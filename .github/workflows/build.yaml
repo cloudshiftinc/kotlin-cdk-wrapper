@@ -38,10 +38,6 @@ jobs:
         distribution: 'temurin'
         check-latest: 'true'
 
-    # https://github.com/gradle/wrapper-validation-action
-    - name: 'Validate Gradle Wrapper'
-      uses: 'gradle/wrapper-validation-action@9ba54b687bf0f59b62abbf91e0d60de082e8ebc4' # v3.4.1
-
     # https://github.com/gradle/actions/tree/main/setup-gradle
     - name: 'Set up Gradle'
       uses: 'gradle/actions/setup-gradle@31ae3562f68c96d481c31bc1a8a55cc1be162f83' # v3.4.1
@@ -52,7 +48,15 @@ jobs:
           caches
           notifications
         gradle-home-cache-cleanup: 'true'
+        validate-wrappers: true
         dependency-graph: 'generate-and-submit'
+
+      # https://github.com/gradle/actions/tree/main/dependency-submission
+    - name: "Generate and submit dependency graph"
+      uses: "gradle/actions/dependency-submission@31ae3562f68c96d481c31bc1a8a55cc1be162f83" # v3.4.1
+      env:
+        DEPENDENCY_GRAPH_EXCLUDE_PROJECTS: "^:(build-logic|buildSrc|.*[Tt]test.*)"
+        DEPENDENCY_GRAPH_EXCLUDE_CONFIGURATIONS: ".*[Tt]est.*Classpath"
 
     - name: 'build'
       run: './gradlew build --info --scan --stacktrace'
