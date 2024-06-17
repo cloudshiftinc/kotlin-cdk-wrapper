@@ -49,7 +49,6 @@ jobs:
           notifications
         gradle-home-cache-cleanup: 'true'
         validate-wrappers: true
-        dependency-graph: 'generate-and-submit'
 
       # https://github.com/gradle/actions/tree/main/dependency-submission
     - name: "Generate and submit dependency graph"
