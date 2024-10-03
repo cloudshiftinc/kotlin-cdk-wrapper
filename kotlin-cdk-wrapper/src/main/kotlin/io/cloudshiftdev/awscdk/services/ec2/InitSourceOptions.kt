@@ -76,7 +76,8 @@ public interface InitSourceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.InitSourceOptions,
-  ) : CdkObject(cdkObject), InitSourceOptions {
+  ) : CdkObject(cdkObject),
+      InitSourceOptions {
     /**
      * Restart the given services after this archive has been extracted.
      *

@@ -171,7 +171,8 @@ public interface ProductionVariant {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ProductionVariant,
-  ) : CdkObject(cdkObject), ProductionVariant {
+  ) : CdkObject(cdkObject),
+      ProductionVariant {
     /**
      * The size of the Elastic Inference (EI) instance to use for the production variant.
      *

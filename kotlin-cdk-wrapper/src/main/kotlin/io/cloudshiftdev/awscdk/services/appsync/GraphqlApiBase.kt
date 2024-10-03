@@ -28,7 +28,8 @@ import io.cloudshiftdev.awscdk.services.opensearchservice.IDomain as Opensearchs
  */
 public abstract class GraphqlApiBase(
   cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiBase,
-) : Resource(cdkObject), IGraphqlApi {
+) : Resource(cdkObject),
+    IGraphqlApi {
   /**
    * add a new DynamoDB data source to this API.
    *

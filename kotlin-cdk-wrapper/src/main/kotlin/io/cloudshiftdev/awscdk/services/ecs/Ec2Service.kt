@@ -37,7 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Ec2Service(
   cdkObject: software.amazon.awscdk.services.ecs.Ec2Service,
-) : BaseService(cdkObject), IEc2Service {
+) : BaseService(cdkObject),
+    IEc2Service {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

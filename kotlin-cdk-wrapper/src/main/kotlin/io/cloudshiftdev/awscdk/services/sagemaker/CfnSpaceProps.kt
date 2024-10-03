@@ -33,8 +33,14 @@ import kotlin.jvm.JvmName
  * .spaceSettings(SpaceSettingsProperty.builder()
  * .appType("appType")
  * .codeEditorAppSettings(SpaceCodeEditorAppSettingsProperty.builder()
+ * .appLifecycleManagement(SpaceAppLifecycleManagementProperty.builder()
+ * .idleSettings(SpaceIdleSettingsProperty.builder()
+ * .idleTimeoutInMinutes(123)
+ * .build())
+ * .build())
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
@@ -45,11 +51,17 @@ import kotlin.jvm.JvmName
  * .build())
  * .build()))
  * .jupyterLabAppSettings(SpaceJupyterLabAppSettingsProperty.builder()
+ * .appLifecycleManagement(SpaceAppLifecycleManagementProperty.builder()
+ * .idleSettings(SpaceIdleSettingsProperty.builder()
+ * .idleTimeoutInMinutes(123)
+ * .build())
+ * .build())
  * .codeRepositories(List.of(CodeRepositoryProperty.builder()
  * .repositoryUrl("repositoryUrl")
  * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
@@ -57,9 +69,11 @@ import kotlin.jvm.JvmName
  * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
  * .build())
  * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
  * .customImages(List.of(CustomImageProperty.builder()
@@ -70,9 +84,11 @@ import kotlin.jvm.JvmName
  * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
  * .build())
  * .spaceStorageSettings(SpaceStorageSettingsProperty.builder()
  * .ebsStorageSettings(EbsStorageSettingsProperty.builder()
@@ -352,7 +368,8 @@ public interface CfnSpaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpaceProps,
-  ) : CdkObject(cdkObject), CfnSpaceProps {
+  ) : CdkObject(cdkObject),
+      CfnSpaceProps {
     /**
      * The ID of the associated domain.
      *

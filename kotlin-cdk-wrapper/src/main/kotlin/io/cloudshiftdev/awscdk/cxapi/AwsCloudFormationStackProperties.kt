@@ -123,7 +123,8 @@ public interface AwsCloudFormationStackProperties {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cxapi.AwsCloudFormationStackProperties,
-  ) : CdkObject(cdkObject), AwsCloudFormationStackProperties {
+  ) : CdkObject(cdkObject),
+      AwsCloudFormationStackProperties {
     /**
      * Values for CloudFormation stack parameters that should be passed when the stack is deployed.
      */

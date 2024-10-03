@@ -51,6 +51,11 @@ public interface HttpStageOptions : StageOptions {
     public fun autoDeploy(autoDeploy: Boolean)
 
     /**
+     * @param description The description for the API stage.
+     */
+    public fun description(description: String)
+
+    /**
      * @param domainMapping The options for custom domain and api mapping.
      */
     public fun domainMapping(domainMapping: DomainMappingOptions)
@@ -90,6 +95,13 @@ public interface HttpStageOptions : StageOptions {
      */
     override fun autoDeploy(autoDeploy: Boolean) {
       cdkBuilder.autoDeploy(autoDeploy)
+    }
+
+    /**
+     * @param description The description for the API stage.
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
     }
 
     /**
@@ -136,13 +148,21 @@ public interface HttpStageOptions : StageOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpStageOptions,
-  ) : CdkObject(cdkObject), HttpStageOptions {
+  ) : CdkObject(cdkObject),
+      HttpStageOptions {
     /**
      * Whether updates to an API automatically trigger a new deployment.
      *
      * Default: false
      */
     override fun autoDeploy(): Boolean? = unwrap(this).getAutoDeploy()
+
+    /**
+     * The description for the API stage.
+     *
+     * Default: - no description
+     */
+    override fun description(): String? = unwrap(this).getDescription()
 
     /**
      * The options for custom domain and api mapping.

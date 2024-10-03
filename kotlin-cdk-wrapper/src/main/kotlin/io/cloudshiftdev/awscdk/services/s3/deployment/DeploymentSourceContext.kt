@@ -59,7 +59,8 @@ public interface DeploymentSourceContext {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext,
-  ) : CdkObject(cdkObject), DeploymentSourceContext {
+  ) : CdkObject(cdkObject),
+      DeploymentSourceContext {
     /**
      * The role for the handler.
      */

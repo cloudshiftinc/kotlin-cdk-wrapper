@@ -2,7 +2,7 @@
 
 package io.cloudshiftdev.awscdk
 
-import io.cloudshiftdev.awscdk.cloudassembly.schema.MissingContext
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.MissingContext
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.constructs.IConstruct
 import kotlin.Any
@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Stack(
   cdkObject: software.amazon.awscdk.Stack,
-) : CloudshiftdevConstructsConstruct(cdkObject), ITaggable {
+) : CloudshiftdevConstructsConstruct(cdkObject),
+    ITaggable {
   public constructor() : this(software.amazon.awscdk.Stack()
   )
 
@@ -310,8 +311,6 @@ public open class Stack(
    * remove the reference from the consuming stack. After that, you can remove
    * the resource and the manual export.
    *
-   * <h2>Example</h2>
-   *
    * Here is how the process works. Let's say there are two stacks,
    * `producerStack` and `consumerStack`, and `producerStack` has a bucket
    * called `bucket`, which is referenced by `consumerStack` (perhaps because
@@ -322,7 +321,7 @@ public open class Stack(
    *
    * Instead, the process takes two deployments:
    *
-   * <h3>Deployment 1: break the relationship</h3>
+   * **Deployment 1: break the relationship**:
    *
    * * Make sure `consumerStack` no longer references `bucket.bucketName` (maybe the consumer
    * stack now uses its own bucket, or it writes to an AWS DynamoDB table, or maybe you just
@@ -332,7 +331,7 @@ public open class Stack(
    * between the two stacks is being broken.
    * * Deploy (this will effectively only change the `consumerStack`, but it's safe to deploy both).
    *
-   * <h3>Deployment 2: remove the bucket resource</h3>
+   * **Deployment 2: remove the bucket resource**:
    *
    * * You are now free to remove the `bucket` resource from `producerStack`.
    * * Don't forget to remove the `exportValue()` call as well.
@@ -362,8 +361,6 @@ public open class Stack(
    * remove the reference from the consuming stack. After that, you can remove
    * the resource and the manual export.
    *
-   * <h2>Example</h2>
-   *
    * Here is how the process works. Let's say there are two stacks,
    * `producerStack` and `consumerStack`, and `producerStack` has a bucket
    * called `bucket`, which is referenced by `consumerStack` (perhaps because
@@ -374,7 +371,7 @@ public open class Stack(
    *
    * Instead, the process takes two deployments:
    *
-   * <h3>Deployment 1: break the relationship</h3>
+   * **Deployment 1: break the relationship**:
    *
    * * Make sure `consumerStack` no longer references `bucket.bucketName` (maybe the consumer
    * stack now uses its own bucket, or it writes to an AWS DynamoDB table, or maybe you just
@@ -384,7 +381,7 @@ public open class Stack(
    * between the two stacks is being broken.
    * * Deploy (this will effectively only change the `consumerStack`, but it's safe to deploy both).
    *
-   * <h3>Deployment 2: remove the bucket resource</h3>
+   * **Deployment 2: remove the bucket resource**:
    *
    * * You are now free to remove the `bucket` resource from `producerStack`.
    * * Don't forget to remove the `exportValue()` call as well.
@@ -415,8 +412,6 @@ public open class Stack(
    * remove the reference from the consuming stack. After that, you can remove
    * the resource and the manual export.
    *
-   * <h2>Example</h2>
-   *
    * Here is how the process works. Let's say there are two stacks,
    * `producerStack` and `consumerStack`, and `producerStack` has a bucket
    * called `bucket`, which is referenced by `consumerStack` (perhaps because
@@ -427,7 +422,7 @@ public open class Stack(
    *
    * Instead, the process takes two deployments:
    *
-   * <h3>Deployment 1: break the relationship</h3>
+   * **Deployment 1: break the relationship**:
    *
    * * Make sure `consumerStack` no longer references `bucket.bucketName` (maybe the consumer
    * stack now uses its own bucket, or it writes to an AWS DynamoDB table, or maybe you just
@@ -437,7 +432,7 @@ public open class Stack(
    * between the two stacks is being broken.
    * * Deploy (this will effectively only change the `consumerStack`, but it's safe to deploy both).
    *
-   * <h3>Deployment 2: remove the bucket resource</h3>
+   * **Deployment 2: remove the bucket resource**:
    *
    * * You are now free to remove the `bucket` resource from `producerStack`.
    * * Don't forget to remove the `exportValue()` call as well.
@@ -651,7 +646,7 @@ public open class Stack(
    * @param report The set of parameters needed to obtain the context. 
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("eb28e30cb4a3bcd7cf10552329d3aac7f3a539ebb37a9dd82d6939a832826110")
+  @JvmName("518cf0a47062d88d22e5197a66e79669873dbac9d6294bf52ac8b693bf65e8b4")
   public open fun reportMissingContextKey(report: MissingContext.Builder.() -> Unit): Unit =
       reportMissingContextKey(MissingContext(report))
 
@@ -966,6 +961,24 @@ public open class Stack(
     public fun env(env: Environment.Builder.() -> Unit)
 
     /**
+     * SNS Topic ARNs that will receive stack events.
+     *
+     * Default: - no notfication arns.
+     *
+     * @param notificationArns SNS Topic ARNs that will receive stack events. 
+     */
+    public fun notificationArns(notificationArns: List<String>)
+
+    /**
+     * SNS Topic ARNs that will receive stack events.
+     *
+     * Default: - no notfication arns.
+     *
+     * @param notificationArns SNS Topic ARNs that will receive stack events. 
+     */
+    public fun notificationArns(vararg notificationArns: String)
+
+    /**
      * Options for applying a permissions boundary to all IAM Roles and Users created within this
      * Stage.
      *
@@ -1244,6 +1257,27 @@ public open class Stack(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("257d47dfd98ff7d3e84d09d23159057e237273e6f9d86e0e1a4729cfbd62261d")
     override fun env(env: Environment.Builder.() -> Unit): Unit = env(Environment(env))
+
+    /**
+     * SNS Topic ARNs that will receive stack events.
+     *
+     * Default: - no notfication arns.
+     *
+     * @param notificationArns SNS Topic ARNs that will receive stack events. 
+     */
+    override fun notificationArns(notificationArns: List<String>) {
+      cdkBuilder.notificationArns(notificationArns)
+    }
+
+    /**
+     * SNS Topic ARNs that will receive stack events.
+     *
+     * Default: - no notfication arns.
+     *
+     * @param notificationArns SNS Topic ARNs that will receive stack events. 
+     */
+    override fun notificationArns(vararg notificationArns: String): Unit =
+        notificationArns(notificationArns.toList())
 
     /**
      * Options for applying a permissions boundary to all IAM Roles and Users created within this

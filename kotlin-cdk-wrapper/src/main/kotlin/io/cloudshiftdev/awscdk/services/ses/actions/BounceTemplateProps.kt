@@ -97,7 +97,8 @@ public interface BounceTemplateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.actions.BounceTemplateProps,
-  ) : CdkObject(cdkObject), BounceTemplateProps {
+  ) : CdkObject(cdkObject),
+      BounceTemplateProps {
     /**
      * Human-readable text to include in the bounce message.
      */

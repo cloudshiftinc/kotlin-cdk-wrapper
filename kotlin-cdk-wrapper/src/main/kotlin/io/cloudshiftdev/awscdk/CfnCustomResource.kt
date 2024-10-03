@@ -45,7 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCustomResource(
   cdkObject: software.amazon.awscdk.CfnCustomResource,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -77,12 +78,12 @@ public open class CfnCustomResource(
   }
 
   /**
-   * Only one property is defined by AWS for a custom resource: `ServiceToken` .
+   * The service token, such as an Amazon SNS topic ARN or Lambda function ARN.
    */
   public open fun serviceToken(): String = unwrap(this).getServiceToken()
 
   /**
-   * Only one property is defined by AWS for a custom resource: `ServiceToken` .
+   * The service token, such as an Amazon SNS topic ARN or Lambda function ARN.
    */
   public open fun serviceToken(`value`: String) {
     unwrap(this).setServiceToken(`value`)
@@ -94,19 +95,15 @@ public open class CfnCustomResource(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Only one property is defined by AWS for a custom resource: `ServiceToken` .
+     * The service token, such as an Amazon SNS topic ARN or Lambda function ARN.
      *
-     * All other properties are defined by the service provider.
-     *
-     * The service token that was given to the template developer by the service provider to access
-     * the service, such as an Amazon SNS topic ARN or Lambda function ARN. The service token must be
-     * from the same Region in which you are creating the stack.
+     * The service token must be from the same Region as the stack.
      *
      * Updates aren't supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html#cfn-cloudformation-customresource-servicetoken)
-     * @param serviceToken Only one property is defined by AWS for a custom resource: `ServiceToken`
-     * . 
+     * @param serviceToken The service token, such as an Amazon SNS topic ARN or Lambda function
+     * ARN. 
      */
     public fun serviceToken(serviceToken: String)
   }
@@ -119,19 +116,15 @@ public open class CfnCustomResource(
         software.amazon.awscdk.CfnCustomResource.Builder.create(scope, id)
 
     /**
-     * Only one property is defined by AWS for a custom resource: `ServiceToken` .
+     * The service token, such as an Amazon SNS topic ARN or Lambda function ARN.
      *
-     * All other properties are defined by the service provider.
-     *
-     * The service token that was given to the template developer by the service provider to access
-     * the service, such as an Amazon SNS topic ARN or Lambda function ARN. The service token must be
-     * from the same Region in which you are creating the stack.
+     * The service token must be from the same Region as the stack.
      *
      * Updates aren't supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html#cfn-cloudformation-customresource-servicetoken)
-     * @param serviceToken Only one property is defined by AWS for a custom resource: `ServiceToken`
-     * . 
+     * @param serviceToken The service token, such as an Amazon SNS topic ARN or Lambda function
+     * ARN. 
      */
     override fun serviceToken(serviceToken: String) {
       cdkBuilder.serviceToken(serviceToken)

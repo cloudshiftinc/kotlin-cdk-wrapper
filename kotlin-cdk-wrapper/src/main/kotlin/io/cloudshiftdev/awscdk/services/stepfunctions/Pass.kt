@@ -21,20 +21,30 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Choice choice = new Choice(this, "Did it work?");
- * // Add conditions with .when()
- * Pass successState = new Pass(this, "SuccessState");
- * Pass failureState = new Pass(this, "FailureState");
- * choice.when(Condition.stringEquals("$.status", "SUCCESS"), successState);
- * choice.when(Condition.numberGreaterThan("$.attempts", 5), failureState);
- * // Use .otherwise() to indicate what should be done if none of the conditions match
- * Pass tryAgainState = new Pass(this, "TryAgainState");
- * choice.otherwise(tryAgainState);
+ * // Define a state machine with one Pass state
+ * StateMachine child = StateMachine.Builder.create(this, "ChildStateMachine")
+ * .definition(Chain.start(new Pass(this, "PassState")))
+ * .build();
+ * // Include the state machine in a Task state with callback pattern
+ * StepFunctionsStartExecution task = StepFunctionsStartExecution.Builder.create(this, "ChildTask")
+ * .stateMachine(child)
+ * .integrationPattern(IntegrationPattern.WAIT_FOR_TASK_TOKEN)
+ * .input(TaskInput.fromObject(Map.of(
+ * "token", JsonPath.getTaskToken(),
+ * "foo", "bar")))
+ * .name("MyExecutionName")
+ * .build();
+ * // Define a second state machine with the Task state above
+ * // Define a second state machine with the Task state above
+ * StateMachine.Builder.create(this, "ParentStateMachine")
+ * .definition(task)
+ * .build();
  * ```
  */
 public open class Pass(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Pass,
-) : State(cdkObject), INextable {
+) : State(cdkObject),
+    INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.Pass(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

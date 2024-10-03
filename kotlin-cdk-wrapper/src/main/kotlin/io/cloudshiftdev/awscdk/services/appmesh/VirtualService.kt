@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class VirtualService(
   cdkObject: software.amazon.awscdk.services.appmesh.VirtualService,
-) : Resource(cdkObject), IVirtualService {
+) : Resource(cdkObject),
+    IVirtualService {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

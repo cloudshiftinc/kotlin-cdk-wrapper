@@ -156,7 +156,8 @@ public interface BaseTargetTrackingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.applicationautoscaling.BaseTargetTrackingProps,
-  ) : CdkObject(cdkObject), BaseTargetTrackingProps {
+  ) : CdkObject(cdkObject),
+      BaseTargetTrackingProps {
     /**
      * Indicates whether scale in by the target tracking policy is disabled.
      *

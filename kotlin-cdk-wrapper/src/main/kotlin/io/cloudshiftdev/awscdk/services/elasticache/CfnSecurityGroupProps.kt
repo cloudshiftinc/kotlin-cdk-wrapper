@@ -108,7 +108,8 @@ public interface CfnSecurityGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticache.CfnSecurityGroupProps,
-  ) : CdkObject(cdkObject), CfnSecurityGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnSecurityGroupProps {
     /**
      * A description for the cache security group.
      *

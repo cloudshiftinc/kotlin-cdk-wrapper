@@ -28,7 +28,8 @@ public interface IApiKey : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IApiKey,
-  ) : CdkObject(cdkObject), IApiKey {
+  ) : CdkObject(cdkObject),
+      IApiKey {
     /**
      * Apply the given removal policy to this resource.
      *

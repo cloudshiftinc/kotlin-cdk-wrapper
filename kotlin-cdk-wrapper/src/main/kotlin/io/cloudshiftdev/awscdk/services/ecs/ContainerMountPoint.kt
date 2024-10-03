@@ -94,7 +94,8 @@ public interface ContainerMountPoint : BaseMountPoint {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ContainerMountPoint,
-  ) : CdkObject(cdkObject), ContainerMountPoint {
+  ) : CdkObject(cdkObject),
+      ContainerMountPoint {
     /**
      * The path on the container to mount the host volume at.
      */

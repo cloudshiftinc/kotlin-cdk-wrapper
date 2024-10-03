@@ -24,7 +24,7 @@ import kotlin.String
  * .webhook(true) // optional, default: true if `webhookFilters` were provided, false otherwise
  * .webhookTriggersBatchBuild(true) // optional, default is false
  * .webhookFilters(List.of(FilterGroup.inEventOf(EventAction.PUSH).andBranchIs("main").andCommitMessageIs("the
- * commit message")))
+ * commit message"), FilterGroup.inEventOf(EventAction.RELEASED).andBranchIs("main")))
  * .build());
  * ```
  */

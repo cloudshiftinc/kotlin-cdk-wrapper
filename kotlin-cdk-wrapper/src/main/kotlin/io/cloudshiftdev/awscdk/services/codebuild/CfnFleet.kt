@@ -5,14 +5,19 @@ package io.cloudshiftdev.awscdk.services.codebuild
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggableV2
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -30,7 +35,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .baseCapacity(123)
  * .computeType("computeType")
  * .environmentType("environmentType")
+ * .fleetServiceRole("fleetServiceRole")
+ * .fleetVpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .vpcId("vpcId")
+ * .build())
+ * .imageId("imageId")
  * .name("name")
+ * .overflowBehavior("overflowBehavior")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -42,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFleet(
   cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codebuild.CfnFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -90,31 +105,78 @@ public open class CfnFleet(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   * Information about the compute resources the compute fleet uses.
-   *
-   * Available values include:.
+   * Updating this field is not allowed for `MAC_ARM` .
    */
   public open fun computeType(): String? = unwrap(this).getComputeType()
 
   /**
-   * Information about the compute resources the compute fleet uses.
-   *
-   * Available values include:.
+   * Updating this field is not allowed for `MAC_ARM` .
    */
   public open fun computeType(`value`: String) {
     unwrap(this).setComputeType(`value`)
   }
 
   /**
-   * The environment type of the compute fleet.
+   * Updating this field is not allowed for `MAC_ARM` .
    */
   public open fun environmentType(): String? = unwrap(this).getEnvironmentType()
 
   /**
-   * The environment type of the compute fleet.
+   * Updating this field is not allowed for `MAC_ARM` .
    */
   public open fun environmentType(`value`: String) {
     unwrap(this).setEnvironmentType(`value`)
+  }
+
+  /**
+   * The service role associated with the compute fleet.
+   */
+  public open fun fleetServiceRole(): String? = unwrap(this).getFleetServiceRole()
+
+  /**
+   * The service role associated with the compute fleet.
+   */
+  public open fun fleetServiceRole(`value`: String) {
+    unwrap(this).setFleetServiceRole(`value`)
+  }
+
+  /**
+   * Updating this field is not allowed for `MAC_ARM` .
+   */
+  public open fun fleetVpcConfig(): Any? = unwrap(this).getFleetVpcConfig()
+
+  /**
+   * Updating this field is not allowed for `MAC_ARM` .
+   */
+  public open fun fleetVpcConfig(`value`: IResolvable) {
+    unwrap(this).setFleetVpcConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Updating this field is not allowed for `MAC_ARM` .
+   */
+  public open fun fleetVpcConfig(`value`: VpcConfigProperty) {
+    unwrap(this).setFleetVpcConfig(`value`.let(VpcConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * Updating this field is not allowed for `MAC_ARM` .
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("0ae880fbe2c1ab8b417e5fafe263789c3105b4e087fa381af6efbae306dd1cbe")
+  public open fun fleetVpcConfig(`value`: VpcConfigProperty.Builder.() -> Unit): Unit =
+      fleetVpcConfig(VpcConfigProperty(`value`))
+
+  /**
+   * Updating this field is not allowed for `MAC_ARM` .
+   */
+  public open fun imageId(): String? = unwrap(this).getImageId()
+
+  /**
+   * Updating this field is not allowed for `MAC_ARM` .
+   */
+  public open fun imageId(`value`: String) {
+    unwrap(this).setImageId(`value`)
   }
 
   /**
@@ -136,6 +198,18 @@ public open class CfnFleet(
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
+  }
+
+  /**
+   * The compute fleet overflow behavior.
+   */
+  public open fun overflowBehavior(): String? = unwrap(this).getOverflowBehavior()
+
+  /**
+   * The compute fleet overflow behavior.
+   */
+  public open fun overflowBehavior(`value`: String) {
+    unwrap(this).setOverflowBehavior(`value`)
   }
 
   /**
@@ -171,7 +245,9 @@ public open class CfnFleet(
     public fun baseCapacity(baseCapacity: Number)
 
     /**
-     * Information about the compute resources the compute fleet uses. Available values include:.
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
+     * Information about the compute resources the compute fleet uses. Available values include:
      *
      * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
      * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
@@ -205,12 +281,13 @@ public open class CfnFleet(
      * in the *AWS CodeBuild User Guide.*
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computetype)
-     * @param computeType Information about the compute resources the compute fleet uses. Available
-     * values include:. 
+     * @param computeType Updating this field is not allowed for `MAC_ARM` . 
      */
     public fun computeType(computeType: String)
 
     /**
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
      * The environment type of the compute fleet.
      *
      * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia), US
@@ -236,9 +313,63 @@ public open class CfnFleet(
      * in the *AWS CodeBuild user guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-environmenttype)
-     * @param environmentType The environment type of the compute fleet. 
+     * @param environmentType Updating this field is not allowed for `MAC_ARM` . 
      */
     public fun environmentType(environmentType: String)
+
+    /**
+     * The service role associated with the compute fleet.
+     *
+     * For more information, see [Allow a user to add a permission policy for a fleet service
+     * role](https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-permission-policy-fleet-service-role.html)
+     * in the *AWS CodeBuild User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetservicerole)
+     * @param fleetServiceRole The service role associated with the compute fleet. 
+     */
+    public fun fleetServiceRole(fleetServiceRole: String)
+
+    /**
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
+     * Information about the VPC configuration that AWS CodeBuild accesses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
+     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     */
+    public fun fleetVpcConfig(fleetVpcConfig: IResolvable)
+
+    /**
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
+     * Information about the VPC configuration that AWS CodeBuild accesses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
+     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     */
+    public fun fleetVpcConfig(fleetVpcConfig: VpcConfigProperty)
+
+    /**
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
+     * Information about the VPC configuration that AWS CodeBuild accesses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
+     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2364dacd7b4942e2f55e3813ce37e4e78473c73fbc2e69544b423c50f197c6c1")
+    public fun fleetVpcConfig(fleetVpcConfig: VpcConfigProperty.Builder.() -> Unit)
+
+    /**
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
+     * The Amazon Machine Image (AMI) of the compute fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-imageid)
+     * @param imageId Updating this field is not allowed for `MAC_ARM` . 
+     */
+    public fun imageId(imageId: String)
 
     /**
      * The name of the compute fleet.
@@ -247,6 +378,27 @@ public open class CfnFleet(
      * @param name The name of the compute fleet. 
      */
     public fun name(name: String)
+
+    /**
+     * The compute fleet overflow behavior.
+     *
+     * * For overflow behavior `QUEUE` , your overflow builds need to wait on the existing fleet
+     * instance to become available.
+     * * For overflow behavior `ON_DEMAND` , your overflow builds run on CodeBuild on-demand.
+     *
+     *
+     * If you choose to set your overflow behavior to on-demand while creating a VPC-connected
+     * fleet, make sure that you add the required VPC permissions to your project service role. For
+     * more information, see [Example policy statement to allow CodeBuild access to AWS services
+     * required to create a VPC network
+     * interface](https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-create-vpc-network-interface)
+     * .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-overflowbehavior)
+     * @param overflowBehavior The compute fleet overflow behavior. 
+     */
+    public fun overflowBehavior(overflowBehavior: String)
 
     /**
      * A list of tag key and value pairs associated with this compute fleet.
@@ -291,7 +443,9 @@ public open class CfnFleet(
     }
 
     /**
-     * Information about the compute resources the compute fleet uses. Available values include:.
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
+     * Information about the compute resources the compute fleet uses. Available values include:
      *
      * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
      * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
@@ -325,14 +479,15 @@ public open class CfnFleet(
      * in the *AWS CodeBuild User Guide.*
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computetype)
-     * @param computeType Information about the compute resources the compute fleet uses. Available
-     * values include:. 
+     * @param computeType Updating this field is not allowed for `MAC_ARM` . 
      */
     override fun computeType(computeType: String) {
       cdkBuilder.computeType(computeType)
     }
 
     /**
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
      * The environment type of the compute fleet.
      *
      * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia), US
@@ -358,10 +513,73 @@ public open class CfnFleet(
      * in the *AWS CodeBuild user guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-environmenttype)
-     * @param environmentType The environment type of the compute fleet. 
+     * @param environmentType Updating this field is not allowed for `MAC_ARM` . 
      */
     override fun environmentType(environmentType: String) {
       cdkBuilder.environmentType(environmentType)
+    }
+
+    /**
+     * The service role associated with the compute fleet.
+     *
+     * For more information, see [Allow a user to add a permission policy for a fleet service
+     * role](https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-permission-policy-fleet-service-role.html)
+     * in the *AWS CodeBuild User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetservicerole)
+     * @param fleetServiceRole The service role associated with the compute fleet. 
+     */
+    override fun fleetServiceRole(fleetServiceRole: String) {
+      cdkBuilder.fleetServiceRole(fleetServiceRole)
+    }
+
+    /**
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
+     * Information about the VPC configuration that AWS CodeBuild accesses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
+     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     */
+    override fun fleetVpcConfig(fleetVpcConfig: IResolvable) {
+      cdkBuilder.fleetVpcConfig(fleetVpcConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
+     * Information about the VPC configuration that AWS CodeBuild accesses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
+     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     */
+    override fun fleetVpcConfig(fleetVpcConfig: VpcConfigProperty) {
+      cdkBuilder.fleetVpcConfig(fleetVpcConfig.let(VpcConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
+     * Information about the VPC configuration that AWS CodeBuild accesses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
+     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2364dacd7b4942e2f55e3813ce37e4e78473c73fbc2e69544b423c50f197c6c1")
+    override fun fleetVpcConfig(fleetVpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+        fleetVpcConfig(VpcConfigProperty(fleetVpcConfig))
+
+    /**
+     * Updating this field is not allowed for `MAC_ARM` .
+     *
+     * The Amazon Machine Image (AMI) of the compute fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-imageid)
+     * @param imageId Updating this field is not allowed for `MAC_ARM` . 
+     */
+    override fun imageId(imageId: String) {
+      cdkBuilder.imageId(imageId)
     }
 
     /**
@@ -372,6 +590,29 @@ public open class CfnFleet(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The compute fleet overflow behavior.
+     *
+     * * For overflow behavior `QUEUE` , your overflow builds need to wait on the existing fleet
+     * instance to become available.
+     * * For overflow behavior `ON_DEMAND` , your overflow builds run on CodeBuild on-demand.
+     *
+     *
+     * If you choose to set your overflow behavior to on-demand while creating a VPC-connected
+     * fleet, make sure that you add the required VPC permissions to your project service role. For
+     * more information, see [Example policy statement to allow CodeBuild access to AWS services
+     * required to create a VPC network
+     * interface](https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-create-vpc-network-interface)
+     * .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-overflowbehavior)
+     * @param overflowBehavior The compute fleet overflow behavior. 
+     */
+    override fun overflowBehavior(overflowBehavior: String) {
+      cdkBuilder.overflowBehavior(overflowBehavior)
     }
 
     /**
@@ -419,5 +660,162 @@ public open class CfnFleet(
 
     internal fun unwrap(wrapped: CfnFleet): software.amazon.awscdk.services.codebuild.CfnFleet =
         wrapped.cdkObject as software.amazon.awscdk.services.codebuild.CfnFleet
+  }
+
+  /**
+   * Information about the VPC configuration that AWS CodeBuild accesses.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnets(List.of("subnets"))
+   * .vpcId("vpcId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-vpcconfig.html)
+   */
+  public interface VpcConfigProperty {
+    /**
+     * A list of one or more security groups IDs in your Amazon VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-vpcconfig.html#cfn-codebuild-fleet-vpcconfig-securitygroupids)
+     */
+    public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
+
+    /**
+     * A list of one or more subnet IDs in your Amazon VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-vpcconfig.html#cfn-codebuild-fleet-vpcconfig-subnets)
+     */
+    public fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+
+    /**
+     * The ID of the Amazon VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-vpcconfig.html#cfn-codebuild-fleet-vpcconfig-vpcid)
+     */
+    public fun vpcId(): String? = unwrap(this).getVpcId()
+
+    /**
+     * A builder for [VpcConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
+       */
+      public fun securityGroupIds(securityGroupIds: List<String>)
+
+      /**
+       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
+       */
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
+      /**
+       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
+       */
+      public fun subnets(subnets: List<String>)
+
+      /**
+       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
+       */
+      public fun subnets(vararg subnets: String)
+
+      /**
+       * @param vpcId The ID of the Amazon VPC.
+       */
+      public fun vpcId(vpcId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnFleet.VpcConfigProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnFleet.VpcConfigProperty.builder()
+
+      /**
+       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
+       */
+      override fun securityGroupIds(securityGroupIds: List<String>) {
+        cdkBuilder.securityGroupIds(securityGroupIds)
+      }
+
+      /**
+       * @param securityGroupIds A list of one or more security groups IDs in your Amazon VPC.
+       */
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
+      /**
+       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
+       */
+      override fun subnets(subnets: List<String>) {
+        cdkBuilder.subnets(subnets)
+      }
+
+      /**
+       * @param subnets A list of one or more subnet IDs in your Amazon VPC.
+       */
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
+      /**
+       * @param vpcId The ID of the Amazon VPC.
+       */
+      override fun vpcId(vpcId: String) {
+        cdkBuilder.vpcId(vpcId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.codebuild.CfnFleet.VpcConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.VpcConfigProperty,
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
+      /**
+       * A list of one or more security groups IDs in your Amazon VPC.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-vpcconfig.html#cfn-codebuild-fleet-vpcconfig-securitygroupids)
+       */
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+          emptyList()
+
+      /**
+       * A list of one or more subnet IDs in your Amazon VPC.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-vpcconfig.html#cfn-codebuild-fleet-vpcconfig-subnets)
+       */
+      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+
+      /**
+       * The ID of the Amazon VPC.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-vpcconfig.html#cfn-codebuild-fleet-vpcconfig-vpcid)
+       */
+      override fun vpcId(): String? = unwrap(this).getVpcId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.VpcConfigProperty):
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcConfigProperty):
+          software.amazon.awscdk.services.codebuild.CfnFleet.VpcConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnFleet.VpcConfigProperty
+    }
   }
 }

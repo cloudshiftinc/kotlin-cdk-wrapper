@@ -35,7 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class KeyGroup(
   cdkObject: software.amazon.awscdk.services.cloudfront.KeyGroup,
-) : Resource(cdkObject), IKeyGroup {
+) : Resource(cdkObject),
+    IKeyGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

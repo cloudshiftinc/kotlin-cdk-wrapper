@@ -133,7 +133,8 @@ public interface UtilizationScalingOptions : BaseTargetTrackingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.UtilizationScalingOptions,
-  ) : CdkObject(cdkObject), UtilizationScalingOptions {
+  ) : CdkObject(cdkObject),
+      UtilizationScalingOptions {
     /**
      * Indicates whether scale in by the target tracking policy is disabled.
      *

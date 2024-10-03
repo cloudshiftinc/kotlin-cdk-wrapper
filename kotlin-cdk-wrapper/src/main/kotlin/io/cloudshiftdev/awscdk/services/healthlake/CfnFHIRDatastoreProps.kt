@@ -324,7 +324,8 @@ public interface CfnFHIRDatastoreProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastoreProps,
-  ) : CdkObject(cdkObject), CfnFHIRDatastoreProps {
+  ) : CdkObject(cdkObject),
+      CfnFHIRDatastoreProps {
     /**
      * The user generated name for the data store.
      *

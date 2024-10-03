@@ -37,7 +37,8 @@ import software.amazon.awscdk.services.logs.ILogGroup as AmazonAwscdkServicesLog
  */
 public open class CloudWatchLogGroup(
   cdkObject: software.amazon.awscdk.services.events.targets.CloudWatchLogGroup,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(logGroup: CloudshiftdevAwscdkServicesLogsILogGroup) :
       this(software.amazon.awscdk.services.events.targets.CloudWatchLogGroup(logGroup.let(CloudshiftdevAwscdkServicesLogsILogGroup.Companion::unwrap))
   )

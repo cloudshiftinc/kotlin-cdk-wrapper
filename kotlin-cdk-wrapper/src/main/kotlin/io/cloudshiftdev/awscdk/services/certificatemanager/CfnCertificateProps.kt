@@ -478,7 +478,8 @@ public interface CfnCertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.certificatemanager.CfnCertificateProps,
-  ) : CdkObject(cdkObject), CfnCertificateProps {
+  ) : CdkObject(cdkObject),
+      CfnCertificateProps {
     /**
      * The Amazon Resource Name (ARN) of the private certificate authority (CA) that will be used to
      * issue the certificate.

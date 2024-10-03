@@ -83,7 +83,8 @@ public interface CfnTransitGatewayRegistrationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistrationProps,
-  ) : CdkObject(cdkObject), CfnTransitGatewayRegistrationProps {
+  ) : CdkObject(cdkObject),
+      CfnTransitGatewayRegistrationProps {
     /**
      * The ID of the global network.
      *

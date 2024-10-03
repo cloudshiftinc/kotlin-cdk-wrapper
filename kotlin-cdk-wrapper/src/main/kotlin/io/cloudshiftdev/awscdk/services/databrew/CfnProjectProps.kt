@@ -227,7 +227,8 @@ public interface CfnProjectProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.databrew.CfnProjectProps,
-  ) : CdkObject(cdkObject), CfnProjectProps {
+  ) : CdkObject(cdkObject),
+      CfnProjectProps {
     /**
      * The dataset that the project is to act upon.
      *

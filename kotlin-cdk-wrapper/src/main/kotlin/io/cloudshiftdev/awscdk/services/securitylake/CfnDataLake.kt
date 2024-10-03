@@ -73,7 +73,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataLake(
   cdkObject: software.amazon.awscdk.services.securitylake.CfnDataLake,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.securitylake.CfnDataLake(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -643,7 +645,8 @@ public open class CfnDataLake(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securitylake.CfnDataLake.EncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionConfigurationProperty {
       /**
        * The ID of KMS encryption key used by Amazon Security Lake to encrypt the Security Lake
        * object.
@@ -731,7 +734,8 @@ public open class CfnDataLake(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securitylake.CfnDataLake.ExpirationProperty,
-    ) : CdkObject(cdkObject), ExpirationProperty {
+    ) : CdkObject(cdkObject),
+        ExpirationProperty {
       /**
        * The number of days before data expires in the Amazon Security Lake object.
        *
@@ -929,7 +933,8 @@ public open class CfnDataLake(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securitylake.CfnDataLake.LifecycleConfigurationProperty,
-    ) : CdkObject(cdkObject), LifecycleConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LifecycleConfigurationProperty {
       /**
        * Provides data expiration details of the Amazon Security Lake object.
        *
@@ -1106,7 +1111,8 @@ public open class CfnDataLake(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securitylake.CfnDataLake.ReplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), ReplicationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationConfigurationProperty {
       /**
        * Specifies one or more centralized rollup Regions.
        *
@@ -1241,7 +1247,8 @@ public open class CfnDataLake(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securitylake.CfnDataLake.TransitionsProperty,
-    ) : CdkObject(cdkObject), TransitionsProperty {
+    ) : CdkObject(cdkObject),
+        TransitionsProperty {
       /**
        * The number of days before data transitions to a different S3 Storage Class in the Amazon
        * Security Lake object.

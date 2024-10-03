@@ -9,7 +9,7 @@ import kotlin.String
 import kotlin.Unit
 
 /**
- * Class for scheduling a weekly manitenance time.
+ * Class for scheduling a weekly maintenance time.
  *
  * Example:
  *
@@ -54,9 +54,9 @@ public open class LustreMaintenanceTime(
     public fun day(day: Weekday)
 
     /**
-     * The hour of the day (from 0-24) for maintenance to be performed.
+     * The hour of the day (from 0-23) for maintenance to be performed.
      *
-     * @param hour The hour of the day (from 0-24) for maintenance to be performed. 
+     * @param hour The hour of the day (from 0-23) for maintenance to be performed. 
      */
     public fun hour(hour: Number)
 
@@ -82,9 +82,9 @@ public open class LustreMaintenanceTime(
     }
 
     /**
-     * The hour of the day (from 0-24) for maintenance to be performed.
+     * The hour of the day (from 0-23) for maintenance to be performed.
      *
-     * @param hour The hour of the day (from 0-24) for maintenance to be performed. 
+     * @param hour The hour of the day (from 0-23) for maintenance to be performed. 
      */
     override fun hour(hour: Number) {
       cdkBuilder.hour(hour)

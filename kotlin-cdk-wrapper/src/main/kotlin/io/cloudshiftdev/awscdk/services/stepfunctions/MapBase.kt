@@ -20,7 +20,8 @@ import kotlin.collections.List
  */
 public abstract class MapBase(
   cdkObject: software.amazon.awscdk.services.stepfunctions.MapBase,
-) : State(cdkObject), INextable {
+) : State(cdkObject),
+    INextable {
   /**
    * Continuable states of this Chainable.
    */

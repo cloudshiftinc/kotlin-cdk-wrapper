@@ -304,7 +304,8 @@ public interface ApiGatewayProps : TargetBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.targets.ApiGatewayProps,
-  ) : CdkObject(cdkObject), ApiGatewayProps {
+  ) : CdkObject(cdkObject),
+      ApiGatewayProps {
     /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
      * dead-letter

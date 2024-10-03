@@ -24,7 +24,8 @@ import io.cloudshiftdev.awscdk.services.route53.IRecordSet
  */
 public open class Route53RecordTarget(
   cdkObject: software.amazon.awscdk.services.route53.targets.Route53RecordTarget,
-) : CdkObject(cdkObject), IAliasRecordTarget {
+) : CdkObject(cdkObject),
+    IAliasRecordTarget {
   public constructor(record: IRecordSet) :
       this(software.amazon.awscdk.services.route53.targets.Route53RecordTarget(record.let(IRecordSet.Companion::unwrap))
   )

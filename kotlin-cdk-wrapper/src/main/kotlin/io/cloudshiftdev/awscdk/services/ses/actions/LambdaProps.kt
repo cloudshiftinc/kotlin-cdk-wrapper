@@ -102,7 +102,8 @@ public interface LambdaProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.actions.LambdaProps,
-  ) : CdkObject(cdkObject), LambdaProps {
+  ) : CdkObject(cdkObject),
+      LambdaProps {
     /**
      * The Lambda function to invoke.
      */

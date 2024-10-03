@@ -30,7 +30,8 @@ import kotlin.Boolean
  */
 public abstract class Resource(
   cdkObject: software.amazon.awscdk.Resource,
-) : Construct(cdkObject), IResource {
+) : Construct(cdkObject),
+    IResource {
   /**
    * Apply the given removal policy to this resource.
    *

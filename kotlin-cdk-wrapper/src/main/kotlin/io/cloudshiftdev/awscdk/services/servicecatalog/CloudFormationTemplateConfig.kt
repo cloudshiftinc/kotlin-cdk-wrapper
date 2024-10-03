@@ -82,7 +82,8 @@ public interface CloudFormationTemplateConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig,
-  ) : CdkObject(cdkObject), CloudFormationTemplateConfig {
+  ) : CdkObject(cdkObject),
+      CloudFormationTemplateConfig {
     /**
      * The S3 bucket containing product stack assets.
      *

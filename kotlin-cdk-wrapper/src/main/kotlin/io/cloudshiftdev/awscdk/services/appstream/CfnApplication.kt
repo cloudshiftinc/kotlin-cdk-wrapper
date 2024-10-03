@@ -59,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplication(
   cdkObject: software.amazon.awscdk.services.appstream.CfnApplication,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -744,7 +746,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnApplication.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * The S3 bucket of the S3 object.
        *

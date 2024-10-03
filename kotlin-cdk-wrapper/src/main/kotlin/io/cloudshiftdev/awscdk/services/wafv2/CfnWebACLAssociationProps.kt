@@ -127,7 +127,8 @@ public interface CfnWebACLAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACLAssociationProps,
-  ) : CdkObject(cdkObject), CfnWebACLAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnWebACLAssociationProps {
     /**
      * The Amazon Resource Name (ARN) of the resource to associate with the web ACL.
      *

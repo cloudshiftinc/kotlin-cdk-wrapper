@@ -145,7 +145,8 @@ public interface CfnProfilePermissionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.signer.CfnProfilePermissionProps,
-  ) : CdkObject(cdkObject), CfnProfilePermissionProps {
+  ) : CdkObject(cdkObject),
+      CfnProfilePermissionProps {
     /**
      * The AWS Signer action permitted as part of cross-account permissions.
      *

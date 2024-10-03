@@ -425,7 +425,8 @@ public interface IQueue : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sqs.IQueue,
-  ) : CdkObject(cdkObject), IQueue {
+  ) : CdkObject(cdkObject),
+      IQueue {
     /**
      * Adds a statement to the IAM resource policy associated with this queue.
      *

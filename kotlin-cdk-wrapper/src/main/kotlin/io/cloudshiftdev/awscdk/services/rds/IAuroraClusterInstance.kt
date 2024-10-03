@@ -53,7 +53,8 @@ public interface IAuroraClusterInstance : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.IAuroraClusterInstance,
-  ) : CdkObject(cdkObject), IAuroraClusterInstance {
+  ) : CdkObject(cdkObject),
+      IAuroraClusterInstance {
     /**
      * Apply the given removal policy to this resource.
      *

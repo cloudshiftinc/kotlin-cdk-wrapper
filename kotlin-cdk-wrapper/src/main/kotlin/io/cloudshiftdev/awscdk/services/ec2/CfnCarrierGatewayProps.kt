@@ -96,7 +96,8 @@ public interface CfnCarrierGatewayProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnCarrierGatewayProps,
-  ) : CdkObject(cdkObject), CfnCarrierGatewayProps {
+  ) : CdkObject(cdkObject),
+      CfnCarrierGatewayProps {
     /**
      * The tags assigned to the carrier gateway.
      *

@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplicationFleetAssociation(
   cdkObject: software.amazon.awscdk.services.appstream.CfnApplicationFleetAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

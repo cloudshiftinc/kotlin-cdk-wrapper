@@ -103,7 +103,8 @@ public interface CfnLoggingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnLoggingProps,
-  ) : CdkObject(cdkObject), CfnLoggingProps {
+  ) : CdkObject(cdkObject),
+      CfnLoggingProps {
     /**
      * The account ID.
      *

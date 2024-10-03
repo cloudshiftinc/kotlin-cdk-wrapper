@@ -96,7 +96,8 @@ public interface CustomStateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.CustomStateProps,
-  ) : CdkObject(cdkObject), CustomStateProps {
+  ) : CdkObject(cdkObject),
+      CustomStateProps {
     /**
      * Amazon States Language (JSON-based) definition of the state.
      *

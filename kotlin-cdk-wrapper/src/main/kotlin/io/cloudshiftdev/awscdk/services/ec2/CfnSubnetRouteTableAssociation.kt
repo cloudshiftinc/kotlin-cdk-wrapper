@@ -37,7 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSubnetRouteTableAssociation(
   cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

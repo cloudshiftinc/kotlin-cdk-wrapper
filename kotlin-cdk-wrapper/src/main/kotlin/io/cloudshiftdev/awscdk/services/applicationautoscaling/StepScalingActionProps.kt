@@ -192,7 +192,8 @@ public interface StepScalingActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.applicationautoscaling.StepScalingActionProps,
-  ) : CdkObject(cdkObject), StepScalingActionProps {
+  ) : CdkObject(cdkObject),
+      StepScalingActionProps {
     /**
      * How the adjustment numbers are interpreted.
      *

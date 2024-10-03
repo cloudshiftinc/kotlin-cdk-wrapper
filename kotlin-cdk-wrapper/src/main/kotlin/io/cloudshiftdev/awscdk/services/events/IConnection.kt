@@ -32,7 +32,8 @@ public interface IConnection : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.IConnection,
-  ) : CdkObject(cdkObject), IConnection {
+  ) : CdkObject(cdkObject),
+      IConnection {
     /**
      * Apply the given removal policy to this resource.
      *

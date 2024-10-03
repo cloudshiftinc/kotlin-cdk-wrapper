@@ -51,6 +51,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .s3Action(S3ActionProperty.builder()
  * .bucketName("bucketName")
  * // the properties below are optional
+ * .iamRoleArn("iamRoleArn")
  * .kmsKeyArn("kmsKeyArn")
  * .objectKeyPrefix("objectKeyPrefix")
  * .topicArn("topicArn")
@@ -86,7 +87,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnReceiptRule(
   cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -353,6 +355,7 @@ public open class CfnReceiptRule(
    * .s3Action(S3ActionProperty.builder()
    * .bucketName("bucketName")
    * // the properties below are optional
+   * .iamRoleArn("iamRoleArn")
    * .kmsKeyArn("kmsKeyArn")
    * .objectKeyPrefix("objectKeyPrefix")
    * .topicArn("topicArn")
@@ -423,7 +426,7 @@ public open class CfnReceiptRule(
     public fun stopAction(): Any? = unwrap(this).getStopAction()
 
     /**
-     * Calls Amazon WorkMail and, optionally, publishes a notification to Amazon Amazon SNS.
+     * Calls Amazon WorkMail and, optionally, publishes a notification to Amazon SNS.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-workmailaction)
      */
@@ -550,19 +553,19 @@ public open class CfnReceiptRule(
 
       /**
        * @param workmailAction Calls Amazon WorkMail and, optionally, publishes a notification to
-       * Amazon Amazon SNS.
+       * Amazon SNS.
        */
       public fun workmailAction(workmailAction: IResolvable)
 
       /**
        * @param workmailAction Calls Amazon WorkMail and, optionally, publishes a notification to
-       * Amazon Amazon SNS.
+       * Amazon SNS.
        */
       public fun workmailAction(workmailAction: WorkmailActionProperty)
 
       /**
        * @param workmailAction Calls Amazon WorkMail and, optionally, publishes a notification to
-       * Amazon Amazon SNS.
+       * Amazon SNS.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2e6da27a29ffc59c66ab95ebaa1a29b810412f3740b2dbd633e4d4201903ad81")
@@ -720,7 +723,7 @@ public open class CfnReceiptRule(
 
       /**
        * @param workmailAction Calls Amazon WorkMail and, optionally, publishes a notification to
-       * Amazon Amazon SNS.
+       * Amazon SNS.
        */
       override fun workmailAction(workmailAction: IResolvable) {
         cdkBuilder.workmailAction(workmailAction.let(IResolvable.Companion::unwrap))
@@ -728,7 +731,7 @@ public open class CfnReceiptRule(
 
       /**
        * @param workmailAction Calls Amazon WorkMail and, optionally, publishes a notification to
-       * Amazon Amazon SNS.
+       * Amazon SNS.
        */
       override fun workmailAction(workmailAction: WorkmailActionProperty) {
         cdkBuilder.workmailAction(workmailAction.let(WorkmailActionProperty.Companion::unwrap))
@@ -736,7 +739,7 @@ public open class CfnReceiptRule(
 
       /**
        * @param workmailAction Calls Amazon WorkMail and, optionally, publishes a notification to
-       * Amazon Amazon SNS.
+       * Amazon SNS.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2e6da27a29ffc59c66ab95ebaa1a29b810412f3740b2dbd633e4d4201903ad81")
@@ -749,7 +752,8 @@ public open class CfnReceiptRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * Adds a header to the received email.
        *
@@ -796,7 +800,7 @@ public open class CfnReceiptRule(
       override fun stopAction(): Any? = unwrap(this).getStopAction()
 
       /**
-       * Calls Amazon WorkMail and, optionally, publishes a notification to Amazon Amazon SNS.
+       * Calls Amazon WorkMail and, optionally, publishes a notification to Amazon SNS.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-workmailaction)
        */
@@ -824,7 +828,8 @@ public open class CfnReceiptRule(
    * When included in a receipt rule, this action adds a header to the received email.
    *
    * For information about adding a header using a receipt rule, see the [Amazon SES Developer
-   * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-add-header.html) .
+   * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-receipt-rules-console-walkthrough.html)
+   * .
    *
    * Example:
    *
@@ -845,7 +850,7 @@ public open class CfnReceiptRule(
      * The name of the header to add to the incoming message.
      *
      * The name must contain at least one character, and can contain up to 50 characters. It
-     * consists of alphanumeric (a–z, A–Z, 0–9) characters and dashes.
+     * consists of alphanumeric ( `a–z, A–Z, 0–9` ) characters and dashes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-addheaderaction.html#cfn-ses-receiptrule-addheaderaction-headername)
      */
@@ -869,7 +874,7 @@ public open class CfnReceiptRule(
       /**
        * @param headerName The name of the header to add to the incoming message. 
        * The name must contain at least one character, and can contain up to 50 characters. It
-       * consists of alphanumeric (a–z, A–Z, 0–9) characters and dashes.
+       * consists of alphanumeric ( `a–z, A–Z, 0–9` ) characters and dashes.
        */
       public fun headerName(headerName: String)
 
@@ -889,7 +894,7 @@ public open class CfnReceiptRule(
       /**
        * @param headerName The name of the header to add to the incoming message. 
        * The name must contain at least one character, and can contain up to 50 characters. It
-       * consists of alphanumeric (a–z, A–Z, 0–9) characters and dashes.
+       * consists of alphanumeric ( `a–z, A–Z, 0–9` ) characters and dashes.
        */
       override fun headerName(headerName: String) {
         cdkBuilder.headerName(headerName)
@@ -910,12 +915,13 @@ public open class CfnReceiptRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.AddHeaderActionProperty,
-    ) : CdkObject(cdkObject), AddHeaderActionProperty {
+    ) : CdkObject(cdkObject),
+        AddHeaderActionProperty {
       /**
        * The name of the header to add to the incoming message.
        *
        * The name must contain at least one character, and can contain up to 50 characters. It
-       * consists of alphanumeric (a–z, A–Z, 0–9) characters and dashes.
+       * consists of alphanumeric ( `a–z, A–Z, 0–9` ) characters and dashes.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-addheaderaction.html#cfn-ses-receiptrule-addheaderaction-headername)
        */
@@ -1122,7 +1128,8 @@ public open class CfnReceiptRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.BounceActionProperty,
-    ) : CdkObject(cdkObject), BounceActionProperty {
+    ) : CdkObject(cdkObject),
+        BounceActionProperty {
       /**
        * Human-readable text to include in the bounce message.
        *
@@ -1358,7 +1365,8 @@ public open class CfnReceiptRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.LambdaActionProperty,
-    ) : CdkObject(cdkObject), LambdaActionProperty {
+    ) : CdkObject(cdkObject),
+        LambdaActionProperty {
       /**
        * The Amazon Resource Name (ARN) of the AWS Lambda function.
        *
@@ -1465,6 +1473,7 @@ public open class CfnReceiptRule(
    * .s3Action(S3ActionProperty.builder()
    * .bucketName("bucketName")
    * // the properties below are optional
+   * .iamRoleArn("iamRoleArn")
    * .kmsKeyArn("kmsKeyArn")
    * .objectKeyPrefix("objectKeyPrefix")
    * .topicArn("topicArn")
@@ -1744,7 +1753,8 @@ public open class CfnReceiptRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.RuleProperty,
-    ) : CdkObject(cdkObject), RuleProperty {
+    ) : CdkObject(cdkObject),
+        RuleProperty {
       /**
        * An ordered list of actions to perform on messages that match at least one of the recipient
        * email addresses or domains specified in the receipt rule.
@@ -1834,7 +1844,7 @@ public open class CfnReceiptRule(
    *
    *
    * When you save your emails to an Amazon S3 bucket, the maximum email size (including headers) is
-   * 40 MB. Emails larger than that bounces.
+   * 30 MB. Emails larger than that bounces.
    *
    *
    * For information about specifying Amazon S3 actions in receipt rules, see the [Amazon SES
@@ -1849,6 +1859,7 @@ public open class CfnReceiptRule(
    * S3ActionProperty s3ActionProperty = S3ActionProperty.builder()
    * .bucketName("bucketName")
    * // the properties below are optional
+   * .iamRoleArn("iamRoleArn")
    * .kmsKeyArn("kmsKeyArn")
    * .objectKeyPrefix("objectKeyPrefix")
    * .topicArn("topicArn")
@@ -1866,26 +1877,47 @@ public open class CfnReceiptRule(
     public fun bucketName(): String
 
     /**
-     * The customer master key that Amazon SES should use to encrypt your emails before saving them
+     * The ARN of the IAM role to be used by Amazon Simple Email Service while writing to the Amazon
+     * S3 bucket, optionally encrypting your mail via the provided customer managed key, and publishing
+     * to the Amazon SNS topic.
+     *
+     * This role should have access to the following APIs:
+     *
+     * * `s3:PutObject` , `kms:Encrypt` and `kms:GenerateDataKey` for the given Amazon S3 bucket.
+     * * `kms:GenerateDataKey` for the given AWS KMS customer managed key.
+     * * `sns:Publish` for the given Amazon SNS topic.
+     *
+     *
+     * If an IAM role ARN is provided, the role (and only the role) is used to access all the given
+     * resources (Amazon S3 bucket, AWS KMS customer managed key and Amazon SNS topic). Therefore,
+     * setting up individual resource access permissions is not required.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-s3action.html#cfn-ses-receiptrule-s3action-iamrolearn)
+     */
+    public fun iamRoleArn(): String? = unwrap(this).getIamRoleArn()
+
+    /**
+     * The customer managed key that Amazon SES should use to encrypt your emails before saving them
      * to the Amazon S3 bucket.
      *
-     * You can use the default master key or a custom master key that you created in AWS KMS as
+     * You can use the AWS managed key or a customer managed key that you created in AWS KMS as
      * follows:
      *
-     * * To use the default master key, provide an ARN in the form of
+     * * To use the AWS managed key, provide an ARN in the form of
      * `arn:aws:kms:REGION:ACCOUNT-ID-WITHOUT-HYPHENS:alias/aws/ses` . For example, if your AWS account
-     * ID is 123456789012 and you want to use the default master key in the US West (Oregon) Region,
-     * the ARN of the default master key would be `arn:aws:kms:us-west-2:123456789012:alias/aws/ses` .
-     * If you use the default master key, you don't need to perform any extra steps to give Amazon SES
-     * permission to use the key.
-     * * To use a custom master key that you created in AWS KMS, provide the ARN of the master key
-     * and ensure that you add a statement to your key's policy to give Amazon SES permission to use
-     * it. For more information about giving permissions, see the [Amazon SES Developer
-     * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-permissions.html) .
+     * ID is 123456789012 and you want to use the AWS managed key in the US West (Oregon) Region, the
+     * ARN of the AWS managed key would be `arn:aws:kms:us-west-2:123456789012:alias/aws/ses` . If you
+     * use the AWS managed key, you don't need to perform any extra steps to give Amazon SES permission
+     * to use the key.
+     * * To use a customer managed key that you created in AWS KMS, provide the ARN of the customer
+     * managed key and ensure that you add a statement to your key's policy to give Amazon SES
+     * permission to use it. For more information about giving permissions, see the [Amazon SES
+     * Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-permissions.html) .
      *
      * For more information about key policies, see the [AWS KMS Developer
      * Guide](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html) . If you do not
-     * specify a master key, Amazon SES does not encrypt your emails.
+     * specify an AWS KMS key, Amazon SES does not encrypt your emails.
      *
      *
      * Your mail is encrypted by Amazon SES using the Amazon S3 encryption client before the mail is
@@ -1895,7 +1927,7 @@ public open class CfnReceiptRule(
      * decryption. This encryption client is currently available with the [AWS SDK for
      * Java](https://docs.aws.amazon.com/sdk-for-java/) and [AWS SDK for
      * Ruby](https://docs.aws.amazon.com/sdk-for-ruby/) only. For more information about client-side
-     * encryption using AWS KMS master keys, see the [Amazon S3 Developer
+     * encryption using AWS KMS managed keys, see the [Amazon S3 Developer
      * Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html) .
      *
      *
@@ -1938,25 +1970,42 @@ public open class CfnReceiptRule(
       public fun bucketName(bucketName: String)
 
       /**
-       * @param kmsKeyArn The customer master key that Amazon SES should use to encrypt your emails
+       * @param iamRoleArn The ARN of the IAM role to be used by Amazon Simple Email Service while
+       * writing to the Amazon S3 bucket, optionally encrypting your mail via the provided customer
+       * managed key, and publishing to the Amazon SNS topic.
+       * This role should have access to the following APIs:
+       *
+       * * `s3:PutObject` , `kms:Encrypt` and `kms:GenerateDataKey` for the given Amazon S3 bucket.
+       * * `kms:GenerateDataKey` for the given AWS KMS customer managed key.
+       * * `sns:Publish` for the given Amazon SNS topic.
+       *
+       *
+       * If an IAM role ARN is provided, the role (and only the role) is used to access all the
+       * given resources (Amazon S3 bucket, AWS KMS customer managed key and Amazon SNS topic).
+       * Therefore, setting up individual resource access permissions is not required.
+       */
+      public fun iamRoleArn(iamRoleArn: String)
+
+      /**
+       * @param kmsKeyArn The customer managed key that Amazon SES should use to encrypt your emails
        * before saving them to the Amazon S3 bucket.
-       * You can use the default master key or a custom master key that you created in AWS KMS as
+       * You can use the AWS managed key or a customer managed key that you created in AWS KMS as
        * follows:
        *
-       * * To use the default master key, provide an ARN in the form of
+       * * To use the AWS managed key, provide an ARN in the form of
        * `arn:aws:kms:REGION:ACCOUNT-ID-WITHOUT-HYPHENS:alias/aws/ses` . For example, if your AWS
-       * account ID is 123456789012 and you want to use the default master key in the US West (Oregon)
-       * Region, the ARN of the default master key would be
-       * `arn:aws:kms:us-west-2:123456789012:alias/aws/ses` . If you use the default master key, you
-       * don't need to perform any extra steps to give Amazon SES permission to use the key.
-       * * To use a custom master key that you created in AWS KMS, provide the ARN of the master key
-       * and ensure that you add a statement to your key's policy to give Amazon SES permission to use
-       * it. For more information about giving permissions, see the [Amazon SES Developer
-       * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-permissions.html) .
+       * account ID is 123456789012 and you want to use the AWS managed key in the US West (Oregon)
+       * Region, the ARN of the AWS managed key would be
+       * `arn:aws:kms:us-west-2:123456789012:alias/aws/ses` . If you use the AWS managed key, you don't
+       * need to perform any extra steps to give Amazon SES permission to use the key.
+       * * To use a customer managed key that you created in AWS KMS, provide the ARN of the
+       * customer managed key and ensure that you add a statement to your key's policy to give Amazon
+       * SES permission to use it. For more information about giving permissions, see the [Amazon SES
+       * Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-permissions.html) .
        *
        * For more information about key policies, see the [AWS KMS Developer
        * Guide](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html) . If you do not
-       * specify a master key, Amazon SES does not encrypt your emails.
+       * specify an AWS KMS key, Amazon SES does not encrypt your emails.
        *
        *
        * Your mail is encrypted by Amazon SES using the Amazon S3 encryption client before the mail
@@ -1966,7 +2015,7 @@ public open class CfnReceiptRule(
        * decryption. This encryption client is currently available with the [AWS SDK for
        * Java](https://docs.aws.amazon.com/sdk-for-java/) and [AWS SDK for
        * Ruby](https://docs.aws.amazon.com/sdk-for-ruby/) only. For more information about client-side
-       * encryption using AWS KMS master keys, see the [Amazon S3 Developer
+       * encryption using AWS KMS managed keys, see the [Amazon S3 Developer
        * Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html) .
        */
       public fun kmsKeyArn(kmsKeyArn: String)
@@ -2004,25 +2053,44 @@ public open class CfnReceiptRule(
       }
 
       /**
-       * @param kmsKeyArn The customer master key that Amazon SES should use to encrypt your emails
+       * @param iamRoleArn The ARN of the IAM role to be used by Amazon Simple Email Service while
+       * writing to the Amazon S3 bucket, optionally encrypting your mail via the provided customer
+       * managed key, and publishing to the Amazon SNS topic.
+       * This role should have access to the following APIs:
+       *
+       * * `s3:PutObject` , `kms:Encrypt` and `kms:GenerateDataKey` for the given Amazon S3 bucket.
+       * * `kms:GenerateDataKey` for the given AWS KMS customer managed key.
+       * * `sns:Publish` for the given Amazon SNS topic.
+       *
+       *
+       * If an IAM role ARN is provided, the role (and only the role) is used to access all the
+       * given resources (Amazon S3 bucket, AWS KMS customer managed key and Amazon SNS topic).
+       * Therefore, setting up individual resource access permissions is not required.
+       */
+      override fun iamRoleArn(iamRoleArn: String) {
+        cdkBuilder.iamRoleArn(iamRoleArn)
+      }
+
+      /**
+       * @param kmsKeyArn The customer managed key that Amazon SES should use to encrypt your emails
        * before saving them to the Amazon S3 bucket.
-       * You can use the default master key or a custom master key that you created in AWS KMS as
+       * You can use the AWS managed key or a customer managed key that you created in AWS KMS as
        * follows:
        *
-       * * To use the default master key, provide an ARN in the form of
+       * * To use the AWS managed key, provide an ARN in the form of
        * `arn:aws:kms:REGION:ACCOUNT-ID-WITHOUT-HYPHENS:alias/aws/ses` . For example, if your AWS
-       * account ID is 123456789012 and you want to use the default master key in the US West (Oregon)
-       * Region, the ARN of the default master key would be
-       * `arn:aws:kms:us-west-2:123456789012:alias/aws/ses` . If you use the default master key, you
-       * don't need to perform any extra steps to give Amazon SES permission to use the key.
-       * * To use a custom master key that you created in AWS KMS, provide the ARN of the master key
-       * and ensure that you add a statement to your key's policy to give Amazon SES permission to use
-       * it. For more information about giving permissions, see the [Amazon SES Developer
-       * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-permissions.html) .
+       * account ID is 123456789012 and you want to use the AWS managed key in the US West (Oregon)
+       * Region, the ARN of the AWS managed key would be
+       * `arn:aws:kms:us-west-2:123456789012:alias/aws/ses` . If you use the AWS managed key, you don't
+       * need to perform any extra steps to give Amazon SES permission to use the key.
+       * * To use a customer managed key that you created in AWS KMS, provide the ARN of the
+       * customer managed key and ensure that you add a statement to your key's policy to give Amazon
+       * SES permission to use it. For more information about giving permissions, see the [Amazon SES
+       * Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-permissions.html) .
        *
        * For more information about key policies, see the [AWS KMS Developer
        * Guide](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html) . If you do not
-       * specify a master key, Amazon SES does not encrypt your emails.
+       * specify an AWS KMS key, Amazon SES does not encrypt your emails.
        *
        *
        * Your mail is encrypted by Amazon SES using the Amazon S3 encryption client before the mail
@@ -2032,7 +2100,7 @@ public open class CfnReceiptRule(
        * decryption. This encryption client is currently available with the [AWS SDK for
        * Java](https://docs.aws.amazon.com/sdk-for-java/) and [AWS SDK for
        * Ruby](https://docs.aws.amazon.com/sdk-for-ruby/) only. For more information about client-side
-       * encryption using AWS KMS master keys, see the [Amazon S3 Developer
+       * encryption using AWS KMS managed keys, see the [Amazon S3 Developer
        * Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html) .
        */
       override fun kmsKeyArn(kmsKeyArn: String) {
@@ -2068,7 +2136,8 @@ public open class CfnReceiptRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.S3ActionProperty,
-    ) : CdkObject(cdkObject), S3ActionProperty {
+    ) : CdkObject(cdkObject),
+        S3ActionProperty {
       /**
        * The name of the Amazon S3 bucket for incoming email.
        *
@@ -2077,26 +2146,47 @@ public open class CfnReceiptRule(
       override fun bucketName(): String = unwrap(this).getBucketName()
 
       /**
-       * The customer master key that Amazon SES should use to encrypt your emails before saving
+       * The ARN of the IAM role to be used by Amazon Simple Email Service while writing to the
+       * Amazon S3 bucket, optionally encrypting your mail via the provided customer managed key, and
+       * publishing to the Amazon SNS topic.
+       *
+       * This role should have access to the following APIs:
+       *
+       * * `s3:PutObject` , `kms:Encrypt` and `kms:GenerateDataKey` for the given Amazon S3 bucket.
+       * * `kms:GenerateDataKey` for the given AWS KMS customer managed key.
+       * * `sns:Publish` for the given Amazon SNS topic.
+       *
+       *
+       * If an IAM role ARN is provided, the role (and only the role) is used to access all the
+       * given resources (Amazon S3 bucket, AWS KMS customer managed key and Amazon SNS topic).
+       * Therefore, setting up individual resource access permissions is not required.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-s3action.html#cfn-ses-receiptrule-s3action-iamrolearn)
+       */
+      override fun iamRoleArn(): String? = unwrap(this).getIamRoleArn()
+
+      /**
+       * The customer managed key that Amazon SES should use to encrypt your emails before saving
        * them to the Amazon S3 bucket.
        *
-       * You can use the default master key or a custom master key that you created in AWS KMS as
+       * You can use the AWS managed key or a customer managed key that you created in AWS KMS as
        * follows:
        *
-       * * To use the default master key, provide an ARN in the form of
+       * * To use the AWS managed key, provide an ARN in the form of
        * `arn:aws:kms:REGION:ACCOUNT-ID-WITHOUT-HYPHENS:alias/aws/ses` . For example, if your AWS
-       * account ID is 123456789012 and you want to use the default master key in the US West (Oregon)
-       * Region, the ARN of the default master key would be
-       * `arn:aws:kms:us-west-2:123456789012:alias/aws/ses` . If you use the default master key, you
-       * don't need to perform any extra steps to give Amazon SES permission to use the key.
-       * * To use a custom master key that you created in AWS KMS, provide the ARN of the master key
-       * and ensure that you add a statement to your key's policy to give Amazon SES permission to use
-       * it. For more information about giving permissions, see the [Amazon SES Developer
-       * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-permissions.html) .
+       * account ID is 123456789012 and you want to use the AWS managed key in the US West (Oregon)
+       * Region, the ARN of the AWS managed key would be
+       * `arn:aws:kms:us-west-2:123456789012:alias/aws/ses` . If you use the AWS managed key, you don't
+       * need to perform any extra steps to give Amazon SES permission to use the key.
+       * * To use a customer managed key that you created in AWS KMS, provide the ARN of the
+       * customer managed key and ensure that you add a statement to your key's policy to give Amazon
+       * SES permission to use it. For more information about giving permissions, see the [Amazon SES
+       * Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-permissions.html) .
        *
        * For more information about key policies, see the [AWS KMS Developer
        * Guide](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html) . If you do not
-       * specify a master key, Amazon SES does not encrypt your emails.
+       * specify an AWS KMS key, Amazon SES does not encrypt your emails.
        *
        *
        * Your mail is encrypted by Amazon SES using the Amazon S3 encryption client before the mail
@@ -2106,7 +2196,7 @@ public open class CfnReceiptRule(
        * decryption. This encryption client is currently available with the [AWS SDK for
        * Java](https://docs.aws.amazon.com/sdk-for-java/) and [AWS SDK for
        * Ruby](https://docs.aws.amazon.com/sdk-for-ruby/) only. For more information about client-side
-       * encryption using AWS KMS master keys, see the [Amazon S3 Developer
+       * encryption using AWS KMS managed keys, see the [Amazon S3 Developer
        * Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingClientSideEncryption.html) .
        *
        *
@@ -2280,7 +2370,8 @@ public open class CfnReceiptRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.SNSActionProperty,
-    ) : CdkObject(cdkObject), SNSActionProperty {
+    ) : CdkObject(cdkObject),
+        SNSActionProperty {
       /**
        * The encoding to use for the email within the Amazon SNS notification.
        *
@@ -2429,7 +2520,8 @@ public open class CfnReceiptRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.StopActionProperty,
-    ) : CdkObject(cdkObject), StopActionProperty {
+    ) : CdkObject(cdkObject),
+        StopActionProperty {
       /**
        * The scope of the StopAction.
        *
@@ -2607,7 +2699,8 @@ public open class CfnReceiptRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.WorkmailActionProperty,
-    ) : CdkObject(cdkObject), WorkmailActionProperty {
+    ) : CdkObject(cdkObject),
+        WorkmailActionProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon WorkMail organization. Amazon WorkMail ARNs
        * use the following format:.

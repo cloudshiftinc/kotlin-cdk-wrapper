@@ -209,7 +209,8 @@ public interface PassProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.PassProps,
-  ) : CdkObject(cdkObject), PassProps {
+  ) : CdkObject(cdkObject),
+      PassProps {
     /**
      * An optional description for this state.
      *

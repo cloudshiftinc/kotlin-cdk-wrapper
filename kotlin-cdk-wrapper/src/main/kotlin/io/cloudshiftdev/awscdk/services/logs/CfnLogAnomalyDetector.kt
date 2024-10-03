@@ -55,7 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLogAnomalyDetector(
   cdkObject: software.amazon.awscdk.services.logs.CfnLogAnomalyDetector,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.logs.CfnLogAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

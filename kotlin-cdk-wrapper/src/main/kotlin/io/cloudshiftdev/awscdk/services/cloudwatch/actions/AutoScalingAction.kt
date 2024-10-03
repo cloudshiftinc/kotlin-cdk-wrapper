@@ -25,7 +25,8 @@ import io.cloudshiftdev.constructs.Construct
  */
 public open class AutoScalingAction(
   cdkObject: software.amazon.awscdk.services.cloudwatch.actions.AutoScalingAction,
-) : CdkObject(cdkObject), IAlarmAction {
+) : CdkObject(cdkObject),
+    IAlarmAction {
   public constructor(stepScalingAction: StepScalingAction) :
       this(software.amazon.awscdk.services.cloudwatch.actions.AutoScalingAction(stepScalingAction.let(StepScalingAction.Companion::unwrap))
   )

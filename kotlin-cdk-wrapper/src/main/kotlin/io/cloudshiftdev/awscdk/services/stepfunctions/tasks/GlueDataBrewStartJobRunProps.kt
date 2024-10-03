@@ -277,7 +277,8 @@ public interface GlueDataBrewStartJobRunProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRunProps,
-  ) : CdkObject(cdkObject), GlueDataBrewStartJobRunProps {
+  ) : CdkObject(cdkObject),
+      GlueDataBrewStartJobRunProps {
     /**
      * An optional description for this state.
      *

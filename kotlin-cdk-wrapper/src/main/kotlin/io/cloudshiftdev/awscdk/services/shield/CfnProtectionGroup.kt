@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProtectionGroup(
   cdkObject: software.amazon.awscdk.services.shield.CfnProtectionGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

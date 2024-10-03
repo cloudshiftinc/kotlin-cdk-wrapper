@@ -244,7 +244,8 @@ public interface CfnWirelessGatewayProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGatewayProps,
-  ) : CdkObject(cdkObject), CfnWirelessGatewayProps {
+  ) : CdkObject(cdkObject),
+      CfnWirelessGatewayProps {
     /**
      * The description of the new resource.
      *

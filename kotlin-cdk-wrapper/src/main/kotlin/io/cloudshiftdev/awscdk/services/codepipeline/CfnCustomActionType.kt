@@ -79,7 +79,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCustomActionType(
   cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -764,7 +766,8 @@ public open class CfnCustomActionType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ArtifactDetailsProperty,
-    ) : CdkObject(cdkObject), ArtifactDetailsProperty {
+    ) : CdkObject(cdkObject),
+        ArtifactDetailsProperty {
       /**
        * The maximum number of artifacts allowed for the action type.
        *
@@ -1095,7 +1098,8 @@ public open class CfnCustomActionType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ConfigurationPropertiesProperty,
-    ) : CdkObject(cdkObject), ConfigurationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ConfigurationPropertiesProperty {
       /**
        * The description of the action configuration property that is displayed to users.
        *
@@ -1323,7 +1327,8 @@ public open class CfnCustomActionType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty,
-    ) : CdkObject(cdkObject), SettingsProperty {
+    ) : CdkObject(cdkObject),
+        SettingsProperty {
       /**
        * The URL returned to the CodePipeline console that provides a deep link to the resources of
        * the external system, such as the configuration page for a CodeDeploy deployment group.

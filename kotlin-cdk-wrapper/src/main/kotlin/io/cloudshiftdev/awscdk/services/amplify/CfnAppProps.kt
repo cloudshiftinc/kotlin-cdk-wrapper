@@ -53,6 +53,9 @@ import kotlin.jvm.JvmName
  * .username("username")
  * .build())
  * .buildSpec("buildSpec")
+ * .cacheConfig(CacheConfigProperty.builder()
+ * .type("type")
+ * .build())
  * .customHeaders("customHeaders")
  * .customRules(List.of(CustomRuleProperty.builder()
  * .source("source")
@@ -125,6 +128,16 @@ public interface CfnAppProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-buildspec)
    */
   public fun buildSpec(): String? = unwrap(this).getBuildSpec()
+
+  /**
+   * The cache configuration for the Amplify app.
+   *
+   * If you don't specify the cache configuration `type` , Amplify uses the default
+   * `AMPLIFY_MANAGED` setting.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-cacheconfig)
+   */
+  public fun cacheConfig(): Any? = unwrap(this).getCacheConfig()
 
   /**
    * The custom HTTP headers for an Amplify app.
@@ -209,6 +222,13 @@ public interface CfnAppProps {
    * For a static app, set the platform type to `WEB` . For a dynamic server-side rendered (SSR)
    * app, set the platform type to `WEB_COMPUTE` . For an app requiring Amplify Hosting's original SSR
    * support only, set the platform type to `WEB_DYNAMIC` .
+   *
+   * If you are deploying an SSG only app with Next.js version 14 or later, you must set the
+   * platform type to `WEB_COMPUTE` and set the artifacts `baseDirectory` to `.next` in the
+   * application's build settings. For an example of the build specification settings, see [Amplify
+   * build settings for a Next.js 14 SSG
+   * application](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-nextjs-app.html#build-setting-detection-ssg-14)
+   * in the *Amplify Hosting User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-platform)
    */
@@ -297,6 +317,29 @@ public interface CfnAppProps {
      * @param buildSpec The build specification (build spec) for an Amplify app.
      */
     public fun buildSpec(buildSpec: String)
+
+    /**
+     * @param cacheConfig The cache configuration for the Amplify app.
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     */
+    public fun cacheConfig(cacheConfig: IResolvable)
+
+    /**
+     * @param cacheConfig The cache configuration for the Amplify app.
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     */
+    public fun cacheConfig(cacheConfig: CfnApp.CacheConfigProperty)
+
+    /**
+     * @param cacheConfig The cache configuration for the Amplify app.
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("614caff08928827b55f5fb797769eb439bc2d9249162360ad7db313ff29cccc6")
+    public fun cacheConfig(cacheConfig: CfnApp.CacheConfigProperty.Builder.() -> Unit)
 
     /**
      * @param customHeaders The custom HTTP headers for an Amplify app.
@@ -396,6 +439,13 @@ public interface CfnAppProps {
      * For a static app, set the platform type to `WEB` . For a dynamic server-side rendered (SSR)
      * app, set the platform type to `WEB_COMPUTE` . For an app requiring Amplify Hosting's original
      * SSR support only, set the platform type to `WEB_DYNAMIC` .
+     *
+     * If you are deploying an SSG only app with Next.js version 14 or later, you must set the
+     * platform type to `WEB_COMPUTE` and set the artifacts `baseDirectory` to `.next` in the
+     * application's build settings. For an example of the build specification settings, see [Amplify
+     * build settings for a Next.js 14 SSG
+     * application](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-nextjs-app.html#build-setting-detection-ssg-14)
+     * in the *Amplify Hosting User Guide* .
      */
     public fun platform(platform: String)
 
@@ -499,6 +549,34 @@ public interface CfnAppProps {
     override fun buildSpec(buildSpec: String) {
       cdkBuilder.buildSpec(buildSpec)
     }
+
+    /**
+     * @param cacheConfig The cache configuration for the Amplify app.
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     */
+    override fun cacheConfig(cacheConfig: IResolvable) {
+      cdkBuilder.cacheConfig(cacheConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param cacheConfig The cache configuration for the Amplify app.
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     */
+    override fun cacheConfig(cacheConfig: CfnApp.CacheConfigProperty) {
+      cdkBuilder.cacheConfig(cacheConfig.let(CfnApp.CacheConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param cacheConfig The cache configuration for the Amplify app.
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("614caff08928827b55f5fb797769eb439bc2d9249162360ad7db313ff29cccc6")
+    override fun cacheConfig(cacheConfig: CfnApp.CacheConfigProperty.Builder.() -> Unit): Unit =
+        cacheConfig(CfnApp.CacheConfigProperty(cacheConfig))
 
     /**
      * @param customHeaders The custom HTTP headers for an Amplify app.
@@ -621,6 +699,13 @@ public interface CfnAppProps {
      * For a static app, set the platform type to `WEB` . For a dynamic server-side rendered (SSR)
      * app, set the platform type to `WEB_COMPUTE` . For an app requiring Amplify Hosting's original
      * SSR support only, set the platform type to `WEB_DYNAMIC` .
+     *
+     * If you are deploying an SSG only app with Next.js version 14 or later, you must set the
+     * platform type to `WEB_COMPUTE` and set the artifacts `baseDirectory` to `.next` in the
+     * application's build settings. For an example of the build specification settings, see [Amplify
+     * build settings for a Next.js 14 SSG
+     * application](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-nextjs-app.html#build-setting-detection-ssg-14)
+     * in the *Amplify Hosting User Guide* .
      */
     override fun platform(platform: String) {
       cdkBuilder.platform(platform)
@@ -650,7 +735,8 @@ public interface CfnAppProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.amplify.CfnAppProps,
-  ) : CdkObject(cdkObject), CfnAppProps {
+  ) : CdkObject(cdkObject),
+      CfnAppProps {
     /**
      * The personal access token for a GitHub repository for an Amplify app.
      *
@@ -695,6 +781,16 @@ public interface CfnAppProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-buildspec)
      */
     override fun buildSpec(): String? = unwrap(this).getBuildSpec()
+
+    /**
+     * The cache configuration for the Amplify app.
+     *
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-cacheconfig)
+     */
+    override fun cacheConfig(): Any? = unwrap(this).getCacheConfig()
 
     /**
      * The custom HTTP headers for an Amplify app.
@@ -779,6 +875,13 @@ public interface CfnAppProps {
      * For a static app, set the platform type to `WEB` . For a dynamic server-side rendered (SSR)
      * app, set the platform type to `WEB_COMPUTE` . For an app requiring Amplify Hosting's original
      * SSR support only, set the platform type to `WEB_DYNAMIC` .
+     *
+     * If you are deploying an SSG only app with Next.js version 14 or later, you must set the
+     * platform type to `WEB_COMPUTE` and set the artifacts `baseDirectory` to `.next` in the
+     * application's build settings. For an example of the build specification settings, see [Amplify
+     * build settings for a Next.js 14 SSG
+     * application](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-nextjs-app.html#build-setting-detection-ssg-14)
+     * in the *Amplify Hosting User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-platform)
      */

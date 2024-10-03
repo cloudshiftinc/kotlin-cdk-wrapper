@@ -19,8 +19,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * ```
  * Fail fail = Fail.Builder.create(this, "Fail")
- * .errorPath(JsonPath.stringAt("$.someError"))
- * .causePath(JsonPath.stringAt("$.someCause"))
+ * .errorPath(JsonPath.format("error: {}.", JsonPath.stringAt("$.someError")))
+ * .causePath("States.Format('cause: {}.', $.someCause)")
  * .build();
  * ```
  */
@@ -76,6 +76,10 @@ public open class Fail(
     /**
      * JsonPath expression to select part of the state to be the cause to this state.
      *
+     * You can also use an intrinsic function that returns a string to specify this property.
+     * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+     * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
+     *
      * Default: - No cause path
      *
      * @param causePath JsonPath expression to select part of the state to be the cause to this
@@ -103,6 +107,10 @@ public open class Fail(
 
     /**
      * JsonPath expression to select part of the state to be the error to this state.
+     *
+     * You can also use an intrinsic function that returns a string to specify this property.
+     * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+     * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
      *
      * Default: - No error path
      *
@@ -142,6 +150,10 @@ public open class Fail(
     /**
      * JsonPath expression to select part of the state to be the cause to this state.
      *
+     * You can also use an intrinsic function that returns a string to specify this property.
+     * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+     * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
+     *
      * Default: - No cause path
      *
      * @param causePath JsonPath expression to select part of the state to be the cause to this
@@ -175,6 +187,10 @@ public open class Fail(
 
     /**
      * JsonPath expression to select part of the state to be the error to this state.
+     *
+     * You can also use an intrinsic function that returns a string to specify this property.
+     * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+     * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
      *
      * Default: - No error path
      *

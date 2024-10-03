@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAlert(
   cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -459,7 +460,8 @@ public open class CfnAlert(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * A configuration for an AWS Lambda channel.
        *
@@ -568,7 +570,8 @@ public open class CfnAlert(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.LambdaConfigurationProperty,
-    ) : CdkObject(cdkObject), LambdaConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LambdaConfigurationProperty {
       /**
        * The ARN of the Lambda function.
        *
@@ -677,7 +680,8 @@ public open class CfnAlert(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty,
-    ) : CdkObject(cdkObject), SNSConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SNSConfigurationProperty {
       /**
        * The ARN of the IAM role that has access to the target SNS topic.
        *

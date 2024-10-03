@@ -66,7 +66,8 @@ public interface EnvironmentOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.EnvironmentOptions,
-  ) : CdkObject(cdkObject), EnvironmentOptions {
+  ) : CdkObject(cdkObject),
+      EnvironmentOptions {
     /**
      * When used in Lambda&#64;Edge via edgeArn() API, these environment variables will be removed.
      *

@@ -45,7 +45,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPartnership(
   cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

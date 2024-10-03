@@ -133,7 +133,8 @@ public interface CfnDataCatalogEncryptionSettingsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettingsProps,
-  ) : CdkObject(cdkObject), CfnDataCatalogEncryptionSettingsProps {
+  ) : CdkObject(cdkObject),
+      CfnDataCatalogEncryptionSettingsProps {
     /**
      * The ID of the Data Catalog in which the settings are created.
      *

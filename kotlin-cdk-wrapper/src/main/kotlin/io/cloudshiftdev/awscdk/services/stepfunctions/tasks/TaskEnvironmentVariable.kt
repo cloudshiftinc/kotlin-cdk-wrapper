@@ -83,7 +83,8 @@ public interface TaskEnvironmentVariable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TaskEnvironmentVariable,
-  ) : CdkObject(cdkObject), TaskEnvironmentVariable {
+  ) : CdkObject(cdkObject),
+      TaskEnvironmentVariable {
     /**
      * Name for the environment variable.
      *

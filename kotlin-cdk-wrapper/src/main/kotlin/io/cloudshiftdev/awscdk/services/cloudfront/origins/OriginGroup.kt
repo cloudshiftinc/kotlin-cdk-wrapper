@@ -26,7 +26,7 @@ import kotlin.jvm.JvmName
  * Distribution.Builder.create(this, "myDist")
  * .defaultBehavior(BehaviorOptions.builder()
  * .origin(OriginGroup.Builder.create()
- * .primaryOrigin(new S3Origin(myBucket))
+ * .primaryOrigin(S3BucketOrigin.withOriginAccessControl(myBucket))
  * .fallbackOrigin(new HttpOrigin("www.example.com"))
  * // optional, defaults to: 500, 502, 503 and 504
  * .fallbackStatusCodes(List.of(404))
@@ -37,7 +37,8 @@ import kotlin.jvm.JvmName
  */
 public open class OriginGroup(
   cdkObject: software.amazon.awscdk.services.cloudfront.origins.OriginGroup,
-) : CdkObject(cdkObject), IOrigin {
+) : CdkObject(cdkObject),
+    IOrigin {
   public constructor(props: OriginGroupProps) :
       this(software.amazon.awscdk.services.cloudfront.origins.OriginGroup(props.let(OriginGroupProps.Companion::unwrap))
   )

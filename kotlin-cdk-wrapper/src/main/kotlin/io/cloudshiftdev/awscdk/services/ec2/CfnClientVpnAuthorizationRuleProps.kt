@@ -178,7 +178,8 @@ public interface CfnClientVpnAuthorizationRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRuleProps,
-  ) : CdkObject(cdkObject), CfnClientVpnAuthorizationRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnClientVpnAuthorizationRuleProps {
     /**
      * The ID of the group to grant access to, for example, the Active Directory group or identity
      * provider (IdP) group.

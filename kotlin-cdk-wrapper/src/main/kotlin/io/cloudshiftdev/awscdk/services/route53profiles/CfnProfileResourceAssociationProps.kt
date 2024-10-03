@@ -126,7 +126,8 @@ public interface CfnProfileResourceAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53profiles.CfnProfileResourceAssociationProps,
-  ) : CdkObject(cdkObject), CfnProfileResourceAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnProfileResourceAssociationProps {
     /**
      * Name of the Profile resource association.
      *

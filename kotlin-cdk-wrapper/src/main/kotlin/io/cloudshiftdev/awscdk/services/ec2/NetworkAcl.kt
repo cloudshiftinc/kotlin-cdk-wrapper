@@ -42,7 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class NetworkAcl(
   cdkObject: software.amazon.awscdk.services.ec2.NetworkAcl,
-) : Resource(cdkObject), INetworkAcl {
+) : Resource(cdkObject),
+    INetworkAcl {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

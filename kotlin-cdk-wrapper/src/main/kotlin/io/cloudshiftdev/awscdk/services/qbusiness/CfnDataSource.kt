@@ -117,7 +117,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataSource(
   cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -183,12 +185,14 @@ public open class CfnDataSource(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   * Configuration information to connect to your data source repository.
+   * Use this property to specify a JSON or YAML schema with configuration information specific to
+   * your data source connector to connect your data source repository to Amazon Q Business .
    */
   public open fun configuration(): Any = unwrap(this).getConfiguration()
 
   /**
-   * Configuration information to connect to your data source repository.
+   * Use this property to specify a JSON or YAML schema with configuration information specific to
+   * your data source connector to connect your data source repository to Amazon Q Business .
    */
   public open fun configuration(`value`: Any) {
     unwrap(this).setConfiguration(`value`)
@@ -364,13 +368,23 @@ public open class CfnDataSource(
     public fun applicationId(applicationId: String)
 
     /**
-     * Configuration information to connect to your data source repository.
+     * Use this property to specify a JSON or YAML schema with configuration information specific to
+     * your data source connector to connect your data source repository to Amazon Q Business .
      *
-     * For configuration templates for your specific data source, see [Supported
-     * connectors](https://docs.aws.amazon.com/amazonq/latest/business-use-dg/connectors-list.html) .
+     * You must use the JSON or YAML schema provided by Amazon Q .
+     *
+     * You can find configuration templates for your specific data source using the following steps:
+     *
+     * * Navigate to the [Supported
+     * connectors](https://docs.aws.amazon.com/amazonq/latest/business-use-dg/connectors-list.html)
+     * page in the Amazon Q Business User Guide, and select the data source connector of your choice.
+     * * Then, from that specific data source connector's page, select *Using AWS CloudFormation* to
+     * find the schemas for your data source connector, including parameter descriptions and examples.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-configuration)
-     * @param configuration Configuration information to connect to your data source repository. 
+     * @param configuration Use this property to specify a JSON or YAML schema with configuration
+     * information specific to your data source connector to connect your data source repository to
+     * Amazon Q Business . 
      */
     public fun configuration(configuration: Any)
 
@@ -556,13 +570,23 @@ public open class CfnDataSource(
     }
 
     /**
-     * Configuration information to connect to your data source repository.
+     * Use this property to specify a JSON or YAML schema with configuration information specific to
+     * your data source connector to connect your data source repository to Amazon Q Business .
      *
-     * For configuration templates for your specific data source, see [Supported
-     * connectors](https://docs.aws.amazon.com/amazonq/latest/business-use-dg/connectors-list.html) .
+     * You must use the JSON or YAML schema provided by Amazon Q .
+     *
+     * You can find configuration templates for your specific data source using the following steps:
+     *
+     * * Navigate to the [Supported
+     * connectors](https://docs.aws.amazon.com/amazonq/latest/business-use-dg/connectors-list.html)
+     * page in the Amazon Q Business User Guide, and select the data source connector of your choice.
+     * * Then, from that specific data source connector's page, select *Using AWS CloudFormation* to
+     * find the schemas for your data source connector, including parameter descriptions and examples.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-datasource.html#cfn-qbusiness-datasource-configuration)
-     * @param configuration Configuration information to connect to your data source repository. 
+     * @param configuration Use this property to specify a JSON or YAML schema with configuration
+     * information specific to your data source connector to connect your data source repository to
+     * Amazon Q Business . 
      */
     override fun configuration(configuration: Any) {
       cdkBuilder.configuration(configuration)
@@ -891,7 +915,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.DataSourceVpcConfigurationProperty,
-    ) : CdkObject(cdkObject), DataSourceVpcConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DataSourceVpcConfigurationProperty {
       /**
        * A list of identifiers of security groups within your Amazon VPC.
        *
@@ -1115,7 +1140,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.DocumentAttributeConditionProperty,
-    ) : CdkObject(cdkObject), DocumentAttributeConditionProperty {
+    ) : CdkObject(cdkObject),
+        DocumentAttributeConditionProperty {
       /**
        * The identifier of the document attribute used for the condition.
        *
@@ -1336,7 +1362,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.DocumentAttributeTargetProperty,
-    ) : CdkObject(cdkObject), DocumentAttributeTargetProperty {
+    ) : CdkObject(cdkObject),
+        DocumentAttributeTargetProperty {
       /**
        * `TRUE` to delete the existing target value for your specified target attribute key.
        *
@@ -1523,7 +1550,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.DocumentAttributeValueProperty,
-    ) : CdkObject(cdkObject), DocumentAttributeValueProperty {
+    ) : CdkObject(cdkObject),
+        DocumentAttributeValueProperty {
       /**
        * A date expressed as an ISO 8601 string.
        *
@@ -1905,7 +1933,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.DocumentEnrichmentConfigurationProperty,
-    ) : CdkObject(cdkObject), DocumentEnrichmentConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DocumentEnrichmentConfigurationProperty {
       /**
        * Configuration information to alter document attributes or metadata fields and content when
        * ingesting documents into Amazon Q Business.
@@ -2176,7 +2205,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.HookConfigurationProperty,
-    ) : CdkObject(cdkObject), HookConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        HookConfigurationProperty {
       /**
        * The condition used for when a Lambda function should be invoked.
        *
@@ -2442,7 +2472,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnDataSource.InlineDocumentEnrichmentConfigurationProperty,
-    ) : CdkObject(cdkObject), InlineDocumentEnrichmentConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InlineDocumentEnrichmentConfigurationProperty {
       /**
        * Configuration of the condition used for the target document attribute or metadata field
        * when ingesting documents into Amazon Q Business .

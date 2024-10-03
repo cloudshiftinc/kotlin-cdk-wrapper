@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPolicyStore(
   cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -454,8 +455,8 @@ public open class CfnPolicyStore(
      * store.
      *
      * For more information, see [Policy store
-     * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
-     * *Amazon Verified Permissions User Guide* .
+     * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the AVP
+     * User Guide.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policystore-schemadefinition.html#cfn-verifiedpermissions-policystore-schemadefinition-cedarjson)
      */
@@ -471,7 +472,7 @@ public open class CfnPolicyStore(
        * use this policy store.
        * For more information, see [Policy store
        * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
-       * *Amazon Verified Permissions User Guide* .
+       * AVP User Guide.
        */
       public fun cedarJson(cedarJson: String)
     }
@@ -487,7 +488,7 @@ public open class CfnPolicyStore(
        * use this policy store.
        * For more information, see [Policy store
        * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
-       * *Amazon Verified Permissions User Guide* .
+       * AVP User Guide.
        */
       override fun cedarJson(cedarJson: String) {
         cdkBuilder.cedarJson(cedarJson)
@@ -500,14 +501,15 @@ public open class CfnPolicyStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty,
-    ) : CdkObject(cdkObject), SchemaDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        SchemaDefinitionProperty {
       /**
        * A JSON string representation of the schema supported by applications that use this policy
        * store.
        *
        * For more information, see [Policy store
        * schema](https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/schema.html) in the
-       * *Amazon Verified Permissions User Guide* .
+       * AVP User Guide.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-policystore-schemadefinition.html#cfn-verifiedpermissions-policystore-schemadefinition-cedarjson)
        */
@@ -631,7 +633,8 @@ public open class CfnPolicyStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty,
-    ) : CdkObject(cdkObject), ValidationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ValidationSettingsProperty {
       /**
        * The validation mode currently configured for this policy store. The valid values are:.
        *

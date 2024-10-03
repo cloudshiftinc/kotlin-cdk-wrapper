@@ -90,6 +90,8 @@ public interface CfnWorkspaceProps {
    * [User authentication in Amazon Managed
    * Grafana](https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html) .
    *
+   * *Allowed Values* : `AWS_SSO | SAML`
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-authenticationproviders)
    */
   public fun authenticationProviders(): List<String>
@@ -154,13 +156,15 @@ public interface CfnWorkspaceProps {
    * The AWS notification channels that Amazon Managed Grafana can automatically create IAM roles
    * and permissions for, to allow Amazon Managed Grafana to use these channels.
    *
+   * *AllowedValues* : `SNS`
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-notificationdestinations)
    */
   public fun notificationDestinations(): List<String> = unwrap(this).getNotificationDestinations()
       ?: emptyList()
 
   /**
-   * The name of the IAM role that is used to access resources through Organizations .
+   * The name of the IAM role that is used to access resources through Organizations.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-organizationrolename)
    */
@@ -271,6 +275,7 @@ public interface CfnWorkspaceProps {
      * Identity Center , or both to authenticate users for using the Grafana console within a
      * workspace. For more information, see [User authentication in Amazon Managed
      * Grafana](https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html) . 
+     * *Allowed Values* : `AWS_SSO | SAML`
      */
     public fun authenticationProviders(authenticationProviders: List<String>)
 
@@ -279,6 +284,7 @@ public interface CfnWorkspaceProps {
      * Identity Center , or both to authenticate users for using the Grafana console within a
      * workspace. For more information, see [User authentication in Amazon Managed
      * Grafana](https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html) . 
+     * *Allowed Values* : `AWS_SSO | SAML`
      */
     public fun authenticationProviders(vararg authenticationProviders: String)
 
@@ -350,6 +356,7 @@ public interface CfnWorkspaceProps {
      * @param notificationDestinations The AWS notification channels that Amazon Managed Grafana can
      * automatically create IAM roles and permissions for, to allow Amazon Managed Grafana to use these
      * channels.
+     * *AllowedValues* : `SNS`
      */
     public fun notificationDestinations(notificationDestinations: List<String>)
 
@@ -357,12 +364,13 @@ public interface CfnWorkspaceProps {
      * @param notificationDestinations The AWS notification channels that Amazon Managed Grafana can
      * automatically create IAM roles and permissions for, to allow Amazon Managed Grafana to use these
      * channels.
+     * *AllowedValues* : `SNS`
      */
     public fun notificationDestinations(vararg notificationDestinations: String)
 
     /**
      * @param organizationRoleName The name of the IAM role that is used to access resources through
-     * Organizations .
+     * Organizations.
      */
     public fun organizationRoleName(organizationRoleName: String)
 
@@ -507,6 +515,7 @@ public interface CfnWorkspaceProps {
      * Identity Center , or both to authenticate users for using the Grafana console within a
      * workspace. For more information, see [User authentication in Amazon Managed
      * Grafana](https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html) . 
+     * *Allowed Values* : `AWS_SSO | SAML`
      */
     override fun authenticationProviders(authenticationProviders: List<String>) {
       cdkBuilder.authenticationProviders(authenticationProviders)
@@ -517,6 +526,7 @@ public interface CfnWorkspaceProps {
      * Identity Center , or both to authenticate users for using the Grafana console within a
      * workspace. For more information, see [User authentication in Amazon Managed
      * Grafana](https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html) . 
+     * *Allowed Values* : `AWS_SSO | SAML`
      */
     override fun authenticationProviders(vararg authenticationProviders: String): Unit =
         authenticationProviders(authenticationProviders.toList())
@@ -605,6 +615,7 @@ public interface CfnWorkspaceProps {
      * @param notificationDestinations The AWS notification channels that Amazon Managed Grafana can
      * automatically create IAM roles and permissions for, to allow Amazon Managed Grafana to use these
      * channels.
+     * *AllowedValues* : `SNS`
      */
     override fun notificationDestinations(notificationDestinations: List<String>) {
       cdkBuilder.notificationDestinations(notificationDestinations)
@@ -614,13 +625,14 @@ public interface CfnWorkspaceProps {
      * @param notificationDestinations The AWS notification channels that Amazon Managed Grafana can
      * automatically create IAM roles and permissions for, to allow Amazon Managed Grafana to use these
      * channels.
+     * *AllowedValues* : `SNS`
      */
     override fun notificationDestinations(vararg notificationDestinations: String): Unit =
         notificationDestinations(notificationDestinations.toList())
 
     /**
      * @param organizationRoleName The name of the IAM role that is used to access resources through
-     * Organizations .
+     * Organizations.
      */
     override fun organizationRoleName(organizationRoleName: String) {
       cdkBuilder.organizationRoleName(organizationRoleName)
@@ -775,7 +787,8 @@ public interface CfnWorkspaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspaceProps,
-  ) : CdkObject(cdkObject), CfnWorkspaceProps {
+  ) : CdkObject(cdkObject),
+      CfnWorkspaceProps {
     /**
      * Specifies whether the workspace can access AWS resources in this AWS account only, or whether
      * it can also access AWS resources in other accounts in the same organization.
@@ -792,6 +805,8 @@ public interface CfnWorkspaceProps {
      * authenticate users for using the Grafana console within a workspace. For more information, see
      * [User authentication in Amazon Managed
      * Grafana](https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html) .
+     *
+     * *Allowed Values* : `AWS_SSO | SAML`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-authenticationproviders)
      */
@@ -857,13 +872,15 @@ public interface CfnWorkspaceProps {
      * The AWS notification channels that Amazon Managed Grafana can automatically create IAM roles
      * and permissions for, to allow Amazon Managed Grafana to use these channels.
      *
+     * *AllowedValues* : `SNS`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-notificationdestinations)
      */
     override fun notificationDestinations(): List<String> =
         unwrap(this).getNotificationDestinations() ?: emptyList()
 
     /**
-     * The name of the IAM role that is used to access resources through Organizations .
+     * The name of the IAM role that is used to access resources through Organizations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html#cfn-grafana-workspace-organizationrolename)
      */

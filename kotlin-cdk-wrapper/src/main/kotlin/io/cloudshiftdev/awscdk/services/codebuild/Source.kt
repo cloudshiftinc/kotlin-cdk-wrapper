@@ -27,7 +27,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class Source(
   cdkObject: software.amazon.awscdk.services.codebuild.Source,
-) : CdkObject(cdkObject), ISource {
+) : CdkObject(cdkObject),
+    ISource {
   /**
    *
    */

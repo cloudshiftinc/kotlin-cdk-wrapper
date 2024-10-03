@@ -121,6 +121,8 @@ public interface CfnScalableTargetProps {
    * the resource ID. Example: `endpoint/my-end-point/variant/KMeansClustering` .
    * * SageMaker inference component - The resource type is `inference-component` and the unique
    * identifier is the resource ID. Example: `inference-component/my-inference-component` .
+   * * Pool of WorkSpaces - The resource type is `workspacespool` and the unique identifier is the
+   * pool ID. Example: `workspacespool/wspool-123456` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-resourceid)
    */
@@ -152,10 +154,10 @@ public interface CfnScalableTargetProps {
    *
    * This string consists of the service namespace, resource type, and scaling property.
    *
-   * * `ecs:service:DesiredCount` - The desired task count of an ECS service.
+   * * `ecs:service:DesiredCount` - The task count of an ECS service.
    * * `elasticmapreduce:instancegroup:InstanceCount` - The instance count of an EMR Instance Group.
    * * `ec2:spot-fleet-request:TargetCapacity` - The target capacity of a Spot Fleet.
-   * * `appstream:fleet:DesiredCapacity` - The desired capacity of an AppStream 2.0 fleet.
+   * * `appstream:fleet:DesiredCapacity` - The capacity of an AppStream 2.0 fleet.
    * * `dynamodb:table:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB table.
    * * `dynamodb:table:WriteCapacityUnits` - The provisioned write capacity for a DynamoDB table.
    * * `dynamodb:index:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB global
@@ -189,6 +191,8 @@ public interface CfnScalableTargetProps {
    * SageMaker serverless endpoint.
    * * `sagemaker:inference-component:DesiredCopyCount` - The number of copies across an endpoint
    * for a SageMaker inference component.
+   * * `workspaces:workspacespool:DesiredUserSessions` - The number of user sessions for the
+   * WorkSpaces in the pool.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-scalabledimension)
    */
@@ -297,6 +301,8 @@ public interface CfnScalableTargetProps {
      * the resource ID. Example: `endpoint/my-end-point/variant/KMeansClustering` .
      * * SageMaker inference component - The resource type is `inference-component` and the unique
      * identifier is the resource ID. Example: `inference-component/my-inference-component` .
+     * * Pool of WorkSpaces - The resource type is `workspacespool` and the unique identifier is the
+     * pool ID. Example: `workspacespool/wspool-123456` .
      */
     public fun resourceId(resourceId: String)
 
@@ -322,11 +328,11 @@ public interface CfnScalableTargetProps {
      * @param scalableDimension The scalable dimension associated with the scalable target. 
      * This string consists of the service namespace, resource type, and scaling property.
      *
-     * * `ecs:service:DesiredCount` - The desired task count of an ECS service.
+     * * `ecs:service:DesiredCount` - The task count of an ECS service.
      * * `elasticmapreduce:instancegroup:InstanceCount` - The instance count of an EMR Instance
      * Group.
      * * `ec2:spot-fleet-request:TargetCapacity` - The target capacity of a Spot Fleet.
-     * * `appstream:fleet:DesiredCapacity` - The desired capacity of an AppStream 2.0 fleet.
+     * * `appstream:fleet:DesiredCapacity` - The capacity of an AppStream 2.0 fleet.
      * * `dynamodb:table:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB table.
      * * `dynamodb:table:WriteCapacityUnits` - The provisioned write capacity for a DynamoDB table.
      * * `dynamodb:index:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB global
@@ -361,6 +367,8 @@ public interface CfnScalableTargetProps {
      * SageMaker serverless endpoint.
      * * `sagemaker:inference-component:DesiredCopyCount` - The number of copies across an endpoint
      * for a SageMaker inference component.
+     * * `workspaces:workspacespool:DesiredUserSessions` - The number of user sessions for the
+     * WorkSpaces in the pool.
      */
     public fun scalableDimension(scalableDimension: String)
 
@@ -514,6 +522,8 @@ public interface CfnScalableTargetProps {
      * the resource ID. Example: `endpoint/my-end-point/variant/KMeansClustering` .
      * * SageMaker inference component - The resource type is `inference-component` and the unique
      * identifier is the resource ID. Example: `inference-component/my-inference-component` .
+     * * Pool of WorkSpaces - The resource type is `workspacespool` and the unique identifier is the
+     * pool ID. Example: `workspacespool/wspool-123456` .
      */
     override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
@@ -543,11 +553,11 @@ public interface CfnScalableTargetProps {
      * @param scalableDimension The scalable dimension associated with the scalable target. 
      * This string consists of the service namespace, resource type, and scaling property.
      *
-     * * `ecs:service:DesiredCount` - The desired task count of an ECS service.
+     * * `ecs:service:DesiredCount` - The task count of an ECS service.
      * * `elasticmapreduce:instancegroup:InstanceCount` - The instance count of an EMR Instance
      * Group.
      * * `ec2:spot-fleet-request:TargetCapacity` - The target capacity of a Spot Fleet.
-     * * `appstream:fleet:DesiredCapacity` - The desired capacity of an AppStream 2.0 fleet.
+     * * `appstream:fleet:DesiredCapacity` - The capacity of an AppStream 2.0 fleet.
      * * `dynamodb:table:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB table.
      * * `dynamodb:table:WriteCapacityUnits` - The provisioned write capacity for a DynamoDB table.
      * * `dynamodb:index:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB global
@@ -582,6 +592,8 @@ public interface CfnScalableTargetProps {
      * SageMaker serverless endpoint.
      * * `sagemaker:inference-component:DesiredCopyCount` - The number of copies across an endpoint
      * for a SageMaker inference component.
+     * * `workspaces:workspacespool:DesiredUserSessions` - The number of user sessions for the
+     * WorkSpaces in the pool.
      */
     override fun scalableDimension(scalableDimension: String) {
       cdkBuilder.scalableDimension(scalableDimension)
@@ -684,7 +696,8 @@ public interface CfnScalableTargetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTargetProps,
-  ) : CdkObject(cdkObject), CfnScalableTargetProps {
+  ) : CdkObject(cdkObject),
+      CfnScalableTargetProps {
     /**
      * The maximum value that you plan to scale out to.
      *
@@ -754,6 +767,8 @@ public interface CfnScalableTargetProps {
      * the resource ID. Example: `endpoint/my-end-point/variant/KMeansClustering` .
      * * SageMaker inference component - The resource type is `inference-component` and the unique
      * identifier is the resource ID. Example: `inference-component/my-inference-component` .
+     * * Pool of WorkSpaces - The resource type is `workspacespool` and the unique identifier is the
+     * pool ID. Example: `workspacespool/wspool-123456` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-resourceid)
      */
@@ -785,11 +800,11 @@ public interface CfnScalableTargetProps {
      *
      * This string consists of the service namespace, resource type, and scaling property.
      *
-     * * `ecs:service:DesiredCount` - The desired task count of an ECS service.
+     * * `ecs:service:DesiredCount` - The task count of an ECS service.
      * * `elasticmapreduce:instancegroup:InstanceCount` - The instance count of an EMR Instance
      * Group.
      * * `ec2:spot-fleet-request:TargetCapacity` - The target capacity of a Spot Fleet.
-     * * `appstream:fleet:DesiredCapacity` - The desired capacity of an AppStream 2.0 fleet.
+     * * `appstream:fleet:DesiredCapacity` - The capacity of an AppStream 2.0 fleet.
      * * `dynamodb:table:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB table.
      * * `dynamodb:table:WriteCapacityUnits` - The provisioned write capacity for a DynamoDB table.
      * * `dynamodb:index:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB global
@@ -824,6 +839,8 @@ public interface CfnScalableTargetProps {
      * SageMaker serverless endpoint.
      * * `sagemaker:inference-component:DesiredCopyCount` - The number of copies across an endpoint
      * for a SageMaker inference component.
+     * * `workspaces:workspacespool:DesiredUserSessions` - The number of user sessions for the
+     * WorkSpaces in the pool.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-scalabledimension)
      */

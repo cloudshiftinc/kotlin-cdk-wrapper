@@ -376,7 +376,8 @@ public interface CfnIPSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.wafv2.CfnIPSetProps,
-  ) : CdkObject(cdkObject), CfnIPSetProps {
+  ) : CdkObject(cdkObject),
+      CfnIPSetProps {
     /**
      * Contains an array of strings that specifies zero or more IP addresses or blocks of IP
      * addresses that you want AWS WAF to inspect for in incoming requests.

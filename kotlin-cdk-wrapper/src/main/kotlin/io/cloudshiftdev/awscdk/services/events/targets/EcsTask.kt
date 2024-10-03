@@ -48,7 +48,8 @@ import kotlin.jvm.JvmName
  */
 public open class EcsTask(
   cdkObject: software.amazon.awscdk.services.events.targets.EcsTask,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(props: EcsTaskProps) :
       this(software.amazon.awscdk.services.events.targets.EcsTask(props.let(EcsTaskProps.Companion::unwrap))
   )

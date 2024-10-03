@@ -69,7 +69,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDBCluster(
   cdkObject: software.amazon.awscdk.services.docdb.CfnDBCluster,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.docdb.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

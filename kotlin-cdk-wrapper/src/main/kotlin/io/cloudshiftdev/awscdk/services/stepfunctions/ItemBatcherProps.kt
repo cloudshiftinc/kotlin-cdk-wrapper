@@ -177,7 +177,8 @@ public interface ItemBatcherProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.ItemBatcherProps,
-  ) : CdkObject(cdkObject), ItemBatcherProps {
+  ) : CdkObject(cdkObject),
+      ItemBatcherProps {
     /**
      * BatchInput.
      *

@@ -122,7 +122,8 @@ public interface HttpGatewayRouteSpecOptions : CommonGatewayRouteSpecOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions,
-  ) : CdkObject(cdkObject), HttpGatewayRouteSpecOptions {
+  ) : CdkObject(cdkObject),
+      HttpGatewayRouteSpecOptions {
     /**
      * The criterion for determining a request match for this GatewayRoute.
      *

@@ -225,7 +225,8 @@ public interface CfnInstanceAccessControlAttributeConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfigurationProps,
-  ) : CdkObject(cdkObject), CfnInstanceAccessControlAttributeConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnInstanceAccessControlAttributeConfigurationProps {
     /**
      * Lists the attributes that are configured for ABAC in the specified IAM Identity Center
      * instance.

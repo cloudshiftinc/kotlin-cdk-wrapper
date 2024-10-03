@@ -197,7 +197,13 @@ public interface CfnDBClusterProps {
   public fun iamAuthEnabled(): Any? = unwrap(this).getIamAuthEnabled()
 
   /**
-   * If `StorageEncrypted` is true, the Amazon KMS key identifier for the encrypted DB cluster.
+   * The Amazon Resource Name (ARN) of the KMS key that is used to encrypt the database instances in
+   * the DB cluster, such as
+   * `arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef` .
+   *
+   * If you enable the `StorageEncrypted` property but don't specify this property, the default KMS
+   * key is used. If you specify this property, you must set the `StorageEncrypted` property to `true`
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-kmskeyid)
    */
@@ -294,13 +300,20 @@ public interface CfnDBClusterProps {
   /**
    * Indicates whether the DB cluster is encrypted.
    *
-   * If you specify the `DBClusterIdentifier` , `DBSnapshotIdentifier` , or
-   * `SourceDBInstanceIdentifier` property, don't specify this property. The value is inherited from
-   * the cluster, snapshot, or source DB instance. If you specify the `KmsKeyId` property, you must
-   * enable encryption.
+   * If you specify the `KmsKeyId` property, then you must enable encryption and set this property
+   * to `true` .
    *
-   * If you specify the `KmsKeyId` , you must enable encryption by setting `StorageEncrypted` to
-   * true.
+   * If you enable the `StorageEncrypted` property but don't specify the `KmsKeyId` property, then
+   * the default KMS key is used. If you specify the `KmsKeyId` property, then that KMS key is used to
+   * encrypt the database instances in the DB cluster.
+   *
+   * If you specify the `SourceDBClusterIdentifier` property, and don't specify this property or
+   * disable it, the value is inherited from the source DB cluster. If the source DB cluster is
+   * encrypted, the `KmsKeyId` property from the source cluster is used.
+   *
+   * If you specify the `DBSnapshotIdentifier` and don't specify this property or disable it, the
+   * value is inherited from the snapshot and the specified `KmsKeyId` property from the snapshot is
+   * used.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-storageencrypted)
    */
@@ -487,8 +500,12 @@ public interface CfnDBClusterProps {
     public fun iamAuthEnabled(iamAuthEnabled: IResolvable)
 
     /**
-     * @param kmsKeyId If `StorageEncrypted` is true, the Amazon KMS key identifier for the
-     * encrypted DB cluster.
+     * @param kmsKeyId The Amazon Resource Name (ARN) of the KMS key that is used to encrypt the
+     * database instances in the DB cluster, such as
+     * `arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef` .
+     * If you enable the `StorageEncrypted` property but don't specify this property, the default
+     * KMS key is used. If you specify this property, you must set the `StorageEncrypted` property to
+     * `true` .
      */
     public fun kmsKeyId(kmsKeyId: String)
 
@@ -578,25 +595,39 @@ public interface CfnDBClusterProps {
 
     /**
      * @param storageEncrypted Indicates whether the DB cluster is encrypted.
-     * If you specify the `DBClusterIdentifier` , `DBSnapshotIdentifier` , or
-     * `SourceDBInstanceIdentifier` property, don't specify this property. The value is inherited from
-     * the cluster, snapshot, or source DB instance. If you specify the `KmsKeyId` property, you must
-     * enable encryption.
+     * If you specify the `KmsKeyId` property, then you must enable encryption and set this property
+     * to `true` .
      *
-     * If you specify the `KmsKeyId` , you must enable encryption by setting `StorageEncrypted` to
-     * true.
+     * If you enable the `StorageEncrypted` property but don't specify the `KmsKeyId` property, then
+     * the default KMS key is used. If you specify the `KmsKeyId` property, then that KMS key is used
+     * to encrypt the database instances in the DB cluster.
+     *
+     * If you specify the `SourceDBClusterIdentifier` property, and don't specify this property or
+     * disable it, the value is inherited from the source DB cluster. If the source DB cluster is
+     * encrypted, the `KmsKeyId` property from the source cluster is used.
+     *
+     * If you specify the `DBSnapshotIdentifier` and don't specify this property or disable it, the
+     * value is inherited from the snapshot and the specified `KmsKeyId` property from the snapshot is
+     * used.
      */
     public fun storageEncrypted(storageEncrypted: Boolean)
 
     /**
      * @param storageEncrypted Indicates whether the DB cluster is encrypted.
-     * If you specify the `DBClusterIdentifier` , `DBSnapshotIdentifier` , or
-     * `SourceDBInstanceIdentifier` property, don't specify this property. The value is inherited from
-     * the cluster, snapshot, or source DB instance. If you specify the `KmsKeyId` property, you must
-     * enable encryption.
+     * If you specify the `KmsKeyId` property, then you must enable encryption and set this property
+     * to `true` .
      *
-     * If you specify the `KmsKeyId` , you must enable encryption by setting `StorageEncrypted` to
-     * true.
+     * If you enable the `StorageEncrypted` property but don't specify the `KmsKeyId` property, then
+     * the default KMS key is used. If you specify the `KmsKeyId` property, then that KMS key is used
+     * to encrypt the database instances in the DB cluster.
+     *
+     * If you specify the `SourceDBClusterIdentifier` property, and don't specify this property or
+     * disable it, the value is inherited from the source DB cluster. If the source DB cluster is
+     * encrypted, the `KmsKeyId` property from the source cluster is used.
+     *
+     * If you specify the `DBSnapshotIdentifier` and don't specify this property or disable it, the
+     * value is inherited from the snapshot and the specified `KmsKeyId` property from the snapshot is
+     * used.
      */
     public fun storageEncrypted(storageEncrypted: IResolvable)
 
@@ -835,8 +866,12 @@ public interface CfnDBClusterProps {
     }
 
     /**
-     * @param kmsKeyId If `StorageEncrypted` is true, the Amazon KMS key identifier for the
-     * encrypted DB cluster.
+     * @param kmsKeyId The Amazon Resource Name (ARN) of the KMS key that is used to encrypt the
+     * database instances in the DB cluster, such as
+     * `arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef` .
+     * If you enable the `StorageEncrypted` property but don't specify this property, the default
+     * KMS key is used. If you specify this property, you must set the `StorageEncrypted` property to
+     * `true` .
      */
     override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
@@ -946,13 +981,20 @@ public interface CfnDBClusterProps {
 
     /**
      * @param storageEncrypted Indicates whether the DB cluster is encrypted.
-     * If you specify the `DBClusterIdentifier` , `DBSnapshotIdentifier` , or
-     * `SourceDBInstanceIdentifier` property, don't specify this property. The value is inherited from
-     * the cluster, snapshot, or source DB instance. If you specify the `KmsKeyId` property, you must
-     * enable encryption.
+     * If you specify the `KmsKeyId` property, then you must enable encryption and set this property
+     * to `true` .
      *
-     * If you specify the `KmsKeyId` , you must enable encryption by setting `StorageEncrypted` to
-     * true.
+     * If you enable the `StorageEncrypted` property but don't specify the `KmsKeyId` property, then
+     * the default KMS key is used. If you specify the `KmsKeyId` property, then that KMS key is used
+     * to encrypt the database instances in the DB cluster.
+     *
+     * If you specify the `SourceDBClusterIdentifier` property, and don't specify this property or
+     * disable it, the value is inherited from the source DB cluster. If the source DB cluster is
+     * encrypted, the `KmsKeyId` property from the source cluster is used.
+     *
+     * If you specify the `DBSnapshotIdentifier` and don't specify this property or disable it, the
+     * value is inherited from the snapshot and the specified `KmsKeyId` property from the snapshot is
+     * used.
      */
     override fun storageEncrypted(storageEncrypted: Boolean) {
       cdkBuilder.storageEncrypted(storageEncrypted)
@@ -960,13 +1002,20 @@ public interface CfnDBClusterProps {
 
     /**
      * @param storageEncrypted Indicates whether the DB cluster is encrypted.
-     * If you specify the `DBClusterIdentifier` , `DBSnapshotIdentifier` , or
-     * `SourceDBInstanceIdentifier` property, don't specify this property. The value is inherited from
-     * the cluster, snapshot, or source DB instance. If you specify the `KmsKeyId` property, you must
-     * enable encryption.
+     * If you specify the `KmsKeyId` property, then you must enable encryption and set this property
+     * to `true` .
      *
-     * If you specify the `KmsKeyId` , you must enable encryption by setting `StorageEncrypted` to
-     * true.
+     * If you enable the `StorageEncrypted` property but don't specify the `KmsKeyId` property, then
+     * the default KMS key is used. If you specify the `KmsKeyId` property, then that KMS key is used
+     * to encrypt the database instances in the DB cluster.
+     *
+     * If you specify the `SourceDBClusterIdentifier` property, and don't specify this property or
+     * disable it, the value is inherited from the source DB cluster. If the source DB cluster is
+     * encrypted, the `KmsKeyId` property from the source cluster is used.
+     *
+     * If you specify the `DBSnapshotIdentifier` and don't specify this property or disable it, the
+     * value is inherited from the snapshot and the specified `KmsKeyId` property from the snapshot is
+     * used.
      */
     override fun storageEncrypted(storageEncrypted: IResolvable) {
       cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable.Companion::unwrap))
@@ -1033,7 +1082,8 @@ public interface CfnDBClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.neptune.CfnDBClusterProps,
-  ) : CdkObject(cdkObject), CfnDBClusterProps {
+  ) : CdkObject(cdkObject),
+      CfnDBClusterProps {
     /**
      * Provides a list of the Amazon Identity and Access Management (IAM) roles that are associated
      * with the DB cluster.
@@ -1169,7 +1219,13 @@ public interface CfnDBClusterProps {
     override fun iamAuthEnabled(): Any? = unwrap(this).getIamAuthEnabled()
 
     /**
-     * If `StorageEncrypted` is true, the Amazon KMS key identifier for the encrypted DB cluster.
+     * The Amazon Resource Name (ARN) of the KMS key that is used to encrypt the database instances
+     * in the DB cluster, such as
+     * `arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef` .
+     *
+     * If you enable the `StorageEncrypted` property but don't specify this property, the default
+     * KMS key is used. If you specify this property, you must set the `StorageEncrypted` property to
+     * `true` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-kmskeyid)
      */
@@ -1267,13 +1323,20 @@ public interface CfnDBClusterProps {
     /**
      * Indicates whether the DB cluster is encrypted.
      *
-     * If you specify the `DBClusterIdentifier` , `DBSnapshotIdentifier` , or
-     * `SourceDBInstanceIdentifier` property, don't specify this property. The value is inherited from
-     * the cluster, snapshot, or source DB instance. If you specify the `KmsKeyId` property, you must
-     * enable encryption.
+     * If you specify the `KmsKeyId` property, then you must enable encryption and set this property
+     * to `true` .
      *
-     * If you specify the `KmsKeyId` , you must enable encryption by setting `StorageEncrypted` to
-     * true.
+     * If you enable the `StorageEncrypted` property but don't specify the `KmsKeyId` property, then
+     * the default KMS key is used. If you specify the `KmsKeyId` property, then that KMS key is used
+     * to encrypt the database instances in the DB cluster.
+     *
+     * If you specify the `SourceDBClusterIdentifier` property, and don't specify this property or
+     * disable it, the value is inherited from the source DB cluster. If the source DB cluster is
+     * encrypted, the `KmsKeyId` property from the source cluster is used.
+     *
+     * If you specify the `DBSnapshotIdentifier` and don't specify this property or disable it, the
+     * value is inherited from the snapshot and the specified `KmsKeyId` property from the snapshot is
+     * used.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-storageencrypted)
      */

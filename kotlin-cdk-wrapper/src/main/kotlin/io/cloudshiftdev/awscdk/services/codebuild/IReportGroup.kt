@@ -37,7 +37,8 @@ public interface IReportGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.IReportGroup,
-  ) : CdkObject(cdkObject), IReportGroup {
+  ) : CdkObject(cdkObject),
+      IReportGroup {
     /**
      * Apply the given removal policy to this resource.
      *

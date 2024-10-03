@@ -92,7 +92,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResponsePlan(
   cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -786,7 +788,8 @@ public open class CfnResponsePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * Details about the Systems Manager automation document that will be used as a runbook during
        * an incident.
@@ -894,7 +897,8 @@ public open class CfnResponsePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty,
-    ) : CdkObject(cdkObject), ChatChannelProperty {
+    ) : CdkObject(cdkObject),
+        ChatChannelProperty {
       /**
        * The Amazon SNS targets that AWS Chatbot uses to notify the chat channel of updates to an
        * incident.
@@ -1055,7 +1059,8 @@ public open class CfnResponsePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterProperty,
-    ) : CdkObject(cdkObject), DynamicSsmParameterProperty {
+    ) : CdkObject(cdkObject),
+        DynamicSsmParameterProperty {
       /**
        * The key parameter to use when running the Systems Manager Automation runbook.
        *
@@ -1149,7 +1154,8 @@ public open class CfnResponsePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterValueProperty,
-    ) : CdkObject(cdkObject), DynamicSsmParameterValueProperty {
+    ) : CdkObject(cdkObject),
+        DynamicSsmParameterValueProperty {
       /**
        * Variable dynamic parameters.
        *
@@ -1451,7 +1457,8 @@ public open class CfnResponsePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IncidentTemplateProperty,
-    ) : CdkObject(cdkObject), IncidentTemplateProperty {
+    ) : CdkObject(cdkObject),
+        IncidentTemplateProperty {
       /**
        * Used to create only one incident record for an incident.
        *
@@ -1625,7 +1632,8 @@ public open class CfnResponsePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty,
-    ) : CdkObject(cdkObject), IntegrationProperty {
+    ) : CdkObject(cdkObject),
+        IntegrationProperty {
       /**
        * Information about the PagerDuty service where the response plan creates an incident.
        *
@@ -1708,7 +1716,8 @@ public open class CfnResponsePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty,
-    ) : CdkObject(cdkObject), NotificationTargetItemProperty {
+    ) : CdkObject(cdkObject),
+        NotificationTargetItemProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon SNS topic.
        *
@@ -1874,7 +1883,8 @@ public open class CfnResponsePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyConfigurationProperty,
-    ) : CdkObject(cdkObject), PagerDutyConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PagerDutyConfigurationProperty {
       /**
        * The name of the PagerDuty configuration.
        *
@@ -1976,7 +1986,8 @@ public open class CfnResponsePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty,
-    ) : CdkObject(cdkObject), PagerDutyIncidentConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PagerDutyIncidentConfigurationProperty {
       /**
        * The ID of the PagerDuty service that the response plan associates with an incident when it
        * launches.
@@ -2229,7 +2240,8 @@ public open class CfnResponsePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty,
-    ) : CdkObject(cdkObject), SsmAutomationProperty {
+    ) : CdkObject(cdkObject),
+        SsmAutomationProperty {
       /**
        * The automation document's name.
        *
@@ -2380,7 +2392,8 @@ public open class CfnResponsePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty,
-    ) : CdkObject(cdkObject), SsmParameterProperty {
+    ) : CdkObject(cdkObject),
+        SsmParameterProperty {
       /**
        * The key parameter to use when running the Automation runbook.
        *

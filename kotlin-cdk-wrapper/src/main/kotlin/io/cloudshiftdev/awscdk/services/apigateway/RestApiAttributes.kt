@@ -231,7 +231,8 @@ public interface RestApiAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.RestApiAttributes,
-  ) : CdkObject(cdkObject), RestApiAttributes {
+  ) : CdkObject(cdkObject),
+      RestApiAttributes {
     /**
      * The ID of the API Gateway RestApi.
      */

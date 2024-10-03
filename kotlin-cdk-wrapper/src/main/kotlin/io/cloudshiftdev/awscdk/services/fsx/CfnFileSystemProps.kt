@@ -41,6 +41,10 @@ import kotlin.jvm.JvmName
  * .exportPath("exportPath")
  * .importedFileChunkSize(123)
  * .importPath("importPath")
+ * .metadataConfiguration(MetadataConfigurationProperty.builder()
+ * .iops(123)
+ * .mode("mode")
+ * .build())
  * .perUnitStorageThroughput(123)
  * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
  * .build())
@@ -160,22 +164,23 @@ public interface CfnFileSystemProps {
   public fun fileSystemType(): String
 
   /**
-   * (Optional) For FSx for Lustre file systems, sets the Lustre version for the file system that
-   * you're creating.
+   * For FSx for Lustre file systems, sets the Lustre version for the file system that you're
+   * creating.
    *
    * Valid values are `2.10` , `2.12` , and `2.15` :
    *
-   * * 2.10 is supported by the Scratch and Persistent_1 Lustre deployment types.
-   * * 2.12 and 2.15 are supported by all Lustre deployment types. `2.12` or `2.15` is required when
-   * setting FSx for Lustre `DeploymentType` to `PERSISTENT_2` .
+   * * `2.10` is supported by the Scratch and Persistent_1 Lustre deployment types.
+   * * `2.12` is supported by all Lustre deployment types, except for `PERSISTENT_2` with a metadata
+   * configuration mode.
+   * * `2.15` is supported by all Lustre deployment types and is recommended for all new file
+   * systems.
    *
-   * Default value = `2.10` , except when `DeploymentType` is set to `PERSISTENT_2` , then the
-   * default is `2.12` .
+   * Default value is `2.10` , except for the following deployments:
    *
-   *
-   * If you set `FileSystemTypeVersion` to `2.10` for a `PERSISTENT_2` Lustre deployment type, the
-   * `CreateFileSystem` operation fails.
-   *
+   * * Default value is `2.12` when `DeploymentType` is set to `PERSISTENT_2` without a metadata
+   * configuration mode.
+   * * Default value is `2.15` when `DeploymentType` is set to `PERSISTENT_2` with a metadata
+   * configuration mode.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-filesystemtypeversion)
    */
@@ -262,8 +267,10 @@ public interface CfnFileSystemProps {
    * * For `SCRATCH_1` deployment type, valid values are 1200 GiB, 2400 GiB, and increments of 3600
    * GiB.
    *
-   * *FSx for ONTAP file systems* - The amount of storage capacity that you can configure is from
-   * 1024 GiB up to 196,608 GiB (192 TiB).
+   * *FSx for ONTAP file systems* - The amount of SSD storage capacity that you can configure
+   * depends on the value of the `HAPairs` property. The minimum value is calculated as 1,024 GiB *
+   * HAPairs and the maximum is calculated as 524,288 GiB * HAPairs, up to a maximum amount of SSD
+   * storage capacity of 1,048,576 GiB (1 pebibyte).
    *
    * *FSx for OpenZFS file systems* - The amount of storage capacity that you can configure is from
    * 64 GiB up to 524,288 GiB (512 TiB). If you are creating a file system from a backup, you can
@@ -359,20 +366,22 @@ public interface CfnFileSystemProps {
     public fun fileSystemType(fileSystemType: String)
 
     /**
-     * @param fileSystemTypeVersion (Optional) For FSx for Lustre file systems, sets the Lustre
-     * version for the file system that you're creating.
+     * @param fileSystemTypeVersion For FSx for Lustre file systems, sets the Lustre version for the
+     * file system that you're creating.
      * Valid values are `2.10` , `2.12` , and `2.15` :
      *
-     * * 2.10 is supported by the Scratch and Persistent_1 Lustre deployment types.
-     * * 2.12 and 2.15 are supported by all Lustre deployment types. `2.12` or `2.15` is required
-     * when setting FSx for Lustre `DeploymentType` to `PERSISTENT_2` .
+     * * `2.10` is supported by the Scratch and Persistent_1 Lustre deployment types.
+     * * `2.12` is supported by all Lustre deployment types, except for `PERSISTENT_2` with a
+     * metadata configuration mode.
+     * * `2.15` is supported by all Lustre deployment types and is recommended for all new file
+     * systems.
      *
-     * Default value = `2.10` , except when `DeploymentType` is set to `PERSISTENT_2` , then the
-     * default is `2.12` .
+     * Default value is `2.10` , except for the following deployments:
      *
-     *
-     * If you set `FileSystemTypeVersion` to `2.10` for a `PERSISTENT_2` Lustre deployment type, the
-     * `CreateFileSystem` operation fails.
+     * * Default value is `2.12` when `DeploymentType` is set to `PERSISTENT_2` without a metadata
+     * configuration mode.
+     * * Default value is `2.15` when `DeploymentType` is set to `PERSISTENT_2` with a metadata
+     * configuration mode.
      */
     public fun fileSystemTypeVersion(fileSystemTypeVersion: String)
 
@@ -514,8 +523,10 @@ public interface CfnFileSystemProps {
      * * For `SCRATCH_1` deployment type, valid values are 1200 GiB, 2400 GiB, and increments of
      * 3600 GiB.
      *
-     * *FSx for ONTAP file systems* - The amount of storage capacity that you can configure is from
-     * 1024 GiB up to 196,608 GiB (192 TiB).
+     * *FSx for ONTAP file systems* - The amount of SSD storage capacity that you can configure
+     * depends on the value of the `HAPairs` property. The minimum value is calculated as 1,024 GiB *
+     * HAPairs and the maximum is calculated as 524,288 GiB * HAPairs, up to a maximum amount of SSD
+     * storage capacity of 1,048,576 GiB (1 pebibyte).
      *
      * *FSx for OpenZFS file systems* - The amount of storage capacity that you can configure is
      * from 64 GiB up to 524,288 GiB (512 TiB). If you are creating a file system from a backup, you
@@ -648,20 +659,22 @@ public interface CfnFileSystemProps {
     }
 
     /**
-     * @param fileSystemTypeVersion (Optional) For FSx for Lustre file systems, sets the Lustre
-     * version for the file system that you're creating.
+     * @param fileSystemTypeVersion For FSx for Lustre file systems, sets the Lustre version for the
+     * file system that you're creating.
      * Valid values are `2.10` , `2.12` , and `2.15` :
      *
-     * * 2.10 is supported by the Scratch and Persistent_1 Lustre deployment types.
-     * * 2.12 and 2.15 are supported by all Lustre deployment types. `2.12` or `2.15` is required
-     * when setting FSx for Lustre `DeploymentType` to `PERSISTENT_2` .
+     * * `2.10` is supported by the Scratch and Persistent_1 Lustre deployment types.
+     * * `2.12` is supported by all Lustre deployment types, except for `PERSISTENT_2` with a
+     * metadata configuration mode.
+     * * `2.15` is supported by all Lustre deployment types and is recommended for all new file
+     * systems.
      *
-     * Default value = `2.10` , except when `DeploymentType` is set to `PERSISTENT_2` , then the
-     * default is `2.12` .
+     * Default value is `2.10` , except for the following deployments:
      *
-     *
-     * If you set `FileSystemTypeVersion` to `2.10` for a `PERSISTENT_2` Lustre deployment type, the
-     * `CreateFileSystem` operation fails.
+     * * Default value is `2.12` when `DeploymentType` is set to `PERSISTENT_2` without a metadata
+     * configuration mode.
+     * * Default value is `2.15` when `DeploymentType` is set to `PERSISTENT_2` with a metadata
+     * configuration mode.
      */
     override fun fileSystemTypeVersion(fileSystemTypeVersion: String) {
       cdkBuilder.fileSystemTypeVersion(fileSystemTypeVersion)
@@ -827,8 +840,10 @@ public interface CfnFileSystemProps {
      * * For `SCRATCH_1` deployment type, valid values are 1200 GiB, 2400 GiB, and increments of
      * 3600 GiB.
      *
-     * *FSx for ONTAP file systems* - The amount of storage capacity that you can configure is from
-     * 1024 GiB up to 196,608 GiB (192 TiB).
+     * *FSx for ONTAP file systems* - The amount of SSD storage capacity that you can configure
+     * depends on the value of the `HAPairs` property. The minimum value is calculated as 1,024 GiB *
+     * HAPairs and the maximum is calculated as 524,288 GiB * HAPairs, up to a maximum amount of SSD
+     * storage capacity of 1,048,576 GiB (1 pebibyte).
      *
      * *FSx for OpenZFS file systems* - The amount of storage capacity that you can configure is
      * from 64 GiB up to 524,288 GiB (512 TiB). If you are creating a file system from a backup, you
@@ -956,7 +971,8 @@ public interface CfnFileSystemProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystemProps,
-  ) : CdkObject(cdkObject), CfnFileSystemProps {
+  ) : CdkObject(cdkObject),
+      CfnFileSystemProps {
     /**
      * The ID of the file system backup that you are using to create a file system.
      *
@@ -977,22 +993,23 @@ public interface CfnFileSystemProps {
     override fun fileSystemType(): String = unwrap(this).getFileSystemType()
 
     /**
-     * (Optional) For FSx for Lustre file systems, sets the Lustre version for the file system that
-     * you're creating.
+     * For FSx for Lustre file systems, sets the Lustre version for the file system that you're
+     * creating.
      *
      * Valid values are `2.10` , `2.12` , and `2.15` :
      *
-     * * 2.10 is supported by the Scratch and Persistent_1 Lustre deployment types.
-     * * 2.12 and 2.15 are supported by all Lustre deployment types. `2.12` or `2.15` is required
-     * when setting FSx for Lustre `DeploymentType` to `PERSISTENT_2` .
+     * * `2.10` is supported by the Scratch and Persistent_1 Lustre deployment types.
+     * * `2.12` is supported by all Lustre deployment types, except for `PERSISTENT_2` with a
+     * metadata configuration mode.
+     * * `2.15` is supported by all Lustre deployment types and is recommended for all new file
+     * systems.
      *
-     * Default value = `2.10` , except when `DeploymentType` is set to `PERSISTENT_2` , then the
-     * default is `2.12` .
+     * Default value is `2.10` , except for the following deployments:
      *
-     *
-     * If you set `FileSystemTypeVersion` to `2.10` for a `PERSISTENT_2` Lustre deployment type, the
-     * `CreateFileSystem` operation fails.
-     *
+     * * Default value is `2.12` when `DeploymentType` is set to `PERSISTENT_2` without a metadata
+     * configuration mode.
+     * * Default value is `2.15` when `DeploymentType` is set to `PERSISTENT_2` with a metadata
+     * configuration mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-filesystemtypeversion)
      */
@@ -1081,8 +1098,10 @@ public interface CfnFileSystemProps {
      * * For `SCRATCH_1` deployment type, valid values are 1200 GiB, 2400 GiB, and increments of
      * 3600 GiB.
      *
-     * *FSx for ONTAP file systems* - The amount of storage capacity that you can configure is from
-     * 1024 GiB up to 196,608 GiB (192 TiB).
+     * *FSx for ONTAP file systems* - The amount of SSD storage capacity that you can configure
+     * depends on the value of the `HAPairs` property. The minimum value is calculated as 1,024 GiB *
+     * HAPairs and the maximum is calculated as 524,288 GiB * HAPairs, up to a maximum amount of SSD
+     * storage capacity of 1,048,576 GiB (1 pebibyte).
      *
      * *FSx for OpenZFS file systems* - The amount of storage capacity that you can configure is
      * from 64 GiB up to 524,288 GiB (512 TiB). If you are creating a file system from a backup, you

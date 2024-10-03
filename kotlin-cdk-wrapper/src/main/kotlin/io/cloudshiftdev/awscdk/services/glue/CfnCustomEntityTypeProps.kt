@@ -163,7 +163,8 @@ public interface CfnCustomEntityTypeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnCustomEntityTypeProps,
-  ) : CdkObject(cdkObject), CfnCustomEntityTypeProps {
+  ) : CdkObject(cdkObject),
+      CfnCustomEntityTypeProps {
     /**
      * A list of context words.
      *

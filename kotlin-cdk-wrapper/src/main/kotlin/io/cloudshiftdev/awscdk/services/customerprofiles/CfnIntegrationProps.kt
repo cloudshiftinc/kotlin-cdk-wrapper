@@ -309,7 +309,8 @@ public interface CfnIntegrationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegrationProps,
-  ) : CdkObject(cdkObject), CfnIntegrationProps {
+  ) : CdkObject(cdkObject),
+      CfnIntegrationProps {
     /**
      * The unique name of the domain.
      *

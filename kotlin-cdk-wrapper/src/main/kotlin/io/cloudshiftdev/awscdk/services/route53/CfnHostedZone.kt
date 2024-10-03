@@ -96,7 +96,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnHostedZone(
   cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53.CfnHostedZone(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1261,7 +1263,8 @@ public open class CfnHostedZone(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty,
-    ) : CdkObject(cdkObject), HostedZoneConfigProperty {
+    ) : CdkObject(cdkObject),
+        HostedZoneConfigProperty {
       /**
        * Any comments that you want to include about the hosted zone.
        *
@@ -1395,7 +1398,8 @@ public open class CfnHostedZone(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty,
-    ) : CdkObject(cdkObject), HostedZoneTagProperty {
+    ) : CdkObject(cdkObject),
+        HostedZoneTagProperty {
       /**
        * The value of `Key` depends on the operation that you want to perform:.
        *
@@ -1498,7 +1502,8 @@ public open class CfnHostedZone(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.QueryLoggingConfigProperty,
-    ) : CdkObject(cdkObject), QueryLoggingConfigProperty {
+    ) : CdkObject(cdkObject),
+        QueryLoggingConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is
        * publishing logs to.
@@ -1623,7 +1628,8 @@ public open class CfnHostedZone(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty,
-    ) : CdkObject(cdkObject), VPCProperty {
+    ) : CdkObject(cdkObject),
+        VPCProperty {
       /**
        * *Private hosted zones only:* The ID of an Amazon VPC.
        *

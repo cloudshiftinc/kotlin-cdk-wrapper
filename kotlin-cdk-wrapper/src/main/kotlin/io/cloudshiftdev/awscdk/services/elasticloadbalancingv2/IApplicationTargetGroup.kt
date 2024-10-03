@@ -83,7 +83,8 @@ public interface IApplicationTargetGroup : ITargetGroup {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroup,
-  ) : CdkObject(cdkObject), IApplicationTargetGroup {
+  ) : CdkObject(cdkObject),
+      IApplicationTargetGroup {
     /**
      * Add a load balancing target to this target group.
      *

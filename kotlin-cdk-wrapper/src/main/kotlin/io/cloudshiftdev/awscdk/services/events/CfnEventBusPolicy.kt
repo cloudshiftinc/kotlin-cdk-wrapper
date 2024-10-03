@@ -20,8 +20,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Running `PutPermission` permits the specified AWS account or AWS organization to put events to
  * the specified *event bus* .
  *
- * Amazon EventBridge (CloudWatch Events) rules in your account are triggered by these events
- * arriving to an event bus in your account.
+ * Amazon EventBridge rules in your account are triggered by these events arriving to an event bus
+ * in your account.
  *
  * For another account to send events to your account, that external account must have an
  * EventBridge rule with your account's event bus as a target.
@@ -66,7 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEventBusPolicy(
   cdkObject: software.amazon.awscdk.services.events.CfnEventBusPolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -597,7 +598,8 @@ public open class CfnEventBusPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnEventBusPolicy.ConditionProperty,
-    ) : CdkObject(cdkObject), ConditionProperty {
+    ) : CdkObject(cdkObject),
+        ConditionProperty {
       /**
        * Specifies the key for the condition.
        *

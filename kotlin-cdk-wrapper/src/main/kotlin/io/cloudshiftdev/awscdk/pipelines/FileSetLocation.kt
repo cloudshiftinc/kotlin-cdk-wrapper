@@ -74,7 +74,8 @@ public interface FileSetLocation {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.FileSetLocation,
-  ) : CdkObject(cdkObject), FileSetLocation {
+  ) : CdkObject(cdkObject),
+      FileSetLocation {
     /**
      * The (relative) directory where the FileSet is found.
      */

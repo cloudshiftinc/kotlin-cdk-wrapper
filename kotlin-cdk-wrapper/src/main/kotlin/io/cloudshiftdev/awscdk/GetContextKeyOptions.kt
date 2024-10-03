@@ -97,7 +97,8 @@ public interface GetContextKeyOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.GetContextKeyOptions,
-  ) : CdkObject(cdkObject), GetContextKeyOptions {
+  ) : CdkObject(cdkObject),
+      GetContextKeyOptions {
     /**
      * Whether to include the stack's account and region automatically.
      *

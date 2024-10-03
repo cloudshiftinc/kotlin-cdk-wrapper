@@ -97,7 +97,8 @@ public interface RoutingRuleCondition {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.RoutingRuleCondition,
-  ) : CdkObject(cdkObject), RoutingRuleCondition {
+  ) : CdkObject(cdkObject),
+      RoutingRuleCondition {
     /**
      * The HTTP error code when the redirect is applied.
      *

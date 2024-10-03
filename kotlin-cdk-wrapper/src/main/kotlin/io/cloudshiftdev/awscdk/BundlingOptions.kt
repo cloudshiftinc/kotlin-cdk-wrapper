@@ -398,7 +398,8 @@ public interface BundlingOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.BundlingOptions,
-  ) : CdkObject(cdkObject), BundlingOptions {
+  ) : CdkObject(cdkObject),
+      BundlingOptions {
     /**
      * The access mechanism used to make source files available to the bundling container and to
      * return the bundling output back to the host.

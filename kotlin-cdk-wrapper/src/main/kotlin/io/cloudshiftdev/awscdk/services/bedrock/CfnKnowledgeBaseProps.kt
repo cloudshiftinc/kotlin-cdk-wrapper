@@ -26,6 +26,12 @@ import kotlin.jvm.JvmName
  * .type("type")
  * .vectorKnowledgeBaseConfiguration(VectorKnowledgeBaseConfigurationProperty.builder()
  * .embeddingModelArn("embeddingModelArn")
+ * // the properties below are optional
+ * .embeddingModelConfiguration(EmbeddingModelConfigurationProperty.builder()
+ * .bedrockEmbeddingModelConfiguration(BedrockEmbeddingModelConfigurationProperty.builder()
+ * .dimensions(123)
+ * .build())
+ * .build())
  * .build())
  * .build())
  * .name("name")
@@ -300,7 +306,8 @@ public interface CfnKnowledgeBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBaseProps,
-  ) : CdkObject(cdkObject), CfnKnowledgeBaseProps {
+  ) : CdkObject(cdkObject),
+      CfnKnowledgeBaseProps {
     /**
      * The description of the knowledge base.
      *

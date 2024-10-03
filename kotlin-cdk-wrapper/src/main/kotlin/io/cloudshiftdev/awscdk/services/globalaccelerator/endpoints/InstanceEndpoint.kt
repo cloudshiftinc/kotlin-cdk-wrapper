@@ -32,7 +32,8 @@ import software.amazon.awscdk.services.ec2.IInstance as AmazonAwscdkServicesEc2I
  */
 public open class InstanceEndpoint(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint,
-) : CdkObject(cdkObject), IEndpoint {
+) : CdkObject(cdkObject),
+    IEndpoint {
   public constructor(instance: CloudshiftdevAwscdkServicesEc2IInstance) :
       this(software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint(instance.let(CloudshiftdevAwscdkServicesEc2IInstance.Companion::unwrap))
   )

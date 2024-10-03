@@ -79,7 +79,8 @@ public interface CloudFrontWebDistributionAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CloudFrontWebDistributionAttributes,
-  ) : CdkObject(cdkObject), CloudFrontWebDistributionAttributes {
+  ) : CdkObject(cdkObject),
+      CloudFrontWebDistributionAttributes {
     /**
      * The distribution ID for this distribution.
      */

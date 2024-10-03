@@ -121,7 +121,8 @@ public interface CfnGeoMatchSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSetProps,
-  ) : CdkObject(cdkObject), CfnGeoMatchSetProps {
+  ) : CdkObject(cdkObject),
+      CfnGeoMatchSetProps {
     /**
      * An array of `GeoMatchConstraint` objects, which contain the country that you want AWS WAF to
      * search for.

@@ -65,7 +65,8 @@ public interface ILayerVersion : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.ILayerVersion,
-  ) : CdkObject(cdkObject), ILayerVersion {
+  ) : CdkObject(cdkObject),
+      ILayerVersion {
     /**
      * Add permission for this layer version to specific entities.
      *

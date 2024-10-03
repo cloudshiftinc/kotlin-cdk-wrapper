@@ -30,7 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EmailIdentity(
   cdkObject: software.amazon.awscdk.services.ses.EmailIdentity,
-) : Resource(cdkObject), IEmailIdentity {
+) : Resource(cdkObject),
+    IEmailIdentity {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

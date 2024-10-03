@@ -7,6 +7,7 @@ public enum class LoadBalancerIpAddressType(
 ) {
   IPV4(software.amazon.awscdk.cxapi.LoadBalancerIpAddressType.IPV4),
   DUAL_STACK(software.amazon.awscdk.cxapi.LoadBalancerIpAddressType.DUAL_STACK),
+  DUAL_STACK_WITHOUT_PUBLIC_IPV4(software.amazon.awscdk.cxapi.LoadBalancerIpAddressType.DUAL_STACK_WITHOUT_PUBLIC_IPV4),
   ;
 
   public companion object {
@@ -15,6 +16,8 @@ public enum class LoadBalancerIpAddressType(
       software.amazon.awscdk.cxapi.LoadBalancerIpAddressType.IPV4 -> LoadBalancerIpAddressType.IPV4
       software.amazon.awscdk.cxapi.LoadBalancerIpAddressType.DUAL_STACK ->
           LoadBalancerIpAddressType.DUAL_STACK
+      software.amazon.awscdk.cxapi.LoadBalancerIpAddressType.DUAL_STACK_WITHOUT_PUBLIC_IPV4 ->
+          LoadBalancerIpAddressType.DUAL_STACK_WITHOUT_PUBLIC_IPV4
     }
 
     internal fun unwrap(wrapped: LoadBalancerIpAddressType):

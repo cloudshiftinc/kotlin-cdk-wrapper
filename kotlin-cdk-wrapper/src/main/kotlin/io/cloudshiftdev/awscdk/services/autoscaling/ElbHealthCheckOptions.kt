@@ -65,7 +65,8 @@ public interface ElbHealthCheckOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions,
-  ) : CdkObject(cdkObject), ElbHealthCheckOptions {
+  ) : CdkObject(cdkObject),
+      ElbHealthCheckOptions {
     /**
      * Specified the time Auto Scaling waits before checking the health status of an EC2 instance
      * that has come into service.

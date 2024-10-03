@@ -41,7 +41,8 @@ public interface ILocalBundling {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ILocalBundling,
-  ) : CdkObject(cdkObject), ILocalBundling {
+  ) : CdkObject(cdkObject),
+      ILocalBundling {
     /**
      * This method is called before attempting docker bundling to allow the bundler to be executed
      * locally.

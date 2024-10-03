@@ -31,6 +31,14 @@ import kotlin.jvm.JvmName
  * .applianceModeSupport(false)
  * .ipv6Support(false)
  * .build())
+ * .proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
  * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
  * .attachmentPolicyRuleNumber(123)
  * .segmentName("segmentName")
@@ -62,6 +70,14 @@ public interface CfnVpcAttachmentProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-options)
    */
   public fun options(): Any? = unwrap(this).getOptions()
+
+  /**
+   * Describes proposed changes to a network function group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange)
+   */
+  public fun proposedNetworkFunctionGroupChange(): Any? =
+      unwrap(this).getProposedNetworkFunctionGroupChange()
 
   /**
    * Describes a proposed segment change.
@@ -119,6 +135,28 @@ public interface CfnVpcAttachmentProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6757c0f2d355da3d8905624f7e84eb5a2ec2edf3d14c9ccf5c2ed4d293c7071e")
     public fun options(options: CfnVpcAttachment.VpcOptionsProperty.Builder.() -> Unit)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    public fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a6ba0afb1cbf97a7d3c9421cd886ef6bdff947038a603c51ed69d8fec0bc4b3b")
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit)
 
     /**
      * @param proposedSegmentChange Describes a proposed segment change.
@@ -203,6 +241,35 @@ public interface CfnVpcAttachmentProps {
         options(CfnVpcAttachment.VpcOptionsProperty(options))
 
     /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a6ba0afb1cbf97a7d3c9421cd886ef6bdff947038a603c51ed69d8fec0bc4b3b")
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit):
+        Unit =
+        proposedNetworkFunctionGroupChange(CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty(proposedNetworkFunctionGroupChange))
+
+    /**
      * @param proposedSegmentChange Describes a proposed segment change.
      * In some cases, the segment change must first be evaluated and accepted.
      */
@@ -267,7 +334,8 @@ public interface CfnVpcAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachmentProps,
-  ) : CdkObject(cdkObject), CfnVpcAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnVpcAttachmentProps {
     /**
      * The core network ID.
      *
@@ -281,6 +349,14 @@ public interface CfnVpcAttachmentProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-options)
      */
     override fun options(): Any? = unwrap(this).getOptions()
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange)
+     */
+    override fun proposedNetworkFunctionGroupChange(): Any? =
+        unwrap(this).getProposedNetworkFunctionGroupChange()
 
     /**
      * Describes a proposed segment change.

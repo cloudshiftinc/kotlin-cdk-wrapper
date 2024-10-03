@@ -101,7 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResourceDefinitionVersion(
   cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -399,7 +400,8 @@ public open class CfnResourceDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.GroupOwnerSettingProperty,
-    ) : CdkObject(cdkObject), GroupOwnerSettingProperty {
+    ) : CdkObject(cdkObject),
+        GroupOwnerSettingProperty {
       /**
        * Indicates whether to give the privileges of the Linux group that owns the resource to the
        * Lambda process.
@@ -569,7 +571,8 @@ public open class CfnResourceDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.LocalDeviceResourceDataProperty,
-    ) : CdkObject(cdkObject), LocalDeviceResourceDataProperty {
+    ) : CdkObject(cdkObject),
+        LocalDeviceResourceDataProperty {
       /**
        * Settings that define additional Linux OS group permissions to give to the Lambda function
        * process.
@@ -756,7 +759,8 @@ public open class CfnResourceDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.LocalVolumeResourceDataProperty,
-    ) : CdkObject(cdkObject), LocalVolumeResourceDataProperty {
+    ) : CdkObject(cdkObject),
+        LocalVolumeResourceDataProperty {
       /**
        * The absolute local path of the resource in the Lambda environment.
        *
@@ -1160,7 +1164,8 @@ public open class CfnResourceDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.ResourceDataContainerProperty,
-    ) : CdkObject(cdkObject), ResourceDataContainerProperty {
+    ) : CdkObject(cdkObject),
+        ResourceDataContainerProperty {
       /**
        * Settings for a local device resource.
        *
@@ -1318,7 +1323,8 @@ public open class CfnResourceDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.ResourceDownloadOwnerSettingProperty,
-    ) : CdkObject(cdkObject), ResourceDownloadOwnerSettingProperty {
+    ) : CdkObject(cdkObject),
+        ResourceDownloadOwnerSettingProperty {
       /**
        * The group owner of the machine learning resource.
        *
@@ -1604,7 +1610,8 @@ public open class CfnResourceDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.ResourceInstanceProperty,
-    ) : CdkObject(cdkObject), ResourceInstanceProperty {
+    ) : CdkObject(cdkObject),
+        ResourceInstanceProperty {
       /**
        * A descriptive or arbitrary ID for the resource.
        *
@@ -1824,7 +1831,8 @@ public open class CfnResourceDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.S3MachineLearningModelResourceDataProperty,
-    ) : CdkObject(cdkObject), S3MachineLearningModelResourceDataProperty {
+    ) : CdkObject(cdkObject),
+        S3MachineLearningModelResourceDataProperty {
       /**
        * The absolute local path of the resource inside the Lambda environment.
        *
@@ -2037,7 +2045,8 @@ public open class CfnResourceDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.SageMakerMachineLearningModelResourceDataProperty,
-    ) : CdkObject(cdkObject), SageMakerMachineLearningModelResourceDataProperty {
+    ) : CdkObject(cdkObject),
+        SageMakerMachineLearningModelResourceDataProperty {
       /**
        * The absolute local path of the resource inside the Lambda environment.
        *
@@ -2199,7 +2208,8 @@ public open class CfnResourceDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion.SecretsManagerSecretResourceDataProperty,
-    ) : CdkObject(cdkObject), SecretsManagerSecretResourceDataProperty {
+    ) : CdkObject(cdkObject),
+        SecretsManagerSecretResourceDataProperty {
       /**
        * The staging labels whose values you want to make available on the core, in addition to
        * `AWSCURRENT` .

@@ -173,7 +173,8 @@ public interface CfnServiceProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotwireless.CfnServiceProfileProps,
-  ) : CdkObject(cdkObject), CfnServiceProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnServiceProfileProps {
     /**
      * LoRaWAN service profile object.
      *

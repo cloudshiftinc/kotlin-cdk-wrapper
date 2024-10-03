@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnChannelPolicy(
   cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelPolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

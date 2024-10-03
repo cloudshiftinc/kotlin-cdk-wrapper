@@ -47,8 +47,13 @@ public interface CfnThreatIntelSetProps {
   public fun activate(): Any? = unwrap(this).getActivate()
 
   /**
-   * The unique ID of the detector of the GuardDuty account that you want to create a threatIntelSet
-   * for.
+   * The unique ID of the detector of the GuardDuty account for which you want to create a
+   * `ThreatIntelSet` .
+   *
+   * To find the `detectorId` in the current Region, see the
+   * Settings page in the GuardDuty console, or run the
+   * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+   * API.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-detectorid)
    */
@@ -107,8 +112,12 @@ public interface CfnThreatIntelSetProps {
     public fun activate(activate: IResolvable)
 
     /**
-     * @param detectorId The unique ID of the detector of the GuardDuty account that you want to
-     * create a threatIntelSet for.
+     * @param detectorId The unique ID of the detector of the GuardDuty account for which you want
+     * to create a `ThreatIntelSet` .
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
      */
     public fun detectorId(detectorId: String)
 
@@ -170,8 +179,12 @@ public interface CfnThreatIntelSetProps {
     }
 
     /**
-     * @param detectorId The unique ID of the detector of the GuardDuty account that you want to
-     * create a threatIntelSet for.
+     * @param detectorId The unique ID of the detector of the GuardDuty account for which you want
+     * to create a `ThreatIntelSet` .
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
      */
     override fun detectorId(detectorId: String) {
       cdkBuilder.detectorId(detectorId)
@@ -227,7 +240,8 @@ public interface CfnThreatIntelSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.guardduty.CfnThreatIntelSetProps,
-  ) : CdkObject(cdkObject), CfnThreatIntelSetProps {
+  ) : CdkObject(cdkObject),
+      CfnThreatIntelSetProps {
     /**
      * A Boolean value that indicates whether GuardDuty is to start using the uploaded
      * ThreatIntelSet.
@@ -237,8 +251,13 @@ public interface CfnThreatIntelSetProps {
     override fun activate(): Any? = unwrap(this).getActivate()
 
     /**
-     * The unique ID of the detector of the GuardDuty account that you want to create a
-     * threatIntelSet for.
+     * The unique ID of the detector of the GuardDuty account for which you want to create a
+     * `ThreatIntelSet` .
+     *
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html#cfn-guardduty-threatintelset-detectorid)
      */

@@ -43,7 +43,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEntityType(
   cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityType,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

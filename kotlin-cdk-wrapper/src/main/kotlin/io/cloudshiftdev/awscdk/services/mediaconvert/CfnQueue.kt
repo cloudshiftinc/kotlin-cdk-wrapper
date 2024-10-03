@@ -41,7 +41,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnQueue(
   cdkObject: software.amazon.awscdk.services.mediaconvert.CfnQueue,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.mediaconvert.CfnQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

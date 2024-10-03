@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.deadline
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -30,11 +33,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.deadline.*;
  * CfnQueue cfnQueue = CfnQueue.Builder.create(this, "MyCfnQueue")
  * .displayName("displayName")
+ * .farmId("farmId")
  * // the properties below are optional
  * .allowedStorageProfileIds(List.of("allowedStorageProfileIds"))
  * .defaultBudgetAction("defaultBudgetAction")
  * .description("description")
- * .farmId("farmId")
  * .jobAttachmentSettings(JobAttachmentSettingsProperty.builder()
  * .rootPrefix("rootPrefix")
  * .s3BucketName("s3BucketName")
@@ -53,6 +56,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .requiredFileSystemLocationNames(List.of("requiredFileSystemLocationNames"))
  * .roleArn("roleArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -60,7 +67,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnQueue(
   cdkObject: software.amazon.awscdk.services.deadline.CfnQueue,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -110,6 +119,12 @@ public open class CfnQueue(
   public open fun attrQueueId(): String = unwrap(this).getAttrQueueId()
 
   /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  /**
    * The default action taken on a queue summary if a budget wasn't configured.
    */
   public open fun defaultBudgetAction(): String? = unwrap(this).getDefaultBudgetAction()
@@ -148,7 +163,7 @@ public open class CfnQueue(
   /**
    * The farm ID.
    */
-  public open fun farmId(): String? = unwrap(this).getFarmId()
+  public open fun farmId(): String = unwrap(this).getFarmId()
 
   /**
    * The farm ID.
@@ -254,6 +269,23 @@ public open class CfnQueue(
   }
 
   /**
+   * The tags to add to your queue.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * The tags to add to your queue.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   * The tags to add to your queue.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.deadline.CfnQueue].
    */
   @CdkDslMarker
@@ -302,6 +334,11 @@ public open class CfnQueue(
 
     /**
      * The display name of the queue summary to update.
+     *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-displayname)
      * @param displayName The display name of the queue summary to update. 
@@ -400,6 +437,28 @@ public open class CfnQueue(
      * jobs in this queue. 
      */
     public fun roleArn(roleArn: String)
+
+    /**
+     * The tags to add to your queue.
+     *
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-tags)
+     * @param tags The tags to add to your queue. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * The tags to add to your queue.
+     *
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-tags)
+     * @param tags The tags to add to your queue. 
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -460,6 +519,11 @@ public open class CfnQueue(
 
     /**
      * The display name of the queue summary to update.
+     *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-displayname)
      * @param displayName The display name of the queue summary to update. 
@@ -578,6 +642,30 @@ public open class CfnQueue(
       cdkBuilder.roleArn(roleArn)
     }
 
+    /**
+     * The tags to add to your queue.
+     *
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-tags)
+     * @param tags The tags to add to your queue. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * The tags to add to your queue.
+     *
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-tags)
+     * @param tags The tags to add to your queue. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.deadline.CfnQueue = cdkBuilder.build()
   }
 
@@ -678,7 +766,8 @@ public open class CfnQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnQueue.JobAttachmentSettingsProperty,
-    ) : CdkObject(cdkObject), JobAttachmentSettingsProperty {
+    ) : CdkObject(cdkObject),
+        JobAttachmentSettingsProperty {
       /**
        * The root prefix.
        *
@@ -869,7 +958,8 @@ public open class CfnQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnQueue.JobRunAsUserProperty,
-    ) : CdkObject(cdkObject), JobRunAsUserProperty {
+    ) : CdkObject(cdkObject),
+        JobRunAsUserProperty {
       /**
        * The user and group that the jobs in the queue run as.
        *
@@ -984,7 +1074,8 @@ public open class CfnQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnQueue.PosixUserProperty,
-    ) : CdkObject(cdkObject), PosixUserProperty {
+    ) : CdkObject(cdkObject),
+        PosixUserProperty {
       /**
        * The name of the POSIX user's group.
        *
@@ -1091,7 +1182,8 @@ public open class CfnQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnQueue.WindowsUserProperty,
-    ) : CdkObject(cdkObject), WindowsUserProperty {
+    ) : CdkObject(cdkObject),
+        WindowsUserProperty {
       /**
        * The password ARN for the Windows user.
        *

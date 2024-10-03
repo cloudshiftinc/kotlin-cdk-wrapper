@@ -53,8 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * * Deactivate any applications that are using the DB cluster so that there's no activity on the DB
  * instance.
- * * Create a snapshot of the DB cluster. For more information, see [Creating a DB Cluster
- * Snapshot](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CreateSnapshotCluster.html)
+ * * Create a snapshot of the DB cluster. For more information, see [Creating a DB cluster
+ * snapshot](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CreateSnapshotCluster.html)
  * .
  * * If you want to restore your DB cluster using a DB cluster snapshot, modify the updated template
  * with your DB cluster changes and add the `SnapshotIdentifier` property with the ID of the DB cluster
@@ -121,7 +121,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .enableGlobalWriteForwarding(false)
  * .enableHttpEndpoint(false)
  * .enableIamDatabaseAuthentication(false)
+ * .enableLocalWriteForwarding(false)
  * .engine("engine")
+ * .engineLifecycleSupport("engineLifecycleSupport")
  * .engineMode("engineMode")
  * .engineVersion("engineVersion")
  * .globalClusterIdentifier("globalClusterIdentifier")
@@ -177,7 +179,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDBCluster(
   cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.rds.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -255,7 +259,8 @@ public open class CfnDBCluster(
   public open fun attrDbClusterResourceId(): String = unwrap(this).getAttrDbClusterResourceId()
 
   /**
-   *
+   * The `Endpoint` return value specifies the connection endpoint for the primary instance of the
+   * DB cluster.
    */
   public open fun attrEndpoint(): IResolvable =
       unwrap(this).getAttrEndpoint().let(IResolvable::wrap)
@@ -281,7 +286,19 @@ public open class CfnDBCluster(
       unwrap(this).getAttrMasterUserSecretSecretArn()
 
   /**
+   * The `ReadEndpoint` return value specifies the reader endpoint for the DB cluster.
    *
+   * The reader endpoint for a DB cluster load-balances connections across the Aurora Replicas that
+   * are available in a DB cluster. As clients request new connections to the reader endpoint, Aurora
+   * distributes the connection requests among the Aurora Replicas in the DB cluster. This
+   * functionality can help balance your read workload across multiple Aurora Replicas in your DB
+   * cluster.
+   * If a failover occurs, and the Aurora Replica that you are connected to is promoted to be the
+   * primary instance, your connection is dropped. To continue sending your read workload to other
+   * Aurora Replicas in the cluster, you can then reconnect to the reader endpoint.
+   * For more information about Aurora endpoints, see [Amazon Aurora connection
+   * management](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html)
+   * in the *Amazon Aurora User Guide*.
    */
   public open fun attrReadEndpoint(): IResolvable =
       unwrap(this).getAttrReadEndpoint().let(IResolvable::wrap)
@@ -347,14 +364,14 @@ public open class CfnDBCluster(
   /**
    * The target backtrack window, in seconds.
    *
-   * To disable backtracking, set this value to 0.
+   * To disable backtracking, set this value to `0` .
    */
   public open fun backtrackWindow(): Number? = unwrap(this).getBacktrackWindow()
 
   /**
    * The target backtrack window, in seconds.
    *
-   * To disable backtracking, set this value to 0.
+   * To disable backtracking, set this value to `0` .
    */
   public open fun backtrackWindow(`value`: Number) {
     unwrap(this).setBacktrackWindow(`value`)
@@ -622,6 +639,28 @@ public open class CfnDBCluster(
   }
 
   /**
+   * Specifies whether read replicas can forward write operations to the writer DB instance in the
+   * DB cluster.
+   */
+  public open fun enableLocalWriteForwarding(): Any? = unwrap(this).getEnableLocalWriteForwarding()
+
+  /**
+   * Specifies whether read replicas can forward write operations to the writer DB instance in the
+   * DB cluster.
+   */
+  public open fun enableLocalWriteForwarding(`value`: Boolean) {
+    unwrap(this).setEnableLocalWriteForwarding(`value`)
+  }
+
+  /**
+   * Specifies whether read replicas can forward write operations to the writer DB instance in the
+   * DB cluster.
+   */
+  public open fun enableLocalWriteForwarding(`value`: IResolvable) {
+    unwrap(this).setEnableLocalWriteForwarding(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
    * The name of the database engine to be used for this DB cluster.
    */
   public open fun engine(): String? = unwrap(this).getEngine()
@@ -631,6 +670,18 @@ public open class CfnDBCluster(
    */
   public open fun engine(`value`: String) {
     unwrap(this).setEngine(`value`)
+  }
+
+  /**
+   * The life cycle type for this DB cluster.
+   */
+  public open fun engineLifecycleSupport(): String? = unwrap(this).getEngineLifecycleSupport()
+
+  /**
+   * The life cycle type for this DB cluster.
+   */
+  public open fun engineLifecycleSupport(`value`: String) {
+    unwrap(this).setEngineLifecycleSupport(`value`)
   }
 
   /**
@@ -1104,20 +1155,20 @@ public open class CfnDBCluster(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * An optional array of key-value pairs to apply to this DB cluster.
+   * Tags to assign to the DB cluster.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * An optional array of key-value pairs to apply to this DB cluster.
+   * Tags to assign to the DB cluster.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * An optional array of key-value pairs to apply to this DB cluster.
+   * Tags to assign to the DB cluster.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -1284,25 +1335,19 @@ public open class CfnDBCluster(
     public fun availabilityZones(vararg availabilityZones: String)
 
     /**
-     * The target backtrack window, in seconds. To disable backtracking, set this value to 0.
+     * The target backtrack window, in seconds. To disable backtracking, set this value to `0` .
      *
+     * Valid for Cluster Type: Aurora MySQL DB clusters only
      *
-     * Currently, Backtrack is only supported for Aurora MySQL DB clusters.
-     *
-     *
-     * Default: 0
+     * Default: `0`
      *
      * Constraints:
      *
      * * If specified, this value must be set to a number from 0 to 259,200 (72 hours).
      *
-     * Valid for: Aurora MySQL DB clusters only
-     *
-     * Default: - 0
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-backtrackwindow)
      * @param backtrackWindow The target backtrack window, in seconds. To disable backtracking, set
-     * this value to 0. 
+     * this value to `0` . 
      */
     public fun backtrackWindow(backtrackWindow: Number)
 
@@ -1423,8 +1468,6 @@ public open class CfnDBCluster(
      * "DBClusterParameterGroups[].DBClusterParameterGroupName" --output text`
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
-     *
-     * Default: - "default.aurora5.6"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusterparametergroupname)
      * @param dbClusterParameterGroupName The name of the DB cluster parameter group to associate
@@ -1712,6 +1755,34 @@ public open class CfnDBCluster(
     public fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable)
 
     /**
+     * Specifies whether read replicas can forward write operations to the writer DB instance in the
+     * DB cluster.
+     *
+     * By default, write operations aren't allowed on reader DB instances.
+     *
+     * Valid for: Aurora DB clusters only
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enablelocalwriteforwarding)
+     * @param enableLocalWriteForwarding Specifies whether read replicas can forward write
+     * operations to the writer DB instance in the DB cluster. 
+     */
+    public fun enableLocalWriteForwarding(enableLocalWriteForwarding: Boolean)
+
+    /**
+     * Specifies whether read replicas can forward write operations to the writer DB instance in the
+     * DB cluster.
+     *
+     * By default, write operations aren't allowed on reader DB instances.
+     *
+     * Valid for: Aurora DB clusters only
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enablelocalwriteforwarding)
+     * @param enableLocalWriteForwarding Specifies whether read replicas can forward write
+     * operations to the writer DB instance in the DB cluster. 
+     */
+    public fun enableLocalWriteForwarding(enableLocalWriteForwarding: IResolvable)
+
+    /**
      * The name of the database engine to be used for this DB cluster.
      *
      * Valid Values:
@@ -1727,6 +1798,39 @@ public open class CfnDBCluster(
      * @param engine The name of the database engine to be used for this DB cluster. 
      */
     public fun engine(engine: String)
+
+    /**
+     * The life cycle type for this DB cluster.
+     *
+     *
+     * By default, this value is set to `open-source-rds-extended-support` , which enrolls your DB
+     * cluster into Amazon RDS Extended Support. At the end of standard support, you can avoid charges
+     * for Extended Support by setting the value to `open-source-rds-extended-support-disabled` . In
+     * this case, creating the DB cluster will fail if the DB major version is past its end of standard
+     * support date.
+     *
+     *
+     * You can use this setting to enroll your DB cluster into Amazon RDS Extended Support. With RDS
+     * Extended Support, you can run the selected major engine version on your DB cluster past the end
+     * of standard support for that engine version. For more information, see the following sections:
+     *
+     * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * the *Amazon Aurora User Guide*
+     * * Amazon RDS - [Using Amazon RDS Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * *Amazon RDS User Guide*
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+     *
+     * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+     *
+     * Default: `open-source-rds-extended-support`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enginelifecyclesupport)
+     * @param engineLifecycleSupport The life cycle type for this DB cluster. 
+     */
+    public fun engineLifecycleSupport(engineLifecycleSupport: String)
 
     /**
      * The DB engine mode of the DB cluster, either `provisioned` or `serverless` .
@@ -2027,8 +2131,6 @@ public open class CfnDBCluster(
      *
      * Default: `0`
      *
-     * Default: - 0
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-monitoringinterval)
      * @param monitoringInterval The interval, in seconds, between points when Enhanced Monitoring
      * metrics are collected for the DB cluster. 
@@ -2220,11 +2322,12 @@ public open class CfnDBCluster(
     /**
      * Specifies whether the DB cluster is publicly accessible.
      *
-     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to
-     * the private IP address from within the DB cluster's virtual private cloud (VPC). It resolves to
-     * the public IP address from outside of the DB cluster's VPC. Access to the DB cluster is
-     * ultimately controlled by the security group it uses. That public access isn't permitted if the
-     * security group assigned to the DB cluster doesn't permit it.
+     * When the DB cluster is publicly accessible and you connect from outside of the DB cluster's
+     * virtual private cloud (VPC), its Domain Name System (DNS) endpoint resolves to the public IP
+     * address. When you connect from within the same VPC as the DB cluster, the endpoint resolves to
+     * the private IP address. Access to the DB cluster is ultimately controlled by the security group
+     * it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     * doesn't permit it.
      *
      * When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name
      * that resolves to a private IP address.
@@ -2257,11 +2360,12 @@ public open class CfnDBCluster(
     /**
      * Specifies whether the DB cluster is publicly accessible.
      *
-     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to
-     * the private IP address from within the DB cluster's virtual private cloud (VPC). It resolves to
-     * the public IP address from outside of the DB cluster's VPC. Access to the DB cluster is
-     * ultimately controlled by the security group it uses. That public access isn't permitted if the
-     * security group assigned to the DB cluster doesn't permit it.
+     * When the DB cluster is publicly accessible and you connect from outside of the DB cluster's
+     * virtual private cloud (VPC), its Domain Name System (DNS) endpoint resolves to the public IP
+     * address. When you connect from within the same VPC as the DB cluster, the endpoint resolves to
+     * the private IP address. Access to the DB cluster is ultimately controlled by the security group
+     * it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     * doesn't permit it.
      *
      * When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name
      * that resolves to a private IP address.
@@ -2337,8 +2441,6 @@ public open class CfnDBCluster(
      * copy of the source DB cluster.
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
-     *
-     * Default: - "full-copy"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-restoretype)
      * @param restoreType The type of restore to be performed. You can specify one of the following
@@ -2603,22 +2705,22 @@ public open class CfnDBCluster(
     public fun storageType(storageType: String)
 
     /**
-     * An optional array of key-value pairs to apply to this DB cluster.
+     * Tags to assign to the DB cluster.
      *
-     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB cluster. 
+     * @param tags Tags to assign to the DB cluster. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * An optional array of key-value pairs to apply to this DB cluster.
+     * Tags to assign to the DB cluster.
      *
-     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB cluster. 
+     * @param tags Tags to assign to the DB cluster. 
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -2818,25 +2920,19 @@ public open class CfnDBCluster(
         availabilityZones(availabilityZones.toList())
 
     /**
-     * The target backtrack window, in seconds. To disable backtracking, set this value to 0.
+     * The target backtrack window, in seconds. To disable backtracking, set this value to `0` .
      *
+     * Valid for Cluster Type: Aurora MySQL DB clusters only
      *
-     * Currently, Backtrack is only supported for Aurora MySQL DB clusters.
-     *
-     *
-     * Default: 0
+     * Default: `0`
      *
      * Constraints:
      *
      * * If specified, this value must be set to a number from 0 to 259,200 (72 hours).
      *
-     * Valid for: Aurora MySQL DB clusters only
-     *
-     * Default: - 0
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-backtrackwindow)
      * @param backtrackWindow The target backtrack window, in seconds. To disable backtracking, set
-     * this value to 0. 
+     * this value to `0` . 
      */
     override fun backtrackWindow(backtrackWindow: Number) {
       cdkBuilder.backtrackWindow(backtrackWindow)
@@ -2971,8 +3067,6 @@ public open class CfnDBCluster(
      * "DBClusterParameterGroups[].DBClusterParameterGroupName" --output text`
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
-     *
-     * Default: - "default.aurora5.6"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusterparametergroupname)
      * @param dbClusterParameterGroupName The name of the DB cluster parameter group to associate
@@ -3291,6 +3385,38 @@ public open class CfnDBCluster(
     }
 
     /**
+     * Specifies whether read replicas can forward write operations to the writer DB instance in the
+     * DB cluster.
+     *
+     * By default, write operations aren't allowed on reader DB instances.
+     *
+     * Valid for: Aurora DB clusters only
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enablelocalwriteforwarding)
+     * @param enableLocalWriteForwarding Specifies whether read replicas can forward write
+     * operations to the writer DB instance in the DB cluster. 
+     */
+    override fun enableLocalWriteForwarding(enableLocalWriteForwarding: Boolean) {
+      cdkBuilder.enableLocalWriteForwarding(enableLocalWriteForwarding)
+    }
+
+    /**
+     * Specifies whether read replicas can forward write operations to the writer DB instance in the
+     * DB cluster.
+     *
+     * By default, write operations aren't allowed on reader DB instances.
+     *
+     * Valid for: Aurora DB clusters only
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enablelocalwriteforwarding)
+     * @param enableLocalWriteForwarding Specifies whether read replicas can forward write
+     * operations to the writer DB instance in the DB cluster. 
+     */
+    override fun enableLocalWriteForwarding(enableLocalWriteForwarding: IResolvable) {
+      cdkBuilder.enableLocalWriteForwarding(enableLocalWriteForwarding.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * The name of the database engine to be used for this DB cluster.
      *
      * Valid Values:
@@ -3307,6 +3433,41 @@ public open class CfnDBCluster(
      */
     override fun engine(engine: String) {
       cdkBuilder.engine(engine)
+    }
+
+    /**
+     * The life cycle type for this DB cluster.
+     *
+     *
+     * By default, this value is set to `open-source-rds-extended-support` , which enrolls your DB
+     * cluster into Amazon RDS Extended Support. At the end of standard support, you can avoid charges
+     * for Extended Support by setting the value to `open-source-rds-extended-support-disabled` . In
+     * this case, creating the DB cluster will fail if the DB major version is past its end of standard
+     * support date.
+     *
+     *
+     * You can use this setting to enroll your DB cluster into Amazon RDS Extended Support. With RDS
+     * Extended Support, you can run the selected major engine version on your DB cluster past the end
+     * of standard support for that engine version. For more information, see the following sections:
+     *
+     * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * the *Amazon Aurora User Guide*
+     * * Amazon RDS - [Using Amazon RDS Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * *Amazon RDS User Guide*
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+     *
+     * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+     *
+     * Default: `open-source-rds-extended-support`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enginelifecyclesupport)
+     * @param engineLifecycleSupport The life cycle type for this DB cluster. 
+     */
+    override fun engineLifecycleSupport(engineLifecycleSupport: String) {
+      cdkBuilder.engineLifecycleSupport(engineLifecycleSupport)
     }
 
     /**
@@ -3631,8 +3792,6 @@ public open class CfnDBCluster(
      *
      * Default: `0`
      *
-     * Default: - 0
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-monitoringinterval)
      * @param monitoringInterval The interval, in seconds, between points when Enhanced Monitoring
      * metrics are collected for the DB cluster. 
@@ -3844,11 +4003,12 @@ public open class CfnDBCluster(
     /**
      * Specifies whether the DB cluster is publicly accessible.
      *
-     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to
-     * the private IP address from within the DB cluster's virtual private cloud (VPC). It resolves to
-     * the public IP address from outside of the DB cluster's VPC. Access to the DB cluster is
-     * ultimately controlled by the security group it uses. That public access isn't permitted if the
-     * security group assigned to the DB cluster doesn't permit it.
+     * When the DB cluster is publicly accessible and you connect from outside of the DB cluster's
+     * virtual private cloud (VPC), its Domain Name System (DNS) endpoint resolves to the public IP
+     * address. When you connect from within the same VPC as the DB cluster, the endpoint resolves to
+     * the private IP address. Access to the DB cluster is ultimately controlled by the security group
+     * it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     * doesn't permit it.
      *
      * When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name
      * that resolves to a private IP address.
@@ -3883,11 +4043,12 @@ public open class CfnDBCluster(
     /**
      * Specifies whether the DB cluster is publicly accessible.
      *
-     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to
-     * the private IP address from within the DB cluster's virtual private cloud (VPC). It resolves to
-     * the public IP address from outside of the DB cluster's VPC. Access to the DB cluster is
-     * ultimately controlled by the security group it uses. That public access isn't permitted if the
-     * security group assigned to the DB cluster doesn't permit it.
+     * When the DB cluster is publicly accessible and you connect from outside of the DB cluster's
+     * virtual private cloud (VPC), its Domain Name System (DNS) endpoint resolves to the public IP
+     * address. When you connect from within the same VPC as the DB cluster, the endpoint resolves to
+     * the private IP address. Access to the DB cluster is ultimately controlled by the security group
+     * it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     * doesn't permit it.
      *
      * When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name
      * that resolves to a private IP address.
@@ -3969,8 +4130,6 @@ public open class CfnDBCluster(
      * copy of the source DB cluster.
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
-     *
-     * Default: - "full-copy"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-restoretype)
      * @param restoreType The type of restore to be performed. You can specify one of the following
@@ -4260,24 +4419,24 @@ public open class CfnDBCluster(
     }
 
     /**
-     * An optional array of key-value pairs to apply to this DB cluster.
+     * Tags to assign to the DB cluster.
      *
-     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB cluster. 
+     * @param tags Tags to assign to the DB cluster. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * An optional array of key-value pairs to apply to this DB cluster.
+     * Tags to assign to the DB cluster.
      *
-     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB cluster. 
+     * @param tags Tags to assign to the DB cluster. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -4460,7 +4619,8 @@ public open class CfnDBCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty,
-    ) : CdkObject(cdkObject), DBClusterRoleProperty {
+    ) : CdkObject(cdkObject),
+        DBClusterRoleProperty {
       /**
        * The name of the feature associated with the AWS Identity and Access Management (IAM) role.
        *
@@ -4576,7 +4736,8 @@ public open class CfnDBCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.EndpointProperty,
-    ) : CdkObject(cdkObject), EndpointProperty {
+    ) : CdkObject(cdkObject),
+        EndpointProperty {
       /**
        * Specifies the connection endpoint for the primary instance of the DB cluster.
        *
@@ -4644,6 +4805,11 @@ public open class CfnDBCluster(
     /**
      * The Amazon Resource Name (ARN) of the secret.
      *
+     * This parameter is a return value that you can retrieve using the `Fn::GetAtt` intrinsic
+     * function. For more information, see [Return
+     * values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#aws-resource-rds-dbcluster-return-values)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html#cfn-rds-dbcluster-masterusersecret-secretarn)
      */
     public fun secretArn(): String? = unwrap(this).getSecretArn()
@@ -4660,6 +4826,10 @@ public open class CfnDBCluster(
 
       /**
        * @param secretArn The Amazon Resource Name (ARN) of the secret.
+       * This parameter is a return value that you can retrieve using the `Fn::GetAtt` intrinsic
+       * function. For more information, see [Return
+       * values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#aws-resource-rds-dbcluster-return-values)
+       * .
        */
       public fun secretArn(secretArn: String)
     }
@@ -4678,6 +4848,10 @@ public open class CfnDBCluster(
 
       /**
        * @param secretArn The Amazon Resource Name (ARN) of the secret.
+       * This parameter is a return value that you can retrieve using the `Fn::GetAtt` intrinsic
+       * function. For more information, see [Return
+       * values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#aws-resource-rds-dbcluster-return-values)
+       * .
        */
       override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
@@ -4689,7 +4863,8 @@ public open class CfnDBCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.MasterUserSecretProperty,
-    ) : CdkObject(cdkObject), MasterUserSecretProperty {
+    ) : CdkObject(cdkObject),
+        MasterUserSecretProperty {
       /**
        * The AWS KMS key identifier that is used to encrypt the secret.
        *
@@ -4699,6 +4874,11 @@ public open class CfnDBCluster(
 
       /**
        * The Amazon Resource Name (ARN) of the secret.
+       *
+       * This parameter is a return value that you can retrieve using the `Fn::GetAtt` intrinsic
+       * function. For more information, see [Return
+       * values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#aws-resource-rds-dbcluster-return-values)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html#cfn-rds-dbcluster-masterusersecret-secretarn)
        */
@@ -4790,7 +4970,8 @@ public open class CfnDBCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty,
-    ) : CdkObject(cdkObject), ReadEndpointProperty {
+    ) : CdkObject(cdkObject),
+        ReadEndpointProperty {
       /**
        * The host address of the reader endpoint.
        *
@@ -5136,7 +5317,8 @@ public open class CfnDBCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ScalingConfigurationProperty,
-    ) : CdkObject(cdkObject), ScalingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ScalingConfigurationProperty {
       /**
        * Indicates whether to allow or disallow automatic pause for an Aurora DB cluster in
        * `serverless` DB engine mode.
@@ -5252,9 +5434,9 @@ public open class CfnDBCluster(
    * v2](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.html) in the
    * *Amazon Aurora User Guide* .
    *
-   * If you have an Aurora cluster, you must set the `ScalingConfigurationInfo` attribute before you
-   * add a DB instance that uses the `db.serverless` DB instance class. For more information, see
-   * [Clusters that use Aurora Serverless v2 must have a capacity range
+   * If you have an Aurora cluster, you must set this attribute before you add a DB instance that
+   * uses the `db.serverless` DB instance class. For more information, see [Clusters that use Aurora
+   * Serverless v2 must have a capacity range
    * specified](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html#aurora-serverless-v2.requirements.capacity-range)
    * in the *Amazon Aurora User Guide* .
    *
@@ -5291,6 +5473,11 @@ public open class CfnDBCluster(
      * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
      * in the *Amazon Aurora User Guide* .
      *
+     * Aurora automatically sets certain parameters for Aurora Serverless V2 DB instances to values
+     * that depend on the maximum ACU value in the capacity range. When you update the maximum capacity
+     * value, the `ParameterApplyStatus` value for the DB instance changes to `pending-reboot` . You
+     * can update the parameter values by rebooting the DB instance after changing the capacity range.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-maxcapacity)
      */
     public fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
@@ -5321,6 +5508,12 @@ public open class CfnDBCluster(
        * maximum Aurora Serverless v2 capacity setting for a
        * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
        * in the *Amazon Aurora User Guide* .
+       *
+       * Aurora automatically sets certain parameters for Aurora Serverless V2 DB instances to
+       * values that depend on the maximum ACU value in the capacity range. When you update the maximum
+       * capacity value, the `ParameterApplyStatus` value for the DB instance changes to
+       * `pending-reboot` . You can update the parameter values by rebooting the DB instance after
+       * changing the capacity range.
        */
       public fun maxCapacity(maxCapacity: Number)
 
@@ -5349,6 +5542,12 @@ public open class CfnDBCluster(
        * maximum Aurora Serverless v2 capacity setting for a
        * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
        * in the *Amazon Aurora User Guide* .
+       *
+       * Aurora automatically sets certain parameters for Aurora Serverless V2 DB instances to
+       * values that depend on the maximum ACU value in the capacity range. When you update the maximum
+       * capacity value, the `ParameterApplyStatus` value for the DB instance changes to
+       * `pending-reboot` . You can update the parameter values by rebooting the DB instance after
+       * changing the capacity range.
        */
       override fun maxCapacity(maxCapacity: Number) {
         cdkBuilder.maxCapacity(maxCapacity)
@@ -5371,7 +5570,8 @@ public open class CfnDBCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty,
-    ) : CdkObject(cdkObject), ServerlessV2ScalingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServerlessV2ScalingConfigurationProperty {
       /**
        * The maximum number of Aurora capacity units (ACUs) for a DB instance in an Aurora
        * Serverless v2 cluster.
@@ -5383,6 +5583,12 @@ public open class CfnDBCluster(
        * maximum Aurora Serverless v2 capacity setting for a
        * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
        * in the *Amazon Aurora User Guide* .
+       *
+       * Aurora automatically sets certain parameters for Aurora Serverless V2 DB instances to
+       * values that depend on the maximum ACU value in the capacity range. When you update the maximum
+       * capacity value, the `ParameterApplyStatus` value for the DB instance changes to
+       * `pending-reboot` . You can update the parameter values by rebooting the DB instance after
+       * changing the capacity range.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-maxcapacity)
        */

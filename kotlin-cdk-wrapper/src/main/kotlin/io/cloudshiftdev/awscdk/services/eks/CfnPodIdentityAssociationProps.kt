@@ -237,7 +237,8 @@ public interface CfnPodIdentityAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.CfnPodIdentityAssociationProps,
-  ) : CdkObject(cdkObject), CfnPodIdentityAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnPodIdentityAssociationProps {
     /**
      * The name of the cluster that the association is in.
      *

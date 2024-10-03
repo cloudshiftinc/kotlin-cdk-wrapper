@@ -51,7 +51,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * subnetcount = subnetcount + 1;
  * }
  * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
- * .version(KubernetesVersion.V1_29)
+ * .version(KubernetesVersion.V1_30)
  * .vpc(vpc)
  * .ipFamily(IpFamily.IP_V6)
  * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
@@ -62,7 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVPCCidrBlock(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVPCCidrBlock,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -103,6 +104,21 @@ public open class CfnVPCCidrBlock(
    * The Id of the VPC associated CIDR Block.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
+
+  /**
+   * The source that allocated the IP address space.
+   *
+   * `byoip` or `amazon` indicates public IP address space allocated by Amazon or space that you
+   * have allocated with Bring your own IP (BYOIP). `none` indicates private space.
+   */
+  public open fun attrIpSource(): String = unwrap(this).getAttrIpSource()
+
+  /**
+   * Public IPv6 addresses are those advertised on the internet from AWS .
+   *
+   * Private IP addresses are not and cannot be advertised on the internet from AWS .
+   */
+  public open fun attrIpv6AddressAttribute(): String = unwrap(this).getAttrIpv6AddressAttribute()
 
   /**
    * An IPv4 CIDR block to associate with the VPC.

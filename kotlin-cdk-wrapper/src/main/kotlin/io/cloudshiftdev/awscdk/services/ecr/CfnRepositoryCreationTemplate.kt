@@ -18,8 +18,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * AWS::ECR::RepositoryCreationTemplate is used to create repository with configuration from a
- * pre-defined template.
+ * The details of the repository creation template associated with the request.
  *
  * Example:
  *
@@ -32,6 +31,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .appliedFor(List.of("appliedFor"))
  * .prefix("prefix")
  * // the properties below are optional
+ * .customRoleArn("customRoleArn")
  * .description("description")
  * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
  * .encryptionType("encryptionType")
@@ -52,7 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRepositoryCreationTemplate(
   cdkObject: software.amazon.awscdk.services.ecr.CfnRepositoryCreationTemplate,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -70,13 +71,13 @@ public open class CfnRepositoryCreationTemplate(
   )
 
   /**
-   * A list of enumerable Strings representing the repository creation scenarios that the template
+   * A list of enumerable Strings representing the repository creation scenarios that this template
    * will apply towards.
    */
   public open fun appliedFor(): List<String> = unwrap(this).getAppliedFor()
 
   /**
-   * A list of enumerable Strings representing the repository creation scenarios that the template
+   * A list of enumerable Strings representing the repository creation scenarios that this template
    * will apply towards.
    */
   public open fun appliedFor(`value`: List<String>) {
@@ -84,62 +85,68 @@ public open class CfnRepositoryCreationTemplate(
   }
 
   /**
-   * A list of enumerable Strings representing the repository creation scenarios that the template
+   * A list of enumerable Strings representing the repository creation scenarios that this template
    * will apply towards.
    */
   public open fun appliedFor(vararg `value`: String): Unit = appliedFor(`value`.toList())
 
   /**
-   * Create timestamp of the template.
+   * The date and time, in JavaScript date format, when the repository creation template was
+   * created.
    */
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
   /**
-   * Update timestamp of the template.
+   * The date and time, in JavaScript date format, when the repository creation template was last
+   * updated.
    */
   public open fun attrUpdatedAt(): String = unwrap(this).getAttrUpdatedAt()
 
   /**
-   * The description of the template.
+   * The ARN of the role to be assumed by Amazon ECR.
+   */
+  public open fun customRoleArn(): String? = unwrap(this).getCustomRoleArn()
+
+  /**
+   * The ARN of the role to be assumed by Amazon ECR.
+   */
+  public open fun customRoleArn(`value`: String) {
+    unwrap(this).setCustomRoleArn(`value`)
+  }
+
+  /**
+   * The description associated with the repository creation template.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The description of the template.
+   * The description associated with the repository creation template.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
 
   /**
-   * The encryption configuration for the repository.
-   *
-   * This determines how the contents of your repository are encrypted at rest.
+   * The encryption configuration associated with the repository creation template.
    */
   public open fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
 
   /**
-   * The encryption configuration for the repository.
-   *
-   * This determines how the contents of your repository are encrypted at rest.
+   * The encryption configuration associated with the repository creation template.
    */
   public open fun encryptionConfiguration(`value`: IResolvable) {
     unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The encryption configuration for the repository.
-   *
-   * This determines how the contents of your repository are encrypted at rest.
+   * The encryption configuration associated with the repository creation template.
    */
   public open fun encryptionConfiguration(`value`: EncryptionConfigurationProperty) {
     unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   * The encryption configuration for the repository.
-   *
-   * This determines how the contents of your repository are encrypted at rest.
+   * The encryption configuration associated with the repository creation template.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("0615e622a0ea6b7667d6f0352968d9c0b77e1f2d4905736dec3072d9ba5ce92e")
@@ -148,12 +155,12 @@ public open class CfnRepositoryCreationTemplate(
       = encryptionConfiguration(EncryptionConfigurationProperty(`value`))
 
   /**
-   * The image tag mutability setting for the repository.
+   * The tag mutability setting for the repository.
    */
   public open fun imageTagMutability(): String? = unwrap(this).getImageTagMutability()
 
   /**
-   * The image tag mutability setting for the repository.
+   * The tag mutability setting for the repository.
    */
   public open fun imageTagMutability(`value`: String) {
     unwrap(this).setImageTagMutability(`value`)
@@ -169,62 +176,62 @@ public open class CfnRepositoryCreationTemplate(
   }
 
   /**
-   * The JSON lifecycle policy text to apply to the repository.
+   * The lifecycle policy to use for repositories created using the template.
    */
   public open fun lifecyclePolicy(): String? = unwrap(this).getLifecyclePolicy()
 
   /**
-   * The JSON lifecycle policy text to apply to the repository.
+   * The lifecycle policy to use for repositories created using the template.
    */
   public open fun lifecyclePolicy(`value`: String) {
     unwrap(this).setLifecyclePolicy(`value`)
   }
 
   /**
-   * The prefix use to match the repository name and apply the template.
+   * The repository namespace prefix associated with the repository creation template.
    */
   public open fun prefix(): String = unwrap(this).getPrefix()
 
   /**
-   * The prefix use to match the repository name and apply the template.
+   * The repository namespace prefix associated with the repository creation template.
    */
   public open fun prefix(`value`: String) {
     unwrap(this).setPrefix(`value`)
   }
 
   /**
-   * The JSON repository policy text to apply to the repository.
+   * he repository policy to apply to repositories created using the template.
    */
   public open fun repositoryPolicy(): String? = unwrap(this).getRepositoryPolicy()
 
   /**
-   * The JSON repository policy text to apply to the repository.
+   * he repository policy to apply to repositories created using the template.
    */
   public open fun repositoryPolicy(`value`: String) {
     unwrap(this).setRepositoryPolicy(`value`)
   }
 
   /**
-   * The tags attached to the resource.
+   * The metadata to apply to the repository to help you categorize and organize.
    */
   public open fun resourceTags(): Any? = unwrap(this).getResourceTags()
 
   /**
-   * The tags attached to the resource.
+   * The metadata to apply to the repository to help you categorize and organize.
    */
   public open fun resourceTags(`value`: IResolvable) {
     unwrap(this).setResourceTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The tags attached to the resource.
+   * The metadata to apply to the repository to help you categorize and organize.
    */
   public open fun resourceTags(`value`: List<Any>) {
     unwrap(this).setResourceTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * The tags attached to the resource.
+   * The metadata to apply to the repository to help you categorize and organize.
    */
   public open fun resourceTags(vararg `value`: Any): Unit = resourceTags(`value`.toList())
 
@@ -234,93 +241,73 @@ public open class CfnRepositoryCreationTemplate(
   @CdkDslMarker
   public interface Builder {
     /**
-     * A list of enumerable Strings representing the repository creation scenarios that the template
-     * will apply towards.
+     * A list of enumerable Strings representing the repository creation scenarios that this
+     * template will apply towards.
+     *
+     * The two supported scenarios are PULL_THROUGH_CACHE and REPLICATION
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-appliedfor)
      * @param appliedFor A list of enumerable Strings representing the repository creation scenarios
-     * that the template will apply towards. 
+     * that this template will apply towards. 
      */
     public fun appliedFor(appliedFor: List<String>)
 
     /**
-     * A list of enumerable Strings representing the repository creation scenarios that the template
-     * will apply towards.
+     * A list of enumerable Strings representing the repository creation scenarios that this
+     * template will apply towards.
+     *
+     * The two supported scenarios are PULL_THROUGH_CACHE and REPLICATION
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-appliedfor)
      * @param appliedFor A list of enumerable Strings representing the repository creation scenarios
-     * that the template will apply towards. 
+     * that this template will apply towards. 
      */
     public fun appliedFor(vararg appliedFor: String)
 
     /**
-     * The description of the template.
+     * The ARN of the role to be assumed by Amazon ECR.
+     *
+     * Amazon ECR will assume your supplied role when the customRoleArn is specified. When this
+     * field isn't specified, Amazon ECR will use the service-linked role for the repository creation
+     * template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-customrolearn)
+     * @param customRoleArn The ARN of the role to be assumed by Amazon ECR. 
+     */
+    public fun customRoleArn(customRoleArn: String)
+
+    /**
+     * The description associated with the repository creation template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-description)
-     * @param description The description of the template. 
+     * @param description The description associated with the repository creation template. 
      */
     public fun description(description: String)
 
     /**
-     * The encryption configuration for the repository. This determines how the contents of your
-     * repository are encrypted at rest.
-     *
-     * By default, when no encryption configuration is set or the `AES256` encryption type is used,
-     * Amazon ECR uses server-side encryption with Amazon S3-managed encryption keys which encrypts
-     * your data at rest using an AES-256 encryption algorithm. This does not require any action on
-     * your part.
-     *
-     * For more control over the encryption of the contents of your repository, you can use
-     * server-side encryption with AWS Key Management Service key stored in AWS Key Management Service
-     * ( AWS KMS ) to encrypt your images. For more information, see [Amazon ECR encryption at
-     * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
-     * *Amazon Elastic Container Registry User Guide* .
+     * The encryption configuration associated with the repository creation template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-encryptionconfiguration)
-     * @param encryptionConfiguration The encryption configuration for the repository. This
-     * determines how the contents of your repository are encrypted at rest. 
+     * @param encryptionConfiguration The encryption configuration associated with the repository
+     * creation template. 
      */
     public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
 
     /**
-     * The encryption configuration for the repository. This determines how the contents of your
-     * repository are encrypted at rest.
-     *
-     * By default, when no encryption configuration is set or the `AES256` encryption type is used,
-     * Amazon ECR uses server-side encryption with Amazon S3-managed encryption keys which encrypts
-     * your data at rest using an AES-256 encryption algorithm. This does not require any action on
-     * your part.
-     *
-     * For more control over the encryption of the contents of your repository, you can use
-     * server-side encryption with AWS Key Management Service key stored in AWS Key Management Service
-     * ( AWS KMS ) to encrypt your images. For more information, see [Amazon ECR encryption at
-     * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
-     * *Amazon Elastic Container Registry User Guide* .
+     * The encryption configuration associated with the repository creation template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-encryptionconfiguration)
-     * @param encryptionConfiguration The encryption configuration for the repository. This
-     * determines how the contents of your repository are encrypted at rest. 
+     * @param encryptionConfiguration The encryption configuration associated with the repository
+     * creation template. 
      */
     public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty)
 
     /**
-     * The encryption configuration for the repository. This determines how the contents of your
-     * repository are encrypted at rest.
-     *
-     * By default, when no encryption configuration is set or the `AES256` encryption type is used,
-     * Amazon ECR uses server-side encryption with Amazon S3-managed encryption keys which encrypts
-     * your data at rest using an AES-256 encryption algorithm. This does not require any action on
-     * your part.
-     *
-     * For more control over the encryption of the contents of your repository, you can use
-     * server-side encryption with AWS Key Management Service key stored in AWS Key Management Service
-     * ( AWS KMS ) to encrypt your images. For more information, see [Amazon ECR encryption at
-     * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
-     * *Amazon Elastic Container Registry User Guide* .
+     * The encryption configuration associated with the repository creation template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-encryptionconfiguration)
-     * @param encryptionConfiguration The encryption configuration for the repository. This
-     * determines how the contents of your repository are encrypted at rest. 
+     * @param encryptionConfiguration The encryption configuration associated with the repository
+     * creation template. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11bfe268586d293bebc28c5576956fc7f90e2692aa08fc8ec8cde003fcd52e83")
@@ -328,64 +315,83 @@ public open class CfnRepositoryCreationTemplate(
         fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * The image tag mutability setting for the repository.
+     * The tag mutability setting for the repository.
+     *
+     * If this parameter is omitted, the default setting of MUTABLE will be used which will allow
+     * image tags to be overwritten. If IMMUTABLE is specified, all image tags within the repository
+     * will be immutable which will prevent them from being overwritten.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-imagetagmutability)
-     * @param imageTagMutability The image tag mutability setting for the repository. 
+     * @param imageTagMutability The tag mutability setting for the repository. 
      */
     public fun imageTagMutability(imageTagMutability: String)
 
     /**
-     * The JSON lifecycle policy text to apply to the repository.
-     *
-     * For information about lifecycle policy syntax, see
-     * https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html
+     * The lifecycle policy to use for repositories created using the template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-lifecyclepolicy)
-     * @param lifecyclePolicy The JSON lifecycle policy text to apply to the repository. 
+     * @param lifecyclePolicy The lifecycle policy to use for repositories created using the
+     * template. 
      */
     public fun lifecyclePolicy(lifecyclePolicy: String)
 
     /**
-     * The prefix use to match the repository name and apply the template.
+     * The repository namespace prefix associated with the repository creation template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-prefix)
-     * @param prefix The prefix use to match the repository name and apply the template. 
+     * @param prefix The repository namespace prefix associated with the repository creation
+     * template. 
      */
     public fun prefix(prefix: String)
 
     /**
-     * The JSON repository policy text to apply to the repository.
+     * he repository policy to apply to repositories created using the template.
      *
-     * For more information, see
-     * https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html
+     * A repository policy is a permissions policy associated with a repository to control access
+     * permissions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-repositorypolicy)
-     * @param repositoryPolicy The JSON repository policy text to apply to the repository. 
+     * @param repositoryPolicy he repository policy to apply to repositories created using the
+     * template. 
      */
     public fun repositoryPolicy(repositoryPolicy: String)
 
     /**
-     * The tags attached to the resource.
+     * The metadata to apply to the repository to help you categorize and organize.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
+     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
+     * characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-resourcetags)
-     * @param resourceTags The tags attached to the resource. 
+     * @param resourceTags The metadata to apply to the repository to help you categorize and
+     * organize. 
      */
     public fun resourceTags(resourceTags: IResolvable)
 
     /**
-     * The tags attached to the resource.
+     * The metadata to apply to the repository to help you categorize and organize.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
+     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
+     * characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-resourcetags)
-     * @param resourceTags The tags attached to the resource. 
+     * @param resourceTags The metadata to apply to the repository to help you categorize and
+     * organize. 
      */
     public fun resourceTags(resourceTags: List<Any>)
 
     /**
-     * The tags attached to the resource.
+     * The metadata to apply to the repository to help you categorize and organize.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
+     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
+     * characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-resourcetags)
-     * @param resourceTags The tags attached to the resource. 
+     * @param resourceTags The metadata to apply to the repository to help you categorize and
+     * organize. 
      */
     public fun resourceTags(vararg resourceTags: Any)
   }
@@ -399,101 +405,83 @@ public open class CfnRepositoryCreationTemplate(
         software.amazon.awscdk.services.ecr.CfnRepositoryCreationTemplate.Builder.create(scope, id)
 
     /**
-     * A list of enumerable Strings representing the repository creation scenarios that the template
-     * will apply towards.
+     * A list of enumerable Strings representing the repository creation scenarios that this
+     * template will apply towards.
+     *
+     * The two supported scenarios are PULL_THROUGH_CACHE and REPLICATION
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-appliedfor)
      * @param appliedFor A list of enumerable Strings representing the repository creation scenarios
-     * that the template will apply towards. 
+     * that this template will apply towards. 
      */
     override fun appliedFor(appliedFor: List<String>) {
       cdkBuilder.appliedFor(appliedFor)
     }
 
     /**
-     * A list of enumerable Strings representing the repository creation scenarios that the template
-     * will apply towards.
+     * A list of enumerable Strings representing the repository creation scenarios that this
+     * template will apply towards.
+     *
+     * The two supported scenarios are PULL_THROUGH_CACHE and REPLICATION
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-appliedfor)
      * @param appliedFor A list of enumerable Strings representing the repository creation scenarios
-     * that the template will apply towards. 
+     * that this template will apply towards. 
      */
     override fun appliedFor(vararg appliedFor: String): Unit = appliedFor(appliedFor.toList())
 
     /**
-     * The description of the template.
+     * The ARN of the role to be assumed by Amazon ECR.
+     *
+     * Amazon ECR will assume your supplied role when the customRoleArn is specified. When this
+     * field isn't specified, Amazon ECR will use the service-linked role for the repository creation
+     * template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-customrolearn)
+     * @param customRoleArn The ARN of the role to be assumed by Amazon ECR. 
+     */
+    override fun customRoleArn(customRoleArn: String) {
+      cdkBuilder.customRoleArn(customRoleArn)
+    }
+
+    /**
+     * The description associated with the repository creation template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-description)
-     * @param description The description of the template. 
+     * @param description The description associated with the repository creation template. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * The encryption configuration for the repository. This determines how the contents of your
-     * repository are encrypted at rest.
-     *
-     * By default, when no encryption configuration is set or the `AES256` encryption type is used,
-     * Amazon ECR uses server-side encryption with Amazon S3-managed encryption keys which encrypts
-     * your data at rest using an AES-256 encryption algorithm. This does not require any action on
-     * your part.
-     *
-     * For more control over the encryption of the contents of your repository, you can use
-     * server-side encryption with AWS Key Management Service key stored in AWS Key Management Service
-     * ( AWS KMS ) to encrypt your images. For more information, see [Amazon ECR encryption at
-     * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
-     * *Amazon Elastic Container Registry User Guide* .
+     * The encryption configuration associated with the repository creation template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-encryptionconfiguration)
-     * @param encryptionConfiguration The encryption configuration for the repository. This
-     * determines how the contents of your repository are encrypted at rest. 
+     * @param encryptionConfiguration The encryption configuration associated with the repository
+     * creation template. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
       cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The encryption configuration for the repository. This determines how the contents of your
-     * repository are encrypted at rest.
-     *
-     * By default, when no encryption configuration is set or the `AES256` encryption type is used,
-     * Amazon ECR uses server-side encryption with Amazon S3-managed encryption keys which encrypts
-     * your data at rest using an AES-256 encryption algorithm. This does not require any action on
-     * your part.
-     *
-     * For more control over the encryption of the contents of your repository, you can use
-     * server-side encryption with AWS Key Management Service key stored in AWS Key Management Service
-     * ( AWS KMS ) to encrypt your images. For more information, see [Amazon ECR encryption at
-     * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
-     * *Amazon Elastic Container Registry User Guide* .
+     * The encryption configuration associated with the repository creation template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-encryptionconfiguration)
-     * @param encryptionConfiguration The encryption configuration for the repository. This
-     * determines how the contents of your repository are encrypted at rest. 
+     * @param encryptionConfiguration The encryption configuration associated with the repository
+     * creation template. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
       cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
-     * The encryption configuration for the repository. This determines how the contents of your
-     * repository are encrypted at rest.
-     *
-     * By default, when no encryption configuration is set or the `AES256` encryption type is used,
-     * Amazon ECR uses server-side encryption with Amazon S3-managed encryption keys which encrypts
-     * your data at rest using an AES-256 encryption algorithm. This does not require any action on
-     * your part.
-     *
-     * For more control over the encryption of the contents of your repository, you can use
-     * server-side encryption with AWS Key Management Service key stored in AWS Key Management Service
-     * ( AWS KMS ) to encrypt your images. For more information, see [Amazon ECR encryption at
-     * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
-     * *Amazon Elastic Container Registry User Guide* .
+     * The encryption configuration associated with the repository creation template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-encryptionconfiguration)
-     * @param encryptionConfiguration The encryption configuration for the repository. This
-     * determines how the contents of your repository are encrypted at rest. 
+     * @param encryptionConfiguration The encryption configuration associated with the repository
+     * creation template. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11bfe268586d293bebc28c5576956fc7f90e2692aa08fc8ec8cde003fcd52e83")
@@ -502,76 +490,95 @@ public open class CfnRepositoryCreationTemplate(
         Unit = encryptionConfiguration(EncryptionConfigurationProperty(encryptionConfiguration))
 
     /**
-     * The image tag mutability setting for the repository.
+     * The tag mutability setting for the repository.
+     *
+     * If this parameter is omitted, the default setting of MUTABLE will be used which will allow
+     * image tags to be overwritten. If IMMUTABLE is specified, all image tags within the repository
+     * will be immutable which will prevent them from being overwritten.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-imagetagmutability)
-     * @param imageTagMutability The image tag mutability setting for the repository. 
+     * @param imageTagMutability The tag mutability setting for the repository. 
      */
     override fun imageTagMutability(imageTagMutability: String) {
       cdkBuilder.imageTagMutability(imageTagMutability)
     }
 
     /**
-     * The JSON lifecycle policy text to apply to the repository.
-     *
-     * For information about lifecycle policy syntax, see
-     * https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html
+     * The lifecycle policy to use for repositories created using the template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-lifecyclepolicy)
-     * @param lifecyclePolicy The JSON lifecycle policy text to apply to the repository. 
+     * @param lifecyclePolicy The lifecycle policy to use for repositories created using the
+     * template. 
      */
     override fun lifecyclePolicy(lifecyclePolicy: String) {
       cdkBuilder.lifecyclePolicy(lifecyclePolicy)
     }
 
     /**
-     * The prefix use to match the repository name and apply the template.
+     * The repository namespace prefix associated with the repository creation template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-prefix)
-     * @param prefix The prefix use to match the repository name and apply the template. 
+     * @param prefix The repository namespace prefix associated with the repository creation
+     * template. 
      */
     override fun prefix(prefix: String) {
       cdkBuilder.prefix(prefix)
     }
 
     /**
-     * The JSON repository policy text to apply to the repository.
+     * he repository policy to apply to repositories created using the template.
      *
-     * For more information, see
-     * https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html
+     * A repository policy is a permissions policy associated with a repository to control access
+     * permissions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-repositorypolicy)
-     * @param repositoryPolicy The JSON repository policy text to apply to the repository. 
+     * @param repositoryPolicy he repository policy to apply to repositories created using the
+     * template. 
      */
     override fun repositoryPolicy(repositoryPolicy: String) {
       cdkBuilder.repositoryPolicy(repositoryPolicy)
     }
 
     /**
-     * The tags attached to the resource.
+     * The metadata to apply to the repository to help you categorize and organize.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
+     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
+     * characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-resourcetags)
-     * @param resourceTags The tags attached to the resource. 
+     * @param resourceTags The metadata to apply to the repository to help you categorize and
+     * organize. 
      */
     override fun resourceTags(resourceTags: IResolvable) {
       cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The tags attached to the resource.
+     * The metadata to apply to the repository to help you categorize and organize.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
+     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
+     * characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-resourcetags)
-     * @param resourceTags The tags attached to the resource. 
+     * @param resourceTags The metadata to apply to the repository to help you categorize and
+     * organize. 
      */
     override fun resourceTags(resourceTags: List<Any>) {
       cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * The tags attached to the resource.
+     * The metadata to apply to the repository to help you categorize and organize.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
+     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
+     * characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-resourcetags)
-     * @param resourceTags The tags attached to the resource. 
+     * @param resourceTags The metadata to apply to the repository to help you categorize and
+     * organize. 
      */
     override fun resourceTags(vararg resourceTags: Any): Unit = resourceTags(resourceTags.toList())
 
@@ -606,7 +613,7 @@ public open class CfnRepositoryCreationTemplate(
    *
    * By default, when no encryption configuration is set or the `AES256` encryption type is used,
    * Amazon ECR uses server-side encryption with Amazon S3-managed encryption keys which encrypts your
-   * data at rest using an AES-256 encryption algorithm. This does not require any action on your part.
+   * data at rest using an AES256 encryption algorithm. This does not require any action on your part.
    *
    * For more control over the encryption of the contents of your repository, you can use
    * server-side encryption with AWS Key Management Service key stored in AWS Key Management Service (
@@ -637,17 +644,21 @@ public open class CfnRepositoryCreationTemplate(
      * If you use the `KMS` encryption type, the contents of the repository will be encrypted using
      * server-side encryption with AWS Key Management Service key stored in AWS KMS . When you use AWS
      * KMS to encrypt your data, you can either use the default AWS managed AWS KMS key for Amazon ECR,
-     * or specify your own AWS KMS key, which you already created. For more information, see
-     * [Protecting data using server-side encryption with an AWS KMS key stored in AWS Key Management
-     * Service (SSE-KMS)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in
-     * the *Amazon Simple Storage Service Console Developer Guide* .
+     * or specify your own AWS KMS key, which you already created.
+     *
+     * If you use the `KMS_DSSE` encryption type, the contents of the repository will be encrypted
+     * with two layers of encryption using server-side encryption with the AWS KMS Management Service
+     * key stored in AWS KMS . Similar to the `KMS` encryption type, you can either use the default AWS
+     * managed AWS KMS key for Amazon ECR, or specify your own AWS KMS key, which you've already
+     * created.
      *
      * If you use the `AES256` encryption type, Amazon ECR uses server-side encryption with Amazon
-     * S3-managed encryption keys which encrypts the images in the repository using an AES-256
-     * encryption algorithm. For more information, see [Protecting data using server-side encryption
-     * with Amazon S3-managed encryption keys
-     * (SSE-S3)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the
-     * *Amazon Simple Storage Service Console Developer Guide* .
+     * S3-managed encryption keys which encrypts the images in the repository using an AES256
+     * encryption algorithm.
+     *
+     * For more information, see [Amazon ECR encryption at
+     * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
+     * *Amazon Elastic Container Registry User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repositorycreationtemplate-encryptionconfiguration.html#cfn-ecr-repositorycreationtemplate-encryptionconfiguration-encryptiontype)
      */
@@ -674,18 +685,21 @@ public open class CfnRepositoryCreationTemplate(
        * If you use the `KMS` encryption type, the contents of the repository will be encrypted
        * using server-side encryption with AWS Key Management Service key stored in AWS KMS . When you
        * use AWS KMS to encrypt your data, you can either use the default AWS managed AWS KMS key for
-       * Amazon ECR, or specify your own AWS KMS key, which you already created. For more information,
-       * see [Protecting data using server-side encryption with an AWS KMS key stored in AWS Key
-       * Management Service
-       * (SSE-KMS)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the
-       * *Amazon Simple Storage Service Console Developer Guide* .
+       * Amazon ECR, or specify your own AWS KMS key, which you already created.
+       *
+       * If you use the `KMS_DSSE` encryption type, the contents of the repository will be encrypted
+       * with two layers of encryption using server-side encryption with the AWS KMS Management Service
+       * key stored in AWS KMS . Similar to the `KMS` encryption type, you can either use the default
+       * AWS managed AWS KMS key for Amazon ECR, or specify your own AWS KMS key, which you've already
+       * created.
        *
        * If you use the `AES256` encryption type, Amazon ECR uses server-side encryption with Amazon
-       * S3-managed encryption keys which encrypts the images in the repository using an AES-256
-       * encryption algorithm. For more information, see [Protecting data using server-side encryption
-       * with Amazon S3-managed encryption keys
-       * (SSE-S3)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in
-       * the *Amazon Simple Storage Service Console Developer Guide* .
+       * S3-managed encryption keys which encrypts the images in the repository using an AES256
+       * encryption algorithm.
+       *
+       * For more information, see [Amazon ECR encryption at
+       * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
+       * *Amazon Elastic Container Registry User Guide* .
        */
       public fun encryptionType(encryptionType: String)
 
@@ -710,18 +724,21 @@ public open class CfnRepositoryCreationTemplate(
        * If you use the `KMS` encryption type, the contents of the repository will be encrypted
        * using server-side encryption with AWS Key Management Service key stored in AWS KMS . When you
        * use AWS KMS to encrypt your data, you can either use the default AWS managed AWS KMS key for
-       * Amazon ECR, or specify your own AWS KMS key, which you already created. For more information,
-       * see [Protecting data using server-side encryption with an AWS KMS key stored in AWS Key
-       * Management Service
-       * (SSE-KMS)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the
-       * *Amazon Simple Storage Service Console Developer Guide* .
+       * Amazon ECR, or specify your own AWS KMS key, which you already created.
+       *
+       * If you use the `KMS_DSSE` encryption type, the contents of the repository will be encrypted
+       * with two layers of encryption using server-side encryption with the AWS KMS Management Service
+       * key stored in AWS KMS . Similar to the `KMS` encryption type, you can either use the default
+       * AWS managed AWS KMS key for Amazon ECR, or specify your own AWS KMS key, which you've already
+       * created.
        *
        * If you use the `AES256` encryption type, Amazon ECR uses server-side encryption with Amazon
-       * S3-managed encryption keys which encrypts the images in the repository using an AES-256
-       * encryption algorithm. For more information, see [Protecting data using server-side encryption
-       * with Amazon S3-managed encryption keys
-       * (SSE-S3)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in
-       * the *Amazon Simple Storage Service Console Developer Guide* .
+       * S3-managed encryption keys which encrypts the images in the repository using an AES256
+       * encryption algorithm.
+       *
+       * For more information, see [Amazon ECR encryption at
+       * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
+       * *Amazon Elastic Container Registry User Guide* .
        */
       override fun encryptionType(encryptionType: String) {
         cdkBuilder.encryptionType(encryptionType)
@@ -745,25 +762,29 @@ public open class CfnRepositoryCreationTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecr.CfnRepositoryCreationTemplate.EncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionConfigurationProperty {
       /**
        * The encryption type to use.
        *
        * If you use the `KMS` encryption type, the contents of the repository will be encrypted
        * using server-side encryption with AWS Key Management Service key stored in AWS KMS . When you
        * use AWS KMS to encrypt your data, you can either use the default AWS managed AWS KMS key for
-       * Amazon ECR, or specify your own AWS KMS key, which you already created. For more information,
-       * see [Protecting data using server-side encryption with an AWS KMS key stored in AWS Key
-       * Management Service
-       * (SSE-KMS)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the
-       * *Amazon Simple Storage Service Console Developer Guide* .
+       * Amazon ECR, or specify your own AWS KMS key, which you already created.
+       *
+       * If you use the `KMS_DSSE` encryption type, the contents of the repository will be encrypted
+       * with two layers of encryption using server-side encryption with the AWS KMS Management Service
+       * key stored in AWS KMS . Similar to the `KMS` encryption type, you can either use the default
+       * AWS managed AWS KMS key for Amazon ECR, or specify your own AWS KMS key, which you've already
+       * created.
        *
        * If you use the `AES256` encryption type, Amazon ECR uses server-side encryption with Amazon
-       * S3-managed encryption keys which encrypts the images in the repository using an AES-256
-       * encryption algorithm. For more information, see [Protecting data using server-side encryption
-       * with Amazon S3-managed encryption keys
-       * (SSE-S3)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in
-       * the *Amazon Simple Storage Service Console Developer Guide* .
+       * S3-managed encryption keys which encrypts the images in the repository using an AES256
+       * encryption algorithm.
+       *
+       * For more information, see [Amazon ECR encryption at
+       * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
+       * *Amazon Elastic Container Registry User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repositorycreationtemplate-encryptionconfiguration.html#cfn-ecr-repositorycreationtemplate-encryptionconfiguration-encryptiontype)
        */

@@ -23,7 +23,8 @@ import kotlin.String
  */
 public open class SsmIncidentAction(
   cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction,
-) : CdkObject(cdkObject), IAlarmAction {
+) : CdkObject(cdkObject),
+    IAlarmAction {
   public constructor(responsePlanName: String) :
       this(software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction(responsePlanName)
   )

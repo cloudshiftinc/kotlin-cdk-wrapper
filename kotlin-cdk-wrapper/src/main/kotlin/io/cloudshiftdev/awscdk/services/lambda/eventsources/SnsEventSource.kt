@@ -34,7 +34,8 @@ import software.amazon.awscdk.services.sns.ITopic as AmazonAwscdkServicesSnsITop
  */
 public open class SnsEventSource(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsEventSource,
-) : CdkObject(cdkObject), IEventSource {
+) : CdkObject(cdkObject),
+    IEventSource {
   public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic) :
       this(software.amazon.awscdk.services.lambda.eventsources.SnsEventSource(topic.let(CloudshiftdevAwscdkServicesSnsITopic.Companion::unwrap))
   )

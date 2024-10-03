@@ -143,7 +143,8 @@ public interface CfnConnectionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codestarconnections.CfnConnectionProps,
-  ) : CdkObject(cdkObject), CfnConnectionProps {
+  ) : CdkObject(cdkObject),
+      CfnConnectionProps {
     /**
      * The name of the connection.
      *

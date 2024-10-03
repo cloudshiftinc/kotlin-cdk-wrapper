@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAnalyzer(
   cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -552,7 +554,8 @@ public open class CfnAnalyzer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty,
-    ) : CdkObject(cdkObject), AnalyzerConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AnalyzerConfigurationProperty {
       /**
        * Specifies the configuration of an unused access analyzer for an AWS organization or
        * account.
@@ -685,7 +688,8 @@ public open class CfnAnalyzer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty,
-    ) : CdkObject(cdkObject), ArchiveRuleProperty {
+    ) : CdkObject(cdkObject),
+        ArchiveRuleProperty {
       /**
        * The criteria for the rule.
        *
@@ -899,7 +903,8 @@ public open class CfnAnalyzer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
+    ) : CdkObject(cdkObject),
+        FilterProperty {
       /**
        * A "contains" condition to match for the rule.
        *
@@ -1022,7 +1027,8 @@ public open class CfnAnalyzer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.UnusedAccessConfigurationProperty,
-    ) : CdkObject(cdkObject), UnusedAccessConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        UnusedAccessConfigurationProperty {
       /**
        * The specified access age in days for which to generate findings for unused access.
        *

@@ -28,7 +28,9 @@ import kotlin.jvm.JvmName
  */
 public abstract class FunctionBase(
   cdkObject: software.amazon.awscdk.services.lambda.FunctionBase,
-) : Resource(cdkObject), IFunction, IClientVpnConnectionHandler {
+) : Resource(cdkObject),
+    IFunction,
+    IClientVpnConnectionHandler {
   /**
    * Adds an event source to this function.
    *
@@ -215,12 +217,31 @@ public abstract class FunctionBase(
       unwrap(this).grantInvokeCompositePrincipal(compositePrincipal.let(CompositePrincipal.Companion::unwrap)).map(Grant::wrap)
 
   /**
+   * Grant the given identity permissions to invoke the $LATEST version or unqualified version of
+   * this Lambda.
+   *
+   * @param grantee 
+   */
+  public override fun grantInvokeLatestVersion(grantee: IGrantable): Grant =
+      unwrap(this).grantInvokeLatestVersion(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+  /**
    * Grant the given identity permissions to invoke this Lambda Function URL.
    *
    * @param grantee 
    */
   public override fun grantInvokeUrl(grantee: IGrantable): Grant =
       unwrap(this).grantInvokeUrl(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+  /**
+   * Grant the given identity permissions to invoke the given version of this Lambda.
+   *
+   * @param grantee 
+   * @param version 
+   */
+  public override fun grantInvokeVersion(grantee: IGrantable, version: IVersion): Grant =
+      unwrap(this).grantInvokeVersion(grantee.let(IGrantable.Companion::unwrap),
+      version.let(IVersion.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The principal this Lambda Function is running as.

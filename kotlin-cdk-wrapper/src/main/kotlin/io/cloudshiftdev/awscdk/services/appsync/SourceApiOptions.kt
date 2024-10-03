@@ -108,7 +108,8 @@ public interface SourceApiOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.SourceApiOptions,
-  ) : CdkObject(cdkObject), SourceApiOptions {
+  ) : CdkObject(cdkObject),
+      SourceApiOptions {
     /**
      * IAM Role used to validate access to source APIs at runtime and to update the merged API
      * endpoint with the source API changes.

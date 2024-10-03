@@ -25,7 +25,8 @@ import kotlin.String
  */
 public open class LambdaDestination(
   cdkObject: software.amazon.awscdk.services.appconfig.LambdaDestination,
-) : CdkObject(cdkObject), IEventDestination {
+) : CdkObject(cdkObject),
+    IEventDestination {
   public constructor(func: IFunction) :
       this(software.amazon.awscdk.services.appconfig.LambdaDestination(func.let(IFunction.Companion::unwrap))
   )

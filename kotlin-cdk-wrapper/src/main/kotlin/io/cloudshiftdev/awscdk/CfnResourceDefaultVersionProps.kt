@@ -121,7 +121,8 @@ public interface CfnResourceDefaultVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnResourceDefaultVersionProps,
-  ) : CdkObject(cdkObject), CfnResourceDefaultVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnResourceDefaultVersionProps {
     /**
      * The name of the resource.
      *

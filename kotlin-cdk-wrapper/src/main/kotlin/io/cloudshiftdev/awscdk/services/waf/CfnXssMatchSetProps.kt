@@ -118,7 +118,8 @@ public interface CfnXssMatchSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.waf.CfnXssMatchSetProps,
-  ) : CdkObject(cdkObject), CfnXssMatchSetProps {
+  ) : CdkObject(cdkObject),
+      CfnXssMatchSetProps {
     /**
      * The name, if any, of the `XssMatchSet` .
      *

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
+import kotlin.jvm.JvmName
 
 /**
  * Construction properties of `ServerDeploymentConfig`.
@@ -29,6 +30,14 @@ public interface ServerDeploymentConfigProps : BaseDeploymentConfigOptions {
   public fun minimumHealthyHosts(): MinimumHealthyHosts
 
   /**
+   * Configure CodeDeploy to deploy your application to one Availability Zone at a time within an
+   * AWS Region.
+   *
+   * Default: - deploy your application to a random selection of hosts across a Region
+   */
+  public fun zonalConfig(): ZonalConfig? = unwrap(this).getZonalConfig()?.let(ZonalConfig::wrap)
+
+  /**
    * A builder for [ServerDeploymentConfigProps]
    */
   @CdkDslMarker
@@ -43,6 +52,20 @@ public interface ServerDeploymentConfigProps : BaseDeploymentConfigOptions {
      * @param minimumHealthyHosts Minimum number of healthy hosts. 
      */
     public fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts)
+
+    /**
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region.
+     */
+    public fun zonalConfig(zonalConfig: ZonalConfig)
+
+    /**
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("89add2f760630fa9d78509219bf9a35f54a4cb9909e47cd9178b27e50776bf84")
+    public fun zonalConfig(zonalConfig: ZonalConfig.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -65,13 +88,31 @@ public interface ServerDeploymentConfigProps : BaseDeploymentConfigOptions {
       cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHosts.Companion::unwrap))
     }
 
+    /**
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region.
+     */
+    override fun zonalConfig(zonalConfig: ZonalConfig) {
+      cdkBuilder.zonalConfig(zonalConfig.let(ZonalConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("89add2f760630fa9d78509219bf9a35f54a4cb9909e47cd9178b27e50776bf84")
+    override fun zonalConfig(zonalConfig: ZonalConfig.Builder.() -> Unit): Unit =
+        zonalConfig(ZonalConfig(zonalConfig))
+
     public fun build(): software.amazon.awscdk.services.codedeploy.ServerDeploymentConfigProps =
         cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentConfigProps,
-  ) : CdkObject(cdkObject), ServerDeploymentConfigProps {
+  ) : CdkObject(cdkObject),
+      ServerDeploymentConfigProps {
     /**
      * The physical, human-readable name of the Deployment Configuration.
      *
@@ -84,6 +125,14 @@ public interface ServerDeploymentConfigProps : BaseDeploymentConfigOptions {
      */
     override fun minimumHealthyHosts(): MinimumHealthyHosts =
         unwrap(this).getMinimumHealthyHosts().let(MinimumHealthyHosts::wrap)
+
+    /**
+     * Configure CodeDeploy to deploy your application to one Availability Zone at a time within an
+     * AWS Region.
+     *
+     * Default: - deploy your application to a random selection of hosts across a Region
+     */
+    override fun zonalConfig(): ZonalConfig? = unwrap(this).getZonalConfig()?.let(ZonalConfig::wrap)
   }
 
   public companion object {

@@ -37,7 +37,8 @@ import software.amazon.awscdk.services.cognito.IUserPool as AmazonAwscdkServices
  */
 public open class HttpUserPoolAuthorizer(
   cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer,
-) : CdkObject(cdkObject), IHttpRouteAuthorizer {
+) : CdkObject(cdkObject),
+    IHttpRouteAuthorizer {
   public constructor(id: String, pool: CloudshiftdevAwscdkServicesCognitoIUserPool) :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer(id,
       pool.let(CloudshiftdevAwscdkServicesCognitoIUserPool.Companion::unwrap))

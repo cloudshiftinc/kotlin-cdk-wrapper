@@ -308,7 +308,8 @@ public interface CfnDistributionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistributionProps,
-  ) : CdkObject(cdkObject), CfnDistributionProps {
+  ) : CdkObject(cdkObject),
+      CfnDistributionProps {
     /**
      * The distribution's configuration.
      *

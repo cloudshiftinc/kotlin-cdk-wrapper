@@ -491,7 +491,8 @@ public interface CfnCertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateProps,
-  ) : CdkObject(cdkObject), CfnCertificateProps {
+  ) : CdkObject(cdkObject),
+      CfnCertificateProps {
     /**
      * Specifies X.509 certificate information to be included in the issued certificate. An
      * `APIPassthrough` or `APICSRPassthrough` template variant must be selected, or else this

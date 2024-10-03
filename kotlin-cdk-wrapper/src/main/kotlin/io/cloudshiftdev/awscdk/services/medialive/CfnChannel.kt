@@ -35,7 +35,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnChannel(
   cdkObject: software.amazon.awscdk.services.medialive.CfnChannel,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.medialive.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1178,7 +1180,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AacSettingsProperty,
-    ) : CdkObject(cdkObject), AacSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AacSettingsProperty {
       /**
        * The average bitrate in bits/second.
        *
@@ -1503,7 +1506,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Ac3SettingsProperty,
-    ) : CdkObject(cdkObject), Ac3SettingsProperty {
+    ) : CdkObject(cdkObject),
+        Ac3SettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html#cfn-medialive-channel-ac3settings-attenuationcontrol)
        */
@@ -1665,7 +1669,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AncillarySourceSettingsProperty,
-    ) : CdkObject(cdkObject), AncillarySourceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AncillarySourceSettingsProperty {
       /**
        * Specifies the number (1 to 4) of the captions channel you want to extract from the
        * ancillary captions.
@@ -1785,7 +1790,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ArchiveCdnSettingsProperty,
-    ) : CdkObject(cdkObject), ArchiveCdnSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ArchiveCdnSettingsProperty {
       /**
        * Sets up Amazon S3 as the destination for this Archive output.
        *
@@ -2004,7 +2010,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ArchiveContainerSettingsProperty,
-    ) : CdkObject(cdkObject), ArchiveContainerSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ArchiveContainerSettingsProperty {
       /**
        * The settings for the M2TS in the archive output.
        *
@@ -2200,7 +2207,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ArchiveGroupSettingsProperty,
-    ) : CdkObject(cdkObject), ArchiveGroupSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ArchiveGroupSettingsProperty {
       /**
        * Settings to configure the destination of an Archive output.
        *
@@ -2439,7 +2447,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ArchiveOutputSettingsProperty,
-    ) : CdkObject(cdkObject), ArchiveOutputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ArchiveOutputSettingsProperty {
       /**
        * The settings that are specific to the container type of the file.
        *
@@ -2544,7 +2553,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ArchiveS3SettingsProperty,
-    ) : CdkObject(cdkObject), ArchiveS3SettingsProperty {
+    ) : CdkObject(cdkObject),
+        ArchiveS3SettingsProperty {
       /**
        * Specify the canned ACL to apply to each S3 request.
        *
@@ -2606,7 +2616,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AribDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), AribDestinationSettingsProperty
+    ) : CdkObject(cdkObject),
+        AribDestinationSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}): AribDestinationSettingsProperty {
@@ -2658,7 +2669,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AribSourceSettingsProperty,
-    ) : CdkObject(cdkObject), AribSourceSettingsProperty
+    ) : CdkObject(cdkObject),
+        AribSourceSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}): AribSourceSettingsProperty {
@@ -2787,7 +2799,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioChannelMappingProperty,
-    ) : CdkObject(cdkObject), AudioChannelMappingProperty {
+    ) : CdkObject(cdkObject),
+        AudioChannelMappingProperty {
       /**
        * The indices and gain values for each input channel that should be remixed into this output
        * channel.
@@ -3244,7 +3257,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioCodecSettingsProperty,
-    ) : CdkObject(cdkObject), AudioCodecSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AudioCodecSettingsProperty {
       /**
        * The setup of the AAC audio codec in the output.
        *
@@ -3884,7 +3898,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioDescriptionProperty,
-    ) : CdkObject(cdkObject), AudioDescriptionProperty {
+    ) : CdkObject(cdkObject),
+        AudioDescriptionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodescription.html#cfn-medialive-channel-audiodescription-audiodashroles)
        */
@@ -4062,7 +4077,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioDolbyEDecodeProperty,
-    ) : CdkObject(cdkObject), AudioDolbyEDecodeProperty {
+    ) : CdkObject(cdkObject),
+        AudioDolbyEDecodeProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodolbyedecode.html#cfn-medialive-channel-audiodolbyedecode-programselection)
        */
@@ -4167,7 +4183,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioHlsRenditionSelectionProperty,
-    ) : CdkObject(cdkObject), AudioHlsRenditionSelectionProperty {
+    ) : CdkObject(cdkObject),
+        AudioHlsRenditionSelectionProperty {
       /**
        * Specifies the GROUP-ID in the #EXT-X-MEDIA tag of the target HLS audio rendition.
        *
@@ -4298,7 +4315,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioLanguageSelectionProperty,
-    ) : CdkObject(cdkObject), AudioLanguageSelectionProperty {
+    ) : CdkObject(cdkObject),
+        AudioLanguageSelectionProperty {
       /**
        * Selects a specific three-letter language code from within an audio source.
        *
@@ -4459,7 +4477,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioNormalizationSettingsProperty,
-    ) : CdkObject(cdkObject), AudioNormalizationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AudioNormalizationSettingsProperty {
       /**
        * The audio normalization algorithm to use.
        *
@@ -4722,7 +4741,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioOnlyHlsSettingsProperty,
-    ) : CdkObject(cdkObject), AudioOnlyHlsSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AudioOnlyHlsSettingsProperty {
       /**
        * Specifies the group that the audio rendition belongs to.
        *
@@ -4841,7 +4861,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioPidSelectionProperty,
-    ) : CdkObject(cdkObject), AudioPidSelectionProperty {
+    ) : CdkObject(cdkObject),
+        AudioPidSelectionProperty {
       /**
        * Select the audio by this PID.
        *
@@ -4992,7 +5013,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioSelectorProperty,
-    ) : CdkObject(cdkObject), AudioSelectorProperty {
+    ) : CdkObject(cdkObject),
+        AudioSelectorProperty {
       /**
        * A name for this AudioSelector.
        *
@@ -5277,7 +5299,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioSelectorSettingsProperty,
-    ) : CdkObject(cdkObject), AudioSelectorSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AudioSelectorSettingsProperty {
       /**
        * Selector for HLS audio rendition.
        *
@@ -5420,7 +5443,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioSilenceFailoverSettingsProperty,
-    ) : CdkObject(cdkObject), AudioSilenceFailoverSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AudioSilenceFailoverSettingsProperty {
       /**
        * The name of the audio selector in the input that MediaLive should monitor to detect
        * silence.
@@ -5518,7 +5542,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioTrackProperty,
-    ) : CdkObject(cdkObject), AudioTrackProperty {
+    ) : CdkObject(cdkObject),
+        AudioTrackProperty {
       /**
        * 1-based integer value that maps to a specific audio track.
        *
@@ -5672,7 +5697,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioTrackSelectionProperty,
-    ) : CdkObject(cdkObject), AudioTrackSelectionProperty {
+    ) : CdkObject(cdkObject),
+        AudioTrackSelectionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiotrackselection.html#cfn-medialive-channel-audiotrackselection-dolbyedecode)
        */
@@ -5812,7 +5838,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioWatermarkSettingsProperty,
-    ) : CdkObject(cdkObject), AudioWatermarkSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AudioWatermarkSettingsProperty {
       /**
        * Settings to configure Nielsen Watermarks in the audio encode.
        *
@@ -6023,7 +6050,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AutomaticInputFailoverSettingsProperty,
-    ) : CdkObject(cdkObject), AutomaticInputFailoverSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AutomaticInputFailoverSettingsProperty {
       /**
        * This clear time defines the requirement a recovered input must meet to be considered
        * healthy.
@@ -6198,7 +6226,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AvailBlankingProperty,
-    ) : CdkObject(cdkObject), AvailBlankingProperty {
+    ) : CdkObject(cdkObject),
+        AvailBlankingProperty {
       /**
        * The blanking image to be used.
        *
@@ -6267,6 +6296,7 @@ public open class CfnChannel(
    * .webDeliveryAllowedFlag("webDeliveryAllowedFlag")
    * .build())
    * .build())
+   * .scte35SegmentationScope("scte35SegmentationScope")
    * .build();
    * ```
    *
@@ -6279,6 +6309,11 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availconfiguration.html#cfn-medialive-channel-availconfiguration-availsettings)
      */
     public fun availSettings(): Any? = unwrap(this).getAvailSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availconfiguration.html#cfn-medialive-channel-availconfiguration-scte35segmentationscope)
+     */
+    public fun scte35SegmentationScope(): String? = unwrap(this).getScte35SegmentationScope()
 
     /**
      * A builder for [AvailConfigurationProperty]
@@ -6301,6 +6336,11 @@ public open class CfnChannel(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("240d5e0606d729c84794d102fb2ba988f76c879c4aaef20e19080d639b518ac5")
       public fun availSettings(availSettings: AvailSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param scte35SegmentationScope the value to be set.
+       */
+      public fun scte35SegmentationScope(scte35SegmentationScope: String)
     }
 
     private class BuilderImpl : Builder {
@@ -6330,6 +6370,13 @@ public open class CfnChannel(
       override fun availSettings(availSettings: AvailSettingsProperty.Builder.() -> Unit): Unit =
           availSettings(AvailSettingsProperty(availSettings))
 
+      /**
+       * @param scte35SegmentationScope the value to be set.
+       */
+      override fun scte35SegmentationScope(scte35SegmentationScope: String) {
+        cdkBuilder.scte35SegmentationScope(scte35SegmentationScope)
+      }
+
       public fun build():
           software.amazon.awscdk.services.medialive.CfnChannel.AvailConfigurationProperty =
           cdkBuilder.build()
@@ -6337,13 +6384,19 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AvailConfigurationProperty,
-    ) : CdkObject(cdkObject), AvailConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AvailConfigurationProperty {
       /**
        * The setup of ad avail handling in the output.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availconfiguration.html#cfn-medialive-channel-availconfiguration-availsettings)
        */
       override fun availSettings(): Any? = unwrap(this).getAvailSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availconfiguration.html#cfn-medialive-channel-availconfiguration-scte35segmentationscope)
+       */
+      override fun scte35SegmentationScope(): String? = unwrap(this).getScte35SegmentationScope()
     }
 
     public companion object {
@@ -6556,7 +6609,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AvailSettingsProperty,
-    ) : CdkObject(cdkObject), AvailSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AvailSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availsettings.html#cfn-medialive-channel-availsettings-esam)
        */
@@ -6838,7 +6892,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.BlackoutSlateProperty,
-    ) : CdkObject(cdkObject), BlackoutSlateProperty {
+    ) : CdkObject(cdkObject),
+        BlackoutSlateProperty {
       /**
        * The blackout slate image to be used.
        *
@@ -7478,7 +7533,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.BurnInDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), BurnInDestinationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        BurnInDestinationSettingsProperty {
       /**
        * If no explicit xPosition or yPosition is provided, setting alignment to centered places the
        * captions at the bottom center of the output.
@@ -8001,7 +8057,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionDescriptionProperty,
-    ) : CdkObject(cdkObject), CaptionDescriptionProperty {
+    ) : CdkObject(cdkObject),
+        CaptionDescriptionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-accessibility)
        */
@@ -8912,7 +8969,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), CaptionDestinationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        CaptionDestinationSettingsProperty {
       /**
        * The configuration of one ARIB captions encode in the output.
        *
@@ -9136,7 +9194,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionLanguageMappingProperty,
-    ) : CdkObject(cdkObject), CaptionLanguageMappingProperty {
+    ) : CdkObject(cdkObject),
+        CaptionLanguageMappingProperty {
       /**
        * The closed caption channel being described by this CaptionLanguageMapping.
        *
@@ -9377,7 +9436,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionRectangleProperty,
-    ) : CdkObject(cdkObject), CaptionRectangleProperty {
+    ) : CdkObject(cdkObject),
+        CaptionRectangleProperty {
       /**
        * See the description in leftOffset.
        *
@@ -9621,7 +9681,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionSelectorProperty,
-    ) : CdkObject(cdkObject), CaptionSelectorProperty {
+    ) : CdkObject(cdkObject),
+        CaptionSelectorProperty {
       /**
        * When specified, this field indicates the three-letter language code of the captions track
        * to extract from the source.
@@ -10108,7 +10169,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionSelectorSettingsProperty,
-    ) : CdkObject(cdkObject), CaptionSelectorSettingsProperty {
+    ) : CdkObject(cdkObject),
+        CaptionSelectorSettingsProperty {
       /**
        * Information about the ancillary captions to extract from the input.
        *
@@ -10238,7 +10300,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CdiInputSpecificationProperty,
-    ) : CdkObject(cdkObject), CdiInputSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        CdiInputSpecificationProperty {
       /**
        * Maximum CDI input resolution.
        *
@@ -10436,7 +10499,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestGroupSettingsProperty,
-    ) : CdkObject(cdkObject), CmafIngestGroupSettingsProperty {
+    ) : CdkObject(cdkObject),
+        CmafIngestGroupSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-destination)
        */
@@ -10538,7 +10602,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestOutputSettingsProperty,
-    ) : CdkObject(cdkObject), CmafIngestOutputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        CmafIngestOutputSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestoutputsettings.html#cfn-medialive-channel-cmafingestoutputsettings-namemodifier)
        */
@@ -10649,7 +10714,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ColorCorrectionProperty,
-    ) : CdkObject(cdkObject), ColorCorrectionProperty {
+    ) : CdkObject(cdkObject),
+        ColorCorrectionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-colorcorrection.html#cfn-medialive-channel-colorcorrection-inputcolorspace)
        */
@@ -10763,7 +10829,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ColorCorrectionSettingsProperty,
-    ) : CdkObject(cdkObject), ColorCorrectionSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ColorCorrectionSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-colorcorrectionsettings.html#cfn-medialive-channel-colorcorrectionsettings-globalcolorcorrections)
        */
@@ -10821,7 +10888,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ColorSpacePassthroughSettingsProperty,
-    ) : CdkObject(cdkObject), ColorSpacePassthroughSettingsProperty
+    ) : CdkObject(cdkObject),
+        ColorSpacePassthroughSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
@@ -10875,7 +10943,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DolbyVision81SettingsProperty,
-    ) : CdkObject(cdkObject), DolbyVision81SettingsProperty
+    ) : CdkObject(cdkObject),
+        DolbyVision81SettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}): DolbyVision81SettingsProperty {
@@ -11000,7 +11069,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DvbNitSettingsProperty,
-    ) : CdkObject(cdkObject), DvbNitSettingsProperty {
+    ) : CdkObject(cdkObject),
+        DvbNitSettingsProperty {
       /**
        * The numeric value placed in the Network Information Table (NIT).
        *
@@ -11191,7 +11261,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DvbSdtSettingsProperty,
-    ) : CdkObject(cdkObject), DvbSdtSettingsProperty {
+    ) : CdkObject(cdkObject),
+        DvbSdtSettingsProperty {
       /**
        * Selects a method of inserting SDT information into an output stream.
        *
@@ -11840,7 +11911,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DvbSubDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), DvbSubDestinationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        DvbSubDestinationSettingsProperty {
       /**
        * If no explicit xPosition or yPosition is provided, setting the alignment to centered places
        * the captions at the bottom center of the output.
@@ -12137,7 +12209,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DvbSubSourceSettingsProperty,
-    ) : CdkObject(cdkObject), DvbSubSourceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        DvbSubSourceSettingsProperty {
       /**
        * If you will configure a WebVTT caption description that references this caption selector,
        * use this field to provide the language to consider when translating the image-based source to
@@ -12234,7 +12307,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DvbTdtSettingsProperty,
-    ) : CdkObject(cdkObject), DvbTdtSettingsProperty {
+    ) : CdkObject(cdkObject),
+        DvbTdtSettingsProperty {
       /**
        * The number of milliseconds between instances of this table in the output transport stream.
        *
@@ -12419,7 +12493,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Eac3AtmosSettingsProperty,
-    ) : CdkObject(cdkObject), Eac3AtmosSettingsProperty {
+    ) : CdkObject(cdkObject),
+        Eac3AtmosSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-eac3atmossettings.html#cfn-medialive-channel-eac3atmossettings-bitrate)
        */
@@ -12994,7 +13069,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Eac3SettingsProperty,
-    ) : CdkObject(cdkObject), Eac3SettingsProperty {
+    ) : CdkObject(cdkObject),
+        Eac3SettingsProperty {
       /**
        * When set to attenuate3Db, applies a 3 dB attenuation to the surround channels.
        *
@@ -13378,7 +13454,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EbuTtDDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), EbuTtDDestinationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        EbuTtDDestinationSettingsProperty {
       /**
        * Applies only if you plan to convert these source captions to EBU-TT-D or TTML in an output.
        *
@@ -13484,7 +13561,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EmbeddedDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), EmbeddedDestinationSettingsProperty
+    ) : CdkObject(cdkObject),
+        EmbeddedDestinationSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
@@ -13538,7 +13616,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EmbeddedPlusScte20DestinationSettingsProperty,
-    ) : CdkObject(cdkObject), EmbeddedPlusScte20DestinationSettingsProperty
+    ) : CdkObject(cdkObject),
+        EmbeddedPlusScte20DestinationSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
@@ -13693,7 +13772,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EmbeddedSourceSettingsProperty,
-    ) : CdkObject(cdkObject), EmbeddedSourceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        EmbeddedSourceSettingsProperty {
       /**
        * If this is upconvert, 608 data is both passed through the "608 compatibility bytes" fields
        * of the 708 wrapper as well as translated into 708.
@@ -14432,7 +14512,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EncoderSettingsProperty,
-    ) : CdkObject(cdkObject), EncoderSettingsProperty {
+    ) : CdkObject(cdkObject),
+        EncoderSettingsProperty {
       /**
        * The encoding information for output audio.
        *
@@ -14617,7 +14698,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EpochLockingSettingsProperty,
-    ) : CdkObject(cdkObject), EpochLockingSettingsProperty {
+    ) : CdkObject(cdkObject),
+        EpochLockingSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-epochlockingsettings.html#cfn-medialive-channel-epochlockingsettings-customepoch)
        */
@@ -14786,7 +14868,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EsamProperty,
-    ) : CdkObject(cdkObject), EsamProperty {
+    ) : CdkObject(cdkObject),
+        EsamProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-esam.html#cfn-medialive-channel-esam-acquisitionpointid)
        */
@@ -14935,7 +15018,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FailoverConditionProperty,
-    ) : CdkObject(cdkObject), FailoverConditionProperty {
+    ) : CdkObject(cdkObject),
+        FailoverConditionProperty {
       /**
        * Settings for a specific failover condition.
        *
@@ -15176,7 +15260,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FailoverConditionSettingsProperty,
-    ) : CdkObject(cdkObject), FailoverConditionSettingsProperty {
+    ) : CdkObject(cdkObject),
+        FailoverConditionSettingsProperty {
       /**
        * MediaLive will perform a failover if the specified audio selector is silent for the
        * specified period.
@@ -15309,7 +15394,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FeatureActivationsProperty,
-    ) : CdkObject(cdkObject), FeatureActivationsProperty {
+    ) : CdkObject(cdkObject),
+        FeatureActivationsProperty {
       /**
        * Enables the Input Prepare feature.
        *
@@ -15466,7 +15552,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FecOutputSettingsProperty,
-    ) : CdkObject(cdkObject), FecOutputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        FecOutputSettingsProperty {
       /**
        * The parameter D from SMPTE 2022-1.
        *
@@ -15623,7 +15710,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Fmp4HlsSettingsProperty,
-    ) : CdkObject(cdkObject), Fmp4HlsSettingsProperty {
+    ) : CdkObject(cdkObject),
+        Fmp4HlsSettingsProperty {
       /**
        * List all the audio groups that are used with the video output stream.
        *
@@ -15762,7 +15850,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureCdnSettingsProperty,
-    ) : CdkObject(cdkObject), FrameCaptureCdnSettingsProperty {
+    ) : CdkObject(cdkObject),
+        FrameCaptureCdnSettingsProperty {
       /**
        * Sets up Amazon S3 as the destination for this Frame Capture output.
        *
@@ -15979,7 +16068,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureGroupSettingsProperty,
-    ) : CdkObject(cdkObject), FrameCaptureGroupSettingsProperty {
+    ) : CdkObject(cdkObject),
+        FrameCaptureGroupSettingsProperty {
       /**
        * The destination for the frame capture files.
        *
@@ -16054,7 +16144,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureHlsSettingsProperty,
-    ) : CdkObject(cdkObject), FrameCaptureHlsSettingsProperty
+    ) : CdkObject(cdkObject),
+        FrameCaptureHlsSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}): FrameCaptureHlsSettingsProperty {
@@ -16136,7 +16227,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureOutputSettingsProperty,
-    ) : CdkObject(cdkObject), FrameCaptureOutputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        FrameCaptureOutputSettingsProperty {
       /**
        * Required if the output group contains more than one output.
        *
@@ -16228,7 +16320,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureS3SettingsProperty,
-    ) : CdkObject(cdkObject), FrameCaptureS3SettingsProperty {
+    ) : CdkObject(cdkObject),
+        FrameCaptureS3SettingsProperty {
       /**
        * Specify the canned ACL to apply to each S3 request.
        *
@@ -16392,7 +16485,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureSettingsProperty,
-    ) : CdkObject(cdkObject), FrameCaptureSettingsProperty {
+    ) : CdkObject(cdkObject),
+        FrameCaptureSettingsProperty {
       /**
        * The frequency, in seconds, for capturing frames for inclusion in the output.
        *
@@ -16721,7 +16815,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.GlobalConfigurationProperty,
-    ) : CdkObject(cdkObject), GlobalConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        GlobalConfigurationProperty {
       /**
        * The value to set the initial audio gain for the channel.
        *
@@ -16994,7 +17089,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H264ColorSpaceSettingsProperty,
-    ) : CdkObject(cdkObject), H264ColorSpaceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        H264ColorSpaceSettingsProperty {
       /**
        * Passthrough applies no color space conversion to the output.
        *
@@ -17124,7 +17220,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H264FilterSettingsProperty,
-    ) : CdkObject(cdkObject), H264FilterSettingsProperty {
+    ) : CdkObject(cdkObject),
+        H264FilterSettingsProperty {
       /**
        * Settings for applying the temporal filter to the video.
        *
@@ -18352,7 +18449,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H264SettingsProperty,
-    ) : CdkObject(cdkObject), H264SettingsProperty {
+    ) : CdkObject(cdkObject),
+        H264SettingsProperty {
       /**
        * The adaptive quantization.
        *
@@ -19041,7 +19139,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H265ColorSpaceSettingsProperty,
-    ) : CdkObject(cdkObject), H265ColorSpaceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        H265ColorSpaceSettingsProperty {
       /**
        * Passthrough applies no color space conversion to the output.
        *
@@ -19183,7 +19282,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H265FilterSettingsProperty,
-    ) : CdkObject(cdkObject), H265FilterSettingsProperty {
+    ) : CdkObject(cdkObject),
+        H265FilterSettingsProperty {
       /**
        * Settings for applying the temporal filter to the video.
        *
@@ -20214,7 +20314,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H265SettingsProperty,
-    ) : CdkObject(cdkObject), H265SettingsProperty {
+    ) : CdkObject(cdkObject),
+        H265SettingsProperty {
       /**
        * Adaptive quantization.
        *
@@ -20617,7 +20718,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Hdr10SettingsProperty,
-    ) : CdkObject(cdkObject), Hdr10SettingsProperty {
+    ) : CdkObject(cdkObject),
+        Hdr10SettingsProperty {
       /**
        * Maximum Content Light Level An integer metadata value defining the maximum light level, in
        * nits, of any single pixel within an encoded HDR video stream or file.
@@ -20848,7 +20950,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsAkamaiSettingsProperty,
-    ) : CdkObject(cdkObject), HlsAkamaiSettingsProperty {
+    ) : CdkObject(cdkObject),
+        HlsAkamaiSettingsProperty {
       /**
        * The number of seconds to wait before retrying a connection to the CDN if the connection is
        * lost.
@@ -21053,7 +21156,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsBasicPutSettingsProperty,
-    ) : CdkObject(cdkObject), HlsBasicPutSettingsProperty {
+    ) : CdkObject(cdkObject),
+        HlsBasicPutSettingsProperty {
       /**
        * The number of seconds to wait before retrying a connection to the CDN if the connection is
        * lost.
@@ -21417,7 +21521,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsCdnSettingsProperty,
-    ) : CdkObject(cdkObject), HlsCdnSettingsProperty {
+    ) : CdkObject(cdkObject),
+        HlsCdnSettingsProperty {
       /**
        * Sets up Akamai as the downstream system for the HLS output group.
        *
@@ -22858,7 +22963,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsGroupSettingsProperty,
-    ) : CdkObject(cdkObject), HlsGroupSettingsProperty {
+    ) : CdkObject(cdkObject),
+        HlsGroupSettingsProperty {
       /**
        * Chooses one or more ad marker types to pass SCTE35 signals through to this group of Apple
        * HLS outputs.
@@ -23463,7 +23569,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsInputSettingsProperty,
-    ) : CdkObject(cdkObject), HlsInputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        HlsInputSettingsProperty {
       /**
        * When specified, the HLS stream with the m3u8 bandwidth that most closely matches this value
        * is chosen.
@@ -23682,7 +23789,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsMediaStoreSettingsProperty,
-    ) : CdkObject(cdkObject), HlsMediaStoreSettingsProperty {
+    ) : CdkObject(cdkObject),
+        HlsMediaStoreSettingsProperty {
       /**
        * The number of seconds to wait before retrying a connection to the CDN if the connection is
        * lost.
@@ -23940,7 +24048,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsOutputSettingsProperty,
-    ) : CdkObject(cdkObject), HlsOutputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        HlsOutputSettingsProperty {
       /**
        * Only applicable when this output is referencing an H.265 video description. Specifies
        * whether MP4 segments should be packaged as HEV1 or HVC1.
@@ -24052,7 +24161,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsS3SettingsProperty,
-    ) : CdkObject(cdkObject), HlsS3SettingsProperty {
+    ) : CdkObject(cdkObject),
+        HlsS3SettingsProperty {
       /**
        * Specify the canned ACL to apply to each S3 request.
        *
@@ -24353,7 +24463,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsSettingsProperty,
-    ) : CdkObject(cdkObject), HlsSettingsProperty {
+    ) : CdkObject(cdkObject),
+        HlsSettingsProperty {
       /**
        * The settings for an audio-only output.
        *
@@ -24548,7 +24659,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsWebdavSettingsProperty,
-    ) : CdkObject(cdkObject), HlsWebdavSettingsProperty {
+    ) : CdkObject(cdkObject),
+        HlsWebdavSettingsProperty {
       /**
        * The number of seconds to wait before retrying a connection to the CDN if the connection is
        * lost.
@@ -24639,7 +24751,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HtmlMotionGraphicsSettingsProperty,
-    ) : CdkObject(cdkObject), HtmlMotionGraphicsSettingsProperty
+    ) : CdkObject(cdkObject),
+        HtmlMotionGraphicsSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
@@ -24969,7 +25082,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputAttachmentProperty,
-    ) : CdkObject(cdkObject), InputAttachmentProperty {
+    ) : CdkObject(cdkObject),
+        InputAttachmentProperty {
       /**
        * Settings to implement automatic input failover in this input.
        *
@@ -25101,7 +25215,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputChannelLevelProperty,
-    ) : CdkObject(cdkObject), InputChannelLevelProperty {
+    ) : CdkObject(cdkObject),
+        InputChannelLevelProperty {
       /**
        * The remixing value.
        *
@@ -25249,7 +25364,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputLocationProperty,
-    ) : CdkObject(cdkObject), InputLocationProperty {
+    ) : CdkObject(cdkObject),
+        InputLocationProperty {
       /**
        * The password parameter that holds the password for accessing the downstream system.
        *
@@ -25501,7 +25617,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputLossBehaviorProperty,
-    ) : CdkObject(cdkObject), InputLossBehaviorProperty {
+    ) : CdkObject(cdkObject),
+        InputLossBehaviorProperty {
       /**
        * On input loss, the number of milliseconds to substitute black into the output before
        * switching to the frame specified by inputLossImageType.
@@ -25633,7 +25750,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputLossFailoverSettingsProperty,
-    ) : CdkObject(cdkObject), InputLossFailoverSettingsProperty {
+    ) : CdkObject(cdkObject),
+        InputLossFailoverSettingsProperty {
       /**
        * The amount of time (in milliseconds) that no input is detected.
        *
@@ -26140,7 +26258,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputSettingsProperty,
-    ) : CdkObject(cdkObject), InputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        InputSettingsProperty {
       /**
        * Information about the specific audio to extract from the input.
        *
@@ -26347,7 +26466,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputSpecificationProperty,
-    ) : CdkObject(cdkObject), InputSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        InputSpecificationProperty {
       /**
        * The codec to include in the input specification for this channel.
        *
@@ -26479,7 +26599,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.KeyProviderSettingsProperty,
-    ) : CdkObject(cdkObject), KeyProviderSettingsProperty {
+    ) : CdkObject(cdkObject),
+        KeyProviderSettingsProperty {
       /**
        * The configuration of static key settings.
        *
@@ -27893,7 +28014,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.M2tsSettingsProperty,
-    ) : CdkObject(cdkObject), M2tsSettingsProperty {
+    ) : CdkObject(cdkObject),
+        M2tsSettingsProperty {
       /**
        * When set to drop, the output audio streams are removed from the program if the selected
        * input audio stream is removed from the input.
@@ -28834,7 +28956,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.M3u8SettingsProperty,
-    ) : CdkObject(cdkObject), M3u8SettingsProperty {
+    ) : CdkObject(cdkObject),
+        M3u8SettingsProperty {
       /**
        * The number of audio frames to insert for each PES packet.
        *
@@ -29090,7 +29213,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MaintenanceCreateSettingsProperty,
-    ) : CdkObject(cdkObject), MaintenanceCreateSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MaintenanceCreateSettingsProperty {
       /**
        * Choose one day of the week for maintenance.
        *
@@ -29217,7 +29341,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MaintenanceUpdateSettingsProperty,
-    ) : CdkObject(cdkObject), MaintenanceUpdateSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MaintenanceUpdateSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-maintenanceupdatesettings.html#cfn-medialive-channel-maintenanceupdatesettings-maintenanceday)
        */
@@ -29340,7 +29465,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MediaPackageGroupSettingsProperty,
-    ) : CdkObject(cdkObject), MediaPackageGroupSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MediaPackageGroupSettingsProperty {
       /**
        * The MediaPackage channel destination.
        *
@@ -29438,7 +29564,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MediaPackageOutputDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), MediaPackageOutputDestinationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MediaPackageOutputDestinationSettingsProperty {
       /**
        * The ID of the channel in MediaPackage that is the destination for this output group.
        *
@@ -29503,7 +29630,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MediaPackageOutputSettingsProperty,
-    ) : CdkObject(cdkObject), MediaPackageOutputSettingsProperty
+    ) : CdkObject(cdkObject),
+        MediaPackageOutputSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
@@ -29641,7 +29769,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MotionGraphicsConfigurationProperty,
-    ) : CdkObject(cdkObject), MotionGraphicsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        MotionGraphicsConfigurationProperty {
       /**
        * Enables or disables the motion graphics overlay feature in the channel.
        *
@@ -29772,7 +29901,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MotionGraphicsSettingsProperty,
-    ) : CdkObject(cdkObject), MotionGraphicsSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MotionGraphicsSettingsProperty {
       /**
        * Settings to configure the motion graphics overlay to use an HTML asset.
        *
@@ -29898,7 +30028,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Mp2SettingsProperty,
-    ) : CdkObject(cdkObject), Mp2SettingsProperty {
+    ) : CdkObject(cdkObject),
+        Mp2SettingsProperty {
       /**
        * The average bitrate in bits/second.
        *
@@ -30029,7 +30160,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Mpeg2FilterSettingsProperty,
-    ) : CdkObject(cdkObject), Mpeg2FilterSettingsProperty {
+    ) : CdkObject(cdkObject),
+        Mpeg2FilterSettingsProperty {
       /**
        * Settings for applying the temporal filter to the video.
        *
@@ -30693,7 +30825,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Mpeg2SettingsProperty,
-    ) : CdkObject(cdkObject), Mpeg2SettingsProperty {
+    ) : CdkObject(cdkObject),
+        Mpeg2SettingsProperty {
       /**
        * Choose Off to disable adaptive quantization.
        *
@@ -31425,7 +31558,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MsSmoothGroupSettingsProperty,
-    ) : CdkObject(cdkObject), MsSmoothGroupSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MsSmoothGroupSettingsProperty {
       /**
        * The value of the Acquisition Point Identity element that is used in each message placed in
        * the sparse track.
@@ -31697,7 +31831,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MsSmoothOutputSettingsProperty,
-    ) : CdkObject(cdkObject), MsSmoothOutputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MsSmoothOutputSettingsProperty {
       /**
        * Only applicable when this output is referencing an H.265 video description. Specifies
        * whether MP4 segments should be packaged as HEV1 or HVC1.
@@ -31767,7 +31902,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MultiplexGroupSettingsProperty,
-    ) : CdkObject(cdkObject), MultiplexGroupSettingsProperty
+    ) : CdkObject(cdkObject),
+        MultiplexGroupSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}): MultiplexGroupSettingsProperty {
@@ -31874,7 +32010,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MultiplexOutputSettingsProperty,
-    ) : CdkObject(cdkObject), MultiplexOutputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MultiplexOutputSettingsProperty {
       /**
        * Destination is a Multiplex.
        *
@@ -31992,7 +32129,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MultiplexProgramChannelDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), MultiplexProgramChannelDestinationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MultiplexProgramChannelDestinationSettingsProperty {
       /**
        * The ID of the Multiplex that the encoder is providing output to.
        *
@@ -32155,7 +32293,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.NetworkInputSettingsProperty,
-    ) : CdkObject(cdkObject), NetworkInputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInputSettingsProperty {
       /**
        * Information about how to connect to the upstream system.
        *
@@ -32292,7 +32431,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.NielsenCBETProperty,
-    ) : CdkObject(cdkObject), NielsenCBETProperty {
+    ) : CdkObject(cdkObject),
+        NielsenCBETProperty {
       /**
        * Enter the CBET check digits to use in the watermark.
        *
@@ -32412,7 +32552,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.NielsenConfigurationProperty,
-    ) : CdkObject(cdkObject), NielsenConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NielsenConfigurationProperty {
       /**
        * Enter the Distributor ID assigned to your organization by Nielsen.
        *
@@ -32541,7 +32682,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.NielsenNaesIiNwProperty,
-    ) : CdkObject(cdkObject), NielsenNaesIiNwProperty {
+    ) : CdkObject(cdkObject),
+        NielsenNaesIiNwProperty {
       /**
        * Enter the check digit string for the watermark.
        *
@@ -32758,7 +32900,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.NielsenWatermarksSettingsProperty,
-    ) : CdkObject(cdkObject), NielsenWatermarksSettingsProperty {
+    ) : CdkObject(cdkObject),
+        NielsenWatermarksSettingsProperty {
       /**
        * Complete these fields only if you want to insert watermarks of type Nielsen CBET.
        *
@@ -33013,7 +33156,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputDestinationProperty,
-    ) : CdkObject(cdkObject), OutputDestinationProperty {
+    ) : CdkObject(cdkObject),
+        OutputDestinationProperty {
       /**
        * The ID for this destination.
        *
@@ -33195,7 +33339,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), OutputDestinationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        OutputDestinationSettingsProperty {
       /**
        * The password parameter that holds the password for accessing the downstream system.
        *
@@ -33792,7 +33937,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputGroupProperty,
-    ) : CdkObject(cdkObject), OutputGroupProperty {
+    ) : CdkObject(cdkObject),
+        OutputGroupProperty {
       /**
        * A custom output group name that you can optionally define.
        *
@@ -34480,7 +34626,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputGroupSettingsProperty,
-    ) : CdkObject(cdkObject), OutputGroupSettingsProperty {
+    ) : CdkObject(cdkObject),
+        OutputGroupSettingsProperty {
       /**
        * The configuration of an archive output group.
        *
@@ -34620,7 +34767,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputLocationRefProperty,
-    ) : CdkObject(cdkObject), OutputLocationRefProperty {
+    ) : CdkObject(cdkObject),
+        OutputLocationRefProperty {
       /**
        * A reference ID for this destination.
        *
@@ -34750,7 +34898,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputLockingSettingsProperty,
-    ) : CdkObject(cdkObject), OutputLockingSettingsProperty {
+    ) : CdkObject(cdkObject),
+        OutputLockingSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputlockingsettings.html#cfn-medialive-channel-outputlockingsettings-epochlockingsettings)
        */
@@ -35190,7 +35339,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputProperty,
-    ) : CdkObject(cdkObject), OutputProperty {
+    ) : CdkObject(cdkObject),
+        OutputProperty {
       /**
        * The names of the audio descriptions that are used as audio sources for this output.
        *
@@ -35974,7 +36124,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputSettingsProperty,
-    ) : CdkObject(cdkObject), OutputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        OutputSettingsProperty {
       /**
        * The settings for an archive output.
        *
@@ -36097,7 +36248,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.PassThroughSettingsProperty,
-    ) : CdkObject(cdkObject), PassThroughSettingsProperty
+    ) : CdkObject(cdkObject),
+        PassThroughSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}): PassThroughSettingsProperty {
@@ -36147,7 +36299,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.RawSettingsProperty,
-    ) : CdkObject(cdkObject), RawSettingsProperty
+    ) : CdkObject(cdkObject),
+        RawSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}): RawSettingsProperty {
@@ -36198,7 +36351,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Rec601SettingsProperty,
-    ) : CdkObject(cdkObject), Rec601SettingsProperty
+    ) : CdkObject(cdkObject),
+        Rec601SettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}): Rec601SettingsProperty {
@@ -36249,7 +36403,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Rec709SettingsProperty,
-    ) : CdkObject(cdkObject), Rec709SettingsProperty
+    ) : CdkObject(cdkObject),
+        Rec709SettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}): Rec709SettingsProperty {
@@ -36403,7 +36558,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.RemixSettingsProperty,
-    ) : CdkObject(cdkObject), RemixSettingsProperty {
+    ) : CdkObject(cdkObject),
+        RemixSettingsProperty {
       /**
        * A mapping of input channels to output channels, with appropriate gain adjustments.
        *
@@ -36479,7 +36635,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.RtmpCaptionInfoDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), RtmpCaptionInfoDestinationSettingsProperty
+    ) : CdkObject(cdkObject),
+        RtmpCaptionInfoDestinationSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
@@ -36759,7 +36916,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.RtmpGroupSettingsProperty,
-    ) : CdkObject(cdkObject), RtmpGroupSettingsProperty {
+    ) : CdkObject(cdkObject),
+        RtmpGroupSettingsProperty {
       /**
        * Choose the ad marker type for this output group.
        *
@@ -37013,7 +37171,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.RtmpOutputSettingsProperty,
-    ) : CdkObject(cdkObject), RtmpOutputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        RtmpOutputSettingsProperty {
       /**
        * If set to verifyAuthenticity, verifies the TLS certificate chain to a trusted certificate
        * authority (CA).
@@ -37098,7 +37257,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte20PlusEmbeddedDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), Scte20PlusEmbeddedDestinationSettingsProperty
+    ) : CdkObject(cdkObject),
+        Scte20PlusEmbeddedDestinationSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
@@ -37206,7 +37366,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte20SourceSettingsProperty,
-    ) : CdkObject(cdkObject), Scte20SourceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        Scte20SourceSettingsProperty {
       /**
        * If upconvert, 608 data is both passed through the "608 compatibility bytes" fields of the
        * 708 wrapper as well as translated into 708.
@@ -37276,7 +37437,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte27DestinationSettingsProperty,
-    ) : CdkObject(cdkObject), Scte27DestinationSettingsProperty
+    ) : CdkObject(cdkObject),
+        Scte27DestinationSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
@@ -37396,7 +37558,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte27SourceSettingsProperty,
-    ) : CdkObject(cdkObject), Scte27SourceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        Scte27SourceSettingsProperty {
       /**
        * If you will configure a WebVTT caption description that references this caption selector,
        * use this field to provide the language to consider when translating the image-based source to
@@ -37546,7 +37709,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte35SpliceInsertProperty,
-    ) : CdkObject(cdkObject), Scte35SpliceInsertProperty {
+    ) : CdkObject(cdkObject),
+        Scte35SpliceInsertProperty {
       /**
        * When specified, this offset (in milliseconds) is added to the input ad avail PTS time.
        *
@@ -37701,7 +37865,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte35TimeSignalAposProperty,
-    ) : CdkObject(cdkObject), Scte35TimeSignalAposProperty {
+    ) : CdkObject(cdkObject),
+        Scte35TimeSignalAposProperty {
       /**
        * When specified, this offset (in milliseconds) is added to the input ad avail PTS time.
        *
@@ -37779,7 +37944,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.SmpteTtDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), SmpteTtDestinationSettingsProperty
+    ) : CdkObject(cdkObject),
+        SmpteTtDestinationSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
@@ -37932,7 +38098,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.StandardHlsSettingsProperty,
-    ) : CdkObject(cdkObject), StandardHlsSettingsProperty {
+    ) : CdkObject(cdkObject),
+        StandardHlsSettingsProperty {
       /**
        * Lists all the audio groups that are used with the video output stream.
        *
@@ -38076,7 +38243,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.StaticKeySettingsProperty,
-    ) : CdkObject(cdkObject), StaticKeySettingsProperty {
+    ) : CdkObject(cdkObject),
+        StaticKeySettingsProperty {
       /**
        * The URL of the license server that is used for protecting content.
        *
@@ -38143,7 +38311,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TeletextDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), TeletextDestinationSettingsProperty
+    ) : CdkObject(cdkObject),
+        TeletextDestinationSettingsProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}):
@@ -38290,7 +38459,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TeletextSourceSettingsProperty,
-    ) : CdkObject(cdkObject), TeletextSourceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        TeletextSourceSettingsProperty {
       /**
        * Settings to configure the caption rectangle for an output captions that will be created
        * using this Teletext source captions.
@@ -38425,7 +38595,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TemporalFilterSettingsProperty,
-    ) : CdkObject(cdkObject), TemporalFilterSettingsProperty {
+    ) : CdkObject(cdkObject),
+        TemporalFilterSettingsProperty {
       /**
        * If you enable this filter, the results are the following: - If the source content is noisy
        * (it contains excessive digital artifacts), the filter cleans up the source.
@@ -38518,7 +38689,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ThumbnailConfigurationProperty,
-    ) : CdkObject(cdkObject), ThumbnailConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ThumbnailConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-thumbnailconfiguration.html#cfn-medialive-channel-thumbnailconfiguration-state)
        */
@@ -38631,7 +38803,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TimecodeBurninSettingsProperty,
-    ) : CdkObject(cdkObject), TimecodeBurninSettingsProperty {
+    ) : CdkObject(cdkObject),
+        TimecodeBurninSettingsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-timecodeburninsettings.html#cfn-medialive-channel-timecodeburninsettings-fontsize)
        */
@@ -38766,7 +38939,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TimecodeConfigProperty,
-    ) : CdkObject(cdkObject), TimecodeConfigProperty {
+    ) : CdkObject(cdkObject),
+        TimecodeConfigProperty {
       /**
        * Identifies the source for the timecode that will be associated with the channel outputs.
        *
@@ -38870,7 +39044,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TtmlDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), TtmlDestinationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        TtmlDestinationSettingsProperty {
       /**
        * When set to passthrough, passes through style and position information from a TTML-like
        * input source (TTML, SMPTE-TT, CFF-TT) to the CFF-TT output or TTML output.
@@ -39043,7 +39218,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.UdpContainerSettingsProperty,
-    ) : CdkObject(cdkObject), UdpContainerSettingsProperty {
+    ) : CdkObject(cdkObject),
+        UdpContainerSettingsProperty {
       /**
        * The M2TS configuration for this UDP output.
        *
@@ -39185,7 +39361,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.UdpGroupSettingsProperty,
-    ) : CdkObject(cdkObject), UdpGroupSettingsProperty {
+    ) : CdkObject(cdkObject),
+        UdpGroupSettingsProperty {
       /**
        * Specifies the behavior of the last resort when the input video is lost, and no more backup
        * inputs are available.
@@ -39532,7 +39709,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.UdpOutputSettingsProperty,
-    ) : CdkObject(cdkObject), UdpOutputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        UdpOutputSettingsProperty {
       /**
        * The UDP output buffering in milliseconds.
        *
@@ -39693,7 +39871,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoBlackFailoverSettingsProperty,
-    ) : CdkObject(cdkObject), VideoBlackFailoverSettingsProperty {
+    ) : CdkObject(cdkObject),
+        VideoBlackFailoverSettingsProperty {
       /**
        * A value used in calculating the threshold below which MediaLive considers a pixel to be
        * 'black'.
@@ -40110,7 +40289,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoCodecSettingsProperty,
-    ) : CdkObject(cdkObject), VideoCodecSettingsProperty {
+    ) : CdkObject(cdkObject),
+        VideoCodecSettingsProperty {
       /**
        * The settings for the video codec in a frame capture output.
        *
@@ -40574,7 +40754,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoDescriptionProperty,
-    ) : CdkObject(cdkObject), VideoDescriptionProperty {
+    ) : CdkObject(cdkObject),
+        VideoDescriptionProperty {
       /**
        * The video codec settings.
        *
@@ -40756,7 +40937,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorColorSpaceSettingsProperty,
-    ) : CdkObject(cdkObject), VideoSelectorColorSpaceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        VideoSelectorColorSpaceSettingsProperty {
       /**
        * Settings to configure color space settings in the incoming video.
        *
@@ -40840,7 +41022,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorPidProperty,
-    ) : CdkObject(cdkObject), VideoSelectorPidProperty {
+    ) : CdkObject(cdkObject),
+        VideoSelectorPidProperty {
       /**
        * Selects a specific PID from within a video source.
        *
@@ -40932,7 +41115,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorProgramIdProperty,
-    ) : CdkObject(cdkObject), VideoSelectorProgramIdProperty {
+    ) : CdkObject(cdkObject),
+        VideoSelectorProgramIdProperty {
       /**
        * Selects a specific program from within a multi-program transport stream.
        *
@@ -41174,7 +41358,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorProperty,
-    ) : CdkObject(cdkObject), VideoSelectorProperty {
+    ) : CdkObject(cdkObject),
+        VideoSelectorProperty {
       /**
        * Specifies the color space of an input.
        *
@@ -41370,7 +41555,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorSettingsProperty,
-    ) : CdkObject(cdkObject), VideoSelectorSettingsProperty {
+    ) : CdkObject(cdkObject),
+        VideoSelectorSettingsProperty {
       /**
        * Used to extract video by PID.
        *
@@ -41561,7 +41747,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VpcOutputSettingsProperty,
-    ) : CdkObject(cdkObject), VpcOutputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        VpcOutputSettingsProperty {
       /**
        * List of public address allocation IDs to associate with ENIs that will be created in Output
        * VPC.
@@ -41711,7 +41898,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.WavSettingsProperty,
-    ) : CdkObject(cdkObject), WavSettingsProperty {
+    ) : CdkObject(cdkObject),
+        WavSettingsProperty {
       /**
        * Bits per sample.
        *
@@ -41824,7 +42012,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.WebvttDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), WebvttDestinationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        WebvttDestinationSettingsProperty {
       /**
        * Controls whether the color and position of the source captions is passed through to the
        * WebVTT output captions.

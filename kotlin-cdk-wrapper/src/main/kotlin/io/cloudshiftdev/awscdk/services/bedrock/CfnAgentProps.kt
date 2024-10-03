@@ -31,6 +31,7 @@ import kotlin.jvm.JvmName
  * .actionGroupName("actionGroupName")
  * // the properties below are optional
  * .actionGroupExecutor(ActionGroupExecutorProperty.builder()
+ * .customControl("customControl")
  * .lambda("lambda")
  * .build())
  * .actionGroupState("actionGroupState")
@@ -42,6 +43,20 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .description("description")
+ * .functionSchema(FunctionSchemaProperty.builder()
+ * .functions(List.of(FunctionProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .parameters(Map.of(
+ * "parametersKey", ParameterDetailProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .required(false)
+ * .build()))
+ * .build()))
+ * .build())
  * .parentActionGroupSignature("parentActionGroupSignature")
  * .skipResourceInUseCheckOnDelete(false)
  * .build()))
@@ -50,6 +65,10 @@ import kotlin.jvm.JvmName
  * .customerEncryptionKeyArn("customerEncryptionKeyArn")
  * .description("description")
  * .foundationModel("foundationModel")
+ * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+ * .guardrailIdentifier("guardrailIdentifier")
+ * .guardrailVersion("guardrailVersion")
+ * .build())
  * .idleSessionTtlInSeconds(123)
  * .instruction("instruction")
  * .knowledgeBases(List.of(AgentKnowledgeBaseProperty.builder()
@@ -144,6 +163,13 @@ public interface CfnAgentProps {
   public fun foundationModel(): String? = unwrap(this).getFoundationModel()
 
   /**
+   * Details about the guardrail associated with the agent.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-guardrailconfiguration)
+   */
+  public fun guardrailConfiguration(): Any? = unwrap(this).getGuardrailConfiguration()
+
+  /**
    * The number of seconds for which Amazon Bedrock keeps information about a user's conversation
    * with the agent.
    *
@@ -205,7 +231,13 @@ public interface CfnAgentProps {
   public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
   /**
-   * A map of tag keys and values.
+   * Metadata that you can assign to a resource as key-value pairs. For more information, see the
+   * following resources:.
+   *
+   * * [Tag naming limits and
+   * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
+   * * [Tagging best
+   * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
    */
@@ -273,6 +305,25 @@ public interface CfnAgentProps {
      * @param foundationModel The foundation model used for orchestration by the agent.
      */
     public fun foundationModel(foundationModel: String)
+
+    /**
+     * @param guardrailConfiguration Details about the guardrail associated with the agent.
+     */
+    public fun guardrailConfiguration(guardrailConfiguration: IResolvable)
+
+    /**
+     * @param guardrailConfiguration Details about the guardrail associated with the agent.
+     */
+    public
+        fun guardrailConfiguration(guardrailConfiguration: CfnAgent.GuardrailConfigurationProperty)
+
+    /**
+     * @param guardrailConfiguration Details about the guardrail associated with the agent.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c95eb6d7cda004d60aac97fabd9b6792cafa76c86fb90a4d00c0f0f85d31cb54")
+    public
+        fun guardrailConfiguration(guardrailConfiguration: CfnAgent.GuardrailConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param idleSessionTtlInSeconds The number of seconds for which Amazon Bedrock keeps
@@ -357,12 +408,22 @@ public interface CfnAgentProps {
     public fun tags(tags: Map<String, String>)
 
     /**
-     * @param testAliasTags A map of tag keys and values.
+     * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
+     * information, see the following resources:.
+     * * [Tag naming limits and
+     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
+     * * [Tagging best
+     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      */
     public fun testAliasTags(testAliasTags: IResolvable)
 
     /**
-     * @param testAliasTags A map of tag keys and values.
+     * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
+     * information, see the following resources:.
+     * * [Tag naming limits and
+     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
+     * * [Tagging best
+     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      */
     public fun testAliasTags(testAliasTags: Map<String, String>)
   }
@@ -446,6 +507,31 @@ public interface CfnAgentProps {
     override fun foundationModel(foundationModel: String) {
       cdkBuilder.foundationModel(foundationModel)
     }
+
+    /**
+     * @param guardrailConfiguration Details about the guardrail associated with the agent.
+     */
+    override fun guardrailConfiguration(guardrailConfiguration: IResolvable) {
+      cdkBuilder.guardrailConfiguration(guardrailConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param guardrailConfiguration Details about the guardrail associated with the agent.
+     */
+    override
+        fun guardrailConfiguration(guardrailConfiguration: CfnAgent.GuardrailConfigurationProperty) {
+      cdkBuilder.guardrailConfiguration(guardrailConfiguration.let(CfnAgent.GuardrailConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param guardrailConfiguration Details about the guardrail associated with the agent.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c95eb6d7cda004d60aac97fabd9b6792cafa76c86fb90a4d00c0f0f85d31cb54")
+    override
+        fun guardrailConfiguration(guardrailConfiguration: CfnAgent.GuardrailConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        guardrailConfiguration(CfnAgent.GuardrailConfigurationProperty(guardrailConfiguration))
 
     /**
      * @param idleSessionTtlInSeconds The number of seconds for which Amazon Bedrock keeps
@@ -551,14 +637,24 @@ public interface CfnAgentProps {
     }
 
     /**
-     * @param testAliasTags A map of tag keys and values.
+     * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
+     * information, see the following resources:.
+     * * [Tag naming limits and
+     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
+     * * [Tagging best
+     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      */
     override fun testAliasTags(testAliasTags: IResolvable) {
       cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param testAliasTags A map of tag keys and values.
+     * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
+     * information, see the following resources:.
+     * * [Tag naming limits and
+     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
+     * * [Tagging best
+     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      */
     override fun testAliasTags(testAliasTags: Map<String, String>) {
       cdkBuilder.testAliasTags(testAliasTags)
@@ -569,7 +665,8 @@ public interface CfnAgentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.bedrock.CfnAgentProps,
-  ) : CdkObject(cdkObject), CfnAgentProps {
+  ) : CdkObject(cdkObject),
+      CfnAgentProps {
     /**
      * The action groups that belong to an agent.
      *
@@ -625,6 +722,13 @@ public interface CfnAgentProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-foundationmodel)
      */
     override fun foundationModel(): String? = unwrap(this).getFoundationModel()
+
+    /**
+     * Details about the guardrail associated with the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-guardrailconfiguration)
+     */
+    override fun guardrailConfiguration(): Any? = unwrap(this).getGuardrailConfiguration()
 
     /**
      * The number of seconds for which Amazon Bedrock keeps information about a user's conversation
@@ -688,7 +792,13 @@ public interface CfnAgentProps {
     override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
     /**
-     * A map of tag keys and values.
+     * Metadata that you can assign to a resource as key-value pairs. For more information, see the
+     * following resources:.
+     *
+     * * [Tag naming limits and
+     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
+     * * [Tagging best
+     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
      */

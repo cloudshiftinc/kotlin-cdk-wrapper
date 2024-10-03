@@ -78,7 +78,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMLTransform(
   cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1139,7 +1141,8 @@ public open class CfnMLTransform(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.FindMatchesParametersProperty,
-    ) : CdkObject(cdkObject), FindMatchesParametersProperty {
+    ) : CdkObject(cdkObject),
+        FindMatchesParametersProperty {
       /**
        * The value that is selected when tuning your transform for a balance between accuracy and
        * cost.
@@ -1332,7 +1335,8 @@ public open class CfnMLTransform(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty,
-    ) : CdkObject(cdkObject), GlueTablesProperty {
+    ) : CdkObject(cdkObject),
+        GlueTablesProperty {
       /**
        * A unique identifier for the AWS Glue Data Catalog .
        *
@@ -1468,7 +1472,8 @@ public open class CfnMLTransform(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty,
-    ) : CdkObject(cdkObject), InputRecordTablesProperty {
+    ) : CdkObject(cdkObject),
+        InputRecordTablesProperty {
       /**
        * The database and table in the AWS Glue Data Catalog that is used for input or output data.
        *
@@ -1586,7 +1591,8 @@ public open class CfnMLTransform(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty,
-    ) : CdkObject(cdkObject), MLUserDataEncryptionProperty {
+    ) : CdkObject(cdkObject),
+        MLUserDataEncryptionProperty {
       /**
        * The ID for the customer-provided KMS key.
        *
@@ -1746,7 +1752,8 @@ public open class CfnMLTransform(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty,
-    ) : CdkObject(cdkObject), TransformEncryptionProperty {
+    ) : CdkObject(cdkObject),
+        TransformEncryptionProperty {
       /**
        * The encryption-at-rest settings of the transform that apply to accessing user data.
        *
@@ -1906,7 +1913,8 @@ public open class CfnMLTransform(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.TransformParametersProperty,
-    ) : CdkObject(cdkObject), TransformParametersProperty {
+    ) : CdkObject(cdkObject),
+        TransformParametersProperty {
       /**
        * The parameters for the find matches algorithm.
        *

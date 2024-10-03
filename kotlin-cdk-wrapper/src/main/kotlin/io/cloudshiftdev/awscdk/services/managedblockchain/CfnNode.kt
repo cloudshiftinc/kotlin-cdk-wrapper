@@ -42,7 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNode(
   cdkObject: software.amazon.awscdk.services.managedblockchain.CfnNode,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -362,7 +363,8 @@ public open class CfnNode(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.managedblockchain.CfnNode.NodeConfigurationProperty,
-    ) : CdkObject(cdkObject), NodeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NodeConfigurationProperty {
       /**
        * The Availability Zone in which the node exists.
        *

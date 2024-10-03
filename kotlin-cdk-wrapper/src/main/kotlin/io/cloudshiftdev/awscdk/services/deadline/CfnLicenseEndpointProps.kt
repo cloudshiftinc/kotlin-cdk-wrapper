@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.deadline
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -22,6 +23,11 @@ import kotlin.collections.List
  * .securityGroupIds(List.of("securityGroupIds"))
  * .subnetIds(List.of("subnetIds"))
  * .vpcId("vpcId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -41,6 +47,16 @@ public interface CfnLicenseEndpointProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-licenseendpoint.html#cfn-deadline-licenseendpoint-subnetids)
    */
   public fun subnetIds(): List<String>
+
+  /**
+   * The tags to add to your license endpoint.
+   *
+   * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but tag
+   * values can be empty strings.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-licenseendpoint.html#cfn-deadline-licenseendpoint-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * The VCP(virtual private cloud) ID associated with the license endpoint.
@@ -75,6 +91,20 @@ public interface CfnLicenseEndpointProps {
      * @param subnetIds Identifies the VPC subnets that can connect to a license endpoint. 
      */
     public fun subnetIds(vararg subnetIds: String)
+
+    /**
+     * @param tags The tags to add to your license endpoint.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags The tags to add to your license endpoint.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * @param vpcId The VCP(virtual private cloud) ID associated with the license endpoint. 
@@ -114,6 +144,22 @@ public interface CfnLicenseEndpointProps {
     override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
     /**
+     * @param tags The tags to add to your license endpoint.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags The tags to add to your license endpoint.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
      * @param vpcId The VCP(virtual private cloud) ID associated with the license endpoint. 
      */
     override fun vpcId(vpcId: String) {
@@ -126,7 +172,8 @@ public interface CfnLicenseEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.deadline.CfnLicenseEndpointProps,
-  ) : CdkObject(cdkObject), CfnLicenseEndpointProps {
+  ) : CdkObject(cdkObject),
+      CfnLicenseEndpointProps {
     /**
      * The identifier of the Amazon EC2 security group that controls access to the license endpoint.
      *
@@ -140,6 +187,16 @@ public interface CfnLicenseEndpointProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-licenseendpoint.html#cfn-deadline-licenseendpoint-subnetids)
      */
     override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
+
+    /**
+     * The tags to add to your license endpoint.
+     *
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-licenseendpoint.html#cfn-deadline-licenseendpoint-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
      * The VCP(virtual private cloud) ID associated with the license endpoint.

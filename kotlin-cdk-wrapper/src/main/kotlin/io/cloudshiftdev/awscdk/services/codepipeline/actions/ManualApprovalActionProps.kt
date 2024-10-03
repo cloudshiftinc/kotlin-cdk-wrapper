@@ -216,7 +216,8 @@ public interface ManualApprovalActionProps : CommonAwsActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.ManualApprovalActionProps,
-  ) : CdkObject(cdkObject), ManualApprovalActionProps {
+  ) : CdkObject(cdkObject),
+      ManualApprovalActionProps {
     /**
      * The physical, human-readable name of the Action.
      *

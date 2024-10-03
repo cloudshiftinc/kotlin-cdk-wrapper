@@ -47,7 +47,12 @@ public interface CfnIPSetProps {
   public fun activate(): Any? = unwrap(this).getActivate()
 
   /**
-   * The unique ID of the detector of the GuardDuty account that you want to create an IPSet for.
+   * The unique ID of the detector of the GuardDuty account for which you want to create an IPSet.
+   *
+   * To find the `detectorId` in the current Region, see the
+   * Settings page in the GuardDuty console, or run the
+   * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+   * API.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-detectorid)
    */
@@ -105,8 +110,12 @@ public interface CfnIPSetProps {
     public fun activate(activate: IResolvable)
 
     /**
-     * @param detectorId The unique ID of the detector of the GuardDuty account that you want to
-     * create an IPSet for.
+     * @param detectorId The unique ID of the detector of the GuardDuty account for which you want
+     * to create an IPSet.
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
      */
     public fun detectorId(detectorId: String)
 
@@ -166,8 +175,12 @@ public interface CfnIPSetProps {
     }
 
     /**
-     * @param detectorId The unique ID of the detector of the GuardDuty account that you want to
-     * create an IPSet for.
+     * @param detectorId The unique ID of the detector of the GuardDuty account for which you want
+     * to create an IPSet.
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
      */
     override fun detectorId(detectorId: String) {
       cdkBuilder.detectorId(detectorId)
@@ -222,7 +235,8 @@ public interface CfnIPSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.guardduty.CfnIPSetProps,
-  ) : CdkObject(cdkObject), CfnIPSetProps {
+  ) : CdkObject(cdkObject),
+      CfnIPSetProps {
     /**
      * Indicates whether or not GuardDuty uses the `IPSet` .
      *
@@ -231,7 +245,12 @@ public interface CfnIPSetProps {
     override fun activate(): Any? = unwrap(this).getActivate()
 
     /**
-     * The unique ID of the detector of the GuardDuty account that you want to create an IPSet for.
+     * The unique ID of the detector of the GuardDuty account for which you want to create an IPSet.
+     *
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html#cfn-guardduty-ipset-detectorid)
      */

@@ -179,7 +179,8 @@ public interface HttpRetryPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.HttpRetryPolicy,
-  ) : CdkObject(cdkObject), HttpRetryPolicy {
+  ) : CdkObject(cdkObject),
+      HttpRetryPolicy {
     /**
      * Specify HTTP events on which to retry.
      *

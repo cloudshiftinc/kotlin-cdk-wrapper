@@ -23,11 +23,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.deadline.*;
  * CfnMeteredProduct cfnMeteredProduct = CfnMeteredProduct.Builder.create(this,
  * "MyCfnMeteredProduct")
- * .family("family")
  * .licenseEndpointId("licenseEndpointId")
- * .port(123)
  * .productId("productId")
- * .vendor("vendor")
  * .build();
  * ```
  *
@@ -35,7 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMeteredProduct(
   cdkObject: software.amazon.awscdk.services.deadline.CfnMeteredProduct,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.deadline.CfnMeteredProduct(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -65,14 +63,17 @@ public open class CfnMeteredProduct(
   /**
    * The family to which the metered product belongs.
    */
-  public open fun family(): String? = unwrap(this).getFamily()
+  public open fun attrFamily(): String = unwrap(this).getAttrFamily()
 
   /**
-   * The family to which the metered product belongs.
+   * The port on which the metered product should run.
    */
-  public open fun family(`value`: String) {
-    unwrap(this).setFamily(`value`)
-  }
+  public open fun attrPort(): Number = unwrap(this).getAttrPort()
+
+  /**
+   * The vendor.
+   */
+  public open fun attrVendor(): String = unwrap(this).getAttrVendor()
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -96,18 +97,6 @@ public open class CfnMeteredProduct(
   }
 
   /**
-   * The port on which the metered product should run.
-   */
-  public open fun port(): Number? = unwrap(this).getPort()
-
-  /**
-   * The port on which the metered product should run.
-   */
-  public open fun port(`value`: Number) {
-    unwrap(this).setPort(`value`)
-  }
-
-  /**
    * The product ID.
    */
   public open fun productId(): String? = unwrap(this).getProductId()
@@ -120,30 +109,10 @@ public open class CfnMeteredProduct(
   }
 
   /**
-   * The vendor.
-   */
-  public open fun vendor(): String? = unwrap(this).getVendor()
-
-  /**
-   * The vendor.
-   */
-  public open fun vendor(`value`: String) {
-    unwrap(this).setVendor(`value`)
-  }
-
-  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.deadline.CfnMeteredProduct].
    */
   @CdkDslMarker
   public interface Builder {
-    /**
-     * The family to which the metered product belongs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-meteredproduct.html#cfn-deadline-meteredproduct-family)
-     * @param family The family to which the metered product belongs. 
-     */
-    public fun family(family: String)
-
     /**
      * The Amazon EC2 identifier of the license endpoint.
      *
@@ -153,28 +122,12 @@ public open class CfnMeteredProduct(
     public fun licenseEndpointId(licenseEndpointId: String)
 
     /**
-     * The port on which the metered product should run.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-meteredproduct.html#cfn-deadline-meteredproduct-port)
-     * @param port The port on which the metered product should run. 
-     */
-    public fun port(port: Number)
-
-    /**
      * The product ID.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-meteredproduct.html#cfn-deadline-meteredproduct-productid)
      * @param productId The product ID. 
      */
     public fun productId(productId: String)
-
-    /**
-     * The vendor.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-meteredproduct.html#cfn-deadline-meteredproduct-vendor)
-     * @param vendor The vendor. 
-     */
-    public fun vendor(vendor: String)
   }
 
   private class BuilderImpl(
@@ -183,16 +136,6 @@ public open class CfnMeteredProduct(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.deadline.CfnMeteredProduct.Builder =
         software.amazon.awscdk.services.deadline.CfnMeteredProduct.Builder.create(scope, id)
-
-    /**
-     * The family to which the metered product belongs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-meteredproduct.html#cfn-deadline-meteredproduct-family)
-     * @param family The family to which the metered product belongs. 
-     */
-    override fun family(family: String) {
-      cdkBuilder.family(family)
-    }
 
     /**
      * The Amazon EC2 identifier of the license endpoint.
@@ -205,16 +148,6 @@ public open class CfnMeteredProduct(
     }
 
     /**
-     * The port on which the metered product should run.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-meteredproduct.html#cfn-deadline-meteredproduct-port)
-     * @param port The port on which the metered product should run. 
-     */
-    override fun port(port: Number) {
-      cdkBuilder.port(port)
-    }
-
-    /**
      * The product ID.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-meteredproduct.html#cfn-deadline-meteredproduct-productid)
@@ -222,16 +155,6 @@ public open class CfnMeteredProduct(
      */
     override fun productId(productId: String) {
       cdkBuilder.productId(productId)
-    }
-
-    /**
-     * The vendor.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-meteredproduct.html#cfn-deadline-meteredproduct-vendor)
-     * @param vendor The vendor. 
-     */
-    override fun vendor(vendor: String) {
-      cdkBuilder.vendor(vendor)
     }
 
     public fun build(): software.amazon.awscdk.services.deadline.CfnMeteredProduct =

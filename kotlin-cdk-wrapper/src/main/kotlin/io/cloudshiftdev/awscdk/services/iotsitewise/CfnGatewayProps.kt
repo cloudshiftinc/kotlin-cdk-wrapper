@@ -31,6 +31,9 @@ import kotlin.jvm.JvmName
  * .greengrassV2(GreengrassV2Property.builder()
  * .coreDeviceThingName("coreDeviceThingName")
  * .build())
+ * .siemensIe(SiemensIEProperty.builder()
+ * .iotCoreThingName("iotCoreThingName")
+ * .build())
  * .build())
  * // the properties below are optional
  * .gatewayCapabilitySummaries(List.of(GatewayCapabilitySummaryProperty.builder()
@@ -61,7 +64,7 @@ public interface CfnGatewayProps {
   public fun gatewayCapabilitySummaries(): Any? = unwrap(this).getGatewayCapabilitySummaries()
 
   /**
-   * A unique, friendly name for the gateway.
+   * A unique name for the gateway.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayname)
    */
@@ -123,7 +126,7 @@ public interface CfnGatewayProps {
     public fun gatewayCapabilitySummaries(vararg gatewayCapabilitySummaries: Any)
 
     /**
-     * @param gatewayName A unique, friendly name for the gateway. 
+     * @param gatewayName A unique name for the gateway. 
      */
     public fun gatewayName(gatewayName: String)
 
@@ -205,7 +208,7 @@ public interface CfnGatewayProps {
         gatewayCapabilitySummaries(gatewayCapabilitySummaries.toList())
 
     /**
-     * @param gatewayName A unique, friendly name for the gateway. 
+     * @param gatewayName A unique name for the gateway. 
      */
     override fun gatewayName(gatewayName: String) {
       cdkBuilder.gatewayName(gatewayName)
@@ -261,7 +264,8 @@ public interface CfnGatewayProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGatewayProps,
-  ) : CdkObject(cdkObject), CfnGatewayProps {
+  ) : CdkObject(cdkObject),
+      CfnGatewayProps {
     /**
      * A list of gateway capability summaries that each contain a namespace and status.
      *
@@ -275,7 +279,7 @@ public interface CfnGatewayProps {
     override fun gatewayCapabilitySummaries(): Any? = unwrap(this).getGatewayCapabilitySummaries()
 
     /**
-     * A unique, friendly name for the gateway.
+     * A unique name for the gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayname)
      */

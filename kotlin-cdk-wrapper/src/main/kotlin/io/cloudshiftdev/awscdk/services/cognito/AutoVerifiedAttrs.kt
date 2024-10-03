@@ -87,7 +87,8 @@ public interface AutoVerifiedAttrs {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.AutoVerifiedAttrs,
-  ) : CdkObject(cdkObject), AutoVerifiedAttrs {
+  ) : CdkObject(cdkObject),
+      AutoVerifiedAttrs {
     /**
      * Whether the email address of the user should be auto verified at sign up.
      *

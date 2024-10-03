@@ -40,6 +40,18 @@ import kotlin.jvm.JvmName
  * .url("url")
  * .username("username")
  * .build()))
+ * .srtSettings(SrtSettingsRequestProperty.builder()
+ * .srtCallerSources(List.of(SrtCallerSourceRequestProperty.builder()
+ * .decryption(SrtCallerDecryptionRequestProperty.builder()
+ * .algorithm("algorithm")
+ * .passphraseSecretArn("passphraseSecretArn")
+ * .build())
+ * .minimumLatency(123)
+ * .srtListenerAddress("srtListenerAddress")
+ * .srtListenerPort("srtListenerPort")
+ * .streamId("streamId")
+ * .build()))
+ * .build())
  * .tags(tags)
  * .type("type")
  * .vpc(InputVpcRequestProperty.builder()
@@ -104,6 +116,11 @@ public interface CfnInputProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-sources)
    */
   public fun sources(): Any? = unwrap(this).getSources()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-srtsettings)
+   */
+  public fun srtSettings(): Any? = unwrap(this).getSrtSettings()
 
   /**
    * A collection of tags for this input.
@@ -216,6 +233,23 @@ public interface CfnInputProps {
      * @param sources Settings that apply only if the input is a pull type of input.
      */
     public fun sources(vararg sources: Any)
+
+    /**
+     * @param srtSettings the value to be set.
+     */
+    public fun srtSettings(srtSettings: IResolvable)
+
+    /**
+     * @param srtSettings the value to be set.
+     */
+    public fun srtSettings(srtSettings: CfnInput.SrtSettingsRequestProperty)
+
+    /**
+     * @param srtSettings the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2c2bf0d8c2fca216bb26ae39974a46c2a59b3ab1d7abefe44ae336f2c1058e3a")
+    public fun srtSettings(srtSettings: CfnInput.SrtSettingsRequestProperty.Builder.() -> Unit)
 
     /**
      * @param tags A collection of tags for this input.
@@ -362,6 +396,28 @@ public interface CfnInputProps {
     override fun sources(vararg sources: Any): Unit = sources(sources.toList())
 
     /**
+     * @param srtSettings the value to be set.
+     */
+    override fun srtSettings(srtSettings: IResolvable) {
+      cdkBuilder.srtSettings(srtSettings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param srtSettings the value to be set.
+     */
+    override fun srtSettings(srtSettings: CfnInput.SrtSettingsRequestProperty) {
+      cdkBuilder.srtSettings(srtSettings.let(CfnInput.SrtSettingsRequestProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param srtSettings the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2c2bf0d8c2fca216bb26ae39974a46c2a59b3ab1d7abefe44ae336f2c1058e3a")
+    override fun srtSettings(srtSettings: CfnInput.SrtSettingsRequestProperty.Builder.() -> Unit):
+        Unit = srtSettings(CfnInput.SrtSettingsRequestProperty(srtSettings))
+
+    /**
      * @param tags A collection of tags for this input.
      * Each tag is a key-value pair.
      */
@@ -406,7 +462,8 @@ public interface CfnInputProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.medialive.CfnInputProps,
-  ) : CdkObject(cdkObject), CfnInputProps {
+  ) : CdkObject(cdkObject),
+      CfnInputProps {
     /**
      * Settings that apply only if the input is a push type of input.
      *
@@ -459,6 +516,11 @@ public interface CfnInputProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-sources)
      */
     override fun sources(): Any? = unwrap(this).getSources()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-srtsettings)
+     */
+    override fun srtSettings(): Any? = unwrap(this).getSrtSettings()
 
     /**
      * A collection of tags for this input.

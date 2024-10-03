@@ -121,7 +121,8 @@ public interface SnsTopicProps : TargetBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.targets.SnsTopicProps,
-  ) : CdkObject(cdkObject), SnsTopicProps {
+  ) : CdkObject(cdkObject),
+      SnsTopicProps {
     /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
      * dead-letter

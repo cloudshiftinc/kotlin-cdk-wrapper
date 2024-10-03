@@ -64,7 +64,8 @@ public open class Template(
    * Get the set of matching Conditions that match the given properties in the CloudFormation
    * template.
    *
-   * @param logicalId the name of the condition. 
+   * @param logicalId the name of the condition, provide `'*'` to match all conditions in the
+   * template. 
    * @param props by default, matches all Conditions in the template.
    */
   public open fun findConditions(logicalId: String): Map<String, Map<String, Any>> =
@@ -74,7 +75,8 @@ public open class Template(
    * Get the set of matching Conditions that match the given properties in the CloudFormation
    * template.
    *
-   * @param logicalId the name of the condition. 
+   * @param logicalId the name of the condition, provide `'*'` to match all conditions in the
+   * template. 
    * @param props by default, matches all Conditions in the template.
    */
   public open fun findConditions(logicalId: String, props: Any): Map<String, Map<String, Any>> =
@@ -84,7 +86,7 @@ public open class Template(
    * Get the set of matching Mappings that match the given properties in the CloudFormation
    * template.
    *
-   * @param logicalId the name of the mapping. 
+   * @param logicalId the name of the mapping, provide `'*'` to match all mappings in the template. 
    * @param props by default, matches all Mappings in the template.
    */
   public open fun findMappings(logicalId: String): Map<String, Map<String, Any>> =
@@ -94,7 +96,7 @@ public open class Template(
    * Get the set of matching Mappings that match the given properties in the CloudFormation
    * template.
    *
-   * @param logicalId the name of the mapping. 
+   * @param logicalId the name of the mapping, provide `'*'` to match all mappings in the template. 
    * @param props by default, matches all Mappings in the template.
    */
   public open fun findMappings(logicalId: String, props: Any): Map<String, Map<String, Any>> =
@@ -103,7 +105,7 @@ public open class Template(
   /**
    * Get the set of matching Outputs that match the given properties in the CloudFormation template.
    *
-   * @param logicalId the name of the output. 
+   * @param logicalId the name of the output, provide `'*'` to match all outputs in the template. 
    * @param props by default, matches all Outputs in the template.
    */
   public open fun findOutputs(logicalId: String): Map<String, Map<String, Any>> =
@@ -112,7 +114,7 @@ public open class Template(
   /**
    * Get the set of matching Outputs that match the given properties in the CloudFormation template.
    *
-   * @param logicalId the name of the output. 
+   * @param logicalId the name of the output, provide `'*'` to match all outputs in the template. 
    * @param props by default, matches all Outputs in the template.
    */
   public open fun findOutputs(logicalId: String, props: Any): Map<String, Map<String, Any>> =
@@ -122,7 +124,8 @@ public open class Template(
    * Get the set of matching Parameters that match the given properties in the CloudFormation
    * template.
    *
-   * @param logicalId the name of the parameter. 
+   * @param logicalId the name of the parameter, provide `'*'` to match all parameters in the
+   * template. 
    * @param props by default, matches all Parameters in the template.
    */
   public open fun findParameters(logicalId: String): Map<String, Map<String, Any>> =
@@ -132,7 +135,8 @@ public open class Template(
    * Get the set of matching Parameters that match the given properties in the CloudFormation
    * template.
    *
-   * @param logicalId the name of the parameter. 
+   * @param logicalId the name of the parameter, provide `'*'` to match all parameters in the
+   * template. 
    * @param props by default, matches all Parameters in the template.
    */
   public open fun findParameters(logicalId: String, props: Any): Map<String, Map<String, Any>> =
@@ -164,7 +168,8 @@ public open class Template(
    * By default, performs partial matching on the resource, via the `Match.objectLike()`.
    * To configure different behavior, use other matchers in the `Match` class.
    *
-   * @param logicalId the name of the mapping. 
+   * @param logicalId the name of the mapping, provide `'*'` to match all conditions in the
+   * template. 
    * @param props the output as should be expected in the template. 
    */
   public open fun hasCondition(logicalId: String, props: Any) {
@@ -177,7 +182,7 @@ public open class Template(
    * By default, performs partial matching on the resource, via the `Match.objectLike()`.
    * To configure different behavior, use other matchers in the `Match` class.
    *
-   * @param logicalId the name of the mapping. 
+   * @param logicalId the name of the mapping, provide `'*'` to match all mappings in the template. 
    * @param props the output as should be expected in the template. 
    */
   public open fun hasMapping(logicalId: String, props: Any) {
@@ -190,7 +195,7 @@ public open class Template(
    * By default, performs partial matching on the resource, via the `Match.objectLike()`.
    * To configure different behavior, use other matchers in the `Match` class.
    *
-   * @param logicalId the name of the output. 
+   * @param logicalId the name of the output, provide `'*'` to match all outputs in the template. 
    * @param props the output as should be expected in the template. 
    */
   public open fun hasOutput(logicalId: String, props: Any) {
@@ -203,7 +208,8 @@ public open class Template(
    * By default, performs partial matching on the parameter, via the `Match.objectLike()`.
    * To configure different behavior, use other matchers in the `Match` class.
    *
-   * @param logicalId the name of the parameter. 
+   * @param logicalId the name of the parameter, provide `'*'` to match all parameters in the
+   * template. 
    * @param props the parameter as should be expected in the template. 
    */
   public open fun hasParameter(logicalId: String, props: Any) {

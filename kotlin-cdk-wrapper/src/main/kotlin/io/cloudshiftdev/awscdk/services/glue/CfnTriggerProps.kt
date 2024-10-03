@@ -392,7 +392,8 @@ public interface CfnTriggerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnTriggerProps,
-  ) : CdkObject(cdkObject), CfnTriggerProps {
+  ) : CdkObject(cdkObject),
+      CfnTriggerProps {
     /**
      * The actions initiated by this trigger.
      *

@@ -143,7 +143,8 @@ public interface VpnTunnelOption {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.VpnTunnelOption,
-  ) : CdkObject(cdkObject), VpnTunnelOption {
+  ) : CdkObject(cdkObject),
+      VpnTunnelOption {
     /**
      * (deprecated) The pre-shared key (PSK) to establish initial authentication between the virtual
      * private gateway and customer gateway.

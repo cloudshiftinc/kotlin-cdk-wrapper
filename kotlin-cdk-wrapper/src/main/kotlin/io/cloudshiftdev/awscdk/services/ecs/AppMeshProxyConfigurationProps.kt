@@ -254,7 +254,8 @@ public interface AppMeshProxyConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.AppMeshProxyConfigurationProps,
-  ) : CdkObject(cdkObject), AppMeshProxyConfigurationProps {
+  ) : CdkObject(cdkObject),
+      AppMeshProxyConfigurationProps {
     /**
      * The list of ports that the application uses.
      *

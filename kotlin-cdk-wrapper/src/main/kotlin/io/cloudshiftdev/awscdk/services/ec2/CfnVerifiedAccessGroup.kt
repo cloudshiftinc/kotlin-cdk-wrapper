@@ -57,7 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVerifiedAccessGroup(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -534,7 +536,8 @@ public open class CfnVerifiedAccessGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup.SseSpecificationProperty,
-    ) : CdkObject(cdkObject), SseSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SseSpecificationProperty {
       /**
        * Enable or disable the use of customer managed KMS keys for server side encryption.
        *

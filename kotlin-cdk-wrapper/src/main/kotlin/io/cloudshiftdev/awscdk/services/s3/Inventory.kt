@@ -246,7 +246,8 @@ public interface Inventory {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.Inventory,
-  ) : CdkObject(cdkObject), Inventory {
+  ) : CdkObject(cdkObject),
+      Inventory {
     /**
      * The destination of the inventory.
      */

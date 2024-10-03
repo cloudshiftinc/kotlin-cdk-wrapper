@@ -56,7 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIdentityPoolRoleAttachment(
   cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -423,7 +424,8 @@ public open class CfnIdentityPoolRoleAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.MappingRuleProperty,
-    ) : CdkObject(cdkObject), MappingRuleProperty {
+    ) : CdkObject(cdkObject),
+        MappingRuleProperty {
       /**
        * The claim name that must be present in the token.
        *
@@ -684,7 +686,8 @@ public open class CfnIdentityPoolRoleAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty,
-    ) : CdkObject(cdkObject), RoleMappingProperty {
+    ) : CdkObject(cdkObject),
+        RoleMappingProperty {
       /**
        * If you specify Token or Rules as the `Type` , `AmbiguousRoleResolution` is required.
        *
@@ -843,7 +846,8 @@ public open class CfnIdentityPoolRoleAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty,
-    ) : CdkObject(cdkObject), RulesConfigurationTypeProperty {
+    ) : CdkObject(cdkObject),
+        RulesConfigurationTypeProperty {
       /**
        * The rules.
        *

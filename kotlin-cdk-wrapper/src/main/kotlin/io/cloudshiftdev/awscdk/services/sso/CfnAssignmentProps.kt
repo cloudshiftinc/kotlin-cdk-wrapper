@@ -189,7 +189,8 @@ public interface CfnAssignmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sso.CfnAssignmentProps,
-  ) : CdkObject(cdkObject), CfnAssignmentProps {
+  ) : CdkObject(cdkObject),
+      CfnAssignmentProps {
     /**
      * The ARN of the IAM Identity Center instance under which the operation will be executed.
      *

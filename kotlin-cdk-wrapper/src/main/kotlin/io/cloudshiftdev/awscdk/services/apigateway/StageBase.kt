@@ -16,7 +16,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class StageBase(
   cdkObject: software.amazon.awscdk.services.apigateway.StageBase,
-) : Resource(cdkObject), IStage {
+) : Resource(cdkObject),
+    IStage {
   /**
    * Add an ApiKey to this stage.
    *

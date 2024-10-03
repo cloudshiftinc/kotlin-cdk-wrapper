@@ -157,7 +157,8 @@ public interface CfnCertificateProviderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnCertificateProviderProps,
-  ) : CdkObject(cdkObject), CfnCertificateProviderProps {
+  ) : CdkObject(cdkObject),
+      CfnCertificateProviderProps {
     /**
      * A list of the operations that the certificate provider will use to generate certificates.
      *

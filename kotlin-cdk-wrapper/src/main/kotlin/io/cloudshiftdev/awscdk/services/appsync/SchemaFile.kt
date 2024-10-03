@@ -51,7 +51,8 @@ import kotlin.jvm.JvmName
  */
 public open class SchemaFile(
   cdkObject: software.amazon.awscdk.services.appsync.SchemaFile,
-) : CdkObject(cdkObject), ISchema {
+) : CdkObject(cdkObject),
+    ISchema {
   public constructor(options: SchemaProps) :
       this(software.amazon.awscdk.services.appsync.SchemaFile(options.let(SchemaProps.Companion::unwrap))
   )

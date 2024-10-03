@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLocationObjectStorage(
   cdkObject: software.amazon.awscdk.services.datasync.CfnLocationObjectStorage,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -84,22 +86,22 @@ public open class CfnLocationObjectStorage(
   }
 
   /**
-   * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect
-   * with your location.
+   * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect with your
+   * object storage system.
    */
   public open fun agentArns(): List<String> = unwrap(this).getAgentArns()
 
   /**
-   * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect
-   * with your location.
+   * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect with your
+   * object storage system.
    */
   public open fun agentArns(`value`: List<String>) {
     unwrap(this).setAgentArns(`value`)
   }
 
   /**
-   * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect
-   * with your location.
+   * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect with your
+   * object storage system.
    */
   public open fun agentArns(vararg `value`: String): Unit = agentArns(`value`.toList())
 
@@ -251,22 +253,22 @@ public open class CfnLocationObjectStorage(
     public fun accessKey(accessKey: String)
 
     /**
-     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect
-     * with your location.
+     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect with your
+     * object storage system.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-agentarns)
      * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * securely connect with your location. 
+     * connect with your object storage system. 
      */
     public fun agentArns(agentArns: List<String>)
 
     /**
-     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect
-     * with your location.
+     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect with your
+     * object storage system.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-agentarns)
      * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * securely connect with your location. 
+     * connect with your object storage system. 
      */
     public fun agentArns(vararg agentArns: String)
 
@@ -402,24 +404,24 @@ public open class CfnLocationObjectStorage(
     }
 
     /**
-     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect
-     * with your location.
+     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect with your
+     * object storage system.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-agentarns)
      * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * securely connect with your location. 
+     * connect with your object storage system. 
      */
     override fun agentArns(agentArns: List<String>) {
       cdkBuilder.agentArns(agentArns)
     }
 
     /**
-     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect
-     * with your location.
+     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect with your
+     * object storage system.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-agentarns)
      * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * securely connect with your location. 
+     * connect with your object storage system. 
      */
     override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
 

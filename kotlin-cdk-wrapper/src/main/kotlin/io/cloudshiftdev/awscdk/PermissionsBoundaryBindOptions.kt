@@ -36,7 +36,8 @@ public interface PermissionsBoundaryBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.PermissionsBoundaryBindOptions,
-  ) : CdkObject(cdkObject), PermissionsBoundaryBindOptions
+  ) : CdkObject(cdkObject),
+      PermissionsBoundaryBindOptions
 
   public companion object {
     public operator fun invoke(block: Builder.() -> Unit = {}): PermissionsBoundaryBindOptions {

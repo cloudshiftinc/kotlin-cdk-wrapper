@@ -128,7 +128,8 @@ public interface ConfigurationSetEventDestinationProps : ConfigurationSetEventDe
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationProps,
-  ) : CdkObject(cdkObject), ConfigurationSetEventDestinationProps {
+  ) : CdkObject(cdkObject),
+      ConfigurationSetEventDestinationProps {
     /**
      * The configuration set that contains the event destination.
      */

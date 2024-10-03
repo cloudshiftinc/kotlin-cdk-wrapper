@@ -18,6 +18,7 @@ import kotlin.jvm.JvmName
  * ```
  * EventBus bus = EventBus.Builder.create(this, "bus")
  * .eventBusName("MyCustomEventBus")
+ * .description("MyCustomEventBus")
  * .build();
  * bus.archive("MyArchive", BaseArchiveProps.builder()
  * .archiveName("MyCustomEventBusArchive")
@@ -138,7 +139,8 @@ public interface BaseArchiveProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.BaseArchiveProps,
-  ) : CdkObject(cdkObject), BaseArchiveProps {
+  ) : CdkObject(cdkObject),
+      BaseArchiveProps {
     /**
      * The name of the archive.
      *

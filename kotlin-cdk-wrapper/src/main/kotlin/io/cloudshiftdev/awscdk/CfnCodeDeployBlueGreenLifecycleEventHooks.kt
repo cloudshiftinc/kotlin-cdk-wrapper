@@ -155,7 +155,8 @@ public interface CfnCodeDeployBlueGreenLifecycleEventHooks {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenLifecycleEventHooks,
-  ) : CdkObject(cdkObject), CfnCodeDeployBlueGreenLifecycleEventHooks {
+  ) : CdkObject(cdkObject),
+      CfnCodeDeployBlueGreenLifecycleEventHooks {
     /**
      * Function to use to run tasks after the test listener serves traffic to the replacement task
      * set.

@@ -22,7 +22,8 @@ public interface IClientVpnConnectionHandler {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IClientVpnConnectionHandler,
-  ) : CdkObject(cdkObject), IClientVpnConnectionHandler {
+  ) : CdkObject(cdkObject),
+      IClientVpnConnectionHandler {
     /**
      * The ARN of the function.
      */

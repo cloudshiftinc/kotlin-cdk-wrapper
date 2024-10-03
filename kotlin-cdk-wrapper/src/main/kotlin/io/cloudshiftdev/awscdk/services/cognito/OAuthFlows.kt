@@ -112,7 +112,8 @@ public interface OAuthFlows {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.OAuthFlows,
-  ) : CdkObject(cdkObject), OAuthFlows {
+  ) : CdkObject(cdkObject),
+      OAuthFlows {
     /**
      * Initiate an authorization code grant flow, which provides an authorization code as the
      * response.

@@ -82,7 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplicationReferenceDataSource(
   cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -400,7 +401,8 @@ public open class CfnApplicationReferenceDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.CSVMappingParametersProperty,
-    ) : CdkObject(cdkObject), CSVMappingParametersProperty {
+    ) : CdkObject(cdkObject),
+        CSVMappingParametersProperty {
       /**
        * Column delimiter.
        *
@@ -494,7 +496,8 @@ public open class CfnApplicationReferenceDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.JSONMappingParametersProperty,
-    ) : CdkObject(cdkObject), JSONMappingParametersProperty {
+    ) : CdkObject(cdkObject),
+        JSONMappingParametersProperty {
       /**
        * Path to the top-level parent that contains the records.
        *
@@ -675,7 +678,8 @@ public open class CfnApplicationReferenceDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.MappingParametersProperty,
-    ) : CdkObject(cdkObject), MappingParametersProperty {
+    ) : CdkObject(cdkObject),
+        MappingParametersProperty {
       /**
        * Provides additional mapping information when the record format uses delimiters (for
        * example, CSV).
@@ -826,7 +830,8 @@ public open class CfnApplicationReferenceDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.RecordColumnProperty,
-    ) : CdkObject(cdkObject), RecordColumnProperty {
+    ) : CdkObject(cdkObject),
+        RecordColumnProperty {
       /**
        * Reference to the data element in the streaming input or the reference data source.
        *
@@ -998,7 +1003,8 @@ public open class CfnApplicationReferenceDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.RecordFormatProperty,
-    ) : CdkObject(cdkObject), RecordFormatProperty {
+    ) : CdkObject(cdkObject),
+        RecordFormatProperty {
       /**
        * When configuring application input at the time of creating or updating an application,
        * provides additional mapping information specific to the record format (such as JSON, CSV, or
@@ -1256,7 +1262,8 @@ public open class CfnApplicationReferenceDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.ReferenceDataSourceProperty,
-    ) : CdkObject(cdkObject), ReferenceDataSourceProperty {
+    ) : CdkObject(cdkObject),
+        ReferenceDataSourceProperty {
       /**
        * Describes the format of the data in the streaming source, and how each data element maps to
        * corresponding columns created in the in-application stream.
@@ -1471,7 +1478,8 @@ public open class CfnApplicationReferenceDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.ReferenceSchemaProperty,
-    ) : CdkObject(cdkObject), ReferenceSchemaProperty {
+    ) : CdkObject(cdkObject),
+        ReferenceSchemaProperty {
       /**
        * A list of RecordColumn objects.
        *
@@ -1627,7 +1635,8 @@ public open class CfnApplicationReferenceDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty,
-    ) : CdkObject(cdkObject), S3ReferenceDataSourceProperty {
+    ) : CdkObject(cdkObject),
+        S3ReferenceDataSourceProperty {
       /**
        * Amazon Resource Name (ARN) of the S3 bucket.
        *

@@ -189,7 +189,8 @@ public interface CfnListProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.frauddetector.CfnListProps,
-  ) : CdkObject(cdkObject), CfnListProps {
+  ) : CdkObject(cdkObject),
+      CfnListProps {
     /**
      * The description of the list.
      *

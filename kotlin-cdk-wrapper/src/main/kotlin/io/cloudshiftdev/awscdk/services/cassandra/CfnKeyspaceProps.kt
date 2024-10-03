@@ -240,7 +240,8 @@ public interface CfnKeyspaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cassandra.CfnKeyspaceProps,
-  ) : CdkObject(cdkObject), CfnKeyspaceProps {
+  ) : CdkObject(cdkObject),
+      CfnKeyspaceProps {
     /**
      * The name of the keyspace to be created.
      *

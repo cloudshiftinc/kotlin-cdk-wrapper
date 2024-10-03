@@ -22,9 +22,9 @@ import kotlin.collections.List
  * import io.cloudshiftdev.awscdk.services.deadline.*;
  * CfnStorageProfileProps cfnStorageProfileProps = CfnStorageProfileProps.builder()
  * .displayName("displayName")
+ * .farmId("farmId")
  * .osFamily("osFamily")
  * // the properties below are optional
- * .farmId("farmId")
  * .fileSystemLocations(List.of(FileSystemLocationProperty.builder()
  * .name("name")
  * .path("path")
@@ -39,6 +39,11 @@ public interface CfnStorageProfileProps {
   /**
    * The display name of the storage profile summary to update.
    *
+   *
+   * This field can store any content. Escape or encode this content before displaying it on a
+   * webpage or any other system that might interpret the content of this field.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-storageprofile.html#cfn-deadline-storageprofile-displayname)
    */
   public fun displayName(): String
@@ -48,7 +53,7 @@ public interface CfnStorageProfileProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-storageprofile.html#cfn-deadline-storageprofile-farmid)
    */
-  public fun farmId(): String? = unwrap(this).getFarmId()
+  public fun farmId(): String
 
   /**
    * Operating system specific file system path to the storage location.
@@ -71,11 +76,14 @@ public interface CfnStorageProfileProps {
   public interface Builder {
     /**
      * @param displayName The display name of the storage profile summary to update. 
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
      */
     public fun displayName(displayName: String)
 
     /**
-     * @param farmId The unique identifier of the farm that contains the storage profile.
+     * @param farmId The unique identifier of the farm that contains the storage profile. 
      */
     public fun farmId(farmId: String)
 
@@ -109,13 +117,16 @@ public interface CfnStorageProfileProps {
 
     /**
      * @param displayName The display name of the storage profile summary to update. 
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
      */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
     /**
-     * @param farmId The unique identifier of the farm that contains the storage profile.
+     * @param farmId The unique identifier of the farm that contains the storage profile. 
      */
     override fun farmId(farmId: String) {
       cdkBuilder.farmId(farmId)
@@ -157,9 +168,15 @@ public interface CfnStorageProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.deadline.CfnStorageProfileProps,
-  ) : CdkObject(cdkObject), CfnStorageProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnStorageProfileProps {
     /**
      * The display name of the storage profile summary to update.
+     *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-storageprofile.html#cfn-deadline-storageprofile-displayname)
      */
@@ -170,7 +187,7 @@ public interface CfnStorageProfileProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-storageprofile.html#cfn-deadline-storageprofile-farmid)
      */
-    override fun farmId(): String? = unwrap(this).getFarmId()
+    override fun farmId(): String = unwrap(this).getFarmId()
 
     /**
      * Operating system specific file system path to the storage location.

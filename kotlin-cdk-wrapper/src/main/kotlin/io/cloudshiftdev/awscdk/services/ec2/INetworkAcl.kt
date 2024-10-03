@@ -43,7 +43,8 @@ public interface INetworkAcl : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.INetworkAcl,
-  ) : CdkObject(cdkObject), INetworkAcl {
+  ) : CdkObject(cdkObject),
+      INetworkAcl {
     /**
      * Add a new entry to the ACL.
      *

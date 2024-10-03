@@ -165,7 +165,8 @@ public interface ApplicationListenerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationListenerProps,
-  ) : CdkObject(cdkObject), ApplicationListenerProps {
+  ) : CdkObject(cdkObject),
+      ApplicationListenerProps {
     /**
      * Certificate Manager certificate to associate with the load balancer.
      *

@@ -55,7 +55,8 @@ import kotlin.jvm.JvmName
  */
 public open class LinuxBuildImage(
   cdkObject: software.amazon.awscdk.services.codebuild.LinuxBuildImage,
-) : CdkObject(cdkObject), IBuildImage {
+) : CdkObject(cdkObject),
+    IBuildImage {
   /**
    * The default `ComputeType` to use with this image, if one was not specified in
    * `BuildEnvironment#computeType` explicitly.
@@ -141,6 +142,12 @@ public open class LinuxBuildImage(
 
     public val AMAZON_LINUX_2_ARM_3: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxBuildImage.AMAZON_LINUX_2_ARM_3)
+
+    public val AMAZON_LINUX_2_CORETTO_11: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxBuildImage.AMAZON_LINUX_2_CORETTO_11)
+
+    public val AMAZON_LINUX_2_CORETTO_8: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxBuildImage.AMAZON_LINUX_2_CORETTO_8)
 
     public val STANDARD_1_0: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxBuildImage.STANDARD_1_0)

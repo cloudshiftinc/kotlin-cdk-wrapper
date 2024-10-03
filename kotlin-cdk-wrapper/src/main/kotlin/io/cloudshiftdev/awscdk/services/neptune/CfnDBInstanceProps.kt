@@ -396,7 +396,8 @@ public interface CfnDBInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.neptune.CfnDBInstanceProps,
-  ) : CdkObject(cdkObject), CfnDBInstanceProps {
+  ) : CdkObject(cdkObject),
+      CfnDBInstanceProps {
     /**
      * Indicates that major version upgrades are allowed.
      *

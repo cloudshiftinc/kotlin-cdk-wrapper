@@ -24,7 +24,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * For more information about global endpoints, see [Making applications Regional-fault tolerant
  * with global endpoints and event
  * replication](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html) in
- * the *Amazon EventBridge User Guide* .
+ * the **Amazon EventBridge User Guide** .
  *
  * Example:
  *
@@ -60,7 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEndpoint(
   cdkObject: software.amazon.awscdk.services.events.CfnEndpoint,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -571,7 +572,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty,
-    ) : CdkObject(cdkObject), EndpointEventBusProperty {
+    ) : CdkObject(cdkObject),
+        EndpointEventBusProperty {
       /**
        * The ARN of the event bus the endpoint is associated with.
        *
@@ -738,7 +740,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty,
-    ) : CdkObject(cdkObject), FailoverConfigProperty {
+    ) : CdkObject(cdkObject),
+        FailoverConfigProperty {
       /**
        * The main Region of the endpoint.
        *
@@ -828,7 +831,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty,
-    ) : CdkObject(cdkObject), PrimaryProperty {
+    ) : CdkObject(cdkObject),
+        PrimaryProperty {
       /**
        * The ARN of the health check used by the endpoint to determine whether failover is
        * triggered.
@@ -909,7 +913,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty,
-    ) : CdkObject(cdkObject), ReplicationConfigProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationConfigProperty {
       /**
        * The state of event replication.
        *
@@ -1031,7 +1036,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty,
-    ) : CdkObject(cdkObject), RoutingConfigProperty {
+    ) : CdkObject(cdkObject),
+        RoutingConfigProperty {
       /**
        * The failover configuration for an endpoint.
        *
@@ -1114,7 +1120,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty,
-    ) : CdkObject(cdkObject), SecondaryProperty {
+    ) : CdkObject(cdkObject),
+        SecondaryProperty {
       /**
        * Defines the secondary Region.
        *

@@ -36,7 +36,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class BucketBase(
   cdkObject: software.amazon.awscdk.services.s3.BucketBase,
-) : Resource(cdkObject), IBucket {
+) : Resource(cdkObject),
+    IBucket {
   /**
    * Adds a bucket notification event destination.
    *

@@ -52,7 +52,7 @@ public interface CfnQueueEnvironmentProps {
   public fun queueId(): String
 
   /**
-   * A JSON or YAML template the describes the processing environment for the queue.
+   * A JSON or YAML template that describes the processing environment for the queue.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queueenvironment.html#cfn-deadline-queueenvironment-template)
    */
@@ -86,7 +86,7 @@ public interface CfnQueueEnvironmentProps {
     public fun queueId(queueId: String)
 
     /**
-     * @param template A JSON or YAML template the describes the processing environment for the
+     * @param template A JSON or YAML template that describes the processing environment for the
      * queue. 
      */
     public fun template(template: String)
@@ -125,7 +125,7 @@ public interface CfnQueueEnvironmentProps {
     }
 
     /**
-     * @param template A JSON or YAML template the describes the processing environment for the
+     * @param template A JSON or YAML template that describes the processing environment for the
      * queue. 
      */
     override fun template(template: String) {
@@ -146,7 +146,8 @@ public interface CfnQueueEnvironmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.deadline.CfnQueueEnvironmentProps,
-  ) : CdkObject(cdkObject), CfnQueueEnvironmentProps {
+  ) : CdkObject(cdkObject),
+      CfnQueueEnvironmentProps {
     /**
      * The identifier assigned to the farm that contains the queue.
      *
@@ -169,7 +170,7 @@ public interface CfnQueueEnvironmentProps {
     override fun queueId(): String = unwrap(this).getQueueId()
 
     /**
-     * A JSON or YAML template the describes the processing environment for the queue.
+     * A JSON or YAML template that describes the processing environment for the queue.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queueenvironment.html#cfn-deadline-queueenvironment-template)
      */

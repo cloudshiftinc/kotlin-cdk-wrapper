@@ -112,7 +112,8 @@ public interface CfnFlowTemplateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplateProps,
-  ) : CdkObject(cdkObject), CfnFlowTemplateProps {
+  ) : CdkObject(cdkObject),
+      CfnFlowTemplateProps {
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotthingsgraph-flowtemplate.html#cfn-iotthingsgraph-flowtemplate-compatiblenamespaceversion)
      */

@@ -47,7 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUserPoolResourceServer(
   cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -63,11 +64,6 @@ public open class CfnUserPoolResourceServer(
     props: CfnUserPoolResourceServerProps.Builder.() -> Unit,
   ) : this(scope, id, CfnUserPoolResourceServerProps(props)
   )
-
-  /**
-   * The resource ID.
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
    * A unique resource server identifier for the resource server.
@@ -302,7 +298,18 @@ public open class CfnUserPoolResourceServer(
   }
 
   /**
-   * A resource server scope.
+   * One custom scope associated with a user pool resource server.
+   *
+   * This data type is a member of `ResourceServerScopeType` . For more information, see [Scopes,
+   * M2M, and API authorization with resource
+   * servers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-define-resource-servers.html)
+   * .
+   *
+   * This data type is a request parameter of
+   * [CreateResourceServer](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateResourceServer.html)
+   * and a response parameter of
+   * [DescribeResourceServer](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeResourceServer.html)
+   * .
    *
    * Example:
    *
@@ -321,7 +328,7 @@ public open class CfnUserPoolResourceServer(
    */
   public interface ResourceServerScopeTypeProperty {
     /**
-     * A description of the scope.
+     * A friendly description of a custom scope.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolresourceserver-resourceserverscopetype.html#cfn-cognito-userpoolresourceserver-resourceserverscopetype-scopedescription)
      */
@@ -329,6 +336,11 @@ public open class CfnUserPoolResourceServer(
 
     /**
      * The name of the scope.
+     *
+     * Amazon Cognito renders custom scopes in the format `resourceServerIdentifier/ScopeName` . For
+     * example, if this parameter is `exampleScope` in the resource server with the identifier
+     * `exampleResourceServer` , you request and receive the scope `exampleResourceServer/exampleScope`
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolresourceserver-resourceserverscopetype.html#cfn-cognito-userpoolresourceserver-resourceserverscopetype-scopename)
      */
@@ -340,12 +352,16 @@ public open class CfnUserPoolResourceServer(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param scopeDescription A description of the scope. 
+       * @param scopeDescription A friendly description of a custom scope. 
        */
       public fun scopeDescription(scopeDescription: String)
 
       /**
        * @param scopeName The name of the scope. 
+       * Amazon Cognito renders custom scopes in the format `resourceServerIdentifier/ScopeName` .
+       * For example, if this parameter is `exampleScope` in the resource server with the identifier
+       * `exampleResourceServer` , you request and receive the scope
+       * `exampleResourceServer/exampleScope` .
        */
       public fun scopeName(scopeName: String)
     }
@@ -357,7 +373,7 @@ public open class CfnUserPoolResourceServer(
           software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer.ResourceServerScopeTypeProperty.builder()
 
       /**
-       * @param scopeDescription A description of the scope. 
+       * @param scopeDescription A friendly description of a custom scope. 
        */
       override fun scopeDescription(scopeDescription: String) {
         cdkBuilder.scopeDescription(scopeDescription)
@@ -365,6 +381,10 @@ public open class CfnUserPoolResourceServer(
 
       /**
        * @param scopeName The name of the scope. 
+       * Amazon Cognito renders custom scopes in the format `resourceServerIdentifier/ScopeName` .
+       * For example, if this parameter is `exampleScope` in the resource server with the identifier
+       * `exampleResourceServer` , you request and receive the scope
+       * `exampleResourceServer/exampleScope` .
        */
       override fun scopeName(scopeName: String) {
         cdkBuilder.scopeName(scopeName)
@@ -377,9 +397,10 @@ public open class CfnUserPoolResourceServer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer.ResourceServerScopeTypeProperty,
-    ) : CdkObject(cdkObject), ResourceServerScopeTypeProperty {
+    ) : CdkObject(cdkObject),
+        ResourceServerScopeTypeProperty {
       /**
-       * A description of the scope.
+       * A friendly description of a custom scope.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolresourceserver-resourceserverscopetype.html#cfn-cognito-userpoolresourceserver-resourceserverscopetype-scopedescription)
        */
@@ -387,6 +408,11 @@ public open class CfnUserPoolResourceServer(
 
       /**
        * The name of the scope.
+       *
+       * Amazon Cognito renders custom scopes in the format `resourceServerIdentifier/ScopeName` .
+       * For example, if this parameter is `exampleScope` in the resource server with the identifier
+       * `exampleResourceServer` , you request and receive the scope
+       * `exampleResourceServer/exampleScope` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolresourceserver-resourceserverscopetype.html#cfn-cognito-userpoolresourceserver-resourceserverscopetype-scopename)
        */

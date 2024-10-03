@@ -259,7 +259,8 @@ public interface CfnRoomProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ivschat.CfnRoomProps,
-  ) : CdkObject(cdkObject), CfnRoomProps {
+  ) : CdkObject(cdkObject),
+      CfnRoomProps {
     /**
      * List of logging-configuration identifiers attached to the room.
      *

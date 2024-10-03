@@ -98,7 +98,8 @@ public interface FileSystemAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.FileSystemAttributes,
-  ) : CdkObject(cdkObject), FileSystemAttributes {
+  ) : CdkObject(cdkObject),
+      FileSystemAttributes {
     /**
      * The File System's Arn.
      *

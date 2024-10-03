@@ -55,7 +55,8 @@ public interface DestinationOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.DestinationOptions,
-  ) : CdkObject(cdkObject), DestinationOptions {
+  ) : CdkObject(cdkObject),
+      DestinationOptions {
     /**
      * The destination type.
      */

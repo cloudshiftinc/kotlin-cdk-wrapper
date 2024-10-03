@@ -430,7 +430,8 @@ public interface CfnUserPoolIdentityProviderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolIdentityProviderProps,
-  ) : CdkObject(cdkObject), CfnUserPoolIdentityProviderProps {
+  ) : CdkObject(cdkObject),
+      CfnUserPoolIdentityProviderProps {
     /**
      * A mapping of IdP attributes to standard and custom user pool attributes.
      *

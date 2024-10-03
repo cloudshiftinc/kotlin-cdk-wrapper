@@ -44,7 +44,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCluster(
   cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnCluster,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -308,7 +310,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnCluster.ClusterEndpointProperty,
-    ) : CdkObject(cdkObject), ClusterEndpointProperty {
+    ) : CdkObject(cdkObject),
+        ClusterEndpointProperty {
       /**
        * A cluster endpoint URL for one of the five redundant clusters that you specify to set or
        * retrieve a routing control state.

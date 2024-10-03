@@ -158,7 +158,8 @@ public interface NetworkLoadBalancerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancerProps,
-  ) : CdkObject(cdkObject), NetworkLoadBalancerProps {
+  ) : CdkObject(cdkObject),
+      NetworkLoadBalancerProps {
     /**
      * The domain name for the service, e.g. "api.example.com.".
      *

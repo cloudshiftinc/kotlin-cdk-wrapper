@@ -83,7 +83,8 @@ public interface ThroughputProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.ThroughputProps,
-  ) : CdkObject(cdkObject), ThroughputProps {
+  ) : CdkObject(cdkObject),
+      ThroughputProps {
     /**
      * The read capacity.
      */

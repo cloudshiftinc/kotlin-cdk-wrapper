@@ -190,7 +190,8 @@ public interface CfnTableOptimizerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnTableOptimizerProps,
-  ) : CdkObject(cdkObject), CfnTableOptimizerProps {
+  ) : CdkObject(cdkObject),
+      CfnTableOptimizerProps {
     /**
      * The catalog ID of the table.
      *

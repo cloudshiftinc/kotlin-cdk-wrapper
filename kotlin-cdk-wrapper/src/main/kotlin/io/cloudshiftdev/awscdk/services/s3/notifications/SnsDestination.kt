@@ -22,7 +22,8 @@ import io.cloudshiftdev.constructs.Construct
  */
 public open class SnsDestination(
   cdkObject: software.amazon.awscdk.services.s3.notifications.SnsDestination,
-) : CdkObject(cdkObject), IBucketNotificationDestination {
+) : CdkObject(cdkObject),
+    IBucketNotificationDestination {
   public constructor(topic: ITopic) :
       this(software.amazon.awscdk.services.s3.notifications.SnsDestination(topic.let(ITopic.Companion::unwrap))
   )

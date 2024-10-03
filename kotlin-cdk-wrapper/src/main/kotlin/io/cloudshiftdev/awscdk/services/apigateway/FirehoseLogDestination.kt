@@ -32,7 +32,8 @@ import io.cloudshiftdev.awscdk.services.kinesisfirehose.CfnDeliveryStream
  */
 public open class FirehoseLogDestination(
   cdkObject: software.amazon.awscdk.services.apigateway.FirehoseLogDestination,
-) : CdkObject(cdkObject), IAccessLogDestination {
+) : CdkObject(cdkObject),
+    IAccessLogDestination {
   public constructor(stream: CfnDeliveryStream) :
       this(software.amazon.awscdk.services.apigateway.FirehoseLogDestination(stream.let(CfnDeliveryStream.Companion::unwrap))
   )

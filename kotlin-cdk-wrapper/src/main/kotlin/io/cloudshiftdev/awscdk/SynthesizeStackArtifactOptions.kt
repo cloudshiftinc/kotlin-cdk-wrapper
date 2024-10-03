@@ -2,10 +2,11 @@
 
 package io.cloudshiftdev.awscdk
 
-import io.cloudshiftdev.awscdk.cloudassembly.schema.BootstrapRole
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.BootstrapRole
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -25,9 +26,12 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
+ * Object assumeRoleAdditionalOptions;
  * SynthesizeStackArtifactOptions synthesizeStackArtifactOptions =
  * SynthesizeStackArtifactOptions.builder()
  * .additionalDependencies(List.of("additionalDependencies"))
+ * .assumeRoleAdditionalOptions(Map.of(
+ * "assumeRoleAdditionalOptionsKey", assumeRoleAdditionalOptions))
  * .assumeRoleArn("assumeRoleArn")
  * .assumeRoleExternalId("assumeRoleExternalId")
  * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
@@ -35,6 +39,8 @@ import kotlin.jvm.JvmName
  * .lookupRole(BootstrapRole.builder()
  * .arn("arn")
  * // the properties below are optional
+ * .assumeRoleAdditionalOptions(Map.of(
+ * "assumeRoleAdditionalOptionsKey", assumeRoleAdditionalOptions))
  * .assumeRoleExternalId("assumeRoleExternalId")
  * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
  * .requiresBootstrapStackVersion(123)
@@ -54,6 +60,21 @@ public interface SynthesizeStackArtifactOptions {
    */
   public fun additionalDependencies(): List<String> = unwrap(this).getAdditionalDependencies() ?:
       emptyList()
+
+  /**
+   * Additional options to pass to STS when assuming the role for cloudformation deployments.
+   *
+   * * `RoleArn` should not be used. Use the dedicated `assumeRoleArn` property instead.
+   * * `ExternalId` should not be used. Use the dedicated `assumeRoleExternalId` instead.
+   * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags are
+   * transitive by default.
+   *
+   * Default: - No additional options.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+   */
+  public fun assumeRoleAdditionalOptions(): Map<String, Any> =
+      unwrap(this).getAssumeRoleAdditionalOptions() ?: emptyMap()
 
   /**
    * The role that needs to be assumed to deploy the stack.
@@ -138,6 +159,16 @@ public interface SynthesizeStackArtifactOptions {
     public fun additionalDependencies(vararg additionalDependencies: String)
 
     /**
+     * @param assumeRoleAdditionalOptions Additional options to pass to STS when assuming the role
+     * for cloudformation deployments.
+     * * `RoleArn` should not be used. Use the dedicated `assumeRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `assumeRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    public fun assumeRoleAdditionalOptions(assumeRoleAdditionalOptions: Map<String, Any>)
+
+    /**
      * @param assumeRoleArn The role that needs to be assumed to deploy the stack.
      */
     public fun assumeRoleArn(assumeRoleArn: String)
@@ -175,7 +206,7 @@ public interface SynthesizeStackArtifactOptions {
      * @param lookupRole The role to use to look up values from the target AWS account.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("667efbdaa99a63c73ad9441bf91996ead6c776da81567e995faf159be4f41f99")
+    @JvmName("1931a134460bf2dc8dbbd5562b372cf8502a457973718015da4df8928d7c72dd")
     public fun lookupRole(lookupRole: BootstrapRole.Builder.() -> Unit)
 
     /**
@@ -213,6 +244,18 @@ public interface SynthesizeStackArtifactOptions {
      */
     override fun additionalDependencies(vararg additionalDependencies: String): Unit =
         additionalDependencies(additionalDependencies.toList())
+
+    /**
+     * @param assumeRoleAdditionalOptions Additional options to pass to STS when assuming the role
+     * for cloudformation deployments.
+     * * `RoleArn` should not be used. Use the dedicated `assumeRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `assumeRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    override fun assumeRoleAdditionalOptions(assumeRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.assumeRoleAdditionalOptions(assumeRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
 
     /**
      * @param assumeRoleArn The role that needs to be assumed to deploy the stack.
@@ -262,7 +305,7 @@ public interface SynthesizeStackArtifactOptions {
      * @param lookupRole The role to use to look up values from the target AWS account.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("667efbdaa99a63c73ad9441bf91996ead6c776da81567e995faf159be4f41f99")
+    @JvmName("1931a134460bf2dc8dbbd5562b372cf8502a457973718015da4df8928d7c72dd")
     override fun lookupRole(lookupRole: BootstrapRole.Builder.() -> Unit): Unit =
         lookupRole(BootstrapRole(lookupRole))
 
@@ -295,7 +338,8 @@ public interface SynthesizeStackArtifactOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.SynthesizeStackArtifactOptions,
-  ) : CdkObject(cdkObject), SynthesizeStackArtifactOptions {
+  ) : CdkObject(cdkObject),
+      SynthesizeStackArtifactOptions {
     /**
      * Identifiers of additional dependencies.
      *
@@ -303,6 +347,21 @@ public interface SynthesizeStackArtifactOptions {
      */
     override fun additionalDependencies(): List<String> = unwrap(this).getAdditionalDependencies()
         ?: emptyList()
+
+    /**
+     * Additional options to pass to STS when assuming the role for cloudformation deployments.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `assumeRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `assumeRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     */
+    override fun assumeRoleAdditionalOptions(): Map<String, Any> =
+        unwrap(this).getAssumeRoleAdditionalOptions() ?: emptyMap()
 
     /**
      * The role that needs to be assumed to deploy the stack.

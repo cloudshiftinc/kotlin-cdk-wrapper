@@ -46,7 +46,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTransitGatewayMulticastDomain(
   cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -365,7 +367,8 @@ public open class CfnTransitGatewayMulticastDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain.OptionsProperty,
-    ) : CdkObject(cdkObject), OptionsProperty {
+    ) : CdkObject(cdkObject),
+        OptionsProperty {
       /**
        * Indicates whether to automatically accept cross-account subnet associations that are
        * associated with the transit gateway multicast domain.

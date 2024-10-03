@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
@@ -25,6 +26,7 @@ import kotlin.Unit
  * // the properties below are optional
  * .code(code)
  * .description("description")
+ * .maxBatchSize(123)
  * .requestMappingTemplate(mappingTemplate)
  * .responseMappingTemplate(mappingTemplate)
  * .runtime(functionRuntime)
@@ -45,6 +47,16 @@ public interface BaseAppsyncFunctionProps {
    * Default: - no description
    */
   public fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * The maximum number of resolver request inputs that will be sent to a single AWS Lambda function
+   * in a BatchInvoke operation.
+   *
+   * Can only be set when using LambdaDataSource.
+   *
+   * Default: - No max batch size
+   */
+  public fun maxBatchSize(): Number? = unwrap(this).getMaxBatchSize()
 
   /**
    * the name of the AppSync Function.
@@ -90,6 +102,13 @@ public interface BaseAppsyncFunctionProps {
     public fun description(description: String)
 
     /**
+     * @param maxBatchSize The maximum number of resolver request inputs that will be sent to a
+     * single AWS Lambda function in a BatchInvoke operation.
+     * Can only be set when using LambdaDataSource.
+     */
+    public fun maxBatchSize(maxBatchSize: Number)
+
+    /**
      * @param name the name of the AppSync Function. 
      */
     public fun name(name: String)
@@ -129,6 +148,15 @@ public interface BaseAppsyncFunctionProps {
     }
 
     /**
+     * @param maxBatchSize The maximum number of resolver request inputs that will be sent to a
+     * single AWS Lambda function in a BatchInvoke operation.
+     * Can only be set when using LambdaDataSource.
+     */
+    override fun maxBatchSize(maxBatchSize: Number) {
+      cdkBuilder.maxBatchSize(maxBatchSize)
+    }
+
+    /**
      * @param name the name of the AppSync Function. 
      */
     override fun name(name: String) {
@@ -162,7 +190,8 @@ public interface BaseAppsyncFunctionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.BaseAppsyncFunctionProps,
-  ) : CdkObject(cdkObject), BaseAppsyncFunctionProps {
+  ) : CdkObject(cdkObject),
+      BaseAppsyncFunctionProps {
     /**
      * The function code.
      *
@@ -176,6 +205,16 @@ public interface BaseAppsyncFunctionProps {
      * Default: - no description
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The maximum number of resolver request inputs that will be sent to a single AWS Lambda
+     * function in a BatchInvoke operation.
+     *
+     * Can only be set when using LambdaDataSource.
+     *
+     * Default: - No max batch size
+     */
+    override fun maxBatchSize(): Number? = unwrap(this).getMaxBatchSize()
 
     /**
      * the name of the AppSync Function.

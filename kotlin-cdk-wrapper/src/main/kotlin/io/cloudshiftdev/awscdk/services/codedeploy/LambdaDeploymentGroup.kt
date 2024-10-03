@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class LambdaDeploymentGroup(
   cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup,
-) : Resource(cdkObject), ILambdaDeploymentGroup {
+) : Resource(cdkObject),
+    ILambdaDeploymentGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMultiRegionAccessPointPolicy(
   cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -239,7 +240,8 @@ public open class CfnMultiRegionAccessPointPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy.PolicyStatusProperty,
-    ) : CdkObject(cdkObject), PolicyStatusProperty {
+    ) : CdkObject(cdkObject),
+        PolicyStatusProperty {
       /**
        * The policy status for this bucket.
        *

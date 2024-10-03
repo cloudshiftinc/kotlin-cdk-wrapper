@@ -22,7 +22,8 @@ public interface IListener : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListener,
-  ) : CdkObject(cdkObject), IListener {
+  ) : CdkObject(cdkObject),
+      IListener {
     /**
      * Apply the given removal policy to this resource.
      *

@@ -39,7 +39,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnChannelGroup(
   cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

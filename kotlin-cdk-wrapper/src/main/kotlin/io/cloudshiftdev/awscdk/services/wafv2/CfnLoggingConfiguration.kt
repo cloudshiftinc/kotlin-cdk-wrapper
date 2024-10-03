@@ -84,7 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLoggingConfiguration(
   cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -538,7 +539,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty,
-    ) : CdkObject(cdkObject), ActionConditionProperty {
+    ) : CdkObject(cdkObject),
+        ActionConditionProperty {
       /**
        * The action setting that a log record must contain in order to meet the condition.
        *
@@ -735,7 +737,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ConditionProperty,
-    ) : CdkObject(cdkObject), ConditionProperty {
+    ) : CdkObject(cdkObject),
+        ConditionProperty {
       /**
        * A single action condition.
        *
@@ -953,7 +956,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FieldToMatchProperty,
-    ) : CdkObject(cdkObject), FieldToMatchProperty {
+    ) : CdkObject(cdkObject),
+        FieldToMatchProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-fieldtomatch.html#cfn-wafv2-loggingconfiguration-fieldtomatch-jsonbody)
        */
@@ -1149,7 +1153,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
+    ) : CdkObject(cdkObject),
+        FilterProperty {
       /**
        * How to handle logs that satisfy the filter's conditions and requirement.
        *
@@ -1311,7 +1316,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.JsonBodyProperty,
-    ) : CdkObject(cdkObject), JsonBodyProperty {
+    ) : CdkObject(cdkObject),
+        JsonBodyProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-jsonbody.html#cfn-wafv2-loggingconfiguration-jsonbody-invalidfallbackbehavior)
        */
@@ -1413,7 +1419,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty,
-    ) : CdkObject(cdkObject), LabelNameConditionProperty {
+    ) : CdkObject(cdkObject),
+        LabelNameConditionProperty {
       /**
        * The label name that a log record must contain in order to meet the condition.
        *
@@ -1558,7 +1565,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty,
-    ) : CdkObject(cdkObject), LoggingFilterProperty {
+    ) : CdkObject(cdkObject),
+        LoggingFilterProperty {
       /**
        * Default handling for logs that don't match any of the specified filtering conditions.
        *
@@ -1673,7 +1681,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty,
-    ) : CdkObject(cdkObject), MatchPatternProperty {
+    ) : CdkObject(cdkObject),
+        MatchPatternProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html#cfn-wafv2-loggingconfiguration-matchpattern-all)
        */
@@ -1768,7 +1777,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty,
-    ) : CdkObject(cdkObject), SingleHeaderProperty {
+    ) : CdkObject(cdkObject),
+        SingleHeaderProperty {
       /**
        * The name of the query header to inspect.
        *

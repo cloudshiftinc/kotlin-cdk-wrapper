@@ -110,7 +110,8 @@ public interface SrvRecordValue {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.SrvRecordValue,
-  ) : CdkObject(cdkObject), SrvRecordValue {
+  ) : CdkObject(cdkObject),
+      SrvRecordValue {
     /**
      * The server host name.
      */

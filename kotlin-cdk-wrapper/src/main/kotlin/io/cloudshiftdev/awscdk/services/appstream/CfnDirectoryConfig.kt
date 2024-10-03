@@ -47,7 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDirectoryConfig(
   cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -562,7 +563,8 @@ public open class CfnDirectoryConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty,
-    ) : CdkObject(cdkObject), CertificateBasedAuthPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        CertificateBasedAuthPropertiesProperty {
       /**
        * The ARN of the AWS Certificate Manager Private CA resource.
        *
@@ -691,7 +693,8 @@ public open class CfnDirectoryConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty,
-    ) : CdkObject(cdkObject), ServiceAccountCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        ServiceAccountCredentialsProperty {
       /**
        * The user name of the account.
        *

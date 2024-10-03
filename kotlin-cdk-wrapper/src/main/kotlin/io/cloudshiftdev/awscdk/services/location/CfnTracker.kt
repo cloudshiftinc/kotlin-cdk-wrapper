@@ -50,7 +50,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTracker(
   cdkObject: software.amazon.awscdk.services.location.CfnTracker,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -209,12 +211,16 @@ public open class CfnTracker(
   }
 
   /**
+   * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+   *
    * @deprecated this property has been deprecated
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun pricingPlanDataSource(): String? = unwrap(this).getPricingPlanDataSource()
 
   /**
+   * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+   *
    * @deprecated this property has been deprecated
    */
   @Deprecated(message = "deprecated in CDK")
@@ -336,9 +342,13 @@ public open class CfnTracker(
     public fun pricingPlan(pricingPlan: String)
 
     /**
+     * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+     *
+     * No longer allowed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-pricingplandatasource)
      * @deprecated this property has been deprecated
-     * @param pricingPlanDataSource 
+     * @param pricingPlanDataSource This shape is deprecated since 2022-02-01: Deprecated. 
      */
     @Deprecated(message = "deprecated in CDK")
     public fun pricingPlanDataSource(pricingPlanDataSource: String)
@@ -478,9 +488,13 @@ public open class CfnTracker(
     }
 
     /**
+     * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+     *
+     * No longer allowed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-pricingplandatasource)
      * @deprecated this property has been deprecated
-     * @param pricingPlanDataSource 
+     * @param pricingPlanDataSource This shape is deprecated since 2022-02-01: Deprecated. 
      */
     @Deprecated(message = "deprecated in CDK")
     override fun pricingPlanDataSource(pricingPlanDataSource: String) {

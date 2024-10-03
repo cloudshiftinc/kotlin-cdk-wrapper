@@ -43,7 +43,8 @@ import kotlin.jvm.JvmName
  */
 public open class Metric(
   cdkObject: software.amazon.awscdk.services.cloudwatch.Metric,
-) : CdkObject(cdkObject), IMetric {
+) : CdkObject(cdkObject),
+    IMetric {
   public constructor(props: MetricProps) :
       this(software.amazon.awscdk.services.cloudwatch.Metric(props.let(MetricProps.Companion::unwrap))
   )

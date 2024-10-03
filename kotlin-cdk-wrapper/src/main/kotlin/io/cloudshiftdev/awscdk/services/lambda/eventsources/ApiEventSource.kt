@@ -60,7 +60,8 @@ import kotlin.jvm.JvmName
  */
 public open class ApiEventSource(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.ApiEventSource,
-) : CdkObject(cdkObject), IEventSource {
+) : CdkObject(cdkObject),
+    IEventSource {
   public constructor(method: String, path: String) :
       this(software.amazon.awscdk.services.lambda.eventsources.ApiEventSource(method, path)
   )

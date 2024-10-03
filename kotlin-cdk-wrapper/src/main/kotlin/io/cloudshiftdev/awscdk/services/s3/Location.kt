@@ -14,106 +14,24 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * Stack lambdaStack = new Stack(app, "LambdaStack");
- * CfnParametersCode lambdaCode = Code.fromCfnParameters();
- * Function.Builder.create(lambdaStack, "Lambda")
- * .code(lambdaCode)
- * .handler("index.handler")
- * .runtime(Runtime.NODEJS_LATEST)
- * .build();
- * // other resources that your Lambda needs, added to the lambdaStack...
- * Stack pipelineStack = new Stack(app, "PipelineStack");
- * Pipeline pipeline = Pipeline.Builder.create(pipelineStack, "Pipeline")
- * .crossAccountKeys(true)
- * .build();
- * // add the source code repository containing this code to your Pipeline,
- * // and the source code of the Lambda Function, if they're separate
- * Artifact cdkSourceOutput = new Artifact();
- * CodeCommitSourceAction cdkSourceAction = CodeCommitSourceAction.Builder.create()
- * .repository(Repository.Builder.create(pipelineStack, "CdkCodeRepo")
- * .repositoryName("CdkCodeRepo")
+ * AthenaStartQueryExecution startQueryExecutionJob = AthenaStartQueryExecution.Builder.create(this,
+ * "Start Athena Query")
+ * .queryString(JsonPath.stringAt("$.queryString"))
+ * .queryExecutionContext(QueryExecutionContext.builder()
+ * .databaseName("mydatabase")
  * .build())
- * .actionName("CdkCode_Source")
- * .output(cdkSourceOutput)
- * .build();
- * Artifact lambdaSourceOutput = new Artifact();
- * CodeCommitSourceAction lambdaSourceAction = CodeCommitSourceAction.Builder.create()
- * .repository(Repository.Builder.create(pipelineStack, "LambdaCodeRepo")
- * .repositoryName("LambdaCodeRepo")
+ * .resultConfiguration(ResultConfiguration.builder()
+ * .encryptionConfiguration(EncryptionConfiguration.builder()
+ * .encryptionOption(EncryptionOption.S3_MANAGED)
  * .build())
- * .actionName("LambdaCode_Source")
- * .output(lambdaSourceOutput)
- * .build();
- * pipeline.addStage(StageOptions.builder()
- * .stageName("Source")
- * .actions(List.of(cdkSourceAction, lambdaSourceAction))
- * .build());
- * // synthesize the Lambda CDK template, using CodeBuild
- * // the below values are just examples, assuming your CDK code is in TypeScript/JavaScript -
- * // adjust the build environment and/or commands accordingly
- * Project cdkBuildProject = Project.Builder.create(pipelineStack, "CdkBuildProject")
- * .environment(BuildEnvironment.builder()
- * .buildImage(LinuxBuildImage.STANDARD_7_0)
+ * .outputLocation(Location.builder()
+ * .bucketName("query-results-bucket")
+ * .objectKey("folder")
  * .build())
- * .buildSpec(BuildSpec.fromObject(Map.of(
- * "version", "0.2",
- * "phases", Map.of(
- * "install", Map.of(
- * "commands", "npm install"),
- * "build", Map.of(
- * "commands", List.of("npm run build", "npm run cdk synth LambdaStack -- -o ."))),
- * "artifacts", Map.of(
- * "files", "LambdaStack.template.yaml"))))
- * .build();
- * Artifact cdkBuildOutput = new Artifact();
- * CodeBuildAction cdkBuildAction = CodeBuildAction.Builder.create()
- * .actionName("CDK_Build")
- * .project(cdkBuildProject)
- * .input(cdkSourceOutput)
- * .outputs(List.of(cdkBuildOutput))
- * .build();
- * // build your Lambda code, using CodeBuild
- * // again, this example assumes your Lambda is written in TypeScript/JavaScript -
- * // make sure to adjust the build environment and/or commands if they don't match your specific
- * situation
- * Project lambdaBuildProject = Project.Builder.create(pipelineStack, "LambdaBuildProject")
- * .environment(BuildEnvironment.builder()
- * .buildImage(LinuxBuildImage.STANDARD_7_0)
  * .build())
- * .buildSpec(BuildSpec.fromObject(Map.of(
- * "version", "0.2",
- * "phases", Map.of(
- * "install", Map.of(
- * "commands", "npm install"),
- * "build", Map.of(
- * "commands", "npm run build")),
- * "artifacts", Map.of(
- * "files", List.of("index.js", "node_modules/ **&#47;*")))))
+ * .executionParameters(List.of("param1", "param2"))
+ * .resultReuseConfigurationMaxAge(Duration.minutes(100))
  * .build();
- * Artifact lambdaBuildOutput = new Artifact();
- * CodeBuildAction lambdaBuildAction = CodeBuildAction.Builder.create()
- * .actionName("Lambda_Build")
- * .project(lambdaBuildProject)
- * .input(lambdaSourceOutput)
- * .outputs(List.of(lambdaBuildOutput))
- * .build();
- * pipeline.addStage(StageOptions.builder()
- * .stageName("Build")
- * .actions(List.of(cdkBuildAction, lambdaBuildAction))
- * .build());
- * // finally, deploy your Lambda Stack
- * pipeline.addStage(StageOptions.builder()
- * .stageName("Deploy")
- * .actions(List.of(
- * CloudFormationCreateUpdateStackAction.Builder.create()
- * .actionName("Lambda_CFN_Deploy")
- * .templatePath(cdkBuildOutput.atPath("LambdaStack.template.yaml"))
- * .stackName("LambdaStackDeployedName")
- * .adminPermissions(true)
- * .parameterOverrides(lambdaCode.assign(lambdaBuildOutput.getS3Location()))
- * .extraInputs(List.of(lambdaBuildOutput))
- * .build()))
- * .build());
  * ```
  */
 public interface Location {
@@ -183,7 +101,8 @@ public interface Location {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.Location,
-  ) : CdkObject(cdkObject), Location {
+  ) : CdkObject(cdkObject),
+      Location {
     /**
      * The name of the S3 Bucket the object is in.
      */

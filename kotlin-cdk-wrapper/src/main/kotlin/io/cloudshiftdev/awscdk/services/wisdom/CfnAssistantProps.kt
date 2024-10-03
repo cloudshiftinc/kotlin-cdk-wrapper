@@ -249,7 +249,8 @@ public interface CfnAssistantProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantProps,
-  ) : CdkObject(cdkObject), CfnAssistantProps {
+  ) : CdkObject(cdkObject),
+      CfnAssistantProps {
     /**
      * The description of the assistant.
      *

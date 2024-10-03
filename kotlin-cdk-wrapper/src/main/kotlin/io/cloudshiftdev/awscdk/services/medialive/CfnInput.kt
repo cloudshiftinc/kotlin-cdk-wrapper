@@ -12,6 +12,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -50,6 +51,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .url("url")
  * .username("username")
  * .build()))
+ * .srtSettings(SrtSettingsRequestProperty.builder()
+ * .srtCallerSources(List.of(SrtCallerSourceRequestProperty.builder()
+ * .decryption(SrtCallerDecryptionRequestProperty.builder()
+ * .algorithm("algorithm")
+ * .passphraseSecretArn("passphraseSecretArn")
+ * .build())
+ * .minimumLatency(123)
+ * .srtListenerAddress("srtListenerAddress")
+ * .srtListenerPort("srtListenerPort")
+ * .streamId("streamId")
+ * .build()))
+ * .build())
  * .tags(tags)
  * .type("type")
  * .vpc(InputVpcRequestProperty.builder()
@@ -63,7 +76,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInput(
   cdkObject: software.amazon.awscdk.services.medialive.CfnInput,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.medialive.CfnInput(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -266,6 +281,33 @@ public open class CfnInput(
   public open fun sources(vararg `value`: Any): Unit = sources(`value`.toList())
 
   /**
+   *
+   */
+  public open fun srtSettings(): Any? = unwrap(this).getSrtSettings()
+
+  /**
+   *
+   */
+  public open fun srtSettings(`value`: IResolvable) {
+    unwrap(this).setSrtSettings(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun srtSettings(`value`: SrtSettingsRequestProperty) {
+    unwrap(this).setSrtSettings(`value`.let(SrtSettingsRequestProperty.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("b7fc1f30acc123313da482969b54fbf5f0e18b7fa39c2667672b834b1f35ba88")
+  public open fun srtSettings(`value`: SrtSettingsRequestProperty.Builder.() -> Unit): Unit =
+      srtSettings(SrtSettingsRequestProperty(`value`))
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -460,6 +502,26 @@ public open class CfnInput(
      * @param sources Settings that apply only if the input is a pull type of input. 
      */
     public fun sources(vararg sources: Any)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-srtsettings)
+     * @param srtSettings 
+     */
+    public fun srtSettings(srtSettings: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-srtsettings)
+     * @param srtSettings 
+     */
+    public fun srtSettings(srtSettings: SrtSettingsRequestProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-srtsettings)
+     * @param srtSettings 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d4baefce32faa000b9c63b87059872a585c4276a7e58211f2243705abab1e56f")
+    public fun srtSettings(srtSettings: SrtSettingsRequestProperty.Builder.() -> Unit)
 
     /**
      * A collection of tags for this input.
@@ -676,6 +738,31 @@ public open class CfnInput(
     override fun sources(vararg sources: Any): Unit = sources(sources.toList())
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-srtsettings)
+     * @param srtSettings 
+     */
+    override fun srtSettings(srtSettings: IResolvable) {
+      cdkBuilder.srtSettings(srtSettings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-srtsettings)
+     * @param srtSettings 
+     */
+    override fun srtSettings(srtSettings: SrtSettingsRequestProperty) {
+      cdkBuilder.srtSettings(srtSettings.let(SrtSettingsRequestProperty.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-srtsettings)
+     * @param srtSettings 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d4baefce32faa000b9c63b87059872a585c4276a7e58211f2243705abab1e56f")
+    override fun srtSettings(srtSettings: SrtSettingsRequestProperty.Builder.() -> Unit): Unit =
+        srtSettings(SrtSettingsRequestProperty(srtSettings))
+
+    /**
      * A collection of tags for this input.
      *
      * Each tag is a key-value pair.
@@ -815,7 +902,8 @@ public open class CfnInput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty,
-    ) : CdkObject(cdkObject), InputDestinationRequestProperty {
+    ) : CdkObject(cdkObject),
+        InputDestinationRequestProperty {
       /**
        * The stream name (application name/application instance) for the location the RTMP source
        * content will be pushed to in MediaLive.
@@ -893,7 +981,8 @@ public open class CfnInput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty,
-    ) : CdkObject(cdkObject), InputDeviceRequestProperty {
+    ) : CdkObject(cdkObject),
+        InputDeviceRequestProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicerequest.html#cfn-medialive-input-inputdevicerequest-id)
        */
@@ -974,7 +1063,8 @@ public open class CfnInput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty,
-    ) : CdkObject(cdkObject), InputDeviceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        InputDeviceSettingsProperty {
       /**
        * The unique ID for the device.
        *
@@ -1107,7 +1197,8 @@ public open class CfnInput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputSourceRequestProperty,
-    ) : CdkObject(cdkObject), InputSourceRequestProperty {
+    ) : CdkObject(cdkObject),
+        InputSourceRequestProperty {
       /**
        * The password parameter that holds the password for accessing the upstream system.
        *
@@ -1269,7 +1360,8 @@ public open class CfnInput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputVpcRequestProperty,
-    ) : CdkObject(cdkObject), InputVpcRequestProperty {
+    ) : CdkObject(cdkObject),
+        InputVpcRequestProperty {
       /**
        * The list of up to five VPC security group IDs to attach to the input VPC network
        * interfaces.
@@ -1370,7 +1462,8 @@ public open class CfnInput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnInput.MediaConnectFlowRequestProperty,
-    ) : CdkObject(cdkObject), MediaConnectFlowRequestProperty {
+    ) : CdkObject(cdkObject),
+        MediaConnectFlowRequestProperty {
       /**
        * The ARN of one or two MediaConnect flows that are the sources for this MediaConnect input.
        *
@@ -1394,6 +1487,416 @@ public open class CfnInput(
           software.amazon.awscdk.services.medialive.CfnInput.MediaConnectFlowRequestProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.medialive.CfnInput.MediaConnectFlowRequestProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * SrtCallerDecryptionRequestProperty srtCallerDecryptionRequestProperty =
+   * SrtCallerDecryptionRequestProperty.builder()
+   * .algorithm("algorithm")
+   * .passphraseSecretArn("passphraseSecretArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallerdecryptionrequest.html)
+   */
+  public interface SrtCallerDecryptionRequestProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallerdecryptionrequest.html#cfn-medialive-input-srtcallerdecryptionrequest-algorithm)
+     */
+    public fun algorithm(): String? = unwrap(this).getAlgorithm()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallerdecryptionrequest.html#cfn-medialive-input-srtcallerdecryptionrequest-passphrasesecretarn)
+     */
+    public fun passphraseSecretArn(): String? = unwrap(this).getPassphraseSecretArn()
+
+    /**
+     * A builder for [SrtCallerDecryptionRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param algorithm the value to be set.
+       */
+      public fun algorithm(algorithm: String)
+
+      /**
+       * @param passphraseSecretArn the value to be set.
+       */
+      public fun passphraseSecretArn(passphraseSecretArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.SrtCallerDecryptionRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnInput.SrtCallerDecryptionRequestProperty.builder()
+
+      /**
+       * @param algorithm the value to be set.
+       */
+      override fun algorithm(algorithm: String) {
+        cdkBuilder.algorithm(algorithm)
+      }
+
+      /**
+       * @param passphraseSecretArn the value to be set.
+       */
+      override fun passphraseSecretArn(passphraseSecretArn: String) {
+        cdkBuilder.passphraseSecretArn(passphraseSecretArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.SrtCallerDecryptionRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.SrtCallerDecryptionRequestProperty,
+    ) : CdkObject(cdkObject),
+        SrtCallerDecryptionRequestProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallerdecryptionrequest.html#cfn-medialive-input-srtcallerdecryptionrequest-algorithm)
+       */
+      override fun algorithm(): String? = unwrap(this).getAlgorithm()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallerdecryptionrequest.html#cfn-medialive-input-srtcallerdecryptionrequest-passphrasesecretarn)
+       */
+      override fun passphraseSecretArn(): String? = unwrap(this).getPassphraseSecretArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SrtCallerDecryptionRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.SrtCallerDecryptionRequestProperty):
+          SrtCallerDecryptionRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SrtCallerDecryptionRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SrtCallerDecryptionRequestProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.SrtCallerDecryptionRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.SrtCallerDecryptionRequestProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * SrtCallerSourceRequestProperty srtCallerSourceRequestProperty =
+   * SrtCallerSourceRequestProperty.builder()
+   * .decryption(SrtCallerDecryptionRequestProperty.builder()
+   * .algorithm("algorithm")
+   * .passphraseSecretArn("passphraseSecretArn")
+   * .build())
+   * .minimumLatency(123)
+   * .srtListenerAddress("srtListenerAddress")
+   * .srtListenerPort("srtListenerPort")
+   * .streamId("streamId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallersourcerequest.html)
+   */
+  public interface SrtCallerSourceRequestProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallersourcerequest.html#cfn-medialive-input-srtcallersourcerequest-decryption)
+     */
+    public fun decryption(): Any? = unwrap(this).getDecryption()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallersourcerequest.html#cfn-medialive-input-srtcallersourcerequest-minimumlatency)
+     */
+    public fun minimumLatency(): Number? = unwrap(this).getMinimumLatency()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallersourcerequest.html#cfn-medialive-input-srtcallersourcerequest-srtlisteneraddress)
+     */
+    public fun srtListenerAddress(): String? = unwrap(this).getSrtListenerAddress()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallersourcerequest.html#cfn-medialive-input-srtcallersourcerequest-srtlistenerport)
+     */
+    public fun srtListenerPort(): String? = unwrap(this).getSrtListenerPort()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallersourcerequest.html#cfn-medialive-input-srtcallersourcerequest-streamid)
+     */
+    public fun streamId(): String? = unwrap(this).getStreamId()
+
+    /**
+     * A builder for [SrtCallerSourceRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param decryption the value to be set.
+       */
+      public fun decryption(decryption: IResolvable)
+
+      /**
+       * @param decryption the value to be set.
+       */
+      public fun decryption(decryption: SrtCallerDecryptionRequestProperty)
+
+      /**
+       * @param decryption the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("da17572550067a25ba16d9f699a74120d02a9f657a15c1c91abe34396c6bcab9")
+      public fun decryption(decryption: SrtCallerDecryptionRequestProperty.Builder.() -> Unit)
+
+      /**
+       * @param minimumLatency the value to be set.
+       */
+      public fun minimumLatency(minimumLatency: Number)
+
+      /**
+       * @param srtListenerAddress the value to be set.
+       */
+      public fun srtListenerAddress(srtListenerAddress: String)
+
+      /**
+       * @param srtListenerPort the value to be set.
+       */
+      public fun srtListenerPort(srtListenerPort: String)
+
+      /**
+       * @param streamId the value to be set.
+       */
+      public fun streamId(streamId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.SrtCallerSourceRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnInput.SrtCallerSourceRequestProperty.builder()
+
+      /**
+       * @param decryption the value to be set.
+       */
+      override fun decryption(decryption: IResolvable) {
+        cdkBuilder.decryption(decryption.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param decryption the value to be set.
+       */
+      override fun decryption(decryption: SrtCallerDecryptionRequestProperty) {
+        cdkBuilder.decryption(decryption.let(SrtCallerDecryptionRequestProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param decryption the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("da17572550067a25ba16d9f699a74120d02a9f657a15c1c91abe34396c6bcab9")
+      override fun decryption(decryption: SrtCallerDecryptionRequestProperty.Builder.() -> Unit):
+          Unit = decryption(SrtCallerDecryptionRequestProperty(decryption))
+
+      /**
+       * @param minimumLatency the value to be set.
+       */
+      override fun minimumLatency(minimumLatency: Number) {
+        cdkBuilder.minimumLatency(minimumLatency)
+      }
+
+      /**
+       * @param srtListenerAddress the value to be set.
+       */
+      override fun srtListenerAddress(srtListenerAddress: String) {
+        cdkBuilder.srtListenerAddress(srtListenerAddress)
+      }
+
+      /**
+       * @param srtListenerPort the value to be set.
+       */
+      override fun srtListenerPort(srtListenerPort: String) {
+        cdkBuilder.srtListenerPort(srtListenerPort)
+      }
+
+      /**
+       * @param streamId the value to be set.
+       */
+      override fun streamId(streamId: String) {
+        cdkBuilder.streamId(streamId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.SrtCallerSourceRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.SrtCallerSourceRequestProperty,
+    ) : CdkObject(cdkObject),
+        SrtCallerSourceRequestProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallersourcerequest.html#cfn-medialive-input-srtcallersourcerequest-decryption)
+       */
+      override fun decryption(): Any? = unwrap(this).getDecryption()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallersourcerequest.html#cfn-medialive-input-srtcallersourcerequest-minimumlatency)
+       */
+      override fun minimumLatency(): Number? = unwrap(this).getMinimumLatency()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallersourcerequest.html#cfn-medialive-input-srtcallersourcerequest-srtlisteneraddress)
+       */
+      override fun srtListenerAddress(): String? = unwrap(this).getSrtListenerAddress()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallersourcerequest.html#cfn-medialive-input-srtcallersourcerequest-srtlistenerport)
+       */
+      override fun srtListenerPort(): String? = unwrap(this).getSrtListenerPort()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtcallersourcerequest.html#cfn-medialive-input-srtcallersourcerequest-streamid)
+       */
+      override fun streamId(): String? = unwrap(this).getStreamId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SrtCallerSourceRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.SrtCallerSourceRequestProperty):
+          SrtCallerSourceRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SrtCallerSourceRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SrtCallerSourceRequestProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.SrtCallerSourceRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.SrtCallerSourceRequestProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * SrtSettingsRequestProperty srtSettingsRequestProperty = SrtSettingsRequestProperty.builder()
+   * .srtCallerSources(List.of(SrtCallerSourceRequestProperty.builder()
+   * .decryption(SrtCallerDecryptionRequestProperty.builder()
+   * .algorithm("algorithm")
+   * .passphraseSecretArn("passphraseSecretArn")
+   * .build())
+   * .minimumLatency(123)
+   * .srtListenerAddress("srtListenerAddress")
+   * .srtListenerPort("srtListenerPort")
+   * .streamId("streamId")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtsettingsrequest.html)
+   */
+  public interface SrtSettingsRequestProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtsettingsrequest.html#cfn-medialive-input-srtsettingsrequest-srtcallersources)
+     */
+    public fun srtCallerSources(): Any? = unwrap(this).getSrtCallerSources()
+
+    /**
+     * A builder for [SrtSettingsRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param srtCallerSources the value to be set.
+       */
+      public fun srtCallerSources(srtCallerSources: IResolvable)
+
+      /**
+       * @param srtCallerSources the value to be set.
+       */
+      public fun srtCallerSources(srtCallerSources: List<Any>)
+
+      /**
+       * @param srtCallerSources the value to be set.
+       */
+      public fun srtCallerSources(vararg srtCallerSources: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.SrtSettingsRequestProperty.Builder =
+          software.amazon.awscdk.services.medialive.CfnInput.SrtSettingsRequestProperty.builder()
+
+      /**
+       * @param srtCallerSources the value to be set.
+       */
+      override fun srtCallerSources(srtCallerSources: IResolvable) {
+        cdkBuilder.srtCallerSources(srtCallerSources.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param srtCallerSources the value to be set.
+       */
+      override fun srtCallerSources(srtCallerSources: List<Any>) {
+        cdkBuilder.srtCallerSources(srtCallerSources.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param srtCallerSources the value to be set.
+       */
+      override fun srtCallerSources(vararg srtCallerSources: Any): Unit =
+          srtCallerSources(srtCallerSources.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.SrtSettingsRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.SrtSettingsRequestProperty,
+    ) : CdkObject(cdkObject),
+        SrtSettingsRequestProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-srtsettingsrequest.html#cfn-medialive-input-srtsettingsrequest-srtcallersources)
+       */
+      override fun srtCallerSources(): Any? = unwrap(this).getSrtCallerSources()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SrtSettingsRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.SrtSettingsRequestProperty):
+          SrtSettingsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SrtSettingsRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SrtSettingsRequestProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.SrtSettingsRequestProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.SrtSettingsRequestProperty
     }
   }
 }

@@ -203,7 +203,8 @@ public interface CfnAutoScalingConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apprunner.CfnAutoScalingConfigurationProps,
-  ) : CdkObject(cdkObject), CfnAutoScalingConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnAutoScalingConfigurationProps {
     /**
      * The customer-provided auto scaling configuration name.
      *

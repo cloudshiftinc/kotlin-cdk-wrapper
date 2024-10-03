@@ -30,7 +30,8 @@ import software.amazon.awscdk.services.ec2.CfnEIP as AmazonAwscdkServicesEc2CfnE
  */
 public open class CfnEipEndpoint(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint,
-) : CdkObject(cdkObject), IEndpoint {
+) : CdkObject(cdkObject),
+    IEndpoint {
   public constructor(eip: CloudshiftdevAwscdkServicesEc2CfnEIP) :
       this(software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint(eip.let(CloudshiftdevAwscdkServicesEc2CfnEIP.Companion::unwrap))
   )

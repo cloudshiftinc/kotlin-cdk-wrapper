@@ -93,7 +93,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDatastore(
   cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iotanalytics.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -760,7 +762,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.ColumnProperty,
-    ) : CdkObject(cdkObject), ColumnProperty {
+    ) : CdkObject(cdkObject),
+        ColumnProperty {
       /**
        * The name of the column.
        *
@@ -909,7 +912,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3Property,
-    ) : CdkObject(cdkObject), CustomerManagedS3Property {
+    ) : CdkObject(cdkObject),
+        CustomerManagedS3Property {
       /**
        * The name of the Amazon S3 bucket where your data is stored.
        *
@@ -1043,7 +1047,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty,
-    ) : CdkObject(cdkObject), CustomerManagedS3StorageProperty {
+    ) : CdkObject(cdkObject),
+        CustomerManagedS3StorageProperty {
       /**
        * The name of the Amazon S3 bucket where your data is stored.
        *
@@ -1219,7 +1224,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionProperty,
-    ) : CdkObject(cdkObject), DatastorePartitionProperty {
+    ) : CdkObject(cdkObject),
+        DatastorePartitionProperty {
       /**
        * A partition dimension defined by an attribute.
        *
@@ -1339,7 +1345,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty,
-    ) : CdkObject(cdkObject), DatastorePartitionsProperty {
+    ) : CdkObject(cdkObject),
+        DatastorePartitionsProperty {
       /**
        * A list of partition dimensions in a data store.
        *
@@ -1571,7 +1578,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastoreStorageProperty,
-    ) : CdkObject(cdkObject), DatastoreStorageProperty {
+    ) : CdkObject(cdkObject),
+        DatastoreStorageProperty {
       /**
        * Use this to store data store data in an S3 bucket that you manage.
        *
@@ -1739,7 +1747,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.FileFormatConfigurationProperty,
-    ) : CdkObject(cdkObject), FileFormatConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FileFormatConfigurationProperty {
       /**
        * Contains the configuration information of the JSON format.
        *
@@ -1873,7 +1882,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty,
-    ) : CdkObject(cdkObject), IotSiteWiseMultiLayerStorageProperty {
+    ) : CdkObject(cdkObject),
+        IotSiteWiseMultiLayerStorageProperty {
       /**
        * Stores data used by AWS IoT SiteWise in an Amazon S3 bucket that you manage.
        *
@@ -1989,7 +1999,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty,
-    ) : CdkObject(cdkObject), ParquetConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ParquetConfigurationProperty {
       /**
        * Information needed to define a schema.
        *
@@ -2072,7 +2083,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.PartitionProperty,
-    ) : CdkObject(cdkObject), PartitionProperty {
+    ) : CdkObject(cdkObject),
+        PartitionProperty {
       /**
        * The name of the attribute that defines a partition dimension.
        *
@@ -2190,7 +2202,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty,
-    ) : CdkObject(cdkObject), RetentionPeriodProperty {
+    ) : CdkObject(cdkObject),
+        RetentionPeriodProperty {
       /**
        * The number of days that message data is kept.
        *
@@ -2314,7 +2327,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty,
-    ) : CdkObject(cdkObject), SchemaDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        SchemaDefinitionProperty {
       /**
        * Specifies one or more columns that store your data.
        *
@@ -2423,7 +2437,8 @@ public open class CfnDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty,
-    ) : CdkObject(cdkObject), TimestampPartitionProperty {
+    ) : CdkObject(cdkObject),
+        TimestampPartitionProperty {
       /**
        * The attribute name of the partition defined by a timestamp.
        *

@@ -120,7 +120,8 @@ public interface EmailSubscriptionProps : SubscriptionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.subscriptions.EmailSubscriptionProps,
-  ) : CdkObject(cdkObject), EmailSubscriptionProps {
+  ) : CdkObject(cdkObject),
+      EmailSubscriptionProps {
     /**
      * Queue to be used as dead letter queue.
      *

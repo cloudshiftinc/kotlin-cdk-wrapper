@@ -69,7 +69,8 @@ public interface IConfiguration : IConstruct {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.IConfiguration,
-  ) : CdkObject(cdkObject), IConfiguration {
+  ) : CdkObject(cdkObject),
+      IConfiguration {
     /**
      * The application associated with the configuration.
      */

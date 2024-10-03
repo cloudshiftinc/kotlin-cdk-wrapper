@@ -59,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDomainConfiguration(
   cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnDomainConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -859,7 +861,8 @@ public open class CfnDomainConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.AuthorizerConfigProperty,
-    ) : CdkObject(cdkObject), AuthorizerConfigProperty {
+    ) : CdkObject(cdkObject),
+        AuthorizerConfigProperty {
       /**
        * A Boolean that specifies whether the domain configuration's authorization service can be
        * overridden.
@@ -987,7 +990,8 @@ public open class CfnDomainConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty,
-    ) : CdkObject(cdkObject), ServerCertificateConfigProperty {
+    ) : CdkObject(cdkObject),
+        ServerCertificateConfigProperty {
       /**
        * A Boolean value that indicates whether Online Certificate Status Protocol (OCSP) server
        * certificate check is enabled or not.
@@ -1118,7 +1122,8 @@ public open class CfnDomainConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateSummaryProperty,
-    ) : CdkObject(cdkObject), ServerCertificateSummaryProperty {
+    ) : CdkObject(cdkObject),
+        ServerCertificateSummaryProperty {
       /**
        * The ARN of the server certificate.
        *
@@ -1224,7 +1229,8 @@ public open class CfnDomainConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty,
-    ) : CdkObject(cdkObject), TlsConfigProperty {
+    ) : CdkObject(cdkObject),
+        TlsConfigProperty {
       /**
        * The security policy for a domain configuration.
        *

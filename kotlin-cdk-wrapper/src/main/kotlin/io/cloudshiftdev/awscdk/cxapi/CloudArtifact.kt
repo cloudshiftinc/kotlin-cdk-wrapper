@@ -2,7 +2,7 @@
 
 package io.cloudshiftdev.awscdk.cxapi
 
-import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactManifest
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.ArtifactManifest
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
@@ -17,8 +17,9 @@ import kotlin.jvm.JvmName
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.cloudassembly.schema.*;
+ * import io.cloudshiftdev.awscdk.cloud_assembly_schema.*;
  * import io.cloudshiftdev.awscdk.cxapi.*;
+ * Object assumeRoleAdditionalOptions;
  * CloudAssembly cloudAssembly;
  * CloudArtifact cloudArtifact = CloudArtifact.fromManifest(cloudAssembly, "MyCloudArtifact",
  * ArtifactManifest.builder()
@@ -37,6 +38,8 @@ import kotlin.jvm.JvmName
  * .properties(AwsCloudFormationStackProperties.builder()
  * .templateFile("templateFile")
  * // the properties below are optional
+ * .assumeRoleAdditionalOptions(Map.of(
+ * "assumeRoleAdditionalOptionsKey", assumeRoleAdditionalOptions))
  * .assumeRoleArn("assumeRoleArn")
  * .assumeRoleExternalId("assumeRoleExternalId")
  * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
@@ -44,10 +47,13 @@ import kotlin.jvm.JvmName
  * .lookupRole(BootstrapRole.builder()
  * .arn("arn")
  * // the properties below are optional
+ * .assumeRoleAdditionalOptions(Map.of(
+ * "assumeRoleAdditionalOptionsKey", assumeRoleAdditionalOptions))
  * .assumeRoleExternalId("assumeRoleExternalId")
  * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
  * .requiresBootstrapStackVersion(123)
  * .build())
+ * .notificationArns(List.of("notificationArns"))
  * .parameters(Map.of(
  * "parametersKey", "parameters"))
  * .requiresBootstrapStackVersion(123)
@@ -118,7 +124,7 @@ public open class CloudArtifact(
         id, artifact.let(ArtifactManifest.Companion::unwrap))?.let(CloudArtifact::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("cf15c645a93890774d2fc564c09a4cc0b00096f48fca3019d1f567d1c659f93c")
+    @JvmName("0f5ce50809a53220163e245b0d4c56e7ff30df317fe38f32142e72defa856036")
     public fun fromManifest(
       assembly: CloudAssembly,
       id: String,

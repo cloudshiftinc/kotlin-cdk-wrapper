@@ -75,7 +75,8 @@ public interface MatchCapture {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.assertions.MatchCapture,
-  ) : CdkObject(cdkObject), MatchCapture {
+  ) : CdkObject(cdkObject),
+      MatchCapture {
     /**
      * The instance of Capture class to which this capture is associated with.
      */

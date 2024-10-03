@@ -313,7 +313,8 @@ public interface FargateComputeEnvironmentProps : ManagedComputeEnvironmentProps
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.FargateComputeEnvironmentProps,
-  ) : CdkObject(cdkObject), FargateComputeEnvironmentProps {
+  ) : CdkObject(cdkObject),
+      FargateComputeEnvironmentProps {
     /**
      * The name of the ComputeEnvironment.
      *

@@ -79,7 +79,8 @@ public interface NetworkListenerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkListenerProps,
-  ) : CdkObject(cdkObject), NetworkListenerProps {
+  ) : CdkObject(cdkObject),
+      NetworkListenerProps {
     /**
      * Name of the listener.
      */

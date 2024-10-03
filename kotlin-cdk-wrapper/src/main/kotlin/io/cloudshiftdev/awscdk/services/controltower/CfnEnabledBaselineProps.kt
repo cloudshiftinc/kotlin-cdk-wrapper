@@ -195,7 +195,8 @@ public interface CfnEnabledBaselineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledBaselineProps,
-  ) : CdkObject(cdkObject), CfnEnabledBaselineProps {
+  ) : CdkObject(cdkObject),
+      CfnEnabledBaselineProps {
     /**
      * The specific `Baseline` enabled as part of the `EnabledBaseline` resource.
      *

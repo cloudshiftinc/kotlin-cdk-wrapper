@@ -56,7 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMetricFilter(
   cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -406,7 +407,8 @@ public open class CfnMetricFilter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter.DimensionProperty,
-    ) : CdkObject(cdkObject), DimensionProperty {
+    ) : CdkObject(cdkObject),
+        DimensionProperty {
       /**
        * The name for the CloudWatch metric dimension that the metric filter creates.
        *
@@ -769,7 +771,8 @@ public open class CfnMetricFilter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter.MetricTransformationProperty,
-    ) : CdkObject(cdkObject), MetricTransformationProperty {
+    ) : CdkObject(cdkObject),
+        MetricTransformationProperty {
       /**
        * (Optional) The value to emit when a filter pattern does not match a log event.
        *

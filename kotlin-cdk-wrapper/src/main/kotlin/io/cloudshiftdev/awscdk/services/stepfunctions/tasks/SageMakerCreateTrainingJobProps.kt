@@ -93,8 +93,11 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
   /**
    * Describes the various datasets (e.g. train, validation, test) and the Amazon S3 location where
    * stored.
+   *
+   * Default: - No inputDataConfig
    */
-  public fun inputDataConfig(): List<Channel>
+  public fun inputDataConfig(): List<Channel> =
+      unwrap(this).getInputDataConfig()?.map(Channel::wrap) ?: emptyList()
 
   /**
    * Identifies the Amazon S3 location where you want Amazon SageMaker to save the results of model
@@ -224,13 +227,13 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
 
     /**
      * @param inputDataConfig Describes the various datasets (e.g. train, validation, test) and the
-     * Amazon S3 location where stored. 
+     * Amazon S3 location where stored.
      */
     public fun inputDataConfig(inputDataConfig: List<Channel>)
 
     /**
      * @param inputDataConfig Describes the various datasets (e.g. train, validation, test) and the
-     * Amazon S3 location where stored. 
+     * Amazon S3 location where stored.
      */
     public fun inputDataConfig(vararg inputDataConfig: Channel)
 
@@ -458,7 +461,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
 
     /**
      * @param inputDataConfig Describes the various datasets (e.g. train, validation, test) and the
-     * Amazon S3 location where stored. 
+     * Amazon S3 location where stored.
      */
     override fun inputDataConfig(inputDataConfig: List<Channel>) {
       cdkBuilder.inputDataConfig(inputDataConfig.map(Channel.Companion::unwrap))
@@ -466,7 +469,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
 
     /**
      * @param inputDataConfig Describes the various datasets (e.g. train, validation, test) and the
-     * Amazon S3 location where stored. 
+     * Amazon S3 location where stored.
      */
     override fun inputDataConfig(vararg inputDataConfig: Channel): Unit =
         inputDataConfig(inputDataConfig.toList())
@@ -643,7 +646,8 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJobProps,
-  ) : CdkObject(cdkObject), SageMakerCreateTrainingJobProps {
+  ) : CdkObject(cdkObject),
+      SageMakerCreateTrainingJobProps {
     /**
      * Identifies the training algorithm to use.
      */
@@ -721,9 +725,11 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
     /**
      * Describes the various datasets (e.g. train, validation, test) and the Amazon S3 location
      * where stored.
+     *
+     * Default: - No inputDataConfig
      */
     override fun inputDataConfig(): List<Channel> =
-        unwrap(this).getInputDataConfig().map(Channel::wrap)
+        unwrap(this).getInputDataConfig()?.map(Channel::wrap) ?: emptyList()
 
     /**
      * JSONPath expression to select part of the state to be the input to this state.

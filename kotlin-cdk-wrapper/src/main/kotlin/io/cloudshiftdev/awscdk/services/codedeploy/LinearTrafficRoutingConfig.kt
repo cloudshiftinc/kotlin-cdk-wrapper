@@ -80,7 +80,8 @@ public interface LinearTrafficRoutingConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig,
-  ) : CdkObject(cdkObject), LinearTrafficRoutingConfig {
+  ) : CdkObject(cdkObject),
+      LinearTrafficRoutingConfig {
     /**
      * The number of minutes between each incremental traffic shift of a `TimeBasedLinear`
      * deployment.

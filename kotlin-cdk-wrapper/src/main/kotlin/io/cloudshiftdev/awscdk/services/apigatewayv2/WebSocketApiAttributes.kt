@@ -72,7 +72,8 @@ public interface WebSocketApiAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApiAttributes,
-  ) : CdkObject(cdkObject), WebSocketApiAttributes {
+  ) : CdkObject(cdkObject),
+      WebSocketApiAttributes {
     /**
      * The endpoint URL of the WebSocketApi.
      *

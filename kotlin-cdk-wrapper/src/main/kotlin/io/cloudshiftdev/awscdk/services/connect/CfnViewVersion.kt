@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnViewVersion(
   cdkObject: software.amazon.awscdk.services.connect.CfnViewVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -173,7 +173,8 @@ public interface AutoScalingGroupOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.AutoScalingGroupOptions,
-  ) : CdkObject(cdkObject), AutoScalingGroupOptions {
+  ) : CdkObject(cdkObject),
+      AutoScalingGroupOptions {
     /**
      * Configures the EC2 user-data script for instances in this autoscaling group to bootstrap the
      * node (invoke `/etc/eks/bootstrap.sh`) and associate it with the EKS cluster.

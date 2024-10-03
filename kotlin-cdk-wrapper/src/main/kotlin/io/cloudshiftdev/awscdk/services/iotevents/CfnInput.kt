@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInput(
   cdkObject: software.amazon.awscdk.services.iotevents.CfnInput,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -410,7 +412,8 @@ public open class CfnInput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnInput.AttributeProperty,
-    ) : CdkObject(cdkObject), AttributeProperty {
+    ) : CdkObject(cdkObject),
+        AttributeProperty {
       /**
        * An expression that specifies an attribute-value pair in a JSON structure.
        *
@@ -556,7 +559,8 @@ public open class CfnInput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnInput.InputDefinitionProperty,
-    ) : CdkObject(cdkObject), InputDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        InputDefinitionProperty {
       /**
        * The attributes from the JSON payload that are made available by the input.
        *

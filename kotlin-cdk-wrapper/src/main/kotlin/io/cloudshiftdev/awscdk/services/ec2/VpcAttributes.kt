@@ -584,7 +584,8 @@ public interface VpcAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.VpcAttributes,
-  ) : CdkObject(cdkObject), VpcAttributes {
+  ) : CdkObject(cdkObject),
+      VpcAttributes {
     /**
      * List of availability zones for the subnets in this VPC.
      */

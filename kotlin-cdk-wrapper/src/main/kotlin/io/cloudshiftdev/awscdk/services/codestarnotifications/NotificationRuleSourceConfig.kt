@@ -59,7 +59,8 @@ public interface NotificationRuleSourceConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codestarnotifications.NotificationRuleSourceConfig,
-  ) : CdkObject(cdkObject), NotificationRuleSourceConfig {
+  ) : CdkObject(cdkObject),
+      NotificationRuleSourceConfig {
     /**
      * The Amazon Resource Name (ARN) of the notification source.
      */

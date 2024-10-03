@@ -121,7 +121,8 @@ public interface CfnPreparedStatementProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.athena.CfnPreparedStatementProps,
-  ) : CdkObject(cdkObject), CfnPreparedStatementProps {
+  ) : CdkObject(cdkObject),
+      CfnPreparedStatementProps {
     /**
      * The description of the prepared statement.
      *

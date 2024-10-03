@@ -154,7 +154,8 @@ public interface DeployTimeSubstitutedFileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFileProps,
-  ) : CdkObject(cdkObject), DeployTimeSubstitutedFileProps {
+  ) : CdkObject(cdkObject),
+      DeployTimeSubstitutedFileProps {
     /**
      * The S3 bucket to sync the contents of the zip file to.
      */

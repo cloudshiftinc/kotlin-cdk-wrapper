@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class NetworkTargetGroup(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup,
-) : TargetGroupBase(cdkObject), INetworkTargetGroup {
+) : TargetGroupBase(cdkObject),
+    INetworkTargetGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

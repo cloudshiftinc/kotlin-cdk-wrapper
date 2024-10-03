@@ -391,7 +391,8 @@ public interface CfnObjectTypeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectTypeProps,
-  ) : CdkObject(cdkObject), CfnObjectTypeProps {
+  ) : CdkObject(cdkObject),
+      CfnObjectTypeProps {
     /**
      * Indicates whether a profile should be created when data is received if one doesn’t exist for
      * an object of this type.

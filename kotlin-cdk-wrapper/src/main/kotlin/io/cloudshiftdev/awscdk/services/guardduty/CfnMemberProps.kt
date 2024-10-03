@@ -201,7 +201,8 @@ public interface CfnMemberProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.guardduty.CfnMemberProps,
-  ) : CdkObject(cdkObject), CfnMemberProps {
+  ) : CdkObject(cdkObject),
+      CfnMemberProps {
     /**
      * The ID of the detector associated with the GuardDuty service to add the member to.
      *

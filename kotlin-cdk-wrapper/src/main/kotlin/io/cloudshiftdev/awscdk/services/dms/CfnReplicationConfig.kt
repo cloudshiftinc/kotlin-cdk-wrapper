@@ -49,17 +49,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
  * .build())
  * .replicationConfigIdentifier("replicationConfigIdentifier")
- * .replicationSettings(replicationSettings)
  * .replicationType("replicationType")
- * .resourceIdentifier("resourceIdentifier")
  * .sourceEndpointArn("sourceEndpointArn")
- * .supplementalSettings(supplementalSettings)
  * .tableMappings(tableMappings)
+ * .targetEndpointArn("targetEndpointArn")
+ * // the properties below are optional
+ * .replicationSettings(replicationSettings)
+ * .resourceIdentifier("resourceIdentifier")
+ * .supplementalSettings(supplementalSettings)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
- * .targetEndpointArn("targetEndpointArn")
  * .build();
  * ```
  *
@@ -67,12 +68,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnReplicationConfig(
   cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfig,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
-  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.dms.CfnReplicationConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
-      id)
-  )
-
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -90,7 +88,7 @@ public open class CfnReplicationConfig(
   )
 
   /**
-   * The Amazon Resource Name (ARN) of the Replication Config.
+   * The Amazon Resource Name (ARN) of this AWS DMS Serverless replication configuration.
    */
   public open fun attrReplicationConfigArn(): String = unwrap(this).getAttrReplicationConfigArn()
 
@@ -103,7 +101,7 @@ public open class CfnReplicationConfig(
   /**
    * Configuration parameters for provisioning an AWS DMS Serverless replication.
    */
-  public open fun computeConfig(): Any? = unwrap(this).getComputeConfig()
+  public open fun computeConfig(): Any = unwrap(this).getComputeConfig()
 
   /**
    * Configuration parameters for provisioning an AWS DMS Serverless replication.
@@ -140,7 +138,7 @@ public open class CfnReplicationConfig(
    * A unique identifier that you want to use to create a `ReplicationConfigArn` that is returned as
    * part of the output from this action.
    */
-  public open fun replicationConfigIdentifier(): String? =
+  public open fun replicationConfigIdentifier(): String =
       unwrap(this).getReplicationConfigIdentifier()
 
   /**
@@ -168,7 +166,7 @@ public open class CfnReplicationConfig(
   /**
    * The type of AWS DMS Serverless replication to provision using this replication configuration.
    */
-  public open fun replicationType(): String? = unwrap(this).getReplicationType()
+  public open fun replicationType(): String = unwrap(this).getReplicationType()
 
   /**
    * The type of AWS DMS Serverless replication to provision using this replication configuration.
@@ -195,7 +193,7 @@ public open class CfnReplicationConfig(
    * The Amazon Resource Name (ARN) of the source endpoint for this AWS DMS Serverless replication
    * configuration.
    */
-  public open fun sourceEndpointArn(): String? = unwrap(this).getSourceEndpointArn()
+  public open fun sourceEndpointArn(): String = unwrap(this).getSourceEndpointArn()
 
   /**
    * The Amazon Resource Name (ARN) of the source endpoint for this AWS DMS Serverless replication
@@ -221,7 +219,7 @@ public open class CfnReplicationConfig(
    * JSON table mappings for AWS DMS Serverless replications that are provisioned using this
    * replication configuration.
    */
-  public open fun tableMappings(): Any? = unwrap(this).getTableMappings()
+  public open fun tableMappings(): Any = unwrap(this).getTableMappings()
 
   /**
    * JSON table mappings for AWS DMS Serverless replications that are provisioned using this
@@ -252,7 +250,7 @@ public open class CfnReplicationConfig(
    * The Amazon Resource Name (ARN) of the target endpoint for this AWS DMS serverless replication
    * configuration.
    */
-  public open fun targetEndpointArn(): String? = unwrap(this).getTargetEndpointArn()
+  public open fun targetEndpointArn(): String = unwrap(this).getTargetEndpointArn()
 
   /**
    * The Amazon Resource Name (ARN) of the target endpoint for this AWS DMS serverless replication
@@ -1012,7 +1010,8 @@ public open class CfnReplicationConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfig.ComputeConfigProperty,
-    ) : CdkObject(cdkObject), ComputeConfigProperty {
+    ) : CdkObject(cdkObject),
+        ComputeConfigProperty {
       /**
        * The Availability Zone where the AWS DMS Serverless replication using this configuration
        * will run.

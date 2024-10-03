@@ -45,6 +45,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .glueVersion("glueVersion")
  * .logUri("logUri")
+ * .maintenanceWindow("maintenanceWindow")
  * .maxCapacity(123)
  * .maxRetries(123)
  * .name("name")
@@ -145,7 +146,8 @@ public interface CfnJobProps {
    * versions, see [Glue version](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) in the
    * developer guide.
    *
-   * Jobs that are created without specifying a Glue version default to Glue 0.9.
+   * Jobs that are created without specifying a Glue version default to the latest Glue version
+   * available.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-glueversion)
    */
@@ -157,6 +159,20 @@ public interface CfnJobProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-loguri)
    */
   public fun logUri(): String? = unwrap(this).getLogUri()
+
+  /**
+   * This field specifies a day of the week and hour for a maintenance window for streaming jobs.
+   *
+   * AWS Glue periodically performs maintenance activities. During these maintenance windows, AWS
+   * Glue will need to restart your streaming jobs.
+   *
+   * AWS Glue will restart the job within 3 hours of the specified maintenance window. For instance,
+   * if you set up the maintenance window for Monday at 10:00AM GMT, your jobs will be restarted
+   * between 10:00AM GMT to 1:00PM GMT.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-maintenancewindow)
+   */
+  public fun maintenanceWindow(): String? = unwrap(this).getMaintenanceWindow()
 
   /**
    * The number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.
@@ -391,7 +407,8 @@ public interface CfnJobProps {
      * versions, see [Glue version](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) in the
      * developer guide.
      *
-     * Jobs that are created without specifying a Glue version default to Glue 0.9.
+     * Jobs that are created without specifying a Glue version default to the latest Glue version
+     * available.
      */
     public fun glueVersion(glueVersion: String)
 
@@ -399,6 +416,18 @@ public interface CfnJobProps {
      * @param logUri This field is reserved for future use.
      */
     public fun logUri(logUri: String)
+
+    /**
+     * @param maintenanceWindow This field specifies a day of the week and hour for a maintenance
+     * window for streaming jobs.
+     * AWS Glue periodically performs maintenance activities. During these maintenance windows, AWS
+     * Glue will need to restart your streaming jobs.
+     *
+     * AWS Glue will restart the job within 3 hours of the specified maintenance window. For
+     * instance, if you set up the maintenance window for Monday at 10:00AM GMT, your jobs will be
+     * restarted between 10:00AM GMT to 1:00PM GMT.
+     */
+    public fun maintenanceWindow(maintenanceWindow: String)
 
     /**
      * @param maxCapacity The number of AWS Glue data processing units (DPUs) that can be allocated
@@ -648,7 +677,8 @@ public interface CfnJobProps {
      * versions, see [Glue version](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) in the
      * developer guide.
      *
-     * Jobs that are created without specifying a Glue version default to Glue 0.9.
+     * Jobs that are created without specifying a Glue version default to the latest Glue version
+     * available.
      */
     override fun glueVersion(glueVersion: String) {
       cdkBuilder.glueVersion(glueVersion)
@@ -659,6 +689,20 @@ public interface CfnJobProps {
      */
     override fun logUri(logUri: String) {
       cdkBuilder.logUri(logUri)
+    }
+
+    /**
+     * @param maintenanceWindow This field specifies a day of the week and hour for a maintenance
+     * window for streaming jobs.
+     * AWS Glue periodically performs maintenance activities. During these maintenance windows, AWS
+     * Glue will need to restart your streaming jobs.
+     *
+     * AWS Glue will restart the job within 3 hours of the specified maintenance window. For
+     * instance, if you set up the maintenance window for Monday at 10:00AM GMT, your jobs will be
+     * restarted between 10:00AM GMT to 1:00PM GMT.
+     */
+    override fun maintenanceWindow(maintenanceWindow: String) {
+      cdkBuilder.maintenanceWindow(maintenanceWindow)
     }
 
     /**
@@ -808,7 +852,8 @@ public interface CfnJobProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnJobProps,
-  ) : CdkObject(cdkObject), CfnJobProps {
+  ) : CdkObject(cdkObject),
+      CfnJobProps {
     /**
      * This parameter is no longer supported. Use `MaxCapacity` instead.
      *
@@ -891,7 +936,8 @@ public interface CfnJobProps {
      * versions, see [Glue version](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) in the
      * developer guide.
      *
-     * Jobs that are created without specifying a Glue version default to Glue 0.9.
+     * Jobs that are created without specifying a Glue version default to the latest Glue version
+     * available.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-glueversion)
      */
@@ -903,6 +949,20 @@ public interface CfnJobProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-loguri)
      */
     override fun logUri(): String? = unwrap(this).getLogUri()
+
+    /**
+     * This field specifies a day of the week and hour for a maintenance window for streaming jobs.
+     *
+     * AWS Glue periodically performs maintenance activities. During these maintenance windows, AWS
+     * Glue will need to restart your streaming jobs.
+     *
+     * AWS Glue will restart the job within 3 hours of the specified maintenance window. For
+     * instance, if you set up the maintenance window for Monday at 10:00AM GMT, your jobs will be
+     * restarted between 10:00AM GMT to 1:00PM GMT.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-maintenancewindow)
+     */
+    override fun maintenanceWindow(): String? = unwrap(this).getMaintenanceWindow()
 
     /**
      * The number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.

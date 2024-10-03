@@ -27,7 +27,8 @@ import kotlin.jvm.JvmName
  */
 public open class QueueHook(
   cdkObject: software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook,
-) : CdkObject(cdkObject), ILifecycleHookTarget {
+) : CdkObject(cdkObject),
+    ILifecycleHookTarget {
   public constructor(queue: IQueue) :
       this(software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook(queue.let(IQueue.Companion::unwrap))
   )

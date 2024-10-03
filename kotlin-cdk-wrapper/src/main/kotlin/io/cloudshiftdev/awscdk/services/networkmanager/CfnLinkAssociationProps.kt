@@ -101,7 +101,8 @@ public interface CfnLinkAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkmanager.CfnLinkAssociationProps,
-  ) : CdkObject(cdkObject), CfnLinkAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnLinkAssociationProps {
     /**
      * The device ID for the link association.
      *

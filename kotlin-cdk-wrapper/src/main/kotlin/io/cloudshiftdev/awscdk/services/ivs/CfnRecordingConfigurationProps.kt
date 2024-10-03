@@ -371,7 +371,8 @@ public interface CfnRecordingConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfigurationProps,
-  ) : CdkObject(cdkObject), CfnRecordingConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnRecordingConfigurationProps {
     /**
      * A destination configuration describes an S3 bucket where recorded video will be stored.
      *

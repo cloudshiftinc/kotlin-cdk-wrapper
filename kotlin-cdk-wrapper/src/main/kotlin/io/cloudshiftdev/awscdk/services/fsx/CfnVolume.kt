@@ -123,7 +123,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVolume(
   cdkObject: software.amazon.awscdk.services.fsx.CfnVolume,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -570,7 +572,7 @@ public open class CfnVolume(
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *
      * * The strings in the value of `Aggregates` are not are not formatted as `aggrX` , where X is
-     * a number between 1 and 6.
+     * a number between 1 and 12.
      * * The value of `Aggregates` contains aggregates that are not present.
      * * One or more of the aggregates supplied are too close to the volume limit to support adding
      * more volumes.
@@ -605,7 +607,7 @@ public open class CfnVolume(
        * conditions:
        *
        * * The strings in the value of `Aggregates` are not are not formatted as `aggrX` , where X
-       * is a number between 1 and 6.
+       * is a number between 1 and 12.
        * * The value of `Aggregates` contains aggregates that are not present.
        * * One or more of the aggregates supplied are too close to the volume limit to support
        * adding more volumes.
@@ -623,7 +625,7 @@ public open class CfnVolume(
        * conditions:
        *
        * * The strings in the value of `Aggregates` are not are not formatted as `aggrX` , where X
-       * is a number between 1 and 6.
+       * is a number between 1 and 12.
        * * The value of `Aggregates` contains aggregates that are not present.
        * * One or more of the aggregates supplied are too close to the volume limit to support
        * adding more volumes.
@@ -655,7 +657,7 @@ public open class CfnVolume(
        * conditions:
        *
        * * The strings in the value of `Aggregates` are not are not formatted as `aggrX` , where X
-       * is a number between 1 and 6.
+       * is a number between 1 and 12.
        * * The value of `Aggregates` contains aggregates that are not present.
        * * One or more of the aggregates supplied are too close to the volume limit to support
        * adding more volumes.
@@ -675,7 +677,7 @@ public open class CfnVolume(
        * conditions:
        *
        * * The strings in the value of `Aggregates` are not are not formatted as `aggrX` , where X
-       * is a number between 1 and 6.
+       * is a number between 1 and 12.
        * * The value of `Aggregates` contains aggregates that are not present.
        * * One or more of the aggregates supplied are too close to the volume limit to support
        * adding more volumes.
@@ -699,7 +701,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.AggregateConfigurationProperty,
-    ) : CdkObject(cdkObject), AggregateConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AggregateConfigurationProperty {
       /**
        * The list of aggregates that this volume resides on.
        *
@@ -712,7 +715,7 @@ public open class CfnVolume(
        * conditions:
        *
        * * The strings in the value of `Aggregates` are not are not formatted as `aggrX` , where X
-       * is a number between 1 and 6.
+       * is a number between 1 and 12.
        * * The value of `Aggregates` contains aggregates that are not present.
        * * One or more of the aggregates supplied are too close to the volume limit to support
        * adding more volumes.
@@ -863,7 +866,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty,
-    ) : CdkObject(cdkObject), AutocommitPeriodProperty {
+    ) : CdkObject(cdkObject),
+        AutocommitPeriodProperty {
       /**
        * Defines the type of time for the autocommit period of a file in an FSx for ONTAP SnapLock
        * volume.
@@ -1055,7 +1059,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.ClientConfigurationsProperty,
-    ) : CdkObject(cdkObject), ClientConfigurationsProperty {
+    ) : CdkObject(cdkObject),
+        ClientConfigurationsProperty {
       /**
        * A value that specifies who can mount the file system.
        *
@@ -1190,7 +1195,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty,
-    ) : CdkObject(cdkObject), NfsExportsProperty {
+    ) : CdkObject(cdkObject),
+        NfsExportsProperty {
       /**
        * A list of configuration objects that contain the client and options for mounting the
        * OpenZFS file system.
@@ -1319,8 +1325,8 @@ public open class CfnVolume(
      * destination of a NetApp SnapMirror relationship.
      *
      * For more information, see [Volume
-     * types](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types) in the Amazon FSx for
-     * NetApp ONTAP User Guide.
+     * types](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types) in
+     * the Amazon FSx for NetApp ONTAP User Guide.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-ontapconfiguration.html#cfn-fsx-volume-ontapconfiguration-ontapvolumetype)
      */
@@ -1331,9 +1337,7 @@ public open class CfnVolume(
      *
      * If a volume's security style is not specified, it is automatically set to the root volume's
      * security style. The security style determines the type of permissions that FSx for ONTAP uses to
-     * control data access. For more information, see [Volume security
-     * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style) in the *Amazon
-     * FSx for NetApp ONTAP User Guide* . Specify one of the following values:
+     * control data access. Specify one of the following values:
      *
      * * `UNIX` if the file system is managed by a UNIX administrator, the majority of users are NFS
      * clients, and an application accessing the data uses a UNIX user as the service account.
@@ -1345,8 +1349,8 @@ public open class CfnVolume(
      * in the NetApp Documentation Center.
      *
      * For more information, see [Volume security
-     * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html) in the FSx
-     * for ONTAP User Guide.
+     * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style)
+     * in the FSx for ONTAP User Guide.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-ontapconfiguration.html#cfn-fsx-volume-ontapconfiguration-securitystyle)
      */
@@ -1442,8 +1446,8 @@ public open class CfnVolume(
      *
      * FSx for ONTAP offers two styles of volumes that you can use for different purposes, FlexVol
      * and FlexGroup volumes. For more information, see [Volume
-     * styles](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html) in the Amazon FSx
-     * for NetApp ONTAP User Guide.
+     * styles](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles)
+     * in the Amazon FSx for NetApp ONTAP User Guide.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-ontapconfiguration.html#cfn-fsx-volume-ontapconfiguration-volumestyle)
      */
@@ -1501,8 +1505,8 @@ public open class CfnVolume(
        * the destination of a NetApp SnapMirror relationship.
        *
        * For more information, see [Volume
-       * types](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types) in the Amazon FSx for
-       * NetApp ONTAP User Guide.
+       * types](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types)
+       * in the Amazon FSx for NetApp ONTAP User Guide.
        */
       public fun ontapVolumeType(ontapVolumeType: String)
 
@@ -1510,9 +1514,7 @@ public open class CfnVolume(
        * @param securityStyle Specifies the security style for the volume.
        * If a volume's security style is not specified, it is automatically set to the root volume's
        * security style. The security style determines the type of permissions that FSx for ONTAP uses
-       * to control data access. For more information, see [Volume security
-       * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style) in the *Amazon
-       * FSx for NetApp ONTAP User Guide* . Specify one of the following values:
+       * to control data access. Specify one of the following values:
        *
        * * `UNIX` if the file system is managed by a UNIX administrator, the majority of users are
        * NFS clients, and an application accessing the data uses a UNIX user as the service account.
@@ -1525,8 +1527,8 @@ public open class CfnVolume(
        * in the NetApp Documentation Center.
        *
        * For more information, see [Volume security
-       * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html) in the
-       * FSx for ONTAP User Guide.
+       * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style)
+       * in the FSx for ONTAP User Guide.
        */
       public fun securityStyle(securityStyle: String)
 
@@ -1656,8 +1658,8 @@ public open class CfnVolume(
        * @param volumeStyle Use to specify the style of an ONTAP volume.
        * FSx for ONTAP offers two styles of volumes that you can use for different purposes, FlexVol
        * and FlexGroup volumes. For more information, see [Volume
-       * styles](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html) in the Amazon
-       * FSx for NetApp ONTAP User Guide.
+       * styles](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles)
+       * in the Amazon FSx for NetApp ONTAP User Guide.
        */
       public fun volumeStyle(volumeStyle: String)
     }
@@ -1723,8 +1725,8 @@ public open class CfnVolume(
        * the destination of a NetApp SnapMirror relationship.
        *
        * For more information, see [Volume
-       * types](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types) in the Amazon FSx for
-       * NetApp ONTAP User Guide.
+       * types](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types)
+       * in the Amazon FSx for NetApp ONTAP User Guide.
        */
       override fun ontapVolumeType(ontapVolumeType: String) {
         cdkBuilder.ontapVolumeType(ontapVolumeType)
@@ -1734,9 +1736,7 @@ public open class CfnVolume(
        * @param securityStyle Specifies the security style for the volume.
        * If a volume's security style is not specified, it is automatically set to the root volume's
        * security style. The security style determines the type of permissions that FSx for ONTAP uses
-       * to control data access. For more information, see [Volume security
-       * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style) in the *Amazon
-       * FSx for NetApp ONTAP User Guide* . Specify one of the following values:
+       * to control data access. Specify one of the following values:
        *
        * * `UNIX` if the file system is managed by a UNIX administrator, the majority of users are
        * NFS clients, and an application accessing the data uses a UNIX user as the service account.
@@ -1749,8 +1749,8 @@ public open class CfnVolume(
        * in the NetApp Documentation Center.
        *
        * For more information, see [Volume security
-       * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html) in the
-       * FSx for ONTAP User Guide.
+       * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style)
+       * in the FSx for ONTAP User Guide.
        */
       override fun securityStyle(securityStyle: String) {
         cdkBuilder.securityStyle(securityStyle)
@@ -1902,8 +1902,8 @@ public open class CfnVolume(
        * @param volumeStyle Use to specify the style of an ONTAP volume.
        * FSx for ONTAP offers two styles of volumes that you can use for different purposes, FlexVol
        * and FlexGroup volumes. For more information, see [Volume
-       * styles](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html) in the Amazon
-       * FSx for NetApp ONTAP User Guide.
+       * styles](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles)
+       * in the Amazon FSx for NetApp ONTAP User Guide.
        */
       override fun volumeStyle(volumeStyle: String) {
         cdkBuilder.volumeStyle(volumeStyle)
@@ -1915,7 +1915,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OntapConfigurationProperty,
-    ) : CdkObject(cdkObject), OntapConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        OntapConfigurationProperty {
       /**
        * Used to specify the configuration options for an FSx for ONTAP volume's storage aggregate
        * or aggregates.
@@ -1954,8 +1955,8 @@ public open class CfnVolume(
        * the destination of a NetApp SnapMirror relationship.
        *
        * For more information, see [Volume
-       * types](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-types) in the Amazon FSx for
-       * NetApp ONTAP User Guide.
+       * types](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-types)
+       * in the Amazon FSx for NetApp ONTAP User Guide.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-ontapconfiguration.html#cfn-fsx-volume-ontapconfiguration-ontapvolumetype)
        */
@@ -1966,9 +1967,7 @@ public open class CfnVolume(
        *
        * If a volume's security style is not specified, it is automatically set to the root volume's
        * security style. The security style determines the type of permissions that FSx for ONTAP uses
-       * to control data access. For more information, see [Volume security
-       * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style) in the *Amazon
-       * FSx for NetApp ONTAP User Guide* . Specify one of the following values:
+       * to control data access. Specify one of the following values:
        *
        * * `UNIX` if the file system is managed by a UNIX administrator, the majority of users are
        * NFS clients, and an application accessing the data uses a UNIX user as the service account.
@@ -1981,8 +1980,8 @@ public open class CfnVolume(
        * in the NetApp Documentation Center.
        *
        * For more information, see [Volume security
-       * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-security-style.html) in the
-       * FSx for ONTAP User Guide.
+       * style](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-security-style)
+       * in the FSx for ONTAP User Guide.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-ontapconfiguration.html#cfn-fsx-volume-ontapconfiguration-securitystyle)
        */
@@ -2078,8 +2077,8 @@ public open class CfnVolume(
        *
        * FSx for ONTAP offers two styles of volumes that you can use for different purposes, FlexVol
        * and FlexGroup volumes. For more information, see [Volume
-       * styles](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-styles.html) in the Amazon
-       * FSx for NetApp ONTAP User Guide.
+       * styles](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html#volume-styles)
+       * in the Amazon FSx for NetApp ONTAP User Guide.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-ontapconfiguration.html#cfn-fsx-volume-ontapconfiguration-volumestyle)
        */
@@ -2626,7 +2625,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty,
-    ) : CdkObject(cdkObject), OpenZFSConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        OpenZFSConfigurationProperty {
       /**
        * A Boolean value indicating whether tags for the volume should be copied to snapshots.
        *
@@ -2885,7 +2885,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty,
-    ) : CdkObject(cdkObject), OriginSnapshotProperty {
+    ) : CdkObject(cdkObject),
+        OriginSnapshotProperty {
       /**
        * Specifies the strategy used when copying data from the snapshot to the new volume.
        *
@@ -3057,7 +3058,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty,
-    ) : CdkObject(cdkObject), RetentionPeriodProperty {
+    ) : CdkObject(cdkObject),
+        RetentionPeriodProperty {
       /**
        * Defines the type of time for the retention period of an FSx for ONTAP SnapLock volume.
        *
@@ -3451,7 +3453,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.SnaplockConfigurationProperty,
-    ) : CdkObject(cdkObject), SnaplockConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SnaplockConfigurationProperty {
       /**
        * Enables or disables the audit log volume for an FSx for ONTAP SnapLock volume.
        *
@@ -3785,7 +3788,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty,
-    ) : CdkObject(cdkObject), SnaplockRetentionPeriodProperty {
+    ) : CdkObject(cdkObject),
+        SnaplockRetentionPeriodProperty {
       /**
        * The retention period assigned to a write once, read many (WORM) file by default if an
        * explicit retention period is not set for an FSx for ONTAP SnapLock volume.
@@ -3953,7 +3957,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty,
-    ) : CdkObject(cdkObject), TieringPolicyProperty {
+    ) : CdkObject(cdkObject),
+        TieringPolicyProperty {
       /**
        * Specifies the number of days that user data in a volume must remain inactive before it is
        * considered "cold" and moved to the capacity pool.
@@ -4092,7 +4097,8 @@ public open class CfnVolume(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty,
-    ) : CdkObject(cdkObject), UserAndGroupQuotasProperty {
+    ) : CdkObject(cdkObject),
+        UserAndGroupQuotasProperty {
       /**
        * The ID of the user or group that the quota applies to.
        *

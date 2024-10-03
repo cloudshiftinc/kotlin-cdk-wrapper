@@ -228,7 +228,8 @@ public interface JsonFileLogDriverProps : BaseLogDriverProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.JsonFileLogDriverProps,
-  ) : CdkObject(cdkObject), JsonFileLogDriverProps {
+  ) : CdkObject(cdkObject),
+      JsonFileLogDriverProps {
     /**
      * Toggles compression for rotated logs.
      *

@@ -49,7 +49,7 @@ public interface CfnHostProps {
    * affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding)
    * in the *Amazon EC2 User Guide* .
    *
-   * Default: `on`
+   * Default: `off`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-autoplacement)
    */
@@ -126,7 +126,7 @@ public interface CfnHostProps {
      * affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding)
      * in the *Amazon EC2 User Guide* .
      *
-     * Default: `on`
+     * Default: `off`
      */
     public fun autoPlacement(autoPlacement: String)
 
@@ -191,7 +191,7 @@ public interface CfnHostProps {
      * affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding)
      * in the *Amazon EC2 User Guide* .
      *
-     * Default: `on`
+     * Default: `off`
      */
     override fun autoPlacement(autoPlacement: String) {
       cdkBuilder.autoPlacement(autoPlacement)
@@ -255,7 +255,8 @@ public interface CfnHostProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnHostProps,
-  ) : CdkObject(cdkObject), CfnHostProps {
+  ) : CdkObject(cdkObject),
+      CfnHostProps {
     /**
      * The ID of the Outpost hardware asset on which the Dedicated Host is allocated.
      *
@@ -272,7 +273,7 @@ public interface CfnHostProps {
      * affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding)
      * in the *Amazon EC2 User Guide* .
      *
-     * Default: `on`
+     * Default: `off`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-autoplacement)
      */

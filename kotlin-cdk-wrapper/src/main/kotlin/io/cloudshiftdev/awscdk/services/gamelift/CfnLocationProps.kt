@@ -40,10 +40,10 @@ public interface CfnLocationProps {
   public fun locationName(): String
 
   /**
-   * A list of labels to assign to the new matchmaking configuration resource.
+   * A list of labels to assign to the new resource.
    *
    * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
-   * management, access management and cost allocation. For more information, see [Tagging AWS
+   * management, access management, and cost allocation. For more information, see [Tagging AWS
    * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
    * Rareference* .
    *
@@ -62,18 +62,18 @@ public interface CfnLocationProps {
     public fun locationName(locationName: String)
 
     /**
-     * @param tags A list of labels to assign to the new matchmaking configuration resource.
+     * @param tags A list of labels to assign to the new resource.
      * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
-     * management, access management and cost allocation. For more information, see [Tagging AWS
+     * management, access management, and cost allocation. For more information, see [Tagging AWS
      * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
      * Rareference* .
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags A list of labels to assign to the new matchmaking configuration resource.
+     * @param tags A list of labels to assign to the new resource.
      * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
-     * management, access management and cost allocation. For more information, see [Tagging AWS
+     * management, access management, and cost allocation. For more information, see [Tagging AWS
      * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
      * Rareference* .
      */
@@ -92,9 +92,9 @@ public interface CfnLocationProps {
     }
 
     /**
-     * @param tags A list of labels to assign to the new matchmaking configuration resource.
+     * @param tags A list of labels to assign to the new resource.
      * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
-     * management, access management and cost allocation. For more information, see [Tagging AWS
+     * management, access management, and cost allocation. For more information, see [Tagging AWS
      * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
      * Rareference* .
      */
@@ -103,9 +103,9 @@ public interface CfnLocationProps {
     }
 
     /**
-     * @param tags A list of labels to assign to the new matchmaking configuration resource.
+     * @param tags A list of labels to assign to the new resource.
      * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
-     * management, access management and cost allocation. For more information, see [Tagging AWS
+     * management, access management, and cost allocation. For more information, see [Tagging AWS
      * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
      * Rareference* .
      */
@@ -117,7 +117,8 @@ public interface CfnLocationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.gamelift.CfnLocationProps,
-  ) : CdkObject(cdkObject), CfnLocationProps {
+  ) : CdkObject(cdkObject),
+      CfnLocationProps {
     /**
      * A descriptive name for the custom location.
      *
@@ -126,10 +127,10 @@ public interface CfnLocationProps {
     override fun locationName(): String = unwrap(this).getLocationName()
 
     /**
-     * A list of labels to assign to the new matchmaking configuration resource.
+     * A list of labels to assign to the new resource.
      *
      * Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource
-     * management, access management and cost allocation. For more information, see [Tagging AWS
+     * management, access management, and cost allocation. For more information, see [Tagging AWS
      * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
      * Rareference* .
      *

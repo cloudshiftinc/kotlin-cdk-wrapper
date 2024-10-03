@@ -50,7 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAccessPoint(
   cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -785,7 +786,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint.PublicAccessBlockConfigurationProperty,
-    ) : CdkObject(cdkObject), PublicAccessBlockConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PublicAccessBlockConfigurationProperty {
       /**
        * Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket
        * and objects in this bucket.
@@ -918,7 +920,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty,
-    ) : CdkObject(cdkObject), VpcConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigurationProperty {
       /**
        * If this field is specified, the access point will only allow connections from the specified
        * VPC ID.

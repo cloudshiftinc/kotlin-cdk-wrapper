@@ -107,6 +107,31 @@ public interface CfnInstanceProps {
   public fun instanceAttributes(): Any
 
   /**
+   * An identifier that you want to associate with the instance. Note the following:.
+   *
+   * * If the service that's specified by `ServiceId` includes settings for an `SRV` record, the
+   * value of `InstanceId` is automatically included as part of the value for the `SRV` record. For
+   * more information, see [DnsRecord &gt;
+   * Type](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html#cloudmap-Type-DnsRecord-Type)
+   * .
+   * * You can use this value to update an existing instance.
+   * * To register a new instance, you must specify a value that's unique among instances that you
+   * register by using the same service.
+   * * If you specify an existing `InstanceId` and `ServiceId` , AWS Cloud Map updates the existing
+   * DNS records, if any. If there's also an existing health check, AWS Cloud Map deletes the old
+   * health check and creates a new one.
+   *
+   *
+   * The health check isn't deleted immediately, so it will still appear for a while if you submit a
+   * `ListHealthChecks` request, for example.
+   *
+   *
+   *
+   * Do not include sensitive information in `InstanceId` if the namespace is discoverable by public
+   * DNS queries and any `Type` member of `DnsRecord` for the service contains `SRV` because the
+   * `InstanceId` is discoverable by public DNS queries.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html#cfn-servicediscovery-instance-instanceid)
    */
   public fun instanceId(): String? = unwrap(this).getInstanceId()
@@ -197,7 +222,29 @@ public interface CfnInstanceProps {
     public fun instanceAttributes(instanceAttributes: Any)
 
     /**
-     * @param instanceId the value to be set.
+     * @param instanceId An identifier that you want to associate with the instance. Note the
+     * following:.
+     * * If the service that's specified by `ServiceId` includes settings for an `SRV` record, the
+     * value of `InstanceId` is automatically included as part of the value for the `SRV` record. For
+     * more information, see [DnsRecord &gt;
+     * Type](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html#cloudmap-Type-DnsRecord-Type)
+     * .
+     * * You can use this value to update an existing instance.
+     * * To register a new instance, you must specify a value that's unique among instances that you
+     * register by using the same service.
+     * * If you specify an existing `InstanceId` and `ServiceId` , AWS Cloud Map updates the
+     * existing DNS records, if any. If there's also an existing health check, AWS Cloud Map deletes
+     * the old health check and creates a new one.
+     *
+     *
+     * The health check isn't deleted immediately, so it will still appear for a while if you submit
+     * a `ListHealthChecks` request, for example.
+     *
+     *
+     *
+     * Do not include sensitive information in `InstanceId` if the namespace is discoverable by
+     * public DNS queries and any `Type` member of `DnsRecord` for the service contains `SRV` because
+     * the `InstanceId` is discoverable by public DNS queries.
      */
     public fun instanceId(instanceId: String)
 
@@ -288,7 +335,29 @@ public interface CfnInstanceProps {
     }
 
     /**
-     * @param instanceId the value to be set.
+     * @param instanceId An identifier that you want to associate with the instance. Note the
+     * following:.
+     * * If the service that's specified by `ServiceId` includes settings for an `SRV` record, the
+     * value of `InstanceId` is automatically included as part of the value for the `SRV` record. For
+     * more information, see [DnsRecord &gt;
+     * Type](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html#cloudmap-Type-DnsRecord-Type)
+     * .
+     * * You can use this value to update an existing instance.
+     * * To register a new instance, you must specify a value that's unique among instances that you
+     * register by using the same service.
+     * * If you specify an existing `InstanceId` and `ServiceId` , AWS Cloud Map updates the
+     * existing DNS records, if any. If there's also an existing health check, AWS Cloud Map deletes
+     * the old health check and creates a new one.
+     *
+     *
+     * The health check isn't deleted immediately, so it will still appear for a while if you submit
+     * a `ListHealthChecks` request, for example.
+     *
+     *
+     *
+     * Do not include sensitive information in `InstanceId` if the namespace is discoverable by
+     * public DNS queries and any `Type` member of `DnsRecord` for the service contains `SRV` because
+     * the `InstanceId` is discoverable by public DNS queries.
      */
     override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
@@ -307,7 +376,8 @@ public interface CfnInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.CfnInstanceProps,
-  ) : CdkObject(cdkObject), CfnInstanceProps {
+  ) : CdkObject(cdkObject),
+      CfnInstanceProps {
     /**
      * A string map that contains the following information for the service that you specify in
      * `ServiceId` :.
@@ -385,6 +455,31 @@ public interface CfnInstanceProps {
     override fun instanceAttributes(): Any = unwrap(this).getInstanceAttributes()
 
     /**
+     * An identifier that you want to associate with the instance. Note the following:.
+     *
+     * * If the service that's specified by `ServiceId` includes settings for an `SRV` record, the
+     * value of `InstanceId` is automatically included as part of the value for the `SRV` record. For
+     * more information, see [DnsRecord &gt;
+     * Type](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html#cloudmap-Type-DnsRecord-Type)
+     * .
+     * * You can use this value to update an existing instance.
+     * * To register a new instance, you must specify a value that's unique among instances that you
+     * register by using the same service.
+     * * If you specify an existing `InstanceId` and `ServiceId` , AWS Cloud Map updates the
+     * existing DNS records, if any. If there's also an existing health check, AWS Cloud Map deletes
+     * the old health check and creates a new one.
+     *
+     *
+     * The health check isn't deleted immediately, so it will still appear for a while if you submit
+     * a `ListHealthChecks` request, for example.
+     *
+     *
+     *
+     * Do not include sensitive information in `InstanceId` if the namespace is discoverable by
+     * public DNS queries and any `Type` member of `DnsRecord` for the service contains `SRV` because
+     * the `InstanceId` is discoverable by public DNS queries.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html#cfn-servicediscovery-instance-instanceid)
      */
     override fun instanceId(): String? = unwrap(this).getInstanceId()

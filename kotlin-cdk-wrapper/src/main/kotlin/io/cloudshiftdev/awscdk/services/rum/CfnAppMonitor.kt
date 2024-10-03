@@ -87,7 +87,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAppMonitor(
   cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1142,7 +1144,8 @@ public open class CfnAppMonitor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.AppMonitorConfigurationProperty,
-    ) : CdkObject(cdkObject), AppMonitorConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AppMonitorConfigurationProperty {
       /**
        * If you set this to `true` , the CloudWatch RUM web client sets two cookies, a session
        * cookie and a user cookie.
@@ -1325,7 +1328,8 @@ public open class CfnAppMonitor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.CustomEventsProperty,
-    ) : CdkObject(cdkObject), CustomEventsProperty {
+    ) : CdkObject(cdkObject),
+        CustomEventsProperty {
       /**
        * Set this to `ENABLED` to allow the web client to send custom events for this app monitor.
        *
@@ -1610,7 +1614,8 @@ public open class CfnAppMonitor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDefinitionProperty,
-    ) : CdkObject(cdkObject), MetricDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        MetricDefinitionProperty {
       /**
        * This field is a map of field paths to dimension names.
        *
@@ -1879,7 +1884,8 @@ public open class CfnAppMonitor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty,
-    ) : CdkObject(cdkObject), MetricDestinationProperty {
+    ) : CdkObject(cdkObject),
+        MetricDestinationProperty {
       /**
        * Defines the destination to send the metrics to.
        *

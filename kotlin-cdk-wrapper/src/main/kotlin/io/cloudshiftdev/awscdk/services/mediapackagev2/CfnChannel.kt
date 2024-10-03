@@ -36,6 +36,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .channelName("channelName")
  * // the properties below are optional
  * .description("description")
+ * .inputType("inputType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -47,7 +48,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnChannel(
   cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannel,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -73,6 +76,11 @@ public open class CfnChannel(
    * The timestamp of the ccreation of the channel.
    */
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
+
+  /**
+   *
+   */
+  public open fun attrIngestEndpointUrls(): List<String> = unwrap(this).getAttrIngestEndpointUrls()
 
   /**
    * The ingest endpoints associated with the channel.
@@ -125,6 +133,18 @@ public open class CfnChannel(
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
+  }
+
+  /**
+   *
+   */
+  public open fun inputType(): String? = unwrap(this).getInputType()
+
+  /**
+   *
+   */
+  public open fun inputType(`value`: String) {
+    unwrap(this).setInputType(`value`)
   }
 
   /**
@@ -184,6 +204,12 @@ public open class CfnChannel(
     public fun description(description: String)
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputtype)
+     * @param inputType 
+     */
+    public fun inputType(inputType: String)
+
+    /**
      * The tags associated with the channel.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-tags)
@@ -236,6 +262,14 @@ public open class CfnChannel(
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputtype)
+     * @param inputType 
+     */
+    override fun inputType(inputType: String) {
+      cdkBuilder.inputType(inputType)
     }
 
     /**
@@ -355,7 +389,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty,
-    ) : CdkObject(cdkObject), IngestEndpointProperty {
+    ) : CdkObject(cdkObject),
+        IngestEndpointProperty {
       /**
        * The identifier associated with the ingest endpoint of the channel.
        *

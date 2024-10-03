@@ -22,7 +22,8 @@ public interface IListenerAction {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerAction,
-  ) : CdkObject(cdkObject), IListenerAction {
+  ) : CdkObject(cdkObject),
+      IListenerAction {
     /**
      * Render the listener default actions in this chain.
      */

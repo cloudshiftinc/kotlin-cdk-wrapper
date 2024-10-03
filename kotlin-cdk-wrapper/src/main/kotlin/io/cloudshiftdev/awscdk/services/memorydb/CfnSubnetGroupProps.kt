@@ -162,7 +162,8 @@ public interface CfnSubnetGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.memorydb.CfnSubnetGroupProps,
-  ) : CdkObject(cdkObject), CfnSubnetGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnSubnetGroupProps {
     /**
      * A description of the subnet group.
      *

@@ -99,7 +99,8 @@ public interface ColumnRestriction {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.ColumnRestriction,
-  ) : CdkObject(cdkObject), ColumnRestriction {
+  ) : CdkObject(cdkObject),
+      ColumnRestriction {
     /**
      * Comparison operator to use.
      */

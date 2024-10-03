@@ -21,10 +21,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * ```
  * Queue sourceQueue;
- * Queue targetQueue;
- * SqsTarget pipeTarget = SqsTarget.Builder.create(targetQueue)
- * .inputTransformation(InputTransformation.fromObject(Map.of(
- * "SomeKey", DynamicInput.fromEventPath("$.body"))))
+ * IFunction targetFunction;
+ * LambdaFunction pipeTarget = LambdaFunction.Builder.create(targetFunction)
+ * .inputTransformation(InputTransformation.fromObject(Map.of("body", "👀")))
  * .build();
  * Pipe pipe = Pipe.Builder.create(this, "Pipe")
  * .source(new SomeSource(sourceQueue))

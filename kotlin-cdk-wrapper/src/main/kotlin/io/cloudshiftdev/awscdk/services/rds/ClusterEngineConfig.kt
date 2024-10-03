@@ -123,7 +123,8 @@ public interface ClusterEngineConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ClusterEngineConfig,
-  ) : CdkObject(cdkObject), ClusterEngineConfig {
+  ) : CdkObject(cdkObject),
+      ClusterEngineConfig {
     /**
      * Features supported by the database engine.
      *

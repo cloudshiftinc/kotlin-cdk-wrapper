@@ -65,7 +65,8 @@ import software.constructs.IConstruct as SoftwareConstructsIConstruct
  */
 public open class BatchJob(
   cdkObject: software.amazon.awscdk.services.events.targets.BatchJob,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(
     jobQueueArn: String,
     jobQueueScope: CloudshiftdevConstructsIConstruct,

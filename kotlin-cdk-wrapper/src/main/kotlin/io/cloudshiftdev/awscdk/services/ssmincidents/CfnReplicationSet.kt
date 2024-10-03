@@ -53,7 +53,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnReplicationSet(
   cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -380,7 +382,8 @@ public open class CfnReplicationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.RegionConfigurationProperty,
-    ) : CdkObject(cdkObject), RegionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RegionConfigurationProperty {
       /**
        * The AWS Key Management Service key ID to use to encrypt your replication set.
        *
@@ -514,7 +517,8 @@ public open class CfnReplicationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.ReplicationRegionProperty,
-    ) : CdkObject(cdkObject), ReplicationRegionProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationRegionProperty {
       /**
        * Specifies the Region configuration.
        *

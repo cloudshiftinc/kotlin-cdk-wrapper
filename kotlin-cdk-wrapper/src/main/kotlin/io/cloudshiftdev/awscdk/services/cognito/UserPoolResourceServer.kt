@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class UserPoolResourceServer(
   cdkObject: software.amazon.awscdk.services.cognito.UserPoolResourceServer,
-) : Resource(cdkObject), IUserPoolResourceServer {
+) : Resource(cdkObject),
+    IUserPoolResourceServer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

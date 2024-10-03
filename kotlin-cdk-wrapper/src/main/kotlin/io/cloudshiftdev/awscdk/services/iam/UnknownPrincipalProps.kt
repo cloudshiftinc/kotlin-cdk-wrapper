@@ -58,7 +58,8 @@ public interface UnknownPrincipalProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.UnknownPrincipalProps,
-  ) : CdkObject(cdkObject), UnknownPrincipalProps {
+  ) : CdkObject(cdkObject),
+      UnknownPrincipalProps {
     /**
      * The resource the role proxy is for.
      */

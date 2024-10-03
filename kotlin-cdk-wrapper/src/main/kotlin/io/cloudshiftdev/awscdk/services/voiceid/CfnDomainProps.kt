@@ -179,7 +179,8 @@ public interface CfnDomainProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.voiceid.CfnDomainProps,
-  ) : CdkObject(cdkObject), CfnDomainProps {
+  ) : CdkObject(cdkObject),
+      CfnDomainProps {
     /**
      * The description of the domain.
      *

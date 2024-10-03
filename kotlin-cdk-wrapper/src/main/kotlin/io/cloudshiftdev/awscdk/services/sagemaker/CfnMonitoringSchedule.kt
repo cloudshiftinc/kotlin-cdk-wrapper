@@ -153,7 +153,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMonitoringSchedule(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -767,7 +769,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty,
-    ) : CdkObject(cdkObject), BaselineConfigProperty {
+    ) : CdkObject(cdkObject),
+        BaselineConfigProperty {
       /**
        * The Amazon S3 URI for the constraints resource.
        *
@@ -1013,7 +1016,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BatchTransformInputProperty,
-    ) : CdkObject(cdkObject), BatchTransformInputProperty {
+    ) : CdkObject(cdkObject),
+        BatchTransformInputProperty {
       /**
        * The Amazon S3 location being used to capture the data.
        *
@@ -1215,7 +1219,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty,
-    ) : CdkObject(cdkObject), ClusterConfigProperty {
+    ) : CdkObject(cdkObject),
+        ClusterConfigProperty {
       /**
        * The number of ML compute instances to use in the model monitoring job.
        *
@@ -1323,7 +1328,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty,
-    ) : CdkObject(cdkObject), ConstraintsResourceProperty {
+    ) : CdkObject(cdkObject),
+        ConstraintsResourceProperty {
       /**
        * The Amazon S3 URI for the constraints resource.
        *
@@ -1416,7 +1422,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty,
-    ) : CdkObject(cdkObject), CsvProperty {
+    ) : CdkObject(cdkObject),
+        CsvProperty {
       /**
        * A boolean flag indicating if given CSV has header.
        *
@@ -1605,7 +1612,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty,
-    ) : CdkObject(cdkObject), DatasetFormatProperty {
+    ) : CdkObject(cdkObject),
+        DatasetFormatProperty {
       /**
        * The CSV format.
        *
@@ -1805,7 +1813,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.EndpointInputProperty,
-    ) : CdkObject(cdkObject), EndpointInputProperty {
+    ) : CdkObject(cdkObject),
+        EndpointInputProperty {
       /**
        * An endpoint in customer's account which has enabled `DataCaptureConfig` enabled.
        *
@@ -1933,7 +1942,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty,
-    ) : CdkObject(cdkObject), JsonProperty {
+    ) : CdkObject(cdkObject),
+        JsonProperty {
       /**
        * A boolean flag indicating if it is JSON line format.
        *
@@ -2147,7 +2157,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringAppSpecificationProperty,
-    ) : CdkObject(cdkObject), MonitoringAppSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringAppSpecificationProperty {
       /**
        * An array of arguments for the container used to run the monitoring job.
        *
@@ -2412,7 +2423,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringExecutionSummaryProperty,
-    ) : CdkObject(cdkObject), MonitoringExecutionSummaryProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringExecutionSummaryProperty {
       /**
        * The time at which the monitoring job was created.
        *
@@ -2643,7 +2655,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty,
-    ) : CdkObject(cdkObject), MonitoringInputProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringInputProperty {
       /**
        * Input object for the batch transform job.
        *
@@ -3221,7 +3234,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringJobDefinitionProperty,
-    ) : CdkObject(cdkObject), MonitoringJobDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringJobDefinitionProperty {
       /**
        * Baseline configuration used to validate that the data conforms to the specified constraints
        * and statistics.
@@ -3429,7 +3443,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty,
-    ) : CdkObject(cdkObject), MonitoringOutputConfigProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringOutputConfigProperty {
       /**
        * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
        * model artifacts at rest using Amazon S3 server-side encryption.
@@ -3559,7 +3574,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty,
-    ) : CdkObject(cdkObject), MonitoringOutputProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringOutputProperty {
       /**
        * The Amazon S3 storage location where the results of a monitoring job are saved.
        *
@@ -3680,7 +3696,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringResourcesProperty,
-    ) : CdkObject(cdkObject), MonitoringResourcesProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringResourcesProperty {
       /**
        * The configuration for the cluster resources used to run the processing job.
        *
@@ -3966,7 +3983,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringScheduleConfigProperty,
-    ) : CdkObject(cdkObject), MonitoringScheduleConfigProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringScheduleConfigProperty {
       /**
        * Defines the monitoring job.
        *
@@ -4227,7 +4245,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.NetworkConfigProperty,
-    ) : CdkObject(cdkObject), NetworkConfigProperty {
+    ) : CdkObject(cdkObject),
+        NetworkConfigProperty {
       /**
        * Whether to encrypt all communications between distributed processing jobs.
        *
@@ -4386,7 +4405,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty,
-    ) : CdkObject(cdkObject), S3OutputProperty {
+    ) : CdkObject(cdkObject),
+        S3OutputProperty {
       /**
        * The local path to the S3 storage location where SageMaker saves the results of a monitoring
        * job.
@@ -4698,7 +4718,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty,
-    ) : CdkObject(cdkObject), ScheduleConfigProperty {
+    ) : CdkObject(cdkObject),
+        ScheduleConfigProperty {
       /**
        * Sets the end time for a monitoring job window.
        *
@@ -4853,7 +4874,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty,
-    ) : CdkObject(cdkObject), StatisticsResourceProperty {
+    ) : CdkObject(cdkObject),
+        StatisticsResourceProperty {
       /**
        * The S3 URI for the statistics resource.
        *
@@ -4881,11 +4903,9 @@ public open class CfnMonitoringSchedule(
   }
 
   /**
-   * Specifies a limit to how long a model training job or model compilation job can run.
+   * Specifies a limit to how long a job can run.
    *
-   * It also specifies how long a managed spot training job has to complete. When the job reaches
-   * the time limit, SageMaker ends the training or compilation job. Use this API to cap model training
-   * costs.
+   * When the job reaches the time limit, SageMaker ends the job. Use this API to cap costs.
    *
    * To stop a training job, SageMaker sends the algorithm the `SIGTERM` signal, which delays job
    * termination for 120 seconds. Algorithms can use this 120-second window to save the model
@@ -4992,7 +5012,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty,
-    ) : CdkObject(cdkObject), StoppingConditionProperty {
+    ) : CdkObject(cdkObject),
+        StoppingConditionProperty {
       /**
        * The maximum length of time, in seconds, that a training or compilation job can run before
        * it is stopped.
@@ -5159,7 +5180,8 @@ public open class CfnMonitoringSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
       /**
        * The VPC security group IDs, in the form `sg-xxxxxxxx` .
        *

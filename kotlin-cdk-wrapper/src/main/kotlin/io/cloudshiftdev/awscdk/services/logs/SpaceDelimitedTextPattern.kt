@@ -22,7 +22,8 @@ import kotlin.collections.List
  */
 public open class SpaceDelimitedTextPattern(
   cdkObject: software.amazon.awscdk.services.logs.SpaceDelimitedTextPattern,
-) : CdkObject(cdkObject), IFilterPattern {
+) : CdkObject(cdkObject),
+    IFilterPattern {
   /**
    *
    */

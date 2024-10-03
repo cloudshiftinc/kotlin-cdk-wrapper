@@ -108,7 +108,8 @@ public interface UserInvitationConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.UserInvitationConfig,
-  ) : CdkObject(cdkObject), UserInvitationConfig {
+  ) : CdkObject(cdkObject),
+      UserInvitationConfig {
     /**
      * The template to the email body that is sent to the user when an administrator signs them up
      * to the user pool.

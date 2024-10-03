@@ -52,7 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVPCEndpointService(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointService,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnVPCEndpointService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

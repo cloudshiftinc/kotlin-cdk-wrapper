@@ -43,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTemplate(
   cdkObject: software.amazon.awscdk.services.ses.CfnTemplate,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -216,8 +217,11 @@ public open class CfnTemplate(
   }
 
   /**
-   * The content of the email, composed of a subject line and either an HTML part or a text-only
-   * part.
+   * An object that defines the email template to use for an email message, and the values to use
+   * for any message variables in that template.
+   *
+   * An *email template* is a type of message template that contains content that you want to
+   * define, save, and reuse in email messages that you send.
    *
    * Example:
    *
@@ -254,6 +258,9 @@ public open class CfnTemplate(
     /**
      * The name of the template.
      *
+     * You will refer to this name when you send email using the `SendTemplatedEmail` or
+     * `SendBulkTemplatedEmail` operations.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-templatename)
      */
     public fun templateName(): String? = unwrap(this).getTemplateName()
@@ -282,6 +289,8 @@ public open class CfnTemplate(
 
       /**
        * @param templateName The name of the template.
+       * You will refer to this name when you send email using the `SendTemplatedEmail` or
+       * `SendBulkTemplatedEmail` operations.
        */
       public fun templateName(templateName: String)
 
@@ -313,6 +322,8 @@ public open class CfnTemplate(
 
       /**
        * @param templateName The name of the template.
+       * You will refer to this name when you send email using the `SendTemplatedEmail` or
+       * `SendBulkTemplatedEmail` operations.
        */
       override fun templateName(templateName: String) {
         cdkBuilder.templateName(templateName)
@@ -332,7 +343,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty,
-    ) : CdkObject(cdkObject), TemplateProperty {
+    ) : CdkObject(cdkObject),
+        TemplateProperty {
       /**
        * The HTML body of the email.
        *
@@ -349,6 +361,9 @@ public open class CfnTemplate(
 
       /**
        * The name of the template.
+       *
+       * You will refer to this name when you send email using the `SendTemplatedEmail` or
+       * `SendBulkTemplatedEmail` operations.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-templatename)
        */

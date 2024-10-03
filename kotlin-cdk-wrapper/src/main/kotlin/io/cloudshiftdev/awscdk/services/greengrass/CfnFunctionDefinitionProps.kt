@@ -285,7 +285,8 @@ public interface CfnFunctionDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionProps,
-  ) : CdkObject(cdkObject), CfnFunctionDefinitionProps {
+  ) : CdkObject(cdkObject),
+      CfnFunctionDefinitionProps {
     /**
      * The function definition version to include when the function definition is created.
      *

@@ -113,7 +113,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnComponentType(
   cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -822,7 +824,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty,
-    ) : CdkObject(cdkObject), CompositeComponentTypeProperty {
+    ) : CdkObject(cdkObject),
+        CompositeComponentTypeProperty {
       /**
        * The ID of the component type.
        *
@@ -969,7 +972,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty,
-    ) : CdkObject(cdkObject), DataConnectorProperty {
+    ) : CdkObject(cdkObject),
+        DataConnectorProperty {
       /**
        * A boolean value that specifies whether the data connector is native to IoT TwinMaker.
        *
@@ -1236,7 +1240,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataTypeProperty,
-    ) : CdkObject(cdkObject), DataTypeProperty {
+    ) : CdkObject(cdkObject),
+        DataTypeProperty {
       /**
        * The allowed values for this data type.
        *
@@ -1556,7 +1561,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataValueProperty,
-    ) : CdkObject(cdkObject), DataValueProperty {
+    ) : CdkObject(cdkObject),
+        DataValueProperty {
       /**
        * A boolean value.
        *
@@ -1713,7 +1719,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty,
-    ) : CdkObject(cdkObject), ErrorProperty {
+    ) : CdkObject(cdkObject),
+        ErrorProperty {
       /**
        * The component type error code.
        *
@@ -1884,7 +1891,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.FunctionProperty,
-    ) : CdkObject(cdkObject), FunctionProperty {
+    ) : CdkObject(cdkObject),
+        FunctionProperty {
       /**
        * The data connector.
        *
@@ -1981,7 +1989,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty,
-    ) : CdkObject(cdkObject), LambdaFunctionProperty {
+    ) : CdkObject(cdkObject),
+        LambdaFunctionProperty {
       /**
        * The Lambda function ARN.
        *
@@ -2360,7 +2369,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyDefinitionProperty,
-    ) : CdkObject(cdkObject), PropertyDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        PropertyDefinitionProperty {
       /**
        * A mapping that specifies configuration information about the property.
        *
@@ -2515,7 +2525,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty,
-    ) : CdkObject(cdkObject), PropertyGroupProperty {
+    ) : CdkObject(cdkObject),
+        PropertyGroupProperty {
       /**
        * The group type.
        *
@@ -2626,7 +2637,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipProperty,
-    ) : CdkObject(cdkObject), RelationshipProperty {
+    ) : CdkObject(cdkObject),
+        RelationshipProperty {
       /**
        * The type of the relationship.
        *
@@ -2735,7 +2747,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty,
-    ) : CdkObject(cdkObject), RelationshipValueProperty {
+    ) : CdkObject(cdkObject),
+        RelationshipValueProperty {
       /**
        * The target component name.
        *
@@ -2873,7 +2886,8 @@ public open class CfnComponentType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty,
-    ) : CdkObject(cdkObject), StatusProperty {
+    ) : CdkObject(cdkObject),
+        StatusProperty {
       /**
        * The component type error.
        *

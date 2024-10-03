@@ -200,7 +200,8 @@ public interface WaiterStateMachineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.customresources.WaiterStateMachineProps,
-  ) : CdkObject(cdkObject), WaiterStateMachineProps {
+  ) : CdkObject(cdkObject),
+      WaiterStateMachineProps {
     /**
      * Backoff between attempts.
      */

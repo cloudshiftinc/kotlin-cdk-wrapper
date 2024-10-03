@@ -59,7 +59,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class StateMachineFragment(
   cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineFragment,
-) : Construct(cdkObject), IChainable {
+) : Construct(cdkObject),
+    IChainable {
   /**
    * The states to chain onto if this fragment is used.
    */

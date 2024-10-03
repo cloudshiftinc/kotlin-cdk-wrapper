@@ -78,7 +78,7 @@ public interface CfnServerlessCacheProps {
    * The daily time that a cache snapshot will be created.
    *
    * Default is NULL, i.e. snapshots will not be created at a specific time on a daily basis.
-   * Available for Redis only.
+   * Available for Redis OSS and Serverless Memcached only.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-dailysnapshottime)
    */
@@ -163,7 +163,7 @@ public interface CfnServerlessCacheProps {
   /**
    * The current setting for the number of serverless cache snapshots the system will retain.
    *
-   * Available for Redis only.
+   * Available for Redis OSS and Serverless Memcached only.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-snapshotretentionlimit)
    */
@@ -190,7 +190,7 @@ public interface CfnServerlessCacheProps {
   /**
    * The identifier of the user group associated with the serverless cache.
    *
-   * Available for Redis only. Default is NULL.
+   * Available for Redis OSS only. Default is NULL.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-usergroupid)
    */
@@ -222,7 +222,7 @@ public interface CfnServerlessCacheProps {
     /**
      * @param dailySnapshotTime The daily time that a cache snapshot will be created.
      * Default is NULL, i.e. snapshots will not be created at a specific time on a daily basis.
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      */
     public fun dailySnapshotTime(dailySnapshotTime: String)
 
@@ -333,7 +333,7 @@ public interface CfnServerlessCacheProps {
     /**
      * @param snapshotRetentionLimit The current setting for the number of serverless cache
      * snapshots the system will retain.
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      */
     public fun snapshotRetentionLimit(snapshotRetentionLimit: Number)
 
@@ -365,7 +365,7 @@ public interface CfnServerlessCacheProps {
 
     /**
      * @param userGroupId The identifier of the user group associated with the serverless cache.
-     * Available for Redis only. Default is NULL.
+     * Available for Redis OSS only. Default is NULL.
      */
     public fun userGroupId(userGroupId: String)
   }
@@ -401,7 +401,7 @@ public interface CfnServerlessCacheProps {
     /**
      * @param dailySnapshotTime The daily time that a cache snapshot will be created.
      * Default is NULL, i.e. snapshots will not be created at a specific time on a daily basis.
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      */
     override fun dailySnapshotTime(dailySnapshotTime: String) {
       cdkBuilder.dailySnapshotTime(dailySnapshotTime)
@@ -542,7 +542,7 @@ public interface CfnServerlessCacheProps {
     /**
      * @param snapshotRetentionLimit The current setting for the number of serverless cache
      * snapshots the system will retain.
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      */
     override fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
       cdkBuilder.snapshotRetentionLimit(snapshotRetentionLimit)
@@ -580,7 +580,7 @@ public interface CfnServerlessCacheProps {
 
     /**
      * @param userGroupId The identifier of the user group associated with the serverless cache.
-     * Available for Redis only. Default is NULL.
+     * Available for Redis OSS only. Default is NULL.
      */
     override fun userGroupId(userGroupId: String) {
       cdkBuilder.userGroupId(userGroupId)
@@ -592,7 +592,8 @@ public interface CfnServerlessCacheProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCacheProps,
-  ) : CdkObject(cdkObject), CfnServerlessCacheProps {
+  ) : CdkObject(cdkObject),
+      CfnServerlessCacheProps {
     /**
      * The cache usage limit for the serverless cache.
      *
@@ -604,7 +605,7 @@ public interface CfnServerlessCacheProps {
      * The daily time that a cache snapshot will be created.
      *
      * Default is NULL, i.e. snapshots will not be created at a specific time on a daily basis.
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-dailysnapshottime)
      */
@@ -690,7 +691,7 @@ public interface CfnServerlessCacheProps {
     /**
      * The current setting for the number of serverless cache snapshots the system will retain.
      *
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-snapshotretentionlimit)
      */
@@ -717,7 +718,7 @@ public interface CfnServerlessCacheProps {
     /**
      * The identifier of the user group associated with the serverless cache.
      *
-     * Available for Redis only. Default is NULL.
+     * Available for Redis OSS only. Default is NULL.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-usergroupid)
      */

@@ -53,6 +53,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .actionGroupName("actionGroupName")
  * // the properties below are optional
  * .actionGroupExecutor(ActionGroupExecutorProperty.builder()
+ * .customControl("customControl")
  * .lambda("lambda")
  * .build())
  * .actionGroupState("actionGroupState")
@@ -64,6 +65,20 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .description("description")
+ * .functionSchema(FunctionSchemaProperty.builder()
+ * .functions(List.of(FunctionProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .parameters(Map.of(
+ * "parametersKey", ParameterDetailProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .required(false)
+ * .build()))
+ * .build()))
+ * .build())
  * .parentActionGroupSignature("parentActionGroupSignature")
  * .skipResourceInUseCheckOnDelete(false)
  * .build()))
@@ -72,6 +87,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .customerEncryptionKeyArn("customerEncryptionKeyArn")
  * .description("description")
  * .foundationModel("foundationModel")
+ * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+ * .guardrailIdentifier("guardrailIdentifier")
+ * .guardrailVersion("guardrailVersion")
+ * .build())
  * .idleSessionTtlInSeconds(123)
  * .instruction("instruction")
  * .knowledgeBases(List.of(AgentKnowledgeBaseProperty.builder()
@@ -110,7 +129,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAgent(
   cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -295,6 +316,34 @@ public open class CfnAgent(
   }
 
   /**
+   * Details about the guardrail associated with the agent.
+   */
+  public open fun guardrailConfiguration(): Any? = unwrap(this).getGuardrailConfiguration()
+
+  /**
+   * Details about the guardrail associated with the agent.
+   */
+  public open fun guardrailConfiguration(`value`: IResolvable) {
+    unwrap(this).setGuardrailConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Details about the guardrail associated with the agent.
+   */
+  public open fun guardrailConfiguration(`value`: GuardrailConfigurationProperty) {
+    unwrap(this).setGuardrailConfiguration(`value`.let(GuardrailConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * Details about the guardrail associated with the agent.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("04049312d43b17b62d0851c33cd32642ec76160c8c5b6015e9019ca6c2e786e0")
+  public open
+      fun guardrailConfiguration(`value`: GuardrailConfigurationProperty.Builder.() -> Unit): Unit =
+      guardrailConfiguration(GuardrailConfigurationProperty(`value`))
+
+  /**
    * The number of seconds for which Amazon Bedrock keeps information about a user's conversation
    * with the agent.
    */
@@ -419,19 +468,25 @@ public open class CfnAgent(
   }
 
   /**
-   * A map of tag keys and values.
+   * Metadata that you can assign to a resource as key-value pairs.
+   *
+   * For more information, see the following resources:.
    */
   public open fun testAliasTags(): Any? = unwrap(this).getTestAliasTags()
 
   /**
-   * A map of tag keys and values.
+   * Metadata that you can assign to a resource as key-value pairs.
+   *
+   * For more information, see the following resources:.
    */
   public open fun testAliasTags(`value`: IResolvable) {
     unwrap(this).setTestAliasTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * A map of tag keys and values.
+   * Metadata that you can assign to a resource as key-value pairs.
+   *
+   * For more information, see the following resources:.
    */
   public open fun testAliasTags(`value`: Map<String, String>) {
     unwrap(this).setTestAliasTags(`value`)
@@ -538,6 +593,33 @@ public open class CfnAgent(
      * @param foundationModel The foundation model used for orchestration by the agent. 
      */
     public fun foundationModel(foundationModel: String)
+
+    /**
+     * Details about the guardrail associated with the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-guardrailconfiguration)
+     * @param guardrailConfiguration Details about the guardrail associated with the agent. 
+     */
+    public fun guardrailConfiguration(guardrailConfiguration: IResolvable)
+
+    /**
+     * Details about the guardrail associated with the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-guardrailconfiguration)
+     * @param guardrailConfiguration Details about the guardrail associated with the agent. 
+     */
+    public fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty)
+
+    /**
+     * Details about the guardrail associated with the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-guardrailconfiguration)
+     * @param guardrailConfiguration Details about the guardrail associated with the agent. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8418c91d52c1bd259d601e910d40b1c6737b53abf42d92d66f60f80fe319930c")
+    public
+        fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty.Builder.() -> Unit)
 
     /**
      * The number of seconds for which Amazon Bedrock keeps information about a user's conversation
@@ -668,18 +750,32 @@ public open class CfnAgent(
     public fun tags(tags: Map<String, String>)
 
     /**
-     * A map of tag keys and values.
+     * Metadata that you can assign to a resource as key-value pairs. For more information, see the
+     * following resources:.
+     *
+     * * [Tag naming limits and
+     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
+     * * [Tagging best
+     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
-     * @param testAliasTags A map of tag keys and values. 
+     * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
+     * information, see the following resources:. 
      */
     public fun testAliasTags(testAliasTags: IResolvable)
 
     /**
-     * A map of tag keys and values.
+     * Metadata that you can assign to a resource as key-value pairs. For more information, see the
+     * following resources:.
+     *
+     * * [Tag naming limits and
+     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
+     * * [Tagging best
+     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
-     * @param testAliasTags A map of tag keys and values. 
+     * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
+     * information, see the following resources:. 
      */
     public fun testAliasTags(testAliasTags: Map<String, String>)
   }
@@ -805,6 +901,38 @@ public open class CfnAgent(
     override fun foundationModel(foundationModel: String) {
       cdkBuilder.foundationModel(foundationModel)
     }
+
+    /**
+     * Details about the guardrail associated with the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-guardrailconfiguration)
+     * @param guardrailConfiguration Details about the guardrail associated with the agent. 
+     */
+    override fun guardrailConfiguration(guardrailConfiguration: IResolvable) {
+      cdkBuilder.guardrailConfiguration(guardrailConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Details about the guardrail associated with the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-guardrailconfiguration)
+     * @param guardrailConfiguration Details about the guardrail associated with the agent. 
+     */
+    override fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty) {
+      cdkBuilder.guardrailConfiguration(guardrailConfiguration.let(GuardrailConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * Details about the guardrail associated with the agent.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-guardrailconfiguration)
+     * @param guardrailConfiguration Details about the guardrail associated with the agent. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8418c91d52c1bd259d601e910d40b1c6737b53abf42d92d66f60f80fe319930c")
+    override
+        fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty.Builder.() -> Unit):
+        Unit = guardrailConfiguration(GuardrailConfigurationProperty(guardrailConfiguration))
 
     /**
      * The number of seconds for which Amazon Bedrock keeps information about a user's conversation
@@ -956,20 +1084,34 @@ public open class CfnAgent(
     }
 
     /**
-     * A map of tag keys and values.
+     * Metadata that you can assign to a resource as key-value pairs. For more information, see the
+     * following resources:.
+     *
+     * * [Tag naming limits and
+     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
+     * * [Tagging best
+     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
-     * @param testAliasTags A map of tag keys and values. 
+     * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
+     * information, see the following resources:. 
      */
     override fun testAliasTags(testAliasTags: IResolvable) {
       cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * A map of tag keys and values.
+     * Metadata that you can assign to a resource as key-value pairs. For more information, see the
+     * following resources:.
+     *
+     * * [Tag naming limits and
+     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
+     * * [Tagging best
+     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
-     * @param testAliasTags A map of tag keys and values. 
+     * @param testAliasTags Metadata that you can assign to a resource as key-value pairs. For more
+     * information, see the following resources:. 
      */
     override fun testAliasTags(testAliasTags: Map<String, String>) {
       cdkBuilder.testAliasTags(testAliasTags)
@@ -1136,7 +1278,8 @@ public open class CfnAgent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.APISchemaProperty,
-    ) : CdkObject(cdkObject), APISchemaProperty {
+    ) : CdkObject(cdkObject),
+        APISchemaProperty {
       /**
        * The JSON or YAML-formatted payload defining the OpenAPI schema for the action group.
        *
@@ -1177,7 +1320,8 @@ public open class CfnAgent(
 
   /**
    * Contains details about the Lambda function containing the business logic that is carried out
-   * upon invoking the action.
+   * upon invoking the action or the custom control method for handling the information elicited from
+   * the user.
    *
    * Example:
    *
@@ -1186,6 +1330,7 @@ public open class CfnAgent(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
    * ActionGroupExecutorProperty actionGroupExecutorProperty = ActionGroupExecutorProperty.builder()
+   * .customControl("customControl")
    * .lambda("lambda")
    * .build();
    * ```
@@ -1194,12 +1339,20 @@ public open class CfnAgent(
    */
   public interface ActionGroupExecutorProperty {
     /**
+     * To return the action group invocation results directly in the `InvokeAgent` response, specify
+     * `RETURN_CONTROL` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-actiongroupexecutor.html#cfn-bedrock-agent-actiongroupexecutor-customcontrol)
+     */
+    public fun customControl(): String? = unwrap(this).getCustomControl()
+
+    /**
      * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is
      * carried out upon invoking the action.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-actiongroupexecutor.html#cfn-bedrock-agent-actiongroupexecutor-lambda)
      */
-    public fun lambda(): String
+    public fun lambda(): String? = unwrap(this).getLambda()
 
     /**
      * A builder for [ActionGroupExecutorProperty]
@@ -1207,8 +1360,14 @@ public open class CfnAgent(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param customControl To return the action group invocation results directly in the
+       * `InvokeAgent` response, specify `RETURN_CONTROL` .
+       */
+      public fun customControl(customControl: String)
+
+      /**
        * @param lambda The Amazon Resource Name (ARN) of the Lambda function containing the business
-       * logic that is carried out upon invoking the action. 
+       * logic that is carried out upon invoking the action.
        */
       public fun lambda(lambda: String)
     }
@@ -1219,8 +1378,16 @@ public open class CfnAgent(
           software.amazon.awscdk.services.bedrock.CfnAgent.ActionGroupExecutorProperty.builder()
 
       /**
+       * @param customControl To return the action group invocation results directly in the
+       * `InvokeAgent` response, specify `RETURN_CONTROL` .
+       */
+      override fun customControl(customControl: String) {
+        cdkBuilder.customControl(customControl)
+      }
+
+      /**
        * @param lambda The Amazon Resource Name (ARN) of the Lambda function containing the business
-       * logic that is carried out upon invoking the action. 
+       * logic that is carried out upon invoking the action.
        */
       override fun lambda(lambda: String) {
         cdkBuilder.lambda(lambda)
@@ -1233,14 +1400,23 @@ public open class CfnAgent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.ActionGroupExecutorProperty,
-    ) : CdkObject(cdkObject), ActionGroupExecutorProperty {
+    ) : CdkObject(cdkObject),
+        ActionGroupExecutorProperty {
+      /**
+       * To return the action group invocation results directly in the `InvokeAgent` response,
+       * specify `RETURN_CONTROL` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-actiongroupexecutor.html#cfn-bedrock-agent-actiongroupexecutor-customcontrol)
+       */
+      override fun customControl(): String? = unwrap(this).getCustomControl()
+
       /**
        * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is
        * carried out upon invoking the action.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-actiongroupexecutor.html#cfn-bedrock-agent-actiongroupexecutor-lambda)
        */
-      override fun lambda(): String = unwrap(this).getLambda()
+      override fun lambda(): String? = unwrap(this).getLambda()
     }
 
     public companion object {
@@ -1274,6 +1450,7 @@ public open class CfnAgent(
    * .actionGroupName("actionGroupName")
    * // the properties below are optional
    * .actionGroupExecutor(ActionGroupExecutorProperty.builder()
+   * .customControl("customControl")
    * .lambda("lambda")
    * .build())
    * .actionGroupState("actionGroupState")
@@ -1285,6 +1462,20 @@ public open class CfnAgent(
    * .build())
    * .build())
    * .description("description")
+   * .functionSchema(FunctionSchemaProperty.builder()
+   * .functions(List.of(FunctionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .description("description")
+   * .parameters(Map.of(
+   * "parametersKey", ParameterDetailProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .description("description")
+   * .required(false)
+   * .build()))
+   * .build()))
+   * .build())
    * .parentActionGroupSignature("parentActionGroupSignature")
    * .skipResourceInUseCheckOnDelete(false)
    * .build();
@@ -1295,7 +1486,8 @@ public open class CfnAgent(
   public interface AgentActionGroupProperty {
     /**
      * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is
-     * carried out upon invoking the action.
+     * carried out upon invoking the action or the custom control method for handling the information
+     * elicited from the user.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentactiongroup.html#cfn-bedrock-agent-agentactiongroup-actiongroupexecutor)
      */
@@ -1337,6 +1529,15 @@ public open class CfnAgent(
     public fun description(): String? = unwrap(this).getDescription()
 
     /**
+     * Defines functions that each define parameters that the agent needs to invoke from the user.
+     *
+     * Each function represents an action in an action group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentactiongroup.html#cfn-bedrock-agent-agentactiongroup-functionschema)
+     */
+    public fun functionSchema(): Any? = unwrap(this).getFunctionSchema()
+
+    /**
      * If this field is set as `AMAZON.UserInput` , the agent can request the user for additional
      * information when trying to complete a task. The `description` , `apiSchema` , and
      * `actionGroupExecutor` fields must be blank for this action group.
@@ -1370,19 +1571,22 @@ public open class CfnAgent(
     public interface Builder {
       /**
        * @param actionGroupExecutor The Amazon Resource Name (ARN) of the Lambda function containing
-       * the business logic that is carried out upon invoking the action.
+       * the business logic that is carried out upon invoking the action or the custom control method
+       * for handling the information elicited from the user.
        */
       public fun actionGroupExecutor(actionGroupExecutor: IResolvable)
 
       /**
        * @param actionGroupExecutor The Amazon Resource Name (ARN) of the Lambda function containing
-       * the business logic that is carried out upon invoking the action.
+       * the business logic that is carried out upon invoking the action or the custom control method
+       * for handling the information elicited from the user.
        */
       public fun actionGroupExecutor(actionGroupExecutor: ActionGroupExecutorProperty)
 
       /**
        * @param actionGroupExecutor The Amazon Resource Name (ARN) of the Lambda function containing
-       * the business logic that is carried out upon invoking the action.
+       * the business logic that is carried out upon invoking the action or the custom control method
+       * for handling the information elicited from the user.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bbe9062ac1f596537a9de04683d855a04b2e8cd613ad96c21989601a932af6ab")
@@ -1434,6 +1638,29 @@ public open class CfnAgent(
       public fun description(description: String)
 
       /**
+       * @param functionSchema Defines functions that each define parameters that the agent needs to
+       * invoke from the user.
+       * Each function represents an action in an action group.
+       */
+      public fun functionSchema(functionSchema: IResolvable)
+
+      /**
+       * @param functionSchema Defines functions that each define parameters that the agent needs to
+       * invoke from the user.
+       * Each function represents an action in an action group.
+       */
+      public fun functionSchema(functionSchema: FunctionSchemaProperty)
+
+      /**
+       * @param functionSchema Defines functions that each define parameters that the agent needs to
+       * invoke from the user.
+       * Each function represents an action in an action group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8ae6a932602ba614adb804ec413d8870487556f1dcdb132b461d7ab5eee1a9c6")
+      public fun functionSchema(functionSchema: FunctionSchemaProperty.Builder.() -> Unit)
+
+      /**
        * @param parentActionGroupSignature If this field is set as `AMAZON.UserInput` , the agent
        * can request the user for additional information when trying to complete a task. The
        * `description` , `apiSchema` , and `actionGroupExecutor` fields must be blank for this action
@@ -1468,7 +1695,8 @@ public open class CfnAgent(
 
       /**
        * @param actionGroupExecutor The Amazon Resource Name (ARN) of the Lambda function containing
-       * the business logic that is carried out upon invoking the action.
+       * the business logic that is carried out upon invoking the action or the custom control method
+       * for handling the information elicited from the user.
        */
       override fun actionGroupExecutor(actionGroupExecutor: IResolvable) {
         cdkBuilder.actionGroupExecutor(actionGroupExecutor.let(IResolvable.Companion::unwrap))
@@ -1476,7 +1704,8 @@ public open class CfnAgent(
 
       /**
        * @param actionGroupExecutor The Amazon Resource Name (ARN) of the Lambda function containing
-       * the business logic that is carried out upon invoking the action.
+       * the business logic that is carried out upon invoking the action or the custom control method
+       * for handling the information elicited from the user.
        */
       override fun actionGroupExecutor(actionGroupExecutor: ActionGroupExecutorProperty) {
         cdkBuilder.actionGroupExecutor(actionGroupExecutor.let(ActionGroupExecutorProperty.Companion::unwrap))
@@ -1484,7 +1713,8 @@ public open class CfnAgent(
 
       /**
        * @param actionGroupExecutor The Amazon Resource Name (ARN) of the Lambda function containing
-       * the business logic that is carried out upon invoking the action.
+       * the business logic that is carried out upon invoking the action or the custom control method
+       * for handling the information elicited from the user.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bbe9062ac1f596537a9de04683d855a04b2e8cd613ad96c21989601a932af6ab")
@@ -1548,6 +1778,34 @@ public open class CfnAgent(
       }
 
       /**
+       * @param functionSchema Defines functions that each define parameters that the agent needs to
+       * invoke from the user.
+       * Each function represents an action in an action group.
+       */
+      override fun functionSchema(functionSchema: IResolvable) {
+        cdkBuilder.functionSchema(functionSchema.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param functionSchema Defines functions that each define parameters that the agent needs to
+       * invoke from the user.
+       * Each function represents an action in an action group.
+       */
+      override fun functionSchema(functionSchema: FunctionSchemaProperty) {
+        cdkBuilder.functionSchema(functionSchema.let(FunctionSchemaProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param functionSchema Defines functions that each define parameters that the agent needs to
+       * invoke from the user.
+       * Each function represents an action in an action group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8ae6a932602ba614adb804ec413d8870487556f1dcdb132b461d7ab5eee1a9c6")
+      override fun functionSchema(functionSchema: FunctionSchemaProperty.Builder.() -> Unit): Unit =
+          functionSchema(FunctionSchemaProperty(functionSchema))
+
+      /**
        * @param parentActionGroupSignature If this field is set as `AMAZON.UserInput` , the agent
        * can request the user for additional information when trying to complete a task. The
        * `description` , `apiSchema` , and `actionGroupExecutor` fields must be blank for this action
@@ -1586,10 +1844,12 @@ public open class CfnAgent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.AgentActionGroupProperty,
-    ) : CdkObject(cdkObject), AgentActionGroupProperty {
+    ) : CdkObject(cdkObject),
+        AgentActionGroupProperty {
       /**
        * The Amazon Resource Name (ARN) of the Lambda function containing the business logic that is
-       * carried out upon invoking the action.
+       * carried out upon invoking the action or the custom control method for handling the information
+       * elicited from the user.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentactiongroup.html#cfn-bedrock-agent-agentactiongroup-actiongroupexecutor)
        */
@@ -1629,6 +1889,15 @@ public open class CfnAgent(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentactiongroup.html#cfn-bedrock-agent-agentactiongroup-description)
        */
       override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * Defines functions that each define parameters that the agent needs to invoke from the user.
+       *
+       * Each function represents an action in an action group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentactiongroup.html#cfn-bedrock-agent-agentactiongroup-functionschema)
+       */
+      override fun functionSchema(): Any? = unwrap(this).getFunctionSchema()
 
       /**
        * If this field is set as `AMAZON.UserInput` , the agent can request the user for additional
@@ -1784,7 +2053,8 @@ public open class CfnAgent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.AgentKnowledgeBaseProperty,
-    ) : CdkObject(cdkObject), AgentKnowledgeBaseProperty {
+    ) : CdkObject(cdkObject),
+        AgentKnowledgeBaseProperty {
       /**
        * The description of the association between the agent and the knowledge base.
        *
@@ -1828,13 +2098,429 @@ public open class CfnAgent(
   }
 
   /**
-   * Specifications about the inference parameters that were provided alongside the prompt.
+   * Defines parameters that the agent needs to invoke from the user to complete the function.
    *
-   * These are specified in the
-   * [PromptOverrideConfiguration](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_PromptOverrideConfiguration.html)
-   * object that was set when the agent was created or updated. For more information, see [Inference
-   * parameters for foundation
+   * Corresponds to an action in an action group.
+   *
+   * This data type is used in the following API operations:
+   *
+   * * [CreateAgentActionGroup
+   * request](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateAgentActionGroup.html#API_agent_CreateAgentActionGroup_RequestSyntax)
+   * * [CreateAgentActionGroup
+   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateAgentActionGroup.html#API_agent_CreateAgentActionGroup_ResponseSyntax)
+   * * [UpdateAgentActionGroup
+   * request](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_UpdateAgentActionGroup.html#API_agent_UpdateAgentActionGroup_RequestSyntax)
+   * * [UpdateAgentActionGroup
+   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_UpdateAgentActionGroup.html#API_agent_UpdateAgentActionGroup_ResponseSyntax)
+   * * [GetAgentActionGroup
+   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_GetAgentActionGroup.html#API_agent_GetAgentActionGroup_ResponseSyntax)
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * FunctionProperty functionProperty = FunctionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .description("description")
+   * .parameters(Map.of(
+   * "parametersKey", ParameterDetailProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .description("description")
+   * .required(false)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-function.html)
+   */
+  public interface FunctionProperty {
+    /**
+     * A description of the function and its purpose.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-function.html#cfn-bedrock-agent-function-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * A name for the function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-function.html#cfn-bedrock-agent-function-name)
+     */
+    public fun name(): String
+
+    /**
+     * The parameters that the agent elicits from the user to fulfill the function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-function.html#cfn-bedrock-agent-function-parameters)
+     */
+    public fun parameters(): Any? = unwrap(this).getParameters()
+
+    /**
+     * A builder for [FunctionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param description A description of the function and its purpose.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param name A name for the function. 
+       */
+      public fun name(name: String)
+
+      /**
+       * @param parameters The parameters that the agent elicits from the user to fulfill the
+       * function.
+       */
+      public fun parameters(parameters: IResolvable)
+
+      /**
+       * @param parameters The parameters that the agent elicits from the user to fulfill the
+       * function.
+       */
+      public fun parameters(parameters: Map<String, Any>)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnAgent.FunctionProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnAgent.FunctionProperty.builder()
+
+      /**
+       * @param description A description of the function and its purpose.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param name A name for the function. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param parameters The parameters that the agent elicits from the user to fulfill the
+       * function.
+       */
+      override fun parameters(parameters: IResolvable) {
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param parameters The parameters that the agent elicits from the user to fulfill the
+       * function.
+       */
+      override fun parameters(parameters: Map<String, Any>) {
+        cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
+      }
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnAgent.FunctionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.FunctionProperty,
+    ) : CdkObject(cdkObject),
+        FunctionProperty {
+      /**
+       * A description of the function and its purpose.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-function.html#cfn-bedrock-agent-function-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * A name for the function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-function.html#cfn-bedrock-agent-function-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The parameters that the agent elicits from the user to fulfill the function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-function.html#cfn-bedrock-agent-function-parameters)
+       */
+      override fun parameters(): Any? = unwrap(this).getParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FunctionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.FunctionProperty):
+          FunctionProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FunctionProperty):
+          software.amazon.awscdk.services.bedrock.CfnAgent.FunctionProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.bedrock.CfnAgent.FunctionProperty
+    }
+  }
+
+  /**
+   * Defines functions that each define parameters that the agent needs to invoke from the user.
+   *
+   * Each function represents an action in an action group.
+   *
+   * This data type is used in the following API operations:
+   *
+   * * [CreateAgentActionGroup
+   * request](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateAgentActionGroup.html#API_agent_CreateAgentActionGroup_RequestSyntax)
+   * * [CreateAgentActionGroup
+   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateAgentActionGroup.html#API_agent_CreateAgentActionGroup_ResponseSyntax)
+   * * [UpdateAgentActionGroup
+   * request](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_UpdateAgentActionGroup.html#API_agent_UpdateAgentActionGroup_RequestSyntax)
+   * * [UpdateAgentActionGroup
+   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_UpdateAgentActionGroup.html#API_agent_UpdateAgentActionGroup_ResponseSyntax)
+   * * [GetAgentActionGroup
+   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_GetAgentActionGroup.html#API_agent_GetAgentActionGroup_ResponseSyntax)
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * FunctionSchemaProperty functionSchemaProperty = FunctionSchemaProperty.builder()
+   * .functions(List.of(FunctionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .description("description")
+   * .parameters(Map.of(
+   * "parametersKey", ParameterDetailProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .description("description")
+   * .required(false)
+   * .build()))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-functionschema.html)
+   */
+  public interface FunctionSchemaProperty {
+    /**
+     * A list of functions that each define an action in the action group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-functionschema.html#cfn-bedrock-agent-functionschema-functions)
+     */
+    public fun functions(): Any
+
+    /**
+     * A builder for [FunctionSchemaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param functions A list of functions that each define an action in the action group. 
+       */
+      public fun functions(functions: IResolvable)
+
+      /**
+       * @param functions A list of functions that each define an action in the action group. 
+       */
+      public fun functions(functions: List<Any>)
+
+      /**
+       * @param functions A list of functions that each define an action in the action group. 
+       */
+      public fun functions(vararg functions: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnAgent.FunctionSchemaProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnAgent.FunctionSchemaProperty.builder()
+
+      /**
+       * @param functions A list of functions that each define an action in the action group. 
+       */
+      override fun functions(functions: IResolvable) {
+        cdkBuilder.functions(functions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param functions A list of functions that each define an action in the action group. 
+       */
+      override fun functions(functions: List<Any>) {
+        cdkBuilder.functions(functions.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param functions A list of functions that each define an action in the action group. 
+       */
+      override fun functions(vararg functions: Any): Unit = functions(functions.toList())
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnAgent.FunctionSchemaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.FunctionSchemaProperty,
+    ) : CdkObject(cdkObject),
+        FunctionSchemaProperty {
+      /**
+       * A list of functions that each define an action in the action group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-functionschema.html#cfn-bedrock-agent-functionschema-functions)
+       */
+      override fun functions(): Any = unwrap(this).getFunctions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FunctionSchemaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.FunctionSchemaProperty):
+          FunctionSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionSchemaProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FunctionSchemaProperty):
+          software.amazon.awscdk.services.bedrock.CfnAgent.FunctionSchemaProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnAgent.FunctionSchemaProperty
+    }
+  }
+
+  /**
+   * Configuration information for a guardrail that you use with the
+   * [Converse](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html)
+   * operation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * GuardrailConfigurationProperty guardrailConfigurationProperty =
+   * GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-guardrailconfiguration.html)
+   */
+  public interface GuardrailConfigurationProperty {
+    /**
+     * The identifier for the guardrail.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-guardrailconfiguration.html#cfn-bedrock-agent-guardrailconfiguration-guardrailidentifier)
+     */
+    public fun guardrailIdentifier(): String? = unwrap(this).getGuardrailIdentifier()
+
+    /**
+     * The version of the guardrail.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-guardrailconfiguration.html#cfn-bedrock-agent-guardrailconfiguration-guardrailversion)
+     */
+    public fun guardrailVersion(): String? = unwrap(this).getGuardrailVersion()
+
+    /**
+     * A builder for [GuardrailConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param guardrailIdentifier The identifier for the guardrail.
+       */
+      public fun guardrailIdentifier(guardrailIdentifier: String)
+
+      /**
+       * @param guardrailVersion The version of the guardrail.
+       */
+      public fun guardrailVersion(guardrailVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnAgent.GuardrailConfigurationProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnAgent.GuardrailConfigurationProperty.builder()
+
+      /**
+       * @param guardrailIdentifier The identifier for the guardrail.
+       */
+      override fun guardrailIdentifier(guardrailIdentifier: String) {
+        cdkBuilder.guardrailIdentifier(guardrailIdentifier)
+      }
+
+      /**
+       * @param guardrailVersion The version of the guardrail.
+       */
+      override fun guardrailVersion(guardrailVersion: String) {
+        cdkBuilder.guardrailVersion(guardrailVersion)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnAgent.GuardrailConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.GuardrailConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        GuardrailConfigurationProperty {
+      /**
+       * The identifier for the guardrail.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-guardrailconfiguration.html#cfn-bedrock-agent-guardrailconfiguration-guardrailidentifier)
+       */
+      override fun guardrailIdentifier(): String? = unwrap(this).getGuardrailIdentifier()
+
+      /**
+       * The version of the guardrail.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-guardrailconfiguration.html#cfn-bedrock-agent-guardrailconfiguration-guardrailversion)
+       */
+      override fun guardrailVersion(): String? = unwrap(this).getGuardrailVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GuardrailConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.GuardrailConfigurationProperty):
+          GuardrailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GuardrailConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GuardrailConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnAgent.GuardrailConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnAgent.GuardrailConfigurationProperty
+    }
+  }
+
+  /**
+   * Base inference parameters to pass to a model in a call to
+   * [Converse](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html) or
+   * [ConverseStream](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ConverseStream.html)
+   * . For more information, see [Inference parameters for foundation
    * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
+   *
+   * If you need to pass additional parameters that the model supports, use the
+   * `additionalModelRequestFields` request field in the call to `Converse` or `ConverseStream` . For
+   * more information, see [Model
+   * parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
    *
    * Example:
    *
@@ -1878,6 +2564,10 @@ public open class CfnAgent(
      * A lower value makes the model more likely to choose higher-probability options, while a
      * higher value makes the model more likely to choose lower-probability options.
      *
+     * The default value is the default value for the model that you are using. For more
+     * information, see [Inference parameters for foundation
+     * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-inferenceconfiguration.html#cfn-bedrock-agent-inferenceconfiguration-temperature)
      */
     public fun temperature(): Number? = unwrap(this).getTemperature()
@@ -1895,13 +2585,14 @@ public open class CfnAgent(
     public fun topK(): Number? = unwrap(this).getTopK()
 
     /**
-     * While generating a response, the model determines the probability of the following token at
-     * each point of generation.
+     * The percentage of most-likely candidates that the model considers for the next token.
      *
-     * The value that you set for `Top P` determines the number of most-likely candidates from which
-     * the model chooses the next token in the sequence. For example, if you set `topP` to 80, the
-     * model only selects the next token from the top 80% of the probability distribution of next
-     * tokens.
+     * For example, if you choose a value of 0.8 for `topP` , the model selects from the top 80% of
+     * the probability distribution of tokens that could be next in the sequence.
+     *
+     * The default value is the default value for the model that you are using. For more
+     * information, see [Inference parameters for foundation
+     * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-inferenceconfiguration.html#cfn-bedrock-agent-inferenceconfiguration-topp)
      */
@@ -1936,6 +2627,10 @@ public open class CfnAgent(
        * generating a response.
        * A lower value makes the model more likely to choose higher-probability options, while a
        * higher value makes the model more likely to choose lower-probability options.
+       *
+       * The default value is the default value for the model that you are using. For more
+       * information, see [Inference parameters for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
        */
       public fun temperature(temperature: Number)
 
@@ -1949,12 +2644,14 @@ public open class CfnAgent(
       public fun topK(topK: Number)
 
       /**
-       * @param topP While generating a response, the model determines the probability of the
-       * following token at each point of generation.
-       * The value that you set for `Top P` determines the number of most-likely candidates from
-       * which the model chooses the next token in the sequence. For example, if you set `topP` to 80,
-       * the model only selects the next token from the top 80% of the probability distribution of next
-       * tokens.
+       * @param topP The percentage of most-likely candidates that the model considers for the next
+       * token.
+       * For example, if you choose a value of 0.8 for `topP` , the model selects from the top 80%
+       * of the probability distribution of tokens that could be next in the sequence.
+       *
+       * The default value is the default value for the model that you are using. For more
+       * information, see [Inference parameters for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
        */
       public fun topP(topP: Number)
     }
@@ -1993,6 +2690,10 @@ public open class CfnAgent(
        * generating a response.
        * A lower value makes the model more likely to choose higher-probability options, while a
        * higher value makes the model more likely to choose lower-probability options.
+       *
+       * The default value is the default value for the model that you are using. For more
+       * information, see [Inference parameters for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
        */
       override fun temperature(temperature: Number) {
         cdkBuilder.temperature(temperature)
@@ -2010,12 +2711,14 @@ public open class CfnAgent(
       }
 
       /**
-       * @param topP While generating a response, the model determines the probability of the
-       * following token at each point of generation.
-       * The value that you set for `Top P` determines the number of most-likely candidates from
-       * which the model chooses the next token in the sequence. For example, if you set `topP` to 80,
-       * the model only selects the next token from the top 80% of the probability distribution of next
-       * tokens.
+       * @param topP The percentage of most-likely candidates that the model considers for the next
+       * token.
+       * For example, if you choose a value of 0.8 for `topP` , the model selects from the top 80%
+       * of the probability distribution of tokens that could be next in the sequence.
+       *
+       * The default value is the default value for the model that you are using. For more
+       * information, see [Inference parameters for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
        */
       override fun topP(topP: Number) {
         cdkBuilder.topP(topP)
@@ -2028,7 +2731,8 @@ public open class CfnAgent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.InferenceConfigurationProperty,
-    ) : CdkObject(cdkObject), InferenceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InferenceConfigurationProperty {
       /**
        * The maximum number of tokens allowed in the generated response.
        *
@@ -2053,6 +2757,10 @@ public open class CfnAgent(
        * A lower value makes the model more likely to choose higher-probability options, while a
        * higher value makes the model more likely to choose lower-probability options.
        *
+       * The default value is the default value for the model that you are using. For more
+       * information, see [Inference parameters for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-inferenceconfiguration.html#cfn-bedrock-agent-inferenceconfiguration-temperature)
        */
       override fun temperature(): Number? = unwrap(this).getTemperature()
@@ -2070,13 +2778,14 @@ public open class CfnAgent(
       override fun topK(): Number? = unwrap(this).getTopK()
 
       /**
-       * While generating a response, the model determines the probability of the following token at
-       * each point of generation.
+       * The percentage of most-likely candidates that the model considers for the next token.
        *
-       * The value that you set for `Top P` determines the number of most-likely candidates from
-       * which the model chooses the next token in the sequence. For example, if you set `topP` to 80,
-       * the model only selects the next token from the top 80% of the probability distribution of next
-       * tokens.
+       * For example, if you choose a value of 0.8 for `topP` , the model selects from the top 80%
+       * of the probability distribution of tokens that could be next in the sequence.
+       *
+       * The default value is the default value for the model that you are using. For more
+       * information, see [Inference parameters for foundation
+       * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-inferenceconfiguration.html#cfn-bedrock-agent-inferenceconfiguration-topp)
        */
@@ -2098,6 +2807,179 @@ public open class CfnAgent(
           software.amazon.awscdk.services.bedrock.CfnAgent.InferenceConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.bedrock.CfnAgent.InferenceConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains details about a parameter in a function for an action group.
+   *
+   * This data type is used in the following API operations:
+   *
+   * * [CreateAgentActionGroup
+   * request](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateAgentActionGroup.html#API_agent_CreateAgentActionGroup_RequestSyntax)
+   * * [CreateAgentActionGroup
+   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateAgentActionGroup.html#API_agent_CreateAgentActionGroup_ResponseSyntax)
+   * * [UpdateAgentActionGroup
+   * request](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_UpdateAgentActionGroup.html#API_agent_UpdateAgentActionGroup_RequestSyntax)
+   * * [UpdateAgentActionGroup
+   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_UpdateAgentActionGroup.html#API_agent_UpdateAgentActionGroup_ResponseSyntax)
+   * * [GetAgentActionGroup
+   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_GetAgentActionGroup.html#API_agent_GetAgentActionGroup_ResponseSyntax)
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * ParameterDetailProperty parameterDetailProperty = ParameterDetailProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .description("description")
+   * .required(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-parameterdetail.html)
+   */
+  public interface ParameterDetailProperty {
+    /**
+     * A description of the parameter.
+     *
+     * Helps the foundation model determine how to elicit the parameters from the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-parameterdetail.html#cfn-bedrock-agent-parameterdetail-description)
+     */
+    public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * Whether the parameter is required for the agent to complete the function for action group
+     * invocation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-parameterdetail.html#cfn-bedrock-agent-parameterdetail-required)
+     */
+    public fun required(): Any? = unwrap(this).getRequired()
+
+    /**
+     * The data type of the parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-parameterdetail.html#cfn-bedrock-agent-parameterdetail-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [ParameterDetailProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param description A description of the parameter.
+       * Helps the foundation model determine how to elicit the parameters from the user.
+       */
+      public fun description(description: String)
+
+      /**
+       * @param required Whether the parameter is required for the agent to complete the function
+       * for action group invocation.
+       */
+      public fun required(required: Boolean)
+
+      /**
+       * @param required Whether the parameter is required for the agent to complete the function
+       * for action group invocation.
+       */
+      public fun required(required: IResolvable)
+
+      /**
+       * @param type The data type of the parameter. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnAgent.ParameterDetailProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnAgent.ParameterDetailProperty.builder()
+
+      /**
+       * @param description A description of the parameter.
+       * Helps the foundation model determine how to elicit the parameters from the user.
+       */
+      override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      /**
+       * @param required Whether the parameter is required for the agent to complete the function
+       * for action group invocation.
+       */
+      override fun required(required: Boolean) {
+        cdkBuilder.required(required)
+      }
+
+      /**
+       * @param required Whether the parameter is required for the agent to complete the function
+       * for action group invocation.
+       */
+      override fun required(required: IResolvable) {
+        cdkBuilder.required(required.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param type The data type of the parameter. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.bedrock.CfnAgent.ParameterDetailProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.ParameterDetailProperty,
+    ) : CdkObject(cdkObject),
+        ParameterDetailProperty {
+      /**
+       * A description of the parameter.
+       *
+       * Helps the foundation model determine how to elicit the parameters from the user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-parameterdetail.html#cfn-bedrock-agent-parameterdetail-description)
+       */
+      override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * Whether the parameter is required for the agent to complete the function for action group
+       * invocation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-parameterdetail.html#cfn-bedrock-agent-parameterdetail-required)
+       */
+      override fun required(): Any? = unwrap(this).getRequired()
+
+      /**
+       * The data type of the parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-parameterdetail.html#cfn-bedrock-agent-parameterdetail-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ParameterDetailProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.ParameterDetailProperty):
+          ParameterDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterDetailProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ParameterDetailProperty):
+          software.amazon.awscdk.services.bedrock.CfnAgent.ParameterDetailProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnAgent.ParameterDetailProperty
     }
   }
 
@@ -2137,7 +3019,10 @@ public open class CfnAgent(
      *
      * You can use placeholder variables in the base prompt template to customize the prompt. For
      * more information, see [Prompt template placeholder
-     * variables](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html) .
+     * variables](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html) . For
+     * more information, see [Configure the prompt
+     * templates](https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts-configure.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-promptconfiguration.html#cfn-bedrock-agent-promptconfiguration-baseprompttemplate)
      */
@@ -2209,6 +3094,9 @@ public open class CfnAgent(
        * You can use placeholder variables in the base prompt template to customize the prompt. For
        * more information, see [Prompt template placeholder
        * variables](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html) .
+       * For more information, see [Configure the prompt
+       * templates](https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts-configure.html)
+       * .
        */
       public fun basePromptTemplate(basePromptTemplate: String)
 
@@ -2288,6 +3176,9 @@ public open class CfnAgent(
        * You can use placeholder variables in the base prompt template to customize the prompt. For
        * more information, see [Prompt template placeholder
        * variables](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html) .
+       * For more information, see [Configure the prompt
+       * templates](https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts-configure.html)
+       * .
        */
       override fun basePromptTemplate(basePromptTemplate: String) {
         cdkBuilder.basePromptTemplate(basePromptTemplate)
@@ -2377,13 +3268,17 @@ public open class CfnAgent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.PromptConfigurationProperty,
-    ) : CdkObject(cdkObject), PromptConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PromptConfigurationProperty {
       /**
        * Defines the prompt template with which to replace the default prompt template.
        *
        * You can use placeholder variables in the base prompt template to customize the prompt. For
        * more information, see [Prompt template placeholder
        * variables](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html) .
+       * For more information, see [Configure the prompt
+       * templates](https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts-configure.html)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-promptconfiguration.html#cfn-bedrock-agent-promptconfiguration-baseprompttemplate)
        */
@@ -2505,7 +3400,9 @@ public open class CfnAgent(
      * of the agent sequence.
      *
      * If you specify this field, at least one of the `promptConfigurations` must contain a
-     * `parserMode` value that is set to `OVERRIDDEN` .
+     * `parserMode` value that is set to `OVERRIDDEN` . For more information, see [Parser Lambda
+     * function in Amazon Bedrock
+     * Agents](https://docs.aws.amazon.com/bedrock/latest/userguide/lambda-parser.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-promptoverrideconfiguration.html#cfn-bedrock-agent-promptoverrideconfiguration-overridelambda)
      */
@@ -2530,7 +3427,9 @@ public open class CfnAgent(
        * @param overrideLambda The ARN of the Lambda function to use when parsing the raw foundation
        * model output in parts of the agent sequence.
        * If you specify this field, at least one of the `promptConfigurations` must contain a
-       * `parserMode` value that is set to `OVERRIDDEN` .
+       * `parserMode` value that is set to `OVERRIDDEN` . For more information, see [Parser Lambda
+       * function in Amazon Bedrock
+       * Agents](https://docs.aws.amazon.com/bedrock/latest/userguide/lambda-parser.html) .
        */
       public fun overrideLambda(overrideLambda: String)
 
@@ -2569,7 +3468,9 @@ public open class CfnAgent(
        * @param overrideLambda The ARN of the Lambda function to use when parsing the raw foundation
        * model output in parts of the agent sequence.
        * If you specify this field, at least one of the `promptConfigurations` must contain a
-       * `parserMode` value that is set to `OVERRIDDEN` .
+       * `parserMode` value that is set to `OVERRIDDEN` . For more information, see [Parser Lambda
+       * function in Amazon Bedrock
+       * Agents](https://docs.aws.amazon.com/bedrock/latest/userguide/lambda-parser.html) .
        */
       override fun overrideLambda(overrideLambda: String) {
         cdkBuilder.overrideLambda(overrideLambda)
@@ -2611,13 +3512,16 @@ public open class CfnAgent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.PromptOverrideConfigurationProperty,
-    ) : CdkObject(cdkObject), PromptOverrideConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PromptOverrideConfigurationProperty {
       /**
        * The ARN of the Lambda function to use when parsing the raw foundation model output in parts
        * of the agent sequence.
        *
        * If you specify this field, at least one of the `promptConfigurations` must contain a
-       * `parserMode` value that is set to `OVERRIDDEN` .
+       * `parserMode` value that is set to `OVERRIDDEN` . For more information, see [Parser Lambda
+       * function in Amazon Bedrock
+       * Agents](https://docs.aws.amazon.com/bedrock/latest/userguide/lambda-parser.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-promptoverrideconfiguration.html#cfn-bedrock-agent-promptoverrideconfiguration-overridelambda)
        */
@@ -2654,7 +3558,7 @@ public open class CfnAgent(
   }
 
   /**
-   * Contains information about the S3 object containing the resource.
+   * The identifier information for an Amazon S3 bucket.
    *
    * Example:
    *
@@ -2679,7 +3583,7 @@ public open class CfnAgent(
     public fun s3BucketName(): String? = unwrap(this).getS3BucketName()
 
     /**
-     * The S3 object key containing the resource.
+     * The S3 object key for the S3 resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-s3identifier.html#cfn-bedrock-agent-s3identifier-s3objectkey)
      */
@@ -2696,7 +3600,7 @@ public open class CfnAgent(
       public fun s3BucketName(s3BucketName: String)
 
       /**
-       * @param s3ObjectKey The S3 object key containing the resource.
+       * @param s3ObjectKey The S3 object key for the S3 resource.
        */
       public fun s3ObjectKey(s3ObjectKey: String)
     }
@@ -2714,7 +3618,7 @@ public open class CfnAgent(
       }
 
       /**
-       * @param s3ObjectKey The S3 object key containing the resource.
+       * @param s3ObjectKey The S3 object key for the S3 resource.
        */
       override fun s3ObjectKey(s3ObjectKey: String) {
         cdkBuilder.s3ObjectKey(s3ObjectKey)
@@ -2726,7 +3630,8 @@ public open class CfnAgent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.S3IdentifierProperty,
-    ) : CdkObject(cdkObject), S3IdentifierProperty {
+    ) : CdkObject(cdkObject),
+        S3IdentifierProperty {
       /**
        * The name of the S3 bucket.
        *
@@ -2735,7 +3640,7 @@ public open class CfnAgent(
       override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
 
       /**
-       * The S3 object key containing the resource.
+       * The S3 object key for the S3 resource.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-s3identifier.html#cfn-bedrock-agent-s3identifier-s3objectkey)
        */

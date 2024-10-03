@@ -56,7 +56,8 @@ public interface AlarmActionConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig,
-  ) : CdkObject(cdkObject), AlarmActionConfig {
+  ) : CdkObject(cdkObject),
+      AlarmActionConfig {
     /**
      * Return the ARN that should be used for a CloudWatch Alarm action.
      */

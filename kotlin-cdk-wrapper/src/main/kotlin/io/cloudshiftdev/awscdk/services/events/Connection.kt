@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Connection(
   cdkObject: software.amazon.awscdk.services.events.Connection,
-) : Resource(cdkObject), IConnection {
+) : Resource(cdkObject),
+    IConnection {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

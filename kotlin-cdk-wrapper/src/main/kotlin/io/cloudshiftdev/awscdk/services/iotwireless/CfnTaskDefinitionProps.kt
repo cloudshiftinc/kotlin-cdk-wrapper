@@ -301,7 +301,8 @@ public interface CfnTaskDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinitionProps,
-  ) : CdkObject(cdkObject), CfnTaskDefinitionProps {
+  ) : CdkObject(cdkObject),
+      CfnTaskDefinitionProps {
     /**
      * Whether to automatically create tasks using this task definition for all gateways with the
      * specified current version.

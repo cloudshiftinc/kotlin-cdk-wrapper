@@ -28,7 +28,8 @@ import kotlin.String
  */
 public open class ApiGatewayv2DomainProperties(
   cdkObject: software.amazon.awscdk.services.route53.targets.ApiGatewayv2DomainProperties,
-) : CdkObject(cdkObject), IAliasRecordTarget {
+) : CdkObject(cdkObject),
+    IAliasRecordTarget {
   public constructor(regionalDomainName: String, regionalHostedZoneId: String) :
       this(software.amazon.awscdk.services.route53.targets.ApiGatewayv2DomainProperties(regionalDomainName,
       regionalHostedZoneId)

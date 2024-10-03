@@ -110,7 +110,8 @@ public interface CfnResourceCollectionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollectionProps,
-  ) : CdkObject(cdkObject), CfnResourceCollectionProps {
+  ) : CdkObject(cdkObject),
+      CfnResourceCollectionProps {
     /**
      * Information about a filter used to specify which AWS resources are analyzed for anomalous
      * behavior by DevOps Guru.

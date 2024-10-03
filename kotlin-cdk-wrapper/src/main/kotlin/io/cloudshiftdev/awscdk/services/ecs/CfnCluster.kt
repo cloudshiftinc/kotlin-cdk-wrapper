@@ -51,6 +51,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .logging("logging")
  * .build())
+ * .managedStorageConfiguration(ManagedStorageConfigurationProperty.builder()
+ * .fargateEphemeralStorageKmsKeyId("fargateEphemeralStorageKmsKeyId")
+ * .kmsKeyId("kmsKeyId")
+ * .build())
  * .build())
  * .defaultCapacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
  * .base(123)
@@ -71,7 +75,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCluster(
   cdkObject: software.amazon.awscdk.services.ecs.CfnCluster,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.CfnCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -155,26 +161,26 @@ public open class CfnCluster(
   public open fun clusterSettings(vararg `value`: Any): Unit = clusterSettings(`value`.toList())
 
   /**
-   * The execute command configuration for the cluster.
+   * The execute command and managed storage configuration for the cluster.
    */
   public open fun configuration(): Any? = unwrap(this).getConfiguration()
 
   /**
-   * The execute command configuration for the cluster.
+   * The execute command and managed storage configuration for the cluster.
    */
   public open fun configuration(`value`: IResolvable) {
     unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The execute command configuration for the cluster.
+   * The execute command and managed storage configuration for the cluster.
    */
   public open fun configuration(`value`: ClusterConfigurationProperty) {
     unwrap(this).setConfiguration(`value`.let(ClusterConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   * The execute command configuration for the cluster.
+   * The execute command and managed storage configuration for the cluster.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("1e266837809905aa2bb30e14c304754921c7d70fc5aa7a9315dbba12185f3738")
@@ -375,26 +381,26 @@ public open class CfnCluster(
     public fun clusterSettings(vararg clusterSettings: Any)
 
     /**
-     * The execute command configuration for the cluster.
+     * The execute command and managed storage configuration for the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-configuration)
-     * @param configuration The execute command configuration for the cluster. 
+     * @param configuration The execute command and managed storage configuration for the cluster. 
      */
     public fun configuration(configuration: IResolvable)
 
     /**
-     * The execute command configuration for the cluster.
+     * The execute command and managed storage configuration for the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-configuration)
-     * @param configuration The execute command configuration for the cluster. 
+     * @param configuration The execute command and managed storage configuration for the cluster. 
      */
     public fun configuration(configuration: ClusterConfigurationProperty)
 
     /**
-     * The execute command configuration for the cluster.
+     * The execute command and managed storage configuration for the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-configuration)
-     * @param configuration The execute command configuration for the cluster. 
+     * @param configuration The execute command and managed storage configuration for the cluster. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ecbb13bf8972c170b1b30b1e3eebd7a17f7ed6b44e3908d3af4d9a7b84873c18")
@@ -668,30 +674,30 @@ public open class CfnCluster(
         clusterSettings(clusterSettings.toList())
 
     /**
-     * The execute command configuration for the cluster.
+     * The execute command and managed storage configuration for the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-configuration)
-     * @param configuration The execute command configuration for the cluster. 
+     * @param configuration The execute command and managed storage configuration for the cluster. 
      */
     override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The execute command configuration for the cluster.
+     * The execute command and managed storage configuration for the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-configuration)
-     * @param configuration The execute command configuration for the cluster. 
+     * @param configuration The execute command and managed storage configuration for the cluster. 
      */
     override fun configuration(configuration: ClusterConfigurationProperty) {
       cdkBuilder.configuration(configuration.let(ClusterConfigurationProperty.Companion::unwrap))
     }
 
     /**
-     * The execute command configuration for the cluster.
+     * The execute command and managed storage configuration for the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-configuration)
-     * @param configuration The execute command configuration for the cluster. 
+     * @param configuration The execute command and managed storage configuration for the cluster. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ecbb13bf8972c170b1b30b1e3eebd7a17f7ed6b44e3908d3af4d9a7b84873c18")
@@ -1039,7 +1045,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty,
-    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
+    ) : CdkObject(cdkObject),
+        CapacityProviderStrategyItemProperty {
       /**
        * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
        * provider.
@@ -1103,7 +1110,7 @@ public open class CfnCluster(
   }
 
   /**
-   * The execute command configuration for the cluster.
+   * The execute command and managed storage configuration for the cluster.
    *
    * Example:
    *
@@ -1124,6 +1131,10 @@ public open class CfnCluster(
    * .build())
    * .logging("logging")
    * .build())
+   * .managedStorageConfiguration(ManagedStorageConfigurationProperty.builder()
+   * .fargateEphemeralStorageKmsKeyId("fargateEphemeralStorageKmsKeyId")
+   * .kmsKeyId("kmsKeyId")
+   * .build())
    * .build();
    * ```
    *
@@ -1136,6 +1147,13 @@ public open class CfnCluster(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clusterconfiguration.html#cfn-ecs-cluster-clusterconfiguration-executecommandconfiguration)
      */
     public fun executeCommandConfiguration(): Any? = unwrap(this).getExecuteCommandConfiguration()
+
+    /**
+     * The details of the managed storage configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clusterconfiguration.html#cfn-ecs-cluster-clusterconfiguration-managedstorageconfiguration)
+     */
+    public fun managedStorageConfiguration(): Any? = unwrap(this).getManagedStorageConfiguration()
 
     /**
      * A builder for [ClusterConfigurationProperty]
@@ -1160,6 +1178,25 @@ public open class CfnCluster(
       @JvmName("e2c142dbeb86944d2f38ed48264d7c5a153056a38a629e653a939c6de008408f")
       public
           fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param managedStorageConfiguration The details of the managed storage configuration.
+       */
+      public fun managedStorageConfiguration(managedStorageConfiguration: IResolvable)
+
+      /**
+       * @param managedStorageConfiguration The details of the managed storage configuration.
+       */
+      public
+          fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfigurationProperty)
+
+      /**
+       * @param managedStorageConfiguration The details of the managed storage configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1bbc874e7f6c60d3c5b5b98c1a6bf2524c3775852b3fa348bf185e307b58ddc1")
+      public
+          fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1192,6 +1229,31 @@ public open class CfnCluster(
           Unit =
           executeCommandConfiguration(ExecuteCommandConfigurationProperty(executeCommandConfiguration))
 
+      /**
+       * @param managedStorageConfiguration The details of the managed storage configuration.
+       */
+      override fun managedStorageConfiguration(managedStorageConfiguration: IResolvable) {
+        cdkBuilder.managedStorageConfiguration(managedStorageConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param managedStorageConfiguration The details of the managed storage configuration.
+       */
+      override
+          fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfigurationProperty) {
+        cdkBuilder.managedStorageConfiguration(managedStorageConfiguration.let(ManagedStorageConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param managedStorageConfiguration The details of the managed storage configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1bbc874e7f6c60d3c5b5b98c1a6bf2524c3775852b3fa348bf185e307b58ddc1")
+      override
+          fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          managedStorageConfiguration(ManagedStorageConfigurationProperty(managedStorageConfiguration))
+
       public fun build():
           software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty =
           cdkBuilder.build()
@@ -1199,7 +1261,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty,
-    ) : CdkObject(cdkObject), ClusterConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ClusterConfigurationProperty {
       /**
        * The details of the execute command configuration.
        *
@@ -1207,6 +1270,14 @@ public open class CfnCluster(
        */
       override fun executeCommandConfiguration(): Any? =
           unwrap(this).getExecuteCommandConfiguration()
+
+      /**
+       * The details of the managed storage configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clusterconfiguration.html#cfn-ecs-cluster-clusterconfiguration-managedstorageconfiguration)
+       */
+      override fun managedStorageConfiguration(): Any? =
+          unwrap(this).getManagedStorageConfiguration()
     }
 
     public companion object {
@@ -1333,7 +1404,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty,
-    ) : CdkObject(cdkObject), ClusterSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ClusterSettingsProperty {
       /**
        * The name of the cluster setting.
        *
@@ -1556,7 +1628,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty,
-    ) : CdkObject(cdkObject), ExecuteCommandConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ExecuteCommandConfigurationProperty {
       /**
        * Specify an AWS Key Management Service key ID to encrypt the data between the local client
        * and the container.
@@ -1804,7 +1877,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandLogConfigurationProperty,
-    ) : CdkObject(cdkObject), ExecuteCommandLogConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ExecuteCommandLogConfigurationProperty {
       /**
        * Determines whether to use encryption on the CloudWatch logs.
        *
@@ -1870,6 +1944,122 @@ public open class CfnCluster(
           software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandLogConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandLogConfigurationProperty
+    }
+  }
+
+  /**
+   * The managed storage configuration for the cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * ManagedStorageConfigurationProperty managedStorageConfigurationProperty =
+   * ManagedStorageConfigurationProperty.builder()
+   * .fargateEphemeralStorageKmsKeyId("fargateEphemeralStorageKmsKeyId")
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-managedstorageconfiguration.html)
+   */
+  public interface ManagedStorageConfigurationProperty {
+    /**
+     * Specify the AWS Key Management Service key ID for the Fargate ephemeral storage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-managedstorageconfiguration.html#cfn-ecs-cluster-managedstorageconfiguration-fargateephemeralstoragekmskeyid)
+     */
+    public fun fargateEphemeralStorageKmsKeyId(): String? =
+        unwrap(this).getFargateEphemeralStorageKmsKeyId()
+
+    /**
+     * Specify a AWS Key Management Service key ID to encrypt the managed storage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-managedstorageconfiguration.html#cfn-ecs-cluster-managedstorageconfiguration-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * A builder for [ManagedStorageConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param fargateEphemeralStorageKmsKeyId Specify the AWS Key Management Service key ID for
+       * the Fargate ephemeral storage.
+       */
+      public fun fargateEphemeralStorageKmsKeyId(fargateEphemeralStorageKmsKeyId: String)
+
+      /**
+       * @param kmsKeyId Specify a AWS Key Management Service key ID to encrypt the managed storage.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnCluster.ManagedStorageConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnCluster.ManagedStorageConfigurationProperty.builder()
+
+      /**
+       * @param fargateEphemeralStorageKmsKeyId Specify the AWS Key Management Service key ID for
+       * the Fargate ephemeral storage.
+       */
+      override fun fargateEphemeralStorageKmsKeyId(fargateEphemeralStorageKmsKeyId: String) {
+        cdkBuilder.fargateEphemeralStorageKmsKeyId(fargateEphemeralStorageKmsKeyId)
+      }
+
+      /**
+       * @param kmsKeyId Specify a AWS Key Management Service key ID to encrypt the managed storage.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnCluster.ManagedStorageConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ManagedStorageConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ManagedStorageConfigurationProperty {
+      /**
+       * Specify the AWS Key Management Service key ID for the Fargate ephemeral storage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-managedstorageconfiguration.html#cfn-ecs-cluster-managedstorageconfiguration-fargateephemeralstoragekmskeyid)
+       */
+      override fun fargateEphemeralStorageKmsKeyId(): String? =
+          unwrap(this).getFargateEphemeralStorageKmsKeyId()
+
+      /**
+       * Specify a AWS Key Management Service key ID to encrypt the managed storage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-managedstorageconfiguration.html#cfn-ecs-cluster-managedstorageconfiguration-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ManagedStorageConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ManagedStorageConfigurationProperty):
+          ManagedStorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManagedStorageConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ManagedStorageConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnCluster.ManagedStorageConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnCluster.ManagedStorageConfigurationProperty
     }
   }
 
@@ -2002,7 +2192,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ServiceConnectDefaultsProperty,
-    ) : CdkObject(cdkObject), ServiceConnectDefaultsProperty {
+    ) : CdkObject(cdkObject),
+        ServiceConnectDefaultsProperty {
       /**
        * The namespace name or full Amazon Resource Name (ARN) of the AWS Cloud Map namespace that's
        * used when you create a service and don't specify a Service Connect configuration.

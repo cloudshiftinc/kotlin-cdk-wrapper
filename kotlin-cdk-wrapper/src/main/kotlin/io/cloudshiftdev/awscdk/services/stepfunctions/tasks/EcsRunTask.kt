@@ -64,7 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EcsRunTask(
   cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask,
-) : TaskStateBase(cdkObject), IConnectable {
+) : TaskStateBase(cdkObject),
+    IConnectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -138,6 +139,16 @@ public open class EcsRunTask(
      * @param containerOverrides Container setting overrides. 
      */
     public fun containerOverrides(vararg containerOverrides: ContainerOverride)
+
+    /**
+     * Cpu setting override.
+     *
+     * Default: - No override
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskOverride.html)
+     * @param cpu Cpu setting override. 
+     */
+    public fun cpu(cpu: String)
 
     /**
      * Credentials for an IAM Role that the State Machine assumes for executing the task.
@@ -240,6 +251,16 @@ public open class EcsRunTask(
      * your tasks and services are hosted. 
      */
     public fun launchTarget(launchTarget: IEcsLaunchTarget)
+
+    /**
+     * Memory setting override.
+     *
+     * Default: - No override
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskOverride.html)
+     * @param memoryMiB Memory setting override. 
+     */
+    public fun memoryMiB(memoryMiB: String)
 
     /**
      * JSONPath expression to select select a portion of the state output to pass to the next state.
@@ -452,6 +473,18 @@ public open class EcsRunTask(
         containerOverrides(containerOverrides.toList())
 
     /**
+     * Cpu setting override.
+     *
+     * Default: - No override
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskOverride.html)
+     * @param cpu Cpu setting override. 
+     */
+    override fun cpu(cpu: String) {
+      cdkBuilder.cpu(cpu)
+    }
+
+    /**
      * Credentials for an IAM Role that the State Machine assumes for executing the task.
      *
      * This enables cross-account resource invocations.
@@ -566,6 +599,18 @@ public open class EcsRunTask(
      */
     override fun launchTarget(launchTarget: IEcsLaunchTarget) {
       cdkBuilder.launchTarget(launchTarget.let(IEcsLaunchTarget.Companion::unwrap))
+    }
+
+    /**
+     * Memory setting override.
+     *
+     * Default: - No override
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskOverride.html)
+     * @param memoryMiB Memory setting override. 
+     */
+    override fun memoryMiB(memoryMiB: String) {
+      cdkBuilder.memoryMiB(memoryMiB)
     }
 
     /**

@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVirtualCluster(
   cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -404,7 +406,8 @@ public open class CfnVirtualCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty,
-    ) : CdkObject(cdkObject), ContainerInfoProperty {
+    ) : CdkObject(cdkObject),
+        ContainerInfoProperty {
       /**
        * The information about the Amazon EKS cluster.
        *
@@ -577,7 +580,8 @@ public open class CfnVirtualCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerProviderProperty,
-    ) : CdkObject(cdkObject), ContainerProviderProperty {
+    ) : CdkObject(cdkObject),
+        ContainerProviderProperty {
       /**
        * The ID of the container cluster.
        *
@@ -696,7 +700,8 @@ public open class CfnVirtualCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty,
-    ) : CdkObject(cdkObject), EksInfoProperty {
+    ) : CdkObject(cdkObject),
+        EksInfoProperty {
       /**
        * The namespaces of the EKS cluster.
        *

@@ -78,7 +78,8 @@ public interface IntrinsicProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IntrinsicProps,
-  ) : CdkObject(cdkObject), IntrinsicProps {
+  ) : CdkObject(cdkObject),
+      IntrinsicProps {
     /**
      * Capture the stack trace of where this token is created.
      *

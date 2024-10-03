@@ -55,7 +55,10 @@ public interface CfnRepositoryProps {
   public fun domainName(): String
 
   /**
-   * The 12-digit account ID of the AWS account that owns the domain.
+   * The 12-digit account number of the AWS account that owns the domain that contains the
+   * repository.
+   *
+   * It does not include dashes or spaces.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-domainowner)
    */
@@ -121,7 +124,9 @@ public interface CfnRepositoryProps {
     public fun domainName(domainName: String)
 
     /**
-     * @param domainOwner The 12-digit account ID of the AWS account that owns the domain.
+     * @param domainOwner The 12-digit account number of the AWS account that owns the domain that
+     * contains the repository.
+     * It does not include dashes or spaces.
      */
     public fun domainOwner(domainOwner: String)
 
@@ -198,7 +203,9 @@ public interface CfnRepositoryProps {
     }
 
     /**
-     * @param domainOwner The 12-digit account ID of the AWS account that owns the domain.
+     * @param domainOwner The 12-digit account number of the AWS account that owns the domain that
+     * contains the repository.
+     * It does not include dashes or spaces.
      */
     override fun domainOwner(domainOwner: String) {
       cdkBuilder.domainOwner(domainOwner)
@@ -274,7 +281,8 @@ public interface CfnRepositoryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codeartifact.CfnRepositoryProps,
-  ) : CdkObject(cdkObject), CfnRepositoryProps {
+  ) : CdkObject(cdkObject),
+      CfnRepositoryProps {
     /**
      * A text description of the repository.
      *
@@ -290,7 +298,10 @@ public interface CfnRepositoryProps {
     override fun domainName(): String = unwrap(this).getDomainName()
 
     /**
-     * The 12-digit account ID of the AWS account that owns the domain.
+     * The 12-digit account number of the AWS account that owns the domain that contains the
+     * repository.
+     *
+     * It does not include dashes or spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-domainowner)
      */

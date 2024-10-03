@@ -682,7 +682,8 @@ public interface CfnApiProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiProps,
-  ) : CdkObject(cdkObject), CfnApiProps {
+  ) : CdkObject(cdkObject),
+      CfnApiProps {
     /**
      * An API key selection expression.
      *

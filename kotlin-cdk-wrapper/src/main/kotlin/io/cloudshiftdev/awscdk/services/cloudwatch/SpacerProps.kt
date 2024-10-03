@@ -77,7 +77,8 @@ public interface SpacerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.SpacerProps,
-  ) : CdkObject(cdkObject), SpacerProps {
+  ) : CdkObject(cdkObject),
+      SpacerProps {
     /**
      * Height of the spacer.
      *

@@ -120,7 +120,8 @@ public interface CfnLandingZoneProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.controltower.CfnLandingZoneProps,
-  ) : CdkObject(cdkObject), CfnLandingZoneProps {
+  ) : CdkObject(cdkObject),
+      CfnLandingZoneProps {
     /**
      * The landing zone manifest JSON text file that specifies the landing zone configurations.
      *

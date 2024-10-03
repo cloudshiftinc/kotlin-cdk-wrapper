@@ -45,6 +45,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .blockOverrideDomain("blockOverrideDomain")
  * .blockOverrideTtl(123)
  * .blockResponse("blockResponse")
+ * .firewallDomainRedirectionAction("firewallDomainRedirectionAction")
  * .qtype("qtype")
  * .build()))
  * .name("name")
@@ -59,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFirewallRuleGroup(
   cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -378,6 +381,7 @@ public open class CfnFirewallRuleGroup(
    * .blockOverrideDomain("blockOverrideDomain")
    * .blockOverrideTtl(123)
    * .blockResponse("blockResponse")
+   * .firewallDomainRedirectionAction("firewallDomainRedirectionAction")
    * .qtype("qtype")
    * .build();
    * ```
@@ -453,6 +457,21 @@ public open class CfnFirewallRuleGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewalldomainlistid)
      */
     public fun firewallDomainListId(): String
+
+    /**
+     * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as
+     * CNAME, or DNAME.
+     *
+     * `Inspect_Redirection_Domain` (Default) inspects all domains in the redirection chain. The
+     * individual domains in the redirection chain must be added to the domain list.
+     *
+     * `Trust_Redirection_Domain` inspects only the first domain in the redirection chain. You don't
+     * need to add the subsequent domains in the domain in the redirection list to the domain list.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewalldomainredirectionaction)
+     */
+    public fun firewallDomainRedirectionAction(): String? =
+        unwrap(this).getFirewallDomainRedirectionAction()
 
     /**
      * The priority of the rule in the rule group.
@@ -545,6 +564,18 @@ public open class CfnFirewallRuleGroup(
        * @param firewallDomainListId The ID of the domain list that's used in the rule. 
        */
       public fun firewallDomainListId(firewallDomainListId: String)
+
+      /**
+       * @param firewallDomainRedirectionAction How you want the the rule to evaluate DNS
+       * redirection in the DNS redirection chain, such as CNAME, or DNAME.
+       * `Inspect_Redirection_Domain` (Default) inspects all domains in the redirection chain. The
+       * individual domains in the redirection chain must be added to the domain list.
+       *
+       * `Trust_Redirection_Domain` inspects only the first domain in the redirection chain. You
+       * don't need to add the subsequent domains in the domain in the redirection list to the domain
+       * list.
+       */
+      public fun firewallDomainRedirectionAction(firewallDomainRedirectionAction: String)
 
       /**
        * @param priority The priority of the rule in the rule group. 
@@ -647,6 +678,20 @@ public open class CfnFirewallRuleGroup(
       }
 
       /**
+       * @param firewallDomainRedirectionAction How you want the the rule to evaluate DNS
+       * redirection in the DNS redirection chain, such as CNAME, or DNAME.
+       * `Inspect_Redirection_Domain` (Default) inspects all domains in the redirection chain. The
+       * individual domains in the redirection chain must be added to the domain list.
+       *
+       * `Trust_Redirection_Domain` inspects only the first domain in the redirection chain. You
+       * don't need to add the subsequent domains in the domain in the redirection list to the domain
+       * list.
+       */
+      override fun firewallDomainRedirectionAction(firewallDomainRedirectionAction: String) {
+        cdkBuilder.firewallDomainRedirectionAction(firewallDomainRedirectionAction)
+      }
+
+      /**
        * @param priority The priority of the rule in the rule group. 
        * This value must be unique within the rule group. DNS Firewall processes the rules in a rule
        * group by order of priority, starting from the lowest setting.
@@ -686,7 +731,8 @@ public open class CfnFirewallRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup.FirewallRuleProperty,
-    ) : CdkObject(cdkObject), FirewallRuleProperty {
+    ) : CdkObject(cdkObject),
+        FirewallRuleProperty {
       /**
        * The action that DNS Firewall should take on a DNS query when it matches one of the domains
        * in the rule's domain list:  - `ALLOW` - Permit the request to go through.
@@ -755,6 +801,22 @@ public open class CfnFirewallRuleGroup(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewalldomainlistid)
        */
       override fun firewallDomainListId(): String = unwrap(this).getFirewallDomainListId()
+
+      /**
+       * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as
+       * CNAME, or DNAME.
+       *
+       * `Inspect_Redirection_Domain` (Default) inspects all domains in the redirection chain. The
+       * individual domains in the redirection chain must be added to the domain list.
+       *
+       * `Trust_Redirection_Domain` inspects only the first domain in the redirection chain. You
+       * don't need to add the subsequent domains in the domain in the redirection list to the domain
+       * list.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewalldomainredirectionaction)
+       */
+      override fun firewallDomainRedirectionAction(): String? =
+          unwrap(this).getFirewallDomainRedirectionAction()
 
       /**
        * The priority of the rule in the rule group.

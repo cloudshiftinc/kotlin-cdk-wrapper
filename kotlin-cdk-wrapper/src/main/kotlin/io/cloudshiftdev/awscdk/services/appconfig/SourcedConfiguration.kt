@@ -32,7 +32,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class SourcedConfiguration(
   cdkObject: software.amazon.awscdk.services.appconfig.SourcedConfiguration,
-) : CloudshiftdevConstructsConstruct(cdkObject), IConfiguration, IExtensible {
+) : CloudshiftdevConstructsConstruct(cdkObject),
+    IConfiguration,
+    IExtensible {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -533,7 +535,8 @@ public open class SourcedConfiguration(
     /**
      * The IAM role to retrieve the configuration.
      *
-     * Default: - A role is generated.
+     * Default: - Auto generated if location type is not ConfigurationSourceType.CODE_PIPELINE
+     * otherwise no role specified.
      *
      * @param retrievalRole The IAM role to retrieve the configuration. 
      */
@@ -684,7 +687,8 @@ public open class SourcedConfiguration(
     /**
      * The IAM role to retrieve the configuration.
      *
-     * Default: - A role is generated.
+     * Default: - Auto generated if location type is not ConfigurationSourceType.CODE_PIPELINE
+     * otherwise no role specified.
      *
      * @param retrievalRole The IAM role to retrieve the configuration. 
      */

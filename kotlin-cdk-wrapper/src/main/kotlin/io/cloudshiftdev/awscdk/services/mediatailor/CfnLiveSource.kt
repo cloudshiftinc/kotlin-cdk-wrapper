@@ -48,7 +48,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLiveSource(
   cdkObject: software.amazon.awscdk.services.mediatailor.CfnLiveSource,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -440,7 +442,8 @@ public open class CfnLiveSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnLiveSource.HttpPackageConfigurationProperty,
-    ) : CdkObject(cdkObject), HttpPackageConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        HttpPackageConfigurationProperty {
       /**
        * The relative path to the URL for this VOD source.
        *

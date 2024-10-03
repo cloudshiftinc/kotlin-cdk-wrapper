@@ -77,7 +77,8 @@ public interface VpnGatewayProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.VpnGatewayProps,
-  ) : CdkObject(cdkObject), VpnGatewayProps {
+  ) : CdkObject(cdkObject),
+      VpnGatewayProps {
     /**
      * Explicitly specify an Asn or let aws pick an Asn for you.
      *

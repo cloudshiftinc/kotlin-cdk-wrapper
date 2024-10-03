@@ -40,7 +40,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Policy(
   cdkObject: software.amazon.awscdk.services.iam.Policy,
-) : Resource(cdkObject), IPolicy, IGrantable {
+) : Resource(cdkObject),
+    IPolicy,
+    IGrantable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.Policy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

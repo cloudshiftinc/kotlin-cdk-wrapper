@@ -104,7 +104,8 @@ public interface CfnConnectionAliasProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.workspaces.CfnConnectionAliasProps,
-  ) : CdkObject(cdkObject), CfnConnectionAliasProps {
+  ) : CdkObject(cdkObject),
+      CfnConnectionAliasProps {
     /**
      * The connection string specified for the connection alias.
      *

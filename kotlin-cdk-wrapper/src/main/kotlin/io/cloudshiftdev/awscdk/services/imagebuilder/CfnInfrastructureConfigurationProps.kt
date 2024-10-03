@@ -438,7 +438,8 @@ public interface CfnInfrastructureConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfigurationProps,
-  ) : CdkObject(cdkObject), CfnInfrastructureConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnInfrastructureConfigurationProps {
     /**
      * The description of the infrastructure configuration.
      *

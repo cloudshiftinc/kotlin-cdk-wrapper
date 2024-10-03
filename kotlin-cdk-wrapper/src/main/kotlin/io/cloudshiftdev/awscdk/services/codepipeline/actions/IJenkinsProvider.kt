@@ -35,7 +35,8 @@ public interface IJenkinsProvider : IConstruct {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.IJenkinsProvider,
-  ) : CdkObject(cdkObject), IJenkinsProvider {
+  ) : CdkObject(cdkObject),
+      IJenkinsProvider {
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
     /**

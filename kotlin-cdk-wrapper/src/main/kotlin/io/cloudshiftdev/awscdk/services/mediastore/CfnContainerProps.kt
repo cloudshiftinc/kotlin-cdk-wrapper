@@ -479,7 +479,8 @@ public interface CfnContainerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediastore.CfnContainerProps,
-  ) : CdkObject(cdkObject), CfnContainerProps {
+  ) : CdkObject(cdkObject),
+      CfnContainerProps {
     /**
      * The state of access logging on the container.
      *

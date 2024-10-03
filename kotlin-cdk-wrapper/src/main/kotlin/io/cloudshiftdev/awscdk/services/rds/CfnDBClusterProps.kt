@@ -50,7 +50,9 @@ import kotlin.jvm.JvmName
  * .enableGlobalWriteForwarding(false)
  * .enableHttpEndpoint(false)
  * .enableIamDatabaseAuthentication(false)
+ * .enableLocalWriteForwarding(false)
  * .engine("engine")
+ * .engineLifecycleSupport("engineLifecycleSupport")
  * .engineMode("engineMode")
  * .engineVersion("engineVersion")
  * .globalClusterIdentifier("globalClusterIdentifier")
@@ -157,21 +159,15 @@ public interface CfnDBClusterProps {
   public fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?: emptyList()
 
   /**
-   * The target backtrack window, in seconds. To disable backtracking, set this value to 0.
+   * The target backtrack window, in seconds. To disable backtracking, set this value to `0` .
    *
+   * Valid for Cluster Type: Aurora MySQL DB clusters only
    *
-   * Currently, Backtrack is only supported for Aurora MySQL DB clusters.
-   *
-   *
-   * Default: 0
+   * Default: `0`
    *
    * Constraints:
    *
    * * If specified, this value must be set to a number from 0 to 259,200 (72 hours).
-   *
-   * Valid for: Aurora MySQL DB clusters only
-   *
-   * Default: - 0
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-backtrackwindow)
    */
@@ -271,8 +267,6 @@ public interface CfnDBClusterProps {
    * "DBClusterParameterGroups[].DBClusterParameterGroupName" --output text`
    *
    * Valid for: Aurora DB clusters and Multi-AZ DB clusters
-   *
-   * Default: - "default.aurora5.6"
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusterparametergroupname)
    */
@@ -442,6 +436,18 @@ public interface CfnDBClusterProps {
       unwrap(this).getEnableIamDatabaseAuthentication()
 
   /**
+   * Specifies whether read replicas can forward write operations to the writer DB instance in the
+   * DB cluster.
+   *
+   * By default, write operations aren't allowed on reader DB instances.
+   *
+   * Valid for: Aurora DB clusters only
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enablelocalwriteforwarding)
+   */
+  public fun enableLocalWriteForwarding(): Any? = unwrap(this).getEnableLocalWriteForwarding()
+
+  /**
    * The name of the database engine to be used for this DB cluster.
    *
    * Valid Values:
@@ -456,6 +462,38 @@ public interface CfnDBClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engine)
    */
   public fun engine(): String? = unwrap(this).getEngine()
+
+  /**
+   * The life cycle type for this DB cluster.
+   *
+   *
+   * By default, this value is set to `open-source-rds-extended-support` , which enrolls your DB
+   * cluster into Amazon RDS Extended Support. At the end of standard support, you can avoid charges
+   * for Extended Support by setting the value to `open-source-rds-extended-support-disabled` . In this
+   * case, creating the DB cluster will fail if the DB major version is past its end of standard
+   * support date.
+   *
+   *
+   * You can use this setting to enroll your DB cluster into Amazon RDS Extended Support. With RDS
+   * Extended Support, you can run the selected major engine version on your DB cluster past the end of
+   * standard support for that engine version. For more information, see the following sections:
+   *
+   * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+   * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+   * the *Amazon Aurora User Guide*
+   * * Amazon RDS - [Using Amazon RDS Extended
+   * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+   * *Amazon RDS User Guide*
+   *
+   * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+   *
+   * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+   *
+   * Default: `open-source-rds-extended-support`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enginelifecyclesupport)
+   */
+  public fun engineLifecycleSupport(): String? = unwrap(this).getEngineLifecycleSupport()
 
   /**
    * The DB engine mode of the DB cluster, either `provisioned` or `serverless` .
@@ -681,8 +719,6 @@ public interface CfnDBClusterProps {
    *
    * Default: `0`
    *
-   * Default: - 0
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-monitoringinterval)
    */
   public fun monitoringInterval(): Number? = unwrap(this).getMonitoringInterval()
@@ -842,11 +878,12 @@ public interface CfnDBClusterProps {
   /**
    * Specifies whether the DB cluster is publicly accessible.
    *
-   * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to
-   * the private IP address from within the DB cluster's virtual private cloud (VPC). It resolves to
-   * the public IP address from outside of the DB cluster's VPC. Access to the DB cluster is ultimately
-   * controlled by the security group it uses. That public access isn't permitted if the security group
-   * assigned to the DB cluster doesn't permit it.
+   * When the DB cluster is publicly accessible and you connect from outside of the DB cluster's
+   * virtual private cloud (VPC), its Domain Name System (DNS) endpoint resolves to the public IP
+   * address. When you connect from within the same VPC as the DB cluster, the endpoint resolves to the
+   * private IP address. Access to the DB cluster is ultimately controlled by the security group it
+   * uses. That public access isn't permitted if the security group assigned to the DB cluster doesn't
+   * permit it.
    *
    * When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name
    * that resolves to a private IP address.
@@ -918,8 +955,6 @@ public interface CfnDBClusterProps {
    * of the source DB cluster.
    *
    * Valid for: Aurora DB clusters and Multi-AZ DB clusters
-   *
-   * Default: - "full-copy"
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-restoretype)
    */
@@ -1078,9 +1113,9 @@ public interface CfnDBClusterProps {
   public fun storageType(): String? = unwrap(this).getStorageType()
 
   /**
-   * An optional array of key-value pairs to apply to this DB cluster.
+   * Tags to assign to the DB cluster.
    *
-   * Valid for: Aurora DB clusters and Multi-AZ DB clusters
+   * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-tags)
    */
@@ -1197,18 +1232,14 @@ public interface CfnDBClusterProps {
 
     /**
      * @param backtrackWindow The target backtrack window, in seconds. To disable backtracking, set
-     * this value to 0.
+     * this value to `0` .
+     * Valid for Cluster Type: Aurora MySQL DB clusters only
      *
-     * Currently, Backtrack is only supported for Aurora MySQL DB clusters.
-     *
-     *
-     * Default: 0
+     * Default: `0`
      *
      * Constraints:
      *
      * * If specified, this value must be set to a number from 0 to 259,200 (72 hours).
-     *
-     * Valid for: Aurora MySQL DB clusters only
      */
     public fun backtrackWindow(backtrackWindow: Number)
 
@@ -1517,6 +1548,24 @@ public interface CfnDBClusterProps {
     public fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable)
 
     /**
+     * @param enableLocalWriteForwarding Specifies whether read replicas can forward write
+     * operations to the writer DB instance in the DB cluster.
+     * By default, write operations aren't allowed on reader DB instances.
+     *
+     * Valid for: Aurora DB clusters only
+     */
+    public fun enableLocalWriteForwarding(enableLocalWriteForwarding: Boolean)
+
+    /**
+     * @param enableLocalWriteForwarding Specifies whether read replicas can forward write
+     * operations to the writer DB instance in the DB cluster.
+     * By default, write operations aren't allowed on reader DB instances.
+     *
+     * Valid for: Aurora DB clusters only
+     */
+    public fun enableLocalWriteForwarding(enableLocalWriteForwarding: IResolvable)
+
+    /**
      * @param engine The name of the database engine to be used for this DB cluster.
      * Valid Values:
      *
@@ -1528,6 +1577,35 @@ public interface CfnDBClusterProps {
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
     public fun engine(engine: String)
+
+    /**
+     * @param engineLifecycleSupport The life cycle type for this DB cluster.
+     *
+     * By default, this value is set to `open-source-rds-extended-support` , which enrolls your DB
+     * cluster into Amazon RDS Extended Support. At the end of standard support, you can avoid charges
+     * for Extended Support by setting the value to `open-source-rds-extended-support-disabled` . In
+     * this case, creating the DB cluster will fail if the DB major version is past its end of standard
+     * support date.
+     *
+     *
+     * You can use this setting to enroll your DB cluster into Amazon RDS Extended Support. With RDS
+     * Extended Support, you can run the selected major engine version on your DB cluster past the end
+     * of standard support for that engine version. For more information, see the following sections:
+     *
+     * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * the *Amazon Aurora User Guide*
+     * * Amazon RDS - [Using Amazon RDS Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * *Amazon RDS User Guide*
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+     *
+     * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+     *
+     * Default: `open-source-rds-extended-support`
+     */
+    public fun engineLifecycleSupport(engineLifecycleSupport: String)
 
     /**
      * @param engineMode The DB engine mode of the DB cluster, either `provisioned` or `serverless`
@@ -1922,11 +2000,12 @@ public interface CfnDBClusterProps {
 
     /**
      * @param publiclyAccessible Specifies whether the DB cluster is publicly accessible.
-     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to
-     * the private IP address from within the DB cluster's virtual private cloud (VPC). It resolves to
-     * the public IP address from outside of the DB cluster's VPC. Access to the DB cluster is
-     * ultimately controlled by the security group it uses. That public access isn't permitted if the
-     * security group assigned to the DB cluster doesn't permit it.
+     * When the DB cluster is publicly accessible and you connect from outside of the DB cluster's
+     * virtual private cloud (VPC), its Domain Name System (DNS) endpoint resolves to the public IP
+     * address. When you connect from within the same VPC as the DB cluster, the endpoint resolves to
+     * the private IP address. Access to the DB cluster is ultimately controlled by the security group
+     * it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     * doesn't permit it.
      *
      * When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name
      * that resolves to a private IP address.
@@ -1955,11 +2034,12 @@ public interface CfnDBClusterProps {
 
     /**
      * @param publiclyAccessible Specifies whether the DB cluster is publicly accessible.
-     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to
-     * the private IP address from within the DB cluster's virtual private cloud (VPC). It resolves to
-     * the public IP address from outside of the DB cluster's VPC. Access to the DB cluster is
-     * ultimately controlled by the security group it uses. That public access isn't permitted if the
-     * security group assigned to the DB cluster doesn't permit it.
+     * When the DB cluster is publicly accessible and you connect from outside of the DB cluster's
+     * virtual private cloud (VPC), its Domain Name System (DNS) endpoint resolves to the public IP
+     * address. When you connect from within the same VPC as the DB cluster, the endpoint resolves to
+     * the private IP address. Access to the DB cluster is ultimately controlled by the security group
+     * it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     * doesn't permit it.
      *
      * When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name
      * that resolves to a private IP address.
@@ -2232,14 +2312,14 @@ public interface CfnDBClusterProps {
     public fun storageType(storageType: String)
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this DB cluster.
-     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     * @param tags Tags to assign to the DB cluster.
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this DB cluster.
-     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     * @param tags Tags to assign to the DB cluster.
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -2381,18 +2461,14 @@ public interface CfnDBClusterProps {
 
     /**
      * @param backtrackWindow The target backtrack window, in seconds. To disable backtracking, set
-     * this value to 0.
+     * this value to `0` .
+     * Valid for Cluster Type: Aurora MySQL DB clusters only
      *
-     * Currently, Backtrack is only supported for Aurora MySQL DB clusters.
-     *
-     *
-     * Default: 0
+     * Default: `0`
      *
      * Constraints:
      *
      * * If specified, this value must be set to a number from 0 to 259,200 (72 hours).
-     *
-     * Valid for: Aurora MySQL DB clusters only
      */
     override fun backtrackWindow(backtrackWindow: Number) {
       cdkBuilder.backtrackWindow(backtrackWindow)
@@ -2746,6 +2822,28 @@ public interface CfnDBClusterProps {
     }
 
     /**
+     * @param enableLocalWriteForwarding Specifies whether read replicas can forward write
+     * operations to the writer DB instance in the DB cluster.
+     * By default, write operations aren't allowed on reader DB instances.
+     *
+     * Valid for: Aurora DB clusters only
+     */
+    override fun enableLocalWriteForwarding(enableLocalWriteForwarding: Boolean) {
+      cdkBuilder.enableLocalWriteForwarding(enableLocalWriteForwarding)
+    }
+
+    /**
+     * @param enableLocalWriteForwarding Specifies whether read replicas can forward write
+     * operations to the writer DB instance in the DB cluster.
+     * By default, write operations aren't allowed on reader DB instances.
+     *
+     * Valid for: Aurora DB clusters only
+     */
+    override fun enableLocalWriteForwarding(enableLocalWriteForwarding: IResolvable) {
+      cdkBuilder.enableLocalWriteForwarding(enableLocalWriteForwarding.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * @param engine The name of the database engine to be used for this DB cluster.
      * Valid Values:
      *
@@ -2758,6 +2856,37 @@ public interface CfnDBClusterProps {
      */
     override fun engine(engine: String) {
       cdkBuilder.engine(engine)
+    }
+
+    /**
+     * @param engineLifecycleSupport The life cycle type for this DB cluster.
+     *
+     * By default, this value is set to `open-source-rds-extended-support` , which enrolls your DB
+     * cluster into Amazon RDS Extended Support. At the end of standard support, you can avoid charges
+     * for Extended Support by setting the value to `open-source-rds-extended-support-disabled` . In
+     * this case, creating the DB cluster will fail if the DB major version is past its end of standard
+     * support date.
+     *
+     *
+     * You can use this setting to enroll your DB cluster into Amazon RDS Extended Support. With RDS
+     * Extended Support, you can run the selected major engine version on your DB cluster past the end
+     * of standard support for that engine version. For more information, see the following sections:
+     *
+     * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * the *Amazon Aurora User Guide*
+     * * Amazon RDS - [Using Amazon RDS Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * *Amazon RDS User Guide*
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+     *
+     * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+     *
+     * Default: `open-source-rds-extended-support`
+     */
+    override fun engineLifecycleSupport(engineLifecycleSupport: String) {
+      cdkBuilder.engineLifecycleSupport(engineLifecycleSupport)
     }
 
     /**
@@ -3196,11 +3325,12 @@ public interface CfnDBClusterProps {
 
     /**
      * @param publiclyAccessible Specifies whether the DB cluster is publicly accessible.
-     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to
-     * the private IP address from within the DB cluster's virtual private cloud (VPC). It resolves to
-     * the public IP address from outside of the DB cluster's VPC. Access to the DB cluster is
-     * ultimately controlled by the security group it uses. That public access isn't permitted if the
-     * security group assigned to the DB cluster doesn't permit it.
+     * When the DB cluster is publicly accessible and you connect from outside of the DB cluster's
+     * virtual private cloud (VPC), its Domain Name System (DNS) endpoint resolves to the public IP
+     * address. When you connect from within the same VPC as the DB cluster, the endpoint resolves to
+     * the private IP address. Access to the DB cluster is ultimately controlled by the security group
+     * it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     * doesn't permit it.
      *
      * When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name
      * that resolves to a private IP address.
@@ -3231,11 +3361,12 @@ public interface CfnDBClusterProps {
 
     /**
      * @param publiclyAccessible Specifies whether the DB cluster is publicly accessible.
-     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to
-     * the private IP address from within the DB cluster's virtual private cloud (VPC). It resolves to
-     * the public IP address from outside of the DB cluster's VPC. Access to the DB cluster is
-     * ultimately controlled by the security group it uses. That public access isn't permitted if the
-     * security group assigned to the DB cluster doesn't permit it.
+     * When the DB cluster is publicly accessible and you connect from outside of the DB cluster's
+     * virtual private cloud (VPC), its Domain Name System (DNS) endpoint resolves to the public IP
+     * address. When you connect from within the same VPC as the DB cluster, the endpoint resolves to
+     * the private IP address. Access to the DB cluster is ultimately controlled by the security group
+     * it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     * doesn't permit it.
      *
      * When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name
      * that resolves to a private IP address.
@@ -3540,16 +3671,16 @@ public interface CfnDBClusterProps {
     }
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this DB cluster.
-     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     * @param tags Tags to assign to the DB cluster.
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this DB cluster.
-     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     * @param tags Tags to assign to the DB cluster.
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -3601,7 +3732,8 @@ public interface CfnDBClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.CfnDBClusterProps,
-  ) : CdkObject(cdkObject), CfnDBClusterProps {
+  ) : CdkObject(cdkObject),
+      CfnDBClusterProps {
     /**
      * The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB
      * cluster.
@@ -3655,21 +3787,15 @@ public interface CfnDBClusterProps {
         emptyList()
 
     /**
-     * The target backtrack window, in seconds. To disable backtracking, set this value to 0.
+     * The target backtrack window, in seconds. To disable backtracking, set this value to `0` .
      *
+     * Valid for Cluster Type: Aurora MySQL DB clusters only
      *
-     * Currently, Backtrack is only supported for Aurora MySQL DB clusters.
-     *
-     *
-     * Default: 0
+     * Default: `0`
      *
      * Constraints:
      *
      * * If specified, this value must be set to a number from 0 to 259,200 (72 hours).
-     *
-     * Valid for: Aurora MySQL DB clusters only
-     *
-     * Default: - 0
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-backtrackwindow)
      */
@@ -3769,8 +3895,6 @@ public interface CfnDBClusterProps {
      * "DBClusterParameterGroups[].DBClusterParameterGroupName" --output text`
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
-     *
-     * Default: - "default.aurora5.6"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusterparametergroupname)
      */
@@ -3941,6 +4065,18 @@ public interface CfnDBClusterProps {
         unwrap(this).getEnableIamDatabaseAuthentication()
 
     /**
+     * Specifies whether read replicas can forward write operations to the writer DB instance in the
+     * DB cluster.
+     *
+     * By default, write operations aren't allowed on reader DB instances.
+     *
+     * Valid for: Aurora DB clusters only
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enablelocalwriteforwarding)
+     */
+    override fun enableLocalWriteForwarding(): Any? = unwrap(this).getEnableLocalWriteForwarding()
+
+    /**
      * The name of the database engine to be used for this DB cluster.
      *
      * Valid Values:
@@ -3955,6 +4091,38 @@ public interface CfnDBClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engine)
      */
     override fun engine(): String? = unwrap(this).getEngine()
+
+    /**
+     * The life cycle type for this DB cluster.
+     *
+     *
+     * By default, this value is set to `open-source-rds-extended-support` , which enrolls your DB
+     * cluster into Amazon RDS Extended Support. At the end of standard support, you can avoid charges
+     * for Extended Support by setting the value to `open-source-rds-extended-support-disabled` . In
+     * this case, creating the DB cluster will fail if the DB major version is past its end of standard
+     * support date.
+     *
+     *
+     * You can use this setting to enroll your DB cluster into Amazon RDS Extended Support. With RDS
+     * Extended Support, you can run the selected major engine version on your DB cluster past the end
+     * of standard support for that engine version. For more information, see the following sections:
+     *
+     * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * the *Amazon Aurora User Guide*
+     * * Amazon RDS - [Using Amazon RDS Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+     * *Amazon RDS User Guide*
+     *
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
+     *
+     * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+     *
+     * Default: `open-source-rds-extended-support`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enginelifecyclesupport)
+     */
+    override fun engineLifecycleSupport(): String? = unwrap(this).getEngineLifecycleSupport()
 
     /**
      * The DB engine mode of the DB cluster, either `provisioned` or `serverless` .
@@ -4184,8 +4352,6 @@ public interface CfnDBClusterProps {
      *
      * Default: `0`
      *
-     * Default: - 0
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-monitoringinterval)
      */
     override fun monitoringInterval(): Number? = unwrap(this).getMonitoringInterval()
@@ -4349,11 +4515,12 @@ public interface CfnDBClusterProps {
     /**
      * Specifies whether the DB cluster is publicly accessible.
      *
-     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to
-     * the private IP address from within the DB cluster's virtual private cloud (VPC). It resolves to
-     * the public IP address from outside of the DB cluster's VPC. Access to the DB cluster is
-     * ultimately controlled by the security group it uses. That public access isn't permitted if the
-     * security group assigned to the DB cluster doesn't permit it.
+     * When the DB cluster is publicly accessible and you connect from outside of the DB cluster's
+     * virtual private cloud (VPC), its Domain Name System (DNS) endpoint resolves to the public IP
+     * address. When you connect from within the same VPC as the DB cluster, the endpoint resolves to
+     * the private IP address. Access to the DB cluster is ultimately controlled by the security group
+     * it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     * doesn't permit it.
      *
      * When the DB cluster isn't publicly accessible, it is an internal DB cluster with a DNS name
      * that resolves to a private IP address.
@@ -4426,8 +4593,6 @@ public interface CfnDBClusterProps {
      * copy of the source DB cluster.
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
-     *
-     * Default: - "full-copy"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-restoretype)
      */
@@ -4588,9 +4753,9 @@ public interface CfnDBClusterProps {
     override fun storageType(): String? = unwrap(this).getStorageType()
 
     /**
-     * An optional array of key-value pairs to apply to this DB cluster.
+     * Tags to assign to the DB cluster.
      *
-     * Valid for: Aurora DB clusters and Multi-AZ DB clusters
+     * Valid for Cluster Type: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-tags)
      */

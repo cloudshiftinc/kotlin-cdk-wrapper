@@ -80,7 +80,8 @@ public interface CanaryTrafficRoutingConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig,
-  ) : CdkObject(cdkObject), CanaryTrafficRoutingConfig {
+  ) : CdkObject(cdkObject),
+      CanaryTrafficRoutingConfig {
     /**
      * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
      * deployment.

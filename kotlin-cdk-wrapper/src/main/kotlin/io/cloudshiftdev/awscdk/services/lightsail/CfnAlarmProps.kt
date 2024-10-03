@@ -378,7 +378,8 @@ public interface CfnAlarmProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lightsail.CfnAlarmProps,
-  ) : CdkObject(cdkObject), CfnAlarmProps {
+  ) : CdkObject(cdkObject),
+      CfnAlarmProps {
     /**
      * The name of the alarm.
      *

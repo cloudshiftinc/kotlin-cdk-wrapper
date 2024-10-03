@@ -75,7 +75,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFileSystem(
   cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.efs.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1220,7 +1222,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty,
-    ) : CdkObject(cdkObject), BackupPolicyProperty {
+    ) : CdkObject(cdkObject),
+        BackupPolicyProperty {
       /**
        * Set the backup policy status for the file system.
        *
@@ -1332,7 +1335,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty,
-    ) : CdkObject(cdkObject), ElasticFileSystemTagProperty {
+    ) : CdkObject(cdkObject),
+        ElasticFileSystemTagProperty {
       /**
        * The tag key (String).
        *
@@ -1460,7 +1464,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty,
-    ) : CdkObject(cdkObject), FileSystemProtectionProperty {
+    ) : CdkObject(cdkObject),
+        FileSystemProtectionProperty {
       /**
        * The status of the file system's replication overwrite protection.
        *
@@ -1637,7 +1642,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty,
-    ) : CdkObject(cdkObject), LifecyclePolicyProperty {
+    ) : CdkObject(cdkObject),
+        LifecyclePolicyProperty {
       /**
        * The number of days after files were last accessed in primary storage (the Standard storage
        * class) at which to move them to Archive storage.
@@ -1783,7 +1789,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), ReplicationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationConfigurationProperty {
       /**
        * An array of destination objects.
        *
@@ -1967,7 +1974,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty,
-    ) : CdkObject(cdkObject), ReplicationDestinationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationDestinationProperty {
       /**
        * For One Zone file systems, the replication configuration must specify the Availability Zone
        * in which the destination file system is located.

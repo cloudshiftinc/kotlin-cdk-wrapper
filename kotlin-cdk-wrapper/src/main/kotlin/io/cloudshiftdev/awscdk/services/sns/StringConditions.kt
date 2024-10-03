@@ -175,7 +175,8 @@ public interface StringConditions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.StringConditions,
-  ) : CdkObject(cdkObject), StringConditions {
+  ) : CdkObject(cdkObject),
+      StringConditions {
     /**
      * Match one or more values.
      *

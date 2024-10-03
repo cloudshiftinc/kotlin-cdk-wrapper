@@ -81,7 +81,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnContinuousDeploymentPolicy(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -616,7 +617,8 @@ public open class CfnContinuousDeploymentPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty,
-    ) : CdkObject(cdkObject), ContinuousDeploymentPolicyConfigProperty {
+    ) : CdkObject(cdkObject),
+        ContinuousDeploymentPolicyConfigProperty {
       /**
        * A Boolean that indicates whether this continuous deployment policy is enabled (in effect).
        *
@@ -785,7 +787,8 @@ public open class CfnContinuousDeploymentPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty,
-    ) : CdkObject(cdkObject), SessionStickinessConfigProperty {
+    ) : CdkObject(cdkObject),
+        SessionStickinessConfigProperty {
       /**
        * The amount of time after which you want sessions to cease if no requests are received.
        *
@@ -905,7 +908,8 @@ public open class CfnContinuousDeploymentPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty,
-    ) : CdkObject(cdkObject), SingleHeaderConfigProperty {
+    ) : CdkObject(cdkObject),
+        SingleHeaderConfigProperty {
       /**
        * The request header name that you want CloudFront to send to your staging distribution.
        *
@@ -942,6 +946,16 @@ public open class CfnContinuousDeploymentPolicy(
   }
 
   /**
+   * Defines a single header policy for a CloudFront distribution.
+   *
+   *
+   * This property is legacy. We recommend that you use
+   * [TrafficConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html)
+   * and specify the
+   * [SingleHeaderConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-singleheaderconfig)
+   * property instead.
+   *
+   *
    * Example:
    *
    * ```
@@ -959,11 +973,15 @@ public open class CfnContinuousDeploymentPolicy(
    */
   public interface SingleHeaderPolicyConfigProperty {
     /**
+     * The name of the HTTP header that CloudFront uses to configure for the single header policy.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig-header)
      */
     public fun `header`(): String
 
     /**
+     * Specifies the value to assign to the header for a single header policy.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig-value)
      */
     public fun `value`(): String
@@ -974,12 +992,13 @@ public open class CfnContinuousDeploymentPolicy(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param header the value to be set. 
+       * @param header The name of the HTTP header that CloudFront uses to configure for the single
+       * header policy. 
        */
       public fun `header`(`header`: String)
 
       /**
-       * @param value the value to be set. 
+       * @param value Specifies the value to assign to the header for a single header policy. 
        */
       public fun `value`(`value`: String)
     }
@@ -991,14 +1010,15 @@ public open class CfnContinuousDeploymentPolicy(
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty.builder()
 
       /**
-       * @param header the value to be set. 
+       * @param header The name of the HTTP header that CloudFront uses to configure for the single
+       * header policy. 
        */
       override fun `header`(`header`: String) {
         cdkBuilder.`header`(`header`)
       }
 
       /**
-       * @param value the value to be set. 
+       * @param value Specifies the value to assign to the header for a single header policy. 
        */
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
@@ -1011,13 +1031,18 @@ public open class CfnContinuousDeploymentPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty,
-    ) : CdkObject(cdkObject), SingleHeaderPolicyConfigProperty {
+    ) : CdkObject(cdkObject),
+        SingleHeaderPolicyConfigProperty {
       /**
+       * The name of the HTTP header that CloudFront uses to configure for the single header policy.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig-header)
        */
       override fun `header`(): String = unwrap(this).getHeader()
 
       /**
+       * Specifies the value to assign to the header for a single header policy.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleheaderpolicyconfig-value)
        */
       override fun `value`(): String = unwrap(this).getValue()
@@ -1186,7 +1211,8 @@ public open class CfnContinuousDeploymentPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightConfigProperty,
-    ) : CdkObject(cdkObject), SingleWeightConfigProperty {
+    ) : CdkObject(cdkObject),
+        SingleWeightConfigProperty {
       /**
        * Session stickiness provides the ability to define multiple requests from a single viewer as
        * a single session.
@@ -1228,6 +1254,17 @@ public open class CfnContinuousDeploymentPolicy(
   }
 
   /**
+   * Configure a policy that CloudFront uses to route requests to different origins or use different
+   * cache settings, based on the weight assigned to each option.
+   *
+   *
+   * This property is legacy. We recommend that you use
+   * [TrafficConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html)
+   * and specify the
+   * [SingleWeightConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html#cfn-cloudfront-continuousdeploymentpolicy-trafficconfig-singleweightconfig)
+   * property instead.
+   *
+   *
    * Example:
    *
    * ```
@@ -1249,11 +1286,16 @@ public open class CfnContinuousDeploymentPolicy(
    */
   public interface SingleWeightPolicyConfigProperty {
     /**
+     * Enable session stickiness for the associated origin or cache settings.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-sessionstickinessconfig)
      */
     public fun sessionStickinessConfig(): Any? = unwrap(this).getSessionStickinessConfig()
 
     /**
+     * The percentage of requests that CloudFront will use to send to an associated origin or cache
+     * settings.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-weight)
      */
     public fun weight(): Number
@@ -1264,17 +1306,20 @@ public open class CfnContinuousDeploymentPolicy(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param sessionStickinessConfig the value to be set.
+       * @param sessionStickinessConfig Enable session stickiness for the associated origin or cache
+       * settings.
        */
       public fun sessionStickinessConfig(sessionStickinessConfig: IResolvable)
 
       /**
-       * @param sessionStickinessConfig the value to be set.
+       * @param sessionStickinessConfig Enable session stickiness for the associated origin or cache
+       * settings.
        */
       public fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty)
 
       /**
-       * @param sessionStickinessConfig the value to be set.
+       * @param sessionStickinessConfig Enable session stickiness for the associated origin or cache
+       * settings.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("84a16445b31759c204e527d9438144fd1c2e1960ae5d2a6dc3696de87e89688d")
@@ -1282,7 +1327,8 @@ public open class CfnContinuousDeploymentPolicy(
           fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty.Builder.() -> Unit)
 
       /**
-       * @param weight the value to be set. 
+       * @param weight The percentage of requests that CloudFront will use to send to an associated
+       * origin or cache settings. 
        */
       public fun weight(weight: Number)
     }
@@ -1294,14 +1340,16 @@ public open class CfnContinuousDeploymentPolicy(
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty.builder()
 
       /**
-       * @param sessionStickinessConfig the value to be set.
+       * @param sessionStickinessConfig Enable session stickiness for the associated origin or cache
+       * settings.
        */
       override fun sessionStickinessConfig(sessionStickinessConfig: IResolvable) {
         cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param sessionStickinessConfig the value to be set.
+       * @param sessionStickinessConfig Enable session stickiness for the associated origin or cache
+       * settings.
        */
       override
           fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty) {
@@ -1309,7 +1357,8 @@ public open class CfnContinuousDeploymentPolicy(
       }
 
       /**
-       * @param sessionStickinessConfig the value to be set.
+       * @param sessionStickinessConfig Enable session stickiness for the associated origin or cache
+       * settings.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("84a16445b31759c204e527d9438144fd1c2e1960ae5d2a6dc3696de87e89688d")
@@ -1318,7 +1367,8 @@ public open class CfnContinuousDeploymentPolicy(
           Unit = sessionStickinessConfig(SessionStickinessConfigProperty(sessionStickinessConfig))
 
       /**
-       * @param weight the value to be set. 
+       * @param weight The percentage of requests that CloudFront will use to send to an associated
+       * origin or cache settings. 
        */
       override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
@@ -1331,13 +1381,19 @@ public open class CfnContinuousDeploymentPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty,
-    ) : CdkObject(cdkObject), SingleWeightPolicyConfigProperty {
+    ) : CdkObject(cdkObject),
+        SingleWeightPolicyConfigProperty {
       /**
+       * Enable session stickiness for the associated origin or cache settings.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-sessionstickinessconfig)
        */
       override fun sessionStickinessConfig(): Any? = unwrap(this).getSessionStickinessConfig()
 
       /**
+       * The percentage of requests that CloudFront will use to send to an associated origin or
+       * cache settings.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig.html#cfn-cloudfront-continuousdeploymentpolicy-singleweightpolicyconfig-weight)
        */
       override fun weight(): Number = unwrap(this).getWeight()
@@ -1537,7 +1593,8 @@ public open class CfnContinuousDeploymentPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty,
-    ) : CdkObject(cdkObject), TrafficConfigProperty {
+    ) : CdkObject(cdkObject),
+        TrafficConfigProperty {
       /**
        * Determines which HTTP requests are sent to the staging distribution.
        *

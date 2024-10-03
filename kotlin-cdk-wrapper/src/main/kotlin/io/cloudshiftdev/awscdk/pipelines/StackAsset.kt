@@ -158,7 +158,8 @@ public interface StackAsset {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.StackAsset,
-  ) : CdkObject(cdkObject), StackAsset {
+  ) : CdkObject(cdkObject),
+      StackAsset {
     /**
      * Asset identifier.
      */

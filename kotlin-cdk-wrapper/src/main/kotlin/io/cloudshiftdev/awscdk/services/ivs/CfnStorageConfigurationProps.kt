@@ -193,7 +193,8 @@ public interface CfnStorageConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ivs.CfnStorageConfigurationProps,
-  ) : CdkObject(cdkObject), CfnStorageConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnStorageConfigurationProps {
     /**
      * Storage cnfiguration name.
      *

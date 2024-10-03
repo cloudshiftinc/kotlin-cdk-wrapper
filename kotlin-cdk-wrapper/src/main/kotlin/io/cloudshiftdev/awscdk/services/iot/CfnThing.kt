@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnThing(
   cdkObject: software.amazon.awscdk.services.iot.CfnThing,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnThing(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -335,7 +336,8 @@ public open class CfnThing(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnThing.AttributePayloadProperty,
-    ) : CdkObject(cdkObject), AttributePayloadProperty {
+    ) : CdkObject(cdkObject),
+        AttributePayloadProperty {
       /**
        * A JSON string containing up to three key-value pair in JSON format. For example:.
        *

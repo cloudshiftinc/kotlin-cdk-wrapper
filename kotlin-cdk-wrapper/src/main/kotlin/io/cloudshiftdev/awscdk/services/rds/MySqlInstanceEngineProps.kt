@@ -65,7 +65,8 @@ public interface MySqlInstanceEngineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.MySqlInstanceEngineProps,
-  ) : CdkObject(cdkObject), MySqlInstanceEngineProps {
+  ) : CdkObject(cdkObject),
+      MySqlInstanceEngineProps {
     /**
      * The exact version of the engine to use.
      */

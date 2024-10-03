@@ -57,7 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResiliencyPolicy(
   cdkObject: software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -428,7 +430,8 @@ public open class CfnResiliencyPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy.FailurePolicyProperty,
-    ) : CdkObject(cdkObject), FailurePolicyProperty {
+    ) : CdkObject(cdkObject),
+        FailurePolicyProperty {
       /**
        * Recovery Point Objective (RPO) in seconds.
        *

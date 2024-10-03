@@ -901,7 +901,8 @@ public interface JsonSchema {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.JsonSchema,
-  ) : CdkObject(cdkObject), JsonSchema {
+  ) : CdkObject(cdkObject),
+      JsonSchema {
     /**
      *
      */

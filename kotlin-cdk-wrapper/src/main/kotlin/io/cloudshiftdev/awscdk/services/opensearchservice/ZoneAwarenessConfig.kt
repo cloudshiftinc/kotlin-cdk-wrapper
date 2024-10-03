@@ -123,7 +123,8 @@ public interface ZoneAwarenessConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opensearchservice.ZoneAwarenessConfig,
-  ) : CdkObject(cdkObject), ZoneAwarenessConfig {
+  ) : CdkObject(cdkObject),
+      ZoneAwarenessConfig {
     /**
      * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the domain
      * to use.

@@ -58,6 +58,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .glueVersion("glueVersion")
  * .logUri("logUri")
+ * .maintenanceWindow("maintenanceWindow")
  * .maxCapacity(123)
  * .maxRetries(123)
  * .name("name")
@@ -77,7 +78,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnJob(
   cdkObject: software.amazon.awscdk.services.glue.CfnJob,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -263,6 +266,18 @@ public open class CfnJob(
    */
   public open fun logUri(`value`: String) {
     unwrap(this).setLogUri(`value`)
+  }
+
+  /**
+   * This field specifies a day of the week and hour for a maintenance window for streaming jobs.
+   */
+  public open fun maintenanceWindow(): String? = unwrap(this).getMaintenanceWindow()
+
+  /**
+   * This field specifies a day of the week and hour for a maintenance window for streaming jobs.
+   */
+  public open fun maintenanceWindow(`value`: String) {
+    unwrap(this).setMaintenanceWindow(`value`)
   }
 
   /**
@@ -569,7 +584,8 @@ public open class CfnJob(
      * versions, see [Glue version](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) in the
      * developer guide.
      *
-     * Jobs that are created without specifying a Glue version default to Glue 0.9.
+     * Jobs that are created without specifying a Glue version default to the latest Glue version
+     * available.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-glueversion)
      * @param glueVersion Glue version determines the versions of Apache Spark and Python that AWS
@@ -584,6 +600,22 @@ public open class CfnJob(
      * @param logUri This field is reserved for future use. 
      */
     public fun logUri(logUri: String)
+
+    /**
+     * This field specifies a day of the week and hour for a maintenance window for streaming jobs.
+     *
+     * AWS Glue periodically performs maintenance activities. During these maintenance windows, AWS
+     * Glue will need to restart your streaming jobs.
+     *
+     * AWS Glue will restart the job within 3 hours of the specified maintenance window. For
+     * instance, if you set up the maintenance window for Monday at 10:00AM GMT, your jobs will be
+     * restarted between 10:00AM GMT to 1:00PM GMT.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-maintenancewindow)
+     * @param maintenanceWindow This field specifies a day of the week and hour for a maintenance
+     * window for streaming jobs. 
+     */
+    public fun maintenanceWindow(maintenanceWindow: String)
 
     /**
      * The number of AWS Glue data processing units (DPUs) that can be allocated when this job runs.
@@ -923,7 +955,8 @@ public open class CfnJob(
      * versions, see [Glue version](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) in the
      * developer guide.
      *
-     * Jobs that are created without specifying a Glue version default to Glue 0.9.
+     * Jobs that are created without specifying a Glue version default to the latest Glue version
+     * available.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-glueversion)
      * @param glueVersion Glue version determines the versions of Apache Spark and Python that AWS
@@ -941,6 +974,24 @@ public open class CfnJob(
      */
     override fun logUri(logUri: String) {
       cdkBuilder.logUri(logUri)
+    }
+
+    /**
+     * This field specifies a day of the week and hour for a maintenance window for streaming jobs.
+     *
+     * AWS Glue periodically performs maintenance activities. During these maintenance windows, AWS
+     * Glue will need to restart your streaming jobs.
+     *
+     * AWS Glue will restart the job within 3 hours of the specified maintenance window. For
+     * instance, if you set up the maintenance window for Monday at 10:00AM GMT, your jobs will be
+     * restarted between 10:00AM GMT to 1:00PM GMT.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-maintenancewindow)
+     * @param maintenanceWindow This field specifies a day of the week and hour for a maintenance
+     * window for streaming jobs. 
+     */
+    override fun maintenanceWindow(maintenanceWindow: String) {
+      cdkBuilder.maintenanceWindow(maintenanceWindow)
     }
 
     /**
@@ -1214,7 +1265,8 @@ public open class CfnJob(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty,
-    ) : CdkObject(cdkObject), ConnectionsListProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionsListProperty {
       /**
        * A list of connections used by the job.
        *
@@ -1301,7 +1353,8 @@ public open class CfnJob(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty,
-    ) : CdkObject(cdkObject), ExecutionPropertyProperty {
+    ) : CdkObject(cdkObject),
+        ExecutionPropertyProperty {
       /**
        * The maximum number of concurrent runs allowed for the job.
        *
@@ -1473,7 +1526,8 @@ public open class CfnJob(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnJob.JobCommandProperty,
-    ) : CdkObject(cdkObject), JobCommandProperty {
+    ) : CdkObject(cdkObject),
+        JobCommandProperty {
       /**
        * The name of the job command.
        *
@@ -1588,7 +1642,8 @@ public open class CfnJob(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty,
-    ) : CdkObject(cdkObject), NotificationPropertyProperty {
+    ) : CdkObject(cdkObject),
+        NotificationPropertyProperty {
       /**
        * After a job run starts, the number of minutes to wait before sending a job run delay
        * notification.

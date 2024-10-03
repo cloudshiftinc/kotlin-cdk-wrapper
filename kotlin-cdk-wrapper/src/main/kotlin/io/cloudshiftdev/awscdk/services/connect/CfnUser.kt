@@ -74,7 +74,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUser(
   cdkObject: software.amazon.awscdk.services.connect.CfnUser,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -863,7 +865,8 @@ public open class CfnUser(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty,
-    ) : CdkObject(cdkObject), UserIdentityInfoProperty {
+    ) : CdkObject(cdkObject),
+        UserIdentityInfoProperty {
       /**
        * The email address.
        *
@@ -1083,7 +1086,8 @@ public open class CfnUser(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty,
-    ) : CdkObject(cdkObject), UserPhoneConfigProperty {
+    ) : CdkObject(cdkObject),
+        UserPhoneConfigProperty {
       /**
        * The After Call Work (ACW) timeout setting, in seconds.
        *
@@ -1253,7 +1257,8 @@ public open class CfnUser(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty,
-    ) : CdkObject(cdkObject), UserProficiencyProperty {
+    ) : CdkObject(cdkObject),
+        UserProficiencyProperty {
       /**
        * The name of user’s proficiency.
        *

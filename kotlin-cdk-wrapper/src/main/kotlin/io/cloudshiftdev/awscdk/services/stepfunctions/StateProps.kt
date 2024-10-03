@@ -226,7 +226,8 @@ public interface StateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.StateProps,
-  ) : CdkObject(cdkObject), StateProps {
+  ) : CdkObject(cdkObject),
+      StateProps {
     /**
      * A comment describing this state.
      *

@@ -231,7 +231,8 @@ public interface CfnMultiplexProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexProps,
-  ) : CdkObject(cdkObject), CfnMultiplexProps {
+  ) : CdkObject(cdkObject),
+      CfnMultiplexProps {
     /**
      * A list of availability zones for the multiplex.
      *

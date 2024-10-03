@@ -201,7 +201,8 @@ public interface CfnPublicDnsNamespaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespaceProps,
-  ) : CdkObject(cdkObject), CfnPublicDnsNamespaceProps {
+  ) : CdkObject(cdkObject),
+      CfnPublicDnsNamespaceProps {
     /**
      * A description for the namespace.
      *

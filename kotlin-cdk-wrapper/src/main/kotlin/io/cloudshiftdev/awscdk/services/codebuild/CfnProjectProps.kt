@@ -181,6 +181,9 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .excludeMatchedPattern(false)
  * .build())))
+ * .scopeConfiguration(ScopeConfigurationProperty.builder()
+ * .name("name")
+ * .build())
  * .webhook(false)
  * .build())
  * .visibility("visibility")
@@ -373,6 +376,7 @@ public interface CfnProjectProps {
    * version of the source code you want to build. If a pull request ID is specified, it must use the
    * format `pr/pull-request-ID` (for example `pr/25` ). If a branch name is specified, the branch's
    * HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is used.
+   * * For GitLab: the commit ID, branch, or Git tag to use.
    * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of the
    * source code you want to build. If a branch name is specified, the branch's HEAD commit ID is used.
    * If not specified, the default branch's HEAD commit ID is used.
@@ -399,8 +403,8 @@ public interface CfnProjectProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * How long, in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait before timing out any
-   * related build that did not get marked as completed.
+   * How long, in minutes, from 5 to 2160 (36 hours), for AWS CodeBuild to wait before timing out
+   * any related build that did not get marked as completed.
    *
    * The default is 60 minutes.
    *
@@ -730,6 +734,7 @@ public interface CfnProjectProps {
      * the version of the source code you want to build. If a pull request ID is specified, it must use
      * the format `pr/pull-request-ID` (for example `pr/25` ). If a branch name is specified, the
      * branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is used.
+     * * For GitLab: the commit ID, branch, or Git tag to use.
      * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
      * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID is
      * used. If not specified, the default branch's HEAD commit ID is used.
@@ -760,7 +765,7 @@ public interface CfnProjectProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param timeoutInMinutes How long, in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to
+     * @param timeoutInMinutes How long, in minutes, from 5 to 2160 (36 hours), for AWS CodeBuild to
      * wait before timing out any related build that did not get marked as completed.
      * The default is 60 minutes.
      */
@@ -1185,6 +1190,7 @@ public interface CfnProjectProps {
      * the version of the source code you want to build. If a pull request ID is specified, it must use
      * the format `pr/pull-request-ID` (for example `pr/25` ). If a branch name is specified, the
      * branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is used.
+     * * For GitLab: the commit ID, branch, or Git tag to use.
      * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
      * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID is
      * used. If not specified, the default branch's HEAD commit ID is used.
@@ -1219,7 +1225,7 @@ public interface CfnProjectProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param timeoutInMinutes How long, in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to
+     * @param timeoutInMinutes How long, in minutes, from 5 to 2160 (36 hours), for AWS CodeBuild to
      * wait before timing out any related build that did not get marked as completed.
      * The default is 60 minutes.
      */
@@ -1304,7 +1310,8 @@ public interface CfnProjectProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.CfnProjectProps,
-  ) : CdkObject(cdkObject), CfnProjectProps {
+  ) : CdkObject(cdkObject),
+      CfnProjectProps {
     /**
      * `Artifacts` is a property of the
      * [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
@@ -1483,6 +1490,7 @@ public interface CfnProjectProps {
      * the version of the source code you want to build. If a pull request ID is specified, it must use
      * the format `pr/pull-request-ID` (for example `pr/25` ). If a branch name is specified, the
      * branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is used.
+     * * For GitLab: the commit ID, branch, or Git tag to use.
      * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
      * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID is
      * used. If not specified, the default branch's HEAD commit ID is used.
@@ -1511,7 +1519,7 @@ public interface CfnProjectProps {
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * How long, in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait before timing out
+     * How long, in minutes, from 5 to 2160 (36 hours), for AWS CodeBuild to wait before timing out
      * any related build that did not get marked as completed.
      *
      * The default is 60 minutes.

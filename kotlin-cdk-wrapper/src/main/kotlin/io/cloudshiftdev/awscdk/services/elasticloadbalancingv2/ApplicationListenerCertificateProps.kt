@@ -101,7 +101,8 @@ public interface ApplicationListenerCertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificateProps,
-  ) : CdkObject(cdkObject), ApplicationListenerCertificateProps {
+  ) : CdkObject(cdkObject),
+      ApplicationListenerCertificateProps {
     /**
      * Certificates to attach.
      *

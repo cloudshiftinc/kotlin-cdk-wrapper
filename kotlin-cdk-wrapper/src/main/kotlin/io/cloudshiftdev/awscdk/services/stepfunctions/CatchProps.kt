@@ -107,7 +107,8 @@ public interface CatchProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.CatchProps,
-  ) : CdkObject(cdkObject), CatchProps {
+  ) : CdkObject(cdkObject),
+      CatchProps {
     /**
      * Errors to recover from by going to the given state.
      *

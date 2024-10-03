@@ -359,7 +359,8 @@ public interface CfnPipelineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipelineProps,
-  ) : CdkObject(cdkObject), CfnPipelineProps {
+  ) : CdkObject(cdkObject),
+      CfnPipelineProps {
     /**
      * Indicates whether to validate and start the pipeline or stop an active pipeline.
      *

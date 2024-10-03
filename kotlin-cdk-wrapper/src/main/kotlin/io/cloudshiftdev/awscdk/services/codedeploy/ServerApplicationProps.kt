@@ -56,7 +56,8 @@ public interface ServerApplicationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.ServerApplicationProps,
-  ) : CdkObject(cdkObject), ServerApplicationProps {
+  ) : CdkObject(cdkObject),
+      ServerApplicationProps {
     /**
      * The physical, human-readable name of the CodeDeploy Application.
      *

@@ -357,7 +357,8 @@ public interface CfnAccessGrantProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantProps,
-  ) : CdkObject(cdkObject), CfnAccessGrantProps {
+  ) : CdkObject(cdkObject),
+      CfnAccessGrantProps {
     /**
      * The configuration options of the grant location.
      *

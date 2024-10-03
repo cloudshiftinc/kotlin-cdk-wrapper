@@ -59,7 +59,8 @@ public interface IReceiptRuleSet : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.IReceiptRuleSet,
-  ) : CdkObject(cdkObject), IReceiptRuleSet {
+  ) : CdkObject(cdkObject),
+      IReceiptRuleSet {
     /**
      * Adds a new receipt rule in this rule set.
      *

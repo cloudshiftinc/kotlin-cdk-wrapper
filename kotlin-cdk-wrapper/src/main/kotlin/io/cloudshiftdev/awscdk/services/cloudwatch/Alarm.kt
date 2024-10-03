@@ -63,7 +63,7 @@ public open class Alarm(
   /**
    * Trigger this action if the alarm fires.
    *
-   * Typically SnsAcion or AutoScalingAction.
+   * Typically SnsAction or AutoScalingAction.
    *
    * @param actions 
    */

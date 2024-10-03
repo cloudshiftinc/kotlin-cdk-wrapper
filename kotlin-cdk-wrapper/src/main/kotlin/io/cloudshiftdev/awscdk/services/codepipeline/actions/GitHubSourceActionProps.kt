@@ -259,7 +259,8 @@ public interface GitHubSourceActionProps : CommonActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.GitHubSourceActionProps,
-  ) : CdkObject(cdkObject), GitHubSourceActionProps {
+  ) : CdkObject(cdkObject),
+      GitHubSourceActionProps {
     /**
      * The physical, human-readable name of the Action.
      *

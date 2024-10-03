@@ -111,7 +111,8 @@ public interface CfnViewVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnViewVersionProps,
-  ) : CdkObject(cdkObject), CfnViewVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnViewVersionProps {
     /**
      * The description of the view version.
      *

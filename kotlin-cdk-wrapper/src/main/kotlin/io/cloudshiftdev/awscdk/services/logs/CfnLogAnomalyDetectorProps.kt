@@ -268,7 +268,8 @@ public interface CfnLogAnomalyDetectorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.CfnLogAnomalyDetectorProps,
-  ) : CdkObject(cdkObject), CfnLogAnomalyDetectorProps {
+  ) : CdkObject(cdkObject),
+      CfnLogAnomalyDetectorProps {
     /**
      * The ID of the account to create the anomaly detector in.
      *

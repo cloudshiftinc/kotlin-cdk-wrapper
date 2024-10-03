@@ -374,7 +374,8 @@ public interface CfnAppBlockBuilderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockBuilderProps,
-  ) : CdkObject(cdkObject), CfnAppBlockBuilderProps {
+  ) : CdkObject(cdkObject),
+      CfnAppBlockBuilderProps {
     /**
      * The access endpoints of the app block builder.
      *

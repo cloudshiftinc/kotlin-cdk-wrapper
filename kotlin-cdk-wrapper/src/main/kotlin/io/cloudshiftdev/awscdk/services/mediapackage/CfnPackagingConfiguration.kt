@@ -169,7 +169,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPackagingConfiguration(
   cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -789,7 +791,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafEncryptionProperty,
-    ) : CdkObject(cdkObject), CmafEncryptionProperty {
+    ) : CdkObject(cdkObject),
+        CmafEncryptionProperty {
       /**
        * Parameters for the SPEKE key provider.
        *
@@ -1052,7 +1055,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafPackageProperty,
-    ) : CdkObject(cdkObject), CmafPackageProperty {
+    ) : CdkObject(cdkObject),
+        CmafPackageProperty {
       /**
        * Parameters for encrypting content.
        *
@@ -1198,7 +1202,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashEncryptionProperty,
-    ) : CdkObject(cdkObject), DashEncryptionProperty {
+    ) : CdkObject(cdkObject),
+        DashEncryptionProperty {
       /**
        * Parameters for the SPEKE key provider.
        *
@@ -1461,7 +1466,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashManifestProperty,
-    ) : CdkObject(cdkObject), DashManifestProperty {
+    ) : CdkObject(cdkObject),
+        DashManifestProperty {
       /**
        * Determines the position of some tags in the Media Presentation Description (MPD).
        *
@@ -1935,7 +1941,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashPackageProperty,
-    ) : CdkObject(cdkObject), DashPackageProperty {
+    ) : CdkObject(cdkObject),
+        DashPackageProperty {
       /**
        * A list of DASH manifest configurations that are available from this endpoint.
        *
@@ -2222,7 +2229,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.EncryptionContractConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionContractConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionContractConfigurationProperty {
       /**
        * A collection of audio encryption presets.
        *
@@ -2435,7 +2443,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsEncryptionProperty,
-    ) : CdkObject(cdkObject), HlsEncryptionProperty {
+    ) : CdkObject(cdkObject),
+        HlsEncryptionProperty {
       /**
        * A 128-bit, 16-byte hex value represented by a 32-character string, used with the key for
        * encrypting blocks.
@@ -2768,7 +2777,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsManifestProperty,
-    ) : CdkObject(cdkObject), HlsManifestProperty {
+    ) : CdkObject(cdkObject),
+        HlsManifestProperty {
       /**
        * This setting controls ad markers in the packaged content.
        *
@@ -3115,7 +3125,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsPackageProperty,
-    ) : CdkObject(cdkObject), HlsPackageProperty {
+    ) : CdkObject(cdkObject),
+        HlsPackageProperty {
       /**
        * Parameters for encrypting content.
        *
@@ -3266,7 +3277,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssEncryptionProperty,
-    ) : CdkObject(cdkObject), MssEncryptionProperty {
+    ) : CdkObject(cdkObject),
+        MssEncryptionProperty {
       /**
        * Parameters for the SPEKE key provider.
        *
@@ -3408,7 +3420,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssManifestProperty,
-    ) : CdkObject(cdkObject), MssManifestProperty {
+    ) : CdkObject(cdkObject),
+        MssManifestProperty {
       /**
        * A short string that's appended to the end of the endpoint URL to create a unique path to
        * this packaging configuration.
@@ -3617,7 +3630,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssPackageProperty,
-    ) : CdkObject(cdkObject), MssPackageProperty {
+    ) : CdkObject(cdkObject),
+        MssPackageProperty {
       /**
        * Parameters for encrypting content.
        *
@@ -3865,7 +3879,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.SpekeKeyProviderProperty,
-    ) : CdkObject(cdkObject), SpekeKeyProviderProperty {
+    ) : CdkObject(cdkObject),
+        SpekeKeyProviderProperty {
       /**
        * Use `encryptionContractConfiguration` to configure one or more content encryption keys for
        * your endpoints that use SPEKE Version 2.0. The encryption contract defines which content keys
@@ -4036,7 +4051,8 @@ public open class CfnPackagingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.StreamSelectionProperty,
-    ) : CdkObject(cdkObject), StreamSelectionProperty {
+    ) : CdkObject(cdkObject),
+        StreamSelectionProperty {
       /**
        * The upper limit of the bitrates that this endpoint serves.
        *

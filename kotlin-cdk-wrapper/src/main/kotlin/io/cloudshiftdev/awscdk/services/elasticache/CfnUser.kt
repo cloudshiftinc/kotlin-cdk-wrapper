@@ -21,8 +21,8 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * For Redis engine version 6.0 onwards: Creates a Redis user. For more information, see [Using Role
- * Based Access Control
+ * For Redis OSS engine version 6.0 onwards: Creates a Redis OSS user. For more information, see
+ * [Using Role Based Access Control
  * (RBAC)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) .
  *
  * Example:
@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUser(
   cdkObject: software.amazon.awscdk.services.elasticache.CfnUser,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -172,20 +174,20 @@ public open class CfnUser(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * An array of key-value pairs to apply to this user.
+   * The list of tags.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * An array of key-value pairs to apply to this user.
+   * The list of tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * An array of key-value pairs to apply to this user.
+   * The list of tags.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -285,18 +287,18 @@ public open class CfnUser(
     public fun passwords(vararg passwords: String)
 
     /**
-     * An array of key-value pairs to apply to this user.
+     * The list of tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
+     * @param tags The list of tags. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * An array of key-value pairs to apply to this user.
+     * The list of tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
+     * @param tags The list of tags. 
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -403,20 +405,20 @@ public open class CfnUser(
     override fun passwords(vararg passwords: String): Unit = passwords(passwords.toList())
 
     /**
-     * An array of key-value pairs to apply to this user.
+     * The list of tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
+     * @param tags The list of tags. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * An array of key-value pairs to apply to this user.
+     * The list of tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
+     * @param tags The list of tags. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -556,7 +558,8 @@ public open class CfnUser(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty,
-    ) : CdkObject(cdkObject), AuthenticationModeProperty {
+    ) : CdkObject(cdkObject),
+        AuthenticationModeProperty {
       /**
        * Specifies the passwords to use for authentication if `Type` is set to `password` .
        *

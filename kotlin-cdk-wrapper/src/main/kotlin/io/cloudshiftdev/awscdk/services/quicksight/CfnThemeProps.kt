@@ -342,7 +342,8 @@ public interface CfnThemeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.quicksight.CfnThemeProps,
-  ) : CdkObject(cdkObject), CfnThemeProps {
+  ) : CdkObject(cdkObject),
+      CfnThemeProps {
     /**
      * The ID of the AWS account where you want to store the new theme.
      *

@@ -13,7 +13,8 @@ import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 public interface ISageMakerTask : IGrantable {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ISageMakerTask,
-  ) : CdkObject(cdkObject), ISageMakerTask {
+  ) : CdkObject(cdkObject),
+      ISageMakerTask {
     /**
      * The principal to grant permissions to.
      */

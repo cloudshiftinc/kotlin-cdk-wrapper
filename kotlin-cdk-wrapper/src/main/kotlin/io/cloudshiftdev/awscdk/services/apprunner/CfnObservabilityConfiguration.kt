@@ -67,7 +67,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnObservabilityConfiguration(
   cdkObject: software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -458,7 +460,8 @@ public open class CfnObservabilityConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration.TraceConfigurationProperty,
-    ) : CdkObject(cdkObject), TraceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        TraceConfigurationProperty {
       /**
        * The implementation provider chosen for tracing App Runner services.
        *

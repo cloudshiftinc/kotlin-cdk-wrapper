@@ -1093,7 +1093,8 @@ public interface CommonAutoScalingGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.CommonAutoScalingGroupProps,
-  ) : CdkObject(cdkObject), CommonAutoScalingGroupProps {
+  ) : CdkObject(cdkObject),
+      CommonAutoScalingGroupProps {
     /**
      * Whether the instances can initiate connections to anywhere by default.
      *

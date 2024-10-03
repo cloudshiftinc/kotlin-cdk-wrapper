@@ -124,7 +124,8 @@ public interface CfnVolumeAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnVolumeAttachmentProps,
-  ) : CdkObject(cdkObject), CfnVolumeAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnVolumeAttachmentProps {
     /**
      * The device name (for example, `/dev/sdh` or `xvdh` ).
      *

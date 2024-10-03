@@ -58,7 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEndpointGroup(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -880,7 +881,8 @@ public open class CfnEndpointGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty,
-    ) : CdkObject(cdkObject), EndpointConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EndpointConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints
        * (resources) that can be added to accelerators and principals that have permission to add the
@@ -1056,7 +1058,8 @@ public open class CfnEndpointGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty,
-    ) : CdkObject(cdkObject), PortOverrideProperty {
+    ) : CdkObject(cdkObject),
+        PortOverrideProperty {
       /**
        * The endpoint port that you want a listener port to be mapped to.
        *

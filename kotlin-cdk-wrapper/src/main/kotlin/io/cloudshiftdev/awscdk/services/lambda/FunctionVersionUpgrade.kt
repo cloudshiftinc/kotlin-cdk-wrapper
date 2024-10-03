@@ -25,7 +25,8 @@ import kotlin.String
  */
 public open class FunctionVersionUpgrade(
   cdkObject: software.amazon.awscdk.services.lambda.FunctionVersionUpgrade,
-) : CdkObject(cdkObject), IAspect {
+) : CdkObject(cdkObject),
+    IAspect {
   public constructor(featureFlag: String) :
       this(software.amazon.awscdk.services.lambda.FunctionVersionUpgrade(featureFlag)
   )

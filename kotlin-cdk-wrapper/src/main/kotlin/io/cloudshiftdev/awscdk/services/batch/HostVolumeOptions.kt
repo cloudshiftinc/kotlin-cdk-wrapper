@@ -99,7 +99,8 @@ public interface HostVolumeOptions : EcsVolumeOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.HostVolumeOptions,
-  ) : CdkObject(cdkObject), HostVolumeOptions {
+  ) : CdkObject(cdkObject),
+      HostVolumeOptions {
     /**
      * the path on the container where this volume is mounted.
      */

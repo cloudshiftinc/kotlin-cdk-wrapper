@@ -286,7 +286,8 @@ public interface CfnDetectorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.guardduty.CfnDetectorProps,
-  ) : CdkObject(cdkObject), CfnDetectorProps {
+  ) : CdkObject(cdkObject),
+      CfnDetectorProps {
     /**
      * Describes which data sources will be enabled for the detector.
      *

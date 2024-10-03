@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStorageVirtualMachine(
   cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -607,7 +609,8 @@ public open class CfnStorageVirtualMachine(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty,
-    ) : CdkObject(cdkObject), ActiveDirectoryConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ActiveDirectoryConfigurationProperty {
       /**
        * The NetBIOS name of the Active Directory computer object that will be created for your SVM.
        *
@@ -883,7 +886,8 @@ public open class CfnStorageVirtualMachine(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty,
-    ) : CdkObject(cdkObject), SelfManagedActiveDirectoryConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SelfManagedActiveDirectoryConfigurationProperty {
       /**
        * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed
        * AD directory.

@@ -27,6 +27,10 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .desiredSoftwareSetId("desiredSoftwareSetId")
  * .desktopEndpoint("desktopEndpoint")
+ * .deviceCreationTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .kmsKeyArn("kmsKeyArn")
  * .maintenanceWindow(MaintenanceWindowProperty.builder()
  * .type("type")
@@ -72,6 +76,13 @@ public interface CfnEnvironmentProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-desktopendpoint)
    */
   public fun desktopEndpoint(): String? = unwrap(this).getDesktopEndpoint()
+
+  /**
+   * The tag keys and optional values for the newly created devices for this environment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-devicecreationtags)
+   */
+  public fun deviceCreationTags(): Any? = unwrap(this).getDeviceCreationTags()
 
   /**
    * The Amazon Resource Name (ARN) of the AWS Key Management Service key used to encrypt the
@@ -141,6 +152,24 @@ public interface CfnEnvironmentProps {
      * use AppStream 2.0).
      */
     public fun desktopEndpoint(desktopEndpoint: String)
+
+    /**
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment.
+     */
+    public fun deviceCreationTags(deviceCreationTags: IResolvable)
+
+    /**
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment.
+     */
+    public fun deviceCreationTags(deviceCreationTags: List<Any>)
+
+    /**
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment.
+     */
+    public fun deviceCreationTags(vararg deviceCreationTags: Any)
 
     /**
      * @param kmsKeyArn The Amazon Resource Name (ARN) of the AWS Key Management Service key used to
@@ -228,6 +257,29 @@ public interface CfnEnvironmentProps {
     }
 
     /**
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment.
+     */
+    override fun deviceCreationTags(deviceCreationTags: IResolvable) {
+      cdkBuilder.deviceCreationTags(deviceCreationTags.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment.
+     */
+    override fun deviceCreationTags(deviceCreationTags: List<Any>) {
+      cdkBuilder.deviceCreationTags(deviceCreationTags.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment.
+     */
+    override fun deviceCreationTags(vararg deviceCreationTags: Any): Unit =
+        deviceCreationTags(deviceCreationTags.toList())
+
+    /**
      * @param kmsKeyArn The Amazon Resource Name (ARN) of the AWS Key Management Service key used to
      * encrypt the environment.
      */
@@ -304,7 +356,8 @@ public interface CfnEnvironmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.workspacesthinclient.CfnEnvironmentProps,
-  ) : CdkObject(cdkObject), CfnEnvironmentProps {
+  ) : CdkObject(cdkObject),
+      CfnEnvironmentProps {
     /**
      * The ID of the software set to apply.
      *
@@ -326,6 +379,13 @@ public interface CfnEnvironmentProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-desktopendpoint)
      */
     override fun desktopEndpoint(): String? = unwrap(this).getDesktopEndpoint()
+
+    /**
+     * The tag keys and optional values for the newly created devices for this environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-devicecreationtags)
+     */
+    override fun deviceCreationTags(): Any? = unwrap(this).getDeviceCreationTags()
 
     /**
      * The Amazon Resource Name (ARN) of the AWS Key Management Service key used to encrypt the

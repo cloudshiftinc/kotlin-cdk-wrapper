@@ -25,20 +25,24 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * IChainable definition;
- * Role role = Role.Builder.create(this, "Role")
- * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
+ * // Option 3: Create a new role that allows the account root principal to assume. Add this role in
+ * the `system:masters` and witch to this role from the AWS console.
+ * Cluster cluster;
+ * Role consoleReadOnlyRole = Role.Builder.create(this, "ConsoleReadOnlyRole")
+ * .assumedBy(new ArnPrincipal("arn_for_trusted_principal"))
  * .build();
- * StateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
- * .definitionBody(DefinitionBody.fromChainable(definition))
- * .build();
- * // Give role permission to get execution history of ALL executions for the state machine
- * stateMachine.grantExecution(role, "states:GetExecutionHistory");
+ * consoleReadOnlyRole.addToPolicy(PolicyStatement.Builder.create()
+ * .actions(List.of("eks:AccessKubernetesApi", "eks:Describe*", "eks:List*"))
+ * .resources(List.of(cluster.getClusterArn()))
+ * .build());
+ * // Add this role to system:masters RBAC group
+ * cluster.awsAuth.addMastersRole(consoleReadOnlyRole);
  * ```
  */
 public open class Role(
   cdkObject: software.amazon.awscdk.services.iam.Role,
-) : Resource(cdkObject), IRole {
+) : Resource(cdkObject),
+    IRole {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

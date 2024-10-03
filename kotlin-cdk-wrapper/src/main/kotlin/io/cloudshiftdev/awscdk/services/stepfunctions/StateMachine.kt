@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class StateMachine(
   cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachine,
-) : Resource(cdkObject), IStateMachine {
+) : Resource(cdkObject),
+    IStateMachine {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -463,6 +464,16 @@ public open class StateMachine(
     public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
 
     /**
+     * Configures server-side encryption of the state machine definition and execution history.
+     *
+     * Default: - data is transparently encrypted using an AWS owned key
+     *
+     * @param encryptionConfiguration Configures server-side encryption of the state machine
+     * definition and execution history. 
+     */
+    public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration)
+
+    /**
      * Defines what execution history events are logged and where they are logged.
      *
      * Default: No logging
@@ -583,6 +594,18 @@ public open class StateMachine(
      */
     override fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
       cdkBuilder.definitionSubstitutions(definitionSubstitutions)
+    }
+
+    /**
+     * Configures server-side encryption of the state machine definition and execution history.
+     *
+     * Default: - data is transparently encrypted using an AWS owned key
+     *
+     * @param encryptionConfiguration Configures server-side encryption of the state machine
+     * definition and execution history. 
+     */
+    override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration) {
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfiguration.Companion::unwrap))
     }
 
     /**

@@ -117,7 +117,8 @@ public interface ActionArtifactBounds {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.ActionArtifactBounds,
-  ) : CdkObject(cdkObject), ActionArtifactBounds {
+  ) : CdkObject(cdkObject),
+      ActionArtifactBounds {
     /**
      *
      */

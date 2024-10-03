@@ -224,7 +224,8 @@ public interface JsonWithStandardFieldProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.JsonWithStandardFieldProps,
-  ) : CdkObject(cdkObject), JsonWithStandardFieldProps {
+  ) : CdkObject(cdkObject),
+      JsonWithStandardFieldProps {
     /**
      * If this flag is enabled, the principal identifier of the caller will be output to the log.
      */

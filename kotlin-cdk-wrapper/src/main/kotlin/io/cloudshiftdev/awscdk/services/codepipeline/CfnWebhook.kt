@@ -70,7 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWebhook(
   cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -249,6 +250,16 @@ public open class CfnWebhook(
     /**
      * Supported options are GITHUB_HMAC, IP, and UNAUTHENTICATED.
      *
+     *
+     * When creating CodePipeline webhooks, do not use your own credentials or reuse the same secret
+     * token across multiple webhooks. For optimal security, generate a unique secret token for each
+     * webhook you create. The secret token is an arbitrary string that you provide, which GitHub uses
+     * to compute and sign the webhook payloads sent to CodePipeline, for protecting the integrity and
+     * authenticity of the webhook payloads. Using your own credentials or reusing the same token
+     * across multiple webhooks can lead to security vulnerabilities. &gt; If a secret token was
+     * provided, it will be redacted in the response.
+     *
+     *
      * * For information about the authentication scheme implemented by GITHUB_HMAC, see [Securing
      * your webhooks](https://docs.aws.amazon.com/https://developer.github.com/webhooks/securing/) on
      * the GitHub Developer website.
@@ -409,6 +420,16 @@ public open class CfnWebhook(
 
     /**
      * Supported options are GITHUB_HMAC, IP, and UNAUTHENTICATED.
+     *
+     *
+     * When creating CodePipeline webhooks, do not use your own credentials or reuse the same secret
+     * token across multiple webhooks. For optimal security, generate a unique secret token for each
+     * webhook you create. The secret token is an arbitrary string that you provide, which GitHub uses
+     * to compute and sign the webhook payloads sent to CodePipeline, for protecting the integrity and
+     * authenticity of the webhook payloads. Using your own credentials or reusing the same token
+     * across multiple webhooks can lead to security vulnerabilities. &gt; If a secret token was
+     * provided, it will be redacted in the response.
+     *
      *
      * * For information about the authentication scheme implemented by GITHUB_HMAC, see [Securing
      * your webhooks](https://docs.aws.amazon.com/https://developer.github.com/webhooks/securing/) on
@@ -638,9 +659,18 @@ public open class CfnWebhook(
     public fun allowedIpRange(): String? = unwrap(this).getAllowedIpRange()
 
     /**
-     * The property used to configure GitHub authentication.
+     * The property used to configure GitHub authentication. For GITHUB_HMAC, only the `SecretToken`
+     * property must be set.
      *
-     * For GITHUB_HMAC, only the `SecretToken` property must be set.
+     *
+     * When creating CodePipeline webhooks, do not use your own credentials or reuse the same secret
+     * token across multiple webhooks. For optimal security, generate a unique secret token for each
+     * webhook you create. The secret token is an arbitrary string that you provide, which GitHub uses
+     * to compute and sign the webhook payloads sent to CodePipeline, for protecting the integrity and
+     * authenticity of the webhook payloads. Using your own credentials or reusing the same token
+     * across multiple webhooks can lead to security vulnerabilities. &gt; If a secret token was
+     * provided, it will be redacted in the response.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken)
      */
@@ -660,8 +690,16 @@ public open class CfnWebhook(
       public fun allowedIpRange(allowedIpRange: String)
 
       /**
-       * @param secretToken The property used to configure GitHub authentication.
-       * For GITHUB_HMAC, only the `SecretToken` property must be set.
+       * @param secretToken The property used to configure GitHub authentication. For GITHUB_HMAC,
+       * only the `SecretToken` property must be set.
+       *
+       * When creating CodePipeline webhooks, do not use your own credentials or reuse the same
+       * secret token across multiple webhooks. For optimal security, generate a unique secret token
+       * for each webhook you create. The secret token is an arbitrary string that you provide, which
+       * GitHub uses to compute and sign the webhook payloads sent to CodePipeline, for protecting the
+       * integrity and authenticity of the webhook payloads. Using your own credentials or reusing the
+       * same token across multiple webhooks can lead to security vulnerabilities. &gt; If a secret
+       * token was provided, it will be redacted in the response.
        */
       public fun secretToken(secretToken: String)
     }
@@ -683,8 +721,16 @@ public open class CfnWebhook(
       }
 
       /**
-       * @param secretToken The property used to configure GitHub authentication.
-       * For GITHUB_HMAC, only the `SecretToken` property must be set.
+       * @param secretToken The property used to configure GitHub authentication. For GITHUB_HMAC,
+       * only the `SecretToken` property must be set.
+       *
+       * When creating CodePipeline webhooks, do not use your own credentials or reuse the same
+       * secret token across multiple webhooks. For optimal security, generate a unique secret token
+       * for each webhook you create. The secret token is an arbitrary string that you provide, which
+       * GitHub uses to compute and sign the webhook payloads sent to CodePipeline, for protecting the
+       * integrity and authenticity of the webhook payloads. Using your own credentials or reusing the
+       * same token across multiple webhooks can lead to security vulnerabilities. &gt; If a secret
+       * token was provided, it will be redacted in the response.
        */
       override fun secretToken(secretToken: String) {
         cdkBuilder.secretToken(secretToken)
@@ -697,7 +743,8 @@ public open class CfnWebhook(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty,
-    ) : CdkObject(cdkObject), WebhookAuthConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        WebhookAuthConfigurationProperty {
       /**
        * The property used to configure acceptance of webhooks in an IP address range.
        *
@@ -709,9 +756,18 @@ public open class CfnWebhook(
       override fun allowedIpRange(): String? = unwrap(this).getAllowedIpRange()
 
       /**
-       * The property used to configure GitHub authentication.
+       * The property used to configure GitHub authentication. For GITHUB_HMAC, only the
+       * `SecretToken` property must be set.
        *
-       * For GITHUB_HMAC, only the `SecretToken` property must be set.
+       *
+       * When creating CodePipeline webhooks, do not use your own credentials or reuse the same
+       * secret token across multiple webhooks. For optimal security, generate a unique secret token
+       * for each webhook you create. The secret token is an arbitrary string that you provide, which
+       * GitHub uses to compute and sign the webhook payloads sent to CodePipeline, for protecting the
+       * integrity and authenticity of the webhook payloads. Using your own credentials or reusing the
+       * same token across multiple webhooks can lead to security vulnerabilities. &gt; If a secret
+       * token was provided, it will be redacted in the response.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html#cfn-codepipeline-webhook-webhookauthconfiguration-secrettoken)
        */
@@ -852,7 +908,8 @@ public open class CfnWebhook(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookFilterRuleProperty,
-    ) : CdkObject(cdkObject), WebhookFilterRuleProperty {
+    ) : CdkObject(cdkObject),
+        WebhookFilterRuleProperty {
       /**
        * A JsonPath expression that is applied to the body/payload of the webhook.
        *

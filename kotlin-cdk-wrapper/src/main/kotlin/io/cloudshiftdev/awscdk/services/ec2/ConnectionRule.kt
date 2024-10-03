@@ -155,7 +155,8 @@ public interface ConnectionRule {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.ConnectionRule,
-  ) : CdkObject(cdkObject), ConnectionRule {
+  ) : CdkObject(cdkObject),
+      ConnectionRule {
     /**
      * Description of this connection.
      *

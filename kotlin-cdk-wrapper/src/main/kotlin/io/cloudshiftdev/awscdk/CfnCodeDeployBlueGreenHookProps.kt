@@ -269,7 +269,8 @@ public interface CfnCodeDeployBlueGreenHookProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenHookProps,
-  ) : CdkObject(cdkObject), CfnCodeDeployBlueGreenHookProps {
+  ) : CdkObject(cdkObject),
+      CfnCodeDeployBlueGreenHookProps {
     /**
      * Additional options for the blue/green deployment.
      *

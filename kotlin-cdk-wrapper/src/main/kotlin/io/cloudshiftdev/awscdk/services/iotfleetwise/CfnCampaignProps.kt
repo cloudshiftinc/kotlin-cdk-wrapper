@@ -43,6 +43,10 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .compression("compression")
  * .dataDestinationConfigs(List.of(DataDestinationConfigProperty.builder()
+ * .mqttTopicConfig(MqttTopicConfigProperty.builder()
+ * .executionRoleArn("executionRoleArn")
+ * .mqttTopicArn("mqttTopicArn")
+ * .build())
  * .s3Config(S3ConfigProperty.builder()
  * .bucketArn("bucketArn")
  * // the properties below are optional
@@ -66,6 +70,21 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .maxSampleCount(123)
  * .minimumSamplingIntervalMs(123)
+ * .build()))
+ * .signalsToFetch(List.of(SignalFetchInformationProperty.builder()
+ * .actions(List.of("actions"))
+ * .fullyQualifiedName("fullyQualifiedName")
+ * .signalFetchConfig(SignalFetchConfigProperty.builder()
+ * .conditionBased(ConditionBasedSignalFetchConfigProperty.builder()
+ * .conditionExpression("conditionExpression")
+ * .triggerMode("triggerMode")
+ * .build())
+ * .timeBased(TimeBasedSignalFetchConfigProperty.builder()
+ * .executionFrequencyMs(123)
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .conditionLanguageVersion(123)
  * .build()))
  * .spoolingMode("spoolingMode")
  * .startTime("startTime")
@@ -231,6 +250,11 @@ public interface CfnCampaignProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstocollect)
    */
   public fun signalsToCollect(): Any? = unwrap(this).getSignalsToCollect()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
+   */
+  public fun signalsToFetch(): Any? = unwrap(this).getSignalsToFetch()
 
   /**
    * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.
@@ -453,6 +477,21 @@ public interface CfnCampaignProps {
      * @param signalsToCollect (Optional) A list of information about signals to collect.
      */
     public fun signalsToCollect(vararg signalsToCollect: Any)
+
+    /**
+     * @param signalsToFetch the value to be set.
+     */
+    public fun signalsToFetch(signalsToFetch: IResolvable)
+
+    /**
+     * @param signalsToFetch the value to be set.
+     */
+    public fun signalsToFetch(signalsToFetch: List<Any>)
+
+    /**
+     * @param signalsToFetch the value to be set.
+     */
+    public fun signalsToFetch(vararg signalsToFetch: Any)
 
     /**
      * @param spoolingMode (Optional) Whether to store collected data after a vehicle lost a
@@ -707,6 +746,26 @@ public interface CfnCampaignProps {
         signalsToCollect(signalsToCollect.toList())
 
     /**
+     * @param signalsToFetch the value to be set.
+     */
+    override fun signalsToFetch(signalsToFetch: IResolvable) {
+      cdkBuilder.signalsToFetch(signalsToFetch.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param signalsToFetch the value to be set.
+     */
+    override fun signalsToFetch(signalsToFetch: List<Any>) {
+      cdkBuilder.signalsToFetch(signalsToFetch.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param signalsToFetch the value to be set.
+     */
+    override fun signalsToFetch(vararg signalsToFetch: Any): Unit =
+        signalsToFetch(signalsToFetch.toList())
+
+    /**
      * @param spoolingMode (Optional) Whether to store collected data after a vehicle lost a
      * connection with the cloud.
      * After a connection is re-established, the data is automatically forwarded to AWS IoT
@@ -756,7 +815,8 @@ public interface CfnCampaignProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaignProps,
-  ) : CdkObject(cdkObject), CfnCampaignProps {
+  ) : CdkObject(cdkObject),
+      CfnCampaignProps {
     /**
      * Specifies how to update a campaign. The action can be one of the following:.
      *
@@ -910,6 +970,11 @@ public interface CfnCampaignProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstocollect)
      */
     override fun signalsToCollect(): Any? = unwrap(this).getSignalsToCollect()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
+     */
+    override fun signalsToFetch(): Any? = unwrap(this).getSignalsToFetch()
 
     /**
      * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.

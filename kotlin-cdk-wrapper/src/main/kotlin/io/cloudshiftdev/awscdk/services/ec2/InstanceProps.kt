@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.Deprecated
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -56,6 +57,8 @@ public interface InstanceProps {
   /**
    * Whether to associate a public IP address to the primary network interface attached to this
    * instance.
+   *
+   * You cannot specify this property and `ipv6AddressCount` at the same time.
    *
    * Default: - public IP address is automatically assigned based on default behavior
    */
@@ -117,6 +120,33 @@ public interface InstanceProps {
   public fun ebsOptimized(): Boolean? = unwrap(this).getEbsOptimized()
 
   /**
+   * Whether the instance is enabled for AWS Nitro Enclaves.
+   *
+   * Nitro Enclaves requires a Nitro-based virtualized parent instance with specific Intel/AMD with
+   * at least 4 vCPUs
+   * or Graviton with at least 2 vCPUs instance types and Linux/Windows host OS,
+   * while the enclave itself supports only Linux OS.
+   *
+   * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+   *
+   * Default: - false
+   *
+   * [Documentation](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html#nitro-enclave-reqs)
+   */
+  public fun enclaveEnabled(): Boolean? = unwrap(this).getEnclaveEnabled()
+
+  /**
+   * Whether the instance is enabled for hibernation.
+   *
+   * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+   *
+   * Default: - false
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-hibernationoptions.html)
+   */
+  public fun hibernationEnabled(): Boolean? = unwrap(this).getHibernationEnabled()
+
+  /**
    * Apply the given CloudFormation Init configuration to the instance at startup.
    *
    * Default: - no CloudFormation init
@@ -134,6 +164,17 @@ public interface InstanceProps {
       unwrap(this).getInitOptions()?.let(ApplyCloudFormationInitOptions::wrap)
 
   /**
+   * Indicates whether an instance stops or terminates when you initiate shutdown from the instance
+   * (using the operating system command for system shutdown).
+   *
+   * Default: InstanceInitiatedShutdownBehavior.STOP
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior)
+   */
+  public fun instanceInitiatedShutdownBehavior(): InstanceInitiatedShutdownBehavior? =
+      unwrap(this).getInstanceInitiatedShutdownBehavior()?.let(InstanceInitiatedShutdownBehavior::wrap)
+
+  /**
    * The name of the instance.
    *
    * Default: - CDK generated name
@@ -144,6 +185,17 @@ public interface InstanceProps {
    * Type of instance to launch.
    */
   public fun instanceType(): InstanceType
+
+  /**
+   * The number of IPv6 addresses to associate with the primary network interface.
+   *
+   * Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
+   *
+   * You cannot specify this property and `associatePublicIpAddress` at the same time.
+   *
+   * Default: - For instances associated with an IPv6 subnet, use 1; otherwise, use 0.
+   */
+  public fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
 
   /**
    * (deprecated) Name of SSH keypair to grant access to instance.
@@ -167,6 +219,14 @@ public interface InstanceProps {
    * AMI to launch.
    */
   public fun machineImage(): IMachineImage
+
+  /**
+   * The placement group that you want to launch the instance into.
+   *
+   * Default: - no placement group will be used for this instance.
+   */
+  public fun placementGroup(): IPlacementGroup? =
+      unwrap(this).getPlacementGroup()?.let(IPlacementGroup::wrap)
 
   /**
    * Defines a private IP address to associate with an instance.
@@ -282,7 +342,7 @@ public interface InstanceProps {
    * UserData, which will cause CloudFormation to replace it if the UserData
    * changes.
    *
-   * Default: - true iff `initOptions` is specified, false otherwise.
+   * Default: - true if `initOptions` is specified, false otherwise.
    */
   public fun userDataCausesReplacement(): Boolean? = unwrap(this).getUserDataCausesReplacement()
 
@@ -321,6 +381,7 @@ public interface InstanceProps {
     /**
      * @param associatePublicIpAddress Whether to associate a public IP address to the primary
      * network interface attached to this instance.
+     * You cannot specify this property and `ipv6AddressCount` at the same time.
      */
     public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
 
@@ -372,6 +433,23 @@ public interface InstanceProps {
     public fun ebsOptimized(ebsOptimized: Boolean)
 
     /**
+     * @param enclaveEnabled Whether the instance is enabled for AWS Nitro Enclaves.
+     * Nitro Enclaves requires a Nitro-based virtualized parent instance with specific Intel/AMD
+     * with at least 4 vCPUs
+     * or Graviton with at least 2 vCPUs instance types and Linux/Windows host OS,
+     * while the enclave itself supports only Linux OS.
+     *
+     * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+     */
+    public fun enclaveEnabled(enclaveEnabled: Boolean)
+
+    /**
+     * @param hibernationEnabled Whether the instance is enabled for hibernation.
+     * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+     */
+    public fun hibernationEnabled(hibernationEnabled: Boolean)
+
+    /**
      * @param init Apply the given CloudFormation Init configuration to the instance at startup.
      */
     public fun `init`(`init`: CloudFormationInit)
@@ -391,6 +469,14 @@ public interface InstanceProps {
     public fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit)
 
     /**
+     * @param instanceInitiatedShutdownBehavior Indicates whether an instance stops or terminates
+     * when you initiate shutdown from the instance (using the operating system command for system
+     * shutdown).
+     */
+    public
+        fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: InstanceInitiatedShutdownBehavior)
+
+    /**
      * @param instanceName The name of the instance.
      */
     public fun instanceName(instanceName: String)
@@ -399,6 +485,15 @@ public interface InstanceProps {
      * @param instanceType Type of instance to launch. 
      */
     public fun instanceType(instanceType: InstanceType)
+
+    /**
+     * @param ipv6AddressCount The number of IPv6 addresses to associate with the primary network
+     * interface.
+     * Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
+     *
+     * You cannot specify this property and `associatePublicIpAddress` at the same time.
+     */
+    public fun ipv6AddressCount(ipv6AddressCount: Number)
 
     /**
      * @param keyName Name of SSH keypair to grant access to instance.
@@ -417,6 +512,11 @@ public interface InstanceProps {
      * @param machineImage AMI to launch. 
      */
     public fun machineImage(machineImage: IMachineImage)
+
+    /**
+     * @param placementGroup The placement group that you want to launch the instance into.
+     */
+    public fun placementGroup(placementGroup: IPlacementGroup)
 
     /**
      * @param privateIpAddress Defines a private IP address to associate with an instance.
@@ -542,6 +642,7 @@ public interface InstanceProps {
     /**
      * @param associatePublicIpAddress Whether to associate a public IP address to the primary
      * network interface attached to this instance.
+     * You cannot specify this property and `ipv6AddressCount` at the same time.
      */
     override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
       cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
@@ -606,6 +707,27 @@ public interface InstanceProps {
     }
 
     /**
+     * @param enclaveEnabled Whether the instance is enabled for AWS Nitro Enclaves.
+     * Nitro Enclaves requires a Nitro-based virtualized parent instance with specific Intel/AMD
+     * with at least 4 vCPUs
+     * or Graviton with at least 2 vCPUs instance types and Linux/Windows host OS,
+     * while the enclave itself supports only Linux OS.
+     *
+     * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+     */
+    override fun enclaveEnabled(enclaveEnabled: Boolean) {
+      cdkBuilder.enclaveEnabled(enclaveEnabled)
+    }
+
+    /**
+     * @param hibernationEnabled Whether the instance is enabled for hibernation.
+     * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+     */
+    override fun hibernationEnabled(hibernationEnabled: Boolean) {
+      cdkBuilder.hibernationEnabled(hibernationEnabled)
+    }
+
+    /**
      * @param init Apply the given CloudFormation Init configuration to the instance at startup.
      */
     override fun `init`(`init`: CloudFormationInit) {
@@ -630,6 +752,16 @@ public interface InstanceProps {
         initOptions(ApplyCloudFormationInitOptions(initOptions))
 
     /**
+     * @param instanceInitiatedShutdownBehavior Indicates whether an instance stops or terminates
+     * when you initiate shutdown from the instance (using the operating system command for system
+     * shutdown).
+     */
+    override
+        fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: InstanceInitiatedShutdownBehavior) {
+      cdkBuilder.instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior.let(InstanceInitiatedShutdownBehavior.Companion::unwrap))
+    }
+
+    /**
      * @param instanceName The name of the instance.
      */
     override fun instanceName(instanceName: String) {
@@ -641,6 +773,17 @@ public interface InstanceProps {
      */
     override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
+    }
+
+    /**
+     * @param ipv6AddressCount The number of IPv6 addresses to associate with the primary network
+     * interface.
+     * Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
+     *
+     * You cannot specify this property and `associatePublicIpAddress` at the same time.
+     */
+    override fun ipv6AddressCount(ipv6AddressCount: Number) {
+      cdkBuilder.ipv6AddressCount(ipv6AddressCount)
     }
 
     /**
@@ -665,6 +808,13 @@ public interface InstanceProps {
      */
     override fun machineImage(machineImage: IMachineImage) {
       cdkBuilder.machineImage(machineImage.let(IMachineImage.Companion::unwrap))
+    }
+
+    /**
+     * @param placementGroup The placement group that you want to launch the instance into.
+     */
+    override fun placementGroup(placementGroup: IPlacementGroup) {
+      cdkBuilder.placementGroup(placementGroup.let(IPlacementGroup.Companion::unwrap))
     }
 
     /**
@@ -795,7 +945,8 @@ public interface InstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.InstanceProps,
-  ) : CdkObject(cdkObject), InstanceProps {
+  ) : CdkObject(cdkObject),
+      InstanceProps {
     /**
      * Whether the instance could initiate IPv6 connections to anywhere by default.
      *
@@ -817,6 +968,8 @@ public interface InstanceProps {
     /**
      * Whether to associate a public IP address to the primary network interface attached to this
      * instance.
+     *
+     * You cannot specify this property and `ipv6AddressCount` at the same time.
      *
      * Default: - public IP address is automatically assigned based on default behavior
      */
@@ -878,6 +1031,33 @@ public interface InstanceProps {
     override fun ebsOptimized(): Boolean? = unwrap(this).getEbsOptimized()
 
     /**
+     * Whether the instance is enabled for AWS Nitro Enclaves.
+     *
+     * Nitro Enclaves requires a Nitro-based virtualized parent instance with specific Intel/AMD
+     * with at least 4 vCPUs
+     * or Graviton with at least 2 vCPUs instance types and Linux/Windows host OS,
+     * while the enclave itself supports only Linux OS.
+     *
+     * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+     *
+     * Default: - false
+     *
+     * [Documentation](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html#nitro-enclave-reqs)
+     */
+    override fun enclaveEnabled(): Boolean? = unwrap(this).getEnclaveEnabled()
+
+    /**
+     * Whether the instance is enabled for hibernation.
+     *
+     * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+     *
+     * Default: - false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-hibernationoptions.html)
+     */
+    override fun hibernationEnabled(): Boolean? = unwrap(this).getHibernationEnabled()
+
+    /**
      * Apply the given CloudFormation Init configuration to the instance at startup.
      *
      * Default: - no CloudFormation init
@@ -896,6 +1076,17 @@ public interface InstanceProps {
         unwrap(this).getInitOptions()?.let(ApplyCloudFormationInitOptions::wrap)
 
     /**
+     * Indicates whether an instance stops or terminates when you initiate shutdown from the
+     * instance (using the operating system command for system shutdown).
+     *
+     * Default: InstanceInitiatedShutdownBehavior.STOP
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior)
+     */
+    override fun instanceInitiatedShutdownBehavior(): InstanceInitiatedShutdownBehavior? =
+        unwrap(this).getInstanceInitiatedShutdownBehavior()?.let(InstanceInitiatedShutdownBehavior::wrap)
+
+    /**
      * The name of the instance.
      *
      * Default: - CDK generated name
@@ -907,6 +1098,17 @@ public interface InstanceProps {
      */
     override fun instanceType(): InstanceType =
         unwrap(this).getInstanceType().let(InstanceType::wrap)
+
+    /**
+     * The number of IPv6 addresses to associate with the primary network interface.
+     *
+     * Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
+     *
+     * You cannot specify this property and `associatePublicIpAddress` at the same time.
+     *
+     * Default: - For instances associated with an IPv6 subnet, use 1; otherwise, use 0.
+     */
+    override fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
 
     /**
      * (deprecated) Name of SSH keypair to grant access to instance.
@@ -931,6 +1133,14 @@ public interface InstanceProps {
      */
     override fun machineImage(): IMachineImage =
         unwrap(this).getMachineImage().let(IMachineImage::wrap)
+
+    /**
+     * The placement group that you want to launch the instance into.
+     *
+     * Default: - no placement group will be used for this instance.
+     */
+    override fun placementGroup(): IPlacementGroup? =
+        unwrap(this).getPlacementGroup()?.let(IPlacementGroup::wrap)
 
     /**
      * Defines a private IP address to associate with an instance.
@@ -1046,7 +1256,7 @@ public interface InstanceProps {
      * UserData, which will cause CloudFormation to replace it if the UserData
      * changes.
      *
-     * Default: - true iff `initOptions` is specified, false otherwise.
+     * Default: - true if `initOptions` is specified, false otherwise.
      */
     override fun userDataCausesReplacement(): Boolean? = unwrap(this).getUserDataCausesReplacement()
 

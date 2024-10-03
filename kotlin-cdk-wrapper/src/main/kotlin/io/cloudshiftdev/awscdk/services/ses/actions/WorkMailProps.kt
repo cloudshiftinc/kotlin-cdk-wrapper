@@ -93,7 +93,8 @@ public interface WorkMailProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.actions.WorkMailProps,
-  ) : CdkObject(cdkObject), WorkMailProps {
+  ) : CdkObject(cdkObject),
+      WorkMailProps {
     /**
      * The WorkMail organization ARN.
      *

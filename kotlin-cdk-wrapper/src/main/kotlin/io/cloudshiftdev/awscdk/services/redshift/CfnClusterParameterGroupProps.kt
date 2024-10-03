@@ -241,7 +241,8 @@ public interface CfnClusterParameterGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.redshift.CfnClusterParameterGroupProps,
-  ) : CdkObject(cdkObject), CfnClusterParameterGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnClusterParameterGroupProps {
     /**
      * The description of the parameter group.
      *

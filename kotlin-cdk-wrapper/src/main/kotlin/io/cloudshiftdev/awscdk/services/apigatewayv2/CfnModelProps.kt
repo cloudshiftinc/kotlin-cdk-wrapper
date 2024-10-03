@@ -147,7 +147,8 @@ public interface CfnModelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnModelProps,
-  ) : CdkObject(cdkObject), CfnModelProps {
+  ) : CdkObject(cdkObject),
+      CfnModelProps {
     /**
      * The API identifier.
      *

@@ -113,7 +113,8 @@ public interface CfnTrustStoreProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.workspacesweb.CfnTrustStoreProps,
-  ) : CdkObject(cdkObject), CfnTrustStoreProps {
+  ) : CdkObject(cdkObject),
+      CfnTrustStoreProps {
     /**
      * A list of CA certificates to be added to the trust store.
      *

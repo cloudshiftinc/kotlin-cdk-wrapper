@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDefaultViewAssociation(
   cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

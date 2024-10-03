@@ -223,7 +223,8 @@ public interface CfnRateBasedRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.waf.regional.CfnRateBasedRuleProps,
-  ) : CdkObject(cdkObject), CfnRateBasedRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnRateBasedRuleProps {
     /**
      * The `Predicates` object contains one `Predicate` element for each `ByteMatchSet` , `IPSet` ,
      * or `SqlInjectionMatchSet&gt;` object that you want to include in a `RateBasedRule` .

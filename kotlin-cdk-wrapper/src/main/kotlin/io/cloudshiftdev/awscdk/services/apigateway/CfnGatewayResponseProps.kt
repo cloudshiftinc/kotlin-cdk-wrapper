@@ -180,7 +180,8 @@ public interface CfnGatewayResponseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.CfnGatewayResponseProps,
-  ) : CdkObject(cdkObject), CfnGatewayResponseProps {
+  ) : CdkObject(cdkObject),
+      CfnGatewayResponseProps {
     /**
      * Response parameters (paths, query strings and headers) of the GatewayResponse as a
      * string-to-string map of key-value pairs.

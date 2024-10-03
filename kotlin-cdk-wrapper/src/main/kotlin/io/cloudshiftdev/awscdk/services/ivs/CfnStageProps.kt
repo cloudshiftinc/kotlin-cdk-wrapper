@@ -3,12 +3,15 @@
 package io.cloudshiftdev.awscdk.services.ivs
 
 import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnStage`.
@@ -20,6 +23,11 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.ivs.*;
  * CfnStageProps cfnStageProps = CfnStageProps.builder()
+ * .autoParticipantRecordingConfiguration(AutoParticipantRecordingConfigurationProperty.builder()
+ * .storageConfigurationArn("storageConfigurationArn")
+ * // the properties below are optional
+ * .mediaTypes(List.of("mediaTypes"))
+ * .build())
  * .name("name")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -31,6 +39,14 @@ import kotlin.collections.List
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-stage.html)
  */
 public interface CfnStageProps {
+  /**
+   * Configuration object for individual participant recording, to attach to the new stage.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-stage.html#cfn-ivs-stage-autoparticipantrecordingconfiguration)
+   */
+  public fun autoParticipantRecordingConfiguration(): Any? =
+      unwrap(this).getAutoParticipantRecordingConfiguration()
+
   /**
    * Stage name.
    *
@@ -54,6 +70,29 @@ public interface CfnStageProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param autoParticipantRecordingConfiguration Configuration object for individual participant
+     * recording, to attach to the new stage.
+     */
+    public
+        fun autoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration: IResolvable)
+
+    /**
+     * @param autoParticipantRecordingConfiguration Configuration object for individual participant
+     * recording, to attach to the new stage.
+     */
+    public
+        fun autoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration: CfnStage.AutoParticipantRecordingConfigurationProperty)
+
+    /**
+     * @param autoParticipantRecordingConfiguration Configuration object for individual participant
+     * recording, to attach to the new stage.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("be7f8235f22b77c876b541213c0a87fe2aa5fb500224d091727be978f7ae51bf")
+    public
+        fun autoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration: CfnStage.AutoParticipantRecordingConfigurationProperty.Builder.() -> Unit)
+
     /**
      * @param name Stage name.
      */
@@ -79,6 +118,35 @@ public interface CfnStageProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ivs.CfnStageProps.Builder =
         software.amazon.awscdk.services.ivs.CfnStageProps.builder()
+
+    /**
+     * @param autoParticipantRecordingConfiguration Configuration object for individual participant
+     * recording, to attach to the new stage.
+     */
+    override
+        fun autoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration: IResolvable) {
+      cdkBuilder.autoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param autoParticipantRecordingConfiguration Configuration object for individual participant
+     * recording, to attach to the new stage.
+     */
+    override
+        fun autoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration: CfnStage.AutoParticipantRecordingConfigurationProperty) {
+      cdkBuilder.autoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration.let(CfnStage.AutoParticipantRecordingConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param autoParticipantRecordingConfiguration Configuration object for individual participant
+     * recording, to attach to the new stage.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("be7f8235f22b77c876b541213c0a87fe2aa5fb500224d091727be978f7ae51bf")
+    override
+        fun autoParticipantRecordingConfiguration(autoParticipantRecordingConfiguration: CfnStage.AutoParticipantRecordingConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        autoParticipantRecordingConfiguration(CfnStage.AutoParticipantRecordingConfigurationProperty(autoParticipantRecordingConfiguration))
 
     /**
      * @param name Stage name.
@@ -110,7 +178,16 @@ public interface CfnStageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ivs.CfnStageProps,
-  ) : CdkObject(cdkObject), CfnStageProps {
+  ) : CdkObject(cdkObject),
+      CfnStageProps {
+    /**
+     * Configuration object for individual participant recording, to attach to the new stage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-stage.html#cfn-ivs-stage-autoparticipantrecordingconfiguration)
+     */
+    override fun autoParticipantRecordingConfiguration(): Any? =
+        unwrap(this).getAutoParticipantRecordingConfiguration()
+
     /**
      * Stage name.
      *

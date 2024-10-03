@@ -327,7 +327,8 @@ public interface CfnSpotFleetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleetProps,
-  ) : CdkObject(cdkObject), CfnSpotFleetProps {
+  ) : CdkObject(cdkObject),
+      CfnSpotFleetProps {
     /**
      * Describes the configuration of a Spot Fleet request.
      *

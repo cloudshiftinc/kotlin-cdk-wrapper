@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.Unit
 
 /**
@@ -61,6 +62,15 @@ public interface ReplicaGlobalSecondaryIndexOptions {
   public fun contributorInsights(): Boolean? = unwrap(this).getContributorInsights()
 
   /**
+   * The maximum read request units for a specific global secondary index on a replica table.
+   *
+   * Note: This can only be configured if primary table billing is PAY_PER_REQUEST.
+   *
+   * Default: - inherited from the primary table
+   */
+  public fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
+
+  /**
    * The read capacity for a specific global secondary index on a replica table.
    *
    * Note: This can only be configured if primary table billing is provisioned.
@@ -79,6 +89,13 @@ public interface ReplicaGlobalSecondaryIndexOptions {
      * global secondary index on a replica table.
      */
     public fun contributorInsights(contributorInsights: Boolean)
+
+    /**
+     * @param maxReadRequestUnits The maximum read request units for a specific global secondary
+     * index on a replica table.
+     * Note: This can only be configured if primary table billing is PAY_PER_REQUEST.
+     */
+    public fun maxReadRequestUnits(maxReadRequestUnits: Number)
 
     /**
      * @param readCapacity The read capacity for a specific global secondary index on a replica
@@ -102,6 +119,15 @@ public interface ReplicaGlobalSecondaryIndexOptions {
     }
 
     /**
+     * @param maxReadRequestUnits The maximum read request units for a specific global secondary
+     * index on a replica table.
+     * Note: This can only be configured if primary table billing is PAY_PER_REQUEST.
+     */
+    override fun maxReadRequestUnits(maxReadRequestUnits: Number) {
+      cdkBuilder.maxReadRequestUnits(maxReadRequestUnits)
+    }
+
+    /**
      * @param readCapacity The read capacity for a specific global secondary index on a replica
      * table.
      * Note: This can only be configured if primary table billing is provisioned.
@@ -116,7 +142,8 @@ public interface ReplicaGlobalSecondaryIndexOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.ReplicaGlobalSecondaryIndexOptions,
-  ) : CdkObject(cdkObject), ReplicaGlobalSecondaryIndexOptions {
+  ) : CdkObject(cdkObject),
+      ReplicaGlobalSecondaryIndexOptions {
     /**
      * Whether CloudWatch contributor insights is enabled for a specific global secondary index on a
      * replica table.
@@ -124,6 +151,15 @@ public interface ReplicaGlobalSecondaryIndexOptions {
      * Default: - inherited from the primary table
      */
     override fun contributorInsights(): Boolean? = unwrap(this).getContributorInsights()
+
+    /**
+     * The maximum read request units for a specific global secondary index on a replica table.
+     *
+     * Note: This can only be configured if primary table billing is PAY_PER_REQUEST.
+     *
+     * Default: - inherited from the primary table
+     */
+    override fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
 
     /**
      * The read capacity for a specific global secondary index on a replica table.

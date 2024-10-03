@@ -29,7 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class SubnetNetworkAclAssociation(
   cdkObject: software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation,
-) : Resource(cdkObject), ISubnetNetworkAclAssociation {
+) : Resource(cdkObject),
+    ISubnetNetworkAclAssociation {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

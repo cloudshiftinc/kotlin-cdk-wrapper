@@ -19,15 +19,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.sns.*;
- * Topic topic = new Topic(this, "MyTopic");
- * TopicRule topicRule = TopicRule.Builder.create(this, "TopicRule")
- * .sql(IotSql.fromStringAsVer20160323("SELECT topic(2) as device_id, year, month, day FROM
- * 'device/+/data'"))
- * .actions(List.of(
- * SnsTopicAction.Builder.create(topic)
- * .messageFormat(SnsActionMessageFormat.JSON)
- * .build()))
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.alpha.DeliveryStream;
+ * DeliveryStream stream;
+ * Topic topic = new Topic(this, "Topic");
+ * Subscription.Builder.create(this, "Subscription")
+ * .topic(topic)
+ * .endpoint(stream.getDeliveryStreamArn())
+ * .protocol(SubscriptionProtocol.FIREHOSE)
+ * .subscriptionRoleArn("SAMPLE_ARN")
  * .build();
  * ```
  */
@@ -113,6 +112,9 @@ public open class Topic(
 
     /**
      * A developer-defined string that can be used to identify this SNS topic.
+     *
+     * The display name must be maximum 100 characters long, including hyphens (-),
+     * underscores (_), spaces, and tabs.
      *
      * Default: None
      *
@@ -239,6 +241,9 @@ public open class Topic(
 
     /**
      * A developer-defined string that can be used to identify this SNS topic.
+     *
+     * The display name must be maximum 100 characters long, including hyphens (-),
+     * underscores (_), spaces, and tabs.
      *
      * Default: None
      *

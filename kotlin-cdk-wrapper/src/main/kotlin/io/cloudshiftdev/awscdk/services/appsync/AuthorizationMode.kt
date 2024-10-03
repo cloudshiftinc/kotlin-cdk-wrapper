@@ -228,7 +228,8 @@ public interface AuthorizationMode {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.AuthorizationMode,
-  ) : CdkObject(cdkObject), AuthorizationMode {
+  ) : CdkObject(cdkObject),
+      AuthorizationMode {
     /**
      * If authorizationType is `AuthorizationType.API_KEY`, this option can be configured.
      *

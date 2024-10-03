@@ -58,7 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplicationSettings(
   cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -729,7 +730,8 @@ public open class CfnApplicationSettings(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty,
-    ) : CdkObject(cdkObject), CampaignHookProperty {
+    ) : CdkObject(cdkObject),
+        CampaignHookProperty {
       /**
        * The name or Amazon Resource Name (ARN) of the Lambda function that Amazon Pinpoint invokes
        * to send messages for campaigns in the application.
@@ -918,7 +920,8 @@ public open class CfnApplicationSettings(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty,
-    ) : CdkObject(cdkObject), LimitsProperty {
+    ) : CdkObject(cdkObject),
+        LimitsProperty {
       /**
        * The maximum number of messages that a campaign can send to a single endpoint during a
        * 24-hour period.
@@ -1073,7 +1076,8 @@ public open class CfnApplicationSettings(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.QuietTimeProperty,
-    ) : CdkObject(cdkObject), QuietTimeProperty {
+    ) : CdkObject(cdkObject),
+        QuietTimeProperty {
       /**
        * The specific time when quiet time ends.
        *

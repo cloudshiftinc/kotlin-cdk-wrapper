@@ -65,7 +65,8 @@ public interface IPrincipal : IGrantable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IPrincipal,
-  ) : CdkObject(cdkObject), IPrincipal {
+  ) : CdkObject(cdkObject),
+      IPrincipal {
     /**
      * Add to the policy of this principal.
      *

@@ -22,7 +22,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EcsApplication(
   cdkObject: software.amazon.awscdk.services.codedeploy.EcsApplication,
-) : Resource(cdkObject), IEcsApplication {
+) : Resource(cdkObject),
+    IEcsApplication {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codedeploy.EcsApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

@@ -53,7 +53,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDBClusterParameterGroup(
   cdkObject: software.amazon.awscdk.services.neptune.CfnDBClusterParameterGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

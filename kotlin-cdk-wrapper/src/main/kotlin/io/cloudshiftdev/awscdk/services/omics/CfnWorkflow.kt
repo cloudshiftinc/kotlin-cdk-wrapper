@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWorkflow(
   cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.omics.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -525,7 +527,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty,
-    ) : CdkObject(cdkObject), WorkflowParameterProperty {
+    ) : CdkObject(cdkObject),
+        WorkflowParameterProperty {
       /**
        * The parameter's description.
        *

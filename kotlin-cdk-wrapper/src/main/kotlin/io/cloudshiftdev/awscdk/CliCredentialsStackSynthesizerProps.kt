@@ -186,7 +186,8 @@ public interface CliCredentialsStackSynthesizerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CliCredentialsStackSynthesizerProps,
-  ) : CdkObject(cdkObject), CliCredentialsStackSynthesizerProps {
+  ) : CdkObject(cdkObject),
+      CliCredentialsStackSynthesizerProps {
     /**
      * bucketPrefix to use while storing S3 Assets.
      *

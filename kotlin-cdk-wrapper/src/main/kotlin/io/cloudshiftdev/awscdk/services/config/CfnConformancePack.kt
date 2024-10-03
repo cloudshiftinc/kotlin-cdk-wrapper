@@ -50,7 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConformancePack(
   cdkObject: software.amazon.awscdk.services.config.CfnConformancePack,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -499,7 +500,8 @@ public open class CfnConformancePack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty,
-    ) : CdkObject(cdkObject), ConformancePackInputParameterProperty {
+    ) : CdkObject(cdkObject),
+        ConformancePackInputParameterProperty {
       /**
        * One part of a key-value pair.
        *
@@ -643,7 +645,8 @@ public open class CfnConformancePack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty,
-    ) : CdkObject(cdkObject), TemplateSSMDocumentDetailsProperty {
+    ) : CdkObject(cdkObject),
+        TemplateSSMDocumentDetailsProperty {
       /**
        * The name or Amazon Resource Name (ARN) of the SSM document to use to create a conformance
        * pack.

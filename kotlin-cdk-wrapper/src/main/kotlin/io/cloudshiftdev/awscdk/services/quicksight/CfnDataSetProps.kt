@@ -98,6 +98,7 @@ import kotlin.jvm.JvmName
  * .columns(List.of("columns"))
  * .description("description")
  * .build()))
+ * .folderArns(List.of("folderArns"))
  * .importMode("importMode")
  * .ingestionWaitPolicy(IngestionWaitPolicyProperty.builder()
  * .ingestionWaitTimeInHours(123)
@@ -106,23 +107,6 @@ import kotlin.jvm.JvmName
  * .logicalTableMap(Map.of(
  * "logicalTableMapKey", LogicalTableProperty.builder()
  * .alias("alias")
- * .source(LogicalTableSourceProperty.builder()
- * .dataSetArn("dataSetArn")
- * .joinInstruction(JoinInstructionProperty.builder()
- * .leftOperand("leftOperand")
- * .onClause("onClause")
- * .rightOperand("rightOperand")
- * .type("type")
- * // the properties below are optional
- * .leftJoinKeyProperties(JoinKeyPropertiesProperty.builder()
- * .uniqueKey(false)
- * .build())
- * .rightJoinKeyProperties(JoinKeyPropertiesProperty.builder()
- * .uniqueKey(false)
- * .build())
- * .build())
- * .physicalTableId("physicalTableId")
- * .build())
  * // the properties below are optional
  * .dataTransforms(List.of(TransformOperationProperty.builder()
  * .castColumnTypeOperation(CastColumnTypeOperationProperty.builder()
@@ -169,7 +153,28 @@ import kotlin.jvm.JvmName
  * .columnGeographicRole("columnGeographicRole")
  * .build()))
  * .build())
+ * .untagColumnOperation(UntagColumnOperationProperty.builder()
+ * .columnName("columnName")
+ * .tagNames(List.of("tagNames"))
+ * .build())
  * .build()))
+ * .source(LogicalTableSourceProperty.builder()
+ * .dataSetArn("dataSetArn")
+ * .joinInstruction(JoinInstructionProperty.builder()
+ * .leftOperand("leftOperand")
+ * .onClause("onClause")
+ * .rightOperand("rightOperand")
+ * .type("type")
+ * // the properties below are optional
+ * .leftJoinKeyProperties(JoinKeyPropertiesProperty.builder()
+ * .uniqueKey(false)
+ * .build())
+ * .rightJoinKeyProperties(JoinKeyPropertiesProperty.builder()
+ * .uniqueKey(false)
+ * .build())
+ * .build())
+ * .physicalTableId("physicalTableId")
+ * .build())
  * .build()))
  * .name("name")
  * .permissions(List.of(ResourcePermissionProperty.builder()
@@ -309,6 +314,13 @@ public interface CfnDataSetProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-fieldfolders)
    */
   public fun fieldFolders(): Any? = unwrap(this).getFieldFolders()
+
+  /**
+   * When you create the dataset, Amazon QuickSight adds the dataset to these folders.</p>.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-folderarns)
+   */
+  public fun folderArns(): List<String> = unwrap(this).getFolderArns() ?: emptyList()
 
   /**
    * Indicates whether you want to import the data into SPICE.
@@ -496,6 +508,18 @@ public interface CfnDataSetProps {
      * @param fieldFolders The folder that contains fields and nested subfolders for your dataset.
      */
     public fun fieldFolders(fieldFolders: Map<String, Any>)
+
+    /**
+     * @param folderArns When you create the dataset, Amazon QuickSight adds the dataset to these
+     * folders.</p>.
+     */
+    public fun folderArns(folderArns: List<String>)
+
+    /**
+     * @param folderArns When you create the dataset, Amazon QuickSight adds the dataset to these
+     * folders.</p>.
+     */
+    public fun folderArns(vararg folderArns: String)
 
     /**
      * @param importMode Indicates whether you want to import the data into SPICE.
@@ -779,6 +803,20 @@ public interface CfnDataSetProps {
     }
 
     /**
+     * @param folderArns When you create the dataset, Amazon QuickSight adds the dataset to these
+     * folders.</p>.
+     */
+    override fun folderArns(folderArns: List<String>) {
+      cdkBuilder.folderArns(folderArns)
+    }
+
+    /**
+     * @param folderArns When you create the dataset, Amazon QuickSight adds the dataset to these
+     * folders.</p>.
+     */
+    override fun folderArns(vararg folderArns: String): Unit = folderArns(folderArns.toList())
+
+    /**
      * @param importMode Indicates whether you want to import the data into SPICE.
      */
     override fun importMode(importMode: String) {
@@ -946,7 +984,8 @@ public interface CfnDataSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSetProps,
-  ) : CdkObject(cdkObject), CfnDataSetProps {
+  ) : CdkObject(cdkObject),
+      CfnDataSetProps {
     /**
      * The AWS account ID.
      *
@@ -1006,6 +1045,13 @@ public interface CfnDataSetProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-fieldfolders)
      */
     override fun fieldFolders(): Any? = unwrap(this).getFieldFolders()
+
+    /**
+     * When you create the dataset, Amazon QuickSight adds the dataset to these folders.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-folderarns)
+     */
+    override fun folderArns(): List<String> = unwrap(this).getFolderArns() ?: emptyList()
 
     /**
      * Indicates whether you want to import the data into SPICE.

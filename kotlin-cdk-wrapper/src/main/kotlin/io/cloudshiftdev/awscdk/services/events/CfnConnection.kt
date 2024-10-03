@@ -32,7 +32,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.events.*;
  * CfnConnection cfnConnection = CfnConnection.Builder.create(this, "MyCfnConnection")
  * .authorizationType("authorizationType")
- * // the properties below are optional
  * .authParameters(AuthParametersProperty.builder()
  * .apiKeyAuthParameters(ApiKeyAuthParametersProperty.builder()
  * .apiKeyName("apiKeyName")
@@ -92,6 +91,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .build())
+ * // the properties below are optional
  * .description("description")
  * .name("name")
  * .build();
@@ -101,7 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConnection(
   cdkObject: software.amazon.awscdk.services.events.CfnConnection,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -132,7 +133,7 @@ public open class CfnConnection(
    * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters to
    * use to authorize with the endpoint.
    */
-  public open fun authParameters(): Any? = unwrap(this).getAuthParameters()
+  public open fun authParameters(): Any = unwrap(this).getAuthParameters()
 
   /**
    * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters to
@@ -448,7 +449,8 @@ public open class CfnConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnConnection.ApiKeyAuthParametersProperty,
-    ) : CdkObject(cdkObject), ApiKeyAuthParametersProperty {
+    ) : CdkObject(cdkObject),
+        ApiKeyAuthParametersProperty {
       /**
        * The name of the API key to use for authorization.
        *
@@ -773,7 +775,8 @@ public open class CfnConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnConnection.AuthParametersProperty,
-    ) : CdkObject(cdkObject), AuthParametersProperty {
+    ) : CdkObject(cdkObject),
+        AuthParametersProperty {
       /**
        * The API Key parameters to use for authorization.
        *
@@ -896,7 +899,8 @@ public open class CfnConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty,
-    ) : CdkObject(cdkObject), BasicAuthParametersProperty {
+    ) : CdkObject(cdkObject),
+        BasicAuthParametersProperty {
       /**
        * The password associated with the user name to use for Basic authorization.
        *
@@ -1006,7 +1010,8 @@ public open class CfnConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty,
-    ) : CdkObject(cdkObject), ClientParametersProperty {
+    ) : CdkObject(cdkObject),
+        ClientParametersProperty {
       /**
        * The client ID to use for OAuth authorization.
        *
@@ -1226,7 +1231,8 @@ public open class CfnConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty,
-    ) : CdkObject(cdkObject), ConnectionHttpParametersProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionHttpParametersProperty {
       /**
        * Contains additional body string parameters for the connection.
        *
@@ -1476,7 +1482,8 @@ public open class CfnConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnConnection.OAuthParametersProperty,
-    ) : CdkObject(cdkObject), OAuthParametersProperty {
+    ) : CdkObject(cdkObject),
+        OAuthParametersProperty {
       /**
        * The URL to the authorization endpoint when OAuth is specified as the authorization type.
        *
@@ -1551,6 +1558,8 @@ public open class CfnConnection(
   public interface ParameterProperty {
     /**
      * Specifies whether the value is secret.
+     *
+     * Default: - true
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-isvaluesecret)
      */
@@ -1635,9 +1644,12 @@ public open class CfnConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.events.CfnConnection.ParameterProperty,
-    ) : CdkObject(cdkObject), ParameterProperty {
+    ) : CdkObject(cdkObject),
+        ParameterProperty {
       /**
        * Specifies whether the value is secret.
+       *
+       * Default: - true
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html#cfn-events-connection-parameter-isvaluesecret)
        */

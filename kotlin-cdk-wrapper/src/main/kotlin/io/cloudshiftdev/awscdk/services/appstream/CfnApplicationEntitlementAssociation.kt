@@ -32,7 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplicationEntitlementAssociation(
   cdkObject: software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

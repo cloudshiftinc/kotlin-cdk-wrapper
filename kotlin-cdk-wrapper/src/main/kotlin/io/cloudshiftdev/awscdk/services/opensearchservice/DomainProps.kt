@@ -1004,7 +1004,8 @@ public interface DomainProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opensearchservice.DomainProps,
-  ) : CdkObject(cdkObject), DomainProps {
+  ) : CdkObject(cdkObject),
+      DomainProps {
     /**
      * Domain access policies.
      *

@@ -304,7 +304,8 @@ public interface CfnFuotaTaskProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotwireless.CfnFuotaTaskProps,
-  ) : CdkObject(cdkObject), CfnFuotaTaskProps {
+  ) : CdkObject(cdkObject),
+      CfnFuotaTaskProps {
     /**
      * The ID of the multicast group to associate with a FUOTA task.
      *

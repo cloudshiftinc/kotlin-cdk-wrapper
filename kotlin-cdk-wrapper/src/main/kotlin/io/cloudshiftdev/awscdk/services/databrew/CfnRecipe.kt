@@ -62,7 +62,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRecipe(
   cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -405,7 +407,8 @@ public open class CfnRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * The name of a valid DataBrew transformation to be performed on the data.
        *
@@ -550,7 +553,8 @@ public open class CfnRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.ConditionExpressionProperty,
-    ) : CdkObject(cdkObject), ConditionExpressionProperty {
+    ) : CdkObject(cdkObject),
+        ConditionExpressionProperty {
       /**
        * A specific condition to apply to a recipe action.
        *
@@ -754,7 +758,8 @@ public open class CfnRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.DataCatalogInputDefinitionProperty,
-    ) : CdkObject(cdkObject), DataCatalogInputDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        DataCatalogInputDefinitionProperty {
       /**
        * The unique identifier of the AWS account that holds the Data Catalog that stores the data.
        *
@@ -951,7 +956,8 @@ public open class CfnRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.InputProperty,
-    ) : CdkObject(cdkObject), InputProperty {
+    ) : CdkObject(cdkObject),
+        InputProperty {
       /**
        * The AWS Glue Data Catalog parameters for the data.
        *
@@ -3227,7 +3233,8 @@ public open class CfnRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.RecipeParametersProperty,
-    ) : CdkObject(cdkObject), RecipeParametersProperty {
+    ) : CdkObject(cdkObject),
+        RecipeParametersProperty {
       /**
        * The name of an aggregation function to apply.
        *
@@ -4147,7 +4154,8 @@ public open class CfnRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.RecipeStepProperty,
-    ) : CdkObject(cdkObject), RecipeStepProperty {
+    ) : CdkObject(cdkObject),
+        RecipeStepProperty {
       /**
        * The particular action to be performed in the recipe step.
        *
@@ -4261,7 +4269,8 @@ public open class CfnRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * The Amazon S3 bucket name.
        *
@@ -4440,7 +4449,8 @@ public open class CfnRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty,
-    ) : CdkObject(cdkObject), SecondaryInputProperty {
+    ) : CdkObject(cdkObject),
+        SecondaryInputProperty {
       /**
        * The AWS Glue Data Catalog parameters for the data.
        *

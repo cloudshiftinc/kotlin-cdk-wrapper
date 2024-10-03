@@ -34,6 +34,16 @@ import kotlin.jvm.JvmName
  * .providerConfiguration(Map.of(
  * "providerConfigurationKey", "providerConfiguration"))
  * .build())
+ * .ruleBasedProperties(IdMappingRuleBasedPropertiesProperty.builder()
+ * .attributeMatchingModel("attributeMatchingModel")
+ * .recordMatchingModel("recordMatchingModel")
+ * // the properties below are optional
+ * .ruleDefinitionType("ruleDefinitionType")
+ * .rules(List.of(RuleProperty.builder()
+ * .matchingKeys(List.of("matchingKeys"))
+ * .ruleName("ruleName")
+ * .build()))
+ * .build())
  * .build())
  * .inputSourceConfig(List.of(IdMappingWorkflowInputSourceProperty.builder()
  * .inputSourceArn("inputSourceArn")
@@ -68,7 +78,7 @@ public interface CfnIdMappingWorkflowProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * An object which defines the `idMappingType` and the `providerProperties` .
+   * An object which defines the ID mapping technique and any additional configurations.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques)
    */
@@ -126,21 +136,21 @@ public interface CfnIdMappingWorkflowProps {
     public fun description(description: String)
 
     /**
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     public fun idMappingTechniques(idMappingTechniques: IResolvable)
 
     /**
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     public
         fun idMappingTechniques(idMappingTechniques: CfnIdMappingWorkflow.IdMappingTechniquesProperty)
 
     /**
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9593406f44ebd4be37ba4b85dee9531e9059ac32c4256bb3cfad2cba55d5fb48")
@@ -220,16 +230,16 @@ public interface CfnIdMappingWorkflowProps {
     }
 
     /**
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     override fun idMappingTechniques(idMappingTechniques: IResolvable) {
       cdkBuilder.idMappingTechniques(idMappingTechniques.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     override
         fun idMappingTechniques(idMappingTechniques: CfnIdMappingWorkflow.IdMappingTechniquesProperty) {
@@ -237,8 +247,8 @@ public interface CfnIdMappingWorkflowProps {
     }
 
     /**
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9593406f44ebd4be37ba4b85dee9531e9059ac32c4256bb3cfad2cba55d5fb48")
@@ -328,7 +338,8 @@ public interface CfnIdMappingWorkflowProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflowProps,
-  ) : CdkObject(cdkObject), CfnIdMappingWorkflowProps {
+  ) : CdkObject(cdkObject),
+      CfnIdMappingWorkflowProps {
     /**
      * A description of the workflow.
      *
@@ -337,7 +348,7 @@ public interface CfnIdMappingWorkflowProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * An object which defines the `idMappingType` and the `providerProperties` .
+     * An object which defines the ID mapping technique and any additional configurations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques)
      */

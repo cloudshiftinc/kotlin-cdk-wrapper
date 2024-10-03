@@ -101,7 +101,8 @@ public interface ByoDkimOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.ByoDkimOptions,
-  ) : CdkObject(cdkObject), ByoDkimOptions {
+  ) : CdkObject(cdkObject),
+      ByoDkimOptions {
     /**
      * The private key that's used to generate a DKIM signature.
      */

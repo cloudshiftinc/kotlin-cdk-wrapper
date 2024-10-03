@@ -47,7 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EcsDeploymentGroup(
   cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup,
-) : Resource(cdkObject), IEcsDeploymentGroup {
+) : Resource(cdkObject),
+    IEcsDeploymentGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

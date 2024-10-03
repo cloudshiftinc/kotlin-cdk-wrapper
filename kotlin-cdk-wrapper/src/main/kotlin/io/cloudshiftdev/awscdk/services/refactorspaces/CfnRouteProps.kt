@@ -262,7 +262,8 @@ public interface CfnRouteProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRouteProps,
-  ) : CdkObject(cdkObject), CfnRouteProps {
+  ) : CdkObject(cdkObject),
+      CfnRouteProps {
     /**
      * The unique identifier of the application.
      *

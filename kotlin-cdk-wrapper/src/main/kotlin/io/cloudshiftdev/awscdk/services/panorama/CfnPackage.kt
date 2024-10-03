@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPackage(
   cdkObject: software.amazon.awscdk.services.panorama.CfnPackage,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -84,30 +86,30 @@ public open class CfnPackage(
   public open fun attrPackageId(): String = unwrap(this).getAttrPackageId()
 
   /**
-   *
+   * The location's binary prefix.
    */
   public open fun attrStorageLocationBinaryPrefixLocation(): String =
       unwrap(this).getAttrStorageLocationBinaryPrefixLocation()
 
   /**
-   *
+   * The location's bucket.
    */
   public open fun attrStorageLocationBucket(): String = unwrap(this).getAttrStorageLocationBucket()
 
   /**
-   *
+   * The location's generated prefix.
    */
   public open fun attrStorageLocationGeneratedPrefixLocation(): String =
       unwrap(this).getAttrStorageLocationGeneratedPrefixLocation()
 
   /**
-   *
+   * The location's manifest prefix.
    */
   public open fun attrStorageLocationManifestPrefixLocation(): String =
       unwrap(this).getAttrStorageLocationManifestPrefixLocation()
 
   /**
-   *
+   * The location's repo prefix.
    */
   public open fun attrStorageLocationRepoPrefixLocation(): String =
       unwrap(this).getAttrStorageLocationRepoPrefixLocation()
@@ -462,7 +464,8 @@ public open class CfnPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.panorama.CfnPackage.StorageLocationProperty,
-    ) : CdkObject(cdkObject), StorageLocationProperty {
+    ) : CdkObject(cdkObject),
+        StorageLocationProperty {
       /**
        * The location's binary prefix.
        *

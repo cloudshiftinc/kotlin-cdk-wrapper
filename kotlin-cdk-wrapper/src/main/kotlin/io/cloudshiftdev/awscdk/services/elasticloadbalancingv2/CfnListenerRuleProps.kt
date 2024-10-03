@@ -319,7 +319,8 @@ public interface CfnListenerRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRuleProps,
-  ) : CdkObject(cdkObject), CfnListenerRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnListenerRuleProps {
     /**
      * The actions.
      *

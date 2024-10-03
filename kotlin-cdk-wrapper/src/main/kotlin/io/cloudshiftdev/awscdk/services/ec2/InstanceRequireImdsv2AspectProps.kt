@@ -98,7 +98,8 @@ public interface InstanceRequireImdsv2AspectProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.InstanceRequireImdsv2AspectProps,
-  ) : CdkObject(cdkObject), InstanceRequireImdsv2AspectProps {
+  ) : CdkObject(cdkObject),
+      InstanceRequireImdsv2AspectProps {
     /**
      * Whether warnings that would be raised when an Instance is associated with an existing Launch
      * Template should be suppressed or not.

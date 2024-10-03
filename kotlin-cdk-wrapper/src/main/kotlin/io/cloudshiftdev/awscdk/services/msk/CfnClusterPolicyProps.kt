@@ -82,7 +82,8 @@ public interface CfnClusterPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.msk.CfnClusterPolicyProps,
-  ) : CdkObject(cdkObject), CfnClusterPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnClusterPolicyProps {
     /**
      * The Amazon Resource Name (ARN) that uniquely identifies the cluster.
      *

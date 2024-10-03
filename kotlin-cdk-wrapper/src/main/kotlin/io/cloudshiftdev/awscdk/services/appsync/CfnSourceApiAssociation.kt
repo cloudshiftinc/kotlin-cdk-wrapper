@@ -45,7 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSourceApiAssociation(
   cdkObject: software.amazon.awscdk.services.appsync.CfnSourceApiAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appsync.CfnSourceApiAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -453,7 +454,8 @@ public open class CfnSourceApiAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnSourceApiAssociation.SourceApiAssociationConfigProperty,
-    ) : CdkObject(cdkObject), SourceApiAssociationConfigProperty {
+    ) : CdkObject(cdkObject),
+        SourceApiAssociationConfigProperty {
       /**
        * The property that indicates which merging option is enabled in the source API association.
        *

@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ServiceAccount(
   cdkObject: software.amazon.awscdk.services.eks.ServiceAccount,
-) : CloudshiftdevConstructsConstruct(cdkObject), IPrincipal {
+) : CloudshiftdevConstructsConstruct(cdkObject),
+    IPrincipal {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -130,6 +131,15 @@ public open class ServiceAccount(
     public fun cluster(cluster: ICluster)
 
     /**
+     * The identity type to use for the service account.
+     *
+     * Default: IdentityType.IRSA
+     *
+     * @param identityType The identity type to use for the service account. 
+     */
+    public fun identityType(identityType: IdentityType)
+
+    /**
      * Additional labels of the service account.
      *
      * Default: - no additional labels
@@ -188,6 +198,17 @@ public open class ServiceAccount(
      */
     override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
+    }
+
+    /**
+     * The identity type to use for the service account.
+     *
+     * Default: IdentityType.IRSA
+     *
+     * @param identityType The identity type to use for the service account. 
+     */
+    override fun identityType(identityType: IdentityType) {
+      cdkBuilder.identityType(identityType.let(IdentityType.Companion::unwrap))
     }
 
     /**

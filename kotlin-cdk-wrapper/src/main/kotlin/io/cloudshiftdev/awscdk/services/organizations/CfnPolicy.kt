@@ -60,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPolicy(
   cdkObject: software.amazon.awscdk.services.organizations.CfnPolicy,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

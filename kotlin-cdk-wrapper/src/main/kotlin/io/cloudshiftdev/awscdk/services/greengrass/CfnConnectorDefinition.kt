@@ -69,7 +69,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConnectorDefinition(
   cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -518,7 +520,8 @@ public open class CfnConnectorDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty,
-    ) : CdkObject(cdkObject), ConnectorDefinitionVersionProperty {
+    ) : CdkObject(cdkObject),
+        ConnectorDefinitionVersionProperty {
       /**
        * The connectors in this version.
        *
@@ -676,7 +679,8 @@ public open class CfnConnectorDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorProperty,
-    ) : CdkObject(cdkObject), ConnectorProperty {
+    ) : CdkObject(cdkObject),
+        ConnectorProperty {
       /**
        * The Amazon Resource Name (ARN) of the connector.
        *

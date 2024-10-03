@@ -311,7 +311,8 @@ public interface IPipeline : IResource, INotificationRuleSource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.IPipeline,
-  ) : CdkObject(cdkObject), IPipeline {
+  ) : CdkObject(cdkObject),
+      IPipeline {
     /**
      * Apply the given removal policy to this resource.
      *

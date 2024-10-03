@@ -140,7 +140,8 @@ public interface CfnADMChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnADMChannelProps,
-  ) : CdkObject(cdkObject), CfnADMChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnADMChannelProps {
     /**
      * The unique identifier for the Amazon Pinpoint application that the ADM channel applies to.
      *

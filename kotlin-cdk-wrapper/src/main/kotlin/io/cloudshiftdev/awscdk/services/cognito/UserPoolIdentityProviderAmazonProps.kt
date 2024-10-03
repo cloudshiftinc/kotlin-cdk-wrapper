@@ -163,7 +163,8 @@ public interface UserPoolIdentityProviderAmazonProps : UserPoolIdentityProviderP
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderAmazonProps,
-  ) : CdkObject(cdkObject), UserPoolIdentityProviderAmazonProps {
+  ) : CdkObject(cdkObject),
+      UserPoolIdentityProviderAmazonProps {
     /**
      * Mapping attributes from the identity provider to standard and custom attributes of the user
      * pool.

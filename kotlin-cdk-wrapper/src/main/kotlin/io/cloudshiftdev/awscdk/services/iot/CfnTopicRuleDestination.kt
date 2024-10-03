@@ -45,7 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTopicRuleDestination(
   cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnTopicRuleDestination(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -408,7 +409,8 @@ public open class CfnTopicRuleDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty,
-    ) : CdkObject(cdkObject), HttpUrlDestinationSummaryProperty {
+    ) : CdkObject(cdkObject),
+        HttpUrlDestinationSummaryProperty {
       /**
        * The URL used to confirm the HTTP topic rule destination URL.
        *
@@ -576,7 +578,8 @@ public open class CfnTopicRuleDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination.VpcDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), VpcDestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        VpcDestinationPropertiesProperty {
       /**
        * The ARN of a role that has permission to create and attach to elastic network interfaces
        * (ENIs).

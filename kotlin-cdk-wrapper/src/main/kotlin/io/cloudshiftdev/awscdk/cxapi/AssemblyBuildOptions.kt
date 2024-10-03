@@ -33,7 +33,8 @@ public interface AssemblyBuildOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cxapi.AssemblyBuildOptions,
-  ) : CdkObject(cdkObject), AssemblyBuildOptions
+  ) : CdkObject(cdkObject),
+      AssemblyBuildOptions
 
   public companion object {
     public operator fun invoke(block: Builder.() -> Unit = {}): AssemblyBuildOptions {

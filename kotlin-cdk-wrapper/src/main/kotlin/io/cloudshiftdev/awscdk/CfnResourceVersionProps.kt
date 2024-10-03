@@ -255,7 +255,8 @@ public interface CfnResourceVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnResourceVersionProps,
-  ) : CdkObject(cdkObject), CfnResourceVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnResourceVersionProps {
     /**
      * The Amazon Resource Name (ARN) of the IAM role for CloudFormation to assume when invoking the
      * resource.

@@ -358,7 +358,8 @@ public interface CfnBucketProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucketProps,
-  ) : CdkObject(cdkObject), CfnBucketProps {
+  ) : CdkObject(cdkObject),
+      CfnBucketProps {
     /**
      * A name for the S3 on Outposts bucket.
      *

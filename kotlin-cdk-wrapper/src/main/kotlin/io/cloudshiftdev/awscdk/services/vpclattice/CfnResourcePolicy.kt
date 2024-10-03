@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResourcePolicy(
   cdkObject: software.amazon.awscdk.services.vpclattice.CfnResourcePolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

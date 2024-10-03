@@ -304,7 +304,8 @@ public interface GitPullRequestFilter {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.GitPullRequestFilter,
-  ) : CdkObject(cdkObject), GitPullRequestFilter {
+  ) : CdkObject(cdkObject),
+      GitPullRequestFilter {
     /**
      * The list of patterns of Git branches that, when pull request events occurs, are to be
      * excluded from starting the pipeline.

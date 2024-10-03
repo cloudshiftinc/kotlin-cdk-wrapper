@@ -18,9 +18,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * This resource specifies user access logging settings that can be associated with a web portal.
  *
- * In order to receive logs from WorkSpaces Web, you must have an Amazon Kinesis Data Stream that
- * starts with "amazon-workspaces-web-*". Your Amazon Kinesis data stream must either have server-side
- * encryption turned off, or must use AWS managed keys for server-side encryption.
+ * In order to receive logs from WorkSpaces Secure Browser, you must have an Amazon Kinesis Data
+ * Stream that starts with "amazon-workspaces-web-*". Your Amazon Kinesis data stream must either have
+ * server-side encryption turned off, or must use AWS managed keys for server-side encryption.
  *
  * For more information about setting server-side encryption in Amazon Kinesis , see [How Do I Get
  * Started with Server-Side
@@ -50,7 +50,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUserAccessLoggingSettings(
   cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

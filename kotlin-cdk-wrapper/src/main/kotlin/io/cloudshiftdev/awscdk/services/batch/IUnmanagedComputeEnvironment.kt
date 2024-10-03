@@ -31,7 +31,8 @@ public interface IUnmanagedComputeEnvironment : IComputeEnvironment {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IUnmanagedComputeEnvironment,
-  ) : CdkObject(cdkObject), IUnmanagedComputeEnvironment {
+  ) : CdkObject(cdkObject),
+      IUnmanagedComputeEnvironment {
     /**
      * Apply the given removal policy to this resource.
      *

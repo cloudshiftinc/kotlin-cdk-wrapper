@@ -51,10 +51,71 @@ import kotlin.jvm.JvmName
  * .build()))
  * .name("name")
  * // the properties below are optional
+ * .beforeEntry(BeforeEntryConditionsProperty.builder()
+ * .conditions(List.of(ConditionProperty.builder()
+ * .result("result")
+ * .rules(List.of(RuleDeclarationProperty.builder()
+ * .configuration(configuration)
+ * .inputArtifacts(List.of(InputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .name("name")
+ * .region("region")
+ * .roleArn("roleArn")
+ * .ruleTypeId(RuleTypeIdProperty.builder()
+ * .category("category")
+ * .owner("owner")
+ * .provider("provider")
+ * .version("version")
+ * .build())
+ * .build()))
+ * .build()))
+ * .build())
  * .blockers(List.of(BlockerDeclarationProperty.builder()
  * .name("name")
  * .type("type")
  * .build()))
+ * .onFailure(FailureConditionsProperty.builder()
+ * .conditions(List.of(ConditionProperty.builder()
+ * .result("result")
+ * .rules(List.of(RuleDeclarationProperty.builder()
+ * .configuration(configuration)
+ * .inputArtifacts(List.of(InputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .name("name")
+ * .region("region")
+ * .roleArn("roleArn")
+ * .ruleTypeId(RuleTypeIdProperty.builder()
+ * .category("category")
+ * .owner("owner")
+ * .provider("provider")
+ * .version("version")
+ * .build())
+ * .build()))
+ * .build()))
+ * .result("result")
+ * .build())
+ * .onSuccess(SuccessConditionsProperty.builder()
+ * .conditions(List.of(ConditionProperty.builder()
+ * .result("result")
+ * .rules(List.of(RuleDeclarationProperty.builder()
+ * .configuration(configuration)
+ * .inputArtifacts(List.of(InputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .name("name")
+ * .region("region")
+ * .roleArn("roleArn")
+ * .ruleTypeId(RuleTypeIdProperty.builder()
+ * .category("category")
+ * .owner("owner")
+ * .provider("provider")
+ * .version("version")
+ * .build())
+ * .build()))
+ * .build()))
+ * .build())
  * .build()))
  * // the properties below are optional
  * .artifactStore(ArtifactStoreProperty.builder()
@@ -174,6 +235,8 @@ public interface CfnPipelineProps {
    * The method that the pipeline will use to handle multiple executions.
    *
    * The default mode is SUPERSEDED.
+   *
+   * Default: - "SUPERSEDED"
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-executionmode)
    */
@@ -734,7 +797,8 @@ public interface CfnPipelineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipelineProps,
-  ) : CdkObject(cdkObject), CfnPipelineProps {
+  ) : CdkObject(cdkObject),
+      CfnPipelineProps {
     /**
      * The S3 bucket where artifacts for the pipeline are stored.
      *
@@ -774,6 +838,8 @@ public interface CfnPipelineProps {
      * The method that the pipeline will use to handle multiple executions.
      *
      * The default mode is SUPERSEDED.
+     *
+     * Default: - "SUPERSEDED"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-executionmode)
      */

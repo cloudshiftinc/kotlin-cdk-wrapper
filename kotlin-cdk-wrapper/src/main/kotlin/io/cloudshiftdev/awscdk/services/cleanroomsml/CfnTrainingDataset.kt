@@ -66,7 +66,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTrainingDataset(
   cdkObject: software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -544,7 +546,8 @@ public open class CfnTrainingDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset.ColumnSchemaProperty,
-    ) : CdkObject(cdkObject), ColumnSchemaProperty {
+    ) : CdkObject(cdkObject),
+        ColumnSchemaProperty {
       /**
        * The name of a column.
        *
@@ -672,7 +675,8 @@ public open class CfnTrainingDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset.DataSourceProperty,
-    ) : CdkObject(cdkObject), DataSourceProperty {
+    ) : CdkObject(cdkObject),
+        DataSourceProperty {
       /**
        * A GlueDataSource object that defines the catalog ID, database name, and table name for the
        * training data.
@@ -840,7 +844,8 @@ public open class CfnTrainingDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset.DatasetInputConfigProperty,
-    ) : CdkObject(cdkObject), DatasetInputConfigProperty {
+    ) : CdkObject(cdkObject),
+        DatasetInputConfigProperty {
       /**
        * A DataSource object that specifies the Glue data source for the training data.
        *
@@ -995,7 +1000,8 @@ public open class CfnTrainingDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset.DatasetProperty,
-    ) : CdkObject(cdkObject), DatasetProperty {
+    ) : CdkObject(cdkObject),
+        DatasetProperty {
       /**
        * A DatasetInputConfig object that defines the data source and schema mapping.
        *
@@ -1125,7 +1131,8 @@ public open class CfnTrainingDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset.GlueDataSourceProperty,
-    ) : CdkObject(cdkObject), GlueDataSourceProperty {
+    ) : CdkObject(cdkObject),
+        GlueDataSourceProperty {
       /**
        * The Glue catalog that contains the training data.
        *

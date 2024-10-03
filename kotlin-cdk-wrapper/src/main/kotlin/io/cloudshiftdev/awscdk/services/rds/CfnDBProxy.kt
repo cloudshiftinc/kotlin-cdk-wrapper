@@ -79,7 +79,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDBProxy(
   cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -97,12 +99,14 @@ public open class CfnDBProxy(
   )
 
   /**
-   * The Amazon Resource Name (ARN) representing the target group.
+   * The Amazon Resource Name (ARN) for the proxy.
    */
   public open fun attrDbProxyArn(): String = unwrap(this).getAttrDbProxyArn()
 
   /**
-   * The writer endpoint for the RDS DB instance or Aurora DB cluster.
+   * The endpoint that you can use to connect to the DB proxy.
+   *
+   * You include the endpoint value in the connection string for a database client application.
    */
   public open fun attrEndpoint(): String = unwrap(this).getAttrEndpoint()
 
@@ -376,8 +380,6 @@ public open class CfnDBProxy(
      * databases, specify `MYSQL` . For Aurora PostgreSQL and RDS for PostgreSQL databases, specify
      * `POSTGRESQL` . For RDS for Microsoft SQL Server, specify `SQLSERVER` .
      *
-     * *Valid Values* : `MYSQL` | `POSTGRESQL` | `SQLSERVER`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-enginefamily)
      * @param engineFamily The kinds of databases that the proxy can connect to. 
      */
@@ -580,8 +582,6 @@ public open class CfnDBProxy(
      * databases, specify `MYSQL` . For Aurora PostgreSQL and RDS for PostgreSQL databases, specify
      * `POSTGRESQL` . For RDS for Microsoft SQL Server, specify `SQLSERVER` .
      *
-     * *Valid Values* : `MYSQL` | `POSTGRESQL` | `SQLSERVER`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-enginefamily)
      * @param engineFamily The kinds of databases that the proxy can connect to. 
      */
@@ -758,8 +758,6 @@ public open class CfnDBProxy(
      * The type of authentication that the proxy uses for connections from the proxy to the
      * underlying database.
      *
-     * Valid Values: `SECRETS`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-authformat.html#cfn-rds-dbproxy-authformat-authscheme)
      */
     public fun authScheme(): String? = unwrap(this).getAuthScheme()
@@ -781,12 +779,10 @@ public open class CfnDBProxy(
     public fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * Whether to require or disallow AWS Identity and Access Management (IAM) authentication for
-     * connections to the proxy.
+     * A value that indicates whether to require or disallow AWS Identity and Access Management
+     * (IAM) authentication for connections to the proxy.
      *
      * The `ENABLED` value is valid only for proxies with RDS for Microsoft SQL Server.
-     *
-     * Valid Values: `ENABLED | DISABLED | REQUIRED`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-authformat.html#cfn-rds-dbproxy-authformat-iamauth)
      */
@@ -810,7 +806,6 @@ public open class CfnDBProxy(
       /**
        * @param authScheme The type of authentication that the proxy uses for connections from the
        * proxy to the underlying database.
-       * Valid Values: `SECRETS`
        */
       public fun authScheme(authScheme: String)
 
@@ -827,11 +822,9 @@ public open class CfnDBProxy(
       public fun description(description: String)
 
       /**
-       * @param iamAuth Whether to require or disallow AWS Identity and Access Management (IAM)
-       * authentication for connections to the proxy.
+       * @param iamAuth A value that indicates whether to require or disallow AWS Identity and
+       * Access Management (IAM) authentication for connections to the proxy.
        * The `ENABLED` value is valid only for proxies with RDS for Microsoft SQL Server.
-       *
-       * Valid Values: `ENABLED | DISABLED | REQUIRED`
        */
       public fun iamAuth(iamAuth: String)
 
@@ -851,7 +844,6 @@ public open class CfnDBProxy(
       /**
        * @param authScheme The type of authentication that the proxy uses for connections from the
        * proxy to the underlying database.
-       * Valid Values: `SECRETS`
        */
       override fun authScheme(authScheme: String) {
         cdkBuilder.authScheme(authScheme)
@@ -874,11 +866,9 @@ public open class CfnDBProxy(
       }
 
       /**
-       * @param iamAuth Whether to require or disallow AWS Identity and Access Management (IAM)
-       * authentication for connections to the proxy.
+       * @param iamAuth A value that indicates whether to require or disallow AWS Identity and
+       * Access Management (IAM) authentication for connections to the proxy.
        * The `ENABLED` value is valid only for proxies with RDS for Microsoft SQL Server.
-       *
-       * Valid Values: `ENABLED | DISABLED | REQUIRED`
        */
       override fun iamAuth(iamAuth: String) {
         cdkBuilder.iamAuth(iamAuth)
@@ -899,12 +889,11 @@ public open class CfnDBProxy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.AuthFormatProperty,
-    ) : CdkObject(cdkObject), AuthFormatProperty {
+    ) : CdkObject(cdkObject),
+        AuthFormatProperty {
       /**
        * The type of authentication that the proxy uses for connections from the proxy to the
        * underlying database.
-       *
-       * Valid Values: `SECRETS`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-authformat.html#cfn-rds-dbproxy-authformat-authscheme)
        */
@@ -927,12 +916,10 @@ public open class CfnDBProxy(
       override fun description(): String? = unwrap(this).getDescription()
 
       /**
-       * Whether to require or disallow AWS Identity and Access Management (IAM) authentication for
-       * connections to the proxy.
+       * A value that indicates whether to require or disallow AWS Identity and Access Management
+       * (IAM) authentication for connections to the proxy.
        *
        * The `ENABLED` value is valid only for proxies with RDS for Microsoft SQL Server.
-       *
-       * Valid Values: `ENABLED | DISABLED | REQUIRED`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-authformat.html#cfn-rds-dbproxy-authformat-iamauth)
        */
@@ -967,7 +954,13 @@ public open class CfnDBProxy(
   }
 
   /**
-   * Metadata assigned to a DB proxy consisting of a key-value pair.
+   * Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+   *
+   * For more information, see [Tagging Amazon RDS
+   * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+   * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+   * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in the
+   * *Amazon Aurora User Guide* .
    *
    * Example:
    *
@@ -987,9 +980,10 @@ public open class CfnDBProxy(
     /**
      * A key is the required name of the tag.
      *
-     * The string value can be 1-128 Unicode characters in length and can't be prefixed with `aws:`
-     * . The string can contain only the set of Unicode letters, digits, white-space, '*', '.', '/',
-     * '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+     * The string value can be from 1 to 128 Unicode characters in length and can't be prefixed with
+     * `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+     * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+     * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-tagformat.html#cfn-rds-dbproxy-tagformat-key)
      */
@@ -998,9 +992,10 @@ public open class CfnDBProxy(
     /**
      * A value is the optional value of the tag.
      *
-     * The string value can be 1-256 Unicode characters in length and can't be prefixed with `aws:`
-     * . The string can contain only the set of Unicode letters, digits, white-space, '*', '.', '/',
-     * '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+     * The string value can be from 1 to 256 Unicode characters in length and can't be prefixed with
+     * `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+     * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+     * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-tagformat.html#cfn-rds-dbproxy-tagformat-value)
      */
@@ -1013,17 +1008,19 @@ public open class CfnDBProxy(
     public interface Builder {
       /**
        * @param key A key is the required name of the tag.
-       * The string value can be 1-128 Unicode characters in length and can't be prefixed with
-       * `aws:` . The string can contain only the set of Unicode letters, digits, white-space, '*',
-       * '.', '/', '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+       * The string value can be from 1 to 128 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        */
       public fun key(key: String)
 
       /**
        * @param value A value is the optional value of the tag.
-       * The string value can be 1-256 Unicode characters in length and can't be prefixed with
-       * `aws:` . The string can contain only the set of Unicode letters, digits, white-space, '*',
-       * '.', '/', '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+       * The string value can be from 1 to 256 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        */
       public fun `value`(`value`: String)
     }
@@ -1035,9 +1032,10 @@ public open class CfnDBProxy(
 
       /**
        * @param key A key is the required name of the tag.
-       * The string value can be 1-128 Unicode characters in length and can't be prefixed with
-       * `aws:` . The string can contain only the set of Unicode letters, digits, white-space, '*',
-       * '.', '/', '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+       * The string value can be from 1 to 128 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        */
       override fun key(key: String) {
         cdkBuilder.key(key)
@@ -1045,9 +1043,10 @@ public open class CfnDBProxy(
 
       /**
        * @param value A value is the optional value of the tag.
-       * The string value can be 1-256 Unicode characters in length and can't be prefixed with
-       * `aws:` . The string can contain only the set of Unicode letters, digits, white-space, '*',
-       * '.', '/', '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+       * The string value can be from 1 to 256 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        */
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
@@ -1059,13 +1058,15 @@ public open class CfnDBProxy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.TagFormatProperty,
-    ) : CdkObject(cdkObject), TagFormatProperty {
+    ) : CdkObject(cdkObject),
+        TagFormatProperty {
       /**
        * A key is the required name of the tag.
        *
-       * The string value can be 1-128 Unicode characters in length and can't be prefixed with
-       * `aws:` . The string can contain only the set of Unicode letters, digits, white-space, '*',
-       * '.', '/', '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+       * The string value can be from 1 to 128 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-tagformat.html#cfn-rds-dbproxy-tagformat-key)
        */
@@ -1074,9 +1075,10 @@ public open class CfnDBProxy(
       /**
        * A value is the optional value of the tag.
        *
-       * The string value can be 1-256 Unicode characters in length and can't be prefixed with
-       * `aws:` . The string can contain only the set of Unicode letters, digits, white-space, '*',
-       * '.', '/', '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+       * The string value can be from 1 to 256 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-tagformat.html#cfn-rds-dbproxy-tagformat-value)
        */

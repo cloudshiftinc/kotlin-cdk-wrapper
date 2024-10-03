@@ -46,7 +46,8 @@ public interface IEmailIdentity : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.IEmailIdentity,
-  ) : CdkObject(cdkObject), IEmailIdentity {
+  ) : CdkObject(cdkObject),
+      IEmailIdentity {
     /**
      * Apply the given removal policy to this resource.
      *

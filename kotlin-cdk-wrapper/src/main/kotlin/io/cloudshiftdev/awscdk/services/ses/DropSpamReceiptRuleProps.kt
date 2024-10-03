@@ -172,7 +172,8 @@ public interface DropSpamReceiptRuleProps : ReceiptRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.DropSpamReceiptRuleProps,
-  ) : CdkObject(cdkObject), DropSpamReceiptRuleProps {
+  ) : CdkObject(cdkObject),
+      DropSpamReceiptRuleProps {
     /**
      * An ordered list of actions to perform on messages that match at least one of the recipient
      * email addresses or domains specified in the receipt rule.

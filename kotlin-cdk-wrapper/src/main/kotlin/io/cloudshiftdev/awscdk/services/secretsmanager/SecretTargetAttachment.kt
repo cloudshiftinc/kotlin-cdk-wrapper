@@ -37,7 +37,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class SecretTargetAttachment(
   cdkObject: software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment,
-) : Resource(cdkObject), ISecretTargetAttachment, ISecret {
+) : Resource(cdkObject),
+    ISecretTargetAttachment,
+    ISecret {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

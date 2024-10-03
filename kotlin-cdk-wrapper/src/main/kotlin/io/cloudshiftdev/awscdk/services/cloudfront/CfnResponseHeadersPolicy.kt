@@ -120,7 +120,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResponseHeadersPolicy(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -366,7 +367,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty,
-    ) : CdkObject(cdkObject), AccessControlAllowHeadersProperty {
+    ) : CdkObject(cdkObject),
+        AccessControlAllowHeadersProperty {
       /**
        * The list of HTTP header names.
        *
@@ -518,7 +520,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowMethodsProperty,
-    ) : CdkObject(cdkObject), AccessControlAllowMethodsProperty {
+    ) : CdkObject(cdkObject),
+        AccessControlAllowMethodsProperty {
       /**
        * The list of HTTP methods. Valid values are:.
        *
@@ -634,7 +637,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty,
-    ) : CdkObject(cdkObject), AccessControlAllowOriginsProperty {
+    ) : CdkObject(cdkObject),
+        AccessControlAllowOriginsProperty {
       /**
        * The list of origins (domain names).
        *
@@ -741,7 +745,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty,
-    ) : CdkObject(cdkObject), AccessControlExposeHeadersProperty {
+    ) : CdkObject(cdkObject),
+        AccessControlExposeHeadersProperty {
       /**
        * The list of HTTP headers.
        *
@@ -876,7 +881,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty,
-    ) : CdkObject(cdkObject), ContentSecurityPolicyProperty {
+    ) : CdkObject(cdkObject),
+        ContentSecurityPolicyProperty {
       /**
        * The policy directives and their values that CloudFront includes as values for the
        * `Content-Security-Policy` HTTP response header.
@@ -994,7 +1000,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty,
-    ) : CdkObject(cdkObject), ContentTypeOptionsProperty {
+    ) : CdkObject(cdkObject),
+        ContentTypeOptionsProperty {
       /**
        * A Boolean that determines whether CloudFront overrides the `X-Content-Type-Options` HTTP
        * response header received from the origin with the one specified in this response headers
@@ -1522,7 +1529,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty,
-    ) : CdkObject(cdkObject), CorsConfigProperty {
+    ) : CdkObject(cdkObject),
+        CorsConfigProperty {
       /**
        * A Boolean that CloudFront uses as the value for the `Access-Control-Allow-Credentials` HTTP
        * response header.
@@ -1738,7 +1746,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeaderProperty,
-    ) : CdkObject(cdkObject), CustomHeaderProperty {
+    ) : CdkObject(cdkObject),
+        CustomHeaderProperty {
       /**
        * The HTTP response header name.
        *
@@ -1864,7 +1873,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty,
-    ) : CdkObject(cdkObject), CustomHeadersConfigProperty {
+    ) : CdkObject(cdkObject),
+        CustomHeadersConfigProperty {
       /**
        * The list of HTTP response headers and their values.
        *
@@ -2005,7 +2015,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty,
-    ) : CdkObject(cdkObject), FrameOptionsProperty {
+    ) : CdkObject(cdkObject),
+        FrameOptionsProperty {
       /**
        * The value of the `X-Frame-Options` HTTP response header. Valid values are `DENY` and
        * `SAMEORIGIN` .
@@ -2185,7 +2196,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty,
-    ) : CdkObject(cdkObject), ReferrerPolicyProperty {
+    ) : CdkObject(cdkObject),
+        ReferrerPolicyProperty {
       /**
        * A Boolean that determines whether CloudFront overrides the `Referrer-Policy` HTTP response
        * header received from the origin with the one specified in this response headers policy.
@@ -2289,7 +2301,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty,
-    ) : CdkObject(cdkObject), RemoveHeaderProperty {
+    ) : CdkObject(cdkObject),
+        RemoveHeaderProperty {
       /**
        * The HTTP header name.
        *
@@ -2396,7 +2409,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty,
-    ) : CdkObject(cdkObject), RemoveHeadersConfigProperty {
+    ) : CdkObject(cdkObject),
+        RemoveHeadersConfigProperty {
       /**
        * The list of HTTP header names.
        *
@@ -2844,7 +2858,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty,
-    ) : CdkObject(cdkObject), ResponseHeadersPolicyConfigProperty {
+    ) : CdkObject(cdkObject),
+        ResponseHeadersPolicyConfigProperty {
       /**
        * A comment to describe the response headers policy.
        *
@@ -3466,7 +3481,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.SecurityHeadersConfigProperty,
-    ) : CdkObject(cdkObject), SecurityHeadersConfigProperty {
+    ) : CdkObject(cdkObject),
+        SecurityHeadersConfigProperty {
       /**
        * The policy directives and their values that CloudFront includes as values for the
        * `Content-Security-Policy` HTTP response header.
@@ -3679,7 +3695,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ServerTimingHeadersConfigProperty,
-    ) : CdkObject(cdkObject), ServerTimingHeadersConfigProperty {
+    ) : CdkObject(cdkObject),
+        ServerTimingHeadersConfigProperty {
       /**
        * A Boolean that determines whether CloudFront adds the `Server-Timing` header to HTTP
        * responses that it sends in response to requests that match a cache behavior that's associated
@@ -3903,7 +3920,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.StrictTransportSecurityProperty,
-    ) : CdkObject(cdkObject), StrictTransportSecurityProperty {
+    ) : CdkObject(cdkObject),
+        StrictTransportSecurityProperty {
       /**
        * A number that CloudFront uses as the value for the `max-age` directive in the
        * `Strict-Transport-Security` HTTP response header.
@@ -4197,7 +4215,8 @@ public open class CfnResponseHeadersPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.XSSProtectionProperty,
-    ) : CdkObject(cdkObject), XSSProtectionProperty {
+    ) : CdkObject(cdkObject),
+        XSSProtectionProperty {
       /**
        * A Boolean that determines whether CloudFront includes the `mode=block` directive in the
        * `X-XSS-Protection` header.

@@ -72,7 +72,8 @@ public interface RepositoryAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecr.RepositoryAttributes,
-  ) : CdkObject(cdkObject), RepositoryAttributes {
+  ) : CdkObject(cdkObject),
+      RepositoryAttributes {
     /**
      *
      */

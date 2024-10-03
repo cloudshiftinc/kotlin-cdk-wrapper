@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
@@ -136,6 +137,27 @@ public open class TableV2(
    */
   public open fun replica(region: String): ITableV2 =
       unwrap(this).replica(region).let(ITableV2::wrap)
+
+  /**
+   * The resource policy for the table.
+   */
+  public override fun resourcePolicy(): PolicyDocument? =
+      unwrap(this).getResourcePolicy()?.let(PolicyDocument::wrap)
+
+  /**
+   * The resource policy for the table.
+   */
+  public override fun resourcePolicy(`value`: PolicyDocument) {
+    unwrap(this).setResourcePolicy(`value`.let(PolicyDocument.Companion::unwrap))
+  }
+
+  /**
+   * The resource policy for the table.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("86a422cdfbd7ab1eb4700fbb0990116f2f653f87b45d5d6a5ce2846099e124d0")
+  public override fun resourcePolicy(`value`: PolicyDocument.Builder.() -> Unit): Unit =
+      resourcePolicy(PolicyDocument(`value`))
 
   /**
    * The ARN of the table.
@@ -323,6 +345,28 @@ public open class TableV2(
      * @param replicas Replica tables to deploy with the primary table. 
      */
     public fun replicas(vararg replicas: ReplicaTableProps)
+
+    /**
+     * Resource policy to assign to DynamoDB Table.
+     *
+     * Default: - No resource policy statements are added to the created table.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-resourcepolicy)
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table. 
+     */
+    public fun resourcePolicy(resourcePolicy: PolicyDocument)
+
+    /**
+     * Resource policy to assign to DynamoDB Table.
+     *
+     * Default: - No resource policy statements are added to the created table.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-resourcepolicy)
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("353951006c280a7f9616b330147d1849c810391f67ccdbbfed1f34bccbf78f27")
+    public fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit)
 
     /**
      * Sort key attribute definition.
@@ -585,6 +629,31 @@ public open class TableV2(
      * @param replicas Replica tables to deploy with the primary table. 
      */
     override fun replicas(vararg replicas: ReplicaTableProps): Unit = replicas(replicas.toList())
+
+    /**
+     * Resource policy to assign to DynamoDB Table.
+     *
+     * Default: - No resource policy statements are added to the created table.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-resourcepolicy)
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table. 
+     */
+    override fun resourcePolicy(resourcePolicy: PolicyDocument) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(PolicyDocument.Companion::unwrap))
+    }
+
+    /**
+     * Resource policy to assign to DynamoDB Table.
+     *
+     * Default: - No resource policy statements are added to the created table.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-resourcepolicy)
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("353951006c280a7f9616b330147d1849c810391f67ccdbbfed1f34bccbf78f27")
+    override fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit): Unit =
+        resourcePolicy(PolicyDocument(resourcePolicy))
 
     /**
      * Sort key attribute definition.

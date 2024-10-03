@@ -56,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnChannel(
   cdkObject: software.amazon.awscdk.services.ivs.CfnChannel,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ivs.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

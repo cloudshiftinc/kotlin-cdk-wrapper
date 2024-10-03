@@ -105,7 +105,8 @@ public interface CfnModuleVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnModuleVersionProps,
-  ) : CdkObject(cdkObject), CfnModuleVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnModuleVersionProps {
     /**
      * The name of the module being registered.
      *

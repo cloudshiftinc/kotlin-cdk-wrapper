@@ -85,7 +85,8 @@ public interface RuntimePlatform {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.RuntimePlatform,
-  ) : CdkObject(cdkObject), RuntimePlatform {
+  ) : CdkObject(cdkObject),
+      RuntimePlatform {
     /**
      * The CpuArchitecture for Fargate Runtime Platform.
      *

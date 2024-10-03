@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.jvm.JvmName
 
 /**
  * Properties for a configuration set.
@@ -53,7 +54,7 @@ public interface ConfigurationSetProps {
    * Whether to publish reputation metrics for the configuration set, such as bounce and complaint
    * rates, to Amazon CloudWatch.
    *
-   * Default: false
+   * Default: true
    */
   public fun reputationMetrics(): Boolean? = unwrap(this).getReputationMetrics()
 
@@ -81,6 +82,14 @@ public interface ConfigurationSetProps {
    */
   public fun tlsPolicy(): ConfigurationSetTlsPolicy? =
       unwrap(this).getTlsPolicy()?.let(ConfigurationSetTlsPolicy::wrap)
+
+  /**
+   * The Virtual Deliverability Manager (VDM) options that apply to the configuration set.
+   *
+   * Default: - VDM options not configured at the configuration set level. In this case, use account
+   * level settings. (To set the account level settings using CDK, use the `VdmAttributes` Construct.)
+   */
+  public fun vdmOptions(): VdmOptions? = unwrap(this).getVdmOptions()?.let(VdmOptions::wrap)
 
   /**
    * A builder for [ConfigurationSetProps]
@@ -125,6 +134,20 @@ public interface ConfigurationSetProps {
      * use Transport Layer Security (TLS).
      */
     public fun tlsPolicy(tlsPolicy: ConfigurationSetTlsPolicy)
+
+    /**
+     * @param vdmOptions The Virtual Deliverability Manager (VDM) options that apply to the
+     * configuration set.
+     */
+    public fun vdmOptions(vdmOptions: VdmOptions)
+
+    /**
+     * @param vdmOptions The Virtual Deliverability Manager (VDM) options that apply to the
+     * configuration set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1f76a9207ec6cc886f1001b778f6a3c9ef2329f2daf5cb599cb2fdb2772be574")
+    public fun vdmOptions(vdmOptions: VdmOptions.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -184,13 +207,31 @@ public interface ConfigurationSetProps {
       cdkBuilder.tlsPolicy(tlsPolicy.let(ConfigurationSetTlsPolicy.Companion::unwrap))
     }
 
+    /**
+     * @param vdmOptions The Virtual Deliverability Manager (VDM) options that apply to the
+     * configuration set.
+     */
+    override fun vdmOptions(vdmOptions: VdmOptions) {
+      cdkBuilder.vdmOptions(vdmOptions.let(VdmOptions.Companion::unwrap))
+    }
+
+    /**
+     * @param vdmOptions The Virtual Deliverability Manager (VDM) options that apply to the
+     * configuration set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1f76a9207ec6cc886f1001b778f6a3c9ef2329f2daf5cb599cb2fdb2772be574")
+    override fun vdmOptions(vdmOptions: VdmOptions.Builder.() -> Unit): Unit =
+        vdmOptions(VdmOptions(vdmOptions))
+
     public fun build(): software.amazon.awscdk.services.ses.ConfigurationSetProps =
         cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.ConfigurationSetProps,
-  ) : CdkObject(cdkObject), ConfigurationSetProps {
+  ) : CdkObject(cdkObject),
+      ConfigurationSetProps {
     /**
      * A name for the configuration set.
      *
@@ -219,7 +260,7 @@ public interface ConfigurationSetProps {
      * Whether to publish reputation metrics for the configuration set, such as bounce and complaint
      * rates, to Amazon CloudWatch.
      *
-     * Default: false
+     * Default: true
      */
     override fun reputationMetrics(): Boolean? = unwrap(this).getReputationMetrics()
 
@@ -247,6 +288,15 @@ public interface ConfigurationSetProps {
      */
     override fun tlsPolicy(): ConfigurationSetTlsPolicy? =
         unwrap(this).getTlsPolicy()?.let(ConfigurationSetTlsPolicy::wrap)
+
+    /**
+     * The Virtual Deliverability Manager (VDM) options that apply to the configuration set.
+     *
+     * Default: - VDM options not configured at the configuration set level. In this case, use
+     * account level settings. (To set the account level settings using CDK, use the `VdmAttributes`
+     * Construct.)
+     */
+    override fun vdmOptions(): VdmOptions? = unwrap(this).getVdmOptions()?.let(VdmOptions::wrap)
   }
 
   public companion object {

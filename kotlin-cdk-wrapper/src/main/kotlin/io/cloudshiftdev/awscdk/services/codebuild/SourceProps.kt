@@ -59,7 +59,8 @@ public interface SourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.SourceProps,
-  ) : CdkObject(cdkObject), SourceProps {
+  ) : CdkObject(cdkObject),
+      SourceProps {
     /**
      * The source identifier.
      *

@@ -35,7 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnClientVpnTargetNetworkAssociation(
   cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

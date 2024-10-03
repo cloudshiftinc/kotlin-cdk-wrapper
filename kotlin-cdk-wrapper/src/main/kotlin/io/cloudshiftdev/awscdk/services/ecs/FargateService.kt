@@ -48,7 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class FargateService(
   cdkObject: software.amazon.awscdk.services.ecs.FargateService,
-) : BaseService(cdkObject), IFargateService {
+) : BaseService(cdkObject),
+    IFargateService {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

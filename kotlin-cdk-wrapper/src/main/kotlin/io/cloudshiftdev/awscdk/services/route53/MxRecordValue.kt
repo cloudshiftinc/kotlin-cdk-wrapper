@@ -74,7 +74,8 @@ public interface MxRecordValue {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.MxRecordValue,
-  ) : CdkObject(cdkObject), MxRecordValue {
+  ) : CdkObject(cdkObject),
+      MxRecordValue {
     /**
      * The mail server host name.
      */

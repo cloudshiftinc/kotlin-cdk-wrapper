@@ -53,7 +53,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRepository(
   cdkObject: software.amazon.awscdk.services.codeartifact.CfnRepository,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -118,12 +120,14 @@ public open class CfnRepository(
   }
 
   /**
-   * The 12-digit account ID of the AWS account that owns the domain.
+   * The 12-digit account number of the AWS account that owns the domain that contains the
+   * repository.
    */
   public open fun domainOwner(): String? = unwrap(this).getDomainOwner()
 
   /**
-   * The 12-digit account ID of the AWS account that owns the domain.
+   * The 12-digit account number of the AWS account that owns the domain that contains the
+   * repository.
    */
   public open fun domainOwner(`value`: String) {
     unwrap(this).setDomainOwner(`value`)
@@ -243,10 +247,14 @@ public open class CfnRepository(
     public fun domainName(domainName: String)
 
     /**
-     * The 12-digit account ID of the AWS account that owns the domain.
+     * The 12-digit account number of the AWS account that owns the domain that contains the
+     * repository.
+     *
+     * It does not include dashes or spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-domainowner)
-     * @param domainOwner The 12-digit account ID of the AWS account that owns the domain. 
+     * @param domainOwner The 12-digit account number of the AWS account that owns the domain that
+     * contains the repository. 
      */
     public fun domainOwner(domainOwner: String)
 
@@ -360,10 +368,14 @@ public open class CfnRepository(
     }
 
     /**
-     * The 12-digit account ID of the AWS account that owns the domain.
+     * The 12-digit account number of the AWS account that owns the domain that contains the
+     * repository.
+     *
+     * It does not include dashes or spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-domainowner)
-     * @param domainOwner The 12-digit account ID of the AWS account that owns the domain. 
+     * @param domainOwner The 12-digit account number of the AWS account that owns the domain that
+     * contains the repository. 
      */
     override fun domainOwner(domainOwner: String) {
       cdkBuilder.domainOwner(domainOwner)

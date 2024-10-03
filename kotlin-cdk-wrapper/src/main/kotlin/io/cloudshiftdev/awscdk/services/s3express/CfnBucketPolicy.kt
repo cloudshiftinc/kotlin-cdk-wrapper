@@ -80,7 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBucketPolicy(
   cdkObject: software.amazon.awscdk.services.s3express.CfnBucketPolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

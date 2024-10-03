@@ -95,7 +95,8 @@ public interface EnvironmentFileConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFileConfig,
-  ) : CdkObject(cdkObject), EnvironmentFileConfig {
+  ) : CdkObject(cdkObject),
+      EnvironmentFileConfig {
     /**
      * The type of environment file.
      */

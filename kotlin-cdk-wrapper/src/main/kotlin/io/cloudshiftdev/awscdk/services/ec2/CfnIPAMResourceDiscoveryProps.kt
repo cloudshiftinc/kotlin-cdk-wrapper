@@ -170,7 +170,8 @@ public interface CfnIPAMResourceDiscoveryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryProps,
-  ) : CdkObject(cdkObject), CfnIPAMResourceDiscoveryProps {
+  ) : CdkObject(cdkObject),
+      CfnIPAMResourceDiscoveryProps {
     /**
      * The resource discovery description.
      *

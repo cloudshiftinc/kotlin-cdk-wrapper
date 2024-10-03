@@ -50,7 +50,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNetworkProfile(
   cdkObject: software.amazon.awscdk.services.devicefarm.CfnNetworkProfile,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

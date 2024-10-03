@@ -29,7 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class RequestValidator(
   cdkObject: software.amazon.awscdk.services.apigateway.RequestValidator,
-) : Resource(cdkObject), IRequestValidator {
+) : Resource(cdkObject),
+    IRequestValidator {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

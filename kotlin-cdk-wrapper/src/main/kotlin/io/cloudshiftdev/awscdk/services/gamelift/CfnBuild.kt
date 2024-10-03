@@ -48,7 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBuild(
   cdkObject: software.amazon.awscdk.services.gamelift.CfnBuild,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.gamelift.CfnBuild(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -183,9 +184,12 @@ public open class CfnBuild(
      * build's operating system later.
      *
      *
-     * If you have active fleets using the Windows Server 2012 operating system, you can continue to
-     * create new builds using this OS until October 10, 2023, when Microsoft ends its support. All
-     * others must use Windows Server 2016 when creating new Windows-based builds.
+     * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+     * GameLift server SDK version
+     * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-operatingsystem)
@@ -295,9 +299,12 @@ public open class CfnBuild(
      * build's operating system later.
      *
      *
-     * If you have active fleets using the Windows Server 2012 operating system, you can continue to
-     * create new builds using this OS until October 10, 2023, when Microsoft ends its support. All
-     * others must use Windows Server 2016 when creating new Windows-based builds.
+     * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+     * GameLift server SDK version
+     * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-operatingsystem)
@@ -547,7 +554,8 @@ public open class CfnBuild(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnBuild.StorageLocationProperty,
-    ) : CdkObject(cdkObject), StorageLocationProperty {
+    ) : CdkObject(cdkObject),
+        StorageLocationProperty {
       /**
        * An Amazon S3 bucket identifier. The name of the S3 bucket.
        *

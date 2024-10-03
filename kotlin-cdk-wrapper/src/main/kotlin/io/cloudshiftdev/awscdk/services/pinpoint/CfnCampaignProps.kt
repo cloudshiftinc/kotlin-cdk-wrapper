@@ -1099,7 +1099,8 @@ public interface CfnCampaignProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaignProps,
-  ) : CdkObject(cdkObject), CfnCampaignProps {
+  ) : CdkObject(cdkObject),
+      CfnCampaignProps {
     /**
      * An array of requests that defines additional treatments for the campaign, in addition to the
      * default treatment for the campaign.

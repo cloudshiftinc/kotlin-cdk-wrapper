@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIndex(
   cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnIndex,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

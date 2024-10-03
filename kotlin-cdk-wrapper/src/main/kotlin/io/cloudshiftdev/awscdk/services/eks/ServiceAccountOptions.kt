@@ -35,6 +35,13 @@ public interface ServiceAccountOptions {
   public fun annotations(): Map<String, String> = unwrap(this).getAnnotations() ?: emptyMap()
 
   /**
+   * The identity type to use for the service account.
+   *
+   * Default: IdentityType.IRSA
+   */
+  public fun identityType(): IdentityType? = unwrap(this).getIdentityType()?.let(IdentityType::wrap)
+
+  /**
    * Additional labels of the service account.
    *
    * Default: - no additional labels
@@ -72,6 +79,11 @@ public interface ServiceAccountOptions {
     public fun annotations(annotations: Map<String, String>)
 
     /**
+     * @param identityType The identity type to use for the service account.
+     */
+    public fun identityType(identityType: IdentityType)
+
+    /**
      * @param labels Additional labels of the service account.
      */
     public fun labels(labels: Map<String, String>)
@@ -100,6 +112,13 @@ public interface ServiceAccountOptions {
      */
     override fun annotations(annotations: Map<String, String>) {
       cdkBuilder.annotations(annotations)
+    }
+
+    /**
+     * @param identityType The identity type to use for the service account.
+     */
+    override fun identityType(identityType: IdentityType) {
+      cdkBuilder.identityType(identityType.let(IdentityType.Companion::unwrap))
     }
 
     /**
@@ -133,13 +152,22 @@ public interface ServiceAccountOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.ServiceAccountOptions,
-  ) : CdkObject(cdkObject), ServiceAccountOptions {
+  ) : CdkObject(cdkObject),
+      ServiceAccountOptions {
     /**
      * Additional annotations of the service account.
      *
      * Default: - no additional annotations
      */
     override fun annotations(): Map<String, String> = unwrap(this).getAnnotations() ?: emptyMap()
+
+    /**
+     * The identity type to use for the service account.
+     *
+     * Default: IdentityType.IRSA
+     */
+    override fun identityType(): IdentityType? =
+        unwrap(this).getIdentityType()?.let(IdentityType::wrap)
 
     /**
      * Additional labels of the service account.

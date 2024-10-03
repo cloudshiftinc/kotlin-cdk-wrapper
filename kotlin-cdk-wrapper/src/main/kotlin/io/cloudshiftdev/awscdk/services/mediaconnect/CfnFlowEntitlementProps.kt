@@ -280,7 +280,8 @@ public interface CfnFlowEntitlementProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlementProps,
-  ) : CdkObject(cdkObject), CfnFlowEntitlementProps {
+  ) : CdkObject(cdkObject),
+      CfnFlowEntitlementProps {
     /**
      * The percentage of the entitlement data transfer fee that you want the subscriber to be
      * responsible for.

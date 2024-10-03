@@ -94,7 +94,8 @@ public interface CfnResourcePolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lex.CfnResourcePolicyProps,
-  ) : CdkObject(cdkObject), CfnResourcePolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnResourcePolicyProps {
     /**
      * A resource policy to add to the resource.
      *

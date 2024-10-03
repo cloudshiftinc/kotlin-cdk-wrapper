@@ -33,7 +33,8 @@ import kotlin.collections.List
  */
 public open class S3ObjectsItemReader(
   cdkObject: software.amazon.awscdk.services.stepfunctions.S3ObjectsItemReader,
-) : CdkObject(cdkObject), IItemReader {
+) : CdkObject(cdkObject),
+    IItemReader {
   public constructor(props: S3ObjectsItemReaderProps) :
       this(software.amazon.awscdk.services.stepfunctions.S3ObjectsItemReader(props.let(S3ObjectsItemReaderProps.Companion::unwrap))
   )

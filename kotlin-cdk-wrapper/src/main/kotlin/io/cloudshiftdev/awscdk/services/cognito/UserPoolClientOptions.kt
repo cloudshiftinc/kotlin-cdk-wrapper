@@ -76,6 +76,19 @@ public interface UserPoolClientOptions {
   public fun disableOAuth(): Boolean? = unwrap(this).getDisableOAuth()
 
   /**
+   * Enable the propagation of additional user context data.
+   *
+   * You can only activate enablePropagateAdditionalUserContextData in an app client that has a
+   * client secret.
+   *
+   * Default: false for new user pool clients
+   *
+   * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint)
+   */
+  public fun enablePropagateAdditionalUserContextData(): Boolean? =
+      unwrap(this).getEnablePropagateAdditionalUserContextData()
+
+  /**
    * Enable token revocation for this client.
    *
    * Default: true for new user pool clients
@@ -213,6 +226,15 @@ public interface UserPoolClientOptions {
     public fun disableOAuth(disableOAuth: Boolean)
 
     /**
+     * @param enablePropagateAdditionalUserContextData Enable the propagation of additional user
+     * context data.
+     * You can only activate enablePropagateAdditionalUserContextData in an app client that has a
+     * client secret.
+     */
+    public
+        fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: Boolean)
+
+    /**
      * @param enableTokenRevocation Enable token revocation for this client.
      */
     public fun enableTokenRevocation(enableTokenRevocation: Boolean)
@@ -332,6 +354,17 @@ public interface UserPoolClientOptions {
     }
 
     /**
+     * @param enablePropagateAdditionalUserContextData Enable the propagation of additional user
+     * context data.
+     * You can only activate enablePropagateAdditionalUserContextData in an app client that has a
+     * client secret.
+     */
+    override
+        fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: Boolean) {
+      cdkBuilder.enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData)
+    }
+
+    /**
      * @param enableTokenRevocation Enable token revocation for this client.
      */
     override fun enableTokenRevocation(enableTokenRevocation: Boolean) {
@@ -431,7 +464,8 @@ public interface UserPoolClientOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.UserPoolClientOptions,
-  ) : CdkObject(cdkObject), UserPoolClientOptions {
+  ) : CdkObject(cdkObject),
+      UserPoolClientOptions {
     /**
      * Validity of the access token.
      *
@@ -474,6 +508,19 @@ public interface UserPoolClientOptions {
      * Default: false
      */
     override fun disableOAuth(): Boolean? = unwrap(this).getDisableOAuth()
+
+    /**
+     * Enable the propagation of additional user context data.
+     *
+     * You can only activate enablePropagateAdditionalUserContextData in an app client that has a
+     * client secret.
+     *
+     * Default: false for new user pool clients
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint)
+     */
+    override fun enablePropagateAdditionalUserContextData(): Boolean? =
+        unwrap(this).getEnablePropagateAdditionalUserContextData()
 
     /**
      * Enable token revocation for this client.

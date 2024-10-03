@@ -531,7 +531,8 @@ public interface IGraphqlApi : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.IGraphqlApi,
-  ) : CdkObject(cdkObject), IGraphqlApi {
+  ) : CdkObject(cdkObject),
+      IGraphqlApi {
     /**
      * add a new DynamoDB data source to this API.
      *

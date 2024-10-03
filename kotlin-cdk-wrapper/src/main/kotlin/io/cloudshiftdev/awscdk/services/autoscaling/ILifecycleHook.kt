@@ -25,7 +25,8 @@ public interface ILifecycleHook : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.ILifecycleHook,
-  ) : CdkObject(cdkObject), ILifecycleHook {
+  ) : CdkObject(cdkObject),
+      ILifecycleHook {
     /**
      * Apply the given removal policy to this resource.
      *

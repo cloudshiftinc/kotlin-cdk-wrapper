@@ -143,7 +143,8 @@ public interface LambdaRuntimeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.LambdaRuntimeProps,
-  ) : CdkObject(cdkObject), LambdaRuntimeProps {
+  ) : CdkObject(cdkObject),
+      LambdaRuntimeProps {
     /**
      * The Docker image name to be used for bundling in this runtime.
      *

@@ -304,7 +304,8 @@ public interface CfnComponentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.imagebuilder.CfnComponentProps,
-  ) : CdkObject(cdkObject), CfnComponentProps {
+  ) : CdkObject(cdkObject),
+      CfnComponentProps {
     /**
      * The change description of the component.
      *

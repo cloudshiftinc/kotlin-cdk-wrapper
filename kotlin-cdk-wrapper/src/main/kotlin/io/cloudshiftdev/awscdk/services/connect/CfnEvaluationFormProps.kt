@@ -374,7 +374,8 @@ public interface CfnEvaluationFormProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationFormProps,
-  ) : CdkObject(cdkObject), CfnEvaluationFormProps {
+  ) : CdkObject(cdkObject),
+      CfnEvaluationFormProps {
     /**
      * The description of the evaluation form.
      *

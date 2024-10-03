@@ -8,6 +8,7 @@ public enum class TargetGroupLoadBalancingAlgorithmType(
 ) {
   ROUND_ROBIN(software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupLoadBalancingAlgorithmType.ROUND_ROBIN),
   LEAST_OUTSTANDING_REQUESTS(software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupLoadBalancingAlgorithmType.LEAST_OUTSTANDING_REQUESTS),
+  WEIGHTED_RANDOM(software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM),
   ;
 
   public companion object {
@@ -18,6 +19,8 @@ public enum class TargetGroupLoadBalancingAlgorithmType(
           TargetGroupLoadBalancingAlgorithmType.ROUND_ROBIN
       software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupLoadBalancingAlgorithmType.LEAST_OUTSTANDING_REQUESTS ->
           TargetGroupLoadBalancingAlgorithmType.LEAST_OUTSTANDING_REQUESTS
+      software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM ->
+          TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM
     }
 
     internal fun unwrap(wrapped: TargetGroupLoadBalancingAlgorithmType):

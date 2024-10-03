@@ -126,7 +126,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStorageLens(
   cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -763,7 +765,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AccountLevelProperty,
-    ) : CdkObject(cdkObject), AccountLevelProperty {
+    ) : CdkObject(cdkObject),
+        AccountLevelProperty {
       /**
        * This property contains the details of account-level activity metrics for S3 Storage Lens.
        *
@@ -906,7 +909,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty,
-    ) : CdkObject(cdkObject), ActivityMetricsProperty {
+    ) : CdkObject(cdkObject),
+        ActivityMetricsProperty {
       /**
        * A property that indicates whether the activity metrics is enabled.
        *
@@ -1011,7 +1015,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty,
-    ) : CdkObject(cdkObject), AdvancedCostOptimizationMetricsProperty {
+    ) : CdkObject(cdkObject),
+        AdvancedCostOptimizationMetricsProperty {
       /**
        * Indicates whether advanced cost optimization metrics are enabled.
        *
@@ -1116,7 +1121,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty,
-    ) : CdkObject(cdkObject), AdvancedDataProtectionMetricsProperty {
+    ) : CdkObject(cdkObject),
+        AdvancedDataProtectionMetricsProperty {
       /**
        * Indicates whether advanced data protection metrics are enabled.
        *
@@ -1197,7 +1203,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty,
-    ) : CdkObject(cdkObject), AwsOrgProperty {
+    ) : CdkObject(cdkObject),
+        AwsOrgProperty {
       /**
        * This resource contains the ARN of the AWS Organization.
        *
@@ -1549,7 +1556,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty,
-    ) : CdkObject(cdkObject), BucketLevelProperty {
+    ) : CdkObject(cdkObject),
+        BucketLevelProperty {
       /**
        * A property for bucket-level activity metrics for S3 Storage Lens.
        *
@@ -1731,7 +1739,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty,
-    ) : CdkObject(cdkObject), BucketsAndRegionsProperty {
+    ) : CdkObject(cdkObject),
+        BucketsAndRegionsProperty {
       /**
        * This property contains the details of the buckets for the Amazon S3 Storage Lens
        * configuration.
@@ -1847,7 +1856,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.CloudWatchMetricsProperty,
-    ) : CdkObject(cdkObject), CloudWatchMetricsProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchMetricsProperty {
       /**
        * This property identifies whether the CloudWatch publishing option for S3 Storage Lens is
        * enabled.
@@ -2034,7 +2044,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty,
-    ) : CdkObject(cdkObject), DataExportProperty {
+    ) : CdkObject(cdkObject),
+        DataExportProperty {
       /**
        * This property enables the Amazon CloudWatch publishing option for S3 Storage Lens metrics.
        *
@@ -2146,7 +2157,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty,
-    ) : CdkObject(cdkObject), DetailedStatusCodesMetricsProperty {
+    ) : CdkObject(cdkObject),
+        DetailedStatusCodesMetricsProperty {
       /**
        * Indicates whether detailed status code metrics are enabled.
        *
@@ -2292,7 +2304,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty,
-    ) : CdkObject(cdkObject), EncryptionProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionProperty {
       /**
        * Specifies the use of AWS Key Management Service keys (SSE-KMS) to encrypt the S3 Storage
        * Lens metrics export file.
@@ -2423,7 +2436,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty,
-    ) : CdkObject(cdkObject), PrefixLevelProperty {
+    ) : CdkObject(cdkObject),
+        PrefixLevelProperty {
       /**
        * A property for the prefix-level storage metrics for Amazon S3 Storage Lens.
        *
@@ -2583,7 +2597,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty,
-    ) : CdkObject(cdkObject), PrefixLevelStorageMetricsProperty {
+    ) : CdkObject(cdkObject),
+        PrefixLevelStorageMetricsProperty {
       /**
        * This property identifies whether the details of the prefix-level storage metrics for S3
        * Storage Lens are enabled.
@@ -2831,7 +2846,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.S3BucketDestinationProperty,
-    ) : CdkObject(cdkObject), S3BucketDestinationProperty {
+    ) : CdkObject(cdkObject),
+        S3BucketDestinationProperty {
       /**
        * This property contains the details of the AWS account ID of the S3 Storage Lens export
        * bucket destination.
@@ -2966,7 +2982,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty,
-    ) : CdkObject(cdkObject), SSEKMSProperty {
+    ) : CdkObject(cdkObject),
+        SSEKMSProperty {
       /**
        * Specifies the Amazon Resource Name (ARN) of the customer managed AWS KMS key to use for
        * encrypting the S3 Storage Lens metrics export file.
@@ -3099,7 +3116,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty,
-    ) : CdkObject(cdkObject), SelectionCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        SelectionCriteriaProperty {
       /**
        * This property contains the details of the S3 Storage Lens delimiter being used.
        *
@@ -3605,7 +3623,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensConfigurationProperty,
-    ) : CdkObject(cdkObject), StorageLensConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        StorageLensConfigurationProperty {
       /**
        * This property contains the details of the account-level metrics for Amazon S3 Storage Lens
        * configuration.
@@ -3796,7 +3815,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty,
-    ) : CdkObject(cdkObject), StorageLensGroupLevelProperty {
+    ) : CdkObject(cdkObject),
+        StorageLensGroupLevelProperty {
       /**
        * This property indicates which Storage Lens group ARNs to include or exclude in the Storage
        * Lens group aggregation.
@@ -3937,7 +3957,8 @@ public open class CfnStorageLens(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty,
-    ) : CdkObject(cdkObject), StorageLensGroupSelectionCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        StorageLensGroupSelectionCriteriaProperty {
       /**
        * This property indicates which Storage Lens group ARNs to exclude from the Storage Lens
        * group aggregation.

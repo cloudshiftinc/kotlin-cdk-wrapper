@@ -501,7 +501,8 @@ public interface AssetImageCodeProps : DockerImageAssetOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.AssetImageCodeProps,
-  ) : CdkObject(cdkObject), AssetImageCodeProps {
+  ) : CdkObject(cdkObject),
+      AssetImageCodeProps {
     /**
      * Unique identifier of the docker image asset and its potential revisions.
      *

@@ -54,7 +54,8 @@ public interface BucketCacheOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.BucketCacheOptions,
-  ) : CdkObject(cdkObject), BucketCacheOptions {
+  ) : CdkObject(cdkObject),
+      BucketCacheOptions {
     /**
      * The prefix to use to store the cache in the bucket.
      */

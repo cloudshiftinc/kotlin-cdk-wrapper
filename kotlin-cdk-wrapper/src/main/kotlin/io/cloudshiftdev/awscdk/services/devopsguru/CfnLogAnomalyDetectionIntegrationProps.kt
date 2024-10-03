@@ -41,7 +41,8 @@ public interface CfnLogAnomalyDetectionIntegrationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegrationProps,
-  ) : CdkObject(cdkObject), CfnLogAnomalyDetectionIntegrationProps
+  ) : CdkObject(cdkObject),
+      CfnLogAnomalyDetectionIntegrationProps
 
   public companion object {
     public operator fun invoke(block: Builder.() -> Unit = {}):

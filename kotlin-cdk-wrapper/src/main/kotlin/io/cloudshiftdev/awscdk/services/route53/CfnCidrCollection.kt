@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCidrCollection(
   cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollection,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -303,7 +304,8 @@ public open class CfnCidrCollection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty,
-    ) : CdkObject(cdkObject), LocationProperty {
+    ) : CdkObject(cdkObject),
+        LocationProperty {
       /**
        * List of CIDR blocks.
        *

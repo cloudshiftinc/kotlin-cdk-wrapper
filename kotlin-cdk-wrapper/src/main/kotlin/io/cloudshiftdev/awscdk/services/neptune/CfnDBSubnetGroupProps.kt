@@ -146,7 +146,8 @@ public interface CfnDBSubnetGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.neptune.CfnDBSubnetGroupProps,
-  ) : CdkObject(cdkObject), CfnDBSubnetGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnDBSubnetGroupProps {
     /**
      * Provides the description of the DB subnet group.
      *

@@ -87,7 +87,8 @@ public interface CfnRobotApplicationVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersionProps,
-  ) : CdkObject(cdkObject), CfnRobotApplicationVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnRobotApplicationVersionProps {
     /**
      * The application information for the robot application.
      *

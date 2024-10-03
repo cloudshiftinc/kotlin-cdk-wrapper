@@ -285,7 +285,8 @@ public interface GlueStartCrawlerRunProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.GlueStartCrawlerRunProps,
-  ) : CdkObject(cdkObject), GlueStartCrawlerRunProps {
+  ) : CdkObject(cdkObject),
+      GlueStartCrawlerRunProps {
     /**
      * An optional description for this state.
      *

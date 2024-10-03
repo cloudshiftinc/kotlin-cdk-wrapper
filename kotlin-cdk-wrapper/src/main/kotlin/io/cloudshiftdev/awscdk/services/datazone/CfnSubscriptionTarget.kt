@@ -54,7 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSubscriptionTarget(
   cdkObject: software.amazon.awscdk.services.datazone.CfnSubscriptionTarget,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -604,7 +605,8 @@ public open class CfnSubscriptionTarget(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnSubscriptionTarget.SubscriptionTargetFormProperty,
-    ) : CdkObject(cdkObject), SubscriptionTargetFormProperty {
+    ) : CdkObject(cdkObject),
+        SubscriptionTargetFormProperty {
       /**
        * The content of the subscription target configuration.
        *

@@ -145,7 +145,8 @@ public interface CfnPrivateGraphEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpointProps,
-  ) : CdkObject(cdkObject), CfnPrivateGraphEndpointProps {
+  ) : CdkObject(cdkObject),
+      CfnPrivateGraphEndpointProps {
     /**
      * The unique identifier of the Neptune Analytics graph.
      *

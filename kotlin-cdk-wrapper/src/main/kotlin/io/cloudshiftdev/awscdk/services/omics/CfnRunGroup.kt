@@ -16,7 +16,8 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates a run group.
+ * You can optionally create a run group to limit the compute resources for the runs that you add to
+ * the group.
  *
  * Example:
  *
@@ -39,7 +40,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRunGroup(
   cdkObject: software.amazon.awscdk.services.omics.CfnRunGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.omics.CfnRunGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

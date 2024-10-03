@@ -150,7 +150,8 @@ public interface RawEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.RawEndpointProps,
-  ) : CdkObject(cdkObject), RawEndpointProps {
+  ) : CdkObject(cdkObject),
+      RawEndpointProps {
     /**
      * Identifier of the endpoint.
      *

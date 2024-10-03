@@ -111,7 +111,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnScalingPlan(
   cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -556,7 +557,8 @@ public open class CfnScalingPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty,
-    ) : CdkObject(cdkObject), ApplicationSourceProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationSourceProperty {
       /**
        * The Amazon Resource Name (ARN) of a CloudFormation stack.
        *
@@ -814,7 +816,8 @@ public open class CfnScalingPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedLoadMetricSpecificationProperty,
-    ) : CdkObject(cdkObject), CustomizedLoadMetricSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        CustomizedLoadMetricSpecificationProperty {
       /**
        * The dimensions of the metric.
        *
@@ -1097,7 +1100,8 @@ public open class CfnScalingPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedScalingMetricSpecificationProperty,
-    ) : CdkObject(cdkObject), CustomizedScalingMetricSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        CustomizedScalingMetricSpecificationProperty {
       /**
        * The dimensions of the metric.
        *
@@ -1245,7 +1249,8 @@ public open class CfnScalingPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty,
-    ) : CdkObject(cdkObject), MetricDimensionProperty {
+    ) : CdkObject(cdkObject),
+        MetricDimensionProperty {
       /**
        * The name of the dimension.
        *
@@ -1429,7 +1434,8 @@ public open class CfnScalingPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty,
-    ) : CdkObject(cdkObject), PredefinedLoadMetricSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PredefinedLoadMetricSpecificationProperty {
       /**
        * The metric type.
        *
@@ -1641,7 +1647,8 @@ public open class CfnScalingPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedScalingMetricSpecificationProperty,
-    ) : CdkObject(cdkObject), PredefinedScalingMetricSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PredefinedScalingMetricSpecificationProperty {
       /**
        * The metric type.
        *
@@ -2480,7 +2487,8 @@ public open class CfnScalingPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ScalingInstructionProperty,
-    ) : CdkObject(cdkObject), ScalingInstructionProperty {
+    ) : CdkObject(cdkObject),
+        ScalingInstructionProperty {
       /**
        * The customized load metric to use for predictive scaling.
        *
@@ -2784,7 +2792,8 @@ public open class CfnScalingPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty,
-    ) : CdkObject(cdkObject), TagFilterProperty {
+    ) : CdkObject(cdkObject),
+        TagFilterProperty {
       /**
        * The tag key.
        *
@@ -3167,7 +3176,8 @@ public open class CfnScalingPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty,
-    ) : CdkObject(cdkObject), TargetTrackingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        TargetTrackingConfigurationProperty {
       /**
        * A customized metric.
        *

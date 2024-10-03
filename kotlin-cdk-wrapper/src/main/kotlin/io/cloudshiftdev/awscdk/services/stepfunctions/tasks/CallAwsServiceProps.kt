@@ -451,7 +451,8 @@ public interface CallAwsServiceProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallAwsServiceProps,
-  ) : CdkObject(cdkObject), CallAwsServiceProps {
+  ) : CdkObject(cdkObject),
+      CallAwsServiceProps {
     /**
      * The API action to call.
      *

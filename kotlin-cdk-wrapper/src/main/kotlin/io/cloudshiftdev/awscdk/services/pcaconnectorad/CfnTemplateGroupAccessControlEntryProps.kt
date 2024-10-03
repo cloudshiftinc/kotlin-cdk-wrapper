@@ -184,7 +184,8 @@ public interface CfnTemplateGroupAccessControlEntryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntryProps,
-  ) : CdkObject(cdkObject), CfnTemplateGroupAccessControlEntryProps {
+  ) : CdkObject(cdkObject),
+      CfnTemplateGroupAccessControlEntryProps {
     /**
      * Permissions to allow or deny an Active Directory group to enroll or autoenroll certificates
      * issued against a template.

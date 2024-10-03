@@ -51,7 +51,8 @@ public interface MetadataEntry {
 
   private class Wrapper(
     cdkObject: software.constructs.MetadataEntry,
-  ) : CdkObject(cdkObject), MetadataEntry {
+  ) : CdkObject(cdkObject),
+      MetadataEntry {
     override fun `data`(): Any = unwrap(this).getData()
 
     override fun trace(): List<String> = unwrap(this).getTrace() ?: emptyList()

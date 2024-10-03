@@ -40,7 +40,7 @@ import kotlin.collections.Map
  */
 public interface CfnStackProps {
   /**
-   * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events.
+   * The Amazon SNS topic ARNs to publish stack related events.
    *
    * You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line
    * Interface (CLI).
@@ -74,7 +74,7 @@ public interface CfnStackProps {
   /**
    * Key-value pairs to associate with this stack.
    *
-   * AWS CloudFormation also propagates these tags to the resources created in the stack. A maximum
+   * CloudFormation also propagates these tags to the resources created in the stack. A maximum
    * number of 50 tags can be specified.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-tags)
@@ -117,16 +117,14 @@ public interface CfnStackProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param notificationArns The Amazon Simple Notification Service (Amazon SNS) topic ARNs to
-     * publish stack related events.
+     * @param notificationArns The Amazon SNS topic ARNs to publish stack related events.
      * You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line
      * Interface (CLI).
      */
     public fun notificationArns(notificationArns: List<String>)
 
     /**
-     * @param notificationArns The Amazon Simple Notification Service (Amazon SNS) topic ARNs to
-     * publish stack related events.
+     * @param notificationArns The Amazon SNS topic ARNs to publish stack related events.
      * You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line
      * Interface (CLI).
      */
@@ -172,15 +170,15 @@ public interface CfnStackProps {
 
     /**
      * @param tags Key-value pairs to associate with this stack.
-     * AWS CloudFormation also propagates these tags to the resources created in the stack. A
-     * maximum number of 50 tags can be specified.
+     * CloudFormation also propagates these tags to the resources created in the stack. A maximum
+     * number of 50 tags can be specified.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
      * @param tags Key-value pairs to associate with this stack.
-     * AWS CloudFormation also propagates these tags to the resources created in the stack. A
-     * maximum number of 50 tags can be specified.
+     * CloudFormation also propagates these tags to the resources created in the stack. A maximum
+     * number of 50 tags can be specified.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -214,8 +212,7 @@ public interface CfnStackProps {
         software.amazon.awscdk.services.cloudformation.CfnStackProps.builder()
 
     /**
-     * @param notificationArns The Amazon Simple Notification Service (Amazon SNS) topic ARNs to
-     * publish stack related events.
+     * @param notificationArns The Amazon SNS topic ARNs to publish stack related events.
      * You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line
      * Interface (CLI).
      */
@@ -224,8 +221,7 @@ public interface CfnStackProps {
     }
 
     /**
-     * @param notificationArns The Amazon Simple Notification Service (Amazon SNS) topic ARNs to
-     * publish stack related events.
+     * @param notificationArns The Amazon SNS topic ARNs to publish stack related events.
      * You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line
      * Interface (CLI).
      */
@@ -276,8 +272,8 @@ public interface CfnStackProps {
 
     /**
      * @param tags Key-value pairs to associate with this stack.
-     * AWS CloudFormation also propagates these tags to the resources created in the stack. A
-     * maximum number of 50 tags can be specified.
+     * CloudFormation also propagates these tags to the resources created in the stack. A maximum
+     * number of 50 tags can be specified.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
@@ -285,8 +281,8 @@ public interface CfnStackProps {
 
     /**
      * @param tags Key-value pairs to associate with this stack.
-     * AWS CloudFormation also propagates these tags to the resources created in the stack. A
-     * maximum number of 50 tags can be specified.
+     * CloudFormation also propagates these tags to the resources created in the stack. A maximum
+     * number of 50 tags can be specified.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -324,10 +320,10 @@ public interface CfnStackProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackProps,
-  ) : CdkObject(cdkObject), CfnStackProps {
+  ) : CdkObject(cdkObject),
+      CfnStackProps {
     /**
-     * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related
-     * events.
+     * The Amazon SNS topic ARNs to publish stack related events.
      *
      * You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line
      * Interface (CLI).
@@ -362,8 +358,8 @@ public interface CfnStackProps {
     /**
      * Key-value pairs to associate with this stack.
      *
-     * AWS CloudFormation also propagates these tags to the resources created in the stack. A
-     * maximum number of 50 tags can be specified.
+     * CloudFormation also propagates these tags to the resources created in the stack. A maximum
+     * number of 50 tags can be specified.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-tags)
      */

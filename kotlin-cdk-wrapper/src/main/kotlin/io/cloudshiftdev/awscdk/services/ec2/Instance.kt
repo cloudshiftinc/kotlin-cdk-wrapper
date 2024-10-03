@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import kotlin.Boolean
 import kotlin.Deprecated
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -40,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Instance(
   cdkObject: software.amazon.awscdk.services.ec2.Instance,
-) : Resource(cdkObject), IInstance {
+) : Resource(cdkObject),
+    IInstance {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -96,6 +98,58 @@ public open class Instance(
   public open fun addUserData(vararg commands: String) {
     unwrap(this).addUserData(*commands.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray())
   }
+
+  /**
+   * Use a CloudFormation Init configuration at instance startup.
+   *
+   * This does the following:
+   *
+   * * Attaches the CloudFormation Init metadata to the Instance resource.
+   * * Add commands to the instance UserData to run `cfn-init` and `cfn-signal`.
+   * * Update the instance's CreationPolicy to wait for the `cfn-signal` commands.
+   *
+   * @param init 
+   * @param options
+   */
+  public open fun applyCloudFormationInit(`init`: CloudFormationInit) {
+    unwrap(this).applyCloudFormationInit(`init`.let(CloudFormationInit.Companion::unwrap))
+  }
+
+  /**
+   * Use a CloudFormation Init configuration at instance startup.
+   *
+   * This does the following:
+   *
+   * * Attaches the CloudFormation Init metadata to the Instance resource.
+   * * Add commands to the instance UserData to run `cfn-init` and `cfn-signal`.
+   * * Update the instance's CreationPolicy to wait for the `cfn-signal` commands.
+   *
+   * @param init 
+   * @param options
+   */
+  public open fun applyCloudFormationInit(`init`: CloudFormationInit,
+      options: ApplyCloudFormationInitOptions) {
+    unwrap(this).applyCloudFormationInit(`init`.let(CloudFormationInit.Companion::unwrap),
+        options.let(ApplyCloudFormationInitOptions.Companion::unwrap))
+  }
+
+  /**
+   * Use a CloudFormation Init configuration at instance startup.
+   *
+   * This does the following:
+   *
+   * * Attaches the CloudFormation Init metadata to the Instance resource.
+   * * Add commands to the instance UserData to run `cfn-init` and `cfn-signal`.
+   * * Update the instance's CreationPolicy to wait for the `cfn-signal` commands.
+   *
+   * @param init 
+   * @param options
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("c953b7fb8b3b572e9e845d958602b699096bd9927b367f8da6a49795d60b62b9")
+  public open fun applyCloudFormationInit(`init`: CloudFormationInit,
+      options: ApplyCloudFormationInitOptions.Builder.() -> Unit): Unit =
+      applyCloudFormationInit(`init`, ApplyCloudFormationInitOptions(options))
 
   /**
    * Allows specify security group connections for the instance.
@@ -198,6 +252,8 @@ public open class Instance(
      * Whether to associate a public IP address to the primary network interface attached to this
      * instance.
      *
+     * You cannot specify this property and `ipv6AddressCount` at the same time.
+     *
      * Default: - public IP address is automatically assigned based on default behavior
      *
      * @param associatePublicIpAddress Whether to associate a public IP address to the primary
@@ -287,6 +343,35 @@ public open class Instance(
     public fun ebsOptimized(ebsOptimized: Boolean)
 
     /**
+     * Whether the instance is enabled for AWS Nitro Enclaves.
+     *
+     * Nitro Enclaves requires a Nitro-based virtualized parent instance with specific Intel/AMD
+     * with at least 4 vCPUs
+     * or Graviton with at least 2 vCPUs instance types and Linux/Windows host OS,
+     * while the enclave itself supports only Linux OS.
+     *
+     * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+     *
+     * Default: - false
+     *
+     * [Documentation](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html#nitro-enclave-reqs)
+     * @param enclaveEnabled Whether the instance is enabled for AWS Nitro Enclaves. 
+     */
+    public fun enclaveEnabled(enclaveEnabled: Boolean)
+
+    /**
+     * Whether the instance is enabled for hibernation.
+     *
+     * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+     *
+     * Default: - false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-hibernationoptions.html)
+     * @param hibernationEnabled Whether the instance is enabled for hibernation. 
+     */
+    public fun hibernationEnabled(hibernationEnabled: Boolean)
+
+    /**
      * Apply the given CloudFormation Init configuration to the instance at startup.
      *
      * Default: - no CloudFormation init
@@ -320,6 +405,20 @@ public open class Instance(
     public fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit)
 
     /**
+     * Indicates whether an instance stops or terminates when you initiate shutdown from the
+     * instance (using the operating system command for system shutdown).
+     *
+     * Default: InstanceInitiatedShutdownBehavior.STOP
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior)
+     * @param instanceInitiatedShutdownBehavior Indicates whether an instance stops or terminates
+     * when you initiate shutdown from the instance (using the operating system command for system
+     * shutdown). 
+     */
+    public
+        fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: InstanceInitiatedShutdownBehavior)
+
+    /**
      * The name of the instance.
      *
      * Default: - CDK generated name
@@ -334,6 +433,20 @@ public open class Instance(
      * @param instanceType Type of instance to launch. 
      */
     public fun instanceType(instanceType: InstanceType)
+
+    /**
+     * The number of IPv6 addresses to associate with the primary network interface.
+     *
+     * Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
+     *
+     * You cannot specify this property and `associatePublicIpAddress` at the same time.
+     *
+     * Default: - For instances associated with an IPv6 subnet, use 1; otherwise, use 0.
+     *
+     * @param ipv6AddressCount The number of IPv6 addresses to associate with the primary network
+     * interface. 
+     */
+    public fun ipv6AddressCount(ipv6AddressCount: Number)
 
     /**
      * (deprecated) Name of SSH keypair to grant access to instance.
@@ -362,6 +475,15 @@ public open class Instance(
      * @param machineImage AMI to launch. 
      */
     public fun machineImage(machineImage: IMachineImage)
+
+    /**
+     * The placement group that you want to launch the instance into.
+     *
+     * Default: - no placement group will be used for this instance.
+     *
+     * @param placementGroup The placement group that you want to launch the instance into. 
+     */
+    public fun placementGroup(placementGroup: IPlacementGroup)
 
     /**
      * Defines a private IP address to associate with an instance.
@@ -494,7 +616,7 @@ public open class Instance(
      * UserData, which will cause CloudFormation to replace it if the UserData
      * changes.
      *
-     * Default: - true iff `initOptions` is specified, false otherwise.
+     * Default: - true if `initOptions` is specified, false otherwise.
      *
      * @param userDataCausesReplacement Changes to the UserData force replacement. 
      */
@@ -566,6 +688,8 @@ public open class Instance(
     /**
      * Whether to associate a public IP address to the primary network interface attached to this
      * instance.
+     *
+     * You cannot specify this property and `ipv6AddressCount` at the same time.
      *
      * Default: - public IP address is automatically assigned based on default behavior
      *
@@ -669,6 +793,39 @@ public open class Instance(
     }
 
     /**
+     * Whether the instance is enabled for AWS Nitro Enclaves.
+     *
+     * Nitro Enclaves requires a Nitro-based virtualized parent instance with specific Intel/AMD
+     * with at least 4 vCPUs
+     * or Graviton with at least 2 vCPUs instance types and Linux/Windows host OS,
+     * while the enclave itself supports only Linux OS.
+     *
+     * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+     *
+     * Default: - false
+     *
+     * [Documentation](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave.html#nitro-enclave-reqs)
+     * @param enclaveEnabled Whether the instance is enabled for AWS Nitro Enclaves. 
+     */
+    override fun enclaveEnabled(enclaveEnabled: Boolean) {
+      cdkBuilder.enclaveEnabled(enclaveEnabled)
+    }
+
+    /**
+     * Whether the instance is enabled for hibernation.
+     *
+     * You can't set both `enclaveEnabled` and `hibernationEnabled` to true on the same instance.
+     *
+     * Default: - false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-hibernationoptions.html)
+     * @param hibernationEnabled Whether the instance is enabled for hibernation. 
+     */
+    override fun hibernationEnabled(hibernationEnabled: Boolean) {
+      cdkBuilder.hibernationEnabled(hibernationEnabled)
+    }
+
+    /**
      * Apply the given CloudFormation Init configuration to the instance at startup.
      *
      * Default: - no CloudFormation init
@@ -707,6 +864,22 @@ public open class Instance(
         initOptions(ApplyCloudFormationInitOptions(initOptions))
 
     /**
+     * Indicates whether an instance stops or terminates when you initiate shutdown from the
+     * instance (using the operating system command for system shutdown).
+     *
+     * Default: InstanceInitiatedShutdownBehavior.STOP
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior)
+     * @param instanceInitiatedShutdownBehavior Indicates whether an instance stops or terminates
+     * when you initiate shutdown from the instance (using the operating system command for system
+     * shutdown). 
+     */
+    override
+        fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: InstanceInitiatedShutdownBehavior) {
+      cdkBuilder.instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior.let(InstanceInitiatedShutdownBehavior.Companion::unwrap))
+    }
+
+    /**
      * The name of the instance.
      *
      * Default: - CDK generated name
@@ -724,6 +897,22 @@ public open class Instance(
      */
     override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
+    }
+
+    /**
+     * The number of IPv6 addresses to associate with the primary network interface.
+     *
+     * Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
+     *
+     * You cannot specify this property and `associatePublicIpAddress` at the same time.
+     *
+     * Default: - For instances associated with an IPv6 subnet, use 1; otherwise, use 0.
+     *
+     * @param ipv6AddressCount The number of IPv6 addresses to associate with the primary network
+     * interface. 
+     */
+    override fun ipv6AddressCount(ipv6AddressCount: Number) {
+      cdkBuilder.ipv6AddressCount(ipv6AddressCount)
     }
 
     /**
@@ -758,6 +947,17 @@ public open class Instance(
      */
     override fun machineImage(machineImage: IMachineImage) {
       cdkBuilder.machineImage(machineImage.let(IMachineImage.Companion::unwrap))
+    }
+
+    /**
+     * The placement group that you want to launch the instance into.
+     *
+     * Default: - no placement group will be used for this instance.
+     *
+     * @param placementGroup The placement group that you want to launch the instance into. 
+     */
+    override fun placementGroup(placementGroup: IPlacementGroup) {
+      cdkBuilder.placementGroup(placementGroup.let(IPlacementGroup.Companion::unwrap))
     }
 
     /**
@@ -909,7 +1109,7 @@ public open class Instance(
      * UserData, which will cause CloudFormation to replace it if the UserData
      * changes.
      *
-     * Default: - true iff `initOptions` is specified, false otherwise.
+     * Default: - true if `initOptions` is specified, false otherwise.
      *
      * @param userDataCausesReplacement Changes to the UserData force replacement. 
      */

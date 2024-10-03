@@ -649,7 +649,8 @@ public interface IRepository : IResource, INotificationRuleSource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codecommit.IRepository,
-  ) : CdkObject(cdkObject), IRepository {
+  ) : CdkObject(cdkObject),
+      IRepository {
     /**
      * Apply the given removal policy to this resource.
      *

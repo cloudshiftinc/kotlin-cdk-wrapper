@@ -49,6 +49,11 @@ import kotlin.jvm.JvmName
  * .subnetIds(List.of("subnetIds"))
  * // the properties below are optional
  * .securityGroupIds(List.of("securityGroupIds"))
+ * .vpcAttachmentOptions(VpcAttachmentOptionsProperty.builder()
+ * .attachToVpc(false)
+ * .cidrBlock("cidrBlock")
+ * .build())
+ * .vpcEndpointManagement("vpcEndpointManagement")
  * .build())
  * .build();
  * ```
@@ -403,7 +408,8 @@ public interface CfnPipelineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.osis.CfnPipelineProps,
-  ) : CdkObject(cdkObject), CfnPipelineProps {
+  ) : CdkObject(cdkObject),
+      CfnPipelineProps {
     /**
      * Options that specify the configuration of a persistent buffer.
      *

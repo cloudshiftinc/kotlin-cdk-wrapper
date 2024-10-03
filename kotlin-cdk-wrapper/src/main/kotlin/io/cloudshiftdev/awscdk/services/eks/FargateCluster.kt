@@ -30,7 +30,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * ```
  * FargateCluster cluster = FargateCluster.Builder.create(this, "MyCluster")
- * .version(KubernetesVersion.V1_29)
+ * .version(KubernetesVersion.V1_30)
  * .build();
  * ```
  */
@@ -85,6 +85,15 @@ public open class FargateCluster(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("528a333dd842b13c5cafad907c7593e4e97283440c6757fd7bf66f1e17707f07")
     public fun albController(albController: AlbControllerOptions.Builder.() -> Unit)
+
+    /**
+     * The desired authentication mode for the cluster.
+     *
+     * Default: AuthenticationMode.CONFIG_MAP
+     *
+     * @param authenticationMode The desired authentication mode for the cluster. 
+     */
+    public fun authenticationMode(authenticationMode: AuthenticationMode)
 
     /**
      * An AWS Lambda layer that contains the `aws` CLI.
@@ -463,6 +472,17 @@ public open class FargateCluster(
     @JvmName("528a333dd842b13c5cafad907c7593e4e97283440c6757fd7bf66f1e17707f07")
     override fun albController(albController: AlbControllerOptions.Builder.() -> Unit): Unit =
         albController(AlbControllerOptions(albController))
+
+    /**
+     * The desired authentication mode for the cluster.
+     *
+     * Default: AuthenticationMode.CONFIG_MAP
+     *
+     * @param authenticationMode The desired authentication mode for the cluster. 
+     */
+    override fun authenticationMode(authenticationMode: AuthenticationMode) {
+      cdkBuilder.authenticationMode(authenticationMode.let(AuthenticationMode.Companion::unwrap))
+    }
 
     /**
      * An AWS Lambda layer that contains the `aws` CLI.

@@ -104,7 +104,8 @@ public interface BaseListenerLookupOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListenerLookupOptions,
-  ) : CdkObject(cdkObject), BaseListenerLookupOptions {
+  ) : CdkObject(cdkObject),
+      BaseListenerLookupOptions {
     /**
      * Filter listeners by listener port.
      *

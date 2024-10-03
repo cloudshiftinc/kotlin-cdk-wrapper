@@ -1243,7 +1243,8 @@ public interface CfnServerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.transfer.CfnServerProps,
-  ) : CdkObject(cdkObject), CfnServerProps {
+  ) : CdkObject(cdkObject),
+      CfnServerProps {
     /**
      * The Amazon Resource Name (ARN) of the AWS Certificate Manager (ACM) certificate.
      *

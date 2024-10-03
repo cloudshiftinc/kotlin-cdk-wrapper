@@ -173,7 +173,8 @@ public interface CfnCreationPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnCreationPolicy,
-  ) : CdkObject(cdkObject), CfnCreationPolicy {
+  ) : CdkObject(cdkObject),
+      CfnCreationPolicy {
     /**
      * For an Auto Scaling group replacement update, specifies how many instances must signal
      * success for the update to succeed.

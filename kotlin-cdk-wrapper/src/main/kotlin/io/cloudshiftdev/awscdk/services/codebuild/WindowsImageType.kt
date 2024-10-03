@@ -7,6 +7,7 @@ public enum class WindowsImageType(
 ) {
   STANDARD(software.amazon.awscdk.services.codebuild.WindowsImageType.STANDARD),
   SERVER_2019(software.amazon.awscdk.services.codebuild.WindowsImageType.SERVER_2019),
+  SERVER_2022(software.amazon.awscdk.services.codebuild.WindowsImageType.SERVER_2022),
   ;
 
   public companion object {
@@ -16,6 +17,8 @@ public enum class WindowsImageType(
           WindowsImageType.STANDARD
       software.amazon.awscdk.services.codebuild.WindowsImageType.SERVER_2019 ->
           WindowsImageType.SERVER_2019
+      software.amazon.awscdk.services.codebuild.WindowsImageType.SERVER_2022 ->
+          WindowsImageType.SERVER_2022
     }
 
     internal fun unwrap(wrapped: WindowsImageType):

@@ -77,7 +77,8 @@ public interface Attribute {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.Attribute,
-  ) : CdkObject(cdkObject), Attribute {
+  ) : CdkObject(cdkObject),
+      Attribute {
     /**
      * The name of an attribute.
      */

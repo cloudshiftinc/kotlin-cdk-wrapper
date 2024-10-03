@@ -42,6 +42,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .anonymousAuthEnabled(false)
  * .enabled(false)
  * .internalUserDatabaseEnabled(false)
+ * .jwtOptions(JWTOptionsProperty.builder()
+ * .enabled(false)
+ * .publicKey("publicKey")
+ * .rolesKey("rolesKey")
+ * .subjectKey("subjectKey")
+ * .build())
  * .masterUserOptions(MasterUserOptionsProperty.builder()
  * .masterUserArn("masterUserArn")
  * .masterUserName("masterUserName")
@@ -123,6 +129,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .build())
+ * .skipShardMigrationWait(false)
  * .snapshotOptions(SnapshotOptionsProperty.builder()
  * .automatedSnapshotStartHour(123)
  * .build())
@@ -144,7 +151,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDomain(
   cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.opensearchservice.CfnDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -605,6 +614,25 @@ public open class CfnDomain(
   @JvmName("10360d18cf0e8887df35f99efa1b24f31b6e2817cab33ff9cc997b316f616517")
   public open fun offPeakWindowOptions(`value`: OffPeakWindowOptionsProperty.Builder.() -> Unit):
       Unit = offPeakWindowOptions(OffPeakWindowOptionsProperty(`value`))
+
+  /**
+   *
+   */
+  public open fun skipShardMigrationWait(): Any? = unwrap(this).getSkipShardMigrationWait()
+
+  /**
+   *
+   */
+  public open fun skipShardMigrationWait(`value`: Boolean) {
+    unwrap(this).setSkipShardMigrationWait(`value`)
+  }
+
+  /**
+   *
+   */
+  public open fun skipShardMigrationWait(`value`: IResolvable) {
+    unwrap(this).setSkipShardMigrationWait(`value`.let(IResolvable.Companion::unwrap))
+  }
 
   /**
    * *DEPRECATED* .
@@ -1160,6 +1188,18 @@ public open class CfnDomain(
     @JvmName("e70e5778d97125c7fda25481a6d9e1dee790e8fcafaf024d5d7c4e554b4a6f72")
     public
         fun offPeakWindowOptions(offPeakWindowOptions: OffPeakWindowOptionsProperty.Builder.() -> Unit)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-skipshardmigrationwait)
+     * @param skipShardMigrationWait 
+     */
+    public fun skipShardMigrationWait(skipShardMigrationWait: Boolean)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-skipshardmigrationwait)
+     * @param skipShardMigrationWait 
+     */
+    public fun skipShardMigrationWait(skipShardMigrationWait: IResolvable)
 
     /**
      * *DEPRECATED* .
@@ -1806,6 +1846,22 @@ public open class CfnDomain(
         Unit = offPeakWindowOptions(OffPeakWindowOptionsProperty(offPeakWindowOptions))
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-skipshardmigrationwait)
+     * @param skipShardMigrationWait 
+     */
+    override fun skipShardMigrationWait(skipShardMigrationWait: Boolean) {
+      cdkBuilder.skipShardMigrationWait(skipShardMigrationWait)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-skipshardmigrationwait)
+     * @param skipShardMigrationWait 
+     */
+    override fun skipShardMigrationWait(skipShardMigrationWait: IResolvable) {
+      cdkBuilder.skipShardMigrationWait(skipShardMigrationWait.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * *DEPRECATED* .
      *
      * The automated snapshot configuration for the OpenSearch Service domain indexes.
@@ -2000,6 +2056,12 @@ public open class CfnDomain(
    * .anonymousAuthEnabled(false)
    * .enabled(false)
    * .internalUserDatabaseEnabled(false)
+   * .jwtOptions(JWTOptionsProperty.builder()
+   * .enabled(false)
+   * .publicKey("publicKey")
+   * .rolesKey("rolesKey")
+   * .subjectKey("subjectKey")
+   * .build())
    * .masterUserOptions(MasterUserOptionsProperty.builder()
    * .masterUserArn("masterUserArn")
    * .masterUserName("masterUserName")
@@ -2063,6 +2125,13 @@ public open class CfnDomain(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html#cfn-opensearchservice-domain-advancedsecurityoptionsinput-internaluserdatabaseenabled)
      */
     public fun internalUserDatabaseEnabled(): Any? = unwrap(this).getInternalUserDatabaseEnabled()
+
+    /**
+     * Container for information about the JWT configuration of the Amazon OpenSearch Service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html#cfn-opensearchservice-domain-advancedsecurityoptionsinput-jwtoptions)
+     */
+    public fun jwtOptions(): Any? = unwrap(this).getJwtOptions()
 
     /**
      * Specifies information about the master user.
@@ -2134,6 +2203,26 @@ public open class CfnDomain(
        * @param internalUserDatabaseEnabled True to enable the internal user database.
        */
       public fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: IResolvable)
+
+      /**
+       * @param jwtOptions Container for information about the JWT configuration of the Amazon
+       * OpenSearch Service.
+       */
+      public fun jwtOptions(jwtOptions: IResolvable)
+
+      /**
+       * @param jwtOptions Container for information about the JWT configuration of the Amazon
+       * OpenSearch Service.
+       */
+      public fun jwtOptions(jwtOptions: JWTOptionsProperty)
+
+      /**
+       * @param jwtOptions Container for information about the JWT configuration of the Amazon
+       * OpenSearch Service.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cef78b4cf87e380205c518c60c1ae00ab2031655fc3a42bcdc0b7a6610ccdf6f")
+      public fun jwtOptions(jwtOptions: JWTOptionsProperty.Builder.() -> Unit)
 
       /**
        * @param masterUserOptions Specifies information about the master user.
@@ -2246,6 +2335,31 @@ public open class CfnDomain(
       }
 
       /**
+       * @param jwtOptions Container for information about the JWT configuration of the Amazon
+       * OpenSearch Service.
+       */
+      override fun jwtOptions(jwtOptions: IResolvable) {
+        cdkBuilder.jwtOptions(jwtOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param jwtOptions Container for information about the JWT configuration of the Amazon
+       * OpenSearch Service.
+       */
+      override fun jwtOptions(jwtOptions: JWTOptionsProperty) {
+        cdkBuilder.jwtOptions(jwtOptions.let(JWTOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param jwtOptions Container for information about the JWT configuration of the Amazon
+       * OpenSearch Service.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cef78b4cf87e380205c518c60c1ae00ab2031655fc3a42bcdc0b7a6610ccdf6f")
+      override fun jwtOptions(jwtOptions: JWTOptionsProperty.Builder.() -> Unit): Unit =
+          jwtOptions(JWTOptionsProperty(jwtOptions))
+
+      /**
        * @param masterUserOptions Specifies information about the master user.
        */
       override fun masterUserOptions(masterUserOptions: IResolvable) {
@@ -2300,7 +2414,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.AdvancedSecurityOptionsInputProperty,
-    ) : CdkObject(cdkObject), AdvancedSecurityOptionsInputProperty {
+    ) : CdkObject(cdkObject),
+        AdvancedSecurityOptionsInputProperty {
       /**
        * Date and time when the migration period will be disabled.
        *
@@ -2342,6 +2457,13 @@ public open class CfnDomain(
        */
       override fun internalUserDatabaseEnabled(): Any? =
           unwrap(this).getInternalUserDatabaseEnabled()
+
+      /**
+       * Container for information about the JWT configuration of the Amazon OpenSearch Service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html#cfn-opensearchservice-domain-advancedsecurityoptionsinput-jwtoptions)
+       */
+      override fun jwtOptions(): Any? = unwrap(this).getJwtOptions()
 
       /**
        * Specifies information about the master user.
@@ -2918,7 +3040,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ClusterConfigProperty,
-    ) : CdkObject(cdkObject), ClusterConfigProperty {
+    ) : CdkObject(cdkObject),
+        ClusterConfigProperty {
       /**
        * Container for cold storage configuration options.
        *
@@ -3226,7 +3349,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty,
-    ) : CdkObject(cdkObject), CognitoOptionsProperty {
+    ) : CdkObject(cdkObject),
+        CognitoOptionsProperty {
       /**
        * Whether to enable or disable Amazon Cognito authentication for OpenSearch Dashboards.
        *
@@ -3363,7 +3487,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty,
-    ) : CdkObject(cdkObject), ColdStorageOptionsProperty {
+    ) : CdkObject(cdkObject),
+        ColdStorageOptionsProperty {
       /**
        * Whether to enable or disable cold storage on the domain.
        *
@@ -3456,11 +3581,14 @@ public open class CfnDomain(
     public fun enforceHttps(): Any? = unwrap(this).getEnforceHttps()
 
     /**
-     * The minimum TLS version required for traffic to the domain. Valid values are TLS 1.3
-     * (recommended) or 1.2:.
+     * The minimum TLS version required for traffic to the domain. The policy can be one of the
+     * following values:.
      *
-     * * `Policy-Min-TLS-1-0-2019-07`
-     * * `Policy-Min-TLS-1-2-2019-07`
+     * * *Policy-Min-TLS-1-0-2019-07:* TLS security policy that supports TLS version 1.0 to TLS
+     * version 1.2
+     * * *Policy-Min-TLS-1-2-2019-07:* TLS security policy that supports only TLS version 1.2
+     * * *Policy-Min-TLS-1-2-PFS-2023-10:* TLS security policy that supports TLS version 1.2 to TLS
+     * version 1.3 with perfect forward secrecy cipher suites
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-domainendpointoptions.html#cfn-opensearchservice-domain-domainendpointoptions-tlssecuritypolicy)
      */
@@ -3515,10 +3643,13 @@ public open class CfnDomain(
       public fun enforceHttps(enforceHttps: IResolvable)
 
       /**
-       * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain. Valid
-       * values are TLS 1.3 (recommended) or 1.2:.
-       * * `Policy-Min-TLS-1-0-2019-07`
-       * * `Policy-Min-TLS-1-2-2019-07`
+       * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain. The
+       * policy can be one of the following values:.
+       * * *Policy-Min-TLS-1-0-2019-07:* TLS security policy that supports TLS version 1.0 to TLS
+       * version 1.2
+       * * *Policy-Min-TLS-1-2-2019-07:* TLS security policy that supports only TLS version 1.2
+       * * *Policy-Min-TLS-1-2-PFS-2023-10:* TLS security policy that supports TLS version 1.2 to
+       * TLS version 1.3 with perfect forward secrecy cipher suites
        */
       public fun tlsSecurityPolicy(tlsSecurityPolicy: String)
     }
@@ -3585,10 +3716,13 @@ public open class CfnDomain(
       }
 
       /**
-       * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain. Valid
-       * values are TLS 1.3 (recommended) or 1.2:.
-       * * `Policy-Min-TLS-1-0-2019-07`
-       * * `Policy-Min-TLS-1-2-2019-07`
+       * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain. The
+       * policy can be one of the following values:.
+       * * *Policy-Min-TLS-1-0-2019-07:* TLS security policy that supports TLS version 1.0 to TLS
+       * version 1.2
+       * * *Policy-Min-TLS-1-2-2019-07:* TLS security policy that supports only TLS version 1.2
+       * * *Policy-Min-TLS-1-2-PFS-2023-10:* TLS security policy that supports TLS version 1.2 to
+       * TLS version 1.3 with perfect forward secrecy cipher suites
        */
       override fun tlsSecurityPolicy(tlsSecurityPolicy: String) {
         cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy)
@@ -3601,7 +3735,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.DomainEndpointOptionsProperty,
-    ) : CdkObject(cdkObject), DomainEndpointOptionsProperty {
+    ) : CdkObject(cdkObject),
+        DomainEndpointOptionsProperty {
       /**
        * The fully qualified URL for your custom endpoint.
        *
@@ -3643,11 +3778,14 @@ public open class CfnDomain(
       override fun enforceHttps(): Any? = unwrap(this).getEnforceHttps()
 
       /**
-       * The minimum TLS version required for traffic to the domain. Valid values are TLS 1.3
-       * (recommended) or 1.2:.
+       * The minimum TLS version required for traffic to the domain. The policy can be one of the
+       * following values:.
        *
-       * * `Policy-Min-TLS-1-0-2019-07`
-       * * `Policy-Min-TLS-1-2-2019-07`
+       * * *Policy-Min-TLS-1-0-2019-07:* TLS security policy that supports TLS version 1.0 to TLS
+       * version 1.2
+       * * *Policy-Min-TLS-1-2-2019-07:* TLS security policy that supports only TLS version 1.2
+       * * *Policy-Min-TLS-1-2-PFS-2023-10:* TLS security policy that supports TLS version 1.2 to
+       * TLS version 1.3 with perfect forward secrecy cipher suites
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-domainendpointoptions.html#cfn-opensearchservice-domain-domainendpointoptions-tlssecuritypolicy)
        */
@@ -3862,7 +4000,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty,
-    ) : CdkObject(cdkObject), EBSOptionsProperty {
+    ) : CdkObject(cdkObject),
+        EBSOptionsProperty {
       /**
        * Specifies whether Amazon EBS volumes are attached to data nodes in the OpenSearch Service
        * domain.
@@ -4079,7 +4218,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty,
-    ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionAtRestOptionsProperty {
       /**
        * Specify `true` to enable encryption at rest. Required if you enable fine-grained access
        * control in
@@ -4202,7 +4342,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty,
-    ) : CdkObject(cdkObject), IdpProperty {
+    ) : CdkObject(cdkObject),
+        IdpProperty {
       /**
        * The unique entity ID of the application in the SAML identity provider.
        *
@@ -4232,6 +4373,163 @@ public open class CfnDomain(
           software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * JWTOptionsProperty jWTOptionsProperty = JWTOptionsProperty.builder()
+   * .enabled(false)
+   * .publicKey("publicKey")
+   * .rolesKey("rolesKey")
+   * .subjectKey("subjectKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-jwtoptions.html)
+   */
+  public interface JWTOptionsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-jwtoptions.html#cfn-opensearchservice-domain-jwtoptions-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-jwtoptions.html#cfn-opensearchservice-domain-jwtoptions-publickey)
+     */
+    public fun publicKey(): String? = unwrap(this).getPublicKey()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-jwtoptions.html#cfn-opensearchservice-domain-jwtoptions-roleskey)
+     */
+    public fun rolesKey(): String? = unwrap(this).getRolesKey()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-jwtoptions.html#cfn-opensearchservice-domain-jwtoptions-subjectkey)
+     */
+    public fun subjectKey(): String? = unwrap(this).getSubjectKey()
+
+    /**
+     * A builder for [JWTOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled the value to be set.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled the value to be set.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param publicKey the value to be set.
+       */
+      public fun publicKey(publicKey: String)
+
+      /**
+       * @param rolesKey the value to be set.
+       */
+      public fun rolesKey(rolesKey: String)
+
+      /**
+       * @param subjectKey the value to be set.
+       */
+      public fun subjectKey(subjectKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.JWTOptionsProperty.Builder =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.JWTOptionsProperty.builder()
+
+      /**
+       * @param enabled the value to be set.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled the value to be set.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param publicKey the value to be set.
+       */
+      override fun publicKey(publicKey: String) {
+        cdkBuilder.publicKey(publicKey)
+      }
+
+      /**
+       * @param rolesKey the value to be set.
+       */
+      override fun rolesKey(rolesKey: String) {
+        cdkBuilder.rolesKey(rolesKey)
+      }
+
+      /**
+       * @param subjectKey the value to be set.
+       */
+      override fun subjectKey(subjectKey: String) {
+        cdkBuilder.subjectKey(subjectKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.JWTOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.JWTOptionsProperty,
+    ) : CdkObject(cdkObject),
+        JWTOptionsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-jwtoptions.html#cfn-opensearchservice-domain-jwtoptions-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-jwtoptions.html#cfn-opensearchservice-domain-jwtoptions-publickey)
+       */
+      override fun publicKey(): String? = unwrap(this).getPublicKey()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-jwtoptions.html#cfn-opensearchservice-domain-jwtoptions-roleskey)
+       */
+      override fun rolesKey(): String? = unwrap(this).getRolesKey()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-jwtoptions.html#cfn-opensearchservice-domain-jwtoptions-subjectkey)
+       */
+      override fun subjectKey(): String? = unwrap(this).getSubjectKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JWTOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.JWTOptionsProperty):
+          JWTOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? JWTOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JWTOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.JWTOptionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.JWTOptionsProperty
     }
   }
 
@@ -4345,7 +4643,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty,
-    ) : CdkObject(cdkObject), LogPublishingOptionProperty {
+    ) : CdkObject(cdkObject),
+        LogPublishingOptionProperty {
       /**
        * Specifies the CloudWatch log group to publish to.
        *
@@ -4539,7 +4838,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty,
-    ) : CdkObject(cdkObject), MasterUserOptionsProperty {
+    ) : CdkObject(cdkObject),
+        MasterUserOptionsProperty {
       /**
        * Amazon Resource Name (ARN) for the master user.
        *
@@ -4684,7 +4984,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty,
-    ) : CdkObject(cdkObject), NodeToNodeEncryptionOptionsProperty {
+    ) : CdkObject(cdkObject),
+        NodeToNodeEncryptionOptionsProperty {
       /**
        * Specifies to enable or disable node-to-node encryption on the domain.
        *
@@ -4836,7 +5137,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty,
-    ) : CdkObject(cdkObject), OffPeakWindowOptionsProperty {
+    ) : CdkObject(cdkObject),
+        OffPeakWindowOptionsProperty {
       /**
        * Specifies whether off-peak window settings are enabled for the domain.
        *
@@ -4960,7 +5262,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty,
-    ) : CdkObject(cdkObject), OffPeakWindowProperty {
+    ) : CdkObject(cdkObject),
+        OffPeakWindowProperty {
       /**
        * The desired start time for an off-peak maintenance window.
        *
@@ -5218,7 +5521,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty,
-    ) : CdkObject(cdkObject), SAMLOptionsProperty {
+    ) : CdkObject(cdkObject),
+        SAMLOptionsProperty {
       /**
        * True to enable SAML authentication for a domain.
        *
@@ -5553,7 +5857,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ServiceSoftwareOptionsProperty,
-    ) : CdkObject(cdkObject), ServiceSoftwareOptionsProperty {
+    ) : CdkObject(cdkObject),
+        ServiceSoftwareOptionsProperty {
       /**
        * The timestamp, in Epoch time, until which you can manually request a service software
        * update.
@@ -5708,7 +6013,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty,
-    ) : CdkObject(cdkObject), SnapshotOptionsProperty {
+    ) : CdkObject(cdkObject),
+        SnapshotOptionsProperty {
       /**
        * The hour in UTC during which the service takes an automated daily snapshot of the indexes
        * in the OpenSearch Service domain.
@@ -5812,7 +6118,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty,
-    ) : CdkObject(cdkObject), SoftwareUpdateOptionsProperty {
+    ) : CdkObject(cdkObject),
+        SoftwareUpdateOptionsProperty {
       /**
        * Specifies whether automatic service software updates are enabled for the domain.
        *
@@ -6008,7 +6315,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.VPCOptionsProperty,
-    ) : CdkObject(cdkObject), VPCOptionsProperty {
+    ) : CdkObject(cdkObject),
+        VPCOptionsProperty {
       /**
        * The list of security group IDs that are associated with the VPC endpoints for the domain.
        *
@@ -6148,7 +6456,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty,
-    ) : CdkObject(cdkObject), WindowStartTimeProperty {
+    ) : CdkObject(cdkObject),
+        WindowStartTimeProperty {
       /**
        * The start hour of the window in Coordinated Universal Time (UTC), using 24-hour time.
        *
@@ -6251,7 +6560,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty,
-    ) : CdkObject(cdkObject), ZoneAwarenessConfigProperty {
+    ) : CdkObject(cdkObject),
+        ZoneAwarenessConfigProperty {
       /**
        * If you enabled multiple Availability Zones (AZs), the number of AZs that you want the
        * domain to use.

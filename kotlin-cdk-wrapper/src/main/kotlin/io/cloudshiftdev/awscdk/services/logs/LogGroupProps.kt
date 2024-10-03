@@ -17,29 +17,29 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Vpc vpc;
- * Key kmsKey = new Key(this, "KmsKey");
- * // Pass the KMS key in the `encryptionKey` field to associate the key to the log group
- * LogGroup logGroup = LogGroup.Builder.create(this, "LogGroup")
- * .encryptionKey(kmsKey)
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.alpha.*;
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.destinations.alpha.*;
+ * LogGroup logGroupDestination = LogGroup.Builder.create(this, "LogGroupLambdaAudit")
+ * .logGroupName("auditDestinationForCDK")
  * .build();
- * // Pass the KMS key in the `encryptionKey` field to associate the key to the S3 bucket
- * Bucket execBucket = Bucket.Builder.create(this, "EcsExecBucket")
- * .encryptionKey(kmsKey)
+ * Bucket bucket = new Bucket(this, "audit-bucket");
+ * S3Bucket s3Destination = new S3Bucket(bucket);
+ * DeliveryStream deliveryStream = DeliveryStream.Builder.create(this, "Delivery Stream")
+ * .destinations(List.of(s3Destination))
  * .build();
- * Cluster cluster = Cluster.Builder.create(this, "Cluster")
- * .vpc(vpc)
- * .executeCommandConfiguration(ExecuteCommandConfiguration.builder()
- * .kmsKey(kmsKey)
- * .logConfiguration(ExecuteCommandLogConfiguration.builder()
- * .cloudWatchLogGroup(logGroup)
- * .cloudWatchEncryptionEnabled(true)
- * .s3Bucket(execBucket)
- * .s3EncryptionEnabled(true)
- * .s3KeyPrefix("exec-command-output")
- * .build())
- * .logging(ExecuteCommandLogging.OVERRIDE)
- * .build())
+ * DataProtectionPolicy dataProtectionPolicy = DataProtectionPolicy.Builder.create()
+ * .name("data protection policy")
+ * .description("policy description")
+ * .identifiers(List.of(DataIdentifier.DRIVERSLICENSE_US,  // managed data identifier
+ * new DataIdentifier("EmailAddress"),  // forward compatibility for new managed data identifiers
+ * new CustomDataIdentifier("EmployeeId", "EmployeeId-\\d{9}"))) // custom data identifier
+ * .logGroupAuditDestination(logGroupDestination)
+ * .s3BucketAuditDestination(bucket)
+ * .deliveryStreamNameAuditDestination(deliveryStream.getDeliveryStreamName())
+ * .build();
+ * LogGroup.Builder.create(this, "LogGroupLambda")
+ * .logGroupName("cdkIntegLogGroup")
+ * .dataProtectionPolicy(dataProtectionPolicy)
  * .build();
  * ```
  */
@@ -221,7 +221,8 @@ public interface LogGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.LogGroupProps,
-  ) : CdkObject(cdkObject), LogGroupProps {
+  ) : CdkObject(cdkObject),
+      LogGroupProps {
     /**
      * Data Protection Policy for this log group.
      *

@@ -126,7 +126,8 @@ public interface QueryDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.QueryDefinitionProps,
-  ) : CdkObject(cdkObject), QueryDefinitionProps {
+  ) : CdkObject(cdkObject),
+      QueryDefinitionProps {
     /**
      * Specify certain log groups for the query definition.
      *

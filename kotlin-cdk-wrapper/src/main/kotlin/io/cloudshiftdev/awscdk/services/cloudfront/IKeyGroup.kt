@@ -22,7 +22,8 @@ public interface IKeyGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.IKeyGroup,
-  ) : CdkObject(cdkObject), IKeyGroup {
+  ) : CdkObject(cdkObject),
+      IKeyGroup {
     /**
      * Apply the given removal policy to this resource.
      *

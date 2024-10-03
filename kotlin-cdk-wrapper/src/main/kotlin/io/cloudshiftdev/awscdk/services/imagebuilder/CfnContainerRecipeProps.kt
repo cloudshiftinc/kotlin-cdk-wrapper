@@ -551,7 +551,8 @@ public interface CfnContainerRecipeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipeProps,
-  ) : CdkObject(cdkObject), CfnContainerRecipeProps {
+  ) : CdkObject(cdkObject),
+      CfnContainerRecipeProps {
     /**
      * Build and test components that are included in the container recipe.
      *

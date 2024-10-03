@@ -38,7 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class DomainName(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainName,
-) : Resource(cdkObject), IDomainName {
+) : Resource(cdkObject),
+    IDomainName {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

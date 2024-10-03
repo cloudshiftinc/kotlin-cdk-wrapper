@@ -67,7 +67,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIdentityProviderConfig(
   cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -630,7 +632,8 @@ public open class CfnIdentityProviderConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty,
-    ) : CdkObject(cdkObject), OidcIdentityProviderConfigProperty {
+    ) : CdkObject(cdkObject),
+        OidcIdentityProviderConfigProperty {
       /**
        * This is also known as *audience* .
        *
@@ -789,7 +792,8 @@ public open class CfnIdentityProviderConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.RequiredClaimProperty,
-    ) : CdkObject(cdkObject), RequiredClaimProperty {
+    ) : CdkObject(cdkObject),
+        RequiredClaimProperty {
       /**
        * The key to match from the token.
        *

@@ -67,7 +67,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnThingGroup(
   cdkObject: software.amazon.awscdk.services.iot.CfnThingGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnThingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -463,7 +465,8 @@ public open class CfnThingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnThingGroup.AttributePayloadProperty,
-    ) : CdkObject(cdkObject), AttributePayloadProperty {
+    ) : CdkObject(cdkObject),
+        AttributePayloadProperty {
       /**
        * A JSON string containing up to three key-value pair in JSON format. For example:.
        *
@@ -597,7 +600,8 @@ public open class CfnThingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnThingGroup.ThingGroupPropertiesProperty,
-    ) : CdkObject(cdkObject), ThingGroupPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ThingGroupPropertiesProperty {
       /**
        * The thing group attributes in JSON format.
        *

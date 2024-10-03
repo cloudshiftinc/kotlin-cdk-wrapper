@@ -139,7 +139,8 @@ public interface ComputeEnvironmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.ComputeEnvironmentProps,
-  ) : CdkObject(cdkObject), ComputeEnvironmentProps {
+  ) : CdkObject(cdkObject),
+      ComputeEnvironmentProps {
     /**
      * The name of the ComputeEnvironment.
      *

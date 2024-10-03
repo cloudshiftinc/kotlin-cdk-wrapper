@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUserPoolUICustomizationAttachment(
   cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachment,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -65,11 +66,6 @@ public open class CfnUserPoolUICustomizationAttachment(
     props: CfnUserPoolUICustomizationAttachmentProps.Builder.() -> Unit,
   ) : this(scope, id, CfnUserPoolUICustomizationAttachmentProps(props)
   )
-
-  /**
-   * The resource ID.
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
    * The client ID for the client app.

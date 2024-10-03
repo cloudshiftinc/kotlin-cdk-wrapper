@@ -57,12 +57,17 @@ import kotlin.jvm.JvmName
  * .matchingKeys(List.of("matchingKeys"))
  * .ruleName("ruleName")
  * .build()))
+ * // the properties below are optional
+ * .matchPurpose("matchPurpose")
  * .build())
  * .build())
  * .roleArn("roleArn")
  * .workflowName("workflowName")
  * // the properties below are optional
  * .description("description")
+ * .incrementalRunConfig(IncrementalRunConfigProperty.builder()
+ * .incrementalRunType("incrementalRunType")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -79,6 +84,13 @@ public interface CfnMatchingWorkflowProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig)
+   */
+  public fun incrementalRunConfig(): Any? = unwrap(this).getIncrementalRunConfig()
 
   /**
    * A list of `InputSource` objects, which have the fields `InputSourceARN` and `SchemaName` .
@@ -137,6 +149,28 @@ public interface CfnMatchingWorkflowProps {
      * @param description A description of the workflow.
      */
     public fun description(description: String)
+
+    /**
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field.
+     */
+    public fun incrementalRunConfig(incrementalRunConfig: IResolvable)
+
+    /**
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field.
+     */
+    public
+        fun incrementalRunConfig(incrementalRunConfig: CfnMatchingWorkflow.IncrementalRunConfigProperty)
+
+    /**
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("37d18e057de3f39c2db48aca6fdcecbc1661ec9881157ead6368bc8fd069f90c")
+    public
+        fun incrementalRunConfig(incrementalRunConfig: CfnMatchingWorkflow.IncrementalRunConfigProperty.Builder.() -> Unit)
 
     /**
      * @param inputSourceConfig A list of `InputSource` objects, which have the fields
@@ -231,6 +265,34 @@ public interface CfnMatchingWorkflowProps {
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field.
+     */
+    override fun incrementalRunConfig(incrementalRunConfig: IResolvable) {
+      cdkBuilder.incrementalRunConfig(incrementalRunConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field.
+     */
+    override
+        fun incrementalRunConfig(incrementalRunConfig: CfnMatchingWorkflow.IncrementalRunConfigProperty) {
+      cdkBuilder.incrementalRunConfig(incrementalRunConfig.let(CfnMatchingWorkflow.IncrementalRunConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("37d18e057de3f39c2db48aca6fdcecbc1661ec9881157ead6368bc8fd069f90c")
+    override
+        fun incrementalRunConfig(incrementalRunConfig: CfnMatchingWorkflow.IncrementalRunConfigProperty.Builder.() -> Unit):
+        Unit =
+        incrementalRunConfig(CfnMatchingWorkflow.IncrementalRunConfigProperty(incrementalRunConfig))
 
     /**
      * @param inputSourceConfig A list of `InputSource` objects, which have the fields
@@ -341,13 +403,21 @@ public interface CfnMatchingWorkflowProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflowProps,
-  ) : CdkObject(cdkObject), CfnMatchingWorkflowProps {
+  ) : CdkObject(cdkObject),
+      CfnMatchingWorkflowProps {
     /**
      * A description of the workflow.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig)
+     */
+    override fun incrementalRunConfig(): Any? = unwrap(this).getIncrementalRunConfig()
 
     /**
      * A list of `InputSource` objects, which have the fields `InputSourceARN` and `SchemaName` .

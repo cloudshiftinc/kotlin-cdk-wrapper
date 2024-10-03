@@ -90,7 +90,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEventType(
   cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -809,7 +811,8 @@ public open class CfnEventType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType.EntityTypeProperty,
-    ) : CdkObject(cdkObject), EntityTypeProperty {
+    ) : CdkObject(cdkObject),
+        EntityTypeProperty {
       /**
        * The entity type ARN.
        *
@@ -1276,7 +1279,8 @@ public open class CfnEventType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType.EventVariableProperty,
-    ) : CdkObject(cdkObject), EventVariableProperty {
+    ) : CdkObject(cdkObject),
+        EventVariableProperty {
       /**
        * The event variable ARN.
        *
@@ -1670,7 +1674,8 @@ public open class CfnEventType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType.LabelProperty,
-    ) : CdkObject(cdkObject), LabelProperty {
+    ) : CdkObject(cdkObject),
+        LabelProperty {
       /**
        * The label ARN.
        *

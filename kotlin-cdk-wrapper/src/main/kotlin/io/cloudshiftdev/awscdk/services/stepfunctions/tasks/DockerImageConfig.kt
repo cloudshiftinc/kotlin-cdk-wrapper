@@ -57,7 +57,8 @@ public interface DockerImageConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig,
-  ) : CdkObject(cdkObject), DockerImageConfig {
+  ) : CdkObject(cdkObject),
+      DockerImageConfig {
     /**
      * The fully qualified URI of the Docker image.
      */

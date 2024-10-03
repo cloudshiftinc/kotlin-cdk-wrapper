@@ -58,7 +58,8 @@ public interface GenericLinuxImageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.GenericLinuxImageProps,
-  ) : CdkObject(cdkObject), GenericLinuxImageProps {
+  ) : CdkObject(cdkObject),
+      GenericLinuxImageProps {
     /**
      * Initial user data.
      *

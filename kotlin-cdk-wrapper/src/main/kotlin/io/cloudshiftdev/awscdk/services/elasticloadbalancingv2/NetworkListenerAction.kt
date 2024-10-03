@@ -36,7 +36,8 @@ import kotlin.jvm.JvmName
  */
 public open class NetworkListenerAction(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction,
-) : CdkObject(cdkObject), IListenerAction {
+) : CdkObject(cdkObject),
+    IListenerAction {
   /**
    * Called when the action is being used in a listener.
    *

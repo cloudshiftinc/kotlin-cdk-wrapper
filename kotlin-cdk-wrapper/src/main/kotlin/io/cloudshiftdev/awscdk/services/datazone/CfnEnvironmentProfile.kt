@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEnvironmentProfile(
   cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProfile,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -514,7 +515,8 @@ public open class CfnEnvironmentProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProfile.EnvironmentParameterProperty,
-    ) : CdkObject(cdkObject), EnvironmentParameterProperty {
+    ) : CdkObject(cdkObject),
+        EnvironmentParameterProperty {
       /**
        * The name specified in the environment parameter.
        *

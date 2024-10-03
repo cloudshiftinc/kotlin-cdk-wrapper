@@ -136,7 +136,8 @@ public interface SearchComponents {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.SearchComponents,
-  ) : CdkObject(cdkObject), SearchComponents {
+  ) : CdkObject(cdkObject),
+      SearchComponents {
     /**
      * The list of dimensions to be used in the search expression.
      */

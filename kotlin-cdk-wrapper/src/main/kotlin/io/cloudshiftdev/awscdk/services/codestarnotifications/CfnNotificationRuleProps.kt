@@ -353,7 +353,8 @@ public interface CfnNotificationRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codestarnotifications.CfnNotificationRuleProps,
-  ) : CdkObject(cdkObject), CfnNotificationRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnNotificationRuleProps {
     /**
      * The name or email alias of the person who created the notification rule.
      *

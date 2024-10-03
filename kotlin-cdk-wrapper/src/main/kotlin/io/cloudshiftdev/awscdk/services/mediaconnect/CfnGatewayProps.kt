@@ -159,7 +159,8 @@ public interface CfnGatewayProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediaconnect.CfnGatewayProps,
-  ) : CdkObject(cdkObject), CfnGatewayProps {
+  ) : CdkObject(cdkObject),
+      CfnGatewayProps {
     /**
      * The range of IP addresses that are allowed to contribute content or initiate output requests
      * for flows communicating with this gateway.

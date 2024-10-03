@@ -64,7 +64,8 @@ public interface CfnCodeDeployBlueGreenAdditionalOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions,
-  ) : CdkObject(cdkObject), CfnCodeDeployBlueGreenAdditionalOptions {
+  ) : CdkObject(cdkObject),
+      CfnCodeDeployBlueGreenAdditionalOptions {
     /**
      * Specifies time to wait, in minutes, before terminating the blue resources.
      *

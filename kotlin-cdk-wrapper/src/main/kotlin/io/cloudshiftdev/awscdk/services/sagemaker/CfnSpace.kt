@@ -22,7 +22,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates a space used for real time collaboration in a domain.
+ * Creates a private space or a space used for real time collaboration in a domain.
  *
  * Example:
  *
@@ -41,8 +41,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .spaceSettings(SpaceSettingsProperty.builder()
  * .appType("appType")
  * .codeEditorAppSettings(SpaceCodeEditorAppSettingsProperty.builder()
+ * .appLifecycleManagement(SpaceAppLifecycleManagementProperty.builder()
+ * .idleSettings(SpaceIdleSettingsProperty.builder()
+ * .idleTimeoutInMinutes(123)
+ * .build())
+ * .build())
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
@@ -53,11 +59,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build()))
  * .jupyterLabAppSettings(SpaceJupyterLabAppSettingsProperty.builder()
+ * .appLifecycleManagement(SpaceAppLifecycleManagementProperty.builder()
+ * .idleSettings(SpaceIdleSettingsProperty.builder()
+ * .idleTimeoutInMinutes(123)
+ * .build())
+ * .build())
  * .codeRepositories(List.of(CodeRepositoryProperty.builder()
  * .repositoryUrl("repositoryUrl")
  * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
@@ -65,9 +77,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
  * .build())
  * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
  * .customImages(List.of(CustomImageProperty.builder()
@@ -78,9 +92,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
  * .build())
  * .spaceStorageSettings(SpaceStorageSettingsProperty.builder()
  * .ebsStorageSettings(EbsStorageSettingsProperty.builder()
@@ -102,7 +118,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSpace(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -655,7 +673,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.CodeRepositoryProperty,
-    ) : CdkObject(cdkObject), CodeRepositoryProperty {
+    ) : CdkObject(cdkObject),
+        CodeRepositoryProperty {
       /**
        * The URL of the Git repository.
        *
@@ -768,7 +787,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.CustomFileSystemProperty,
-    ) : CdkObject(cdkObject), CustomFileSystemProperty {
+    ) : CdkObject(cdkObject),
+        CustomFileSystemProperty {
       /**
        * A custom file system in Amazon EFS.
        *
@@ -896,7 +916,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.CustomImageProperty,
-    ) : CdkObject(cdkObject), CustomImageProperty {
+    ) : CdkObject(cdkObject),
+        CustomImageProperty {
       /**
        * The name of the AppImageConfig.
        *
@@ -995,7 +1016,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.EFSFileSystemProperty,
-    ) : CdkObject(cdkObject), EFSFileSystemProperty {
+    ) : CdkObject(cdkObject),
+        EFSFileSystemProperty {
       /**
        * The ID of your Amazon EFS file system.
        *
@@ -1076,7 +1098,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.EbsStorageSettingsProperty,
-    ) : CdkObject(cdkObject), EbsStorageSettingsProperty {
+    ) : CdkObject(cdkObject),
+        EbsStorageSettingsProperty {
       /**
        * The size of an EBS storage volume for a space.
        *
@@ -1116,9 +1139,11 @@ public open class CfnSpace(
    * JupyterServerAppSettingsProperty.builder()
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
+   * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
    * .build();
    * ```
    *
@@ -1134,6 +1159,21 @@ public open class CfnSpace(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-jupyterserverappsettings.html#cfn-sagemaker-space-jupyterserverappsettings-defaultresourcespec)
      */
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the
+     * JupyterServerApp.
+     *
+     * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+     *
+     *
+     * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-jupyterserverappsettings.html#cfn-sagemaker-space-jupyterserverappsettings-lifecycleconfigarns)
+     */
+    public fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+        emptyList()
 
     /**
      * A builder for [JupyterServerAppSettingsProperty]
@@ -1162,6 +1202,26 @@ public open class CfnSpace(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bc1e1750215a44aee76b455f21d67ef6ab019a86d8976d254c0ff18df7dcf342")
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the JupyterServerApp.
+       * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the JupyterServerApp.
+       * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      public fun lifecycleConfigArns(vararg lifecycleConfigArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1199,6 +1259,29 @@ public open class CfnSpace(
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the JupyterServerApp.
+       * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
+        cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
+      }
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the JupyterServerApp.
+       * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      override fun lifecycleConfigArns(vararg lifecycleConfigArns: String): Unit =
+          lifecycleConfigArns(lifecycleConfigArns.toList())
+
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnSpace.JupyterServerAppSettingsProperty =
           cdkBuilder.build()
@@ -1206,7 +1289,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.JupyterServerAppSettingsProperty,
-    ) : CdkObject(cdkObject), JupyterServerAppSettingsProperty {
+    ) : CdkObject(cdkObject),
+        JupyterServerAppSettingsProperty {
       /**
        * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
        * used by the JupyterServer app.
@@ -1216,6 +1300,21 @@ public open class CfnSpace(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-jupyterserverappsettings.html#cfn-sagemaker-space-jupyterserverappsettings-defaultresourcespec)
        */
       override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the
+       * JupyterServerApp.
+       *
+       * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-jupyterserverappsettings.html#cfn-sagemaker-space-jupyterserverappsettings-lifecycleconfigarns)
+       */
+      override fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+          emptyList()
     }
 
     public companion object {
@@ -1255,9 +1354,11 @@ public open class CfnSpace(
    * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
+   * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
    * .build();
    * ```
    *
@@ -1284,6 +1385,19 @@ public open class CfnSpace(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-kernelgatewayappsettings.html#cfn-sagemaker-space-kernelgatewayappsettings-defaultresourcespec)
      */
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user
+     * profile or domain.
+     *
+     *
+     * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-kernelgatewayappsettings.html#cfn-sagemaker-space-kernelgatewayappsettings-lifecycleconfigarns)
+     */
+    public fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+        emptyList()
 
     /**
      * A builder for [KernelGatewayAppSettingsProperty]
@@ -1339,6 +1453,22 @@ public open class CfnSpace(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b722b7492eff2a37138d40822cae857b7cd89725c1db0e9ebb4795dee8b85261")
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the the user profile or domain.
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the the user profile or domain.
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      public fun lifecycleConfigArns(vararg lifecycleConfigArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1408,6 +1538,25 @@ public open class CfnSpace(
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the the user profile or domain.
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
+        cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
+      }
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the the user profile or domain.
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      override fun lifecycleConfigArns(vararg lifecycleConfigArns: String): Unit =
+          lifecycleConfigArns(lifecycleConfigArns.toList())
+
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnSpace.KernelGatewayAppSettingsProperty =
           cdkBuilder.build()
@@ -1415,7 +1564,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.KernelGatewayAppSettingsProperty,
-    ) : CdkObject(cdkObject), KernelGatewayAppSettingsProperty {
+    ) : CdkObject(cdkObject),
+        KernelGatewayAppSettingsProperty {
       /**
        * A list of custom SageMaker images that are configured to run as a KernelGateway app.
        *
@@ -1436,6 +1586,19 @@ public open class CfnSpace(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-kernelgatewayappsettings.html#cfn-sagemaker-space-kernelgatewayappsettings-defaultresourcespec)
        */
       override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user
+       * profile or domain.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-kernelgatewayappsettings.html#cfn-sagemaker-space-kernelgatewayappsettings-lifecycleconfigarns)
+       */
+      override fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+          emptyList()
     }
 
     public companion object {
@@ -1510,7 +1673,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.OwnershipSettingsProperty,
-    ) : CdkObject(cdkObject), OwnershipSettingsProperty {
+    ) : CdkObject(cdkObject),
+        OwnershipSettingsProperty {
       /**
        * The user profile who is the owner of the space.
        *
@@ -1549,6 +1713,7 @@ public open class CfnSpace(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * ResourceSpecProperty resourceSpecProperty = ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build();
@@ -1570,6 +1735,13 @@ public open class CfnSpace(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-resourcespec.html#cfn-sagemaker-space-resourcespec-instancetype)
      */
     public fun instanceType(): String? = unwrap(this).getInstanceType()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-resourcespec.html#cfn-sagemaker-space-resourcespec-lifecycleconfigarn)
+     */
+    public fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
     /**
      * The ARN of the SageMaker image that the image version belongs to.
@@ -1601,6 +1773,12 @@ public open class CfnSpace(
       public fun instanceType(instanceType: String)
 
       /**
+       * @param lifecycleConfigArn The Amazon Resource Name (ARN) of the Lifecycle Configuration
+       * attached to the Resource.
+       */
+      public fun lifecycleConfigArn(lifecycleConfigArn: String)
+
+      /**
        * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
        */
       public fun sageMakerImageArn(sageMakerImageArn: String)
@@ -1629,6 +1807,14 @@ public open class CfnSpace(
       }
 
       /**
+       * @param lifecycleConfigArn The Amazon Resource Name (ARN) of the Lifecycle Configuration
+       * attached to the Resource.
+       */
+      override fun lifecycleConfigArn(lifecycleConfigArn: String) {
+        cdkBuilder.lifecycleConfigArn(lifecycleConfigArn)
+      }
+
+      /**
        * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
        */
       override fun sageMakerImageArn(sageMakerImageArn: String) {
@@ -1648,7 +1834,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.ResourceSpecProperty,
-    ) : CdkObject(cdkObject), ResourceSpecProperty {
+    ) : CdkObject(cdkObject),
+        ResourceSpecProperty {
       /**
        * The instance type that the image version runs on.
        *
@@ -1662,6 +1849,13 @@ public open class CfnSpace(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-resourcespec.html#cfn-sagemaker-space-resourcespec-instancetype)
        */
       override fun instanceType(): String? = unwrap(this).getInstanceType()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-resourcespec.html#cfn-sagemaker-space-resourcespec-lifecycleconfigarn)
+       */
+      override fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
       /**
        * The ARN of the SageMaker image that the image version belongs to.
@@ -1697,6 +1891,121 @@ public open class CfnSpace(
   }
 
   /**
+   * Settings that are used to configure and manage the lifecycle of Amazon SageMaker Studio
+   * applications in a space.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * SpaceAppLifecycleManagementProperty spaceAppLifecycleManagementProperty =
+   * SpaceAppLifecycleManagementProperty.builder()
+   * .idleSettings(SpaceIdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spaceapplifecyclemanagement.html)
+   */
+  public interface SpaceAppLifecycleManagementProperty {
+    /**
+     * Settings related to idle shutdown of Studio applications.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spaceapplifecyclemanagement.html#cfn-sagemaker-space-spaceapplifecyclemanagement-idlesettings)
+     */
+    public fun idleSettings(): Any? = unwrap(this).getIdleSettings()
+
+    /**
+     * A builder for [SpaceAppLifecycleManagementProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      public fun idleSettings(idleSettings: IResolvable)
+
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      public fun idleSettings(idleSettings: SpaceIdleSettingsProperty)
+
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d54a7d2926688d762728494544840a99ea889157e195a31f9a2c117351220009")
+      public fun idleSettings(idleSettings: SpaceIdleSettingsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceAppLifecycleManagementProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceAppLifecycleManagementProperty.builder()
+
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      override fun idleSettings(idleSettings: IResolvable) {
+        cdkBuilder.idleSettings(idleSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      override fun idleSettings(idleSettings: SpaceIdleSettingsProperty) {
+        cdkBuilder.idleSettings(idleSettings.let(SpaceIdleSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d54a7d2926688d762728494544840a99ea889157e195a31f9a2c117351220009")
+      override fun idleSettings(idleSettings: SpaceIdleSettingsProperty.Builder.() -> Unit): Unit =
+          idleSettings(SpaceIdleSettingsProperty(idleSettings))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceAppLifecycleManagementProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceAppLifecycleManagementProperty,
+    ) : CdkObject(cdkObject),
+        SpaceAppLifecycleManagementProperty {
+      /**
+       * Settings related to idle shutdown of Studio applications.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spaceapplifecyclemanagement.html#cfn-sagemaker-space-spaceapplifecyclemanagement-idlesettings)
+       */
+      override fun idleSettings(): Any? = unwrap(this).getIdleSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SpaceAppLifecycleManagementProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceAppLifecycleManagementProperty):
+          SpaceAppLifecycleManagementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpaceAppLifecycleManagementProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpaceAppLifecycleManagementProperty):
+          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceAppLifecycleManagementProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceAppLifecycleManagementProperty
+    }
+  }
+
+  /**
    * The application settings for a Code Editor space.
    *
    * Example:
@@ -1707,8 +2016,14 @@ public open class CfnSpace(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * SpaceCodeEditorAppSettingsProperty spaceCodeEditorAppSettingsProperty =
    * SpaceCodeEditorAppSettingsProperty.builder()
+   * .appLifecycleManagement(SpaceAppLifecycleManagementProperty.builder()
+   * .idleSettings(SpaceIdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .build())
+   * .build())
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
@@ -1718,6 +2033,14 @@ public open class CfnSpace(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacecodeeditorappsettings.html)
    */
   public interface SpaceCodeEditorAppSettingsProperty {
+    /**
+     * Settings that are used to configure and manage the lifecycle of CodeEditor applications in a
+     * space.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacecodeeditorappsettings.html#cfn-sagemaker-space-spacecodeeditorappsettings-applifecyclemanagement)
+     */
+    public fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
+
     /**
      * Specifies the ARNs of a SageMaker image and SageMaker image version, and the instance type
      * that the version runs on.
@@ -1731,6 +2054,27 @@ public open class CfnSpace(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications in a space.
+       */
+      public fun appLifecycleManagement(appLifecycleManagement: IResolvable)
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications in a space.
+       */
+      public fun appLifecycleManagement(appLifecycleManagement: SpaceAppLifecycleManagementProperty)
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications in a space.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("642495c09a97994a01af4a8e9e501b4af10ed75adea07f25ef529a19cee17da0")
+      public
+          fun appLifecycleManagement(appLifecycleManagement: SpaceAppLifecycleManagementProperty.Builder.() -> Unit)
+
       /**
        * @param defaultResourceSpec Specifies the ARNs of a SageMaker image and SageMaker image
        * version, and the instance type that the version runs on.
@@ -1757,6 +2101,33 @@ public open class CfnSpace(
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceCodeEditorAppSettingsProperty.Builder
           =
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceCodeEditorAppSettingsProperty.builder()
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications in a space.
+       */
+      override fun appLifecycleManagement(appLifecycleManagement: IResolvable) {
+        cdkBuilder.appLifecycleManagement(appLifecycleManagement.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications in a space.
+       */
+      override
+          fun appLifecycleManagement(appLifecycleManagement: SpaceAppLifecycleManagementProperty) {
+        cdkBuilder.appLifecycleManagement(appLifecycleManagement.let(SpaceAppLifecycleManagementProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications in a space.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("642495c09a97994a01af4a8e9e501b4af10ed75adea07f25ef529a19cee17da0")
+      override
+          fun appLifecycleManagement(appLifecycleManagement: SpaceAppLifecycleManagementProperty.Builder.() -> Unit):
+          Unit = appLifecycleManagement(SpaceAppLifecycleManagementProperty(appLifecycleManagement))
 
       /**
        * @param defaultResourceSpec Specifies the ARNs of a SageMaker image and SageMaker image
@@ -1791,7 +2162,16 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceCodeEditorAppSettingsProperty,
-    ) : CdkObject(cdkObject), SpaceCodeEditorAppSettingsProperty {
+    ) : CdkObject(cdkObject),
+        SpaceCodeEditorAppSettingsProperty {
+      /**
+       * Settings that are used to configure and manage the lifecycle of CodeEditor applications in
+       * a space.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacecodeeditorappsettings.html#cfn-sagemaker-space-spacecodeeditorappsettings-applifecyclemanagement)
+       */
+      override fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
+
       /**
        * Specifies the ARNs of a SageMaker image and SageMaker image version, and the instance type
        * that the version runs on.
@@ -1821,6 +2201,90 @@ public open class CfnSpace(
   }
 
   /**
+   * Settings related to idle shutdown of Studio applications in a space.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * SpaceIdleSettingsProperty spaceIdleSettingsProperty = SpaceIdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spaceidlesettings.html)
+   */
+  public interface SpaceIdleSettingsProperty {
+    /**
+     * The time that SageMaker waits after the application becomes idle before shutting it down.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spaceidlesettings.html#cfn-sagemaker-space-spaceidlesettings-idletimeoutinminutes)
+     */
+    public fun idleTimeoutInMinutes(): Number? = unwrap(this).getIdleTimeoutInMinutes()
+
+    /**
+     * A builder for [SpaceIdleSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param idleTimeoutInMinutes The time that SageMaker waits after the application becomes
+       * idle before shutting it down.
+       */
+      public fun idleTimeoutInMinutes(idleTimeoutInMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceIdleSettingsProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceIdleSettingsProperty.builder()
+
+      /**
+       * @param idleTimeoutInMinutes The time that SageMaker waits after the application becomes
+       * idle before shutting it down.
+       */
+      override fun idleTimeoutInMinutes(idleTimeoutInMinutes: Number) {
+        cdkBuilder.idleTimeoutInMinutes(idleTimeoutInMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceIdleSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceIdleSettingsProperty,
+    ) : CdkObject(cdkObject),
+        SpaceIdleSettingsProperty {
+      /**
+       * The time that SageMaker waits after the application becomes idle before shutting it down.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spaceidlesettings.html#cfn-sagemaker-space-spaceidlesettings-idletimeoutinminutes)
+       */
+      override fun idleTimeoutInMinutes(): Number? = unwrap(this).getIdleTimeoutInMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SpaceIdleSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceIdleSettingsProperty):
+          SpaceIdleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpaceIdleSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpaceIdleSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceIdleSettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceIdleSettingsProperty
+    }
+  }
+
+  /**
    * The settings for the JupyterLab application within a space.
    *
    * Example:
@@ -1831,11 +2295,17 @@ public open class CfnSpace(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * SpaceJupyterLabAppSettingsProperty spaceJupyterLabAppSettingsProperty =
    * SpaceJupyterLabAppSettingsProperty.builder()
+   * .appLifecycleManagement(SpaceAppLifecycleManagementProperty.builder()
+   * .idleSettings(SpaceIdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .build())
+   * .build())
    * .codeRepositories(List.of(CodeRepositoryProperty.builder()
    * .repositoryUrl("repositoryUrl")
    * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
@@ -1845,6 +2315,14 @@ public open class CfnSpace(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacejupyterlabappsettings.html)
    */
   public interface SpaceJupyterLabAppSettingsProperty {
+    /**
+     * Settings that are used to configure and manage the lifecycle of JupyterLab applications in a
+     * space.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacejupyterlabappsettings.html#cfn-sagemaker-space-spacejupyterlabappsettings-applifecyclemanagement)
+     */
+    public fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
+
     /**
      * A list of Git repositories that SageMaker automatically displays to users for cloning in the
      * JupyterLab application.
@@ -1866,6 +2344,27 @@ public open class CfnSpace(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of JupyterLab applications in a space.
+       */
+      public fun appLifecycleManagement(appLifecycleManagement: IResolvable)
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of JupyterLab applications in a space.
+       */
+      public fun appLifecycleManagement(appLifecycleManagement: SpaceAppLifecycleManagementProperty)
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of JupyterLab applications in a space.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4b6df281e20eb48194937b8f3563186eb6a29074a639a39995a8935b1f29703b")
+      public
+          fun appLifecycleManagement(appLifecycleManagement: SpaceAppLifecycleManagementProperty.Builder.() -> Unit)
+
       /**
        * @param codeRepositories A list of Git repositories that SageMaker automatically displays to
        * users for cloning in the JupyterLab application.
@@ -1910,6 +2409,33 @@ public open class CfnSpace(
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceJupyterLabAppSettingsProperty.Builder
           =
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceJupyterLabAppSettingsProperty.builder()
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of JupyterLab applications in a space.
+       */
+      override fun appLifecycleManagement(appLifecycleManagement: IResolvable) {
+        cdkBuilder.appLifecycleManagement(appLifecycleManagement.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of JupyterLab applications in a space.
+       */
+      override
+          fun appLifecycleManagement(appLifecycleManagement: SpaceAppLifecycleManagementProperty) {
+        cdkBuilder.appLifecycleManagement(appLifecycleManagement.let(SpaceAppLifecycleManagementProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of JupyterLab applications in a space.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4b6df281e20eb48194937b8f3563186eb6a29074a639a39995a8935b1f29703b")
+      override
+          fun appLifecycleManagement(appLifecycleManagement: SpaceAppLifecycleManagementProperty.Builder.() -> Unit):
+          Unit = appLifecycleManagement(SpaceAppLifecycleManagementProperty(appLifecycleManagement))
 
       /**
        * @param codeRepositories A list of Git repositories that SageMaker automatically displays to
@@ -1967,7 +2493,16 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceJupyterLabAppSettingsProperty,
-    ) : CdkObject(cdkObject), SpaceJupyterLabAppSettingsProperty {
+    ) : CdkObject(cdkObject),
+        SpaceJupyterLabAppSettingsProperty {
+      /**
+       * Settings that are used to configure and manage the lifecycle of JupyterLab applications in
+       * a space.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacejupyterlabappsettings.html#cfn-sagemaker-space-spacejupyterlabappsettings-applifecyclemanagement)
+       */
+      override fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
+
       /**
        * A list of Git repositories that SageMaker automatically displays to users for cloning in
        * the JupyterLab application.
@@ -2016,8 +2551,14 @@ public open class CfnSpace(
    * SpaceSettingsProperty spaceSettingsProperty = SpaceSettingsProperty.builder()
    * .appType("appType")
    * .codeEditorAppSettings(SpaceCodeEditorAppSettingsProperty.builder()
+   * .appLifecycleManagement(SpaceAppLifecycleManagementProperty.builder()
+   * .idleSettings(SpaceIdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .build())
+   * .build())
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
@@ -2028,11 +2569,17 @@ public open class CfnSpace(
    * .build())
    * .build()))
    * .jupyterLabAppSettings(SpaceJupyterLabAppSettingsProperty.builder()
+   * .appLifecycleManagement(SpaceAppLifecycleManagementProperty.builder()
+   * .idleSettings(SpaceIdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .build())
+   * .build())
    * .codeRepositories(List.of(CodeRepositoryProperty.builder()
    * .repositoryUrl("repositoryUrl")
    * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
@@ -2040,9 +2587,11 @@ public open class CfnSpace(
    * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
+   * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
    * .build())
    * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
    * .customImages(List.of(CustomImageProperty.builder()
@@ -2053,9 +2602,11 @@ public open class CfnSpace(
    * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
+   * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
    * .build())
    * .spaceStorageSettings(SpaceStorageSettingsProperty.builder()
    * .ebsStorageSettings(EbsStorageSettingsProperty.builder()
@@ -2408,7 +2959,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSettingsProperty,
-    ) : CdkObject(cdkObject), SpaceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        SpaceSettingsProperty {
       /**
        * The type of app created within the space.
        *
@@ -2534,7 +3086,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSharingSettingsProperty,
-    ) : CdkObject(cdkObject), SpaceSharingSettingsProperty {
+    ) : CdkObject(cdkObject),
+        SpaceSharingSettingsProperty {
       /**
        * Specifies the sharing type of the space.
        *
@@ -2647,7 +3200,8 @@ public open class CfnSpace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceStorageSettingsProperty,
-    ) : CdkObject(cdkObject), SpaceStorageSettingsProperty {
+    ) : CdkObject(cdkObject),
+        SpaceStorageSettingsProperty {
       /**
        * A collection of EBS storage settings for a space.
        *

@@ -1017,7 +1017,8 @@ public interface CfnAppProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.resiliencehub.CfnAppProps,
-  ) : CdkObject(cdkObject), CfnAppProps {
+  ) : CdkObject(cdkObject),
+      CfnAppProps {
     /**
      * Assessment execution schedule with 'Daily' or 'Disabled' values.
      *

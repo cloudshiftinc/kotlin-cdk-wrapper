@@ -176,7 +176,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEndpointConfig(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1138,7 +1140,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty,
-    ) : CdkObject(cdkObject), AsyncInferenceClientConfigProperty {
+    ) : CdkObject(cdkObject),
+        AsyncInferenceClientConfigProperty {
       /**
        * The maximum number of concurrent requests sent by the SageMaker client to the model
        * container.
@@ -1327,7 +1330,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceConfigProperty,
-    ) : CdkObject(cdkObject), AsyncInferenceConfigProperty {
+    ) : CdkObject(cdkObject),
+        AsyncInferenceConfigProperty {
       /**
        * Configures the behavior of the client used by SageMaker to interact with the model
        * container during asynchronous inference.
@@ -1500,7 +1504,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty,
-    ) : CdkObject(cdkObject), AsyncInferenceNotificationConfigProperty {
+    ) : CdkObject(cdkObject),
+        AsyncInferenceNotificationConfigProperty {
       /**
        * Amazon SNS topic to post a notification to when an inference fails.
        *
@@ -1712,7 +1717,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty,
-    ) : CdkObject(cdkObject), AsyncInferenceOutputConfigProperty {
+    ) : CdkObject(cdkObject),
+        AsyncInferenceOutputConfigProperty {
       /**
        * The AWS Key Management Service ( AWS KMS) key that Amazon SageMaker uses to encrypt the
        * asynchronous inference output in Amazon S3.
@@ -1891,7 +1897,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureContentTypeHeaderProperty,
-    ) : CdkObject(cdkObject), CaptureContentTypeHeaderProperty {
+    ) : CdkObject(cdkObject),
+        CaptureContentTypeHeaderProperty {
       /**
        * A list of the CSV content types of the data that the endpoint captures.
        *
@@ -1988,7 +1995,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty,
-    ) : CdkObject(cdkObject), CaptureOptionProperty {
+    ) : CdkObject(cdkObject),
+        CaptureOptionProperty {
       /**
        * Specifies whether the endpoint captures input data or output data.
        *
@@ -2205,7 +2213,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty,
-    ) : CdkObject(cdkObject), ClarifyExplainerConfigProperty {
+    ) : CdkObject(cdkObject),
+        ClarifyExplainerConfigProperty {
       /**
        * A JMESPath boolean expression used to filter which records to explain.
        *
@@ -2745,7 +2754,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyInferenceConfigProperty,
-    ) : CdkObject(cdkObject), ClarifyInferenceConfigProperty {
+    ) : CdkObject(cdkObject),
+        ClarifyInferenceConfigProperty {
       /**
        * A template string used to format a JSON record into an acceptable model container input.
        *
@@ -3071,7 +3081,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty,
-    ) : CdkObject(cdkObject), ClarifyShapBaselineConfigProperty {
+    ) : CdkObject(cdkObject),
+        ClarifyShapBaselineConfigProperty {
       /**
        * The MIME type of the baseline data.
        *
@@ -3405,7 +3416,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty,
-    ) : CdkObject(cdkObject), ClarifyShapConfigProperty {
+    ) : CdkObject(cdkObject),
+        ClarifyShapConfigProperty {
       /**
        * The number of samples to be used for analysis by the Kernal SHAP algorithm.
        *
@@ -3578,7 +3590,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty,
-    ) : CdkObject(cdkObject), ClarifyTextConfigProperty {
+    ) : CdkObject(cdkObject),
+        ClarifyTextConfigProperty {
       /**
        * The unit of granularity for the analysis of text features.
        *
@@ -3906,7 +3919,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty,
-    ) : CdkObject(cdkObject), DataCaptureConfigProperty {
+    ) : CdkObject(cdkObject),
+        DataCaptureConfigProperty {
       /**
        * A list of the JSON and CSV content type that the endpoint captures.
        *
@@ -4106,7 +4120,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty,
-    ) : CdkObject(cdkObject), ExplainerConfigProperty {
+    ) : CdkObject(cdkObject),
+        ExplainerConfigProperty {
       /**
        * A member of `ExplainerConfig` that contains configuration parameters for the SageMaker
        * Clarify explainer.
@@ -4222,7 +4237,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty,
-    ) : CdkObject(cdkObject), ManagedInstanceScalingProperty {
+    ) : CdkObject(cdkObject),
+        ManagedInstanceScalingProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-managedinstancescaling.html#cfn-sagemaker-endpointconfig-managedinstancescaling-maxinstancecount)
        */
@@ -4760,7 +4776,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ProductionVariantProperty,
-    ) : CdkObject(cdkObject), ProductionVariantProperty {
+    ) : CdkObject(cdkObject),
+        ProductionVariantProperty {
       /**
        * The size of the Elastic Inference (EI) instance to use for the production variant.
        *
@@ -4951,7 +4968,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.RoutingConfigProperty,
-    ) : CdkObject(cdkObject), RoutingConfigProperty {
+    ) : CdkObject(cdkObject),
+        RoutingConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-routingconfig.html#cfn-sagemaker-endpointconfig-routingconfig-routingstrategy)
        */
@@ -5105,7 +5123,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty,
-    ) : CdkObject(cdkObject), ServerlessConfigProperty {
+    ) : CdkObject(cdkObject),
+        ServerlessConfigProperty {
       /**
        * The maximum number of concurrent invocations your serverless endpoint can process.
        *
@@ -5247,7 +5266,8 @@ public open class CfnEndpointConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-vpcconfig.html#cfn-sagemaker-endpointconfig-vpcconfig-securitygroupids)
        */

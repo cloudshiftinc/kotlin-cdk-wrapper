@@ -127,7 +127,8 @@ public interface CfnRecoveryGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroupProps,
-  ) : CdkObject(cdkObject), CfnRecoveryGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnRecoveryGroupProps {
     /**
      * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      *

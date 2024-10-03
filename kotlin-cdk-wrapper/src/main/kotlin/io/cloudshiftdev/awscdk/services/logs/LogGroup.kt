@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class LogGroup(
   cdkObject: software.amazon.awscdk.services.logs.LogGroup,
-) : Resource(cdkObject), ILogGroup {
+) : Resource(cdkObject),
+    ILogGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.logs.LogGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

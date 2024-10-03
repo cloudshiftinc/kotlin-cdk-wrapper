@@ -146,7 +146,8 @@ public interface CodeCommitSourceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.CodeCommitSourceOptions,
-  ) : CdkObject(cdkObject), CodeCommitSourceOptions {
+  ) : CdkObject(cdkObject),
+      CodeCommitSourceOptions {
     /**
      * The action name used for this source in the CodePipeline.
      *

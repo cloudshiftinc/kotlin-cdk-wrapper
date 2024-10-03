@@ -56,7 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRoute(
   cdkObject: software.amazon.awscdk.services.ec2.CfnRoute,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -78,7 +78,8 @@ public interface VirtualRouterListenerConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListenerConfig,
-  ) : CdkObject(cdkObject), VirtualRouterListenerConfig {
+  ) : CdkObject(cdkObject),
+      VirtualRouterListenerConfig {
     /**
      * Single listener config for a VirtualRouter.
      */

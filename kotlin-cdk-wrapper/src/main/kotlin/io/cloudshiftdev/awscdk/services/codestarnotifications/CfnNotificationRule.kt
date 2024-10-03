@@ -56,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNotificationRule(
   cdkObject: software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -665,7 +667,8 @@ public open class CfnNotificationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule.TargetProperty,
-    ) : CdkObject(cdkObject), TargetProperty {
+    ) : CdkObject(cdkObject),
+        TargetProperty {
       /**
        * The Amazon Resource Name (ARN) of the AWS Chatbot topic or AWS Chatbot client.
        *

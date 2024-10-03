@@ -149,7 +149,8 @@ public interface CfnClientVpnRouteProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnRouteProps,
-  ) : CdkObject(cdkObject), CfnClientVpnRouteProps {
+  ) : CdkObject(cdkObject),
+      CfnClientVpnRouteProps {
     /**
      * The ID of the Client VPN endpoint to which to add the route.
      *

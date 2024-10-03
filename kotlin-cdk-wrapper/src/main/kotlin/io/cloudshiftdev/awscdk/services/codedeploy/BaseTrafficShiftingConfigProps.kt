@@ -78,7 +78,8 @@ public interface BaseTrafficShiftingConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps,
-  ) : CdkObject(cdkObject), BaseTrafficShiftingConfigProps {
+  ) : CdkObject(cdkObject),
+      BaseTrafficShiftingConfigProps {
     /**
      * The amount of time between traffic shifts.
      */

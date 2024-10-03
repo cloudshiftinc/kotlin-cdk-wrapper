@@ -32,7 +32,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * HttpInvoke.Builder.create(this, "Invoke HTTP API")
  * .apiRoot("https://api.example.com")
- * .apiEndpoint(TaskInput.fromText("https://api.example.com/path/to/resource"))
+ * .apiEndpoint(TaskInput.fromText("path/to/resource"))
  * .body(TaskInput.fromObject(Map.of("foo", "bar")))
  * .connection(connection)
  * .headers(TaskInput.fromObject(Map.of("Content-Type", "application/json")))

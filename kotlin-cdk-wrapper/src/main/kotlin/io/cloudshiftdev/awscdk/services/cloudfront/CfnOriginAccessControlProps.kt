@@ -102,7 +102,8 @@ public interface CfnOriginAccessControlProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginAccessControlProps,
-  ) : CdkObject(cdkObject), CfnOriginAccessControlProps {
+  ) : CdkObject(cdkObject),
+      CfnOriginAccessControlProps {
     /**
      * The origin access control.
      *

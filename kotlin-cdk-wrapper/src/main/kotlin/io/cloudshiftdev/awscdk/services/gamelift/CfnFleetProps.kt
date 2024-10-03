@@ -293,15 +293,16 @@ public interface CfnFleetProps {
       unwrap(this).getInstanceRoleCredentialsProvider()
 
   /**
-   * A set of remote locations to deploy additional instances to and manage as part of the fleet.
+   * A set of remote locations to deploy additional instances to and manage as a multi-location
+   * fleet.
    *
-   * This parameter can only be used when creating fleets in AWS Regions that support multiple
-   * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the form
-   * of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with instances in
-   * the home Region only, don't set this parameter.
-   *
-   * When using this parameter, Amazon GameLift requires you to include your home location in the
-   * request.
+   * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
+   * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one or
+   * more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
+   * Amazon GameLift requires you to include your home location in the request. For a list of supported
+   * Regions and Local Zones, see [Amazon GameLift service
+   * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
+   * managed hosting.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-locations)
    */
@@ -730,41 +731,41 @@ public interface CfnFleetProps {
     public fun instanceRoleCredentialsProvider(instanceRoleCredentialsProvider: String)
 
     /**
-     * @param locations A set of remote locations to deploy additional instances to and manage as
-     * part of the fleet.
-     * This parameter can only be used when creating fleets in AWS Regions that support multiple
-     * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
-     * instances in the home Region only, don't set this parameter.
-     *
-     * When using this parameter, Amazon GameLift requires you to include your home location in the
-     * request.
+     * @param locations A set of remote locations to deploy additional instances to and manage as a
+     * multi-location fleet.
+     * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
+     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
+     * Amazon GameLift requires you to include your home location in the request. For a list of
+     * supported Regions and Local Zones, see [Amazon GameLift service
+     * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
+     * managed hosting.
      */
     public fun locations(locations: IResolvable)
 
     /**
-     * @param locations A set of remote locations to deploy additional instances to and manage as
-     * part of the fleet.
-     * This parameter can only be used when creating fleets in AWS Regions that support multiple
-     * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
-     * instances in the home Region only, don't set this parameter.
-     *
-     * When using this parameter, Amazon GameLift requires you to include your home location in the
-     * request.
+     * @param locations A set of remote locations to deploy additional instances to and manage as a
+     * multi-location fleet.
+     * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
+     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
+     * Amazon GameLift requires you to include your home location in the request. For a list of
+     * supported Regions and Local Zones, see [Amazon GameLift service
+     * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
+     * managed hosting.
      */
     public fun locations(locations: List<Any>)
 
     /**
-     * @param locations A set of remote locations to deploy additional instances to and manage as
-     * part of the fleet.
-     * This parameter can only be used when creating fleets in AWS Regions that support multiple
-     * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
-     * instances in the home Region only, don't set this parameter.
-     *
-     * When using this parameter, Amazon GameLift requires you to include your home location in the
-     * request.
+     * @param locations A set of remote locations to deploy additional instances to and manage as a
+     * multi-location fleet.
+     * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
+     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
+     * Amazon GameLift requires you to include your home location in the request. For a list of
+     * supported Regions and Local Zones, see [Amazon GameLift service
+     * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
+     * managed hosting.
      */
     public fun locations(vararg locations: Any)
 
@@ -1271,45 +1272,45 @@ public interface CfnFleetProps {
     }
 
     /**
-     * @param locations A set of remote locations to deploy additional instances to and manage as
-     * part of the fleet.
-     * This parameter can only be used when creating fleets in AWS Regions that support multiple
-     * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
-     * instances in the home Region only, don't set this parameter.
-     *
-     * When using this parameter, Amazon GameLift requires you to include your home location in the
-     * request.
+     * @param locations A set of remote locations to deploy additional instances to and manage as a
+     * multi-location fleet.
+     * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
+     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
+     * Amazon GameLift requires you to include your home location in the request. For a list of
+     * supported Regions and Local Zones, see [Amazon GameLift service
+     * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
+     * managed hosting.
      */
     override fun locations(locations: IResolvable) {
       cdkBuilder.locations(locations.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param locations A set of remote locations to deploy additional instances to and manage as
-     * part of the fleet.
-     * This parameter can only be used when creating fleets in AWS Regions that support multiple
-     * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
-     * instances in the home Region only, don't set this parameter.
-     *
-     * When using this parameter, Amazon GameLift requires you to include your home location in the
-     * request.
+     * @param locations A set of remote locations to deploy additional instances to and manage as a
+     * multi-location fleet.
+     * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
+     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
+     * Amazon GameLift requires you to include your home location in the request. For a list of
+     * supported Regions and Local Zones, see [Amazon GameLift service
+     * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
+     * managed hosting.
      */
     override fun locations(locations: List<Any>) {
       cdkBuilder.locations(locations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param locations A set of remote locations to deploy additional instances to and manage as
-     * part of the fleet.
-     * This parameter can only be used when creating fleets in AWS Regions that support multiple
-     * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
-     * instances in the home Region only, don't set this parameter.
-     *
-     * When using this parameter, Amazon GameLift requires you to include your home location in the
-     * request.
+     * @param locations A set of remote locations to deploy additional instances to and manage as a
+     * multi-location fleet.
+     * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
+     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
+     * Amazon GameLift requires you to include your home location in the request. For a list of
+     * supported Regions and Local Zones, see [Amazon GameLift service
+     * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
+     * managed hosting.
      */
     override fun locations(vararg locations: Any): Unit = locations(locations.toList())
 
@@ -1560,7 +1561,8 @@ public interface CfnFleetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.gamelift.CfnFleetProps,
-  ) : CdkObject(cdkObject), CfnFleetProps {
+  ) : CdkObject(cdkObject),
+      CfnFleetProps {
     /**
      * Amazon GameLift Anywhere configuration options.
      *
@@ -1740,15 +1742,16 @@ public interface CfnFleetProps {
         unwrap(this).getInstanceRoleCredentialsProvider()
 
     /**
-     * A set of remote locations to deploy additional instances to and manage as part of the fleet.
+     * A set of remote locations to deploy additional instances to and manage as a multi-location
+     * fleet.
      *
-     * This parameter can only be used when creating fleets in AWS Regions that support multiple
-     * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
-     * instances in the home Region only, don't set this parameter.
-     *
-     * When using this parameter, Amazon GameLift requires you to include your home location in the
-     * request.
+     * Use this parameter when creating a fleet in AWS Regions that support multiple locations. You
+     * can add any AWS Region or Local Zone that's supported by Amazon GameLift. Provide a list of one
+     * or more AWS Region codes, such as `us-west-2` , or Local Zone names. When using this parameter,
+     * Amazon GameLift requires you to include your home location in the request. For a list of
+     * supported Regions and Local Zones, see [Amazon GameLift service
+     * locations](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-regions.html) for
+     * managed hosting.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-locations)
      */

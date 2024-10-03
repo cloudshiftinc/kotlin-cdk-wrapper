@@ -35,7 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNamedQuery(
   cdkObject: software.amazon.awscdk.services.athena.CfnNamedQuery,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

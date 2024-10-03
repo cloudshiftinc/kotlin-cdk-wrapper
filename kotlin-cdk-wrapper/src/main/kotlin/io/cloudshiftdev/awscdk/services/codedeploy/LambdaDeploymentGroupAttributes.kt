@@ -102,7 +102,8 @@ public interface LambdaDeploymentGroupAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupAttributes,
-  ) : CdkObject(cdkObject), LambdaDeploymentGroupAttributes {
+  ) : CdkObject(cdkObject),
+      LambdaDeploymentGroupAttributes {
     /**
      * The reference to the CodeDeploy Lambda Application that this Deployment Group belongs to.
      */

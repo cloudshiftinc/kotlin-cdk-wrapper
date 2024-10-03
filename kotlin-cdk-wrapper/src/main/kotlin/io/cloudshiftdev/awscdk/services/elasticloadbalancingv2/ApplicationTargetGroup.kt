@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.Port
 import io.cloudshiftdev.constructs.IConstruct
+import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
@@ -39,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ApplicationTargetGroup(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup,
-) : TargetGroupBase(cdkObject), IApplicationTargetGroup {
+) : TargetGroupBase(cdkObject),
+    IApplicationTargetGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -629,6 +631,19 @@ public open class ApplicationTargetGroup(
     public fun deregistrationDelay(deregistrationDelay: Duration)
 
     /**
+     * Indicates whether anomaly mitigation is enabled.
+     *
+     * Only available when `loadBalancingAlgorithmType` is
+     * `TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM`
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#automatic-target-weights)
+     * @param enableAnomalyMitigation Indicates whether anomaly mitigation is enabled. 
+     */
+    public fun enableAnomalyMitigation(enableAnomalyMitigation: Boolean)
+
+    /**
      * Health check configuration.
      *
      * Default: - The default value for each property in this configuration varies depending on the
@@ -824,6 +839,21 @@ public open class ApplicationTargetGroup(
      */
     override fun deregistrationDelay(deregistrationDelay: Duration) {
       cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * Indicates whether anomaly mitigation is enabled.
+     *
+     * Only available when `loadBalancingAlgorithmType` is
+     * `TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM`
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#automatic-target-weights)
+     * @param enableAnomalyMitigation Indicates whether anomaly mitigation is enabled. 
+     */
+    override fun enableAnomalyMitigation(enableAnomalyMitigation: Boolean) {
+      cdkBuilder.enableAnomalyMitigation(enableAnomalyMitigation)
     }
 
     /**

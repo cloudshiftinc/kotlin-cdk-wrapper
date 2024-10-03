@@ -21,12 +21,13 @@ import kotlin.String
  * }
  * public CodePipelineActionFactoryResult produceAction(IStage stage, ProduceActionOptions options)
  * {
- * stage.addAction(LambdaInvokeAction.Builder.create()
+ * stage.addAction(
+ * LambdaInvokeAction.Builder.create()
  * .actionName(options.getActionName())
  * .runOrder(options.getRunOrder())
  * // Map the reference to the variable name the CDK has generated for you.
- * .userParameters(Map.of("stackOutput",
- * options.stackOutputsMap.toCodePipeline(this.stackOutputReference)))
+ * .userParameters(Map.of(
+ * "stackOutput", options.stackOutputsMap.toCodePipeline(this.stackOutputReference)))
  * .lambda(this.fn)
  * .build());
  * return CodePipelineActionFactoryResult.builder().runOrdersConsumed(1).build();

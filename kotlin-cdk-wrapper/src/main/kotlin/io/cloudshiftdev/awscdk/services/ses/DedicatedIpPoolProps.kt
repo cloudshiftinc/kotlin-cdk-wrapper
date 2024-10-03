@@ -95,7 +95,8 @@ public interface DedicatedIpPoolProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.DedicatedIpPoolProps,
-  ) : CdkObject(cdkObject), DedicatedIpPoolProps {
+  ) : CdkObject(cdkObject),
+      DedicatedIpPoolProps {
     /**
      * A name for the dedicated IP pool.
      *

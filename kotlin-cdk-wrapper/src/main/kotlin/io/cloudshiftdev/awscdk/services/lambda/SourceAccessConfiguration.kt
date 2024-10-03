@@ -89,7 +89,8 @@ public interface SourceAccessConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.SourceAccessConfiguration,
-  ) : CdkObject(cdkObject), SourceAccessConfiguration {
+  ) : CdkObject(cdkObject),
+      SourceAccessConfiguration {
     /**
      * The type of authentication protocol or the VPC components for your event source.
      *

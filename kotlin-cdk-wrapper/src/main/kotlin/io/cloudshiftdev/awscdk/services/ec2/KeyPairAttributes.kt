@@ -72,7 +72,8 @@ public interface KeyPairAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.KeyPairAttributes,
-  ) : CdkObject(cdkObject), KeyPairAttributes {
+  ) : CdkObject(cdkObject),
+      KeyPairAttributes {
     /**
      * The unique name of the key pair.
      */

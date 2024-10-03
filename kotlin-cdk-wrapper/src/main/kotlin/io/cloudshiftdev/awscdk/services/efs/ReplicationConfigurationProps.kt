@@ -129,7 +129,8 @@ public interface ReplicationConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.ReplicationConfigurationProps,
-  ) : CdkObject(cdkObject), ReplicationConfigurationProps {
+  ) : CdkObject(cdkObject),
+      ReplicationConfigurationProps {
     /**
      * The availability zone name of the destination file system.
      *

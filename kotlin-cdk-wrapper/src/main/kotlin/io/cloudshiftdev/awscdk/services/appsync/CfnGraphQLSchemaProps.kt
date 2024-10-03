@@ -118,7 +118,8 @@ public interface CfnGraphQLSchemaProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLSchemaProps,
-  ) : CdkObject(cdkObject), CfnGraphQLSchemaProps {
+  ) : CdkObject(cdkObject),
+      CfnGraphQLSchemaProps {
     /**
      * The AWS AppSync GraphQL API identifier to which you want to apply this schema.
      *

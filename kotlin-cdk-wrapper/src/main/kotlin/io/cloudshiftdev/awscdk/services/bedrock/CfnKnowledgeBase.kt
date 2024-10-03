@@ -12,6 +12,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -55,6 +56,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .type("type")
  * .vectorKnowledgeBaseConfiguration(VectorKnowledgeBaseConfigurationProperty.builder()
  * .embeddingModelArn("embeddingModelArn")
+ * // the properties below are optional
+ * .embeddingModelConfiguration(EmbeddingModelConfigurationProperty.builder()
+ * .bedrockEmbeddingModelConfiguration(BedrockEmbeddingModelConfigurationProperty.builder()
+ * .dimensions(123)
+ * .build())
+ * .build())
  * .build())
  * .build())
  * .name("name")
@@ -105,7 +112,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnKnowledgeBase(
   cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -538,7 +547,226 @@ public open class CfnKnowledgeBase(
   }
 
   /**
-   * Contains details about the embeddings configuration of the knowledge base.
+   * The vector configuration details for the Bedrock embeddings model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * BedrockEmbeddingModelConfigurationProperty bedrockEmbeddingModelConfigurationProperty =
+   * BedrockEmbeddingModelConfigurationProperty.builder()
+   * .dimensions(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-bedrockembeddingmodelconfiguration.html)
+   */
+  public interface BedrockEmbeddingModelConfigurationProperty {
+    /**
+     * The dimensions details for the vector configuration used on the Bedrock embeddings model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-bedrockembeddingmodelconfiguration.html#cfn-bedrock-knowledgebase-bedrockembeddingmodelconfiguration-dimensions)
+     */
+    public fun dimensions(): Number? = unwrap(this).getDimensions()
+
+    /**
+     * A builder for [BedrockEmbeddingModelConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensions The dimensions details for the vector configuration used on the Bedrock
+       * embeddings model.
+       */
+      public fun dimensions(dimensions: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.BedrockEmbeddingModelConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.BedrockEmbeddingModelConfigurationProperty.builder()
+
+      /**
+       * @param dimensions The dimensions details for the vector configuration used on the Bedrock
+       * embeddings model.
+       */
+      override fun dimensions(dimensions: Number) {
+        cdkBuilder.dimensions(dimensions)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.BedrockEmbeddingModelConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.BedrockEmbeddingModelConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        BedrockEmbeddingModelConfigurationProperty {
+      /**
+       * The dimensions details for the vector configuration used on the Bedrock embeddings model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-bedrockembeddingmodelconfiguration.html#cfn-bedrock-knowledgebase-bedrockembeddingmodelconfiguration-dimensions)
+       */
+      override fun dimensions(): Number? = unwrap(this).getDimensions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BedrockEmbeddingModelConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.BedrockEmbeddingModelConfigurationProperty):
+          BedrockEmbeddingModelConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BedrockEmbeddingModelConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BedrockEmbeddingModelConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.BedrockEmbeddingModelConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.BedrockEmbeddingModelConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration details for the embeddings model.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * EmbeddingModelConfigurationProperty embeddingModelConfigurationProperty =
+   * EmbeddingModelConfigurationProperty.builder()
+   * .bedrockEmbeddingModelConfiguration(BedrockEmbeddingModelConfigurationProperty.builder()
+   * .dimensions(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-embeddingmodelconfiguration.html)
+   */
+  public interface EmbeddingModelConfigurationProperty {
+    /**
+     * The vector configuration details on the Bedrock embeddings model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-embeddingmodelconfiguration.html#cfn-bedrock-knowledgebase-embeddingmodelconfiguration-bedrockembeddingmodelconfiguration)
+     */
+    public fun bedrockEmbeddingModelConfiguration(): Any? =
+        unwrap(this).getBedrockEmbeddingModelConfiguration()
+
+    /**
+     * A builder for [EmbeddingModelConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bedrockEmbeddingModelConfiguration The vector configuration details on the Bedrock
+       * embeddings model.
+       */
+      public fun bedrockEmbeddingModelConfiguration(bedrockEmbeddingModelConfiguration: IResolvable)
+
+      /**
+       * @param bedrockEmbeddingModelConfiguration The vector configuration details on the Bedrock
+       * embeddings model.
+       */
+      public
+          fun bedrockEmbeddingModelConfiguration(bedrockEmbeddingModelConfiguration: BedrockEmbeddingModelConfigurationProperty)
+
+      /**
+       * @param bedrockEmbeddingModelConfiguration The vector configuration details on the Bedrock
+       * embeddings model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("72420c2fbd5dfcb0301b963bf5b5e58a81e45f21a5f5cf40293b13daaedff8e4")
+      public
+          fun bedrockEmbeddingModelConfiguration(bedrockEmbeddingModelConfiguration: BedrockEmbeddingModelConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.EmbeddingModelConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.EmbeddingModelConfigurationProperty.builder()
+
+      /**
+       * @param bedrockEmbeddingModelConfiguration The vector configuration details on the Bedrock
+       * embeddings model.
+       */
+      override
+          fun bedrockEmbeddingModelConfiguration(bedrockEmbeddingModelConfiguration: IResolvable) {
+        cdkBuilder.bedrockEmbeddingModelConfiguration(bedrockEmbeddingModelConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockEmbeddingModelConfiguration The vector configuration details on the Bedrock
+       * embeddings model.
+       */
+      override
+          fun bedrockEmbeddingModelConfiguration(bedrockEmbeddingModelConfiguration: BedrockEmbeddingModelConfigurationProperty) {
+        cdkBuilder.bedrockEmbeddingModelConfiguration(bedrockEmbeddingModelConfiguration.let(BedrockEmbeddingModelConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bedrockEmbeddingModelConfiguration The vector configuration details on the Bedrock
+       * embeddings model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("72420c2fbd5dfcb0301b963bf5b5e58a81e45f21a5f5cf40293b13daaedff8e4")
+      override
+          fun bedrockEmbeddingModelConfiguration(bedrockEmbeddingModelConfiguration: BedrockEmbeddingModelConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          bedrockEmbeddingModelConfiguration(BedrockEmbeddingModelConfigurationProperty(bedrockEmbeddingModelConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.EmbeddingModelConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.EmbeddingModelConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        EmbeddingModelConfigurationProperty {
+      /**
+       * The vector configuration details on the Bedrock embeddings model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-embeddingmodelconfiguration.html#cfn-bedrock-knowledgebase-embeddingmodelconfiguration-bedrockembeddingmodelconfiguration)
+       */
+      override fun bedrockEmbeddingModelConfiguration(): Any? =
+          unwrap(this).getBedrockEmbeddingModelConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          EmbeddingModelConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.EmbeddingModelConfigurationProperty):
+          EmbeddingModelConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EmbeddingModelConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EmbeddingModelConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.EmbeddingModelConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.EmbeddingModelConfigurationProperty
+    }
+  }
+
+  /**
+   * Configurations to apply to a knowledge base attached to the agent during query.
+   *
+   * For more information, see [Knowledge base retrieval
+   * configurations](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-session-state.html#session-state-kb)
+   * .
    *
    * Example:
    *
@@ -551,6 +779,12 @@ public open class CfnKnowledgeBase(
    * .type("type")
    * .vectorKnowledgeBaseConfiguration(VectorKnowledgeBaseConfigurationProperty.builder()
    * .embeddingModelArn("embeddingModelArn")
+   * // the properties below are optional
+   * .embeddingModelConfiguration(EmbeddingModelConfigurationProperty.builder()
+   * .bedrockEmbeddingModelConfiguration(BedrockEmbeddingModelConfigurationProperty.builder()
+   * .dimensions(123)
+   * .build())
+   * .build())
    * .build())
    * .build();
    * ```
@@ -655,7 +889,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KnowledgeBaseConfigurationProperty,
-    ) : CdkObject(cdkObject), KnowledgeBaseConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        KnowledgeBaseConfigurationProperty {
       /**
        * The type of data that the data source is converted into for the knowledge base.
        *
@@ -832,7 +1067,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessConfigurationProperty,
-    ) : CdkObject(cdkObject), OpenSearchServerlessConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        OpenSearchServerlessConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
        *
@@ -981,7 +1217,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessFieldMappingProperty,
-    ) : CdkObject(cdkObject), OpenSearchServerlessFieldMappingProperty {
+    ) : CdkObject(cdkObject),
+        OpenSearchServerlessFieldMappingProperty {
       /**
        * The name of the field in which Amazon Bedrock stores metadata about the vector store.
        *
@@ -1186,7 +1423,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeConfigurationProperty,
-    ) : CdkObject(cdkObject), PineconeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PineconeConfigurationProperty {
       /**
        * The endpoint URL for your index management page.
        *
@@ -1319,7 +1557,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeFieldMappingProperty,
-    ) : CdkObject(cdkObject), PineconeFieldMappingProperty {
+    ) : CdkObject(cdkObject),
+        PineconeFieldMappingProperty {
       /**
        * The name of the field in which Amazon Bedrock stores metadata about the vector store.
        *
@@ -1534,7 +1773,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsConfigurationProperty,
-    ) : CdkObject(cdkObject), RdsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RdsConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the secret that you created in AWS Secrets Manager that
        * is linked to your Amazon RDS database.
@@ -1717,7 +1957,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsFieldMappingProperty,
-    ) : CdkObject(cdkObject), RdsFieldMappingProperty {
+    ) : CdkObject(cdkObject),
+        RdsFieldMappingProperty {
       /**
        * The name of the field in which Amazon Bedrock stores metadata about the vector store.
        *
@@ -2036,7 +2277,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.StorageConfigurationProperty,
-    ) : CdkObject(cdkObject), StorageConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        StorageConfigurationProperty {
       /**
        * Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
        *
@@ -2100,6 +2342,12 @@ public open class CfnKnowledgeBase(
    * VectorKnowledgeBaseConfigurationProperty vectorKnowledgeBaseConfigurationProperty =
    * VectorKnowledgeBaseConfigurationProperty.builder()
    * .embeddingModelArn("embeddingModelArn")
+   * // the properties below are optional
+   * .embeddingModelConfiguration(EmbeddingModelConfigurationProperty.builder()
+   * .bedrockEmbeddingModelConfiguration(BedrockEmbeddingModelConfigurationProperty.builder()
+   * .dimensions(123)
+   * .build())
+   * .build())
    * .build();
    * ```
    *
@@ -2115,6 +2363,13 @@ public open class CfnKnowledgeBase(
     public fun embeddingModelArn(): String
 
     /**
+     * The embeddings model configuration details for the vector model used in Knowledge Base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-vectorknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-vectorknowledgebaseconfiguration-embeddingmodelconfiguration)
+     */
+    public fun embeddingModelConfiguration(): Any? = unwrap(this).getEmbeddingModelConfiguration()
+
+    /**
      * A builder for [VectorKnowledgeBaseConfigurationProperty]
      */
     @CdkDslMarker
@@ -2124,6 +2379,28 @@ public open class CfnKnowledgeBase(
        * embeddings for the knowledge base. 
        */
       public fun embeddingModelArn(embeddingModelArn: String)
+
+      /**
+       * @param embeddingModelConfiguration The embeddings model configuration details for the
+       * vector model used in Knowledge Base.
+       */
+      public fun embeddingModelConfiguration(embeddingModelConfiguration: IResolvable)
+
+      /**
+       * @param embeddingModelConfiguration The embeddings model configuration details for the
+       * vector model used in Knowledge Base.
+       */
+      public
+          fun embeddingModelConfiguration(embeddingModelConfiguration: EmbeddingModelConfigurationProperty)
+
+      /**
+       * @param embeddingModelConfiguration The embeddings model configuration details for the
+       * vector model used in Knowledge Base.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("38170d9af7d2c9e074ba25342b9b34f11f5d34e34d36410e027a205a972027e6")
+      public
+          fun embeddingModelConfiguration(embeddingModelConfiguration: EmbeddingModelConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2140,6 +2417,34 @@ public open class CfnKnowledgeBase(
         cdkBuilder.embeddingModelArn(embeddingModelArn)
       }
 
+      /**
+       * @param embeddingModelConfiguration The embeddings model configuration details for the
+       * vector model used in Knowledge Base.
+       */
+      override fun embeddingModelConfiguration(embeddingModelConfiguration: IResolvable) {
+        cdkBuilder.embeddingModelConfiguration(embeddingModelConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param embeddingModelConfiguration The embeddings model configuration details for the
+       * vector model used in Knowledge Base.
+       */
+      override
+          fun embeddingModelConfiguration(embeddingModelConfiguration: EmbeddingModelConfigurationProperty) {
+        cdkBuilder.embeddingModelConfiguration(embeddingModelConfiguration.let(EmbeddingModelConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param embeddingModelConfiguration The embeddings model configuration details for the
+       * vector model used in Knowledge Base.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("38170d9af7d2c9e074ba25342b9b34f11f5d34e34d36410e027a205a972027e6")
+      override
+          fun embeddingModelConfiguration(embeddingModelConfiguration: EmbeddingModelConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          embeddingModelConfiguration(EmbeddingModelConfigurationProperty(embeddingModelConfiguration))
+
       public fun build():
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.VectorKnowledgeBaseConfigurationProperty
           = cdkBuilder.build()
@@ -2147,7 +2452,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.VectorKnowledgeBaseConfigurationProperty,
-    ) : CdkObject(cdkObject), VectorKnowledgeBaseConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        VectorKnowledgeBaseConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the model used to create vector embeddings for the
        * knowledge base.
@@ -2155,6 +2461,14 @@ public open class CfnKnowledgeBase(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-vectorknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-vectorknowledgebaseconfiguration-embeddingmodelarn)
        */
       override fun embeddingModelArn(): String = unwrap(this).getEmbeddingModelArn()
+
+      /**
+       * The embeddings model configuration details for the vector model used in Knowledge Base.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-vectorknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-vectorknowledgebaseconfiguration-embeddingmodelconfiguration)
+       */
+      override fun embeddingModelConfiguration(): Any? =
+          unwrap(this).getEmbeddingModelConfiguration()
     }
 
     public companion object {

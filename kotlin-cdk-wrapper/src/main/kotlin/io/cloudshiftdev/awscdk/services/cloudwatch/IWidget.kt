@@ -53,7 +53,8 @@ public interface IWidget {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.IWidget,
-  ) : CdkObject(cdkObject), IWidget {
+  ) : CdkObject(cdkObject),
+      IWidget {
     /**
      * The amount of vertical grid units the widget will take up.
      */

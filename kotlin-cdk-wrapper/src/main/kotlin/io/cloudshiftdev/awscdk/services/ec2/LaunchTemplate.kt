@@ -42,7 +42,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class LaunchTemplate(
   cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplate,
-) : Resource(cdkObject), ILaunchTemplate, IGrantable, IConnectable {
+) : Resource(cdkObject),
+    ILaunchTemplate,
+    IGrantable,
+    IConnectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.LaunchTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -470,6 +473,18 @@ public open class LaunchTemplate(
      * @param userData The AMI that will be used by instances. 
      */
     public fun userData(userData: UserData)
+
+    /**
+     * A description for the first version of the launch template.
+     *
+     * The version description must be maximum 255 characters long.
+     *
+     * Default: - No description
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-versiondescription)
+     * @param versionDescription A description for the first version of the launch template. 
+     */
+    public fun versionDescription(versionDescription: String)
   }
 
   private class BuilderImpl(
@@ -854,6 +869,20 @@ public open class LaunchTemplate(
      */
     override fun userData(userData: UserData) {
       cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
+    }
+
+    /**
+     * A description for the first version of the launch template.
+     *
+     * The version description must be maximum 255 characters long.
+     *
+     * Default: - No description
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-versiondescription)
+     * @param versionDescription A description for the first version of the launch template. 
+     */
+    override fun versionDescription(versionDescription: String) {
+      cdkBuilder.versionDescription(versionDescription)
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.LaunchTemplate = cdkBuilder.build()

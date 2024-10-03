@@ -121,7 +121,8 @@ public interface CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps 
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps,
-  ) : CdkObject(cdkObject), CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps {
     /**
      * The ID of the local gateway route table.
      *

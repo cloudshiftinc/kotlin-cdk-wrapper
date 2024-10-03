@@ -35,7 +35,8 @@ import kotlin.Unit
  */
 public open class DateTimeAttribute(
   cdkObject: software.amazon.awscdk.services.cognito.DateTimeAttribute,
-) : CdkObject(cdkObject), ICustomAttribute {
+) : CdkObject(cdkObject),
+    ICustomAttribute {
   public constructor() : this(software.amazon.awscdk.services.cognito.DateTimeAttribute()
   )
 

@@ -61,8 +61,6 @@ public interface CfnDBProxyEndpointProps {
    * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only
    * operations.
    *
-   * Valid Values: `READ_WRITE | READ_ONLY`
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html#cfn-rds-dbproxyendpoint-targetrole)
    */
   public fun targetRole(): String? = unwrap(this).getTargetRole()
@@ -118,7 +116,6 @@ public interface CfnDBProxyEndpointProps {
     /**
      * @param targetRole A value that indicates whether the DB proxy endpoint can be used for
      * read/write or read-only operations.
-     * Valid Values: `READ_WRITE | READ_ONLY`
      */
     public fun targetRole(targetRole: String)
 
@@ -187,7 +184,6 @@ public interface CfnDBProxyEndpointProps {
     /**
      * @param targetRole A value that indicates whether the DB proxy endpoint can be used for
      * read/write or read-only operations.
-     * Valid Values: `READ_WRITE | READ_ONLY`
      */
     override fun targetRole(targetRole: String) {
       cdkBuilder.targetRole(targetRole)
@@ -233,7 +229,8 @@ public interface CfnDBProxyEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyEndpointProps,
-  ) : CdkObject(cdkObject), CfnDBProxyEndpointProps {
+  ) : CdkObject(cdkObject),
+      CfnDBProxyEndpointProps {
     /**
      * The name of the DB proxy endpoint to create.
      *
@@ -260,8 +257,6 @@ public interface CfnDBProxyEndpointProps {
     /**
      * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only
      * operations.
-     *
-     * Valid Values: `READ_WRITE | READ_ONLY`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html#cfn-rds-dbproxyendpoint-targetrole)
      */

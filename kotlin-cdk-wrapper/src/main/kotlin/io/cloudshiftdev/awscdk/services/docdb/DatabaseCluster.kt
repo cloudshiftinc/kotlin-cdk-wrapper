@@ -45,13 +45,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .subnetType(SubnetType.PUBLIC)
  * .build())
  * .vpc(vpc)
- * .caCertificate(CaCertificate.RDS_CA_RSA4096_G1)
+ * .removalPolicy(RemovalPolicy.SNAPSHOT)
  * .build();
  * ```
  */
 public open class DatabaseCluster(
   cdkObject: software.amazon.awscdk.services.docdb.DatabaseCluster,
-) : Resource(cdkObject), IDatabaseCluster {
+) : Resource(cdkObject),
+    IDatabaseCluster {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -290,7 +291,7 @@ public open class DatabaseCluster(
     /**
      * What version of the database to start.
      *
-     * Default: - The default engine version.
+     * Default: -  the latest major version
      *
      * @param engineVersion What version of the database to start. 
      */
@@ -476,6 +477,18 @@ public open class DatabaseCluster(
     public fun storageEncrypted(storageEncrypted: Boolean)
 
     /**
+     * The storage type of the DocDB cluster.
+     *
+     * I/O-optimized storage is supported starting with engine version 5.0.0.
+     *
+     * Default: StorageType.STANDARD
+     *
+     * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/release-notes.html#release-notes.11-21-2023)
+     * @param storageType The storage type of the DocDB cluster. 
+     */
+    public fun storageType(storageType: StorageType)
+
+    /**
      * What subnets to run the DocumentDB instances in.
      *
      * Must be at least 2 subnets in two different AZs.
@@ -636,7 +649,7 @@ public open class DatabaseCluster(
     /**
      * What version of the database to start.
      *
-     * Default: - The default engine version.
+     * Default: -  the latest major version
      *
      * @param engineVersion What version of the database to start. 
      */
@@ -852,6 +865,20 @@ public open class DatabaseCluster(
      */
     override fun storageEncrypted(storageEncrypted: Boolean) {
       cdkBuilder.storageEncrypted(storageEncrypted)
+    }
+
+    /**
+     * The storage type of the DocDB cluster.
+     *
+     * I/O-optimized storage is supported starting with engine version 5.0.0.
+     *
+     * Default: StorageType.STANDARD
+     *
+     * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/release-notes.html#release-notes.11-21-2023)
+     * @param storageType The storage type of the DocDB cluster. 
+     */
+    override fun storageType(storageType: StorageType) {
+      cdkBuilder.storageType(storageType.let(StorageType.Companion::unwrap))
     }
 
     /**

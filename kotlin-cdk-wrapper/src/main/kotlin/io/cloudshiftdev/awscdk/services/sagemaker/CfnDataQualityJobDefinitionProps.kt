@@ -610,7 +610,8 @@ public interface CfnDataQualityJobDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinitionProps,
-  ) : CdkObject(cdkObject), CfnDataQualityJobDefinitionProps {
+  ) : CdkObject(cdkObject),
+      CfnDataQualityJobDefinitionProps {
     /**
      * Specifies the container that runs the monitoring job.
      *

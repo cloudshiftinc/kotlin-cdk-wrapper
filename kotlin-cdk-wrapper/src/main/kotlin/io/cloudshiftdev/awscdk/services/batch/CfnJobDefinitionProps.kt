@@ -696,7 +696,8 @@ public interface CfnJobDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinitionProps,
-  ) : CdkObject(cdkObject), CfnJobDefinitionProps {
+  ) : CdkObject(cdkObject),
+      CfnJobDefinitionProps {
     /**
      * An object with properties specific to Amazon ECS-based jobs.
      *

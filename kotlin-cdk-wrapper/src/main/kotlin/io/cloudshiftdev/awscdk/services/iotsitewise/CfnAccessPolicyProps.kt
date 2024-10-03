@@ -204,7 +204,8 @@ public interface CfnAccessPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicyProps,
-  ) : CdkObject(cdkObject), CfnAccessPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnAccessPolicyProps {
     /**
      * The identity for this access policy.
      *

@@ -58,6 +58,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .compression("compression")
  * .dataDestinationConfigs(List.of(DataDestinationConfigProperty.builder()
+ * .mqttTopicConfig(MqttTopicConfigProperty.builder()
+ * .executionRoleArn("executionRoleArn")
+ * .mqttTopicArn("mqttTopicArn")
+ * .build())
  * .s3Config(S3ConfigProperty.builder()
  * .bucketArn("bucketArn")
  * // the properties below are optional
@@ -82,6 +86,21 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .maxSampleCount(123)
  * .minimumSamplingIntervalMs(123)
  * .build()))
+ * .signalsToFetch(List.of(SignalFetchInformationProperty.builder()
+ * .actions(List.of("actions"))
+ * .fullyQualifiedName("fullyQualifiedName")
+ * .signalFetchConfig(SignalFetchConfigProperty.builder()
+ * .conditionBased(ConditionBasedSignalFetchConfigProperty.builder()
+ * .conditionExpression("conditionExpression")
+ * .triggerMode("triggerMode")
+ * .build())
+ * .timeBased(TimeBasedSignalFetchConfigProperty.builder()
+ * .executionFrequencyMs(123)
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .conditionLanguageVersion(123)
+ * .build()))
  * .spoolingMode("spoolingMode")
  * .startTime("startTime")
  * .tags(List.of(CfnTag.builder()
@@ -95,7 +114,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCampaign(
   cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -357,6 +378,30 @@ public open class CfnCampaign(
    * (Optional) A list of information about signals to collect.
    */
   public open fun signalsToCollect(vararg `value`: Any): Unit = signalsToCollect(`value`.toList())
+
+  /**
+   *
+   */
+  public open fun signalsToFetch(): Any? = unwrap(this).getSignalsToFetch()
+
+  /**
+   *
+   */
+  public open fun signalsToFetch(`value`: IResolvable) {
+    unwrap(this).setSignalsToFetch(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun signalsToFetch(`value`: List<Any>) {
+    unwrap(this).setSignalsToFetch(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   *
+   */
+  public open fun signalsToFetch(vararg `value`: Any): Unit = signalsToFetch(`value`.toList())
 
   /**
    * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.
@@ -682,6 +727,24 @@ public open class CfnCampaign(
      * @param signalsToCollect (Optional) A list of information about signals to collect. 
      */
     public fun signalsToCollect(vararg signalsToCollect: Any)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
+     * @param signalsToFetch 
+     */
+    public fun signalsToFetch(signalsToFetch: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
+     * @param signalsToFetch 
+     */
+    public fun signalsToFetch(signalsToFetch: List<Any>)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
+     * @param signalsToFetch 
+     */
+    public fun signalsToFetch(vararg signalsToFetch: Any)
 
     /**
      * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.
@@ -1046,6 +1109,29 @@ public open class CfnCampaign(
         signalsToCollect(signalsToCollect.toList())
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
+     * @param signalsToFetch 
+     */
+    override fun signalsToFetch(signalsToFetch: IResolvable) {
+      cdkBuilder.signalsToFetch(signalsToFetch.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
+     * @param signalsToFetch 
+     */
+    override fun signalsToFetch(signalsToFetch: List<Any>) {
+      cdkBuilder.signalsToFetch(signalsToFetch.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
+     * @param signalsToFetch 
+     */
+    override fun signalsToFetch(vararg signalsToFetch: Any): Unit =
+        signalsToFetch(signalsToFetch.toList())
+
+    /**
      * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.
      *
      * After a connection is re-established, the data is automatically forwarded to AWS IoT
@@ -1297,7 +1383,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.CollectionSchemeProperty,
-    ) : CdkObject(cdkObject), CollectionSchemeProperty {
+    ) : CdkObject(cdkObject),
+        CollectionSchemeProperty {
       /**
        * (Optional) Information about a collection scheme that uses a simple logical expression to
        * recognize what data to collect.
@@ -1481,7 +1568,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedCollectionSchemeProperty,
-    ) : CdkObject(cdkObject), ConditionBasedCollectionSchemeProperty {
+    ) : CdkObject(cdkObject),
+        ConditionBasedCollectionSchemeProperty {
       /**
        * (Optional) Specifies the version of the conditional expression language.
        *
@@ -1542,6 +1630,108 @@ public open class CfnCampaign(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * ConditionBasedSignalFetchConfigProperty conditionBasedSignalFetchConfigProperty =
+   * ConditionBasedSignalFetchConfigProperty.builder()
+   * .conditionExpression("conditionExpression")
+   * .triggerMode("triggerMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedsignalfetchconfig.html)
+   */
+  public interface ConditionBasedSignalFetchConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-conditionbasedsignalfetchconfig-conditionexpression)
+     */
+    public fun conditionExpression(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-conditionbasedsignalfetchconfig-triggermode)
+     */
+    public fun triggerMode(): String
+
+    /**
+     * A builder for [ConditionBasedSignalFetchConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param conditionExpression the value to be set. 
+       */
+      public fun conditionExpression(conditionExpression: String)
+
+      /**
+       * @param triggerMode the value to be set. 
+       */
+      public fun triggerMode(triggerMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedSignalFetchConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedSignalFetchConfigProperty.builder()
+
+      /**
+       * @param conditionExpression the value to be set. 
+       */
+      override fun conditionExpression(conditionExpression: String) {
+        cdkBuilder.conditionExpression(conditionExpression)
+      }
+
+      /**
+       * @param triggerMode the value to be set. 
+       */
+      override fun triggerMode(triggerMode: String) {
+        cdkBuilder.triggerMode(triggerMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedSignalFetchConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedSignalFetchConfigProperty,
+    ) : CdkObject(cdkObject),
+        ConditionBasedSignalFetchConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-conditionbasedsignalfetchconfig-conditionexpression)
+       */
+      override fun conditionExpression(): String = unwrap(this).getConditionExpression()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-conditionbasedsignalfetchconfig-triggermode)
+       */
+      override fun triggerMode(): String = unwrap(this).getTriggerMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ConditionBasedSignalFetchConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedSignalFetchConfigProperty):
+          ConditionBasedSignalFetchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConditionBasedSignalFetchConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConditionBasedSignalFetchConfigProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedSignalFetchConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedSignalFetchConfigProperty
+    }
+  }
+
+  /**
    * The destination where the AWS IoT FleetWise campaign sends data.
    *
    * You can send data to be stored in Amazon S3 or Amazon Timestream .
@@ -1554,6 +1744,10 @@ public open class CfnCampaign(
    * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
    * DataDestinationConfigProperty dataDestinationConfigProperty =
    * DataDestinationConfigProperty.builder()
+   * .mqttTopicConfig(MqttTopicConfigProperty.builder()
+   * .executionRoleArn("executionRoleArn")
+   * .mqttTopicArn("mqttTopicArn")
+   * .build())
    * .s3Config(S3ConfigProperty.builder()
    * .bucketArn("bucketArn")
    * // the properties below are optional
@@ -1571,6 +1765,11 @@ public open class CfnCampaign(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html)
    */
   public interface DataDestinationConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-mqtttopicconfig)
+     */
+    public fun mqttTopicConfig(): Any? = unwrap(this).getMqttTopicConfig()
+
     /**
      * (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
      *
@@ -1590,6 +1789,23 @@ public open class CfnCampaign(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param mqttTopicConfig the value to be set.
+       */
+      public fun mqttTopicConfig(mqttTopicConfig: IResolvable)
+
+      /**
+       * @param mqttTopicConfig the value to be set.
+       */
+      public fun mqttTopicConfig(mqttTopicConfig: MqttTopicConfigProperty)
+
+      /**
+       * @param mqttTopicConfig the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("56eb0f11ad367f66b034a2f29775d7135605ee5356c6e51b5c013a12de9e5188")
+      public fun mqttTopicConfig(mqttTopicConfig: MqttTopicConfigProperty.Builder.() -> Unit)
+
       /**
        * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
        * data.
@@ -1636,6 +1852,28 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty.Builder
           =
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty.builder()
+
+      /**
+       * @param mqttTopicConfig the value to be set.
+       */
+      override fun mqttTopicConfig(mqttTopicConfig: IResolvable) {
+        cdkBuilder.mqttTopicConfig(mqttTopicConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param mqttTopicConfig the value to be set.
+       */
+      override fun mqttTopicConfig(mqttTopicConfig: MqttTopicConfigProperty) {
+        cdkBuilder.mqttTopicConfig(mqttTopicConfig.let(MqttTopicConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param mqttTopicConfig the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("56eb0f11ad367f66b034a2f29775d7135605ee5356c6e51b5c013a12de9e5188")
+      override fun mqttTopicConfig(mqttTopicConfig: MqttTopicConfigProperty.Builder.() -> Unit):
+          Unit = mqttTopicConfig(MqttTopicConfigProperty(mqttTopicConfig))
 
       /**
        * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
@@ -1694,7 +1932,13 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty,
-    ) : CdkObject(cdkObject), DataDestinationConfigProperty {
+    ) : CdkObject(cdkObject),
+        DataDestinationConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-mqtttopicconfig)
+       */
+      override fun mqttTopicConfig(): Any? = unwrap(this).getMqttTopicConfig()
+
       /**
        * (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
        *
@@ -1725,6 +1969,105 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * MqttTopicConfigProperty mqttTopicConfigProperty = MqttTopicConfigProperty.builder()
+   * .executionRoleArn("executionRoleArn")
+   * .mqttTopicArn("mqttTopicArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-mqtttopicconfig.html)
+   */
+  public interface MqttTopicConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-mqtttopicconfig.html#cfn-iotfleetwise-campaign-mqtttopicconfig-executionrolearn)
+     */
+    public fun executionRoleArn(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-mqtttopicconfig.html#cfn-iotfleetwise-campaign-mqtttopicconfig-mqtttopicarn)
+     */
+    public fun mqttTopicArn(): String
+
+    /**
+     * A builder for [MqttTopicConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param executionRoleArn the value to be set. 
+       */
+      public fun executionRoleArn(executionRoleArn: String)
+
+      /**
+       * @param mqttTopicArn the value to be set. 
+       */
+      public fun mqttTopicArn(mqttTopicArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.MqttTopicConfigProperty.Builder =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.MqttTopicConfigProperty.builder()
+
+      /**
+       * @param executionRoleArn the value to be set. 
+       */
+      override fun executionRoleArn(executionRoleArn: String) {
+        cdkBuilder.executionRoleArn(executionRoleArn)
+      }
+
+      /**
+       * @param mqttTopicArn the value to be set. 
+       */
+      override fun mqttTopicArn(mqttTopicArn: String) {
+        cdkBuilder.mqttTopicArn(mqttTopicArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.MqttTopicConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.MqttTopicConfigProperty,
+    ) : CdkObject(cdkObject),
+        MqttTopicConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-mqtttopicconfig.html#cfn-iotfleetwise-campaign-mqtttopicconfig-executionrolearn)
+       */
+      override fun executionRoleArn(): String = unwrap(this).getExecutionRoleArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-mqtttopicconfig.html#cfn-iotfleetwise-campaign-mqtttopicconfig-mqtttopicarn)
+       */
+      override fun mqttTopicArn(): String = unwrap(this).getMqttTopicArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MqttTopicConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.MqttTopicConfigProperty):
+          MqttTopicConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? MqttTopicConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MqttTopicConfigProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.MqttTopicConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.MqttTopicConfigProperty
     }
   }
 
@@ -1901,7 +2244,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.S3ConfigProperty,
-    ) : CdkObject(cdkObject), S3ConfigProperty {
+    ) : CdkObject(cdkObject),
+        S3ConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon S3 bucket.
        *
@@ -1965,6 +2309,361 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.S3ConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.S3ConfigProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * SignalFetchConfigProperty signalFetchConfigProperty = SignalFetchConfigProperty.builder()
+   * .conditionBased(ConditionBasedSignalFetchConfigProperty.builder()
+   * .conditionExpression("conditionExpression")
+   * .triggerMode("triggerMode")
+   * .build())
+   * .timeBased(TimeBasedSignalFetchConfigProperty.builder()
+   * .executionFrequencyMs(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchconfig.html)
+   */
+  public interface SignalFetchConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchconfig.html#cfn-iotfleetwise-campaign-signalfetchconfig-conditionbased)
+     */
+    public fun conditionBased(): Any? = unwrap(this).getConditionBased()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchconfig.html#cfn-iotfleetwise-campaign-signalfetchconfig-timebased)
+     */
+    public fun timeBased(): Any? = unwrap(this).getTimeBased()
+
+    /**
+     * A builder for [SignalFetchConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param conditionBased the value to be set.
+       */
+      public fun conditionBased(conditionBased: IResolvable)
+
+      /**
+       * @param conditionBased the value to be set.
+       */
+      public fun conditionBased(conditionBased: ConditionBasedSignalFetchConfigProperty)
+
+      /**
+       * @param conditionBased the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0792e8d6a50c4d84d0d00d2d7644caad0646ca0941c06c22932753e3b6794de8")
+      public
+          fun conditionBased(conditionBased: ConditionBasedSignalFetchConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param timeBased the value to be set.
+       */
+      public fun timeBased(timeBased: IResolvable)
+
+      /**
+       * @param timeBased the value to be set.
+       */
+      public fun timeBased(timeBased: TimeBasedSignalFetchConfigProperty)
+
+      /**
+       * @param timeBased the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c4cf236a85c5ab84bc92f6aa9bc27c3c11b82c9ef1c7e9d1dcd9c5ad79ed595e")
+      public fun timeBased(timeBased: TimeBasedSignalFetchConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchConfigProperty.builder()
+
+      /**
+       * @param conditionBased the value to be set.
+       */
+      override fun conditionBased(conditionBased: IResolvable) {
+        cdkBuilder.conditionBased(conditionBased.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param conditionBased the value to be set.
+       */
+      override fun conditionBased(conditionBased: ConditionBasedSignalFetchConfigProperty) {
+        cdkBuilder.conditionBased(conditionBased.let(ConditionBasedSignalFetchConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param conditionBased the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0792e8d6a50c4d84d0d00d2d7644caad0646ca0941c06c22932753e3b6794de8")
+      override
+          fun conditionBased(conditionBased: ConditionBasedSignalFetchConfigProperty.Builder.() -> Unit):
+          Unit = conditionBased(ConditionBasedSignalFetchConfigProperty(conditionBased))
+
+      /**
+       * @param timeBased the value to be set.
+       */
+      override fun timeBased(timeBased: IResolvable) {
+        cdkBuilder.timeBased(timeBased.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param timeBased the value to be set.
+       */
+      override fun timeBased(timeBased: TimeBasedSignalFetchConfigProperty) {
+        cdkBuilder.timeBased(timeBased.let(TimeBasedSignalFetchConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param timeBased the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c4cf236a85c5ab84bc92f6aa9bc27c3c11b82c9ef1c7e9d1dcd9c5ad79ed595e")
+      override fun timeBased(timeBased: TimeBasedSignalFetchConfigProperty.Builder.() -> Unit): Unit
+          = timeBased(TimeBasedSignalFetchConfigProperty(timeBased))
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchConfigProperty,
+    ) : CdkObject(cdkObject),
+        SignalFetchConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchconfig.html#cfn-iotfleetwise-campaign-signalfetchconfig-conditionbased)
+       */
+      override fun conditionBased(): Any? = unwrap(this).getConditionBased()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchconfig.html#cfn-iotfleetwise-campaign-signalfetchconfig-timebased)
+       */
+      override fun timeBased(): Any? = unwrap(this).getTimeBased()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SignalFetchConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchConfigProperty):
+          SignalFetchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SignalFetchConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SignalFetchConfigProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchConfigProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * SignalFetchInformationProperty signalFetchInformationProperty =
+   * SignalFetchInformationProperty.builder()
+   * .actions(List.of("actions"))
+   * .fullyQualifiedName("fullyQualifiedName")
+   * .signalFetchConfig(SignalFetchConfigProperty.builder()
+   * .conditionBased(ConditionBasedSignalFetchConfigProperty.builder()
+   * .conditionExpression("conditionExpression")
+   * .triggerMode("triggerMode")
+   * .build())
+   * .timeBased(TimeBasedSignalFetchConfigProperty.builder()
+   * .executionFrequencyMs(123)
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .conditionLanguageVersion(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html)
+   */
+  public interface SignalFetchInformationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-actions)
+     */
+    public fun actions(): List<String>
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-conditionlanguageversion)
+     */
+    public fun conditionLanguageVersion(): Number? = unwrap(this).getConditionLanguageVersion()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-fullyqualifiedname)
+     */
+    public fun fullyQualifiedName(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-signalfetchconfig)
+     */
+    public fun signalFetchConfig(): Any
+
+    /**
+     * A builder for [SignalFetchInformationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param actions the value to be set. 
+       */
+      public fun actions(actions: List<String>)
+
+      /**
+       * @param actions the value to be set. 
+       */
+      public fun actions(vararg actions: String)
+
+      /**
+       * @param conditionLanguageVersion the value to be set.
+       */
+      public fun conditionLanguageVersion(conditionLanguageVersion: Number)
+
+      /**
+       * @param fullyQualifiedName the value to be set. 
+       */
+      public fun fullyQualifiedName(fullyQualifiedName: String)
+
+      /**
+       * @param signalFetchConfig the value to be set. 
+       */
+      public fun signalFetchConfig(signalFetchConfig: IResolvable)
+
+      /**
+       * @param signalFetchConfig the value to be set. 
+       */
+      public fun signalFetchConfig(signalFetchConfig: SignalFetchConfigProperty)
+
+      /**
+       * @param signalFetchConfig the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fead850def1f2655988c799819e78891e79f097f3bd3834a5fcd8d5570211117")
+      public fun signalFetchConfig(signalFetchConfig: SignalFetchConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchInformationProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchInformationProperty.builder()
+
+      /**
+       * @param actions the value to be set. 
+       */
+      override fun actions(actions: List<String>) {
+        cdkBuilder.actions(actions)
+      }
+
+      /**
+       * @param actions the value to be set. 
+       */
+      override fun actions(vararg actions: String): Unit = actions(actions.toList())
+
+      /**
+       * @param conditionLanguageVersion the value to be set.
+       */
+      override fun conditionLanguageVersion(conditionLanguageVersion: Number) {
+        cdkBuilder.conditionLanguageVersion(conditionLanguageVersion)
+      }
+
+      /**
+       * @param fullyQualifiedName the value to be set. 
+       */
+      override fun fullyQualifiedName(fullyQualifiedName: String) {
+        cdkBuilder.fullyQualifiedName(fullyQualifiedName)
+      }
+
+      /**
+       * @param signalFetchConfig the value to be set. 
+       */
+      override fun signalFetchConfig(signalFetchConfig: IResolvable) {
+        cdkBuilder.signalFetchConfig(signalFetchConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param signalFetchConfig the value to be set. 
+       */
+      override fun signalFetchConfig(signalFetchConfig: SignalFetchConfigProperty) {
+        cdkBuilder.signalFetchConfig(signalFetchConfig.let(SignalFetchConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param signalFetchConfig the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fead850def1f2655988c799819e78891e79f097f3bd3834a5fcd8d5570211117")
+      override
+          fun signalFetchConfig(signalFetchConfig: SignalFetchConfigProperty.Builder.() -> Unit):
+          Unit = signalFetchConfig(SignalFetchConfigProperty(signalFetchConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchInformationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchInformationProperty,
+    ) : CdkObject(cdkObject),
+        SignalFetchInformationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-actions)
+       */
+      override fun actions(): List<String> = unwrap(this).getActions()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-conditionlanguageversion)
+       */
+      override fun conditionLanguageVersion(): Number? = unwrap(this).getConditionLanguageVersion()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-fullyqualifiedname)
+       */
+      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-signalfetchconfig)
+       */
+      override fun signalFetchConfig(): Any = unwrap(this).getSignalFetchConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SignalFetchInformationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchInformationProperty):
+          SignalFetchInformationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SignalFetchInformationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SignalFetchInformationProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchInformationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchInformationProperty
     }
   }
 
@@ -2075,7 +2774,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty,
-    ) : CdkObject(cdkObject), SignalInformationProperty {
+    ) : CdkObject(cdkObject),
+        SignalInformationProperty {
       /**
        * (Optional) The maximum number of samples to collect.
        *
@@ -2186,7 +2886,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty,
-    ) : CdkObject(cdkObject), TimeBasedCollectionSchemeProperty {
+    ) : CdkObject(cdkObject),
+        TimeBasedCollectionSchemeProperty {
       /**
        * The time period (in milliseconds) to decide how often to collect data.
        *
@@ -2214,6 +2915,85 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * TimeBasedSignalFetchConfigProperty timeBasedSignalFetchConfigProperty =
+   * TimeBasedSignalFetchConfigProperty.builder()
+   * .executionFrequencyMs(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedsignalfetchconfig.html)
+   */
+  public interface TimeBasedSignalFetchConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-timebasedsignalfetchconfig-executionfrequencyms)
+     */
+    public fun executionFrequencyMs(): Number
+
+    /**
+     * A builder for [TimeBasedSignalFetchConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param executionFrequencyMs the value to be set. 
+       */
+      public fun executionFrequencyMs(executionFrequencyMs: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedSignalFetchConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedSignalFetchConfigProperty.builder()
+
+      /**
+       * @param executionFrequencyMs the value to be set. 
+       */
+      override fun executionFrequencyMs(executionFrequencyMs: Number) {
+        cdkBuilder.executionFrequencyMs(executionFrequencyMs)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedSignalFetchConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedSignalFetchConfigProperty,
+    ) : CdkObject(cdkObject),
+        TimeBasedSignalFetchConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-timebasedsignalfetchconfig-executionfrequencyms)
+       */
+      override fun executionFrequencyMs(): Number = unwrap(this).getExecutionFrequencyMs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TimeBasedSignalFetchConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedSignalFetchConfigProperty):
+          TimeBasedSignalFetchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimeBasedSignalFetchConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TimeBasedSignalFetchConfigProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedSignalFetchConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedSignalFetchConfigProperty
     }
   }
 
@@ -2300,7 +3080,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty,
-    ) : CdkObject(cdkObject), TimestreamConfigProperty {
+    ) : CdkObject(cdkObject),
+        TimestreamConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the task execution role that grants AWS IoT FleetWise
        * permission to deliver data to the Amazon Timestream table.

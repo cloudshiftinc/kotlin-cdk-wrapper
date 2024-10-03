@@ -157,7 +157,8 @@ public interface IManagedEc2EcsComputeEnvironment : IManagedComputeEnvironment {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IManagedEc2EcsComputeEnvironment,
-  ) : CdkObject(cdkObject), IManagedEc2EcsComputeEnvironment {
+  ) : CdkObject(cdkObject),
+      IManagedEc2EcsComputeEnvironment {
     /**
      * Add an instance class to this compute environment.
      *

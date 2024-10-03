@@ -61,7 +61,8 @@ public interface ReverseOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ReverseOptions,
-  ) : CdkObject(cdkObject), ReverseOptions {
+  ) : CdkObject(cdkObject),
+      ReverseOptions {
     /**
      * Fail if the given string is a concatenation.
      *

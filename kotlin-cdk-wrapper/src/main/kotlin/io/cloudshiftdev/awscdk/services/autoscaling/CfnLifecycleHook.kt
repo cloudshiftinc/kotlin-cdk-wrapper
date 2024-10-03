@@ -53,7 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLifecycleHook(
   cdkObject: software.amazon.awscdk.services.autoscaling.CfnLifecycleHook,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

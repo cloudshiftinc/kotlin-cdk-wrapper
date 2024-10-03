@@ -92,7 +92,8 @@ public interface WebSocketRouteAuthorizerConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerConfig,
-  ) : CdkObject(cdkObject), WebSocketRouteAuthorizerConfig {
+  ) : CdkObject(cdkObject),
+      WebSocketRouteAuthorizerConfig {
     /**
      * The type of authorization.
      *

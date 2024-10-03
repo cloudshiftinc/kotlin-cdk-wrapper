@@ -980,7 +980,8 @@ public interface CfnAlarmProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarmProps,
-  ) : CdkObject(cdkObject), CfnAlarmProps {
+  ) : CdkObject(cdkObject),
+      CfnAlarmProps {
     /**
      * Indicates whether actions should be executed during any changes to the alarm state.
      *

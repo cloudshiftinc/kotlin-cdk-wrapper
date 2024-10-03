@@ -43,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSMSChannel(
   cdkObject: software.amazon.awscdk.services.pinpoint.CfnSMSChannel,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

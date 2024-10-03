@@ -81,7 +81,8 @@ public interface NonIpInstanceBaseProps : BaseInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.NonIpInstanceBaseProps,
-  ) : CdkObject(cdkObject), NonIpInstanceBaseProps {
+  ) : CdkObject(cdkObject),
+      NonIpInstanceBaseProps {
     /**
      * Custom attributes of the instance.
      *

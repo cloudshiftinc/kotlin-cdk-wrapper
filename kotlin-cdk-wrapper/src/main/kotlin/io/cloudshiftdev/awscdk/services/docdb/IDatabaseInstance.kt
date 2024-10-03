@@ -42,7 +42,8 @@ public interface IDatabaseInstance : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.IDatabaseInstance,
-  ) : CdkObject(cdkObject), IDatabaseInstance {
+  ) : CdkObject(cdkObject),
+      IDatabaseInstance {
     /**
      * Apply the given removal policy to this resource.
      *

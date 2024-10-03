@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnReportDefinition(
   cdkObject: software.amazon.awscdk.services.cur.CfnReportDefinition,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

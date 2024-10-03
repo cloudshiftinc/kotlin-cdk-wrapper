@@ -284,6 +284,17 @@ public interface LaunchTemplateProps {
   public fun userData(): UserData? = unwrap(this).getUserData()?.let(UserData::wrap)
 
   /**
+   * A description for the first version of the launch template.
+   *
+   * The version description must be maximum 255 characters long.
+   *
+   * Default: - No description
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-versiondescription)
+   */
+  public fun versionDescription(): String? = unwrap(this).getVersionDescription()
+
+  /**
    * A builder for [LaunchTemplateProps]
    */
   @CdkDslMarker
@@ -466,6 +477,12 @@ public interface LaunchTemplateProps {
      * @param userData The AMI that will be used by instances.
      */
     public fun userData(userData: UserData)
+
+    /**
+     * @param versionDescription A description for the first version of the launch template.
+     * The version description must be maximum 255 characters long.
+     */
+    public fun versionDescription(versionDescription: String)
   }
 
   private class BuilderImpl : Builder {
@@ -703,12 +720,21 @@ public interface LaunchTemplateProps {
       cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
+    /**
+     * @param versionDescription A description for the first version of the launch template.
+     * The version description must be maximum 255 characters long.
+     */
+    override fun versionDescription(versionDescription: String) {
+      cdkBuilder.versionDescription(versionDescription)
+    }
+
     public fun build(): software.amazon.awscdk.services.ec2.LaunchTemplateProps = cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateProps,
-  ) : CdkObject(cdkObject), LaunchTemplateProps {
+  ) : CdkObject(cdkObject),
+      LaunchTemplateProps {
     /**
      * Whether instances should have a public IP addresses associated with them.
      *
@@ -956,6 +982,17 @@ public interface LaunchTemplateProps {
      * machineImage; no UserData is created if a machineImage is not provided
      */
     override fun userData(): UserData? = unwrap(this).getUserData()?.let(UserData::wrap)
+
+    /**
+     * A description for the first version of the launch template.
+     *
+     * The version description must be maximum 255 characters long.
+     *
+     * Default: - No description
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-versiondescription)
+     */
+    override fun versionDescription(): String? = unwrap(this).getVersionDescription()
   }
 
   public companion object {

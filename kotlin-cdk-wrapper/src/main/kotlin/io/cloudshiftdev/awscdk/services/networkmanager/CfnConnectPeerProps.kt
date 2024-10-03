@@ -240,7 +240,8 @@ public interface CfnConnectPeerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeerProps,
-  ) : CdkObject(cdkObject), CfnConnectPeerProps {
+  ) : CdkObject(cdkObject),
+      CfnConnectPeerProps {
     /**
      * Describes the BGP options.
      *

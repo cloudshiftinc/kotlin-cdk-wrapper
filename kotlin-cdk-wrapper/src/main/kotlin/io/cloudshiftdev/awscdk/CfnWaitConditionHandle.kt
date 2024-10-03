@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWaitConditionHandle(
   cdkObject: software.amazon.awscdk.CfnWaitConditionHandle,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.CfnWaitConditionHandle(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

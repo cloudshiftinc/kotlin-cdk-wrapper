@@ -74,7 +74,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNetworkInterface(
   cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1451,7 +1453,8 @@ public open class CfnNetworkInterface(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.ConnectionTrackingSpecificationProperty,
-    ) : CdkObject(cdkObject), ConnectionTrackingSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionTrackingSpecificationProperty {
       /**
        * Timeout (in seconds) for idle TCP connections in an established state.
        *
@@ -1557,7 +1560,8 @@ public open class CfnNetworkInterface(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.InstanceIpv6AddressProperty,
-    ) : CdkObject(cdkObject), InstanceIpv6AddressProperty {
+    ) : CdkObject(cdkObject),
+        InstanceIpv6AddressProperty {
       /**
        * An IPv6 address to associate with the network interface.
        *
@@ -1605,9 +1609,9 @@ public open class CfnNetworkInterface(
     /**
      * The IPv4 prefix.
      *
-     * For information, see [Assigning prefixes to Amazon EC2 network
+     * For information, see [Assigning prefixes to network
      * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-     * *Amazon Elastic Compute Cloud User Guide* .
+     * *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-ipv4prefixspecification.html#cfn-ec2-networkinterface-ipv4prefixspecification-ipv4prefix)
      */
@@ -1620,9 +1624,9 @@ public open class CfnNetworkInterface(
     public interface Builder {
       /**
        * @param ipv4Prefix The IPv4 prefix. 
-       * For information, see [Assigning prefixes to Amazon EC2 network
+       * For information, see [Assigning prefixes to network
        * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       public fun ipv4Prefix(ipv4Prefix: String)
     }
@@ -1635,9 +1639,9 @@ public open class CfnNetworkInterface(
 
       /**
        * @param ipv4Prefix The IPv4 prefix. 
-       * For information, see [Assigning prefixes to Amazon EC2 network
+       * For information, see [Assigning prefixes to network
        * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       override fun ipv4Prefix(ipv4Prefix: String) {
         cdkBuilder.ipv4Prefix(ipv4Prefix)
@@ -1650,13 +1654,14 @@ public open class CfnNetworkInterface(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv4PrefixSpecificationProperty,
-    ) : CdkObject(cdkObject), Ipv4PrefixSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        Ipv4PrefixSpecificationProperty {
       /**
        * The IPv4 prefix.
        *
-       * For information, see [Assigning prefixes to Amazon EC2 network
+       * For information, see [Assigning prefixes to network
        * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-ipv4prefixspecification.html#cfn-ec2-networkinterface-ipv4prefixspecification-ipv4prefix)
        */
@@ -1747,7 +1752,8 @@ public open class CfnNetworkInterface(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty,
-    ) : CdkObject(cdkObject), Ipv6PrefixSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        Ipv6PrefixSpecificationProperty {
       /**
        * The IPv6 prefix.
        *
@@ -1877,7 +1883,8 @@ public open class CfnNetworkInterface(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty,
-    ) : CdkObject(cdkObject), PrivateIpAddressSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PrivateIpAddressSpecificationProperty {
       /**
        * Sets the private IP address as the primary private address.
        *

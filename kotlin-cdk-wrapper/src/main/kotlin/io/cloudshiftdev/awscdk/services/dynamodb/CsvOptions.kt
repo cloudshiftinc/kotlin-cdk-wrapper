@@ -146,7 +146,8 @@ public interface CsvOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.CsvOptions,
-  ) : CdkObject(cdkObject), CsvOptions {
+  ) : CdkObject(cdkObject),
+      CsvOptions {
     /**
      * The delimiter used for separating items in the CSV file being imported.
      *

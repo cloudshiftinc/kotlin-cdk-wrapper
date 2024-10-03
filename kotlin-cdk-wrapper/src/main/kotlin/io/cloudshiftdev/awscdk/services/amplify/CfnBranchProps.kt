@@ -66,7 +66,11 @@ public interface CfnBranchProps {
   public fun appId(): String
 
   /**
-   * Specifies the backend for a `Branch` of an Amplify app.
+   * The backend for a `Branch` of an Amplify app. Use for a backend created from an AWS
+   * CloudFormation stack.
+   *
+   * This field is available to Amplify Gen 2 apps only. When you deploy an application with Amplify
+   * Gen 2, you provision the app's backend infrastructure using Typescript code.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-backend)
    */
@@ -201,17 +205,26 @@ public interface CfnBranchProps {
     public fun appId(appId: String)
 
     /**
-     * @param backend Specifies the backend for a `Branch` of an Amplify app.
+     * @param backend The backend for a `Branch` of an Amplify app. Use for a backend created from
+     * an AWS CloudFormation stack.
+     * This field is available to Amplify Gen 2 apps only. When you deploy an application with
+     * Amplify Gen 2, you provision the app's backend infrastructure using Typescript code.
      */
     public fun backend(backend: IResolvable)
 
     /**
-     * @param backend Specifies the backend for a `Branch` of an Amplify app.
+     * @param backend The backend for a `Branch` of an Amplify app. Use for a backend created from
+     * an AWS CloudFormation stack.
+     * This field is available to Amplify Gen 2 apps only. When you deploy an application with
+     * Amplify Gen 2, you provision the app's backend infrastructure using Typescript code.
      */
     public fun backend(backend: CfnBranch.BackendProperty)
 
     /**
-     * @param backend Specifies the backend for a `Branch` of an Amplify app.
+     * @param backend The backend for a `Branch` of an Amplify app. Use for a backend created from
+     * an AWS CloudFormation stack.
+     * This field is available to Amplify Gen 2 apps only. When you deploy an application with
+     * Amplify Gen 2, you provision the app's backend infrastructure using Typescript code.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5ca1e5a8e883f335ce3d4909bf2590b31a5a37227e08ef1959dba530961b7676")
@@ -382,21 +395,30 @@ public interface CfnBranchProps {
     }
 
     /**
-     * @param backend Specifies the backend for a `Branch` of an Amplify app.
+     * @param backend The backend for a `Branch` of an Amplify app. Use for a backend created from
+     * an AWS CloudFormation stack.
+     * This field is available to Amplify Gen 2 apps only. When you deploy an application with
+     * Amplify Gen 2, you provision the app's backend infrastructure using Typescript code.
      */
     override fun backend(backend: IResolvable) {
       cdkBuilder.backend(backend.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param backend Specifies the backend for a `Branch` of an Amplify app.
+     * @param backend The backend for a `Branch` of an Amplify app. Use for a backend created from
+     * an AWS CloudFormation stack.
+     * This field is available to Amplify Gen 2 apps only. When you deploy an application with
+     * Amplify Gen 2, you provision the app's backend infrastructure using Typescript code.
      */
     override fun backend(backend: CfnBranch.BackendProperty) {
       cdkBuilder.backend(backend.let(CfnBranch.BackendProperty.Companion::unwrap))
     }
 
     /**
-     * @param backend Specifies the backend for a `Branch` of an Amplify app.
+     * @param backend The backend for a `Branch` of an Amplify app. Use for a backend created from
+     * an AWS CloudFormation stack.
+     * This field is available to Amplify Gen 2 apps only. When you deploy an application with
+     * Amplify Gen 2, you provision the app's backend infrastructure using Typescript code.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5ca1e5a8e883f335ce3d4909bf2590b31a5a37227e08ef1959dba530961b7676")
@@ -596,7 +618,8 @@ public interface CfnBranchProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.amplify.CfnBranchProps,
-  ) : CdkObject(cdkObject), CfnBranchProps {
+  ) : CdkObject(cdkObject),
+      CfnBranchProps {
     /**
      * The unique ID for an Amplify app.
      *
@@ -605,7 +628,11 @@ public interface CfnBranchProps {
     override fun appId(): String = unwrap(this).getAppId()
 
     /**
-     * Specifies the backend for a `Branch` of an Amplify app.
+     * The backend for a `Branch` of an Amplify app. Use for a backend created from an AWS
+     * CloudFormation stack.
+     *
+     * This field is available to Amplify Gen 2 apps only. When you deploy an application with
+     * Amplify Gen 2, you provision the app's backend infrastructure using Typescript code.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-backend)
      */

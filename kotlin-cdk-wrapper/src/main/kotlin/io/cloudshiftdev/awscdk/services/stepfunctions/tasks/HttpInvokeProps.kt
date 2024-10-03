@@ -31,7 +31,7 @@ import kotlin.jvm.JvmName
  * .build();
  * HttpInvoke.Builder.create(this, "Invoke HTTP API")
  * .apiRoot("https://api.example.com")
- * .apiEndpoint(TaskInput.fromText("https://api.example.com/path/to/resource"))
+ * .apiEndpoint(TaskInput.fromText("path/to/resource"))
  * .body(TaskInput.fromObject(Map.of("foo", "bar")))
  * .connection(connection)
  * .headers(TaskInput.fromObject(Map.of("Content-Type", "application/json")))
@@ -464,7 +464,8 @@ public interface HttpInvokeProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.HttpInvokeProps,
-  ) : CdkObject(cdkObject), HttpInvokeProps {
+  ) : CdkObject(cdkObject),
+      HttpInvokeProps {
     /**
      * The API endpoint to call, relative to `apiRoot`.
      *

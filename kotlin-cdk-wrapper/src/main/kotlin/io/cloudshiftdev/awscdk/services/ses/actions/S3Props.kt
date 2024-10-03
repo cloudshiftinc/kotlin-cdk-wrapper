@@ -136,7 +136,8 @@ public interface S3Props {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.actions.S3Props,
-  ) : CdkObject(cdkObject), S3Props {
+  ) : CdkObject(cdkObject),
+      S3Props {
     /**
      * The S3 bucket that incoming email will be saved to.
      */

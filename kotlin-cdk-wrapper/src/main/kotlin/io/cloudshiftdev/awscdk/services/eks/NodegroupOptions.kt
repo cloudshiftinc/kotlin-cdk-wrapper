@@ -88,8 +88,7 @@ public interface NodegroupOptions {
    *
    * Default: t3.medium will be used according to the cloudformation document.
    *
-   * [Documentation]( -
-   * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
    */
   public fun instanceTypes(): List<InstanceType> =
       unwrap(this).getInstanceTypes()?.map(InstanceType::wrap) ?: emptyList()
@@ -106,7 +105,7 @@ public interface NodegroupOptions {
    *
    * Default: - no launch template
    *
-   * [Documentation]( - https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
+   * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
    */
   public fun launchTemplateSpec(): LaunchTemplateSpec? =
       unwrap(this).getLaunchTemplateSpec()?.let(LaunchTemplateSpec::wrap)
@@ -667,7 +666,8 @@ public interface NodegroupOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.NodegroupOptions,
-  ) : CdkObject(cdkObject), NodegroupOptions {
+  ) : CdkObject(cdkObject),
+      NodegroupOptions {
     /**
      * The AMI type for your node group.
      *
@@ -725,8 +725,7 @@ public interface NodegroupOptions {
      *
      * Default: t3.medium will be used according to the cloudformation document.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
      */
     override fun instanceTypes(): List<InstanceType> =
         unwrap(this).getInstanceTypes()?.map(InstanceType::wrap) ?: emptyList()
@@ -743,7 +742,7 @@ public interface NodegroupOptions {
      *
      * Default: - no launch template
      *
-     * [Documentation]( - https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
+     * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
      */
     override fun launchTemplateSpec(): LaunchTemplateSpec? =
         unwrap(this).getLaunchTemplateSpec()?.let(LaunchTemplateSpec::wrap)

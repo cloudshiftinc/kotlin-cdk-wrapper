@@ -255,7 +255,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRoute(
   cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -742,7 +744,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.DurationProperty,
-    ) : CdkObject(cdkObject), DurationProperty {
+    ) : CdkObject(cdkObject),
+        DurationProperty {
       /**
        * A unit of time.
        *
@@ -1016,7 +1019,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRetryPolicyProperty,
-    ) : CdkObject(cdkObject), GrpcRetryPolicyProperty {
+    ) : CdkObject(cdkObject),
+        GrpcRetryPolicyProperty {
       /**
        * Specify at least one of the valid values.
        *
@@ -1170,7 +1174,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteActionProperty,
-    ) : CdkObject(cdkObject), GrpcRouteActionProperty {
+    ) : CdkObject(cdkObject),
+        GrpcRouteActionProperty {
       /**
        * An object that represents the targets that traffic is routed to when a request matches the
        * route.
@@ -1353,7 +1358,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteMatchProperty,
-    ) : CdkObject(cdkObject), GrpcRouteMatchProperty {
+    ) : CdkObject(cdkObject),
+        GrpcRouteMatchProperty {
       /**
        * An object that represents the data to match from the request.
        *
@@ -1571,7 +1577,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteMetadataMatchMethodProperty,
-    ) : CdkObject(cdkObject), GrpcRouteMetadataMatchMethodProperty {
+    ) : CdkObject(cdkObject),
+        GrpcRouteMetadataMatchMethodProperty {
       /**
        * The value sent by the client must match the specified value exactly.
        *
@@ -1775,7 +1782,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteMetadataProperty,
-    ) : CdkObject(cdkObject), GrpcRouteMetadataProperty {
+    ) : CdkObject(cdkObject),
+        GrpcRouteMetadataProperty {
       /**
        * Specify `True` to match anything except the match criteria.
        *
@@ -2085,7 +2093,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteProperty,
-    ) : CdkObject(cdkObject), GrpcRouteProperty {
+    ) : CdkObject(cdkObject),
+        GrpcRouteProperty {
       /**
        * An object that represents the action to take if a match is determined.
        *
@@ -2309,7 +2318,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcTimeoutProperty,
-    ) : CdkObject(cdkObject), GrpcTimeoutProperty {
+    ) : CdkObject(cdkObject),
+        GrpcTimeoutProperty {
       /**
        * An object that represents an idle timeout.
        *
@@ -2517,7 +2527,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HeaderMatchMethodProperty,
-    ) : CdkObject(cdkObject), HeaderMatchMethodProperty {
+    ) : CdkObject(cdkObject),
+        HeaderMatchMethodProperty {
       /**
        * The value sent by the client must match the specified value exactly.
        *
@@ -2645,7 +2656,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpPathMatchProperty,
-    ) : CdkObject(cdkObject), HttpPathMatchProperty {
+    ) : CdkObject(cdkObject),
+        HttpPathMatchProperty {
       /**
        * The exact path to match on.
        *
@@ -2734,7 +2746,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpQueryParameterMatchProperty,
-    ) : CdkObject(cdkObject), HttpQueryParameterMatchProperty {
+    ) : CdkObject(cdkObject),
+        HttpQueryParameterMatchProperty {
       /**
        * The exact query parameter to match on.
        *
@@ -2971,7 +2984,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpRetryPolicyProperty,
-    ) : CdkObject(cdkObject), HttpRetryPolicyProperty {
+    ) : CdkObject(cdkObject),
+        HttpRetryPolicyProperty {
       /**
        * Specify at least one of the following values.
        *
@@ -3117,7 +3131,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteActionProperty,
-    ) : CdkObject(cdkObject), HttpRouteActionProperty {
+    ) : CdkObject(cdkObject),
+        HttpRouteActionProperty {
       /**
        * An object that represents the targets that traffic is routed to when a request matches the
        * route.
@@ -3293,7 +3308,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteHeaderProperty,
-    ) : CdkObject(cdkObject), HttpRouteHeaderProperty {
+    ) : CdkObject(cdkObject),
+        HttpRouteHeaderProperty {
       /**
        * Specify `True` to match anything except the match criteria.
        *
@@ -3626,7 +3642,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteMatchProperty,
-    ) : CdkObject(cdkObject), HttpRouteMatchProperty {
+    ) : CdkObject(cdkObject),
+        HttpRouteMatchProperty {
       /**
        * The client request headers to match on.
        *
@@ -3982,7 +3999,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteProperty,
-    ) : CdkObject(cdkObject), HttpRouteProperty {
+    ) : CdkObject(cdkObject),
+        HttpRouteProperty {
       /**
        * An object that represents the action to take if a match is determined.
        *
@@ -4206,7 +4224,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpTimeoutProperty,
-    ) : CdkObject(cdkObject), HttpTimeoutProperty {
+    ) : CdkObject(cdkObject),
+        HttpTimeoutProperty {
       /**
        * An object that represents an idle timeout.
        *
@@ -4324,7 +4343,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.MatchRangeProperty,
-    ) : CdkObject(cdkObject), MatchRangeProperty {
+    ) : CdkObject(cdkObject),
+        MatchRangeProperty {
       /**
        * The end of the range.
        *
@@ -4461,7 +4481,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.QueryParameterProperty,
-    ) : CdkObject(cdkObject), QueryParameterProperty {
+    ) : CdkObject(cdkObject),
+        QueryParameterProperty {
       /**
        * The query parameter to match on.
        *
@@ -4936,7 +4957,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.RouteSpecProperty,
-    ) : CdkObject(cdkObject), RouteSpecProperty {
+    ) : CdkObject(cdkObject),
+        RouteSpecProperty {
       /**
        * An object that represents the specification of a gRPC route.
        *
@@ -5080,7 +5102,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.TcpRouteActionProperty,
-    ) : CdkObject(cdkObject), TcpRouteActionProperty {
+    ) : CdkObject(cdkObject),
+        TcpRouteActionProperty {
       /**
        * An object that represents the targets that traffic is routed to when a request matches the
        * route.
@@ -5161,7 +5184,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.TcpRouteMatchProperty,
-    ) : CdkObject(cdkObject), TcpRouteMatchProperty {
+    ) : CdkObject(cdkObject),
+        TcpRouteMatchProperty {
       /**
        * The port number to match on.
        *
@@ -5377,7 +5401,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.TcpRouteProperty,
-    ) : CdkObject(cdkObject), TcpRouteProperty {
+    ) : CdkObject(cdkObject),
+        TcpRouteProperty {
       /**
        * The action to take if a match is determined.
        *
@@ -5515,7 +5540,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.TcpTimeoutProperty,
-    ) : CdkObject(cdkObject), TcpTimeoutProperty {
+    ) : CdkObject(cdkObject),
+        TcpTimeoutProperty {
       /**
        * An object that represents an idle timeout.
        *
@@ -5644,7 +5670,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.WeightedTargetProperty,
-    ) : CdkObject(cdkObject), WeightedTargetProperty {
+    ) : CdkObject(cdkObject),
+        WeightedTargetProperty {
       /**
        * The targeted port of the weighted object.
        *

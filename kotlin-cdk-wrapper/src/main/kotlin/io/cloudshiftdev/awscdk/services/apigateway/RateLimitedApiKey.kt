@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class RateLimitedApiKey(
   cdkObject: software.amazon.awscdk.services.apigateway.RateLimitedApiKey,
-) : Resource(cdkObject), IApiKey {
+) : Resource(cdkObject),
+    IApiKey {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.RateLimitedApiKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

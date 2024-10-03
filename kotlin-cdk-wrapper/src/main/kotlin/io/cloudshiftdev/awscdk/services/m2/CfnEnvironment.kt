@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEnvironment(
   cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -810,7 +812,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty,
-    ) : CdkObject(cdkObject), EfsStorageConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EfsStorageConfigurationProperty {
       /**
        * The file system identifier.
        *
@@ -920,7 +923,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.FsxStorageConfigurationProperty,
-    ) : CdkObject(cdkObject), FsxStorageConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FsxStorageConfigurationProperty {
       /**
        * The file system identifier.
        *
@@ -1013,7 +1017,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty,
-    ) : CdkObject(cdkObject), HighAvailabilityConfigProperty {
+    ) : CdkObject(cdkObject),
+        HighAvailabilityConfigProperty {
       /**
        * The number of instances in a high availability configuration.
        *
@@ -1177,7 +1182,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.StorageConfigurationProperty,
-    ) : CdkObject(cdkObject), StorageConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        StorageConfigurationProperty {
       /**
        * Defines the storage configuration for an Amazon EFS file system.
        *

@@ -98,7 +98,8 @@ public interface BackupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.BackupProps,
-  ) : CdkObject(cdkObject), BackupProps {
+  ) : CdkObject(cdkObject),
+      BackupProps {
     /**
      * A daily time range in 24-hours UTC format in which backups preferably execute.
      *

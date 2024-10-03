@@ -261,7 +261,8 @@ public interface CfnReportGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroupProps,
-  ) : CdkObject(cdkObject), CfnReportGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnReportGroupProps {
     /**
      * When deleting a report group, specifies if reports within the report group should be deleted.
      *

@@ -17,7 +17,8 @@ import kotlin.String
 public interface IPrivateSubnet : ISubnet {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IPrivateSubnet,
-  ) : CdkObject(cdkObject), IPrivateSubnet {
+  ) : CdkObject(cdkObject),
+      IPrivateSubnet {
     /**
      * Apply the given removal policy to this resource.
      *

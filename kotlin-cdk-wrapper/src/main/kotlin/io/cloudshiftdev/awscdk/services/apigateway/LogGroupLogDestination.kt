@@ -25,7 +25,8 @@ import io.cloudshiftdev.awscdk.services.logs.ILogGroup
  */
 public open class LogGroupLogDestination(
   cdkObject: software.amazon.awscdk.services.apigateway.LogGroupLogDestination,
-) : CdkObject(cdkObject), IAccessLogDestination {
+) : CdkObject(cdkObject),
+    IAccessLogDestination {
   public constructor(logGroup: ILogGroup) :
       this(software.amazon.awscdk.services.apigateway.LogGroupLogDestination(logGroup.let(ILogGroup.Companion::unwrap))
   )

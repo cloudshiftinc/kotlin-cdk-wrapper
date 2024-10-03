@@ -136,7 +136,8 @@ public interface IEcsContainerDefinition : IConstruct {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IEcsContainerDefinition,
-  ) : CdkObject(cdkObject), IEcsContainerDefinition {
+  ) : CdkObject(cdkObject),
+      IEcsContainerDefinition {
     /**
      * Add a Volume to this container.
      *

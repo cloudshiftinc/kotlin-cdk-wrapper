@@ -43,7 +43,8 @@ import kotlin.jvm.JvmName
  */
 public open class WebSocketIamAuthorizer(
   cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer,
-) : CdkObject(cdkObject), IWebSocketRouteAuthorizer {
+) : CdkObject(cdkObject),
+    IWebSocketRouteAuthorizer {
   public constructor() :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer()
   )

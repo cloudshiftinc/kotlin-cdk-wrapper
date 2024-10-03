@@ -32,6 +32,7 @@ import kotlin.jvm.JvmName
  * .videoContentSourceUrl("videoContentSourceUrl")
  * // the properties below are optional
  * .availSuppression(AvailSuppressionProperty.builder()
+ * .fillPolicy("fillPolicy")
  * .mode("mode")
  * .value("value")
  * .build())
@@ -777,7 +778,8 @@ public interface CfnPlaybackConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfigurationProps,
-  ) : CdkObject(cdkObject), CfnPlaybackConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnPlaybackConfigurationProps {
     /**
      * The URL for the ad decision server (ADS).
      *

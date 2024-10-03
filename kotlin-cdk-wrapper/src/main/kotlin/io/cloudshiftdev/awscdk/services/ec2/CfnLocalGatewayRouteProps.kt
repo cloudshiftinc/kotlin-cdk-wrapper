@@ -122,7 +122,8 @@ public interface CfnLocalGatewayRouteProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteProps,
-  ) : CdkObject(cdkObject), CfnLocalGatewayRouteProps {
+  ) : CdkObject(cdkObject),
+      CfnLocalGatewayRouteProps {
     /**
      * The CIDR block used for destination matches.
      *

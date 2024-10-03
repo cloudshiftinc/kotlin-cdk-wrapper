@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStep(
   cdkObject: software.amazon.awscdk.services.emr.CfnStep,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -496,7 +497,8 @@ public open class CfnStep(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty,
-    ) : CdkObject(cdkObject), HadoopJarStepConfigProperty {
+    ) : CdkObject(cdkObject),
+        HadoopJarStepConfigProperty {
       /**
        * A list of command line arguments passed to the JAR file's main function when executed.
        *
@@ -622,7 +624,8 @@ public open class CfnStep(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnStep.KeyValueProperty,
-    ) : CdkObject(cdkObject), KeyValueProperty {
+    ) : CdkObject(cdkObject),
+        KeyValueProperty {
       /**
        * The unique identifier of a key-value pair.
        *

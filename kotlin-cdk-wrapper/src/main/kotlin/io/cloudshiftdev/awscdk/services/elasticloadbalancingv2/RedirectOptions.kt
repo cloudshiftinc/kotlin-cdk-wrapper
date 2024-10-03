@@ -206,7 +206,8 @@ public interface RedirectOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.RedirectOptions,
-  ) : CdkObject(cdkObject), RedirectOptions {
+  ) : CdkObject(cdkObject),
+      RedirectOptions {
     /**
      * The hostname.
      *

@@ -93,7 +93,8 @@ public interface ResourceServerScopeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.ResourceServerScopeProps,
-  ) : CdkObject(cdkObject), ResourceServerScopeProps {
+  ) : CdkObject(cdkObject),
+      ResourceServerScopeProps {
     /**
      * A description of the scope.
      */

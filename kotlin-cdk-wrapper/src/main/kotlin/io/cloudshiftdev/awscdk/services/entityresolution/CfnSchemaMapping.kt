@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -37,6 +38,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .type("type")
  * // the properties below are optional
  * .groupName("groupName")
+ * .hashed(false)
  * .matchKey("matchKey")
  * .subType("subType")
  * .build()))
@@ -54,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSchemaMapping(
   cdkObject: software.amazon.awscdk.services.entityresolution.CfnSchemaMapping,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -358,7 +362,8 @@ public open class CfnSchemaMapping(
   }
 
   /**
-   * An object containing `FieldName` , `Type` , `GroupName` , `MatchKey` , and `SubType` .
+   * An object containing `FieldName` , `Type` , `GroupName` , `MatchKey` , `Hashing` , and
+   * `SubType` .
    *
    * Example:
    *
@@ -372,6 +377,7 @@ public open class CfnSchemaMapping(
    * .type("type")
    * // the properties below are optional
    * .groupName("groupName")
+   * .hashed(false)
    * .matchKey("matchKey")
    * .subType("subType")
    * .build();
@@ -400,13 +406,25 @@ public open class CfnSchemaMapping(
     public fun groupName(): String? = unwrap(this).getGroupName()
 
     /**
+     * Indicates if the column values are hashed in the schema input.
+     *
+     * If the value is set to `TRUE` , the column values are hashed. If the value is set to `FALSE`
+     * , the column values are cleartext.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-hashed)
+     */
+    public fun hashed(): Any? = unwrap(this).getHashed()
+
+    /**
      * A key that allows grouping of multiple input attributes into a unified matching group.
      *
      * For example, consider a scenario where the source table contains various addresses, such as
      * `business_address` and `shipping_address` . By assigning a `matchKey` called `address` to both
      * attributes, AWS Entity Resolution will match records across these fields to create a
-     * consolidated matching group. If no `matchKey` is specified for a column, it won't be utilized
-     * for matching purposes but will still be included in the output table.
+     * consolidated matching group.
+     *
+     * If no `matchKey` is specified for a column, it won't be utilized for matching purposes but
+     * will still be included in the output table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-matchkey)
      */
@@ -446,13 +464,29 @@ public open class CfnSchemaMapping(
       public fun groupName(groupName: String)
 
       /**
+       * @param hashed Indicates if the column values are hashed in the schema input.
+       * If the value is set to `TRUE` , the column values are hashed. If the value is set to
+       * `FALSE` , the column values are cleartext.
+       */
+      public fun hashed(hashed: Boolean)
+
+      /**
+       * @param hashed Indicates if the column values are hashed in the schema input.
+       * If the value is set to `TRUE` , the column values are hashed. If the value is set to
+       * `FALSE` , the column values are cleartext.
+       */
+      public fun hashed(hashed: IResolvable)
+
+      /**
        * @param matchKey A key that allows grouping of multiple input attributes into a unified
        * matching group.
        * For example, consider a scenario where the source table contains various addresses, such as
        * `business_address` and `shipping_address` . By assigning a `matchKey` called `address` to both
        * attributes, AWS Entity Resolution will match records across these fields to create a
-       * consolidated matching group. If no `matchKey` is specified for a column, it won't be utilized
-       * for matching purposes but will still be included in the output table.
+       * consolidated matching group.
+       *
+       * If no `matchKey` is specified for a column, it won't be utilized for matching purposes but
+       * will still be included in the output table.
        */
       public fun matchKey(matchKey: String)
 
@@ -492,13 +526,33 @@ public open class CfnSchemaMapping(
       }
 
       /**
+       * @param hashed Indicates if the column values are hashed in the schema input.
+       * If the value is set to `TRUE` , the column values are hashed. If the value is set to
+       * `FALSE` , the column values are cleartext.
+       */
+      override fun hashed(hashed: Boolean) {
+        cdkBuilder.hashed(hashed)
+      }
+
+      /**
+       * @param hashed Indicates if the column values are hashed in the schema input.
+       * If the value is set to `TRUE` , the column values are hashed. If the value is set to
+       * `FALSE` , the column values are cleartext.
+       */
+      override fun hashed(hashed: IResolvable) {
+        cdkBuilder.hashed(hashed.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
        * @param matchKey A key that allows grouping of multiple input attributes into a unified
        * matching group.
        * For example, consider a scenario where the source table contains various addresses, such as
        * `business_address` and `shipping_address` . By assigning a `matchKey` called `address` to both
        * attributes, AWS Entity Resolution will match records across these fields to create a
-       * consolidated matching group. If no `matchKey` is specified for a column, it won't be utilized
-       * for matching purposes but will still be included in the output table.
+       * consolidated matching group.
+       *
+       * If no `matchKey` is specified for a column, it won't be utilized for matching purposes but
+       * will still be included in the output table.
        */
       override fun matchKey(matchKey: String) {
         cdkBuilder.matchKey(matchKey)
@@ -525,7 +579,8 @@ public open class CfnSchemaMapping(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty,
-    ) : CdkObject(cdkObject), SchemaInputAttributeProperty {
+    ) : CdkObject(cdkObject),
+        SchemaInputAttributeProperty {
       /**
        * A string containing the field name.
        *
@@ -546,13 +601,25 @@ public open class CfnSchemaMapping(
       override fun groupName(): String? = unwrap(this).getGroupName()
 
       /**
+       * Indicates if the column values are hashed in the schema input.
+       *
+       * If the value is set to `TRUE` , the column values are hashed. If the value is set to
+       * `FALSE` , the column values are cleartext.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-hashed)
+       */
+      override fun hashed(): Any? = unwrap(this).getHashed()
+
+      /**
        * A key that allows grouping of multiple input attributes into a unified matching group.
        *
        * For example, consider a scenario where the source table contains various addresses, such as
        * `business_address` and `shipping_address` . By assigning a `matchKey` called `address` to both
        * attributes, AWS Entity Resolution will match records across these fields to create a
-       * consolidated matching group. If no `matchKey` is specified for a column, it won't be utilized
-       * for matching purposes but will still be included in the output table.
+       * consolidated matching group.
+       *
+       * If no `matchKey` is specified for a column, it won't be utilized for matching purposes but
+       * will still be included in the output table.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-matchkey)
        */

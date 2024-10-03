@@ -80,7 +80,8 @@ public interface S3EventSelector {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudtrail.S3EventSelector,
-  ) : CdkObject(cdkObject), S3EventSelector {
+  ) : CdkObject(cdkObject),
+      S3EventSelector {
     /**
      * S3 bucket.
      */

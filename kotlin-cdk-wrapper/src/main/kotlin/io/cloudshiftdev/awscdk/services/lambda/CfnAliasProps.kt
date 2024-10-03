@@ -281,7 +281,8 @@ public interface CfnAliasProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.CfnAliasProps,
-  ) : CdkObject(cdkObject), CfnAliasProps {
+  ) : CdkObject(cdkObject),
+      CfnAliasProps {
     /**
      * A description of the alias.
      *

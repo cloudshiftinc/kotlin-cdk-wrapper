@@ -2,13 +2,13 @@
 
 package io.cloudshiftdev.awscdk.cxapi
 
-import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactManifest
-import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactType
-import io.cloudshiftdev.awscdk.cloudassembly.schema.AssetManifestProperties
-import io.cloudshiftdev.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties
-import io.cloudshiftdev.awscdk.cloudassembly.schema.MetadataEntry
-import io.cloudshiftdev.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties
-import io.cloudshiftdev.awscdk.cloudassembly.schema.TreeArtifactProperties
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.ArtifactManifest
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.ArtifactType
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.AssetManifestProperties
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.AwsCloudFormationStackProperties
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.MetadataEntry
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.NestedCloudAssemblyProperties
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.TreeArtifactProperties
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Boolean
@@ -26,8 +26,9 @@ import kotlin.jvm.JvmName
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.cloudassembly.schema.*;
+ * import io.cloudshiftdev.awscdk.cloud_assembly_schema.*;
  * import io.cloudshiftdev.awscdk.cxapi.*;
+ * Object assumeRoleAdditionalOptions;
  * CloudAssembly cloudAssembly;
  * NestedCloudAssemblyArtifact nestedCloudAssemblyArtifact =
  * NestedCloudAssemblyArtifact.Builder.create(cloudAssembly, "name")
@@ -46,6 +47,8 @@ import kotlin.jvm.JvmName
  * .properties(AwsCloudFormationStackProperties.builder()
  * .templateFile("templateFile")
  * // the properties below are optional
+ * .assumeRoleAdditionalOptions(Map.of(
+ * "assumeRoleAdditionalOptionsKey", assumeRoleAdditionalOptions))
  * .assumeRoleArn("assumeRoleArn")
  * .assumeRoleExternalId("assumeRoleExternalId")
  * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
@@ -53,10 +56,13 @@ import kotlin.jvm.JvmName
  * .lookupRole(BootstrapRole.builder()
  * .arn("arn")
  * // the properties below are optional
+ * .assumeRoleAdditionalOptions(Map.of(
+ * "assumeRoleAdditionalOptionsKey", assumeRoleAdditionalOptions))
  * .assumeRoleExternalId("assumeRoleExternalId")
  * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
  * .requiresBootstrapStackVersion(123)
  * .build())
+ * .notificationArns(List.of("notificationArns"))
  * .parameters(Map.of(
  * "parametersKey", "parameters"))
  * .requiresBootstrapStackVersion(123)
@@ -179,7 +185,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("96bcbb184e451768106b6f3257a88b7eed0ad2c6d69a847c891ae86e79c2caaa")
+    @JvmName("e44f7afd2088b4b9dd84c8bfd40629f44dc01cdd51646d2a77a9f262678c6447")
     public fun properties(properties: AwsCloudFormationStackProperties.Builder.() -> Unit)
 
     /**
@@ -199,7 +205,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("8d7709add77d497c9f5df7a50657dab1044e1eda730957b04d51c8933216402f")
+    @JvmName("1f1c61536a05dbac2da96a497b18800d9a131415e9667caec7cd283b7426d814")
     public fun properties(properties: AssetManifestProperties.Builder.() -> Unit)
 
     /**
@@ -219,7 +225,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("d2c4121c265fcedd8998f80de849166240f9d87a48132c18e05e23693421244a")
+    @JvmName("670d3c9f19c2c72991a5317d40b701c8814361aa7f0291fae70b998ca5423998")
     public fun properties(properties: TreeArtifactProperties.Builder.() -> Unit)
 
     /**
@@ -239,7 +245,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("819747833b8339b5bc1d2c29e7c27851a4cf6462a17bb23412f9234bb42e411f")
+    @JvmName("a3e41b4ea4614eab80f28645b7d0d89d77c9fab840126bb4668c3ce4d651ac5b")
     public fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit)
 
     /**
@@ -332,7 +338,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("96bcbb184e451768106b6f3257a88b7eed0ad2c6d69a847c891ae86e79c2caaa")
+    @JvmName("e44f7afd2088b4b9dd84c8bfd40629f44dc01cdd51646d2a77a9f262678c6447")
     override fun properties(properties: AwsCloudFormationStackProperties.Builder.() -> Unit): Unit =
         properties(AwsCloudFormationStackProperties(properties))
 
@@ -355,7 +361,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("8d7709add77d497c9f5df7a50657dab1044e1eda730957b04d51c8933216402f")
+    @JvmName("1f1c61536a05dbac2da96a497b18800d9a131415e9667caec7cd283b7426d814")
     override fun properties(properties: AssetManifestProperties.Builder.() -> Unit): Unit =
         properties(AssetManifestProperties(properties))
 
@@ -378,7 +384,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("d2c4121c265fcedd8998f80de849166240f9d87a48132c18e05e23693421244a")
+    @JvmName("670d3c9f19c2c72991a5317d40b701c8814361aa7f0291fae70b998ca5423998")
     override fun properties(properties: TreeArtifactProperties.Builder.() -> Unit): Unit =
         properties(TreeArtifactProperties(properties))
 
@@ -401,7 +407,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("819747833b8339b5bc1d2c29e7c27851a4cf6462a17bb23412f9234bb42e411f")
+    @JvmName("a3e41b4ea4614eab80f28645b7d0d89d77c9fab840126bb4668c3ce4d651ac5b")
     override fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit): Unit =
         properties(NestedCloudAssemblyProperties(properties))
 

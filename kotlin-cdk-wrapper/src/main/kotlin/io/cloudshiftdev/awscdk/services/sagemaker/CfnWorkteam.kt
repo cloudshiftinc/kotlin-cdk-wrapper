@@ -62,7 +62,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWorkteam(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sagemaker.CfnWorkteam(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -605,7 +607,8 @@ public open class CfnWorkteam(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.CognitoMemberDefinitionProperty,
-    ) : CdkObject(cdkObject), CognitoMemberDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        CognitoMemberDefinitionProperty {
       /**
        * An identifier for an application client.
        *
@@ -824,7 +827,8 @@ public open class CfnWorkteam(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty,
-    ) : CdkObject(cdkObject), MemberDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        MemberDefinitionProperty {
       /**
        * The Amazon Cognito user group that is part of the work team.
        *
@@ -921,7 +925,8 @@ public open class CfnWorkteam(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty,
-    ) : CdkObject(cdkObject), NotificationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NotificationConfigurationProperty {
       /**
        * The ARN for the Amazon SNS topic to which notifications should be published.
        *
@@ -1018,7 +1023,8 @@ public open class CfnWorkteam(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty,
-    ) : CdkObject(cdkObject), OidcMemberDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        OidcMemberDefinitionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-oidcmemberdefinition.html#cfn-sagemaker-workteam-oidcmemberdefinition-oidcgroups)
        */

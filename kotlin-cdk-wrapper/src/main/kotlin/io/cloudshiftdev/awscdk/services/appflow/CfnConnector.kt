@@ -47,7 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConnector(
   cdkObject: software.amazon.awscdk.services.appflow.CfnConnector,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -388,7 +389,8 @@ public open class CfnConnector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnector.ConnectorProvisioningConfigProperty,
-    ) : CdkObject(cdkObject), ConnectorProvisioningConfigProperty {
+    ) : CdkObject(cdkObject),
+        ConnectorProvisioningConfigProperty {
       /**
        * Contains information about the configuration of the lambda which is being registered as the
        * connector.
@@ -474,7 +476,8 @@ public open class CfnConnector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnector.LambdaConnectorProvisioningConfigProperty,
-    ) : CdkObject(cdkObject), LambdaConnectorProvisioningConfigProperty {
+    ) : CdkObject(cdkObject),
+        LambdaConnectorProvisioningConfigProperty {
       /**
        * Lambda ARN of the connector being registered.
        *

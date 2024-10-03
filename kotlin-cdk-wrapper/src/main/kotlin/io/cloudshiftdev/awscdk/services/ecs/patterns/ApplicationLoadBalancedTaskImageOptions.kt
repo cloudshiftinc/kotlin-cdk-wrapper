@@ -473,7 +473,8 @@ public interface ApplicationLoadBalancedTaskImageOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageOptions,
-  ) : CdkObject(cdkObject), ApplicationLoadBalancedTaskImageOptions {
+  ) : CdkObject(cdkObject),
+      ApplicationLoadBalancedTaskImageOptions {
     /**
      * The command that's passed to the container.
      *

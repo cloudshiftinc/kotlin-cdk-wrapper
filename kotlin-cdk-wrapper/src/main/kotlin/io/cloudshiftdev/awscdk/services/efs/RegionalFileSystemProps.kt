@@ -81,7 +81,8 @@ public interface RegionalFileSystemProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.RegionalFileSystemProps,
-  ) : CdkObject(cdkObject), RegionalFileSystemProps {
+  ) : CdkObject(cdkObject),
+      RegionalFileSystemProps {
     /**
      * AWS KMS key used to protect the encrypted file system.
      *

@@ -64,7 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAlias(
   cdkObject: software.amazon.awscdk.services.paymentcryptography.CfnAlias,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

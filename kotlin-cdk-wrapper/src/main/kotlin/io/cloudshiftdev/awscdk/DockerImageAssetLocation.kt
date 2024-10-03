@@ -98,7 +98,8 @@ public interface DockerImageAssetLocation {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.DockerImageAssetLocation,
-  ) : CdkObject(cdkObject), DockerImageAssetLocation {
+  ) : CdkObject(cdkObject),
+      DockerImageAssetLocation {
     /**
      * The tag of the image in Amazon ECR.
      *

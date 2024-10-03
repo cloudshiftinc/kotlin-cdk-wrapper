@@ -165,7 +165,8 @@ public interface CfnPromptProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnPromptProps,
-  ) : CdkObject(cdkObject), CfnPromptProps {
+  ) : CdkObject(cdkObject),
+      CfnPromptProps {
     /**
      * The description of the prompt.
      *

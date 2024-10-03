@@ -73,7 +73,8 @@ public interface IPolicyValidationPluginBeta1 {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IPolicyValidationPluginBeta1,
-  ) : CdkObject(cdkObject), IPolicyValidationPluginBeta1 {
+  ) : CdkObject(cdkObject),
+      IPolicyValidationPluginBeta1 {
     /**
      * The name of the plugin that will be displayed in the validation report.
      */

@@ -38,7 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLocalGatewayRoute(
   cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

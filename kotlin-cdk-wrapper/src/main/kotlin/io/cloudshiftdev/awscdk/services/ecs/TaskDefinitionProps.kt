@@ -593,7 +593,8 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.TaskDefinitionProps,
-  ) : CdkObject(cdkObject), TaskDefinitionProps {
+  ) : CdkObject(cdkObject),
+      TaskDefinitionProps {
     /**
      * The task launch type compatiblity requirement.
      */

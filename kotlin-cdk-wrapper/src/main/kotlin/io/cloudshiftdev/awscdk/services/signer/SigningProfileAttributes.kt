@@ -74,7 +74,8 @@ public interface SigningProfileAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.signer.SigningProfileAttributes,
-  ) : CdkObject(cdkObject), SigningProfileAttributes {
+  ) : CdkObject(cdkObject),
+      SigningProfileAttributes {
     /**
      * The name of signing profile.
      */

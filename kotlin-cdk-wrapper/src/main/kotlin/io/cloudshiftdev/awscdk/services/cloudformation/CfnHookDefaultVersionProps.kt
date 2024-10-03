@@ -113,7 +113,8 @@ public interface CfnHookDefaultVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersionProps,
-  ) : CdkObject(cdkObject), CfnHookDefaultVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnHookDefaultVersionProps {
     /**
      * The name of the hook.
      *

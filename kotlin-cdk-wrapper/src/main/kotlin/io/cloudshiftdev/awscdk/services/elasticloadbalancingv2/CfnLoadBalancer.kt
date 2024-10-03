@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLoadBalancer(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -143,12 +145,12 @@ public open class CfnLoadBalancer(
   }
 
   /**
-   * The IP address type.
+   * Note: Internal load balancers must use the `ipv4` IP address type.
    */
   public open fun ipAddressType(): String? = unwrap(this).getIpAddressType()
 
   /**
-   * The IP address type.
+   * Note: Internal load balancers must use the `ipv4` IP address type.
    */
   public open fun ipAddressType(`value`: String) {
     unwrap(this).setIpAddressType(`value`)
@@ -317,13 +319,25 @@ public open class CfnLoadBalancer(
         fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: String)
 
     /**
-     * The IP address type.
+     * Note: Internal load balancers must use the `ipv4` IP address type.
      *
-     * The possible values are `ipv4` (for IPv4 addresses) and `dualstack` (for IPv4 and IPv6
-     * addresses). You can’t specify `dualstack` for a load balancer with a UDP or TCP_UDP listener.
+     * [Application Load Balancers] The IP address type. The possible values are `ipv4` (for only
+     * IPv4 addresses), `dualstack` (for IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4`
+     * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
+     *
+     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting
+     * to an Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
+     * balancer cannot complete the authentication process, resulting in HTTP 500 errors.
+     *
+     * [Network Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
+     * addresses) and `dualstack` (for IPv4 and IPv6 addresses). You can’t specify `dualstack` for a
+     * load balancer with a UDP or TCP_UDP listener.
+     *
+     * [Gateway Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
+     * addresses) and `dualstack` (for IPv4 and IPv6 addresses).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype)
-     * @param ipAddressType The IP address type. 
+     * @param ipAddressType Note: Internal load balancers must use the `ipv4` IP address type. 
      */
     public fun ipAddressType(ipAddressType: String)
 
@@ -589,13 +603,25 @@ public open class CfnLoadBalancer(
     }
 
     /**
-     * The IP address type.
+     * Note: Internal load balancers must use the `ipv4` IP address type.
      *
-     * The possible values are `ipv4` (for IPv4 addresses) and `dualstack` (for IPv4 and IPv6
-     * addresses). You can’t specify `dualstack` for a load balancer with a UDP or TCP_UDP listener.
+     * [Application Load Balancers] The IP address type. The possible values are `ipv4` (for only
+     * IPv4 addresses), `dualstack` (for IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4`
+     * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
+     *
+     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting
+     * to an Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
+     * balancer cannot complete the authentication process, resulting in HTTP 500 errors.
+     *
+     * [Network Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
+     * addresses) and `dualstack` (for IPv4 and IPv6 addresses). You can’t specify `dualstack` for a
+     * load balancer with a UDP or TCP_UDP listener.
+     *
+     * [Gateway Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
+     * addresses) and `dualstack` (for IPv4 and IPv6 addresses).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype)
-     * @param ipAddressType The IP address type. 
+     * @param ipAddressType Note: Internal load balancers must use the `ipv4` IP address type. 
      */
     override fun ipAddressType(ipAddressType: String) {
       cdkBuilder.ipAddressType(ipAddressType)
@@ -1210,7 +1236,8 @@ public open class CfnLoadBalancer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.LoadBalancerAttributeProperty,
-    ) : CdkObject(cdkObject), LoadBalancerAttributeProperty {
+    ) : CdkObject(cdkObject),
+        LoadBalancerAttributeProperty {
       /**
        * The name of the attribute.
        *
@@ -1449,7 +1476,8 @@ public open class CfnLoadBalancer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty,
-    ) : CdkObject(cdkObject), SubnetMappingProperty {
+    ) : CdkObject(cdkObject),
+        SubnetMappingProperty {
       /**
        * [Network Load Balancers] The allocation ID of the Elastic IP address for an internet-facing
        * load balancer.

@@ -53,6 +53,10 @@ import kotlin.Unit
  * .stoppedDeployment(true) // default: false
  * .deploymentInAlarm(true)
  * .build())
+ * // whether the deployment group was configured to have CodeDeploy install a termination hook into
+ * an Auto Scaling group
+ * // default: false
+ * .terminationHook(true)
  * .build();
  * ```
  */
@@ -135,7 +139,8 @@ public interface AutoRollbackConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.AutoRollbackConfig,
-  ) : CdkObject(cdkObject), AutoRollbackConfig {
+  ) : CdkObject(cdkObject),
+      AutoRollbackConfig {
     /**
      * Whether to automatically roll back a deployment during which one of the configured CloudWatch
      * alarms for this Deployment Group went off.

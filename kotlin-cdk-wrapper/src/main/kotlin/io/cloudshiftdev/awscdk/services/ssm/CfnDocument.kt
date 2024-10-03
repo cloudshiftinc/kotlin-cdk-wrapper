@@ -44,7 +44,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDocument(
   cdkObject: software.amazon.awscdk.services.ssm.CfnDocument,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -726,11 +728,11 @@ public open class CfnDocument(
      *
      * * For the key *SourceUrl* , the value is an S3 bucket location. For example:
      *
-     * `"Values": [ "s3://doc-example-bucket/my-folder" ]`
+     * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix" ]`
      *
      * * For the key *S3FileUrl* , the value is a file in an S3 bucket. For example:
      *
-     * `"Values": [ "s3://doc-example-bucket/my-folder/my-file.py" ]`
+     * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix/my-file.py" ]`
      *
      * * For the key *AttachmentReference* , the value is constructed from the name of another SSM
      * document in your account, a version number of that document, and a file attached to that
@@ -771,11 +773,11 @@ public open class CfnDocument(
        *
        * * For the key *SourceUrl* , the value is an S3 bucket location. For example:
        *
-       * `"Values": [ "s3://doc-example-bucket/my-folder" ]`
+       * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix" ]`
        *
        * * For the key *S3FileUrl* , the value is a file in an S3 bucket. For example:
        *
-       * `"Values": [ "s3://doc-example-bucket/my-folder/my-file.py" ]`
+       * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix/my-file.py" ]`
        *
        * * For the key *AttachmentReference* , the value is constructed from the name of another SSM
        * document in your account, a version number of that document, and a file attached to that
@@ -798,11 +800,11 @@ public open class CfnDocument(
        *
        * * For the key *SourceUrl* , the value is an S3 bucket location. For example:
        *
-       * `"Values": [ "s3://doc-example-bucket/my-folder" ]`
+       * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix" ]`
        *
        * * For the key *S3FileUrl* , the value is a file in an S3 bucket. For example:
        *
-       * `"Values": [ "s3://doc-example-bucket/my-folder/my-file.py" ]`
+       * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix/my-file.py" ]`
        *
        * * For the key *AttachmentReference* , the value is constructed from the name of another SSM
        * document in your account, a version number of that document, and a file attached to that
@@ -846,11 +848,11 @@ public open class CfnDocument(
        *
        * * For the key *SourceUrl* , the value is an S3 bucket location. For example:
        *
-       * `"Values": [ "s3://doc-example-bucket/my-folder" ]`
+       * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix" ]`
        *
        * * For the key *S3FileUrl* , the value is a file in an S3 bucket. For example:
        *
-       * `"Values": [ "s3://doc-example-bucket/my-folder/my-file.py" ]`
+       * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix/my-file.py" ]`
        *
        * * For the key *AttachmentReference* , the value is constructed from the name of another SSM
        * document in your account, a version number of that document, and a file attached to that
@@ -875,11 +877,11 @@ public open class CfnDocument(
        *
        * * For the key *SourceUrl* , the value is an S3 bucket location. For example:
        *
-       * `"Values": [ "s3://doc-example-bucket/my-folder" ]`
+       * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix" ]`
        *
        * * For the key *S3FileUrl* , the value is a file in an S3 bucket. For example:
        *
-       * `"Values": [ "s3://doc-example-bucket/my-folder/my-file.py" ]`
+       * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix/my-file.py" ]`
        *
        * * For the key *AttachmentReference* , the value is constructed from the name of another SSM
        * document in your account, a version number of that document, and a file attached to that
@@ -901,7 +903,8 @@ public open class CfnDocument(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnDocument.AttachmentsSourceProperty,
-    ) : CdkObject(cdkObject), AttachmentsSourceProperty {
+    ) : CdkObject(cdkObject),
+        AttachmentsSourceProperty {
       /**
        * The key of a key-value pair that identifies the location of an attachment to a document.
        *
@@ -923,11 +926,11 @@ public open class CfnDocument(
        *
        * * For the key *SourceUrl* , the value is an S3 bucket location. For example:
        *
-       * `"Values": [ "s3://doc-example-bucket/my-folder" ]`
+       * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix" ]`
        *
        * * For the key *S3FileUrl* , the value is a file in an S3 bucket. For example:
        *
-       * `"Values": [ "s3://doc-example-bucket/my-folder/my-file.py" ]`
+       * `"Values": [ "s3://amzn-s3-demo-bucket/my-prefix/my-file.py" ]`
        *
        * * For the key *AttachmentReference* , the value is constructed from the name of another SSM
        * document in your account, a version number of that document, and a file attached to that
@@ -1041,7 +1044,8 @@ public open class CfnDocument(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnDocument.DocumentRequiresProperty,
-    ) : CdkObject(cdkObject), DocumentRequiresProperty {
+    ) : CdkObject(cdkObject),
+        DocumentRequiresProperty {
       /**
        * The name of the required SSM document.
        *

@@ -101,7 +101,8 @@ public interface EcsDeploymentGroupAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupAttributes,
-  ) : CdkObject(cdkObject), EcsDeploymentGroupAttributes {
+  ) : CdkObject(cdkObject),
+      EcsDeploymentGroupAttributes {
     /**
      * The reference to the CodeDeploy ECS Application that this Deployment Group belongs to.
      */

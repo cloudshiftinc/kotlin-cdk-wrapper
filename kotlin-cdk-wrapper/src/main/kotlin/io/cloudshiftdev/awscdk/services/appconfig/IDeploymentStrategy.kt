@@ -58,7 +58,8 @@ public interface IDeploymentStrategy : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.IDeploymentStrategy,
-  ) : CdkObject(cdkObject), IDeploymentStrategy {
+  ) : CdkObject(cdkObject),
+      IDeploymentStrategy {
     /**
      * Apply the given removal policy to this resource.
      *

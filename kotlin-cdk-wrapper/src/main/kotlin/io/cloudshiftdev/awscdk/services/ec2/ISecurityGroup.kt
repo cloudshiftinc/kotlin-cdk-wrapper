@@ -181,7 +181,8 @@ public interface ISecurityGroup : IResource, IPeer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.ISecurityGroup,
-  ) : CdkObject(cdkObject), ISecurityGroup {
+  ) : CdkObject(cdkObject),
+      ISecurityGroup {
     /**
      * Add an egress rule for the current security group.
      *

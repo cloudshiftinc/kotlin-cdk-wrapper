@@ -261,7 +261,8 @@ public interface CfnBillingGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroupProps,
-  ) : CdkObject(cdkObject), CfnBillingGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnBillingGroupProps {
     /**
      * The set of accounts that will be under the billing group.
      *

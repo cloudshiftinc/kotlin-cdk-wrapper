@@ -136,7 +136,8 @@ public interface HealthCheckConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.HealthCheckConfig,
-  ) : CdkObject(cdkObject), HealthCheckConfig {
+  ) : CdkObject(cdkObject),
+      HealthCheckConfig {
     /**
      * The number of consecutive health checks that an endpoint must pass or fail for Route 53 to
      * change the current status of the endpoint from unhealthy to healthy or vice versa.

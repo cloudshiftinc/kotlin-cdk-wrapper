@@ -160,7 +160,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInstance(
   cdkObject: software.amazon.awscdk.services.ec2.CfnInstance,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1428,7 +1430,7 @@ public open class CfnInstance(
      *
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -1444,7 +1446,7 @@ public open class CfnInstance(
      *
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -1460,7 +1462,7 @@ public open class CfnInstance(
      *
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -2573,7 +2575,7 @@ public open class CfnInstance(
      *
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -2591,7 +2593,7 @@ public open class CfnInstance(
      *
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -2609,7 +2611,7 @@ public open class CfnInstance(
      *
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -3402,9 +3404,9 @@ public open class CfnInstance(
   /**
    * Specifies input parameter values for an SSM document in AWS Systems Manager .
    *
-   * `AssociationParameter` is a property of the [Amazon EC2 Instance
-   * SsmAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations.html)
-   * property.
+   * `AssociationParameter` is a property of the
+   * [SsmAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociation.html)
+   * property type.
    *
    * Example:
    *
@@ -3488,7 +3490,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty,
-    ) : CdkObject(cdkObject), AssociationParameterProperty {
+    ) : CdkObject(cdkObject),
+        AssociationParameterProperty {
       /**
        * The name of an input parameter that is in the associated SSM document.
        *
@@ -3853,7 +3856,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
+    ) : CdkObject(cdkObject),
+        BlockDeviceMappingProperty {
       /**
        * The device name (for example, `/dev/sdh` or `xvdh` ).
        *
@@ -4022,7 +4026,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty,
-    ) : CdkObject(cdkObject), CpuOptionsProperty {
+    ) : CdkObject(cdkObject),
+        CpuOptionsProperty {
       /**
        * The number of CPU cores for the instance.
        *
@@ -4127,7 +4132,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty,
-    ) : CdkObject(cdkObject), CreditSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        CreditSpecificationProperty {
       /**
        * The credit option for CPU usage of the instance.
        *
@@ -4161,9 +4167,9 @@ public open class CfnInstance(
   /**
    * Specifies a block device for an EBS volume.
    *
-   * `Ebs` is a property of the [Amazon EC2
-   * BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-mapping.html)
-   * property.
+   * `Ebs` is a property of the
+   * [BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-blockdevicemapping.html)
+   * property type.
    *
    *
    * After the instance is running, you can modify only the `DeleteOnTermination` parameters for the
@@ -4676,7 +4682,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty,
-    ) : CdkObject(cdkObject), EbsProperty {
+    ) : CdkObject(cdkObject),
+        EbsProperty {
       /**
        * Indicates whether the EBS volume is deleted on instance termination.
        *
@@ -4848,10 +4855,7 @@ public open class CfnInstance(
    * G4dn, or G5 instances.
    *
    * Specifies the type of Elastic GPU. An Elastic GPU is a GPU resource that you can attach to your
-   * Amazon EC2 instance to accelerate the graphics performance of your applications. For more
-   * information, see [Amazon EC2 Elastic
-   * GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html) in the *Amazon
-   * EC2 User Guide for Windows Instances* .
+   * Amazon EC2 instance to accelerate the graphics performance of your applications.
    *
    * `ElasticGpuSpecification` is a property of the
    * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
@@ -4875,11 +4879,6 @@ public open class CfnInstance(
     /**
      * The type of Elastic Graphics accelerator.
      *
-     * For more information about the values to specify for `Type` , see [Elastic Graphics
-     * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-     * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-     * User Guide for Windows Instances* .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticgpuspecification.html#cfn-ec2-instance-elasticgpuspecification-type)
      */
     public fun type(): String
@@ -4891,10 +4890,6 @@ public open class CfnInstance(
     public interface Builder {
       /**
        * @param type The type of Elastic Graphics accelerator. 
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
        */
       public fun type(type: String)
     }
@@ -4906,10 +4901,6 @@ public open class CfnInstance(
 
       /**
        * @param type The type of Elastic Graphics accelerator. 
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -4922,14 +4913,10 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty,
-    ) : CdkObject(cdkObject), ElasticGpuSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ElasticGpuSpecificationProperty {
       /**
        * The type of Elastic Graphics accelerator.
-       *
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticgpuspecification.html#cfn-ec2-instance-elasticgpuspecification-type)
        */
@@ -5042,7 +5029,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty,
-    ) : CdkObject(cdkObject), ElasticInferenceAcceleratorProperty {
+    ) : CdkObject(cdkObject),
+        ElasticInferenceAcceleratorProperty {
       /**
        * The number of elastic inference accelerators to attach to the instance.
        *
@@ -5155,7 +5143,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty,
-    ) : CdkObject(cdkObject), EnclaveOptionsProperty {
+    ) : CdkObject(cdkObject),
+        EnclaveOptionsProperty {
       /**
        * If this parameter is set to `true` , the instance is enabled for AWS Nitro Enclaves;
        *
@@ -5306,7 +5295,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty,
-    ) : CdkObject(cdkObject), HibernationOptionsProperty {
+    ) : CdkObject(cdkObject),
+        HibernationOptionsProperty {
       /**
        * Set to `true` to enable your instance for hibernation.
        *
@@ -5404,7 +5394,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty,
-    ) : CdkObject(cdkObject), InstanceIpv6AddressProperty {
+    ) : CdkObject(cdkObject),
+        InstanceIpv6AddressProperty {
       /**
        * The IPv6 address.
        *
@@ -5568,7 +5559,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        LaunchTemplateSpecificationProperty {
       /**
        * The ID of the launch template.
        *
@@ -5682,7 +5674,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty,
-    ) : CdkObject(cdkObject), LicenseSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        LicenseSpecificationProperty {
       /**
        * The Amazon Resource Name (ARN) of the license configuration.
        *
@@ -6268,7 +6261,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInterfaceProperty {
       /**
        * Indicates whether to assign a carrier IP address to the network interface.
        *
@@ -6449,7 +6443,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty,
-    ) : CdkObject(cdkObject), NoDeviceProperty
+    ) : CdkObject(cdkObject),
+        NoDeviceProperty
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}): NoDeviceProperty {
@@ -6654,7 +6649,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty,
-    ) : CdkObject(cdkObject), PrivateDnsNameOptionsProperty {
+    ) : CdkObject(cdkObject),
+        PrivateDnsNameOptionsProperty {
       /**
        * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
        *
@@ -6810,7 +6806,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty,
-    ) : CdkObject(cdkObject), PrivateIpAddressSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PrivateIpAddressSpecificationProperty {
       /**
        * Indicates whether the private IPv4 address is the primary private IPv4 address.
        *
@@ -6958,7 +6955,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty,
-    ) : CdkObject(cdkObject), SsmAssociationProperty {
+    ) : CdkObject(cdkObject),
+        SsmAssociationProperty {
       /**
        * The input parameter values to use with the associated SSM document.
        *
@@ -6993,7 +6991,7 @@ public open class CfnInstance(
   }
 
   /**
-   * The current state of the instance.
+   * Describes the current state of an instance.
    *
    * Example:
    *
@@ -7013,6 +7011,26 @@ public open class CfnInstance(
     /**
      * The state of the instance as a 16-bit unsigned integer.
      *
+     * The high byte is all of the bits between 2^8 and (2^16)-1, which equals decimal values
+     * between 256 and 65,535. These numerical values are used for internal purposes and should be
+     * ignored.
+     *
+     * The low byte is all of the bits between 2^0 and (2^8)-1, which equals decimal values between
+     * 0 and 255.
+     *
+     * The valid values for instance-state-code will all be in the range of the low byte and they
+     * are:
+     *
+     * * `0` : `pending`
+     * * `16` : `running`
+     * * `32` : `shutting-down`
+     * * `48` : `terminated`
+     * * `64` : `stopping`
+     * * `80` : `stopped`
+     *
+     * You can ignore the high byte value by zeroing out all of the bits above 2^8 or 256 in
+     * decimal.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-state.html#cfn-ec2-instance-state-code)
      */
     public fun code(): String? = unwrap(this).getCode()
@@ -7031,6 +7049,25 @@ public open class CfnInstance(
     public interface Builder {
       /**
        * @param code The state of the instance as a 16-bit unsigned integer.
+       * The high byte is all of the bits between 2^8 and (2^16)-1, which equals decimal values
+       * between 256 and 65,535. These numerical values are used for internal purposes and should be
+       * ignored.
+       *
+       * The low byte is all of the bits between 2^0 and (2^8)-1, which equals decimal values
+       * between 0 and 255.
+       *
+       * The valid values for instance-state-code will all be in the range of the low byte and they
+       * are:
+       *
+       * * `0` : `pending`
+       * * `16` : `running`
+       * * `32` : `shutting-down`
+       * * `48` : `terminated`
+       * * `64` : `stopping`
+       * * `80` : `stopped`
+       *
+       * You can ignore the high byte value by zeroing out all of the bits above 2^8 or 256 in
+       * decimal.
        */
       public fun code(code: String)
 
@@ -7046,6 +7083,25 @@ public open class CfnInstance(
 
       /**
        * @param code The state of the instance as a 16-bit unsigned integer.
+       * The high byte is all of the bits between 2^8 and (2^16)-1, which equals decimal values
+       * between 256 and 65,535. These numerical values are used for internal purposes and should be
+       * ignored.
+       *
+       * The low byte is all of the bits between 2^0 and (2^8)-1, which equals decimal values
+       * between 0 and 255.
+       *
+       * The valid values for instance-state-code will all be in the range of the low byte and they
+       * are:
+       *
+       * * `0` : `pending`
+       * * `16` : `running`
+       * * `32` : `shutting-down`
+       * * `48` : `terminated`
+       * * `64` : `stopping`
+       * * `80` : `stopped`
+       *
+       * You can ignore the high byte value by zeroing out all of the bits above 2^8 or 256 in
+       * decimal.
        */
       override fun code(code: String) {
         cdkBuilder.code(code)
@@ -7064,9 +7120,30 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.StateProperty,
-    ) : CdkObject(cdkObject), StateProperty {
+    ) : CdkObject(cdkObject),
+        StateProperty {
       /**
        * The state of the instance as a 16-bit unsigned integer.
+       *
+       * The high byte is all of the bits between 2^8 and (2^16)-1, which equals decimal values
+       * between 256 and 65,535. These numerical values are used for internal purposes and should be
+       * ignored.
+       *
+       * The low byte is all of the bits between 2^0 and (2^8)-1, which equals decimal values
+       * between 0 and 255.
+       *
+       * The valid values for instance-state-code will all be in the range of the low byte and they
+       * are:
+       *
+       * * `0` : `pending`
+       * * `16` : `running`
+       * * `32` : `shutting-down`
+       * * `48` : `terminated`
+       * * `64` : `stopping`
+       * * `80` : `stopped`
+       *
+       * You can ignore the high byte value by zeroing out all of the bits above 2^8 or 256 in
+       * decimal.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-state.html#cfn-ec2-instance-state-code)
        */
@@ -7175,7 +7252,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty,
-    ) : CdkObject(cdkObject), VolumeProperty {
+    ) : CdkObject(cdkObject),
+        VolumeProperty {
       /**
        * The device name (for example, `/dev/sdh` or `xvdh` ).
        *

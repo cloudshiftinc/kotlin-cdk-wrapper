@@ -32,7 +32,8 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBa
  */
 public open class ApplicationLoadBalancerEndpoint(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpoint,
-) : CdkObject(cdkObject), IEndpoint {
+) : CdkObject(cdkObject),
+    IEndpoint {
   public
       constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer)
       :

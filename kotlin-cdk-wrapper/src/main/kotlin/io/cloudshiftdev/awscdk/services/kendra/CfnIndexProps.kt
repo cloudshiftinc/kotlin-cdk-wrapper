@@ -527,7 +527,8 @@ public interface CfnIndexProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kendra.CfnIndexProps,
-  ) : CdkObject(cdkObject), CfnIndexProps {
+  ) : CdkObject(cdkObject),
+      CfnIndexProps {
     /**
      * Specifies additional capacity units configured for your Enterprise Edition index.
      *

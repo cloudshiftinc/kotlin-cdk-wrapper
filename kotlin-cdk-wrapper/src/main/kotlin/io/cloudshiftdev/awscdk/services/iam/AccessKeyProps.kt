@@ -119,7 +119,8 @@ public interface AccessKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.AccessKeyProps,
-  ) : CdkObject(cdkObject), AccessKeyProps {
+  ) : CdkObject(cdkObject),
+      AccessKeyProps {
     /**
      * A CloudFormation-specific value that signifies the access key should be replaced/rotated.
      *

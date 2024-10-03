@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDeploymentStrategy(
   cdkObject: software.amazon.awscdk.services.appconfig.CfnDeploymentStrategy,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

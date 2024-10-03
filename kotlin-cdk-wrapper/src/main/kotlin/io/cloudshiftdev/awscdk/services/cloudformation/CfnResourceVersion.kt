@@ -57,7 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResourceVersion(
   cdkObject: software.amazon.awscdk.services.cloudformation.CfnResourceVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -92,7 +93,7 @@ public open class CfnResourceVersion(
   /**
    * For resource type extensions, the provisioning behavior of the resource type.
    *
-   * AWS CloudFormation determines the provisioning type during registration, based on the types of
+   * CloudFormation determines the provisioning type during registration, based on the types of
    * handlers in the schema handler package submitted.
    *
    * Valid values include:
@@ -131,7 +132,7 @@ public open class CfnResourceVersion(
    * Valid values include:
    *
    * * `PRIVATE` : The extension is only visible and usable within the account in which it is
-   * registered. AWS CloudFormation marks any extensions you register as `PRIVATE` .
+   * registered. CloudFormation marks any extensions you register as `PRIVATE` .
    * * `PUBLIC` : The extension is publicly visible and usable within any AWS account.
    */
   public open fun attrVisibility(): String = unwrap(this).getAttrVisibility()
@@ -521,7 +522,8 @@ public open class CfnResourceVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudformation.CfnResourceVersion.LoggingConfigProperty,
-    ) : CdkObject(cdkObject), LoggingConfigProperty {
+    ) : CdkObject(cdkObject),
+        LoggingConfigProperty {
       /**
        * The Amazon CloudWatch logs group to which CloudFormation sends error logging information
        * when invoking the type's handlers.

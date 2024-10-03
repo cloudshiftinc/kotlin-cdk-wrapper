@@ -76,7 +76,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWebACL(
   cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1651,7 +1653,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesACFPRuleSetProperty,
-    ) : CdkObject(cdkObject), AWSManagedRulesACFPRuleSetProperty {
+    ) : CdkObject(cdkObject),
+        AWSManagedRulesACFPRuleSetProperty {
       /**
        * The path of the account creation endpoint for your application.
        *
@@ -2067,7 +2070,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesATPRuleSetProperty,
-    ) : CdkObject(cdkObject), AWSManagedRulesATPRuleSetProperty {
+    ) : CdkObject(cdkObject),
+        AWSManagedRulesATPRuleSetProperty {
       /**
        * Allow the use of regular expressions in the login page path.
        *
@@ -2301,7 +2305,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AWSManagedRulesBotControlRuleSetProperty,
-    ) : CdkObject(cdkObject), AWSManagedRulesBotControlRuleSetProperty {
+    ) : CdkObject(cdkObject),
+        AWSManagedRulesBotControlRuleSetProperty {
       /**
        * Applies only to the targeted inspection level.
        *
@@ -2474,7 +2479,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AllowActionProperty,
-    ) : CdkObject(cdkObject), AllowActionProperty {
+    ) : CdkObject(cdkObject),
+        AllowActionProperty {
       /**
        * Defines custom handling for the web request.
        *
@@ -2585,7 +2591,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AndStatementProperty,
-    ) : CdkObject(cdkObject), AndStatementProperty {
+    ) : CdkObject(cdkObject),
+        AndStatementProperty {
       /**
        * The statements to combine with AND logic.
        *
@@ -2766,7 +2773,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AssociationConfigProperty,
-    ) : CdkObject(cdkObject), AssociationConfigProperty {
+    ) : CdkObject(cdkObject),
+        AssociationConfigProperty {
       /**
        * Customizes the maximum size of the request body that your protected CloudFront, API
        * Gateway, Amazon Cognito, App Runner, and Verified Access resources forward to AWS WAF for
@@ -2929,7 +2937,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.BlockActionProperty,
-    ) : CdkObject(cdkObject), BlockActionProperty {
+    ) : CdkObject(cdkObject),
+        BlockActionProperty {
       /**
        * Defines a custom response for the web request.
        *
@@ -3085,7 +3094,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.BodyProperty,
-    ) : CdkObject(cdkObject), BodyProperty {
+    ) : CdkObject(cdkObject),
+        BodyProperty {
       /**
        * What AWS WAF should do if the body is larger than AWS WAF can inspect.
        *
@@ -3556,7 +3566,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ByteMatchStatementProperty,
-    ) : CdkObject(cdkObject), ByteMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        ByteMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.
        *
@@ -3810,7 +3821,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CaptchaActionProperty,
-    ) : CdkObject(cdkObject), CaptchaActionProperty {
+    ) : CdkObject(cdkObject),
+        CaptchaActionProperty {
       /**
        * Defines custom handling for the web request, used when the `CAPTCHA` inspection determines
        * that the request's token is valid and unexpired.
@@ -3937,7 +3949,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CaptchaConfigProperty,
-    ) : CdkObject(cdkObject), CaptchaConfigProperty {
+    ) : CdkObject(cdkObject),
+        CaptchaConfigProperty {
       /**
        * Determines how long a `CAPTCHA` timestamp in the token remains valid after the client
        * successfully solves a `CAPTCHA` puzzle.
@@ -4124,7 +4137,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ChallengeActionProperty,
-    ) : CdkObject(cdkObject), ChallengeActionProperty {
+    ) : CdkObject(cdkObject),
+        ChallengeActionProperty {
       /**
        * Defines custom handling for the web request, used when the challenge inspection determines
        * that the request's token is valid and unexpired.
@@ -4251,7 +4265,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ChallengeConfigProperty,
-    ) : CdkObject(cdkObject), ChallengeConfigProperty {
+    ) : CdkObject(cdkObject),
+        ChallengeConfigProperty {
       /**
        * Determines how long a challenge timestamp in the token remains valid after the client
        * successfully responds to a challenge.
@@ -4407,7 +4422,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CookieMatchPatternProperty,
-    ) : CdkObject(cdkObject), CookieMatchPatternProperty {
+    ) : CdkObject(cdkObject),
+        CookieMatchPatternProperty {
       /**
        * Inspect all cookies.
        *
@@ -4675,7 +4691,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CookiesProperty,
-    ) : CdkObject(cdkObject), CookiesProperty {
+    ) : CdkObject(cdkObject),
+        CookiesProperty {
       /**
        * The filter to use to identify the subset of cookies to inspect in a web request.
        *
@@ -4859,7 +4876,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CountActionProperty,
-    ) : CdkObject(cdkObject), CountActionProperty {
+    ) : CdkObject(cdkObject),
+        CountActionProperty {
       /**
        * Defines custom handling for the web request.
        *
@@ -4979,7 +4997,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CustomHTTPHeaderProperty,
-    ) : CdkObject(cdkObject), CustomHTTPHeaderProperty {
+    ) : CdkObject(cdkObject),
+        CustomHTTPHeaderProperty {
       /**
        * The name of the custom header.
        *
@@ -5141,7 +5160,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CustomRequestHandlingProperty,
-    ) : CdkObject(cdkObject), CustomRequestHandlingProperty {
+    ) : CdkObject(cdkObject),
+        CustomRequestHandlingProperty {
       /**
        * The HTTP headers to insert into the request. Duplicate header names are not allowed.
        *
@@ -5271,7 +5291,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CustomResponseBodyProperty,
-    ) : CdkObject(cdkObject), CustomResponseBodyProperty {
+    ) : CdkObject(cdkObject),
+        CustomResponseBodyProperty {
       /**
        * The payload of the custom response.
        *
@@ -5522,7 +5543,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.CustomResponseProperty,
-    ) : CdkObject(cdkObject), CustomResponseProperty {
+    ) : CdkObject(cdkObject),
+        CustomResponseProperty {
       /**
        * References the response body that you want AWS WAF to return to the web request client.
        *
@@ -5729,7 +5751,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.DefaultActionProperty,
-    ) : CdkObject(cdkObject), DefaultActionProperty {
+    ) : CdkObject(cdkObject),
+        DefaultActionProperty {
       /**
        * Specifies that AWS WAF should allow requests by default.
        *
@@ -5821,7 +5844,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ExcludedRuleProperty,
-    ) : CdkObject(cdkObject), ExcludedRuleProperty {
+    ) : CdkObject(cdkObject),
+        ExcludedRuleProperty {
       /**
        * The name of the rule whose action you want to override to `Count` .
        *
@@ -5935,7 +5959,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.FieldIdentifierProperty,
-    ) : CdkObject(cdkObject), FieldIdentifierProperty {
+    ) : CdkObject(cdkObject),
+        FieldIdentifierProperty {
       /**
        * The name of the field.
        *
@@ -6124,12 +6149,13 @@ public open class CfnWebACL(
     public fun headers(): Any? = unwrap(this).getHeaders()
 
     /**
-     * Match against the request's JA3 fingerprint.
+     * Available for use with Amazon CloudFront distributions and Application Load Balancers.
      *
-     * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-     * request. This fingerprint serves as a unique identifier for the client's TLS configuration. AWS
-     * WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-     * information for the calculation. Almost all web requests include this information.
+     * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+     * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+     * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint for
+     * each request that has enough TLS Client Hello information for the calculation. Almost all web
+     * requests include this information.
      *
      *
      * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -6380,11 +6406,13 @@ public open class CfnWebACL(
       public fun headers(headers: HeadersProperty.Builder.() -> Unit)
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -6403,11 +6431,13 @@ public open class CfnWebACL(
       public fun ja3Fingerprint(ja3Fingerprint: IResolvable)
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -6426,11 +6456,13 @@ public open class CfnWebACL(
       public fun ja3Fingerprint(ja3Fingerprint: JA3FingerprintProperty)
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -6725,11 +6757,13 @@ public open class CfnWebACL(
           headers(HeadersProperty(headers))
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -6750,11 +6784,13 @@ public open class CfnWebACL(
       }
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -6775,11 +6811,13 @@ public open class CfnWebACL(
       }
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -6927,7 +6965,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.FieldToMatchProperty,
-    ) : CdkObject(cdkObject), FieldToMatchProperty {
+    ) : CdkObject(cdkObject),
+        FieldToMatchProperty {
       /**
        * Inspect all query arguments.
        *
@@ -6990,12 +7029,13 @@ public open class CfnWebACL(
       override fun headers(): Any? = unwrap(this).getHeaders()
 
       /**
-       * Match against the request's JA3 fingerprint.
+       * Available for use with Amazon CloudFront distributions and Application Load Balancers.
        *
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -7253,7 +7293,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ForwardedIPConfigurationProperty,
-    ) : CdkObject(cdkObject), ForwardedIPConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ForwardedIPConfigurationProperty {
       /**
        * The match status to assign to the web request if the request doesn't have a valid IP
        * address in the specified position.
@@ -7528,7 +7569,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.GeoMatchStatementProperty,
-    ) : CdkObject(cdkObject), GeoMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        GeoMatchStatementProperty {
       /**
        * An array of two-character country codes that you want to match against, for example, `[
        * "US", "CN" ]` , from the alpha-2 country ISO codes of the ISO 3166 international standard.
@@ -7705,7 +7747,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.HeaderMatchPatternProperty,
-    ) : CdkObject(cdkObject), HeaderMatchPatternProperty {
+    ) : CdkObject(cdkObject),
+        HeaderMatchPatternProperty {
       /**
        * Inspect all headers.
        *
@@ -7976,7 +8019,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.HeadersProperty,
-    ) : CdkObject(cdkObject), HeadersProperty {
+    ) : CdkObject(cdkObject),
+        HeadersProperty {
       /**
        * The filter to use to identify the subset of headers to inspect in a web request.
        *
@@ -8232,7 +8276,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.IPSetForwardedIPConfigurationProperty,
-    ) : CdkObject(cdkObject), IPSetForwardedIPConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        IPSetForwardedIPConfigurationProperty {
       /**
        * The match status to assign to the web request if the request doesn't have a valid IP
        * address in the specified position.
@@ -8473,7 +8518,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.IPSetReferenceStatementProperty,
-    ) : CdkObject(cdkObject), IPSetReferenceStatementProperty {
+    ) : CdkObject(cdkObject),
+        IPSetReferenceStatementProperty {
       /**
        * The Amazon Resource Name (ARN) of the `IPSet` that this statement references.
        *
@@ -8586,7 +8632,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ImmunityTimePropertyProperty,
-    ) : CdkObject(cdkObject), ImmunityTimePropertyProperty {
+    ) : CdkObject(cdkObject),
+        ImmunityTimePropertyProperty {
       /**
        * The amount of time, in seconds, that a `CAPTCHA` or challenge timestamp is considered valid
        * by AWS WAF .
@@ -8619,12 +8666,13 @@ public open class CfnWebACL(
   }
 
   /**
-   * Match against the request's JA3 fingerprint.
+   * Available for use with Amazon CloudFront distributions and Application Load Balancers.
    *
-   * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-   * request. This fingerprint serves as a unique identifier for the client's TLS configuration. AWS
-   * WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-   * information for the calculation. Almost all web requests include this information.
+   * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash derived
+   * from the TLS Client Hello of an incoming request. This fingerprint serves as a unique identifier
+   * for the client's TLS configuration. AWS WAF calculates and logs this fingerprint for each request
+   * that has enough TLS Client Hello information for the calculation. Almost all web requests include
+   * this information.
    *
    *
    * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -8708,7 +8756,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.JA3FingerprintProperty,
-    ) : CdkObject(cdkObject), JA3FingerprintProperty {
+    ) : CdkObject(cdkObject),
+        JA3FingerprintProperty {
       /**
        * The match status to assign to the web request if the request doesn't have a JA3
        * fingerprint.
@@ -8754,6 +8803,10 @@ public open class CfnWebACL(
    *
    * Example JSON: `"JsonBody": { "MatchPattern": { "All": {} }, "MatchScope": "ALL" }`
    *
+   * For additional information about this request component option, see [JSON
+   * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+   * in the *AWS WAF Developer Guide* .
+   *
    * Example:
    *
    * ```
@@ -8790,15 +8843,13 @@ public open class CfnWebACL(
      * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
      * first parsing failure that it encounters.
      *
-     * AWS WAF does its best to parse the entire JSON body, but might be forced to stop for reasons
-     * such as invalid characters, duplicate keys, truncation, and any content whose root node isn't an
-     * object or an array.
      *
-     * AWS WAF parses the JSON in the following examples as two valid key, value pairs:
+     * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for
+     * invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+     * information, see [JSON
+     * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+     * in the *AWS WAF Developer Guide* .
      *
-     * * Missing comma: `{"key1":"value1""key2":"value2"}`
-     * * Missing colon: `{"key1":"value1","key2""value2"}`
-     * * Extra colons: `{"key1"::"value1","key2""value2"}`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-jsonbody.html#cfn-wafv2-webacl-jsonbody-invalidfallbackbehavior)
      */
@@ -8875,15 +8926,12 @@ public open class CfnWebACL(
        * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
        * first parsing failure that it encounters.
        *
-       * AWS WAF does its best to parse the entire JSON body, but might be forced to stop for
-       * reasons such as invalid characters, duplicate keys, truncation, and any content whose root
-       * node isn't an object or an array.
        *
-       * AWS WAF parses the JSON in the following examples as two valid key, value pairs:
-       *
-       * * Missing comma: `{"key1":"value1""key2":"value2"}`
-       * * Missing colon: `{"key1":"value1","key2""value2"}`
-       * * Extra colons: `{"key1"::"value1","key2""value2"}`
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
        */
       public fun invalidFallbackBehavior(invalidFallbackBehavior: String)
 
@@ -8965,15 +9013,12 @@ public open class CfnWebACL(
        * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
        * first parsing failure that it encounters.
        *
-       * AWS WAF does its best to parse the entire JSON body, but might be forced to stop for
-       * reasons such as invalid characters, duplicate keys, truncation, and any content whose root
-       * node isn't an object or an array.
        *
-       * AWS WAF parses the JSON in the following examples as two valid key, value pairs:
-       *
-       * * Missing comma: `{"key1":"value1""key2":"value2"}`
-       * * Missing colon: `{"key1":"value1","key2""value2"}`
-       * * Extra colons: `{"key1"::"value1","key2""value2"}`
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
        */
       override fun invalidFallbackBehavior(invalidFallbackBehavior: String) {
         cdkBuilder.invalidFallbackBehavior(invalidFallbackBehavior)
@@ -9053,7 +9098,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.JsonBodyProperty,
-    ) : CdkObject(cdkObject), JsonBodyProperty {
+    ) : CdkObject(cdkObject),
+        JsonBodyProperty {
       /**
        * What AWS WAF should do if it fails to completely parse the JSON body. The options are the
        * following:.
@@ -9068,15 +9114,13 @@ public open class CfnWebACL(
        * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
        * first parsing failure that it encounters.
        *
-       * AWS WAF does its best to parse the entire JSON body, but might be forced to stop for
-       * reasons such as invalid characters, duplicate keys, truncation, and any content whose root
-       * node isn't an object or an array.
        *
-       * AWS WAF parses the JSON in the following examples as two valid key, value pairs:
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
        *
-       * * Missing comma: `{"key1":"value1""key2":"value2"}`
-       * * Missing colon: `{"key1":"value1","key2""value2"}`
-       * * Extra colons: `{"key1"::"value1","key2""value2"}`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-jsonbody.html#cfn-wafv2-webacl-jsonbody-invalidfallbackbehavior)
        */
@@ -9300,7 +9344,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.JsonMatchPatternProperty,
-    ) : CdkObject(cdkObject), JsonMatchPatternProperty {
+    ) : CdkObject(cdkObject),
+        JsonMatchPatternProperty {
       /**
        * Match all of the elements. See also `MatchScope` in the `JsonBody` `FieldToMatch`
        * specification.
@@ -9462,7 +9507,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.LabelMatchStatementProperty,
-    ) : CdkObject(cdkObject), LabelMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        LabelMatchStatementProperty {
       /**
        * The string to match against. The setting you provide for this depends on the match
        * statement's `Scope` setting:.
@@ -9561,7 +9607,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.LabelProperty,
-    ) : CdkObject(cdkObject), LabelProperty {
+    ) : CdkObject(cdkObject),
+        LabelProperty {
       /**
        * The label string.
        *
@@ -10254,7 +10301,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ManagedRuleGroupConfigProperty,
-    ) : CdkObject(cdkObject), ManagedRuleGroupConfigProperty {
+    ) : CdkObject(cdkObject),
+        ManagedRuleGroupConfigProperty {
       /**
        * Additional configuration for using the account creation fraud prevention (ACFP) managed
        * rule group, `AWSManagedRulesACFPRuleSet` .
@@ -10847,7 +10895,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ManagedRuleGroupStatementProperty,
-    ) : CdkObject(cdkObject), ManagedRuleGroupStatementProperty {
+    ) : CdkObject(cdkObject),
+        ManagedRuleGroupStatementProperty {
       /**
        * Rules in the referenced rule group whose actions are set to `Count` .
        *
@@ -11041,7 +11090,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.NotStatementProperty,
-    ) : CdkObject(cdkObject), NotStatementProperty {
+    ) : CdkObject(cdkObject),
+        NotStatementProperty {
       /**
        * The statement to negate.
        *
@@ -11149,7 +11199,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.OrStatementProperty,
-    ) : CdkObject(cdkObject), OrStatementProperty {
+    ) : CdkObject(cdkObject),
+        OrStatementProperty {
       /**
        * The statements to combine with OR logic.
        *
@@ -11287,7 +11338,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.OverrideActionProperty,
-    ) : CdkObject(cdkObject), OverrideActionProperty {
+    ) : CdkObject(cdkObject),
+        OverrideActionProperty {
       /**
        * Override the rule group evaluation result to count only.
        *
@@ -11945,7 +11997,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateBasedStatementCustomKeyProperty,
-    ) : CdkObject(cdkObject), RateBasedStatementCustomKeyProperty {
+    ) : CdkObject(cdkObject),
+        RateBasedStatementCustomKeyProperty {
       /**
        * Use the value of a cookie in the request as an aggregate key.
        *
@@ -12622,7 +12675,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateBasedStatementProperty,
-    ) : CdkObject(cdkObject), RateBasedStatementProperty {
+    ) : CdkObject(cdkObject),
+        RateBasedStatementProperty {
       /**
        * Setting that indicates how to aggregate the request counts.
        *
@@ -12905,7 +12959,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitCookieProperty,
-    ) : CdkObject(cdkObject), RateLimitCookieProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitCookieProperty {
       /**
        * The name of the cookie to use.
        *
@@ -13098,7 +13153,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitHeaderProperty,
-    ) : CdkObject(cdkObject), RateLimitHeaderProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitHeaderProperty {
       /**
        * The name of the header to use.
        *
@@ -13206,7 +13262,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitLabelNamespaceProperty,
-    ) : CdkObject(cdkObject), RateLimitLabelNamespaceProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitLabelNamespaceProperty {
       /**
        * The namespace to use for aggregation.
        *
@@ -13387,7 +13444,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitQueryArgumentProperty,
-    ) : CdkObject(cdkObject), RateLimitQueryArgumentProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitQueryArgumentProperty {
       /**
        * The name of the query argument to use.
        *
@@ -13562,7 +13620,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitQueryStringProperty,
-    ) : CdkObject(cdkObject), RateLimitQueryStringProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitQueryStringProperty {
       /**
        * Text transformations eliminate some of the unusual formatting that attackers use in web
        * requests in an effort to bypass detection.
@@ -13728,7 +13787,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitUriPathProperty,
-    ) : CdkObject(cdkObject), RateLimitUriPathProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitUriPathProperty {
       /**
        * Text transformations eliminate some of the unusual formatting that attackers use in web
        * requests in an effort to bypass detection.
@@ -13988,7 +14048,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RegexMatchStatementProperty,
-    ) : CdkObject(cdkObject), RegexMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        RegexMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.
        *
@@ -14270,7 +14331,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RegexPatternSetReferenceStatementProperty,
-    ) : CdkObject(cdkObject), RegexPatternSetReferenceStatementProperty {
+    ) : CdkObject(cdkObject),
+        RegexPatternSetReferenceStatementProperty {
       /**
        * The Amazon Resource Name (ARN) of the `RegexPatternSet` that this statement references.
        *
@@ -14405,7 +14467,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RequestBodyAssociatedResourceTypeConfigProperty,
-    ) : CdkObject(cdkObject), RequestBodyAssociatedResourceTypeConfigProperty {
+    ) : CdkObject(cdkObject),
+        RequestBodyAssociatedResourceTypeConfigProperty {
       /**
        * Specifies the maximum size of the web request body component that an associated CloudFront,
        * API Gateway, Amazon Cognito, App Runner, or Verified Access resource should send to AWS WAF
@@ -15346,7 +15409,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RequestInspectionACFPProperty,
-    ) : CdkObject(cdkObject), RequestInspectionACFPProperty {
+    ) : CdkObject(cdkObject),
+        RequestInspectionACFPProperty {
       /**
        * The names of the fields in the request payload that contain your customer's primary
        * physical address.
@@ -15864,7 +15928,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RequestInspectionProperty,
-    ) : CdkObject(cdkObject), RequestInspectionProperty {
+    ) : CdkObject(cdkObject),
+        RequestInspectionProperty {
       /**
        * The name of the field in the request payload that contains your customer's password.
        *
@@ -16097,7 +16162,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionBodyContainsProperty,
-    ) : CdkObject(cdkObject), ResponseInspectionBodyContainsProperty {
+    ) : CdkObject(cdkObject),
+        ResponseInspectionBodyContainsProperty {
       /**
        * Strings in the body of the response that indicate a failed login or account creation
        * attempt.
@@ -16335,7 +16401,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionHeaderProperty,
-    ) : CdkObject(cdkObject), ResponseInspectionHeaderProperty {
+    ) : CdkObject(cdkObject),
+        ResponseInspectionHeaderProperty {
       /**
        * Values in the response header with the specified name that indicate a failed login or
        * account creation attempt.
@@ -16582,7 +16649,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionJsonProperty,
-    ) : CdkObject(cdkObject), ResponseInspectionJsonProperty {
+    ) : CdkObject(cdkObject),
+        ResponseInspectionJsonProperty {
       /**
        * Values for the specified identifier in the response JSON that indicate a failed login or
        * account creation attempt.
@@ -16928,7 +16996,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionProperty,
-    ) : CdkObject(cdkObject), ResponseInspectionProperty {
+    ) : CdkObject(cdkObject),
+        ResponseInspectionProperty {
       /**
        * Configures inspection of the response body for success and failure indicators.
        *
@@ -17177,7 +17246,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionStatusCodeProperty,
-    ) : CdkObject(cdkObject), ResponseInspectionStatusCodeProperty {
+    ) : CdkObject(cdkObject),
+        ResponseInspectionStatusCodeProperty {
       /**
        * Status codes in the response that indicate a failed login or account creation attempt.
        *
@@ -17379,7 +17449,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RuleActionOverrideProperty,
-    ) : CdkObject(cdkObject), RuleActionOverrideProperty {
+    ) : CdkObject(cdkObject),
+        RuleActionOverrideProperty {
       /**
        * The override action to use, in place of the configured action of the rule in the rule
        * group.
@@ -17848,7 +17919,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RuleActionProperty,
-    ) : CdkObject(cdkObject), RuleActionProperty {
+    ) : CdkObject(cdkObject),
+        RuleActionProperty {
       /**
        * Instructs AWS WAF to allow the web request.
        *
@@ -18194,7 +18266,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RuleGroupReferenceStatementProperty,
-    ) : CdkObject(cdkObject), RuleGroupReferenceStatementProperty {
+    ) : CdkObject(cdkObject),
+        RuleGroupReferenceStatementProperty {
       /**
        * The Amazon Resource Name (ARN) of the entity.
        *
@@ -19036,7 +19109,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RuleProperty,
-    ) : CdkObject(cdkObject), RuleProperty {
+    ) : CdkObject(cdkObject),
+        RuleProperty {
       /**
        * The action that AWS WAF should take on a web request when it matches the rule's statement.
        *
@@ -19245,7 +19319,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.SingleHeaderProperty,
-    ) : CdkObject(cdkObject), SingleHeaderProperty {
+    ) : CdkObject(cdkObject),
+        SingleHeaderProperty {
       /**
        * The name of the query header to inspect.
        *
@@ -19334,7 +19409,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.SingleQueryArgumentProperty,
-    ) : CdkObject(cdkObject), SingleQueryArgumentProperty {
+    ) : CdkObject(cdkObject),
+        SingleQueryArgumentProperty {
       /**
        * The name of the query argument to inspect.
        *
@@ -19621,7 +19697,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.SizeConstraintStatementProperty,
-    ) : CdkObject(cdkObject), SizeConstraintStatementProperty {
+    ) : CdkObject(cdkObject),
+        SizeConstraintStatementProperty {
       /**
        * The operator to use to compare the request part to the size setting.
        *
@@ -19934,7 +20011,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.SqliMatchStatementProperty,
-    ) : CdkObject(cdkObject), SqliMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        SqliMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.
        *
@@ -21995,7 +22073,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.StatementProperty,
-    ) : CdkObject(cdkObject), StatementProperty {
+    ) : CdkObject(cdkObject),
+        StatementProperty {
       /**
        * A logical rule statement used to combine other rule statements with AND logic.
        *
@@ -22396,7 +22475,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.TextTransformationProperty,
-    ) : CdkObject(cdkObject), TextTransformationProperty {
+    ) : CdkObject(cdkObject),
+        TextTransformationProperty {
       /**
        * Sets the relative processing order for multiple transformations.
        *
@@ -22654,7 +22734,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.VisibilityConfigProperty,
-    ) : CdkObject(cdkObject), VisibilityConfigProperty {
+    ) : CdkObject(cdkObject),
+        VisibilityConfigProperty {
       /**
        * Indicates whether the associated resource sends metrics to Amazon CloudWatch.
        *
@@ -22924,7 +23005,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.XssMatchStatementProperty,
-    ) : CdkObject(cdkObject), XssMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        XssMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.
        *

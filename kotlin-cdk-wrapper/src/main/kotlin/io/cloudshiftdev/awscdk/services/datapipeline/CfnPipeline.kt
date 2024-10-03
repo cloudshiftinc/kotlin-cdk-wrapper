@@ -23,11 +23,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * The AWS::DataPipeline::Pipeline resource specifies a data pipeline that you can use to automate
  * the movement and transformation of data.
  *
+ *
+ * AWS Data Pipeline is no longer available to new customers. Existing customers of AWS Data
+ * Pipeline can continue to use the service as normal. [Learn
+ * more](https://docs.aws.amazon.com/big-data/migrate-workloads-from-aws-data-pipeline/)
+ *
+ *
  * In each pipeline, you define pipeline objects, such as activities, schedules, data nodes, and
- * resources. For information about pipeline objects and components that you can use, see [Pipeline
- * Object
- * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
- * in the *AWS Data Pipeline Developer Guide* .
+ * resources.
  *
  * The `AWS::DataPipeline::Pipeline` resource adds tasks, schedules, and preconditions to the
  * specified pipeline. You can use `PutPipelineDefinition` to populate a new pipeline.
@@ -89,7 +92,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPipeline(
   cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -801,7 +806,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty,
-    ) : CdkObject(cdkObject), FieldProperty {
+    ) : CdkObject(cdkObject),
+        FieldProperty {
       /**
        * Specifies the name of a field for a particular object.
        *
@@ -940,7 +946,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty,
-    ) : CdkObject(cdkObject), ParameterAttributeProperty {
+    ) : CdkObject(cdkObject),
+        ParameterAttributeProperty {
       /**
        * The field identifier.
        *
@@ -1073,7 +1080,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty,
-    ) : CdkObject(cdkObject), ParameterObjectProperty {
+    ) : CdkObject(cdkObject),
+        ParameterObjectProperty {
       /**
        * The attributes of the parameter object.
        *
@@ -1181,7 +1189,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty,
-    ) : CdkObject(cdkObject), ParameterValueProperty {
+    ) : CdkObject(cdkObject),
+        ParameterValueProperty {
       /**
        * The ID of the parameter value.
        *
@@ -1340,7 +1349,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty,
-    ) : CdkObject(cdkObject), PipelineObjectProperty {
+    ) : CdkObject(cdkObject),
+        PipelineObjectProperty {
       /**
        * Key-value pairs that define the properties of the object.
        *
@@ -1460,7 +1470,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty,
-    ) : CdkObject(cdkObject), PipelineTagProperty {
+    ) : CdkObject(cdkObject),
+        PipelineTagProperty {
       /**
        * The key name of a tag.
        *

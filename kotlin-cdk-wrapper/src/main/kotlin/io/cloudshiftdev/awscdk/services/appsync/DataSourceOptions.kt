@@ -78,7 +78,8 @@ public interface DataSourceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.DataSourceOptions,
-  ) : CdkObject(cdkObject), DataSourceOptions {
+  ) : CdkObject(cdkObject),
+      DataSourceOptions {
     /**
      * The description of the data source.
      *

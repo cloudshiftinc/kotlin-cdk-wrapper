@@ -110,8 +110,8 @@ public interface CfnTrafficMirrorSessionProps {
    * The VXLAN ID for the Traffic Mirror session.
    *
    * For more information about the VXLAN protocol, see [RFC
-   * 7348](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc7348) . If you do not specify a
-   * `VirtualNetworkId` , an account-wide unique id is chosen at random.
+   * 7348](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc7348) . If you do not
+   * specify a `VirtualNetworkId` , an account-wide unique ID is chosen at random.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html#cfn-ec2-trafficmirrorsession-virtualnetworkid)
    */
@@ -180,8 +180,8 @@ public interface CfnTrafficMirrorSessionProps {
     /**
      * @param virtualNetworkId The VXLAN ID for the Traffic Mirror session.
      * For more information about the VXLAN protocol, see [RFC
-     * 7348](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc7348) . If you do not specify a
-     * `VirtualNetworkId` , an account-wide unique id is chosen at random.
+     * 7348](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc7348) . If you do not
+     * specify a `VirtualNetworkId` , an account-wide unique ID is chosen at random.
      */
     public fun virtualNetworkId(virtualNetworkId: Number)
   }
@@ -262,8 +262,8 @@ public interface CfnTrafficMirrorSessionProps {
     /**
      * @param virtualNetworkId The VXLAN ID for the Traffic Mirror session.
      * For more information about the VXLAN protocol, see [RFC
-     * 7348](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc7348) . If you do not specify a
-     * `VirtualNetworkId` , an account-wide unique id is chosen at random.
+     * 7348](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc7348) . If you do not
+     * specify a `VirtualNetworkId` , an account-wide unique ID is chosen at random.
      */
     override fun virtualNetworkId(virtualNetworkId: Number) {
       cdkBuilder.virtualNetworkId(virtualNetworkId)
@@ -275,7 +275,8 @@ public interface CfnTrafficMirrorSessionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorSessionProps,
-  ) : CdkObject(cdkObject), CfnTrafficMirrorSessionProps {
+  ) : CdkObject(cdkObject),
+      CfnTrafficMirrorSessionProps {
     /**
      * The description of the Traffic Mirror session.
      *
@@ -346,8 +347,8 @@ public interface CfnTrafficMirrorSessionProps {
      * The VXLAN ID for the Traffic Mirror session.
      *
      * For more information about the VXLAN protocol, see [RFC
-     * 7348](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc7348) . If you do not specify a
-     * `VirtualNetworkId` , an account-wide unique id is chosen at random.
+     * 7348](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc7348) . If you do not
+     * specify a `VirtualNetworkId` , an account-wide unique ID is chosen at random.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html#cfn-ec2-trafficmirrorsession-virtualnetworkid)
      */

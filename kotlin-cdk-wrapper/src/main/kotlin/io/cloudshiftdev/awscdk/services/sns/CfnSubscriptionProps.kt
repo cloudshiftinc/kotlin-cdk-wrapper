@@ -149,6 +149,9 @@ public interface CfnSubscriptionProps {
   public fun region(): String? = unwrap(this).getRegion()
 
   /**
+   * Specifies whether Amazon SNS resends the notification to the subscription when a message's
+   * attribute changes.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-replaypolicy)
    */
   public fun replayPolicy(): Any? = unwrap(this).getReplayPolicy()
@@ -274,7 +277,8 @@ public interface CfnSubscriptionProps {
     public fun region(region: String)
 
     /**
-     * @param replayPolicy the value to be set.
+     * @param replayPolicy Specifies whether Amazon SNS resends the notification to the subscription
+     * when a message's attribute changes.
      */
     public fun replayPolicy(replayPolicy: Any)
 
@@ -413,7 +417,8 @@ public interface CfnSubscriptionProps {
     }
 
     /**
-     * @param replayPolicy the value to be set.
+     * @param replayPolicy Specifies whether Amazon SNS resends the notification to the subscription
+     * when a message's attribute changes.
      */
     override fun replayPolicy(replayPolicy: Any) {
       cdkBuilder.replayPolicy(replayPolicy)
@@ -449,7 +454,8 @@ public interface CfnSubscriptionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.CfnSubscriptionProps,
-  ) : CdkObject(cdkObject), CfnSubscriptionProps {
+  ) : CdkObject(cdkObject),
+      CfnSubscriptionProps {
     /**
      * The delivery policy JSON assigned to the subscription.
      *
@@ -556,6 +562,9 @@ public interface CfnSubscriptionProps {
     override fun region(): String? = unwrap(this).getRegion()
 
     /**
+     * Specifies whether Amazon SNS resends the notification to the subscription when a message's
+     * attribute changes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-replaypolicy)
      */
     override fun replayPolicy(): Any? = unwrap(this).getReplayPolicy()

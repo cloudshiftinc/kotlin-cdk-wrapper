@@ -72,7 +72,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnImage(
   cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImage,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -729,9 +731,9 @@ public open class CfnImage(
    */
   public interface EcrConfigurationProperty {
     /**
-     * Tags for Image Builder to apply to the output container image that &amp;INS;
+     * Tags for Image Builder to apply to the output container image that Amazon Inspector scans.
      *
-     * scans. Tags can help you identify and manage your scanned images.
+     * Tags can help you identify and manage your scanned images.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-ecrconfiguration.html#cfn-imagebuilder-image-ecrconfiguration-containertags)
      */
@@ -757,15 +759,15 @@ public open class CfnImage(
     public interface Builder {
       /**
        * @param containerTags Tags for Image Builder to apply to the output container image that
-       * &amp;INS;.
-       * scans. Tags can help you identify and manage your scanned images.
+       * Amazon Inspector scans.
+       * Tags can help you identify and manage your scanned images.
        */
       public fun containerTags(containerTags: List<String>)
 
       /**
        * @param containerTags Tags for Image Builder to apply to the output container image that
-       * &amp;INS;.
-       * scans. Tags can help you identify and manage your scanned images.
+       * Amazon Inspector scans.
+       * Tags can help you identify and manage your scanned images.
        */
       public fun containerTags(vararg containerTags: String)
 
@@ -787,8 +789,8 @@ public open class CfnImage(
 
       /**
        * @param containerTags Tags for Image Builder to apply to the output container image that
-       * &amp;INS;.
-       * scans. Tags can help you identify and manage your scanned images.
+       * Amazon Inspector scans.
+       * Tags can help you identify and manage your scanned images.
        */
       override fun containerTags(containerTags: List<String>) {
         cdkBuilder.containerTags(containerTags)
@@ -796,8 +798,8 @@ public open class CfnImage(
 
       /**
        * @param containerTags Tags for Image Builder to apply to the output container image that
-       * &amp;INS;.
-       * scans. Tags can help you identify and manage your scanned images.
+       * Amazon Inspector scans.
+       * Tags can help you identify and manage your scanned images.
        */
       override fun containerTags(vararg containerTags: String): Unit =
           containerTags(containerTags.toList())
@@ -821,11 +823,12 @@ public open class CfnImage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImage.EcrConfigurationProperty,
-    ) : CdkObject(cdkObject), EcrConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EcrConfigurationProperty {
       /**
-       * Tags for Image Builder to apply to the output container image that &amp;INS;
+       * Tags for Image Builder to apply to the output container image that Amazon Inspector scans.
        *
-       * scans. Tags can help you identify and manage your scanned images.
+       * Tags can help you identify and manage your scanned images.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-ecrconfiguration.html#cfn-imagebuilder-image-ecrconfiguration-containertags)
        */
@@ -990,7 +993,8 @@ public open class CfnImage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImage.ImageScanningConfigurationProperty,
-    ) : CdkObject(cdkObject), ImageScanningConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ImageScanningConfigurationProperty {
       /**
        * Contains Amazon ECR settings for vulnerability scans.
        *
@@ -1138,7 +1142,8 @@ public open class CfnImage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImage.ImageTestsConfigurationProperty,
-    ) : CdkObject(cdkObject), ImageTestsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ImageTestsConfigurationProperty {
       /**
        * Determines if tests should run after building the image.
        *
@@ -1342,7 +1347,8 @@ public open class CfnImage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImage.WorkflowConfigurationProperty,
-    ) : CdkObject(cdkObject), WorkflowConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        WorkflowConfigurationProperty {
       /**
        * The action to take if the workflow fails.
        *
@@ -1480,7 +1486,8 @@ public open class CfnImage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImage.WorkflowParameterProperty,
-    ) : CdkObject(cdkObject), WorkflowParameterProperty {
+    ) : CdkObject(cdkObject),
+        WorkflowParameterProperty {
       /**
        * The name of the workflow parameter to set.
        *

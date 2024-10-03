@@ -121,7 +121,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDeployment(
   cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -775,7 +777,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty,
-    ) : CdkObject(cdkObject), ComponentConfigurationUpdateProperty {
+    ) : CdkObject(cdkObject),
+        ComponentConfigurationUpdateProperty {
       /**
        * A serialized JSON string that contains the configuration object to merge to target devices.
        *
@@ -1074,7 +1077,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentDeploymentSpecificationProperty,
-    ) : CdkObject(cdkObject), ComponentDeploymentSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ComponentDeploymentSpecificationProperty {
       /**
        * The version of the component.
        *
@@ -1353,7 +1357,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty,
-    ) : CdkObject(cdkObject), ComponentRunWithProperty {
+    ) : CdkObject(cdkObject),
+        ComponentRunWithProperty {
       /**
        * The POSIX system user and (optional) group to use to run this component.
        *
@@ -1558,7 +1563,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentComponentUpdatePolicyProperty,
-    ) : CdkObject(cdkObject), DeploymentComponentUpdatePolicyProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentComponentUpdatePolicyProperty {
       /**
        * Whether or not to notify components and wait for components to become safe to update.
        *
@@ -1692,7 +1698,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty,
-    ) : CdkObject(cdkObject), DeploymentConfigurationValidationPolicyProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentConfigurationValidationPolicyProperty {
       /**
        * The amount of time in seconds that a component can validate its configuration updates.
        *
@@ -1954,7 +1961,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentIoTJobConfigurationProperty,
-    ) : CdkObject(cdkObject), DeploymentIoTJobConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentIoTJobConfigurationProperty {
       /**
        * The stop configuration for the job.
        *
@@ -2198,7 +2206,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty,
-    ) : CdkObject(cdkObject), DeploymentPoliciesProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentPoliciesProperty {
       /**
        * The component update policy for the configuration deployment.
        *
@@ -2336,7 +2345,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty,
-    ) : CdkObject(cdkObject), IoTJobAbortConfigProperty {
+    ) : CdkObject(cdkObject),
+        IoTJobAbortConfigProperty {
       /**
        * The list of criteria that define when and how to cancel the configuration deployment.
        *
@@ -2494,7 +2504,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty,
-    ) : CdkObject(cdkObject), IoTJobAbortCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        IoTJobAbortCriteriaProperty {
       /**
        * The action to perform when the criteria are met.
        *
@@ -2660,7 +2671,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExecutionsRolloutConfigProperty,
-    ) : CdkObject(cdkObject), IoTJobExecutionsRolloutConfigProperty {
+    ) : CdkObject(cdkObject),
+        IoTJobExecutionsRolloutConfigProperty {
       /**
        * The exponential rate to increase the job rollout rate.
        *
@@ -2806,7 +2818,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty,
-    ) : CdkObject(cdkObject), IoTJobExponentialRolloutRateProperty {
+    ) : CdkObject(cdkObject),
+        IoTJobExponentialRolloutRateProperty {
       /**
        * The minimum number of devices that receive a pending job notification, per minute, when the
        * job starts.
@@ -2926,7 +2939,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty,
-    ) : CdkObject(cdkObject), IoTJobTimeoutConfigProperty {
+    ) : CdkObject(cdkObject),
+        IoTJobTimeoutConfigProperty {
       /**
        * The amount of time, in minutes, that devices have to complete the job.
        *
@@ -3071,7 +3085,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty,
-    ) : CdkObject(cdkObject), SystemResourceLimitsProperty {
+    ) : CdkObject(cdkObject),
+        SystemResourceLimitsProperty {
       /**
        * The maximum amount of CPU time that a component's processes can use on the core device.
        *

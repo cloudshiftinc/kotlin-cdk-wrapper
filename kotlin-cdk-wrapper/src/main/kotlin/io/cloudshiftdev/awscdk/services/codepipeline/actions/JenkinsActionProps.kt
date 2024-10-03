@@ -202,7 +202,8 @@ public interface JenkinsActionProps : CommonActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.JenkinsActionProps,
-  ) : CdkObject(cdkObject), JenkinsActionProps {
+  ) : CdkObject(cdkObject),
+      JenkinsActionProps {
     /**
      * The physical, human-readable name of the Action.
      *

@@ -5,13 +5,18 @@ package io.cloudshiftdev.awscdk.services.qbusiness
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggableV2
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -27,6 +32,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnWebExperience cfnWebExperience = CfnWebExperience.Builder.create(this, "MyCfnWebExperience")
  * .applicationId("applicationId")
  * // the properties below are optional
+ * .identityProviderConfiguration(IdentityProviderConfigurationProperty.builder()
+ * .openIdConnectConfiguration(OpenIDConnectProviderConfigurationProperty.builder()
+ * .secretsArn("secretsArn")
+ * .secretsRole("secretsRole")
+ * .build())
+ * .samlConfiguration(SamlProviderConfigurationProperty.builder()
+ * .authenticationUrl("authenticationUrl")
+ * .build())
+ * .build())
  * .roleArn("roleArn")
  * .samplePromptsControlMode("samplePromptsControlMode")
  * .subtitle("subtitle")
@@ -43,7 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWebExperience(
   cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperience,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -109,6 +125,39 @@ public open class CfnWebExperience(
    */
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  /**
+   * Provides information about the identity provider (IdP) used to authenticate end users of an
+   * Amazon Q Business web experience.
+   */
+  public open fun identityProviderConfiguration(): Any? =
+      unwrap(this).getIdentityProviderConfiguration()
+
+  /**
+   * Provides information about the identity provider (IdP) used to authenticate end users of an
+   * Amazon Q Business web experience.
+   */
+  public open fun identityProviderConfiguration(`value`: IResolvable) {
+    unwrap(this).setIdentityProviderConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Provides information about the identity provider (IdP) used to authenticate end users of an
+   * Amazon Q Business web experience.
+   */
+  public open fun identityProviderConfiguration(`value`: IdentityProviderConfigurationProperty) {
+    unwrap(this).setIdentityProviderConfiguration(`value`.let(IdentityProviderConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * Provides information about the identity provider (IdP) used to authenticate end users of an
+   * Amazon Q Business web experience.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("903cfc8bf4232863db0899fbdb71d7c0cee5d2124d73f67f9ffa315b1e8134dc")
+  public open
+      fun identityProviderConfiguration(`value`: IdentityProviderConfigurationProperty.Builder.() -> Unit):
+      Unit = identityProviderConfiguration(IdentityProviderConfigurationProperty(`value`))
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -210,7 +259,47 @@ public open class CfnWebExperience(
     public fun applicationId(applicationId: String)
 
     /**
+     * Provides information about the identity provider (IdP) used to authenticate end users of an
+     * Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-identityproviderconfiguration)
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience. 
+     */
+    public fun identityProviderConfiguration(identityProviderConfiguration: IResolvable)
+
+    /**
+     * Provides information about the identity provider (IdP) used to authenticate end users of an
+     * Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-identityproviderconfiguration)
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience. 
+     */
+    public
+        fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty)
+
+    /**
+     * Provides information about the identity provider (IdP) used to authenticate end users of an
+     * Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-identityproviderconfiguration)
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("57f86501bd3b16088abd77fc6c5d3047e5b55983ed4dc477068e2d0ad803b46f")
+    public
+        fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     *
+     *
+     * You must provide this value if you're using IAM Identity Center to manage end user access to
+     * your application. If you're using legacy identity management to manage user access, you don't
+     * need to provide this value.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-rolearn)
      * @param roleArn The Amazon Resource Name (ARN) of the service role attached to your web
@@ -294,7 +383,53 @@ public open class CfnWebExperience(
     }
 
     /**
+     * Provides information about the identity provider (IdP) used to authenticate end users of an
+     * Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-identityproviderconfiguration)
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience. 
+     */
+    override fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
+      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Provides information about the identity provider (IdP) used to authenticate end users of an
+     * Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-identityproviderconfiguration)
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience. 
+     */
+    override
+        fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty) {
+      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IdentityProviderConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * Provides information about the identity provider (IdP) used to authenticate end users of an
+     * Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-identityproviderconfiguration)
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("57f86501bd3b16088abd77fc6c5d3047e5b55983ed4dc477068e2d0ad803b46f")
+    override
+        fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        identityProviderConfiguration(IdentityProviderConfigurationProperty(identityProviderConfiguration))
+
+    /**
      * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     *
+     *
+     * You must provide this value if you're using IAM Identity Center to manage end user access to
+     * your application. If you're using legacy identity management to manage user access, you don't
+     * need to provide this value.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-rolearn)
      * @param roleArn The Amazon Resource Name (ARN) of the service role attached to your web
@@ -394,5 +529,384 @@ public open class CfnWebExperience(
     internal fun unwrap(wrapped: CfnWebExperience):
         software.amazon.awscdk.services.qbusiness.CfnWebExperience = wrapped.cdkObject as
         software.amazon.awscdk.services.qbusiness.CfnWebExperience
+  }
+
+  /**
+   * Provides information about the identity provider (IdP) used to authenticate end users of an
+   * Amazon Q Business web experience.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.qbusiness.*;
+   * IdentityProviderConfigurationProperty identityProviderConfigurationProperty =
+   * IdentityProviderConfigurationProperty.builder()
+   * .openIdConnectConfiguration(OpenIDConnectProviderConfigurationProperty.builder()
+   * .secretsArn("secretsArn")
+   * .secretsRole("secretsRole")
+   * .build())
+   * .samlConfiguration(SamlProviderConfigurationProperty.builder()
+   * .authenticationUrl("authenticationUrl")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-identityproviderconfiguration.html)
+   */
+  public interface IdentityProviderConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-identityproviderconfiguration.html#cfn-qbusiness-webexperience-identityproviderconfiguration-openidconnectconfiguration)
+     */
+    public fun openIdConnectConfiguration(): Any? = unwrap(this).getOpenIdConnectConfiguration()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-identityproviderconfiguration.html#cfn-qbusiness-webexperience-identityproviderconfiguration-samlconfiguration)
+     */
+    public fun samlConfiguration(): Any? = unwrap(this).getSamlConfiguration()
+
+    /**
+     * A builder for [IdentityProviderConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      public fun openIdConnectConfiguration(openIdConnectConfiguration: IResolvable)
+
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      public
+          fun openIdConnectConfiguration(openIdConnectConfiguration: OpenIDConnectProviderConfigurationProperty)
+
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2a5e15aacb6e057d775f92d0dea96c2517fb15bad90a175296f59f1b6e7d293c")
+      public
+          fun openIdConnectConfiguration(openIdConnectConfiguration: OpenIDConnectProviderConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param samlConfiguration the value to be set.
+       */
+      public fun samlConfiguration(samlConfiguration: IResolvable)
+
+      /**
+       * @param samlConfiguration the value to be set.
+       */
+      public fun samlConfiguration(samlConfiguration: SamlProviderConfigurationProperty)
+
+      /**
+       * @param samlConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a6826baa48b87c9780151c121965349b66056e067eb48f76d86201bd065e3909")
+      public
+          fun samlConfiguration(samlConfiguration: SamlProviderConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.IdentityProviderConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.IdentityProviderConfigurationProperty.builder()
+
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      override fun openIdConnectConfiguration(openIdConnectConfiguration: IResolvable) {
+        cdkBuilder.openIdConnectConfiguration(openIdConnectConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      override
+          fun openIdConnectConfiguration(openIdConnectConfiguration: OpenIDConnectProviderConfigurationProperty) {
+        cdkBuilder.openIdConnectConfiguration(openIdConnectConfiguration.let(OpenIDConnectProviderConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2a5e15aacb6e057d775f92d0dea96c2517fb15bad90a175296f59f1b6e7d293c")
+      override
+          fun openIdConnectConfiguration(openIdConnectConfiguration: OpenIDConnectProviderConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          openIdConnectConfiguration(OpenIDConnectProviderConfigurationProperty(openIdConnectConfiguration))
+
+      /**
+       * @param samlConfiguration the value to be set.
+       */
+      override fun samlConfiguration(samlConfiguration: IResolvable) {
+        cdkBuilder.samlConfiguration(samlConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param samlConfiguration the value to be set.
+       */
+      override fun samlConfiguration(samlConfiguration: SamlProviderConfigurationProperty) {
+        cdkBuilder.samlConfiguration(samlConfiguration.let(SamlProviderConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param samlConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a6826baa48b87c9780151c121965349b66056e067eb48f76d86201bd065e3909")
+      override
+          fun samlConfiguration(samlConfiguration: SamlProviderConfigurationProperty.Builder.() -> Unit):
+          Unit = samlConfiguration(SamlProviderConfigurationProperty(samlConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.IdentityProviderConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperience.IdentityProviderConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        IdentityProviderConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-identityproviderconfiguration.html#cfn-qbusiness-webexperience-identityproviderconfiguration-openidconnectconfiguration)
+       */
+      override fun openIdConnectConfiguration(): Any? = unwrap(this).getOpenIdConnectConfiguration()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-identityproviderconfiguration.html#cfn-qbusiness-webexperience-identityproviderconfiguration-samlconfiguration)
+       */
+      override fun samlConfiguration(): Any? = unwrap(this).getSamlConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IdentityProviderConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperience.IdentityProviderConfigurationProperty):
+          IdentityProviderConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdentityProviderConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IdentityProviderConfigurationProperty):
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.IdentityProviderConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.IdentityProviderConfigurationProperty
+    }
+  }
+
+  /**
+   * Information about the OIDC-compliant identity provider (IdP) used to authenticate end users of
+   * an Amazon Q Business web experience.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.qbusiness.*;
+   * OpenIDConnectProviderConfigurationProperty openIDConnectProviderConfigurationProperty =
+   * OpenIDConnectProviderConfigurationProperty.builder()
+   * .secretsArn("secretsArn")
+   * .secretsRole("secretsRole")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-openidconnectproviderconfiguration.html)
+   */
+  public interface OpenIDConnectProviderConfigurationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of a Secrets Manager secret containing the OIDC client secret.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-openidconnectproviderconfiguration.html#cfn-qbusiness-webexperience-openidconnectproviderconfiguration-secretsarn)
+     */
+    public fun secretsArn(): String
+
+    /**
+     * An IAM role with permissions to access AWS KMS to decrypt the Secrets Manager secret
+     * containing your OIDC client secret.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-openidconnectproviderconfiguration.html#cfn-qbusiness-webexperience-openidconnectproviderconfiguration-secretsrole)
+     */
+    public fun secretsRole(): String
+
+    /**
+     * A builder for [OpenIDConnectProviderConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param secretsArn The Amazon Resource Name (ARN) of a Secrets Manager secret containing the
+       * OIDC client secret. 
+       */
+      public fun secretsArn(secretsArn: String)
+
+      /**
+       * @param secretsRole An IAM role with permissions to access AWS KMS to decrypt the Secrets
+       * Manager secret containing your OIDC client secret. 
+       */
+      public fun secretsRole(secretsRole: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.OpenIDConnectProviderConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.OpenIDConnectProviderConfigurationProperty.builder()
+
+      /**
+       * @param secretsArn The Amazon Resource Name (ARN) of a Secrets Manager secret containing the
+       * OIDC client secret. 
+       */
+      override fun secretsArn(secretsArn: String) {
+        cdkBuilder.secretsArn(secretsArn)
+      }
+
+      /**
+       * @param secretsRole An IAM role with permissions to access AWS KMS to decrypt the Secrets
+       * Manager secret containing your OIDC client secret. 
+       */
+      override fun secretsRole(secretsRole: String) {
+        cdkBuilder.secretsRole(secretsRole)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.OpenIDConnectProviderConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperience.OpenIDConnectProviderConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        OpenIDConnectProviderConfigurationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of a Secrets Manager secret containing the OIDC client
+       * secret.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-openidconnectproviderconfiguration.html#cfn-qbusiness-webexperience-openidconnectproviderconfiguration-secretsarn)
+       */
+      override fun secretsArn(): String = unwrap(this).getSecretsArn()
+
+      /**
+       * An IAM role with permissions to access AWS KMS to decrypt the Secrets Manager secret
+       * containing your OIDC client secret.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-openidconnectproviderconfiguration.html#cfn-qbusiness-webexperience-openidconnectproviderconfiguration-secretsrole)
+       */
+      override fun secretsRole(): String = unwrap(this).getSecretsRole()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OpenIDConnectProviderConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperience.OpenIDConnectProviderConfigurationProperty):
+          OpenIDConnectProviderConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenIDConnectProviderConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenIDConnectProviderConfigurationProperty):
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.OpenIDConnectProviderConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.OpenIDConnectProviderConfigurationProperty
+    }
+  }
+
+  /**
+   * Information about the SAML 2.0-compliant identity provider (IdP) used to authenticate end users
+   * of an Amazon Q Business web experience.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.qbusiness.*;
+   * SamlProviderConfigurationProperty samlProviderConfigurationProperty =
+   * SamlProviderConfigurationProperty.builder()
+   * .authenticationUrl("authenticationUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-samlproviderconfiguration.html)
+   */
+  public interface SamlProviderConfigurationProperty {
+    /**
+     * The URL where Amazon Q Business end users will be redirected for authentication.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-samlproviderconfiguration.html#cfn-qbusiness-webexperience-samlproviderconfiguration-authenticationurl)
+     */
+    public fun authenticationUrl(): String
+
+    /**
+     * A builder for [SamlProviderConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authenticationUrl The URL where Amazon Q Business end users will be redirected for
+       * authentication. 
+       */
+      public fun authenticationUrl(authenticationUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.SamlProviderConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.SamlProviderConfigurationProperty.builder()
+
+      /**
+       * @param authenticationUrl The URL where Amazon Q Business end users will be redirected for
+       * authentication. 
+       */
+      override fun authenticationUrl(authenticationUrl: String) {
+        cdkBuilder.authenticationUrl(authenticationUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.SamlProviderConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperience.SamlProviderConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        SamlProviderConfigurationProperty {
+      /**
+       * The URL where Amazon Q Business end users will be redirected for authentication.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-samlproviderconfiguration.html#cfn-qbusiness-webexperience-samlproviderconfiguration-authenticationurl)
+       */
+      override fun authenticationUrl(): String = unwrap(this).getAuthenticationUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SamlProviderConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperience.SamlProviderConfigurationProperty):
+          SamlProviderConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SamlProviderConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SamlProviderConfigurationProperty):
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.SamlProviderConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.SamlProviderConfigurationProperty
+    }
   }
 }

@@ -144,7 +144,8 @@ public interface ImportSourceSpecification {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.ImportSourceSpecification,
-  ) : CdkObject(cdkObject), ImportSourceSpecification {
+  ) : CdkObject(cdkObject),
+      ImportSourceSpecification {
     /**
      * The S3 bucket that is being imported from.
      */

@@ -626,7 +626,8 @@ public interface CfnModelQualityJobDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinitionProps,
-  ) : CdkObject(cdkObject), CfnModelQualityJobDefinitionProps {
+  ) : CdkObject(cdkObject),
+      CfnModelQualityJobDefinitionProps {
     /**
      * The name of the endpoint used to run the monitoring job.
      *

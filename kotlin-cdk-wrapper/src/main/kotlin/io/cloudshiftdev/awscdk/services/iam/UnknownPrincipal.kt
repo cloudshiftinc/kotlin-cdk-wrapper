@@ -36,7 +36,8 @@ import kotlin.jvm.JvmName
  */
 public open class UnknownPrincipal(
   cdkObject: software.amazon.awscdk.services.iam.UnknownPrincipal,
-) : CdkObject(cdkObject), IPrincipal {
+) : CdkObject(cdkObject),
+    IPrincipal {
   public constructor(props: UnknownPrincipalProps) :
       this(software.amazon.awscdk.services.iam.UnknownPrincipal(props.let(UnknownPrincipalProps.Companion::unwrap))
   )

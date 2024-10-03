@@ -62,7 +62,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSubscriber(
   cdkObject: software.amazon.awscdk.services.securitylake.CfnSubscriber,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -688,7 +690,8 @@ public open class CfnSubscriber(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securitylake.CfnSubscriber.AwsLogSourceProperty,
-    ) : CdkObject(cdkObject), AwsLogSourceProperty {
+    ) : CdkObject(cdkObject),
+        AwsLogSourceProperty {
       /**
        * Source name of the natively supported AWS service that is supported as an Amazon Security
        * Lake source.
@@ -811,7 +814,8 @@ public open class CfnSubscriber(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securitylake.CfnSubscriber.CustomLogSourceProperty,
-    ) : CdkObject(cdkObject), CustomLogSourceProperty {
+    ) : CdkObject(cdkObject),
+        CustomLogSourceProperty {
       /**
        * The name of the custom log source.
        *
@@ -996,7 +1000,8 @@ public open class CfnSubscriber(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securitylake.CfnSubscriber.SourceProperty,
-    ) : CdkObject(cdkObject), SourceProperty {
+    ) : CdkObject(cdkObject),
+        SourceProperty {
       /**
        * The natively supported AWS service which is used a Amazon Security Lake source to collect
        * logs and events from.
@@ -1111,7 +1116,8 @@ public open class CfnSubscriber(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securitylake.CfnSubscriber.SubscriberIdentityProperty,
-    ) : CdkObject(cdkObject), SubscriberIdentityProperty {
+    ) : CdkObject(cdkObject),
+        SubscriberIdentityProperty {
       /**
        * The external ID is a unique identifier that the subscriber provides to you.
        *

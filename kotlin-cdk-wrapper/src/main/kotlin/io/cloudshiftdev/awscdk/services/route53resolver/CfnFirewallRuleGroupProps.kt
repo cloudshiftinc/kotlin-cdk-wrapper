@@ -31,6 +31,7 @@ import kotlin.collections.List
  * .blockOverrideDomain("blockOverrideDomain")
  * .blockOverrideTtl(123)
  * .blockResponse("blockResponse")
+ * .firewallDomainRedirectionAction("firewallDomainRedirectionAction")
  * .qtype("qtype")
  * .build()))
  * .name("name")
@@ -151,7 +152,8 @@ public interface CfnFirewallRuleGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupProps,
-  ) : CdkObject(cdkObject), CfnFirewallRuleGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnFirewallRuleGroupProps {
     /**
      * A list of the rules that you have defined.
      *

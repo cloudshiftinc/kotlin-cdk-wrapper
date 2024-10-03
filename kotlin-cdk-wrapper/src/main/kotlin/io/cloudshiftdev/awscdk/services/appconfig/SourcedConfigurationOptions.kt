@@ -247,7 +247,8 @@ public interface SourcedConfigurationOptions : ConfigurationOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.SourcedConfigurationOptions,
-  ) : CdkObject(cdkObject), SourcedConfigurationOptions {
+  ) : CdkObject(cdkObject),
+      SourcedConfigurationOptions {
     /**
      * The list of environments to deploy the configuration to.
      *

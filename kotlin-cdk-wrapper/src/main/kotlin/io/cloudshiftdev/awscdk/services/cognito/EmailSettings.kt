@@ -86,7 +86,8 @@ public interface EmailSettings {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.EmailSettings,
-  ) : CdkObject(cdkObject), EmailSettings {
+  ) : CdkObject(cdkObject),
+      EmailSettings {
     /**
      * The 'from' address on the emails received by the user.
      *

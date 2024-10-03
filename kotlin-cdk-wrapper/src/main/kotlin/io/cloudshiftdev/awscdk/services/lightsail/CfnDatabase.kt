@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDatabase(
   cdkObject: software.amazon.awscdk.services.lightsail.CfnDatabase,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1209,7 +1211,8 @@ public open class CfnDatabase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnDatabase.RelationalDatabaseParameterProperty,
-    ) : CdkObject(cdkObject), RelationalDatabaseParameterProperty {
+    ) : CdkObject(cdkObject),
+        RelationalDatabaseParameterProperty {
       /**
        * The valid range of values for the parameter.
        *

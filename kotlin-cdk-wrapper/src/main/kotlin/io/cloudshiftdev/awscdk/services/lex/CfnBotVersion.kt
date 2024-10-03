@@ -50,7 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBotVersion(
   cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -342,7 +343,8 @@ public open class CfnBotVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty,
-    ) : CdkObject(cdkObject), BotVersionLocaleDetailsProperty {
+    ) : CdkObject(cdkObject),
+        BotVersionLocaleDetailsProperty {
       /**
        * The version of a bot used for a bot locale.
        *
@@ -481,7 +483,8 @@ public open class CfnBotVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleSpecificationProperty,
-    ) : CdkObject(cdkObject), BotVersionLocaleSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        BotVersionLocaleSpecificationProperty {
       /**
        * The version of a bot used for a bot locale.
        *

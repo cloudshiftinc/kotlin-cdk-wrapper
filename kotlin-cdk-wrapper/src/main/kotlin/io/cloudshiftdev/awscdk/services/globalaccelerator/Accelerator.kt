@@ -48,7 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Accelerator(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.Accelerator,
-) : Resource(cdkObject), IAccelerator {
+) : Resource(cdkObject),
+    IAccelerator {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.globalaccelerator.Accelerator(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

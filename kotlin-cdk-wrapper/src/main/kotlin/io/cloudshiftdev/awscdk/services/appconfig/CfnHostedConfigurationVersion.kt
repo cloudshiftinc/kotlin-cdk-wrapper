@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnHostedConfigurationVersion(
   cdkObject: software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -96,12 +97,12 @@ public open class CfnHostedConfigurationVersion(
   }
 
   /**
-   * The content of the configuration or the configuration data.
+   * The configuration data, as bytes.
    */
   public open fun content(): String = unwrap(this).getContent()
 
   /**
-   * The content of the configuration or the configuration data.
+   * The configuration data, as bytes.
    */
   public open fun content(`value`: String) {
     unwrap(this).setContent(`value`)
@@ -189,10 +190,15 @@ public open class CfnHostedConfigurationVersion(
     public fun configurationProfileId(configurationProfileId: String)
 
     /**
-     * The content of the configuration or the configuration data.
+     * The configuration data, as bytes.
+     *
+     *
+     * AWS AppConfig accepts any type of data, including text formats like JSON or TOML, or binary
+     * formats like protocol buffers or compressed data.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-content)
-     * @param content The content of the configuration or the configuration data. 
+     * @param content The configuration data, as bytes. 
      */
     public fun content(content: String)
 
@@ -268,10 +274,15 @@ public open class CfnHostedConfigurationVersion(
     }
 
     /**
-     * The content of the configuration or the configuration data.
+     * The configuration data, as bytes.
+     *
+     *
+     * AWS AppConfig accepts any type of data, including text formats like JSON or TOML, or binary
+     * formats like protocol buffers or compressed data.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-content)
-     * @param content The content of the configuration or the configuration data. 
+     * @param content The configuration data, as bytes. 
      */
     override fun content(content: String) {
       cdkBuilder.content(content)

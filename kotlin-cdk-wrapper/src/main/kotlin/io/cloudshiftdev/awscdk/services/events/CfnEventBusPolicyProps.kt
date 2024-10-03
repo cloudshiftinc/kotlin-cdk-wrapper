@@ -317,7 +317,8 @@ public interface CfnEventBusPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.CfnEventBusPolicyProps,
-  ) : CdkObject(cdkObject), CfnEventBusPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnEventBusPolicyProps {
     /**
      * The action that you are enabling the other account to perform.
      *

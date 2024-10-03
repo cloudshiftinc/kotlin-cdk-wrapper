@@ -16,9 +16,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * A WAL workspace is a logical container of write-ahead logs (WALs).
- *
- * All WALs in Amazon EMR WAL are encapsulated by a WAL workspace.
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html.
  *
  * Example:
  *
@@ -39,7 +37,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWALWorkspace(
   cdkObject: software.amazon.awscdk.services.emr.CfnWALWorkspace,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.emr.CfnWALWorkspace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -77,29 +77,29 @@ public open class CfnWALWorkspace(
   }
 
   /**
-   * You can add tags when you create a new workspace.
+   * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * You can add tags when you create a new workspace.
+   * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * You can add tags when you create a new workspace.
+   * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
-   * The name of the WAL workspace.
+   * The name of the emrwal container.
    */
   public open fun walWorkspaceName(): String? = unwrap(this).getWalWorkspaceName()
 
   /**
-   * The name of the WAL workspace.
+   * The name of the emrwal container.
    */
   public open fun walWorkspaceName(`value`: String) {
     unwrap(this).setWalWorkspaceName(`value`)
@@ -111,38 +111,26 @@ public open class CfnWALWorkspace(
   @CdkDslMarker
   public interface Builder {
     /**
-     * You can add tags when you create a new workspace.
-     *
-     * You can add, remove, or list tags from an active workspace, but you can't update tags.
-     * Instead, remove the tag and add a new one. For more information, see see [Tag your Amazon EMR
-     * WAL
-     * workspaces](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-wal.html#emr-hbase-wal-tagging)
-     * .
+     * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html#cfn-emr-walworkspace-tags)
-     * @param tags You can add tags when you create a new workspace. 
+     * @param tags An array of key-value pairs to apply to this resource. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * You can add tags when you create a new workspace.
-     *
-     * You can add, remove, or list tags from an active workspace, but you can't update tags.
-     * Instead, remove the tag and add a new one. For more information, see see [Tag your Amazon EMR
-     * WAL
-     * workspaces](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-wal.html#emr-hbase-wal-tagging)
-     * .
+     * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html#cfn-emr-walworkspace-tags)
-     * @param tags You can add tags when you create a new workspace. 
+     * @param tags An array of key-value pairs to apply to this resource. 
      */
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * The name of the WAL workspace.
+     * The name of the emrwal container.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html#cfn-emr-walworkspace-walworkspacename)
-     * @param walWorkspaceName The name of the WAL workspace. 
+     * @param walWorkspaceName The name of the emrwal container. 
      */
     public fun walWorkspaceName(walWorkspaceName: String)
   }
@@ -155,40 +143,28 @@ public open class CfnWALWorkspace(
         software.amazon.awscdk.services.emr.CfnWALWorkspace.Builder.create(scope, id)
 
     /**
-     * You can add tags when you create a new workspace.
-     *
-     * You can add, remove, or list tags from an active workspace, but you can't update tags.
-     * Instead, remove the tag and add a new one. For more information, see see [Tag your Amazon EMR
-     * WAL
-     * workspaces](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-wal.html#emr-hbase-wal-tagging)
-     * .
+     * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html#cfn-emr-walworkspace-tags)
-     * @param tags You can add tags when you create a new workspace. 
+     * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * You can add tags when you create a new workspace.
-     *
-     * You can add, remove, or list tags from an active workspace, but you can't update tags.
-     * Instead, remove the tag and add a new one. For more information, see see [Tag your Amazon EMR
-     * WAL
-     * workspaces](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-wal.html#emr-hbase-wal-tagging)
-     * .
+     * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html#cfn-emr-walworkspace-tags)
-     * @param tags You can add tags when you create a new workspace. 
+     * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * The name of the WAL workspace.
+     * The name of the emrwal container.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html#cfn-emr-walworkspace-walworkspacename)
-     * @param walWorkspaceName The name of the WAL workspace. 
+     * @param walWorkspaceName The name of the emrwal container. 
      */
     override fun walWorkspaceName(walWorkspaceName: String) {
       cdkBuilder.walWorkspaceName(walWorkspaceName)

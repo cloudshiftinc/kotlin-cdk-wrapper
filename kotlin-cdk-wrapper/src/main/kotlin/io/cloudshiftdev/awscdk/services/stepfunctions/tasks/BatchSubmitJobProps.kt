@@ -499,7 +499,8 @@ public interface BatchSubmitJobProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJobProps,
-  ) : CdkObject(cdkObject), BatchSubmitJobProps {
+  ) : CdkObject(cdkObject),
+      BatchSubmitJobProps {
     /**
      * The array size can be between 2 and 10,000.
      *

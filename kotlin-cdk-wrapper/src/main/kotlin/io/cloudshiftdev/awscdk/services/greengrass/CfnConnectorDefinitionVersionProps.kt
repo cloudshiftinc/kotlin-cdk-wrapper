@@ -135,7 +135,8 @@ public interface CfnConnectorDefinitionVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersionProps,
-  ) : CdkObject(cdkObject), CfnConnectorDefinitionVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnConnectorDefinitionVersionProps {
     /**
      * The ID of the connector definition associated with this version.
      *

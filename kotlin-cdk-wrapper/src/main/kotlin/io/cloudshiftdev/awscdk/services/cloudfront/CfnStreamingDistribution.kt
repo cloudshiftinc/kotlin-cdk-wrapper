@@ -70,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStreamingDistribution(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -445,7 +447,8 @@ public open class CfnStreamingDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty,
-    ) : CdkObject(cdkObject), LoggingProperty {
+    ) : CdkObject(cdkObject),
+        LoggingProperty {
       /**
        * The Amazon S3 bucket to store the access logs in, for example,
        * `myawslogbucket.s3.amazonaws.com` .
@@ -623,7 +626,8 @@ public open class CfnStreamingDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty,
-    ) : CdkObject(cdkObject), S3OriginProperty {
+    ) : CdkObject(cdkObject),
+        S3OriginProperty {
       /**
        * The DNS name of the Amazon S3 origin.
        *
@@ -1032,7 +1036,8 @@ public open class CfnStreamingDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty,
-    ) : CdkObject(cdkObject), StreamingDistributionConfigProperty {
+    ) : CdkObject(cdkObject),
+        StreamingDistributionConfigProperty {
       /**
        * A complex type that contains information about CNAMEs (alternate domain names), if any, for
        * this streaming distribution.
@@ -1240,7 +1245,8 @@ public open class CfnStreamingDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.TrustedSignersProperty,
-    ) : CdkObject(cdkObject), TrustedSignersProperty {
+    ) : CdkObject(cdkObject),
+        TrustedSignersProperty {
       /**
        * An AWS account number that contains active CloudFront key pairs that CloudFront can use to
        * verify the signatures of signed URLs and signed cookies.

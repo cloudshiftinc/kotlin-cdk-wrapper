@@ -16,17 +16,16 @@ import io.cloudshiftdev.constructs.Construct
  *
  * ```
  * Queue myQueue;
- * Bucket bucket = new Bucket(this, "MyBucket");
- * bucket.addEventNotification(EventType.OBJECT_REMOVED, new SqsDestination(myQueue),
- * NotificationKeyFilter.builder()
- * .prefix("foo/")
- * .suffix(".jpg")
- * .build());
+ * Bucket bucket = Bucket.Builder.create(this, "MyBucket")
+ * .notificationsSkipDestinationValidation(true)
+ * .build();
+ * bucket.addEventNotification(EventType.OBJECT_REMOVED, new SqsDestination(myQueue));
  * ```
  */
 public open class SqsDestination(
   cdkObject: software.amazon.awscdk.services.s3.notifications.SqsDestination,
-) : CdkObject(cdkObject), IBucketNotificationDestination {
+) : CdkObject(cdkObject),
+    IBucketNotificationDestination {
   public constructor(queue: IQueue) :
       this(software.amazon.awscdk.services.s3.notifications.SqsDestination(queue.let(IQueue.Companion::unwrap))
   )

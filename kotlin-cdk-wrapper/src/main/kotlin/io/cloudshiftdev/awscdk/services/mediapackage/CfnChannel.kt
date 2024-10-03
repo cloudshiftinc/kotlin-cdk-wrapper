@@ -62,7 +62,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnChannel(
   cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -586,7 +588,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty,
-    ) : CdkObject(cdkObject), HlsIngestProperty {
+    ) : CdkObject(cdkObject),
+        HlsIngestProperty {
       /**
        * The input URL where the source stream should be sent.
        *
@@ -727,7 +730,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty,
-    ) : CdkObject(cdkObject), IngestEndpointProperty {
+    ) : CdkObject(cdkObject),
+        IngestEndpointProperty {
       /**
        * The endpoint identifier.
        *
@@ -829,7 +833,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty,
-    ) : CdkObject(cdkObject), LogConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LogConfigurationProperty {
       /**
        * Sets a custom Amazon CloudWatch log group name.
        *

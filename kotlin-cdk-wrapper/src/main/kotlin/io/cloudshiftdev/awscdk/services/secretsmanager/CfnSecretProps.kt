@@ -580,7 +580,8 @@ public interface CfnSecretProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecretProps,
-  ) : CdkObject(cdkObject), CfnSecretProps {
+  ) : CdkObject(cdkObject),
+      CfnSecretProps {
     /**
      * The description of the secret.
      *

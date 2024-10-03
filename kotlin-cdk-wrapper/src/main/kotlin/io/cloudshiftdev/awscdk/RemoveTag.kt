@@ -30,7 +30,8 @@ import kotlin.collections.List
  */
 public open class RemoveTag(
   cdkObject: software.amazon.awscdk.RemoveTag,
-) : CdkObject(cdkObject), IAspect {
+) : CdkObject(cdkObject),
+    IAspect {
   public constructor(key: String) : this(software.amazon.awscdk.RemoveTag(key)
   )
 

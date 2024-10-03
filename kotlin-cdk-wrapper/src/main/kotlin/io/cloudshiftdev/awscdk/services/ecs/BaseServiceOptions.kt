@@ -632,7 +632,8 @@ public interface BaseServiceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.BaseServiceOptions,
-  ) : CdkObject(cdkObject), BaseServiceOptions {
+  ) : CdkObject(cdkObject),
+      BaseServiceOptions {
     /**
      * A list of Capacity Provider strategies used to place a service.
      *

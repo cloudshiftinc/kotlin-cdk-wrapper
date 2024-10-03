@@ -74,7 +74,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMitigationAction(
   cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -777,7 +779,8 @@ public open class CfnMitigationAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.ActionParamsProperty,
-    ) : CdkObject(cdkObject), ActionParamsProperty {
+    ) : CdkObject(cdkObject),
+        ActionParamsProperty {
       /**
        * Specifies the group to which you want to add the devices.
        *
@@ -970,7 +973,8 @@ public open class CfnMitigationAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.AddThingsToThingGroupParamsProperty,
-    ) : CdkObject(cdkObject), AddThingsToThingGroupParamsProperty {
+    ) : CdkObject(cdkObject),
+        AddThingsToThingGroupParamsProperty {
       /**
        * Specifies if this mitigation action can move the things that triggered the mitigation
        * action even if they are part of one or more dynamic thing groups.
@@ -1086,7 +1090,8 @@ public open class CfnMitigationAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.EnableIoTLoggingParamsProperty,
-    ) : CdkObject(cdkObject), EnableIoTLoggingParamsProperty {
+    ) : CdkObject(cdkObject),
+        EnableIoTLoggingParamsProperty {
       /**
        * Specifies the type of information to be logged.
        *
@@ -1178,7 +1183,8 @@ public open class CfnMitigationAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty,
-    ) : CdkObject(cdkObject), PublishFindingToSnsParamsProperty {
+    ) : CdkObject(cdkObject),
+        PublishFindingToSnsParamsProperty {
       /**
        * The ARN of the topic to which you want to publish the findings.
        *
@@ -1266,7 +1272,8 @@ public open class CfnMitigationAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty,
-    ) : CdkObject(cdkObject), ReplaceDefaultPolicyVersionParamsProperty {
+    ) : CdkObject(cdkObject),
+        ReplaceDefaultPolicyVersionParamsProperty {
       /**
        * The name of the template to be applied.
        *
@@ -1357,7 +1364,8 @@ public open class CfnMitigationAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty,
-    ) : CdkObject(cdkObject), UpdateCACertificateParamsProperty {
+    ) : CdkObject(cdkObject),
+        UpdateCACertificateParamsProperty {
       /**
        * The action that you want to apply to the CA certificate.
        *
@@ -1448,7 +1456,8 @@ public open class CfnMitigationAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty,
-    ) : CdkObject(cdkObject), UpdateDeviceCertificateParamsProperty {
+    ) : CdkObject(cdkObject),
+        UpdateDeviceCertificateParamsProperty {
       /**
        * The action that you want to apply to the device certificate.
        *

@@ -24,7 +24,8 @@ public interface IApiMapping : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IApiMapping,
-  ) : CdkObject(cdkObject), IApiMapping {
+  ) : CdkObject(cdkObject),
+      IApiMapping {
     /**
      * ID of the api mapping.
      */

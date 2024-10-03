@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class RequestAuthorizer(
   cdkObject: software.amazon.awscdk.services.apigateway.RequestAuthorizer,
-) : Authorizer(cdkObject), IAuthorizer {
+) : Authorizer(cdkObject),
+    IAuthorizer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

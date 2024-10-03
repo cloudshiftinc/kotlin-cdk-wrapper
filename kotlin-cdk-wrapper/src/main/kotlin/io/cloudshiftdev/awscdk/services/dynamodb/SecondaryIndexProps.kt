@@ -110,7 +110,8 @@ public interface SecondaryIndexProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.SecondaryIndexProps,
-  ) : CdkObject(cdkObject), SecondaryIndexProps {
+  ) : CdkObject(cdkObject),
+      SecondaryIndexProps {
     /**
      * The name of the secondary index.
      */

@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResource(
   cdkObject: software.amazon.awscdk.services.lakeformation.CfnResource,
-) : io.cloudshiftdev.awscdk.CfnResource(cdkObject), IInspectable {
+) : io.cloudshiftdev.awscdk.CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

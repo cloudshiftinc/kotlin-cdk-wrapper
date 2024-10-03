@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
@@ -22,26 +23,25 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.*;
- * import io.cloudshiftdev.awscdk.services.s3.*;
- * IBucket bucket;
- * App app = new App();
- * Stack stack = new Stack(app, "Stack");
- * Table.Builder.create(stack, "Table")
+ * import io.cloudshiftdev.awscdk.services.lambda.eventsources.*;
+ * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+ * import io.cloudshiftdev.awscdk.services.kms.Key;
+ * Function fn;
+ * Table table = Table.Builder.create(this, "Table")
  * .partitionKey(Attribute.builder()
  * .name("id")
  * .type(AttributeType.STRING)
  * .build())
- * .importSource(ImportSourceSpecification.builder()
- * .compressionType(InputCompressionType.GZIP)
- * .inputFormat(InputFormat.csv(CsvOptions.builder()
- * .delimiter(",")
- * .headerList(List.of("id", "name"))
- * .build()))
- * .bucket(bucket)
- * .keyPrefix("prefix")
- * .build())
+ * .stream(StreamViewType.NEW_IMAGE)
  * .build();
+ * // Your self managed KMS key
+ * IKey myKey = Key.fromKeyArn(this, "SourceBucketEncryptionKey",
+ * "arn:aws:kms:us-east-1:123456789012:key/&lt;key-id&gt;");
+ * fn.addEventSource(DynamoEventSource.Builder.create(table)
+ * .startingPosition(StartingPosition.LATEST)
+ * .filters(List.of(FilterCriteria.filter(Map.of("eventName", FilterRule.isEqual("INSERT")))))
+ * .filterEncryption(myKey)
+ * .build());
  * ```
  */
 public open class Table(
@@ -197,6 +197,39 @@ public open class Table(
   public override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
   /**
+   * Resource policy to assign to DynamoDB Table.
+   *
+   * Default: - No resource policy statements are added to the created table.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-resourcepolicy.html)
+   */
+  public override fun resourcePolicy(): PolicyDocument? =
+      unwrap(this).getResourcePolicy()?.let(PolicyDocument::wrap)
+
+  /**
+   * Resource policy to assign to DynamoDB Table.
+   *
+   * Default: - No resource policy statements are added to the created table.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-resourcepolicy.html)
+   */
+  public override fun resourcePolicy(`value`: PolicyDocument) {
+    unwrap(this).setResourcePolicy(`value`.let(PolicyDocument.Companion::unwrap))
+  }
+
+  /**
+   * Resource policy to assign to DynamoDB Table.
+   *
+   * Default: - No resource policy statements are added to the created table.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-resourcepolicy.html)
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("86a422cdfbd7ab1eb4700fbb0990116f2f653f87b45d5d6a5ce2846099e124d0")
+  public override fun resourcePolicy(`value`: PolicyDocument.Builder.() -> Unit): Unit =
+      resourcePolicy(PolicyDocument(`value`))
+
+  /**
    * Get schema attributes of table or index.
    *
    * @return Schema of table or index.
@@ -329,6 +362,34 @@ public open class Table(
     public fun kinesisStream(kinesisStream: IStream)
 
     /**
+     * The maximum read request units for the table.
+     *
+     * Careful if you add Global Secondary Indexes, as
+     * those will share the table's maximum on-demand throughput.
+     *
+     * Can only be provided if billingMode is PAY_PER_REQUEST.
+     *
+     * Default: - on-demand throughput is disabled
+     *
+     * @param maxReadRequestUnits The maximum read request units for the table. 
+     */
+    public fun maxReadRequestUnits(maxReadRequestUnits: Number)
+
+    /**
+     * The write request units for the table.
+     *
+     * Careful if you add Global Secondary Indexes, as
+     * those will share the table's maximum on-demand throughput.
+     *
+     * Can only be provided if billingMode is PAY_PER_REQUEST.
+     *
+     * Default: - on-demand throughput is disabled
+     *
+     * @param maxWriteRequestUnits The write request units for the table. 
+     */
+    public fun maxWriteRequestUnits(maxWriteRequestUnits: Number)
+
+    /**
      * Partition key attribute definition.
      *
      * @param partitionKey Partition key attribute definition. 
@@ -404,6 +465,28 @@ public open class Table(
     public fun replicationTimeout(replicationTimeout: Duration)
 
     /**
+     * Resource policy to assign to table.
+     *
+     * Default: - No resource policy statement
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+     * @param resourcePolicy Resource policy to assign to table. 
+     */
+    public fun resourcePolicy(resourcePolicy: PolicyDocument)
+
+    /**
+     * Resource policy to assign to table.
+     *
+     * Default: - No resource policy statement
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+     * @param resourcePolicy Resource policy to assign to table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("71f4b00d83d7ce16c3636bbdeceecf6431cc6844d714f8831df7885b6bd11458")
+    public fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit)
+
+    /**
      * Sort key attribute definition.
      *
      * Default: no sort key
@@ -462,7 +545,9 @@ public open class Table(
     public fun timeToLiveAttribute(timeToLiveAttribute: String)
 
     /**
-     * Indicates whether CloudFormation stack waits for replication to finish.
+     * [WARNING: Use this flag with caution, misusing this flag may cause deleting existing
+     * replicas, refer to the detailed documentation for more information] Indicates whether
+     * CloudFormation stack waits for replication to finish.
      *
      * If set to false, the CloudFormation resource will mark the resource as
      * created and replication will be completed asynchronously. This property is
@@ -483,8 +568,9 @@ public open class Table(
      * Default: true
      *
      * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
-     * @param waitForReplicationToFinish Indicates whether CloudFormation stack waits for
-     * replication to finish. 
+     * @param waitForReplicationToFinish [WARNING: Use this flag with caution, misusing this flag
+     * may cause deleting existing replicas, refer to the detailed documentation for more information]
+     * Indicates whether CloudFormation stack waits for replication to finish. 
      */
     public fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean)
 
@@ -621,6 +707,38 @@ public open class Table(
     }
 
     /**
+     * The maximum read request units for the table.
+     *
+     * Careful if you add Global Secondary Indexes, as
+     * those will share the table's maximum on-demand throughput.
+     *
+     * Can only be provided if billingMode is PAY_PER_REQUEST.
+     *
+     * Default: - on-demand throughput is disabled
+     *
+     * @param maxReadRequestUnits The maximum read request units for the table. 
+     */
+    override fun maxReadRequestUnits(maxReadRequestUnits: Number) {
+      cdkBuilder.maxReadRequestUnits(maxReadRequestUnits)
+    }
+
+    /**
+     * The write request units for the table.
+     *
+     * Careful if you add Global Secondary Indexes, as
+     * those will share the table's maximum on-demand throughput.
+     *
+     * Can only be provided if billingMode is PAY_PER_REQUEST.
+     *
+     * Default: - on-demand throughput is disabled
+     *
+     * @param maxWriteRequestUnits The write request units for the table. 
+     */
+    override fun maxWriteRequestUnits(maxWriteRequestUnits: Number) {
+      cdkBuilder.maxWriteRequestUnits(maxWriteRequestUnits)
+    }
+
+    /**
      * Partition key attribute definition.
      *
      * @param partitionKey Partition key attribute definition. 
@@ -710,6 +828,31 @@ public open class Table(
     }
 
     /**
+     * Resource policy to assign to table.
+     *
+     * Default: - No resource policy statement
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+     * @param resourcePolicy Resource policy to assign to table. 
+     */
+    override fun resourcePolicy(resourcePolicy: PolicyDocument) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(PolicyDocument.Companion::unwrap))
+    }
+
+    /**
+     * Resource policy to assign to table.
+     *
+     * Default: - No resource policy statement
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+     * @param resourcePolicy Resource policy to assign to table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("71f4b00d83d7ce16c3636bbdeceecf6431cc6844d714f8831df7885b6bd11458")
+    override fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit): Unit =
+        resourcePolicy(PolicyDocument(resourcePolicy))
+
+    /**
      * Sort key attribute definition.
      *
      * Default: no sort key
@@ -778,7 +921,9 @@ public open class Table(
     }
 
     /**
-     * Indicates whether CloudFormation stack waits for replication to finish.
+     * [WARNING: Use this flag with caution, misusing this flag may cause deleting existing
+     * replicas, refer to the detailed documentation for more information] Indicates whether
+     * CloudFormation stack waits for replication to finish.
      *
      * If set to false, the CloudFormation resource will mark the resource as
      * created and replication will be completed asynchronously. This property is
@@ -799,8 +944,9 @@ public open class Table(
      * Default: true
      *
      * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
-     * @param waitForReplicationToFinish Indicates whether CloudFormation stack waits for
-     * replication to finish. 
+     * @param waitForReplicationToFinish [WARNING: Use this flag with caution, misusing this flag
+     * may cause deleting existing replicas, refer to the detailed documentation for more information]
+     * Indicates whether CloudFormation stack waits for replication to finish. 
      */
     override fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean) {
       cdkBuilder.waitForReplicationToFinish(waitForReplicationToFinish)

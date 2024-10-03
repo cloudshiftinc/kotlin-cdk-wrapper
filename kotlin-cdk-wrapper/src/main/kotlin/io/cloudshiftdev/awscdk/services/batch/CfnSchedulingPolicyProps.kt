@@ -176,7 +176,8 @@ public interface CfnSchedulingPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicyProps,
-  ) : CdkObject(cdkObject), CfnSchedulingPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnSchedulingPolicyProps {
     /**
      * The fair share policy of the scheduling policy.
      *

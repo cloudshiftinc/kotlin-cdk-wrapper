@@ -42,7 +42,8 @@ public interface UserDefinedObjectMetadata {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.deployment.UserDefinedObjectMetadata,
-  ) : CdkObject(cdkObject), UserDefinedObjectMetadata
+  ) : CdkObject(cdkObject),
+      UserDefinedObjectMetadata
 
   public companion object {
     public operator fun invoke(block: Builder.() -> Unit = {}): UserDefinedObjectMetadata {

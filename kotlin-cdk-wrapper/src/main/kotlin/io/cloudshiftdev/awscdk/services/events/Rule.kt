@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Rule(
   cdkObject: software.amazon.awscdk.services.events.Rule,
-) : Resource(cdkObject), IRule {
+) : Resource(cdkObject),
+    IRule {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.events.Rule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

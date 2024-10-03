@@ -21,10 +21,13 @@ import kotlin.jvm.JvmName
  * .vpc(vpc)
  * .instanceType(instanceType)
  * .machineImage(machineImage)
- * .ebsOptimized(true)
+ * // ...
  * .blockDevices(List.of(BlockDevice.builder()
- * .deviceName("/dev/xvda")
- * .volume(BlockDeviceVolume.ebs(8))
+ * .deviceName("/dev/sda1")
+ * .volume(BlockDeviceVolume.ebs(100, EbsDeviceOptions.builder()
+ * .volumeType(EbsDeviceVolumeType.GP3)
+ * .throughput(250)
+ * .build()))
  * .build()))
  * .build();
  * ```

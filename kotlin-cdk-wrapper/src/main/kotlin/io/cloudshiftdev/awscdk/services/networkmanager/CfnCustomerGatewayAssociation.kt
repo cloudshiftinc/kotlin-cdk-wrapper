@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCustomerGatewayAssociation(
   cdkObject: software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

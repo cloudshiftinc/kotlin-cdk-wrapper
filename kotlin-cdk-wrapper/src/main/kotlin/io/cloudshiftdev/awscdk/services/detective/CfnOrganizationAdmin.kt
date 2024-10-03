@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnOrganizationAdmin(
   cdkObject: software.amazon.awscdk.services.detective.CfnOrganizationAdmin,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

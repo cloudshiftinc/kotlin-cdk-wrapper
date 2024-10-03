@@ -106,7 +106,8 @@ public interface TlsValidation {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.TlsValidation,
-  ) : CdkObject(cdkObject), TlsValidation {
+  ) : CdkObject(cdkObject),
+      TlsValidation {
     /**
      * Represents the subject alternative names (SANs) secured by the certificate.
      *

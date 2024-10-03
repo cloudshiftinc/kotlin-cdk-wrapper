@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBackupVault(
   cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -239,7 +241,7 @@ public open class CfnBackupVault(
      * The name of a logical container where backups are stored.
      *
      * Backup vaults are identified by names that are unique to the account used to create them and
-     * the AWS Region where they are created. They consist of lowercase letters, numbers, and hyphens.
+     * the AWS Region where they are created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaultname)
      * @param backupVaultName The name of a logical container where backups are stored. 
@@ -355,7 +357,7 @@ public open class CfnBackupVault(
      * The name of a logical container where backups are stored.
      *
      * Backup vaults are identified by names that are unique to the account used to create them and
-     * the AWS Region where they are created. They consist of lowercase letters, numbers, and hyphens.
+     * the AWS Region where they are created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaultname)
      * @param backupVaultName The name of a logical container where backups are stored. 
@@ -708,7 +710,8 @@ public open class CfnBackupVault(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault.LockConfigurationTypeProperty,
-    ) : CdkObject(cdkObject), LockConfigurationTypeProperty {
+    ) : CdkObject(cdkObject),
+        LockConfigurationTypeProperty {
       /**
        * The AWS Backup Vault Lock configuration that specifies the number of days before the lock
        * date.
@@ -905,7 +908,8 @@ public open class CfnBackupVault(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty,
-    ) : CdkObject(cdkObject), NotificationObjectTypeProperty {
+    ) : CdkObject(cdkObject),
+        NotificationObjectTypeProperty {
       /**
        * An array of events that indicate the status of jobs to back up resources to the backup
        * vault.

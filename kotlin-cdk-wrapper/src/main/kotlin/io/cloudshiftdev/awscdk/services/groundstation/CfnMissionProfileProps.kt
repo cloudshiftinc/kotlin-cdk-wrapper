@@ -93,12 +93,14 @@ public interface CfnMissionProfileProps {
   public fun name(): String
 
   /**
+   * KMS key to use for encrypting streams.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html#cfn-groundstation-missionprofile-streamskmskey)
    */
   public fun streamsKmsKey(): Any? = unwrap(this).getStreamsKmsKey()
 
   /**
-   * The ARN of the KMS Key or Alias Key role used to define permissions on KMS Key usage.
+   * Role to use for encrypting streams with KMS key.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html#cfn-groundstation-missionprofile-streamskmsrole)
    */
@@ -167,17 +169,17 @@ public interface CfnMissionProfileProps {
     public fun name(name: String)
 
     /**
-     * @param streamsKmsKey the value to be set.
+     * @param streamsKmsKey KMS key to use for encrypting streams.
      */
     public fun streamsKmsKey(streamsKmsKey: IResolvable)
 
     /**
-     * @param streamsKmsKey the value to be set.
+     * @param streamsKmsKey KMS key to use for encrypting streams.
      */
     public fun streamsKmsKey(streamsKmsKey: CfnMissionProfile.StreamsKmsKeyProperty)
 
     /**
-     * @param streamsKmsKey the value to be set.
+     * @param streamsKmsKey KMS key to use for encrypting streams.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("117b35e3da185b448b5d987c3d2710e6ac6a0b3721dc9c7452a754f8b44e93a3")
@@ -185,8 +187,7 @@ public interface CfnMissionProfileProps {
         fun streamsKmsKey(streamsKmsKey: CfnMissionProfile.StreamsKmsKeyProperty.Builder.() -> Unit)
 
     /**
-     * @param streamsKmsRole The ARN of the KMS Key or Alias Key role used to define permissions on
-     * KMS Key usage.
+     * @param streamsKmsRole Role to use for encrypting streams with KMS key.
      */
     public fun streamsKmsRole(streamsKmsRole: String)
 
@@ -268,21 +269,21 @@ public interface CfnMissionProfileProps {
     }
 
     /**
-     * @param streamsKmsKey the value to be set.
+     * @param streamsKmsKey KMS key to use for encrypting streams.
      */
     override fun streamsKmsKey(streamsKmsKey: IResolvable) {
       cdkBuilder.streamsKmsKey(streamsKmsKey.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param streamsKmsKey the value to be set.
+     * @param streamsKmsKey KMS key to use for encrypting streams.
      */
     override fun streamsKmsKey(streamsKmsKey: CfnMissionProfile.StreamsKmsKeyProperty) {
       cdkBuilder.streamsKmsKey(streamsKmsKey.let(CfnMissionProfile.StreamsKmsKeyProperty.Companion::unwrap))
     }
 
     /**
-     * @param streamsKmsKey the value to be set.
+     * @param streamsKmsKey KMS key to use for encrypting streams.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("117b35e3da185b448b5d987c3d2710e6ac6a0b3721dc9c7452a754f8b44e93a3")
@@ -291,8 +292,7 @@ public interface CfnMissionProfileProps {
         Unit = streamsKmsKey(CfnMissionProfile.StreamsKmsKeyProperty(streamsKmsKey))
 
     /**
-     * @param streamsKmsRole The ARN of the KMS Key or Alias Key role used to define permissions on
-     * KMS Key usage.
+     * @param streamsKmsRole Role to use for encrypting streams with KMS key.
      */
     override fun streamsKmsRole(streamsKmsRole: String) {
       cdkBuilder.streamsKmsRole(streamsKmsRole)
@@ -324,7 +324,8 @@ public interface CfnMissionProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfileProps,
-  ) : CdkObject(cdkObject), CfnMissionProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnMissionProfileProps {
     /**
      * Amount of time in seconds after a contact ends that you’d like to receive a Ground Station
      * Contact State Change indicating the pass has finished.
@@ -370,12 +371,14 @@ public interface CfnMissionProfileProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
+     * KMS key to use for encrypting streams.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html#cfn-groundstation-missionprofile-streamskmskey)
      */
     override fun streamsKmsKey(): Any? = unwrap(this).getStreamsKmsKey()
 
     /**
-     * The ARN of the KMS Key or Alias Key role used to define permissions on KMS Key usage.
+     * Role to use for encrypting streams with KMS key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html#cfn-groundstation-missionprofile-streamskmsrole)
      */

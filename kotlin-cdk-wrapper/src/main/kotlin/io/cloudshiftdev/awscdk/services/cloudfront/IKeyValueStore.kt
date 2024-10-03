@@ -32,7 +32,8 @@ public interface IKeyValueStore : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.IKeyValueStore,
-  ) : CdkObject(cdkObject), IKeyValueStore {
+  ) : CdkObject(cdkObject),
+      IKeyValueStore {
     /**
      * Apply the given removal policy to this resource.
      *

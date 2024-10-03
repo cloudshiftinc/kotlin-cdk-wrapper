@@ -150,7 +150,8 @@ public interface CfnNodeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.managedblockchain.CfnNodeProps,
-  ) : CdkObject(cdkObject), CfnNodeProps {
+  ) : CdkObject(cdkObject),
+      CfnNodeProps {
     /**
      * The unique identifier of the member to which the node belongs.
      *

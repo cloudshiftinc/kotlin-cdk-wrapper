@@ -76,7 +76,8 @@ public interface FunctionAssociation {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation,
-  ) : CdkObject(cdkObject), FunctionAssociation {
+  ) : CdkObject(cdkObject),
+      FunctionAssociation {
     /**
      * The type of event which should invoke the function.
      */

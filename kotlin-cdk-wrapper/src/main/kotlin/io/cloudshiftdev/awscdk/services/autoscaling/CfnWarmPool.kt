@@ -64,7 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWarmPool(
   cdkObject: software.amazon.awscdk.services.autoscaling.CfnWarmPool,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -494,7 +495,8 @@ public open class CfnWarmPool(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnWarmPool.InstanceReusePolicyProperty,
-    ) : CdkObject(cdkObject), InstanceReusePolicyProperty {
+    ) : CdkObject(cdkObject),
+        InstanceReusePolicyProperty {
       /**
        * Specifies whether instances in the Auto Scaling group can be returned to the warm pool on
        * scale in.

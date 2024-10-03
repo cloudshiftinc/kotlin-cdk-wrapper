@@ -56,7 +56,7 @@ public interface CfnBackupVaultProps {
    * The name of a logical container where backups are stored.
    *
    * Backup vaults are identified by names that are unique to the account used to create them and
-   * the AWS Region where they are created. They consist of lowercase letters, numbers, and hyphens.
+   * the AWS Region where they are created.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaultname)
    */
@@ -116,7 +116,7 @@ public interface CfnBackupVaultProps {
     /**
      * @param backupVaultName The name of a logical container where backups are stored. 
      * Backup vaults are identified by names that are unique to the account used to create them and
-     * the AWS Region where they are created. They consist of lowercase letters, numbers, and hyphens.
+     * the AWS Region where they are created.
      */
     public fun backupVaultName(backupVaultName: String)
 
@@ -194,7 +194,7 @@ public interface CfnBackupVaultProps {
     /**
      * @param backupVaultName The name of a logical container where backups are stored. 
      * Backup vaults are identified by names that are unique to the account used to create them and
-     * the AWS Region where they are created. They consist of lowercase letters, numbers, and hyphens.
+     * the AWS Region where they are created.
      */
     override fun backupVaultName(backupVaultName: String) {
       cdkBuilder.backupVaultName(backupVaultName)
@@ -279,7 +279,8 @@ public interface CfnBackupVaultProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.backup.CfnBackupVaultProps,
-  ) : CdkObject(cdkObject), CfnBackupVaultProps {
+  ) : CdkObject(cdkObject),
+      CfnBackupVaultProps {
     /**
      * A resource-based policy that is used to manage access permissions on the target backup vault.
      *
@@ -291,7 +292,7 @@ public interface CfnBackupVaultProps {
      * The name of a logical container where backups are stored.
      *
      * Backup vaults are identified by names that are unique to the account used to create them and
-     * the AWS Region where they are created. They consist of lowercase letters, numbers, and hyphens.
+     * the AWS Region where they are created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaultname)
      */

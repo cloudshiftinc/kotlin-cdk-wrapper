@@ -55,7 +55,8 @@ public interface IStage : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IStage,
-  ) : CdkObject(cdkObject), IStage {
+  ) : CdkObject(cdkObject),
+      IStage {
     /**
      * Add an ApiKey to this Stage.
      *

@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Pipeline(
   cdkObject: software.amazon.awscdk.services.codepipeline.Pipeline,
-) : Resource(cdkObject), IPipeline {
+) : Resource(cdkObject),
+    IPipeline {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codepipeline.Pipeline(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

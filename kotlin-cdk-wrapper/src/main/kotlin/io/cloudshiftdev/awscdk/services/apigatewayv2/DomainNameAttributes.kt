@@ -97,7 +97,8 @@ public interface DomainNameAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainNameAttributes,
-  ) : CdkObject(cdkObject), DomainNameAttributes {
+  ) : CdkObject(cdkObject),
+      DomainNameAttributes {
     /**
      * domain name string.
      */

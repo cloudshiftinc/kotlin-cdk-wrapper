@@ -17,7 +17,8 @@ public interface IVariable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.IVariable,
-  ) : CdkObject(cdkObject), IVariable {
+  ) : CdkObject(cdkObject),
+      IVariable {
     /**
      * Return the variable JSON for use in the dashboard.
      */

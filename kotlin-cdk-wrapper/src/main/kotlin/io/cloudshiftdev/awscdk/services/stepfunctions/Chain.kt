@@ -38,7 +38,8 @@ import kotlin.jvm.JvmName
  */
 public open class Chain(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Chain,
-) : CdkObject(cdkObject), IChainable {
+) : CdkObject(cdkObject),
+    IChainable {
   /**
    * The chainable end state(s) of this chain.
    */

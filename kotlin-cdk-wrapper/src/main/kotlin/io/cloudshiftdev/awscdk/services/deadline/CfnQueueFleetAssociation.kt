@@ -32,7 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnQueueFleetAssociation(
   cdkObject: software.amazon.awscdk.services.deadline.CfnQueueFleetAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

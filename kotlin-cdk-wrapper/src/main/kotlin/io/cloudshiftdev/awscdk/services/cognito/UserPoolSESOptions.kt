@@ -186,7 +186,8 @@ public interface UserPoolSESOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.UserPoolSESOptions,
-  ) : CdkObject(cdkObject), UserPoolSESOptions {
+  ) : CdkObject(cdkObject),
+      UserPoolSESOptions {
     /**
      * The name of a configuration set in Amazon SES that should be applied to emails sent via
      * Cognito.

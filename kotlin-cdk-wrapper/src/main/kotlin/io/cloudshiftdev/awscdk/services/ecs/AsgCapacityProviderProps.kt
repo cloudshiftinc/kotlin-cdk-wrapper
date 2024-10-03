@@ -45,6 +45,12 @@ import kotlin.Unit
 public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
   /**
    * The autoscaling group to add as a Capacity Provider.
+   *
+   * Warning: When passing an imported resource using `AutoScalingGroup.fromAutoScalingGroupName`
+   * along with `enableManagedTerminationProtection: true`,
+   * the `AsgCapacityProvider` construct will not be able to enforce the option
+   * `newInstancesProtectedFromScaleIn` of the `AutoScalingGroup`.
+   * In this case the constructor of `AsgCapacityProvider` will throw an exception.
    */
   public fun autoScalingGroup(): IAutoScalingGroup
 
@@ -151,6 +157,11 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
   public interface Builder {
     /**
      * @param autoScalingGroup The autoscaling group to add as a Capacity Provider. 
+     * Warning: When passing an imported resource using `AutoScalingGroup.fromAutoScalingGroupName`
+     * along with `enableManagedTerminationProtection: true`,
+     * the `AsgCapacityProvider` construct will not be able to enforce the option
+     * `newInstancesProtectedFromScaleIn` of the `AutoScalingGroup`.
+     * In this case the constructor of `AsgCapacityProvider` will throw an exception.
      */
     public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup)
 
@@ -269,6 +280,11 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
 
     /**
      * @param autoScalingGroup The autoscaling group to add as a Capacity Provider. 
+     * Warning: When passing an imported resource using `AutoScalingGroup.fromAutoScalingGroupName`
+     * along with `enableManagedTerminationProtection: true`,
+     * the `AsgCapacityProvider` construct will not be able to enforce the option
+     * `newInstancesProtectedFromScaleIn` of the `AutoScalingGroup`.
+     * In this case the constructor of `AsgCapacityProvider` will throw an exception.
      */
     override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
       cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup.Companion::unwrap))
@@ -412,9 +428,16 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.AsgCapacityProviderProps,
-  ) : CdkObject(cdkObject), AsgCapacityProviderProps {
+  ) : CdkObject(cdkObject),
+      AsgCapacityProviderProps {
     /**
      * The autoscaling group to add as a Capacity Provider.
+     *
+     * Warning: When passing an imported resource using `AutoScalingGroup.fromAutoScalingGroupName`
+     * along with `enableManagedTerminationProtection: true`,
+     * the `AsgCapacityProvider` construct will not be able to enforce the option
+     * `newInstancesProtectedFromScaleIn` of the `AutoScalingGroup`.
+     * In this case the constructor of `AsgCapacityProvider` will throw an exception.
      */
     override fun autoScalingGroup(): IAutoScalingGroup =
         unwrap(this).getAutoScalingGroup().let(IAutoScalingGroup::wrap)

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.regioninfo
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.Deprecated
 import kotlin.String
 
 /**
@@ -48,6 +49,9 @@ public open class FactName(
     public val IS_OPT_IN_REGION: String =
         software.amazon.awscdk.regioninfo.FactName.IS_OPT_IN_REGION
 
+    public val LATEST_NODE_RUNTIME: String =
+        software.amazon.awscdk.regioninfo.FactName.LATEST_NODE_RUNTIME
+
     public val PARTITION: String = software.amazon.awscdk.regioninfo.FactName.PARTITION
 
     public val S3_STATIC_WEBSITE_ENDPOINT: String =
@@ -85,6 +89,7 @@ public open class FactName(
         software.amazon.awscdk.regioninfo.FactName.paramsAndSecretsLambdaLayer(version,
         architecture)
 
+    @Deprecated(message = "deprecated in CDK")
     public fun servicePrincipal(service: String): String =
         software.amazon.awscdk.regioninfo.FactName.servicePrincipal(service)
 

@@ -88,7 +88,8 @@ public interface LogRetentionRetryOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.LogRetentionRetryOptions,
-  ) : CdkObject(cdkObject), LogRetentionRetryOptions {
+  ) : CdkObject(cdkObject),
+      LogRetentionRetryOptions {
     /**
      * (deprecated) The base duration to use in the exponential backoff for operation retries.
      *

@@ -499,7 +499,8 @@ public interface CfnNamespaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespaceProps,
-  ) : CdkObject(cdkObject), CfnNamespaceProps {
+  ) : CdkObject(cdkObject),
+      CfnNamespaceProps {
     /**
      * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the namespace's
      * admin credentials secret.

@@ -61,7 +61,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnReportGroup(
   cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -569,7 +571,8 @@ public open class CfnReportGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup.ReportExportConfigProperty,
-    ) : CdkObject(cdkObject), ReportExportConfigProperty {
+    ) : CdkObject(cdkObject),
+        ReportExportConfigProperty {
       /**
        * The export configuration type. Valid values are:.
        *
@@ -797,7 +800,8 @@ public open class CfnReportGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup.S3ReportExportConfigProperty,
-    ) : CdkObject(cdkObject), S3ReportExportConfigProperty {
+    ) : CdkObject(cdkObject),
+        S3ReportExportConfigProperty {
       /**
        * The name of the S3 bucket where the raw data of a report are exported.
        *

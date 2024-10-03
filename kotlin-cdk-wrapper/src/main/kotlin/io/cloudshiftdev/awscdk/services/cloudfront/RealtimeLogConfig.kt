@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class RealtimeLogConfig(
   cdkObject: software.amazon.awscdk.services.cloudfront.RealtimeLogConfig,
-) : Resource(cdkObject), IRealtimeLogConfig {
+) : Resource(cdkObject),
+    IRealtimeLogConfig {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

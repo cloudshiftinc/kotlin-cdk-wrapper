@@ -63,7 +63,8 @@ public interface InterfaceVpcEndpointAwsServiceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsServiceProps,
-  ) : CdkObject(cdkObject), InterfaceVpcEndpointAwsServiceProps {
+  ) : CdkObject(cdkObject),
+      InterfaceVpcEndpointAwsServiceProps {
     /**
      * If true, the service is a global endpoint and its name will not be prefixed with the stack's
      * region.

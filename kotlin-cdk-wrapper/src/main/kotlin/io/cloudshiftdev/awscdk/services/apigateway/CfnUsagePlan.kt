@@ -74,7 +74,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUsagePlan(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnUsagePlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -637,7 +639,8 @@ public open class CfnUsagePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty,
-    ) : CdkObject(cdkObject), ApiStageProperty {
+    ) : CdkObject(cdkObject),
+        ApiStageProperty {
       /**
        * API Id of the associated API stage in a usage plan.
        *
@@ -788,7 +791,8 @@ public open class CfnUsagePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty,
-    ) : CdkObject(cdkObject), QuotaSettingsProperty {
+    ) : CdkObject(cdkObject),
+        QuotaSettingsProperty {
       /**
        * The target maximum number of requests that can be made in a given time period.
        *
@@ -912,7 +916,8 @@ public open class CfnUsagePlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty,
-    ) : CdkObject(cdkObject), ThrottleSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ThrottleSettingsProperty {
       /**
        * The API target request burst rate limit.
        *

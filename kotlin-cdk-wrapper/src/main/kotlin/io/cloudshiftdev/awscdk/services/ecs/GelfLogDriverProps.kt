@@ -277,7 +277,8 @@ public interface GelfLogDriverProps : BaseLogDriverProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.GelfLogDriverProps,
-  ) : CdkObject(cdkObject), GelfLogDriverProps {
+  ) : CdkObject(cdkObject),
+      GelfLogDriverProps {
     /**
      * The address of the GELF server.
      *

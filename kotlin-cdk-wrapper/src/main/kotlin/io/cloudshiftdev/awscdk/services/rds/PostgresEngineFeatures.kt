@@ -82,7 +82,8 @@ public interface PostgresEngineFeatures {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.PostgresEngineFeatures,
-  ) : CdkObject(cdkObject), PostgresEngineFeatures {
+  ) : CdkObject(cdkObject),
+      PostgresEngineFeatures {
     /**
      * Whether this version of the Postgres engine supports the S3 data export feature.
      *

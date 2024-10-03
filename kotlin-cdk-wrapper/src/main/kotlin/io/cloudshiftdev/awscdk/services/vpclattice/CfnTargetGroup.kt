@@ -80,7 +80,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTargetGroup(
   cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -787,7 +789,8 @@ public open class CfnTargetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.HealthCheckConfigProperty,
-    ) : CdkObject(cdkObject), HealthCheckConfigProperty {
+    ) : CdkObject(cdkObject),
+        HealthCheckConfigProperty {
       /**
        * Indicates whether health checking is enabled.
        *
@@ -955,7 +958,8 @@ public open class CfnTargetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty,
-    ) : CdkObject(cdkObject), MatcherProperty {
+    ) : CdkObject(cdkObject),
+        MatcherProperty {
       /**
        * The HTTP code to use when checking for a successful response from a target.
        *
@@ -1246,7 +1250,8 @@ public open class CfnTargetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetGroupConfigProperty,
-    ) : CdkObject(cdkObject), TargetGroupConfigProperty {
+    ) : CdkObject(cdkObject),
+        TargetGroupConfigProperty {
       /**
        * The health check configuration.
        *
@@ -1426,7 +1431,8 @@ public open class CfnTargetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty,
-    ) : CdkObject(cdkObject), TargetProperty {
+    ) : CdkObject(cdkObject),
+        TargetProperty {
       /**
        * The ID of the target.
        *

@@ -194,7 +194,8 @@ public interface CfnReportPlanProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.backup.CfnReportPlanProps,
-  ) : CdkObject(cdkObject), CfnReportPlanProps {
+  ) : CdkObject(cdkObject),
+      CfnReportPlanProps {
     /**
      * Contains information about where and how to deliver your reports, specifically your Amazon S3
      * bucket name, S3 key prefix, and the formats of your reports.

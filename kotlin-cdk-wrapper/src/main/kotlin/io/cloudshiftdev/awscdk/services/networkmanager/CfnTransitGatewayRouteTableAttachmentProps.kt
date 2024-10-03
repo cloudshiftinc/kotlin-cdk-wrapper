@@ -27,6 +27,15 @@ import kotlin.jvm.JvmName
  * .peeringId("peeringId")
  * .transitGatewayRouteTableArn("transitGatewayRouteTableArn")
  * // the properties below are optional
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
  * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
  * .attachmentPolicyRuleNumber(123)
  * .segmentName("segmentName")
@@ -46,11 +55,26 @@ import kotlin.jvm.JvmName
  */
 public interface CfnTransitGatewayRouteTableAttachmentProps {
   /**
+   * The name of the network function group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-networkfunctiongroupname)
+   */
+  public fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+  /**
    * The ID of the transit gateway peering.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-peeringid)
    */
   public fun peeringId(): String
+
+  /**
+   * Describes proposed changes to a network function group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange)
+   */
+  public fun proposedNetworkFunctionGroupChange(): Any? =
+      unwrap(this).getProposedNetworkFunctionGroupChange()
 
   /**
    * This property is read-only.
@@ -84,9 +108,36 @@ public interface CfnTransitGatewayRouteTableAttachmentProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param networkFunctionGroupName The name of the network function group.
+     */
+    public fun networkFunctionGroupName(networkFunctionGroupName: String)
+
+    /**
      * @param peeringId The ID of the transit gateway peering. 
      */
     public fun peeringId(peeringId: String)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    public fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("367a9706b5b0659df6993edda0b1863ba70cddaee1df411f10a6b8bfee20e84c")
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit)
 
     /**
      * @param proposedSegmentChange This property is read-only.
@@ -137,11 +188,47 @@ public interface CfnTransitGatewayRouteTableAttachmentProps {
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachmentProps.builder()
 
     /**
+     * @param networkFunctionGroupName The name of the network function group.
+     */
+    override fun networkFunctionGroupName(networkFunctionGroupName: String) {
+      cdkBuilder.networkFunctionGroupName(networkFunctionGroupName)
+    }
+
+    /**
      * @param peeringId The ID of the transit gateway peering. 
      */
     override fun peeringId(peeringId: String) {
       cdkBuilder.peeringId(peeringId)
     }
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("367a9706b5b0659df6993edda0b1863ba70cddaee1df411f10a6b8bfee20e84c")
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit):
+        Unit =
+        proposedNetworkFunctionGroupChange(CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty(proposedNetworkFunctionGroupChange))
 
     /**
      * @param proposedSegmentChange This property is read-only.
@@ -201,13 +288,29 @@ public interface CfnTransitGatewayRouteTableAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachmentProps,
-  ) : CdkObject(cdkObject), CfnTransitGatewayRouteTableAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnTransitGatewayRouteTableAttachmentProps {
+    /**
+     * The name of the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-networkfunctiongroupname)
+     */
+    override fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
     /**
      * The ID of the transit gateway peering.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-peeringid)
      */
     override fun peeringId(): String = unwrap(this).getPeeringId()
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange)
+     */
+    override fun proposedNetworkFunctionGroupChange(): Any? =
+        unwrap(this).getProposedNetworkFunctionGroupChange()
 
     /**
      * This property is read-only.

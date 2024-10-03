@@ -299,7 +299,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConnectorProfile(
   cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -705,7 +706,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), AmplitudeConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        AmplitudeConnectorProfileCredentialsProperty {
       /**
        * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
        * to your API.
@@ -817,7 +819,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty,
-    ) : CdkObject(cdkObject), ApiKeyCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        ApiKeyCredentialsProperty {
       /**
        * The API key required for API key authentication.
        *
@@ -927,7 +930,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty,
-    ) : CdkObject(cdkObject), BasicAuthCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        BasicAuthCredentialsProperty {
       /**
        * The password to use to connect to a resource.
        *
@@ -1043,7 +1047,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty,
-    ) : CdkObject(cdkObject), ConnectorOAuthRequestProperty {
+    ) : CdkObject(cdkObject),
+        ConnectorOAuthRequestProperty {
       /**
        * The code provided by the connector when it has been authenticated via the connected app.
        *
@@ -1468,7 +1473,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty,
-    ) : CdkObject(cdkObject), ConnectorProfileConfigProperty {
+    ) : CdkObject(cdkObject),
+        ConnectorProfileConfigProperty {
       /**
        * The connector-specific credentials required by each connector.
        *
@@ -2558,7 +2564,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), ConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        ConnectorProfileCredentialsProperty {
       /**
        * The connector-specific credentials required when using Amplitude.
        *
@@ -3481,7 +3488,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), ConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ConnectorProfilePropertiesProperty {
       /**
        * The properties required by the custom connector.
        *
@@ -3690,7 +3698,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty,
-    ) : CdkObject(cdkObject), CustomAuthCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        CustomAuthCredentialsProperty {
       /**
        * A map that holds custom authentication credentials.
        *
@@ -4000,7 +4009,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), CustomConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        CustomConnectorProfileCredentialsProperty {
       /**
        * The API keys required for the authentication of the user.
        *
@@ -4183,7 +4193,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), CustomConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        CustomConnectorProfilePropertiesProperty {
       /**
        * The OAuth 2.0 properties required for OAuth 2.0 authentication.
        *
@@ -4307,7 +4318,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), DatadogConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        DatadogConnectorProfileCredentialsProperty {
       /**
        * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
        * to your API.
@@ -4403,7 +4415,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), DatadogConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        DatadogConnectorProfilePropertiesProperty {
       /**
        * The location of the Datadog resource.
        *
@@ -4487,7 +4500,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), DynatraceConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        DynatraceConnectorProfileCredentialsProperty {
       /**
        * The API tokens used by Dynatrace API to authenticate various API calls.
        *
@@ -4571,7 +4585,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), DynatraceConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        DynatraceConnectorProfilePropertiesProperty {
       /**
        * The location of the Dynatrace resource.
        *
@@ -4784,7 +4799,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.GoogleAnalyticsConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), GoogleAnalyticsConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        GoogleAnalyticsConnectorProfileCredentialsProperty {
       /**
        * The credentials used to access protected Google Analytics resources.
        *
@@ -4960,7 +4976,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), InforNexusConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        InforNexusConnectorProfileCredentialsProperty {
       /**
        * The Access Key portion of the credentials.
        *
@@ -5065,7 +5082,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), InforNexusConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        InforNexusConnectorProfilePropertiesProperty {
       /**
        * The location of the Infor Nexus resource.
        *
@@ -5251,7 +5269,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), MarketoConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        MarketoConnectorProfileCredentialsProperty {
       /**
        * The credentials used to access protected Marketo resources.
        *
@@ -5357,7 +5376,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), MarketoConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        MarketoConnectorProfilePropertiesProperty {
       /**
        * The location of the Marketo resource.
        *
@@ -5550,7 +5570,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty,
-    ) : CdkObject(cdkObject), OAuth2CredentialsProperty {
+    ) : CdkObject(cdkObject),
+        OAuth2CredentialsProperty {
       /**
        * The access token used to access the connector on your behalf.
        *
@@ -5728,7 +5749,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty,
-    ) : CdkObject(cdkObject), OAuth2PropertiesProperty {
+    ) : CdkObject(cdkObject),
+        OAuth2PropertiesProperty {
       /**
        * The OAuth 2.0 grant type used by connector for OAuth 2.0 authentication.
        *
@@ -5939,7 +5961,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty,
-    ) : CdkObject(cdkObject), OAuthCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        OAuthCredentialsProperty {
       /**
        * The access token used to access protected SAPOData resources.
        *
@@ -6103,7 +6126,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty,
-    ) : CdkObject(cdkObject), OAuthPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        OAuthPropertiesProperty {
       /**
        * The authorization code url required to redirect to SAP Login Page to fetch authorization
        * code for OAuth type authentication.
@@ -6294,7 +6318,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), PardotConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        PardotConnectorProfileCredentialsProperty {
       /**
        * The credentials used to access protected Salesforce Pardot resources.
        *
@@ -6455,7 +6480,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), PardotConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        PardotConnectorProfilePropertiesProperty {
       /**
        * The business unit id of Salesforce Pardot instance.
        *
@@ -6573,7 +6599,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), RedshiftConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        RedshiftConnectorProfileCredentialsProperty {
       /**
        * The password that corresponds to the user name.
        *
@@ -6876,7 +6903,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), RedshiftConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        RedshiftConnectorProfilePropertiesProperty {
       /**
        * A name for the associated Amazon S3 bucket.
        *
@@ -7117,7 +7145,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SAPODataConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), SAPODataConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        SAPODataConnectorProfileCredentialsProperty {
       /**
        * The SAPOData basic authentication credentials.
        *
@@ -7404,7 +7433,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SAPODataConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), SAPODataConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SAPODataConnectorProfilePropertiesProperty {
       /**
        * The location of the SAPOData resource.
        *
@@ -7726,7 +7756,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), SalesforceConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        SalesforceConnectorProfileCredentialsProperty {
       /**
        * The credentials used to access protected Salesforce resources.
        *
@@ -8071,7 +8102,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), SalesforceConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SalesforceConnectorProfilePropertiesProperty {
       /**
        * The location of the Salesforce resource.
        *
@@ -8273,7 +8305,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), ServiceNowConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        ServiceNowConnectorProfileCredentialsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-oauth2credentials)
        */
@@ -8369,7 +8402,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), ServiceNowConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ServiceNowConnectorProfilePropertiesProperty {
       /**
        * The location of the ServiceNow resource.
        *
@@ -8456,7 +8490,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), SingularConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        SingularConnectorProfileCredentialsProperty {
       /**
        * A unique alphanumeric identifier used to authenticate a user, developer, or calling program
        * to your API.
@@ -8643,7 +8678,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), SlackConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        SlackConnectorProfileCredentialsProperty {
       /**
        * The credentials used to access protected Slack resources.
        *
@@ -8749,7 +8785,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), SlackConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SlackConnectorProfilePropertiesProperty {
       /**
        * The location of the Slack resource.
        *
@@ -8853,7 +8890,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), SnowflakeConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        SnowflakeConnectorProfileCredentialsProperty {
       /**
        * The password that corresponds to the user name.
        *
@@ -9076,7 +9114,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), SnowflakeConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SnowflakeConnectorProfilePropertiesProperty {
       /**
        * The name of the account.
        *
@@ -9205,7 +9244,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), TrendmicroConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        TrendmicroConnectorProfileCredentialsProperty {
       /**
        * The Secret Access Key portion of the credentials.
        *
@@ -9309,7 +9349,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), VeevaConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        VeevaConnectorProfileCredentialsProperty {
       /**
        * The password that corresponds to the user name.
        *
@@ -9400,7 +9441,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), VeevaConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        VeevaConnectorProfilePropertiesProperty {
       /**
        * The location of the Veeva resource.
        *
@@ -9586,7 +9628,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty,
-    ) : CdkObject(cdkObject), ZendeskConnectorProfileCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        ZendeskConnectorProfileCredentialsProperty {
       /**
        * The credentials used to access protected Zendesk resources.
        *
@@ -9692,7 +9735,8 @@ public open class CfnConnectorProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty,
-    ) : CdkObject(cdkObject), ZendeskConnectorProfilePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ZendeskConnectorProfilePropertiesProperty {
       /**
        * The location of the Zendesk resource.
        *

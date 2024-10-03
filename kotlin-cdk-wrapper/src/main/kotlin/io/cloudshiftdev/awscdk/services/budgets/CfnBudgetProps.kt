@@ -73,6 +73,11 @@ import kotlin.jvm.JvmName
  * .subscriptionType("subscriptionType")
  * .build()))
  * .build()))
+ * .resourceTags(List.of(ResourceTagProperty.builder()
+ * .key("key")
+ * // the properties below are optional
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -96,6 +101,15 @@ public interface CfnBudgetProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html#cfn-budgets-budget-notificationswithsubscribers)
    */
   public fun notificationsWithSubscribers(): Any? = unwrap(this).getNotificationsWithSubscribers()
+
+  /**
+   * An optional list of tags to associate with the specified budget.
+   *
+   * Each tag consists of a key and a value, and each key must be unique for the resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html#cfn-budgets-budget-resourcetags)
+   */
+  public fun resourceTags(): Any? = unwrap(this).getResourceTags()
 
   /**
    * A builder for [CfnBudgetProps]
@@ -142,6 +156,24 @@ public interface CfnBudgetProps {
      * `CreateBudget` call, AWS creates the notifications and subscribers for you.
      */
     public fun notificationsWithSubscribers(vararg notificationsWithSubscribers: Any)
+
+    /**
+     * @param resourceTags An optional list of tags to associate with the specified budget.
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     */
+    public fun resourceTags(resourceTags: IResolvable)
+
+    /**
+     * @param resourceTags An optional list of tags to associate with the specified budget.
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     */
+    public fun resourceTags(resourceTags: List<Any>)
+
+    /**
+     * @param resourceTags An optional list of tags to associate with the specified budget.
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     */
+    public fun resourceTags(vararg resourceTags: Any)
   }
 
   private class BuilderImpl : Builder {
@@ -199,12 +231,35 @@ public interface CfnBudgetProps {
     override fun notificationsWithSubscribers(vararg notificationsWithSubscribers: Any): Unit =
         notificationsWithSubscribers(notificationsWithSubscribers.toList())
 
+    /**
+     * @param resourceTags An optional list of tags to associate with the specified budget.
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     */
+    override fun resourceTags(resourceTags: IResolvable) {
+      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param resourceTags An optional list of tags to associate with the specified budget.
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     */
+    override fun resourceTags(resourceTags: List<Any>) {
+      cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param resourceTags An optional list of tags to associate with the specified budget.
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     */
+    override fun resourceTags(vararg resourceTags: Any): Unit = resourceTags(resourceTags.toList())
+
     public fun build(): software.amazon.awscdk.services.budgets.CfnBudgetProps = cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetProps,
-  ) : CdkObject(cdkObject), CfnBudgetProps {
+  ) : CdkObject(cdkObject),
+      CfnBudgetProps {
     /**
      * The budget object that you want to create.
      *
@@ -223,6 +278,15 @@ public interface CfnBudgetProps {
      */
     override fun notificationsWithSubscribers(): Any? =
         unwrap(this).getNotificationsWithSubscribers()
+
+    /**
+     * An optional list of tags to associate with the specified budget.
+     *
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html#cfn-budgets-budget-resourcetags)
+     */
+    override fun resourceTags(): Any? = unwrap(this).getResourceTags()
   }
 
   public companion object {

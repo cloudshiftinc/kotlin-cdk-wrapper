@@ -57,7 +57,8 @@ public interface ShuffleConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig,
-  ) : CdkObject(cdkObject), ShuffleConfig {
+  ) : CdkObject(cdkObject),
+      ShuffleConfig {
     /**
      * Determines the shuffling order.
      */

@@ -62,7 +62,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfigurationSet(
   cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -687,7 +689,8 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.DeliveryOptionsProperty,
-    ) : CdkObject(cdkObject), DeliveryOptionsProperty {
+    ) : CdkObject(cdkObject),
+        DeliveryOptionsProperty {
       /**
        * The name of the dedicated IP pool that you want to associate with the configuration set.
        *
@@ -792,7 +795,8 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty,
-    ) : CdkObject(cdkObject), ReputationOptionsProperty {
+    ) : CdkObject(cdkObject),
+        ReputationOptionsProperty {
       /**
        * If `true` , tracking of reputation metrics is enabled for the configuration set.
        *
@@ -895,7 +899,8 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.SendingOptionsProperty,
-    ) : CdkObject(cdkObject), SendingOptionsProperty {
+    ) : CdkObject(cdkObject),
+        SendingOptionsProperty {
       /**
        * If `true` , email sending is enabled for the configuration set.
        *
@@ -988,7 +993,8 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.TrackingOptionsProperty,
-    ) : CdkObject(cdkObject), TrackingOptionsProperty {
+    ) : CdkObject(cdkObject),
+        TrackingOptionsProperty {
       /**
        * The domain that you want to use for tracking open and click events.
        *

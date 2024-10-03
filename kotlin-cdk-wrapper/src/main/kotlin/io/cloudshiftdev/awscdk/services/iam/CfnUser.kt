@@ -61,7 +61,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUser(
   cdkObject: software.amazon.awscdk.services.iam.CfnUser,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.CfnUser(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -967,7 +969,8 @@ public open class CfnUser(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iam.CfnUser.LoginProfileProperty,
-    ) : CdkObject(cdkObject), LoginProfileProperty {
+    ) : CdkObject(cdkObject),
+        LoginProfileProperty {
       /**
        * The user's password.
        *
@@ -1089,7 +1092,8 @@ public open class CfnUser(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iam.CfnUser.PolicyProperty,
-    ) : CdkObject(cdkObject), PolicyProperty {
+    ) : CdkObject(cdkObject),
+        PolicyProperty {
       /**
        * The entire contents of the policy that defines permissions.
        *

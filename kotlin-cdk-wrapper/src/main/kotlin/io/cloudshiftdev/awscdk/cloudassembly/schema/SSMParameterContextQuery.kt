@@ -5,73 +5,26 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 
-/**
- * Query to SSM Parameter Context Provider.
- *
- * Example:
- *
- * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.cloudassembly.schema.*;
- * SSMParameterContextQuery sSMParameterContextQuery = SSMParameterContextQuery.builder()
- * .account("account")
- * .parameterName("parameterName")
- * .region("region")
- * // the properties below are optional
- * .lookupRoleArn("lookupRoleArn")
- * .build();
- * ```
- */
-public interface SSMParameterContextQuery {
-  /**
-   * Query account.
-   */
-  public fun account(): String
-
-  /**
-   * The ARN of the role that should be used to look up the missing values.
-   *
-   * Default: - None
-   */
-  public fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
-
-  /**
-   * Parameter name to query.
-   */
+public interface SSMParameterContextQuery : ContextLookupRoleOptions {
   public fun parameterName(): String
 
-  /**
-   * Query region.
-   */
-  public fun region(): String
-
-  /**
-   * A builder for [SSMParameterContextQuery]
-   */
   @CdkDslMarker
   public interface Builder {
-    /**
-     * @param account Query account. 
-     */
     public fun account(account: String)
 
-    /**
-     * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
-     */
+    public fun assumeRoleAdditionalOptions(assumeRoleAdditionalOptions: Map<String, Any>)
+
     public fun lookupRoleArn(lookupRoleArn: String)
 
-    /**
-     * @param parameterName Parameter name to query. 
-     */
+    public fun lookupRoleExternalId(lookupRoleExternalId: String)
+
     public fun parameterName(parameterName: String)
 
-    /**
-     * @param region Query region. 
-     */
     public fun region(region: String)
   }
 
@@ -80,30 +33,26 @@ public interface SSMParameterContextQuery {
         software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery.builder()
 
-    /**
-     * @param account Query account. 
-     */
     override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    /**
-     * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
-     */
+    override fun assumeRoleAdditionalOptions(assumeRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.assumeRoleAdditionalOptions(assumeRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
     override fun lookupRoleArn(lookupRoleArn: String) {
       cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    /**
-     * @param parameterName Parameter name to query. 
-     */
+    override fun lookupRoleExternalId(lookupRoleExternalId: String) {
+      cdkBuilder.lookupRoleExternalId(lookupRoleExternalId)
+    }
+
     override fun parameterName(parameterName: String) {
       cdkBuilder.parameterName(parameterName)
     }
 
-    /**
-     * @param region Query region. 
-     */
     override fun region(region: String) {
       cdkBuilder.region(region)
     }
@@ -114,27 +63,19 @@ public interface SSMParameterContextQuery {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery,
-  ) : CdkObject(cdkObject), SSMParameterContextQuery {
-    /**
-     * Query account.
-     */
+  ) : CdkObject(cdkObject),
+      SSMParameterContextQuery {
     override fun account(): String = unwrap(this).getAccount()
 
-    /**
-     * The ARN of the role that should be used to look up the missing values.
-     *
-     * Default: - None
-     */
+    override fun assumeRoleAdditionalOptions(): Map<String, Any> =
+        unwrap(this).getAssumeRoleAdditionalOptions() ?: emptyMap()
+
     override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
-    /**
-     * Parameter name to query.
-     */
+    override fun lookupRoleExternalId(): String? = unwrap(this).getLookupRoleExternalId()
+
     override fun parameterName(): String = unwrap(this).getParameterName()
 
-    /**
-     * Query region.
-     */
     override fun region(): String = unwrap(this).getRegion()
   }
 

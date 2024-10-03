@@ -31,7 +31,8 @@ import software.amazon.awscdk.services.s3.Bucket as AmazonAwscdkServicesS3Bucket
  */
 public open class S3EventSource(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.S3EventSource,
-) : CdkObject(cdkObject), IEventSource {
+) : CdkObject(cdkObject),
+    IEventSource {
   public constructor(bucket: CloudshiftdevAwscdkServicesS3Bucket, props: S3EventSourceProps) :
       this(software.amazon.awscdk.services.lambda.eventsources.S3EventSource(bucket.let(CloudshiftdevAwscdkServicesS3Bucket.Companion::unwrap),
       props.let(S3EventSourceProps.Companion::unwrap))

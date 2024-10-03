@@ -134,7 +134,8 @@ public interface SecretPathVolumeOptions : EksVolumeOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.SecretPathVolumeOptions,
-  ) : CdkObject(cdkObject), SecretPathVolumeOptions {
+  ) : CdkObject(cdkObject),
+      SecretPathVolumeOptions {
     /**
      * The path on the container where the volume is mounted.
      *

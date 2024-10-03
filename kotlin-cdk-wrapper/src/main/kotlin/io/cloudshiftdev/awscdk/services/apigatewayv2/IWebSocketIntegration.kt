@@ -21,7 +21,8 @@ public interface IWebSocketIntegration : IIntegration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketIntegration,
-  ) : CdkObject(cdkObject), IWebSocketIntegration {
+  ) : CdkObject(cdkObject),
+      IWebSocketIntegration {
     /**
      * Apply the given removal policy to this resource.
      *

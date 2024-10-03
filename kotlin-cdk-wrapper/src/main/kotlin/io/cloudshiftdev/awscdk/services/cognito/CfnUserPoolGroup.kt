@@ -35,7 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUserPoolGroup(
   cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolGroup,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

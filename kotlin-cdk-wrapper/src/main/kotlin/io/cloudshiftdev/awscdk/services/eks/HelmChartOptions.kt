@@ -321,7 +321,8 @@ public interface HelmChartOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.HelmChartOptions,
-  ) : CdkObject(cdkObject), HelmChartOptions {
+  ) : CdkObject(cdkObject),
+      HelmChartOptions {
     /**
      * Whether or not Helm should treat this operation as atomic;
      *

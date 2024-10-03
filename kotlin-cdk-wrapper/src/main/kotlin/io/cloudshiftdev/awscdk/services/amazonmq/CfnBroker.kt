@@ -59,11 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.amazonmq.*;
  * CfnBroker cfnBroker = CfnBroker.Builder.create(this, "MyCfnBroker")
- * .autoMinorVersionUpgrade(false)
  * .brokerName("brokerName")
  * .deploymentMode("deploymentMode")
  * .engineType("engineType")
- * .engineVersion("engineVersion")
  * .hostInstanceType("hostInstanceType")
  * .publiclyAccessible(false)
  * .users(List.of(UserProperty.builder()
@@ -76,6 +74,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * // the properties below are optional
  * .authenticationStrategy("authenticationStrategy")
+ * .autoMinorVersionUpgrade(false)
  * .configuration(ConfigurationIdProperty.builder()
  * .id("id")
  * .revision(123)
@@ -87,6 +86,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .kmsKeyId("kmsKeyId")
  * .build())
+ * .engineVersion("engineVersion")
  * .ldapServerMetadata(LdapServerMetadataProperty.builder()
  * .hosts(List.of("hosts"))
  * .roleBase("roleBase")
@@ -124,7 +124,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBroker(
   cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -228,7 +230,7 @@ public open class CfnBroker(
    * Enables automatic upgrades to new minor versions for brokers, as new broker engine versions are
    * released and supported by Amazon MQ.
    */
-  public open fun autoMinorVersionUpgrade(): Any = unwrap(this).getAutoMinorVersionUpgrade()
+  public open fun autoMinorVersionUpgrade(): Any? = unwrap(this).getAutoMinorVersionUpgrade()
 
   /**
    * Enables automatic upgrades to new minor versions for brokers, as new broker engine versions are
@@ -370,7 +372,7 @@ public open class CfnBroker(
   /**
    * The version of the broker engine.
    */
-  public open fun engineVersion(): String = unwrap(this).getEngineVersion()
+  public open fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
   /**
    * The version of the broker engine.
@@ -1631,7 +1633,8 @@ public open class CfnBroker(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty,
-    ) : CdkObject(cdkObject), ConfigurationIdProperty {
+    ) : CdkObject(cdkObject),
+        ConfigurationIdProperty {
       /**
        * The unique ID that Amazon MQ generates for the configuration.
        *
@@ -1769,7 +1772,8 @@ public open class CfnBroker(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty,
-    ) : CdkObject(cdkObject), EncryptionOptionsProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionOptionsProperty {
       /**
        * The customer master key (CMK) to use for the A AWS KMS (KMS).
        *
@@ -2217,7 +2221,8 @@ public open class CfnBroker(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LdapServerMetadataProperty,
-    ) : CdkObject(cdkObject), LdapServerMetadataProperty {
+    ) : CdkObject(cdkObject),
+        LdapServerMetadataProperty {
       /**
        * Specifies the location of the LDAP server such as AWS Directory Service for Microsoft
        * Active Directory .
@@ -2464,7 +2469,8 @@ public open class CfnBroker(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty,
-    ) : CdkObject(cdkObject), LogListProperty {
+    ) : CdkObject(cdkObject),
+        LogListProperty {
       /**
        * Enables audit logging.
        *
@@ -2597,7 +2603,8 @@ public open class CfnBroker(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty,
-    ) : CdkObject(cdkObject), MaintenanceWindowProperty {
+    ) : CdkObject(cdkObject),
+        MaintenanceWindowProperty {
       /**
        * The day of the week.
        *
@@ -2711,7 +2718,8 @@ public open class CfnBroker(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.TagsEntryProperty,
-    ) : CdkObject(cdkObject), TagsEntryProperty {
+    ) : CdkObject(cdkObject),
+        TagsEntryProperty {
       /**
        * The key in a key-value pair.
        *
@@ -2980,7 +2988,8 @@ public open class CfnBroker(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.UserProperty,
-    ) : CdkObject(cdkObject), UserProperty {
+    ) : CdkObject(cdkObject),
+        UserProperty {
       /**
        * Enables access to the ActiveMQ web console for the ActiveMQ user.
        *

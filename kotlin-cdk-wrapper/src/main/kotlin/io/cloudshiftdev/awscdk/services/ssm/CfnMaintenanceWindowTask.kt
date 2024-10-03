@@ -102,7 +102,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMaintenanceWindowTask(
   cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -235,16 +236,14 @@ public open class CfnMaintenanceWindowTask(
   }
 
   /**
-   * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) service role to
-   * use to publish Amazon Simple Notification Service (Amazon SNS) notifications for maintenance
-   * window Run Command tasks.
+   * The Amazon Resource Name (ARN) of the IAM service role for AWS Systems Manager to assume when
+   * running a maintenance window task.
    */
   public open fun serviceRoleArn(): String? = unwrap(this).getServiceRoleArn()
 
   /**
-   * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) service role to
-   * use to publish Amazon Simple Notification Service (Amazon SNS) notifications for maintenance
-   * window Run Command tasks.
+   * The Amazon Resource Name (ARN) of the IAM service role for AWS Systems Manager to assume when
+   * running a maintenance window task.
    */
   public open fun serviceRoleArn(`value`: String) {
     unwrap(this).setServiceRoleArn(`value`)
@@ -488,14 +487,23 @@ public open class CfnMaintenanceWindowTask(
     public fun priority(priority: Number)
 
     /**
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) service role
-     * to use to publish Amazon Simple Notification Service (Amazon SNS) notifications for maintenance
-     * window Run Command tasks.
+     * The Amazon Resource Name (ARN) of the IAM service role for AWS Systems Manager to assume when
+     * running a maintenance window task.
+     *
+     * If you do not specify a service role ARN, Systems Manager uses a service-linked role in your
+     * account. If no appropriate service-linked role for Systems Manager exists in your account, it is
+     * created when you run `RegisterTaskWithMaintenanceWindow` .
+     *
+     * However, for an improved security posture, we strongly recommend creating a custom policy and
+     * custom service role for running your maintenance window tasks. The policy can be crafted to
+     * provide only the permissions needed for your particular maintenance window tasks. For more
+     * information, see [Setting up Maintenance
+     * Windows](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html)
+     * in the in the *AWS Systems Manager User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-servicerolearn)
-     * @param serviceRoleArn The Amazon Resource Name (ARN) of the AWS Identity and Access
-     * Management (IAM) service role to use to publish Amazon Simple Notification Service (Amazon SNS)
-     * notifications for maintenance window Run Command tasks. 
+     * @param serviceRoleArn The Amazon Resource Name (ARN) of the IAM service role for AWS Systems
+     * Manager to assume when running a maintenance window task. 
      */
     public fun serviceRoleArn(serviceRoleArn: String)
 
@@ -806,14 +814,23 @@ public open class CfnMaintenanceWindowTask(
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) service role
-     * to use to publish Amazon Simple Notification Service (Amazon SNS) notifications for maintenance
-     * window Run Command tasks.
+     * The Amazon Resource Name (ARN) of the IAM service role for AWS Systems Manager to assume when
+     * running a maintenance window task.
+     *
+     * If you do not specify a service role ARN, Systems Manager uses a service-linked role in your
+     * account. If no appropriate service-linked role for Systems Manager exists in your account, it is
+     * created when you run `RegisterTaskWithMaintenanceWindow` .
+     *
+     * However, for an improved security posture, we strongly recommend creating a custom policy and
+     * custom service role for running your maintenance window tasks. The policy can be crafted to
+     * provide only the permissions needed for your particular maintenance window tasks. For more
+     * information, see [Setting up Maintenance
+     * Windows](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html)
+     * in the in the *AWS Systems Manager User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-servicerolearn)
-     * @param serviceRoleArn The Amazon Resource Name (ARN) of the AWS Identity and Access
-     * Management (IAM) service role to use to publish Amazon Simple Notification Service (Amazon SNS)
-     * notifications for maintenance window Run Command tasks. 
+     * @param serviceRoleArn The Amazon Resource Name (ARN) of the IAM service role for AWS Systems
+     * Manager to assume when running a maintenance window task. 
      */
     override fun serviceRoleArn(serviceRoleArn: String) {
       cdkBuilder.serviceRoleArn(serviceRoleArn)
@@ -1118,7 +1135,8 @@ public open class CfnMaintenanceWindowTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty,
-    ) : CdkObject(cdkObject), CloudWatchOutputConfigProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchOutputConfigProperty {
       /**
        * The name of the CloudWatch Logs log group where you want to send command output.
        *
@@ -1266,7 +1284,8 @@ public open class CfnMaintenanceWindowTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty,
-    ) : CdkObject(cdkObject), LoggingInfoProperty {
+    ) : CdkObject(cdkObject),
+        LoggingInfoProperty {
       /**
        * The AWS Region where the S3 bucket is located.
        *
@@ -1394,7 +1413,8 @@ public open class CfnMaintenanceWindowTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty,
-    ) : CdkObject(cdkObject), MaintenanceWindowAutomationParametersProperty {
+    ) : CdkObject(cdkObject),
+        MaintenanceWindowAutomationParametersProperty {
       /**
        * The version of an Automation runbook to use during task execution.
        *
@@ -1568,7 +1588,8 @@ public open class CfnMaintenanceWindowTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty,
-    ) : CdkObject(cdkObject), MaintenanceWindowLambdaParametersProperty {
+    ) : CdkObject(cdkObject),
+        MaintenanceWindowLambdaParametersProperty {
       /**
        * Client-specific information to pass to the AWS Lambda function that you're invoking.
        *
@@ -1761,9 +1782,19 @@ public open class CfnMaintenanceWindowTask(
     public fun parameters(): Any? = unwrap(this).getParameters()
 
     /**
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) service role
-     * to use to publish Amazon Simple Notification Service (Amazon SNS) notifications for maintenance
-     * window Run Command tasks.
+     * The Amazon Resource Name (ARN) of the IAM service role for AWS Systems Manager to assume when
+     * running a maintenance window task.
+     *
+     * If you do not specify a service role ARN, Systems Manager uses a service-linked role in your
+     * account. If no appropriate service-linked role for Systems Manager exists in your account, it is
+     * created when you run `RegisterTaskWithMaintenanceWindow` .
+     *
+     * However, for an improved security posture, we strongly recommend creating a custom policy and
+     * custom service role for running your maintenance window tasks. The policy can be crafted to
+     * provide only the permissions needed for your particular maintenance window tasks. For more
+     * information, see [Setting up Maintenance
+     * Windows](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html)
+     * in the in the *AWS Systems Manager User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-servicerolearn)
      */
@@ -1876,9 +1907,18 @@ public open class CfnMaintenanceWindowTask(
       public fun parameters(parameters: Any)
 
       /**
-       * @param serviceRoleArn The Amazon Resource Name (ARN) of the AWS Identity and Access
-       * Management (IAM) service role to use to publish Amazon Simple Notification Service (Amazon
-       * SNS) notifications for maintenance window Run Command tasks.
+       * @param serviceRoleArn The Amazon Resource Name (ARN) of the IAM service role for AWS
+       * Systems Manager to assume when running a maintenance window task.
+       * If you do not specify a service role ARN, Systems Manager uses a service-linked role in
+       * your account. If no appropriate service-linked role for Systems Manager exists in your
+       * account, it is created when you run `RegisterTaskWithMaintenanceWindow` .
+       *
+       * However, for an improved security posture, we strongly recommend creating a custom policy
+       * and custom service role for running your maintenance window tasks. The policy can be crafted
+       * to provide only the permissions needed for your particular maintenance window tasks. For more
+       * information, see [Setting up Maintenance
+       * Windows](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html)
+       * in the in the *AWS Systems Manager User Guide* .
        */
       public fun serviceRoleArn(serviceRoleArn: String)
 
@@ -2014,9 +2054,18 @@ public open class CfnMaintenanceWindowTask(
       }
 
       /**
-       * @param serviceRoleArn The Amazon Resource Name (ARN) of the AWS Identity and Access
-       * Management (IAM) service role to use to publish Amazon Simple Notification Service (Amazon
-       * SNS) notifications for maintenance window Run Command tasks.
+       * @param serviceRoleArn The Amazon Resource Name (ARN) of the IAM service role for AWS
+       * Systems Manager to assume when running a maintenance window task.
+       * If you do not specify a service role ARN, Systems Manager uses a service-linked role in
+       * your account. If no appropriate service-linked role for Systems Manager exists in your
+       * account, it is created when you run `RegisterTaskWithMaintenanceWindow` .
+       *
+       * However, for an improved security posture, we strongly recommend creating a custom policy
+       * and custom service role for running your maintenance window tasks. The policy can be crafted
+       * to provide only the permissions needed for your particular maintenance window tasks. For more
+       * information, see [Setting up Maintenance
+       * Windows](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html)
+       * in the in the *AWS Systems Manager User Guide* .
        */
       override fun serviceRoleArn(serviceRoleArn: String) {
         cdkBuilder.serviceRoleArn(serviceRoleArn)
@@ -2037,7 +2086,8 @@ public open class CfnMaintenanceWindowTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty,
-    ) : CdkObject(cdkObject), MaintenanceWindowRunCommandParametersProperty {
+    ) : CdkObject(cdkObject),
+        MaintenanceWindowRunCommandParametersProperty {
       /**
        * Configuration options for sending command output to Amazon CloudWatch Logs.
        *
@@ -2122,9 +2172,19 @@ public open class CfnMaintenanceWindowTask(
       override fun parameters(): Any? = unwrap(this).getParameters()
 
       /**
-       * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) service role
-       * to use to publish Amazon Simple Notification Service (Amazon SNS) notifications for
-       * maintenance window Run Command tasks.
+       * The Amazon Resource Name (ARN) of the IAM service role for AWS Systems Manager to assume
+       * when running a maintenance window task.
+       *
+       * If you do not specify a service role ARN, Systems Manager uses a service-linked role in
+       * your account. If no appropriate service-linked role for Systems Manager exists in your
+       * account, it is created when you run `RegisterTaskWithMaintenanceWindow` .
+       *
+       * However, for an improved security posture, we strongly recommend creating a custom policy
+       * and custom service role for running your maintenance window tasks. The policy can be crafted
+       * to provide only the permissions needed for your particular maintenance window tasks. For more
+       * information, see [Setting up Maintenance
+       * Windows](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-permissions.html)
+       * in the in the *AWS Systems Manager User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-servicerolearn)
        */
@@ -2239,7 +2299,8 @@ public open class CfnMaintenanceWindowTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty,
-    ) : CdkObject(cdkObject), MaintenanceWindowStepFunctionsParametersProperty {
+    ) : CdkObject(cdkObject),
+        MaintenanceWindowStepFunctionsParametersProperty {
       /**
        * The inputs for the `STEP_FUNCTIONS` task.
        *
@@ -2429,7 +2490,8 @@ public open class CfnMaintenanceWindowTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.NotificationConfigProperty,
-    ) : CdkObject(cdkObject), NotificationConfigProperty {
+    ) : CdkObject(cdkObject),
+        NotificationConfigProperty {
       /**
        * An Amazon Resource Name (ARN) for an Amazon Simple Notification Service (Amazon SNS) topic.
        *
@@ -2634,7 +2696,8 @@ public open class CfnMaintenanceWindowTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty,
-    ) : CdkObject(cdkObject), TargetProperty {
+    ) : CdkObject(cdkObject),
+        TargetProperty {
       /**
        * User-defined criteria for sending commands that target instances that meet the criteria.
        *
@@ -2978,7 +3041,8 @@ public open class CfnMaintenanceWindowTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty,
-    ) : CdkObject(cdkObject), TaskInvocationParametersProperty {
+    ) : CdkObject(cdkObject),
+        TaskInvocationParametersProperty {
       /**
        * The parameters for an `AUTOMATION` task type.
        *

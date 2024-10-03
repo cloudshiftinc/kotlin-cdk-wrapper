@@ -28,7 +28,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class StringListParameter(
   cdkObject: software.amazon.awscdk.services.ssm.StringListParameter,
-) : Resource(cdkObject), IStringListParameter, IParameter {
+) : Resource(cdkObject),
+    IStringListParameter,
+    IParameter {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -128,7 +130,12 @@ public open class StringListParameter(
     public fun parameterName(parameterName: String)
 
     /**
-     * Indicates if the parameter name is a simple name (i.e. does not include "/" separators).
+     * Indicates whether the parameter name is a simple name.
+     *
+     * A parameter name
+     * without any "/" is considered a simple name. If the parameter name includes
+     * "/", setting simpleName to true might cause unintended issues such
+     * as duplicate "/" in the resulting ARN.
      *
      * This is required only if `parameterName` is a token, which means we
      * are unable to detect if the name is simple or "path-like" for the purpose
@@ -140,8 +147,7 @@ public open class StringListParameter(
      *
      * Default: - auto-detect based on `parameterName`
      *
-     * @param simpleName Indicates if the parameter name is a simple name (i.e. does not include "/"
-     * separators). 
+     * @param simpleName Indicates whether the parameter name is a simple name. 
      */
     public fun simpleName(simpleName: Boolean)
 
@@ -217,7 +223,12 @@ public open class StringListParameter(
     }
 
     /**
-     * Indicates if the parameter name is a simple name (i.e. does not include "/" separators).
+     * Indicates whether the parameter name is a simple name.
+     *
+     * A parameter name
+     * without any "/" is considered a simple name. If the parameter name includes
+     * "/", setting simpleName to true might cause unintended issues such
+     * as duplicate "/" in the resulting ARN.
      *
      * This is required only if `parameterName` is a token, which means we
      * are unable to detect if the name is simple or "path-like" for the purpose
@@ -229,8 +240,7 @@ public open class StringListParameter(
      *
      * Default: - auto-detect based on `parameterName`
      *
-     * @param simpleName Indicates if the parameter name is a simple name (i.e. does not include "/"
-     * separators). 
+     * @param simpleName Indicates whether the parameter name is a simple name. 
      */
     override fun simpleName(simpleName: Boolean) {
       cdkBuilder.simpleName(simpleName)

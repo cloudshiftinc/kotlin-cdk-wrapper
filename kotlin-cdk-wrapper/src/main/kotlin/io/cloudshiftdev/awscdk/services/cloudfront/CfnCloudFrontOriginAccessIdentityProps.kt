@@ -107,7 +107,8 @@ public interface CfnCloudFrontOriginAccessIdentityProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentityProps,
-  ) : CdkObject(cdkObject), CfnCloudFrontOriginAccessIdentityProps {
+  ) : CdkObject(cdkObject),
+      CfnCloudFrontOriginAccessIdentityProps {
     /**
      * The current configuration information for the identity.
      *

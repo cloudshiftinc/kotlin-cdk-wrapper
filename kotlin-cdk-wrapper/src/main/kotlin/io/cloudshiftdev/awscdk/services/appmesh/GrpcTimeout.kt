@@ -90,7 +90,8 @@ public interface GrpcTimeout {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.GrpcTimeout,
-  ) : CdkObject(cdkObject), GrpcTimeout {
+  ) : CdkObject(cdkObject),
+      GrpcTimeout {
     /**
      * Represents an idle timeout.
      *

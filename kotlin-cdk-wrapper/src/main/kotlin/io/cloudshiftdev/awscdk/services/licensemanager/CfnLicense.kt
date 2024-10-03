@@ -81,7 +81,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLicense(
   cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -837,7 +838,8 @@ public open class CfnLicense(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.BorrowConfigurationProperty,
-    ) : CdkObject(cdkObject), BorrowConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        BorrowConfigurationProperty {
       /**
        * Indicates whether early check-ins are allowed.
        *
@@ -1033,7 +1035,8 @@ public open class CfnLicense(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty,
-    ) : CdkObject(cdkObject), ConsumptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ConsumptionConfigurationProperty {
       /**
        * Details about a borrow configuration.
        *
@@ -1261,7 +1264,8 @@ public open class CfnLicense(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty,
-    ) : CdkObject(cdkObject), EntitlementProperty {
+    ) : CdkObject(cdkObject),
+        EntitlementProperty {
       /**
        * Indicates whether check-ins are allowed.
        *
@@ -1409,7 +1413,8 @@ public open class CfnLicense(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty,
-    ) : CdkObject(cdkObject), IssuerDataProperty {
+    ) : CdkObject(cdkObject),
+        IssuerDataProperty {
       /**
        * Issuer name.
        *
@@ -1519,7 +1524,8 @@ public open class CfnLicense(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty,
-    ) : CdkObject(cdkObject), MetadataProperty {
+    ) : CdkObject(cdkObject),
+        MetadataProperty {
       /**
        * The key name.
        *
@@ -1609,7 +1615,8 @@ public open class CfnLicense(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty,
-    ) : CdkObject(cdkObject), ProvisionalConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ProvisionalConfigurationProperty {
       /**
        * Maximum time for the provisional configuration, in minutes.
        *
@@ -1711,7 +1718,8 @@ public open class CfnLicense(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty,
-    ) : CdkObject(cdkObject), ValidityDateFormatProperty {
+    ) : CdkObject(cdkObject),
+        ValidityDateFormatProperty {
       /**
        * Start of the time range.
        *

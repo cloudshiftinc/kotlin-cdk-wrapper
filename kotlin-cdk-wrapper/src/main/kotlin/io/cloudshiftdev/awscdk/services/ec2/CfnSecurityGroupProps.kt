@@ -289,7 +289,8 @@ public interface CfnSecurityGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupProps,
-  ) : CdkObject(cdkObject), CfnSecurityGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnSecurityGroupProps {
     /**
      * A description for the security group.
      *

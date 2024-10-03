@@ -45,7 +45,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class DatabaseInstanceBase(
   cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceBase,
-) : Resource(cdkObject), IDatabaseInstance {
+) : Resource(cdkObject),
+    IDatabaseInstance {
   /**
    * Add a new db proxy to this instance.
    *

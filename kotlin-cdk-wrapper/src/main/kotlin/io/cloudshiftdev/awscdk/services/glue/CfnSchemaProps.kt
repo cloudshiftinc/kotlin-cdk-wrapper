@@ -311,7 +311,8 @@ public interface CfnSchemaProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnSchemaProps,
-  ) : CdkObject(cdkObject), CfnSchemaProps {
+  ) : CdkObject(cdkObject),
+      CfnSchemaProps {
     /**
      * Specify the `VersionNumber` or the `IsLatest` for setting the checkpoint for the schema.
      *

@@ -281,7 +281,8 @@ public interface CfnUsagePlanProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlanProps,
-  ) : CdkObject(cdkObject), CfnUsagePlanProps {
+  ) : CdkObject(cdkObject),
+      CfnUsagePlanProps {
     /**
      * The associated API stages of a usage plan.
      *

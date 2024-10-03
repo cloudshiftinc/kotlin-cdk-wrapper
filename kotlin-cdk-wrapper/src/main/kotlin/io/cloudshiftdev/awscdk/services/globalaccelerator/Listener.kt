@@ -47,7 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Listener(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.Listener,
-) : Resource(cdkObject), IListener {
+) : Resource(cdkObject),
+    IListener {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

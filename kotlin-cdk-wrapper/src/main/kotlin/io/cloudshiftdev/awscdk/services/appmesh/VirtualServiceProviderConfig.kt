@@ -148,7 +148,8 @@ public interface VirtualServiceProviderConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProviderConfig,
-  ) : CdkObject(cdkObject), VirtualServiceProviderConfig {
+  ) : CdkObject(cdkObject),
+      VirtualServiceProviderConfig {
     /**
      * Mesh the Provider is using.
      *

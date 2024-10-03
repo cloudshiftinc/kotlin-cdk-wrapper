@@ -25,7 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class SamlProvider(
   cdkObject: software.amazon.awscdk.services.iam.SamlProvider,
-) : Resource(cdkObject), ISamlProvider {
+) : Resource(cdkObject),
+    ISamlProvider {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

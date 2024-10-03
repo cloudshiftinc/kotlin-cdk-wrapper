@@ -49,7 +49,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRecoveryGroup(
   cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

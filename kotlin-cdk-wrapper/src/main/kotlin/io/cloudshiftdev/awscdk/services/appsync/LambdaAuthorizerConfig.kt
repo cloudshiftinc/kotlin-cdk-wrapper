@@ -114,7 +114,8 @@ public interface LambdaAuthorizerConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.LambdaAuthorizerConfig,
-  ) : CdkObject(cdkObject), LambdaAuthorizerConfig {
+  ) : CdkObject(cdkObject),
+      LambdaAuthorizerConfig {
     /**
      * The authorizer lambda function.
      *

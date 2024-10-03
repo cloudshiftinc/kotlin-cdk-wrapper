@@ -84,8 +84,8 @@ import kotlin.jvm.JvmName
  */
 public interface CfnUserPoolRiskConfigurationAttachmentProps {
   /**
-   * The account takeover risk configuration object, including the `NotifyConfiguration` object and
-   * `Actions` to take if there is an account takeover.
+   * The settings for automated responses and notification templates for adaptive authentication
+   * with advanced security features.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)
    */
@@ -103,8 +103,8 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
   public fun clientId(): String
 
   /**
-   * The compromised credentials risk configuration object, including the `EventFilter` and the
-   * `EventAction` .
+   * Settings for compromised-credentials actions and authentication types with advanced security
+   * features in full-function `ENFORCED` mode.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)
    */
@@ -112,14 +112,15 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
       unwrap(this).getCompromisedCredentialsRiskConfiguration()
 
   /**
-   * The configuration to override the risk decision.
+   * Exceptions to the risk evaluation configuration, including always-allow and always-block IP
+   * address ranges.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-riskexceptionconfiguration)
    */
   public fun riskExceptionConfiguration(): Any? = unwrap(this).getRiskExceptionConfiguration()
 
   /**
-   * The user pool ID.
+   * The ID of the user pool that has the risk configuration applied.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-userpoolid)
    */
@@ -131,24 +132,21 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param accountTakeoverRiskConfiguration The account takeover risk configuration object,
-     * including the `NotifyConfiguration` object and `Actions` to take if there is an account
-     * takeover.
+     * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
+     * templates for adaptive authentication with advanced security features.
      */
     public fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: IResolvable)
 
     /**
-     * @param accountTakeoverRiskConfiguration The account takeover risk configuration object,
-     * including the `NotifyConfiguration` object and `Actions` to take if there is an account
-     * takeover.
+     * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
+     * templates for adaptive authentication with advanced security features.
      */
     public
         fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty)
 
     /**
-     * @param accountTakeoverRiskConfiguration The account takeover risk configuration object,
-     * including the `NotifyConfiguration` object and `Actions` to take if there is an account
-     * takeover.
+     * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
+     * templates for adaptive authentication with advanced security features.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb271e35416f61b857614270b74ca98b3886d0741f2eff8f638aedbce2ef7ca0")
@@ -163,22 +161,22 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
     public fun clientId(clientId: String)
 
     /**
-     * @param compromisedCredentialsRiskConfiguration The compromised credentials risk configuration
-     * object, including the `EventFilter` and the `EventAction` .
+     * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
+     * and authentication types with advanced security features in full-function `ENFORCED` mode.
      */
     public
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: IResolvable)
 
     /**
-     * @param compromisedCredentialsRiskConfiguration The compromised credentials risk configuration
-     * object, including the `EventFilter` and the `EventAction` .
+     * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
+     * and authentication types with advanced security features in full-function `ENFORCED` mode.
      */
     public
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty)
 
     /**
-     * @param compromisedCredentialsRiskConfiguration The compromised credentials risk configuration
-     * object, including the `EventFilter` and the `EventAction` .
+     * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
+     * and authentication types with advanced security features in full-function `ENFORCED` mode.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("683ec85a0d5c3a7ccd5caf628278c5d85261b1299fa29aa29cf168b975643e5b")
@@ -186,18 +184,21 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty.Builder.() -> Unit)
 
     /**
-     * @param riskExceptionConfiguration The configuration to override the risk decision.
+     * @param riskExceptionConfiguration Exceptions to the risk evaluation configuration, including
+     * always-allow and always-block IP address ranges.
      */
     public fun riskExceptionConfiguration(riskExceptionConfiguration: IResolvable)
 
     /**
-     * @param riskExceptionConfiguration The configuration to override the risk decision.
+     * @param riskExceptionConfiguration Exceptions to the risk evaluation configuration, including
+     * always-allow and always-block IP address ranges.
      */
     public
         fun riskExceptionConfiguration(riskExceptionConfiguration: CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty)
 
     /**
-     * @param riskExceptionConfiguration The configuration to override the risk decision.
+     * @param riskExceptionConfiguration Exceptions to the risk evaluation configuration, including
+     * always-allow and always-block IP address ranges.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ccd370c772a07343b844afc5a971eacca678c609610d5e9cc698a2638888c52e")
@@ -205,7 +206,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
         fun riskExceptionConfiguration(riskExceptionConfiguration: CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty.Builder.() -> Unit)
 
     /**
-     * @param userPoolId The user pool ID. 
+     * @param userPoolId The ID of the user pool that has the risk configuration applied. 
      */
     public fun userPoolId(userPoolId: String)
   }
@@ -217,18 +218,16 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
         software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachmentProps.builder()
 
     /**
-     * @param accountTakeoverRiskConfiguration The account takeover risk configuration object,
-     * including the `NotifyConfiguration` object and `Actions` to take if there is an account
-     * takeover.
+     * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
+     * templates for adaptive authentication with advanced security features.
      */
     override fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: IResolvable) {
       cdkBuilder.accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param accountTakeoverRiskConfiguration The account takeover risk configuration object,
-     * including the `NotifyConfiguration` object and `Actions` to take if there is an account
-     * takeover.
+     * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
+     * templates for adaptive authentication with advanced security features.
      */
     override
         fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty) {
@@ -236,9 +235,8 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
     }
 
     /**
-     * @param accountTakeoverRiskConfiguration The account takeover risk configuration object,
-     * including the `NotifyConfiguration` object and `Actions` to take if there is an account
-     * takeover.
+     * @param accountTakeoverRiskConfiguration The settings for automated responses and notification
+     * templates for adaptive authentication with advanced security features.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb271e35416f61b857614270b74ca98b3886d0741f2eff8f638aedbce2ef7ca0")
@@ -257,8 +255,8 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
     }
 
     /**
-     * @param compromisedCredentialsRiskConfiguration The compromised credentials risk configuration
-     * object, including the `EventFilter` and the `EventAction` .
+     * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
+     * and authentication types with advanced security features in full-function `ENFORCED` mode.
      */
     override
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: IResolvable) {
@@ -266,8 +264,8 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
     }
 
     /**
-     * @param compromisedCredentialsRiskConfiguration The compromised credentials risk configuration
-     * object, including the `EventFilter` and the `EventAction` .
+     * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
+     * and authentication types with advanced security features in full-function `ENFORCED` mode.
      */
     override
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty) {
@@ -275,8 +273,8 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
     }
 
     /**
-     * @param compromisedCredentialsRiskConfiguration The compromised credentials risk configuration
-     * object, including the `EventFilter` and the `EventAction` .
+     * @param compromisedCredentialsRiskConfiguration Settings for compromised-credentials actions
+     * and authentication types with advanced security features in full-function `ENFORCED` mode.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("683ec85a0d5c3a7ccd5caf628278c5d85261b1299fa29aa29cf168b975643e5b")
@@ -286,14 +284,16 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
         compromisedCredentialsRiskConfiguration(CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty(compromisedCredentialsRiskConfiguration))
 
     /**
-     * @param riskExceptionConfiguration The configuration to override the risk decision.
+     * @param riskExceptionConfiguration Exceptions to the risk evaluation configuration, including
+     * always-allow and always-block IP address ranges.
      */
     override fun riskExceptionConfiguration(riskExceptionConfiguration: IResolvable) {
       cdkBuilder.riskExceptionConfiguration(riskExceptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param riskExceptionConfiguration The configuration to override the risk decision.
+     * @param riskExceptionConfiguration Exceptions to the risk evaluation configuration, including
+     * always-allow and always-block IP address ranges.
      */
     override
         fun riskExceptionConfiguration(riskExceptionConfiguration: CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty) {
@@ -301,7 +301,8 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
     }
 
     /**
-     * @param riskExceptionConfiguration The configuration to override the risk decision.
+     * @param riskExceptionConfiguration Exceptions to the risk evaluation configuration, including
+     * always-allow and always-block IP address ranges.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ccd370c772a07343b844afc5a971eacca678c609610d5e9cc698a2638888c52e")
@@ -311,7 +312,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
         riskExceptionConfiguration(CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty(riskExceptionConfiguration))
 
     /**
-     * @param userPoolId The user pool ID. 
+     * @param userPoolId The ID of the user pool that has the risk configuration applied. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
@@ -324,10 +325,11 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachmentProps,
-  ) : CdkObject(cdkObject), CfnUserPoolRiskConfigurationAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnUserPoolRiskConfigurationAttachmentProps {
     /**
-     * The account takeover risk configuration object, including the `NotifyConfiguration` object
-     * and `Actions` to take if there is an account takeover.
+     * The settings for automated responses and notification templates for adaptive authentication
+     * with advanced security features.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)
      */
@@ -345,8 +347,8 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
     override fun clientId(): String = unwrap(this).getClientId()
 
     /**
-     * The compromised credentials risk configuration object, including the `EventFilter` and the
-     * `EventAction` .
+     * Settings for compromised-credentials actions and authentication types with advanced security
+     * features in full-function `ENFORCED` mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)
      */
@@ -354,14 +356,15 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
         unwrap(this).getCompromisedCredentialsRiskConfiguration()
 
     /**
-     * The configuration to override the risk decision.
+     * Exceptions to the risk evaluation configuration, including always-allow and always-block IP
+     * address ranges.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-riskexceptionconfiguration)
      */
     override fun riskExceptionConfiguration(): Any? = unwrap(this).getRiskExceptionConfiguration()
 
     /**
-     * The user pool ID.
+     * The ID of the user pool that has the risk configuration applied.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-userpoolid)
      */

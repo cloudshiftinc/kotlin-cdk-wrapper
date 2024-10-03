@@ -82,7 +82,8 @@ public interface LoadBalancerTargetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps,
-  ) : CdkObject(cdkObject), LoadBalancerTargetProps {
+  ) : CdkObject(cdkObject),
+      LoadBalancerTargetProps {
     /**
      * JSON representing the target's direct addition to the TargetGroup list.
      *

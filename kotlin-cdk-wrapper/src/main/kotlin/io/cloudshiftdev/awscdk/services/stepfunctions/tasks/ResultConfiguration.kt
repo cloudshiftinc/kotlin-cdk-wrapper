@@ -131,7 +131,8 @@ public interface ResultConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration,
-  ) : CdkObject(cdkObject), ResultConfiguration {
+  ) : CdkObject(cdkObject),
+      ResultConfiguration {
     /**
      * Encryption option used if enabled in S3.
      *

@@ -105,7 +105,8 @@ public interface TriggerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.TriggerProps,
-  ) : CdkObject(cdkObject), TriggerProps {
+  ) : CdkObject(cdkObject),
+      TriggerProps {
     /**
      * Provides the filter criteria and the source stage for the repository event that starts the
      * pipeline, such as Git tags.

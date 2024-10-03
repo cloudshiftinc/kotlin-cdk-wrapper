@@ -62,7 +62,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAutoScalingConfiguration(
   cdkObject: software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

@@ -85,7 +85,7 @@ public interface CfnUserProps {
   public fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
 
   /**
-   * An array of key-value pairs to apply to this user.
+   * The list of tags.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
    */
@@ -153,12 +153,12 @@ public interface CfnUserProps {
     public fun passwords(vararg passwords: String)
 
     /**
-     * @param tags An array of key-value pairs to apply to this user.
+     * @param tags The list of tags.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags An array of key-value pairs to apply to this user.
+     * @param tags The list of tags.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -232,14 +232,14 @@ public interface CfnUserProps {
     override fun passwords(vararg passwords: String): Unit = passwords(passwords.toList())
 
     /**
-     * @param tags An array of key-value pairs to apply to this user.
+     * @param tags The list of tags.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this user.
+     * @param tags The list of tags.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -263,7 +263,8 @@ public interface CfnUserProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticache.CfnUserProps,
-  ) : CdkObject(cdkObject), CfnUserProps {
+  ) : CdkObject(cdkObject),
+      CfnUserProps {
     /**
      * Access permissions string used for this user.
      *
@@ -307,7 +308,7 @@ public interface CfnUserProps {
     override fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
 
     /**
-     * An array of key-value pairs to apply to this user.
+     * The list of tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
      */

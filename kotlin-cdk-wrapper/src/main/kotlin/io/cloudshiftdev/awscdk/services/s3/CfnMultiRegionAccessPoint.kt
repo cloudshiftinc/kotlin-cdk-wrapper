@@ -53,7 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMultiRegionAccessPoint(
   cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -673,7 +674,8 @@ public open class CfnMultiRegionAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty,
-    ) : CdkObject(cdkObject), PublicAccessBlockConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PublicAccessBlockConfigurationProperty {
       /**
        * Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket
        * and objects in this bucket.
@@ -828,7 +830,8 @@ public open class CfnMultiRegionAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.RegionProperty,
-    ) : CdkObject(cdkObject), RegionProperty {
+    ) : CdkObject(cdkObject),
+        RegionProperty {
       /**
        * The name of the associated bucket for the Region.
        *

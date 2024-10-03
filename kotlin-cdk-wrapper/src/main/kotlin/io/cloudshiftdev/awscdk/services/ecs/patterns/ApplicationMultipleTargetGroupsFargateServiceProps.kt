@@ -550,7 +550,8 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateServiceProps,
-  ) : CdkObject(cdkObject), ApplicationMultipleTargetGroupsFargateServiceProps {
+  ) : CdkObject(cdkObject),
+      ApplicationMultipleTargetGroupsFargateServiceProps {
     /**
      * Determines whether the service will be assigned a public IP address.
      *

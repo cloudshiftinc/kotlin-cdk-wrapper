@@ -35,7 +35,8 @@ import kotlin.jvm.JvmName
  */
 public open class Bounce(
   cdkObject: software.amazon.awscdk.services.ses.actions.Bounce,
-) : CdkObject(cdkObject), IReceiptRuleAction {
+) : CdkObject(cdkObject),
+    IReceiptRuleAction {
   public constructor(props: BounceProps) :
       this(software.amazon.awscdk.services.ses.actions.Bounce(props.let(BounceProps.Companion::unwrap))
   )

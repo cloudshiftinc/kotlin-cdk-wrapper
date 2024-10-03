@@ -216,7 +216,8 @@ public interface CorsRule {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.CorsRule,
-  ) : CdkObject(cdkObject), CorsRule {
+  ) : CdkObject(cdkObject),
+      CorsRule {
     /**
      * Headers that are specified in the Access-Control-Request-Headers header.
      *

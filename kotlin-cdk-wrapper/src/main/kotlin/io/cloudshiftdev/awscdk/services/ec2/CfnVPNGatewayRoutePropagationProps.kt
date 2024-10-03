@@ -112,7 +112,8 @@ public interface CfnVPNGatewayRoutePropagationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagationProps,
-  ) : CdkObject(cdkObject), CfnVPNGatewayRoutePropagationProps {
+  ) : CdkObject(cdkObject),
+      CfnVPNGatewayRoutePropagationProps {
     /**
      * The ID of the route table.
      *

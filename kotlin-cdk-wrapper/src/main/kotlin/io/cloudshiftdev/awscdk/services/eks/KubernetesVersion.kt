@@ -11,14 +11,16 @@ import kotlin.String
  * Example:
  *
  * ```
- * Cluster cluster = Cluster.Builder.create(this, "HelloEKS")
- * .version(KubernetesVersion.V1_29)
- * .defaultCapacity(0)
+ * // or
+ * Vpc vpc;
+ * Cluster.Builder.create(this, "MyCluster")
+ * .kubectlMemory(Size.gibibytes(4))
+ * .version(KubernetesVersion.V1_30)
  * .build();
- * cluster.addNodegroupCapacity("custom-node-group", NodegroupOptions.builder()
- * .instanceTypes(List.of(new InstanceType("m5.large")))
- * .minSize(4)
- * .diskSize(100)
+ * Cluster.fromClusterAttributes(this, "MyCluster", ClusterAttributes.builder()
+ * .kubectlMemory(Size.gibibytes(4))
+ * .vpc(vpc)
+ * .clusterName("cluster-name")
  * .build());
  * ```
  *
@@ -80,6 +82,9 @@ public open class KubernetesVersion(
 
     public val V1_29: KubernetesVersion =
         KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_29)
+
+    public val V1_30: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_30)
 
     public fun of(version: String): KubernetesVersion =
         software.amazon.awscdk.services.eks.KubernetesVersion.of(version).let(KubernetesVersion::wrap)

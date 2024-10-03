@@ -88,7 +88,8 @@ public interface VirtualRouterBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterBaseProps,
-  ) : CdkObject(cdkObject), VirtualRouterBaseProps {
+  ) : CdkObject(cdkObject),
+      VirtualRouterBaseProps {
     /**
      * Listener specification for the VirtualRouter.
      *

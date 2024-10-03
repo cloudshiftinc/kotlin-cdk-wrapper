@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPublicRepository(
   cdkObject: software.amazon.awscdk.services.ecr.CfnPublicRepository,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecr.CfnPublicRepository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -487,7 +489,8 @@ public open class CfnPublicRepository(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecr.CfnPublicRepository.RepositoryCatalogDataProperty,
-    ) : CdkObject(cdkObject), RepositoryCatalogDataProperty {
+    ) : CdkObject(cdkObject),
+        RepositoryCatalogDataProperty {
       /**
        * The longform description of the contents of the repository.
        *

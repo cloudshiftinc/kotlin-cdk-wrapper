@@ -75,7 +75,8 @@ public interface IEventBus : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.IEventBus,
-  ) : CdkObject(cdkObject), IEventBus {
+  ) : CdkObject(cdkObject),
+      IEventBus {
     /**
      * Apply the given removal policy to this resource.
      *

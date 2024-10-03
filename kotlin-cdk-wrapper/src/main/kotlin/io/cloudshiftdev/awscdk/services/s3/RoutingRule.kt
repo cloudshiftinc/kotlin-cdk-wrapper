@@ -160,7 +160,8 @@ public interface RoutingRule {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.RoutingRule,
-  ) : CdkObject(cdkObject), RoutingRule {
+  ) : CdkObject(cdkObject),
+      RoutingRule {
     /**
      * Specifies a condition that must be met for the specified redirect to apply.
      *

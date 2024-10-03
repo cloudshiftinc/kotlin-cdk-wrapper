@@ -35,7 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMacro(
   cdkObject: software.amazon.awscdk.CfnMacro,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

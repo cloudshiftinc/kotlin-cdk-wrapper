@@ -47,7 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAnomalyMonitor(
   cdkObject: software.amazon.awscdk.services.ce.CfnAnomalyMonitor,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -424,7 +425,8 @@ public open class CfnAnomalyMonitor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ce.CfnAnomalyMonitor.ResourceTagProperty,
-    ) : CdkObject(cdkObject), ResourceTagProperty {
+    ) : CdkObject(cdkObject),
+        ResourceTagProperty {
       /**
        * The key that's associated with the tag.
        *

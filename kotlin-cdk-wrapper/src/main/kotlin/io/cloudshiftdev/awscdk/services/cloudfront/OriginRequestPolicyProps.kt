@@ -158,7 +158,8 @@ public interface OriginRequestPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.OriginRequestPolicyProps,
-  ) : CdkObject(cdkObject), OriginRequestPolicyProps {
+  ) : CdkObject(cdkObject),
+      OriginRequestPolicyProps {
     /**
      * A comment to describe the origin request policy.
      *

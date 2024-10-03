@@ -35,7 +35,8 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket
  */
 public open class BucketWebsiteTarget(
   cdkObject: software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget,
-) : CdkObject(cdkObject), IAliasRecordTarget {
+) : CdkObject(cdkObject),
+    IAliasRecordTarget {
   public constructor(bucket: IBucket) :
       this(software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget(bucket.let(IBucket.Companion::unwrap))
   )

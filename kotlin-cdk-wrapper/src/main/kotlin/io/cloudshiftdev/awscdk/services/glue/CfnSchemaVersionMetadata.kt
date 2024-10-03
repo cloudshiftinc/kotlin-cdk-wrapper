@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSchemaVersionMetadata(
   cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersionMetadata,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

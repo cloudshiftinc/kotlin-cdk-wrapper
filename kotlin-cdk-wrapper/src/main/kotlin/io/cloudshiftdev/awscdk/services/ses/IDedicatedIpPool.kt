@@ -22,7 +22,8 @@ public interface IDedicatedIpPool : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.IDedicatedIpPool,
-  ) : CdkObject(cdkObject), IDedicatedIpPool {
+  ) : CdkObject(cdkObject),
+      IDedicatedIpPool {
     /**
      * Apply the given removal policy to this resource.
      *

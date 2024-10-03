@@ -100,7 +100,8 @@ public interface UniqueResourceNameOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.UniqueResourceNameOptions,
-  ) : CdkObject(cdkObject), UniqueResourceNameOptions {
+  ) : CdkObject(cdkObject),
+      UniqueResourceNameOptions {
     /**
      * Non-alphanumeric characters allowed in the unique resource name.
      *

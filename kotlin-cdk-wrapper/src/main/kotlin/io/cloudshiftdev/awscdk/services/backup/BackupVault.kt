@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class BackupVault(
   cdkObject: software.amazon.awscdk.services.backup.BackupVault,
-) : Resource(cdkObject), IBackupVault {
+) : Resource(cdkObject),
+    IBackupVault {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.backup.BackupVault(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

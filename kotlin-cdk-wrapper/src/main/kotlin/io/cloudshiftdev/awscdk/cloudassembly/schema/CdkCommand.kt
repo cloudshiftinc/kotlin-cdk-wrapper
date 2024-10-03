@@ -9,68 +9,19 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
-/**
- * Represents a cdk command i.e. `synth`, `deploy`, &amp; `destroy`.
- *
- * Example:
- *
- * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.cloudassembly.schema.*;
- * CdkCommand cdkCommand = CdkCommand.builder()
- * .enabled(false)
- * .expectedMessage("expectedMessage")
- * .expectError(false)
- * .build();
- * ```
- */
 public interface CdkCommand {
-  /**
-   * Whether or not to run this command as part of the workflow This can be used if you only want to
-   * test some of the workflow for example enable `synth` and disable `deploy` &amp; `destroy` in order
-   * to limit the test to synthesis.
-   *
-   * Default: true
-   */
   public fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-  /**
-   * If the runner should expect this command to fail.
-   *
-   * Default: false
-   */
   public fun expectError(): Boolean? = unwrap(this).getExpectError()
 
-  /**
-   * This can be used in combination with `expectedError` to validate that a specific message is
-   * returned.
-   *
-   * Default: - do not validate message
-   */
   public fun expectedMessage(): String? = unwrap(this).getExpectedMessage()
 
-  /**
-   * A builder for [CdkCommand]
-   */
   @CdkDslMarker
   public interface Builder {
-    /**
-     * @param enabled Whether or not to run this command as part of the workflow This can be used if
-     * you only want to test some of the workflow for example enable `synth` and disable `deploy` &amp;
-     * `destroy` in order to limit the test to synthesis.
-     */
     public fun enabled(enabled: Boolean)
 
-    /**
-     * @param expectError If the runner should expect this command to fail.
-     */
     public fun expectError(expectError: Boolean)
 
-    /**
-     * @param expectedMessage This can be used in combination with `expectedError` to validate that
-     * a specific message is returned.
-     */
     public fun expectedMessage(expectedMessage: String)
   }
 
@@ -78,26 +29,14 @@ public interface CdkCommand {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.CdkCommand.Builder =
         software.amazon.awscdk.cloudassembly.schema.CdkCommand.builder()
 
-    /**
-     * @param enabled Whether or not to run this command as part of the workflow This can be used if
-     * you only want to test some of the workflow for example enable `synth` and disable `deploy` &amp;
-     * `destroy` in order to limit the test to synthesis.
-     */
     override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    /**
-     * @param expectError If the runner should expect this command to fail.
-     */
     override fun expectError(expectError: Boolean) {
       cdkBuilder.expectError(expectError)
     }
 
-    /**
-     * @param expectedMessage This can be used in combination with `expectedError` to validate that
-     * a specific message is returned.
-     */
     override fun expectedMessage(expectedMessage: String) {
       cdkBuilder.expectedMessage(expectedMessage)
     }
@@ -107,29 +46,12 @@ public interface CdkCommand {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cloudassembly.schema.CdkCommand,
-  ) : CdkObject(cdkObject), CdkCommand {
-    /**
-     * Whether or not to run this command as part of the workflow This can be used if you only want
-     * to test some of the workflow for example enable `synth` and disable `deploy` &amp; `destroy` in
-     * order to limit the test to synthesis.
-     *
-     * Default: true
-     */
+  ) : CdkObject(cdkObject),
+      CdkCommand {
     override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-    /**
-     * If the runner should expect this command to fail.
-     *
-     * Default: false
-     */
     override fun expectError(): Boolean? = unwrap(this).getExpectError()
 
-    /**
-     * This can be used in combination with `expectedError` to validate that a specific message is
-     * returned.
-     *
-     * Default: - do not validate message
-     */
     override fun expectedMessage(): String? = unwrap(this).getExpectedMessage()
   }
 

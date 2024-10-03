@@ -117,7 +117,8 @@ public interface StandardAttribute {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.StandardAttribute,
-  ) : CdkObject(cdkObject), StandardAttribute {
+  ) : CdkObject(cdkObject),
+      StandardAttribute {
     /**
      * Specifies whether the value of the attribute can be changed.
      *

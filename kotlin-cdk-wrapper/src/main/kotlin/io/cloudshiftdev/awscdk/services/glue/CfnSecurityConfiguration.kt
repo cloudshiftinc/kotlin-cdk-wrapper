@@ -55,7 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSecurityConfiguration(
   cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -325,7 +326,8 @@ public open class CfnSecurityConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty,
-    ) : CdkObject(cdkObject), CloudWatchEncryptionProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchEncryptionProperty {
       /**
        * The encryption mode to use for CloudWatch data.
        *
@@ -551,7 +553,8 @@ public open class CfnSecurityConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionConfigurationProperty {
       /**
        * The encryption configuration for Amazon CloudWatch.
        *
@@ -670,7 +673,8 @@ public open class CfnSecurityConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty,
-    ) : CdkObject(cdkObject), JobBookmarksEncryptionProperty {
+    ) : CdkObject(cdkObject),
+        JobBookmarksEncryptionProperty {
       /**
        * The encryption mode to use for job bookmarks data.
        *
@@ -782,7 +786,8 @@ public open class CfnSecurityConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty,
-    ) : CdkObject(cdkObject), S3EncryptionProperty {
+    ) : CdkObject(cdkObject),
+        S3EncryptionProperty {
       /**
        * The Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
        *

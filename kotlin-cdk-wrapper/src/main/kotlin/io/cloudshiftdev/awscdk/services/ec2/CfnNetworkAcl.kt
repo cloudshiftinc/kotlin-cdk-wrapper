@@ -38,7 +38,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNetworkAcl(
   cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAcl,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

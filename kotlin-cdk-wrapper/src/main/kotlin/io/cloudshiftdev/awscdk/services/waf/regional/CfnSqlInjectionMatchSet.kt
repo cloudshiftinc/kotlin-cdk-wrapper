@@ -61,7 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSqlInjectionMatchSet(
   cdkObject: software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -425,7 +426,8 @@ public open class CfnSqlInjectionMatchSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet.FieldToMatchProperty,
-    ) : CdkObject(cdkObject), FieldToMatchProperty {
+    ) : CdkObject(cdkObject),
+        FieldToMatchProperty {
       /**
        * When the value of `Type` is `HEADER` , enter the name of the header that you want AWS WAF
        * to search, for example, `User-Agent` or `Referer` .
@@ -786,7 +788,8 @@ public open class CfnSqlInjectionMatchSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet.SqlInjectionMatchTupleProperty,
-    ) : CdkObject(cdkObject), SqlInjectionMatchTupleProperty {
+    ) : CdkObject(cdkObject),
+        SqlInjectionMatchTupleProperty {
       /**
        * The part of a web request that you want AWS WAF to inspect, such as a specific header or a
        * query string.

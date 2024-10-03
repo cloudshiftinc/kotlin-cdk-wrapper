@@ -56,7 +56,8 @@ public interface LambdaApplicationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.LambdaApplicationProps,
-  ) : CdkObject(cdkObject), LambdaApplicationProps {
+  ) : CdkObject(cdkObject),
+      LambdaApplicationProps {
     /**
      * The physical, human-readable name of the CodeDeploy Application.
      *

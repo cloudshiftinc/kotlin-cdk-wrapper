@@ -40,6 +40,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .videoContentSourceUrl("videoContentSourceUrl")
  * // the properties below are optional
  * .availSuppression(AvailSuppressionProperty.builder()
+ * .fillPolicy("fillPolicy")
  * .mode("mode")
  * .value("value")
  * .build())
@@ -84,7 +85,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPlaybackConfiguration(
   cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1319,7 +1322,8 @@ public open class CfnPlaybackConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty,
-    ) : CdkObject(cdkObject), AdMarkerPassthroughProperty {
+    ) : CdkObject(cdkObject),
+        AdMarkerPassthroughProperty {
       /**
        * Enables ad marker passthrough for your configuration.
        *
@@ -1359,6 +1363,7 @@ public open class CfnPlaybackConfiguration(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.mediatailor.*;
    * AvailSuppressionProperty availSuppressionProperty = AvailSuppressionProperty.builder()
+   * .fillPolicy("fillPolicy")
    * .mode("mode")
    * .value("value")
    * .build();
@@ -1367,6 +1372,16 @@ public open class CfnPlaybackConfiguration(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html)
    */
   public interface AvailSuppressionProperty {
+    /**
+     * Defines the policy to apply to the avail suppression mode.
+     *
+     * `BEHIND_LIVE_EDGE` will always use the full avail suppression policy. `AFTER_LIVE_EDGE` mode
+     * can be used to invoke partial ad break fills when a session starts mid-break.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html#cfn-mediatailor-playbackconfiguration-availsuppression-fillpolicy)
+     */
+    public fun fillPolicy(): String? = unwrap(this).getFillPolicy()
+
     /**
      * Sets the ad suppression mode.
      *
@@ -1400,6 +1415,13 @@ public open class CfnPlaybackConfiguration(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param fillPolicy Defines the policy to apply to the avail suppression mode.
+       * `BEHIND_LIVE_EDGE` will always use the full avail suppression policy. `AFTER_LIVE_EDGE`
+       * mode can be used to invoke partial ad break fills when a session starts mid-break.
+       */
+      public fun fillPolicy(fillPolicy: String)
+
+      /**
        * @param mode Sets the ad suppression mode.
        * By default, ad suppression is off and all ad breaks are filled with ads or slate. When Mode
        * is set to `BEHIND_LIVE_EDGE` , ad suppression is active and MediaTailor won't fill ad breaks
@@ -1426,6 +1448,15 @@ public open class CfnPlaybackConfiguration(
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty.Builder
           =
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty.builder()
+
+      /**
+       * @param fillPolicy Defines the policy to apply to the avail suppression mode.
+       * `BEHIND_LIVE_EDGE` will always use the full avail suppression policy. `AFTER_LIVE_EDGE`
+       * mode can be used to invoke partial ad break fills when a session starts mid-break.
+       */
+      override fun fillPolicy(fillPolicy: String) {
+        cdkBuilder.fillPolicy(fillPolicy)
+      }
 
       /**
        * @param mode Sets the ad suppression mode.
@@ -1459,7 +1490,18 @@ public open class CfnPlaybackConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty,
-    ) : CdkObject(cdkObject), AvailSuppressionProperty {
+    ) : CdkObject(cdkObject),
+        AvailSuppressionProperty {
+      /**
+       * Defines the policy to apply to the avail suppression mode.
+       *
+       * `BEHIND_LIVE_EDGE` will always use the full avail suppression policy. `AFTER_LIVE_EDGE`
+       * mode can be used to invoke partial ad break fills when a session starts mid-break.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-availsuppression.html#cfn-mediatailor-playbackconfiguration-availsuppression-fillpolicy)
+       */
+      override fun fillPolicy(): String? = unwrap(this).getFillPolicy()
+
       /**
        * Sets the ad suppression mode.
        *
@@ -1585,7 +1627,8 @@ public open class CfnPlaybackConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty,
-    ) : CdkObject(cdkObject), BumperProperty {
+    ) : CdkObject(cdkObject),
+        BumperProperty {
       /**
        * The URL for the end bumper asset.
        *
@@ -1726,7 +1769,8 @@ public open class CfnPlaybackConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.CdnConfigurationProperty,
-    ) : CdkObject(cdkObject), CdnConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CdnConfigurationProperty {
       /**
        * A non-default content delivery network (CDN) to serve ad segments.
        *
@@ -1905,7 +1949,8 @@ public open class CfnPlaybackConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.DashConfigurationProperty,
-    ) : CdkObject(cdkObject), DashConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DashConfigurationProperty {
       /**
        * The URL generated by MediaTailor to initiate a playback session.
        *
@@ -2021,7 +2066,8 @@ public open class CfnPlaybackConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.HlsConfigurationProperty,
-    ) : CdkObject(cdkObject), HlsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        HlsConfigurationProperty {
       /**
        * The URL that is used to initiate a playback session for devices that support Apple HLS.
        *
@@ -2146,7 +2192,8 @@ public open class CfnPlaybackConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty,
-    ) : CdkObject(cdkObject), LivePreRollConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LivePreRollConfigurationProperty {
       /**
        * The URL for the ad decision server (ADS) for pre-roll ads.
        *
@@ -2307,7 +2354,8 @@ public open class CfnPlaybackConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestProcessingRulesProperty,
-    ) : CdkObject(cdkObject), ManifestProcessingRulesProperty {
+    ) : CdkObject(cdkObject),
+        ManifestProcessingRulesProperty {
       /**
        * For HLS, when set to `true` , MediaTailor passes through `EXT-X-CUE-IN` , `EXT-X-CUE-OUT` ,
        * and `EXT-X-SPLICEPOINT-SCTE35` ad markers from the origin manifest to the MediaTailor

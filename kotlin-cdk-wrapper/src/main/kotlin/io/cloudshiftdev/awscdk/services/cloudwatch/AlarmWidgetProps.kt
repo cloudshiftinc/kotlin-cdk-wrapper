@@ -140,7 +140,8 @@ public interface AlarmWidgetProps : MetricWidgetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmWidgetProps,
-  ) : CdkObject(cdkObject), AlarmWidgetProps {
+  ) : CdkObject(cdkObject),
+      AlarmWidgetProps {
     /**
      * The alarm to show.
      */

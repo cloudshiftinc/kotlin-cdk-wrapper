@@ -185,7 +185,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnForm(
   cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.amplifyuibuilder.CfnForm(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1143,7 +1145,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty,
-    ) : CdkObject(cdkObject), FieldConfigProperty {
+    ) : CdkObject(cdkObject),
+        FieldConfigProperty {
       /**
        * Specifies whether to hide a field.
        *
@@ -1710,7 +1713,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldInputConfigProperty,
-    ) : CdkObject(cdkObject), FieldInputConfigProperty {
+    ) : CdkObject(cdkObject),
+        FieldInputConfigProperty {
       /**
        * Specifies whether a field has a default value.
        *
@@ -1938,7 +1942,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty,
-    ) : CdkObject(cdkObject), FieldPositionProperty {
+    ) : CdkObject(cdkObject),
+        FieldPositionProperty {
       /**
        * The field position is below the field specified by the string.
        *
@@ -2132,7 +2137,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty,
-    ) : CdkObject(cdkObject), FieldValidationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FieldValidationConfigurationProperty {
       /**
        * The validation to perform on a number value.
        *
@@ -2439,7 +2445,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty,
-    ) : CdkObject(cdkObject), FileUploaderFieldConfigProperty {
+    ) : CdkObject(cdkObject),
+        FileUploaderFieldConfigProperty {
       /**
        * The file types that are allowed to be uploaded by the file uploader.
        *
@@ -2657,7 +2664,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty,
-    ) : CdkObject(cdkObject), FormButtonProperty {
+    ) : CdkObject(cdkObject),
+        FormButtonProperty {
       /**
        * Describes the button's properties.
        *
@@ -2916,7 +2924,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty,
-    ) : CdkObject(cdkObject), FormCTAProperty {
+    ) : CdkObject(cdkObject),
+        FormCTAProperty {
       /**
        * Displays a cancel button.
        *
@@ -3044,7 +3053,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty,
-    ) : CdkObject(cdkObject), FormDataTypeConfigProperty {
+    ) : CdkObject(cdkObject),
+        FormDataTypeConfigProperty {
       /**
        * The data source type, either an Amplify DataStore model or a custom data type.
        *
@@ -3138,7 +3148,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty,
-    ) : CdkObject(cdkObject), FormInputBindingPropertiesValuePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        FormInputBindingPropertiesValuePropertiesProperty {
       /**
        * An Amplify DataStore model.
        *
@@ -3278,7 +3289,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty,
-    ) : CdkObject(cdkObject), FormInputBindingPropertiesValueProperty {
+    ) : CdkObject(cdkObject),
+        FormInputBindingPropertiesValueProperty {
       /**
        * Describes the properties to customize with data at runtime.
        *
@@ -3393,7 +3405,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty,
-    ) : CdkObject(cdkObject), FormInputValuePropertyBindingPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        FormInputValuePropertyBindingPropertiesProperty {
       /**
        * The data field to bind the property to.
        *
@@ -3592,7 +3605,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty,
-    ) : CdkObject(cdkObject), FormInputValuePropertyProperty {
+    ) : CdkObject(cdkObject),
+        FormInputValuePropertyProperty {
       /**
        * The information to bind fields to data at runtime.
        *
@@ -3712,7 +3726,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty,
-    ) : CdkObject(cdkObject), FormStyleConfigProperty {
+    ) : CdkObject(cdkObject),
+        FormStyleConfigProperty {
       /**
        * A reference to a design token to use to bind the form's style properties to an existing
        * theme.
@@ -3930,7 +3945,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty,
-    ) : CdkObject(cdkObject), FormStyleProperty {
+    ) : CdkObject(cdkObject),
+        FormStyleProperty {
       /**
        * The spacing for the horizontal gap.
        *
@@ -4196,7 +4212,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.SectionalElementProperty,
-    ) : CdkObject(cdkObject), SectionalElementProperty {
+    ) : CdkObject(cdkObject),
+        SectionalElementProperty {
       /**
        * Excludes a sectional element that was generated by default for a specified data model.
        *
@@ -4413,7 +4430,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingProperty,
-    ) : CdkObject(cdkObject), ValueMappingProperty {
+    ) : CdkObject(cdkObject),
+        ValueMappingProperty {
       /**
        * The value to display for the complex object.
        *
@@ -4583,7 +4601,8 @@ public open class CfnForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty,
-    ) : CdkObject(cdkObject), ValueMappingsProperty {
+    ) : CdkObject(cdkObject),
+        ValueMappingsProperty {
       /**
        * The information to bind fields to data at runtime.
        *

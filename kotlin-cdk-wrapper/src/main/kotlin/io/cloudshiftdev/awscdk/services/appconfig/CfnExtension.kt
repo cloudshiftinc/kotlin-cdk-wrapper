@@ -76,7 +76,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnExtension(
   cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -554,7 +556,8 @@ public open class CfnExtension(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * Information about actions defined in the extension.
        *
@@ -741,7 +744,8 @@ public open class CfnExtension(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension.ParameterProperty,
-    ) : CdkObject(cdkObject), ParameterProperty {
+    ) : CdkObject(cdkObject),
+        ParameterProperty {
       /**
        * Information about the parameter.
        *

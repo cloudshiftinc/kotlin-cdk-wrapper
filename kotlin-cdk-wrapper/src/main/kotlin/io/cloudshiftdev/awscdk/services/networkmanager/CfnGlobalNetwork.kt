@@ -39,7 +39,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGlobalNetwork(
   cdkObject: software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

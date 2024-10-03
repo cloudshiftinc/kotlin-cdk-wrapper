@@ -28,6 +28,7 @@ import kotlin.collections.Map
  * .image(containerImage)
  * // the properties below are optional
  * .command(List.of("command"))
+ * .containerName("containerName")
  * .environment(Map.of(
  * "environmentKey", "environment"))
  * .logDriver(logDriver)
@@ -45,6 +46,13 @@ public interface ScheduledTaskImageProps {
    * Default: - CMD value built into container image.
    */
   public fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+
+  /**
+   * Optional name for the container added.
+   *
+   * Default: - ScheduledContainer
+   */
+  public fun containerName(): String? = unwrap(this).getContainerName()
 
   /**
    * The environment variables to pass to the container.
@@ -95,6 +103,11 @@ public interface ScheduledTaskImageProps {
     public fun command(vararg command: String)
 
     /**
+     * @param containerName Optional name for the container added.
+     */
+    public fun containerName(containerName: String)
+
+    /**
      * @param environment The environment variables to pass to the container.
      */
     public fun environment(environment: Map<String, String>)
@@ -136,6 +149,13 @@ public interface ScheduledTaskImageProps {
     override fun command(vararg command: String): Unit = command(command.toList())
 
     /**
+     * @param containerName Optional name for the container added.
+     */
+    override fun containerName(containerName: String) {
+      cdkBuilder.containerName(containerName)
+    }
+
+    /**
      * @param environment The environment variables to pass to the container.
      */
     override fun environment(environment: Map<String, String>) {
@@ -170,7 +190,8 @@ public interface ScheduledTaskImageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledTaskImageProps,
-  ) : CdkObject(cdkObject), ScheduledTaskImageProps {
+  ) : CdkObject(cdkObject),
+      ScheduledTaskImageProps {
     /**
      * The command that is passed to the container.
      *
@@ -179,6 +200,13 @@ public interface ScheduledTaskImageProps {
      * Default: - CMD value built into container image.
      */
     override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+
+    /**
+     * Optional name for the container added.
+     *
+     * Default: - ScheduledContainer
+     */
+    override fun containerName(): String? = unwrap(this).getContainerName()
 
     /**
      * The environment variables to pass to the container.

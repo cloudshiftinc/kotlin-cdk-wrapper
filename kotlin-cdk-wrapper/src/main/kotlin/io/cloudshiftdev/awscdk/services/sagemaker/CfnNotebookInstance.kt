@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNotebookInstance(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstance,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1111,7 +1113,8 @@ public open class CfnNotebookInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty,
-    ) : CdkObject(cdkObject), InstanceMetadataServiceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InstanceMetadataServiceConfigurationProperty {
       /**
        * Indicates the minimum IMDS version that the notebook instance supports.
        *

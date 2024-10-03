@@ -50,7 +50,8 @@ public interface IRole : IIdentity {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IRole,
-  ) : CdkObject(cdkObject), IRole {
+  ) : CdkObject(cdkObject),
+      IRole {
     /**
      * Attaches a managed policy to this principal.
      *

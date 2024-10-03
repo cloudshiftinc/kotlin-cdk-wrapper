@@ -200,7 +200,8 @@ public interface FargateProfileProps : FargateProfileOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.FargateProfileProps,
-  ) : CdkObject(cdkObject), FargateProfileProps {
+  ) : CdkObject(cdkObject),
+      FargateProfileProps {
     /**
      * The EKS cluster to apply the Fargate profile to.
      *

@@ -34,7 +34,8 @@ public interface IOrigin {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.IOrigin,
-  ) : CdkObject(cdkObject), IOrigin {
+  ) : CdkObject(cdkObject),
+      IOrigin {
     /**
      * The method called when a given Origin is added (for the first time) to a Distribution.
      *

@@ -26,7 +26,8 @@ import kotlin.String
  */
 public open class ProvisionedModel(
   cdkObject: software.amazon.awscdk.services.bedrock.ProvisionedModel,
-) : CdkObject(cdkObject), IModel {
+) : CdkObject(cdkObject),
+    IModel {
   /**
    * The ARN of the provisioned model.
    */

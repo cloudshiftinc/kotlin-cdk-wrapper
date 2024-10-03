@@ -121,7 +121,8 @@ public interface BounceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.actions.BounceProps,
-  ) : CdkObject(cdkObject), BounceProps {
+  ) : CdkObject(cdkObject),
+      BounceProps {
     /**
      * The email address of the sender of the bounced email.
      *

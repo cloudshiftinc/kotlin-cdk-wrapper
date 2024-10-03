@@ -30,7 +30,8 @@ public interface ISecretTargetAttachment : ISecret {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretTargetAttachment,
-  ) : CdkObject(cdkObject), ISecretTargetAttachment {
+  ) : CdkObject(cdkObject),
+      ISecretTargetAttachment {
     /**
      * Adds a rotation schedule to the secret.
      *

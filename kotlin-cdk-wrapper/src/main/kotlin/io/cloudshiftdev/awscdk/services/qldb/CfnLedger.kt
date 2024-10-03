@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLedger(
   cdkObject: software.amazon.awscdk.services.qldb.CfnLedger,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

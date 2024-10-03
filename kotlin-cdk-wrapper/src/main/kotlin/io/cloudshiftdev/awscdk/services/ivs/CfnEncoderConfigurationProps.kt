@@ -189,7 +189,8 @@ public interface CfnEncoderConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ivs.CfnEncoderConfigurationProps,
-  ) : CdkObject(cdkObject), CfnEncoderConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnEncoderConfigurationProps {
     /**
      * Encoder cnfiguration name.
      *

@@ -17,7 +17,8 @@ public interface IGatewayVpcEndpointService {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IGatewayVpcEndpointService,
-  ) : CdkObject(cdkObject), IGatewayVpcEndpointService {
+  ) : CdkObject(cdkObject),
+      IGatewayVpcEndpointService {
     /**
      * The name of the service.
      */

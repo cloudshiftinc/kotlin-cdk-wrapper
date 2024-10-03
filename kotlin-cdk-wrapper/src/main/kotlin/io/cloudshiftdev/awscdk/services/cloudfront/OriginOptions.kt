@@ -27,6 +27,7 @@ import kotlin.collections.Map
  * .connectionTimeout(Duration.minutes(30))
  * .customHeaders(Map.of(
  * "customHeadersKey", "customHeaders"))
+ * .originAccessControlId("originAccessControlId")
  * .originId("originId")
  * .originShieldEnabled(false)
  * .originShieldRegion("originShieldRegion")
@@ -60,6 +61,13 @@ public interface OriginOptions {
    * Default: {}
    */
   public fun customHeaders(): Map<String, String> = unwrap(this).getCustomHeaders() ?: emptyMap()
+
+  /**
+   * The unique identifier of an origin access control for this origin.
+   *
+   * Default: - no origin access control
+   */
+  public fun originAccessControlId(): String? = unwrap(this).getOriginAccessControlId()
 
   /**
    * A unique identifier for the origin.
@@ -114,6 +122,12 @@ public interface OriginOptions {
     public fun customHeaders(customHeaders: Map<String, String>)
 
     /**
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin.
+     */
+    public fun originAccessControlId(originAccessControlId: String)
+
+    /**
      * @param originId A unique identifier for the origin.
      * This value must be unique within the distribution.
      */
@@ -163,6 +177,14 @@ public interface OriginOptions {
     }
 
     /**
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin.
+     */
+    override fun originAccessControlId(originAccessControlId: String) {
+      cdkBuilder.originAccessControlId(originAccessControlId)
+    }
+
+    /**
      * @param originId A unique identifier for the origin.
      * This value must be unique within the distribution.
      */
@@ -192,7 +214,8 @@ public interface OriginOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.OriginOptions,
-  ) : CdkObject(cdkObject), OriginOptions {
+  ) : CdkObject(cdkObject),
+      OriginOptions {
     /**
      * The number of times that CloudFront attempts to connect to the origin;
      *
@@ -221,6 +244,13 @@ public interface OriginOptions {
      */
     override fun customHeaders(): Map<String, String> = unwrap(this).getCustomHeaders() ?:
         emptyMap()
+
+    /**
+     * The unique identifier of an origin access control for this origin.
+     *
+     * Default: - no origin access control
+     */
+    override fun originAccessControlId(): String? = unwrap(this).getOriginAccessControlId()
 
     /**
      * A unique identifier for the origin.

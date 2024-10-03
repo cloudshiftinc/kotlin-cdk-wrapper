@@ -216,7 +216,8 @@ public interface CfnHoursOfOperationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperationProps,
-  ) : CdkObject(cdkObject), CfnHoursOfOperationProps {
+  ) : CdkObject(cdkObject),
+      CfnHoursOfOperationProps {
     /**
      * Configuration information for the hours of operation.
      *

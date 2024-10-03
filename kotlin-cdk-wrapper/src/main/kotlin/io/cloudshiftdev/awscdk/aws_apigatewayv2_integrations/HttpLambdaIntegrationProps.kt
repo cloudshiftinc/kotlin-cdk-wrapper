@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -17,6 +18,7 @@ import kotlin.Unit
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
  * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.*;
  * ParameterMapping parameterMapping;
@@ -24,6 +26,7 @@ import kotlin.Unit
  * HttpLambdaIntegrationProps httpLambdaIntegrationProps = HttpLambdaIntegrationProps.builder()
  * .parameterMapping(parameterMapping)
  * .payloadFormatVersion(payloadFormatVersion)
+ * .timeout(Duration.minutes(30))
  * .build();
  * ```
  */
@@ -49,6 +52,15 @@ public interface HttpLambdaIntegrationProps {
       unwrap(this).getPayloadFormatVersion()?.let(PayloadFormatVersion::wrap)
 
   /**
+   * The maximum amount of time an integration will run before it returns without a response.
+   *
+   * Must be between 50 milliseconds and 29 seconds.
+   *
+   * Default: Duration.seconds(29)
+   */
+  public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+  /**
    * A builder for [HttpLambdaIntegrationProps]
    */
   @CdkDslMarker
@@ -63,6 +75,13 @@ public interface HttpLambdaIntegrationProps {
      * @param payloadFormatVersion Version of the payload sent to the lambda handler.
      */
     public fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion)
+
+    /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -85,6 +104,15 @@ public interface HttpLambdaIntegrationProps {
       cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion.Companion::unwrap))
     }
 
+    /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
+    }
+
     public fun build():
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegrationProps =
         cdkBuilder.build()
@@ -92,7 +120,8 @@ public interface HttpLambdaIntegrationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegrationProps,
-  ) : CdkObject(cdkObject), HttpLambdaIntegrationProps {
+  ) : CdkObject(cdkObject),
+      HttpLambdaIntegrationProps {
     /**
      * Specifies how to transform HTTP requests before sending them to the backend.
      *
@@ -112,6 +141,15 @@ public interface HttpLambdaIntegrationProps {
      */
     override fun payloadFormatVersion(): PayloadFormatVersion? =
         unwrap(this).getPayloadFormatVersion()?.let(PayloadFormatVersion::wrap)
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     */
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
   }
 
   public companion object {

@@ -348,7 +348,8 @@ public interface BastionHostLinuxProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.BastionHostLinuxProps,
-  ) : CdkObject(cdkObject), BastionHostLinuxProps {
+  ) : CdkObject(cdkObject),
+      BastionHostLinuxProps {
     /**
      * In which AZ to place the instance within the VPC.
      *

@@ -91,7 +91,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStack(
   cdkObject: software.amazon.awscdk.services.opsworks.CfnStack,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1988,7 +1990,8 @@ public open class CfnStack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ChefConfigurationProperty,
-    ) : CdkObject(cdkObject), ChefConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ChefConfigurationProperty {
       /**
        * The Berkshelf version.
        *
@@ -2094,7 +2097,8 @@ public open class CfnStack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty,
-    ) : CdkObject(cdkObject), ElasticIpProperty {
+    ) : CdkObject(cdkObject),
+        ElasticIpProperty {
       /**
        * The IP address.
        *
@@ -2221,7 +2225,8 @@ public open class CfnStack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty,
-    ) : CdkObject(cdkObject), RdsDbInstanceProperty {
+    ) : CdkObject(cdkObject),
+        RdsDbInstanceProperty {
       /**
        * AWS OpsWorks Stacks returns `*****FILTERED*****` instead of the actual value.
        *
@@ -2489,7 +2494,8 @@ public open class CfnStack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.SourceProperty,
-    ) : CdkObject(cdkObject), SourceProperty {
+    ) : CdkObject(cdkObject),
+        SourceProperty {
       /**
        * When included in a request, the parameter depends on the repository type.
        *
@@ -2664,7 +2670,8 @@ public open class CfnStack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty,
-    ) : CdkObject(cdkObject), StackConfigurationManagerProperty {
+    ) : CdkObject(cdkObject),
+        StackConfigurationManagerProperty {
       /**
        * The name.
        *

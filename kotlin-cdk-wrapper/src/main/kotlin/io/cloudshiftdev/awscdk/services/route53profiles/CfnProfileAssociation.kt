@@ -42,7 +42,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProfileAssociation(
   cdkObject: software.amazon.awscdk.services.route53profiles.CfnProfileAssociation,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -116,12 +118,12 @@ public open class CfnProfileAssociation(
   }
 
   /**
-   * The Amazon Resource Name (ARN) of the VPC.
+   * The ID of the VPC.
    */
   public open fun resourceId(): String = unwrap(this).getResourceId()
 
   /**
-   * The Amazon Resource Name (ARN) of the VPC.
+   * The ID of the VPC.
    */
   public open fun resourceId(`value`: String) {
     unwrap(this).setResourceId(`value`)
@@ -174,10 +176,10 @@ public open class CfnProfileAssociation(
     public fun profileId(profileId: String)
 
     /**
-     * The Amazon Resource Name (ARN) of the VPC.
+     * The ID of the VPC.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53profiles-profileassociation.html#cfn-route53profiles-profileassociation-resourceid)
-     * @param resourceId The Amazon Resource Name (ARN) of the VPC. 
+     * @param resourceId The ID of the VPC. 
      */
     public fun resourceId(resourceId: String)
 
@@ -238,10 +240,10 @@ public open class CfnProfileAssociation(
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the VPC.
+     * The ID of the VPC.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53profiles-profileassociation.html#cfn-route53profiles-profileassociation-resourceid)
-     * @param resourceId The Amazon Resource Name (ARN) of the VPC. 
+     * @param resourceId The ID of the VPC. 
      */
     override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)

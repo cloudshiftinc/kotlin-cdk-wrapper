@@ -217,7 +217,8 @@ public interface CfnConfigurationAggregatorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregatorProps,
-  ) : CdkObject(cdkObject), CfnConfigurationAggregatorProps {
+  ) : CdkObject(cdkObject),
+      CfnConfigurationAggregatorProps {
     /**
      * Provides a list of source accounts and regions to be aggregated.
      *

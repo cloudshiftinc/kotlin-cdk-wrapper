@@ -246,7 +246,8 @@ public interface CfnCampaignProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaignProps,
-  ) : CdkObject(cdkObject), CfnCampaignProps {
+  ) : CdkObject(cdkObject),
+      CfnCampaignProps {
     /**
      * The Amazon Resource Name (ARN) of the Amazon Connect instance.
      *

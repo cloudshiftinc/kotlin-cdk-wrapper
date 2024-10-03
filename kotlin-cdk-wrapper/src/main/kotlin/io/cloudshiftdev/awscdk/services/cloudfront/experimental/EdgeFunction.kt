@@ -23,6 +23,7 @@ import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.AdotInstrumentationConfig
 import io.cloudshiftdev.awscdk.services.lambda.Alias
 import io.cloudshiftdev.awscdk.services.lambda.AliasOptions
+import io.cloudshiftdev.awscdk.services.lambda.ApplicationLogLevel
 import io.cloudshiftdev.awscdk.services.lambda.Architecture
 import io.cloudshiftdev.awscdk.services.lambda.Code
 import io.cloudshiftdev.awscdk.services.lambda.EventInvokeConfigOptions
@@ -42,9 +43,11 @@ import io.cloudshiftdev.awscdk.services.lambda.LogRetentionRetryOptions
 import io.cloudshiftdev.awscdk.services.lambda.LoggingFormat
 import io.cloudshiftdev.awscdk.services.lambda.ParamsAndSecretsLayerVersion
 import io.cloudshiftdev.awscdk.services.lambda.Permission
+import io.cloudshiftdev.awscdk.services.lambda.RecursiveLoop
 import io.cloudshiftdev.awscdk.services.lambda.Runtime
 import io.cloudshiftdev.awscdk.services.lambda.RuntimeManagementMode
 import io.cloudshiftdev.awscdk.services.lambda.SnapStartConf
+import io.cloudshiftdev.awscdk.services.lambda.SystemLogLevel
 import io.cloudshiftdev.awscdk.services.lambda.Tracing
 import io.cloudshiftdev.awscdk.services.lambda.VersionOptions
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
@@ -53,6 +56,7 @@ import io.cloudshiftdev.awscdk.services.sns.ITopic
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import io.cloudshiftdev.constructs.Node
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -97,7 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EdgeFunction(
   cdkObject: software.amazon.awscdk.services.cloudfront.experimental.EdgeFunction,
-) : Resource(cdkObject), IVersion {
+) : Resource(cdkObject),
+    IVersion {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -311,12 +316,31 @@ public open class EdgeFunction(
       unwrap(this).grantInvokeCompositePrincipal(compositePrincipal.let(CompositePrincipal.Companion::unwrap)).map(Grant::wrap)
 
   /**
+   * Grant the given identity permissions to invoke the $LATEST version or unqualified version of
+   * this Lambda.
+   *
+   * @param identity 
+   */
+  public override fun grantInvokeLatestVersion(identity: IGrantable): Grant =
+      unwrap(this).grantInvokeLatestVersion(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+  /**
    * Grant the given identity permissions to invoke this Lambda Function URL.
    *
    * @param identity 
    */
   public override fun grantInvokeUrl(identity: IGrantable): Grant =
       unwrap(this).grantInvokeUrl(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+  /**
+   * Grant the given identity permissions to invoke the given version of this Lambda.
+   *
+   * @param identity 
+   * @param version 
+   */
+  public override fun grantInvokeVersion(identity: IGrantable, version: IVersion): Grant =
+      unwrap(this).grantInvokeVersion(identity.let(IGrantable.Companion::unwrap),
+      version.let(IVersion.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The principal to grant permissions to.
@@ -561,7 +585,23 @@ public open class EdgeFunction(
         fun adotInstrumentation(adotInstrumentation: AdotInstrumentationConfig.Builder.() -> Unit)
 
     /**
-     * Whether to allow the Lambda to send all network traffic.
+     * Whether to allow the Lambda to send all ipv6 network traffic.
+     *
+     * If set to true, there will only be a single egress rule which allows all
+     * outbound ipv6 traffic. If set to false, you must individually add traffic rules to allow the
+     * Lambda to connect to network targets using ipv6.
+     *
+     * Do not specify this property if the `securityGroups` or `securityGroup` property is set.
+     * Instead, configure `allowAllIpv6Outbound` directly on the security group.
+     *
+     * Default: false
+     *
+     * @param allowAllIpv6Outbound Whether to allow the Lambda to send all ipv6 network traffic. 
+     */
+    public fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean)
+
+    /**
+     * Whether to allow the Lambda to send all network traffic (except ipv6).
      *
      * If set to false, you must individually add traffic rules to allow the
      * Lambda to connect to network targets.
@@ -571,7 +611,8 @@ public open class EdgeFunction(
      *
      * Default: true
      *
-     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic. 
+     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic (except
+     * ipv6). 
      */
     public fun allowAllOutbound(allowAllOutbound: Boolean)
 
@@ -589,13 +630,24 @@ public open class EdgeFunction(
     public fun allowPublicSubnet(allowPublicSubnet: Boolean)
 
     /**
-     * Sets the application log level for the function.
+     * (deprecated) Sets the application log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `applicationLogLevelV2` as a property instead.
      * @param applicationLogLevel Sets the application log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun applicationLogLevel(applicationLogLevel: String)
+
+    /**
+     * Sets the application log level for the function.
+     *
+     * Default: ApplicationLogLevel.INFO
+     *
+     * @param applicationLogLevelV2 Sets the application log level for the function. 
+     */
+    public fun applicationLogLevelV2(applicationLogLevelV2: ApplicationLogLevel)
 
     /**
      * The system architectures compatible with this lambda function.
@@ -862,12 +914,14 @@ public open class EdgeFunction(
     public fun layers(vararg layers: ILayerVersion)
 
     /**
-     * Sets the logFormat for the function.
+     * (deprecated) Sets the logFormat for the function.
      *
      * Default: "Text"
      *
+     * @deprecated Use `loggingFormat` as a property instead.
      * @param logFormat Sets the logFormat for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun logFormat(logFormat: String)
 
     /**
@@ -1054,6 +1108,17 @@ public open class EdgeFunction(
     public fun profilingGroup(profilingGroup: IProfilingGroup)
 
     /**
+     * Sets the Recursive Loop Protection for Lambda Function.
+     *
+     * It lets Lambda detect and terminate unintended recusrive loops.
+     *
+     * Default: RecursiveLoop.Terminate
+     *
+     * @param recursiveLoop Sets the Recursive Loop Protection for Lambda Function. 
+     */
+    public fun recursiveLoop(recursiveLoop: RecursiveLoop)
+
+    /**
      * The maximum of concurrent executions you want to reserve for the function.
      *
      * Default: - No specific limit - account limit.
@@ -1168,13 +1233,24 @@ public open class EdgeFunction(
     public fun stackId(stackId: String)
 
     /**
-     * Sets the system log level for the function.
+     * (deprecated) Sets the system log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `systemLogLevelV2` as a property instead.
      * @param systemLogLevel Sets the system log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun systemLogLevel(systemLogLevel: String)
+
+    /**
+     * Sets the system log level for the function.
+     *
+     * Default: SystemLogLevel.INFO
+     *
+     * @param systemLogLevelV2 Sets the system log level for the function. 
+     */
+    public fun systemLogLevelV2(systemLogLevelV2: SystemLogLevel)
 
     /**
      * The function execution time (in seconds) after which Lambda terminates the function.
@@ -1281,7 +1357,25 @@ public open class EdgeFunction(
         Unit = adotInstrumentation(AdotInstrumentationConfig(adotInstrumentation))
 
     /**
-     * Whether to allow the Lambda to send all network traffic.
+     * Whether to allow the Lambda to send all ipv6 network traffic.
+     *
+     * If set to true, there will only be a single egress rule which allows all
+     * outbound ipv6 traffic. If set to false, you must individually add traffic rules to allow the
+     * Lambda to connect to network targets using ipv6.
+     *
+     * Do not specify this property if the `securityGroups` or `securityGroup` property is set.
+     * Instead, configure `allowAllIpv6Outbound` directly on the security group.
+     *
+     * Default: false
+     *
+     * @param allowAllIpv6Outbound Whether to allow the Lambda to send all ipv6 network traffic. 
+     */
+    override fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
+      cdkBuilder.allowAllIpv6Outbound(allowAllIpv6Outbound)
+    }
+
+    /**
+     * Whether to allow the Lambda to send all network traffic (except ipv6).
      *
      * If set to false, you must individually add traffic rules to allow the
      * Lambda to connect to network targets.
@@ -1291,7 +1385,8 @@ public open class EdgeFunction(
      *
      * Default: true
      *
-     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic. 
+     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic (except
+     * ipv6). 
      */
     override fun allowAllOutbound(allowAllOutbound: Boolean) {
       cdkBuilder.allowAllOutbound(allowAllOutbound)
@@ -1313,14 +1408,27 @@ public open class EdgeFunction(
     }
 
     /**
-     * Sets the application log level for the function.
+     * (deprecated) Sets the application log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `applicationLogLevelV2` as a property instead.
      * @param applicationLogLevel Sets the application log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun applicationLogLevel(applicationLogLevel: String) {
       cdkBuilder.applicationLogLevel(applicationLogLevel)
+    }
+
+    /**
+     * Sets the application log level for the function.
+     *
+     * Default: ApplicationLogLevel.INFO
+     *
+     * @param applicationLogLevelV2 Sets the application log level for the function. 
+     */
+    override fun applicationLogLevelV2(applicationLogLevelV2: ApplicationLogLevel) {
+      cdkBuilder.applicationLogLevelV2(applicationLogLevelV2.let(ApplicationLogLevel.Companion::unwrap))
     }
 
     /**
@@ -1628,12 +1736,14 @@ public open class EdgeFunction(
     override fun layers(vararg layers: ILayerVersion): Unit = layers(layers.toList())
 
     /**
-     * Sets the logFormat for the function.
+     * (deprecated) Sets the logFormat for the function.
      *
      * Default: "Text"
      *
+     * @deprecated Use `loggingFormat` as a property instead.
      * @param logFormat Sets the logFormat for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun logFormat(logFormat: String) {
       cdkBuilder.logFormat(logFormat)
     }
@@ -1847,6 +1957,19 @@ public open class EdgeFunction(
     }
 
     /**
+     * Sets the Recursive Loop Protection for Lambda Function.
+     *
+     * It lets Lambda detect and terminate unintended recusrive loops.
+     *
+     * Default: RecursiveLoop.Terminate
+     *
+     * @param recursiveLoop Sets the Recursive Loop Protection for Lambda Function. 
+     */
+    override fun recursiveLoop(recursiveLoop: RecursiveLoop) {
+      cdkBuilder.recursiveLoop(recursiveLoop.let(RecursiveLoop.Companion::unwrap))
+    }
+
+    /**
      * The maximum of concurrent executions you want to reserve for the function.
      *
      * Default: - No specific limit - account limit.
@@ -1978,14 +2101,27 @@ public open class EdgeFunction(
     }
 
     /**
-     * Sets the system log level for the function.
+     * (deprecated) Sets the system log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `systemLogLevelV2` as a property instead.
      * @param systemLogLevel Sets the system log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun systemLogLevel(systemLogLevel: String) {
       cdkBuilder.systemLogLevel(systemLogLevel)
+    }
+
+    /**
+     * Sets the system log level for the function.
+     *
+     * Default: SystemLogLevel.INFO
+     *
+     * @param systemLogLevelV2 Sets the system log level for the function. 
+     */
+    override fun systemLogLevelV2(systemLogLevelV2: SystemLogLevel) {
+      cdkBuilder.systemLogLevelV2(systemLogLevelV2.let(SystemLogLevel.Companion::unwrap))
     }
 
     /**

@@ -858,7 +858,8 @@ public interface QueueProcessingEc2ServiceProps : QueueProcessingServiceBaseProp
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2ServiceProps,
-  ) : CdkObject(cdkObject), QueueProcessingEc2ServiceProps {
+  ) : CdkObject(cdkObject),
+      QueueProcessingEc2ServiceProps {
     /**
      * A list of Capacity Provider strategies used to place a service.
      *

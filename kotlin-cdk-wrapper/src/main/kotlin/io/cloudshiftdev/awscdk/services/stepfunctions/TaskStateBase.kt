@@ -24,7 +24,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class TaskStateBase(
   cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBase,
-) : State(cdkObject), INextable {
+) : State(cdkObject),
+    INextable {
   /**
    * Add a recovery handler for this state.
    *

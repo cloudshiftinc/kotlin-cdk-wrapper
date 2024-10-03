@@ -201,7 +201,8 @@ public interface ScalingSchedule {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.applicationautoscaling.ScalingSchedule,
-  ) : CdkObject(cdkObject), ScalingSchedule {
+  ) : CdkObject(cdkObject),
+      ScalingSchedule {
     /**
      * When this scheduled action expires.
      *

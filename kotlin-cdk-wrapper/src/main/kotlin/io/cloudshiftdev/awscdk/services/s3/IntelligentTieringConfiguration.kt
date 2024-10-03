@@ -163,7 +163,8 @@ public interface IntelligentTieringConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.IntelligentTieringConfiguration,
-  ) : CdkObject(cdkObject), IntelligentTieringConfiguration {
+  ) : CdkObject(cdkObject),
+      IntelligentTieringConfiguration {
     /**
      * When enabled, Intelligent-Tiering will automatically move objects that haven’t been accessed
      * for a minimum of 90 days to the Archive Access tier.

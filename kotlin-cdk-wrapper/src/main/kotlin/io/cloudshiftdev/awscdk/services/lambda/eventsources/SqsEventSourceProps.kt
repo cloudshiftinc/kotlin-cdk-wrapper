@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -51,6 +52,15 @@ public interface SqsEventSourceProps {
    * Default: true
    */
   public fun enabled(): Boolean? = unwrap(this).getEnabled()
+
+  /**
+   * Add Customer managed KMS key to encrypt Filter Criteria.
+   *
+   * Default: - none
+   *
+   * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+   */
+  public fun filterEncryption(): IKey? = unwrap(this).getFilterEncryption()?.let(IKey::wrap)
 
   /**
    * Add filter criteria option.
@@ -115,6 +125,11 @@ public interface SqsEventSourceProps {
     public fun enabled(enabled: Boolean)
 
     /**
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria.
+     */
+    public fun filterEncryption(filterEncryption: IKey)
+
+    /**
      * @param filters Add filter criteria option.
      */
     public fun filters(filters: List<Map<String, Any>>)
@@ -170,6 +185,13 @@ public interface SqsEventSourceProps {
     }
 
     /**
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria.
+     */
+    override fun filterEncryption(filterEncryption: IKey) {
+      cdkBuilder.filterEncryption(filterEncryption.let(IKey.Companion::unwrap))
+    }
+
+    /**
      * @param filters Add filter criteria option.
      */
     override fun filters(filters: List<Map<String, Any>>) {
@@ -212,7 +234,8 @@ public interface SqsEventSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsEventSourceProps,
-  ) : CdkObject(cdkObject), SqsEventSourceProps {
+  ) : CdkObject(cdkObject),
+      SqsEventSourceProps {
     /**
      * The largest number of records that AWS Lambda will retrieve from your event source at the
      * time of invoking your function.
@@ -233,6 +256,15 @@ public interface SqsEventSourceProps {
      * Default: true
      */
     override fun enabled(): Boolean? = unwrap(this).getEnabled()
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     */
+    override fun filterEncryption(): IKey? = unwrap(this).getFilterEncryption()?.let(IKey::wrap)
 
     /**
      * Add filter criteria option.

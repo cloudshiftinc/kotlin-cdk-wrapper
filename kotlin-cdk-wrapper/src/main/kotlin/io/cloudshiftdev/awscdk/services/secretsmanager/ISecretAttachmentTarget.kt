@@ -16,7 +16,8 @@ public interface ISecretAttachmentTarget {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget,
-  ) : CdkObject(cdkObject), ISecretAttachmentTarget {
+  ) : CdkObject(cdkObject),
+      ISecretAttachmentTarget {
     /**
      * Renders the target specifications.
      */

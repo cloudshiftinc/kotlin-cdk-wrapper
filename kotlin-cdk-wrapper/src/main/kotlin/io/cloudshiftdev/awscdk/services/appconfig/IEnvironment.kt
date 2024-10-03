@@ -8,6 +8,8 @@ import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.iam.Grant
+import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 import kotlin.Unit
@@ -70,6 +72,24 @@ public interface IEnvironment : IResource {
    * The ID of the environment.
    */
   public fun environmentId(): String
+
+  /**
+   * Adds an IAM policy statement associated with this environment to an IAM principal's policy.
+   *
+   * @param grantee the principal (no-op if undefined). 
+   * @param actions the set of actions to allow (i.e., 'appconfig:GetLatestConfiguration',
+   * 'appconfig:StartConfigurationSession', etc.). 
+   */
+  public fun grant(grantee: IGrantable, vararg actions: String): Grant
+
+  /**
+   * Permits an IAM principal to perform read operations on this environment's configurations.
+   *
+   * Actions: GetLatestConfiguration, StartConfigurationSession.
+   *
+   * @param grantee Principal to grant read rights to. 
+   */
+  public fun grantReadConfig(grantee: IGrantable): Grant
 
   /**
    * The monitors for the environment.
@@ -335,7 +355,8 @@ public interface IEnvironment : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.IEnvironment,
-  ) : CdkObject(cdkObject), IEnvironment {
+  ) : CdkObject(cdkObject),
+      IEnvironment {
     /**
      * Creates a deployment of the supplied configuration to this environment.
      *
@@ -425,6 +446,27 @@ public interface IEnvironment : IResource {
      * The ID of the environment.
      */
     override fun environmentId(): String = unwrap(this).getEnvironmentId()
+
+    /**
+     * Adds an IAM policy statement associated with this environment to an IAM principal's policy.
+     *
+     * @param grantee the principal (no-op if undefined). 
+     * @param actions the set of actions to allow (i.e., 'appconfig:GetLatestConfiguration',
+     * 'appconfig:StartConfigurationSession', etc.). 
+     */
+    override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+        unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+        *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
+
+    /**
+     * Permits an IAM principal to perform read operations on this environment's configurations.
+     *
+     * Actions: GetLatestConfiguration, StartConfigurationSession.
+     *
+     * @param grantee Principal to grant read rights to. 
+     */
+    override fun grantReadConfig(grantee: IGrantable): Grant =
+        unwrap(this).grantReadConfig(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * The monitors for the environment.

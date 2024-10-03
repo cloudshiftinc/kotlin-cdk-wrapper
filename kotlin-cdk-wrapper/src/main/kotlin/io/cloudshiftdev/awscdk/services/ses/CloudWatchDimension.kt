@@ -98,7 +98,8 @@ public interface CloudWatchDimension {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.CloudWatchDimension,
-  ) : CdkObject(cdkObject), CloudWatchDimension {
+  ) : CdkObject(cdkObject),
+      CloudWatchDimension {
     /**
      * The default value of the dimension that is published to Amazon CloudWatch if you do not
      * provide the value of the dimension when you send an email.

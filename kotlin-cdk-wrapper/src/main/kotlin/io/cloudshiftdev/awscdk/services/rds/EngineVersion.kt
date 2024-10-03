@@ -85,7 +85,8 @@ public interface EngineVersion {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.EngineVersion,
-  ) : CdkObject(cdkObject), EngineVersion {
+  ) : CdkObject(cdkObject),
+      EngineVersion {
     /**
      * The full version string of the engine, for example, "5.6.mysql_aurora.1.22.1". It can be
      * undefined, which means RDS should use whatever version it deems appropriate for the given engine

@@ -452,7 +452,8 @@ public interface PipelineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.PipelineProps,
-  ) : CdkObject(cdkObject), PipelineProps {
+  ) : CdkObject(cdkObject),
+      PipelineProps {
     /**
      * The S3 bucket used by this Pipeline to store artifacts.
      *

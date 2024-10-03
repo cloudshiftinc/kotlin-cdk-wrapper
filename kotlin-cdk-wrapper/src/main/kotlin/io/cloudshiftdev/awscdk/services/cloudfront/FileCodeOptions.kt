@@ -56,7 +56,8 @@ public interface FileCodeOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.FileCodeOptions,
-  ) : CdkObject(cdkObject), FileCodeOptions {
+  ) : CdkObject(cdkObject),
+      FileCodeOptions {
     /**
      * The path of the file to read the code from.
      */

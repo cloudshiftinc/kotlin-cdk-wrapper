@@ -738,7 +738,8 @@ public interface CfnDatabaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lightsail.CfnDatabaseProps,
-  ) : CdkObject(cdkObject), CfnDatabaseProps {
+  ) : CdkObject(cdkObject),
+      CfnDatabaseProps {
     /**
      * The Availability Zone for the database.
      *

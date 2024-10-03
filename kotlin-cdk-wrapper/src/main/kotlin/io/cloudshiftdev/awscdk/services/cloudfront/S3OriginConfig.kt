@@ -149,7 +149,8 @@ public interface S3OriginConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.S3OriginConfig,
-  ) : CdkObject(cdkObject), S3OriginConfig {
+  ) : CdkObject(cdkObject),
+      S3OriginConfig {
     /**
      * The optional Origin Access Identity of the origin identity cloudfront will use when calling
      * your s3 bucket.

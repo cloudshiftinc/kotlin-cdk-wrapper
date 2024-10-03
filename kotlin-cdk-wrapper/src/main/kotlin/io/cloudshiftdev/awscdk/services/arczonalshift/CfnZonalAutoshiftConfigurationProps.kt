@@ -259,7 +259,8 @@ public interface CfnZonalAutoshiftConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfigurationProps,
-  ) : CdkObject(cdkObject), CfnZonalAutoshiftConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnZonalAutoshiftConfigurationProps {
     /**
      * A practice run configuration for a resource includes the Amazon CloudWatch alarms that you've
      * specified for a practice run, as well as any blocked dates or blocked windows for the practice

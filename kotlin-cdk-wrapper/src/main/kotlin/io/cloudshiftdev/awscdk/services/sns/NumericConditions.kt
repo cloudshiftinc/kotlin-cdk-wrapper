@@ -234,7 +234,8 @@ public interface NumericConditions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.NumericConditions,
-  ) : CdkObject(cdkObject), NumericConditions {
+  ) : CdkObject(cdkObject),
+      NumericConditions {
     /**
      * Match one or more values.
      *

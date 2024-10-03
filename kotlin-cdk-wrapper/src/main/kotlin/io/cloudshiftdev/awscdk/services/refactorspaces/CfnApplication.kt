@@ -25,7 +25,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * The account that owns the environment also owns the applications created inside the environment,
  * regardless of the account that creates the application. Refactor Spaces provisions an Amazon API
- * Gateway , API Gateway VPC link, and Network Load Balancer for the application proxy inside your
+ * Gateway, API Gateway VPC link, and Network Load Balancer for the application proxy inside your
  * account.
  *
  * In environments created with a
@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplication(
   cdkObject: software.amazon.awscdk.services.refactorspaces.CfnApplication,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -457,10 +459,10 @@ public open class CfnApplication(
      *
      * If the value is set to `PRIVATE` in the request, this creates a private API endpoint that is
      * isolated from the public internet. The private endpoint can only be accessed by using Amazon
-     * Virtual Private Cloud ( Amazon VPC ) interface endpoints for the Amazon API Gateway that has
-     * been granted access. For more information about creating a private connection with Refactor
-     * Spaces and interface endpoint ( AWS PrivateLink ) availability, see [Access Refactor Spaces
-     * using an interface endpoint ( AWS PrivateLink
+     * Virtual Private Cloud (Amazon VPC) interface endpoints for the Amazon API Gateway that has been
+     * granted access. For more information about creating a private connection with Refactor Spaces
+     * and interface endpoint ( AWS PrivateLink ) availability, see [Access Refactor Spaces using an
+     * interface endpoint ( AWS PrivateLink
      * )](https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/vpc-interface-endpoints.html)
      * .
      *
@@ -488,8 +490,8 @@ public open class CfnApplication(
        *
        * If the value is set to `PRIVATE` in the request, this creates a private API endpoint that
        * is isolated from the public internet. The private endpoint can only be accessed by using
-       * Amazon Virtual Private Cloud ( Amazon VPC ) interface endpoints for the Amazon API Gateway
-       * that has been granted access. For more information about creating a private connection with
+       * Amazon Virtual Private Cloud (Amazon VPC) interface endpoints for the Amazon API Gateway that
+       * has been granted access. For more information about creating a private connection with
        * Refactor Spaces and interface endpoint ( AWS PrivateLink ) availability, see [Access Refactor
        * Spaces using an interface endpoint ( AWS PrivateLink
        * )](https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/vpc-interface-endpoints.html)
@@ -516,8 +518,8 @@ public open class CfnApplication(
        *
        * If the value is set to `PRIVATE` in the request, this creates a private API endpoint that
        * is isolated from the public internet. The private endpoint can only be accessed by using
-       * Amazon Virtual Private Cloud ( Amazon VPC ) interface endpoints for the Amazon API Gateway
-       * that has been granted access. For more information about creating a private connection with
+       * Amazon Virtual Private Cloud (Amazon VPC) interface endpoints for the Amazon API Gateway that
+       * has been granted access. For more information about creating a private connection with
        * Refactor Spaces and interface endpoint ( AWS PrivateLink ) availability, see [Access Refactor
        * Spaces using an interface endpoint ( AWS PrivateLink
        * )](https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/vpc-interface-endpoints.html)
@@ -542,7 +544,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.refactorspaces.CfnApplication.ApiGatewayProxyInputProperty,
-    ) : CdkObject(cdkObject), ApiGatewayProxyInputProperty {
+    ) : CdkObject(cdkObject),
+        ApiGatewayProxyInputProperty {
       /**
        * The type of endpoint to use for the API Gateway proxy.
        *
@@ -550,8 +553,8 @@ public open class CfnApplication(
        *
        * If the value is set to `PRIVATE` in the request, this creates a private API endpoint that
        * is isolated from the public internet. The private endpoint can only be accessed by using
-       * Amazon Virtual Private Cloud ( Amazon VPC ) interface endpoints for the Amazon API Gateway
-       * that has been granted access. For more information about creating a private connection with
+       * Amazon Virtual Private Cloud (Amazon VPC) interface endpoints for the Amazon API Gateway that
+       * has been granted access. For more information about creating a private connection with
        * Refactor Spaces and interface endpoint ( AWS PrivateLink ) availability, see [Access Refactor
        * Spaces using an interface endpoint ( AWS PrivateLink
        * )](https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/vpc-interface-endpoints.html)

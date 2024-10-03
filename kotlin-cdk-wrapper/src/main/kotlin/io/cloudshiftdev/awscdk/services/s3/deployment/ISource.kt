@@ -41,7 +41,8 @@ public interface ISource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.deployment.ISource,
-  ) : CdkObject(cdkObject), ISource {
+  ) : CdkObject(cdkObject),
+      ISource {
     /**
      * Binds the source to a bucket deployment.
      *

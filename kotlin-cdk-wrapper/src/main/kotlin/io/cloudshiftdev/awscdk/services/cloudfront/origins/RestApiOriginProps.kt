@@ -93,6 +93,12 @@ public interface RestApiOriginProps : OriginProps {
     public fun keepaliveTimeout(keepaliveTimeout: Duration)
 
     /**
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin.
+     */
+    public fun originAccessControlId(originAccessControlId: String)
+
+    /**
      * @param originId A unique identifier for the origin.
      * This value must be unique within the distribution.
      */
@@ -176,6 +182,14 @@ public interface RestApiOriginProps : OriginProps {
     }
 
     /**
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin.
+     */
+    override fun originAccessControlId(originAccessControlId: String) {
+      cdkBuilder.originAccessControlId(originAccessControlId)
+    }
+
+    /**
      * @param originId A unique identifier for the origin.
      * This value must be unique within the distribution.
      */
@@ -228,7 +242,8 @@ public interface RestApiOriginProps : OriginProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.origins.RestApiOriginProps,
-  ) : CdkObject(cdkObject), RestApiOriginProps {
+  ) : CdkObject(cdkObject),
+      RestApiOriginProps {
     /**
      * The number of times that CloudFront attempts to connect to the origin;
      *
@@ -272,6 +287,13 @@ public interface RestApiOriginProps : OriginProps {
      */
     override fun keepaliveTimeout(): Duration? =
         unwrap(this).getKeepaliveTimeout()?.let(Duration::wrap)
+
+    /**
+     * The unique identifier of an origin access control for this origin.
+     *
+     * Default: - no origin access control
+     */
+    override fun originAccessControlId(): String? = unwrap(this).getOriginAccessControlId()
 
     /**
      * A unique identifier for the origin.

@@ -187,7 +187,8 @@ public interface CfnViewProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnViewProps,
-  ) : CdkObject(cdkObject), CfnViewProps {
+  ) : CdkObject(cdkObject),
+      CfnViewProps {
     /**
      * A list of actions possible from the view.
      *

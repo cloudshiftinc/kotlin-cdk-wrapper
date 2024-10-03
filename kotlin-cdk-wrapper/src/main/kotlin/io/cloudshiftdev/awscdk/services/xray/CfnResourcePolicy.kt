@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResourcePolicy(
   cdkObject: software.amazon.awscdk.services.xray.CfnResourcePolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

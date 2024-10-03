@@ -88,7 +88,8 @@ public interface CfnResolverQueryLoggingConfigAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociationProps,
-  ) : CdkObject(cdkObject), CfnResolverQueryLoggingConfigAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnResolverQueryLoggingConfigAssociationProps {
     /**
      * The ID of the query logging configuration that a VPC is associated with.
      *

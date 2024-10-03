@@ -37,7 +37,8 @@ public interface SourcedConfigurationProps : ConfigurationProps {
   /**
    * The IAM role to retrieve the configuration.
    *
-   * Default: - A role is generated.
+   * Default: - Auto generated if location type is not ConfigurationSourceType.CODE_PIPELINE
+   * otherwise no role specified.
    */
   public fun retrievalRole(): IRole? = unwrap(this).getRetrievalRole()?.let(IRole::wrap)
 
@@ -244,7 +245,8 @@ public interface SourcedConfigurationProps : ConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.SourcedConfigurationProps,
-  ) : CdkObject(cdkObject), SourcedConfigurationProps {
+  ) : CdkObject(cdkObject),
+      SourcedConfigurationProps {
     /**
      * The application associated with the configuration.
      */
@@ -303,7 +305,8 @@ public interface SourcedConfigurationProps : ConfigurationProps {
     /**
      * The IAM role to retrieve the configuration.
      *
-     * Default: - A role is generated.
+     * Default: - Auto generated if location type is not ConfigurationSourceType.CODE_PIPELINE
+     * otherwise no role specified.
      */
     override fun retrievalRole(): IRole? = unwrap(this).getRetrievalRole()?.let(IRole::wrap)
 

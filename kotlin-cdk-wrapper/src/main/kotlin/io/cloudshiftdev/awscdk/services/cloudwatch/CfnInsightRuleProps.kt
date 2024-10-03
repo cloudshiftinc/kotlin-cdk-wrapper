@@ -196,7 +196,8 @@ public interface CfnInsightRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.CfnInsightRuleProps,
-  ) : CdkObject(cdkObject), CfnInsightRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnInsightRuleProps {
     /**
      * The definition of the rule, as a JSON object.
      *

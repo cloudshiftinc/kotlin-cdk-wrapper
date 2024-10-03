@@ -74,6 +74,17 @@ public open class AccessKeysRotated(
     public fun description(description: String)
 
     /**
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects.
+     *
+     * Default: - Detective evaluation mode only
+     *
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in. 
+     */
+    public fun evaluationModes(evaluationModes: EvaluationMode)
+
+    /**
      * Input parameter values that are passed to the AWS Config rule.
      *
      * Default: - No input parameters
@@ -139,6 +150,19 @@ public open class AccessKeysRotated(
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects.
+     *
+     * Default: - Detective evaluation mode only
+     *
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in. 
+     */
+    override fun evaluationModes(evaluationModes: EvaluationMode) {
+      cdkBuilder.evaluationModes(evaluationModes.let(EvaluationMode.Companion::unwrap))
     }
 
     /**

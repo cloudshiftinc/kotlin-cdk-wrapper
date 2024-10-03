@@ -93,7 +93,8 @@ public interface AclIcmp {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.AclIcmp,
-  ) : CdkObject(cdkObject), AclIcmp {
+  ) : CdkObject(cdkObject),
+      AclIcmp {
     /**
      * The Internet Control Message Protocol (ICMP) code.
      *

@@ -536,7 +536,8 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2ServiceProps,
-  ) : CdkObject(cdkObject), NetworkMultipleTargetGroupsEc2ServiceProps {
+  ) : CdkObject(cdkObject),
+      NetworkMultipleTargetGroupsEc2ServiceProps {
     /**
      * The options for configuring an Amazon ECS service to use service discovery.
      *

@@ -55,6 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .region("region")
  * .build())
  * .build())
+ * // the properties below are optional
+ * .databaseName("databaseName")
  * .build();
  * ```
  *
@@ -62,7 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDatabase(
   cdkObject: software.amazon.awscdk.services.glue.CfnDatabase,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -78,11 +81,6 @@ public open class CfnDatabase(
     props: CfnDatabaseProps.Builder.() -> Unit,
   ) : this(scope, id, CfnDatabaseProps(props)
   )
-
-  /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
    * The AWS account ID for the account in which to create the catalog object.
@@ -122,6 +120,18 @@ public open class CfnDatabase(
   @JvmName("8910c3394f6c7c10c51245acf8628f28a9c05a0d326653d4f1b02aefff064f81")
   public open fun databaseInput(`value`: DatabaseInputProperty.Builder.() -> Unit): Unit =
       databaseInput(DatabaseInputProperty(`value`))
+
+  /**
+   * The name of the catalog database.
+   */
+  public open fun databaseName(): String? = unwrap(this).getDatabaseName()
+
+  /**
+   * The name of the catalog database.
+   */
+  public open fun databaseName(`value`: String) {
+    unwrap(this).setDatabaseName(`value`)
+  }
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -175,6 +185,14 @@ public open class CfnDatabase(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("977dcab4f4d2d0a2cf36d1e9a7b5532875b1237f2589a2f57b19100e301a879b")
     public fun databaseInput(databaseInput: DatabaseInputProperty.Builder.() -> Unit)
+
+    /**
+     * The name of the catalog database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databasename)
+     * @param databaseName The name of the catalog database. 
+     */
+    public fun databaseName(databaseName: String)
   }
 
   private class BuilderImpl(
@@ -229,6 +247,16 @@ public open class CfnDatabase(
     @JvmName("977dcab4f4d2d0a2cf36d1e9a7b5532875b1237f2589a2f57b19100e301a879b")
     override fun databaseInput(databaseInput: DatabaseInputProperty.Builder.() -> Unit): Unit =
         databaseInput(DatabaseInputProperty(databaseInput))
+
+    /**
+     * The name of the catalog database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databasename)
+     * @param databaseName The name of the catalog database. 
+     */
+    override fun databaseName(databaseName: String) {
+      cdkBuilder.databaseName(databaseName)
+    }
 
     public fun build(): software.amazon.awscdk.services.glue.CfnDatabase = cdkBuilder.build()
   }
@@ -307,7 +335,8 @@ public open class CfnDatabase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty,
-    ) : CdkObject(cdkObject), DataLakePrincipalProperty {
+    ) : CdkObject(cdkObject),
+        DataLakePrincipalProperty {
       /**
        * An identifier for the AWS Lake Formation principal.
        *
@@ -429,7 +458,8 @@ public open class CfnDatabase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty,
-    ) : CdkObject(cdkObject), DatabaseIdentifierProperty {
+    ) : CdkObject(cdkObject),
+        DatabaseIdentifierProperty {
       /**
        * The ID of the Data Catalog in which the database resides.
        *
@@ -765,7 +795,8 @@ public open class CfnDatabase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DatabaseInputProperty,
-    ) : CdkObject(cdkObject), DatabaseInputProperty {
+    ) : CdkObject(cdkObject),
+        DatabaseInputProperty {
       /**
        * Creates a set of default permissions on the table for principals.
        *
@@ -913,7 +944,8 @@ public open class CfnDatabase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.FederatedDatabaseProperty,
-    ) : CdkObject(cdkObject), FederatedDatabaseProperty {
+    ) : CdkObject(cdkObject),
+        FederatedDatabaseProperty {
       /**
        * The name of the connection to the external metastore.
        *
@@ -1060,7 +1092,8 @@ public open class CfnDatabase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.PrincipalPrivilegesProperty,
-    ) : CdkObject(cdkObject), PrincipalPrivilegesProperty {
+    ) : CdkObject(cdkObject),
+        PrincipalPrivilegesProperty {
       /**
        * The permissions that are granted to the principal.
        *

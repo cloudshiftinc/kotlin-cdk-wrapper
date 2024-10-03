@@ -18,7 +18,8 @@ public interface IEventSource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.IEventSource,
-  ) : CdkObject(cdkObject), IEventSource {
+  ) : CdkObject(cdkObject),
+      IEventSource {
     /**
      * Called by `lambda.addEventSource` to allow the event source to bind to this function.
      *

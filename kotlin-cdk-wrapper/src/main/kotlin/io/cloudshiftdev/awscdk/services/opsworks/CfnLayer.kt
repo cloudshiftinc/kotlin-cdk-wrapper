@@ -102,7 +102,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLayer(
   cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1585,7 +1587,8 @@ public open class CfnLayer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.AutoScalingThresholdsProperty,
-    ) : CdkObject(cdkObject), AutoScalingThresholdsProperty {
+    ) : CdkObject(cdkObject),
+        AutoScalingThresholdsProperty {
       /**
        * The CPU utilization threshold, as a percent of the available CPU.
        *
@@ -1752,7 +1755,8 @@ public open class CfnLayer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.LifecycleEventConfigurationProperty,
-    ) : CdkObject(cdkObject), LifecycleEventConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LifecycleEventConfigurationProperty {
       /**
        * The Shutdown event configuration.
        *
@@ -1973,7 +1977,8 @@ public open class CfnLayer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty,
-    ) : CdkObject(cdkObject), LoadBasedAutoScalingProperty {
+    ) : CdkObject(cdkObject),
+        LoadBasedAutoScalingProperty {
       /**
        * An `AutoScalingThresholds` object that describes the downscaling configuration, which
        * defines how and when AWS OpsWorks Stacks reduces the number of instances.
@@ -2197,7 +2202,8 @@ public open class CfnLayer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty,
-    ) : CdkObject(cdkObject), RecipesProperty {
+    ) : CdkObject(cdkObject),
+        RecipesProperty {
       /**
        * An array of custom recipe names to be run following a `configure` event.
        *
@@ -2356,7 +2362,8 @@ public open class CfnLayer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty,
-    ) : CdkObject(cdkObject), ShutdownEventConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ShutdownEventConfigurationProperty {
       /**
        * Whether to enable Elastic Load Balancing connection draining.
        *
@@ -2480,8 +2487,8 @@ public open class CfnLayer(
      * * `gp2` - General Purpose (SSD). General purpose volumes must have a minimum size of 1 GiB
      * and a maximum size of 16384 GiB.
      * * `st1` - Throughput Optimized hard disk drive (HDD). Throughput optimized HDD volumes must
-     * have a minimum size of 500 GiB and a maximum size of 16384 GiB.
-     * * `sc1` - Cold HDD. Cold HDD volumes must have a minimum size of 500 GiB and a maximum size
+     * have a minimum size of 125 GiB and a maximum size of 16384 GiB.
+     * * `sc1` - Cold HDD. Cold HDD volumes must have a minimum size of 125 GiB and a maximum size
      * of 16384 GiB.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volumeconfiguration-volumetype)
@@ -2547,8 +2554,8 @@ public open class CfnLayer(
        * * `gp2` - General Purpose (SSD). General purpose volumes must have a minimum size of 1 GiB
        * and a maximum size of 16384 GiB.
        * * `st1` - Throughput Optimized hard disk drive (HDD). Throughput optimized HDD volumes must
-       * have a minimum size of 500 GiB and a maximum size of 16384 GiB.
-       * * `sc1` - Cold HDD. Cold HDD volumes must have a minimum size of 500 GiB and a maximum size
+       * have a minimum size of 125 GiB and a maximum size of 16384 GiB.
+       * * `sc1` - Cold HDD. Cold HDD volumes must have a minimum size of 125 GiB and a maximum size
        * of 16384 GiB.
        */
       public fun volumeType(volumeType: String)
@@ -2627,8 +2634,8 @@ public open class CfnLayer(
        * * `gp2` - General Purpose (SSD). General purpose volumes must have a minimum size of 1 GiB
        * and a maximum size of 16384 GiB.
        * * `st1` - Throughput Optimized hard disk drive (HDD). Throughput optimized HDD volumes must
-       * have a minimum size of 500 GiB and a maximum size of 16384 GiB.
-       * * `sc1` - Cold HDD. Cold HDD volumes must have a minimum size of 500 GiB and a maximum size
+       * have a minimum size of 125 GiB and a maximum size of 16384 GiB.
+       * * `sc1` - Cold HDD. Cold HDD volumes must have a minimum size of 125 GiB and a maximum size
        * of 16384 GiB.
        */
       override fun volumeType(volumeType: String) {
@@ -2642,7 +2649,8 @@ public open class CfnLayer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty,
-    ) : CdkObject(cdkObject), VolumeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        VolumeConfigurationProperty {
       /**
        * Specifies whether an Amazon EBS volume is encrypted.
        *
@@ -2706,8 +2714,8 @@ public open class CfnLayer(
        * * `gp2` - General Purpose (SSD). General purpose volumes must have a minimum size of 1 GiB
        * and a maximum size of 16384 GiB.
        * * `st1` - Throughput Optimized hard disk drive (HDD). Throughput optimized HDD volumes must
-       * have a minimum size of 500 GiB and a maximum size of 16384 GiB.
-       * * `sc1` - Cold HDD. Cold HDD volumes must have a minimum size of 500 GiB and a maximum size
+       * have a minimum size of 125 GiB and a maximum size of 16384 GiB.
+       * * `sc1` - Cold HDD. Cold HDD volumes must have a minimum size of 125 GiB and a maximum size
        * of 16384 GiB.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volumeconfiguration-volumetype)

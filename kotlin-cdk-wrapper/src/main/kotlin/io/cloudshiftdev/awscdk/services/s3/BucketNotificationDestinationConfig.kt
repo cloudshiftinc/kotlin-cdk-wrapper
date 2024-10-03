@@ -116,7 +116,8 @@ public interface BucketNotificationDestinationConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig,
-  ) : CdkObject(cdkObject), BucketNotificationDestinationConfig {
+  ) : CdkObject(cdkObject),
+      BucketNotificationDestinationConfig {
     /**
      * The ARN of the destination (i.e. Lambda, SNS, SQS).
      */

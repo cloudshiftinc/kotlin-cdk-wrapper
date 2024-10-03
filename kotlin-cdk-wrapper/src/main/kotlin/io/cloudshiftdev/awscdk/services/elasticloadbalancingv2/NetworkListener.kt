@@ -43,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class NetworkListener(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener,
-) : BaseListener(cdkObject), INetworkListener {
+) : BaseListener(cdkObject),
+    INetworkListener {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

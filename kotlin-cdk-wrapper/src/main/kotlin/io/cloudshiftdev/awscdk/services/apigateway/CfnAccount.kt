@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAccount(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnAccount,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnAccount(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

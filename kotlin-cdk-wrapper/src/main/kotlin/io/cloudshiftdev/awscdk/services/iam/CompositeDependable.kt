@@ -25,7 +25,8 @@ import io.cloudshiftdev.constructs.IDependable
  */
 public open class CompositeDependable(
   cdkObject: software.amazon.awscdk.services.iam.CompositeDependable,
-) : CdkObject(cdkObject), IDependable {
+) : CdkObject(cdkObject),
+    IDependable {
   public constructor(dependables: IDependable) :
       this(software.amazon.awscdk.services.iam.CompositeDependable(dependables.let(IDependable.Companion::unwrap))
   )

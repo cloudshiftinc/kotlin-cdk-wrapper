@@ -38,7 +38,8 @@ public interface ParameterGroupClusterBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ParameterGroupClusterBindOptions,
-  ) : CdkObject(cdkObject), ParameterGroupClusterBindOptions
+  ) : CdkObject(cdkObject),
+      ParameterGroupClusterBindOptions
 
   public companion object {
     public operator fun invoke(block: Builder.() -> Unit = {}): ParameterGroupClusterBindOptions {

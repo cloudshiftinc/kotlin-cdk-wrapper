@@ -181,7 +181,8 @@ public interface CfnDBClusterParameterGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.neptune.CfnDBClusterParameterGroupProps,
-  ) : CdkObject(cdkObject), CfnDBClusterParameterGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnDBClusterParameterGroupProps {
     /**
      * Provides the customer-specified description for this DB cluster parameter group.
      *

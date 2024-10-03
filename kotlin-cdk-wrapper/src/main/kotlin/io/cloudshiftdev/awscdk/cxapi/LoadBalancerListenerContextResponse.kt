@@ -106,7 +106,8 @@ public interface LoadBalancerListenerContextResponse {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cxapi.LoadBalancerListenerContextResponse,
-  ) : CdkObject(cdkObject), LoadBalancerListenerContextResponse {
+  ) : CdkObject(cdkObject),
+      LoadBalancerListenerContextResponse {
     /**
      * The ARN of the listener.
      */

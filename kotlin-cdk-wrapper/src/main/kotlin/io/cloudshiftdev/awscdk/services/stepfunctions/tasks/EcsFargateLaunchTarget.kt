@@ -46,7 +46,8 @@ import kotlin.jvm.JvmName
  */
 public open class EcsFargateLaunchTarget(
   cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget,
-) : CdkObject(cdkObject), IEcsLaunchTarget {
+) : CdkObject(cdkObject),
+    IEcsLaunchTarget {
   public constructor() :
       this(software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget()
   )

@@ -39,7 +39,8 @@ import kotlin.jvm.JvmName
  */
 public open class Connections(
   cdkObject: software.amazon.awscdk.services.ec2.Connections,
-) : CdkObject(cdkObject), IConnectable {
+) : CdkObject(cdkObject),
+    IConnectable {
   public constructor() : this(software.amazon.awscdk.services.ec2.Connections()
   )
 

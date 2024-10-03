@@ -93,7 +93,8 @@ public interface DataSource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DataSource,
-  ) : CdkObject(cdkObject), DataSource {
+  ) : CdkObject(cdkObject),
+      DataSource {
     /**
      * S3 location of the data source that is associated with a channel.
      */

@@ -53,7 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResourcePolicy(
   cdkObject: software.amazon.awscdk.services.secretsmanager.CfnResourcePolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -71,7 +72,7 @@ public open class CfnResourcePolicy(
   )
 
   /**
-   *
+   * The Arn of the secret.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 

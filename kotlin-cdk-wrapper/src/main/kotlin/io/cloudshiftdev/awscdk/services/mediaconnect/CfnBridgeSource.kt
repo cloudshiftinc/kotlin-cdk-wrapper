@@ -50,7 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBridgeSource(
   cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeSource,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -464,7 +465,8 @@ public open class CfnBridgeSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.BridgeFlowSourceProperty,
-    ) : CdkObject(cdkObject), BridgeFlowSourceProperty {
+    ) : CdkObject(cdkObject),
+        BridgeFlowSourceProperty {
       /**
        * The ARN of the cloud flow used as a source of this bridge.
        *
@@ -615,7 +617,8 @@ public open class CfnBridgeSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.BridgeNetworkSourceProperty,
-    ) : CdkObject(cdkObject), BridgeNetworkSourceProperty {
+    ) : CdkObject(cdkObject),
+        BridgeNetworkSourceProperty {
       /**
        * The network source multicast IP.
        *
@@ -719,7 +722,8 @@ public open class CfnBridgeSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeSource.VpcInterfaceAttachmentProperty,
-    ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
+    ) : CdkObject(cdkObject),
+        VpcInterfaceAttachmentProperty {
       /**
        * The name of the VPC interface that you want to send your output to.
        *

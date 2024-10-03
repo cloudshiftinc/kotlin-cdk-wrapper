@@ -76,7 +76,8 @@ public interface ITemplateOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ITemplateOptions,
-  ) : CdkObject(cdkObject), ITemplateOptions {
+  ) : CdkObject(cdkObject),
+      ITemplateOptions {
     /**
      * Gets or sets the description of this stack.
      *

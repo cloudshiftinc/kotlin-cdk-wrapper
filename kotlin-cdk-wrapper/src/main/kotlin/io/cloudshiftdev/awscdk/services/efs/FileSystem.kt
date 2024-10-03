@@ -51,7 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class FileSystem(
   cdkObject: software.amazon.awscdk.services.efs.FileSystem,
-) : Resource(cdkObject), IFileSystem {
+) : Resource(cdkObject),
+    IFileSystem {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

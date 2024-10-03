@@ -336,7 +336,8 @@ public interface EmrContainersCreateVirtualClusterProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualClusterProps,
-  ) : CdkObject(cdkObject), EmrContainersCreateVirtualClusterProps {
+  ) : CdkObject(cdkObject),
+      EmrContainersCreateVirtualClusterProps {
     /**
      * An optional description for this state.
      *

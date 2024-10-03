@@ -107,7 +107,8 @@ public interface Ulimit {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.Ulimit,
-  ) : CdkObject(cdkObject), Ulimit {
+  ) : CdkObject(cdkObject),
+      Ulimit {
     /**
      * The hard limit for this resource.
      *

@@ -20,7 +20,8 @@ public interface IEcsLoadBalancerTarget : IApplicationLoadBalancerTarget,
     INetworkLoadBalancerTarget, ILoadBalancerTarget {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.IEcsLoadBalancerTarget,
-  ) : CdkObject(cdkObject), IEcsLoadBalancerTarget {
+  ) : CdkObject(cdkObject),
+      IEcsLoadBalancerTarget {
     /**
      * Attach load-balanced target to a TargetGroup.
      *

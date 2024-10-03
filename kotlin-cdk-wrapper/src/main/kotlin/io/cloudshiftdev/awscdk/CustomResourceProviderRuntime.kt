@@ -9,6 +9,7 @@ public enum class CustomResourceProviderRuntime(
   NODEJS_14_X(software.amazon.awscdk.CustomResourceProviderRuntime.NODEJS_14_X),
   NODEJS_16_X(software.amazon.awscdk.CustomResourceProviderRuntime.NODEJS_16_X),
   NODEJS_18_X(software.amazon.awscdk.CustomResourceProviderRuntime.NODEJS_18_X),
+  NODEJS_20_X(software.amazon.awscdk.CustomResourceProviderRuntime.NODEJS_20_X),
   ;
 
   public companion object {
@@ -22,6 +23,8 @@ public enum class CustomResourceProviderRuntime(
           CustomResourceProviderRuntime.NODEJS_16_X
       software.amazon.awscdk.CustomResourceProviderRuntime.NODEJS_18_X ->
           CustomResourceProviderRuntime.NODEJS_18_X
+      software.amazon.awscdk.CustomResourceProviderRuntime.NODEJS_20_X ->
+          CustomResourceProviderRuntime.NODEJS_20_X
     }
 
     internal fun unwrap(wrapped: CustomResourceProviderRuntime):

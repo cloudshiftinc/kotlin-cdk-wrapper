@@ -242,7 +242,8 @@ public interface AmazonLinuxImageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageProps,
-  ) : CdkObject(cdkObject), AmazonLinuxImageProps {
+  ) : CdkObject(cdkObject),
+      AmazonLinuxImageProps {
     /**
      * Whether the AMI ID is cached to be stable between deployments.
      *

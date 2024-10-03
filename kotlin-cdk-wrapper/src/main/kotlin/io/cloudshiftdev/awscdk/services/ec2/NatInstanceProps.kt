@@ -314,7 +314,8 @@ public interface NatInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.NatInstanceProps,
-  ) : CdkObject(cdkObject), NatInstanceProps {
+  ) : CdkObject(cdkObject),
+      NatInstanceProps {
     /**
      * Specifying the CPU credit type for burstable EC2 instance types (T2, T3, T3a, etc).
      *

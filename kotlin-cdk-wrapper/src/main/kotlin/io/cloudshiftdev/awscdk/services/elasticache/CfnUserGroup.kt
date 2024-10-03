@@ -16,7 +16,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * For Redis engine version 6.0 onwards: Creates a Redis user group. For more information, see
+ * For Redis OSS engine version 6.0 onwards: Creates a Redis user group. For more information, see
  * [Using Role Based Access Control
  * (RBAC)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html).
  *
@@ -42,7 +42,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUserGroup(
   cdkObject: software.amazon.awscdk.services.elasticache.CfnUserGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -98,20 +100,20 @@ public open class CfnUserGroup(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * An array of key-value pairs to apply to this user.
+   * The list of tags.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * An array of key-value pairs to apply to this user.
+   * The list of tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * An array of key-value pairs to apply to this user.
+   * The list of tags.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -158,18 +160,18 @@ public open class CfnUserGroup(
     public fun engine(engine: String)
 
     /**
-     * An array of key-value pairs to apply to this user.
+     * The list of tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
+     * @param tags The list of tags. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * An array of key-value pairs to apply to this user.
+     * The list of tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
+     * @param tags The list of tags. 
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -220,20 +222,20 @@ public open class CfnUserGroup(
     }
 
     /**
-     * An array of key-value pairs to apply to this user.
+     * The list of tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
+     * @param tags The list of tags. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * An array of key-value pairs to apply to this user.
+     * The list of tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
+     * @param tags The list of tags. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

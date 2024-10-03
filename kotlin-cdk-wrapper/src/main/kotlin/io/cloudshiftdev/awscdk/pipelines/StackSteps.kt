@@ -150,7 +150,8 @@ public interface StackSteps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.StackSteps,
-  ) : CdkObject(cdkObject), StackSteps {
+  ) : CdkObject(cdkObject),
+      StackSteps {
     /**
      * Steps that execute after stack is prepared but before stack is deployed.
      *

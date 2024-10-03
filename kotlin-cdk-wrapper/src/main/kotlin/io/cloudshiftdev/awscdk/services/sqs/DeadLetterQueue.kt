@@ -26,7 +26,7 @@ import kotlin.Unit
  */
 public interface DeadLetterQueue {
   /**
-   * The number of times a message can be unsuccesfully dequeued before being moved to the
+   * The number of times a message can be unsuccessfully dequeued before being moved to the
    * dead-letter queue.
    */
   public fun maxReceiveCount(): Number
@@ -43,7 +43,7 @@ public interface DeadLetterQueue {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param maxReceiveCount The number of times a message can be unsuccesfully dequeued before
+     * @param maxReceiveCount The number of times a message can be unsuccessfully dequeued before
      * being moved to the dead-letter queue. 
      */
     public fun maxReceiveCount(maxReceiveCount: Number)
@@ -60,7 +60,7 @@ public interface DeadLetterQueue {
         software.amazon.awscdk.services.sqs.DeadLetterQueue.builder()
 
     /**
-     * @param maxReceiveCount The number of times a message can be unsuccesfully dequeued before
+     * @param maxReceiveCount The number of times a message can be unsuccessfully dequeued before
      * being moved to the dead-letter queue. 
      */
     override fun maxReceiveCount(maxReceiveCount: Number) {
@@ -80,9 +80,10 @@ public interface DeadLetterQueue {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sqs.DeadLetterQueue,
-  ) : CdkObject(cdkObject), DeadLetterQueue {
+  ) : CdkObject(cdkObject),
+      DeadLetterQueue {
     /**
-     * The number of times a message can be unsuccesfully dequeued before being moved to the
+     * The number of times a message can be unsuccessfully dequeued before being moved to the
      * dead-letter queue.
      */
     override fun maxReceiveCount(): Number = unwrap(this).getMaxReceiveCount()

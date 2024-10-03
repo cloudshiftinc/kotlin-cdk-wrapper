@@ -54,6 +54,26 @@ public interface OAuthSettings {
   public fun callbackUrls(): List<String> = unwrap(this).getCallbackUrls() ?: emptyList()
 
   /**
+   * The default redirect URI. Must be in the `callbackUrls` list.
+   *
+   * A redirect URI must:
+   *
+   * * Be an absolute URI
+   * * Be registered with the authorization server.
+   * * Not include a fragment component.
+   *
+   * Default: - no default redirect URI
+   *
+   * @see <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2
+   * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.
+   * App callback URLs such as myapp://example are also
+   * supported.">https://tools.ietf.org/html/rfc6749#section-3.1.2
+   * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.
+   * App callback URLs such as myapp://example are also supported.</a>
+   */
+  public fun defaultRedirectUri(): String? = unwrap(this).getDefaultRedirectUri()
+
+  /**
    * OAuth flows that are allowed with this client.
    *
    * Default: {authorizationCodeGrant:true,implicitCodeGrant:true}
@@ -95,6 +115,16 @@ public interface OAuthSettings {
      * @param callbackUrls List of allowed redirect URLs for the identity providers.
      */
     public fun callbackUrls(vararg callbackUrls: String)
+
+    /**
+     * @param defaultRedirectUri The default redirect URI. Must be in the `callbackUrls` list.
+     * A redirect URI must:
+     *
+     * * Be an absolute URI
+     * * Be registered with the authorization server.
+     * * Not include a fragment component.
+     */
+    public fun defaultRedirectUri(defaultRedirectUri: String)
 
     /**
      * @param flows OAuth flows that are allowed with this client.
@@ -147,6 +177,18 @@ public interface OAuthSettings {
         callbackUrls(callbackUrls.toList())
 
     /**
+     * @param defaultRedirectUri The default redirect URI. Must be in the `callbackUrls` list.
+     * A redirect URI must:
+     *
+     * * Be an absolute URI
+     * * Be registered with the authorization server.
+     * * Not include a fragment component.
+     */
+    override fun defaultRedirectUri(defaultRedirectUri: String) {
+      cdkBuilder.defaultRedirectUri(defaultRedirectUri)
+    }
+
+    /**
      * @param flows OAuth flows that are allowed with this client.
      */
     override fun flows(flows: OAuthFlows) {
@@ -189,7 +231,8 @@ public interface OAuthSettings {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.OAuthSettings,
-  ) : CdkObject(cdkObject), OAuthSettings {
+  ) : CdkObject(cdkObject),
+      OAuthSettings {
     /**
      * List of allowed redirect URLs for the identity providers.
      *
@@ -197,6 +240,28 @@ public interface OAuthSettings {
      * flows are enabled, no callback URLs otherwise.
      */
     override fun callbackUrls(): List<String> = unwrap(this).getCallbackUrls() ?: emptyList()
+
+    /**
+     * The default redirect URI. Must be in the `callbackUrls` list.
+     *
+     * A redirect URI must:
+     *
+     * * Be an absolute URI
+     * * Be registered with the authorization server.
+     * * Not include a fragment component.
+     *
+     * Default: - no default redirect URI
+     *
+     * @see <a href="https://tools.ietf.org/html/rfc6749#section-3.1.2
+     * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes
+     * only.
+     * App callback URLs such as myapp://example are also
+     * supported.">https://tools.ietf.org/html/rfc6749#section-3.1.2
+     * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes
+     * only.
+     * App callback URLs such as myapp://example are also supported.</a>
+     */
+    override fun defaultRedirectUri(): String? = unwrap(this).getDefaultRedirectUri()
 
     /**
      * OAuth flows that are allowed with this client.

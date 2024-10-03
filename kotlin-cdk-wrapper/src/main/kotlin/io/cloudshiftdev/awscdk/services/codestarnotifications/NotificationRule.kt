@@ -34,13 +34,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .events(List.of("codebuild-project-build-state-succeeded",
  * "codebuild-project-build-state-failed"))
  * .targets(List.of(topic))
+ * .notificationRuleName("MyNotificationRuleName")
+ * .enabled(true) // The default is true
+ * .detailType(DetailType.FULL) // The default is FULL
+ * .createdBy("Jone Doe")
  * .build();
  * rule.addTarget(slack);
  * ```
  */
 public open class NotificationRule(
   cdkObject: software.amazon.awscdk.services.codestarnotifications.NotificationRule,
-) : Resource(cdkObject), INotificationRule {
+) : Resource(cdkObject),
+    INotificationRule {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -76,6 +81,17 @@ public open class NotificationRule(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The name or email alias of the person who created the notification rule.
+     *
+     * If not specified, it means that the creator's alias is not provided.
+     *
+     * Default: - No alias provided
+     *
+     * @param createdBy The name or email alias of the person who created the notification rule. 
+     */
+    public fun createdBy(createdBy: String)
+
     /**
      * The level of detail to include in the notifications for this resource.
      *
@@ -172,6 +188,19 @@ public open class NotificationRule(
         software.amazon.awscdk.services.codestarnotifications.NotificationRule.Builder =
         software.amazon.awscdk.services.codestarnotifications.NotificationRule.Builder.create(scope,
         id)
+
+    /**
+     * The name or email alias of the person who created the notification rule.
+     *
+     * If not specified, it means that the creator's alias is not provided.
+     *
+     * Default: - No alias provided
+     *
+     * @param createdBy The name or email alias of the person who created the notification rule. 
+     */
+    override fun createdBy(createdBy: String) {
+      cdkBuilder.createdBy(createdBy)
+    }
 
     /**
      * The level of detail to include in the notifications for this resource.

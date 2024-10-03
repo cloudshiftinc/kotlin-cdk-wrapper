@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPackagingGroup(
   cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -467,7 +469,8 @@ public open class CfnPackagingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.AuthorizationProperty,
-    ) : CdkObject(cdkObject), AuthorizationProperty {
+    ) : CdkObject(cdkObject),
+        AuthorizationProperty {
       /**
        * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that is used for CDN
        * authorization.
@@ -568,7 +571,8 @@ public open class CfnPackagingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.LogConfigurationProperty,
-    ) : CdkObject(cdkObject), LogConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LogConfigurationProperty {
       /**
        * Sets a custom Amazon CloudWatch log group name for egress logs.
        *

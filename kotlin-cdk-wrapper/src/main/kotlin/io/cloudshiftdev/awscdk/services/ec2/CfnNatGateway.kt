@@ -68,7 +68,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNatGateway(
   cdkObject: software.amazon.awscdk.services.ec2.CfnNatGateway,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

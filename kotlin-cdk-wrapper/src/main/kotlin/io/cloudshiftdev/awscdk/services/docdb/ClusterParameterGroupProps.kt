@@ -117,7 +117,8 @@ public interface ClusterParameterGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.ClusterParameterGroupProps,
-  ) : CdkObject(cdkObject), ClusterParameterGroupProps {
+  ) : CdkObject(cdkObject),
+      ClusterParameterGroupProps {
     /**
      * The name of the cluster parameter group.
      *

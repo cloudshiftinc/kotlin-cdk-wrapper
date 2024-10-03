@@ -26,7 +26,8 @@ import io.cloudshiftdev.awscdk.services.route53.IRecordSet
  */
 public open class UserPoolDomainTarget(
   cdkObject: software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget,
-) : CdkObject(cdkObject), IAliasRecordTarget {
+) : CdkObject(cdkObject),
+    IAliasRecordTarget {
   public constructor(domain: UserPoolDomain) :
       this(software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget(domain.let(UserPoolDomain.Companion::unwrap))
   )

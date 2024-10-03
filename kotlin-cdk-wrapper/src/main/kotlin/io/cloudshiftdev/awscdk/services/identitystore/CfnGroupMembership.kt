@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGroupMembership(
   cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembership,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -63,12 +64,12 @@ public open class CfnGroupMembership(
   public open fun attrMembershipId(): String = unwrap(this).getAttrMembershipId()
 
   /**
-   * The unique identifier for a group in the identity store.
+   * The identifier for a group in the identity store.
    */
   public open fun groupId(): String = unwrap(this).getGroupId()
 
   /**
-   * The unique identifier for a group in the identity store.
+   * The identifier for a group in the identity store.
    */
   public open fun groupId(`value`: String) {
     unwrap(this).setGroupId(`value`)
@@ -128,10 +129,10 @@ public open class CfnGroupMembership(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The unique identifier for a group in the identity store.
+     * The identifier for a group in the identity store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-groupid)
-     * @param groupId The unique identifier for a group in the identity store. 
+     * @param groupId The identifier for a group in the identity store. 
      */
     public fun groupId(groupId: String)
 
@@ -187,10 +188,10 @@ public open class CfnGroupMembership(
         = software.amazon.awscdk.services.identitystore.CfnGroupMembership.Builder.create(scope, id)
 
     /**
-     * The unique identifier for a group in the identity store.
+     * The identifier for a group in the identity store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-groupid)
-     * @param groupId The unique identifier for a group in the identity store. 
+     * @param groupId The identifier for a group in the identity store. 
      */
     override fun groupId(groupId: String) {
       cdkBuilder.groupId(groupId)
@@ -292,7 +293,7 @@ public open class CfnGroupMembership(
    */
   public interface MemberIdProperty {
     /**
-     * The identifier for a user in the identity store.
+     * An object containing the identifiers of resources that can be members.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-identitystore-groupmembership-memberid.html#cfn-identitystore-groupmembership-memberid-userid)
      */
@@ -304,7 +305,7 @@ public open class CfnGroupMembership(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param userId The identifier for a user in the identity store. 
+       * @param userId An object containing the identifiers of resources that can be members. 
        */
       public fun userId(userId: String)
     }
@@ -316,7 +317,7 @@ public open class CfnGroupMembership(
           software.amazon.awscdk.services.identitystore.CfnGroupMembership.MemberIdProperty.builder()
 
       /**
-       * @param userId The identifier for a user in the identity store. 
+       * @param userId An object containing the identifiers of resources that can be members. 
        */
       override fun userId(userId: String) {
         cdkBuilder.userId(userId)
@@ -329,9 +330,10 @@ public open class CfnGroupMembership(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembership.MemberIdProperty,
-    ) : CdkObject(cdkObject), MemberIdProperty {
+    ) : CdkObject(cdkObject),
+        MemberIdProperty {
       /**
-       * The identifier for a user in the identity store.
+       * An object containing the identifiers of resources that can be members.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-identitystore-groupmembership-memberid.html#cfn-identitystore-groupmembership-memberid-userid)
        */

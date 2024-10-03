@@ -169,7 +169,8 @@ public interface MultiUserHostedRotationOptions : SingleUserHostedRotationOption
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.MultiUserHostedRotationOptions,
-  ) : CdkObject(cdkObject), MultiUserHostedRotationOptions {
+  ) : CdkObject(cdkObject),
+      MultiUserHostedRotationOptions {
     /**
      * A string of the characters that you don't want in the password.
      *

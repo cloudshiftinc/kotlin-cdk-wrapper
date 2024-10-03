@@ -43,7 +43,8 @@ public interface IClusterInstance {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.IClusterInstance,
-  ) : CdkObject(cdkObject), IClusterInstance {
+  ) : CdkObject(cdkObject),
+      IClusterInstance {
     /**
      * Create the database instance within the provided cluster.
      *

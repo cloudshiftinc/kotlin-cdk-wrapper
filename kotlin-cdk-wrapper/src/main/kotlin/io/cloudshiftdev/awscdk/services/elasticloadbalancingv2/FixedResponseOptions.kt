@@ -14,14 +14,26 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * ApplicationListener listener;
- * listener.addAction("Fixed", AddApplicationActionProps.builder()
- * .priority(10)
- * .conditions(List.of(ListenerCondition.pathPatterns(List.of("/ok"))))
- * .action(ListenerAction.fixedResponse(200, FixedResponseOptions.builder()
- * .contentType("text/plain")
- * .messageBody("OK")
- * .build()))
+ * import io.cloudshiftdev.awscdk.services.certificatemanager.*;
+ * Certificate certificate;
+ * ApplicationLoadBalancer lb;
+ * Bucket bucket;
+ * TrustStore trustStore = TrustStore.Builder.create(this, "Store")
+ * .bucket(bucket)
+ * .key("rootCA_cert.pem")
+ * .build();
+ * lb.addListener("Listener", BaseApplicationListenerProps.builder()
+ * .port(443)
+ * .protocol(ApplicationProtocol.HTTPS)
+ * .certificates(List.of(certificate))
+ * // mTLS settings
+ * .mutualAuthentication(MutualAuthentication.builder()
+ * .ignoreClientCertificateExpiry(false)
+ * .mutualAuthenticationMode(MutualAuthenticationMode.VERIFY)
+ * .trustStore(trustStore)
+ * .build())
+ * .defaultAction(ListenerAction.fixedResponse(200,
+ * FixedResponseOptions.builder().contentType("text/plain").messageBody("Success mTLS").build()))
  * .build());
  * ```
  */
@@ -85,7 +97,8 @@ public interface FixedResponseOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions,
-  ) : CdkObject(cdkObject), FixedResponseOptions {
+  ) : CdkObject(cdkObject),
+      FixedResponseOptions {
     /**
      * Content Type of the response.
      *

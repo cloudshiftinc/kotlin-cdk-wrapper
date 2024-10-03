@@ -65,7 +65,8 @@ public interface HealthCheckCustomConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig,
-  ) : CdkObject(cdkObject), HealthCheckCustomConfig {
+  ) : CdkObject(cdkObject),
+      HealthCheckCustomConfig {
     /**
      * The number of 30-second intervals that you want Cloud Map to wait after receiving an
      * UpdateInstanceCustomHealthStatus request before it changes the health status of a service

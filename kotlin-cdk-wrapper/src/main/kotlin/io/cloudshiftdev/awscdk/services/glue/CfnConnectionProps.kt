@@ -141,7 +141,8 @@ public interface CfnConnectionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnConnectionProps,
-  ) : CdkObject(cdkObject), CfnConnectionProps {
+  ) : CdkObject(cdkObject),
+      CfnConnectionProps {
     /**
      * The ID of the data catalog to create the catalog object in.
      *

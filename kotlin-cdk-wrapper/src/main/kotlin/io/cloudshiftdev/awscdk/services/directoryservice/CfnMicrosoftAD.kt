@@ -52,7 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMicrosoftAD(
   cdkObject: software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -632,7 +633,8 @@ public open class CfnMicrosoftAD(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD.VpcSettingsProperty,
-    ) : CdkObject(cdkObject), VpcSettingsProperty {
+    ) : CdkObject(cdkObject),
+        VpcSettingsProperty {
       /**
        * The identifiers of the subnets for the directory servers.
        *

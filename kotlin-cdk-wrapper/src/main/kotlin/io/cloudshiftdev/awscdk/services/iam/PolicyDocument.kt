@@ -40,7 +40,8 @@ import kotlin.jvm.JvmName
  */
 public open class PolicyDocument(
   cdkObject: software.amazon.awscdk.services.iam.PolicyDocument,
-) : CdkObject(cdkObject), IResolvable {
+) : CdkObject(cdkObject),
+    IResolvable {
   public constructor() : this(software.amazon.awscdk.services.iam.PolicyDocument()
   )
 

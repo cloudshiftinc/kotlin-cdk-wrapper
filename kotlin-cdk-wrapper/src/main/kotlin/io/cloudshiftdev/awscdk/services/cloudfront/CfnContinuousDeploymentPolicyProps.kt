@@ -136,7 +136,8 @@ public interface CfnContinuousDeploymentPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicyProps,
-  ) : CdkObject(cdkObject), CfnContinuousDeploymentPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnContinuousDeploymentPolicyProps {
     /**
      * Contains the configuration for a continuous deployment policy.
      *

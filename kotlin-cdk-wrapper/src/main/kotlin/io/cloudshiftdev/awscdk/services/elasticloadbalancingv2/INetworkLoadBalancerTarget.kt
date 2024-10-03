@@ -21,7 +21,8 @@ public interface INetworkLoadBalancerTarget {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget,
-  ) : CdkObject(cdkObject), INetworkLoadBalancerTarget {
+  ) : CdkObject(cdkObject),
+      INetworkLoadBalancerTarget {
     /**
      * Attach load-balanced target to a TargetGroup.
      *

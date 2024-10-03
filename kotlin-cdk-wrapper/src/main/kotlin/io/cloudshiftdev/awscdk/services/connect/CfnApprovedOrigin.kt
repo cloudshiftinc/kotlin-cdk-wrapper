@@ -31,7 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApprovedOrigin(
   cdkObject: software.amazon.awscdk.services.connect.CfnApprovedOrigin,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

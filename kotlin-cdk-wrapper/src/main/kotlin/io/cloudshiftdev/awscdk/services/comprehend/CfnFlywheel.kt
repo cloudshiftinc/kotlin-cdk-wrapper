@@ -87,7 +87,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFlywheel(
   cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -738,7 +740,8 @@ public open class CfnFlywheel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty,
-    ) : CdkObject(cdkObject), DataSecurityConfigProperty {
+    ) : CdkObject(cdkObject),
+        DataSecurityConfigProperty {
       /**
        * ID for the AWS KMS key that Amazon Comprehend uses to encrypt the data in the data lake.
        *
@@ -885,7 +888,8 @@ public open class CfnFlywheel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty,
-    ) : CdkObject(cdkObject), DocumentClassificationConfigProperty {
+    ) : CdkObject(cdkObject),
+        DocumentClassificationConfigProperty {
       /**
        * One or more labels to associate with the custom classifier.
        *
@@ -1000,7 +1004,8 @@ public open class CfnFlywheel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty,
-    ) : CdkObject(cdkObject), EntityRecognitionConfigProperty {
+    ) : CdkObject(cdkObject),
+        EntityRecognitionConfigProperty {
       /**
        * Up to 25 entity types that the model is trained to recognize.
        *
@@ -1096,7 +1101,8 @@ public open class CfnFlywheel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty,
-    ) : CdkObject(cdkObject), EntityTypesListItemProperty {
+    ) : CdkObject(cdkObject),
+        EntityTypesListItemProperty {
       /**
        * An entity type within a labeled training dataset that Amazon Comprehend uses to train a
        * custom entity recognizer.
@@ -1298,7 +1304,8 @@ public open class CfnFlywheel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty,
-    ) : CdkObject(cdkObject), TaskConfigProperty {
+    ) : CdkObject(cdkObject),
+        TaskConfigProperty {
       /**
        * Configuration required for a document classification model.
        *
@@ -1489,7 +1496,8 @@ public open class CfnFlywheel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
       /**
        * The ID number for a security group on an instance of your private VPC.
        *

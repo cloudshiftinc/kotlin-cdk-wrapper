@@ -238,7 +238,8 @@ public interface HostedConfigurationOptions : ConfigurationOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.HostedConfigurationOptions,
-  ) : CdkObject(cdkObject), HostedConfigurationOptions {
+  ) : CdkObject(cdkObject),
+      HostedConfigurationOptions {
     /**
      * The content of the hosted configuration.
      */

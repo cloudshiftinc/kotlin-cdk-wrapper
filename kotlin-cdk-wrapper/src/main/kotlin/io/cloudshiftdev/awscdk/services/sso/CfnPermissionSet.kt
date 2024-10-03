@@ -63,7 +63,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPermissionSet(
   cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -828,7 +830,8 @@ public open class CfnPermissionSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty,
-    ) : CdkObject(cdkObject), CustomerManagedPolicyReferenceProperty {
+    ) : CdkObject(cdkObject),
+        CustomerManagedPolicyReferenceProperty {
       /**
        * The name of the IAM policy that you have configured in each account where you want to
        * deploy your permission set.
@@ -1020,7 +1023,8 @@ public open class CfnPermissionSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty,
-    ) : CdkObject(cdkObject), PermissionsBoundaryProperty {
+    ) : CdkObject(cdkObject),
+        PermissionsBoundaryProperty {
       /**
        * Specifies the name and path of a customer managed policy.
        *

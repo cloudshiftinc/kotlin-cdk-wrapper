@@ -47,6 +47,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .providerConfiguration(Map.of(
  * "providerConfigurationKey", "providerConfiguration"))
  * .build())
+ * .ruleBasedProperties(IdMappingRuleBasedPropertiesProperty.builder()
+ * .attributeMatchingModel("attributeMatchingModel")
+ * .recordMatchingModel("recordMatchingModel")
+ * // the properties below are optional
+ * .ruleDefinitionType("ruleDefinitionType")
+ * .rules(List.of(RuleProperty.builder()
+ * .matchingKeys(List.of("matchingKeys"))
+ * .ruleName("ruleName")
+ * .build()))
+ * .build())
  * .build())
  * .inputSourceConfig(List.of(IdMappingWorkflowInputSourceProperty.builder()
  * .inputSourceArn("inputSourceArn")
@@ -74,7 +84,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIdMappingWorkflow(
   cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -125,26 +137,26 @@ public open class CfnIdMappingWorkflow(
   }
 
   /**
-   * An object which defines the `idMappingType` and the `providerProperties` .
+   * An object which defines the ID mapping technique and any additional configurations.
    */
   public open fun idMappingTechniques(): Any = unwrap(this).getIdMappingTechniques()
 
   /**
-   * An object which defines the `idMappingType` and the `providerProperties` .
+   * An object which defines the ID mapping technique and any additional configurations.
    */
   public open fun idMappingTechniques(`value`: IResolvable) {
     unwrap(this).setIdMappingTechniques(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * An object which defines the `idMappingType` and the `providerProperties` .
+   * An object which defines the ID mapping technique and any additional configurations.
    */
   public open fun idMappingTechniques(`value`: IdMappingTechniquesProperty) {
     unwrap(this).setIdMappingTechniques(`value`.let(IdMappingTechniquesProperty.Companion::unwrap))
   }
 
   /**
-   * An object which defines the `idMappingType` and the `providerProperties` .
+   * An object which defines the ID mapping technique and any additional configurations.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("0dcdc7b99155a327aacc2b9686f29ba8ddb2d40d91243b25a35673b625517f95")
@@ -268,29 +280,29 @@ public open class CfnIdMappingWorkflow(
     public fun description(description: String)
 
     /**
-     * An object which defines the `idMappingType` and the `providerProperties` .
+     * An object which defines the ID mapping technique and any additional configurations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques)
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     public fun idMappingTechniques(idMappingTechniques: IResolvable)
 
     /**
-     * An object which defines the `idMappingType` and the `providerProperties` .
+     * An object which defines the ID mapping technique and any additional configurations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques)
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     public fun idMappingTechniques(idMappingTechniques: IdMappingTechniquesProperty)
 
     /**
-     * An object which defines the `idMappingType` and the `providerProperties` .
+     * An object which defines the ID mapping technique and any additional configurations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques)
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("adf133ccc4d3eb2dd97e1dc0865da29cc2840795e113f053f00da756e475a701")
@@ -412,33 +424,33 @@ public open class CfnIdMappingWorkflow(
     }
 
     /**
-     * An object which defines the `idMappingType` and the `providerProperties` .
+     * An object which defines the ID mapping technique and any additional configurations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques)
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     override fun idMappingTechniques(idMappingTechniques: IResolvable) {
       cdkBuilder.idMappingTechniques(idMappingTechniques.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * An object which defines the `idMappingType` and the `providerProperties` .
+     * An object which defines the ID mapping technique and any additional configurations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques)
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     override fun idMappingTechniques(idMappingTechniques: IdMappingTechniquesProperty) {
       cdkBuilder.idMappingTechniques(idMappingTechniques.let(IdMappingTechniquesProperty.Companion::unwrap))
     }
 
     /**
-     * An object which defines the `idMappingType` and the `providerProperties` .
+     * An object which defines the ID mapping technique and any additional configurations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques)
-     * @param idMappingTechniques An object which defines the `idMappingType` and the
-     * `providerProperties` . 
+     * @param idMappingTechniques An object which defines the ID mapping technique and any
+     * additional configurations. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("adf133ccc4d3eb2dd97e1dc0865da29cc2840795e113f053f00da756e475a701")
@@ -583,7 +595,275 @@ public open class CfnIdMappingWorkflow(
   }
 
   /**
-   * An object which defines the ID mapping techniques and provider configurations.
+   * An object that defines the list of matching rules to run in an ID mapping workflow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
+   * IdMappingRuleBasedPropertiesProperty idMappingRuleBasedPropertiesProperty =
+   * IdMappingRuleBasedPropertiesProperty.builder()
+   * .attributeMatchingModel("attributeMatchingModel")
+   * .recordMatchingModel("recordMatchingModel")
+   * // the properties below are optional
+   * .ruleDefinitionType("ruleDefinitionType")
+   * .rules(List.of(RuleProperty.builder()
+   * .matchingKeys(List.of("matchingKeys"))
+   * .ruleName("ruleName")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingrulebasedproperties.html)
+   */
+  public interface IdMappingRuleBasedPropertiesProperty {
+    /**
+     * The comparison type. You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the
+     * `attributeMatchingModel` .
+     *
+     * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+     * attribute type. For example, if the value of the `Email` field of Profile A matches the value of
+     * the `BusinessEmail` field of Profile B, the two profiles are matched on the `Email` attribute
+     * type.
+     *
+     * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+     * exact match. For example, for the `Email` attribute type, the system will only consider it a
+     * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+     * Profile B.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingrulebasedproperties.html#cfn-entityresolution-idmappingworkflow-idmappingrulebasedproperties-attributematchingmodel)
+     */
+    public fun attributeMatchingModel(): String
+
+    /**
+     * The type of matching record that is allowed to be used in an ID mapping workflow.
+     *
+     * If the value is set to `ONE_SOURCE_TO_ONE_TARGET` , only one record in the source can be
+     * matched to the same record in the target.
+     *
+     * If the value is set to `MANY_SOURCE_TO_ONE_TARGET` , multiple records in the source can be
+     * matched to one record in the target.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingrulebasedproperties.html#cfn-entityresolution-idmappingworkflow-idmappingrulebasedproperties-recordmatchingmodel)
+     */
+    public fun recordMatchingModel(): String
+
+    /**
+     * The set of rules you can use in an ID mapping workflow.
+     *
+     * The limitations specified for the source or target to define the match rules must be
+     * compatible.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingrulebasedproperties.html#cfn-entityresolution-idmappingworkflow-idmappingrulebasedproperties-ruledefinitiontype)
+     */
+    public fun ruleDefinitionType(): String? = unwrap(this).getRuleDefinitionType()
+
+    /**
+     * The rules that can be used for ID mapping.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingrulebasedproperties.html#cfn-entityresolution-idmappingworkflow-idmappingrulebasedproperties-rules)
+     */
+    public fun rules(): Any? = unwrap(this).getRules()
+
+    /**
+     * A builder for [IdMappingRuleBasedPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributeMatchingModel The comparison type. You can either choose `ONE_TO_ONE` or
+       * `MANY_TO_MANY` as the `attributeMatchingModel` . 
+       * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+       * attribute type. For example, if the value of the `Email` field of Profile A matches the value
+       * of the `BusinessEmail` field of Profile B, the two profiles are matched on the `Email`
+       * attribute type.
+       *
+       * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+       * exact match. For example, for the `Email` attribute type, the system will only consider it a
+       * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+       * Profile B.
+       */
+      public fun attributeMatchingModel(attributeMatchingModel: String)
+
+      /**
+       * @param recordMatchingModel The type of matching record that is allowed to be used in an ID
+       * mapping workflow. 
+       * If the value is set to `ONE_SOURCE_TO_ONE_TARGET` , only one record in the source can be
+       * matched to the same record in the target.
+       *
+       * If the value is set to `MANY_SOURCE_TO_ONE_TARGET` , multiple records in the source can be
+       * matched to one record in the target.
+       */
+      public fun recordMatchingModel(recordMatchingModel: String)
+
+      /**
+       * @param ruleDefinitionType The set of rules you can use in an ID mapping workflow.
+       * The limitations specified for the source or target to define the match rules must be
+       * compatible.
+       */
+      public fun ruleDefinitionType(ruleDefinitionType: String)
+
+      /**
+       * @param rules The rules that can be used for ID mapping.
+       */
+      public fun rules(rules: IResolvable)
+
+      /**
+       * @param rules The rules that can be used for ID mapping.
+       */
+      public fun rules(rules: List<Any>)
+
+      /**
+       * @param rules The rules that can be used for ID mapping.
+       */
+      public fun rules(vararg rules: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingRuleBasedPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingRuleBasedPropertiesProperty.builder()
+
+      /**
+       * @param attributeMatchingModel The comparison type. You can either choose `ONE_TO_ONE` or
+       * `MANY_TO_MANY` as the `attributeMatchingModel` . 
+       * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+       * attribute type. For example, if the value of the `Email` field of Profile A matches the value
+       * of the `BusinessEmail` field of Profile B, the two profiles are matched on the `Email`
+       * attribute type.
+       *
+       * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+       * exact match. For example, for the `Email` attribute type, the system will only consider it a
+       * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+       * Profile B.
+       */
+      override fun attributeMatchingModel(attributeMatchingModel: String) {
+        cdkBuilder.attributeMatchingModel(attributeMatchingModel)
+      }
+
+      /**
+       * @param recordMatchingModel The type of matching record that is allowed to be used in an ID
+       * mapping workflow. 
+       * If the value is set to `ONE_SOURCE_TO_ONE_TARGET` , only one record in the source can be
+       * matched to the same record in the target.
+       *
+       * If the value is set to `MANY_SOURCE_TO_ONE_TARGET` , multiple records in the source can be
+       * matched to one record in the target.
+       */
+      override fun recordMatchingModel(recordMatchingModel: String) {
+        cdkBuilder.recordMatchingModel(recordMatchingModel)
+      }
+
+      /**
+       * @param ruleDefinitionType The set of rules you can use in an ID mapping workflow.
+       * The limitations specified for the source or target to define the match rules must be
+       * compatible.
+       */
+      override fun ruleDefinitionType(ruleDefinitionType: String) {
+        cdkBuilder.ruleDefinitionType(ruleDefinitionType)
+      }
+
+      /**
+       * @param rules The rules that can be used for ID mapping.
+       */
+      override fun rules(rules: IResolvable) {
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param rules The rules that can be used for ID mapping.
+       */
+      override fun rules(rules: List<Any>) {
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param rules The rules that can be used for ID mapping.
+       */
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingRuleBasedPropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingRuleBasedPropertiesProperty,
+    ) : CdkObject(cdkObject),
+        IdMappingRuleBasedPropertiesProperty {
+      /**
+       * The comparison type. You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the
+       * `attributeMatchingModel` .
+       *
+       * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+       * attribute type. For example, if the value of the `Email` field of Profile A matches the value
+       * of the `BusinessEmail` field of Profile B, the two profiles are matched on the `Email`
+       * attribute type.
+       *
+       * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+       * exact match. For example, for the `Email` attribute type, the system will only consider it a
+       * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+       * Profile B.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingrulebasedproperties.html#cfn-entityresolution-idmappingworkflow-idmappingrulebasedproperties-attributematchingmodel)
+       */
+      override fun attributeMatchingModel(): String = unwrap(this).getAttributeMatchingModel()
+
+      /**
+       * The type of matching record that is allowed to be used in an ID mapping workflow.
+       *
+       * If the value is set to `ONE_SOURCE_TO_ONE_TARGET` , only one record in the source can be
+       * matched to the same record in the target.
+       *
+       * If the value is set to `MANY_SOURCE_TO_ONE_TARGET` , multiple records in the source can be
+       * matched to one record in the target.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingrulebasedproperties.html#cfn-entityresolution-idmappingworkflow-idmappingrulebasedproperties-recordmatchingmodel)
+       */
+      override fun recordMatchingModel(): String = unwrap(this).getRecordMatchingModel()
+
+      /**
+       * The set of rules you can use in an ID mapping workflow.
+       *
+       * The limitations specified for the source or target to define the match rules must be
+       * compatible.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingrulebasedproperties.html#cfn-entityresolution-idmappingworkflow-idmappingrulebasedproperties-ruledefinitiontype)
+       */
+      override fun ruleDefinitionType(): String? = unwrap(this).getRuleDefinitionType()
+
+      /**
+       * The rules that can be used for ID mapping.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingrulebasedproperties.html#cfn-entityresolution-idmappingworkflow-idmappingrulebasedproperties-rules)
+       */
+      override fun rules(): Any? = unwrap(this).getRules()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IdMappingRuleBasedPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingRuleBasedPropertiesProperty):
+          IdMappingRuleBasedPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdMappingRuleBasedPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IdMappingRuleBasedPropertiesProperty):
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingRuleBasedPropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingRuleBasedPropertiesProperty
+    }
+  }
+
+  /**
+   * An object which defines the ID mapping technique and any additional configurations.
    *
    * Example:
    *
@@ -601,6 +881,16 @@ public open class CfnIdMappingWorkflow(
    * .build())
    * .providerConfiguration(Map.of(
    * "providerConfigurationKey", "providerConfiguration"))
+   * .build())
+   * .ruleBasedProperties(IdMappingRuleBasedPropertiesProperty.builder()
+   * .attributeMatchingModel("attributeMatchingModel")
+   * .recordMatchingModel("recordMatchingModel")
+   * // the properties below are optional
+   * .ruleDefinitionType("ruleDefinitionType")
+   * .rules(List.of(RuleProperty.builder()
+   * .matchingKeys(List.of("matchingKeys"))
+   * .ruleName("ruleName")
+   * .build()))
    * .build())
    * .build();
    * ```
@@ -621,6 +911,13 @@ public open class CfnIdMappingWorkflow(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingtechniques.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques-providerproperties)
      */
     public fun providerProperties(): Any? = unwrap(this).getProviderProperties()
+
+    /**
+     * An object which defines any additional configurations required by rule-based matching.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingtechniques.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques-rulebasedproperties)
+     */
+    public fun ruleBasedProperties(): Any? = unwrap(this).getRuleBasedProperties()
 
     /**
      * A builder for [IdMappingTechniquesProperty]
@@ -652,6 +949,27 @@ public open class CfnIdMappingWorkflow(
       @JvmName("99e7e4a7a6322b76ecdd8c18747c700ce11a2af0f1fbf4624e4560278e5486a8")
       public
           fun providerProperties(providerProperties: ProviderPropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      public fun ruleBasedProperties(ruleBasedProperties: IResolvable)
+
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      public fun ruleBasedProperties(ruleBasedProperties: IdMappingRuleBasedPropertiesProperty)
+
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("820d6249557e752e1e01f9dd2767f40fe0c2d5dcda220ad3833b74a6b9cb182f")
+      public
+          fun ruleBasedProperties(ruleBasedProperties: IdMappingRuleBasedPropertiesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -693,6 +1011,32 @@ public open class CfnIdMappingWorkflow(
           fun providerProperties(providerProperties: ProviderPropertiesProperty.Builder.() -> Unit):
           Unit = providerProperties(ProviderPropertiesProperty(providerProperties))
 
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      override fun ruleBasedProperties(ruleBasedProperties: IResolvable) {
+        cdkBuilder.ruleBasedProperties(ruleBasedProperties.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      override fun ruleBasedProperties(ruleBasedProperties: IdMappingRuleBasedPropertiesProperty) {
+        cdkBuilder.ruleBasedProperties(ruleBasedProperties.let(IdMappingRuleBasedPropertiesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("820d6249557e752e1e01f9dd2767f40fe0c2d5dcda220ad3833b74a6b9cb182f")
+      override
+          fun ruleBasedProperties(ruleBasedProperties: IdMappingRuleBasedPropertiesProperty.Builder.() -> Unit):
+          Unit = ruleBasedProperties(IdMappingRuleBasedPropertiesProperty(ruleBasedProperties))
+
       public fun build():
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingTechniquesProperty
           = cdkBuilder.build()
@@ -700,7 +1044,8 @@ public open class CfnIdMappingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingTechniquesProperty,
-    ) : CdkObject(cdkObject), IdMappingTechniquesProperty {
+    ) : CdkObject(cdkObject),
+        IdMappingTechniquesProperty {
       /**
        * The type of ID mapping.
        *
@@ -714,6 +1059,13 @@ public open class CfnIdMappingWorkflow(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingtechniques.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques-providerproperties)
        */
       override fun providerProperties(): Any? = unwrap(this).getProviderProperties()
+
+      /**
+       * An object which defines any additional configurations required by rule-based matching.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingtechniques.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques-rulebasedproperties)
+       */
+      override fun ruleBasedProperties(): Any? = unwrap(this).getRuleBasedProperties()
     }
 
     public companion object {
@@ -756,7 +1108,8 @@ public open class CfnIdMappingWorkflow(
    */
   public interface IdMappingWorkflowInputSourceProperty {
     /**
-     * An AWS Glue table ARN for the input source table.
+     * An AWS Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source
+     * table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowinputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowinputsource-inputsourcearn)
      */
@@ -775,7 +1128,7 @@ public open class CfnIdMappingWorkflow(
      * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
      * mapping workflow.
      *
-     * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve to.
+     * The `TARGET` contains a configuration of `targetId` which all `sourceIds` will resolve to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowinputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowinputsource-type)
      */
@@ -787,7 +1140,8 @@ public open class CfnIdMappingWorkflow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param inputSourceArn An AWS Glue table ARN for the input source table. 
+       * @param inputSourceArn An AWS Glue table Amazon Resource Name (ARN) or a matching workflow
+       * ARN for the input source table. 
        */
       public fun inputSourceArn(inputSourceArn: String)
 
@@ -802,8 +1156,7 @@ public open class CfnIdMappingWorkflow(
        * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
        * mapping workflow.
        *
-       * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve
-       * to.
+       * The `TARGET` contains a configuration of `targetId` which all `sourceIds` will resolve to.
        */
       public fun type(type: String)
     }
@@ -815,7 +1168,8 @@ public open class CfnIdMappingWorkflow(
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty.builder()
 
       /**
-       * @param inputSourceArn An AWS Glue table ARN for the input source table. 
+       * @param inputSourceArn An AWS Glue table Amazon Resource Name (ARN) or a matching workflow
+       * ARN for the input source table. 
        */
       override fun inputSourceArn(inputSourceArn: String) {
         cdkBuilder.inputSourceArn(inputSourceArn)
@@ -834,8 +1188,7 @@ public open class CfnIdMappingWorkflow(
        * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
        * mapping workflow.
        *
-       * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve
-       * to.
+       * The `TARGET` contains a configuration of `targetId` which all `sourceIds` will resolve to.
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -848,9 +1201,11 @@ public open class CfnIdMappingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty,
-    ) : CdkObject(cdkObject), IdMappingWorkflowInputSourceProperty {
+    ) : CdkObject(cdkObject),
+        IdMappingWorkflowInputSourceProperty {
       /**
-       * An AWS Glue table ARN for the input source table.
+       * An AWS Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input
+       * source table.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowinputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowinputsource-inputsourcearn)
        */
@@ -870,8 +1225,7 @@ public open class CfnIdMappingWorkflow(
        * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
        * mapping workflow.
        *
-       * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve
-       * to.
+       * The `TARGET` contains a configuration of `targetId` which all `sourceIds` will resolve to.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowinputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowinputsource-type)
        */
@@ -981,7 +1335,8 @@ public open class CfnIdMappingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty,
-    ) : CdkObject(cdkObject), IdMappingWorkflowOutputSourceProperty {
+    ) : CdkObject(cdkObject),
+        IdMappingWorkflowOutputSourceProperty {
       /**
        * Customer AWS KMS ARN for encryption at rest.
        *
@@ -1080,7 +1435,8 @@ public open class CfnIdMappingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty,
-    ) : CdkObject(cdkObject), IntermediateSourceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        IntermediateSourceConfigurationProperty {
       /**
        * The Amazon S3 location (bucket and prefix).
        *
@@ -1273,7 +1629,8 @@ public open class CfnIdMappingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty,
-    ) : CdkObject(cdkObject), ProviderPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ProviderPropertiesProperty {
       /**
        * The Amazon S3 location that temporarily stores your data while it processes.
        *
@@ -1314,6 +1671,140 @@ public open class CfnIdMappingWorkflow(
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty
+    }
+  }
+
+  /**
+   * An object containing `RuleName` , and `MatchingKeys` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
+   * RuleProperty ruleProperty = RuleProperty.builder()
+   * .matchingKeys(List.of("matchingKeys"))
+   * .ruleName("ruleName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-rule.html)
+   */
+  public interface RuleProperty {
+    /**
+     * A list of `MatchingKeys` .
+     *
+     * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are considered
+     * to match according to this rule if all of the `MatchingKeys` match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-rule.html#cfn-entityresolution-idmappingworkflow-rule-matchingkeys)
+     */
+    public fun matchingKeys(): List<String>
+
+    /**
+     * A name for the matching rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-rule.html#cfn-entityresolution-idmappingworkflow-rule-rulename)
+     */
+    public fun ruleName(): String
+
+    /**
+     * A builder for [RuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param matchingKeys A list of `MatchingKeys` . 
+       * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are
+       * considered to match according to this rule if all of the `MatchingKeys` match.
+       */
+      public fun matchingKeys(matchingKeys: List<String>)
+
+      /**
+       * @param matchingKeys A list of `MatchingKeys` . 
+       * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are
+       * considered to match according to this rule if all of the `MatchingKeys` match.
+       */
+      public fun matchingKeys(vararg matchingKeys: String)
+
+      /**
+       * @param ruleName A name for the matching rule. 
+       */
+      public fun ruleName(ruleName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.RuleProperty.Builder
+          =
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.RuleProperty.builder()
+
+      /**
+       * @param matchingKeys A list of `MatchingKeys` . 
+       * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are
+       * considered to match according to this rule if all of the `MatchingKeys` match.
+       */
+      override fun matchingKeys(matchingKeys: List<String>) {
+        cdkBuilder.matchingKeys(matchingKeys)
+      }
+
+      /**
+       * @param matchingKeys A list of `MatchingKeys` . 
+       * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are
+       * considered to match according to this rule if all of the `MatchingKeys` match.
+       */
+      override fun matchingKeys(vararg matchingKeys: String): Unit =
+          matchingKeys(matchingKeys.toList())
+
+      /**
+       * @param ruleName A name for the matching rule. 
+       */
+      override fun ruleName(ruleName: String) {
+        cdkBuilder.ruleName(ruleName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.RuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.RuleProperty,
+    ) : CdkObject(cdkObject),
+        RuleProperty {
+      /**
+       * A list of `MatchingKeys` .
+       *
+       * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are
+       * considered to match according to this rule if all of the `MatchingKeys` match.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-rule.html#cfn-entityresolution-idmappingworkflow-rule-matchingkeys)
+       */
+      override fun matchingKeys(): List<String> = unwrap(this).getMatchingKeys()
+
+      /**
+       * A name for the matching rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-rule.html#cfn-entityresolution-idmappingworkflow-rule-rulename)
+       */
+      override fun ruleName(): String = unwrap(this).getRuleName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.RuleProperty):
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RuleProperty):
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.RuleProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.RuleProperty
     }
   }
 }

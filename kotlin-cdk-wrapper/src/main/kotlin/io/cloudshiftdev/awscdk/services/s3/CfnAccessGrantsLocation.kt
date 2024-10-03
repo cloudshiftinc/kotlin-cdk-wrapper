@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAccessGrantsLocation(
   cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsLocation,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.s3.CfnAccessGrantsLocation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

@@ -74,7 +74,8 @@ public interface DeploymentController {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.DeploymentController,
-  ) : CdkObject(cdkObject), DeploymentController {
+  ) : CdkObject(cdkObject),
+      DeploymentController {
     /**
      * The deployment controller type to use.
      *

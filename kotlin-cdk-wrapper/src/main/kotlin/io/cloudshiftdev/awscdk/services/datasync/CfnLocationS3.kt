@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLocationS3(
   cdkObject: software.amazon.awscdk.services.datasync.CfnLocationS3,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -522,7 +524,8 @@ public open class CfnLocationS3(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnLocationS3.S3ConfigProperty,
-    ) : CdkObject(cdkObject), S3ConfigProperty {
+    ) : CdkObject(cdkObject),
+        S3ConfigProperty {
       /**
        * Specifies the ARN of the IAM role that DataSync uses to access your S3 bucket.
        *

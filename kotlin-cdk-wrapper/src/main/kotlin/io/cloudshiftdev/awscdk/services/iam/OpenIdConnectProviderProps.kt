@@ -271,7 +271,8 @@ public interface OpenIdConnectProviderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.OpenIdConnectProviderProps,
-  ) : CdkObject(cdkObject), OpenIdConnectProviderProps {
+  ) : CdkObject(cdkObject),
+      OpenIdConnectProviderProps {
     /**
      * A list of client IDs (also known as audiences).
      *

@@ -85,7 +85,8 @@ public interface InferenceAccelerator {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.InferenceAccelerator,
-  ) : CdkObject(cdkObject), InferenceAccelerator {
+  ) : CdkObject(cdkObject),
+      InferenceAccelerator {
     /**
      * The Elastic Inference accelerator device name.
      *

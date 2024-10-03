@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class SourceApiAssociation(
   cdkObject: software.amazon.awscdk.services.appsync.SourceApiAssociation,
-) : Resource(cdkObject), ISourceApiAssociation {
+) : Resource(cdkObject),
+    ISourceApiAssociation {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

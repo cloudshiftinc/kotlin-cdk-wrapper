@@ -318,7 +318,8 @@ public interface PolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.PolicyProps,
-  ) : CdkObject(cdkObject), PolicyProps {
+  ) : CdkObject(cdkObject),
+      PolicyProps {
     /**
      * Initial PolicyDocument to use for this Policy.
      *

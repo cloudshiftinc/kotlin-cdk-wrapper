@@ -54,6 +54,10 @@ import kotlin.jvm.JvmName
  * .build()))
  * // the properties below are optional
  * .approvalModel("approvalModel")
+ * .resourceTags(List.of(ResourceTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -115,6 +119,16 @@ public interface CfnBudgetsActionProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-notificationtype)
    */
   public fun notificationType(): String
+
+  /**
+   * An optional list of tags to associate with the specified budget action.
+   *
+   * Each tag consists of a key and a value, and each key must be unique for the resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-resourcetags)
+   */
+  public fun resourceTags(): List<CfnBudgetsAction.ResourceTagProperty> =
+      unwrap(this).getResourceTags()?.map(CfnBudgetsAction.ResourceTagProperty::wrap) ?: emptyList()
 
   /**
    * A list of subscribers.
@@ -191,6 +205,18 @@ public interface CfnBudgetsActionProps {
      * @param notificationType The type of a notification. 
      */
     public fun notificationType(notificationType: String)
+
+    /**
+     * @param resourceTags An optional list of tags to associate with the specified budget action.
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     */
+    public fun resourceTags(resourceTags: List<CfnBudgetsAction.ResourceTagProperty>)
+
+    /**
+     * @param resourceTags An optional list of tags to associate with the specified budget action.
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     */
+    public fun resourceTags(vararg resourceTags: CfnBudgetsAction.ResourceTagProperty)
 
     /**
      * @param subscribers A list of subscribers. 
@@ -297,6 +323,21 @@ public interface CfnBudgetsActionProps {
     }
 
     /**
+     * @param resourceTags An optional list of tags to associate with the specified budget action.
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     */
+    override fun resourceTags(resourceTags: List<CfnBudgetsAction.ResourceTagProperty>) {
+      cdkBuilder.resourceTags(resourceTags.map(CfnBudgetsAction.ResourceTagProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param resourceTags An optional list of tags to associate with the specified budget action.
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     */
+    override fun resourceTags(vararg resourceTags: CfnBudgetsAction.ResourceTagProperty): Unit =
+        resourceTags(resourceTags.toList())
+
+    /**
      * @param subscribers A list of subscribers. 
      */
     override fun subscribers(subscribers: IResolvable) {
@@ -321,7 +362,8 @@ public interface CfnBudgetsActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsActionProps,
-  ) : CdkObject(cdkObject), CfnBudgetsActionProps {
+  ) : CdkObject(cdkObject),
+      CfnBudgetsActionProps {
     /**
      * The trigger threshold of the action.
      *
@@ -377,6 +419,17 @@ public interface CfnBudgetsActionProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-notificationtype)
      */
     override fun notificationType(): String = unwrap(this).getNotificationType()
+
+    /**
+     * An optional list of tags to associate with the specified budget action.
+     *
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-resourcetags)
+     */
+    override fun resourceTags(): List<CfnBudgetsAction.ResourceTagProperty> =
+        unwrap(this).getResourceTags()?.map(CfnBudgetsAction.ResourceTagProperty::wrap) ?:
+        emptyList()
 
     /**
      * A list of subscribers.

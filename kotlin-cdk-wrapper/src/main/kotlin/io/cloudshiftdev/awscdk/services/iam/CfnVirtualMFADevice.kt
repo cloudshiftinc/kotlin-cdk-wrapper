@@ -59,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVirtualMFADevice(
   cdkObject: software.amazon.awscdk.services.iam.CfnVirtualMFADevice,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

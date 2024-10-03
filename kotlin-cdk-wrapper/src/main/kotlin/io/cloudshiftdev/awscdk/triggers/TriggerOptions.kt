@@ -167,7 +167,8 @@ public interface TriggerOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.triggers.TriggerOptions,
-  ) : CdkObject(cdkObject), TriggerOptions {
+  ) : CdkObject(cdkObject),
+      TriggerOptions {
     /**
      * Adds trigger dependencies. Execute this trigger only after these construct scopes have been
      * provisioned.

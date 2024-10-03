@@ -117,7 +117,8 @@ public interface CfnDeviceDefinitionVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersionProps,
-  ) : CdkObject(cdkObject), CfnDeviceDefinitionVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnDeviceDefinitionVersionProps {
     /**
      * The ID of the device definition associated with this version.
      *

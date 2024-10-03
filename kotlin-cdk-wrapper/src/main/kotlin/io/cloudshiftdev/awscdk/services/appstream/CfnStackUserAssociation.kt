@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStackUserAssociation(
   cdkObject: software.amazon.awscdk.services.appstream.CfnStackUserAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

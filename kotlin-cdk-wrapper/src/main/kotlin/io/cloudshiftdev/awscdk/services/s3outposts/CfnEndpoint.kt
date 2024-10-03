@@ -54,7 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEndpoint(
   cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -486,7 +487,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint.FailedReasonProperty,
-    ) : CdkObject(cdkObject), FailedReasonProperty {
+    ) : CdkObject(cdkObject),
+        FailedReasonProperty {
       /**
        * The failure code, if any, for a create or delete endpoint operation.
        *
@@ -574,7 +576,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint.NetworkInterfaceProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInterfaceProperty {
       /**
        * The ID for the network interface.
        *

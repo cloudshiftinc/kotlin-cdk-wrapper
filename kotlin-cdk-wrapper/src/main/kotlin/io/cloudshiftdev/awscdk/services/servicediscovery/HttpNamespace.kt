@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class HttpNamespace(
   cdkObject: software.amazon.awscdk.services.servicediscovery.HttpNamespace,
-) : Resource(cdkObject), IHttpNamespace {
+) : Resource(cdkObject),
+    IHttpNamespace {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

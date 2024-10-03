@@ -360,7 +360,8 @@ public interface CfnLocationSMBProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datasync.CfnLocationSMBProps,
-  ) : CdkObject(cdkObject), CfnLocationSMBProps {
+  ) : CdkObject(cdkObject),
+      CfnLocationSMBProps {
     /**
      * The Amazon Resource Names (ARNs) of agents to use for a Server Message Block (SMB) location.
      *

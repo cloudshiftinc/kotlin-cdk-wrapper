@@ -17,7 +17,8 @@ public interface IRouteTable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IRouteTable,
-  ) : CdkObject(cdkObject), IRouteTable {
+  ) : CdkObject(cdkObject),
+      IRouteTable {
     /**
      * Route table ID.
      */

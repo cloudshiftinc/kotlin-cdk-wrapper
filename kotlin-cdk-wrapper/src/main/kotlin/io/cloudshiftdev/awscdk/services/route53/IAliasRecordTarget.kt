@@ -28,7 +28,8 @@ public interface IAliasRecordTarget {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.IAliasRecordTarget,
-  ) : CdkObject(cdkObject), IAliasRecordTarget {
+  ) : CdkObject(cdkObject),
+      IAliasRecordTarget {
     /**
      * Return hosted zone ID and DNS name, usable for Route53 alias targets.
      *

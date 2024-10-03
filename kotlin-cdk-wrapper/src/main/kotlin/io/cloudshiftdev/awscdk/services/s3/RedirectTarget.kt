@@ -71,7 +71,8 @@ public interface RedirectTarget {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.RedirectTarget,
-  ) : CdkObject(cdkObject), RedirectTarget {
+  ) : CdkObject(cdkObject),
+      RedirectTarget {
     /**
      * Name of the host where requests are redirected.
      */

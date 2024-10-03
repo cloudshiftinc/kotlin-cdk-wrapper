@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDomainName(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -546,7 +548,8 @@ public open class CfnDomainName(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty,
-    ) : CdkObject(cdkObject), DomainNameConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DomainNameConfigurationProperty {
       /**
        * An AWS -managed certificate that will be used by the edge-optimized endpoint for this
        * domain name.
@@ -711,7 +714,8 @@ public open class CfnDomainName(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty,
-    ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
+    ) : CdkObject(cdkObject),
+        MutualTlsAuthenticationProperty {
       /**
        * An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example,
        * `s3:// bucket-name / key-name` .

@@ -79,7 +79,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStage(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnStage,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1006,7 +1008,8 @@ public open class CfnStage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.AccessLogSettingProperty,
-    ) : CdkObject(cdkObject), AccessLogSettingProperty {
+    ) : CdkObject(cdkObject),
+        AccessLogSettingProperty {
       /**
        * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose
        * delivery stream to receive access logs.
@@ -1205,7 +1208,8 @@ public open class CfnStage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.CanarySettingProperty,
-    ) : CdkObject(cdkObject), CanarySettingProperty {
+    ) : CdkObject(cdkObject),
+        CanarySettingProperty {
       /**
        * The ID of the canary deployment.
        *
@@ -1618,7 +1622,8 @@ public open class CfnStage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.MethodSettingProperty,
-    ) : CdkObject(cdkObject), MethodSettingProperty {
+    ) : CdkObject(cdkObject),
+        MethodSettingProperty {
       /**
        * Specifies whether the cached responses are encrypted.
        *

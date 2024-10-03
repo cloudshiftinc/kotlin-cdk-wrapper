@@ -90,7 +90,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ManagedEc2EksComputeEnvironment(
   cdkObject: software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironment,
-) : Resource(cdkObject), IManagedComputeEnvironment, IComputeEnvironment {
+) : Resource(cdkObject),
+    IManagedComputeEnvironment,
+    IComputeEnvironment {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -69,7 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnOriginRequestPolicy(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -356,7 +357,8 @@ public open class CfnOriginRequestPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty,
-    ) : CdkObject(cdkObject), CookiesConfigProperty {
+    ) : CdkObject(cdkObject),
+        CookiesConfigProperty {
       /**
        * Determines whether cookies in viewer requests are included in requests that CloudFront
        * sends to the origin. Valid values are:.
@@ -531,7 +533,8 @@ public open class CfnOriginRequestPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty,
-    ) : CdkObject(cdkObject), HeadersConfigProperty {
+    ) : CdkObject(cdkObject),
+        HeadersConfigProperty {
       /**
        * Determines whether any HTTP headers are included in requests that CloudFront sends to the
        * origin. Valid values are:.
@@ -844,7 +847,8 @@ public open class CfnOriginRequestPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty,
-    ) : CdkObject(cdkObject), OriginRequestPolicyConfigProperty {
+    ) : CdkObject(cdkObject),
+        OriginRequestPolicyConfigProperty {
       /**
        * A comment to describe the origin request policy.
        *
@@ -1032,7 +1036,8 @@ public open class CfnOriginRequestPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.QueryStringsConfigProperty,
-    ) : CdkObject(cdkObject), QueryStringsConfigProperty {
+    ) : CdkObject(cdkObject),
+        QueryStringsConfigProperty {
       /**
        * Determines whether any URL query strings in viewer requests are included in requests that
        * CloudFront sends to the origin.

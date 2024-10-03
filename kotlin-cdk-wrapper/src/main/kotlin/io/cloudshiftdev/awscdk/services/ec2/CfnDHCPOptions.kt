@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDHCPOptions(
   cdkObject: software.amazon.awscdk.services.ec2.CfnDHCPOptions,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnDHCPOptions(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

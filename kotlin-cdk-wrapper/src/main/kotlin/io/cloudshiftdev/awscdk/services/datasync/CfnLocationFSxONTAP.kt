@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLocationFSxONTAP(
   cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -582,7 +584,8 @@ public open class CfnLocationFSxONTAP(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NFSProperty,
-    ) : CdkObject(cdkObject), NFSProperty {
+    ) : CdkObject(cdkObject),
+        NFSProperty {
       /**
        * Specifies how DataSync can access a location using the NFS protocol.
        *
@@ -706,7 +709,8 @@ public open class CfnLocationFSxONTAP(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NfsMountOptionsProperty,
-    ) : CdkObject(cdkObject), NfsMountOptionsProperty {
+    ) : CdkObject(cdkObject),
+        NfsMountOptionsProperty {
       /**
        * Specifies the NFS version that you want DataSync to use when mounting your NFS share.
        *
@@ -901,7 +905,8 @@ public open class CfnLocationFSxONTAP(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.ProtocolProperty,
-    ) : CdkObject(cdkObject), ProtocolProperty {
+    ) : CdkObject(cdkObject),
+        ProtocolProperty {
       /**
        * Specifies the Network File System (NFS) protocol configuration that DataSync uses to access
        * your FSx for ONTAP file system's storage virtual machine (SVM).
@@ -1155,7 +1160,8 @@ public open class CfnLocationFSxONTAP(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SMBProperty,
-    ) : CdkObject(cdkObject), SMBProperty {
+    ) : CdkObject(cdkObject),
+        SMBProperty {
       /**
        * Specifies the fully qualified domain name (FQDN) of the Microsoft Active Directory that
        * your storage virtual machine (SVM) belongs to.
@@ -1348,7 +1354,8 @@ public open class CfnLocationFSxONTAP(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SmbMountOptionsProperty,
-    ) : CdkObject(cdkObject), SmbMountOptionsProperty {
+    ) : CdkObject(cdkObject),
+        SmbMountOptionsProperty {
       /**
        * By default, DataSync automatically chooses an SMB protocol version based on negotiation
        * with your SMB file server.

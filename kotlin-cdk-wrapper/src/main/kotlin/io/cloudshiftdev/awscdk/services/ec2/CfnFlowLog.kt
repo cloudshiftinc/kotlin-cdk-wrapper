@@ -62,7 +62,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFlowLog(
   cdkObject: software.amazon.awscdk.services.ec2.CfnFlowLog,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -370,9 +372,8 @@ public open class CfnFlowLog(
      * must be 60 seconds for transit gateway resource types.
      *
      * When a network interface is attached to a [Nitro-based
-     * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-     * , the aggregation interval is always 60 seconds or less, regardless of the value that you
-     * specify.
+     * instance](https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html) , the
+     * aggregation interval is always 60 seconds or less, regardless of the value that you specify.
      *
      * Default: 600
      *
@@ -557,9 +558,8 @@ public open class CfnFlowLog(
      * must be 60 seconds for transit gateway resource types.
      *
      * When a network interface is attached to a [Nitro-based
-     * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)
-     * , the aggregation interval is always 60 seconds or less, regardless of the value that you
-     * specify.
+     * instance](https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-nitro-instances.html) , the
+     * aggregation interval is always 60 seconds or less, regardless of the value that you specify.
      *
      * Default: 600
      *
@@ -785,7 +785,8 @@ public open class CfnFlowLog(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnFlowLog.DestinationOptionsProperty,
-    ) : CdkObject(cdkObject), DestinationOptionsProperty {
+    ) : CdkObject(cdkObject),
+        DestinationOptionsProperty {
       /**
        * The format for the flow log.
        *

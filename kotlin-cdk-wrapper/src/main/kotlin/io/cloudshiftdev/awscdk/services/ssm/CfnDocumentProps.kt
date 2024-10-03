@@ -481,7 +481,8 @@ public interface CfnDocumentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ssm.CfnDocumentProps,
-  ) : CdkObject(cdkObject), CfnDocumentProps {
+  ) : CdkObject(cdkObject),
+      CfnDocumentProps {
     /**
      * A list of key-value pairs that describe attachments to a version of a document.
      *

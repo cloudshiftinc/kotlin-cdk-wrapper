@@ -102,7 +102,8 @@ public interface CfnNetworkInterfacePermissionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermissionProps,
-  ) : CdkObject(cdkObject), CfnNetworkInterfacePermissionProps {
+  ) : CdkObject(cdkObject),
+      CfnNetworkInterfacePermissionProps {
     /**
      * The AWS account ID.
      *

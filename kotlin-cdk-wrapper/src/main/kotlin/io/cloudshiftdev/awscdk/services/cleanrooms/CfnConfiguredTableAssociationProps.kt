@@ -3,9 +3,11 @@
 package io.cloudshiftdev.awscdk.services.cleanrooms
 
 import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -26,6 +28,25 @@ import kotlin.collections.List
  * .name("name")
  * .roleArn("roleArn")
  * // the properties below are optional
+ * .configuredTableAssociationAnalysisRules(List.of(ConfiguredTableAssociationAnalysisRuleProperty.builder()
+ * .policy(ConfiguredTableAssociationAnalysisRulePolicyProperty.builder()
+ * .v1(ConfiguredTableAssociationAnalysisRulePolicyV1Property.builder()
+ * .aggregation(ConfiguredTableAssociationAnalysisRuleAggregationProperty.builder()
+ * .allowedAdditionalAnalyses(List.of("allowedAdditionalAnalyses"))
+ * .allowedResultReceivers(List.of("allowedResultReceivers"))
+ * .build())
+ * .custom(ConfiguredTableAssociationAnalysisRuleCustomProperty.builder()
+ * .allowedAdditionalAnalyses(List.of("allowedAdditionalAnalyses"))
+ * .allowedResultReceivers(List.of("allowedResultReceivers"))
+ * .build())
+ * .list(ConfiguredTableAssociationAnalysisRuleListProperty.builder()
+ * .allowedAdditionalAnalyses(List.of("allowedAdditionalAnalyses"))
+ * .allowedResultReceivers(List.of("allowedResultReceivers"))
+ * .build())
+ * .build())
+ * .build())
+ * .type("type")
+ * .build()))
  * .description("description")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -37,6 +58,18 @@ import kotlin.collections.List
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtableassociation.html)
  */
 public interface CfnConfiguredTableAssociationProps {
+  /**
+   * An analysis rule for a configured table association.
+   *
+   * This analysis rule specifies how data from the table can be used within its associated
+   * collaboration. In the console, the `ConfiguredTableAssociationAnalysisRule` is referred to as the
+   * *collaboration analysis rule* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtableassociation.html#cfn-cleanrooms-configuredtableassociation-configuredtableassociationanalysisrules)
+   */
+  public fun configuredTableAssociationAnalysisRules(): Any? =
+      unwrap(this).getConfiguredTableAssociationAnalysisRules()
+
   /**
    * A unique identifier for the configured table to be associated to.
    *
@@ -94,6 +127,36 @@ public interface CfnConfiguredTableAssociationProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param configuredTableAssociationAnalysisRules An analysis rule for a configured table
+     * association.
+     * This analysis rule specifies how data from the table can be used within its associated
+     * collaboration. In the console, the `ConfiguredTableAssociationAnalysisRule` is referred to as
+     * the *collaboration analysis rule* .
+     */
+    public
+        fun configuredTableAssociationAnalysisRules(configuredTableAssociationAnalysisRules: IResolvable)
+
+    /**
+     * @param configuredTableAssociationAnalysisRules An analysis rule for a configured table
+     * association.
+     * This analysis rule specifies how data from the table can be used within its associated
+     * collaboration. In the console, the `ConfiguredTableAssociationAnalysisRule` is referred to as
+     * the *collaboration analysis rule* .
+     */
+    public
+        fun configuredTableAssociationAnalysisRules(configuredTableAssociationAnalysisRules: List<Any>)
+
+    /**
+     * @param configuredTableAssociationAnalysisRules An analysis rule for a configured table
+     * association.
+     * This analysis rule specifies how data from the table can be used within its associated
+     * collaboration. In the console, the `ConfiguredTableAssociationAnalysisRule` is referred to as
+     * the *collaboration analysis rule* .
+     */
+    public fun configuredTableAssociationAnalysisRules(vararg
+        configuredTableAssociationAnalysisRules: Any)
+
+    /**
      * @param configuredTableIdentifier A unique identifier for the configured table to be
      * associated to. 
      * Currently accepts a configured table ID.
@@ -145,6 +208,41 @@ public interface CfnConfiguredTableAssociationProps {
     private val cdkBuilder:
         software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociationProps.Builder =
         software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociationProps.builder()
+
+    /**
+     * @param configuredTableAssociationAnalysisRules An analysis rule for a configured table
+     * association.
+     * This analysis rule specifies how data from the table can be used within its associated
+     * collaboration. In the console, the `ConfiguredTableAssociationAnalysisRule` is referred to as
+     * the *collaboration analysis rule* .
+     */
+    override
+        fun configuredTableAssociationAnalysisRules(configuredTableAssociationAnalysisRules: IResolvable) {
+      cdkBuilder.configuredTableAssociationAnalysisRules(configuredTableAssociationAnalysisRules.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param configuredTableAssociationAnalysisRules An analysis rule for a configured table
+     * association.
+     * This analysis rule specifies how data from the table can be used within its associated
+     * collaboration. In the console, the `ConfiguredTableAssociationAnalysisRule` is referred to as
+     * the *collaboration analysis rule* .
+     */
+    override
+        fun configuredTableAssociationAnalysisRules(configuredTableAssociationAnalysisRules: List<Any>) {
+      cdkBuilder.configuredTableAssociationAnalysisRules(configuredTableAssociationAnalysisRules.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param configuredTableAssociationAnalysisRules An analysis rule for a configured table
+     * association.
+     * This analysis rule specifies how data from the table can be used within its associated
+     * collaboration. In the console, the `ConfiguredTableAssociationAnalysisRule` is referred to as
+     * the *collaboration analysis rule* .
+     */
+    override fun configuredTableAssociationAnalysisRules(vararg
+        configuredTableAssociationAnalysisRules: Any): Unit =
+        configuredTableAssociationAnalysisRules(configuredTableAssociationAnalysisRules.toList())
 
     /**
      * @param configuredTableIdentifier A unique identifier for the configured table to be
@@ -212,7 +310,20 @@ public interface CfnConfiguredTableAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociationProps,
-  ) : CdkObject(cdkObject), CfnConfiguredTableAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnConfiguredTableAssociationProps {
+    /**
+     * An analysis rule for a configured table association.
+     *
+     * This analysis rule specifies how data from the table can be used within its associated
+     * collaboration. In the console, the `ConfiguredTableAssociationAnalysisRule` is referred to as
+     * the *collaboration analysis rule* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtableassociation.html#cfn-cleanrooms-configuredtableassociation-configuredtableassociationanalysisrules)
+     */
+    override fun configuredTableAssociationAnalysisRules(): Any? =
+        unwrap(this).getConfiguredTableAssociationAnalysisRules()
+
     /**
      * A unique identifier for the configured table to be associated to.
      *

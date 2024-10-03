@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApiKey(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnApiKey,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnApiKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -629,7 +631,8 @@ public open class CfnApiKey(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnApiKey.StageKeyProperty,
-    ) : CdkObject(cdkObject), StageKeyProperty {
+    ) : CdkObject(cdkObject),
+        StageKeyProperty {
       /**
        * The string identifier of the associated RestApi.
        *

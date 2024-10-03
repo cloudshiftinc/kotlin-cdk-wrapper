@@ -51,7 +51,8 @@ public interface IHostedZone : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.IHostedZone,
-  ) : CdkObject(cdkObject), IHostedZone {
+  ) : CdkObject(cdkObject),
+      IHostedZone {
     /**
      * Apply the given removal policy to this resource.
      *

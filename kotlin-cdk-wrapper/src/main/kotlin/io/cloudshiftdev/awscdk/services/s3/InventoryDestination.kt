@@ -114,7 +114,8 @@ public interface InventoryDestination {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.InventoryDestination,
-  ) : CdkObject(cdkObject), InventoryDestination {
+  ) : CdkObject(cdkObject),
+      InventoryDestination {
     /**
      * Bucket where all inventories will be saved in.
      */

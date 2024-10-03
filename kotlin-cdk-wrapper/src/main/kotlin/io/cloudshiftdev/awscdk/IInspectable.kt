@@ -18,7 +18,8 @@ public interface IInspectable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IInspectable,
-  ) : CdkObject(cdkObject), IInspectable {
+  ) : CdkObject(cdkObject),
+      IInspectable {
     /**
      * Examines construct.
      *

@@ -26,7 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class KeyValueStore(
   cdkObject: software.amazon.awscdk.services.cloudfront.KeyValueStore,
-) : Resource(cdkObject), IKeyValueStore {
+) : Resource(cdkObject),
+    IKeyValueStore {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudfront.KeyValueStore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

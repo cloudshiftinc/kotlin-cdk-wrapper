@@ -715,7 +715,8 @@ public interface CfnEC2FleetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnEC2FleetProps,
-  ) : CdkObject(cdkObject), CfnEC2FleetProps {
+  ) : CdkObject(cdkObject),
+      CfnEC2FleetProps {
     /**
      * Reserved.
      *

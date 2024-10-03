@@ -278,7 +278,8 @@ public interface DashboardProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.DashboardProps,
-  ) : CdkObject(cdkObject), DashboardProps {
+  ) : CdkObject(cdkObject),
+      DashboardProps {
     /**
      * Name of the dashboard.
      *

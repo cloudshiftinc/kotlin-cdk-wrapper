@@ -321,7 +321,8 @@ public interface SageMakerCreateEndpointProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointProps,
-  ) : CdkObject(cdkObject), SageMakerCreateEndpointProps {
+  ) : CdkObject(cdkObject),
+      SageMakerCreateEndpointProps {
     /**
      * An optional description for this state.
      *

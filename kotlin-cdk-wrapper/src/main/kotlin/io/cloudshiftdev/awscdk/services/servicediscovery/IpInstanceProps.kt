@@ -136,7 +136,8 @@ public interface IpInstanceProps : IpInstanceBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.IpInstanceProps,
-  ) : CdkObject(cdkObject), IpInstanceProps {
+  ) : CdkObject(cdkObject),
+      IpInstanceProps {
     /**
      * Custom attributes of the instance.
      *

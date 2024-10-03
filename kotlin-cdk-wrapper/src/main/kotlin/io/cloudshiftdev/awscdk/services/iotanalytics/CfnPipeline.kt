@@ -119,7 +119,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPipeline(
   cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1008,7 +1010,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty,
-    ) : CdkObject(cdkObject), ActivityProperty {
+    ) : CdkObject(cdkObject),
+        ActivityProperty {
       /**
        * Adds other attributes based on existing attributes in the message.
        *
@@ -1229,7 +1232,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty,
-    ) : CdkObject(cdkObject), AddAttributesProperty {
+    ) : CdkObject(cdkObject),
+        AddAttributesProperty {
       /**
        * A list of 1-50 "AttributeNameMapping" objects that map an existing attribute to a new
        * attribute.
@@ -1370,7 +1374,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty,
-    ) : CdkObject(cdkObject), ChannelProperty {
+    ) : CdkObject(cdkObject),
+        ChannelProperty {
       /**
        * The name of the channel from which the messages are processed.
        *
@@ -1484,7 +1489,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty,
-    ) : CdkObject(cdkObject), DatastoreProperty {
+    ) : CdkObject(cdkObject),
+        DatastoreProperty {
       /**
        * The name of the data store where processed messages are stored.
        *
@@ -1659,7 +1665,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty,
-    ) : CdkObject(cdkObject), DeviceRegistryEnrichProperty {
+    ) : CdkObject(cdkObject),
+        DeviceRegistryEnrichProperty {
       /**
        * The name of the attribute that is added to the message.
        *
@@ -1852,7 +1859,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty,
-    ) : CdkObject(cdkObject), DeviceShadowEnrichProperty {
+    ) : CdkObject(cdkObject),
+        DeviceShadowEnrichProperty {
       /**
        * The name of the attribute that is added to the message.
        *
@@ -2003,7 +2011,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
+    ) : CdkObject(cdkObject),
+        FilterProperty {
       /**
        * An expression that looks like an SQL WHERE clause that must return a Boolean value.
        *
@@ -2165,7 +2174,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty,
-    ) : CdkObject(cdkObject), LambdaProperty {
+    ) : CdkObject(cdkObject),
+        LambdaProperty {
       /**
        * The number of messages passed to the Lambda function for processing.
        *
@@ -2332,7 +2342,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.MathProperty,
-    ) : CdkObject(cdkObject), MathProperty {
+    ) : CdkObject(cdkObject),
+        MathProperty {
       /**
        * The name of the attribute that contains the result of the math operation.
        *
@@ -2485,7 +2496,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty,
-    ) : CdkObject(cdkObject), RemoveAttributesProperty {
+    ) : CdkObject(cdkObject),
+        RemoveAttributesProperty {
       /**
        * A list of 1-50 attributes to remove from the message.
        *
@@ -2632,7 +2644,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty,
-    ) : CdkObject(cdkObject), SelectAttributesProperty {
+    ) : CdkObject(cdkObject),
+        SelectAttributesProperty {
       /**
        * A list of the attributes to select from the message.
        *

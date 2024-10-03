@@ -168,7 +168,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAlarmModel(
   cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -823,7 +825,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.AcknowledgeFlowProperty,
-    ) : CdkObject(cdkObject), AcknowledgeFlowProperty {
+    ) : CdkObject(cdkObject),
+        AcknowledgeFlowProperty {
       /**
        * The value must be `TRUE` or `FALSE` .
        *
@@ -2139,7 +2142,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmActionProperty,
-    ) : CdkObject(cdkObject), AlarmActionProperty {
+    ) : CdkObject(cdkObject),
+        AlarmActionProperty {
       /**
        * Defines an action to write to the Amazon DynamoDB table that you created.
        *
@@ -2476,7 +2480,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmCapabilitiesProperty,
-    ) : CdkObject(cdkObject), AlarmCapabilitiesProperty {
+    ) : CdkObject(cdkObject),
+        AlarmCapabilitiesProperty {
       /**
        * Specifies whether to get notified for alarm state changes.
        *
@@ -2694,7 +2699,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmEventActionsProperty,
-    ) : CdkObject(cdkObject), AlarmEventActionsProperty {
+    ) : CdkObject(cdkObject),
+        AlarmEventActionsProperty {
       /**
        * Specifies one or more supported actions to receive notifications when the alarm state
        * changes.
@@ -2812,7 +2818,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmRuleProperty,
-    ) : CdkObject(cdkObject), AlarmRuleProperty {
+    ) : CdkObject(cdkObject),
+        AlarmRuleProperty {
       /**
        * A rule that compares an input property value to a threshold value with a comparison
        * operator.
@@ -2948,7 +2955,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.AssetPropertyTimestampProperty,
-    ) : CdkObject(cdkObject), AssetPropertyTimestampProperty {
+    ) : CdkObject(cdkObject),
+        AssetPropertyTimestampProperty {
       /**
        * The nanosecond offset converted from `timeInSeconds` .
        *
@@ -3172,7 +3180,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.AssetPropertyValueProperty,
-    ) : CdkObject(cdkObject), AssetPropertyValueProperty {
+    ) : CdkObject(cdkObject),
+        AssetPropertyValueProperty {
       /**
        * The quality of the asset property value.
        *
@@ -3381,7 +3390,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.AssetPropertyVariantProperty,
-    ) : CdkObject(cdkObject), AssetPropertyVariantProperty {
+    ) : CdkObject(cdkObject),
+        AssetPropertyVariantProperty {
       /**
        * The asset property value is a Boolean value that must be `'TRUE'` or `'FALSE'` .
        *
@@ -3849,7 +3859,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.DynamoDBProperty,
-    ) : CdkObject(cdkObject), DynamoDBProperty {
+    ) : CdkObject(cdkObject),
+        DynamoDBProperty {
       /**
        * The name of the hash key (also called the partition key).
        *
@@ -4145,7 +4156,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.DynamoDBv2Property,
-    ) : CdkObject(cdkObject), DynamoDBv2Property {
+    ) : CdkObject(cdkObject),
+        DynamoDBv2Property {
       /**
        * Information needed to configure the payload.
        *
@@ -4325,7 +4337,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.FirehoseProperty,
-    ) : CdkObject(cdkObject), FirehoseProperty {
+    ) : CdkObject(cdkObject),
+        FirehoseProperty {
       /**
        * The name of the Kinesis Data Firehose delivery stream where the data is written.
        *
@@ -4451,7 +4464,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.InitializationConfigurationProperty,
-    ) : CdkObject(cdkObject), InitializationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InitializationConfigurationProperty {
       /**
        * The value must be `TRUE` or `FALSE` .
        *
@@ -4593,7 +4607,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotEventsProperty,
-    ) : CdkObject(cdkObject), IotEventsProperty {
+    ) : CdkObject(cdkObject),
+        IotEventsProperty {
       /**
        * The name of the AWS IoT Events input where the data is sent.
        *
@@ -4843,7 +4858,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotSiteWiseProperty,
-    ) : CdkObject(cdkObject), IotSiteWiseProperty {
+    ) : CdkObject(cdkObject),
+        IotSiteWiseProperty {
       /**
        * The ID of the asset that has the specified property.
        *
@@ -5021,7 +5037,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotTopicPublishProperty,
-    ) : CdkObject(cdkObject), IotTopicPublishProperty {
+    ) : CdkObject(cdkObject),
+        IotTopicPublishProperty {
       /**
        * The MQTT topic of the message.
        *
@@ -5169,7 +5186,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.LambdaProperty,
-    ) : CdkObject(cdkObject), LambdaProperty {
+    ) : CdkObject(cdkObject),
+        LambdaProperty {
       /**
        * The ARN of the Lambda function that is executed.
        *
@@ -5296,7 +5314,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.PayloadProperty,
-    ) : CdkObject(cdkObject), PayloadProperty {
+    ) : CdkObject(cdkObject),
+        PayloadProperty {
       /**
        * The content of the payload.
        *
@@ -5437,7 +5456,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.SimpleRuleProperty,
-    ) : CdkObject(cdkObject), SimpleRuleProperty {
+    ) : CdkObject(cdkObject),
+        SimpleRuleProperty {
       /**
        * The comparison operator.
        *
@@ -5593,7 +5613,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.SnsProperty,
-    ) : CdkObject(cdkObject), SnsProperty {
+    ) : CdkObject(cdkObject),
+        SnsProperty {
       /**
        * You can configure the action payload when you send a message as an Amazon SNS push
        * notification.
@@ -5781,7 +5802,8 @@ public open class CfnAlarmModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.SqsProperty,
-    ) : CdkObject(cdkObject), SqsProperty {
+    ) : CdkObject(cdkObject),
+        SqsProperty {
       /**
        * You can configure the action payload when you send a message to an Amazon SQS queue.
        *

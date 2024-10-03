@@ -327,7 +327,8 @@ public interface AppProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.AppProps,
-  ) : CdkObject(cdkObject), AppProps {
+  ) : CdkObject(cdkObject),
+      AppProps {
     /**
      * Include runtime versioning information in the Stacks of this app.
      *

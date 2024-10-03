@@ -114,7 +114,8 @@ public interface IRestApi : io.cloudshiftdev.awscdk.IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IRestApi,
-  ) : CdkObject(cdkObject), IRestApi {
+  ) : CdkObject(cdkObject),
+      IRestApi {
     /**
      * Apply the given removal policy to this resource.
      *

@@ -55,7 +55,8 @@ import software.amazon.awscdk.services.apigateway.IRestApi as AmazonAwscdkServic
  */
 public open class ApiGateway(
   cdkObject: software.amazon.awscdk.services.events.targets.ApiGateway,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayIRestApi) :
       this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayIRestApi.Companion::unwrap))
   )

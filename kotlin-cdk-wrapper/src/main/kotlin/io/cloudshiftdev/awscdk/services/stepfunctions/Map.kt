@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Map(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Map,
-) : MapBase(cdkObject), INextable {
+) : MapBase(cdkObject),
+    INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.Map(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

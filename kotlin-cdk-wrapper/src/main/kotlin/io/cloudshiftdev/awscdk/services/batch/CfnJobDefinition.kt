@@ -37,7 +37,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnJobDefinition(
   cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1224,7 +1226,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.AuthorizationConfigProperty,
-    ) : CdkObject(cdkObject), AuthorizationConfigProperty {
+    ) : CdkObject(cdkObject),
+        AuthorizationConfigProperty {
       /**
        * The Amazon EFS access point ID to use.
        *
@@ -3073,7 +3076,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ContainerPropertiesProperty,
-    ) : CdkObject(cdkObject), ContainerPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ContainerPropertiesProperty {
       /**
        * The command that's passed to the container.
        *
@@ -3566,7 +3570,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.DeviceProperty,
-    ) : CdkObject(cdkObject), DeviceProperty {
+    ) : CdkObject(cdkObject),
+        DeviceProperty {
       /**
        * The path inside the container that's used to expose the host device.
        *
@@ -3810,7 +3815,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EcsPropertiesProperty,
-    ) : CdkObject(cdkObject), EcsPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        EcsPropertiesProperty {
       /**
        * An object that contains the properties for the Amazon ECS task definition of a job.
        *
@@ -4465,7 +4471,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EcsTaskPropertiesProperty,
-    ) : CdkObject(cdkObject), EcsTaskPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        EcsTaskPropertiesProperty {
       /**
        * This object is a list of containers.
        *
@@ -4850,7 +4857,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EfsVolumeConfigurationProperty,
-    ) : CdkObject(cdkObject), EfsVolumeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EfsVolumeConfigurationProperty {
       /**
        * The authorization configuration details for the Amazon EFS file system.
        *
@@ -5006,7 +5014,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerEnvironmentVariableProperty,
-    ) : CdkObject(cdkObject), EksContainerEnvironmentVariableProperty {
+    ) : CdkObject(cdkObject),
+        EksContainerEnvironmentVariableProperty {
       /**
        * The name of the environment variable.
        *
@@ -5686,7 +5695,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerProperty,
-    ) : CdkObject(cdkObject), EksContainerProperty {
+    ) : CdkObject(cdkObject),
+        EksContainerProperty {
       /**
        * An array of arguments to the entrypoint.
        *
@@ -5953,7 +5963,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerVolumeMountProperty,
-    ) : CdkObject(cdkObject), EksContainerVolumeMountProperty {
+    ) : CdkObject(cdkObject),
+        EksContainerVolumeMountProperty {
       /**
        * The path on the container where the volume is mounted.
        *
@@ -6169,7 +6180,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksPropertiesProperty,
-    ) : CdkObject(cdkObject), EksPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        EksPropertiesProperty {
       /**
        * The properties for the Kubernetes pod resources of a job.
        *
@@ -6296,7 +6308,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksSecretProperty,
-    ) : CdkObject(cdkObject), EksSecretProperty {
+    ) : CdkObject(cdkObject),
+        EksSecretProperty {
       /**
        * Specifies whether the secret or the secret's keys must be defined.
        *
@@ -6614,7 +6627,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksVolumeProperty,
-    ) : CdkObject(cdkObject), EksVolumeProperty {
+    ) : CdkObject(cdkObject),
+        EksVolumeProperty {
       /**
        * Specifies the configuration of a Kubernetes `emptyDir` volume.
        *
@@ -6745,7 +6759,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EmptyDirProperty,
-    ) : CdkObject(cdkObject), EmptyDirProperty {
+    ) : CdkObject(cdkObject),
+        EmptyDirProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-emptydir.html#cfn-batch-jobdefinition-emptydir-medium)
        */
@@ -6848,7 +6863,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EnvironmentProperty,
-    ) : CdkObject(cdkObject), EnvironmentProperty {
+    ) : CdkObject(cdkObject),
+        EnvironmentProperty {
       /**
        * The name of the environment variable.
        *
@@ -6943,7 +6959,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EphemeralStorageProperty,
-    ) : CdkObject(cdkObject), EphemeralStorageProperty {
+    ) : CdkObject(cdkObject),
+        EphemeralStorageProperty {
       /**
        * The total amount, in GiB, of ephemeral storage to set for the task.
        *
@@ -7135,7 +7152,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EvaluateOnExitProperty,
-    ) : CdkObject(cdkObject), EvaluateOnExitProperty {
+    ) : CdkObject(cdkObject),
+        EvaluateOnExitProperty {
       /**
        * Specifies the action to take if all of the specified conditions ( `onStatusReason` ,
        * `onReason` , and `onExitCode` ) are met.
@@ -7277,7 +7295,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.FargatePlatformConfigurationProperty,
-    ) : CdkObject(cdkObject), FargatePlatformConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FargatePlatformConfigurationProperty {
       /**
        * The AWS Fargate platform version where the jobs are running.
        *
@@ -7361,7 +7380,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.HostPathProperty,
-    ) : CdkObject(cdkObject), HostPathProperty {
+    ) : CdkObject(cdkObject),
+        HostPathProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-hostpath.html#cfn-batch-jobdefinition-hostpath-path)
        */
@@ -7447,7 +7467,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ImagePullSecretProperty,
-    ) : CdkObject(cdkObject), ImagePullSecretProperty {
+    ) : CdkObject(cdkObject),
+        ImagePullSecretProperty {
       /**
        * Provides a unique identifier for the `ImagePullSecret` .
        *
@@ -8008,7 +8029,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.LinuxParametersProperty,
-    ) : CdkObject(cdkObject), LinuxParametersProperty {
+    ) : CdkObject(cdkObject),
+        LinuxParametersProperty {
       /**
        * Any of the host devices to expose to the container.
        *
@@ -8478,7 +8500,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.LogConfigurationProperty,
-    ) : CdkObject(cdkObject), LogConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LogConfigurationProperty {
       /**
        * The log driver to use for the container.
        *
@@ -8652,7 +8675,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.MetadataProperty,
-    ) : CdkObject(cdkObject), MetadataProperty {
+    ) : CdkObject(cdkObject),
+        MetadataProperty {
       /**
        * Key-value pairs used to identify, sort, and organize cube resources.
        *
@@ -8798,7 +8822,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty,
-    ) : CdkObject(cdkObject), MountPointsProperty {
+    ) : CdkObject(cdkObject),
+        MountPointsProperty {
       /**
        * The path on the container where the host volume is mounted.
        *
@@ -8919,7 +8944,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NetworkConfigurationProperty {
       /**
        * Indicates whether the job has a public IP address.
        *
@@ -8967,7 +8993,10 @@ public open class CfnJobDefinition(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.batch.*;
+   * Object labels;
+   * Object limits;
    * Object options;
+   * Object requests;
    * NodePropertiesProperty nodePropertiesProperty = NodePropertiesProperty.builder()
    * .mainNode(123)
    * .nodeRangeProperties(List.of(NodeRangePropertyProperty.builder()
@@ -9168,6 +9197,96 @@ public open class CfnJobDefinition(
    * .build()))
    * .build()))
    * .build())
+   * .eksProperties(EksPropertiesProperty.builder()
+   * .podProperties(PodPropertiesProperty.builder()
+   * .containers(List.of(EksContainerProperty.builder()
+   * .image("image")
+   * // the properties below are optional
+   * .args(List.of("args"))
+   * .command(List.of("command"))
+   * .env(List.of(EksContainerEnvironmentVariableProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .value("value")
+   * .build()))
+   * .imagePullPolicy("imagePullPolicy")
+   * .name("name")
+   * .resources(ResourcesProperty.builder()
+   * .limits(limits)
+   * .requests(requests)
+   * .build())
+   * .securityContext(SecurityContextProperty.builder()
+   * .allowPrivilegeEscalation(false)
+   * .privileged(false)
+   * .readOnlyRootFilesystem(false)
+   * .runAsGroup(123)
+   * .runAsNonRoot(false)
+   * .runAsUser(123)
+   * .build())
+   * .volumeMounts(List.of(EksContainerVolumeMountProperty.builder()
+   * .mountPath("mountPath")
+   * .name("name")
+   * .readOnly(false)
+   * .build()))
+   * .build()))
+   * .dnsPolicy("dnsPolicy")
+   * .hostNetwork(false)
+   * .imagePullSecrets(List.of(ImagePullSecretProperty.builder()
+   * .name("name")
+   * .build()))
+   * .initContainers(List.of(EksContainerProperty.builder()
+   * .image("image")
+   * // the properties below are optional
+   * .args(List.of("args"))
+   * .command(List.of("command"))
+   * .env(List.of(EksContainerEnvironmentVariableProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .value("value")
+   * .build()))
+   * .imagePullPolicy("imagePullPolicy")
+   * .name("name")
+   * .resources(ResourcesProperty.builder()
+   * .limits(limits)
+   * .requests(requests)
+   * .build())
+   * .securityContext(SecurityContextProperty.builder()
+   * .allowPrivilegeEscalation(false)
+   * .privileged(false)
+   * .readOnlyRootFilesystem(false)
+   * .runAsGroup(123)
+   * .runAsNonRoot(false)
+   * .runAsUser(123)
+   * .build())
+   * .volumeMounts(List.of(EksContainerVolumeMountProperty.builder()
+   * .mountPath("mountPath")
+   * .name("name")
+   * .readOnly(false)
+   * .build()))
+   * .build()))
+   * .metadata(MetadataProperty.builder()
+   * .labels(labels)
+   * .build())
+   * .serviceAccountName("serviceAccountName")
+   * .shareProcessNamespace(false)
+   * .volumes(List.of(EksVolumeProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .emptyDir(EmptyDirProperty.builder()
+   * .medium("medium")
+   * .sizeLimit("sizeLimit")
+   * .build())
+   * .hostPath(HostPathProperty.builder()
+   * .path("path")
+   * .build())
+   * .secret(EksSecretProperty.builder()
+   * .secretName("secretName")
+   * // the properties below are optional
+   * .optional(false)
+   * .build())
+   * .build()))
+   * .build())
+   * .build())
    * .instanceTypes(List.of("instanceTypes"))
    * .build()))
    * .numNodes(123)
@@ -9286,7 +9405,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.NodePropertiesProperty,
-    ) : CdkObject(cdkObject), NodePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        NodePropertiesProperty {
       /**
        * Specifies the node index for the main node of a multi-node parallel job.
        *
@@ -9340,7 +9460,10 @@ public open class CfnJobDefinition(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.batch.*;
+   * Object labels;
+   * Object limits;
    * Object options;
+   * Object requests;
    * NodeRangePropertyProperty nodeRangePropertyProperty = NodeRangePropertyProperty.builder()
    * .targetNodes("targetNodes")
    * // the properties below are optional
@@ -9539,6 +9662,96 @@ public open class CfnJobDefinition(
    * .build()))
    * .build()))
    * .build())
+   * .eksProperties(EksPropertiesProperty.builder()
+   * .podProperties(PodPropertiesProperty.builder()
+   * .containers(List.of(EksContainerProperty.builder()
+   * .image("image")
+   * // the properties below are optional
+   * .args(List.of("args"))
+   * .command(List.of("command"))
+   * .env(List.of(EksContainerEnvironmentVariableProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .value("value")
+   * .build()))
+   * .imagePullPolicy("imagePullPolicy")
+   * .name("name")
+   * .resources(ResourcesProperty.builder()
+   * .limits(limits)
+   * .requests(requests)
+   * .build())
+   * .securityContext(SecurityContextProperty.builder()
+   * .allowPrivilegeEscalation(false)
+   * .privileged(false)
+   * .readOnlyRootFilesystem(false)
+   * .runAsGroup(123)
+   * .runAsNonRoot(false)
+   * .runAsUser(123)
+   * .build())
+   * .volumeMounts(List.of(EksContainerVolumeMountProperty.builder()
+   * .mountPath("mountPath")
+   * .name("name")
+   * .readOnly(false)
+   * .build()))
+   * .build()))
+   * .dnsPolicy("dnsPolicy")
+   * .hostNetwork(false)
+   * .imagePullSecrets(List.of(ImagePullSecretProperty.builder()
+   * .name("name")
+   * .build()))
+   * .initContainers(List.of(EksContainerProperty.builder()
+   * .image("image")
+   * // the properties below are optional
+   * .args(List.of("args"))
+   * .command(List.of("command"))
+   * .env(List.of(EksContainerEnvironmentVariableProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .value("value")
+   * .build()))
+   * .imagePullPolicy("imagePullPolicy")
+   * .name("name")
+   * .resources(ResourcesProperty.builder()
+   * .limits(limits)
+   * .requests(requests)
+   * .build())
+   * .securityContext(SecurityContextProperty.builder()
+   * .allowPrivilegeEscalation(false)
+   * .privileged(false)
+   * .readOnlyRootFilesystem(false)
+   * .runAsGroup(123)
+   * .runAsNonRoot(false)
+   * .runAsUser(123)
+   * .build())
+   * .volumeMounts(List.of(EksContainerVolumeMountProperty.builder()
+   * .mountPath("mountPath")
+   * .name("name")
+   * .readOnly(false)
+   * .build()))
+   * .build()))
+   * .metadata(MetadataProperty.builder()
+   * .labels(labels)
+   * .build())
+   * .serviceAccountName("serviceAccountName")
+   * .shareProcessNamespace(false)
+   * .volumes(List.of(EksVolumeProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .emptyDir(EmptyDirProperty.builder()
+   * .medium("medium")
+   * .sizeLimit("sizeLimit")
+   * .build())
+   * .hostPath(HostPathProperty.builder()
+   * .path("path")
+   * .build())
+   * .secret(EksSecretProperty.builder()
+   * .secretName("secretName")
+   * // the properties below are optional
+   * .optional(false)
+   * .build())
+   * .build()))
+   * .build())
+   * .build())
    * .instanceTypes(List.of("instanceTypes"))
    * .build();
    * ```
@@ -9560,6 +9773,14 @@ public open class CfnJobDefinition(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-ecsproperties)
      */
     public fun ecsProperties(): Any? = unwrap(this).getEcsProperties()
+
+    /**
+     * This is an object that represents the properties of the node range for a multi-node parallel
+     * job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-eksproperties)
+     */
+    public fun eksProperties(): Any? = unwrap(this).getEksProperties()
 
     /**
      * The instance types of the underlying host infrastructure of a multi-node parallel job.
@@ -9629,6 +9850,26 @@ public open class CfnJobDefinition(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("66d8ff9e0f4f24b1d9c32aa5170dfcbcdf49c358ce50e8c393906952bbdddbcf")
       public fun ecsProperties(ecsProperties: EcsPropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param eksProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
+       */
+      public fun eksProperties(eksProperties: IResolvable)
+
+      /**
+       * @param eksProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
+       */
+      public fun eksProperties(eksProperties: EksPropertiesProperty)
+
+      /**
+       * @param eksProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e13241449400f6de1ad5320c2fa6262ef6cf7523df6b83efc9d15c50eafca352")
+      public fun eksProperties(eksProperties: EksPropertiesProperty.Builder.() -> Unit)
 
       /**
        * @param instanceTypes The instance types of the underlying host infrastructure of a
@@ -9715,6 +9956,31 @@ public open class CfnJobDefinition(
           ecsProperties(EcsPropertiesProperty(ecsProperties))
 
       /**
+       * @param eksProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
+       */
+      override fun eksProperties(eksProperties: IResolvable) {
+        cdkBuilder.eksProperties(eksProperties.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param eksProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
+       */
+      override fun eksProperties(eksProperties: EksPropertiesProperty) {
+        cdkBuilder.eksProperties(eksProperties.let(EksPropertiesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param eksProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e13241449400f6de1ad5320c2fa6262ef6cf7523df6b83efc9d15c50eafca352")
+      override fun eksProperties(eksProperties: EksPropertiesProperty.Builder.() -> Unit): Unit =
+          eksProperties(EksPropertiesProperty(eksProperties))
+
+      /**
        * @param instanceTypes The instance types of the underlying host infrastructure of a
        * multi-node parallel job.
        *
@@ -9757,7 +10023,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.NodeRangePropertyProperty,
-    ) : CdkObject(cdkObject), NodeRangePropertyProperty {
+    ) : CdkObject(cdkObject),
+        NodeRangePropertyProperty {
       /**
        * The container details for the node range.
        *
@@ -9772,6 +10039,14 @@ public open class CfnJobDefinition(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-ecsproperties)
        */
       override fun ecsProperties(): Any? = unwrap(this).getEcsProperties()
+
+      /**
+       * This is an object that represents the properties of the node range for a multi-node
+       * parallel job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-eksproperties)
+       */
+      override fun eksProperties(): Any? = unwrap(this).getEksProperties()
 
       /**
        * The instance types of the underlying host infrastructure of a multi-node parallel job.
@@ -10436,7 +10711,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.PodPropertiesProperty,
-    ) : CdkObject(cdkObject), PodPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        PodPropertiesProperty {
       /**
        * The properties of the container that's used on the Amazon EKS pod.
        *
@@ -10619,7 +10895,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.RepositoryCredentialsProperty,
-    ) : CdkObject(cdkObject), RepositoryCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        RepositoryCredentialsProperty {
       /**
        * The Amazon Resource Name (ARN) of the secret containing the private repository credentials.
        *
@@ -10983,7 +11260,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ResourceRequirementProperty,
-    ) : CdkObject(cdkObject), ResourceRequirementProperty {
+    ) : CdkObject(cdkObject),
+        ResourceRequirementProperty {
       /**
        * The type of resource to assign to a container.
        *
@@ -11174,7 +11452,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ResourcesProperty,
-    ) : CdkObject(cdkObject), ResourcesProperty {
+    ) : CdkObject(cdkObject),
+        ResourcesProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-resources.html#cfn-batch-jobdefinition-resources-limits)
        */
@@ -11339,7 +11618,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.RetryStrategyProperty,
-    ) : CdkObject(cdkObject), RetryStrategyProperty {
+    ) : CdkObject(cdkObject),
+        RetryStrategyProperty {
       /**
        * The number of times to move a job to the `RUNNABLE` status.
        *
@@ -11522,7 +11802,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.RuntimePlatformProperty,
-    ) : CdkObject(cdkObject), RuntimePlatformProperty {
+    ) : CdkObject(cdkObject),
+        RuntimePlatformProperty {
       /**
        * The vCPU architecture. The default value is `X86_64` . Valid values are `X86_64` and
        * `ARM64` .
@@ -11689,7 +11970,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.SecretProperty,
-    ) : CdkObject(cdkObject), SecretProperty {
+    ) : CdkObject(cdkObject),
+        SecretProperty {
       /**
        * The name of the secret.
        *
@@ -11920,7 +12202,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.SecurityContextProperty,
-    ) : CdkObject(cdkObject), SecurityContextProperty {
+    ) : CdkObject(cdkObject),
+        SecurityContextProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-securitycontext.html#cfn-batch-jobdefinition-securitycontext-allowprivilegeescalation)
        */
@@ -12073,7 +12356,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.TaskContainerDependencyProperty,
-    ) : CdkObject(cdkObject), TaskContainerDependencyProperty {
+    ) : CdkObject(cdkObject),
+        TaskContainerDependencyProperty {
       /**
        * The dependency condition of the container. The following are the available conditions and
        * their behavior:.
@@ -13720,7 +14004,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.TaskContainerPropertiesProperty,
-    ) : CdkObject(cdkObject), TaskContainerPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        TaskContainerPropertiesProperty {
       /**
        * The command that's passed to the container.
        *
@@ -14111,7 +14396,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.TimeoutProperty,
-    ) : CdkObject(cdkObject), TimeoutProperty {
+    ) : CdkObject(cdkObject),
+        TimeoutProperty {
       /**
        * The job timeout time (in seconds) that's measured from the job attempt's `startedAt`
        * timestamp.
@@ -14294,7 +14580,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.TmpfsProperty,
-    ) : CdkObject(cdkObject), TmpfsProperty {
+    ) : CdkObject(cdkObject),
+        TmpfsProperty {
       /**
        * The absolute file path in the container where the `tmpfs` volume is mounted.
        *
@@ -14447,7 +14734,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.UlimitProperty,
-    ) : CdkObject(cdkObject), UlimitProperty {
+    ) : CdkObject(cdkObject),
+        UlimitProperty {
       /**
        * The hard limit for the `ulimit` type.
        *
@@ -14580,7 +14868,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesHostProperty,
-    ) : CdkObject(cdkObject), VolumesHostProperty {
+    ) : CdkObject(cdkObject),
+        VolumesHostProperty {
       /**
        * The path on the host container instance that's presented to the container.
        *
@@ -14875,7 +15164,8 @@ public open class CfnJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesProperty,
-    ) : CdkObject(cdkObject), VolumesProperty {
+    ) : CdkObject(cdkObject),
+        VolumesProperty {
       /**
        * This is used when you're using an Amazon Elastic File System file system for job storage.
        *

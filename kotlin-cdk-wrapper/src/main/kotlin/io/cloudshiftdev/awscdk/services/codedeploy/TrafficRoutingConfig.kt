@@ -153,7 +153,8 @@ public interface TrafficRoutingConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRoutingConfig,
-  ) : CdkObject(cdkObject), TrafficRoutingConfig {
+  ) : CdkObject(cdkObject),
+      TrafficRoutingConfig {
     /**
      * A configuration that shifts traffic from one version of a Lambda function or ECS task set to
      * another in two increments.

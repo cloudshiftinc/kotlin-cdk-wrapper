@@ -67,7 +67,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAccessPoint(
   cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -566,7 +568,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty,
-    ) : CdkObject(cdkObject), AccessPointTagProperty {
+    ) : CdkObject(cdkObject),
+        AccessPointTagProperty {
       /**
        * The tag key (String).
        *
@@ -721,7 +724,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty,
-    ) : CdkObject(cdkObject), CreationInfoProperty {
+    ) : CdkObject(cdkObject),
+        CreationInfoProperty {
       /**
        * Specifies the POSIX group ID to apply to the `RootDirectory` .
        *
@@ -878,7 +882,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty,
-    ) : CdkObject(cdkObject), PosixUserProperty {
+    ) : CdkObject(cdkObject),
+        PosixUserProperty {
       /**
        * The POSIX group ID used for all file system operations using this access point.
        *
@@ -1095,7 +1100,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty,
-    ) : CdkObject(cdkObject), RootDirectoryProperty {
+    ) : CdkObject(cdkObject),
+        RootDirectoryProperty {
       /**
        * (Optional) Specifies the POSIX IDs and permissions to apply to the access point's
        * `RootDirectory` .

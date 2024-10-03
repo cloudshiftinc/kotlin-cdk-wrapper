@@ -40,6 +40,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .applianceModeSupport(false)
  * .ipv6Support(false)
  * .build())
+ * .proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
  * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
  * .attachmentPolicyRuleNumber(123)
  * .segmentName("segmentName")
@@ -59,7 +67,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVpcAttachment(
   cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -108,6 +118,12 @@ public open class CfnVpcAttachment(
    * The Region where the core network edge is located.
    */
   public open fun attrEdgeLocation(): String = unwrap(this).getAttrEdgeLocation()
+
+  /**
+   * The name of the network function group.
+   */
+  public open fun attrNetworkFunctionGroupName(): String =
+      unwrap(this).getAttrNetworkFunctionGroupName()
 
   /**
    * The ID of the VPC attachment owner.
@@ -184,6 +200,36 @@ public open class CfnVpcAttachment(
   @JvmName("e12fd0a4faa3aac7d9970559cee1a47349f2ab80c469430c5f6ef126d8686e81")
   public open fun options(`value`: VpcOptionsProperty.Builder.() -> Unit): Unit =
       options(VpcOptionsProperty(`value`))
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  public open fun proposedNetworkFunctionGroupChange(): Any? =
+      unwrap(this).getProposedNetworkFunctionGroupChange()
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  public open fun proposedNetworkFunctionGroupChange(`value`: IResolvable) {
+    unwrap(this).setProposedNetworkFunctionGroupChange(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  public open
+      fun proposedNetworkFunctionGroupChange(`value`: ProposedNetworkFunctionGroupChangeProperty) {
+    unwrap(this).setProposedNetworkFunctionGroupChange(`value`.let(ProposedNetworkFunctionGroupChangeProperty.Companion::unwrap))
+  }
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("0e53bfd081fe0b30db2236031993dddc72ebab4b0427cf09c4f05bc562c9ed72")
+  public open
+      fun proposedNetworkFunctionGroupChange(`value`: ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit):
+      Unit = proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty(`value`))
 
   /**
    * Describes a proposed segment change.
@@ -302,6 +348,37 @@ public open class CfnVpcAttachment(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6eacb9293db63e6186b9b8dd6e9c5fe8aa22c9ceeb6cce74db1a42b2d3b3c998")
     public fun options(options: VpcOptionsProperty.Builder.() -> Unit)
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    public fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable)
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty)
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d941744ff082e1f82723639e4e1dda96153b7e355b2922dff1286be21d8b7838")
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit)
 
     /**
      * Describes a proposed segment change.
@@ -426,6 +503,44 @@ public open class CfnVpcAttachment(
         options(VpcOptionsProperty(options))
 
     /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(ProposedNetworkFunctionGroupChangeProperty.Companion::unwrap))
+    }
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d941744ff082e1f82723639e4e1dda96153b7e355b2922dff1286be21d8b7838")
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit):
+        Unit =
+        proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty(proposedNetworkFunctionGroupChange))
+
+    /**
      * Describes a proposed segment change.
      *
      * In some cases, the segment change must first be evaluated and accepted.
@@ -532,6 +647,169 @@ public open class CfnVpcAttachment(
     internal fun unwrap(wrapped: CfnVpcAttachment):
         software.amazon.awscdk.services.networkmanager.CfnVpcAttachment = wrapped.cdkObject as
         software.amazon.awscdk.services.networkmanager.CfnVpcAttachment
+  }
+
+  /**
+   * Describes proposed changes to a network function group.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkmanager.*;
+   * ProposedNetworkFunctionGroupChangeProperty proposedNetworkFunctionGroupChangeProperty =
+   * ProposedNetworkFunctionGroupChangeProperty.builder()
+   * .attachmentPolicyRuleNumber(123)
+   * .networkFunctionGroupName("networkFunctionGroupName")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposednetworkfunctiongroupchange.html)
+   */
+  public interface ProposedNetworkFunctionGroupChangeProperty {
+    /**
+     * The proposed new attachment policy rule number for the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange-attachmentpolicyrulenumber)
+     */
+    public fun attachmentPolicyRuleNumber(): Number? = unwrap(this).getAttachmentPolicyRuleNumber()
+
+    /**
+     * The proposed name change for the network function group name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange-networkfunctiongroupname)
+     */
+    public fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+    /**
+     * The list of proposed changes to the key-value tags associated with the network function
+     * group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange-tags)
+     */
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * A builder for [ProposedNetworkFunctionGroupChangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attachmentPolicyRuleNumber The proposed new attachment policy rule number for the
+       * network function group.
+       */
+      public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number)
+
+      /**
+       * @param networkFunctionGroupName The proposed name change for the network function group
+       * name.
+       */
+      public fun networkFunctionGroupName(networkFunctionGroupName: String)
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      public fun tags(tags: List<CfnTag>)
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      public fun tags(vararg tags: CfnTag)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty.Builder
+          =
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty.builder()
+
+      /**
+       * @param attachmentPolicyRuleNumber The proposed new attachment policy rule number for the
+       * network function group.
+       */
+      override fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
+        cdkBuilder.attachmentPolicyRuleNumber(attachmentPolicyRuleNumber)
+      }
+
+      /**
+       * @param networkFunctionGroupName The proposed name change for the network function group
+       * name.
+       */
+      override fun networkFunctionGroupName(networkFunctionGroupName: String) {
+        cdkBuilder.networkFunctionGroupName(networkFunctionGroupName)
+      }
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+      }
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty,
+    ) : CdkObject(cdkObject),
+        ProposedNetworkFunctionGroupChangeProperty {
+      /**
+       * The proposed new attachment policy rule number for the network function group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange-attachmentpolicyrulenumber)
+       */
+      override fun attachmentPolicyRuleNumber(): Number? =
+          unwrap(this).getAttachmentPolicyRuleNumber()
+
+      /**
+       * The proposed name change for the network function group name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange-networkfunctiongroupname)
+       */
+      override fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+      /**
+       * The list of proposed changes to the key-value tags associated with the network function
+       * group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-vpcattachment-proposednetworkfunctiongroupchange-tags)
+       */
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ProposedNetworkFunctionGroupChangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty):
+          ProposedNetworkFunctionGroupChangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProposedNetworkFunctionGroupChangeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProposedNetworkFunctionGroupChangeProperty):
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedNetworkFunctionGroupChangeProperty
+    }
   }
 
   /**
@@ -647,7 +925,8 @@ public open class CfnVpcAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty,
-    ) : CdkObject(cdkObject), ProposedSegmentChangeProperty {
+    ) : CdkObject(cdkObject),
+        ProposedSegmentChangeProperty {
       /**
        * The rule number in the policy document that applies to this change.
        *
@@ -803,7 +1082,8 @@ public open class CfnVpcAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty,
-    ) : CdkObject(cdkObject), VpcOptionsProperty {
+    ) : CdkObject(cdkObject),
+        VpcOptionsProperty {
       /**
        * Indicates whether appliance mode is supported.
        *

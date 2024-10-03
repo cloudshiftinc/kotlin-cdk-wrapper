@@ -31,7 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CognitoUserPoolsAuthorizer(
   cdkObject: software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer,
-) : Authorizer(cdkObject), IAuthorizer {
+) : Authorizer(cdkObject),
+    IAuthorizer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

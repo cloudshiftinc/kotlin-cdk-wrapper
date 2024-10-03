@@ -236,7 +236,8 @@ public interface CfnHookVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnHookVersionProps,
-  ) : CdkObject(cdkObject), CfnHookVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnHookVersionProps {
     /**
      * The Amazon Resource Name (ARN) of the task execution role that grants the hook permission.
      *

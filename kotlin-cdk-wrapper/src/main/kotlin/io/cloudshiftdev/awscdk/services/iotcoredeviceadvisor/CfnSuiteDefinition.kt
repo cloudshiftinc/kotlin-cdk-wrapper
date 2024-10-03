@@ -49,7 +49,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSuiteDefinition(
   cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -374,7 +376,8 @@ public open class CfnSuiteDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty,
-    ) : CdkObject(cdkObject), DeviceUnderTestProperty {
+    ) : CdkObject(cdkObject),
+        DeviceUnderTestProperty {
       /**
        * Lists device's certificate ARN.
        *
@@ -615,7 +618,8 @@ public open class CfnSuiteDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty,
-    ) : CdkObject(cdkObject), SuiteDefinitionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SuiteDefinitionConfigurationProperty {
       /**
        * Gets the device permission ARN.
        *

@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLaunchNotificationConstraint(
   cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraint,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

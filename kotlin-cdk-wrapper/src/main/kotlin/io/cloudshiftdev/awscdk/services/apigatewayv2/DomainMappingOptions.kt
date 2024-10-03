@@ -85,7 +85,8 @@ public interface DomainMappingOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainMappingOptions,
-  ) : CdkObject(cdkObject), DomainMappingOptions {
+  ) : CdkObject(cdkObject),
+      DomainMappingOptions {
     /**
      * The domain name for the mapping.
      */

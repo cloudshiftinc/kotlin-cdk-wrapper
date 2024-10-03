@@ -75,7 +75,8 @@ public interface Tag {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.targets.Tag,
-  ) : CdkObject(cdkObject), Tag {
+  ) : CdkObject(cdkObject),
+      Tag {
     /**
      * Key is the name of the tag.
      */

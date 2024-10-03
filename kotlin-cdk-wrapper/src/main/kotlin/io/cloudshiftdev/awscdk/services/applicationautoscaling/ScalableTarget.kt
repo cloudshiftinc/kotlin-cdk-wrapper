@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ScalableTarget(
   cdkObject: software.amazon.awscdk.services.applicationautoscaling.ScalableTarget,
-) : Resource(cdkObject), IScalableTarget {
+) : Resource(cdkObject),
+    IScalableTarget {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

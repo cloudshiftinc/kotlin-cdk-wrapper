@@ -40,7 +40,8 @@ import kotlin.Unit
  */
 public open class DashboardVariable(
   cdkObject: software.amazon.awscdk.services.cloudwatch.DashboardVariable,
-) : CdkObject(cdkObject), IVariable {
+) : CdkObject(cdkObject),
+    IVariable {
   public constructor(options: DashboardVariableOptions) :
       this(software.amazon.awscdk.services.cloudwatch.DashboardVariable(options.let(DashboardVariableOptions.Companion::unwrap))
   )

@@ -14,7 +14,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class OriginBase(
   cdkObject: software.amazon.awscdk.services.cloudfront.OriginBase,
-) : CdkObject(cdkObject), IOrigin {
+) : CdkObject(cdkObject),
+    IOrigin {
   /**
    * Binds the origin to the associated Distribution.
    *

@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProject(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -513,7 +515,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty,
-    ) : CdkObject(cdkObject), ProvisioningParameterProperty {
+    ) : CdkObject(cdkObject),
+        ProvisioningParameterProperty {
       /**
        * The key that identifies a provisioning parameter.
        *
@@ -667,7 +670,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty,
-    ) : CdkObject(cdkObject), ServiceCatalogProvisionedProductDetailsProperty {
+    ) : CdkObject(cdkObject),
+        ServiceCatalogProvisionedProductDetailsProperty {
       /**
        * The ID of the provisioned product.
        *
@@ -876,7 +880,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty,
-    ) : CdkObject(cdkObject), ServiceCatalogProvisioningDetailsProperty {
+    ) : CdkObject(cdkObject),
+        ServiceCatalogProvisioningDetailsProperty {
       /**
        * The path identifier of the product.
        *

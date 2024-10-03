@@ -119,7 +119,8 @@ public interface CfnInputSecurityGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.medialive.CfnInputSecurityGroupProps,
-  ) : CdkObject(cdkObject), CfnInputSecurityGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnInputSecurityGroupProps {
     /**
      * A collection of tags for this input security group.
      *

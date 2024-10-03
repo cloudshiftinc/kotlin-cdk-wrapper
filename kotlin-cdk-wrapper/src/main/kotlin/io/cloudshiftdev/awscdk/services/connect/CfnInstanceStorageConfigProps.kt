@@ -335,7 +335,8 @@ public interface CfnInstanceStorageConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfigProps,
-  ) : CdkObject(cdkObject), CfnInstanceStorageConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnInstanceStorageConfigProps {
     /**
      * The Amazon Resource Name (ARN) of the instance.
      *

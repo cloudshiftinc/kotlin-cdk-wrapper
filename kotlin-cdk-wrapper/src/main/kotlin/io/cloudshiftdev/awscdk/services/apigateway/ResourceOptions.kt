@@ -164,7 +164,8 @@ public interface ResourceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.ResourceOptions,
-  ) : CdkObject(cdkObject), ResourceOptions {
+  ) : CdkObject(cdkObject),
+      ResourceOptions {
     /**
      * Adds a CORS preflight OPTIONS method to this resource and all child resources.
      *

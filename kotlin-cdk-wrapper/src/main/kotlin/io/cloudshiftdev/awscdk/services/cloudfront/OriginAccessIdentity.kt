@@ -18,18 +18,25 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.cloudfront.*;
- * OriginAccessIdentity originAccessIdentity = OriginAccessIdentity.Builder.create(this,
- * "MyOriginAccessIdentity")
- * .comment("comment")
+ * Bucket myBucket = new Bucket(this, "myBucket");
+ * OriginAccessIdentity myOai = OriginAccessIdentity.Builder.create(this, "myOAI")
+ * .comment("My custom OAI")
+ * .build();
+ * IOrigin s3Origin = S3BucketOrigin.withOriginAccessIdentity(myBucket,
+ * S3BucketOriginWithOAIProps.builder()
+ * .originAccessIdentity(myOai)
+ * .build());
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(s3Origin)
+ * .build())
  * .build();
  * ```
  */
 public open class OriginAccessIdentity(
   cdkObject: software.amazon.awscdk.services.cloudfront.OriginAccessIdentity,
-) : Resource(cdkObject), IOriginAccessIdentity {
+) : Resource(cdkObject),
+    IOriginAccessIdentity {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudfront.OriginAccessIdentity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

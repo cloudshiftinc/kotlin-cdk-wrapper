@@ -163,7 +163,8 @@ public interface BackupSelectionProps : BackupSelectionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.backup.BackupSelectionProps,
-  ) : CdkObject(cdkObject), BackupSelectionProps {
+  ) : CdkObject(cdkObject),
+      BackupSelectionProps {
     /**
      * Whether to automatically give restores permissions to the role that AWS Backup uses.
      *

@@ -351,7 +351,8 @@ public interface CfnInstanceProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dms.CfnInstanceProfileProps,
-  ) : CdkObject(cdkObject), CfnInstanceProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnInstanceProfileProps {
     /**
      * The Availability Zone where the instance profile runs.
      *

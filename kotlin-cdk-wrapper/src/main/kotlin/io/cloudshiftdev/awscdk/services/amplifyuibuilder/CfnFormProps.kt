@@ -532,7 +532,8 @@ public interface CfnFormProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnFormProps,
-  ) : CdkObject(cdkObject), CfnFormProps {
+  ) : CdkObject(cdkObject),
+      CfnFormProps {
     /**
      * The unique ID of the Amplify app associated with the form.
      *

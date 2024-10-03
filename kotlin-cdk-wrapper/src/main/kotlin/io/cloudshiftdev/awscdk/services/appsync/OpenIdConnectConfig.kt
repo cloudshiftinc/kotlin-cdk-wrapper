@@ -147,7 +147,8 @@ public interface OpenIdConnectConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.OpenIdConnectConfig,
-  ) : CdkObject(cdkObject), OpenIdConnectConfig {
+  ) : CdkObject(cdkObject),
+      OpenIdConnectConfig {
     /**
      * The client identifier of the Relying party at the OpenID identity provider.
      *

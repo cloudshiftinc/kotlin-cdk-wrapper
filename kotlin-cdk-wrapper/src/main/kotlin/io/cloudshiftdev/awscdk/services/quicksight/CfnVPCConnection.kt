@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVPCConnection(
   cdkObject: software.amazon.awscdk.services.quicksight.CfnVPCConnection,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.quicksight.CfnVPCConnection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -660,7 +662,8 @@ public open class CfnVPCConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnVPCConnection.NetworkInterfaceProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInterfaceProperty {
       /**
        * The availability zone that the network interface resides in.
        *

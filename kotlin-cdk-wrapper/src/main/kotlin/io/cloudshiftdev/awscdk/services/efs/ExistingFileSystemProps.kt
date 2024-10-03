@@ -56,7 +56,8 @@ public interface ExistingFileSystemProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.ExistingFileSystemProps,
-  ) : CdkObject(cdkObject), ExistingFileSystemProps {
+  ) : CdkObject(cdkObject),
+      ExistingFileSystemProps {
     /**
      * The existing destination file system for the replication.
      */

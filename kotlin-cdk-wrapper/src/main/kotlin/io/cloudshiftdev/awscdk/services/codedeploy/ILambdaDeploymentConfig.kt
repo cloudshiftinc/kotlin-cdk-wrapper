@@ -23,7 +23,8 @@ import kotlin.String
 public interface ILambdaDeploymentConfig : IBaseDeploymentConfig {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaDeploymentConfig,
-  ) : CdkObject(cdkObject), ILambdaDeploymentConfig {
+  ) : CdkObject(cdkObject),
+      ILambdaDeploymentConfig {
     /**
      * The ARN of the Deployment Configuration.
      */

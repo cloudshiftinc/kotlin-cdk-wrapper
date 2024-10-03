@@ -182,7 +182,10 @@ public interface CfnUserPoolClientProps {
   public fun clientName(): String? = unwrap(this).getClientName()
 
   /**
-   * The default redirect URI. Must be in the `CallbackURLs` list.
+   * The default redirect URI.
+   *
+   * In app clients with one assigned IdP, replaces `redirect_uri` in authentication requests. Must
+   * be in the `CallbackURLs` list.
    *
    * A redirect URI must:
    *
@@ -190,8 +193,9 @@ public interface CfnUserPoolClientProps {
    * * Be registered with the authorization server.
    * * Not include a fragment component.
    *
-   * See [OAuth 2.0 - Redirection
-   * Endpoint](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6749#section-3.1.2) .
+   * For more information, see [Default redirect
+   * URI](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about)
+   * .
    *
    * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes only.
    *
@@ -309,7 +313,7 @@ public interface CfnUserPoolClientProps {
   public fun preventUserExistenceErrors(): String? = unwrap(this).getPreventUserExistenceErrors()
 
   /**
-   * The list of user attributes that you want your app client to have read-only access to.
+   * The list of user attributes that you want your app client to have read access to.
    *
    * After your user authenticates in your app, their access token authorizes them to read their own
    * attribute value for any attribute in this list. An example of this kind of activity is when your
@@ -319,9 +323,9 @@ public interface CfnUserPoolClientProps {
    *
    * When you don't specify the `ReadAttributes` for your app client, your app can read the values
    * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
-   * When your user pool has read access to these default attributes, `ReadAttributes` doesn't return
-   * any information. Amazon Cognito only populates `ReadAttributes` in the API response if you have
-   * specified your own custom set of read attributes.
+   * When your user pool app client has read access to these default attributes, `ReadAttributes`
+   * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API response
+   * if you have specified your own custom set of read attributes.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-readattributes)
    */
@@ -590,15 +594,19 @@ public interface CfnUserPoolClientProps {
     public fun clientName(clientName: String)
 
     /**
-     * @param defaultRedirectUri The default redirect URI. Must be in the `CallbackURLs` list.
+     * @param defaultRedirectUri The default redirect URI.
+     * In app clients with one assigned IdP, replaces `redirect_uri` in authentication requests.
+     * Must be in the `CallbackURLs` list.
+     *
      * A redirect URI must:
      *
      * * Be an absolute URI.
      * * Be registered with the authorization server.
      * * Not include a fragment component.
      *
-     * See [OAuth 2.0 - Redirection
-     * Endpoint](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6749#section-3.1.2) .
+     * For more information, see [Default redirect
+     * URI](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about)
+     * .
      *
      * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes
      * only.
@@ -765,8 +773,8 @@ public interface CfnUserPoolClientProps {
     public fun preventUserExistenceErrors(preventUserExistenceErrors: String)
 
     /**
-     * @param readAttributes The list of user attributes that you want your app client to have
-     * read-only access to.
+     * @param readAttributes The list of user attributes that you want your app client to have read
+     * access to.
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
      * your user selects a link to view their profile information. Your app makes a
@@ -775,15 +783,15 @@ public interface CfnUserPoolClientProps {
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
-     * When your user pool has read access to these default attributes, `ReadAttributes` doesn't return
-     * any information. Amazon Cognito only populates `ReadAttributes` in the API response if you have
-     * specified your own custom set of read attributes.
+     * When your user pool app client has read access to these default attributes, `ReadAttributes`
+     * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API
+     * response if you have specified your own custom set of read attributes.
      */
     public fun readAttributes(readAttributes: List<String>)
 
     /**
-     * @param readAttributes The list of user attributes that you want your app client to have
-     * read-only access to.
+     * @param readAttributes The list of user attributes that you want your app client to have read
+     * access to.
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
      * your user selects a link to view their profile information. Your app makes a
@@ -792,9 +800,9 @@ public interface CfnUserPoolClientProps {
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
-     * When your user pool has read access to these default attributes, `ReadAttributes` doesn't return
-     * any information. Amazon Cognito only populates `ReadAttributes` in the API response if you have
-     * specified your own custom set of read attributes.
+     * When your user pool app client has read access to these default attributes, `ReadAttributes`
+     * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API
+     * response if you have specified your own custom set of read attributes.
      */
     public fun readAttributes(vararg readAttributes: String)
 
@@ -1124,15 +1132,19 @@ public interface CfnUserPoolClientProps {
     }
 
     /**
-     * @param defaultRedirectUri The default redirect URI. Must be in the `CallbackURLs` list.
+     * @param defaultRedirectUri The default redirect URI.
+     * In app clients with one assigned IdP, replaces `redirect_uri` in authentication requests.
+     * Must be in the `CallbackURLs` list.
+     *
      * A redirect URI must:
      *
      * * Be an absolute URI.
      * * Be registered with the authorization server.
      * * Not include a fragment component.
      *
-     * See [OAuth 2.0 - Redirection
-     * Endpoint](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6749#section-3.1.2) .
+     * For more information, see [Default redirect
+     * URI](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about)
+     * .
      *
      * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes
      * only.
@@ -1322,8 +1334,8 @@ public interface CfnUserPoolClientProps {
     }
 
     /**
-     * @param readAttributes The list of user attributes that you want your app client to have
-     * read-only access to.
+     * @param readAttributes The list of user attributes that you want your app client to have read
+     * access to.
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
      * your user selects a link to view their profile information. Your app makes a
@@ -1332,17 +1344,17 @@ public interface CfnUserPoolClientProps {
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
-     * When your user pool has read access to these default attributes, `ReadAttributes` doesn't return
-     * any information. Amazon Cognito only populates `ReadAttributes` in the API response if you have
-     * specified your own custom set of read attributes.
+     * When your user pool app client has read access to these default attributes, `ReadAttributes`
+     * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API
+     * response if you have specified your own custom set of read attributes.
      */
     override fun readAttributes(readAttributes: List<String>) {
       cdkBuilder.readAttributes(readAttributes)
     }
 
     /**
-     * @param readAttributes The list of user attributes that you want your app client to have
-     * read-only access to.
+     * @param readAttributes The list of user attributes that you want your app client to have read
+     * access to.
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
      * your user selects a link to view their profile information. Your app makes a
@@ -1351,9 +1363,9 @@ public interface CfnUserPoolClientProps {
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
-     * When your user pool has read access to these default attributes, `ReadAttributes` doesn't return
-     * any information. Amazon Cognito only populates `ReadAttributes` in the API response if you have
-     * specified your own custom set of read attributes.
+     * When your user pool app client has read access to these default attributes, `ReadAttributes`
+     * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API
+     * response if you have specified your own custom set of read attributes.
      */
     override fun readAttributes(vararg readAttributes: String): Unit =
         readAttributes(readAttributes.toList())
@@ -1492,7 +1504,8 @@ public interface CfnUserPoolClientProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClientProps,
-  ) : CdkObject(cdkObject), CfnUserPoolClientProps {
+  ) : CdkObject(cdkObject),
+      CfnUserPoolClientProps {
     /**
      * The access token time limit.
      *
@@ -1616,7 +1629,10 @@ public interface CfnUserPoolClientProps {
     override fun clientName(): String? = unwrap(this).getClientName()
 
     /**
-     * The default redirect URI. Must be in the `CallbackURLs` list.
+     * The default redirect URI.
+     *
+     * In app clients with one assigned IdP, replaces `redirect_uri` in authentication requests.
+     * Must be in the `CallbackURLs` list.
      *
      * A redirect URI must:
      *
@@ -1624,8 +1640,9 @@ public interface CfnUserPoolClientProps {
      * * Be registered with the authorization server.
      * * Not include a fragment component.
      *
-     * See [OAuth 2.0 - Redirection
-     * Endpoint](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6749#section-3.1.2) .
+     * For more information, see [Default redirect
+     * URI](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about)
+     * .
      *
      * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes
      * only.
@@ -1746,7 +1763,7 @@ public interface CfnUserPoolClientProps {
         unwrap(this).getPreventUserExistenceErrors()
 
     /**
-     * The list of user attributes that you want your app client to have read-only access to.
+     * The list of user attributes that you want your app client to have read access to.
      *
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
@@ -1756,9 +1773,9 @@ public interface CfnUserPoolClientProps {
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
-     * When your user pool has read access to these default attributes, `ReadAttributes` doesn't return
-     * any information. Amazon Cognito only populates `ReadAttributes` in the API response if you have
-     * specified your own custom set of read attributes.
+     * When your user pool app client has read access to these default attributes, `ReadAttributes`
+     * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API
+     * response if you have specified your own custom set of read attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-readattributes)
      */

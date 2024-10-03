@@ -42,7 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class PublicDnsNamespace(
   cdkObject: software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace,
-) : Resource(cdkObject), IPublicDnsNamespace {
+) : Resource(cdkObject),
+    IPublicDnsNamespace {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

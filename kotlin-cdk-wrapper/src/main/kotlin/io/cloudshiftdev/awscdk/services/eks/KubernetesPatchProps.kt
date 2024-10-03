@@ -158,7 +158,8 @@ public interface KubernetesPatchProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.KubernetesPatchProps,
-  ) : CdkObject(cdkObject), KubernetesPatchProps {
+  ) : CdkObject(cdkObject),
+      KubernetesPatchProps {
     /**
      * The JSON object to pass to `kubectl patch` when the resource is created/updated.
      */

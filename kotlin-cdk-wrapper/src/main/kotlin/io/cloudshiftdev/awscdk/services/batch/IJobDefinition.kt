@@ -86,7 +86,8 @@ public interface IJobDefinition : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IJobDefinition,
-  ) : CdkObject(cdkObject), IJobDefinition {
+  ) : CdkObject(cdkObject),
+      IJobDefinition {
     /**
      * Add a RetryStrategy to this JobDefinition.
      *

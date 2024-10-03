@@ -193,7 +193,8 @@ public interface EcsJobDefinitionProps : JobDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.EcsJobDefinitionProps,
-  ) : CdkObject(cdkObject), EcsJobDefinitionProps {
+  ) : CdkObject(cdkObject),
+      EcsJobDefinitionProps {
     /**
      * The container that this job will run.
      */

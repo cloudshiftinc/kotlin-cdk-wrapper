@@ -384,7 +384,8 @@ public interface CfnTypeActivationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudformation.CfnTypeActivationProps,
-  ) : CdkObject(cdkObject), CfnTypeActivationProps {
+  ) : CdkObject(cdkObject),
+      CfnTypeActivationProps {
     /**
      * Whether to automatically update the extension in this account and Region when a new *minor*
      * version is published by the extension publisher.

@@ -40,7 +40,8 @@ import kotlin.Unit
  */
 public open class ResolveSsmParameterAtLaunchImage(
   cdkObject: software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage,
-) : CdkObject(cdkObject), IMachineImage {
+) : CdkObject(cdkObject),
+    IMachineImage {
   public constructor(parameterName: String) :
       this(software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage(parameterName)
   )

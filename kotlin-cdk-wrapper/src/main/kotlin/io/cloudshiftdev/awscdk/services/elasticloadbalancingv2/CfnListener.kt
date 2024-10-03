@@ -96,6 +96,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .certificates(List.of(CertificateProperty.builder()
  * .certificateArn("certificateArn")
  * .build()))
+ * .listenerAttributes(List.of(ListenerAttributeProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .mutualAuthentication(MutualAuthenticationProperty.builder()
  * .ignoreClientCertificateExpiry(false)
  * .mode("mode")
@@ -111,7 +115,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnListener(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -214,6 +219,31 @@ public open class CfnListener(
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
+
+  /**
+   *
+   */
+  public open fun listenerAttributes(): Any? = unwrap(this).getListenerAttributes()
+
+  /**
+   *
+   */
+  public open fun listenerAttributes(`value`: IResolvable) {
+    unwrap(this).setListenerAttributes(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun listenerAttributes(`value`: List<Any>) {
+    unwrap(this).setListenerAttributes(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   *
+   */
+  public open fun listenerAttributes(vararg `value`: Any): Unit =
+      listenerAttributes(`value`.toList())
 
   /**
    * The Amazon Resource Name (ARN) of the load balancer.
@@ -395,6 +425,24 @@ public open class CfnListener(
      * default rule. 
      */
     public fun defaultActions(vararg defaultActions: Any)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
+     * @param listenerAttributes 
+     */
+    public fun listenerAttributes(listenerAttributes: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
+     * @param listenerAttributes 
+     */
+    public fun listenerAttributes(listenerAttributes: List<Any>)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
+     * @param listenerAttributes 
+     */
+    public fun listenerAttributes(vararg listenerAttributes: Any)
 
     /**
      * The Amazon Resource Name (ARN) of the load balancer.
@@ -591,6 +639,29 @@ public open class CfnListener(
      */
     override fun defaultActions(vararg defaultActions: Any): Unit =
         defaultActions(defaultActions.toList())
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
+     * @param listenerAttributes 
+     */
+    override fun listenerAttributes(listenerAttributes: IResolvable) {
+      cdkBuilder.listenerAttributes(listenerAttributes.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
+     * @param listenerAttributes 
+     */
+    override fun listenerAttributes(listenerAttributes: List<Any>) {
+      cdkBuilder.listenerAttributes(listenerAttributes.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
+     * @param listenerAttributes 
+     */
+    override fun listenerAttributes(vararg listenerAttributes: Any): Unit =
+        listenerAttributes(listenerAttributes.toList())
 
     /**
      * The Amazon Resource Name (ARN) of the load balancer.
@@ -1203,7 +1274,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * [HTTPS listeners] Information for using Amazon Cognito to authenticate users.
        *
@@ -1551,7 +1623,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateCognitoConfigProperty,
-    ) : CdkObject(cdkObject), AuthenticateCognitoConfigProperty {
+    ) : CdkObject(cdkObject),
+        AuthenticateCognitoConfigProperty {
       /**
        * The query parameters (up to 10) to include in the redirect request to the authorization
        * endpoint.
@@ -2014,7 +2087,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.AuthenticateOidcConfigProperty,
-    ) : CdkObject(cdkObject), AuthenticateOidcConfigProperty {
+    ) : CdkObject(cdkObject),
+        AuthenticateOidcConfigProperty {
       /**
        * The query parameters (up to 10) to include in the redirect request to the authorization
        * endpoint.
@@ -2199,7 +2273,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.CertificateProperty,
-    ) : CdkObject(cdkObject), CertificateProperty {
+    ) : CdkObject(cdkObject),
+        CertificateProperty {
       /**
        * The Amazon Resource Name (ARN) of the certificate.
        *
@@ -2326,7 +2401,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.FixedResponseConfigProperty,
-    ) : CdkObject(cdkObject), FixedResponseConfigProperty {
+    ) : CdkObject(cdkObject),
+        FixedResponseConfigProperty {
       /**
        * The content type.
        *
@@ -2523,7 +2599,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty,
-    ) : CdkObject(cdkObject), ForwardConfigProperty {
+    ) : CdkObject(cdkObject),
+        ForwardConfigProperty {
       /**
        * Information about the target group stickiness for a rule.
        *
@@ -2556,6 +2633,134 @@ public open class CfnListener(
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty
+    }
+  }
+
+  /**
+   * Information about a listener attribute.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * ListenerAttributeProperty listenerAttributeProperty = ListenerAttributeProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-listenerattribute.html)
+   */
+  public interface ListenerAttributeProperty {
+    /**
+     * The name of the attribute.
+     *
+     * The following attribute is supported by Network Load Balancers, and Gateway Load Balancers.
+     *
+     * * `tcp.idle_timeout.seconds` - The tcp idle timeout value, in seconds. The valid range is
+     * 60-6000 seconds. The default is 350 seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-listenerattribute.html#cfn-elasticloadbalancingv2-listener-listenerattribute-key)
+     */
+    public fun key(): String? = unwrap(this).getKey()
+
+    /**
+     * The value of the attribute.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-listenerattribute.html#cfn-elasticloadbalancingv2-listener-listenerattribute-value)
+     */
+    public fun `value`(): String? = unwrap(this).getValue()
+
+    /**
+     * A builder for [ListenerAttributeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The name of the attribute.
+       * The following attribute is supported by Network Load Balancers, and Gateway Load Balancers.
+       *
+       * * `tcp.idle_timeout.seconds` - The tcp idle timeout value, in seconds. The valid range is
+       * 60-6000 seconds. The default is 350 seconds.
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value of the attribute.
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ListenerAttributeProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ListenerAttributeProperty.builder()
+
+      /**
+       * @param key The name of the attribute.
+       * The following attribute is supported by Network Load Balancers, and Gateway Load Balancers.
+       *
+       * * `tcp.idle_timeout.seconds` - The tcp idle timeout value, in seconds. The valid range is
+       * 60-6000 seconds. The default is 350 seconds.
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value of the attribute.
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ListenerAttributeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ListenerAttributeProperty,
+    ) : CdkObject(cdkObject),
+        ListenerAttributeProperty {
+      /**
+       * The name of the attribute.
+       *
+       * The following attribute is supported by Network Load Balancers, and Gateway Load Balancers.
+       *
+       * * `tcp.idle_timeout.seconds` - The tcp idle timeout value, in seconds. The valid range is
+       * 60-6000 seconds. The default is 350 seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-listenerattribute.html#cfn-elasticloadbalancingv2-listener-listenerattribute-key)
+       */
+      override fun key(): String? = unwrap(this).getKey()
+
+      /**
+       * The value of the attribute.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-listenerattribute.html#cfn-elasticloadbalancingv2-listener-listenerattribute-value)
+       */
+      override fun `value`(): String? = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ListenerAttributeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ListenerAttributeProperty):
+          ListenerAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ListenerAttributeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ListenerAttributeProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ListenerAttributeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ListenerAttributeProperty
     }
   }
 
@@ -2676,7 +2881,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.MutualAuthenticationProperty,
-    ) : CdkObject(cdkObject), MutualAuthenticationProperty {
+    ) : CdkObject(cdkObject),
+        MutualAuthenticationProperty {
       /**
        * Indicates whether expired client certificates are ignored.
        *
@@ -2921,7 +3127,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.RedirectConfigProperty,
-    ) : CdkObject(cdkObject), RedirectConfigProperty {
+    ) : CdkObject(cdkObject),
+        RedirectConfigProperty {
       /**
        * The hostname.
        *
@@ -3092,7 +3299,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupStickinessConfigProperty,
-    ) : CdkObject(cdkObject), TargetGroupStickinessConfigProperty {
+    ) : CdkObject(cdkObject),
+        TargetGroupStickinessConfigProperty {
       /**
        * The time period, in seconds, during which requests from a client should be routed to the
        * same target group.
@@ -3210,7 +3418,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.TargetGroupTupleProperty,
-    ) : CdkObject(cdkObject), TargetGroupTupleProperty {
+    ) : CdkObject(cdkObject),
+        TargetGroupTupleProperty {
       /**
        * The Amazon Resource Name (ARN) of the target group.
        *

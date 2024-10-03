@@ -222,7 +222,8 @@ public interface DockerBuildOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.DockerBuildOptions,
-  ) : CdkObject(cdkObject), DockerBuildOptions {
+  ) : CdkObject(cdkObject),
+      DockerBuildOptions {
     /**
      * Build args.
      *

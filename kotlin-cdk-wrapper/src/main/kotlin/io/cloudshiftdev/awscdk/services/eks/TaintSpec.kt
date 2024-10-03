@@ -97,7 +97,8 @@ public interface TaintSpec {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.TaintSpec,
-  ) : CdkObject(cdkObject), TaintSpec {
+  ) : CdkObject(cdkObject),
+      TaintSpec {
     /**
      * Effect type.
      *

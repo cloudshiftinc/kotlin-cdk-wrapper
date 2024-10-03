@@ -169,7 +169,8 @@ public interface EndpointOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.EndpointOptions,
-  ) : CdkObject(cdkObject), EndpointOptions {
+  ) : CdkObject(cdkObject),
+      EndpointOptions {
     /**
      * The ACM certificate for this domain name.
      *

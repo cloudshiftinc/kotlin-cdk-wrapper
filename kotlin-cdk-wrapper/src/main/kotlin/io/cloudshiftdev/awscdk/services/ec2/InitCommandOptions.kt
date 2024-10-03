@@ -218,7 +218,8 @@ public interface InitCommandOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.InitCommandOptions,
-  ) : CdkObject(cdkObject), InitCommandOptions {
+  ) : CdkObject(cdkObject),
+      InitCommandOptions {
     /**
      * The working directory.
      *

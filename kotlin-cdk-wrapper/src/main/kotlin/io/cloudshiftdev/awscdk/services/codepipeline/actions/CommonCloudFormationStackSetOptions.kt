@@ -160,7 +160,8 @@ public interface CommonCloudFormationStackSetOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.CommonCloudFormationStackSetOptions,
-  ) : CdkObject(cdkObject), CommonCloudFormationStackSetOptions {
+  ) : CdkObject(cdkObject),
+      CommonCloudFormationStackSetOptions {
     /**
      * The percentage of accounts per Region for which this stack operation can fail before AWS
      * CloudFormation stops the operation in that Region.

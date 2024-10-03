@@ -107,7 +107,8 @@ public interface DkimIdentityConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.DkimIdentityConfig,
-  ) : CdkObject(cdkObject), DkimIdentityConfig {
+  ) : CdkObject(cdkObject),
+      DkimIdentityConfig {
     /**
      * A private key that's used to generate a DKIM signature.
      *

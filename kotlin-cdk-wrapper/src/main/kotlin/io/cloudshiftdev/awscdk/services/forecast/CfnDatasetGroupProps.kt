@@ -198,7 +198,8 @@ public interface CfnDatasetGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.forecast.CfnDatasetGroupProps,
-  ) : CdkObject(cdkObject), CfnDatasetGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnDatasetGroupProps {
     /**
      * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the
      * dataset group.

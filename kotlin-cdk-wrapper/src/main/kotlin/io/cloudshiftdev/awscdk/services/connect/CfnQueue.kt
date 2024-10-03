@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnQueue(
   cdkObject: software.amazon.awscdk.services.connect.CfnQueue,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -644,7 +646,8 @@ public open class CfnQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnQueue.OutboundCallerConfigProperty,
-    ) : CdkObject(cdkObject), OutboundCallerConfigProperty {
+    ) : CdkObject(cdkObject),
+        OutboundCallerConfigProperty {
       /**
        * The caller ID name.
        *

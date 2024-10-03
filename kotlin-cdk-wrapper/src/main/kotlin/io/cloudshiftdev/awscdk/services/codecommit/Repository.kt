@@ -58,7 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Repository(
   cdkObject: software.amazon.awscdk.services.codecommit.Repository,
-) : Resource(cdkObject), IRepository {
+) : Resource(cdkObject),
+    IRepository {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

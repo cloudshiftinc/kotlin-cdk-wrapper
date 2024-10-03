@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCustomPlugin(
   cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnCustomPlugin,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -449,7 +451,8 @@ public open class CfnCustomPlugin(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnCustomPlugin.CustomPluginFileDescriptionProperty,
-    ) : CdkObject(cdkObject), CustomPluginFileDescriptionProperty {
+    ) : CdkObject(cdkObject),
+        CustomPluginFileDescriptionProperty {
       /**
        * The hex-encoded MD5 checksum of the custom plugin file.
        *
@@ -583,7 +586,8 @@ public open class CfnCustomPlugin(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnCustomPlugin.CustomPluginLocationProperty,
-    ) : CdkObject(cdkObject), CustomPluginLocationProperty {
+    ) : CdkObject(cdkObject),
+        CustomPluginLocationProperty {
       /**
        * The S3 bucket Amazon Resource Name (ARN), file key, and object version of the plugin file
        * stored in Amazon S3.
@@ -706,7 +710,8 @@ public open class CfnCustomPlugin(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnCustomPlugin.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * The Amazon Resource Name (ARN) of an S3 bucket.
        *

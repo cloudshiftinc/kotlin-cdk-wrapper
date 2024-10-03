@@ -160,7 +160,8 @@ public interface CfnEndpointAccessProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccessProps,
-  ) : CdkObject(cdkObject), CfnEndpointAccessProps {
+  ) : CdkObject(cdkObject),
+      CfnEndpointAccessProps {
     /**
      * The cluster identifier of the cluster associated with the endpoint.
      *

@@ -20,7 +20,7 @@ import kotlin.collections.List
  * Distribution.Builder.create(this, "myDist")
  * .defaultBehavior(BehaviorOptions.builder()
  * .origin(OriginGroup.Builder.create()
- * .primaryOrigin(new S3Origin(myBucket))
+ * .primaryOrigin(S3BucketOrigin.withOriginAccessControl(myBucket))
  * .fallbackOrigin(new HttpOrigin("www.example.com"))
  * // optional, defaults to: 500, 502, 503 and 504
  * .fallbackStatusCodes(List.of(404))
@@ -117,7 +117,8 @@ public interface OriginGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.origins.OriginGroupProps,
-  ) : CdkObject(cdkObject), OriginGroupProps {
+  ) : CdkObject(cdkObject),
+      OriginGroupProps {
     /**
      * The fallback origin that should serve requests when the primary fails.
      */

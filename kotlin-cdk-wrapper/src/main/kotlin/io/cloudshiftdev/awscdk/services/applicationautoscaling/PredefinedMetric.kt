@@ -30,6 +30,9 @@ public enum class PredefinedMetric(
   ELASTICACHE_REPLICA_ENGINE_CPU_UTILIZATION(software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric.ELASTICACHE_REPLICA_ENGINE_CPU_UTILIZATION),
   ELASTICACHE_DATABASE_MEMORY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE(software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric.ELASTICACHE_DATABASE_MEMORY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE),
   ELASTICACHE_DATABASE_CAPACITY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE(software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric.ELASTICACHE_DATABASE_CAPACITY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE),
+  SAGEMAKER_INFERENCE_COMPONENT_CONCURRENT_REQUESTS_PER_COPY_HIGH_RESOLUTION(software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric.SAGEMAKER_INFERENCE_COMPONENT_CONCURRENT_REQUESTS_PER_COPY_HIGH_RESOLUTION),
+  SAGEMAKER_VARIANT_CONCURRENT_REQUESTS_PER_MODEL_HIGH_RESOLUTION(software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric.SAGEMAKER_VARIANT_CONCURRENT_REQUESTS_PER_MODEL_HIGH_RESOLUTION),
+  WORKSPACES_AVERAGE_USER_SESSIONS_CAPACITY_UTILIZATION(software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric.WORKSPACES_AVERAGE_USER_SESSIONS_CAPACITY_UTILIZATION),
   ;
 
   public companion object {
@@ -86,6 +89,12 @@ public enum class PredefinedMetric(
           PredefinedMetric.ELASTICACHE_DATABASE_MEMORY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE
       software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric.ELASTICACHE_DATABASE_CAPACITY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE ->
           PredefinedMetric.ELASTICACHE_DATABASE_CAPACITY_USAGE_COUNTED_FOR_EVICT_PERCENTAGE
+      software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric.SAGEMAKER_INFERENCE_COMPONENT_CONCURRENT_REQUESTS_PER_COPY_HIGH_RESOLUTION ->
+          PredefinedMetric.SAGEMAKER_INFERENCE_COMPONENT_CONCURRENT_REQUESTS_PER_COPY_HIGH_RESOLUTION
+      software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric.SAGEMAKER_VARIANT_CONCURRENT_REQUESTS_PER_MODEL_HIGH_RESOLUTION ->
+          PredefinedMetric.SAGEMAKER_VARIANT_CONCURRENT_REQUESTS_PER_MODEL_HIGH_RESOLUTION
+      software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric.WORKSPACES_AVERAGE_USER_SESSIONS_CAPACITY_UTILIZATION ->
+          PredefinedMetric.WORKSPACES_AVERAGE_USER_SESSIONS_CAPACITY_UTILIZATION
     }
 
     internal fun unwrap(wrapped: PredefinedMetric):

@@ -268,7 +268,8 @@ public interface CfnProtectionGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.shield.CfnProtectionGroupProps,
-  ) : CdkObject(cdkObject), CfnProtectionGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnProtectionGroupProps {
     /**
      * Defines how AWS Shield combines resource data for the group in order to detect, mitigate, and
      * report events.

@@ -59,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFirewall(
   cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewall,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -754,7 +756,8 @@ public open class CfnFirewall(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewall.SubnetMappingProperty,
-    ) : CdkObject(cdkObject), SubnetMappingProperty {
+    ) : CdkObject(cdkObject),
+        SubnetMappingProperty {
       /**
        * The subnet's IP address type.
        *

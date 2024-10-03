@@ -149,7 +149,8 @@ public interface QueueAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sqs.QueueAttributes,
-  ) : CdkObject(cdkObject), QueueAttributes {
+  ) : CdkObject(cdkObject),
+      QueueAttributes {
     /**
      * Whether this queue is an Amazon SQS FIFO queue. If false, this is a standard queue.
      *

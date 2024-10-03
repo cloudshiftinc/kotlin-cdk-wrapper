@@ -38,7 +38,8 @@ public interface MetadataOptions {
 
   private class Wrapper(
     cdkObject: software.constructs.MetadataOptions,
-  ) : CdkObject(cdkObject), MetadataOptions {
+  ) : CdkObject(cdkObject),
+      MetadataOptions {
     override fun stackTrace(): Boolean? = unwrap(this).getStackTrace()
 
     override fun traceFromFunction(): Any? = unwrap(this).getTraceFromFunction()

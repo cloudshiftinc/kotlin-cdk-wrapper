@@ -34,7 +34,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class UnmanagedComputeEnvironment(
   cdkObject: software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment,
-) : Resource(cdkObject), IUnmanagedComputeEnvironment, IComputeEnvironment {
+) : Resource(cdkObject),
+    IUnmanagedComputeEnvironment,
+    IComputeEnvironment {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

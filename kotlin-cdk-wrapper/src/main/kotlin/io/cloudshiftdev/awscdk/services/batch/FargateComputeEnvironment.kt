@@ -44,8 +44,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class FargateComputeEnvironment(
   cdkObject: software.amazon.awscdk.services.batch.FargateComputeEnvironment,
-) : Resource(cdkObject), IFargateComputeEnvironment, IManagedComputeEnvironment, IComputeEnvironment
-    {
+) : Resource(cdkObject),
+    IFargateComputeEnvironment,
+    IManagedComputeEnvironment,
+    IComputeEnvironment {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

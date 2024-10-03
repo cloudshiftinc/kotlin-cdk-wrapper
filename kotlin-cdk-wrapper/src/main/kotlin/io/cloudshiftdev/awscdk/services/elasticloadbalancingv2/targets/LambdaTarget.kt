@@ -31,7 +31,8 @@ import io.cloudshiftdev.awscdk.services.lambda.IFunction
  */
 public open class LambdaTarget(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.LambdaTarget,
-) : CdkObject(cdkObject), IApplicationLoadBalancerTarget {
+) : CdkObject(cdkObject),
+    IApplicationLoadBalancerTarget {
   public constructor(fn: IFunction) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.LambdaTarget(fn.let(IFunction.Companion::unwrap))
   )

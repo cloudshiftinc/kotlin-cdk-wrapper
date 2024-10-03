@@ -209,7 +209,8 @@ public interface S3ArtifactsProps : ArtifactsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.S3ArtifactsProps,
-  ) : CdkObject(cdkObject), S3ArtifactsProps {
+  ) : CdkObject(cdkObject),
+      S3ArtifactsProps {
     /**
      * The name of the output bucket.
      */

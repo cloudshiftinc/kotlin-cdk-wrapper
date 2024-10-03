@@ -104,7 +104,8 @@ public interface CfnUserToGroupAdditionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.CfnUserToGroupAdditionProps,
-  ) : CdkObject(cdkObject), CfnUserToGroupAdditionProps {
+  ) : CdkObject(cdkObject),
+      CfnUserToGroupAdditionProps {
     /**
      * The name of the group to update.
      *

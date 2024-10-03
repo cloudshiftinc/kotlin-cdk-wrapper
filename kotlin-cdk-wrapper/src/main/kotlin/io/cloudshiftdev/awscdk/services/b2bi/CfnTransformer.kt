@@ -56,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTransformer(
   cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -596,7 +598,8 @@ public open class CfnTransformer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty,
-    ) : CdkObject(cdkObject), EdiTypeProperty {
+    ) : CdkObject(cdkObject),
+        EdiTypeProperty {
       /**
        * Returns the details for the EDI standard that is being used for the transformer.
        *
@@ -712,7 +715,8 @@ public open class CfnTransformer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty,
-    ) : CdkObject(cdkObject), X12DetailsProperty {
+    ) : CdkObject(cdkObject),
+        X12DetailsProperty {
       /**
        * Returns an enumerated type where each value identifies an X12 transaction set.
        *

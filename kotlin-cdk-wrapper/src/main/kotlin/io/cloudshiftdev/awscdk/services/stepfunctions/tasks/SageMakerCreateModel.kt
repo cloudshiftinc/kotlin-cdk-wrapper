@@ -49,7 +49,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class SageMakerCreateModel(
   cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModel,
-) : TaskStateBase(cdkObject), IGrantable, IConnectable {
+) : TaskStateBase(cdkObject),
+    IGrantable,
+    IConnectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

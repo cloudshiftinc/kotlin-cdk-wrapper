@@ -151,7 +151,8 @@ public interface RedriveAllowPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sqs.RedriveAllowPolicy,
-  ) : CdkObject(cdkObject), RedriveAllowPolicy {
+  ) : CdkObject(cdkObject),
+      RedriveAllowPolicy {
     /**
      * Permission settings for source queues that can designate this queue as their dead-letter
      * queue.

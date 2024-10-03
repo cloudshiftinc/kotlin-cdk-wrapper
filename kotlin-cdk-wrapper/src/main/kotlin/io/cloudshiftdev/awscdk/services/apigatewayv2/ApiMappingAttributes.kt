@@ -57,7 +57,8 @@ public interface ApiMappingAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes,
-  ) : CdkObject(cdkObject), ApiMappingAttributes {
+  ) : CdkObject(cdkObject),
+      ApiMappingAttributes {
     /**
      * The API mapping ID.
      */

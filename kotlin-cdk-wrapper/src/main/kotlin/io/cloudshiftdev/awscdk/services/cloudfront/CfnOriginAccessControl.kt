@@ -53,7 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnOriginAccessControl(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -431,7 +432,8 @@ public open class CfnOriginAccessControl(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl.OriginAccessControlConfigProperty,
-    ) : CdkObject(cdkObject), OriginAccessControlConfigProperty {
+    ) : CdkObject(cdkObject),
+        OriginAccessControlConfigProperty {
       /**
        * A description of the origin access control.
        *

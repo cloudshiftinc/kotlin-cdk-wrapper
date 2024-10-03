@@ -187,7 +187,8 @@ public interface LustreFileSystemProps : FileSystemProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.fsx.LustreFileSystemProps,
-  ) : CdkObject(cdkObject), LustreFileSystemProps {
+  ) : CdkObject(cdkObject),
+      LustreFileSystemProps {
     /**
      * The ID of the backup.
      *

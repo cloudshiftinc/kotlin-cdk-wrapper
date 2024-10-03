@@ -30,7 +30,8 @@ import kotlin.jvm.JvmName
  */
 public open class NatInstanceProvider(
   cdkObject: software.amazon.awscdk.services.ec2.NatInstanceProvider,
-) : NatProvider(cdkObject), IConnectable {
+) : NatProvider(cdkObject),
+    IConnectable {
   @Deprecated(message = "deprecated in CDK")
   public constructor(props: NatInstanceProps) :
       this(software.amazon.awscdk.services.ec2.NatInstanceProvider(props.let(NatInstanceProps.Companion::unwrap))

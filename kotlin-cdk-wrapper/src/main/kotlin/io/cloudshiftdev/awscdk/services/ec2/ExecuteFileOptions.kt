@@ -83,7 +83,8 @@ public interface ExecuteFileOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.ExecuteFileOptions,
-  ) : CdkObject(cdkObject), ExecuteFileOptions {
+  ) : CdkObject(cdkObject),
+      ExecuteFileOptions {
     /**
      * The arguments to be passed to the file.
      *

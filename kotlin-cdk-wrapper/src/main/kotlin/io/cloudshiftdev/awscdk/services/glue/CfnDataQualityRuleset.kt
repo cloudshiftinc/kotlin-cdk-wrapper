@@ -49,7 +49,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataQualityRuleset(
   cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRuleset,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.glue.CfnDataQualityRuleset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -449,7 +451,8 @@ public open class CfnDataQualityRuleset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRuleset.DataQualityTargetTableProperty,
-    ) : CdkObject(cdkObject), DataQualityTargetTableProperty {
+    ) : CdkObject(cdkObject),
+        DataQualityTargetTableProperty {
       /**
        * The name of the database where the AWS Glue table exists.
        *

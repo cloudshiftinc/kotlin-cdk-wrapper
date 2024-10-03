@@ -113,7 +113,8 @@ public interface IRule : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.config.IRule,
-  ) : CdkObject(cdkObject), IRule {
+  ) : CdkObject(cdkObject),
+      IRule {
     /**
      * Apply the given removal policy to this resource.
      *

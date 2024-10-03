@@ -22,7 +22,8 @@ public interface IRecordSet : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.IRecordSet,
-  ) : CdkObject(cdkObject), IRecordSet {
+  ) : CdkObject(cdkObject),
+      IRecordSet {
     /**
      * Apply the given removal policy to this resource.
      *

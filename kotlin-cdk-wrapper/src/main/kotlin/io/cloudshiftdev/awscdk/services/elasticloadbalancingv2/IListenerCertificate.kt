@@ -17,7 +17,8 @@ public interface IListenerCertificate {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate,
-  ) : CdkObject(cdkObject), IListenerCertificate {
+  ) : CdkObject(cdkObject),
+      IListenerCertificate {
     /**
      * The ARN of the certificate to use.
      */

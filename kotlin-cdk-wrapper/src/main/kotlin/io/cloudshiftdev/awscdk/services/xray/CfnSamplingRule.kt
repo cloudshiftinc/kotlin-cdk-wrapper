@@ -115,7 +115,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSamplingRule(
   cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.xray.CfnSamplingRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -924,7 +926,8 @@ public open class CfnSamplingRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleProperty,
-    ) : CdkObject(cdkObject), SamplingRuleProperty {
+    ) : CdkObject(cdkObject),
+        SamplingRuleProperty {
       /**
        * Matches attributes derived from the request.
        *
@@ -1187,7 +1190,8 @@ public open class CfnSamplingRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty,
-    ) : CdkObject(cdkObject), SamplingRuleRecordProperty {
+    ) : CdkObject(cdkObject),
+        SamplingRuleRecordProperty {
       /**
        * When the rule was created, in Unix time seconds.
        *
@@ -1533,7 +1537,8 @@ public open class CfnSamplingRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty,
-    ) : CdkObject(cdkObject), SamplingRuleUpdateProperty {
+    ) : CdkObject(cdkObject),
+        SamplingRuleUpdateProperty {
       /**
        * Matches attributes derived from the request.
        *

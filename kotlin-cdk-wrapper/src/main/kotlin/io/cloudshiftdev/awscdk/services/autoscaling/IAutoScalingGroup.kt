@@ -209,7 +209,8 @@ public interface IAutoScalingGroup : IResource, IGrantable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.IAutoScalingGroup,
-  ) : CdkObject(cdkObject), IAutoScalingGroup {
+  ) : CdkObject(cdkObject),
+      IAutoScalingGroup {
     /**
      * Send a message to either an SQS queue or SNS topic when instances launch or terminate.
      *

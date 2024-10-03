@@ -247,7 +247,8 @@ public interface Http2VirtualNodeListenerOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.Http2VirtualNodeListenerOptions,
-  ) : CdkObject(cdkObject), Http2VirtualNodeListenerOptions {
+  ) : CdkObject(cdkObject),
+      Http2VirtualNodeListenerOptions {
     /**
      * Connection pool for http2 listeners.
      *

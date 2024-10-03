@@ -107,7 +107,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStreamProcessor(
   cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1610,7 +1612,8 @@ public open class CfnStreamProcessor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.BoundingBoxProperty,
-    ) : CdkObject(cdkObject), BoundingBoxProperty {
+    ) : CdkObject(cdkObject),
+        BoundingBoxProperty {
       /**
        * Height of the bounding box as a ratio of the overall image height.
        *
@@ -1773,7 +1776,8 @@ public open class CfnStreamProcessor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.ConnectedHomeSettingsProperty,
-    ) : CdkObject(cdkObject), ConnectedHomeSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ConnectedHomeSettingsProperty {
       /**
        * Specifies what you want to detect in the video, such as people, packages, or pets.
        *
@@ -1887,7 +1891,8 @@ public open class CfnStreamProcessor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty,
-    ) : CdkObject(cdkObject), DataSharingPreferenceProperty {
+    ) : CdkObject(cdkObject),
+        DataSharingPreferenceProperty {
       /**
        * Describes the opt-in status applied to a stream processor's data sharing policy.
        *
@@ -2009,7 +2014,8 @@ public open class CfnStreamProcessor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.FaceSearchSettingsProperty,
-    ) : CdkObject(cdkObject), FaceSearchSettingsProperty {
+    ) : CdkObject(cdkObject),
+        FaceSearchSettingsProperty {
       /**
        * The ID of a collection that contains faces that you want to search for.
        *
@@ -2108,7 +2114,8 @@ public open class CfnStreamProcessor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty,
-    ) : CdkObject(cdkObject), KinesisDataStreamProperty {
+    ) : CdkObject(cdkObject),
+        KinesisDataStreamProperty {
       /**
        * ARN of the output Amazon Kinesis Data Streams stream.
        *
@@ -2195,7 +2202,8 @@ public open class CfnStreamProcessor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty,
-    ) : CdkObject(cdkObject), KinesisVideoStreamProperty {
+    ) : CdkObject(cdkObject),
+        KinesisVideoStreamProperty {
       /**
        * ARN of the Kinesis video stream stream that streams the source video.
        *
@@ -2284,7 +2292,8 @@ public open class CfnStreamProcessor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty,
-    ) : CdkObject(cdkObject), NotificationChannelProperty {
+    ) : CdkObject(cdkObject),
+        NotificationChannelProperty {
       /**
        * The ARN of the SNS topic that receives notifications.
        *
@@ -2397,7 +2406,8 @@ public open class CfnStreamProcessor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.PointProperty,
-    ) : CdkObject(cdkObject), PointProperty {
+    ) : CdkObject(cdkObject),
+        PointProperty {
       /**
        * The value of the X coordinate for a point on a `Polygon` .
        *
@@ -2518,7 +2528,8 @@ public open class CfnStreamProcessor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty,
-    ) : CdkObject(cdkObject), S3DestinationProperty {
+    ) : CdkObject(cdkObject),
+        S3DestinationProperty {
       /**
        * Describes the destination Amazon Simple Storage Service (Amazon S3) bucket name of a stream
        * processor's exports.

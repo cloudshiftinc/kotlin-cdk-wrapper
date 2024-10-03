@@ -57,7 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnServiceNetworkVpcAssociation(
   cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

@@ -35,10 +35,37 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "MyCfnOriginEndpoint")
  * .channelGroupName("channelGroupName")
  * .channelName("channelName")
+ * .containerType("containerType")
  * .originEndpointName("originEndpointName")
  * // the properties below are optional
- * .containerType("containerType")
+ * .dashManifests(List.of(DashManifestConfigurationProperty.builder()
+ * .manifestName("manifestName")
+ * // the properties below are optional
+ * .drmSignaling("drmSignaling")
+ * .filterConfiguration(FilterConfigurationProperty.builder()
+ * .end("end")
+ * .manifestFilter("manifestFilter")
+ * .start("start")
+ * .timeDelaySeconds(123)
+ * .build())
+ * .manifestWindowSeconds(123)
+ * .minBufferTimeSeconds(123)
+ * .minUpdatePeriodSeconds(123)
+ * .periodTriggers(List.of("periodTriggers"))
+ * .scteDash(ScteDashProperty.builder()
+ * .adMarkerDash("adMarkerDash")
+ * .build())
+ * .segmentTemplateFormat("segmentTemplateFormat")
+ * .suggestedPresentationDelaySeconds(123)
+ * .utcTiming(DashUtcTimingProperty.builder()
+ * .timingMode("timingMode")
+ * .timingSource("timingSource")
+ * .build())
+ * .build()))
  * .description("description")
+ * .forceEndpointErrorConfiguration(ForceEndpointErrorConfigurationProperty.builder()
+ * .endpointErrorConditions(List.of("endpointErrorConditions"))
+ * .build())
  * .hlsManifests(List.of(HlsManifestConfigurationProperty.builder()
  * .manifestName("manifestName")
  * // the properties below are optional
@@ -114,7 +141,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnOriginEndpoint(
   cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -140,6 +169,22 @@ public open class CfnOriginEndpoint(
    * The timestamp of the creation of the origin endpoint.
    */
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
+
+  /**
+   *
+   */
+  public open fun attrDashManifestUrls(): List<String> = unwrap(this).getAttrDashManifestUrls()
+
+  /**
+   *
+   */
+  public open fun attrHlsManifestUrls(): List<String> = unwrap(this).getAttrHlsManifestUrls()
+
+  /**
+   *
+   */
+  public open fun attrLowLatencyHlsManifestUrls(): List<String> =
+      unwrap(this).getAttrLowLatencyHlsManifestUrls()
 
   /**
    * The timestamp of the modification of the origin endpoint.
@@ -179,7 +224,7 @@ public open class CfnOriginEndpoint(
   /**
    * The container type associated with the origin endpoint configuration.
    */
-  public open fun containerType(): String? = unwrap(this).getContainerType()
+  public open fun containerType(): String = unwrap(this).getContainerType()
 
   /**
    * The container type associated with the origin endpoint configuration.
@@ -187,6 +232,30 @@ public open class CfnOriginEndpoint(
   public open fun containerType(`value`: String) {
     unwrap(this).setContainerType(`value`)
   }
+
+  /**
+   * A DASH manifest configuration.
+   */
+  public open fun dashManifests(): Any? = unwrap(this).getDashManifests()
+
+  /**
+   * A DASH manifest configuration.
+   */
+  public open fun dashManifests(`value`: IResolvable) {
+    unwrap(this).setDashManifests(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * A DASH manifest configuration.
+   */
+  public open fun dashManifests(`value`: List<Any>) {
+    unwrap(this).setDashManifests(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * A DASH manifest configuration.
+   */
+  public open fun dashManifests(vararg `value`: Any): Unit = dashManifests(`value`.toList())
 
   /**
    * The description associated with the origin endpoint.
@@ -199,6 +268,36 @@ public open class CfnOriginEndpoint(
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
+
+  /**
+   * The failover settings for the endpoint.</p>.
+   */
+  public open fun forceEndpointErrorConfiguration(): Any? =
+      unwrap(this).getForceEndpointErrorConfiguration()
+
+  /**
+   * The failover settings for the endpoint.</p>.
+   */
+  public open fun forceEndpointErrorConfiguration(`value`: IResolvable) {
+    unwrap(this).setForceEndpointErrorConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The failover settings for the endpoint.</p>.
+   */
+  public open
+      fun forceEndpointErrorConfiguration(`value`: ForceEndpointErrorConfigurationProperty) {
+    unwrap(this).setForceEndpointErrorConfiguration(`value`.let(ForceEndpointErrorConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The failover settings for the endpoint.</p>.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("31efe0d6dc69efb78649f668db1822360bf376011260ada8302631686204eeee")
+  public open
+      fun forceEndpointErrorConfiguration(`value`: ForceEndpointErrorConfigurationProperty.Builder.() -> Unit):
+      Unit = forceEndpointErrorConfiguration(ForceEndpointErrorConfigurationProperty(`value`))
 
   /**
    * The HLS manfiests associated with the origin endpoint configuration.
@@ -359,12 +458,64 @@ public open class CfnOriginEndpoint(
     public fun containerType(containerType: String)
 
     /**
+     * A DASH manifest configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-dashmanifests)
+     * @param dashManifests A DASH manifest configuration. 
+     */
+    public fun dashManifests(dashManifests: IResolvable)
+
+    /**
+     * A DASH manifest configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-dashmanifests)
+     * @param dashManifests A DASH manifest configuration. 
+     */
+    public fun dashManifests(dashManifests: List<Any>)
+
+    /**
+     * A DASH manifest configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-dashmanifests)
+     * @param dashManifests A DASH manifest configuration. 
+     */
+    public fun dashManifests(vararg dashManifests: Any)
+
+    /**
      * The description associated with the origin endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-description)
      * @param description The description associated with the origin endpoint. 
      */
     public fun description(description: String)
+
+    /**
+     * The failover settings for the endpoint.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     */
+    public fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: IResolvable)
+
+    /**
+     * The failover settings for the endpoint.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     */
+    public
+        fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: ForceEndpointErrorConfigurationProperty)
+
+    /**
+     * The failover settings for the endpoint.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("947eff8aee5de70bb9564e9bc4a915d63ba9ee4b0b2819652b4b9065b300679d")
+    public
+        fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: ForceEndpointErrorConfigurationProperty.Builder.() -> Unit)
 
     /**
      * The HLS manfiests associated with the origin endpoint configuration.
@@ -520,6 +671,35 @@ public open class CfnOriginEndpoint(
     }
 
     /**
+     * A DASH manifest configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-dashmanifests)
+     * @param dashManifests A DASH manifest configuration. 
+     */
+    override fun dashManifests(dashManifests: IResolvable) {
+      cdkBuilder.dashManifests(dashManifests.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * A DASH manifest configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-dashmanifests)
+     * @param dashManifests A DASH manifest configuration. 
+     */
+    override fun dashManifests(dashManifests: List<Any>) {
+      cdkBuilder.dashManifests(dashManifests.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * A DASH manifest configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-dashmanifests)
+     * @param dashManifests A DASH manifest configuration. 
+     */
+    override fun dashManifests(vararg dashManifests: Any): Unit =
+        dashManifests(dashManifests.toList())
+
+    /**
      * The description associated with the origin endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-description)
@@ -528,6 +708,40 @@ public open class CfnOriginEndpoint(
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * The failover settings for the endpoint.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     */
+    override fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: IResolvable) {
+      cdkBuilder.forceEndpointErrorConfiguration(forceEndpointErrorConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The failover settings for the endpoint.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     */
+    override
+        fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: ForceEndpointErrorConfigurationProperty) {
+      cdkBuilder.forceEndpointErrorConfiguration(forceEndpointErrorConfiguration.let(ForceEndpointErrorConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The failover settings for the endpoint.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("947eff8aee5de70bb9564e9bc4a915d63ba9ee4b0b2819652b4b9065b300679d")
+    override
+        fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: ForceEndpointErrorConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        forceEndpointErrorConfiguration(ForceEndpointErrorConfigurationProperty(forceEndpointErrorConfiguration))
 
     /**
      * The HLS manfiests associated with the origin endpoint configuration.
@@ -689,6 +903,660 @@ public open class CfnOriginEndpoint(
   }
 
   /**
+   * Retrieve the DASH manifest configuration.</p>.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * DashManifestConfigurationProperty dashManifestConfigurationProperty =
+   * DashManifestConfigurationProperty.builder()
+   * .manifestName("manifestName")
+   * // the properties below are optional
+   * .drmSignaling("drmSignaling")
+   * .filterConfiguration(FilterConfigurationProperty.builder()
+   * .end("end")
+   * .manifestFilter("manifestFilter")
+   * .start("start")
+   * .timeDelaySeconds(123)
+   * .build())
+   * .manifestWindowSeconds(123)
+   * .minBufferTimeSeconds(123)
+   * .minUpdatePeriodSeconds(123)
+   * .periodTriggers(List.of("periodTriggers"))
+   * .scteDash(ScteDashProperty.builder()
+   * .adMarkerDash("adMarkerDash")
+   * .build())
+   * .segmentTemplateFormat("segmentTemplateFormat")
+   * .suggestedPresentationDelaySeconds(123)
+   * .utcTiming(DashUtcTimingProperty.builder()
+   * .timingMode("timingMode")
+   * .timingSource("timingSource")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html)
+   */
+  public interface DashManifestConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-drmsignaling)
+     */
+    public fun drmSignaling(): String? = unwrap(this).getDrmSignaling()
+
+    /**
+     * Filter configuration includes settings for manifest filtering, start and end times, and time
+     * delay that apply to all of your egress requests for this manifest.
+     *
+     * </p>
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-filterconfiguration)
+     */
+    public fun filterConfiguration(): Any? = unwrap(this).getFilterConfiguration()
+
+    /**
+     * A short string that's appended to the endpoint URL.
+     *
+     * The manifest name creates a unique path to this endpoint. If you don't enter a value,
+     * MediaPackage uses the default manifest name, index. </p>
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-manifestname)
+     */
+    public fun manifestName(): String
+
+    /**
+     * The total duration (in seconds) of the manifest's content.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-manifestwindowseconds)
+     */
+    public fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
+
+    /**
+     * Minimum amount of content (in seconds) that a player must keep available in the buffer.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-minbuffertimeseconds)
+     */
+    public fun minBufferTimeSeconds(): Number? = unwrap(this).getMinBufferTimeSeconds()
+
+    /**
+     * Minimum amount of time (in seconds) that the player should wait before requesting updates to
+     * the manifest.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-minupdateperiodseconds)
+     */
+    public fun minUpdatePeriodSeconds(): Number? = unwrap(this).getMinUpdatePeriodSeconds()
+
+    /**
+     * A list of triggers that controls when AWS Elemental MediaPackage separates the MPEG-DASH
+     * manifest into multiple periods.
+     *
+     * Leave this value empty to indicate that the manifest is contained all in one period.
+     * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
+     * Elemental
+     * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-periodtriggers)
+     */
+    public fun periodTriggers(): List<String> = unwrap(this).getPeriodTriggers() ?: emptyList()
+
+    /**
+     * The SCTE configuration.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-sctedash)
+     */
+    public fun scteDash(): Any? = unwrap(this).getScteDash()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-segmenttemplateformat)
+     */
+    public fun segmentTemplateFormat(): String? = unwrap(this).getSegmentTemplateFormat()
+
+    /**
+     * The amount of time (in seconds) that the player should be from the end of the manifest.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-suggestedpresentationdelayseconds)
+     */
+    public fun suggestedPresentationDelaySeconds(): Number? =
+        unwrap(this).getSuggestedPresentationDelaySeconds()
+
+    /**
+     * Determines the type of UTC timing included in the DASH Media Presentation Description
+     * (MPD).</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-utctiming)
+     */
+    public fun utcTiming(): Any? = unwrap(this).getUtcTiming()
+
+    /**
+     * A builder for [DashManifestConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param drmSignaling the value to be set.
+       */
+      public fun drmSignaling(drmSignaling: String)
+
+      /**
+       * @param filterConfiguration Filter configuration includes settings for manifest filtering,
+       * start and end times, and time delay that apply to all of your egress requests for this
+       * manifest.
+       * </p>
+       */
+      public fun filterConfiguration(filterConfiguration: IResolvable)
+
+      /**
+       * @param filterConfiguration Filter configuration includes settings for manifest filtering,
+       * start and end times, and time delay that apply to all of your egress requests for this
+       * manifest.
+       * </p>
+       */
+      public fun filterConfiguration(filterConfiguration: FilterConfigurationProperty)
+
+      /**
+       * @param filterConfiguration Filter configuration includes settings for manifest filtering,
+       * start and end times, and time delay that apply to all of your egress requests for this
+       * manifest.
+       * </p>
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c9c71597cb955dbd506744c1077ee76abd6acdc3884ce17cd2562482051335b6")
+      public
+          fun filterConfiguration(filterConfiguration: FilterConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param manifestName A short string that's appended to the endpoint URL. 
+       * The manifest name creates a unique path to this endpoint. If you don't enter a value,
+       * MediaPackage uses the default manifest name, index. </p>
+       */
+      public fun manifestName(manifestName: String)
+
+      /**
+       * @param manifestWindowSeconds The total duration (in seconds) of the manifest's
+       * content.</p>.
+       */
+      public fun manifestWindowSeconds(manifestWindowSeconds: Number)
+
+      /**
+       * @param minBufferTimeSeconds Minimum amount of content (in seconds) that a player must keep
+       * available in the buffer.</p>.
+       */
+      public fun minBufferTimeSeconds(minBufferTimeSeconds: Number)
+
+      /**
+       * @param minUpdatePeriodSeconds Minimum amount of time (in seconds) that the player should
+       * wait before requesting updates to the manifest.</p>.
+       */
+      public fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number)
+
+      /**
+       * @param periodTriggers A list of triggers that controls when AWS Elemental MediaPackage
+       * separates the MPEG-DASH manifest into multiple periods.
+       * Leave this value empty to indicate that the manifest is contained all in one period.
+       * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
+       * Elemental
+       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+       */
+      public fun periodTriggers(periodTriggers: List<String>)
+
+      /**
+       * @param periodTriggers A list of triggers that controls when AWS Elemental MediaPackage
+       * separates the MPEG-DASH manifest into multiple periods.
+       * Leave this value empty to indicate that the manifest is contained all in one period.
+       * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
+       * Elemental
+       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+       */
+      public fun periodTriggers(vararg periodTriggers: String)
+
+      /**
+       * @param scteDash The SCTE configuration.</p>.
+       */
+      public fun scteDash(scteDash: IResolvable)
+
+      /**
+       * @param scteDash The SCTE configuration.</p>.
+       */
+      public fun scteDash(scteDash: ScteDashProperty)
+
+      /**
+       * @param scteDash The SCTE configuration.</p>.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("38790bb2dbacae4b3fd4a62c1b3a8203ea772a5c13552e23b40f72c28e14584f")
+      public fun scteDash(scteDash: ScteDashProperty.Builder.() -> Unit)
+
+      /**
+       * @param segmentTemplateFormat the value to be set.
+       */
+      public fun segmentTemplateFormat(segmentTemplateFormat: String)
+
+      /**
+       * @param suggestedPresentationDelaySeconds The amount of time (in seconds) that the player
+       * should be from the end of the manifest.</p>.
+       */
+      public fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number)
+
+      /**
+       * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
+       * Description (MPD).</p>.
+       */
+      public fun utcTiming(utcTiming: IResolvable)
+
+      /**
+       * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
+       * Description (MPD).</p>.
+       */
+      public fun utcTiming(utcTiming: DashUtcTimingProperty)
+
+      /**
+       * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
+       * Description (MPD).</p>.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f7fc2a5e9905d25d702d76df25aa6f17a90741e74417f395d514442fb4e389b3")
+      public fun utcTiming(utcTiming: DashUtcTimingProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashManifestConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashManifestConfigurationProperty.builder()
+
+      /**
+       * @param drmSignaling the value to be set.
+       */
+      override fun drmSignaling(drmSignaling: String) {
+        cdkBuilder.drmSignaling(drmSignaling)
+      }
+
+      /**
+       * @param filterConfiguration Filter configuration includes settings for manifest filtering,
+       * start and end times, and time delay that apply to all of your egress requests for this
+       * manifest.
+       * </p>
+       */
+      override fun filterConfiguration(filterConfiguration: IResolvable) {
+        cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param filterConfiguration Filter configuration includes settings for manifest filtering,
+       * start and end times, and time delay that apply to all of your egress requests for this
+       * manifest.
+       * </p>
+       */
+      override fun filterConfiguration(filterConfiguration: FilterConfigurationProperty) {
+        cdkBuilder.filterConfiguration(filterConfiguration.let(FilterConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param filterConfiguration Filter configuration includes settings for manifest filtering,
+       * start and end times, and time delay that apply to all of your egress requests for this
+       * manifest.
+       * </p>
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c9c71597cb955dbd506744c1077ee76abd6acdc3884ce17cd2562482051335b6")
+      override
+          fun filterConfiguration(filterConfiguration: FilterConfigurationProperty.Builder.() -> Unit):
+          Unit = filterConfiguration(FilterConfigurationProperty(filterConfiguration))
+
+      /**
+       * @param manifestName A short string that's appended to the endpoint URL. 
+       * The manifest name creates a unique path to this endpoint. If you don't enter a value,
+       * MediaPackage uses the default manifest name, index. </p>
+       */
+      override fun manifestName(manifestName: String) {
+        cdkBuilder.manifestName(manifestName)
+      }
+
+      /**
+       * @param manifestWindowSeconds The total duration (in seconds) of the manifest's
+       * content.</p>.
+       */
+      override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
+        cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
+      }
+
+      /**
+       * @param minBufferTimeSeconds Minimum amount of content (in seconds) that a player must keep
+       * available in the buffer.</p>.
+       */
+      override fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
+        cdkBuilder.minBufferTimeSeconds(minBufferTimeSeconds)
+      }
+
+      /**
+       * @param minUpdatePeriodSeconds Minimum amount of time (in seconds) that the player should
+       * wait before requesting updates to the manifest.</p>.
+       */
+      override fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number) {
+        cdkBuilder.minUpdatePeriodSeconds(minUpdatePeriodSeconds)
+      }
+
+      /**
+       * @param periodTriggers A list of triggers that controls when AWS Elemental MediaPackage
+       * separates the MPEG-DASH manifest into multiple periods.
+       * Leave this value empty to indicate that the manifest is contained all in one period.
+       * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
+       * Elemental
+       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+       */
+      override fun periodTriggers(periodTriggers: List<String>) {
+        cdkBuilder.periodTriggers(periodTriggers)
+      }
+
+      /**
+       * @param periodTriggers A list of triggers that controls when AWS Elemental MediaPackage
+       * separates the MPEG-DASH manifest into multiple periods.
+       * Leave this value empty to indicate that the manifest is contained all in one period.
+       * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
+       * Elemental
+       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+       */
+      override fun periodTriggers(vararg periodTriggers: String): Unit =
+          periodTriggers(periodTriggers.toList())
+
+      /**
+       * @param scteDash The SCTE configuration.</p>.
+       */
+      override fun scteDash(scteDash: IResolvable) {
+        cdkBuilder.scteDash(scteDash.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param scteDash The SCTE configuration.</p>.
+       */
+      override fun scteDash(scteDash: ScteDashProperty) {
+        cdkBuilder.scteDash(scteDash.let(ScteDashProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param scteDash The SCTE configuration.</p>.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("38790bb2dbacae4b3fd4a62c1b3a8203ea772a5c13552e23b40f72c28e14584f")
+      override fun scteDash(scteDash: ScteDashProperty.Builder.() -> Unit): Unit =
+          scteDash(ScteDashProperty(scteDash))
+
+      /**
+       * @param segmentTemplateFormat the value to be set.
+       */
+      override fun segmentTemplateFormat(segmentTemplateFormat: String) {
+        cdkBuilder.segmentTemplateFormat(segmentTemplateFormat)
+      }
+
+      /**
+       * @param suggestedPresentationDelaySeconds The amount of time (in seconds) that the player
+       * should be from the end of the manifest.</p>.
+       */
+      override fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number) {
+        cdkBuilder.suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds)
+      }
+
+      /**
+       * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
+       * Description (MPD).</p>.
+       */
+      override fun utcTiming(utcTiming: IResolvable) {
+        cdkBuilder.utcTiming(utcTiming.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
+       * Description (MPD).</p>.
+       */
+      override fun utcTiming(utcTiming: DashUtcTimingProperty) {
+        cdkBuilder.utcTiming(utcTiming.let(DashUtcTimingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param utcTiming Determines the type of UTC timing included in the DASH Media Presentation
+       * Description (MPD).</p>.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f7fc2a5e9905d25d702d76df25aa6f17a90741e74417f395d514442fb4e389b3")
+      override fun utcTiming(utcTiming: DashUtcTimingProperty.Builder.() -> Unit): Unit =
+          utcTiming(DashUtcTimingProperty(utcTiming))
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashManifestConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashManifestConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        DashManifestConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-drmsignaling)
+       */
+      override fun drmSignaling(): String? = unwrap(this).getDrmSignaling()
+
+      /**
+       * Filter configuration includes settings for manifest filtering, start and end times, and
+       * time delay that apply to all of your egress requests for this manifest.
+       *
+       * </p>
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-filterconfiguration)
+       */
+      override fun filterConfiguration(): Any? = unwrap(this).getFilterConfiguration()
+
+      /**
+       * A short string that's appended to the endpoint URL.
+       *
+       * The manifest name creates a unique path to this endpoint. If you don't enter a value,
+       * MediaPackage uses the default manifest name, index. </p>
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-manifestname)
+       */
+      override fun manifestName(): String = unwrap(this).getManifestName()
+
+      /**
+       * The total duration (in seconds) of the manifest's content.</p>.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-manifestwindowseconds)
+       */
+      override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
+
+      /**
+       * Minimum amount of content (in seconds) that a player must keep available in the
+       * buffer.</p>.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-minbuffertimeseconds)
+       */
+      override fun minBufferTimeSeconds(): Number? = unwrap(this).getMinBufferTimeSeconds()
+
+      /**
+       * Minimum amount of time (in seconds) that the player should wait before requesting updates
+       * to the manifest.</p>.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-minupdateperiodseconds)
+       */
+      override fun minUpdatePeriodSeconds(): Number? = unwrap(this).getMinUpdatePeriodSeconds()
+
+      /**
+       * A list of triggers that controls when AWS Elemental MediaPackage separates the MPEG-DASH
+       * manifest into multiple periods.
+       *
+       * Leave this value empty to indicate that the manifest is contained all in one period.
+       * For more information about periods in the DASH manifest, see [Multi-period DASH in AWS
+       * Elemental
+       * MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/userguide/multi-period.html).</p>
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-periodtriggers)
+       */
+      override fun periodTriggers(): List<String> = unwrap(this).getPeriodTriggers() ?: emptyList()
+
+      /**
+       * The SCTE configuration.</p>.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-sctedash)
+       */
+      override fun scteDash(): Any? = unwrap(this).getScteDash()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-segmenttemplateformat)
+       */
+      override fun segmentTemplateFormat(): String? = unwrap(this).getSegmentTemplateFormat()
+
+      /**
+       * The amount of time (in seconds) that the player should be from the end of the
+       * manifest.</p>.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-suggestedpresentationdelayseconds)
+       */
+      override fun suggestedPresentationDelaySeconds(): Number? =
+          unwrap(this).getSuggestedPresentationDelaySeconds()
+
+      /**
+       * Determines the type of UTC timing included in the DASH Media Presentation Description
+       * (MPD).</p>.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-dashmanifestconfiguration-utctiming)
+       */
+      override fun utcTiming(): Any? = unwrap(this).getUtcTiming()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DashManifestConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashManifestConfigurationProperty):
+          DashManifestConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DashManifestConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DashManifestConfigurationProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashManifestConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashManifestConfigurationProperty
+    }
+  }
+
+  /**
+   * Determines the type of UTC timing included in the DASH Media Presentation Description (MPD).
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * DashUtcTimingProperty dashUtcTimingProperty = DashUtcTimingProperty.builder()
+   * .timingMode("timingMode")
+   * .timingSource("timingSource")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashutctiming.html)
+   */
+  public interface DashUtcTimingProperty {
+    /**
+     * The UTC timing mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashutctiming.html#cfn-mediapackagev2-originendpoint-dashutctiming-timingmode)
+     */
+    public fun timingMode(): String? = unwrap(this).getTimingMode()
+
+    /**
+     * The the method that the player uses to synchronize to coordinated universal time (UTC) wall
+     * clock time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashutctiming.html#cfn-mediapackagev2-originendpoint-dashutctiming-timingsource)
+     */
+    public fun timingSource(): String? = unwrap(this).getTimingSource()
+
+    /**
+     * A builder for [DashUtcTimingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param timingMode The UTC timing mode.
+       */
+      public fun timingMode(timingMode: String)
+
+      /**
+       * @param timingSource The the method that the player uses to synchronize to coordinated
+       * universal time (UTC) wall clock time.
+       */
+      public fun timingSource(timingSource: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashUtcTimingProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashUtcTimingProperty.builder()
+
+      /**
+       * @param timingMode The UTC timing mode.
+       */
+      override fun timingMode(timingMode: String) {
+        cdkBuilder.timingMode(timingMode)
+      }
+
+      /**
+       * @param timingSource The the method that the player uses to synchronize to coordinated
+       * universal time (UTC) wall clock time.
+       */
+      override fun timingSource(timingSource: String) {
+        cdkBuilder.timingSource(timingSource)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashUtcTimingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashUtcTimingProperty,
+    ) : CdkObject(cdkObject),
+        DashUtcTimingProperty {
+      /**
+       * The UTC timing mode.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashutctiming.html#cfn-mediapackagev2-originendpoint-dashutctiming-timingmode)
+       */
+      override fun timingMode(): String? = unwrap(this).getTimingMode()
+
+      /**
+       * The the method that the player uses to synchronize to coordinated universal time (UTC) wall
+       * clock time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-dashutctiming.html#cfn-mediapackagev2-originendpoint-dashutctiming-timingsource)
+       */
+      override fun timingSource(): String? = unwrap(this).getTimingSource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DashUtcTimingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashUtcTimingProperty):
+          DashUtcTimingProperty = CdkObjectWrappers.wrap(cdkObject) as? DashUtcTimingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DashUtcTimingProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashUtcTimingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.DashUtcTimingProperty
+    }
+  }
+
+  /**
    * Use `encryptionContractConfiguration` to configure one or more content encryption keys for your
    * endpoints that use SPEKE Version 2.0. The encryption contract defines which content keys are used
    * to encrypt the audio and video tracks in your stream. To configure the encryption contract,
@@ -801,7 +1669,8 @@ public open class CfnOriginEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionContractConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionContractConfigurationProperty {
       /**
        * A collection of audio encryption presets.
        *
@@ -923,7 +1792,8 @@ public open class CfnOriginEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionMethodProperty,
-    ) : CdkObject(cdkObject), EncryptionMethodProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionMethodProperty {
       /**
        * The encryption method to use.
        *
@@ -1176,7 +2046,8 @@ public open class CfnOriginEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty,
-    ) : CdkObject(cdkObject), EncryptionProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionProperty {
       /**
        * A 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with
        * the key for encrypting content.
@@ -1234,8 +2105,6 @@ public open class CfnOriginEndpoint(
    * Filter configuration includes settings for manifest filtering, start and end times, and time
    * delay that apply to all of your egress requests for this manifest.
    *
-   * </p>
-   *
    * Example:
    *
    * ```
@@ -1257,7 +2126,7 @@ public open class CfnOriginEndpoint(
      * Optionally specify the end time for all of your manifest egress requests.
      *
      * When you include end time, note that you cannot use end time query parameters for this
-     * manifest's endpoint URL.</p>
+     * manifest's endpoint URL.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-filterconfiguration.html#cfn-mediapackagev2-originendpoint-filterconfiguration-end)
      */
@@ -1267,7 +2136,7 @@ public open class CfnOriginEndpoint(
      * Optionally specify one or more manifest filters for all of your manifest egress requests.
      *
      * When you include a manifest filter, note that you cannot use an identical manifest filter
-     * query parameter for this manifest's endpoint URL.</p>
+     * query parameter for this manifest's endpoint URL.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-filterconfiguration.html#cfn-mediapackagev2-originendpoint-filterconfiguration-manifestfilter)
      */
@@ -1277,7 +2146,7 @@ public open class CfnOriginEndpoint(
      * Optionally specify the start time for all of your manifest egress requests.
      *
      * When you include start time, note that you cannot use start time query parameters for this
-     * manifest's endpoint URL.</p>
+     * manifest's endpoint URL.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-filterconfiguration.html#cfn-mediapackagev2-originendpoint-filterconfiguration-start)
      */
@@ -1287,8 +2156,7 @@ public open class CfnOriginEndpoint(
      * Optionally specify the time delay for all of your manifest egress requests.
      *
      * Enter a value that is smaller than your endpoint's startover window. When you include time
-     * delay, note that you cannot use time delay query parameters for this manifest's endpoint
-     * URL.</p>
+     * delay, note that you cannot use time delay query parameters for this manifest's endpoint URL.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-filterconfiguration.html#cfn-mediapackagev2-originendpoint-filterconfiguration-timedelayseconds)
      */
@@ -1302,7 +2170,7 @@ public open class CfnOriginEndpoint(
       /**
        * @param end Optionally specify the end time for all of your manifest egress requests.
        * When you include end time, note that you cannot use end time query parameters for this
-       * manifest's endpoint URL.</p>
+       * manifest's endpoint URL.
        */
       public fun end(end: String)
 
@@ -1310,14 +2178,14 @@ public open class CfnOriginEndpoint(
        * @param manifestFilter Optionally specify one or more manifest filters for all of your
        * manifest egress requests.
        * When you include a manifest filter, note that you cannot use an identical manifest filter
-       * query parameter for this manifest's endpoint URL.</p>
+       * query parameter for this manifest's endpoint URL.
        */
       public fun manifestFilter(manifestFilter: String)
 
       /**
        * @param start Optionally specify the start time for all of your manifest egress requests.
        * When you include start time, note that you cannot use start time query parameters for this
-       * manifest's endpoint URL.</p>
+       * manifest's endpoint URL.
        */
       public fun start(start: String)
 
@@ -1325,8 +2193,7 @@ public open class CfnOriginEndpoint(
        * @param timeDelaySeconds Optionally specify the time delay for all of your manifest egress
        * requests.
        * Enter a value that is smaller than your endpoint's startover window. When you include time
-       * delay, note that you cannot use time delay query parameters for this manifest's endpoint
-       * URL.</p>
+       * delay, note that you cannot use time delay query parameters for this manifest's endpoint URL.
        */
       public fun timeDelaySeconds(timeDelaySeconds: Number)
     }
@@ -1340,7 +2207,7 @@ public open class CfnOriginEndpoint(
       /**
        * @param end Optionally specify the end time for all of your manifest egress requests.
        * When you include end time, note that you cannot use end time query parameters for this
-       * manifest's endpoint URL.</p>
+       * manifest's endpoint URL.
        */
       override fun end(end: String) {
         cdkBuilder.end(end)
@@ -1350,7 +2217,7 @@ public open class CfnOriginEndpoint(
        * @param manifestFilter Optionally specify one or more manifest filters for all of your
        * manifest egress requests.
        * When you include a manifest filter, note that you cannot use an identical manifest filter
-       * query parameter for this manifest's endpoint URL.</p>
+       * query parameter for this manifest's endpoint URL.
        */
       override fun manifestFilter(manifestFilter: String) {
         cdkBuilder.manifestFilter(manifestFilter)
@@ -1359,7 +2226,7 @@ public open class CfnOriginEndpoint(
       /**
        * @param start Optionally specify the start time for all of your manifest egress requests.
        * When you include start time, note that you cannot use start time query parameters for this
-       * manifest's endpoint URL.</p>
+       * manifest's endpoint URL.
        */
       override fun start(start: String) {
         cdkBuilder.start(start)
@@ -1369,8 +2236,7 @@ public open class CfnOriginEndpoint(
        * @param timeDelaySeconds Optionally specify the time delay for all of your manifest egress
        * requests.
        * Enter a value that is smaller than your endpoint's startover window. When you include time
-       * delay, note that you cannot use time delay query parameters for this manifest's endpoint
-       * URL.</p>
+       * delay, note that you cannot use time delay query parameters for this manifest's endpoint URL.
        */
       override fun timeDelaySeconds(timeDelaySeconds: Number) {
         cdkBuilder.timeDelaySeconds(timeDelaySeconds)
@@ -1383,12 +2249,13 @@ public open class CfnOriginEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty,
-    ) : CdkObject(cdkObject), FilterConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FilterConfigurationProperty {
       /**
        * Optionally specify the end time for all of your manifest egress requests.
        *
        * When you include end time, note that you cannot use end time query parameters for this
-       * manifest's endpoint URL.</p>
+       * manifest's endpoint URL.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-filterconfiguration.html#cfn-mediapackagev2-originendpoint-filterconfiguration-end)
        */
@@ -1398,7 +2265,7 @@ public open class CfnOriginEndpoint(
        * Optionally specify one or more manifest filters for all of your manifest egress requests.
        *
        * When you include a manifest filter, note that you cannot use an identical manifest filter
-       * query parameter for this manifest's endpoint URL.</p>
+       * query parameter for this manifest's endpoint URL.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-filterconfiguration.html#cfn-mediapackagev2-originendpoint-filterconfiguration-manifestfilter)
        */
@@ -1408,7 +2275,7 @@ public open class CfnOriginEndpoint(
        * Optionally specify the start time for all of your manifest egress requests.
        *
        * When you include start time, note that you cannot use start time query parameters for this
-       * manifest's endpoint URL.</p>
+       * manifest's endpoint URL.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-filterconfiguration.html#cfn-mediapackagev2-originendpoint-filterconfiguration-start)
        */
@@ -1418,8 +2285,7 @@ public open class CfnOriginEndpoint(
        * Optionally specify the time delay for all of your manifest egress requests.
        *
        * Enter a value that is smaller than your endpoint's startover window. When you include time
-       * delay, note that you cannot use time delay query parameters for this manifest's endpoint
-       * URL.</p>
+       * delay, note that you cannot use time delay query parameters for this manifest's endpoint URL.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-filterconfiguration.html#cfn-mediapackagev2-originendpoint-filterconfiguration-timedelayseconds)
        */
@@ -1441,6 +2307,192 @@ public open class CfnOriginEndpoint(
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty
+    }
+  }
+
+  /**
+   * The failover settings for the endpoint.</p>.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * ForceEndpointErrorConfigurationProperty forceEndpointErrorConfigurationProperty =
+   * ForceEndpointErrorConfigurationProperty.builder()
+   * .endpointErrorConditions(List.of("endpointErrorConditions"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-forceendpointerrorconfiguration.html)
+   */
+  public interface ForceEndpointErrorConfigurationProperty {
+    /**
+     * The failover settings for the endpoint.
+     *
+     * The options are:</p>
+     *
+     * * 
+     *
+     * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
+     *
+     * * 
+     *
+     * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
+     *
+     * * 
+     *
+     * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the current
+     * key period.</p>
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-forceendpointerrorconfiguration.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration-endpointerrorconditions)
+     */
+    public fun endpointErrorConditions(): List<String> = unwrap(this).getEndpointErrorConditions()
+        ?: emptyList()
+
+    /**
+     * A builder for [ForceEndpointErrorConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param endpointErrorConditions The failover settings for the endpoint.
+       * The options are:</p>
+       *
+       * * 
+       *
+       * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
+       *
+       * * 
+       *
+       * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
+       *
+       * * 
+       *
+       * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
+       * current key period.</p>
+       */
+      public fun endpointErrorConditions(endpointErrorConditions: List<String>)
+
+      /**
+       * @param endpointErrorConditions The failover settings for the endpoint.
+       * The options are:</p>
+       *
+       * * 
+       *
+       * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
+       *
+       * * 
+       *
+       * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
+       *
+       * * 
+       *
+       * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
+       * current key period.</p>
+       */
+      public fun endpointErrorConditions(vararg endpointErrorConditions: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty.builder()
+
+      /**
+       * @param endpointErrorConditions The failover settings for the endpoint.
+       * The options are:</p>
+       *
+       * * 
+       *
+       * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
+       *
+       * * 
+       *
+       * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
+       *
+       * * 
+       *
+       * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
+       * current key period.</p>
+       */
+      override fun endpointErrorConditions(endpointErrorConditions: List<String>) {
+        cdkBuilder.endpointErrorConditions(endpointErrorConditions)
+      }
+
+      /**
+       * @param endpointErrorConditions The failover settings for the endpoint.
+       * The options are:</p>
+       *
+       * * 
+       *
+       * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
+       *
+       * * 
+       *
+       * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
+       *
+       * * 
+       *
+       * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
+       * current key period.</p>
+       */
+      override fun endpointErrorConditions(vararg endpointErrorConditions: String): Unit =
+          endpointErrorConditions(endpointErrorConditions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ForceEndpointErrorConfigurationProperty {
+      /**
+       * The failover settings for the endpoint.
+       *
+       * The options are:</p>
+       *
+       * * 
+       *
+       * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
+       *
+       * * 
+       *
+       * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
+       *
+       * * 
+       *
+       * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
+       * current key period.</p>
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-forceendpointerrorconfiguration.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration-endpointerrorconditions)
+       */
+      override fun endpointErrorConditions(): List<String> =
+          unwrap(this).getEndpointErrorConditions() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ForceEndpointErrorConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty):
+          ForceEndpointErrorConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ForceEndpointErrorConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ForceEndpointErrorConfigurationProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty
     }
   }
 
@@ -1721,7 +2773,8 @@ public open class CfnOriginEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.HlsManifestConfigurationProperty,
-    ) : CdkObject(cdkObject), HlsManifestConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        HlsManifestConfigurationProperty {
       /**
        * The name of the child manifest associated with the HLS manifest configuration.
        *
@@ -2110,7 +3163,8 @@ public open class CfnOriginEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.LowLatencyHlsManifestConfigurationProperty,
-    ) : CdkObject(cdkObject), LowLatencyHlsManifestConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LowLatencyHlsManifestConfigurationProperty {
       /**
        * The name of the child manifest associated with the low-latency HLS (LL-HLS) manifest
        * configuration of the origin endpoint.
@@ -2202,6 +3256,123 @@ public open class CfnOriginEndpoint(
   }
 
   /**
+   * The SCTE configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * ScteDashProperty scteDashProperty = ScteDashProperty.builder()
+   * .adMarkerDash("adMarkerDash")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-sctedash.html)
+   */
+  public interface ScteDashProperty {
+    /**
+     * Choose how ad markers are included in the packaged content.
+     *
+     * If you include ad markers in the content stream in your upstream encoders, then you need to
+     * inform MediaPackage what to do with the ad markers in the output.
+     *
+     * Value description:
+     *
+     * * `Binary` - The SCTE-35 marker is expressed as a hex-string (Base64 string) rather than full
+     * XML.
+     * * `XML` - The SCTE marker is expressed fully in XML.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-sctedash.html#cfn-mediapackagev2-originendpoint-sctedash-admarkerdash)
+     */
+    public fun adMarkerDash(): String? = unwrap(this).getAdMarkerDash()
+
+    /**
+     * A builder for [ScteDashProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param adMarkerDash Choose how ad markers are included in the packaged content.
+       * If you include ad markers in the content stream in your upstream encoders, then you need to
+       * inform MediaPackage what to do with the ad markers in the output.
+       *
+       * Value description:
+       *
+       * * `Binary` - The SCTE-35 marker is expressed as a hex-string (Base64 string) rather than
+       * full XML.
+       * * `XML` - The SCTE marker is expressed fully in XML.
+       */
+      public fun adMarkerDash(adMarkerDash: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteDashProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteDashProperty.builder()
+
+      /**
+       * @param adMarkerDash Choose how ad markers are included in the packaged content.
+       * If you include ad markers in the content stream in your upstream encoders, then you need to
+       * inform MediaPackage what to do with the ad markers in the output.
+       *
+       * Value description:
+       *
+       * * `Binary` - The SCTE-35 marker is expressed as a hex-string (Base64 string) rather than
+       * full XML.
+       * * `XML` - The SCTE marker is expressed fully in XML.
+       */
+      override fun adMarkerDash(adMarkerDash: String) {
+        cdkBuilder.adMarkerDash(adMarkerDash)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteDashProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteDashProperty,
+    ) : CdkObject(cdkObject),
+        ScteDashProperty {
+      /**
+       * Choose how ad markers are included in the packaged content.
+       *
+       * If you include ad markers in the content stream in your upstream encoders, then you need to
+       * inform MediaPackage what to do with the ad markers in the output.
+       *
+       * Value description:
+       *
+       * * `Binary` - The SCTE-35 marker is expressed as a hex-string (Base64 string) rather than
+       * full XML.
+       * * `XML` - The SCTE marker is expressed fully in XML.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-sctedash.html#cfn-mediapackagev2-originendpoint-sctedash-admarkerdash)
+       */
+      override fun adMarkerDash(): String? = unwrap(this).getAdMarkerDash()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScteDashProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteDashProperty):
+          ScteDashProperty = CdkObjectWrappers.wrap(cdkObject) as? ScteDashProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScteDashProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteDashProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteDashProperty
+    }
+  }
+
+  /**
    * The SCTE-35 HLS configuration associated with the origin endpoint.
    *
    * Example:
@@ -2255,7 +3426,8 @@ public open class CfnOriginEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty,
-    ) : CdkObject(cdkObject), ScteHlsProperty {
+    ) : CdkObject(cdkObject),
+        ScteHlsProperty {
       /**
        * The SCTE-35 HLS ad-marker configuration.
        *
@@ -2346,7 +3518,8 @@ public open class CfnOriginEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteProperty,
-    ) : CdkObject(cdkObject), ScteProperty {
+    ) : CdkObject(cdkObject),
+        ScteProperty {
       /**
        * The filter associated with the SCTE-35 configuration.
        *
@@ -2656,7 +3829,8 @@ public open class CfnOriginEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty,
-    ) : CdkObject(cdkObject), SegmentProperty {
+    ) : CdkObject(cdkObject),
+        SegmentProperty {
       /**
        * Whether to use encryption for the segment.
        *
@@ -2956,7 +4130,8 @@ public open class CfnOriginEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty,
-    ) : CdkObject(cdkObject), SpekeKeyProviderProperty {
+    ) : CdkObject(cdkObject),
+        SpekeKeyProviderProperty {
       /**
        * The DRM solution provider you're using to protect your content during distribution.
        *

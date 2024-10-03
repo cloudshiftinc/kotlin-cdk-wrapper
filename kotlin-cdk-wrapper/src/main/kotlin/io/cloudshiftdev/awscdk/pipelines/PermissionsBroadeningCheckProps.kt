@@ -18,8 +18,7 @@ import kotlin.Unit
  * CodePipeline pipeline;
  * MyApplicationStage stage = new MyApplicationStage(this, "MyApplication");
  * pipeline.addStage(stage, AddStageOpts.builder()
- * .pre(List.of(
- * ConfirmPermissionsBroadening.Builder.create("Check").stage(stage).build()))
+ * .pre(List.of(ConfirmPermissionsBroadening.Builder.create("Check").stage(stage).build()))
  * .build());
  * ```
  */
@@ -82,7 +81,8 @@ public interface PermissionsBroadeningCheckProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.PermissionsBroadeningCheckProps,
-  ) : CdkObject(cdkObject), PermissionsBroadeningCheckProps {
+  ) : CdkObject(cdkObject),
+      PermissionsBroadeningCheckProps {
     /**
      * Topic to send notifications when a human needs to give manual confirmation.
      *

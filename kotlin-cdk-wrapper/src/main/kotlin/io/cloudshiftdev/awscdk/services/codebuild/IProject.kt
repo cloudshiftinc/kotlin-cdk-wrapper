@@ -599,7 +599,8 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.IProject,
-  ) : CdkObject(cdkObject), IProject {
+  ) : CdkObject(cdkObject),
+      IProject {
     /**
      * @param policyStatement 
      */

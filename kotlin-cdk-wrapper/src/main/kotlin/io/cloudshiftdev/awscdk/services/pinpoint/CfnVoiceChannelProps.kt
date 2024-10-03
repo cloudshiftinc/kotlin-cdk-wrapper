@@ -98,7 +98,8 @@ public interface CfnVoiceChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnVoiceChannelProps,
-  ) : CdkObject(cdkObject), CfnVoiceChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnVoiceChannelProps {
     /**
      * The unique identifier for the Amazon Pinpoint application that the voice channel applies to.
      *

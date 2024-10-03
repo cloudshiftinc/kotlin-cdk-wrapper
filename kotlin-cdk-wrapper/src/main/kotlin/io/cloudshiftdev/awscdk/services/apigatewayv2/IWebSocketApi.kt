@@ -20,7 +20,8 @@ import kotlin.jvm.JvmName
 public interface IWebSocketApi : IApi {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketApi,
-  ) : CdkObject(cdkObject), IWebSocketApi {
+  ) : CdkObject(cdkObject),
+      IWebSocketApi {
     /**
      * The default endpoint for an API.
      */

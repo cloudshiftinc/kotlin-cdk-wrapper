@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -33,6 +34,12 @@ import kotlin.jvm.JvmName
  * .anonymousAuthEnabled(false)
  * .enabled(false)
  * .internalUserDatabaseEnabled(false)
+ * .jwtOptions(JWTOptionsProperty.builder()
+ * .enabled(false)
+ * .publicKey("publicKey")
+ * .rolesKey("rolesKey")
+ * .subjectKey("subjectKey")
+ * .build())
  * .masterUserOptions(MasterUserOptionsProperty.builder()
  * .masterUserArn("masterUserArn")
  * .masterUserName("masterUserName")
@@ -114,6 +121,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .build())
+ * .skipShardMigrationWait(false)
  * .snapshotOptions(SnapshotOptionsProperty.builder()
  * .automatedSnapshotStartHour(123)
  * .build())
@@ -308,6 +316,11 @@ public interface CfnDomainProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-offpeakwindowoptions)
    */
   public fun offPeakWindowOptions(): Any? = unwrap(this).getOffPeakWindowOptions()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-skipshardmigrationwait)
+   */
+  public fun skipShardMigrationWait(): Any? = unwrap(this).getSkipShardMigrationWait()
 
   /**
    * *DEPRECATED* .
@@ -668,6 +681,16 @@ public interface CfnDomainProps {
     @JvmName("ca9d785ff5be5741e5ec97deacd17bda8dd39a70da0db7a61d3efe04fba61c09")
     public
         fun offPeakWindowOptions(offPeakWindowOptions: CfnDomain.OffPeakWindowOptionsProperty.Builder.() -> Unit)
+
+    /**
+     * @param skipShardMigrationWait the value to be set.
+     */
+    public fun skipShardMigrationWait(skipShardMigrationWait: Boolean)
+
+    /**
+     * @param skipShardMigrationWait the value to be set.
+     */
+    public fun skipShardMigrationWait(skipShardMigrationWait: IResolvable)
 
     /**
      * @param snapshotOptions *DEPRECATED* .
@@ -1148,6 +1171,20 @@ public interface CfnDomainProps {
         Unit = offPeakWindowOptions(CfnDomain.OffPeakWindowOptionsProperty(offPeakWindowOptions))
 
     /**
+     * @param skipShardMigrationWait the value to be set.
+     */
+    override fun skipShardMigrationWait(skipShardMigrationWait: Boolean) {
+      cdkBuilder.skipShardMigrationWait(skipShardMigrationWait)
+    }
+
+    /**
+     * @param skipShardMigrationWait the value to be set.
+     */
+    override fun skipShardMigrationWait(skipShardMigrationWait: IResolvable) {
+      cdkBuilder.skipShardMigrationWait(skipShardMigrationWait.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * @param snapshotOptions *DEPRECATED* .
      * The automated snapshot configuration for the OpenSearch Service domain indexes.
      */
@@ -1263,7 +1300,8 @@ public interface CfnDomainProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomainProps,
-  ) : CdkObject(cdkObject), CfnDomainProps {
+  ) : CdkObject(cdkObject),
+      CfnDomainProps {
     /**
      * An AWS Identity and Access Management ( IAM ) policy document that specifies who can access
      * the OpenSearch Service domain and their permissions.
@@ -1438,6 +1476,11 @@ public interface CfnDomainProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-offpeakwindowoptions)
      */
     override fun offPeakWindowOptions(): Any? = unwrap(this).getOffPeakWindowOptions()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-skipshardmigrationwait)
+     */
+    override fun skipShardMigrationWait(): Any? = unwrap(this).getSkipShardMigrationWait()
 
     /**
      * *DEPRECATED* .

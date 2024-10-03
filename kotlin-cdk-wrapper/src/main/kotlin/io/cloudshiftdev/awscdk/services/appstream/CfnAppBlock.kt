@@ -78,7 +78,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAppBlock(
   cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlock,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -663,7 +665,8 @@ public open class CfnAppBlock(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlock.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * The S3 bucket of the app block.
        *
@@ -845,7 +848,8 @@ public open class CfnAppBlock(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlock.ScriptDetailsProperty,
-    ) : CdkObject(cdkObject), ScriptDetailsProperty {
+    ) : CdkObject(cdkObject),
+        ScriptDetailsProperty {
       /**
        * The parameters used in the run path for the script.
        *

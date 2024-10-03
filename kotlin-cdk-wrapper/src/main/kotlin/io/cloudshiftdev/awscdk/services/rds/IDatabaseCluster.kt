@@ -543,7 +543,8 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.IDatabaseCluster,
-  ) : CdkObject(cdkObject), IDatabaseCluster {
+  ) : CdkObject(cdkObject),
+      IDatabaseCluster {
     /**
      * Add a new db proxy to this cluster.
      *

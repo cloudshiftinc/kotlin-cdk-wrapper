@@ -95,10 +95,10 @@ public interface BaseServiceProps : BaseServiceOptions {
    *
    * LaunchType will be omitted if capacity provider strategies are specified on the service.
    *
-   * @see <a href=" -
-   * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy
-   * Valid values are: LaunchType.ECS or LaunchType.FARGATE or LaunchType.EXTERNAL"> -
-   * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy
+   * @see <a
+   * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy
+   * Valid values are: LaunchType.ECS or LaunchType.FARGATE or
+   * LaunchType.EXTERNAL">https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy
    * Valid values are: LaunchType.ECS or LaunchType.FARGATE or LaunchType.EXTERNAL</a>
    */
   public fun launchType(): LaunchType
@@ -508,7 +508,8 @@ public interface BaseServiceProps : BaseServiceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.BaseServiceProps,
-  ) : CdkObject(cdkObject), BaseServiceProps {
+  ) : CdkObject(cdkObject),
+      BaseServiceProps {
     /**
      * A list of Capacity Provider strategies used to place a service.
      *
@@ -604,10 +605,10 @@ public interface BaseServiceProps : BaseServiceOptions {
      *
      * LaunchType will be omitted if capacity provider strategies are specified on the service.
      *
-     * @see <a href=" -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy
-     * Valid values are: LaunchType.ECS or LaunchType.FARGATE or LaunchType.EXTERNAL"> -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy
+     * @see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy
+     * Valid values are: LaunchType.ECS or LaunchType.FARGATE or
+     * LaunchType.EXTERNAL">https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy
      * Valid values are: LaunchType.ECS or LaunchType.FARGATE or LaunchType.EXTERNAL</a>
      */
     override fun launchType(): LaunchType = unwrap(this).getLaunchType().let(LaunchType::wrap)

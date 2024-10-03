@@ -148,6 +148,12 @@ public open class SqlServerEngineVersion(
     public val VER_13_00_6435_1_V1: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_13_00_6435_1_V1)
 
+    public val VER_13_00_6441_1_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_13_00_6441_1_V1)
+
+    public val VER_13_00_6445_1_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_13_00_6445_1_V1)
+
     public val VER_14: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_14)
 
@@ -196,6 +202,12 @@ public open class SqlServerEngineVersion(
     public val VER_14_00_3465_1_V1: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_14_00_3465_1_V1)
 
+    public val VER_14_00_3471_2_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_14_00_3471_2_V1)
+
+    public val VER_14_00_3475_1_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_14_00_3475_1_V1)
+
     public val VER_15: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_15)
 
@@ -232,6 +244,21 @@ public open class SqlServerEngineVersion(
     public val VER_15_00_4355_3_V1: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_15_00_4355_3_V1)
 
+    public val VER_15_00_4365_2_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_15_00_4365_2_V1)
+
+    public val VER_15_00_4375_4_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_15_00_4375_4_V1)
+
+    public val VER_15_00_4382_1_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_15_00_4382_1_V1)
+
+    public val VER_15_00_4385_2_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_15_00_4385_2_V1)
+
+    public val VER_15_00_4390_2_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_15_00_4390_2_V1)
+
     public val VER_16: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_16)
 
@@ -243,6 +270,24 @@ public open class SqlServerEngineVersion(
 
     public val VER_16_00_4105_2_V1: SqlServerEngineVersion =
         SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_16_00_4105_2_V1)
+
+    public val VER_16_00_4115_5_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_16_00_4115_5_V1)
+
+    public val VER_16_00_4120_1_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_16_00_4120_1_V1)
+
+    public val VER_16_00_4125_3_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_16_00_4125_3_V1)
+
+    public val VER_16_00_4131_2_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_16_00_4131_2_V1)
+
+    public val VER_16_00_4135_4_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_16_00_4135_4_V1)
+
+    public val VER_16_00_4140_3_V1: SqlServerEngineVersion =
+        SqlServerEngineVersion.wrap(software.amazon.awscdk.services.rds.SqlServerEngineVersion.VER_16_00_4140_3_V1)
 
     public fun of(sqlServerFullVersion: String, sqlServerMajorVersion: String):
         SqlServerEngineVersion =

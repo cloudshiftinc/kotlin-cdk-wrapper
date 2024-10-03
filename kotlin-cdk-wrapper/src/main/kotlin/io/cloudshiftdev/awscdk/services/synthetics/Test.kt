@@ -13,6 +13,7 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.*;
  * Canary canary = Canary.Builder.create(this, "MyCanary")
  * .schedule(Schedule.rate(Duration.minutes(5)))
  * .test(Test.custom(CustomTestOptions.builder()
@@ -20,8 +21,7 @@ import kotlin.jvm.JvmName
  * .handler("index.handler")
  * .build()))
  * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
- * .environmentVariables(Map.of(
- * "stage", "prod"))
+ * .memory(Size.mebibytes(1024))
  * .build();
  * ```
  */

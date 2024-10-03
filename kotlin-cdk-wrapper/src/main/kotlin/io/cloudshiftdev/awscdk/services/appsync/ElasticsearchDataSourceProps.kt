@@ -127,7 +127,8 @@ public interface ElasticsearchDataSourceProps : BackedDataSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.ElasticsearchDataSourceProps,
-  ) : CdkObject(cdkObject), ElasticsearchDataSourceProps {
+  ) : CdkObject(cdkObject),
+      ElasticsearchDataSourceProps {
     /**
      * The API to attach this data source to.
      */

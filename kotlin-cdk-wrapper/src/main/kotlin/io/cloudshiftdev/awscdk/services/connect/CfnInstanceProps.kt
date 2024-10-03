@@ -202,7 +202,8 @@ public interface CfnInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnInstanceProps,
-  ) : CdkObject(cdkObject), CfnInstanceProps {
+  ) : CdkObject(cdkObject),
+      CfnInstanceProps {
     /**
      * A toggle for an individual feature at the instance level.
      *

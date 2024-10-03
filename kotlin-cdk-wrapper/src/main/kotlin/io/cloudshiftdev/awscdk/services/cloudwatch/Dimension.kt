@@ -77,7 +77,8 @@ public interface Dimension {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.Dimension,
-  ) : CdkObject(cdkObject), Dimension {
+  ) : CdkObject(cdkObject),
+      Dimension {
     /**
      * Name of the dimension.
      */

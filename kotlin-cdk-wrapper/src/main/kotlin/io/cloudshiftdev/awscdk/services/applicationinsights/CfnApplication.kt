@@ -77,6 +77,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .logPath("logPath")
  * .patternSet("patternSet")
  * .build()))
+ * .netWeaverPrometheusExporter(NetWeaverPrometheusExporterProperty.builder()
+ * .instanceNumbers(List.of("instanceNumbers"))
+ * .sapsid("sapsid")
+ * // the properties below are optional
+ * .prometheusPort("prometheusPort")
+ * .build())
+ * .processes(List.of(ProcessProperty.builder()
+ * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+ * .alarmMetricName("alarmMetricName")
+ * .build()))
+ * .processName("processName")
+ * .build()))
+ * .sqlServerPrometheusExporter(SQLServerPrometheusExporterProperty.builder()
+ * .prometheusPort("prometheusPort")
+ * .sqlSecretName("sqlSecretName")
+ * .build())
  * .windowsEvents(List.of(WindowsEventProperty.builder()
  * .eventLevels(List.of("eventLevels"))
  * .eventName("eventName")
@@ -97,6 +113,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .logGroupName("logGroupName")
  * .logPath("logPath")
  * .patternSet("patternSet")
+ * .build()))
+ * .processes(List.of(ProcessProperty.builder()
+ * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+ * .alarmMetricName("alarmMetricName")
+ * .build()))
+ * .processName("processName")
  * .build()))
  * .windowsEvents(List.of(WindowsEventProperty.builder()
  * .eventLevels(List.of("eventLevels"))
@@ -143,6 +165,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .logPath("logPath")
  * .patternSet("patternSet")
  * .build()))
+ * .netWeaverPrometheusExporter(NetWeaverPrometheusExporterProperty.builder()
+ * .instanceNumbers(List.of("instanceNumbers"))
+ * .sapsid("sapsid")
+ * // the properties below are optional
+ * .prometheusPort("prometheusPort")
+ * .build())
+ * .processes(List.of(ProcessProperty.builder()
+ * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+ * .alarmMetricName("alarmMetricName")
+ * .build()))
+ * .processName("processName")
+ * .build()))
+ * .sqlServerPrometheusExporter(SQLServerPrometheusExporterProperty.builder()
+ * .prometheusPort("prometheusPort")
+ * .sqlSecretName("sqlSecretName")
+ * .build())
  * .windowsEvents(List.of(WindowsEventProperty.builder()
  * .eventLevels(List.of("eventLevels"))
  * .eventName("eventName")
@@ -163,6 +201,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .logGroupName("logGroupName")
  * .logPath("logPath")
  * .patternSet("patternSet")
+ * .build()))
+ * .processes(List.of(ProcessProperty.builder()
+ * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+ * .alarmMetricName("alarmMetricName")
+ * .build()))
+ * .processName("processName")
  * .build()))
  * .windowsEvents(List.of(WindowsEventProperty.builder()
  * .eventLevels(List.of("eventLevels"))
@@ -203,7 +247,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplication(
   cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -507,6 +553,9 @@ public open class CfnApplication(
     /**
      * The monitoring settings of the components.
      *
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-componentmonitoringsettings)
      * @param componentMonitoringSettings The monitoring settings of the components. 
      */
@@ -515,6 +564,9 @@ public open class CfnApplication(
     /**
      * The monitoring settings of the components.
      *
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-componentmonitoringsettings)
      * @param componentMonitoringSettings The monitoring settings of the components. 
      */
@@ -522,6 +574,9 @@ public open class CfnApplication(
 
     /**
      * The monitoring settings of the components.
+     *
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-componentmonitoringsettings)
      * @param componentMonitoringSettings The monitoring settings of the components. 
@@ -727,6 +782,9 @@ public open class CfnApplication(
     /**
      * The monitoring settings of the components.
      *
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-componentmonitoringsettings)
      * @param componentMonitoringSettings The monitoring settings of the components. 
      */
@@ -737,6 +795,9 @@ public open class CfnApplication(
     /**
      * The monitoring settings of the components.
      *
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-componentmonitoringsettings)
      * @param componentMonitoringSettings The monitoring settings of the components. 
      */
@@ -746,6 +807,9 @@ public open class CfnApplication(
 
     /**
      * The monitoring settings of the components.
+     *
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-componentmonitoringsettings)
      * @param componentMonitoringSettings The monitoring settings of the components. 
@@ -1013,7 +1077,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty,
-    ) : CdkObject(cdkObject), AlarmMetricProperty {
+    ) : CdkObject(cdkObject),
+        AlarmMetricProperty {
       /**
        * The name of the metric to be monitored for the component.
        *
@@ -1121,7 +1186,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty,
-    ) : CdkObject(cdkObject), AlarmProperty {
+    ) : CdkObject(cdkObject),
+        AlarmProperty {
       /**
        * The name of the CloudWatch alarm to be monitored for the component.
        *
@@ -1199,6 +1265,22 @@ public open class CfnApplication(
    * .logPath("logPath")
    * .patternSet("patternSet")
    * .build()))
+   * .netWeaverPrometheusExporter(NetWeaverPrometheusExporterProperty.builder()
+   * .instanceNumbers(List.of("instanceNumbers"))
+   * .sapsid("sapsid")
+   * // the properties below are optional
+   * .prometheusPort("prometheusPort")
+   * .build())
+   * .processes(List.of(ProcessProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .processName("processName")
+   * .build()))
+   * .sqlServerPrometheusExporter(SQLServerPrometheusExporterProperty.builder()
+   * .prometheusPort("prometheusPort")
+   * .sqlSecretName("sqlSecretName")
+   * .build())
    * .windowsEvents(List.of(WindowsEventProperty.builder()
    * .eventLevels(List.of("eventLevels"))
    * .eventName("eventName")
@@ -1219,6 +1301,12 @@ public open class CfnApplication(
    * .logGroupName("logGroupName")
    * .logPath("logPath")
    * .patternSet("patternSet")
+   * .build()))
+   * .processes(List.of(ProcessProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .processName("processName")
    * .build()))
    * .windowsEvents(List.of(WindowsEventProperty.builder()
    * .eventLevels(List.of("eventLevels"))
@@ -1346,7 +1434,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty,
-    ) : CdkObject(cdkObject), ComponentConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ComponentConfigurationProperty {
       /**
        * The configuration settings.
        *
@@ -1432,6 +1521,22 @@ public open class CfnApplication(
    * .logPath("logPath")
    * .patternSet("patternSet")
    * .build()))
+   * .netWeaverPrometheusExporter(NetWeaverPrometheusExporterProperty.builder()
+   * .instanceNumbers(List.of("instanceNumbers"))
+   * .sapsid("sapsid")
+   * // the properties below are optional
+   * .prometheusPort("prometheusPort")
+   * .build())
+   * .processes(List.of(ProcessProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .processName("processName")
+   * .build()))
+   * .sqlServerPrometheusExporter(SQLServerPrometheusExporterProperty.builder()
+   * .prometheusPort("prometheusPort")
+   * .sqlSecretName("sqlSecretName")
+   * .build())
    * .windowsEvents(List.of(WindowsEventProperty.builder()
    * .eventLevels(List.of("eventLevels"))
    * .eventName("eventName")
@@ -1452,6 +1557,12 @@ public open class CfnApplication(
    * .logGroupName("logGroupName")
    * .logPath("logPath")
    * .patternSet("patternSet")
+   * .build()))
+   * .processes(List.of(ProcessProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .processName("processName")
    * .build()))
    * .windowsEvents(List.of(WindowsEventProperty.builder()
    * .eventLevels(List.of("eventLevels"))
@@ -1498,6 +1609,22 @@ public open class CfnApplication(
    * .logPath("logPath")
    * .patternSet("patternSet")
    * .build()))
+   * .netWeaverPrometheusExporter(NetWeaverPrometheusExporterProperty.builder()
+   * .instanceNumbers(List.of("instanceNumbers"))
+   * .sapsid("sapsid")
+   * // the properties below are optional
+   * .prometheusPort("prometheusPort")
+   * .build())
+   * .processes(List.of(ProcessProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .processName("processName")
+   * .build()))
+   * .sqlServerPrometheusExporter(SQLServerPrometheusExporterProperty.builder()
+   * .prometheusPort("prometheusPort")
+   * .sqlSecretName("sqlSecretName")
+   * .build())
    * .windowsEvents(List.of(WindowsEventProperty.builder()
    * .eventLevels(List.of("eventLevels"))
    * .eventName("eventName")
@@ -1519,6 +1646,12 @@ public open class CfnApplication(
    * .logPath("logPath")
    * .patternSet("patternSet")
    * .build()))
+   * .processes(List.of(ProcessProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .processName("processName")
+   * .build()))
    * .windowsEvents(List.of(WindowsEventProperty.builder()
    * .eventLevels(List.of("eventLevels"))
    * .eventName("eventName")
@@ -1538,6 +1671,8 @@ public open class CfnApplication(
   public interface ComponentMonitoringSettingProperty {
     /**
      * The ARN of the component.
+     *
+     * Either the component ARN or the component name is required.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentarn)
      */
@@ -1562,6 +1697,8 @@ public open class CfnApplication(
 
     /**
      * The name of the component.
+     *
+     * Either the component ARN or the component name is required.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentname)
      */
@@ -1605,6 +1742,7 @@ public open class CfnApplication(
     public interface Builder {
       /**
        * @param componentArn The ARN of the component.
+       * Either the component ARN or the component name is required.
        */
       public fun componentArn(componentArn: String)
 
@@ -1625,6 +1763,7 @@ public open class CfnApplication(
 
       /**
        * @param componentName The name of the component.
+       * Either the component ARN or the component name is required.
        */
       public fun componentName(componentName: String)
 
@@ -1691,6 +1830,7 @@ public open class CfnApplication(
 
       /**
        * @param componentArn The ARN of the component.
+       * Either the component ARN or the component name is required.
        */
       override fun componentArn(componentArn: String) {
         cdkBuilder.componentArn(componentArn)
@@ -1715,6 +1855,7 @@ public open class CfnApplication(
 
       /**
        * @param componentName The name of the component.
+       * Either the component ARN or the component name is required.
        */
       override fun componentName(componentName: String) {
         cdkBuilder.componentName(componentName)
@@ -1795,9 +1936,12 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty,
-    ) : CdkObject(cdkObject), ComponentMonitoringSettingProperty {
+    ) : CdkObject(cdkObject),
+        ComponentMonitoringSettingProperty {
       /**
        * The ARN of the component.
+       *
+       * Either the component ARN or the component name is required.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentarn)
        */
@@ -1823,6 +1967,8 @@ public open class CfnApplication(
 
       /**
        * The name of the component.
+       *
+       * Either the component ARN or the component name is required.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentname)
        */
@@ -1924,6 +2070,22 @@ public open class CfnApplication(
    * .logPath("logPath")
    * .patternSet("patternSet")
    * .build()))
+   * .netWeaverPrometheusExporter(NetWeaverPrometheusExporterProperty.builder()
+   * .instanceNumbers(List.of("instanceNumbers"))
+   * .sapsid("sapsid")
+   * // the properties below are optional
+   * .prometheusPort("prometheusPort")
+   * .build())
+   * .processes(List.of(ProcessProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .processName("processName")
+   * .build()))
+   * .sqlServerPrometheusExporter(SQLServerPrometheusExporterProperty.builder()
+   * .prometheusPort("prometheusPort")
+   * .sqlSecretName("sqlSecretName")
+   * .build())
    * .windowsEvents(List.of(WindowsEventProperty.builder()
    * .eventLevels(List.of("eventLevels"))
    * .eventName("eventName")
@@ -1984,6 +2146,29 @@ public open class CfnApplication(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html#cfn-applicationinsights-application-configurationdetails-logs)
      */
     public fun logs(): Any? = unwrap(this).getLogs()
+
+    /**
+     * The NetWeaver Prometheus Exporter Settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html#cfn-applicationinsights-application-configurationdetails-netweaverprometheusexporter)
+     */
+    public fun netWeaverPrometheusExporter(): Any? = unwrap(this).getNetWeaverPrometheusExporter()
+
+    /**
+     * A list of processes to monitor for the component.
+     *
+     * Only Windows EC2 instances can have a processes section.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html#cfn-applicationinsights-application-configurationdetails-processes)
+     */
+    public fun processes(): Any? = unwrap(this).getProcesses()
+
+    /**
+     * The SQL prometheus exporter settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html#cfn-applicationinsights-application-configurationdetails-sqlserverprometheusexporter)
+     */
+    public fun sqlServerPrometheusExporter(): Any? = unwrap(this).getSqlServerPrometheusExporter()
 
     /**
      * A list of Windows Events to monitor for the component.
@@ -2107,6 +2292,62 @@ public open class CfnApplication(
        * Only Amazon EC2 instances can use `Logs` .
        */
       public fun logs(vararg logs: Any)
+
+      /**
+       * @param netWeaverPrometheusExporter The NetWeaver Prometheus Exporter Settings.
+       */
+      public fun netWeaverPrometheusExporter(netWeaverPrometheusExporter: IResolvable)
+
+      /**
+       * @param netWeaverPrometheusExporter The NetWeaver Prometheus Exporter Settings.
+       */
+      public
+          fun netWeaverPrometheusExporter(netWeaverPrometheusExporter: NetWeaverPrometheusExporterProperty)
+
+      /**
+       * @param netWeaverPrometheusExporter The NetWeaver Prometheus Exporter Settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9519c8440a725a03e69aab7dadf680a338b947013076d83ce8f3062378bd9209")
+      public
+          fun netWeaverPrometheusExporter(netWeaverPrometheusExporter: NetWeaverPrometheusExporterProperty.Builder.() -> Unit)
+
+      /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      public fun processes(processes: IResolvable)
+
+      /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      public fun processes(processes: List<Any>)
+
+      /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      public fun processes(vararg processes: Any)
+
+      /**
+       * @param sqlServerPrometheusExporter The SQL prometheus exporter settings.
+       */
+      public fun sqlServerPrometheusExporter(sqlServerPrometheusExporter: IResolvable)
+
+      /**
+       * @param sqlServerPrometheusExporter The SQL prometheus exporter settings.
+       */
+      public
+          fun sqlServerPrometheusExporter(sqlServerPrometheusExporter: SQLServerPrometheusExporterProperty)
+
+      /**
+       * @param sqlServerPrometheusExporter The SQL prometheus exporter settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2744e9a795d4b99f9b263fe804c115e7b06df88360c857b02942d50d18d2982")
+      public
+          fun sqlServerPrometheusExporter(sqlServerPrometheusExporter: SQLServerPrometheusExporterProperty.Builder.() -> Unit)
 
       /**
        * @param windowsEvents A list of Windows Events to monitor for the component.
@@ -2272,6 +2513,78 @@ public open class CfnApplication(
       override fun logs(vararg logs: Any): Unit = logs(logs.toList())
 
       /**
+       * @param netWeaverPrometheusExporter The NetWeaver Prometheus Exporter Settings.
+       */
+      override fun netWeaverPrometheusExporter(netWeaverPrometheusExporter: IResolvable) {
+        cdkBuilder.netWeaverPrometheusExporter(netWeaverPrometheusExporter.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param netWeaverPrometheusExporter The NetWeaver Prometheus Exporter Settings.
+       */
+      override
+          fun netWeaverPrometheusExporter(netWeaverPrometheusExporter: NetWeaverPrometheusExporterProperty) {
+        cdkBuilder.netWeaverPrometheusExporter(netWeaverPrometheusExporter.let(NetWeaverPrometheusExporterProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param netWeaverPrometheusExporter The NetWeaver Prometheus Exporter Settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9519c8440a725a03e69aab7dadf680a338b947013076d83ce8f3062378bd9209")
+      override
+          fun netWeaverPrometheusExporter(netWeaverPrometheusExporter: NetWeaverPrometheusExporterProperty.Builder.() -> Unit):
+          Unit =
+          netWeaverPrometheusExporter(NetWeaverPrometheusExporterProperty(netWeaverPrometheusExporter))
+
+      /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      override fun processes(processes: IResolvable) {
+        cdkBuilder.processes(processes.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      override fun processes(processes: List<Any>) {
+        cdkBuilder.processes(processes.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      override fun processes(vararg processes: Any): Unit = processes(processes.toList())
+
+      /**
+       * @param sqlServerPrometheusExporter The SQL prometheus exporter settings.
+       */
+      override fun sqlServerPrometheusExporter(sqlServerPrometheusExporter: IResolvable) {
+        cdkBuilder.sqlServerPrometheusExporter(sqlServerPrometheusExporter.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param sqlServerPrometheusExporter The SQL prometheus exporter settings.
+       */
+      override
+          fun sqlServerPrometheusExporter(sqlServerPrometheusExporter: SQLServerPrometheusExporterProperty) {
+        cdkBuilder.sqlServerPrometheusExporter(sqlServerPrometheusExporter.let(SQLServerPrometheusExporterProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param sqlServerPrometheusExporter The SQL prometheus exporter settings.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e2744e9a795d4b99f9b263fe804c115e7b06df88360c857b02942d50d18d2982")
+      override
+          fun sqlServerPrometheusExporter(sqlServerPrometheusExporter: SQLServerPrometheusExporterProperty.Builder.() -> Unit):
+          Unit =
+          sqlServerPrometheusExporter(SQLServerPrometheusExporterProperty(sqlServerPrometheusExporter))
+
+      /**
        * @param windowsEvents A list of Windows Events to monitor for the component.
        * Only Amazon EC2 instances running on Windows can use `WindowsEvents` .
        */
@@ -2301,7 +2614,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty,
-    ) : CdkObject(cdkObject), ConfigurationDetailsProperty {
+    ) : CdkObject(cdkObject),
+        ConfigurationDetailsProperty {
       /**
        * A list of metrics to monitor for the component.
        *
@@ -2350,6 +2664,31 @@ public open class CfnApplication(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html#cfn-applicationinsights-application-configurationdetails-logs)
        */
       override fun logs(): Any? = unwrap(this).getLogs()
+
+      /**
+       * The NetWeaver Prometheus Exporter Settings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html#cfn-applicationinsights-application-configurationdetails-netweaverprometheusexporter)
+       */
+      override fun netWeaverPrometheusExporter(): Any? =
+          unwrap(this).getNetWeaverPrometheusExporter()
+
+      /**
+       * A list of processes to monitor for the component.
+       *
+       * Only Windows EC2 instances can have a processes section.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html#cfn-applicationinsights-application-configurationdetails-processes)
+       */
+      override fun processes(): Any? = unwrap(this).getProcesses()
+
+      /**
+       * The SQL prometheus exporter settings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html#cfn-applicationinsights-application-configurationdetails-sqlserverprometheusexporter)
+       */
+      override fun sqlServerPrometheusExporter(): Any? =
+          unwrap(this).getSqlServerPrometheusExporter()
 
       /**
        * A list of Windows Events to monitor for the component.
@@ -2466,7 +2805,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty,
-    ) : CdkObject(cdkObject), CustomComponentProperty {
+    ) : CdkObject(cdkObject),
+        CustomComponentProperty {
       /**
        * The name of the component.
        *
@@ -2565,7 +2905,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty,
-    ) : CdkObject(cdkObject), HAClusterPrometheusExporterProperty {
+    ) : CdkObject(cdkObject),
+        HAClusterPrometheusExporterProperty {
       /**
        * The target port to which Prometheus sends metrics.
        *
@@ -2766,7 +3107,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty,
-    ) : CdkObject(cdkObject), HANAPrometheusExporterProperty {
+    ) : CdkObject(cdkObject),
+        HANAPrometheusExporterProperty {
       /**
        * Designates whether you agree to install the HANA DB client.
        *
@@ -2935,7 +3277,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty,
-    ) : CdkObject(cdkObject), JMXPrometheusExporterProperty {
+    ) : CdkObject(cdkObject),
+        JMXPrometheusExporterProperty {
       /**
        * The host and port to connect to through remote JMX.
        *
@@ -3087,7 +3430,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty,
-    ) : CdkObject(cdkObject), LogPatternProperty {
+    ) : CdkObject(cdkObject),
+        LogPatternProperty {
       /**
        * A regular expression that defines the log pattern.
        *
@@ -3248,7 +3592,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty,
-    ) : CdkObject(cdkObject), LogPatternSetProperty {
+    ) : CdkObject(cdkObject),
+        LogPatternSetProperty {
       /**
        * A list of objects that define the log patterns that belong to `LogPatternSet` .
        *
@@ -3480,7 +3825,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty,
-    ) : CdkObject(cdkObject), LogProperty {
+    ) : CdkObject(cdkObject),
+        LogProperty {
       /**
        * The type of encoding of the logs to be monitored.
        *
@@ -3556,6 +3902,410 @@ public open class CfnApplication(
   }
 
   /**
+   * The NetWeaver Prometheus Exporter Settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * NetWeaverPrometheusExporterProperty netWeaverPrometheusExporterProperty =
+   * NetWeaverPrometheusExporterProperty.builder()
+   * .instanceNumbers(List.of("instanceNumbers"))
+   * .sapsid("sapsid")
+   * // the properties below are optional
+   * .prometheusPort("prometheusPort")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-netweaverprometheusexporter.html)
+   */
+  public interface NetWeaverPrometheusExporterProperty {
+    /**
+     * SAP instance numbers for ASCS, ERS, and App Servers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-netweaverprometheusexporter.html#cfn-applicationinsights-application-netweaverprometheusexporter-instancenumbers)
+     */
+    public fun instanceNumbers(): List<String>
+
+    /**
+     * Prometheus exporter port.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-netweaverprometheusexporter.html#cfn-applicationinsights-application-netweaverprometheusexporter-prometheusport)
+     */
+    public fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
+
+    /**
+     * SAP NetWeaver SID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-netweaverprometheusexporter.html#cfn-applicationinsights-application-netweaverprometheusexporter-sapsid)
+     */
+    public fun sapsid(): String
+
+    /**
+     * A builder for [NetWeaverPrometheusExporterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceNumbers SAP instance numbers for ASCS, ERS, and App Servers. 
+       */
+      public fun instanceNumbers(instanceNumbers: List<String>)
+
+      /**
+       * @param instanceNumbers SAP instance numbers for ASCS, ERS, and App Servers. 
+       */
+      public fun instanceNumbers(vararg instanceNumbers: String)
+
+      /**
+       * @param prometheusPort Prometheus exporter port.
+       */
+      public fun prometheusPort(prometheusPort: String)
+
+      /**
+       * @param sapsid SAP NetWeaver SID. 
+       */
+      public fun sapsid(sapsid: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.NetWeaverPrometheusExporterProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.NetWeaverPrometheusExporterProperty.builder()
+
+      /**
+       * @param instanceNumbers SAP instance numbers for ASCS, ERS, and App Servers. 
+       */
+      override fun instanceNumbers(instanceNumbers: List<String>) {
+        cdkBuilder.instanceNumbers(instanceNumbers)
+      }
+
+      /**
+       * @param instanceNumbers SAP instance numbers for ASCS, ERS, and App Servers. 
+       */
+      override fun instanceNumbers(vararg instanceNumbers: String): Unit =
+          instanceNumbers(instanceNumbers.toList())
+
+      /**
+       * @param prometheusPort Prometheus exporter port.
+       */
+      override fun prometheusPort(prometheusPort: String) {
+        cdkBuilder.prometheusPort(prometheusPort)
+      }
+
+      /**
+       * @param sapsid SAP NetWeaver SID. 
+       */
+      override fun sapsid(sapsid: String) {
+        cdkBuilder.sapsid(sapsid)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.NetWeaverPrometheusExporterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.NetWeaverPrometheusExporterProperty,
+    ) : CdkObject(cdkObject),
+        NetWeaverPrometheusExporterProperty {
+      /**
+       * SAP instance numbers for ASCS, ERS, and App Servers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-netweaverprometheusexporter.html#cfn-applicationinsights-application-netweaverprometheusexporter-instancenumbers)
+       */
+      override fun instanceNumbers(): List<String> = unwrap(this).getInstanceNumbers()
+
+      /**
+       * Prometheus exporter port.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-netweaverprometheusexporter.html#cfn-applicationinsights-application-netweaverprometheusexporter-prometheusport)
+       */
+      override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
+
+      /**
+       * SAP NetWeaver SID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-netweaverprometheusexporter.html#cfn-applicationinsights-application-netweaverprometheusexporter-sapsid)
+       */
+      override fun sapsid(): String = unwrap(this).getSapsid()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NetWeaverPrometheusExporterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.NetWeaverPrometheusExporterProperty):
+          NetWeaverPrometheusExporterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetWeaverPrometheusExporterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetWeaverPrometheusExporterProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.NetWeaverPrometheusExporterProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.NetWeaverPrometheusExporterProperty
+    }
+  }
+
+  /**
+   * A process to be monitored for the component.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * ProcessProperty processProperty = ProcessProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .processName("processName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-process.html)
+   */
+  public interface ProcessProperty {
+    /**
+     * A list of metrics to monitor for the component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-process.html#cfn-applicationinsights-application-process-alarmmetrics)
+     */
+    public fun alarmMetrics(): Any
+
+    /**
+     * The name of the process to be monitored for the component.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-process.html#cfn-applicationinsights-application-process-processname)
+     */
+    public fun processName(): String
+
+    /**
+     * A builder for [ProcessProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param alarmMetrics A list of metrics to monitor for the component. 
+       */
+      public fun alarmMetrics(alarmMetrics: IResolvable)
+
+      /**
+       * @param alarmMetrics A list of metrics to monitor for the component. 
+       */
+      public fun alarmMetrics(alarmMetrics: List<Any>)
+
+      /**
+       * @param alarmMetrics A list of metrics to monitor for the component. 
+       */
+      public fun alarmMetrics(vararg alarmMetrics: Any)
+
+      /**
+       * @param processName The name of the process to be monitored for the component. 
+       */
+      public fun processName(processName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.ProcessProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.ProcessProperty.builder()
+
+      /**
+       * @param alarmMetrics A list of metrics to monitor for the component. 
+       */
+      override fun alarmMetrics(alarmMetrics: IResolvable) {
+        cdkBuilder.alarmMetrics(alarmMetrics.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param alarmMetrics A list of metrics to monitor for the component. 
+       */
+      override fun alarmMetrics(alarmMetrics: List<Any>) {
+        cdkBuilder.alarmMetrics(alarmMetrics.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param alarmMetrics A list of metrics to monitor for the component. 
+       */
+      override fun alarmMetrics(vararg alarmMetrics: Any): Unit =
+          alarmMetrics(alarmMetrics.toList())
+
+      /**
+       * @param processName The name of the process to be monitored for the component. 
+       */
+      override fun processName(processName: String) {
+        cdkBuilder.processName(processName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.ProcessProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ProcessProperty,
+    ) : CdkObject(cdkObject),
+        ProcessProperty {
+      /**
+       * A list of metrics to monitor for the component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-process.html#cfn-applicationinsights-application-process-alarmmetrics)
+       */
+      override fun alarmMetrics(): Any = unwrap(this).getAlarmMetrics()
+
+      /**
+       * The name of the process to be monitored for the component.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-process.html#cfn-applicationinsights-application-process-processname)
+       */
+      override fun processName(): String = unwrap(this).getProcessName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProcessProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ProcessProperty):
+          ProcessProperty = CdkObjectWrappers.wrap(cdkObject) as? ProcessProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProcessProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.ProcessProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.ProcessProperty
+    }
+  }
+
+  /**
+   * The SQL prometheus exporter settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationinsights.*;
+   * SQLServerPrometheusExporterProperty sQLServerPrometheusExporterProperty =
+   * SQLServerPrometheusExporterProperty.builder()
+   * .prometheusPort("prometheusPort")
+   * .sqlSecretName("sqlSecretName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-sqlserverprometheusexporter.html)
+   */
+  public interface SQLServerPrometheusExporterProperty {
+    /**
+     * Prometheus exporter port.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-sqlserverprometheusexporter.html#cfn-applicationinsights-application-sqlserverprometheusexporter-prometheusport)
+     */
+    public fun prometheusPort(): String
+
+    /**
+     * Secret name which managers SQL exporter connection.
+     *
+     * e.g. {"data_source_name": "sqlserver://<USERNAME>:<PASSWORD>&#64;localhost:1433"}
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-sqlserverprometheusexporter.html#cfn-applicationinsights-application-sqlserverprometheusexporter-sqlsecretname)
+     */
+    public fun sqlSecretName(): String
+
+    /**
+     * A builder for [SQLServerPrometheusExporterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param prometheusPort Prometheus exporter port. 
+       */
+      public fun prometheusPort(prometheusPort: String)
+
+      /**
+       * @param sqlSecretName Secret name which managers SQL exporter connection. 
+       * e.g. {"data_source_name": "sqlserver://<USERNAME>:<PASSWORD>&#64;localhost:1433"}
+       */
+      public fun sqlSecretName(sqlSecretName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.SQLServerPrometheusExporterProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.SQLServerPrometheusExporterProperty.builder()
+
+      /**
+       * @param prometheusPort Prometheus exporter port. 
+       */
+      override fun prometheusPort(prometheusPort: String) {
+        cdkBuilder.prometheusPort(prometheusPort)
+      }
+
+      /**
+       * @param sqlSecretName Secret name which managers SQL exporter connection. 
+       * e.g. {"data_source_name": "sqlserver://<USERNAME>:<PASSWORD>&#64;localhost:1433"}
+       */
+      override fun sqlSecretName(sqlSecretName: String) {
+        cdkBuilder.sqlSecretName(sqlSecretName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.SQLServerPrometheusExporterProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.SQLServerPrometheusExporterProperty,
+    ) : CdkObject(cdkObject),
+        SQLServerPrometheusExporterProperty {
+      /**
+       * Prometheus exporter port.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-sqlserverprometheusexporter.html#cfn-applicationinsights-application-sqlserverprometheusexporter-prometheusport)
+       */
+      override fun prometheusPort(): String = unwrap(this).getPrometheusPort()
+
+      /**
+       * Secret name which managers SQL exporter connection.
+       *
+       * e.g. {"data_source_name": "sqlserver://<USERNAME>:<PASSWORD>&#64;localhost:1433"}
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-sqlserverprometheusexporter.html#cfn-applicationinsights-application-sqlserverprometheusexporter-sqlsecretname)
+       */
+      override fun sqlSecretName(): String = unwrap(this).getSqlSecretName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SQLServerPrometheusExporterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.SQLServerPrometheusExporterProperty):
+          SQLServerPrometheusExporterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SQLServerPrometheusExporterProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SQLServerPrometheusExporterProperty):
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.SQLServerPrometheusExporterProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationinsights.CfnApplication.SQLServerPrometheusExporterProperty
+    }
+  }
+
+  /**
    * The `AWS::ApplicationInsights::Application SubComponentConfigurationDetails` property type
    * specifies the configuration settings of the sub-components.
    *
@@ -3577,6 +4327,12 @@ public open class CfnApplication(
    * .logGroupName("logGroupName")
    * .logPath("logPath")
    * .patternSet("patternSet")
+   * .build()))
+   * .processes(List.of(ProcessProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .processName("processName")
    * .build()))
    * .windowsEvents(List.of(WindowsEventProperty.builder()
    * .eventLevels(List.of("eventLevels"))
@@ -3608,6 +4364,15 @@ public open class CfnApplication(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-subcomponentconfigurationdetails.html#cfn-applicationinsights-application-subcomponentconfigurationdetails-logs)
      */
     public fun logs(): Any? = unwrap(this).getLogs()
+
+    /**
+     * A list of processes to monitor for the component.
+     *
+     * Only Windows EC2 instances can have a processes section.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-subcomponentconfigurationdetails.html#cfn-applicationinsights-application-subcomponentconfigurationdetails-processes)
+     */
+    public fun processes(): Any? = unwrap(this).getProcesses()
 
     /**
      * A list of Windows Events to monitor for the component.
@@ -3658,6 +4423,24 @@ public open class CfnApplication(
        * Only Amazon EC2 instances can use `Logs` .
        */
       public fun logs(vararg logs: Any)
+
+      /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      public fun processes(processes: IResolvable)
+
+      /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      public fun processes(processes: List<Any>)
+
+      /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      public fun processes(vararg processes: Any)
 
       /**
        * @param windowsEvents A list of Windows Events to monitor for the component.
@@ -3730,6 +4513,28 @@ public open class CfnApplication(
       override fun logs(vararg logs: Any): Unit = logs(logs.toList())
 
       /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      override fun processes(processes: IResolvable) {
+        cdkBuilder.processes(processes.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      override fun processes(processes: List<Any>) {
+        cdkBuilder.processes(processes.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param processes A list of processes to monitor for the component.
+       * Only Windows EC2 instances can have a processes section.
+       */
+      override fun processes(vararg processes: Any): Unit = processes(processes.toList())
+
+      /**
        * @param windowsEvents A list of Windows Events to monitor for the component.
        * Only Amazon EC2 instances running on Windows can use `WindowsEvents` .
        */
@@ -3759,7 +4564,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty,
-    ) : CdkObject(cdkObject), SubComponentConfigurationDetailsProperty {
+    ) : CdkObject(cdkObject),
+        SubComponentConfigurationDetailsProperty {
       /**
        * A list of metrics to monitor for the component.
        *
@@ -3777,6 +4583,15 @@ public open class CfnApplication(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-subcomponentconfigurationdetails.html#cfn-applicationinsights-application-subcomponentconfigurationdetails-logs)
        */
       override fun logs(): Any? = unwrap(this).getLogs()
+
+      /**
+       * A list of processes to monitor for the component.
+       *
+       * Only Windows EC2 instances can have a processes section.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-subcomponentconfigurationdetails.html#cfn-applicationinsights-application-subcomponentconfigurationdetails-processes)
+       */
+      override fun processes(): Any? = unwrap(this).getProcesses()
 
       /**
        * A list of Windows Events to monitor for the component.
@@ -3830,6 +4645,12 @@ public open class CfnApplication(
    * .logGroupName("logGroupName")
    * .logPath("logPath")
    * .patternSet("patternSet")
+   * .build()))
+   * .processes(List.of(ProcessProperty.builder()
+   * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+   * .alarmMetricName("alarmMetricName")
+   * .build()))
+   * .processName("processName")
    * .build()))
    * .windowsEvents(List.of(WindowsEventProperty.builder()
    * .eventLevels(List.of("eventLevels"))
@@ -3935,7 +4756,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentTypeConfigurationProperty,
-    ) : CdkObject(cdkObject), SubComponentTypeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SubComponentTypeConfigurationProperty {
       /**
        * The configuration settings of the sub-components.
        *
@@ -4123,7 +4945,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty,
-    ) : CdkObject(cdkObject), WindowsEventProperty {
+    ) : CdkObject(cdkObject),
+        WindowsEventProperty {
       /**
        * The levels of event to log.
        *

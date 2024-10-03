@@ -83,7 +83,8 @@ public interface VolumeFrom {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.VolumeFrom,
-  ) : CdkObject(cdkObject), VolumeFrom {
+  ) : CdkObject(cdkObject),
+      VolumeFrom {
     /**
      * Specifies whether the container has read-only access to the volume.
      *

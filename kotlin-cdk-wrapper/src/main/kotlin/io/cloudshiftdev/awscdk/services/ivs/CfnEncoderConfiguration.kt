@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEncoderConfiguration(
   cdkObject: software.amazon.awscdk.services.ivs.CfnEncoderConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ivs.CfnEncoderConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -484,7 +486,8 @@ public open class CfnEncoderConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ivs.CfnEncoderConfiguration.VideoProperty,
-    ) : CdkObject(cdkObject), VideoProperty {
+    ) : CdkObject(cdkObject),
+        VideoProperty {
       /**
        * Bitrate for generated output, in bps.
        *

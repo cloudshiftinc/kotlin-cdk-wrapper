@@ -19,21 +19,23 @@ import software.amazon.awscdk.services.kinesis.IStream as AmazonAwscdkServicesKi
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.iam.*;
- * import io.cloudshiftdev.awscdk.services.kinesis.*;
  * import io.cloudshiftdev.awscdk.services.logs.destinations.*;
- * Role role;
+ * import io.cloudshiftdev.awscdk.services.kinesis.*;
  * Stream stream;
- * KinesisDestination kinesisDestination = KinesisDestination.Builder.create(stream)
- * .role(role)
+ * LogGroup logGroup;
+ * SubscriptionFilter.Builder.create(this, "Subscription")
+ * .logGroup(logGroup)
+ * .destination(new KinesisDestination(stream))
+ * .filterPattern(FilterPattern.allTerms("ERROR", "MainThread"))
+ * .filterName("ErrorInMainThread")
+ * .distribution(Distribution.RANDOM)
  * .build();
  * ```
  */
 public open class KinesisDestination(
   cdkObject: software.amazon.awscdk.services.logs.destinations.KinesisDestination,
-) : CdkObject(cdkObject), ILogSubscriptionDestination {
+) : CdkObject(cdkObject),
+    ILogSubscriptionDestination {
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream) :
       this(software.amazon.awscdk.services.logs.destinations.KinesisDestination(stream.let(CloudshiftdevAwscdkServicesKinesisIStream.Companion::unwrap))
   )

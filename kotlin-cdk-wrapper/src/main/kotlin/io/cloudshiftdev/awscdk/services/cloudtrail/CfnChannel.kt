@@ -46,7 +46,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnChannel(
   cdkObject: software.amazon.awscdk.services.cloudtrail.CfnChannel,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudtrail.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -423,7 +425,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudtrail.CfnChannel.DestinationProperty,
-    ) : CdkObject(cdkObject), DestinationProperty {
+    ) : CdkObject(cdkObject),
+        DestinationProperty {
       /**
        * For channels used for a CloudTrail Lake integration, the location is the ARN of an event
        * data store that receives events from a channel.

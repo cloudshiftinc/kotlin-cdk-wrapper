@@ -72,7 +72,8 @@ public interface NotificationKeyFilter {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.NotificationKeyFilter,
-  ) : CdkObject(cdkObject), NotificationKeyFilter {
+  ) : CdkObject(cdkObject),
+      NotificationKeyFilter {
     /**
      * S3 keys must have the specified prefix.
      */

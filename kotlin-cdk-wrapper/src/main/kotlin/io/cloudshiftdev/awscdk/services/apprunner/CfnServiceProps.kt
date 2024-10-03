@@ -598,7 +598,8 @@ public interface CfnServiceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apprunner.CfnServiceProps,
-  ) : CdkObject(cdkObject), CfnServiceProps {
+  ) : CdkObject(cdkObject),
+      CfnServiceProps {
     /**
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that
      * you want to associate with your service.

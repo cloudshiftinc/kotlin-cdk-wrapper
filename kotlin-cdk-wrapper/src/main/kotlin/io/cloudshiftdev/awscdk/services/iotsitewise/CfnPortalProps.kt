@@ -320,7 +320,8 @@ public interface CfnPortalProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotsitewise.CfnPortalProps,
-  ) : CdkObject(cdkObject), CfnPortalProps {
+  ) : CdkObject(cdkObject),
+      CfnPortalProps {
     /**
      * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor
      * portal.

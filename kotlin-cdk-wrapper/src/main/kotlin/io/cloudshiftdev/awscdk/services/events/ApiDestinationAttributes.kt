@@ -78,7 +78,8 @@ public interface ApiDestinationAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.ApiDestinationAttributes,
-  ) : CdkObject(cdkObject), ApiDestinationAttributes {
+  ) : CdkObject(cdkObject),
+      ApiDestinationAttributes {
     /**
      * The ARN of the Api Destination.
      */

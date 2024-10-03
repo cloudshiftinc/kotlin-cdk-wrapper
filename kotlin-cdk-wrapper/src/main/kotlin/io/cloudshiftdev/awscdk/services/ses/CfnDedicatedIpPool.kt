@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDedicatedIpPool(
   cdkObject: software.amazon.awscdk.services.ses.CfnDedicatedIpPool,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnDedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

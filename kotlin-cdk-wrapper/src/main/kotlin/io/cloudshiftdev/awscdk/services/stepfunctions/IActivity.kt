@@ -26,9 +26,16 @@ public interface IActivity : IResource {
    */
   public fun activityName(): String
 
+  /**
+   * The encryptionConfiguration object used for server-side encryption of the activity inputs.
+   */
+  public fun encryptionConfiguration(): EncryptionConfiguration? =
+      unwrap(this).getEncryptionConfiguration()?.let(EncryptionConfiguration::wrap)
+
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.IActivity,
-  ) : CdkObject(cdkObject), IActivity {
+  ) : CdkObject(cdkObject),
+      IActivity {
     /**
      * The ARN of the activity.
      */
@@ -55,6 +62,12 @@ public interface IActivity : IResource {
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
+
+    /**
+     * The encryptionConfiguration object used for server-side encryption of the activity inputs.
+     */
+    override fun encryptionConfiguration(): EncryptionConfiguration? =
+        unwrap(this).getEncryptionConfiguration()?.let(EncryptionConfiguration::wrap)
 
     /**
      * The environment this resource belongs to.

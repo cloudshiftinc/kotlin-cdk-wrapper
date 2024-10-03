@@ -205,7 +205,8 @@ public interface CfnDeviceFleetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnDeviceFleetProps,
-  ) : CdkObject(cdkObject), CfnDeviceFleetProps {
+  ) : CdkObject(cdkObject),
+      CfnDeviceFleetProps {
     /**
      * A description of the fleet.
      *

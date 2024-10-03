@@ -106,7 +106,8 @@ public interface LaunchTemplateAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateAttributes,
-  ) : CdkObject(cdkObject), LaunchTemplateAttributes {
+  ) : CdkObject(cdkObject),
+      LaunchTemplateAttributes {
     /**
      * The identifier of the Launch Template.
      *

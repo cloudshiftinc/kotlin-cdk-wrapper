@@ -198,7 +198,8 @@ public interface CfnModelManifestProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnModelManifestProps,
-  ) : CdkObject(cdkObject), CfnModelManifestProps {
+  ) : CdkObject(cdkObject),
+      CfnModelManifestProps {
     /**
      * (Optional) A brief description of the vehicle model.
      *

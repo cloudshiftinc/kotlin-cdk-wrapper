@@ -91,7 +91,8 @@ public interface BindHookTargetOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.BindHookTargetOptions,
-  ) : CdkObject(cdkObject), BindHookTargetOptions {
+  ) : CdkObject(cdkObject),
+      BindHookTargetOptions {
     /**
      * The lifecycle hook to attach to.
      *

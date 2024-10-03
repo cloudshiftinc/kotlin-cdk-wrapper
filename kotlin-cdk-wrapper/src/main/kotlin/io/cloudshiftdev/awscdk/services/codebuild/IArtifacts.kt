@@ -35,7 +35,8 @@ public interface IArtifacts {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.IArtifacts,
-  ) : CdkObject(cdkObject), IArtifacts {
+  ) : CdkObject(cdkObject),
+      IArtifacts {
     /**
      * Callback when an Artifacts class is used in a CodeBuild Project.
      *

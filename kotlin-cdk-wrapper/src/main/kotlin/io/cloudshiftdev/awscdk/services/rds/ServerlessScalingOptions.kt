@@ -9,7 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
- * Options for configuring scaling on an Aurora Serverless cluster.
+ * Options for configuring scaling on an Aurora Serverless v1 Cluster.
  *
  * Example:
  *
@@ -188,7 +188,8 @@ public interface ServerlessScalingOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ServerlessScalingOptions,
-  ) : CdkObject(cdkObject), ServerlessScalingOptions {
+  ) : CdkObject(cdkObject),
+      ServerlessScalingOptions {
     /**
      * The time before an Aurora Serverless database cluster is paused.
      *

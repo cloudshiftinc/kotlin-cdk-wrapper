@@ -66,7 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAnomalySubscription(
   cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -644,7 +645,8 @@ public open class CfnAnomalySubscription(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription.ResourceTagProperty,
-    ) : CdkObject(cdkObject), ResourceTagProperty {
+    ) : CdkObject(cdkObject),
+        ResourceTagProperty {
       /**
        * The key that's associated with the tag.
        *
@@ -775,7 +777,8 @@ public open class CfnAnomalySubscription(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription.SubscriberProperty,
-    ) : CdkObject(cdkObject), SubscriberProperty {
+    ) : CdkObject(cdkObject),
+        SubscriberProperty {
       /**
        * The email address or SNS Topic Amazon Resource Name (ARN), depending on the `Type` .
        *

@@ -47,7 +47,7 @@ public interface CfnQueuePolicyProps {
    * You can use the
    * `[Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)`
    * function to specify an
-   * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)`
+   * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html)`
    * resource.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queuepolicy.html#cfn-sqs-queuepolicy-queues)
@@ -74,7 +74,7 @@ public interface CfnQueuePolicyProps {
      * You can use the
      * `[Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)`
      * function to specify an
-     * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)`
+     * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html)`
      * resource.
      */
     public fun queues(queues: List<String>)
@@ -84,7 +84,7 @@ public interface CfnQueuePolicyProps {
      * You can use the
      * `[Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)`
      * function to specify an
-     * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)`
+     * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html)`
      * resource.
      */
     public fun queues(vararg queues: String)
@@ -111,7 +111,7 @@ public interface CfnQueuePolicyProps {
      * You can use the
      * `[Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)`
      * function to specify an
-     * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)`
+     * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html)`
      * resource.
      */
     override fun queues(queues: List<String>) {
@@ -123,7 +123,7 @@ public interface CfnQueuePolicyProps {
      * You can use the
      * `[Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)`
      * function to specify an
-     * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)`
+     * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html)`
      * resource.
      */
     override fun queues(vararg queues: String): Unit = queues(queues.toList())
@@ -133,7 +133,8 @@ public interface CfnQueuePolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sqs.CfnQueuePolicyProps,
-  ) : CdkObject(cdkObject), CfnQueuePolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnQueuePolicyProps {
     /**
      * A policy document that contains the permissions for the specified Amazon SQS queues.
      *
@@ -152,7 +153,7 @@ public interface CfnQueuePolicyProps {
      * You can use the
      * `[Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)`
      * function to specify an
-     * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)`
+     * `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html)`
      * resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queuepolicy.html#cfn-sqs-queuepolicy-queues)

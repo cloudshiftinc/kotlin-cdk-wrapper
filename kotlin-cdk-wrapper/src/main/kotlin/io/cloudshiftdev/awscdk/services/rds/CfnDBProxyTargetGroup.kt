@@ -79,7 +79,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDBProxyTargetGroup(
   cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -102,23 +103,23 @@ public open class CfnDBProxyTargetGroup(
   public open fun attrTargetGroupArn(): String = unwrap(this).getAttrTargetGroupArn()
 
   /**
-   * Settings that control the size and behavior of the connection pool associated with a
-   * `DBProxyTargetGroup` .
+   * Displays the settings that control the size and behavior of the connection pool associated with
+   * a `DBProxyTarget` .
    */
   public open fun connectionPoolConfigurationInfo(): Any? =
       unwrap(this).getConnectionPoolConfigurationInfo()
 
   /**
-   * Settings that control the size and behavior of the connection pool associated with a
-   * `DBProxyTargetGroup` .
+   * Displays the settings that control the size and behavior of the connection pool associated with
+   * a `DBProxyTarget` .
    */
   public open fun connectionPoolConfigurationInfo(`value`: IResolvable) {
     unwrap(this).setConnectionPoolConfigurationInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Settings that control the size and behavior of the connection pool associated with a
-   * `DBProxyTargetGroup` .
+   * Displays the settings that control the size and behavior of the connection pool associated with
+   * a `DBProxyTarget` .
    */
   public open
       fun connectionPoolConfigurationInfo(`value`: ConnectionPoolConfigurationInfoFormatProperty) {
@@ -126,8 +127,8 @@ public open class CfnDBProxyTargetGroup(
   }
 
   /**
-   * Settings that control the size and behavior of the connection pool associated with a
-   * `DBProxyTargetGroup` .
+   * Displays the settings that control the size and behavior of the connection pool associated with
+   * a `DBProxyTarget` .
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("4063fded1e953b2425194863b7aa1da8f32b08cbb6781e2f8a45201e7e82b26d")
@@ -212,33 +213,33 @@ public open class CfnDBProxyTargetGroup(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Settings that control the size and behavior of the connection pool associated with a
-     * `DBProxyTargetGroup` .
+     * Displays the settings that control the size and behavior of the connection pool associated
+     * with a `DBProxyTarget` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` . 
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` . 
      */
     public fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable)
 
     /**
-     * Settings that control the size and behavior of the connection pool associated with a
-     * `DBProxyTargetGroup` .
+     * Displays the settings that control the size and behavior of the connection pool associated
+     * with a `DBProxyTarget` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` . 
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` . 
      */
     public
         fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: ConnectionPoolConfigurationInfoFormatProperty)
 
     /**
-     * Settings that control the size and behavior of the connection pool associated with a
-     * `DBProxyTargetGroup` .
+     * Displays the settings that control the size and behavior of the connection pool associated
+     * with a `DBProxyTarget` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` . 
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` . 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0b82b793ddcdd39d423ca86d9874701672489a79685d22d7c87246e2dcc494f2")
@@ -307,24 +308,24 @@ public open class CfnDBProxyTargetGroup(
         software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup.Builder.create(scope, id)
 
     /**
-     * Settings that control the size and behavior of the connection pool associated with a
-     * `DBProxyTargetGroup` .
+     * Displays the settings that control the size and behavior of the connection pool associated
+     * with a `DBProxyTarget` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` . 
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` . 
      */
     override fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable) {
       cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Settings that control the size and behavior of the connection pool associated with a
-     * `DBProxyTargetGroup` .
+     * Displays the settings that control the size and behavior of the connection pool associated
+     * with a `DBProxyTarget` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` . 
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` . 
      */
     override
         fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: ConnectionPoolConfigurationInfoFormatProperty) {
@@ -332,12 +333,12 @@ public open class CfnDBProxyTargetGroup(
     }
 
     /**
-     * Settings that control the size and behavior of the connection pool associated with a
-     * `DBProxyTargetGroup` .
+     * Displays the settings that control the size and behavior of the connection pool associated
+     * with a `DBProxyTarget` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` . 
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` . 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0b82b793ddcdd39d423ca86d9874701672489a79685d22d7c87246e2dcc494f2")
@@ -462,7 +463,7 @@ public open class CfnDBProxyTargetGroup(
      * connection pool.
      *
      * This setting only applies when the proxy has opened its maximum number of connections and all
-     * connections are busy with client sessions. For an unlimited wait time, specify `0` .
+     * connections are busy with client sessions.
      *
      * Default: `120`
      *
@@ -553,7 +554,7 @@ public open class CfnDBProxyTargetGroup(
        * @param connectionBorrowTimeout The number of seconds for a proxy to wait for a connection
        * to become available in the connection pool.
        * This setting only applies when the proxy has opened its maximum number of connections and
-       * all connections are busy with client sessions. For an unlimited wait time, specify `0` .
+       * all connections are busy with client sessions.
        *
        * Default: `120`
        *
@@ -647,7 +648,7 @@ public open class CfnDBProxyTargetGroup(
        * @param connectionBorrowTimeout The number of seconds for a proxy to wait for a connection
        * to become available in the connection pool.
        * This setting only applies when the proxy has opened its maximum number of connections and
-       * all connections are busy with client sessions. For an unlimited wait time, specify `0` .
+       * all connections are busy with client sessions.
        *
        * Default: `120`
        *
@@ -748,13 +749,14 @@ public open class CfnDBProxyTargetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty,
-    ) : CdkObject(cdkObject), ConnectionPoolConfigurationInfoFormatProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionPoolConfigurationInfoFormatProperty {
       /**
        * The number of seconds for a proxy to wait for a connection to become available in the
        * connection pool.
        *
        * This setting only applies when the proxy has opened its maximum number of connections and
-       * all connections are busy with client sessions. For an unlimited wait time, specify `0` .
+       * all connections are busy with client sessions.
        *
        * Default: `120`
        *

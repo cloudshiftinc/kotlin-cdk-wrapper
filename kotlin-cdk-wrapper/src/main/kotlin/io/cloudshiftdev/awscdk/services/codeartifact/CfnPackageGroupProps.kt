@@ -256,7 +256,8 @@ public interface CfnPackageGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codeartifact.CfnPackageGroupProps,
-  ) : CdkObject(cdkObject), CfnPackageGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnPackageGroupProps {
     /**
      * The contact information of the package group.
      *

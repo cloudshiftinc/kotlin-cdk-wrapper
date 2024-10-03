@@ -22,7 +22,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ServerApplication(
   cdkObject: software.amazon.awscdk.services.codedeploy.ServerApplication,
-) : Resource(cdkObject), IServerApplication {
+) : Resource(cdkObject),
+    IServerApplication {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codedeploy.ServerApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

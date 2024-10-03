@@ -24,7 +24,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class PrefixList(
   cdkObject: software.amazon.awscdk.services.ec2.PrefixList,
-) : Resource(cdkObject), IPrefixList {
+) : Resource(cdkObject),
+    IPrefixList {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.PrefixList(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

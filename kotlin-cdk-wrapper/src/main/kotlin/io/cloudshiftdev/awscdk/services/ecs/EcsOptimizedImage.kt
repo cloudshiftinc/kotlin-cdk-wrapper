@@ -42,7 +42,8 @@ import kotlin.jvm.JvmName
  */
 public open class EcsOptimizedImage(
   cdkObject: software.amazon.awscdk.services.ecs.EcsOptimizedImage,
-) : CdkObject(cdkObject), IMachineImage {
+) : CdkObject(cdkObject),
+    IMachineImage {
   /**
    * Return the correct image.
    *

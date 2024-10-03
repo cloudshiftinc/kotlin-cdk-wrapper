@@ -494,7 +494,8 @@ public interface CfnDBInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.CfnDBInstanceProps,
-  ) : CdkObject(cdkObject), CfnDBInstanceProps {
+  ) : CdkObject(cdkObject),
+      CfnDBInstanceProps {
     /**
      * This parameter does not apply to Amazon DocumentDB.
      *

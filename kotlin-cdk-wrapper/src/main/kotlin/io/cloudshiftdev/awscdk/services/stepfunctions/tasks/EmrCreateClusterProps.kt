@@ -83,6 +83,16 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
   public fun autoScalingRole(): IRole? = unwrap(this).getAutoScalingRole()?.let(IRole::wrap)
 
   /**
+   * The amount of idle time after which the cluster automatically terminates.
+   *
+   * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
+   *
+   * Default: - No timeout
+   */
+  public fun autoTerminationPolicyIdleTimeout(): Duration? =
+      unwrap(this).getAutoTerminationPolicyIdleTimeout()?.let(Duration::wrap)
+
+  /**
    * A list of bootstrap actions to run before Hadoop starts on the cluster nodes.
    *
    * Default: - None
@@ -235,6 +245,13 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * @param autoScalingRole An IAM role for automatic scaling policies.
      */
     public fun autoScalingRole(autoScalingRole: IRole)
+
+    /**
+     * @param autoTerminationPolicyIdleTimeout The amount of idle time after which the cluster
+     * automatically terminates.
+     * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
+     */
+    public fun autoTerminationPolicyIdleTimeout(autoTerminationPolicyIdleTimeout: Duration)
 
     /**
      * @param bootstrapActions A list of bootstrap actions to run before Hadoop starts on the
@@ -488,6 +505,15 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      */
     override fun autoScalingRole(autoScalingRole: IRole) {
       cdkBuilder.autoScalingRole(autoScalingRole.let(IRole.Companion::unwrap))
+    }
+
+    /**
+     * @param autoTerminationPolicyIdleTimeout The amount of idle time after which the cluster
+     * automatically terminates.
+     * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
+     */
+    override fun autoTerminationPolicyIdleTimeout(autoTerminationPolicyIdleTimeout: Duration) {
+      cdkBuilder.autoTerminationPolicyIdleTimeout(autoTerminationPolicyIdleTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -778,7 +804,8 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateClusterProps,
-  ) : CdkObject(cdkObject), EmrCreateClusterProps {
+  ) : CdkObject(cdkObject),
+      EmrCreateClusterProps {
     /**
      * A JSON string for selecting additional features.
      *
@@ -802,6 +829,16 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * Default: - A role will be created.
      */
     override fun autoScalingRole(): IRole? = unwrap(this).getAutoScalingRole()?.let(IRole::wrap)
+
+    /**
+     * The amount of idle time after which the cluster automatically terminates.
+     *
+     * You can specify a minimum of 60 seconds and a maximum of 604800 seconds (seven days).
+     *
+     * Default: - No timeout
+     */
+    override fun autoTerminationPolicyIdleTimeout(): Duration? =
+        unwrap(this).getAutoTerminationPolicyIdleTimeout()?.let(Duration::wrap)
 
     /**
      * A list of bootstrap actions to run before Hadoop starts on the cluster nodes.

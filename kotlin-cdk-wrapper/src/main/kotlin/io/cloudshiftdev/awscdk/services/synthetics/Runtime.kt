@@ -11,6 +11,7 @@ import kotlin.String
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.*;
  * Canary canary = Canary.Builder.create(this, "MyCanary")
  * .schedule(Schedule.rate(Duration.minutes(5)))
  * .test(Test.custom(CustomTestOptions.builder()
@@ -18,8 +19,7 @@ import kotlin.String
  * .handler("index.handler")
  * .build()))
  * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
- * .environmentVariables(Map.of(
- * "stage", "prod"))
+ * .memory(Size.mebibytes(1024))
  * .build();
  * ```
  */
@@ -81,6 +81,12 @@ public open class Runtime(
     public val SYNTHETICS_NODEJS_PUPPETEER_7_0: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_NODEJS_PUPPETEER_7_0)
 
+    public val SYNTHETICS_NODEJS_PUPPETEER_8_0: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_NODEJS_PUPPETEER_8_0)
+
+    public val SYNTHETICS_NODEJS_PUPPETEER_9_0: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_NODEJS_PUPPETEER_9_0)
+
     public val SYNTHETICS_PYTHON_SELENIUM_1_0: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_1_0)
 
@@ -101,6 +107,9 @@ public open class Runtime(
 
     public val SYNTHETICS_PYTHON_SELENIUM_3_0: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_3_0)
+
+    public val SYNTHETICS_PYTHON_SELENIUM_4_0: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_4_0)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.Runtime): Runtime =
         Runtime(cdkObject)

@@ -72,8 +72,8 @@ import kotlin.collections.List
  */
 public interface CfnCacheClusterProps {
   /**
-   * If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to
-   * opt-in to the next minor version upgrade campaign. This parameter is disabled for previous
+   * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want
+   * to opt-in to the next minor version upgrade campaign. This parameter is disabled for previous
    * versions.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-autominorversionupgrade)
@@ -169,10 +169,10 @@ public interface CfnCacheClusterProps {
    * *Additional node type info*
    *
    * * All current generation instance types are created in Amazon VPC by default.
-   * * Redis append-only files (AOF) are not supported for T1 or T2 instances.
-   * * Redis Multi-AZ with automatic failover is not supported on T1 instances.
-   * * Redis configuration variables `appendonly` and `appendfsync` are not supported on Redis
-   * version 2.8.22 and later.
+   * * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
+   * * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
+   * * Redis OSS configuration variables `appendonly` and `appendfsync` are not supported on Redis
+   * OSS version 2.8.22 and later.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-cachenodetype)
    */
@@ -257,7 +257,7 @@ public interface CfnCacheClusterProps {
   /**
    * The network type you choose when modifying a cluster, either `ipv4` | `ipv6` .
    *
-   * IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached engine
+   * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
    * version 1.6.6 on all instances built on the [Nitro system](https://docs.aws.amazon.com/ec2/nitro/)
    * .
    *
@@ -275,7 +275,7 @@ public interface CfnCacheClusterProps {
   /**
    * Must be either `ipv4` | `ipv6` | `dual_stack` .
    *
-   * IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached engine
+   * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
    * version 1.6.6 on all instances built on the [Nitro system](https://docs.aws.amazon.com/ec2/nitro/)
    * .
    *
@@ -376,7 +376,7 @@ public interface CfnCacheClusterProps {
 
   /**
    * A single-element string list containing an Amazon Resource Name (ARN) that uniquely identifies
-   * a Redis RDB snapshot file stored in Amazon S3.
+   * a Redis OSS RDB snapshot file stored in Amazon S3.
    *
    * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in the
    * ARN cannot contain any commas.
@@ -392,7 +392,7 @@ public interface CfnCacheClusterProps {
   public fun snapshotArns(): List<String> = unwrap(this).getSnapshotArns() ?: emptyList()
 
   /**
-   * The name of a Redis snapshot from which to restore data into the new node group (shard).
+   * The name of a Redis OSS snapshot from which to restore data into the new node group (shard).
    *
    * The snapshot status changes to `restoring` while the new node group (shard) is being created.
    *
@@ -468,15 +468,15 @@ public interface CfnCacheClusterProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param autoMinorVersionUpgrade If you are running Redis engine version 6.0 or later, set this
-     * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
+     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
+     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
      * parameter is disabled for previous versions.
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
     /**
-     * @param autoMinorVersionUpgrade If you are running Redis engine version 6.0 or later, set this
-     * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
+     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
+     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
      * parameter is disabled for previous versions.
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
@@ -567,10 +567,10 @@ public interface CfnCacheClusterProps {
      * *Additional node type info*
      *
      * * All current generation instance types are created in Amazon VPC by default.
-     * * Redis append-only files (AOF) are not supported for T1 or T2 instances.
-     * * Redis Multi-AZ with automatic failover is not supported on T1 instances.
-     * * Redis configuration variables `appendonly` and `appendfsync` are not supported on Redis
-     * version 2.8.22 and later.
+     * * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
+     * * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
+     * * Redis OSS configuration variables `appendonly` and `appendfsync` are not supported on Redis
+     * OSS version 2.8.22 and later.
      */
     public fun cacheNodeType(cacheNodeType: String)
 
@@ -641,7 +641,7 @@ public interface CfnCacheClusterProps {
     /**
      * @param ipDiscovery The network type you choose when modifying a cluster, either `ipv4` |
      * `ipv6` .
-     * IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached engine
+     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
      * version 1.6.6 on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      */
@@ -664,7 +664,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param networkType Must be either `ipv4` | `ipv6` | `dual_stack` .
-     * IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached engine
+     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
      * version 1.6.6 on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      */
@@ -766,7 +766,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis RDB snapshot file stored in Amazon S3.
+     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3.
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
      *
@@ -780,7 +780,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis RDB snapshot file stored in Amazon S3.
+     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3.
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
      *
@@ -793,8 +793,8 @@ public interface CfnCacheClusterProps {
     public fun snapshotArns(vararg snapshotArns: String)
 
     /**
-     * @param snapshotName The name of a Redis snapshot from which to restore data into the new node
-     * group (shard).
+     * @param snapshotName The name of a Redis OSS snapshot from which to restore data into the new
+     * node group (shard).
      * The snapshot status changes to `restoring` while the new node group (shard) is being created.
      *
      *
@@ -869,8 +869,8 @@ public interface CfnCacheClusterProps {
         = software.amazon.awscdk.services.elasticache.CfnCacheClusterProps.builder()
 
     /**
-     * @param autoMinorVersionUpgrade If you are running Redis engine version 6.0 or later, set this
-     * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
+     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
+     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
      * parameter is disabled for previous versions.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
@@ -878,8 +878,8 @@ public interface CfnCacheClusterProps {
     }
 
     /**
-     * @param autoMinorVersionUpgrade If you are running Redis engine version 6.0 or later, set this
-     * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
+     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
+     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
      * parameter is disabled for previous versions.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
@@ -974,10 +974,10 @@ public interface CfnCacheClusterProps {
      * *Additional node type info*
      *
      * * All current generation instance types are created in Amazon VPC by default.
-     * * Redis append-only files (AOF) are not supported for T1 or T2 instances.
-     * * Redis Multi-AZ with automatic failover is not supported on T1 instances.
-     * * Redis configuration variables `appendonly` and `appendfsync` are not supported on Redis
-     * version 2.8.22 and later.
+     * * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
+     * * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
+     * * Redis OSS configuration variables `appendonly` and `appendfsync` are not supported on Redis
+     * OSS version 2.8.22 and later.
      */
     override fun cacheNodeType(cacheNodeType: String) {
       cdkBuilder.cacheNodeType(cacheNodeType)
@@ -1063,7 +1063,7 @@ public interface CfnCacheClusterProps {
     /**
      * @param ipDiscovery The network type you choose when modifying a cluster, either `ipv4` |
      * `ipv6` .
-     * IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached engine
+     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
      * version 1.6.6 on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      */
@@ -1093,7 +1093,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param networkType Must be either `ipv4` | `ipv6` | `dual_stack` .
-     * IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached engine
+     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
      * version 1.6.6 on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      */
@@ -1210,7 +1210,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis RDB snapshot file stored in Amazon S3.
+     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3.
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
      *
@@ -1226,7 +1226,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis RDB snapshot file stored in Amazon S3.
+     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3.
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
      *
@@ -1240,8 +1240,8 @@ public interface CfnCacheClusterProps {
         snapshotArns(snapshotArns.toList())
 
     /**
-     * @param snapshotName The name of a Redis snapshot from which to restore data into the new node
-     * group (shard).
+     * @param snapshotName The name of a Redis OSS snapshot from which to restore data into the new
+     * node group (shard).
      * The snapshot status changes to `restoring` while the new node group (shard) is being created.
      *
      *
@@ -1331,11 +1331,12 @@ public interface CfnCacheClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheClusterProps,
-  ) : CdkObject(cdkObject), CfnCacheClusterProps {
+  ) : CdkObject(cdkObject),
+      CfnCacheClusterProps {
     /**
-     * If you are running Redis engine version 6.0 or later, set this parameter to yes if you want
-     * to opt-in to the next minor version upgrade campaign. This parameter is disabled for previous
-     * versions.
+     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you
+     * want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
+     * previous versions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-autominorversionupgrade)
      */
@@ -1431,10 +1432,10 @@ public interface CfnCacheClusterProps {
      * *Additional node type info*
      *
      * * All current generation instance types are created in Amazon VPC by default.
-     * * Redis append-only files (AOF) are not supported for T1 or T2 instances.
-     * * Redis Multi-AZ with automatic failover is not supported on T1 instances.
-     * * Redis configuration variables `appendonly` and `appendfsync` are not supported on Redis
-     * version 2.8.22 and later.
+     * * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
+     * * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
+     * * Redis OSS configuration variables `appendonly` and `appendfsync` are not supported on Redis
+     * OSS version 2.8.22 and later.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-cachenodetype)
      */
@@ -1519,7 +1520,7 @@ public interface CfnCacheClusterProps {
     /**
      * The network type you choose when modifying a cluster, either `ipv4` | `ipv6` .
      *
-     * IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached engine
+     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
      * version 1.6.6 on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
@@ -1537,7 +1538,7 @@ public interface CfnCacheClusterProps {
     /**
      * Must be either `ipv4` | `ipv6` | `dual_stack` .
      *
-     * IPv6 is supported for workloads using Redis engine version 6.2 onward or Memcached engine
+     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
      * version 1.6.6 on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
@@ -1639,7 +1640,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * A single-element string list containing an Amazon Resource Name (ARN) that uniquely
-     * identifies a Redis RDB snapshot file stored in Amazon S3.
+     * identifies a Redis OSS RDB snapshot file stored in Amazon S3.
      *
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
@@ -1655,7 +1656,7 @@ public interface CfnCacheClusterProps {
     override fun snapshotArns(): List<String> = unwrap(this).getSnapshotArns() ?: emptyList()
 
     /**
-     * The name of a Redis snapshot from which to restore data into the new node group (shard).
+     * The name of a Redis OSS snapshot from which to restore data into the new node group (shard).
      *
      * The snapshot status changes to `restoring` while the new node group (shard) is being created.
      *

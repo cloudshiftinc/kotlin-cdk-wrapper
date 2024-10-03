@@ -315,7 +315,8 @@ public interface AttachInitOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.AttachInitOptions,
-  ) : CdkObject(cdkObject), AttachInitOptions {
+  ) : CdkObject(cdkObject),
+      AttachInitOptions {
     /**
      * ConfigSet to activate.
      *

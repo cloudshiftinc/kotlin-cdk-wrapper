@@ -20,19 +20,19 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * // Validating signed URLs or signed cookies with Trusted Key Groups
- * // public key in PEM format
- * String publicKey;
- * PublicKey pubKey = PublicKey.Builder.create(this, "MyPubKey")
- * .encodedKey(publicKey)
+ * // Adding realtime logs config to a Cloudfront Distribution on default behavior.
+ * import io.cloudshiftdev.awscdk.services.kinesis.*;
+ * Stream stream;
+ * RealtimeLogConfig realTimeConfig = RealtimeLogConfig.Builder.create(this, "realtimeLog")
+ * .endPoints(List.of(Endpoint.fromKinesisStream(stream)))
+ * .fields(List.of("timestamp", "c-ip", "time-to-first-byte", "sc-status"))
+ * .realtimeLogConfigName("my-delivery-stream")
+ * .samplingRate(100)
  * .build();
- * KeyGroup keyGroup = KeyGroup.Builder.create(this, "MyKeyGroup")
- * .items(List.of(pubKey))
- * .build();
- * Distribution.Builder.create(this, "Dist")
+ * Distribution.Builder.create(this, "myCdn")
  * .defaultBehavior(BehaviorOptions.builder()
  * .origin(new HttpOrigin("www.example.com"))
- * .trustedKeyGroups(List.of(keyGroup))
+ * .realtimeLogConfig(realTimeConfig)
  * .build())
  * .build();
  * ```
@@ -128,6 +128,16 @@ public open class HttpOrigin(
      * the origin. 
      */
     public fun keepaliveTimeout(keepaliveTimeout: Duration)
+
+    /**
+     * The unique identifier of an origin access control for this origin.
+     *
+     * Default: - no origin access control
+     *
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin. 
+     */
+    public fun originAccessControlId(originAccessControlId: String)
 
     /**
      * A unique identifier for the origin.
@@ -310,6 +320,18 @@ public open class HttpOrigin(
      */
     override fun keepaliveTimeout(keepaliveTimeout: Duration) {
       cdkBuilder.keepaliveTimeout(keepaliveTimeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * The unique identifier of an origin access control for this origin.
+     *
+     * Default: - no origin access control
+     *
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin. 
+     */
+    override fun originAccessControlId(originAccessControlId: String) {
+      cdkBuilder.originAccessControlId(originAccessControlId)
     }
 
     /**

@@ -176,7 +176,8 @@ public interface CfnParameterGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.memorydb.CfnParameterGroupProps,
-  ) : CdkObject(cdkObject), CfnParameterGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnParameterGroupProps {
     /**
      * A description of the parameter group.
      *

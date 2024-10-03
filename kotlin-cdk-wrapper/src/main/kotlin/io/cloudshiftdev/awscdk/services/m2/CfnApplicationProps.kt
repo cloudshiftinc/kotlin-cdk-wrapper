@@ -247,7 +247,8 @@ public interface CfnApplicationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.m2.CfnApplicationProps,
-  ) : CdkObject(cdkObject), CfnApplicationProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationProps {
     /**
      * The application definition for a particular application. You can specify either inline JSON
      * or an Amazon S3 bucket location.

@@ -150,7 +150,8 @@ public interface CfnRuleGroupsNamespaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.aps.CfnRuleGroupsNamespaceProps,
-  ) : CdkObject(cdkObject), CfnRuleGroupsNamespaceProps {
+  ) : CdkObject(cdkObject),
+      CfnRuleGroupsNamespaceProps {
     /**
      * The rules file used in the namespace.
      *

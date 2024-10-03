@@ -74,7 +74,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnService(
   cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.servicediscovery.CfnService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -764,11 +766,6 @@ public open class CfnService(
    * A complex type that contains information about the Amazon Route 53 DNS records that you want
    * AWS Cloud Map to create when you register an instance.
    *
-   *
-   * The record types of a service can only be changed by deleting the service and recreating it
-   * with a new `Dnsconfig` .
-   *
-   *
    * Example:
    *
    * ```
@@ -792,6 +789,11 @@ public open class CfnService(
     /**
      * An array that contains one `DnsRecord` object for each Route 53 DNS record that you want AWS
      * Cloud Map to create when you register an instance.
+     *
+     *
+     * The record type of a service can't be updated directly and can only be changed by deleting
+     * the service and recreating it with a new `DnsConfig` .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-dnsconfig.html#cfn-servicediscovery-service-dnsconfig-dnsrecords)
      */
@@ -864,18 +866,27 @@ public open class CfnService(
       /**
        * @param dnsRecords An array that contains one `DnsRecord` object for each Route 53 DNS
        * record that you want AWS Cloud Map to create when you register an instance. 
+       *
+       * The record type of a service can't be updated directly and can only be changed by deleting
+       * the service and recreating it with a new `DnsConfig` .
        */
       public fun dnsRecords(dnsRecords: IResolvable)
 
       /**
        * @param dnsRecords An array that contains one `DnsRecord` object for each Route 53 DNS
        * record that you want AWS Cloud Map to create when you register an instance. 
+       *
+       * The record type of a service can't be updated directly and can only be changed by deleting
+       * the service and recreating it with a new `DnsConfig` .
        */
       public fun dnsRecords(dnsRecords: List<Any>)
 
       /**
        * @param dnsRecords An array that contains one `DnsRecord` object for each Route 53 DNS
        * record that you want AWS Cloud Map to create when you register an instance. 
+       *
+       * The record type of a service can't be updated directly and can only be changed by deleting
+       * the service and recreating it with a new `DnsConfig` .
        */
       public fun dnsRecords(vararg dnsRecords: Any)
 
@@ -942,6 +953,9 @@ public open class CfnService(
       /**
        * @param dnsRecords An array that contains one `DnsRecord` object for each Route 53 DNS
        * record that you want AWS Cloud Map to create when you register an instance. 
+       *
+       * The record type of a service can't be updated directly and can only be changed by deleting
+       * the service and recreating it with a new `DnsConfig` .
        */
       override fun dnsRecords(dnsRecords: IResolvable) {
         cdkBuilder.dnsRecords(dnsRecords.let(IResolvable.Companion::unwrap))
@@ -950,6 +964,9 @@ public open class CfnService(
       /**
        * @param dnsRecords An array that contains one `DnsRecord` object for each Route 53 DNS
        * record that you want AWS Cloud Map to create when you register an instance. 
+       *
+       * The record type of a service can't be updated directly and can only be changed by deleting
+       * the service and recreating it with a new `DnsConfig` .
        */
       override fun dnsRecords(dnsRecords: List<Any>) {
         cdkBuilder.dnsRecords(dnsRecords.map{CdkObjectWrappers.unwrap(it)})
@@ -958,6 +975,9 @@ public open class CfnService(
       /**
        * @param dnsRecords An array that contains one `DnsRecord` object for each Route 53 DNS
        * record that you want AWS Cloud Map to create when you register an instance. 
+       *
+       * The record type of a service can't be updated directly and can only be changed by deleting
+       * the service and recreating it with a new `DnsConfig` .
        */
       override fun dnsRecords(vararg dnsRecords: Any): Unit = dnsRecords(dnsRecords.toList())
 
@@ -1026,10 +1046,16 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty,
-    ) : CdkObject(cdkObject), DnsConfigProperty {
+    ) : CdkObject(cdkObject),
+        DnsConfigProperty {
       /**
        * An array that contains one `DnsRecord` object for each Route 53 DNS record that you want
        * AWS Cloud Map to create when you register an instance.
+       *
+       *
+       * The record type of a service can't be updated directly and can only be changed by deleting
+       * the service and recreating it with a new `DnsConfig` .
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-dnsconfig.html#cfn-servicediscovery-service-dnsconfig-dnsrecords)
        */
@@ -1394,7 +1420,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty,
-    ) : CdkObject(cdkObject), DnsRecordProperty {
+    ) : CdkObject(cdkObject),
+        DnsRecordProperty {
       /**
        * The amount of time, in seconds, that you want DNS resolvers to cache the settings for this
        * record.
@@ -1743,7 +1770,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty,
-    ) : CdkObject(cdkObject), HealthCheckConfigProperty {
+    ) : CdkObject(cdkObject),
+        HealthCheckConfigProperty {
       /**
        * The number of consecutive health checks that an endpoint must pass or fail for Route 53 to
        * change the current status of the endpoint from unhealthy to healthy or the other way around.
@@ -1943,7 +1971,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty,
-    ) : CdkObject(cdkObject), HealthCheckCustomConfigProperty {
+    ) : CdkObject(cdkObject),
+        HealthCheckCustomConfigProperty {
       /**
        * This parameter is no longer supported and is always set to 1.
        *

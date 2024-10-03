@@ -22,7 +22,8 @@ public interface IPublicKey : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.IPublicKey,
-  ) : CdkObject(cdkObject), IPublicKey {
+  ) : CdkObject(cdkObject),
+      IPublicKey {
     /**
      * Apply the given removal policy to this resource.
      *

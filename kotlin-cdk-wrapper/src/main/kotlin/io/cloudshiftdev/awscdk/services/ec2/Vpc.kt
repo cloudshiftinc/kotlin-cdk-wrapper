@@ -59,7 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Vpc(
   cdkObject: software.amazon.awscdk.services.ec2.Vpc,
-) : Resource(cdkObject), IVpc {
+) : Resource(cdkObject),
+    IVpc {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.Vpc(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

@@ -66,7 +66,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CustomState(
   cdkObject: software.amazon.awscdk.services.stepfunctions.CustomState,
-) : State(cdkObject), IChainable, INextable {
+) : State(cdkObject),
+    IChainable,
+    INextable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

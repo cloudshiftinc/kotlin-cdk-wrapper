@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnServerlessCluster(
   cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -78,26 +80,26 @@ public open class CfnServerlessCluster(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * Includes all client authentication information.
+   *
    */
   public open fun clientAuthentication(): Any = unwrap(this).getClientAuthentication()
 
   /**
-   * Includes all client authentication information.
+   *
    */
   public open fun clientAuthentication(`value`: IResolvable) {
     unwrap(this).setClientAuthentication(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Includes all client authentication information.
+   *
    */
   public open fun clientAuthentication(`value`: ClientAuthenticationProperty) {
     unwrap(this).setClientAuthentication(`value`.let(ClientAuthenticationProperty.Companion::unwrap))
   }
 
   /**
-   * Includes all client authentication information.
+   *
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("47b2aa882f21c3a05e9b8572d0c2f8f4cea7f6ad92fe0d760e88271c5a191540")
@@ -172,26 +174,20 @@ public open class CfnServerlessCluster(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Includes all client authentication information.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication 
      */
     public fun clientAuthentication(clientAuthentication: IResolvable)
 
     /**
-     * Includes all client authentication information.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication 
      */
     public fun clientAuthentication(clientAuthentication: ClientAuthenticationProperty)
 
     /**
-     * Includes all client authentication information.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cc6ddd365d03cf7342a5451145f746ae7a22b32387a6f891094210535c9d63b7")
@@ -239,30 +235,24 @@ public open class CfnServerlessCluster(
         software.amazon.awscdk.services.msk.CfnServerlessCluster.Builder.create(scope, id)
 
     /**
-     * Includes all client authentication information.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication 
      */
     override fun clientAuthentication(clientAuthentication: IResolvable) {
       cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Includes all client authentication information.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication 
      */
     override fun clientAuthentication(clientAuthentication: ClientAuthenticationProperty) {
       cdkBuilder.clientAuthentication(clientAuthentication.let(ClientAuthenticationProperty.Companion::unwrap))
     }
 
     /**
-     * Includes all client authentication information.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cc6ddd365d03cf7342a5451145f746ae7a22b32387a6f891094210535c9d63b7")
@@ -336,8 +326,6 @@ public open class CfnServerlessCluster(
   }
 
   /**
-   * Includes all client authentication information.
-   *
    * Example:
    *
    * ```
@@ -358,12 +346,6 @@ public open class CfnServerlessCluster(
    */
   public interface ClientAuthenticationProperty {
     /**
-     * Details for client authentication using SASL.
-     *
-     * To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to true.
-     * You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT` . If you choose `TLS_PLAINTEXT` ,
-     * then you must also set `unauthenticated` to true.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-clientauthentication.html#cfn-msk-serverlesscluster-clientauthentication-sasl)
      */
     public fun sasl(): Any
@@ -374,26 +356,17 @@ public open class CfnServerlessCluster(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param sasl Details for client authentication using SASL. 
-       * To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to
-       * true. You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT` . If you choose
-       * `TLS_PLAINTEXT` , then you must also set `unauthenticated` to true.
+       * @param sasl the value to be set. 
        */
       public fun sasl(sasl: IResolvable)
 
       /**
-       * @param sasl Details for client authentication using SASL. 
-       * To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to
-       * true. You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT` . If you choose
-       * `TLS_PLAINTEXT` , then you must also set `unauthenticated` to true.
+       * @param sasl the value to be set. 
        */
       public fun sasl(sasl: SaslProperty)
 
       /**
-       * @param sasl Details for client authentication using SASL. 
-       * To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to
-       * true. You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT` . If you choose
-       * `TLS_PLAINTEXT` , then you must also set `unauthenticated` to true.
+       * @param sasl the value to be set. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("25f43126068a4cef9e1fa0c00143bd78f445f833d035b8763d66db2835fd7a87")
@@ -407,30 +380,21 @@ public open class CfnServerlessCluster(
           software.amazon.awscdk.services.msk.CfnServerlessCluster.ClientAuthenticationProperty.builder()
 
       /**
-       * @param sasl Details for client authentication using SASL. 
-       * To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to
-       * true. You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT` . If you choose
-       * `TLS_PLAINTEXT` , then you must also set `unauthenticated` to true.
+       * @param sasl the value to be set. 
        */
       override fun sasl(sasl: IResolvable) {
         cdkBuilder.sasl(sasl.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param sasl Details for client authentication using SASL. 
-       * To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to
-       * true. You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT` . If you choose
-       * `TLS_PLAINTEXT` , then you must also set `unauthenticated` to true.
+       * @param sasl the value to be set. 
        */
       override fun sasl(sasl: SaslProperty) {
         cdkBuilder.sasl(sasl.let(SaslProperty.Companion::unwrap))
       }
 
       /**
-       * @param sasl Details for client authentication using SASL. 
-       * To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to
-       * true. You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT` . If you choose
-       * `TLS_PLAINTEXT` , then you must also set `unauthenticated` to true.
+       * @param sasl the value to be set. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("25f43126068a4cef9e1fa0c00143bd78f445f833d035b8763d66db2835fd7a87")
@@ -443,14 +407,9 @@ public open class CfnServerlessCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.ClientAuthenticationProperty,
-    ) : CdkObject(cdkObject), ClientAuthenticationProperty {
+    ) : CdkObject(cdkObject),
+        ClientAuthenticationProperty {
       /**
-       * Details for client authentication using SASL.
-       *
-       * To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to
-       * true. You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT` . If you choose
-       * `TLS_PLAINTEXT` , then you must also set `unauthenticated` to true.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-clientauthentication.html#cfn-msk-serverlesscluster-clientauthentication-sasl)
        */
       override fun sasl(): Any = unwrap(this).getSasl()
@@ -475,8 +434,6 @@ public open class CfnServerlessCluster(
   }
 
   /**
-   * Details for SASL/IAM client authentication.
-   *
    * Example:
    *
    * ```
@@ -492,8 +449,6 @@ public open class CfnServerlessCluster(
    */
   public interface IamProperty {
     /**
-     * SASL/IAM authentication is enabled or not.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-iam.html#cfn-msk-serverlesscluster-iam-enabled)
      */
     public fun enabled(): Any
@@ -504,12 +459,12 @@ public open class CfnServerlessCluster(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled SASL/IAM authentication is enabled or not. 
+       * @param enabled the value to be set. 
        */
       public fun enabled(enabled: Boolean)
 
       /**
-       * @param enabled SASL/IAM authentication is enabled or not. 
+       * @param enabled the value to be set. 
        */
       public fun enabled(enabled: IResolvable)
     }
@@ -520,14 +475,14 @@ public open class CfnServerlessCluster(
           software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty.builder()
 
       /**
-       * @param enabled SASL/IAM authentication is enabled or not. 
+       * @param enabled the value to be set. 
        */
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param enabled SASL/IAM authentication is enabled or not. 
+       * @param enabled the value to be set. 
        */
       override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
@@ -539,10 +494,9 @@ public open class CfnServerlessCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty,
-    ) : CdkObject(cdkObject), IamProperty {
+    ) : CdkObject(cdkObject),
+        IamProperty {
       /**
-       * SASL/IAM authentication is enabled or not.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-iam.html#cfn-msk-serverlesscluster-iam-enabled)
        */
       override fun enabled(): Any = unwrap(this).getEnabled()
@@ -566,12 +520,6 @@ public open class CfnServerlessCluster(
   }
 
   /**
-   * Details for client authentication using SASL.
-   *
-   * To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to true.
-   * You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT` . If you choose `TLS_PLAINTEXT` ,
-   * then you must also set `unauthenticated` to true.
-   *
    * Example:
    *
    * ```
@@ -589,8 +537,6 @@ public open class CfnServerlessCluster(
    */
   public interface SaslProperty {
     /**
-     * Details for ClientAuthentication using IAM.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-sasl.html#cfn-msk-serverlesscluster-sasl-iam)
      */
     public fun iam(): Any
@@ -601,17 +547,17 @@ public open class CfnServerlessCluster(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param iam Details for ClientAuthentication using IAM. 
+       * @param iam the value to be set. 
        */
       public fun iam(iam: IResolvable)
 
       /**
-       * @param iam Details for ClientAuthentication using IAM. 
+       * @param iam the value to be set. 
        */
       public fun iam(iam: IamProperty)
 
       /**
-       * @param iam Details for ClientAuthentication using IAM. 
+       * @param iam the value to be set. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c34c9bf0119fd310be992cabba59f51a54b78c65b04929f9828e945991a85a1f")
@@ -624,21 +570,21 @@ public open class CfnServerlessCluster(
           software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty.builder()
 
       /**
-       * @param iam Details for ClientAuthentication using IAM. 
+       * @param iam the value to be set. 
        */
       override fun iam(iam: IResolvable) {
         cdkBuilder.iam(iam.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param iam Details for ClientAuthentication using IAM. 
+       * @param iam the value to be set. 
        */
       override fun iam(iam: IamProperty) {
         cdkBuilder.iam(iam.let(IamProperty.Companion::unwrap))
       }
 
       /**
-       * @param iam Details for ClientAuthentication using IAM. 
+       * @param iam the value to be set. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c34c9bf0119fd310be992cabba59f51a54b78c65b04929f9828e945991a85a1f")
@@ -650,10 +596,9 @@ public open class CfnServerlessCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty,
-    ) : CdkObject(cdkObject), SaslProperty {
+    ) : CdkObject(cdkObject),
+        SaslProperty {
       /**
-       * Details for ClientAuthentication using IAM.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-sasl.html#cfn-msk-serverlesscluster-sasl-iam)
        */
       override fun iam(): Any = unwrap(this).getIam()
@@ -765,7 +710,8 @@ public open class CfnServerlessCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html#cfn-msk-serverlesscluster-vpcconfig-securitygroups)
        */

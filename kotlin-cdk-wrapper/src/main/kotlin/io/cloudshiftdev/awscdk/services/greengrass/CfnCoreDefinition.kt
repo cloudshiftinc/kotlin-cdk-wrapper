@@ -70,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCoreDefinition(
   cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -505,7 +507,8 @@ public open class CfnCoreDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty,
-    ) : CdkObject(cdkObject), CoreDefinitionVersionProperty {
+    ) : CdkObject(cdkObject),
+        CoreDefinitionVersionProperty {
       /**
        * The Greengrass core in this version.
        *
@@ -696,7 +699,8 @@ public open class CfnCoreDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreProperty,
-    ) : CdkObject(cdkObject), CoreProperty {
+    ) : CdkObject(cdkObject),
+        CoreProperty {
       /**
        * The Amazon Resource Name (ARN) of the device certificate for the core.
        *

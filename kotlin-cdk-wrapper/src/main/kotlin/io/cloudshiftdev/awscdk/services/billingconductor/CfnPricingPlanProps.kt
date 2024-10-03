@@ -148,7 +148,8 @@ public interface CfnPricingPlanProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingPlanProps,
-  ) : CdkObject(cdkObject), CfnPricingPlanProps {
+  ) : CdkObject(cdkObject),
+      CfnPricingPlanProps {
     /**
      * The pricing plan description.
      *

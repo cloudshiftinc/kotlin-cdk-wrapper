@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Wait(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Wait,
-) : State(cdkObject), INextable {
+) : State(cdkObject),
+    INextable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

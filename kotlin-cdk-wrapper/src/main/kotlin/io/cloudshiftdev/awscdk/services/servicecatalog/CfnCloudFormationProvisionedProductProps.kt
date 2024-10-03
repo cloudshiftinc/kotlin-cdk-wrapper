@@ -540,7 +540,8 @@ public interface CfnCloudFormationProvisionedProductProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProductProps,
-  ) : CdkObject(cdkObject), CfnCloudFormationProvisionedProductProps {
+  ) : CdkObject(cdkObject),
+      CfnCloudFormationProvisionedProductProps {
     /**
      * The language code.
      *

@@ -41,6 +41,10 @@ import kotlin.jvm.JvmName
  * .build())
  * .logging("logging")
  * .build())
+ * .managedStorageConfiguration(ManagedStorageConfigurationProperty.builder()
+ * .fargateEphemeralStorageKmsKeyId("fargateEphemeralStorageKmsKeyId")
+ * .kmsKeyId("kmsKeyId")
+ * .build())
  * .build())
  * .defaultCapacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
  * .base(123)
@@ -107,7 +111,7 @@ public interface CfnClusterProps {
   public fun clusterSettings(): Any? = unwrap(this).getClusterSettings()
 
   /**
-   * The execute command configuration for the cluster.
+   * The execute command and managed storage configuration for the cluster.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-configuration)
    */
@@ -248,17 +252,17 @@ public interface CfnClusterProps {
     public fun clusterSettings(vararg clusterSettings: Any)
 
     /**
-     * @param configuration The execute command configuration for the cluster.
+     * @param configuration The execute command and managed storage configuration for the cluster.
      */
     public fun configuration(configuration: IResolvable)
 
     /**
-     * @param configuration The execute command configuration for the cluster.
+     * @param configuration The execute command and managed storage configuration for the cluster.
      */
     public fun configuration(configuration: CfnCluster.ClusterConfigurationProperty)
 
     /**
-     * @param configuration The execute command configuration for the cluster.
+     * @param configuration The execute command and managed storage configuration for the cluster.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7e6e99b1e2f459f41708260072121e7085e08fc6e0db3469037f419267c72f8c")
@@ -475,21 +479,21 @@ public interface CfnClusterProps {
         clusterSettings(clusterSettings.toList())
 
     /**
-     * @param configuration The execute command configuration for the cluster.
+     * @param configuration The execute command and managed storage configuration for the cluster.
      */
     override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param configuration The execute command configuration for the cluster.
+     * @param configuration The execute command and managed storage configuration for the cluster.
      */
     override fun configuration(configuration: CfnCluster.ClusterConfigurationProperty) {
       cdkBuilder.configuration(configuration.let(CfnCluster.ClusterConfigurationProperty.Companion::unwrap))
     }
 
     /**
-     * @param configuration The execute command configuration for the cluster.
+     * @param configuration The execute command and managed storage configuration for the cluster.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7e6e99b1e2f459f41708260072121e7085e08fc6e0db3469037f419267c72f8c")
@@ -631,7 +635,8 @@ public interface CfnClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.CfnClusterProps,
-  ) : CdkObject(cdkObject), CfnClusterProps {
+  ) : CdkObject(cdkObject),
+      CfnClusterProps {
     /**
      * The short name of one or more capacity providers to associate with the cluster.
      *
@@ -681,7 +686,7 @@ public interface CfnClusterProps {
     override fun clusterSettings(): Any? = unwrap(this).getClusterSettings()
 
     /**
-     * The execute command configuration for the cluster.
+     * The execute command and managed storage configuration for the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-configuration)
      */

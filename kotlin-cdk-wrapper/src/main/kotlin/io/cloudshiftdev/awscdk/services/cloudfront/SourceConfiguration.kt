@@ -15,7 +15,7 @@ import kotlin.jvm.JvmName
 /**
  * A source configuration is a wrapper for CloudFront origins and behaviors.
  *
- * An origin is what CloudFront will "be in front of" - that is, CloudFront will pull it's assets
+ * An origin is what CloudFront will "be in front of" - that is, CloudFront will pull its assets
  * from an origin.
  *
  * If you're using s3 as a source - pass the `s3Origin` property, otherwise, pass the
@@ -431,7 +431,8 @@ public interface SourceConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.SourceConfiguration,
-  ) : CdkObject(cdkObject), SourceConfiguration {
+  ) : CdkObject(cdkObject),
+      SourceConfiguration {
     /**
      * The behaviors associated with this source.
      *

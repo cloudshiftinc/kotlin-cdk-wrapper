@@ -79,7 +79,8 @@ public interface CloudAssemblyBuilderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cxapi.CloudAssemblyBuilderProps,
-  ) : CdkObject(cdkObject), CloudAssemblyBuilderProps {
+  ) : CdkObject(cdkObject),
+      CloudAssemblyBuilderProps {
     /**
      * Use the given asset output directory.
      *

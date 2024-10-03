@@ -125,7 +125,8 @@ public interface DatabaseProxyAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.DatabaseProxyAttributes,
-  ) : CdkObject(cdkObject), DatabaseProxyAttributes {
+  ) : CdkObject(cdkObject),
+      DatabaseProxyAttributes {
     /**
      * DB Proxy ARN.
      */

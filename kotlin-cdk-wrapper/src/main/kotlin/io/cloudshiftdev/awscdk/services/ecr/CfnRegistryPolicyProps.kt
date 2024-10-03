@@ -61,7 +61,8 @@ public interface CfnRegistryPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecr.CfnRegistryPolicyProps,
-  ) : CdkObject(cdkObject), CfnRegistryPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnRegistryPolicyProps {
     /**
      * The JSON policy text for your registry.
      *

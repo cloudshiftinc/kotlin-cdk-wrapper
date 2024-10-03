@@ -290,7 +290,8 @@ public interface CfnParameterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ssm.CfnParameterProps,
-  ) : CdkObject(cdkObject), CfnParameterProps {
+  ) : CdkObject(cdkObject),
+      CfnParameterProps {
     /**
      * A regular expression used to validate the parameter value.
      *

@@ -30,7 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class FunctionUrl(
   cdkObject: software.amazon.awscdk.services.lambda.FunctionUrl,
-) : Resource(cdkObject), IFunctionUrl {
+) : Resource(cdkObject),
+    IFunctionUrl {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

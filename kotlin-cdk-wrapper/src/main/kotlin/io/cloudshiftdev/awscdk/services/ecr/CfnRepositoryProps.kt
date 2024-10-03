@@ -442,7 +442,8 @@ public interface CfnRepositoryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecr.CfnRepositoryProps,
-  ) : CdkObject(cdkObject), CfnRepositoryProps {
+  ) : CdkObject(cdkObject),
+      CfnRepositoryProps {
     /**
      * If true, deleting the repository force deletes the contents of the repository.
      *

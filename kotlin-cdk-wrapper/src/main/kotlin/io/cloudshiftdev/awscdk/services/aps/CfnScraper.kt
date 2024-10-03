@@ -79,7 +79,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnScraper(
   cdkObject: software.amazon.awscdk.services.aps.CfnScraper,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -565,7 +567,8 @@ public open class CfnScraper(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.aps.CfnScraper.AmpConfigurationProperty,
-    ) : CdkObject(cdkObject), AmpConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AmpConfigurationProperty {
       /**
        * ARN of the Amazon Managed Service for Prometheus workspace.
        *
@@ -680,7 +683,8 @@ public open class CfnScraper(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.aps.CfnScraper.DestinationProperty,
-    ) : CdkObject(cdkObject), DestinationProperty {
+    ) : CdkObject(cdkObject),
+        DestinationProperty {
       /**
        * The Amazon Managed Service for Prometheus workspace to send metrics to.
        *
@@ -826,7 +830,8 @@ public open class CfnScraper(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.aps.CfnScraper.EksConfigurationProperty,
-    ) : CdkObject(cdkObject), EksConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EksConfigurationProperty {
       /**
        * ARN of the Amazon EKS cluster.
        *
@@ -925,7 +930,8 @@ public open class CfnScraper(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.aps.CfnScraper.ScrapeConfigurationProperty,
-    ) : CdkObject(cdkObject), ScrapeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ScrapeConfigurationProperty {
       /**
        * The base 64 encoded scrape configuration file.
        *
@@ -1036,7 +1042,8 @@ public open class CfnScraper(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.aps.CfnScraper.SourceProperty,
-    ) : CdkObject(cdkObject), SourceProperty {
+    ) : CdkObject(cdkObject),
+        SourceProperty {
       /**
        * The Amazon EKS cluster from which a scraper collects metrics.
        *

@@ -73,7 +73,8 @@ public interface SystemControl {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.SystemControl,
-  ) : CdkObject(cdkObject), SystemControl {
+  ) : CdkObject(cdkObject),
+      SystemControl {
     /**
      * The namespaced kernel parameter for which to set a value.
      */

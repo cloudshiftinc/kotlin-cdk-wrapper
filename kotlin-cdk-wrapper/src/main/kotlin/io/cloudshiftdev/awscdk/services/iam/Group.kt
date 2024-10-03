@@ -31,7 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Group(
   cdkObject: software.amazon.awscdk.services.iam.Group,
-) : Resource(cdkObject), IGroup {
+) : Resource(cdkObject),
+    IGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.Group(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

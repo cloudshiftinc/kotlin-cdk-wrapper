@@ -54,7 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStateMachineAlias(
   cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -717,9 +718,15 @@ public open class CfnStateMachineAlias(
    */
   public interface DeploymentPreferenceProperty {
     /**
-     * A list of Amazon CloudWatch alarms to be monitored during the deployment.
+     * A list of Amazon CloudWatch alarm names to be monitored during the deployment.
      *
      * The deployment fails and rolls back if any of these alarms go into the `ALARM` state.
+     *
+     *
+     * Amazon CloudWatch considers nonexistent alarms to have an `OK` state. If you provide an
+     * invalid alarm name or provide the ARN of an alarm instead of its name, your deployment may not
+     * roll back correctly.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-deploymentpreference.html#cfn-stepfunctions-statemachinealias-deploymentpreference-alarms)
      */
@@ -785,14 +792,26 @@ public open class CfnStateMachineAlias(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param alarms A list of Amazon CloudWatch alarms to be monitored during the deployment.
+       * @param alarms A list of Amazon CloudWatch alarm names to be monitored during the
+       * deployment.
        * The deployment fails and rolls back if any of these alarms go into the `ALARM` state.
+       *
+       *
+       * Amazon CloudWatch considers nonexistent alarms to have an `OK` state. If you provide an
+       * invalid alarm name or provide the ARN of an alarm instead of its name, your deployment may not
+       * roll back correctly.
        */
       public fun alarms(alarms: List<String>)
 
       /**
-       * @param alarms A list of Amazon CloudWatch alarms to be monitored during the deployment.
+       * @param alarms A list of Amazon CloudWatch alarm names to be monitored during the
+       * deployment.
        * The deployment fails and rolls back if any of these alarms go into the `ALARM` state.
+       *
+       *
+       * Amazon CloudWatch considers nonexistent alarms to have an `OK` state. If you provide an
+       * invalid alarm name or provide the ARN of an alarm instead of its name, your deployment may not
+       * roll back correctly.
        */
       public fun alarms(vararg alarms: String)
 
@@ -849,16 +868,28 @@ public open class CfnStateMachineAlias(
           software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty.builder()
 
       /**
-       * @param alarms A list of Amazon CloudWatch alarms to be monitored during the deployment.
+       * @param alarms A list of Amazon CloudWatch alarm names to be monitored during the
+       * deployment.
        * The deployment fails and rolls back if any of these alarms go into the `ALARM` state.
+       *
+       *
+       * Amazon CloudWatch considers nonexistent alarms to have an `OK` state. If you provide an
+       * invalid alarm name or provide the ARN of an alarm instead of its name, your deployment may not
+       * roll back correctly.
        */
       override fun alarms(alarms: List<String>) {
         cdkBuilder.alarms(alarms)
       }
 
       /**
-       * @param alarms A list of Amazon CloudWatch alarms to be monitored during the deployment.
+       * @param alarms A list of Amazon CloudWatch alarm names to be monitored during the
+       * deployment.
        * The deployment fails and rolls back if any of these alarms go into the `ALARM` state.
+       *
+       *
+       * Amazon CloudWatch considers nonexistent alarms to have an `OK` state. If you provide an
+       * invalid alarm name or provide the ARN of an alarm instead of its name, your deployment may not
+       * roll back correctly.
        */
       override fun alarms(vararg alarms: String): Unit = alarms(alarms.toList())
 
@@ -922,11 +953,18 @@ public open class CfnStateMachineAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty,
-    ) : CdkObject(cdkObject), DeploymentPreferenceProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentPreferenceProperty {
       /**
-       * A list of Amazon CloudWatch alarms to be monitored during the deployment.
+       * A list of Amazon CloudWatch alarm names to be monitored during the deployment.
        *
        * The deployment fails and rolls back if any of these alarms go into the `ALARM` state.
+       *
+       *
+       * Amazon CloudWatch considers nonexistent alarms to have an `OK` state. If you provide an
+       * invalid alarm name or provide the ARN of an alarm instead of its name, your deployment may not
+       * roll back correctly.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-deploymentpreference.html#cfn-stepfunctions-statemachinealias-deploymentpreference-alarms)
        */
@@ -1095,7 +1133,8 @@ public open class CfnStateMachineAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty,
-    ) : CdkObject(cdkObject), RoutingConfigurationVersionProperty {
+    ) : CdkObject(cdkObject),
+        RoutingConfigurationVersionProperty {
       /**
        * The Amazon Resource Name (ARN) that identifies one or two state machine versions defined in
        * the routing configuration.

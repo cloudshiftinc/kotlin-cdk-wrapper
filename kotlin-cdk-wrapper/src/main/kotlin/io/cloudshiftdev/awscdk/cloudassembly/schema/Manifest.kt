@@ -3,17 +3,19 @@
 package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
-/**
- * Protocol utility class.
- */
 public open class Manifest(
   cdkObject: software.amazon.awscdk.cloudassembly.schema.Manifest,
 ) : CdkObject(cdkObject) {
   public companion object {
+    @Deprecated(message = "deprecated in CDK")
+    public fun load(filePath: String): AssemblyManifest =
+        software.amazon.awscdk.cloudassembly.schema.Manifest.load(filePath).let(AssemblyManifest::wrap)
+
     public fun loadAssemblyManifest(filePath: String): AssemblyManifest =
         software.amazon.awscdk.cloudassembly.schema.Manifest.loadAssemblyManifest(filePath).let(AssemblyManifest::wrap)
 
@@ -33,6 +35,12 @@ public open class Manifest(
 
     public fun loadIntegManifest(filePath: String): IntegManifest =
         software.amazon.awscdk.cloudassembly.schema.Manifest.loadIntegManifest(filePath).let(IntegManifest::wrap)
+
+    @Deprecated(message = "deprecated in CDK")
+    public fun save(manifest: AssemblyManifest, filePath: String) {
+      software.amazon.awscdk.cloudassembly.schema.Manifest.save(manifest.let(AssemblyManifest.Companion::unwrap),
+          filePath)
+    }
 
     public fun saveAssemblyManifest(manifest: AssemblyManifest, filePath: String) {
       software.amazon.awscdk.cloudassembly.schema.Manifest.saveAssemblyManifest(manifest.let(AssemblyManifest.Companion::unwrap),

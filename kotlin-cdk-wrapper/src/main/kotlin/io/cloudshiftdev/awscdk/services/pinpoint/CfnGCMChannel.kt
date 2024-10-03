@@ -45,7 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGCMChannel(
   cdkObject: software.amazon.awscdk.services.pinpoint.CfnGCMChannel,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

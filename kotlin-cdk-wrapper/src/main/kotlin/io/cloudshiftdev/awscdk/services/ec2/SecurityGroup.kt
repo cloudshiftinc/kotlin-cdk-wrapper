@@ -66,7 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class SecurityGroup(
   cdkObject: software.amazon.awscdk.services.ec2.SecurityGroup,
-) : Resource(cdkObject), ISecurityGroup {
+) : Resource(cdkObject),
+    ISecurityGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -43,7 +43,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCarrierGateway(
   cdkObject: software.amazon.awscdk.services.ec2.CfnCarrierGateway,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

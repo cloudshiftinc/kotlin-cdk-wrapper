@@ -117,7 +117,8 @@ public interface FileFingerprintOptions : FileCopyOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.FileFingerprintOptions,
-  ) : CdkObject(cdkObject), FileFingerprintOptions {
+  ) : CdkObject(cdkObject),
+      FileFingerprintOptions {
     /**
      * File paths matching the patterns will be excluded.
      *

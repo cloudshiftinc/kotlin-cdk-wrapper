@@ -43,6 +43,9 @@ import kotlin.jvm.JvmName
  * .applicationSnapshotConfiguration(ApplicationSnapshotConfigurationProperty.builder()
  * .snapshotsEnabled(false)
  * .build())
+ * .applicationSystemRollbackConfiguration(ApplicationSystemRollbackConfigurationProperty.builder()
+ * .rollbackEnabled(false)
+ * .build())
  * .environmentProperties(EnvironmentPropertiesProperty.builder()
  * .propertyGroups(List.of(PropertyGroupProperty.builder()
  * .propertyGroupId("propertyGroupId")
@@ -508,7 +511,8 @@ public interface CfnApplicationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationProps,
-  ) : CdkObject(cdkObject), CfnApplicationProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationProps {
     /**
      * Use this parameter to configure the application.
      *

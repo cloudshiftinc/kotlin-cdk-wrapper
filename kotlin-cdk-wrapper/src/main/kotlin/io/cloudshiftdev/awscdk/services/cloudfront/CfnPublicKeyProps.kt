@@ -131,7 +131,8 @@ public interface CfnPublicKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps,
-  ) : CdkObject(cdkObject), CfnPublicKeyProps {
+  ) : CdkObject(cdkObject),
+      CfnPublicKeyProps {
     /**
      * Configuration information about a public key that you can use with [signed URLs and signed
      * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html)

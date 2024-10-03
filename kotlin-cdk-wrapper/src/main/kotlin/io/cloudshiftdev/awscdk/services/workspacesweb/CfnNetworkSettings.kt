@@ -24,8 +24,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * The VPC must have default tenancy. VPCs with dedicated tenancy are not supported.
  *
  * For availability consideration, you must have at least two subnets created in two different
- * Availability Zones. WorkSpaces Web is available in a subset of the Availability Zones for each
- * supported Region. For more information, see [Supported Availability
+ * Availability Zones. WorkSpaces Secure Browser is available in a subset of the Availability Zones for
+ * each supported Region. For more information, see [Supported Availability
  * Zones](https://docs.aws.amazon.com/workspaces-web/latest/adminguide/availability-zones.html) .
  *
  * Example:
@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNetworkSettings(
   cdkObject: software.amazon.awscdk.services.workspacesweb.CfnNetworkSettings,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class OpenIdConnectProvider(
   cdkObject: software.amazon.awscdk.services.iam.OpenIdConnectProvider,
-) : Resource(cdkObject), IOpenIdConnectProvider {
+) : Resource(cdkObject),
+    IOpenIdConnectProvider {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

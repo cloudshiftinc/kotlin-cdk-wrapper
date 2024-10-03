@@ -87,7 +87,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnServer(
   cdkObject: software.amazon.awscdk.services.transfer.CfnServer,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.transfer.CfnServer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -2004,7 +2006,8 @@ public open class CfnServer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnServer.EndpointDetailsProperty,
-    ) : CdkObject(cdkObject), EndpointDetailsProperty {
+    ) : CdkObject(cdkObject),
+        EndpointDetailsProperty {
       /**
        * A list of address allocation IDs that are required to attach an Elastic IP address to your
        * server's endpoint.
@@ -2292,7 +2295,8 @@ public open class CfnServer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty,
-    ) : CdkObject(cdkObject), IdentityProviderDetailsProperty {
+    ) : CdkObject(cdkObject),
+        IdentityProviderDetailsProperty {
       /**
        * The identifier of the AWS Directory Service directory that you want to use as your identity
        * provider.
@@ -2698,7 +2702,8 @@ public open class CfnServer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty,
-    ) : CdkObject(cdkObject), ProtocolDetailsProperty {
+    ) : CdkObject(cdkObject),
+        ProtocolDetailsProperty {
       /**
        * List of `As2Transport` objects.
        *
@@ -2883,7 +2888,8 @@ public open class CfnServer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty,
-    ) : CdkObject(cdkObject), S3StorageOptionsProperty {
+    ) : CdkObject(cdkObject),
+        S3StorageOptionsProperty {
       /**
        * Specifies whether or not performance for your Amazon S3 directories is optimized. This is
        * disabled by default.
@@ -2997,7 +3003,8 @@ public open class CfnServer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty,
-    ) : CdkObject(cdkObject), WorkflowDetailProperty {
+    ) : CdkObject(cdkObject),
+        WorkflowDetailProperty {
       /**
        * Includes the necessary permissions for S3, EFS, and Lambda operations that Transfer can
        * assume, so that all workflow steps can operate on the required resources.
@@ -3065,6 +3072,10 @@ public open class CfnServer(
      *
      * A *partial upload* occurs when a file is open when the session disconnects.
      *
+     *
+     * `OnPartialUpload` can contain a maximum of one `WorkflowDetail` object.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onpartialupload)
      */
     public fun onPartialUpload(): Any? = unwrap(this).getOnPartialUpload()
@@ -3077,6 +3088,10 @@ public open class CfnServer(
      *
      * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
      * '{"OnUpload":[]}'`
+     *
+     *
+     * `OnUpload` can contain a maximum of one `WorkflowDetail` object.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onupload)
      */
@@ -3093,6 +3108,9 @@ public open class CfnServer(
        * You can attach a workflow to a server that executes whenever there is a partial upload.
        *
        * A *partial upload* occurs when a file is open when the session disconnects.
+       *
+       *
+       * `OnPartialUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       public fun onPartialUpload(onPartialUpload: IResolvable)
 
@@ -3102,6 +3120,9 @@ public open class CfnServer(
        * You can attach a workflow to a server that executes whenever there is a partial upload.
        *
        * A *partial upload* occurs when a file is open when the session disconnects.
+       *
+       *
+       * `OnPartialUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       public fun onPartialUpload(onPartialUpload: List<Any>)
 
@@ -3111,6 +3132,9 @@ public open class CfnServer(
        * You can attach a workflow to a server that executes whenever there is a partial upload.
        *
        * A *partial upload* occurs when a file is open when the session disconnects.
+       *
+       *
+       * `OnPartialUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       public fun onPartialUpload(vararg onPartialUpload: Any)
 
@@ -3122,6 +3146,9 @@ public open class CfnServer(
        *
        * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
        * '{"OnUpload":[]}'`
+       *
+       *
+       * `OnUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       public fun onUpload(onUpload: IResolvable)
 
@@ -3133,6 +3160,9 @@ public open class CfnServer(
        *
        * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
        * '{"OnUpload":[]}'`
+       *
+       *
+       * `OnUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       public fun onUpload(onUpload: List<Any>)
 
@@ -3144,6 +3174,9 @@ public open class CfnServer(
        *
        * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
        * '{"OnUpload":[]}'`
+       *
+       *
+       * `OnUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       public fun onUpload(vararg onUpload: Any)
     }
@@ -3159,6 +3192,9 @@ public open class CfnServer(
        * You can attach a workflow to a server that executes whenever there is a partial upload.
        *
        * A *partial upload* occurs when a file is open when the session disconnects.
+       *
+       *
+       * `OnPartialUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       override fun onPartialUpload(onPartialUpload: IResolvable) {
         cdkBuilder.onPartialUpload(onPartialUpload.let(IResolvable.Companion::unwrap))
@@ -3170,6 +3206,9 @@ public open class CfnServer(
        * You can attach a workflow to a server that executes whenever there is a partial upload.
        *
        * A *partial upload* occurs when a file is open when the session disconnects.
+       *
+       *
+       * `OnPartialUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       override fun onPartialUpload(onPartialUpload: List<Any>) {
         cdkBuilder.onPartialUpload(onPartialUpload.map{CdkObjectWrappers.unwrap(it)})
@@ -3181,6 +3220,9 @@ public open class CfnServer(
        * You can attach a workflow to a server that executes whenever there is a partial upload.
        *
        * A *partial upload* occurs when a file is open when the session disconnects.
+       *
+       *
+       * `OnPartialUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       override fun onPartialUpload(vararg onPartialUpload: Any): Unit =
           onPartialUpload(onPartialUpload.toList())
@@ -3193,6 +3235,9 @@ public open class CfnServer(
        *
        * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
        * '{"OnUpload":[]}'`
+       *
+       *
+       * `OnUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       override fun onUpload(onUpload: IResolvable) {
         cdkBuilder.onUpload(onUpload.let(IResolvable.Companion::unwrap))
@@ -3206,6 +3251,9 @@ public open class CfnServer(
        *
        * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
        * '{"OnUpload":[]}'`
+       *
+       *
+       * `OnUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       override fun onUpload(onUpload: List<Any>) {
         cdkBuilder.onUpload(onUpload.map{CdkObjectWrappers.unwrap(it)})
@@ -3219,6 +3267,9 @@ public open class CfnServer(
        *
        * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
        * '{"OnUpload":[]}'`
+       *
+       *
+       * `OnUpload` can contain a maximum of one `WorkflowDetail` object.
        */
       override fun onUpload(vararg onUpload: Any): Unit = onUpload(onUpload.toList())
 
@@ -3228,13 +3279,18 @@ public open class CfnServer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty,
-    ) : CdkObject(cdkObject), WorkflowDetailsProperty {
+    ) : CdkObject(cdkObject),
+        WorkflowDetailsProperty {
       /**
        * A trigger that starts a workflow if a file is only partially uploaded.
        *
        * You can attach a workflow to a server that executes whenever there is a partial upload.
        *
        * A *partial upload* occurs when a file is open when the session disconnects.
+       *
+       *
+       * `OnPartialUpload` can contain a maximum of one `WorkflowDetail` object.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onpartialupload)
        */
@@ -3248,6 +3304,10 @@ public open class CfnServer(
        *
        * `aws transfer update-server --server-id s-01234567890abcdef --workflow-details
        * '{"OnUpload":[]}'`
+       *
+       *
+       * `OnUpload` can contain a maximum of one `WorkflowDetail` object.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html#cfn-transfer-server-workflowdetails-onupload)
        */

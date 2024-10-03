@@ -29,7 +29,8 @@ import software.amazon.awscdk.services.sqs.IQueue as AmazonAwscdkServicesSqsIQue
  */
 public open class SqsSubscription(
   cdkObject: software.amazon.awscdk.services.sns.subscriptions.SqsSubscription,
-) : CdkObject(cdkObject), ITopicSubscription {
+) : CdkObject(cdkObject),
+    ITopicSubscription {
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
       this(software.amazon.awscdk.services.sns.subscriptions.SqsSubscription(queue.let(CloudshiftdevAwscdkServicesSqsIQueue.Companion::unwrap))
   )

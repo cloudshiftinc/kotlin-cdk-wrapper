@@ -295,7 +295,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSpotFleet(
   cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -541,7 +542,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorCountRequestProperty,
-    ) : CdkObject(cdkObject), AcceleratorCountRequestProperty {
+    ) : CdkObject(cdkObject),
+        AcceleratorCountRequestProperty {
       /**
        * The maximum number of accelerators.
        *
@@ -664,7 +666,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.AcceleratorTotalMemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRequestProperty {
+    ) : CdkObject(cdkObject),
+        AcceleratorTotalMemoryMiBRequestProperty {
       /**
        * The maximum amount of accelerator memory, in MiB.
        *
@@ -791,7 +794,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.BaselineEbsBandwidthMbpsRequestProperty,
-    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsRequestProperty {
+    ) : CdkObject(cdkObject),
+        BaselineEbsBandwidthMbpsRequestProperty {
       /**
        * The maximum baseline bandwidth, in Mbps.
        *
@@ -1028,7 +1032,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.BlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
+    ) : CdkObject(cdkObject),
+        BlockDeviceMappingProperty {
       /**
        * The device name (for example, `/dev/sdh` or `xvdh` ).
        *
@@ -1145,7 +1150,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancerProperty,
-    ) : CdkObject(cdkObject), ClassicLoadBalancerProperty {
+    ) : CdkObject(cdkObject),
+        ClassicLoadBalancerProperty {
       /**
        * The name of the load balancer.
        *
@@ -1255,7 +1261,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty,
-    ) : CdkObject(cdkObject), ClassicLoadBalancersConfigProperty {
+    ) : CdkObject(cdkObject),
+        ClassicLoadBalancersConfigProperty {
       /**
        * One or more Classic Load Balancers.
        *
@@ -1659,7 +1666,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.EbsBlockDeviceProperty,
-    ) : CdkObject(cdkObject), EbsBlockDeviceProperty {
+    ) : CdkObject(cdkObject),
+        EbsBlockDeviceProperty {
       /**
        * Indicates whether the EBS volume is deleted on instance termination.
        *
@@ -1917,7 +1925,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.FleetLaunchTemplateSpecificationProperty,
-    ) : CdkObject(cdkObject), FleetLaunchTemplateSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        FleetLaunchTemplateSpecificationProperty {
       /**
        * The ID of the launch template.
        *
@@ -2022,7 +2031,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.GroupIdentifierProperty,
-    ) : CdkObject(cdkObject), GroupIdentifierProperty {
+    ) : CdkObject(cdkObject),
+        GroupIdentifierProperty {
       /**
        * The ID of the security group.
        *
@@ -2105,7 +2115,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.IamInstanceProfileSpecificationProperty,
-    ) : CdkObject(cdkObject), IamInstanceProfileSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        IamInstanceProfileSpecificationProperty {
       /**
        * The Amazon Resource Name (ARN) of the instance profile.
        *
@@ -2187,7 +2198,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceIpv6AddressProperty,
-    ) : CdkObject(cdkObject), InstanceIpv6AddressProperty {
+    ) : CdkObject(cdkObject),
+        InstanceIpv6AddressProperty {
       /**
        * The IPv6 address.
        *
@@ -2713,7 +2725,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty,
-    ) : CdkObject(cdkObject), InstanceNetworkInterfaceSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        InstanceNetworkInterfaceSpecificationProperty {
       /**
        * Indicates whether to assign a public IPv4 address to an instance you launch in a VPC.
        *
@@ -3204,8 +3217,8 @@ public open class CfnSpotFleet(
      *
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *
-     * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-     * is based on the per vCPU or per memory price instead of the per instance price.
+     * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+     * threshold is based on the per vCPU or per memory price instead of the per instance price.
      *
      *
      * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -3753,8 +3766,8 @@ public open class CfnSpotFleet(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -4431,8 +4444,8 @@ public open class CfnSpotFleet(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -4713,7 +4726,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.InstanceRequirementsRequestProperty,
-    ) : CdkObject(cdkObject), InstanceRequirementsRequestProperty {
+    ) : CdkObject(cdkObject),
+        InstanceRequirementsRequestProperty {
       /**
        * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
        * instance.
@@ -4963,8 +4977,8 @@ public open class CfnSpotFleet(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -5354,7 +5368,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateConfigProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateConfigProperty {
+    ) : CdkObject(cdkObject),
+        LaunchTemplateConfigProperty {
       /**
        * The launch template to use.
        *
@@ -5541,8 +5556,14 @@ public open class CfnSpotFleet(
     /**
      * The number of units provided by the specified instance type.
      *
+     * These are the same units that you chose to set the target capacity in terms of instances, or
+     * a performance characteristic such as vCPUs, memory, or I/O.
      *
-     * When specifying weights, the price used in the `lowest-price` and `price-capacity-optimized`
+     * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the
+     * number of instances to the next whole number. If this value is not specified, the default is 1.
+     *
+     *
+     * When specifying weights, the price used in the `lowestPrice` and `priceCapacityOptimized`
      * allocation strategies is per *unit* hour (where the instance price is divided by the specified
      * weight). However, if all the specified weights are above the requested `TargetCapacity` ,
      * resulting in only 1 instance being launched, the price used is per *instance* hour.
@@ -5641,12 +5662,18 @@ public open class CfnSpotFleet(
 
       /**
        * @param weightedCapacity The number of units provided by the specified instance type.
+       * These are the same units that you chose to set the target capacity in terms of instances,
+       * or a performance characteristic such as vCPUs, memory, or I/O.
        *
-       * When specifying weights, the price used in the `lowest-price` and
-       * `price-capacity-optimized` allocation strategies is per *unit* hour (where the instance price
-       * is divided by the specified weight). However, if all the specified weights are above the
-       * requested `TargetCapacity` , resulting in only 1 instance being launched, the price used is
-       * per *instance* hour.
+       * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the
+       * number of instances to the next whole number. If this value is not specified, the default is
+       * 1.
+       *
+       *
+       * When specifying weights, the price used in the `lowestPrice` and `priceCapacityOptimized`
+       * allocation strategies is per *unit* hour (where the instance price is divided by the specified
+       * weight). However, if all the specified weights are above the requested `TargetCapacity` ,
+       * resulting in only 1 instance being launched, the price used is per *instance* hour.
        */
       public fun weightedCapacity(weightedCapacity: Number)
     }
@@ -5755,12 +5782,18 @@ public open class CfnSpotFleet(
 
       /**
        * @param weightedCapacity The number of units provided by the specified instance type.
+       * These are the same units that you chose to set the target capacity in terms of instances,
+       * or a performance characteristic such as vCPUs, memory, or I/O.
        *
-       * When specifying weights, the price used in the `lowest-price` and
-       * `price-capacity-optimized` allocation strategies is per *unit* hour (where the instance price
-       * is divided by the specified weight). However, if all the specified weights are above the
-       * requested `TargetCapacity` , resulting in only 1 instance being launched, the price used is
-       * per *instance* hour.
+       * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the
+       * number of instances to the next whole number. If this value is not specified, the default is
+       * 1.
+       *
+       *
+       * When specifying weights, the price used in the `lowestPrice` and `priceCapacityOptimized`
+       * allocation strategies is per *unit* hour (where the instance price is divided by the specified
+       * weight). However, if all the specified weights are above the requested `TargetCapacity` ,
+       * resulting in only 1 instance being launched, the price used is per *instance* hour.
        */
       override fun weightedCapacity(weightedCapacity: Number) {
         cdkBuilder.weightedCapacity(weightedCapacity)
@@ -5773,7 +5806,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateOverridesProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateOverridesProperty {
+    ) : CdkObject(cdkObject),
+        LaunchTemplateOverridesProperty {
       /**
        * The Availability Zone in which to launch the instances.
        *
@@ -5847,12 +5881,18 @@ public open class CfnSpotFleet(
       /**
        * The number of units provided by the specified instance type.
        *
+       * These are the same units that you chose to set the target capacity in terms of instances,
+       * or a performance characteristic such as vCPUs, memory, or I/O.
        *
-       * When specifying weights, the price used in the `lowest-price` and
-       * `price-capacity-optimized` allocation strategies is per *unit* hour (where the instance price
-       * is divided by the specified weight). However, if all the specified weights are above the
-       * requested `TargetCapacity` , resulting in only 1 instance being launched, the price used is
-       * per *instance* hour.
+       * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the
+       * number of instances to the next whole number. If this value is not specified, the default is
+       * 1.
+       *
+       *
+       * When specifying weights, the price used in the `lowestPrice` and `priceCapacityOptimized`
+       * allocation strategies is per *unit* hour (where the instance price is divided by the specified
+       * weight). However, if all the specified weights are above the requested `TargetCapacity` ,
+       * resulting in only 1 instance being launched, the price used is per *instance* hour.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-launchtemplateoverrides.html#cfn-ec2-spotfleet-launchtemplateoverrides-weightedcapacity)
@@ -6021,7 +6061,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.LoadBalancersConfigProperty,
-    ) : CdkObject(cdkObject), LoadBalancersConfigProperty {
+    ) : CdkObject(cdkObject),
+        LoadBalancersConfigProperty {
       /**
        * The Classic Load Balancers.
        *
@@ -6138,7 +6179,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryGiBPerVCpuRequestProperty,
-    ) : CdkObject(cdkObject), MemoryGiBPerVCpuRequestProperty {
+    ) : CdkObject(cdkObject),
+        MemoryGiBPerVCpuRequestProperty {
       /**
        * The maximum amount of memory per vCPU, in GiB.
        *
@@ -6257,7 +6299,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.MemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), MemoryMiBRequestProperty {
+    ) : CdkObject(cdkObject),
+        MemoryMiBRequestProperty {
       /**
        * The maximum amount of memory, in MiB.
        *
@@ -6385,7 +6428,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkBandwidthGbpsRequestProperty,
-    ) : CdkObject(cdkObject), NetworkBandwidthGbpsRequestProperty {
+    ) : CdkObject(cdkObject),
+        NetworkBandwidthGbpsRequestProperty {
       /**
        * The maximum amount of network bandwidth, in Gbps.
        *
@@ -6508,7 +6552,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.NetworkInterfaceCountRequestProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceCountRequestProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInterfaceCountRequestProperty {
       /**
        * The maximum number of network interfaces.
        *
@@ -6646,7 +6691,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.PrivateIpAddressSpecificationProperty,
-    ) : CdkObject(cdkObject), PrivateIpAddressSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PrivateIpAddressSpecificationProperty {
       /**
        * Indicates whether the private IPv4 address is the primary private IPv4 address.
        *
@@ -6689,7 +6735,7 @@ public open class CfnSpotFleet(
    *
    * For more information, see [Capacity
    * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-   * in the *Amazon EC2 User Guide for Linux Instances* .
+   * in the *Amazon EC2 User Guide* .
    *
    * Example:
    *
@@ -6814,7 +6860,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotCapacityRebalanceProperty,
-    ) : CdkObject(cdkObject), SpotCapacityRebalanceProperty {
+    ) : CdkObject(cdkObject),
+        SpotCapacityRebalanceProperty {
       /**
        * The replacement strategy to use. Only available for fleets of type `maintain` .
        *
@@ -7176,6 +7223,13 @@ public open class CfnSpotFleet(
      * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the
      * number of instances to the next whole number. If this value is not specified, the default is 1.
      *
+     *
+     * When specifying weights, the price used in the `lowestPrice` and `priceCapacityOptimized`
+     * allocation strategies is per *unit* hour (where the instance price is divided by the specified
+     * weight). However, if all the specified weights are above the requested `TargetCapacity` ,
+     * resulting in only 1 instance being launched, the price used is per *instance* hour.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetlaunchspecification.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-weightedcapacity)
      */
     public fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
@@ -7429,6 +7483,12 @@ public open class CfnSpotFleet(
        * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the
        * number of instances to the next whole number. If this value is not specified, the default is
        * 1.
+       *
+       *
+       * When specifying weights, the price used in the `lowestPrice` and `priceCapacityOptimized`
+       * allocation strategies is per *unit* hour (where the instance price is divided by the specified
+       * weight). However, if all the specified weights are above the requested `TargetCapacity` ,
+       * resulting in only 1 instance being launched, the price used is per *instance* hour.
        */
       public fun weightedCapacity(weightedCapacity: Number)
     }
@@ -7743,6 +7803,12 @@ public open class CfnSpotFleet(
        * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the
        * number of instances to the next whole number. If this value is not specified, the default is
        * 1.
+       *
+       *
+       * When specifying weights, the price used in the `lowestPrice` and `priceCapacityOptimized`
+       * allocation strategies is per *unit* hour (where the instance price is divided by the specified
+       * weight). However, if all the specified weights are above the requested `TargetCapacity` ,
+       * resulting in only 1 instance being launched, the price used is per *instance* hour.
        */
       override fun weightedCapacity(weightedCapacity: Number) {
         cdkBuilder.weightedCapacity(weightedCapacity)
@@ -7755,7 +7821,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetLaunchSpecificationProperty,
-    ) : CdkObject(cdkObject), SpotFleetLaunchSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SpotFleetLaunchSpecificationProperty {
       /**
        * One or more block devices that are mapped to the Spot Instances.
        *
@@ -7927,6 +7994,13 @@ public open class CfnSpotFleet(
        * number of instances to the next whole number. If this value is not specified, the default is
        * 1.
        *
+       *
+       * When specifying weights, the price used in the `lowestPrice` and `priceCapacityOptimized`
+       * allocation strategies is per *unit* hour (where the instance price is divided by the specified
+       * weight). However, if all the specified weights are above the requested `TargetCapacity` ,
+       * resulting in only 1 instance being launched, the price used is per *instance* hour.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetlaunchspecification.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-weightedcapacity)
        */
       override fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
@@ -8025,7 +8099,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetMonitoringProperty,
-    ) : CdkObject(cdkObject), SpotFleetMonitoringProperty {
+    ) : CdkObject(cdkObject),
+        SpotFleetMonitoringProperty {
       /**
        * Enables monitoring for the instance.
        *
@@ -8336,13 +8411,16 @@ public open class CfnSpotFleet(
      * same priority is applied when fulfilling On-Demand capacity.
      * * **diversified** - Spot Fleet requests instances from all of the Spot Instance pools that
      * you specify.
-     * * **lowestPrice** - Spot Fleet requests instances from the lowest priced Spot Instance pool
-     * that has available capacity. If the lowest priced pool doesn't have available capacity, the Spot
-     * Instances come from the next lowest priced pool that has available capacity. If a pool runs out
-     * of capacity before fulfilling your desired capacity, Spot Fleet will continue to fulfill your
-     * request by drawing from the next lowest priced pool. To ensure that your desired capacity is
-     * met, you might receive Spot Instances from several pools. Because this strategy only considers
-     * instance price and not capacity availability, it might lead to high interruption rates.
+     * * **lowestPrice (not recommended)** - &gt; We don't recommend the `lowestPrice` allocation
+     * strategy because it has the highest risk of interruption for your Spot Instances.
+     *
+     * Spot Fleet requests instances from the lowest priced Spot Instance pool that has available
+     * capacity. If the lowest priced pool doesn't have available capacity, the Spot Instances come
+     * from the next lowest priced pool that has available capacity. If a pool runs out of capacity
+     * before fulfilling your desired capacity, Spot Fleet will continue to fulfill your request by
+     * drawing from the next lowest priced pool. To ensure that your desired capacity is met, you might
+     * receive Spot Instances from several pools. Because this strategy only considers instance price
+     * and not capacity availability, it might lead to high interruption rates.
      *
      * Default: `lowestPrice`
      *
@@ -8375,9 +8453,9 @@ public open class CfnSpotFleet(
      *
      * For more information, see [Spot Fleet
      * Prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-requests.html#spot-fleet-prerequisites)
-     * in the *Amazon EC2 User Guide for Linux Instances* . Spot Fleet can terminate Spot Instances on
-     * your behalf when you cancel its Spot Fleet request or when the Spot Fleet request expires, if
-     * you set `TerminateInstancesWithExpiration` .
+     * in the *Amazon EC2 User Guide* . Spot Fleet can terminate Spot Instances on your behalf when you
+     * cancel its Spot Fleet request or when the Spot Fleet request expires, if you set
+     * `TerminateInstancesWithExpiration` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole)
      */
@@ -8472,7 +8550,7 @@ public open class CfnSpotFleet(
      * your final cost might be higher than what you specified for `onDemandMaxTotalPrice` . For more
      * information, see [Surplus credits can incur
      * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-     * in the *EC2 User Guide* .
+     * in the *Amazon EC2 User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-ondemandmaxtotalprice)
@@ -8522,7 +8600,7 @@ public open class CfnSpotFleet(
      * final cost might be higher than what you specified for `spotMaxTotalPrice` . For more
      * information, see [Surplus credits can incur
      * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-     * in the *EC2 User Guide* .
+     * in the *Amazon EC2 User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotmaxtotalprice)
@@ -8655,14 +8733,16 @@ public open class CfnSpotFleet(
        * `prioritized` , the same priority is applied when fulfilling On-Demand capacity.
        * * **diversified** - Spot Fleet requests instances from all of the Spot Instance pools that
        * you specify.
-       * * **lowestPrice** - Spot Fleet requests instances from the lowest priced Spot Instance pool
-       * that has available capacity. If the lowest priced pool doesn't have available capacity, the
-       * Spot Instances come from the next lowest priced pool that has available capacity. If a pool
-       * runs out of capacity before fulfilling your desired capacity, Spot Fleet will continue to
-       * fulfill your request by drawing from the next lowest priced pool. To ensure that your desired
-       * capacity is met, you might receive Spot Instances from several pools. Because this strategy
-       * only considers instance price and not capacity availability, it might lead to high
-       * interruption rates.
+       * * **lowestPrice (not recommended)** - &gt; We don't recommend the `lowestPrice` allocation
+       * strategy because it has the highest risk of interruption for your Spot Instances.
+       *
+       * Spot Fleet requests instances from the lowest priced Spot Instance pool that has available
+       * capacity. If the lowest priced pool doesn't have available capacity, the Spot Instances come
+       * from the next lowest priced pool that has available capacity. If a pool runs out of capacity
+       * before fulfilling your desired capacity, Spot Fleet will continue to fulfill your request by
+       * drawing from the next lowest priced pool. To ensure that your desired capacity is met, you
+       * might receive Spot Instances from several pools. Because this strategy only considers instance
+       * price and not capacity availability, it might lead to high interruption rates.
        *
        * Default: `lowestPrice`
        */
@@ -8687,9 +8767,9 @@ public open class CfnSpotFleet(
        * instances on your behalf. 
        * For more information, see [Spot Fleet
        * Prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-requests.html#spot-fleet-prerequisites)
-       * in the *Amazon EC2 User Guide for Linux Instances* . Spot Fleet can terminate Spot Instances
-       * on your behalf when you cancel its Spot Fleet request or when the Spot Fleet request expires,
-       * if you set `TerminateInstancesWithExpiration` .
+       * in the *Amazon EC2 User Guide* . Spot Fleet can terminate Spot Instances on your behalf when
+       * you cancel its Spot Fleet request or when the Spot Fleet request expires, if you set
+       * `TerminateInstancesWithExpiration` .
        */
       public fun iamFleetRole(iamFleetRole: String)
 
@@ -8815,7 +8895,7 @@ public open class CfnSpotFleet(
        * surplus credits, your final cost might be higher than what you specified for
        * `onDemandMaxTotalPrice` . For more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        */
       public fun onDemandMaxTotalPrice(onDemandMaxTotalPrice: String)
 
@@ -8879,7 +8959,7 @@ public open class CfnSpotFleet(
        * credits, your final cost might be higher than what you specified for `spotMaxTotalPrice` . For
        * more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        */
       public fun spotMaxTotalPrice(spotMaxTotalPrice: String)
 
@@ -9024,14 +9104,16 @@ public open class CfnSpotFleet(
        * `prioritized` , the same priority is applied when fulfilling On-Demand capacity.
        * * **diversified** - Spot Fleet requests instances from all of the Spot Instance pools that
        * you specify.
-       * * **lowestPrice** - Spot Fleet requests instances from the lowest priced Spot Instance pool
-       * that has available capacity. If the lowest priced pool doesn't have available capacity, the
-       * Spot Instances come from the next lowest priced pool that has available capacity. If a pool
-       * runs out of capacity before fulfilling your desired capacity, Spot Fleet will continue to
-       * fulfill your request by drawing from the next lowest priced pool. To ensure that your desired
-       * capacity is met, you might receive Spot Instances from several pools. Because this strategy
-       * only considers instance price and not capacity availability, it might lead to high
-       * interruption rates.
+       * * **lowestPrice (not recommended)** - &gt; We don't recommend the `lowestPrice` allocation
+       * strategy because it has the highest risk of interruption for your Spot Instances.
+       *
+       * Spot Fleet requests instances from the lowest priced Spot Instance pool that has available
+       * capacity. If the lowest priced pool doesn't have available capacity, the Spot Instances come
+       * from the next lowest priced pool that has available capacity. If a pool runs out of capacity
+       * before fulfilling your desired capacity, Spot Fleet will continue to fulfill your request by
+       * drawing from the next lowest priced pool. To ensure that your desired capacity is met, you
+       * might receive Spot Instances from several pools. Because this strategy only considers instance
+       * price and not capacity availability, it might lead to high interruption rates.
        *
        * Default: `lowestPrice`
        */
@@ -9062,9 +9144,9 @@ public open class CfnSpotFleet(
        * instances on your behalf. 
        * For more information, see [Spot Fleet
        * Prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-requests.html#spot-fleet-prerequisites)
-       * in the *Amazon EC2 User Guide for Linux Instances* . Spot Fleet can terminate Spot Instances
-       * on your behalf when you cancel its Spot Fleet request or when the Spot Fleet request expires,
-       * if you set `TerminateInstancesWithExpiration` .
+       * in the *Amazon EC2 User Guide* . Spot Fleet can terminate Spot Instances on your behalf when
+       * you cancel its Spot Fleet request or when the Spot Fleet request expires, if you set
+       * `TerminateInstancesWithExpiration` .
        */
       override fun iamFleetRole(iamFleetRole: String) {
         cdkBuilder.iamFleetRole(iamFleetRole)
@@ -9213,7 +9295,7 @@ public open class CfnSpotFleet(
        * surplus credits, your final cost might be higher than what you specified for
        * `onDemandMaxTotalPrice` . For more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        */
       override fun onDemandMaxTotalPrice(onDemandMaxTotalPrice: String) {
         cdkBuilder.onDemandMaxTotalPrice(onDemandMaxTotalPrice)
@@ -9291,7 +9373,7 @@ public open class CfnSpotFleet(
        * credits, your final cost might be higher than what you specified for `spotMaxTotalPrice` . For
        * more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        */
       override fun spotMaxTotalPrice(spotMaxTotalPrice: String) {
         cdkBuilder.spotMaxTotalPrice(spotMaxTotalPrice)
@@ -9434,7 +9516,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetRequestConfigDataProperty,
-    ) : CdkObject(cdkObject), SpotFleetRequestConfigDataProperty {
+    ) : CdkObject(cdkObject),
+        SpotFleetRequestConfigDataProperty {
       /**
        * The strategy that determines how to allocate the target Spot Instance capacity across the
        * Spot Instance pools specified by the Spot Fleet launch configuration.
@@ -9460,14 +9543,16 @@ public open class CfnSpotFleet(
        * `prioritized` , the same priority is applied when fulfilling On-Demand capacity.
        * * **diversified** - Spot Fleet requests instances from all of the Spot Instance pools that
        * you specify.
-       * * **lowestPrice** - Spot Fleet requests instances from the lowest priced Spot Instance pool
-       * that has available capacity. If the lowest priced pool doesn't have available capacity, the
-       * Spot Instances come from the next lowest priced pool that has available capacity. If a pool
-       * runs out of capacity before fulfilling your desired capacity, Spot Fleet will continue to
-       * fulfill your request by drawing from the next lowest priced pool. To ensure that your desired
-       * capacity is met, you might receive Spot Instances from several pools. Because this strategy
-       * only considers instance price and not capacity availability, it might lead to high
-       * interruption rates.
+       * * **lowestPrice (not recommended)** - &gt; We don't recommend the `lowestPrice` allocation
+       * strategy because it has the highest risk of interruption for your Spot Instances.
+       *
+       * Spot Fleet requests instances from the lowest priced Spot Instance pool that has available
+       * capacity. If the lowest priced pool doesn't have available capacity, the Spot Instances come
+       * from the next lowest priced pool that has available capacity. If a pool runs out of capacity
+       * before fulfilling your desired capacity, Spot Fleet will continue to fulfill your request by
+       * drawing from the next lowest priced pool. To ensure that your desired capacity is met, you
+       * might receive Spot Instances from several pools. Because this strategy only considers instance
+       * price and not capacity availability, it might lead to high interruption rates.
        *
        * Default: `lowestPrice`
        *
@@ -9500,9 +9585,9 @@ public open class CfnSpotFleet(
        *
        * For more information, see [Spot Fleet
        * Prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-requests.html#spot-fleet-prerequisites)
-       * in the *Amazon EC2 User Guide for Linux Instances* . Spot Fleet can terminate Spot Instances
-       * on your behalf when you cancel its Spot Fleet request or when the Spot Fleet request expires,
-       * if you set `TerminateInstancesWithExpiration` .
+       * in the *Amazon EC2 User Guide* . Spot Fleet can terminate Spot Instances on your behalf when
+       * you cancel its Spot Fleet request or when the Spot Fleet request expires, if you set
+       * `TerminateInstancesWithExpiration` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole)
        */
@@ -9598,7 +9683,7 @@ public open class CfnSpotFleet(
        * surplus credits, your final cost might be higher than what you specified for
        * `onDemandMaxTotalPrice` . For more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-ondemandmaxtotalprice)
@@ -9649,7 +9734,7 @@ public open class CfnSpotFleet(
        * credits, your final cost might be higher than what you specified for `spotMaxTotalPrice` . For
        * more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotmaxtotalprice)
@@ -9877,7 +9962,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty,
-    ) : CdkObject(cdkObject), SpotFleetTagSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SpotFleetTagSpecificationProperty {
       /**
        * The type of resource.
        *
@@ -9945,7 +10031,7 @@ public open class CfnSpotFleet(
      *
      * For more information, see [Capacity
      * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-     * in the *Amazon EC2 User Guide for Linux Instances* .
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotmaintenancestrategies.html#cfn-ec2-spotfleet-spotmaintenancestrategies-capacityrebalance)
      */
@@ -9961,7 +10047,7 @@ public open class CfnSpotFleet(
        * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
        * For more information, see [Capacity
        * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        */
       public fun capacityRebalance(capacityRebalance: IResolvable)
 
@@ -9970,7 +10056,7 @@ public open class CfnSpotFleet(
        * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
        * For more information, see [Capacity
        * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        */
       public fun capacityRebalance(capacityRebalance: SpotCapacityRebalanceProperty)
 
@@ -9979,7 +10065,7 @@ public open class CfnSpotFleet(
        * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
        * For more information, see [Capacity
        * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2573a18d019a336fa9f65454022b27033103109b979f9370b6b039c2e26ba7e3")
@@ -9998,7 +10084,7 @@ public open class CfnSpotFleet(
        * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
        * For more information, see [Capacity
        * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        */
       override fun capacityRebalance(capacityRebalance: IResolvable) {
         cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable.Companion::unwrap))
@@ -10009,7 +10095,7 @@ public open class CfnSpotFleet(
        * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
        * For more information, see [Capacity
        * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        */
       override fun capacityRebalance(capacityRebalance: SpotCapacityRebalanceProperty) {
         cdkBuilder.capacityRebalance(capacityRebalance.let(SpotCapacityRebalanceProperty.Companion::unwrap))
@@ -10020,7 +10106,7 @@ public open class CfnSpotFleet(
        * emits a signal that your Spot Instance is at an elevated risk of being interrupted.
        * For more information, see [Capacity
        * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2573a18d019a336fa9f65454022b27033103109b979f9370b6b039c2e26ba7e3")
@@ -10035,14 +10121,15 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotMaintenanceStrategiesProperty,
-    ) : CdkObject(cdkObject), SpotMaintenanceStrategiesProperty {
+    ) : CdkObject(cdkObject),
+        SpotMaintenanceStrategiesProperty {
       /**
        * The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot
        * Instance is at an elevated risk of being interrupted.
        *
        * For more information, see [Capacity
        * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
-       * in the *Amazon EC2 User Guide for Linux Instances* .
+       * in the *Amazon EC2 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotmaintenancestrategies.html#cfn-ec2-spotfleet-spotmaintenancestrategies-capacityrebalance)
        */
@@ -10175,7 +10262,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotPlacementProperty,
-    ) : CdkObject(cdkObject), SpotPlacementProperty {
+    ) : CdkObject(cdkObject),
+        SpotPlacementProperty {
       /**
        * The Availability Zone.
        *
@@ -10275,7 +10363,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupProperty,
-    ) : CdkObject(cdkObject), TargetGroupProperty {
+    ) : CdkObject(cdkObject),
+        TargetGroupProperty {
       /**
        * The Amazon Resource Name (ARN) of the target group.
        *
@@ -10383,7 +10472,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupsConfigProperty,
-    ) : CdkObject(cdkObject), TargetGroupsConfigProperty {
+    ) : CdkObject(cdkObject),
+        TargetGroupsConfigProperty {
       /**
        * One or more target groups.
        *
@@ -10494,7 +10584,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.TotalLocalStorageGBRequestProperty,
-    ) : CdkObject(cdkObject), TotalLocalStorageGBRequestProperty {
+    ) : CdkObject(cdkObject),
+        TotalLocalStorageGBRequestProperty {
       /**
        * The maximum amount of total local storage, in GB.
        *
@@ -10616,7 +10707,8 @@ public open class CfnSpotFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet.VCpuCountRangeRequestProperty,
-    ) : CdkObject(cdkObject), VCpuCountRangeRequestProperty {
+    ) : CdkObject(cdkObject),
+        VCpuCountRangeRequestProperty {
       /**
        * The maximum number of vCPUs.
        *

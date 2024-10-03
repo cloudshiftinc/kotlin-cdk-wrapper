@@ -401,7 +401,8 @@ public interface CfnApplicationSettingsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettingsProps,
-  ) : CdkObject(cdkObject), CfnApplicationSettingsProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationSettingsProps {
     /**
      * The unique identifier for the Amazon Pinpoint application.
      *

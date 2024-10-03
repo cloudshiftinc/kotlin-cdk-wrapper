@@ -216,7 +216,8 @@ public interface IHttpStage : IStage {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpStage,
-  ) : CdkObject(cdkObject), IHttpStage {
+  ) : CdkObject(cdkObject),
+      IHttpStage {
     /**
      * The API this stage is associated to.
      */

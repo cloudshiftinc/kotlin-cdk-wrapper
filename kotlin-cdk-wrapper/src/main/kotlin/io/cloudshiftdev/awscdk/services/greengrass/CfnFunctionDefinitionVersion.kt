@@ -92,7 +92,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFunctionDefinitionVersion(
   cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -478,7 +479,8 @@ public open class CfnFunctionDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.DefaultConfigProperty,
-    ) : CdkObject(cdkObject), DefaultConfigProperty {
+    ) : CdkObject(cdkObject),
+        DefaultConfigProperty {
       /**
        * Configuration settings for the Lambda execution environment on the AWS IoT Greengrass core.
        *
@@ -751,7 +753,8 @@ public open class CfnFunctionDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.EnvironmentProperty,
-    ) : CdkObject(cdkObject), EnvironmentProperty {
+    ) : CdkObject(cdkObject),
+        EnvironmentProperty {
       /**
        * Indicates whether the function is allowed to access the `/sys` directory on the core
        * device, which allows the read device information from `/sys` .
@@ -1117,7 +1120,8 @@ public open class CfnFunctionDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ExecutionProperty,
-    ) : CdkObject(cdkObject), ExecutionProperty {
+    ) : CdkObject(cdkObject),
+        ExecutionProperty {
       /**
        * The containerization that the Lambda function runs in.
        *
@@ -1461,7 +1465,8 @@ public open class CfnFunctionDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionConfigurationProperty,
-    ) : CdkObject(cdkObject), FunctionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FunctionConfigurationProperty {
       /**
        * The expected encoding type of the input payload for the function.
        *
@@ -1716,7 +1721,8 @@ public open class CfnFunctionDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.FunctionProperty,
-    ) : CdkObject(cdkObject), FunctionProperty {
+    ) : CdkObject(cdkObject),
+        FunctionProperty {
       /**
        * The Amazon Resource Name (ARN) of the alias (recommended) or version of the referenced
        * Lambda function.
@@ -1861,7 +1867,8 @@ public open class CfnFunctionDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.ResourceAccessPolicyProperty,
-    ) : CdkObject(cdkObject), ResourceAccessPolicyProperty {
+    ) : CdkObject(cdkObject),
+        ResourceAccessPolicyProperty {
       /**
        * The read-only or read-write access that the Lambda function has to the resource.
        *
@@ -1999,7 +2006,8 @@ public open class CfnFunctionDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion.RunAsProperty,
-    ) : CdkObject(cdkObject), RunAsProperty {
+    ) : CdkObject(cdkObject),
+        RunAsProperty {
       /**
        * The group ID whose permissions are used to run the Lambda function.
        *

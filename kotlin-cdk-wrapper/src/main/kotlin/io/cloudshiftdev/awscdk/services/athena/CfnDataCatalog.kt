@@ -50,7 +50,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataCatalog(
   cdkObject: software.amazon.awscdk.services.athena.CfnDataCatalog,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

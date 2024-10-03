@@ -136,7 +136,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRoute(
   cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRoute,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -615,7 +617,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty,
-    ) : CdkObject(cdkObject), DefaultRouteInputProperty {
+    ) : CdkObject(cdkObject),
+        DefaultRouteInputProperty {
       /**
        * If set to `ACTIVE` , traffic is forwarded to this route’s service after the route is
        * created.
@@ -851,7 +854,8 @@ public open class CfnRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRoute.UriPathRouteInputProperty,
-    ) : CdkObject(cdkObject), UriPathRouteInputProperty {
+    ) : CdkObject(cdkObject),
+        UriPathRouteInputProperty {
       /**
        * If set to `ACTIVE` , traffic is forwarded to this route’s service after the route is
        * created.

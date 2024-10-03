@@ -271,7 +271,8 @@ public interface CfnLifecycleHookProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.CfnLifecycleHookProps,
-  ) : CdkObject(cdkObject), CfnLifecycleHookProps {
+  ) : CdkObject(cdkObject),
+      CfnLifecycleHookProps {
     /**
      * The name of the Auto Scaling group.
      *

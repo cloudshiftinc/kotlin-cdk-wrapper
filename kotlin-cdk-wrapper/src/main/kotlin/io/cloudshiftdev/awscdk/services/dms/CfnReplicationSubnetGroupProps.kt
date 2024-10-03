@@ -156,7 +156,8 @@ public interface CfnReplicationSubnetGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dms.CfnReplicationSubnetGroupProps,
-  ) : CdkObject(cdkObject), CfnReplicationSubnetGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnReplicationSubnetGroupProps {
     /**
      * The description for the subnet group.
      *

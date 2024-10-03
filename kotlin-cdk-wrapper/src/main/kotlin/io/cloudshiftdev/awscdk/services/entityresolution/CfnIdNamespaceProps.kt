@@ -35,6 +35,15 @@ import kotlin.collections.List
  * .providerConfiguration(Map.of(
  * "providerConfigurationKey", "providerConfiguration"))
  * .build())
+ * .ruleBasedProperties(NamespaceRuleBasedPropertiesProperty.builder()
+ * .attributeMatchingModel("attributeMatchingModel")
+ * .recordMatchingModels(List.of("recordMatchingModels"))
+ * .ruleDefinitionTypes(List.of("ruleDefinitionTypes"))
+ * .rules(List.of(RuleProperty.builder()
+ * .matchingKeys(List.of("matchingKeys"))
+ * .ruleName("ruleName")
+ * .build()))
+ * .build())
  * .build()))
  * .inputSourceConfig(List.of(IdNamespaceInputSourceProperty.builder()
  * .inputSourceArn("inputSourceArn")
@@ -104,7 +113,7 @@ public interface CfnIdNamespaceProps {
    * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
    * mapping workflow.
    *
-   * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve to.
+   * The `TARGET` contains a configuration of `targetId` which all `sourceIds` will resolve to.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idnamespace.html#cfn-entityresolution-idnamespace-type)
    */
@@ -183,7 +192,7 @@ public interface CfnIdNamespaceProps {
      * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
      * mapping workflow.
      *
-     * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve to.
+     * The `TARGET` contains a configuration of `targetId` which all `sourceIds` will resolve to.
      */
     public fun type(type: String)
   }
@@ -279,7 +288,7 @@ public interface CfnIdNamespaceProps {
      * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
      * mapping workflow.
      *
-     * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve to.
+     * The `TARGET` contains a configuration of `targetId` which all `sourceIds` will resolve to.
      */
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -291,7 +300,8 @@ public interface CfnIdNamespaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdNamespaceProps,
-  ) : CdkObject(cdkObject), CfnIdNamespaceProps {
+  ) : CdkObject(cdkObject),
+      CfnIdNamespaceProps {
     /**
      * The description of the ID namespace.
      *
@@ -344,7 +354,7 @@ public interface CfnIdNamespaceProps {
      * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
      * mapping workflow.
      *
-     * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve to.
+     * The `TARGET` contains a configuration of `targetId` which all `sourceIds` will resolve to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idnamespace.html#cfn-entityresolution-idnamespace-type)
      */

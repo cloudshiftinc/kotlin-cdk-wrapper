@@ -80,7 +80,8 @@ public interface QueryParameterMatchConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatchConfig,
-  ) : CdkObject(cdkObject), QueryParameterMatchConfig {
+  ) : CdkObject(cdkObject),
+      QueryParameterMatchConfig {
     /**
      * Route CFN configuration for route query parameter match.
      */

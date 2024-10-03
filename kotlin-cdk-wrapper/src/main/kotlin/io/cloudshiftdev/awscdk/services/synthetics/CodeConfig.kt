@@ -99,7 +99,8 @@ public interface CodeConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.synthetics.CodeConfig,
-  ) : CdkObject(cdkObject), CodeConfig {
+  ) : CdkObject(cdkObject),
+      CodeConfig {
     /**
      * Inline code (mutually exclusive with `s3Location`).
      *

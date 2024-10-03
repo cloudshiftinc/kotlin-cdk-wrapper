@@ -16,7 +16,8 @@ public interface ITaggable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ITaggable,
-  ) : CdkObject(cdkObject), ITaggable {
+  ) : CdkObject(cdkObject),
+      ITaggable {
     /**
      * TagManager to set, remove and format tags.
      */

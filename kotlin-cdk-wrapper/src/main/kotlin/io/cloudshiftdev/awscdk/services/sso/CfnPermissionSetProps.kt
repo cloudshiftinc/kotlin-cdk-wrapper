@@ -472,7 +472,8 @@ public interface CfnPermissionSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSetProps,
-  ) : CdkObject(cdkObject), CfnPermissionSetProps {
+  ) : CdkObject(cdkObject),
+      CfnPermissionSetProps {
     /**
      * Specifies the names and paths of the customer managed policies that you have attached to your
      * permission set.

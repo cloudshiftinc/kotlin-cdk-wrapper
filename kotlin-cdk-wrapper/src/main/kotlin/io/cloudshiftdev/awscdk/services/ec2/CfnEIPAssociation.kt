@@ -42,7 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEIPAssociation(
   cdkObject: software.amazon.awscdk.services.ec2.CfnEIPAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnEIPAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -82,16 +83,12 @@ public open class CfnEIPAssociation(
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
-   * (deprecated) The Elastic IP address to associate with the instance.
-   *
    * @deprecated this property has been deprecated
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun eip(): String? = unwrap(this).getEip()
 
   /**
-   * (deprecated) The Elastic IP address to associate with the instance.
-   *
    * @deprecated this property has been deprecated
    */
   @Deprecated(message = "deprecated in CDK")
@@ -160,11 +157,9 @@ public open class CfnEIPAssociation(
     public fun allocationId(allocationId: String)
 
     /**
-     * (deprecated) The Elastic IP address to associate with the instance.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eipassociation.html#cfn-ec2-eipassociation-eip)
      * @deprecated this property has been deprecated
-     * @param eip The Elastic IP address to associate with the instance. 
+     * @param eip 
      */
     @Deprecated(message = "deprecated in CDK")
     public fun eip(eip: String)
@@ -225,11 +220,9 @@ public open class CfnEIPAssociation(
     }
 
     /**
-     * (deprecated) The Elastic IP address to associate with the instance.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eipassociation.html#cfn-ec2-eipassociation-eip)
      * @deprecated this property has been deprecated
-     * @param eip The Elastic IP address to associate with the instance. 
+     * @param eip 
      */
     @Deprecated(message = "deprecated in CDK")
     override fun eip(eip: String) {

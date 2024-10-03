@@ -84,7 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBridge(
   cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -804,7 +805,8 @@ public open class CfnBridge(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty,
-    ) : CdkObject(cdkObject), BridgeFlowSourceProperty {
+    ) : CdkObject(cdkObject),
+        BridgeFlowSourceProperty {
       /**
        * The ARN of the cloud flow used as a source of this bridge.
        *
@@ -1002,7 +1004,8 @@ public open class CfnBridge(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty,
-    ) : CdkObject(cdkObject), BridgeNetworkOutputProperty {
+    ) : CdkObject(cdkObject),
+        BridgeNetworkOutputProperty {
       /**
        * The network output IP Address.
        *
@@ -1205,7 +1208,8 @@ public open class CfnBridge(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty,
-    ) : CdkObject(cdkObject), BridgeNetworkSourceProperty {
+    ) : CdkObject(cdkObject),
+        BridgeNetworkSourceProperty {
       /**
        * The network source multicast IP.
        *
@@ -1358,7 +1362,8 @@ public open class CfnBridge(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty,
-    ) : CdkObject(cdkObject), BridgeOutputProperty {
+    ) : CdkObject(cdkObject),
+        BridgeOutputProperty {
       /**
        * The output of the bridge.
        *
@@ -1544,7 +1549,8 @@ public open class CfnBridge(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty,
-    ) : CdkObject(cdkObject), BridgeSourceProperty {
+    ) : CdkObject(cdkObject),
+        BridgeSourceProperty {
       /**
        * The source of the bridge.
        *
@@ -1640,7 +1646,8 @@ public open class CfnBridge(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty,
-    ) : CdkObject(cdkObject), EgressGatewayBridgeProperty {
+    ) : CdkObject(cdkObject),
+        EgressGatewayBridgeProperty {
       /**
        * The maximum expected bitrate (in bps) of the egress bridge.
        *
@@ -1820,7 +1827,8 @@ public open class CfnBridge(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty,
-    ) : CdkObject(cdkObject), FailoverConfigProperty {
+    ) : CdkObject(cdkObject),
+        FailoverConfigProperty {
       /**
        * The type of failover you choose for this flow.
        *
@@ -1949,7 +1957,8 @@ public open class CfnBridge(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty,
-    ) : CdkObject(cdkObject), IngressGatewayBridgeProperty {
+    ) : CdkObject(cdkObject),
+        IngressGatewayBridgeProperty {
       /**
        * The maximum expected bitrate (in bps) of the ingress bridge.
        *
@@ -2040,7 +2049,8 @@ public open class CfnBridge(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty,
-    ) : CdkObject(cdkObject), SourcePriorityProperty {
+    ) : CdkObject(cdkObject),
+        SourcePriorityProperty {
       /**
        * The name of the source you choose as the primary source for this flow.
        *
@@ -2123,7 +2133,8 @@ public open class CfnBridge(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty,
-    ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
+    ) : CdkObject(cdkObject),
+        VpcInterfaceAttachmentProperty {
       /**
        * The name of the VPC interface that you want to send your output to.
        *

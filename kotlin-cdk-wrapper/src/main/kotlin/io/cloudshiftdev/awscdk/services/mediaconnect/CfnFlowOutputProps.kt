@@ -37,8 +37,26 @@ import kotlin.jvm.JvmName
  * .keyType("keyType")
  * .build())
  * .maxLatency(123)
+ * .mediaStreamOutputConfigurations(List.of(MediaStreamOutputConfigurationProperty.builder()
+ * .encodingName("encodingName")
+ * .mediaStreamName("mediaStreamName")
+ * // the properties below are optional
+ * .destinationConfigurations(List.of(DestinationConfigurationProperty.builder()
+ * .destinationIp("destinationIp")
+ * .destinationPort(123)
+ * .interface(InterfaceProperty.builder()
+ * .name("name")
+ * .build())
+ * .build()))
+ * .encodingParameters(EncodingParametersProperty.builder()
+ * .compressionFactor(123)
+ * // the properties below are optional
+ * .encoderProfile("encoderProfile")
+ * .build())
+ * .build()))
  * .minLatency(123)
  * .name("name")
+ * .outputStatus("outputStatus")
  * .port(123)
  * .remoteId("remoteId")
  * .smoothingLatency(123)
@@ -103,6 +121,14 @@ public interface CfnFlowOutputProps {
   public fun maxLatency(): Number? = unwrap(this).getMaxLatency()
 
   /**
+   * The definition for each media stream that is associated with the output.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-mediastreamoutputconfigurations)
+   */
+  public fun mediaStreamOutputConfigurations(): Any? =
+      unwrap(this).getMediaStreamOutputConfigurations()
+
+  /**
    * The minimum latency in milliseconds for SRT-based streams.
    *
    * In streams that use the SRT protocol, this value that you set on your MediaConnect source or
@@ -121,6 +147,13 @@ public interface CfnFlowOutputProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-name)
    */
   public fun name(): String? = unwrap(this).getName()
+
+  /**
+   * An indication of whether the output should transmit data or not.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-outputstatus)
+   */
+  public fun outputStatus(): String? = unwrap(this).getOutputStatus()
 
   /**
    * The port to use when MediaConnect distributes content to the output.
@@ -230,6 +263,24 @@ public interface CfnFlowOutputProps {
     public fun maxLatency(maxLatency: Number)
 
     /**
+     * @param mediaStreamOutputConfigurations The definition for each media stream that is
+     * associated with the output.
+     */
+    public fun mediaStreamOutputConfigurations(mediaStreamOutputConfigurations: IResolvable)
+
+    /**
+     * @param mediaStreamOutputConfigurations The definition for each media stream that is
+     * associated with the output.
+     */
+    public fun mediaStreamOutputConfigurations(mediaStreamOutputConfigurations: List<Any>)
+
+    /**
+     * @param mediaStreamOutputConfigurations The definition for each media stream that is
+     * associated with the output.
+     */
+    public fun mediaStreamOutputConfigurations(vararg mediaStreamOutputConfigurations: Any)
+
+    /**
      * @param minLatency The minimum latency in milliseconds for SRT-based streams.
      * In streams that use the SRT protocol, this value that you set on your MediaConnect source or
      * output represents the minimal potential latency of that connection. The latency of the stream is
@@ -243,6 +294,11 @@ public interface CfnFlowOutputProps {
      * This value must be unique within the current flow.
      */
     public fun name(name: String)
+
+    /**
+     * @param outputStatus An indication of whether the output should transmit data or not.
+     */
+    public fun outputStatus(outputStatus: String)
 
     /**
      * @param port The port to use when MediaConnect distributes content to the output.
@@ -369,6 +425,29 @@ public interface CfnFlowOutputProps {
     }
 
     /**
+     * @param mediaStreamOutputConfigurations The definition for each media stream that is
+     * associated with the output.
+     */
+    override fun mediaStreamOutputConfigurations(mediaStreamOutputConfigurations: IResolvable) {
+      cdkBuilder.mediaStreamOutputConfigurations(mediaStreamOutputConfigurations.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param mediaStreamOutputConfigurations The definition for each media stream that is
+     * associated with the output.
+     */
+    override fun mediaStreamOutputConfigurations(mediaStreamOutputConfigurations: List<Any>) {
+      cdkBuilder.mediaStreamOutputConfigurations(mediaStreamOutputConfigurations.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param mediaStreamOutputConfigurations The definition for each media stream that is
+     * associated with the output.
+     */
+    override fun mediaStreamOutputConfigurations(vararg mediaStreamOutputConfigurations: Any): Unit
+        = mediaStreamOutputConfigurations(mediaStreamOutputConfigurations.toList())
+
+    /**
      * @param minLatency The minimum latency in milliseconds for SRT-based streams.
      * In streams that use the SRT protocol, this value that you set on your MediaConnect source or
      * output represents the minimal potential latency of that connection. The latency of the stream is
@@ -385,6 +464,13 @@ public interface CfnFlowOutputProps {
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * @param outputStatus An indication of whether the output should transmit data or not.
+     */
+    override fun outputStatus(outputStatus: String) {
+      cdkBuilder.outputStatus(outputStatus)
     }
 
     /**
@@ -456,7 +542,8 @@ public interface CfnFlowOutputProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutputProps,
-  ) : CdkObject(cdkObject), CfnFlowOutputProps {
+  ) : CdkObject(cdkObject),
+      CfnFlowOutputProps {
     /**
      * The range of IP addresses that are allowed to initiate output requests to this flow.
      *
@@ -508,6 +595,14 @@ public interface CfnFlowOutputProps {
     override fun maxLatency(): Number? = unwrap(this).getMaxLatency()
 
     /**
+     * The definition for each media stream that is associated with the output.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-mediastreamoutputconfigurations)
+     */
+    override fun mediaStreamOutputConfigurations(): Any? =
+        unwrap(this).getMediaStreamOutputConfigurations()
+
+    /**
      * The minimum latency in milliseconds for SRT-based streams.
      *
      * In streams that use the SRT protocol, this value that you set on your MediaConnect source or
@@ -527,6 +622,13 @@ public interface CfnFlowOutputProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-name)
      */
     override fun name(): String? = unwrap(this).getName()
+
+    /**
+     * An indication of whether the output should transmit data or not.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-outputstatus)
+     */
+    override fun outputStatus(): String? = unwrap(this).getOutputStatus()
 
     /**
      * The port to use when MediaConnect distributes content to the output.

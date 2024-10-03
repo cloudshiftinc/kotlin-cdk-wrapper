@@ -22,7 +22,8 @@ public interface ICertificateAuthority : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.acmpca.ICertificateAuthority,
-  ) : CdkObject(cdkObject), ICertificateAuthority {
+  ) : CdkObject(cdkObject),
+      ICertificateAuthority {
     /**
      * Apply the given removal policy to this resource.
      *

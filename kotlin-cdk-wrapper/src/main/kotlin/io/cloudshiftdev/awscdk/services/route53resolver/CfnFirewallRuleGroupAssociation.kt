@@ -44,7 +44,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFirewallRuleGroupAssociation(
   cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociation,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

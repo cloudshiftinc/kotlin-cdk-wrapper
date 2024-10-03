@@ -94,7 +94,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataLakeSettings(
   cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1171,7 +1172,8 @@ public open class CfnDataLakeSettings(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty,
-    ) : CdkObject(cdkObject), DataLakePrincipalProperty {
+    ) : CdkObject(cdkObject),
+        DataLakePrincipalProperty {
       /**
        * An identifier for the Lake Formation principal.
        *
@@ -1314,7 +1316,8 @@ public open class CfnDataLakeSettings(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.PrincipalPermissionsProperty,
-    ) : CdkObject(cdkObject), PrincipalPermissionsProperty {
+    ) : CdkObject(cdkObject),
+        PrincipalPermissionsProperty {
       /**
        * The permissions that are granted to the principal.
        *

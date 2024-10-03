@@ -454,7 +454,8 @@ public interface CfnAppMonitorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitorProps,
-  ) : CdkObject(cdkObject), CfnAppMonitorProps {
+  ) : CdkObject(cdkObject),
+      CfnAppMonitorProps {
     /**
      * A structure that contains much of the configuration data for the app monitor.
      *

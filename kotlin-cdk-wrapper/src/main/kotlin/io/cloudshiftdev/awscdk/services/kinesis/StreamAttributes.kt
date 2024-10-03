@@ -82,7 +82,8 @@ public interface StreamAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kinesis.StreamAttributes,
-  ) : CdkObject(cdkObject), StreamAttributes {
+  ) : CdkObject(cdkObject),
+      StreamAttributes {
     /**
      * The KMS key securing the contents of the stream if encryption is enabled.
      *

@@ -41,7 +41,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResourceSet(
   cdkObject: software.amazon.awscdk.services.fms.CfnResourceSet,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -59,7 +61,10 @@ public open class CfnResourceSet(
   )
 
   /**
-   * A Base62 ID.
+   * A unique identifier for the resource set.
+   *
+   * This ID is returned in the responses to create and list commands. You provide it to operations
+   * like update and delete.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 

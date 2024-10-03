@@ -120,7 +120,8 @@ public interface CfnEntityTypeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityTypeProps,
-  ) : CdkObject(cdkObject), CfnEntityTypeProps {
+  ) : CdkObject(cdkObject),
+      CfnEntityTypeProps {
     /**
      * The entity type description.
      *

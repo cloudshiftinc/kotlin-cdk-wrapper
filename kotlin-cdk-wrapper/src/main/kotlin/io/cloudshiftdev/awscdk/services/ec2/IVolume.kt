@@ -165,7 +165,8 @@ public interface IVolume : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IVolume,
-  ) : CdkObject(cdkObject), IVolume {
+  ) : CdkObject(cdkObject),
+      IVolume {
     /**
      * Apply the given removal policy to this resource.
      *

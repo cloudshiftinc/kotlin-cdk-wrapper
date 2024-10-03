@@ -238,7 +238,8 @@ public interface CfnTransitGatewayVpcAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayVpcAttachmentProps,
-  ) : CdkObject(cdkObject), CfnTransitGatewayVpcAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnTransitGatewayVpcAttachmentProps {
     /**
      * The IDs of one or more subnets to add.
      *

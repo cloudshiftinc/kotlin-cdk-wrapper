@@ -189,7 +189,8 @@ public interface VersionOptions : EventInvokeConfigOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.VersionOptions,
-  ) : CdkObject(cdkObject), VersionOptions {
+  ) : CdkObject(cdkObject),
+      VersionOptions {
     /**
      * SHA256 of the version of the Lambda source code.
      *

@@ -111,7 +111,8 @@ public interface CfnResourcePolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudtrail.CfnResourcePolicyProps,
-  ) : CdkObject(cdkObject), CfnResourcePolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnResourcePolicyProps {
     /**
      * The Amazon Resource Name (ARN) of the CloudTrail channel attached to the resource-based
      * policy.

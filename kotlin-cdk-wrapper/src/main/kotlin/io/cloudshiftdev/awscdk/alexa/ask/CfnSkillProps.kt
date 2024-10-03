@@ -226,7 +226,8 @@ public interface CfnSkillProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.alexa.ask.CfnSkillProps,
-  ) : CdkObject(cdkObject), CfnSkillProps {
+  ) : CdkObject(cdkObject),
+      CfnSkillProps {
     /**
      * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
      *

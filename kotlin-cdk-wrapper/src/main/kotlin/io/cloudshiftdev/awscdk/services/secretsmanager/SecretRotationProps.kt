@@ -343,7 +343,8 @@ public interface SecretRotationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.SecretRotationProps,
-  ) : CdkObject(cdkObject), SecretRotationProps {
+  ) : CdkObject(cdkObject),
+      SecretRotationProps {
     /**
      * The serverless application for the rotation.
      */

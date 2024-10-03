@@ -60,7 +60,9 @@ import kotlin.jvm.JvmName
  * .logLevel("logLevel")
  * .build())
  * .build())
+ * .maxWebservers(123)
  * .maxWorkers(123)
+ * .minWebservers(123)
  * .minWorkers(123)
  * .networkConfiguration(NetworkConfigurationProperty.builder()
  * .securityGroupIds(List.of("securityGroupIds"))
@@ -101,8 +103,8 @@ public interface CfnEnvironmentProps {
    * If you specify a newer version number for an existing environment, the version update requires
    * some service interruption before taking effect.
    *
-   * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2`
-   * (latest)
+   * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2` |
+   * `2.8.1` | `2.9.2` (latest)
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)
    */
@@ -168,6 +170,23 @@ public interface CfnEnvironmentProps {
   public fun loggingConfiguration(): Any? = unwrap(this).getLoggingConfiguration()
 
   /**
+   * The maximum number of web servers that you want to run in your environment.
+   *
+   * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+   * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+   * API, or the Apache Airflow CLI. For example, in scenarios where your workload requires network
+   * calls to the Apache Airflow REST API with a high transaction-per-second (TPS) rate, Amazon MWAA
+   * will increase the number of web servers up to the number set in `MaxWebserers` . As TPS rates
+   * decrease Amazon MWAA disposes of the additional web servers, and scales down to the number set in
+   * `MinxWebserers` .
+   *
+   * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-maxwebservers)
+   */
+  public fun maxWebservers(): Number? = unwrap(this).getMaxWebservers()
+
+  /**
    * The maximum number of workers that you want to run in your environment.
    *
    * MWAA scales the number of Apache Airflow workers up to the number you specify in the
@@ -178,6 +197,21 @@ public interface CfnEnvironmentProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-maxworkers)
    */
   public fun maxWorkers(): Number? = unwrap(this).getMaxWorkers()
+
+  /**
+   * The minimum number of web servers that you want to run in your environment.
+   *
+   * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+   * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+   * API, or the Apache Airflow CLI. As the transaction-per-second rate, and the network load,
+   * decrease, Amazon MWAA disposes of the additional web servers, and scales down to the number set in
+   * `MinxWebserers` .
+   *
+   * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-minwebservers)
+   */
+  public fun minWebservers(): Number? = unwrap(this).getMinWebservers()
 
   /**
    * The minimum number of workers that you want to run in your environment.
@@ -356,8 +390,8 @@ public interface CfnEnvironmentProps {
      * If you specify a newer version number for an existing environment, the version update
      * requires some service interruption before taking effect.
      *
-     * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2`
-     * (latest)
+     * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2` |
+     * `2.8.1` | `2.9.2` (latest)
      */
     public fun airflowVersion(airflowVersion: String)
 
@@ -421,6 +455,21 @@ public interface CfnEnvironmentProps {
         fun loggingConfiguration(loggingConfiguration: CfnEnvironment.LoggingConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * @param maxWebservers The maximum number of web servers that you want to run in your
+     * environment.
+     * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+     * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+     * API, or the Apache Airflow CLI. For example, in scenarios where your workload requires network
+     * calls to the Apache Airflow REST API with a high transaction-per-second (TPS) rate, Amazon MWAA
+     * will increase the number of web servers up to the number set in `MaxWebserers` . As TPS rates
+     * decrease Amazon MWAA disposes of the additional web servers, and scales down to the number set
+     * in `MinxWebserers` .
+     *
+     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     */
+    public fun maxWebservers(maxWebservers: Number)
+
+    /**
      * @param maxWorkers The maximum number of workers that you want to run in your environment.
      * MWAA scales the number of Apache Airflow workers up to the number you specify in the
      * `MaxWorkers` field. For example, `20` . When there are no more tasks running, and no more in the
@@ -428,6 +477,19 @@ public interface CfnEnvironmentProps {
      * environment, or the number you specify in `MinWorkers` .
      */
     public fun maxWorkers(maxWorkers: Number)
+
+    /**
+     * @param minWebservers The minimum number of web servers that you want to run in your
+     * environment.
+     * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+     * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+     * API, or the Apache Airflow CLI. As the transaction-per-second rate, and the network load,
+     * decrease, Amazon MWAA disposes of the additional web servers, and scales down to the number set
+     * in `MinxWebserers` .
+     *
+     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     */
+    public fun minWebservers(minWebservers: Number)
 
     /**
      * @param minWorkers The minimum number of workers that you want to run in your environment.
@@ -596,8 +658,8 @@ public interface CfnEnvironmentProps {
      * If you specify a newer version number for an existing environment, the version update
      * requires some service interruption before taking effect.
      *
-     * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2`
-     * (latest)
+     * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2` |
+     * `2.8.1` | `2.9.2` (latest)
      */
     override fun airflowVersion(airflowVersion: String) {
       cdkBuilder.airflowVersion(airflowVersion)
@@ -679,6 +741,23 @@ public interface CfnEnvironmentProps {
         loggingConfiguration(CfnEnvironment.LoggingConfigurationProperty(loggingConfiguration))
 
     /**
+     * @param maxWebservers The maximum number of web servers that you want to run in your
+     * environment.
+     * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+     * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+     * API, or the Apache Airflow CLI. For example, in scenarios where your workload requires network
+     * calls to the Apache Airflow REST API with a high transaction-per-second (TPS) rate, Amazon MWAA
+     * will increase the number of web servers up to the number set in `MaxWebserers` . As TPS rates
+     * decrease Amazon MWAA disposes of the additional web servers, and scales down to the number set
+     * in `MinxWebserers` .
+     *
+     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     */
+    override fun maxWebservers(maxWebservers: Number) {
+      cdkBuilder.maxWebservers(maxWebservers)
+    }
+
+    /**
      * @param maxWorkers The maximum number of workers that you want to run in your environment.
      * MWAA scales the number of Apache Airflow workers up to the number you specify in the
      * `MaxWorkers` field. For example, `20` . When there are no more tasks running, and no more in the
@@ -687,6 +766,21 @@ public interface CfnEnvironmentProps {
      */
     override fun maxWorkers(maxWorkers: Number) {
       cdkBuilder.maxWorkers(maxWorkers)
+    }
+
+    /**
+     * @param minWebservers The minimum number of web servers that you want to run in your
+     * environment.
+     * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+     * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+     * API, or the Apache Airflow CLI. As the transaction-per-second rate, and the network load,
+     * decrease, Amazon MWAA disposes of the additional web servers, and scales down to the number set
+     * in `MinxWebserers` .
+     *
+     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     */
+    override fun minWebservers(minWebservers: Number) {
+      cdkBuilder.minWebservers(minWebservers)
     }
 
     /**
@@ -872,7 +966,8 @@ public interface CfnEnvironmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironmentProps,
-  ) : CdkObject(cdkObject), CfnEnvironmentProps {
+  ) : CdkObject(cdkObject),
+      CfnEnvironmentProps {
     /**
      * A list of key-value pairs containing the Airflow configuration options for your environment.
      *
@@ -891,8 +986,8 @@ public interface CfnEnvironmentProps {
      * If you specify a newer version number for an existing environment, the version update
      * requires some service interruption before taking effect.
      *
-     * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2`
-     * (latest)
+     * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2` |
+     * `2.8.1` | `2.9.2` (latest)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)
      */
@@ -958,6 +1053,23 @@ public interface CfnEnvironmentProps {
     override fun loggingConfiguration(): Any? = unwrap(this).getLoggingConfiguration()
 
     /**
+     * The maximum number of web servers that you want to run in your environment.
+     *
+     * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+     * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+     * API, or the Apache Airflow CLI. For example, in scenarios where your workload requires network
+     * calls to the Apache Airflow REST API with a high transaction-per-second (TPS) rate, Amazon MWAA
+     * will increase the number of web servers up to the number set in `MaxWebserers` . As TPS rates
+     * decrease Amazon MWAA disposes of the additional web servers, and scales down to the number set
+     * in `MinxWebserers` .
+     *
+     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-maxwebservers)
+     */
+    override fun maxWebservers(): Number? = unwrap(this).getMaxWebservers()
+
+    /**
      * The maximum number of workers that you want to run in your environment.
      *
      * MWAA scales the number of Apache Airflow workers up to the number you specify in the
@@ -968,6 +1080,21 @@ public interface CfnEnvironmentProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-maxworkers)
      */
     override fun maxWorkers(): Number? = unwrap(this).getMaxWorkers()
+
+    /**
+     * The minimum number of web servers that you want to run in your environment.
+     *
+     * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+     * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+     * API, or the Apache Airflow CLI. As the transaction-per-second rate, and the network load,
+     * decrease, Amazon MWAA disposes of the additional web servers, and scales down to the number set
+     * in `MinxWebserers` .
+     *
+     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-minwebservers)
+     */
+    override fun minWebservers(): Number? = unwrap(this).getMinWebservers()
 
     /**
      * The minimum number of workers that you want to run in your environment.

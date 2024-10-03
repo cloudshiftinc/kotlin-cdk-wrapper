@@ -28,7 +28,9 @@ import kotlin.String
  */
 public open class InstanceIdTarget(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget,
-) : CdkObject(cdkObject), IApplicationLoadBalancerTarget, INetworkLoadBalancerTarget {
+) : CdkObject(cdkObject),
+    IApplicationLoadBalancerTarget,
+    INetworkLoadBalancerTarget {
   public constructor(instanceId: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget(instanceId)
   )

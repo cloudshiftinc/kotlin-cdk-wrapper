@@ -353,7 +353,8 @@ public interface IPortfolio : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.IPortfolio,
-  ) : CdkObject(cdkObject), IPortfolio {
+  ) : CdkObject(cdkObject),
+      IPortfolio {
     /**
      * Associate portfolio with the given product.
      *

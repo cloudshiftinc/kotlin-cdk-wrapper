@@ -71,7 +71,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEventDataStore(
   cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudtrail.CfnEventDataStore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1370,7 +1372,8 @@ public open class CfnEventDataStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty,
-    ) : CdkObject(cdkObject), AdvancedEventSelectorProperty {
+    ) : CdkObject(cdkObject),
+        AdvancedEventSelectorProperty {
       /**
        * Contains all selector statements in an advanced event selector.
        *
@@ -1485,20 +1488,21 @@ public open class CfnEventDataStore(
      * * For non- AWS events, the value must be `ActivityAuditLog` .
      * * *`resources.type`* - This ﬁeld is required for CloudTrail data events. `resources.type` can
      * only use the `Equals` operator, and the value can be one of the following:
-     * * `AWS::DynamoDB::Table`
-     * * `AWS::Lambda::Function`
-     * * `AWS::S3::Object`
      * * `AWS::AppConfig::Configuration`
      * * `AWS::B2BI::Transformer`
      * * `AWS::Bedrock::AgentAlias`
+     * * `AWS::Bedrock::FlowAlias`
+     * * `AWS::Bedrock::Guardrail`
      * * `AWS::Bedrock::KnowledgeBase`
      * * `AWS::Cassandra::Table`
      * * `AWS::CloudFront::KeyValueStore`
      * * `AWS::CloudTrail::Channel`
+     * * `AWS::CloudWatch::Metric`
      * * `AWS::CodeWhisperer::Customization`
      * * `AWS::CodeWhisperer::Profile`
      * * `AWS::Cognito::IdentityPool`
      * * `AWS::DynamoDB::Stream`
+     * * `AWS::DynamoDB::Table`
      * * `AWS::EC2::Snapshot`
      * * `AWS::EMRWAL::Workspace`
      * * `AWS::FinSpace::Environment`
@@ -1513,18 +1517,31 @@ public open class CfnEventDataStore(
      * * `AWS::IoTTwinMaker::Entity`
      * * `AWS::IoTTwinMaker::Workspace`
      * * `AWS::KendraRanking::ExecutionPlan`
+     * * `AWS::Kinesis::Stream`
+     * * `AWS::Kinesis::StreamConsumer`
      * * `AWS::KinesisVideo::Stream`
+     * * `AWS::Lambda::Function`
+     * * `AWS::MachineLearning::MlModel`
      * * `AWS::ManagedBlockchain::Network`
      * * `AWS::ManagedBlockchain::Node`
      * * `AWS::MedicalImaging::Datastore`
      * * `AWS::NeptuneGraph::Graph`
+     * * `AWS::One::UKey`
+     * * `AWS::One::User`
+     * * `AWS::PaymentCryptography::Alias`
+     * * `AWS::PaymentCryptography::Key`
      * * `AWS::PCAConnectorAD::Connector`
+     * * `AWS::PCAConnectorSCEP::Connector`
+     * * `AWS::QApps:QApp`
      * * `AWS::QBusiness::Application`
      * * `AWS::QBusiness::DataSource`
      * * `AWS::QBusiness::Index`
      * * `AWS::QBusiness::WebExperience`
      * * `AWS::RDS::DBCluster`
+     * * `AWS::RUM::AppMonitor`
      * * `AWS::S3::AccessPoint`
+     * * `AWS::S3::Object`
+     * * `AWS::S3Express::Object`
      * * `AWS::S3ObjectLambda::AccessPoint`
      * * `AWS::S3Outposts::Object`
      * * `AWS::SageMaker::Endpoint`
@@ -1538,6 +1555,7 @@ public open class CfnEventDataStore(
      * * `AWS::SQS::Queue`
      * * `AWS::SSM::ManagedNode`
      * * `AWS::SSMMessages::ControlChannel`
+     * * `AWS::StepFunctions::StateMachine`
      * * `AWS::SWF::Domain`
      * * `AWS::ThinClient::Device`
      * * `AWS::ThinClient::Environment`
@@ -1551,365 +1569,16 @@ public open class CfnEventDataStore(
      *
      * * *`resources.ARN`* - You can use any operator with `resources.ARN` , but if you use `Equals`
      * or `NotEquals` , the value must exactly match the ARN of a valid resource of the type you've
-     * speciﬁed in the template as the value of resources.type.
+     * speciﬁed in the template as the value of resources.type. To log all data events for all objects
+     * in a specific S3 bucket, use the `StartsWith` operator, and include only the bucket ARN as the
+     * matching value. For information about filtering on the `resources.ARN` field, see [Filtering
+     * data events by
+     * resources.ARN](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/filtering-data-events.html#filtering-data-events-resourcearn)
+     * in the *AWS CloudTrail User Guide* .
      *
      *
      * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
      *
-     *
-     * The `resources.ARN` field can be set one of the following.
-     *
-     * If resources.type equals `AWS::S3::Object` , the ARN must be in one of the following formats.
-     * To log all data events for all objects in a specific S3 bucket, use the `StartsWith` operator,
-     * and include only the bucket ARN as the matching value.
-     *
-     * The trailing slash is intentional; do not exclude it. Replace the text between less than and
-     * greater than symbols (&lt;&gt;) with resource-specific information.
-     *
-     * * `arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/`
-     * * `arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/&lt;object_path&gt;/`
-     *
-     * When resources.type equals `AWS::DynamoDB::Table` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;`
-     *
-     * When resources.type equals `AWS::Lambda::Function` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;`
-     *
-     * When resources.type equals `AWS::AppConfig::Configuration` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:appconfig:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/environment/&lt;environment_ID&gt;/configuration/&lt;configuration_profile_ID&gt;`
-     *
-     * When resources.type equals `AWS::B2BI::Transformer` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:b2bi:&lt;region&gt;:&lt;account_ID&gt;:transformer/&lt;transformer_ID&gt;`
-     *
-     * When resources.type equals `AWS::Bedrock::AgentAlias` , and the operator is set to `Equals`
-     * or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:agent-alias/&lt;agent_ID&gt;/&lt;alias_ID&gt;`
-     *
-     * When resources.type equals `AWS::Bedrock::KnowledgeBase` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:knowledge-base/&lt;knowledge_base_ID&gt;`
-     *
-     * When resources.type equals `AWS::Cassandra::Table` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:cassandra:&lt;region&gt;:&lt;account_ID&gt;:/keyspace/&lt;keyspace_name&gt;/table/&lt;table_name&gt;`
-     *
-     * When resources.type equals `AWS::CloudFront::KeyValueStore` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:cloudfront:&lt;region&gt;:&lt;account_ID&gt;:key-value-store/&lt;KVS_name&gt;`
-     *
-     * When resources.type equals `AWS::CloudTrail::Channel` , and the operator is set to `Equals`
-     * or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;`
-     *
-     * When resources.type equals `AWS::CodeWhisperer::Customization` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:customization/&lt;customization_ID&gt;`
-     *
-     * When resources.type equals `AWS::CodeWhisperer::Profile` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:profile/&lt;profile_ID&gt;`
-     *
-     * When resources.type equals `AWS::Cognito::IdentityPool` , and the operator is set to `Equals`
-     * or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:cognito-identity:&lt;region&gt;:&lt;account_ID&gt;:identitypool/&lt;identity_pool_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::DynamoDB::Stream` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;`
-     *
-     * When `resources.type` equals `AWS::EC2::Snapshot` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::EMRWAL::Workspace` , and the operator is set to `Equals`
-     * or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:emrwal:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_name&gt;`
-     *
-     * When `resources.type` equals `AWS::FinSpace::Environment` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::Glue::Table` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;`
-     *
-     * When `resources.type` equals `AWS::GreengrassV2::ComponentVersion` , and the operator is set
-     * to `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:greengrass:&lt;region&gt;:&lt;account_ID&gt;:components/&lt;component_name&gt;`
-     *
-     * When `resources.type` equals `AWS::GreengrassV2::Deployment` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:greengrass:&lt;region&gt;:&lt;account_ID&gt;:deployments/&lt;deployment_ID`
-     *
-     * When `resources.type` equals `AWS::GuardDuty::Detector` , and the operator is set to `Equals`
-     * or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:guardduty:&lt;region&gt;:&lt;account_ID&gt;:detector/&lt;detector_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::IoT::Certificate` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:iot:&lt;region&gt;:&lt;account_ID&gt;:cert/&lt;certificate_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::IoT::Thing` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:iot:&lt;region&gt;:&lt;account_ID&gt;:thing/&lt;thing_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::IoTSiteWise::Asset` , and the operator is set to `Equals`
-     * or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:iotsitewise:&lt;region&gt;:&lt;account_ID&gt;:asset/&lt;asset_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::IoTSiteWise::TimeSeries` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:iotsitewise:&lt;region&gt;:&lt;account_ID&gt;:timeseries/&lt;timeseries_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::IoTTwinMaker::Entity` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;/entity/&lt;entity_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::IoTTwinMaker::Workspace` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::KendraRanking::ExecutionPlan` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:kendra-ranking:&lt;region&gt;:&lt;account_ID&gt;:rescore-execution-plan/&lt;rescore_execution_plan_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::KinesisVideo::Stream` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name&gt;/&lt;creation_time&gt;`
-     *
-     * When `resources.type` equals `AWS::ManagedBlockchain::Network` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;`
-     *
-     * When `resources.type` equals `AWS::ManagedBlockchain::Node` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::MedicalImaging::Datastore` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::NeptuneGraph::Graph` , and the operator is set to `Equals`
-     * or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:neptune-graph:&lt;region&gt;:&lt;account_ID&gt;:graph/&lt;graph_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::PCAConnectorAD::Connector` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::QBusiness::Application` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::QBusiness::DataSource` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;/data-source/&lt;datasource_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::QBusiness::Index` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::QBusiness::WebExperience` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/web-experience/&lt;web_experience_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::RDS::DBCluster` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:rds:&lt;region&gt;:&lt;account_ID&gt;:cluster/&lt;cluster_name&gt;`
-     *
-     * When `resources.type` equals `AWS::S3::AccessPoint` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in one of the following formats. To log events on all objects in
-     * an S3 access point, we recommend that you use only the access point ARN, don’t include the
-     * object path, and use the `StartsWith` or `NotStartsWith` operators.
-     *
-     * *
-     * `arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;`
-     * *
-     * `arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;`
-     *
-     * When `resources.type` equals `AWS::S3ObjectLambda::AccessPoint` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;`
-     *
-     * When `resources.type` equals `AWS::S3Outposts::Object` , and the operator is set to `Equals`
-     * or `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;`
-     *
-     * When `resources.type` equals `AWS::SageMaker::Endpoint` , and the operator is set to `Equals`
-     * or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_name&gt;`
-     *
-     * When `resources.type` equals `AWS::SageMaker::ExperimentTrialComponent` , and the operator is
-     * set to `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:experiment-trial-component/&lt;experiment_trial_component_name&gt;`
-     *
-     * When `resources.type` equals `AWS::SageMaker::FeatureGroup` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;`
-     *
-     * When `resources.type` equals `AWS::SCN::Instance` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:scn:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::ServiceDiscovery::Namespace` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:namespace/&lt;namespace_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::ServiceDiscovery::Service` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:service/&lt;service_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::SNS::PlatformEndpoint` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_type&gt;/&lt;endpoint_name&gt;/&lt;endpoint_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::SNS::Topic` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;`
-     *
-     * When `resources.type` equals `AWS::SQS::Queue` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;`
-     *
-     * When `resources.type` equals `AWS::SSM::ManagedNode` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in one of the following formats:
-     *
-     * *
-     * `arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;`
-     * * `arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::SSMMessages::ControlChannel` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
-     *
-     * When `resources.type` equals `AWS::ThinClient::Device` , and the operator is set to `Equals`
-     * or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:device/&lt;device_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::ThinClient::Environment` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;`
-     *
-     * When `resources.type` equals `AWS::Timestream::Database` , and the operator is set to
-     * `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;`
-     *
-     * When `resources.type` equals `AWS::Timestream::Table` , and the operator is set to `Equals`
-     * or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;/table/&lt;table_name&gt;`
-     *
-     * When resources.type equals `AWS::VerifiedPermissions::PolicyStore` , and the operator is set
-     * to `Equals` or `NotEquals` , the ARN must be in the following format:
-     *
-     * *
-     * `arn:&lt;partition&gt;:verifiedpermissions:&lt;region&gt;:&lt;account_ID&gt;:policy-store/&lt;policy_store_UUID&gt;`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedfieldselector.html#cfn-cloudtrail-eventdatastore-advancedfieldselector-field)
      */
@@ -2015,20 +1684,21 @@ public open class CfnEventDataStore(
        * * For non- AWS events, the value must be `ActivityAuditLog` .
        * * *`resources.type`* - This ﬁeld is required for CloudTrail data events. `resources.type`
        * can only use the `Equals` operator, and the value can be one of the following:
-       * * `AWS::DynamoDB::Table`
-       * * `AWS::Lambda::Function`
-       * * `AWS::S3::Object`
        * * `AWS::AppConfig::Configuration`
        * * `AWS::B2BI::Transformer`
        * * `AWS::Bedrock::AgentAlias`
+       * * `AWS::Bedrock::FlowAlias`
+       * * `AWS::Bedrock::Guardrail`
        * * `AWS::Bedrock::KnowledgeBase`
        * * `AWS::Cassandra::Table`
        * * `AWS::CloudFront::KeyValueStore`
        * * `AWS::CloudTrail::Channel`
+       * * `AWS::CloudWatch::Metric`
        * * `AWS::CodeWhisperer::Customization`
        * * `AWS::CodeWhisperer::Profile`
        * * `AWS::Cognito::IdentityPool`
        * * `AWS::DynamoDB::Stream`
+       * * `AWS::DynamoDB::Table`
        * * `AWS::EC2::Snapshot`
        * * `AWS::EMRWAL::Workspace`
        * * `AWS::FinSpace::Environment`
@@ -2043,18 +1713,31 @@ public open class CfnEventDataStore(
        * * `AWS::IoTTwinMaker::Entity`
        * * `AWS::IoTTwinMaker::Workspace`
        * * `AWS::KendraRanking::ExecutionPlan`
+       * * `AWS::Kinesis::Stream`
+       * * `AWS::Kinesis::StreamConsumer`
        * * `AWS::KinesisVideo::Stream`
+       * * `AWS::Lambda::Function`
+       * * `AWS::MachineLearning::MlModel`
        * * `AWS::ManagedBlockchain::Network`
        * * `AWS::ManagedBlockchain::Node`
        * * `AWS::MedicalImaging::Datastore`
        * * `AWS::NeptuneGraph::Graph`
+       * * `AWS::One::UKey`
+       * * `AWS::One::User`
+       * * `AWS::PaymentCryptography::Alias`
+       * * `AWS::PaymentCryptography::Key`
        * * `AWS::PCAConnectorAD::Connector`
+       * * `AWS::PCAConnectorSCEP::Connector`
+       * * `AWS::QApps:QApp`
        * * `AWS::QBusiness::Application`
        * * `AWS::QBusiness::DataSource`
        * * `AWS::QBusiness::Index`
        * * `AWS::QBusiness::WebExperience`
        * * `AWS::RDS::DBCluster`
+       * * `AWS::RUM::AppMonitor`
        * * `AWS::S3::AccessPoint`
+       * * `AWS::S3::Object`
+       * * `AWS::S3Express::Object`
        * * `AWS::S3ObjectLambda::AccessPoint`
        * * `AWS::S3Outposts::Object`
        * * `AWS::SageMaker::Endpoint`
@@ -2068,6 +1751,7 @@ public open class CfnEventDataStore(
        * * `AWS::SQS::Queue`
        * * `AWS::SSM::ManagedNode`
        * * `AWS::SSMMessages::ControlChannel`
+       * * `AWS::StepFunctions::StateMachine`
        * * `AWS::SWF::Domain`
        * * `AWS::ThinClient::Device`
        * * `AWS::ThinClient::Environment`
@@ -2081,369 +1765,15 @@ public open class CfnEventDataStore(
        *
        * * *`resources.ARN`* - You can use any operator with `resources.ARN` , but if you use
        * `Equals` or `NotEquals` , the value must exactly match the ARN of a valid resource of the type
-       * you've speciﬁed in the template as the value of resources.type.
+       * you've speciﬁed in the template as the value of resources.type. To log all data events for all
+       * objects in a specific S3 bucket, use the `StartsWith` operator, and include only the bucket
+       * ARN as the matching value. For information about filtering on the `resources.ARN` field, see
+       * [Filtering data events by
+       * resources.ARN](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/filtering-data-events.html#filtering-data-events-resourcearn)
+       * in the *AWS CloudTrail User Guide* .
        *
        *
        * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
-       *
-       *
-       * The `resources.ARN` field can be set one of the following.
-       *
-       * If resources.type equals `AWS::S3::Object` , the ARN must be in one of the following
-       * formats. To log all data events for all objects in a specific S3 bucket, use the `StartsWith`
-       * operator, and include only the bucket ARN as the matching value.
-       *
-       * The trailing slash is intentional; do not exclude it. Replace the text between less than
-       * and greater than symbols (&lt;&gt;) with resource-specific information.
-       *
-       * * `arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/`
-       * * `arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/&lt;object_path&gt;/`
-       *
-       * When resources.type equals `AWS::DynamoDB::Table` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;`
-       *
-       * When resources.type equals `AWS::Lambda::Function` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;`
-       *
-       * When resources.type equals `AWS::AppConfig::Configuration` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:appconfig:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/environment/&lt;environment_ID&gt;/configuration/&lt;configuration_profile_ID&gt;`
-       *
-       * When resources.type equals `AWS::B2BI::Transformer` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:b2bi:&lt;region&gt;:&lt;account_ID&gt;:transformer/&lt;transformer_ID&gt;`
-       *
-       * When resources.type equals `AWS::Bedrock::AgentAlias` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:agent-alias/&lt;agent_ID&gt;/&lt;alias_ID&gt;`
-       *
-       * When resources.type equals `AWS::Bedrock::KnowledgeBase` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:knowledge-base/&lt;knowledge_base_ID&gt;`
-       *
-       * When resources.type equals `AWS::Cassandra::Table` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cassandra:&lt;region&gt;:&lt;account_ID&gt;:/keyspace/&lt;keyspace_name&gt;/table/&lt;table_name&gt;`
-       *
-       * When resources.type equals `AWS::CloudFront::KeyValueStore` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cloudfront:&lt;region&gt;:&lt;account_ID&gt;:key-value-store/&lt;KVS_name&gt;`
-       *
-       * When resources.type equals `AWS::CloudTrail::Channel` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;`
-       *
-       * When resources.type equals `AWS::CodeWhisperer::Customization` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:customization/&lt;customization_ID&gt;`
-       *
-       * When resources.type equals `AWS::CodeWhisperer::Profile` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:profile/&lt;profile_ID&gt;`
-       *
-       * When resources.type equals `AWS::Cognito::IdentityPool` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cognito-identity:&lt;region&gt;:&lt;account_ID&gt;:identitypool/&lt;identity_pool_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::DynamoDB::Stream` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;`
-       *
-       * When `resources.type` equals `AWS::EC2::Snapshot` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::EMRWAL::Workspace` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:emrwal:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_name&gt;`
-       *
-       * When `resources.type` equals `AWS::FinSpace::Environment` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::Glue::Table` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;`
-       *
-       * When `resources.type` equals `AWS::GreengrassV2::ComponentVersion` , and the operator is
-       * set to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:greengrass:&lt;region&gt;:&lt;account_ID&gt;:components/&lt;component_name&gt;`
-       *
-       * When `resources.type` equals `AWS::GreengrassV2::Deployment` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:greengrass:&lt;region&gt;:&lt;account_ID&gt;:deployments/&lt;deployment_ID`
-       *
-       * When `resources.type` equals `AWS::GuardDuty::Detector` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:guardduty:&lt;region&gt;:&lt;account_ID&gt;:detector/&lt;detector_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoT::Certificate` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:iot:&lt;region&gt;:&lt;account_ID&gt;:cert/&lt;certificate_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoT::Thing` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:iot:&lt;region&gt;:&lt;account_ID&gt;:thing/&lt;thing_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTSiteWise::Asset` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iotsitewise:&lt;region&gt;:&lt;account_ID&gt;:asset/&lt;asset_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTSiteWise::TimeSeries` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iotsitewise:&lt;region&gt;:&lt;account_ID&gt;:timeseries/&lt;timeseries_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTTwinMaker::Entity` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;/entity/&lt;entity_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTTwinMaker::Workspace` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::KendraRanking::ExecutionPlan` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:kendra-ranking:&lt;region&gt;:&lt;account_ID&gt;:rescore-execution-plan/&lt;rescore_execution_plan_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::KinesisVideo::Stream` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name&gt;/&lt;creation_time&gt;`
-       *
-       * When `resources.type` equals `AWS::ManagedBlockchain::Network` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;`
-       *
-       * When `resources.type` equals `AWS::ManagedBlockchain::Node` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::MedicalImaging::Datastore` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::NeptuneGraph::Graph` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:neptune-graph:&lt;region&gt;:&lt;account_ID&gt;:graph/&lt;graph_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::PCAConnectorAD::Connector` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::Application` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::DataSource` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;/data-source/&lt;datasource_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::Index` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::WebExperience` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/web-experience/&lt;web_experience_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::RDS::DBCluster` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:rds:&lt;region&gt;:&lt;account_ID&gt;:cluster/&lt;cluster_name&gt;`
-       *
-       * When `resources.type` equals `AWS::S3::AccessPoint` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in one of the following formats. To log events on all objects
-       * in an S3 access point, we recommend that you use only the access point ARN, don’t include the
-       * object path, and use the `StartsWith` or `NotStartsWith` operators.
-       *
-       * *
-       * `arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;`
-       * *
-       * `arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;`
-       *
-       * When `resources.type` equals `AWS::S3ObjectLambda::AccessPoint` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;`
-       *
-       * When `resources.type` equals `AWS::S3Outposts::Object` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;`
-       *
-       * When `resources.type` equals `AWS::SageMaker::Endpoint` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SageMaker::ExperimentTrialComponent` , and the operator
-       * is set to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:experiment-trial-component/&lt;experiment_trial_component_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SageMaker::FeatureGroup` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SCN::Instance` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:scn:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::ServiceDiscovery::Namespace` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:namespace/&lt;namespace_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::ServiceDiscovery::Service` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:service/&lt;service_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SNS::PlatformEndpoint` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_type&gt;/&lt;endpoint_name&gt;/&lt;endpoint_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SNS::Topic` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SQS::Queue` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SSM::ManagedNode` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in one of the following formats:
-       *
-       * *
-       * `arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;`
-       * *
-       * `arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SSMMessages::ControlChannel` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
-       *
-       * When `resources.type` equals `AWS::ThinClient::Device` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:device/&lt;device_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::ThinClient::Environment` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::Timestream::Database` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;`
-       *
-       * When `resources.type` equals `AWS::Timestream::Table` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;/table/&lt;table_name&gt;`
-       *
-       * When resources.type equals `AWS::VerifiedPermissions::PolicyStore` , and the operator is
-       * set to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:verifiedpermissions:&lt;region&gt;:&lt;account_ID&gt;:policy-store/&lt;policy_store_UUID&gt;`
        */
       public fun `field`(`field`: String)
 
@@ -2569,20 +1899,21 @@ public open class CfnEventDataStore(
        * * For non- AWS events, the value must be `ActivityAuditLog` .
        * * *`resources.type`* - This ﬁeld is required for CloudTrail data events. `resources.type`
        * can only use the `Equals` operator, and the value can be one of the following:
-       * * `AWS::DynamoDB::Table`
-       * * `AWS::Lambda::Function`
-       * * `AWS::S3::Object`
        * * `AWS::AppConfig::Configuration`
        * * `AWS::B2BI::Transformer`
        * * `AWS::Bedrock::AgentAlias`
+       * * `AWS::Bedrock::FlowAlias`
+       * * `AWS::Bedrock::Guardrail`
        * * `AWS::Bedrock::KnowledgeBase`
        * * `AWS::Cassandra::Table`
        * * `AWS::CloudFront::KeyValueStore`
        * * `AWS::CloudTrail::Channel`
+       * * `AWS::CloudWatch::Metric`
        * * `AWS::CodeWhisperer::Customization`
        * * `AWS::CodeWhisperer::Profile`
        * * `AWS::Cognito::IdentityPool`
        * * `AWS::DynamoDB::Stream`
+       * * `AWS::DynamoDB::Table`
        * * `AWS::EC2::Snapshot`
        * * `AWS::EMRWAL::Workspace`
        * * `AWS::FinSpace::Environment`
@@ -2597,18 +1928,31 @@ public open class CfnEventDataStore(
        * * `AWS::IoTTwinMaker::Entity`
        * * `AWS::IoTTwinMaker::Workspace`
        * * `AWS::KendraRanking::ExecutionPlan`
+       * * `AWS::Kinesis::Stream`
+       * * `AWS::Kinesis::StreamConsumer`
        * * `AWS::KinesisVideo::Stream`
+       * * `AWS::Lambda::Function`
+       * * `AWS::MachineLearning::MlModel`
        * * `AWS::ManagedBlockchain::Network`
        * * `AWS::ManagedBlockchain::Node`
        * * `AWS::MedicalImaging::Datastore`
        * * `AWS::NeptuneGraph::Graph`
+       * * `AWS::One::UKey`
+       * * `AWS::One::User`
+       * * `AWS::PaymentCryptography::Alias`
+       * * `AWS::PaymentCryptography::Key`
        * * `AWS::PCAConnectorAD::Connector`
+       * * `AWS::PCAConnectorSCEP::Connector`
+       * * `AWS::QApps:QApp`
        * * `AWS::QBusiness::Application`
        * * `AWS::QBusiness::DataSource`
        * * `AWS::QBusiness::Index`
        * * `AWS::QBusiness::WebExperience`
        * * `AWS::RDS::DBCluster`
+       * * `AWS::RUM::AppMonitor`
        * * `AWS::S3::AccessPoint`
+       * * `AWS::S3::Object`
+       * * `AWS::S3Express::Object`
        * * `AWS::S3ObjectLambda::AccessPoint`
        * * `AWS::S3Outposts::Object`
        * * `AWS::SageMaker::Endpoint`
@@ -2622,6 +1966,7 @@ public open class CfnEventDataStore(
        * * `AWS::SQS::Queue`
        * * `AWS::SSM::ManagedNode`
        * * `AWS::SSMMessages::ControlChannel`
+       * * `AWS::StepFunctions::StateMachine`
        * * `AWS::SWF::Domain`
        * * `AWS::ThinClient::Device`
        * * `AWS::ThinClient::Environment`
@@ -2635,369 +1980,15 @@ public open class CfnEventDataStore(
        *
        * * *`resources.ARN`* - You can use any operator with `resources.ARN` , but if you use
        * `Equals` or `NotEquals` , the value must exactly match the ARN of a valid resource of the type
-       * you've speciﬁed in the template as the value of resources.type.
+       * you've speciﬁed in the template as the value of resources.type. To log all data events for all
+       * objects in a specific S3 bucket, use the `StartsWith` operator, and include only the bucket
+       * ARN as the matching value. For information about filtering on the `resources.ARN` field, see
+       * [Filtering data events by
+       * resources.ARN](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/filtering-data-events.html#filtering-data-events-resourcearn)
+       * in the *AWS CloudTrail User Guide* .
        *
        *
        * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
-       *
-       *
-       * The `resources.ARN` field can be set one of the following.
-       *
-       * If resources.type equals `AWS::S3::Object` , the ARN must be in one of the following
-       * formats. To log all data events for all objects in a specific S3 bucket, use the `StartsWith`
-       * operator, and include only the bucket ARN as the matching value.
-       *
-       * The trailing slash is intentional; do not exclude it. Replace the text between less than
-       * and greater than symbols (&lt;&gt;) with resource-specific information.
-       *
-       * * `arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/`
-       * * `arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/&lt;object_path&gt;/`
-       *
-       * When resources.type equals `AWS::DynamoDB::Table` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;`
-       *
-       * When resources.type equals `AWS::Lambda::Function` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;`
-       *
-       * When resources.type equals `AWS::AppConfig::Configuration` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:appconfig:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/environment/&lt;environment_ID&gt;/configuration/&lt;configuration_profile_ID&gt;`
-       *
-       * When resources.type equals `AWS::B2BI::Transformer` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:b2bi:&lt;region&gt;:&lt;account_ID&gt;:transformer/&lt;transformer_ID&gt;`
-       *
-       * When resources.type equals `AWS::Bedrock::AgentAlias` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:agent-alias/&lt;agent_ID&gt;/&lt;alias_ID&gt;`
-       *
-       * When resources.type equals `AWS::Bedrock::KnowledgeBase` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:knowledge-base/&lt;knowledge_base_ID&gt;`
-       *
-       * When resources.type equals `AWS::Cassandra::Table` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cassandra:&lt;region&gt;:&lt;account_ID&gt;:/keyspace/&lt;keyspace_name&gt;/table/&lt;table_name&gt;`
-       *
-       * When resources.type equals `AWS::CloudFront::KeyValueStore` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cloudfront:&lt;region&gt;:&lt;account_ID&gt;:key-value-store/&lt;KVS_name&gt;`
-       *
-       * When resources.type equals `AWS::CloudTrail::Channel` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;`
-       *
-       * When resources.type equals `AWS::CodeWhisperer::Customization` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:customization/&lt;customization_ID&gt;`
-       *
-       * When resources.type equals `AWS::CodeWhisperer::Profile` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:profile/&lt;profile_ID&gt;`
-       *
-       * When resources.type equals `AWS::Cognito::IdentityPool` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cognito-identity:&lt;region&gt;:&lt;account_ID&gt;:identitypool/&lt;identity_pool_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::DynamoDB::Stream` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;`
-       *
-       * When `resources.type` equals `AWS::EC2::Snapshot` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::EMRWAL::Workspace` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:emrwal:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_name&gt;`
-       *
-       * When `resources.type` equals `AWS::FinSpace::Environment` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::Glue::Table` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;`
-       *
-       * When `resources.type` equals `AWS::GreengrassV2::ComponentVersion` , and the operator is
-       * set to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:greengrass:&lt;region&gt;:&lt;account_ID&gt;:components/&lt;component_name&gt;`
-       *
-       * When `resources.type` equals `AWS::GreengrassV2::Deployment` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:greengrass:&lt;region&gt;:&lt;account_ID&gt;:deployments/&lt;deployment_ID`
-       *
-       * When `resources.type` equals `AWS::GuardDuty::Detector` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:guardduty:&lt;region&gt;:&lt;account_ID&gt;:detector/&lt;detector_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoT::Certificate` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:iot:&lt;region&gt;:&lt;account_ID&gt;:cert/&lt;certificate_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoT::Thing` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:iot:&lt;region&gt;:&lt;account_ID&gt;:thing/&lt;thing_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTSiteWise::Asset` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iotsitewise:&lt;region&gt;:&lt;account_ID&gt;:asset/&lt;asset_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTSiteWise::TimeSeries` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iotsitewise:&lt;region&gt;:&lt;account_ID&gt;:timeseries/&lt;timeseries_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTTwinMaker::Entity` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;/entity/&lt;entity_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTTwinMaker::Workspace` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::KendraRanking::ExecutionPlan` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:kendra-ranking:&lt;region&gt;:&lt;account_ID&gt;:rescore-execution-plan/&lt;rescore_execution_plan_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::KinesisVideo::Stream` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name&gt;/&lt;creation_time&gt;`
-       *
-       * When `resources.type` equals `AWS::ManagedBlockchain::Network` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;`
-       *
-       * When `resources.type` equals `AWS::ManagedBlockchain::Node` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::MedicalImaging::Datastore` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::NeptuneGraph::Graph` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:neptune-graph:&lt;region&gt;:&lt;account_ID&gt;:graph/&lt;graph_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::PCAConnectorAD::Connector` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::Application` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::DataSource` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;/data-source/&lt;datasource_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::Index` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::WebExperience` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/web-experience/&lt;web_experience_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::RDS::DBCluster` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:rds:&lt;region&gt;:&lt;account_ID&gt;:cluster/&lt;cluster_name&gt;`
-       *
-       * When `resources.type` equals `AWS::S3::AccessPoint` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in one of the following formats. To log events on all objects
-       * in an S3 access point, we recommend that you use only the access point ARN, don’t include the
-       * object path, and use the `StartsWith` or `NotStartsWith` operators.
-       *
-       * *
-       * `arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;`
-       * *
-       * `arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;`
-       *
-       * When `resources.type` equals `AWS::S3ObjectLambda::AccessPoint` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;`
-       *
-       * When `resources.type` equals `AWS::S3Outposts::Object` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;`
-       *
-       * When `resources.type` equals `AWS::SageMaker::Endpoint` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SageMaker::ExperimentTrialComponent` , and the operator
-       * is set to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:experiment-trial-component/&lt;experiment_trial_component_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SageMaker::FeatureGroup` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SCN::Instance` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:scn:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::ServiceDiscovery::Namespace` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:namespace/&lt;namespace_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::ServiceDiscovery::Service` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:service/&lt;service_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SNS::PlatformEndpoint` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_type&gt;/&lt;endpoint_name&gt;/&lt;endpoint_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SNS::Topic` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SQS::Queue` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SSM::ManagedNode` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in one of the following formats:
-       *
-       * *
-       * `arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;`
-       * *
-       * `arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SSMMessages::ControlChannel` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
-       *
-       * When `resources.type` equals `AWS::ThinClient::Device` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:device/&lt;device_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::ThinClient::Environment` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::Timestream::Database` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;`
-       *
-       * When `resources.type` equals `AWS::Timestream::Table` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;/table/&lt;table_name&gt;`
-       *
-       * When resources.type equals `AWS::VerifiedPermissions::PolicyStore` , and the operator is
-       * set to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:verifiedpermissions:&lt;region&gt;:&lt;account_ID&gt;:policy-store/&lt;policy_store_UUID&gt;`
        */
       override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
@@ -3067,7 +2058,8 @@ public open class CfnEventDataStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty,
-    ) : CdkObject(cdkObject), AdvancedFieldSelectorProperty {
+    ) : CdkObject(cdkObject),
+        AdvancedFieldSelectorProperty {
       /**
        * An operator that includes events that match the last few characters of the event record
        * field specified as the value of `Field` .
@@ -3123,20 +2115,21 @@ public open class CfnEventDataStore(
        * * For non- AWS events, the value must be `ActivityAuditLog` .
        * * *`resources.type`* - This ﬁeld is required for CloudTrail data events. `resources.type`
        * can only use the `Equals` operator, and the value can be one of the following:
-       * * `AWS::DynamoDB::Table`
-       * * `AWS::Lambda::Function`
-       * * `AWS::S3::Object`
        * * `AWS::AppConfig::Configuration`
        * * `AWS::B2BI::Transformer`
        * * `AWS::Bedrock::AgentAlias`
+       * * `AWS::Bedrock::FlowAlias`
+       * * `AWS::Bedrock::Guardrail`
        * * `AWS::Bedrock::KnowledgeBase`
        * * `AWS::Cassandra::Table`
        * * `AWS::CloudFront::KeyValueStore`
        * * `AWS::CloudTrail::Channel`
+       * * `AWS::CloudWatch::Metric`
        * * `AWS::CodeWhisperer::Customization`
        * * `AWS::CodeWhisperer::Profile`
        * * `AWS::Cognito::IdentityPool`
        * * `AWS::DynamoDB::Stream`
+       * * `AWS::DynamoDB::Table`
        * * `AWS::EC2::Snapshot`
        * * `AWS::EMRWAL::Workspace`
        * * `AWS::FinSpace::Environment`
@@ -3151,18 +2144,31 @@ public open class CfnEventDataStore(
        * * `AWS::IoTTwinMaker::Entity`
        * * `AWS::IoTTwinMaker::Workspace`
        * * `AWS::KendraRanking::ExecutionPlan`
+       * * `AWS::Kinesis::Stream`
+       * * `AWS::Kinesis::StreamConsumer`
        * * `AWS::KinesisVideo::Stream`
+       * * `AWS::Lambda::Function`
+       * * `AWS::MachineLearning::MlModel`
        * * `AWS::ManagedBlockchain::Network`
        * * `AWS::ManagedBlockchain::Node`
        * * `AWS::MedicalImaging::Datastore`
        * * `AWS::NeptuneGraph::Graph`
+       * * `AWS::One::UKey`
+       * * `AWS::One::User`
+       * * `AWS::PaymentCryptography::Alias`
+       * * `AWS::PaymentCryptography::Key`
        * * `AWS::PCAConnectorAD::Connector`
+       * * `AWS::PCAConnectorSCEP::Connector`
+       * * `AWS::QApps:QApp`
        * * `AWS::QBusiness::Application`
        * * `AWS::QBusiness::DataSource`
        * * `AWS::QBusiness::Index`
        * * `AWS::QBusiness::WebExperience`
        * * `AWS::RDS::DBCluster`
+       * * `AWS::RUM::AppMonitor`
        * * `AWS::S3::AccessPoint`
+       * * `AWS::S3::Object`
+       * * `AWS::S3Express::Object`
        * * `AWS::S3ObjectLambda::AccessPoint`
        * * `AWS::S3Outposts::Object`
        * * `AWS::SageMaker::Endpoint`
@@ -3176,6 +2182,7 @@ public open class CfnEventDataStore(
        * * `AWS::SQS::Queue`
        * * `AWS::SSM::ManagedNode`
        * * `AWS::SSMMessages::ControlChannel`
+       * * `AWS::StepFunctions::StateMachine`
        * * `AWS::SWF::Domain`
        * * `AWS::ThinClient::Device`
        * * `AWS::ThinClient::Environment`
@@ -3189,369 +2196,16 @@ public open class CfnEventDataStore(
        *
        * * *`resources.ARN`* - You can use any operator with `resources.ARN` , but if you use
        * `Equals` or `NotEquals` , the value must exactly match the ARN of a valid resource of the type
-       * you've speciﬁed in the template as the value of resources.type.
+       * you've speciﬁed in the template as the value of resources.type. To log all data events for all
+       * objects in a specific S3 bucket, use the `StartsWith` operator, and include only the bucket
+       * ARN as the matching value. For information about filtering on the `resources.ARN` field, see
+       * [Filtering data events by
+       * resources.ARN](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/filtering-data-events.html#filtering-data-events-resourcearn)
+       * in the *AWS CloudTrail User Guide* .
        *
        *
        * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
        *
-       *
-       * The `resources.ARN` field can be set one of the following.
-       *
-       * If resources.type equals `AWS::S3::Object` , the ARN must be in one of the following
-       * formats. To log all data events for all objects in a specific S3 bucket, use the `StartsWith`
-       * operator, and include only the bucket ARN as the matching value.
-       *
-       * The trailing slash is intentional; do not exclude it. Replace the text between less than
-       * and greater than symbols (&lt;&gt;) with resource-specific information.
-       *
-       * * `arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/`
-       * * `arn:&lt;partition&gt;:s3:::&lt;bucket_name&gt;/&lt;object_path&gt;/`
-       *
-       * When resources.type equals `AWS::DynamoDB::Table` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;`
-       *
-       * When resources.type equals `AWS::Lambda::Function` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:lambda:&lt;region&gt;:&lt;account_ID&gt;:function:&lt;function_name&gt;`
-       *
-       * When resources.type equals `AWS::AppConfig::Configuration` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:appconfig:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/environment/&lt;environment_ID&gt;/configuration/&lt;configuration_profile_ID&gt;`
-       *
-       * When resources.type equals `AWS::B2BI::Transformer` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:b2bi:&lt;region&gt;:&lt;account_ID&gt;:transformer/&lt;transformer_ID&gt;`
-       *
-       * When resources.type equals `AWS::Bedrock::AgentAlias` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:agent-alias/&lt;agent_ID&gt;/&lt;alias_ID&gt;`
-       *
-       * When resources.type equals `AWS::Bedrock::KnowledgeBase` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:bedrock:&lt;region&gt;:&lt;account_ID&gt;:knowledge-base/&lt;knowledge_base_ID&gt;`
-       *
-       * When resources.type equals `AWS::Cassandra::Table` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cassandra:&lt;region&gt;:&lt;account_ID&gt;:/keyspace/&lt;keyspace_name&gt;/table/&lt;table_name&gt;`
-       *
-       * When resources.type equals `AWS::CloudFront::KeyValueStore` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cloudfront:&lt;region&gt;:&lt;account_ID&gt;:key-value-store/&lt;KVS_name&gt;`
-       *
-       * When resources.type equals `AWS::CloudTrail::Channel` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;`
-       *
-       * When resources.type equals `AWS::CodeWhisperer::Customization` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:customization/&lt;customization_ID&gt;`
-       *
-       * When resources.type equals `AWS::CodeWhisperer::Profile` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:codewhisperer:&lt;region&gt;:&lt;account_ID&gt;:profile/&lt;profile_ID&gt;`
-       *
-       * When resources.type equals `AWS::Cognito::IdentityPool` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:cognito-identity:&lt;region&gt;:&lt;account_ID&gt;:identitypool/&lt;identity_pool_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::DynamoDB::Stream` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:dynamodb:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;table_name&gt;/stream/&lt;date_time&gt;`
-       *
-       * When `resources.type` equals `AWS::EC2::Snapshot` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:ec2:&lt;region&gt;::snapshot/&lt;snapshot_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::EMRWAL::Workspace` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:emrwal:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_name&gt;`
-       *
-       * When `resources.type` equals `AWS::FinSpace::Environment` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::Glue::Table` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;`
-       *
-       * When `resources.type` equals `AWS::GreengrassV2::ComponentVersion` , and the operator is
-       * set to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:greengrass:&lt;region&gt;:&lt;account_ID&gt;:components/&lt;component_name&gt;`
-       *
-       * When `resources.type` equals `AWS::GreengrassV2::Deployment` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:greengrass:&lt;region&gt;:&lt;account_ID&gt;:deployments/&lt;deployment_ID`
-       *
-       * When `resources.type` equals `AWS::GuardDuty::Detector` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:guardduty:&lt;region&gt;:&lt;account_ID&gt;:detector/&lt;detector_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoT::Certificate` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:iot:&lt;region&gt;:&lt;account_ID&gt;:cert/&lt;certificate_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoT::Thing` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:iot:&lt;region&gt;:&lt;account_ID&gt;:thing/&lt;thing_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTSiteWise::Asset` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iotsitewise:&lt;region&gt;:&lt;account_ID&gt;:asset/&lt;asset_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTSiteWise::TimeSeries` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iotsitewise:&lt;region&gt;:&lt;account_ID&gt;:timeseries/&lt;timeseries_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTTwinMaker::Entity` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;/entity/&lt;entity_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::IoTTwinMaker::Workspace` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:iottwinmaker:&lt;region&gt;:&lt;account_ID&gt;:workspace/&lt;workspace_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::KendraRanking::ExecutionPlan` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:kendra-ranking:&lt;region&gt;:&lt;account_ID&gt;:rescore-execution-plan/&lt;rescore_execution_plan_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::KinesisVideo::Stream` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:kinesisvideo:&lt;region&gt;:&lt;account_ID&gt;:stream/&lt;stream_name&gt;/&lt;creation_time&gt;`
-       *
-       * When `resources.type` equals `AWS::ManagedBlockchain::Network` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:managedblockchain:::networks/&lt;network_name&gt;`
-       *
-       * When `resources.type` equals `AWS::ManagedBlockchain::Node` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:managedblockchain:&lt;region&gt;:&lt;account_ID&gt;:nodes/&lt;node_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::MedicalImaging::Datastore` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:medical-imaging:&lt;region&gt;:&lt;account_ID&gt;:datastore/&lt;data_store_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::NeptuneGraph::Graph` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:neptune-graph:&lt;region&gt;:&lt;account_ID&gt;:graph/&lt;graph_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::PCAConnectorAD::Connector` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:pca-connector-ad:&lt;region&gt;:&lt;account_ID&gt;:connector/&lt;connector_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::Application` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::DataSource` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;/data-source/&lt;datasource_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::Index` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/index/&lt;index_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::QBusiness::WebExperience` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:qbusiness:&lt;region&gt;:&lt;account_ID&gt;:application/&lt;application_ID&gt;/web-experience/&lt;web_experience_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::RDS::DBCluster` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:rds:&lt;region&gt;:&lt;account_ID&gt;:cluster/&lt;cluster_name&gt;`
-       *
-       * When `resources.type` equals `AWS::S3::AccessPoint` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in one of the following formats. To log events on all objects
-       * in an S3 access point, we recommend that you use only the access point ARN, don’t include the
-       * object path, and use the `StartsWith` or `NotStartsWith` operators.
-       *
-       * *
-       * `arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;`
-       * *
-       * `arn:&lt;partition&gt;:s3:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;/object/&lt;object_path&gt;`
-       *
-       * When `resources.type` equals `AWS::S3ObjectLambda::AccessPoint` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:s3-object-lambda:&lt;region&gt;:&lt;account_ID&gt;:accesspoint/&lt;access_point_name&gt;`
-       *
-       * When `resources.type` equals `AWS::S3Outposts::Object` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:s3-outposts:&lt;region&gt;:&lt;account_ID&gt;:&lt;object_path&gt;`
-       *
-       * When `resources.type` equals `AWS::SageMaker::Endpoint` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SageMaker::ExperimentTrialComponent` , and the operator
-       * is set to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:experiment-trial-component/&lt;experiment_trial_component_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SageMaker::FeatureGroup` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SCN::Instance` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:scn:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::ServiceDiscovery::Namespace` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:namespace/&lt;namespace_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::ServiceDiscovery::Service` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:servicediscovery:&lt;region&gt;:&lt;account_ID&gt;:service/&lt;service_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SNS::PlatformEndpoint` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:endpoint/&lt;endpoint_type&gt;/&lt;endpoint_name&gt;/&lt;endpoint_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SNS::Topic` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SQS::Queue` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;`
-       *
-       * When `resources.type` equals `AWS::SSM::ManagedNode` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in one of the following formats:
-       *
-       * *
-       * `arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;`
-       * *
-       * `arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SSMMessages::ControlChannel` , and the operator is set
-       * to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
-       *
-       * When `resources.type` equals `AWS::ThinClient::Device` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:device/&lt;device_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::ThinClient::Environment` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:thinclient:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;`
-       *
-       * When `resources.type` equals `AWS::Timestream::Database` , and the operator is set to
-       * `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;`
-       *
-       * When `resources.type` equals `AWS::Timestream::Table` , and the operator is set to `Equals`
-       * or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:timestream:&lt;region&gt;:&lt;account_ID&gt;:database/&lt;database_name&gt;/table/&lt;table_name&gt;`
-       *
-       * When resources.type equals `AWS::VerifiedPermissions::PolicyStore` , and the operator is
-       * set to `Equals` or `NotEquals` , the ARN must be in the following format:
-       *
-       * *
-       * `arn:&lt;partition&gt;:verifiedpermissions:&lt;region&gt;:&lt;account_ID&gt;:policy-store/&lt;policy_store_UUID&gt;`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedfieldselector.html#cfn-cloudtrail-eventdatastore-advancedfieldselector-field)
        */
@@ -3682,7 +2336,8 @@ public open class CfnEventDataStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty,
-    ) : CdkObject(cdkObject), InsightSelectorProperty {
+    ) : CdkObject(cdkObject),
+        InsightSelectorProperty {
       /**
        * The type of Insights events to log on an event data store. `ApiCallRateInsight` and
        * `ApiErrorRateInsight` are valid Insight types.

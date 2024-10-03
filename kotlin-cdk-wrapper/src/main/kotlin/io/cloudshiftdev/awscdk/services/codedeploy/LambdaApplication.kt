@@ -22,7 +22,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class LambdaApplication(
   cdkObject: software.amazon.awscdk.services.codedeploy.LambdaApplication,
-) : Resource(cdkObject), ILambdaApplication {
+) : Resource(cdkObject),
+    ILambdaApplication {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codedeploy.LambdaApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

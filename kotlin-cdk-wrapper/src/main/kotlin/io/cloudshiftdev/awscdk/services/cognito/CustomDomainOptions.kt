@@ -87,7 +87,8 @@ public interface CustomDomainOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CustomDomainOptions,
-  ) : CdkObject(cdkObject), CustomDomainOptions {
+  ) : CdkObject(cdkObject),
+      CustomDomainOptions {
     /**
      * The certificate to associate with this domain.
      */

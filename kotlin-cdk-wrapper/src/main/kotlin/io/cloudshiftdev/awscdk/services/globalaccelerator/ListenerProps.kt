@@ -143,7 +143,8 @@ public interface ListenerProps : ListenerOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.ListenerProps,
-  ) : CdkObject(cdkObject), ListenerProps {
+  ) : CdkObject(cdkObject),
+      ListenerProps {
     /**
      * The accelerator for this listener.
      */

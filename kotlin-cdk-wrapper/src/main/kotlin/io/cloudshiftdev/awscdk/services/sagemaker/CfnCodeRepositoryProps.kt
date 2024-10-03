@@ -164,7 +164,8 @@ public interface CfnCodeRepositoryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnCodeRepositoryProps,
-  ) : CdkObject(cdkObject), CfnCodeRepositoryProps {
+  ) : CdkObject(cdkObject),
+      CfnCodeRepositoryProps {
     /**
      * The name of the Git repository.
      *

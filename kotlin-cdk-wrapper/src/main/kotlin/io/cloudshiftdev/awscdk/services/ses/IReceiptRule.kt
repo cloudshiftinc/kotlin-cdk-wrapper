@@ -22,7 +22,8 @@ public interface IReceiptRule : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.IReceiptRule,
-  ) : CdkObject(cdkObject), IReceiptRule {
+  ) : CdkObject(cdkObject),
+      IReceiptRule {
     /**
      * Apply the given removal policy to this resource.
      *

@@ -75,7 +75,8 @@ public interface S3SourceVariables {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.S3SourceVariables,
-  ) : CdkObject(cdkObject), S3SourceVariables {
+  ) : CdkObject(cdkObject),
+      S3SourceVariables {
     /**
      * The e-tag of the S3 version of the object that triggered the build.
      */

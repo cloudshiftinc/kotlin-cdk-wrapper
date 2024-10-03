@@ -15,7 +15,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class VpcEndpoint(
   cdkObject: software.amazon.awscdk.services.ec2.VpcEndpoint,
-) : Resource(cdkObject), IVpcEndpoint {
+) : Resource(cdkObject),
+    IVpcEndpoint {
   /**
    * Adds a statement to the policy document of the VPC endpoint. The statement must have a
    * Principal.

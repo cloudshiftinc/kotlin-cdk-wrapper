@@ -60,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStorageSystem(
   cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -675,7 +677,8 @@ public open class CfnStorageSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty,
-    ) : CdkObject(cdkObject), ServerConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServerConfigurationProperty {
       /**
        * The domain name or IP address of your storage system's management interface.
        *
@@ -790,7 +793,8 @@ public open class CfnStorageSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerCredentialsProperty,
-    ) : CdkObject(cdkObject), ServerCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        ServerCredentialsProperty {
       /**
        * Specifies the password for your storage system's management interface.
        *

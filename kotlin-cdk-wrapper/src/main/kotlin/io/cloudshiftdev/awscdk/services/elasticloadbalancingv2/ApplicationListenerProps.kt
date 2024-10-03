@@ -9,6 +9,7 @@ import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a standalone ApplicationListener.
@@ -23,12 +24,18 @@ import kotlin.collections.List
  * ApplicationTargetGroup applicationTargetGroup;
  * ListenerAction listenerAction;
  * ListenerCertificate listenerCertificate;
+ * TrustStore trustStore;
  * ApplicationListenerProps applicationListenerProps = ApplicationListenerProps.builder()
  * .loadBalancer(applicationLoadBalancer)
  * // the properties below are optional
  * .certificates(List.of(listenerCertificate))
  * .defaultAction(listenerAction)
  * .defaultTargetGroups(List.of(applicationTargetGroup))
+ * .mutualAuthentication(MutualAuthentication.builder()
+ * .ignoreClientCertificateExpiry(false)
+ * .mutualAuthenticationMode(MutualAuthenticationMode.OFF)
+ * .trustStore(trustStore)
+ * .build())
  * .open(false)
  * .port(123)
  * .protocol(ApplicationProtocol.HTTP)
@@ -94,6 +101,18 @@ public interface ApplicationListenerProps : BaseApplicationListenerProps {
      * @param loadBalancer The load balancer to attach this listener to. 
      */
     public fun loadBalancer(loadBalancer: IApplicationLoadBalancer)
+
+    /**
+     * @param mutualAuthentication The mutual authentication configuration information.
+     */
+    public fun mutualAuthentication(mutualAuthentication: MutualAuthentication)
+
+    /**
+     * @param mutualAuthentication The mutual authentication configuration information.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f9c183903e3334d5fa952c535cba81e8c58cca0acfcb03c67dc57dc4fdc21e97")
+    public fun mutualAuthentication(mutualAuthentication: MutualAuthentication.Builder.() -> Unit)
 
     /**
      * @param open Allow anyone to connect to the load balancer on the listener port.
@@ -187,6 +206,22 @@ public interface ApplicationListenerProps : BaseApplicationListenerProps {
     }
 
     /**
+     * @param mutualAuthentication The mutual authentication configuration information.
+     */
+    override fun mutualAuthentication(mutualAuthentication: MutualAuthentication) {
+      cdkBuilder.mutualAuthentication(mutualAuthentication.let(MutualAuthentication.Companion::unwrap))
+    }
+
+    /**
+     * @param mutualAuthentication The mutual authentication configuration information.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f9c183903e3334d5fa952c535cba81e8c58cca0acfcb03c67dc57dc4fdc21e97")
+    override
+        fun mutualAuthentication(mutualAuthentication: MutualAuthentication.Builder.() -> Unit):
+        Unit = mutualAuthentication(MutualAuthentication(mutualAuthentication))
+
+    /**
      * @param open Allow anyone to connect to the load balancer on the listener port.
      * If this is specified, the load balancer will be opened up to anyone who can reach it.
      * For internal load balancers this is anyone in the same VPC. For public load
@@ -228,7 +263,8 @@ public interface ApplicationListenerProps : BaseApplicationListenerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerProps,
-  ) : CdkObject(cdkObject), ApplicationListenerProps {
+  ) : CdkObject(cdkObject),
+      ApplicationListenerProps {
     /**
      * Certificate list of ACM cert ARNs.
      *
@@ -273,6 +309,16 @@ public interface ApplicationListenerProps : BaseApplicationListenerProps {
      */
     override fun loadBalancer(): IApplicationLoadBalancer =
         unwrap(this).getLoadBalancer().let(IApplicationLoadBalancer::wrap)
+
+    /**
+     * The mutual authentication configuration information.
+     *
+     * Default: - No mutual authentication configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/mutual-authentication.html)
+     */
+    override fun mutualAuthentication(): MutualAuthentication? =
+        unwrap(this).getMutualAuthentication()?.let(MutualAuthentication::wrap)
 
     /**
      * Allow anyone to connect to the load balancer on the listener port.

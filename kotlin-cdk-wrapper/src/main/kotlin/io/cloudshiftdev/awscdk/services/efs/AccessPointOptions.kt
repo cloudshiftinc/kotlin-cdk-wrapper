@@ -203,7 +203,8 @@ public interface AccessPointOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.AccessPointOptions,
-  ) : CdkObject(cdkObject), AccessPointOptions {
+  ) : CdkObject(cdkObject),
+      AccessPointOptions {
     /**
      * Specifies the POSIX IDs and permissions to apply when creating the access point's root
      * directory.

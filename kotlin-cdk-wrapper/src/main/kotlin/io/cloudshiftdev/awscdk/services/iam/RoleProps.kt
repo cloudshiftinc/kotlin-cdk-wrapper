@@ -390,7 +390,8 @@ public interface RoleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.RoleProps,
-  ) : CdkObject(cdkObject), RoleProps {
+  ) : CdkObject(cdkObject),
+      RoleProps {
     /**
      * The IAM principal (i.e. `new ServicePrincipal('sns.amazonaws.com')`) which can assume this
      * role.

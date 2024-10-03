@@ -20,7 +20,8 @@ public interface IFileSetProducer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.IFileSetProducer,
-  ) : CdkObject(cdkObject), IFileSetProducer {
+  ) : CdkObject(cdkObject),
+      IFileSetProducer {
     /**
      * The `FileSet` produced by this file set producer.
      *

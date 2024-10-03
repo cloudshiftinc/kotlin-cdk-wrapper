@@ -482,7 +482,8 @@ public interface CfnReplicationTaskProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dms.CfnReplicationTaskProps,
-  ) : CdkObject(cdkObject), CfnReplicationTaskProps {
+  ) : CdkObject(cdkObject),
+      CfnReplicationTaskProps {
     /**
      * Indicates when you want a change data capture (CDC) operation to start.
      *

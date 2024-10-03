@@ -209,7 +209,8 @@ public interface CfnStorageLensGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroupProps,
-  ) : CdkObject(cdkObject), CfnStorageLensGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnStorageLensGroupProps {
     /**
      * This property contains the criteria for the Storage Lens group data that is displayed.
      *

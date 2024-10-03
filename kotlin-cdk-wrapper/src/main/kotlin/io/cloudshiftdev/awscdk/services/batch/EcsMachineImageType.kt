@@ -6,6 +6,7 @@ public enum class EcsMachineImageType(
   private val cdkObject: software.amazon.awscdk.services.batch.EcsMachineImageType,
 ) {
   ECS_AL2(software.amazon.awscdk.services.batch.EcsMachineImageType.ECS_AL2),
+  ECS_AL2023(software.amazon.awscdk.services.batch.EcsMachineImageType.ECS_AL2023),
   ECS_AL2_NVIDIA(software.amazon.awscdk.services.batch.EcsMachineImageType.ECS_AL2_NVIDIA),
   ;
 
@@ -14,6 +15,8 @@ public enum class EcsMachineImageType(
         EcsMachineImageType = when (cdkObject) {
       software.amazon.awscdk.services.batch.EcsMachineImageType.ECS_AL2 ->
           EcsMachineImageType.ECS_AL2
+      software.amazon.awscdk.services.batch.EcsMachineImageType.ECS_AL2023 ->
+          EcsMachineImageType.ECS_AL2023
       software.amazon.awscdk.services.batch.EcsMachineImageType.ECS_AL2_NVIDIA ->
           EcsMachineImageType.ECS_AL2_NVIDIA
     }

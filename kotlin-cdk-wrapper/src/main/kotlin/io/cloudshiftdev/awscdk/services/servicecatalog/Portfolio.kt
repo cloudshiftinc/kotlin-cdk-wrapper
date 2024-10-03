@@ -28,7 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Portfolio(
   cdkObject: software.amazon.awscdk.services.servicecatalog.Portfolio,
-) : Resource(cdkObject), IPortfolio {
+) : Resource(cdkObject),
+    IPortfolio {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

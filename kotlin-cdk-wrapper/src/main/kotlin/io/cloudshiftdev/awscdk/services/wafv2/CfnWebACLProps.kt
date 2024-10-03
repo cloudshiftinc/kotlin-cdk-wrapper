@@ -777,7 +777,8 @@ public interface CfnWebACLProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACLProps,
-  ) : CdkObject(cdkObject), CfnWebACLProps {
+  ) : CdkObject(cdkObject),
+      CfnWebACLProps {
     /**
      * Specifies custom configurations for the associations between the web ACL and protected
      * resources.

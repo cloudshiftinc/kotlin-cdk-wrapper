@@ -39,7 +39,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * DatabaseInstance sourceInstance;
  * DatabaseInstanceFromSnapshot.Builder.create(this, "Instance")
  * .snapshotIdentifier("my-snapshot")
- * .engine(DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15_2).build()))
+ * .engine(DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_16_3).build()))
  * // optional, defaults to m5.large
  * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.LARGE))
  * .vpc(vpc)
@@ -53,7 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class DatabaseInstanceFromSnapshot(
   cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshot,
-) : DatabaseInstanceBase(cdkObject), IDatabaseInstance {
+) : DatabaseInstanceBase(cdkObject),
+    IDatabaseInstance {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

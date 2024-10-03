@@ -166,7 +166,8 @@ public interface ServiceAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.ServiceAttributes,
-  ) : CdkObject(cdkObject), ServiceAttributes {
+  ) : CdkObject(cdkObject),
+      ServiceAttributes {
     /**
      *
      */

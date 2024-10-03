@@ -578,7 +578,8 @@ public interface CfnDocumentClassifierProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifierProps,
-  ) : CdkObject(cdkObject), CfnDocumentClassifierProps {
+  ) : CdkObject(cdkObject),
+      CfnDocumentClassifierProps {
     /**
      * The Amazon Resource Name (ARN) of the IAM role that grants Amazon Comprehend read access to
      * your input data.

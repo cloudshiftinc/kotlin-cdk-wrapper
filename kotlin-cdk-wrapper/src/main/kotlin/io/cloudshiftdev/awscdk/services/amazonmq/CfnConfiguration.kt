@@ -35,11 +35,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnConfiguration cfnConfiguration = CfnConfiguration.Builder.create(this, "MyCfnConfiguration")
  * .data("data")
  * .engineType("engineType")
- * .engineVersion("engineVersion")
  * .name("name")
  * // the properties below are optional
  * .authenticationStrategy("authenticationStrategy")
  * .description("description")
+ * .engineVersion("engineVersion")
  * .tags(List.of(TagsEntryProperty.builder()
  * .key("key")
  * .value("value")
@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfiguration(
   cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -140,7 +142,7 @@ public open class CfnConfiguration(
   /**
    * The version of the broker engine.
    */
-  public open fun engineVersion(): String = unwrap(this).getEngineVersion()
+  public open fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
   /**
    * The version of the broker engine.
@@ -469,7 +471,8 @@ public open class CfnConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfiguration.TagsEntryProperty,
-    ) : CdkObject(cdkObject), TagsEntryProperty {
+    ) : CdkObject(cdkObject),
+        TagsEntryProperty {
       /**
        * The key in a key-value pair.
        *

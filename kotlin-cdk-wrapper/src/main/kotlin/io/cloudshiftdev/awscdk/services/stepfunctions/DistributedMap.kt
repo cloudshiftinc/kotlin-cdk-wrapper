@@ -32,18 +32,21 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
- * .maxConcurrency(1)
- * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+ * DistributedMap distributedMap = DistributedMap.Builder.create(this, "DistributedMap")
+ * .mapExecutionType(StateMachineType.EXPRESS)
  * .build();
- * distributedMap.itemProcessor(new Pass(this, "Pass State"));
+ * distributedMap.itemProcessor(new Pass(this, "Pass"), ProcessorConfig.builder()
+ * .mode(ProcessorMode.DISTRIBUTED)
+ * .executionType(ProcessorType.STANDARD)
+ * .build());
  * ```
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-distributed.html)
  */
 public open class DistributedMap(
   cdkObject: software.amazon.awscdk.services.stepfunctions.DistributedMap,
-) : MapBase(cdkObject), INextable {
+) : MapBase(cdkObject),
+    INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.DistributedMap(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -275,6 +278,8 @@ public open class DistributedMap(
      * MapExecutionType.
      *
      * The execution type of the distributed map state
+     *
+     * This property overwrites ProcessorConfig.executionType
      *
      * Default: StateMachineType.STANDARD
      *
@@ -533,6 +538,8 @@ public open class DistributedMap(
      * MapExecutionType.
      *
      * The execution type of the distributed map state
+     *
+     * This property overwrites ProcessorConfig.executionType
      *
      * Default: StateMachineType.STANDARD
      *

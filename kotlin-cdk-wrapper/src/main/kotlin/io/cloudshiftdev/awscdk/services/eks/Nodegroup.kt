@@ -82,7 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Nodegroup(
   cdkObject: software.amazon.awscdk.services.eks.Nodegroup,
-) : Resource(cdkObject), INodegroup {
+) : Resource(cdkObject),
+    INodegroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -198,8 +199,7 @@ public open class Nodegroup(
      *
      * Default: t3.medium will be used according to the cloudformation document.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
      * @param instanceTypes The instance types to use for your node group. 
      */
     public fun instanceTypes(instanceTypes: List<InstanceType>)
@@ -209,8 +209,7 @@ public open class Nodegroup(
      *
      * Default: t3.medium will be used according to the cloudformation document.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
      * @param instanceTypes The instance types to use for your node group. 
      */
     public fun instanceTypes(vararg instanceTypes: InstanceType)
@@ -230,7 +229,7 @@ public open class Nodegroup(
      *
      * Default: - no launch template
      *
-     * [Documentation]( - https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
+     * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
      * @param launchTemplateSpec Launch template specification used for the nodegroup. 
      */
     public fun launchTemplateSpec(launchTemplateSpec: LaunchTemplateSpec)
@@ -240,7 +239,7 @@ public open class Nodegroup(
      *
      * Default: - no launch template
      *
-     * [Documentation]( - https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
+     * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
      * @param launchTemplateSpec Launch template specification used for the nodegroup. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -534,8 +533,7 @@ public open class Nodegroup(
      *
      * Default: t3.medium will be used according to the cloudformation document.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
      * @param instanceTypes The instance types to use for your node group. 
      */
     override fun instanceTypes(instanceTypes: List<InstanceType>) {
@@ -547,8 +545,7 @@ public open class Nodegroup(
      *
      * Default: t3.medium will be used according to the cloudformation document.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
      * @param instanceTypes The instance types to use for your node group. 
      */
     override fun instanceTypes(vararg instanceTypes: InstanceType): Unit =
@@ -571,7 +568,7 @@ public open class Nodegroup(
      *
      * Default: - no launch template
      *
-     * [Documentation]( - https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
+     * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
      * @param launchTemplateSpec Launch template specification used for the nodegroup. 
      */
     override fun launchTemplateSpec(launchTemplateSpec: LaunchTemplateSpec) {
@@ -583,7 +580,7 @@ public open class Nodegroup(
      *
      * Default: - no launch template
      *
-     * [Documentation]( - https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
+     * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
      * @param launchTemplateSpec Launch template specification used for the nodegroup. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")

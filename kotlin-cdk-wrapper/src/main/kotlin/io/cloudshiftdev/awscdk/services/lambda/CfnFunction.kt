@@ -34,16 +34,19 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * for log streaming and AWS X-Ray for request tracing.
  *
  * You set the package type to `Image` if the deployment package is a [container
- * image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html) . For a container image, the
- * code property must include the URI of a container image in the Amazon ECR registry. You do not need
- * to specify the handler and runtime properties.
+ * image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html) . For these functions,
+ * include the URI of the container image in the Amazon ECR registry in the [`ImageUri` property of the
+ * `Code`
+ * property](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-imageuri)
+ * . You do not need to specify the handler and runtime properties.
  *
  * You set the package type to `Zip` if the deployment package is a [.zip file
  * archive](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip)
- * . For a .zip file archive, the code property specifies the location of the .zip file. You must also
- * specify the handler and runtime properties. For a Python example, see [Deploy Python Lambda
- * functions with .zip file archives](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html)
- * .
+ * . For these functions, specify the Amazon S3 location of your .zip file in the `Code` property.
+ * Alternatively, for Node.js and Python functions, you can define your function inline in the
+ * [`ZipFile` property of the `Code`
+ * property](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-zipfile)
+ * . In both cases, you must also specify the handler and runtime properties.
  *
  * You can use [code
  * signing](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html) if your
@@ -52,6 +55,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * `UpdateFunctionCode` , Lambda checks that the code package has a valid signature from a trusted
  * publisher. The code-signing configuration includes a set of signing profiles, which define the
  * trusted publishers for this function.
+ *
+ * When you update a `AWS::Lambda::Function` resource, CloudFormation calls the
+ * [UpdateFunctionConfiguration](https://docs.aws.amazon.com/lambda/latest/api/API_UpdateFunctionConfiguration.html)
+ * and [UpdateFunctionCode](https://docs.aws.amazon.com/lambda/latest/api/API_UpdateFunctionCode.html)
+ * Lambda APIs under the hood. Because these calls happen sequentially, and invocations can happen
+ * between these calls, your function may encounter errors in the time between the calls. For example,
+ * if you remove an environment variable, and the code that references that environment variable in the
+ * same CloudFormation update, you may see invocation errors related to a missing environment variable.
+ * To work around this, you can invoke your function against a version or alias by default, rather than
+ * the `$LATEST` version.
  *
  * Note that you configure [provisioned
  * concurrency](https://docs.aws.amazon.com/lambda/latest/dg/provisioned-concurrency.html) on a
@@ -73,6 +86,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .s3Bucket("s3Bucket")
  * .s3Key("s3Key")
  * .s3ObjectVersion("s3ObjectVersion")
+ * .sourceKmsKeyArn("sourceKmsKeyArn")
  * .zipFile("zipFile")
  * .build())
  * .role("role")
@@ -111,6 +125,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .memorySize(123)
  * .packageType("packageType")
+ * .recursiveLoop("recursiveLoop")
  * .reservedConcurrentExecutions(123)
  * .runtime("runtime")
  * .runtimeManagementConfig(RuntimeManagementConfigProperty.builder()
@@ -141,7 +156,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFunction(
   cdkObject: software.amazon.awscdk.services.lambda.CfnFunction,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -176,7 +193,7 @@ public open class CfnFunction(
   public open fun architectures(vararg `value`: String): Unit = architectures(`value`.toList())
 
   /**
-   * The Amazon Resource Name (ARN) of the function.
+   *
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
@@ -203,26 +220,54 @@ public open class CfnFunction(
       unwrap(this).getAttrSnapStartResponseOptimizationStatus()
 
   /**
-   * The code for the function.
+   * The [deployment
+   * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+   * function. To deploy a function defined as a container image, you specify the location of a
+   * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+   * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+   * function code inline in the template.  Changes to a deployment package in Amazon S3 or a container
+   * image in ECR are not detected automatically during stack updates. To update the function code,
+   * change the object key or version in the template.
    */
   public open fun code(): Any = unwrap(this).getCode()
 
   /**
-   * The code for the function.
+   * The [deployment
+   * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+   * function. To deploy a function defined as a container image, you specify the location of a
+   * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+   * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+   * function code inline in the template.  Changes to a deployment package in Amazon S3 or a container
+   * image in ECR are not detected automatically during stack updates. To update the function code,
+   * change the object key or version in the template.
    */
   public open fun code(`value`: IResolvable) {
     unwrap(this).setCode(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The code for the function.
+   * The [deployment
+   * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+   * function. To deploy a function defined as a container image, you specify the location of a
+   * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+   * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+   * function code inline in the template.  Changes to a deployment package in Amazon S3 or a container
+   * image in ECR are not detected automatically during stack updates. To update the function code,
+   * change the object key or version in the template.
    */
   public open fun code(`value`: CodeProperty) {
     unwrap(this).setCode(`value`.let(CodeProperty.Companion::unwrap))
   }
 
   /**
-   * The code for the function.
+   * The [deployment
+   * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+   * function. To deploy a function defined as a container image, you specify the location of a
+   * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+   * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+   * function code inline in the template.  Changes to a deployment package in Amazon S3 or a container
+   * image in ECR are not detected automatically during stack updates. To update the function code,
+   * change the object key or version in the template.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("27bc03c11962a84638837c61ff105a539b3caa5340528b2ffd9166edaf307caf")
@@ -241,30 +286,30 @@ public open class CfnFunction(
   }
 
   /**
-   * A dead-letter queue configuration that specifies the queue or topic where Lambda sends
-   * asynchronous events when they fail processing.
+   * The [dead-letter queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq)
+   * for failed asynchronous invocations.
    */
   public open fun deadLetterConfig(): Any? = unwrap(this).getDeadLetterConfig()
 
   /**
-   * A dead-letter queue configuration that specifies the queue or topic where Lambda sends
-   * asynchronous events when they fail processing.
+   * The [dead-letter queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq)
+   * for failed asynchronous invocations.
    */
   public open fun deadLetterConfig(`value`: IResolvable) {
     unwrap(this).setDeadLetterConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * A dead-letter queue configuration that specifies the queue or topic where Lambda sends
-   * asynchronous events when they fail processing.
+   * The [dead-letter queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq)
+   * for failed asynchronous invocations.
    */
   public open fun deadLetterConfig(`value`: DeadLetterConfigProperty) {
     unwrap(this).setDeadLetterConfig(`value`.let(DeadLetterConfigProperty.Companion::unwrap))
   }
 
   /**
-   * A dead-letter queue configuration that specifies the queue or topic where Lambda sends
-   * asynchronous events when they fail processing.
+   * The [dead-letter queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq)
+   * for failed asynchronous invocations.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("82210f417735f1b21f06f2b9874c4d9202ac1920b45ba30cccd2d22bea5b339b")
@@ -284,26 +329,26 @@ public open class CfnFunction(
   }
 
   /**
-   * Environment variables that are accessible from function code during execution.
+   * A function's environment variable settings.
    */
   public open fun environment(): Any? = unwrap(this).getEnvironment()
 
   /**
-   * Environment variables that are accessible from function code during execution.
+   * A function's environment variable settings.
    */
   public open fun environment(`value`: IResolvable) {
     unwrap(this).setEnvironment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Environment variables that are accessible from function code during execution.
+   * A function's environment variable settings.
    */
   public open fun environment(`value`: EnvironmentProperty) {
     unwrap(this).setEnvironment(`value`.let(EnvironmentProperty.Companion::unwrap))
   }
 
   /**
-   * Environment variables that are accessible from function code during execution.
+   * A function's environment variable settings.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("f9fe4e1d1745bd46c7c4df960f9992721cd59f9fbb8b9b0bb9c79fd7087b565d")
@@ -422,10 +467,10 @@ public open class CfnFunction(
   }
 
   /**
-   * The ARN of the AWS Key Management Service ( AWS KMS ) customer managed key that's used to
-   * encrypt your function's [environment
-   * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption)
-   * . When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html) is
+   * The ARN of the KMSlong (KMS) customer managed key that's used to encrypt your function's
+   * [environment
+   * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption).
+   * When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html) is
    * activated, Lambda also uses this key is to encrypt your function's snapshot. If you deploy your
    * function using a container image, Lambda also uses this key to encrypt your function when it's
    * deployed. Note that this is not the same key that's used to protect your container image in the
@@ -435,10 +480,10 @@ public open class CfnFunction(
   public open fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
   /**
-   * The ARN of the AWS Key Management Service ( AWS KMS ) customer managed key that's used to
-   * encrypt your function's [environment
-   * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption)
-   * . When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html) is
+   * The ARN of the KMSlong (KMS) customer managed key that's used to encrypt your function's
+   * [environment
+   * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption).
+   * When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html) is
    * activated, Lambda also uses this key is to encrypt your function's snapshot. If you deploy your
    * function using a container image, Lambda also uses this key to encrypt your function when it's
    * deployed. Note that this is not the same key that's used to protect your container image in the
@@ -534,6 +579,18 @@ public open class CfnFunction(
   }
 
   /**
+   * This property is set to terminate unintended recursions.
+   */
+  public open fun recursiveLoop(): String? = unwrap(this).getRecursiveLoop()
+
+  /**
+   * This property is set to terminate unintended recursions.
+   */
+  public open fun recursiveLoop(`value`: String) {
+    unwrap(this).setRecursiveLoop(`value`)
+  }
+
+  /**
    * The number of simultaneous executions to reserve for the function.
    */
   public open fun reservedConcurrentExecutions(): Number? =
@@ -560,15 +617,27 @@ public open class CfnFunction(
 
   /**
    * The identifier of the function's
-   * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) . Runtime is required
-   * if the deployment package is a .zip file archive.
+   * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html). Runtime is required
+   * if the deployment package is a .zip file archive. Specifying a runtime results in an error if
+   * you're deploying a function using a container image.  The following list includes deprecated
+   * runtimes. Lambda blocks creating new functions and updating existing functions shortly after each
+   * runtime is deprecated. For more information, see [Runtime use after
+   * deprecation](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-deprecation-levels).
+   *  For a list of all currently supported runtimes, see [Supported
+   * runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtimes-supported).
    */
   public open fun runtime(): String? = unwrap(this).getRuntime()
 
   /**
    * The identifier of the function's
-   * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) . Runtime is required
-   * if the deployment package is a .zip file archive.
+   * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html). Runtime is required
+   * if the deployment package is a .zip file archive. Specifying a runtime results in an error if
+   * you're deploying a function using a container image.  The following list includes deprecated
+   * runtimes. Lambda blocks creating new functions and updating existing functions shortly after each
+   * runtime is deprecated. For more information, see [Runtime use after
+   * deprecation](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-deprecation-levels).
+   *  For a list of all currently supported runtimes, see [Supported
+   * runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtimes-supported).
    */
   public open fun runtime(`value`: String) {
     unwrap(this).setRuntime(`value`)
@@ -603,30 +672,30 @@ public open class CfnFunction(
       = runtimeManagementConfig(RuntimeManagementConfigProperty(`value`))
 
   /**
-   * The function's [AWS Lambda
-   * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+   * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+   * setting.
    */
   public open fun snapStart(): Any? = unwrap(this).getSnapStart()
 
   /**
-   * The function's [AWS Lambda
-   * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+   * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+   * setting.
    */
   public open fun snapStart(`value`: IResolvable) {
     unwrap(this).setSnapStart(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The function's [AWS Lambda
-   * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+   * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+   * setting.
    */
   public open fun snapStart(`value`: SnapStartProperty) {
     unwrap(this).setSnapStart(`value`.let(SnapStartProperty.Companion::unwrap))
   }
 
   /**
-   * The function's [AWS Lambda
-   * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+   * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+   * setting.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("81b72b2b8362d1a960276e8abfc120c20bed9e40f1708761e070ce63675b848f")
@@ -672,30 +741,30 @@ public open class CfnFunction(
   }
 
   /**
-   * Set `Mode` to `Active` to sample and trace a subset of incoming requests with
-   * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
+   * The function's [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing
+   * configuration. To sample and record incoming requests, set `Mode` to `Active`.
    */
   public open fun tracingConfig(): Any? = unwrap(this).getTracingConfig()
 
   /**
-   * Set `Mode` to `Active` to sample and trace a subset of incoming requests with
-   * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
+   * The function's [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing
+   * configuration. To sample and record incoming requests, set `Mode` to `Active`.
    */
   public open fun tracingConfig(`value`: IResolvable) {
     unwrap(this).setTracingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Set `Mode` to `Active` to sample and trace a subset of incoming requests with
-   * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
+   * The function's [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing
+   * configuration. To sample and record incoming requests, set `Mode` to `Active`.
    */
   public open fun tracingConfig(`value`: TracingConfigProperty) {
     unwrap(this).setTracingConfig(`value`.let(TracingConfigProperty.Companion::unwrap))
   }
 
   /**
-   * Set `Mode` to `Active` to sample and trace a subset of incoming requests with
-   * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
+   * The function's [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing
+   * configuration. To sample and record incoming requests, set `Mode` to `Active`.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("26af4707ceb8d25c09985966f19fe8fc2018338e50c30202b6e3274e10effb61")
@@ -703,30 +772,26 @@ public open class CfnFunction(
       tracingConfig(TracingConfigProperty(`value`))
 
   /**
-   * For network connectivity to AWS resources in a VPC, specify a list of security groups and
-   * subnets in the VPC.
+   * The VPC security groups and subnets that are attached to a Lambda function.
    */
   public open fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
 
   /**
-   * For network connectivity to AWS resources in a VPC, specify a list of security groups and
-   * subnets in the VPC.
+   * The VPC security groups and subnets that are attached to a Lambda function.
    */
   public open fun vpcConfig(`value`: IResolvable) {
     unwrap(this).setVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * For network connectivity to AWS resources in a VPC, specify a list of security groups and
-   * subnets in the VPC.
+   * The VPC security groups and subnets that are attached to a Lambda function.
    */
   public open fun vpcConfig(`value`: VpcConfigProperty) {
     unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty.Companion::unwrap))
   }
 
   /**
-   * For network connectivity to AWS resources in a VPC, specify a list of security groups and
-   * subnets in the VPC.
+   * The VPC security groups and subnets that are attached to a Lambda function.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("61a85c6b04d196acfcabd6044074bf46c225ba9da5df8f8acc431959fe2fdf45")
@@ -742,7 +807,7 @@ public open class CfnFunction(
      * The instruction set architecture that the function supports.
      *
      * Enter a string array with one of the valid values (arm64 or x86_64). The default value is
-     * `x86_64` .
+     * `x86_64`.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-architectures)
      * @param architectures The instruction set architecture that the function supports. 
@@ -753,7 +818,7 @@ public open class CfnFunction(
      * The instruction set architecture that the function supports.
      *
      * Enter a string array with one of the valid values (arm64 or x86_64). The default value is
-     * `x86_64` .
+     * `x86_64`.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-architectures)
      * @param architectures The instruction set architecture that the function supports. 
@@ -761,26 +826,68 @@ public open class CfnFunction(
     public fun architectures(vararg architectures: String)
 
     /**
-     * The code for the function.
+     * The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-code)
-     * @param code The code for the function. 
+     * @param code The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template. 
      */
     public fun code(code: IResolvable)
 
     /**
-     * The code for the function.
+     * The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-code)
-     * @param code The code for the function. 
+     * @param code The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template. 
      */
     public fun code(code: CodeProperty)
 
     /**
-     * The code for the function.
+     * The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-code)
-     * @param code The code for the function. 
+     * @param code The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4b3964a0b102134414b694f5e98f6d476e8117850de3823fb7471a38dd26e1f9")
@@ -789,8 +896,8 @@ public open class CfnFunction(
     /**
      * To enable code signing for this function, specify the ARN of a code-signing configuration.
      *
-     * A code-signing configuration
-     * includes a set of signing profiles, which define the trusted publishers for this function.
+     * A code-signing configuration includes a set of signing profiles, which define the trusted
+     * publishers for this function.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-codesigningconfigarn)
      * @param codeSigningConfigArn To enable code signing for this function, specify the ARN of a
@@ -799,41 +906,38 @@ public open class CfnFunction(
     public fun codeSigningConfigArn(codeSigningConfigArn: String)
 
     /**
-     * A dead-letter queue configuration that specifies the queue or topic where Lambda sends
-     * asynchronous events when they fail processing.
-     *
-     * For more information, see [Dead-letter
-     * queues](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-dlq) .
+     * The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-deadletterconfig)
-     * @param deadLetterConfig A dead-letter queue configuration that specifies the queue or topic
-     * where Lambda sends asynchronous events when they fail processing. 
+     * @param deadLetterConfig The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations. 
      */
     public fun deadLetterConfig(deadLetterConfig: IResolvable)
 
     /**
-     * A dead-letter queue configuration that specifies the queue or topic where Lambda sends
-     * asynchronous events when they fail processing.
-     *
-     * For more information, see [Dead-letter
-     * queues](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-dlq) .
+     * The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-deadletterconfig)
-     * @param deadLetterConfig A dead-letter queue configuration that specifies the queue or topic
-     * where Lambda sends asynchronous events when they fail processing. 
+     * @param deadLetterConfig The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations. 
      */
     public fun deadLetterConfig(deadLetterConfig: DeadLetterConfigProperty)
 
     /**
-     * A dead-letter queue configuration that specifies the queue or topic where Lambda sends
-     * asynchronous events when they fail processing.
-     *
-     * For more information, see [Dead-letter
-     * queues](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-dlq) .
+     * The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-deadletterconfig)
-     * @param deadLetterConfig A dead-letter queue configuration that specifies the queue or topic
-     * where Lambda sends asynchronous events when they fail processing. 
+     * @param deadLetterConfig The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("752ac7117e2e0fbfe8b87e093fe0487ed1b922480901063ebbdf41963e1b11b9")
@@ -848,29 +952,38 @@ public open class CfnFunction(
     public fun description(description: String)
 
     /**
-     * Environment variables that are accessible from function code during execution.
+     * A function's environment variable settings.
+     *
+     * You can use environment variables to adjust your function's behavior without updating code.
+     * An environment variable is a pair of strings that are stored in a function's version-specific
+     * configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-environment)
-     * @param environment Environment variables that are accessible from function code during
-     * execution. 
+     * @param environment A function's environment variable settings. 
      */
     public fun environment(environment: IResolvable)
 
     /**
-     * Environment variables that are accessible from function code during execution.
+     * A function's environment variable settings.
+     *
+     * You can use environment variables to adjust your function's behavior without updating code.
+     * An environment variable is a pair of strings that are stored in a function's version-specific
+     * configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-environment)
-     * @param environment Environment variables that are accessible from function code during
-     * execution. 
+     * @param environment A function's environment variable settings. 
      */
     public fun environment(environment: EnvironmentProperty)
 
     /**
-     * Environment variables that are accessible from function code during execution.
+     * A function's environment variable settings.
+     *
+     * You can use environment variables to adjust your function's behavior without updating code.
+     * An environment variable is a pair of strings that are stored in a function's version-specific
+     * configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-environment)
-     * @param environment Environment variables that are accessible from function code during
-     * execution. 
+     * @param environment A function's environment variable settings. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6cc75bf28aacefddb8de924be12c3db391e03580ea8cdff98f770371dbd867af")
@@ -916,10 +1029,8 @@ public open class CfnFunction(
      * [AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)
      * resource, you must also specify a `DependsOn` attribute to ensure that the mount target is
      * created or updated before the function.
-     *
      * For more information about using the `DependsOn` attribute, see [DependsOn
-     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
-     * .
+     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-filesystemconfigs)
      * @param fileSystemConfigs Connection settings for an Amazon EFS file system. 
@@ -934,10 +1045,8 @@ public open class CfnFunction(
      * [AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)
      * resource, you must also specify a `DependsOn` attribute to ensure that the mount target is
      * created or updated before the function.
-     *
      * For more information about using the `DependsOn` attribute, see [DependsOn
-     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
-     * .
+     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-filesystemconfigs)
      * @param fileSystemConfigs Connection settings for an Amazon EFS file system. 
@@ -952,10 +1061,8 @@ public open class CfnFunction(
      * [AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)
      * resource, you must also specify a `DependsOn` attribute to ensure that the mount target is
      * created or updated before the function.
-     *
      * For more information about using the `DependsOn` attribute, see [DependsOn
-     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
-     * .
+     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-filesystemconfigs)
      * @param fileSystemConfigs Connection settings for an Amazon EFS file system. 
@@ -965,8 +1072,7 @@ public open class CfnFunction(
     /**
      * The name of the Lambda function, up to 64 characters in length.
      *
-     * If you don't specify a name, AWS CloudFormation generates one.
-     *
+     * If you don't specify a name, CFN generates one.
      * If you specify a name, you cannot perform updates that require replacement of this resource.
      * You can perform updates that require no or some interruption. If you must replace the resource,
      * specify a new name.
@@ -982,7 +1088,7 @@ public open class CfnFunction(
      * Handler is required if the deployment package is a .zip file archive. The format includes the
      * file name. It can also include namespaces and other qualifiers, depending on the runtime. For
      * more information, see [Lambda programming
-     * model](https://docs.aws.amazon.com/lambda/latest/dg/foundation-progmodel.html) .
+     * model](https://docs.aws.amazon.com/lambda/latest/dg/foundation-progmodel.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-handler)
      * @param handler The name of the method within your code that Lambda calls to run your
@@ -994,7 +1100,7 @@ public open class CfnFunction(
      * Configuration values that override the container image Dockerfile settings.
      *
      * For more information, see [Container image
-     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
+     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-imageconfig)
      * @param imageConfig Configuration values that override the container image Dockerfile
@@ -1006,7 +1112,7 @@ public open class CfnFunction(
      * Configuration values that override the container image Dockerfile settings.
      *
      * For more information, see [Container image
-     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
+     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-imageconfig)
      * @param imageConfig Configuration values that override the container image Dockerfile
@@ -1018,7 +1124,7 @@ public open class CfnFunction(
      * Configuration values that override the container image Dockerfile settings.
      *
      * For more information, see [Container image
-     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
+     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-imageconfig)
      * @param imageConfig Configuration values that override the container image Dockerfile
@@ -1029,25 +1135,25 @@ public open class CfnFunction(
     public fun imageConfig(imageConfig: ImageConfigProperty.Builder.() -> Unit)
 
     /**
-     * The ARN of the AWS Key Management Service ( AWS KMS ) customer managed key that's used to
-     * encrypt your function's [environment
-     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption)
-     * . When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html)
-     * is activated, Lambda also uses this key is to encrypt your function's snapshot. If you deploy
-     * your function using a container image, Lambda also uses this key to encrypt your function when
-     * it's deployed. Note that this is not the same key that's used to protect your container image in
-     * the Amazon Elastic Container Registry (Amazon ECR). If you don't provide a customer managed key,
+     * The ARN of the KMSlong (KMS) customer managed key that's used to encrypt your function's
+     * [environment
+     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption).
+     * When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html) is
+     * activated, Lambda also uses this key is to encrypt your function's snapshot. If you deploy your
+     * function using a container image, Lambda also uses this key to encrypt your function when it's
+     * deployed. Note that this is not the same key that's used to protect your container image in the
+     * Amazon Elastic Container Registry (Amazon ECR). If you don't provide a customer managed key,
      * Lambda uses a default service key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-kmskeyarn)
-     * @param kmsKeyArn The ARN of the AWS Key Management Service ( AWS KMS ) customer managed key
-     * that's used to encrypt your function's [environment
-     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption)
-     * . When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html)
-     * is activated, Lambda also uses this key is to encrypt your function's snapshot. If you deploy
-     * your function using a container image, Lambda also uses this key to encrypt your function when
-     * it's deployed. Note that this is not the same key that's used to protect your container image in
-     * the Amazon Elastic Container Registry (Amazon ECR). If you don't provide a customer managed key,
+     * @param kmsKeyArn The ARN of the KMSlong (KMS) customer managed key that's used to encrypt
+     * your function's [environment
+     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption).
+     * When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html) is
+     * activated, Lambda also uses this key is to encrypt your function's snapshot. If you deploy your
+     * function using a container image, Lambda also uses this key to encrypt your function when it's
+     * deployed. Note that this is not the same key that's used to protect your container image in the
+     * Amazon Elastic Container Registry (Amazon ECR). If you don't provide a customer managed key,
      * Lambda uses a default service key. 
      */
     public fun kmsKeyArn(kmsKeyArn: String)
@@ -1131,6 +1237,17 @@ public open class CfnFunction(
     public fun packageType(packageType: String)
 
     /**
+     * This property is set to terminate unintended recursions.
+     *
+     * If set to `Terminate`, Lambda detects and terminates unitended recursive loops. If set to
+     * `Allow` Lambda lets recursions be and does not terminate it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-recursiveloop)
+     * @param recursiveLoop This property is set to terminate unintended recursions. 
+     */
+    public fun recursiveLoop(recursiveLoop: String)
+
+    /**
      * The number of simultaneous executions to reserve for the function.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-reservedconcurrentexecutions)
@@ -1149,18 +1266,26 @@ public open class CfnFunction(
 
     /**
      * The identifier of the function's
-     * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) . Runtime is
-     * required if the deployment package is a .zip file archive.
-     *
-     * The following list includes deprecated runtimes. For more information, see [Runtime
-     * deprecation
-     * policy](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy)
-     * .
+     * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html). Runtime is
+     * required if the deployment package is a .zip file archive. Specifying a runtime results in an
+     * error if you're deploying a function using a container image.  The following list includes
+     * deprecated runtimes. Lambda blocks creating new functions and updating existing functions
+     * shortly after each runtime is deprecated. For more information, see [Runtime use after
+     * deprecation](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-deprecation-levels).
+     *  For a list of all currently supported runtimes, see [Supported
+     * runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtimes-supported).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtime)
      * @param runtime The identifier of the function's
-     * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) . Runtime is
-     * required if the deployment package is a .zip file archive. 
+     * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html). Runtime is
+     * required if the deployment package is a .zip file archive. Specifying a runtime results in an
+     * error if you're deploying a function using a container image.  The following list includes
+     * deprecated runtimes. Lambda blocks creating new functions and updating existing functions
+     * shortly after each runtime is deprecated. For more information, see [Runtime use after
+     * deprecation](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-deprecation-levels).
+     *  For a list of all currently supported runtimes, see [Supported
+     * runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtimes-supported).
+     * 
      */
     public fun runtime(runtime: String)
 
@@ -1168,7 +1293,7 @@ public open class CfnFunction(
      * Sets the runtime management configuration for a function's version.
      *
      * For more information, see [Runtime
-     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
+     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtimemanagementconfig)
      * @param runtimeManagementConfig Sets the runtime management configuration for a function's
@@ -1180,7 +1305,7 @@ public open class CfnFunction(
      * Sets the runtime management configuration for a function's version.
      *
      * For more information, see [Runtime
-     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
+     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtimemanagementconfig)
      * @param runtimeManagementConfig Sets the runtime management configuration for a function's
@@ -1192,7 +1317,7 @@ public open class CfnFunction(
      * Sets the runtime management configuration for a function's version.
      *
      * For more information, see [Runtime
-     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
+     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtimemanagementconfig)
      * @param runtimeManagementConfig Sets the runtime management configuration for a function's
@@ -1204,32 +1329,32 @@ public open class CfnFunction(
         fun runtimeManagementConfig(runtimeManagementConfig: RuntimeManagementConfigProperty.Builder.() -> Unit)
 
     /**
-     * The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+     * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+     * setting.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-snapstart)
-     * @param snapStart The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
+     * @param snapStart The function's
+     * [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
      */
     public fun snapStart(snapStart: IResolvable)
 
     /**
-     * The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+     * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+     * setting.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-snapstart)
-     * @param snapStart The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
+     * @param snapStart The function's
+     * [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
      */
     public fun snapStart(snapStart: SnapStartProperty)
 
     /**
-     * The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+     * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+     * setting.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-snapstart)
-     * @param snapStart The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
+     * @param snapStart The function's
+     * [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2590028845f970506309395f8bc94970e797ab159c68443cb26ca01e9e8a449")
@@ -1260,7 +1385,7 @@ public open class CfnFunction(
      *
      * The default is 3 seconds. The maximum allowed value is 900 seconds. For more information, see
      * [Lambda execution
-     * environment](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html) .
+     * environment](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-timeout)
      * @param timeout The amount of time (in seconds) that Lambda allows a function to run before
@@ -1269,76 +1394,94 @@ public open class CfnFunction(
     public fun timeout(timeout: Number)
 
     /**
-     * Set `Mode` to `Active` to sample and trace a subset of incoming requests with
-     * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
+     * The function's [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing
+     * configuration. To sample and record incoming requests, set `Mode` to `Active`.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tracingconfig)
-     * @param tracingConfig Set `Mode` to `Active` to sample and trace a subset of incoming requests
-     * with [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) . 
+     * @param tracingConfig The function's
+     * [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing configuration. To
+     * sample and record incoming requests, set `Mode` to `Active`. 
      */
     public fun tracingConfig(tracingConfig: IResolvable)
 
     /**
-     * Set `Mode` to `Active` to sample and trace a subset of incoming requests with
-     * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
+     * The function's [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing
+     * configuration. To sample and record incoming requests, set `Mode` to `Active`.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tracingconfig)
-     * @param tracingConfig Set `Mode` to `Active` to sample and trace a subset of incoming requests
-     * with [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) . 
+     * @param tracingConfig The function's
+     * [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing configuration. To
+     * sample and record incoming requests, set `Mode` to `Active`. 
      */
     public fun tracingConfig(tracingConfig: TracingConfigProperty)
 
     /**
-     * Set `Mode` to `Active` to sample and trace a subset of incoming requests with
-     * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
+     * The function's [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing
+     * configuration. To sample and record incoming requests, set `Mode` to `Active`.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tracingconfig)
-     * @param tracingConfig Set `Mode` to `Active` to sample and trace a subset of incoming requests
-     * with [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) . 
+     * @param tracingConfig The function's
+     * [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing configuration. To
+     * sample and record incoming requests, set `Mode` to `Active`. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4e2f5a8b6072e93f227df7d16a2a889f29a7588706e4e11185c859fb17987062")
     public fun tracingConfig(tracingConfig: TracingConfigProperty.Builder.() -> Unit)
 
     /**
-     * For network connectivity to AWS resources in a VPC, specify a list of security groups and
-     * subnets in the VPC.
+     * The VPC security groups and subnets that are attached to a Lambda function.
      *
-     * When you connect a function to a VPC, it can access resources and the internet only through
-     * that VPC. For more information, see [Configuring a Lambda function to access resources in a
-     * VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html) .
+     * When you connect a function to a VPC, Lambda creates an elastic network interface for each
+     * combination of security group and subnet in the function's VPC configuration. The function can
+     * only access resources and the internet through that VPC. For more information, see [VPC
+     * Settings](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html).
+     * When you delete a function, CFN monitors the state of its network interfaces and waits for
+     * Lambda to delete them before proceeding. If the VPC is defined in the same stack, the network
+     * interfaces need to be deleted by Lambda before CFN can delete the VPC's resources.
+     * To monitor network interfaces, CFN needs the `ec2:DescribeNetworkInterfaces` permission. It
+     * obtains this from the user or role that modifies the stack. If you don't provide this
+     * permission, CFN does not wait for network interfaces to be deleted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-vpcconfig)
-     * @param vpcConfig For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. 
+     * @param vpcConfig The VPC security groups and subnets that are attached to a Lambda function. 
      */
     public fun vpcConfig(vpcConfig: IResolvable)
 
     /**
-     * For network connectivity to AWS resources in a VPC, specify a list of security groups and
-     * subnets in the VPC.
+     * The VPC security groups and subnets that are attached to a Lambda function.
      *
-     * When you connect a function to a VPC, it can access resources and the internet only through
-     * that VPC. For more information, see [Configuring a Lambda function to access resources in a
-     * VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html) .
+     * When you connect a function to a VPC, Lambda creates an elastic network interface for each
+     * combination of security group and subnet in the function's VPC configuration. The function can
+     * only access resources and the internet through that VPC. For more information, see [VPC
+     * Settings](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html).
+     * When you delete a function, CFN monitors the state of its network interfaces and waits for
+     * Lambda to delete them before proceeding. If the VPC is defined in the same stack, the network
+     * interfaces need to be deleted by Lambda before CFN can delete the VPC's resources.
+     * To monitor network interfaces, CFN needs the `ec2:DescribeNetworkInterfaces` permission. It
+     * obtains this from the user or role that modifies the stack. If you don't provide this
+     * permission, CFN does not wait for network interfaces to be deleted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-vpcconfig)
-     * @param vpcConfig For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. 
+     * @param vpcConfig The VPC security groups and subnets that are attached to a Lambda function. 
      */
     public fun vpcConfig(vpcConfig: VpcConfigProperty)
 
     /**
-     * For network connectivity to AWS resources in a VPC, specify a list of security groups and
-     * subnets in the VPC.
+     * The VPC security groups and subnets that are attached to a Lambda function.
      *
-     * When you connect a function to a VPC, it can access resources and the internet only through
-     * that VPC. For more information, see [Configuring a Lambda function to access resources in a
-     * VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html) .
+     * When you connect a function to a VPC, Lambda creates an elastic network interface for each
+     * combination of security group and subnet in the function's VPC configuration. The function can
+     * only access resources and the internet through that VPC. For more information, see [VPC
+     * Settings](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html).
+     * When you delete a function, CFN monitors the state of its network interfaces and waits for
+     * Lambda to delete them before proceeding. If the VPC is defined in the same stack, the network
+     * interfaces need to be deleted by Lambda before CFN can delete the VPC's resources.
+     * To monitor network interfaces, CFN needs the `ec2:DescribeNetworkInterfaces` permission. It
+     * obtains this from the user or role that modifies the stack. If you don't provide this
+     * permission, CFN does not wait for network interfaces to be deleted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-vpcconfig)
-     * @param vpcConfig For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. 
+     * @param vpcConfig The VPC security groups and subnets that are attached to a Lambda function. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a95f83151908acd2460fc35b80b4458507ae5c0a7b04dcdf6a96ad632af5a117")
@@ -1356,7 +1499,7 @@ public open class CfnFunction(
      * The instruction set architecture that the function supports.
      *
      * Enter a string array with one of the valid values (arm64 or x86_64). The default value is
-     * `x86_64` .
+     * `x86_64`.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-architectures)
      * @param architectures The instruction set architecture that the function supports. 
@@ -1369,7 +1512,7 @@ public open class CfnFunction(
      * The instruction set architecture that the function supports.
      *
      * Enter a string array with one of the valid values (arm64 or x86_64). The default value is
-     * `x86_64` .
+     * `x86_64`.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-architectures)
      * @param architectures The instruction set architecture that the function supports. 
@@ -1378,30 +1521,72 @@ public open class CfnFunction(
         architectures(architectures.toList())
 
     /**
-     * The code for the function.
+     * The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-code)
-     * @param code The code for the function. 
+     * @param code The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template. 
      */
     override fun code(code: IResolvable) {
       cdkBuilder.code(code.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The code for the function.
+     * The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-code)
-     * @param code The code for the function. 
+     * @param code The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template. 
      */
     override fun code(code: CodeProperty) {
       cdkBuilder.code(code.let(CodeProperty.Companion::unwrap))
     }
 
     /**
-     * The code for the function.
+     * The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-code)
-     * @param code The code for the function. 
+     * @param code The [deployment
+     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+     * function. To deploy a function defined as a container image, you specify the location of a
+     * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
+     * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
+     * function code inline in the template.  Changes to a deployment package in Amazon S3 or a
+     * container image in ECR are not detected automatically during stack updates. To update the
+     * function code, change the object key or version in the template. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4b3964a0b102134414b694f5e98f6d476e8117850de3823fb7471a38dd26e1f9")
@@ -1410,8 +1595,8 @@ public open class CfnFunction(
     /**
      * To enable code signing for this function, specify the ARN of a code-signing configuration.
      *
-     * A code-signing configuration
-     * includes a set of signing profiles, which define the trusted publishers for this function.
+     * A code-signing configuration includes a set of signing profiles, which define the trusted
+     * publishers for this function.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-codesigningconfigarn)
      * @param codeSigningConfigArn To enable code signing for this function, specify the ARN of a
@@ -1422,45 +1607,42 @@ public open class CfnFunction(
     }
 
     /**
-     * A dead-letter queue configuration that specifies the queue or topic where Lambda sends
-     * asynchronous events when they fail processing.
-     *
-     * For more information, see [Dead-letter
-     * queues](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-dlq) .
+     * The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-deadletterconfig)
-     * @param deadLetterConfig A dead-letter queue configuration that specifies the queue or topic
-     * where Lambda sends asynchronous events when they fail processing. 
+     * @param deadLetterConfig The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations. 
      */
     override fun deadLetterConfig(deadLetterConfig: IResolvable) {
       cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * A dead-letter queue configuration that specifies the queue or topic where Lambda sends
-     * asynchronous events when they fail processing.
-     *
-     * For more information, see [Dead-letter
-     * queues](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-dlq) .
+     * The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-deadletterconfig)
-     * @param deadLetterConfig A dead-letter queue configuration that specifies the queue or topic
-     * where Lambda sends asynchronous events when they fail processing. 
+     * @param deadLetterConfig The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations. 
      */
     override fun deadLetterConfig(deadLetterConfig: DeadLetterConfigProperty) {
       cdkBuilder.deadLetterConfig(deadLetterConfig.let(DeadLetterConfigProperty.Companion::unwrap))
     }
 
     /**
-     * A dead-letter queue configuration that specifies the queue or topic where Lambda sends
-     * asynchronous events when they fail processing.
-     *
-     * For more information, see [Dead-letter
-     * queues](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-dlq) .
+     * The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-deadletterconfig)
-     * @param deadLetterConfig A dead-letter queue configuration that specifies the queue or topic
-     * where Lambda sends asynchronous events when they fail processing. 
+     * @param deadLetterConfig The [dead-letter
+     * queue](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq) for failed
+     * asynchronous invocations. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("752ac7117e2e0fbfe8b87e093fe0487ed1b922480901063ebbdf41963e1b11b9")
@@ -1478,33 +1660,42 @@ public open class CfnFunction(
     }
 
     /**
-     * Environment variables that are accessible from function code during execution.
+     * A function's environment variable settings.
+     *
+     * You can use environment variables to adjust your function's behavior without updating code.
+     * An environment variable is a pair of strings that are stored in a function's version-specific
+     * configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-environment)
-     * @param environment Environment variables that are accessible from function code during
-     * execution. 
+     * @param environment A function's environment variable settings. 
      */
     override fun environment(environment: IResolvable) {
       cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Environment variables that are accessible from function code during execution.
+     * A function's environment variable settings.
+     *
+     * You can use environment variables to adjust your function's behavior without updating code.
+     * An environment variable is a pair of strings that are stored in a function's version-specific
+     * configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-environment)
-     * @param environment Environment variables that are accessible from function code during
-     * execution. 
+     * @param environment A function's environment variable settings. 
      */
     override fun environment(environment: EnvironmentProperty) {
       cdkBuilder.environment(environment.let(EnvironmentProperty.Companion::unwrap))
     }
 
     /**
-     * Environment variables that are accessible from function code during execution.
+     * A function's environment variable settings.
+     *
+     * You can use environment variables to adjust your function's behavior without updating code.
+     * An environment variable is a pair of strings that are stored in a function's version-specific
+     * configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-environment)
-     * @param environment Environment variables that are accessible from function code during
-     * execution. 
+     * @param environment A function's environment variable settings. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6cc75bf28aacefddb8de924be12c3db391e03580ea8cdff98f770371dbd867af")
@@ -1556,10 +1747,8 @@ public open class CfnFunction(
      * [AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)
      * resource, you must also specify a `DependsOn` attribute to ensure that the mount target is
      * created or updated before the function.
-     *
      * For more information about using the `DependsOn` attribute, see [DependsOn
-     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
-     * .
+     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-filesystemconfigs)
      * @param fileSystemConfigs Connection settings for an Amazon EFS file system. 
@@ -1576,10 +1765,8 @@ public open class CfnFunction(
      * [AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)
      * resource, you must also specify a `DependsOn` attribute to ensure that the mount target is
      * created or updated before the function.
-     *
      * For more information about using the `DependsOn` attribute, see [DependsOn
-     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
-     * .
+     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-filesystemconfigs)
      * @param fileSystemConfigs Connection settings for an Amazon EFS file system. 
@@ -1596,10 +1783,8 @@ public open class CfnFunction(
      * [AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)
      * resource, you must also specify a `DependsOn` attribute to ensure that the mount target is
      * created or updated before the function.
-     *
      * For more information about using the `DependsOn` attribute, see [DependsOn
-     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
-     * .
+     * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-filesystemconfigs)
      * @param fileSystemConfigs Connection settings for an Amazon EFS file system. 
@@ -1610,8 +1795,7 @@ public open class CfnFunction(
     /**
      * The name of the Lambda function, up to 64 characters in length.
      *
-     * If you don't specify a name, AWS CloudFormation generates one.
-     *
+     * If you don't specify a name, CFN generates one.
      * If you specify a name, you cannot perform updates that require replacement of this resource.
      * You can perform updates that require no or some interruption. If you must replace the resource,
      * specify a new name.
@@ -1629,7 +1813,7 @@ public open class CfnFunction(
      * Handler is required if the deployment package is a .zip file archive. The format includes the
      * file name. It can also include namespaces and other qualifiers, depending on the runtime. For
      * more information, see [Lambda programming
-     * model](https://docs.aws.amazon.com/lambda/latest/dg/foundation-progmodel.html) .
+     * model](https://docs.aws.amazon.com/lambda/latest/dg/foundation-progmodel.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-handler)
      * @param handler The name of the method within your code that Lambda calls to run your
@@ -1643,7 +1827,7 @@ public open class CfnFunction(
      * Configuration values that override the container image Dockerfile settings.
      *
      * For more information, see [Container image
-     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
+     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-imageconfig)
      * @param imageConfig Configuration values that override the container image Dockerfile
@@ -1657,7 +1841,7 @@ public open class CfnFunction(
      * Configuration values that override the container image Dockerfile settings.
      *
      * For more information, see [Container image
-     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
+     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-imageconfig)
      * @param imageConfig Configuration values that override the container image Dockerfile
@@ -1671,7 +1855,7 @@ public open class CfnFunction(
      * Configuration values that override the container image Dockerfile settings.
      *
      * For more information, see [Container image
-     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
+     * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-imageconfig)
      * @param imageConfig Configuration values that override the container image Dockerfile
@@ -1683,25 +1867,25 @@ public open class CfnFunction(
         imageConfig(ImageConfigProperty(imageConfig))
 
     /**
-     * The ARN of the AWS Key Management Service ( AWS KMS ) customer managed key that's used to
-     * encrypt your function's [environment
-     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption)
-     * . When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html)
-     * is activated, Lambda also uses this key is to encrypt your function's snapshot. If you deploy
-     * your function using a container image, Lambda also uses this key to encrypt your function when
-     * it's deployed. Note that this is not the same key that's used to protect your container image in
-     * the Amazon Elastic Container Registry (Amazon ECR). If you don't provide a customer managed key,
+     * The ARN of the KMSlong (KMS) customer managed key that's used to encrypt your function's
+     * [environment
+     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption).
+     * When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html) is
+     * activated, Lambda also uses this key is to encrypt your function's snapshot. If you deploy your
+     * function using a container image, Lambda also uses this key to encrypt your function when it's
+     * deployed. Note that this is not the same key that's used to protect your container image in the
+     * Amazon Elastic Container Registry (Amazon ECR). If you don't provide a customer managed key,
      * Lambda uses a default service key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-kmskeyarn)
-     * @param kmsKeyArn The ARN of the AWS Key Management Service ( AWS KMS ) customer managed key
-     * that's used to encrypt your function's [environment
-     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption)
-     * . When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html)
-     * is activated, Lambda also uses this key is to encrypt your function's snapshot. If you deploy
-     * your function using a container image, Lambda also uses this key to encrypt your function when
-     * it's deployed. Note that this is not the same key that's used to protect your container image in
-     * the Amazon Elastic Container Registry (Amazon ECR). If you don't provide a customer managed key,
+     * @param kmsKeyArn The ARN of the KMSlong (KMS) customer managed key that's used to encrypt
+     * your function's [environment
+     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-encryption).
+     * When [Lambda SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-security.html) is
+     * activated, Lambda also uses this key is to encrypt your function's snapshot. If you deploy your
+     * function using a container image, Lambda also uses this key to encrypt your function when it's
+     * deployed. Note that this is not the same key that's used to protect your container image in the
+     * Amazon Elastic Container Registry (Amazon ECR). If you don't provide a customer managed key,
      * Lambda uses a default service key. 
      */
     override fun kmsKeyArn(kmsKeyArn: String) {
@@ -1798,6 +1982,19 @@ public open class CfnFunction(
     }
 
     /**
+     * This property is set to terminate unintended recursions.
+     *
+     * If set to `Terminate`, Lambda detects and terminates unitended recursive loops. If set to
+     * `Allow` Lambda lets recursions be and does not terminate it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-recursiveloop)
+     * @param recursiveLoop This property is set to terminate unintended recursions. 
+     */
+    override fun recursiveLoop(recursiveLoop: String) {
+      cdkBuilder.recursiveLoop(recursiveLoop)
+    }
+
+    /**
      * The number of simultaneous executions to reserve for the function.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-reservedconcurrentexecutions)
@@ -1820,18 +2017,26 @@ public open class CfnFunction(
 
     /**
      * The identifier of the function's
-     * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) . Runtime is
-     * required if the deployment package is a .zip file archive.
-     *
-     * The following list includes deprecated runtimes. For more information, see [Runtime
-     * deprecation
-     * policy](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy)
-     * .
+     * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html). Runtime is
+     * required if the deployment package is a .zip file archive. Specifying a runtime results in an
+     * error if you're deploying a function using a container image.  The following list includes
+     * deprecated runtimes. Lambda blocks creating new functions and updating existing functions
+     * shortly after each runtime is deprecated. For more information, see [Runtime use after
+     * deprecation](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-deprecation-levels).
+     *  For a list of all currently supported runtimes, see [Supported
+     * runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtimes-supported).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtime)
      * @param runtime The identifier of the function's
-     * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) . Runtime is
-     * required if the deployment package is a .zip file archive. 
+     * [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html). Runtime is
+     * required if the deployment package is a .zip file archive. Specifying a runtime results in an
+     * error if you're deploying a function using a container image.  The following list includes
+     * deprecated runtimes. Lambda blocks creating new functions and updating existing functions
+     * shortly after each runtime is deprecated. For more information, see [Runtime use after
+     * deprecation](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-deprecation-levels).
+     *  For a list of all currently supported runtimes, see [Supported
+     * runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtimes-supported).
+     * 
      */
     override fun runtime(runtime: String) {
       cdkBuilder.runtime(runtime)
@@ -1841,7 +2046,7 @@ public open class CfnFunction(
      * Sets the runtime management configuration for a function's version.
      *
      * For more information, see [Runtime
-     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
+     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtimemanagementconfig)
      * @param runtimeManagementConfig Sets the runtime management configuration for a function's
@@ -1855,7 +2060,7 @@ public open class CfnFunction(
      * Sets the runtime management configuration for a function's version.
      *
      * For more information, see [Runtime
-     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
+     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtimemanagementconfig)
      * @param runtimeManagementConfig Sets the runtime management configuration for a function's
@@ -1869,7 +2074,7 @@ public open class CfnFunction(
      * Sets the runtime management configuration for a function's version.
      *
      * For more information, see [Runtime
-     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
+     * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtimemanagementconfig)
      * @param runtimeManagementConfig Sets the runtime management configuration for a function's
@@ -1882,36 +2087,36 @@ public open class CfnFunction(
         Unit = runtimeManagementConfig(RuntimeManagementConfigProperty(runtimeManagementConfig))
 
     /**
-     * The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+     * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+     * setting.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-snapstart)
-     * @param snapStart The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
+     * @param snapStart The function's
+     * [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
      */
     override fun snapStart(snapStart: IResolvable) {
       cdkBuilder.snapStart(snapStart.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+     * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+     * setting.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-snapstart)
-     * @param snapStart The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
+     * @param snapStart The function's
+     * [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
      */
     override fun snapStart(snapStart: SnapStartProperty) {
       cdkBuilder.snapStart(snapStart.let(SnapStartProperty.Companion::unwrap))
     }
 
     /**
-     * The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+     * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+     * setting.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-snapstart)
-     * @param snapStart The function's [AWS Lambda
-     * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
+     * @param snapStart The function's
+     * [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2590028845f970506309395f8bc94970e797ab159c68443cb26ca01e9e8a449")
@@ -1945,7 +2150,7 @@ public open class CfnFunction(
      *
      * The default is 3 seconds. The maximum allowed value is 900 seconds. For more information, see
      * [Lambda execution
-     * environment](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html) .
+     * environment](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-timeout)
      * @param timeout The amount of time (in seconds) that Lambda allows a function to run before
@@ -1956,36 +2161,39 @@ public open class CfnFunction(
     }
 
     /**
-     * Set `Mode` to `Active` to sample and trace a subset of incoming requests with
-     * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
+     * The function's [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing
+     * configuration. To sample and record incoming requests, set `Mode` to `Active`.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tracingconfig)
-     * @param tracingConfig Set `Mode` to `Active` to sample and trace a subset of incoming requests
-     * with [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) . 
+     * @param tracingConfig The function's
+     * [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing configuration. To
+     * sample and record incoming requests, set `Mode` to `Active`. 
      */
     override fun tracingConfig(tracingConfig: IResolvable) {
       cdkBuilder.tracingConfig(tracingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Set `Mode` to `Active` to sample and trace a subset of incoming requests with
-     * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
+     * The function's [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing
+     * configuration. To sample and record incoming requests, set `Mode` to `Active`.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tracingconfig)
-     * @param tracingConfig Set `Mode` to `Active` to sample and trace a subset of incoming requests
-     * with [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) . 
+     * @param tracingConfig The function's
+     * [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing configuration. To
+     * sample and record incoming requests, set `Mode` to `Active`. 
      */
     override fun tracingConfig(tracingConfig: TracingConfigProperty) {
       cdkBuilder.tracingConfig(tracingConfig.let(TracingConfigProperty.Companion::unwrap))
     }
 
     /**
-     * Set `Mode` to `Active` to sample and trace a subset of incoming requests with
-     * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
+     * The function's [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing
+     * configuration. To sample and record incoming requests, set `Mode` to `Active`.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tracingconfig)
-     * @param tracingConfig Set `Mode` to `Active` to sample and trace a subset of incoming requests
-     * with [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) . 
+     * @param tracingConfig The function's
+     * [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing configuration. To
+     * sample and record incoming requests, set `Mode` to `Active`. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4e2f5a8b6072e93f227df7d16a2a889f29a7588706e4e11185c859fb17987062")
@@ -1993,48 +2201,63 @@ public open class CfnFunction(
         tracingConfig(TracingConfigProperty(tracingConfig))
 
     /**
-     * For network connectivity to AWS resources in a VPC, specify a list of security groups and
-     * subnets in the VPC.
+     * The VPC security groups and subnets that are attached to a Lambda function.
      *
-     * When you connect a function to a VPC, it can access resources and the internet only through
-     * that VPC. For more information, see [Configuring a Lambda function to access resources in a
-     * VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html) .
+     * When you connect a function to a VPC, Lambda creates an elastic network interface for each
+     * combination of security group and subnet in the function's VPC configuration. The function can
+     * only access resources and the internet through that VPC. For more information, see [VPC
+     * Settings](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html).
+     * When you delete a function, CFN monitors the state of its network interfaces and waits for
+     * Lambda to delete them before proceeding. If the VPC is defined in the same stack, the network
+     * interfaces need to be deleted by Lambda before CFN can delete the VPC's resources.
+     * To monitor network interfaces, CFN needs the `ec2:DescribeNetworkInterfaces` permission. It
+     * obtains this from the user or role that modifies the stack. If you don't provide this
+     * permission, CFN does not wait for network interfaces to be deleted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-vpcconfig)
-     * @param vpcConfig For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. 
+     * @param vpcConfig The VPC security groups and subnets that are attached to a Lambda function. 
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * For network connectivity to AWS resources in a VPC, specify a list of security groups and
-     * subnets in the VPC.
+     * The VPC security groups and subnets that are attached to a Lambda function.
      *
-     * When you connect a function to a VPC, it can access resources and the internet only through
-     * that VPC. For more information, see [Configuring a Lambda function to access resources in a
-     * VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html) .
+     * When you connect a function to a VPC, Lambda creates an elastic network interface for each
+     * combination of security group and subnet in the function's VPC configuration. The function can
+     * only access resources and the internet through that VPC. For more information, see [VPC
+     * Settings](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html).
+     * When you delete a function, CFN monitors the state of its network interfaces and waits for
+     * Lambda to delete them before proceeding. If the VPC is defined in the same stack, the network
+     * interfaces need to be deleted by Lambda before CFN can delete the VPC's resources.
+     * To monitor network interfaces, CFN needs the `ec2:DescribeNetworkInterfaces` permission. It
+     * obtains this from the user or role that modifies the stack. If you don't provide this
+     * permission, CFN does not wait for network interfaces to be deleted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-vpcconfig)
-     * @param vpcConfig For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. 
+     * @param vpcConfig The VPC security groups and subnets that are attached to a Lambda function. 
      */
     override fun vpcConfig(vpcConfig: VpcConfigProperty) {
       cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
     }
 
     /**
-     * For network connectivity to AWS resources in a VPC, specify a list of security groups and
-     * subnets in the VPC.
+     * The VPC security groups and subnets that are attached to a Lambda function.
      *
-     * When you connect a function to a VPC, it can access resources and the internet only through
-     * that VPC. For more information, see [Configuring a Lambda function to access resources in a
-     * VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html) .
+     * When you connect a function to a VPC, Lambda creates an elastic network interface for each
+     * combination of security group and subnet in the function's VPC configuration. The function can
+     * only access resources and the internet through that VPC. For more information, see [VPC
+     * Settings](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html).
+     * When you delete a function, CFN monitors the state of its network interfaces and waits for
+     * Lambda to delete them before proceeding. If the VPC is defined in the same stack, the network
+     * interfaces need to be deleted by Lambda before CFN can delete the VPC's resources.
+     * To monitor network interfaces, CFN needs the `ec2:DescribeNetworkInterfaces` permission. It
+     * obtains this from the user or role that modifies the stack. If you don't provide this
+     * permission, CFN does not wait for network interfaces to be deleted.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-vpcconfig)
-     * @param vpcConfig For network connectivity to AWS resources in a VPC, specify a list of
-     * security groups and subnets in the VPC. 
+     * @param vpcConfig The VPC security groups and subnets that are attached to a Lambda function. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a95f83151908acd2460fc35b80b4458507ae5c0a7b04dcdf6a96ad632af5a117")
@@ -2070,11 +2293,9 @@ public open class CfnFunction(
    * function. To deploy a function defined as a container image, you specify the location of a
    * container image in the Amazon ECR registry. For a .zip file deployment package, you can specify
    * the location of an object in Amazon S3. For Node.js and Python functions, you can specify the
-   * function code inline in the template.
-   *
-   * Changes to a deployment package in Amazon S3 or a container image in ECR are not detected
-   * automatically during stack updates. To update the function code, change the object key or version
-   * in the template.
+   * function code inline in the template.  Changes to a deployment package in Amazon S3 or a container
+   * image in ECR are not detected automatically during stack updates. To update the function code,
+   * change the object key or version in the template.
    *
    * Example:
    *
@@ -2087,6 +2308,7 @@ public open class CfnFunction(
    * .s3Bucket("s3Bucket")
    * .s3Key("s3Key")
    * .s3ObjectVersion("s3ObjectVersion")
+   * .sourceKmsKeyArn("sourceKmsKeyArn")
    * .zipFile("zipFile")
    * .build();
    * ```
@@ -2103,9 +2325,9 @@ public open class CfnFunction(
     public fun imageUri(): String? = unwrap(this).getImageUri()
 
     /**
-     * An Amazon S3 bucket in the same AWS Region as your function.
+     * An Amazon S3 bucket in the same AWS-Region as your function.
      *
-     * The bucket can be in a different AWS account .
+     * The bucket can be in a different AWS-account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3bucket)
      */
@@ -2126,21 +2348,22 @@ public open class CfnFunction(
     public fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-sourcekmskeyarn)
+     */
+    public fun sourceKmsKeyArn(): String? = unwrap(this).getSourceKmsKeyArn()
+
+    /**
      * (Node.js and Python) The source code of your Lambda function. If you include your function
-     * source inline with this parameter, AWS CloudFormation places it in a file named `index` and zips
-     * it to create a [deployment
-     * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) . This zip
-     * file cannot exceed 4MB. For the `Handler` property, the first part of the handler identifier
-     * must be `index` . For example, `index.handler` .
-     *
-     * For JSON, you must escape quotes and special characters such as newline ( `\n` ) with a
-     * backslash.
-     *
-     * If you specify a function that interacts with an AWS CloudFormation custom resource, you
-     * don't have to write your own functions to send responses to the custom resource that invoked the
-     * function. AWS CloudFormation provides a response module (
-     * [cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html)
-     * ) that simplifies sending responses. See [Using AWS Lambda with AWS
+     * source inline with this parameter, CFN places it in a file named `index` and zips it to create a
+     * [deployment package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html).
+     * This zip file cannot exceed 4MB. For the `Handler` property, the first part of the handler
+     * identifier must be `index`. For example, `index.handler`.   For JSON, you must escape quotes and
+     * special characters such as newline (`\n`) with a backslash.  If you specify a function that
+     * interacts with an AWS CloudFormation custom resource, you don't have to write your own functions
+     * to send responses to the custom resource that invoked the function. AWS CloudFormation provides
+     * a response module
+     * ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))
+     * that simplifies sending responses. See [Using Lambda with
      * CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html) for
      * details.
      *
@@ -2161,8 +2384,8 @@ public open class CfnFunction(
       public fun imageUri(imageUri: String)
 
       /**
-       * @param s3Bucket An Amazon S3 bucket in the same AWS Region as your function.
-       * The bucket can be in a different AWS account .
+       * @param s3Bucket An Amazon S3 bucket in the same AWS-Region as your function.
+       * The bucket can be in a different AWS-account.
        */
       public fun s3Bucket(s3Bucket: String)
 
@@ -2178,20 +2401,23 @@ public open class CfnFunction(
       public fun s3ObjectVersion(s3ObjectVersion: String)
 
       /**
+       * @param sourceKmsKeyArn the value to be set.
+       */
+      public fun sourceKmsKeyArn(sourceKmsKeyArn: String)
+
+      /**
        * @param zipFile (Node.js and Python) The source code of your Lambda function. If you include
-       * your function source inline with this parameter, AWS CloudFormation places it in a file named
-       * `index` and zips it to create a [deployment
-       * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) . This zip
+       * your function source inline with this parameter, CFN places it in a file named `index` and
+       * zips it to create a [deployment
+       * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html). This zip
        * file cannot exceed 4MB. For the `Handler` property, the first part of the handler identifier
-       * must be `index` . For example, `index.handler` .
-       * For JSON, you must escape quotes and special characters such as newline ( `\n` ) with a
-       * backslash.
-       *
-       * If you specify a function that interacts with an AWS CloudFormation custom resource, you
-       * don't have to write your own functions to send responses to the custom resource that invoked
-       * the function. AWS CloudFormation provides a response module (
-       * [cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html)
-       * ) that simplifies sending responses. See [Using AWS Lambda with AWS
+       * must be `index`. For example, `index.handler`.   For JSON, you must escape quotes and special
+       * characters such as newline (`\n`) with a backslash.  If you specify a function that interacts
+       * with an AWS CloudFormation custom resource, you don't have to write your own functions to send
+       * responses to the custom resource that invoked the function. AWS CloudFormation provides a
+       * response module
+       * ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))
+       * that simplifies sending responses. See [Using Lambda with
        * CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html) for
        * details.
        */
@@ -2213,8 +2439,8 @@ public open class CfnFunction(
       }
 
       /**
-       * @param s3Bucket An Amazon S3 bucket in the same AWS Region as your function.
-       * The bucket can be in a different AWS account .
+       * @param s3Bucket An Amazon S3 bucket in the same AWS-Region as your function.
+       * The bucket can be in a different AWS-account.
        */
       override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
@@ -2236,20 +2462,25 @@ public open class CfnFunction(
       }
 
       /**
+       * @param sourceKmsKeyArn the value to be set.
+       */
+      override fun sourceKmsKeyArn(sourceKmsKeyArn: String) {
+        cdkBuilder.sourceKmsKeyArn(sourceKmsKeyArn)
+      }
+
+      /**
        * @param zipFile (Node.js and Python) The source code of your Lambda function. If you include
-       * your function source inline with this parameter, AWS CloudFormation places it in a file named
-       * `index` and zips it to create a [deployment
-       * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) . This zip
+       * your function source inline with this parameter, CFN places it in a file named `index` and
+       * zips it to create a [deployment
+       * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html). This zip
        * file cannot exceed 4MB. For the `Handler` property, the first part of the handler identifier
-       * must be `index` . For example, `index.handler` .
-       * For JSON, you must escape quotes and special characters such as newline ( `\n` ) with a
-       * backslash.
-       *
-       * If you specify a function that interacts with an AWS CloudFormation custom resource, you
-       * don't have to write your own functions to send responses to the custom resource that invoked
-       * the function. AWS CloudFormation provides a response module (
-       * [cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html)
-       * ) that simplifies sending responses. See [Using AWS Lambda with AWS
+       * must be `index`. For example, `index.handler`.   For JSON, you must escape quotes and special
+       * characters such as newline (`\n`) with a backslash.  If you specify a function that interacts
+       * with an AWS CloudFormation custom resource, you don't have to write your own functions to send
+       * responses to the custom resource that invoked the function. AWS CloudFormation provides a
+       * response module
+       * ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))
+       * that simplifies sending responses. See [Using Lambda with
        * CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html) for
        * details.
        */
@@ -2263,7 +2494,8 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.CodeProperty,
-    ) : CdkObject(cdkObject), CodeProperty {
+    ) : CdkObject(cdkObject),
+        CodeProperty {
       /**
        * URI of a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)
        * in the Amazon ECR registry.
@@ -2273,9 +2505,9 @@ public open class CfnFunction(
       override fun imageUri(): String? = unwrap(this).getImageUri()
 
       /**
-       * An Amazon S3 bucket in the same AWS Region as your function.
+       * An Amazon S3 bucket in the same AWS-Region as your function.
        *
-       * The bucket can be in a different AWS account .
+       * The bucket can be in a different AWS-account.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-s3bucket)
        */
@@ -2296,21 +2528,23 @@ public open class CfnFunction(
       override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-sourcekmskeyarn)
+       */
+      override fun sourceKmsKeyArn(): String? = unwrap(this).getSourceKmsKeyArn()
+
+      /**
        * (Node.js and Python) The source code of your Lambda function. If you include your function
-       * source inline with this parameter, AWS CloudFormation places it in a file named `index` and
-       * zips it to create a [deployment
-       * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) . This zip
+       * source inline with this parameter, CFN places it in a file named `index` and zips it to create
+       * a [deployment
+       * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html). This zip
        * file cannot exceed 4MB. For the `Handler` property, the first part of the handler identifier
-       * must be `index` . For example, `index.handler` .
-       *
-       * For JSON, you must escape quotes and special characters such as newline ( `\n` ) with a
-       * backslash.
-       *
-       * If you specify a function that interacts with an AWS CloudFormation custom resource, you
-       * don't have to write your own functions to send responses to the custom resource that invoked
-       * the function. AWS CloudFormation provides a response module (
-       * [cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html)
-       * ) that simplifies sending responses. See [Using AWS Lambda with AWS
+       * must be `index`. For example, `index.handler`.   For JSON, you must escape quotes and special
+       * characters such as newline (`\n`) with a backslash.  If you specify a function that interacts
+       * with an AWS CloudFormation custom resource, you don't have to write your own functions to send
+       * responses to the custom resource that invoked the function. AWS CloudFormation provides a
+       * response module
+       * ([cfn-response](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-lambda-function-code-cfnresponsemodule.html))
+       * that simplifies sending responses. See [Using Lambda with
        * CloudFormation](https://docs.aws.amazon.com/lambda/latest/dg/services-cloudformation.html) for
        * details.
        *
@@ -2389,7 +2623,8 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty,
-    ) : CdkObject(cdkObject), DeadLetterConfigProperty {
+    ) : CdkObject(cdkObject),
+        DeadLetterConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic.
        *
@@ -2442,7 +2677,7 @@ public open class CfnFunction(
      * Environment variable key-value pairs.
      *
      * For more information, see [Using Lambda environment
-     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+     * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html#cfn-lambda-function-environment-variables)
      */
@@ -2456,14 +2691,14 @@ public open class CfnFunction(
       /**
        * @param variables Environment variable key-value pairs.
        * For more information, see [Using Lambda environment
-       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html).
        */
       public fun variables(variables: IResolvable)
 
       /**
        * @param variables Environment variable key-value pairs.
        * For more information, see [Using Lambda environment
-       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html).
        */
       public fun variables(variables: Map<String, String>)
     }
@@ -2476,7 +2711,7 @@ public open class CfnFunction(
       /**
        * @param variables Environment variable key-value pairs.
        * For more information, see [Using Lambda environment
-       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html).
        */
       override fun variables(variables: IResolvable) {
         cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
@@ -2485,7 +2720,7 @@ public open class CfnFunction(
       /**
        * @param variables Environment variable key-value pairs.
        * For more information, see [Using Lambda environment
-       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html).
        */
       override fun variables(variables: Map<String, String>) {
         cdkBuilder.variables(variables)
@@ -2497,12 +2732,13 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty,
-    ) : CdkObject(cdkObject), EnvironmentProperty {
+    ) : CdkObject(cdkObject),
+        EnvironmentProperty {
       /**
        * Environment variable key-value pairs.
        *
        * For more information, see [Using Lambda environment
-       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
+       * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html).
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html#cfn-lambda-function-environment-variables)
        */
@@ -2583,7 +2819,8 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty,
-    ) : CdkObject(cdkObject), EphemeralStorageProperty {
+    ) : CdkObject(cdkObject),
+        EphemeralStorageProperty {
       /**
        * The size of the function's `/tmp` directory.
        *
@@ -2612,7 +2849,7 @@ public open class CfnFunction(
 
   /**
    * Details about the connection between a Lambda function and an [Amazon EFS file
-   * system](https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html) .
+   * system](https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html).
    *
    * Example:
    *
@@ -2638,7 +2875,7 @@ public open class CfnFunction(
     public fun arn(): String
 
     /**
-     * The path where the function can access the file system, starting with `/mnt/` .
+     * The path where the function can access the file system, starting with `/mnt/`.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-localmountpath)
      */
@@ -2657,7 +2894,7 @@ public open class CfnFunction(
 
       /**
        * @param localMountPath The path where the function can access the file system, starting with
-       * `/mnt/` . 
+       * `/mnt/`. 
        */
       public fun localMountPath(localMountPath: String)
     }
@@ -2677,7 +2914,7 @@ public open class CfnFunction(
 
       /**
        * @param localMountPath The path where the function can access the file system, starting with
-       * `/mnt/` . 
+       * `/mnt/`. 
        */
       override fun localMountPath(localMountPath: String) {
         cdkBuilder.localMountPath(localMountPath)
@@ -2690,7 +2927,8 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty,
-    ) : CdkObject(cdkObject), FileSystemConfigProperty {
+    ) : CdkObject(cdkObject),
+        FileSystemConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the
        * file system.
@@ -2700,7 +2938,7 @@ public open class CfnFunction(
       override fun arn(): String = unwrap(this).getArn()
 
       /**
-       * The path where the function can access the file system, starting with `/mnt/` .
+       * The path where the function can access the file system, starting with `/mnt/`.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html#cfn-lambda-function-filesystemconfig-localmountpath)
        */
@@ -2729,7 +2967,7 @@ public open class CfnFunction(
    * Configuration values that override the container image Dockerfile settings.
    *
    * For more information, see [Container image
-   * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
+   * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms).
    *
    * Example:
    *
@@ -2862,7 +3100,8 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty,
-    ) : CdkObject(cdkObject), ImageConfigProperty {
+    ) : CdkObject(cdkObject),
+        ImageConfigProperty {
       /**
        * Specifies parameters that you want to pass in with ENTRYPOINT.
        *
@@ -2954,7 +3193,7 @@ public open class CfnFunction(
      * The name of the Amazon CloudWatch log group the function sends logs to.
      *
      * By default, Lambda functions send logs to a default log group named `/aws/lambda/&lt;function
-     * name&gt;` . To use a different log group, enter an existing log group or enter a new log group
+     * name&gt;`. To use a different log group, enter an existing log group or enter a new log group
      * name.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-loggroup)
@@ -2995,8 +3234,8 @@ public open class CfnFunction(
       /**
        * @param logGroup The name of the Amazon CloudWatch log group the function sends logs to.
        * By default, Lambda functions send logs to a default log group named
-       * `/aws/lambda/&lt;function name&gt;` . To use a different log group, enter an existing log
-       * group or enter a new log group name.
+       * `/aws/lambda/&lt;function name&gt;`. To use a different log group, enter an existing log group
+       * or enter a new log group name.
        */
       public fun logGroup(logGroup: String)
 
@@ -3036,8 +3275,8 @@ public open class CfnFunction(
       /**
        * @param logGroup The name of the Amazon CloudWatch log group the function sends logs to.
        * By default, Lambda functions send logs to a default log group named
-       * `/aws/lambda/&lt;function name&gt;` . To use a different log group, enter an existing log
-       * group or enter a new log group name.
+       * `/aws/lambda/&lt;function name&gt;`. To use a different log group, enter an existing log group
+       * or enter a new log group name.
        */
       override fun logGroup(logGroup: String) {
         cdkBuilder.logGroup(logGroup)
@@ -3059,7 +3298,8 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty,
-    ) : CdkObject(cdkObject), LoggingConfigProperty {
+    ) : CdkObject(cdkObject),
+        LoggingConfigProperty {
       /**
        * Set this property to filter the application logs for your function that Lambda sends to
        * CloudWatch.
@@ -3084,8 +3324,8 @@ public open class CfnFunction(
        * The name of the Amazon CloudWatch log group the function sends logs to.
        *
        * By default, Lambda functions send logs to a default log group named
-       * `/aws/lambda/&lt;function name&gt;` . To use a different log group, enter an existing log
-       * group or enter a new log group name.
+       * `/aws/lambda/&lt;function name&gt;`. To use a different log group, enter an existing log group
+       * or enter a new log group name.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-loggingconfig.html#cfn-lambda-function-loggingconfig-loggroup)
        */
@@ -3125,7 +3365,7 @@ public open class CfnFunction(
    * Sets the runtime management configuration for a function's version.
    *
    * For more information, see [Runtime
-   * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
+   * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html).
    *
    * Example:
    *
@@ -3147,9 +3387,7 @@ public open class CfnFunction(
     /**
      * The ARN of the runtime version you want the function to use.
      *
-     *
      * This is only required if you're using the *Manual* runtime update mode.
-     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-runtimeversionarn)
      */
@@ -3160,9 +3398,9 @@ public open class CfnFunction(
      *
      * * *Auto (default)* - Automatically update to the most recent and secure runtime version using
      * a [Two-phase runtime version
-     * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
-     * . This is the best choice for most customers to ensure they always benefit from runtime updates.
-     * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and secure
+     * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase).
+     * This is the best choice for most customers to ensure they always benefit from runtime updates.
+     * * *FunctionUpdate* - LAM updates the runtime of you function to the most recent and secure
      * runtime version when you update your function. This approach synchronizes runtime updates with
      * function deployments, giving you control over when runtime updates are applied and allowing you
      * to detect and mitigate rare runtime update incompatibilities early. When using this setting, you
@@ -3171,10 +3409,9 @@ public open class CfnFunction(
      * use this runtime version indefinitely. In the rare case where a new runtime version is
      * incompatible with an existing function, this allows you to roll back your function to an earlier
      * runtime version. For more information, see [Roll back a runtime
-     * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
-     * .
+     * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback).
      *
-     * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
+     * *Valid Values*: `Auto` | `FunctionUpdate` | `Manual`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-updateruntimeon)
      */
@@ -3187,7 +3424,6 @@ public open class CfnFunction(
     public interface Builder {
       /**
        * @param runtimeVersionArn The ARN of the runtime version you want the function to use.
-       *
        * This is only required if you're using the *Manual* runtime update mode.
        */
       public fun runtimeVersionArn(runtimeVersionArn: String)
@@ -3196,23 +3432,20 @@ public open class CfnFunction(
        * @param updateRuntimeOn Specify the runtime update mode. 
        * * *Auto (default)* - Automatically update to the most recent and secure runtime version
        * using a [Two-phase runtime version
-       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
-       * . This is the best choice for most customers to ensure they always benefit from runtime
-       * updates.
-       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
-       * secure runtime version when you update your function. This approach synchronizes runtime
-       * updates with function deployments, giving you control over when runtime updates are applied
-       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
-       * using this setting, you need to regularly update your functions to keep their runtime
-       * up-to-date.
+       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase).
+       * This is the best choice for most customers to ensure they always benefit from runtime updates.
+       * * *FunctionUpdate* - LAM updates the runtime of you function to the most recent and secure
+       * runtime version when you update your function. This approach synchronizes runtime updates with
+       * function deployments, giving you control over when runtime updates are applied and allowing
+       * you to detect and mitigate rare runtime update incompatibilities early. When using this
+       * setting, you need to regularly update your functions to keep their runtime up-to-date.
        * * *Manual* - You specify a runtime version in your function configuration. The function
        * will use this runtime version indefinitely. In the rare case where a new runtime version is
        * incompatible with an existing function, this allows you to roll back your function to an
        * earlier runtime version. For more information, see [Roll back a runtime
-       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
-       * .
+       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback).
        *
-       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
+       * *Valid Values*: `Auto` | `FunctionUpdate` | `Manual`
        */
       public fun updateRuntimeOn(updateRuntimeOn: String)
     }
@@ -3225,7 +3458,6 @@ public open class CfnFunction(
 
       /**
        * @param runtimeVersionArn The ARN of the runtime version you want the function to use.
-       *
        * This is only required if you're using the *Manual* runtime update mode.
        */
       override fun runtimeVersionArn(runtimeVersionArn: String) {
@@ -3236,23 +3468,20 @@ public open class CfnFunction(
        * @param updateRuntimeOn Specify the runtime update mode. 
        * * *Auto (default)* - Automatically update to the most recent and secure runtime version
        * using a [Two-phase runtime version
-       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
-       * . This is the best choice for most customers to ensure they always benefit from runtime
-       * updates.
-       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
-       * secure runtime version when you update your function. This approach synchronizes runtime
-       * updates with function deployments, giving you control over when runtime updates are applied
-       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
-       * using this setting, you need to regularly update your functions to keep their runtime
-       * up-to-date.
+       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase).
+       * This is the best choice for most customers to ensure they always benefit from runtime updates.
+       * * *FunctionUpdate* - LAM updates the runtime of you function to the most recent and secure
+       * runtime version when you update your function. This approach synchronizes runtime updates with
+       * function deployments, giving you control over when runtime updates are applied and allowing
+       * you to detect and mitigate rare runtime update incompatibilities early. When using this
+       * setting, you need to regularly update your functions to keep their runtime up-to-date.
        * * *Manual* - You specify a runtime version in your function configuration. The function
        * will use this runtime version indefinitely. In the rare case where a new runtime version is
        * incompatible with an existing function, this allows you to roll back your function to an
        * earlier runtime version. For more information, see [Roll back a runtime
-       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
-       * .
+       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback).
        *
-       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
+       * *Valid Values*: `Auto` | `FunctionUpdate` | `Manual`
        */
       override fun updateRuntimeOn(updateRuntimeOn: String) {
         cdkBuilder.updateRuntimeOn(updateRuntimeOn)
@@ -3265,13 +3494,12 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty,
-    ) : CdkObject(cdkObject), RuntimeManagementConfigProperty {
+    ) : CdkObject(cdkObject),
+        RuntimeManagementConfigProperty {
       /**
        * The ARN of the runtime version you want the function to use.
        *
-       *
        * This is only required if you're using the *Manual* runtime update mode.
-       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-runtimeversionarn)
        */
@@ -3282,23 +3510,20 @@ public open class CfnFunction(
        *
        * * *Auto (default)* - Automatically update to the most recent and secure runtime version
        * using a [Two-phase runtime version
-       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase)
-       * . This is the best choice for most customers to ensure they always benefit from runtime
-       * updates.
-       * * *FunctionUpdate* - Lambda updates the runtime of you function to the most recent and
-       * secure runtime version when you update your function. This approach synchronizes runtime
-       * updates with function deployments, giving you control over when runtime updates are applied
-       * and allowing you to detect and mitigate rare runtime update incompatibilities early. When
-       * using this setting, you need to regularly update your functions to keep their runtime
-       * up-to-date.
+       * rollout](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-two-phase).
+       * This is the best choice for most customers to ensure they always benefit from runtime updates.
+       * * *FunctionUpdate* - LAM updates the runtime of you function to the most recent and secure
+       * runtime version when you update your function. This approach synchronizes runtime updates with
+       * function deployments, giving you control over when runtime updates are applied and allowing
+       * you to detect and mitigate rare runtime update incompatibilities early. When using this
+       * setting, you need to regularly update your functions to keep their runtime up-to-date.
        * * *Manual* - You specify a runtime version in your function configuration. The function
        * will use this runtime version indefinitely. In the rare case where a new runtime version is
        * incompatible with an existing function, this allows you to roll back your function to an
        * earlier runtime version. For more information, see [Roll back a runtime
-       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback)
-       * .
+       * version](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html#runtime-management-rollback).
        *
-       * *Valid Values* : `Auto` | `FunctionUpdate` | `Manual`
+       * *Valid Values*: `Auto` | `FunctionUpdate` | `Manual`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html#cfn-lambda-function-runtimemanagementconfig-updateruntimeon)
        */
@@ -3324,8 +3549,8 @@ public open class CfnFunction(
   }
 
   /**
-   * The function's [AWS Lambda
-   * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+   * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
+   * setting.
    *
    * Example:
    *
@@ -3380,7 +3605,8 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty,
-    ) : CdkObject(cdkObject), SnapStartProperty {
+    ) : CdkObject(cdkObject),
+        SnapStartProperty {
       /**
        * Set `ApplyOn` to `PublishedVersions` to create a snapshot of the initialized execution
        * environment when you publish a function version.
@@ -3428,7 +3654,7 @@ public open class CfnFunction(
    */
   public interface SnapStartResponseProperty {
     /**
-     * When set to `PublishedVersions` , Lambda creates a snapshot of the execution environment when
+     * When set to `PublishedVersions`, Lambda creates a snapshot of the execution environment when
      * you publish a function version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-applyon)
@@ -3437,8 +3663,8 @@ public open class CfnFunction(
 
     /**
      * When you provide a [qualified Amazon Resource Name
-     * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
-     * , this response element indicates whether SnapStart is activated for the specified function
+     * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using),
+     * this response element indicates whether SnapStart is activated for the specified function
      * version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-optimizationstatus)
@@ -3451,15 +3677,15 @@ public open class CfnFunction(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param applyOn When set to `PublishedVersions` , Lambda creates a snapshot of the execution
+       * @param applyOn When set to `PublishedVersions`, Lambda creates a snapshot of the execution
        * environment when you publish a function version.
        */
       public fun applyOn(applyOn: String)
 
       /**
        * @param optimizationStatus When you provide a [qualified Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
-       * , this response element indicates whether SnapStart is activated for the specified function
+       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using),
+       * this response element indicates whether SnapStart is activated for the specified function
        * version.
        */
       public fun optimizationStatus(optimizationStatus: String)
@@ -3471,7 +3697,7 @@ public open class CfnFunction(
           software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty.builder()
 
       /**
-       * @param applyOn When set to `PublishedVersions` , Lambda creates a snapshot of the execution
+       * @param applyOn When set to `PublishedVersions`, Lambda creates a snapshot of the execution
        * environment when you publish a function version.
        */
       override fun applyOn(applyOn: String) {
@@ -3480,8 +3706,8 @@ public open class CfnFunction(
 
       /**
        * @param optimizationStatus When you provide a [qualified Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
-       * , this response element indicates whether SnapStart is activated for the specified function
+       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using),
+       * this response element indicates whether SnapStart is activated for the specified function
        * version.
        */
       override fun optimizationStatus(optimizationStatus: String) {
@@ -3495,9 +3721,10 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty,
-    ) : CdkObject(cdkObject), SnapStartResponseProperty {
+    ) : CdkObject(cdkObject),
+        SnapStartResponseProperty {
       /**
-       * When set to `PublishedVersions` , Lambda creates a snapshot of the execution environment
+       * When set to `PublishedVersions`, Lambda creates a snapshot of the execution environment
        * when you publish a function version.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-applyon)
@@ -3506,8 +3733,8 @@ public open class CfnFunction(
 
       /**
        * When you provide a [qualified Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using)
-       * , this response element indicates whether SnapStart is activated for the specified function
+       * (ARN)](https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html#versioning-versions-using),
+       * this response element indicates whether SnapStart is activated for the specified function
        * version.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html#cfn-lambda-function-snapstartresponse-optimizationstatus)
@@ -3534,8 +3761,8 @@ public open class CfnFunction(
   }
 
   /**
-   * The function's [AWS X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html)
-   * tracing configuration. To sample and record incoming requests, set `Mode` to `Active` .
+   * The function's [](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) tracing
+   * configuration. To sample and record incoming requests, set `Mode` to `Active`.
    *
    * Example:
    *
@@ -3587,7 +3814,8 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty,
-    ) : CdkObject(cdkObject), TracingConfigProperty {
+    ) : CdkObject(cdkObject),
+        TracingConfigProperty {
       /**
        * The tracing mode.
        *
@@ -3620,18 +3848,13 @@ public open class CfnFunction(
    * When you connect a function to a VPC, Lambda creates an elastic network interface for each
    * combination of security group and subnet in the function's VPC configuration. The function can
    * only access resources and the internet through that VPC. For more information, see [VPC
-   * Settings](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html) .
-   *
-   *
-   * When you delete a function, AWS CloudFormation monitors the state of its network interfaces and
-   * waits for Lambda to delete them before proceeding. If the VPC is defined in the same stack, the
-   * network interfaces need to be deleted by Lambda before AWS CloudFormation can delete the VPC's
-   * resources.
-   *
-   * To monitor network interfaces, AWS CloudFormation needs the `ec2:DescribeNetworkInterfaces`
-   * permission. It obtains this from the user or role that modifies the stack. If you don't provide
-   * this permission, AWS CloudFormation does not wait for network interfaces to be deleted.
-   *
+   * Settings](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html).
+   * When you delete a function, CFN monitors the state of its network interfaces and waits for
+   * Lambda to delete them before proceeding. If the VPC is defined in the same stack, the network
+   * interfaces need to be deleted by Lambda before CFN can delete the VPC's resources.
+   * To monitor network interfaces, CFN needs the `ec2:DescribeNetworkInterfaces` permission. It
+   * obtains this from the user or role that modifies the stack. If you don't provide this permission,
+   * CFN does not wait for network interfaces to be deleted.
    *
    * Example:
    *
@@ -3760,7 +3983,8 @@ public open class CfnFunction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
       /**
        * Allows outbound IPv6 traffic on VPC functions that are connected to dual-stack subnets.
        *

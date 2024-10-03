@@ -38,7 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTagOption(
   cdkObject: software.amazon.awscdk.services.servicecatalog.CfnTagOption,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

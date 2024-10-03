@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAccessPoint(
   cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -407,7 +408,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty,
-    ) : CdkObject(cdkObject), AliasProperty {
+    ) : CdkObject(cdkObject),
+        AliasProperty {
       /**
        * The status of the Object Lambda Access Point alias.
        *
@@ -513,7 +515,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty,
-    ) : CdkObject(cdkObject), AwsLambdaProperty {
+    ) : CdkObject(cdkObject),
+        AwsLambdaProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-awslambda.html#cfn-s3objectlambda-accesspoint-awslambda-functionarn)
        */
@@ -626,7 +629,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ContentTransformationProperty,
-    ) : CdkObject(cdkObject), ContentTransformationProperty {
+    ) : CdkObject(cdkObject),
+        ContentTransformationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-contenttransformation.html#cfn-s3objectlambda-accesspoint-contenttransformation-awslambda)
        */
@@ -841,7 +845,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty,
-    ) : CdkObject(cdkObject), ObjectLambdaConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ObjectLambdaConfigurationProperty {
       /**
        * A container for allowed features.
        *
@@ -966,7 +971,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PolicyStatusProperty,
-    ) : CdkObject(cdkObject), PolicyStatusProperty {
+    ) : CdkObject(cdkObject),
+        PolicyStatusProperty {
       /**
        * Specifies whether the Object lambda Access Point Policy is Public or not.
        *
@@ -1338,7 +1344,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PublicAccessBlockConfigurationProperty,
-    ) : CdkObject(cdkObject), PublicAccessBlockConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PublicAccessBlockConfigurationProperty {
       /**
        * Specifies whether Amazon S3 should block public access control lists (ACLs) for buckets in
        * this account.
@@ -1529,7 +1536,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.TransformationConfigurationProperty,
-    ) : CdkObject(cdkObject), TransformationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        TransformationConfigurationProperty {
       /**
        * A container for the action of an Object Lambda Access Point configuration.
        *

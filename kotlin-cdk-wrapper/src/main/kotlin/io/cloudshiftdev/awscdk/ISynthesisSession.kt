@@ -52,7 +52,8 @@ public interface ISynthesisSession {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ISynthesisSession,
-  ) : CdkObject(cdkObject), ISynthesisSession {
+  ) : CdkObject(cdkObject),
+      ISynthesisSession {
     /**
      * Cloud assembly builder.
      */

@@ -369,7 +369,8 @@ public interface CfnGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.CfnGroupProps,
-  ) : CdkObject(cdkObject), CfnGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnGroupProps {
     /**
      * The name of the group to create. Do not include the path in this value.
      *

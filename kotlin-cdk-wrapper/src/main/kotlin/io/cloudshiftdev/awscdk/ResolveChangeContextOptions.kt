@@ -79,7 +79,8 @@ public interface ResolveChangeContextOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ResolveChangeContextOptions,
-  ) : CdkObject(cdkObject), ResolveChangeContextOptions {
+  ) : CdkObject(cdkObject),
+      ResolveChangeContextOptions {
     /**
      * Change the 'allowIntrinsicKeys' option.
      *

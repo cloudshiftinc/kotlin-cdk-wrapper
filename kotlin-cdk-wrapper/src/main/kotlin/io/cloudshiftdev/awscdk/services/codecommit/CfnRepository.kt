@@ -23,6 +23,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Creates a new, empty repository.
  *
+ *
+ * AWS CodeCommit is no longer available to new customers. Existing customers of AWS CodeCommit can
+ * continue to use the service as normal. [Learn
+ * more"](https://docs.aws.amazon.com/devops/how-to-migrate-your-aws-codecommit-repository-to-another-git-provider)
+ *
+ *
  * Example:
  *
  * ```
@@ -63,7 +69,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRepository(
   cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -714,7 +722,8 @@ public open class CfnRepository(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty,
-    ) : CdkObject(cdkObject), CodeProperty {
+    ) : CdkObject(cdkObject),
+        CodeProperty {
       /**
        * Optional.
        *
@@ -963,7 +972,8 @@ public open class CfnRepository(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty,
-    ) : CdkObject(cdkObject), RepositoryTriggerProperty {
+    ) : CdkObject(cdkObject),
+        RepositoryTriggerProperty {
       /**
        * The branches to be included in the trigger configuration.
        *
@@ -1160,7 +1170,8 @@ public open class CfnRepository(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.S3Property,
-    ) : CdkObject(cdkObject), S3Property {
+    ) : CdkObject(cdkObject),
+        S3Property {
       /**
        * The name of the Amazon S3 bucket that contains the ZIP file with the content that will be
        * committed to the new repository.

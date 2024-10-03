@@ -92,7 +92,8 @@ public interface ZoneSigningOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.ZoneSigningOptions,
-  ) : CdkObject(cdkObject), ZoneSigningOptions {
+  ) : CdkObject(cdkObject),
+      ZoneSigningOptions {
     /**
      * The name for the key signing key.
      *

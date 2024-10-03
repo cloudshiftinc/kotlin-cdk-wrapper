@@ -102,7 +102,8 @@ public interface ClusterEngineBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ClusterEngineBindOptions,
-  ) : CdkObject(cdkObject), ClusterEngineBindOptions {
+  ) : CdkObject(cdkObject),
+      ClusterEngineBindOptions {
     /**
      * The customer-provided ParameterGroup.
      *

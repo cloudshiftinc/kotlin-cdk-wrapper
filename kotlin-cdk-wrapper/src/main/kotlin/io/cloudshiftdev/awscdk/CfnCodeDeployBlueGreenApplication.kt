@@ -125,7 +125,8 @@ public interface CfnCodeDeployBlueGreenApplication {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenApplication,
-  ) : CdkObject(cdkObject), CfnCodeDeployBlueGreenApplication {
+  ) : CdkObject(cdkObject),
+      CfnCodeDeployBlueGreenApplication {
     /**
      * The detailed attributes of the deployed target.
      */

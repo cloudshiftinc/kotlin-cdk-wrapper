@@ -91,7 +91,8 @@ public interface HttpAuthorizerAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpAuthorizerAttributes,
-  ) : CdkObject(cdkObject), HttpAuthorizerAttributes {
+  ) : CdkObject(cdkObject),
+      HttpAuthorizerAttributes {
     /**
      * Id of the Authorizer.
      */

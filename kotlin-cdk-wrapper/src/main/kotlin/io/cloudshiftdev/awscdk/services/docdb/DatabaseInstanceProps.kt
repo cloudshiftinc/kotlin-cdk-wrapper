@@ -262,7 +262,8 @@ public interface DatabaseInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.DatabaseInstanceProps,
-  ) : CdkObject(cdkObject), DatabaseInstanceProps {
+  ) : CdkObject(cdkObject),
+      DatabaseInstanceProps {
     /**
      * Indicates that minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window.

@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNetworkInterfaceAttachment(
   cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -508,7 +509,8 @@ public open class CfnNetworkInterfaceAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty,
-    ) : CdkObject(cdkObject), EnaSrdSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        EnaSrdSpecificationProperty {
       /**
        * Indicates whether ENA Express is enabled for the network interface.
        *
@@ -625,7 +627,8 @@ public open class CfnNetworkInterfaceAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty,
-    ) : CdkObject(cdkObject), EnaSrdUdpSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        EnaSrdUdpSpecificationProperty {
       /**
        * Indicates whether UDP traffic to and from the instance uses ENA Express.
        *

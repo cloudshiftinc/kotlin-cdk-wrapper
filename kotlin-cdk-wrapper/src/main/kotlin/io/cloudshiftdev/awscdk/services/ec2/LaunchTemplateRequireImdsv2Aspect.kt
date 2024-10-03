@@ -28,7 +28,8 @@ import kotlin.Unit
  */
 public open class LaunchTemplateRequireImdsv2Aspect(
   cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect,
-) : CdkObject(cdkObject), IAspect {
+) : CdkObject(cdkObject),
+    IAspect {
   public constructor() :
       this(software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect()
   )

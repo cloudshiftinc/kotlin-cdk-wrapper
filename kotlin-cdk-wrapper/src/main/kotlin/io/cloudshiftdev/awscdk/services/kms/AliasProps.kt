@@ -124,7 +124,8 @@ public interface AliasProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kms.AliasProps,
-  ) : CdkObject(cdkObject), AliasProps {
+  ) : CdkObject(cdkObject),
+      AliasProps {
     /**
      * The name of the alias.
      *

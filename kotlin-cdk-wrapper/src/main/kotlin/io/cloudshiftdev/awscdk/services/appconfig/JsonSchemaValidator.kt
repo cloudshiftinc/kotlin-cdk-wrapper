@@ -24,7 +24,8 @@ import kotlin.String
  */
 public abstract class JsonSchemaValidator(
   cdkObject: software.amazon.awscdk.services.appconfig.JsonSchemaValidator,
-) : CdkObject(cdkObject), IValidator {
+) : CdkObject(cdkObject),
+    IValidator {
   /**
    * The content of the validator.
    */

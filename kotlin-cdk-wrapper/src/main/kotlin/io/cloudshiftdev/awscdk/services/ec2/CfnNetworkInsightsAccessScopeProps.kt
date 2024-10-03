@@ -236,7 +236,8 @@ public interface CfnNetworkInsightsAccessScopeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeProps,
-  ) : CdkObject(cdkObject), CfnNetworkInsightsAccessScopeProps {
+  ) : CdkObject(cdkObject),
+      CfnNetworkInsightsAccessScopeProps {
     /**
      * The paths to exclude.
      *

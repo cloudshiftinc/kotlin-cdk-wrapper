@@ -94,7 +94,8 @@ public interface CfnAssessmentTargetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTargetProps,
-  ) : CdkObject(cdkObject), CfnAssessmentTargetProps {
+  ) : CdkObject(cdkObject),
+      CfnAssessmentTargetProps {
     /**
      * The name of the Amazon Inspector assessment target.
      *

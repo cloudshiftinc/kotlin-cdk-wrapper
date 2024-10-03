@@ -104,7 +104,8 @@ public interface CfnClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnClusterProps,
-  ) : CdkObject(cdkObject), CfnClusterProps {
+  ) : CdkObject(cdkObject),
+      CfnClusterProps {
     /**
      * Name of the cluster.
      *

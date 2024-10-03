@@ -211,7 +211,8 @@ public interface BaseServiceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.BaseServiceProps,
-  ) : CdkObject(cdkObject), BaseServiceProps {
+  ) : CdkObject(cdkObject),
+      BaseServiceProps {
     /**
      * Structure containing failure threshold for a custom health checker.
      *

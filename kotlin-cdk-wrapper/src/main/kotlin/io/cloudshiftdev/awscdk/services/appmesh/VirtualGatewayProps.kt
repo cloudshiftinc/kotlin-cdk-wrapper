@@ -157,7 +157,8 @@ public interface VirtualGatewayProps : VirtualGatewayBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayProps,
-  ) : CdkObject(cdkObject), VirtualGatewayProps {
+  ) : CdkObject(cdkObject),
+      VirtualGatewayProps {
     /**
      * Access Logging Configuration for the VirtualGateway.
      *

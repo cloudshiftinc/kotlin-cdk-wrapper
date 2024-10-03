@@ -289,7 +289,8 @@ public interface CfnDomainProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.amplify.CfnDomainProps,
-  ) : CdkObject(cdkObject), CfnDomainProps {
+  ) : CdkObject(cdkObject),
+      CfnDomainProps {
     /**
      * The unique ID for an Amplify app.
      *

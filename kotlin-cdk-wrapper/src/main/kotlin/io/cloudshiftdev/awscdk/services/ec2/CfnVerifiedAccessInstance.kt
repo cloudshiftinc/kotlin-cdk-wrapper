@@ -72,7 +72,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVerifiedAccessInstance(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -616,7 +618,8 @@ public open class CfnVerifiedAccessInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchLogsProperty {
       /**
        * Indicates whether logging is enabled.
        *
@@ -737,7 +740,8 @@ public open class CfnVerifiedAccessInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty,
-    ) : CdkObject(cdkObject), KinesisDataFirehoseProperty {
+    ) : CdkObject(cdkObject),
+        KinesisDataFirehoseProperty {
       /**
        * The ID of the delivery stream.
        *
@@ -896,7 +900,8 @@ public open class CfnVerifiedAccessInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property,
-    ) : CdkObject(cdkObject), S3Property {
+    ) : CdkObject(cdkObject),
+        S3Property {
       /**
        * The bucket name.
        *
@@ -1191,7 +1196,8 @@ public open class CfnVerifiedAccessInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty,
-    ) : CdkObject(cdkObject), VerifiedAccessLogsProperty {
+    ) : CdkObject(cdkObject),
+        VerifiedAccessLogsProperty {
       /**
        * CloudWatch Logs logging destination.
        *
@@ -1389,7 +1395,8 @@ public open class CfnVerifiedAccessInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessTrustProviderProperty,
-    ) : CdkObject(cdkObject), VerifiedAccessTrustProviderProperty {
+    ) : CdkObject(cdkObject),
+        VerifiedAccessTrustProviderProperty {
       /**
        * A description for the AWS Verified Access trust provider.
        *

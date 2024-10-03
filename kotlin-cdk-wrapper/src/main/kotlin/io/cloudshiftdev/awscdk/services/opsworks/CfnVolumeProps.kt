@@ -128,7 +128,8 @@ public interface CfnVolumeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opsworks.CfnVolumeProps,
-  ) : CdkObject(cdkObject), CfnVolumeProps {
+  ) : CdkObject(cdkObject),
+      CfnVolumeProps {
     /**
      * The Amazon EC2 volume ID.
      *

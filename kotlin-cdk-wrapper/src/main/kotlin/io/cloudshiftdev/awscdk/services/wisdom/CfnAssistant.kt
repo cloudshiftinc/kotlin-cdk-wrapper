@@ -48,7 +48,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAssistant(
   cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistant,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -500,7 +502,8 @@ public open class CfnAssistant(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistant.ServerSideEncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), ServerSideEncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServerSideEncryptionConfigurationProperty {
       /**
        * The customer managed key used for encryption.
        *

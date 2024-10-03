@@ -191,7 +191,8 @@ public interface OAuthAuthorizationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.OAuthAuthorizationProps,
-  ) : CdkObject(cdkObject), OAuthAuthorizationProps {
+  ) : CdkObject(cdkObject),
+      OAuthAuthorizationProps {
     /**
      * The URL to the authorization endpoint.
      */

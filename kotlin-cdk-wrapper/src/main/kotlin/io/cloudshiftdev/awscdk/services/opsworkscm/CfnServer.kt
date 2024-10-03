@@ -75,7 +75,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnServer(
   cdkObject: software.amazon.awscdk.services.opsworkscm.CfnServer,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -386,12 +388,12 @@ public open class CfnServer(
       securityGroupIds(`value`.toList())
 
   /**
-   *
+   * The name of the server.
    */
   public open fun serverName(): String? = unwrap(this).getServerName()
 
   /**
-   *
+   * The name of the server.
    */
   public open fun serverName(`value`: String) {
     unwrap(this).setServerName(`value`)
@@ -801,8 +803,14 @@ public open class CfnServer(
     public fun securityGroupIds(vararg securityGroupIds: String)
 
     /**
+     * The name of the server.
+     *
+     * The server name must be unique within your AWS account, within each region. Server names must
+     * start with a letter; then letters, numbers, or hyphens (-) are allowed, up to a maximum of 40
+     * characters.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-servername)
-     * @param serverName 
+     * @param serverName The name of the server. 
      */
     public fun serverName(serverName: String)
 
@@ -1280,8 +1288,14 @@ public open class CfnServer(
         securityGroupIds(securityGroupIds.toList())
 
     /**
+     * The name of the server.
+     *
+     * The server name must be unique within your AWS account, within each region. Server names must
+     * start with a letter; then letters, numbers, or hyphens (-) are allowed, up to a maximum of 40
+     * characters.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-servername)
-     * @param serverName 
+     * @param serverName The name of the server. 
      */
     override fun serverName(serverName: String) {
       cdkBuilder.serverName(serverName)
@@ -1573,7 +1587,8 @@ public open class CfnServer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworkscm.CfnServer.EngineAttributeProperty,
-    ) : CdkObject(cdkObject), EngineAttributeProperty {
+    ) : CdkObject(cdkObject),
+        EngineAttributeProperty {
       /**
        * The name of the engine attribute.
        *

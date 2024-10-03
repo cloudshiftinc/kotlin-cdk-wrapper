@@ -85,7 +85,8 @@ public interface NotificationConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.NotificationConfiguration,
-  ) : CdkObject(cdkObject), NotificationConfiguration {
+  ) : CdkObject(cdkObject),
+      NotificationConfiguration {
     /**
      * Which fleet scaling events triggers a notification.
      *

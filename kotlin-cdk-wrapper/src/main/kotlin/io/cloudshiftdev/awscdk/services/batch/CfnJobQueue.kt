@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnJobQueue(
   cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -681,7 +683,8 @@ public open class CfnJobQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty,
-    ) : CdkObject(cdkObject), ComputeEnvironmentOrderProperty {
+    ) : CdkObject(cdkObject),
+        ComputeEnvironmentOrderProperty {
       /**
        * The Amazon Resource Name (ARN) of the compute environment.
        *
@@ -854,7 +857,8 @@ public open class CfnJobQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue.JobStateTimeLimitActionProperty,
-    ) : CdkObject(cdkObject), JobStateTimeLimitActionProperty {
+    ) : CdkObject(cdkObject),
+        JobStateTimeLimitActionProperty {
       /**
        * The action to take when a job is at the head of the job queue in the specified state for
        * the specified period of time.

@@ -98,7 +98,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAlarm(
   cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1468,7 +1470,8 @@ public open class CfnAlarm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty,
-    ) : CdkObject(cdkObject), DimensionProperty {
+    ) : CdkObject(cdkObject),
+        DimensionProperty {
       /**
        * The name of the dimension, from 1–255 characters in length.
        *
@@ -1873,7 +1876,8 @@ public open class CfnAlarm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricDataQueryProperty,
-    ) : CdkObject(cdkObject), MetricDataQueryProperty {
+    ) : CdkObject(cdkObject),
+        MetricDataQueryProperty {
       /**
        * The ID of the account where the metrics are located, if this is a cross-account alarm.
        *
@@ -2111,7 +2115,8 @@ public open class CfnAlarm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty,
-    ) : CdkObject(cdkObject), MetricProperty {
+    ) : CdkObject(cdkObject),
+        MetricProperty {
       /**
        * The metric dimensions that you want to be used for the metric that the alarm will watch.
        *
@@ -2371,7 +2376,8 @@ public open class CfnAlarm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty,
-    ) : CdkObject(cdkObject), MetricStatProperty {
+    ) : CdkObject(cdkObject),
+        MetricStatProperty {
       /**
        * The metric to return, including the metric name, namespace, and dimensions.
        *

@@ -282,7 +282,8 @@ public interface CfnTrainingDatasetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cleanroomsml.CfnTrainingDatasetProps,
-  ) : CdkObject(cdkObject), CfnTrainingDatasetProps {
+  ) : CdkObject(cdkObject),
+      CfnTrainingDatasetProps {
     /**
      * The description of the training dataset.
      *

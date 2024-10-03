@@ -14,6 +14,7 @@ import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.AdotInstrumentationConfig
+import io.cloudshiftdev.awscdk.services.lambda.ApplicationLogLevel
 import io.cloudshiftdev.awscdk.services.lambda.Architecture
 import io.cloudshiftdev.awscdk.services.lambda.Code
 import io.cloudshiftdev.awscdk.services.lambda.FileSystem
@@ -26,9 +27,11 @@ import io.cloudshiftdev.awscdk.services.lambda.LambdaInsightsVersion
 import io.cloudshiftdev.awscdk.services.lambda.LogRetentionRetryOptions
 import io.cloudshiftdev.awscdk.services.lambda.LoggingFormat
 import io.cloudshiftdev.awscdk.services.lambda.ParamsAndSecretsLayerVersion
+import io.cloudshiftdev.awscdk.services.lambda.RecursiveLoop
 import io.cloudshiftdev.awscdk.services.lambda.Runtime
 import io.cloudshiftdev.awscdk.services.lambda.RuntimeManagementMode
 import io.cloudshiftdev.awscdk.services.lambda.SnapStartConf
+import io.cloudshiftdev.awscdk.services.lambda.SystemLogLevel
 import io.cloudshiftdev.awscdk.services.lambda.Tracing
 import io.cloudshiftdev.awscdk.services.lambda.VersionOptions
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
@@ -36,6 +39,7 @@ import io.cloudshiftdev.awscdk.services.logs.RetentionDays
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -61,7 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class TriggerFunction(
   cdkObject: software.amazon.awscdk.triggers.TriggerFunction,
-) : Function(cdkObject), ITrigger {
+) : Function(cdkObject),
+    ITrigger {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -140,7 +145,23 @@ public open class TriggerFunction(
         fun adotInstrumentation(adotInstrumentation: AdotInstrumentationConfig.Builder.() -> Unit)
 
     /**
-     * Whether to allow the Lambda to send all network traffic.
+     * Whether to allow the Lambda to send all ipv6 network traffic.
+     *
+     * If set to true, there will only be a single egress rule which allows all
+     * outbound ipv6 traffic. If set to false, you must individually add traffic rules to allow the
+     * Lambda to connect to network targets using ipv6.
+     *
+     * Do not specify this property if the `securityGroups` or `securityGroup` property is set.
+     * Instead, configure `allowAllIpv6Outbound` directly on the security group.
+     *
+     * Default: false
+     *
+     * @param allowAllIpv6Outbound Whether to allow the Lambda to send all ipv6 network traffic. 
+     */
+    public fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean)
+
+    /**
+     * Whether to allow the Lambda to send all network traffic (except ipv6).
      *
      * If set to false, you must individually add traffic rules to allow the
      * Lambda to connect to network targets.
@@ -150,7 +171,8 @@ public open class TriggerFunction(
      *
      * Default: true
      *
-     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic. 
+     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic (except
+     * ipv6). 
      */
     public fun allowAllOutbound(allowAllOutbound: Boolean)
 
@@ -168,13 +190,24 @@ public open class TriggerFunction(
     public fun allowPublicSubnet(allowPublicSubnet: Boolean)
 
     /**
-     * Sets the application log level for the function.
+     * (deprecated) Sets the application log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `applicationLogLevelV2` as a property instead.
      * @param applicationLogLevel Sets the application log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun applicationLogLevel(applicationLogLevel: String)
+
+    /**
+     * Sets the application log level for the function.
+     *
+     * Default: ApplicationLogLevel.INFO
+     *
+     * @param applicationLogLevelV2 Sets the application log level for the function. 
+     */
+    public fun applicationLogLevelV2(applicationLogLevelV2: ApplicationLogLevel)
 
     /**
      * The system architectures compatible with this lambda function.
@@ -508,12 +541,14 @@ public open class TriggerFunction(
     public fun layers(vararg layers: ILayerVersion)
 
     /**
-     * Sets the logFormat for the function.
+     * (deprecated) Sets the logFormat for the function.
      *
      * Default: "Text"
      *
+     * @deprecated Use `loggingFormat` as a property instead.
      * @param logFormat Sets the logFormat for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun logFormat(logFormat: String)
 
     /**
@@ -700,6 +735,17 @@ public open class TriggerFunction(
     public fun profilingGroup(profilingGroup: IProfilingGroup)
 
     /**
+     * Sets the Recursive Loop Protection for Lambda Function.
+     *
+     * It lets Lambda detect and terminate unintended recusrive loops.
+     *
+     * Default: RecursiveLoop.Terminate
+     *
+     * @param recursiveLoop Sets the Recursive Loop Protection for Lambda Function. 
+     */
+    public fun recursiveLoop(recursiveLoop: RecursiveLoop)
+
+    /**
      * The maximum of concurrent executions you want to reserve for the function.
      *
      * Default: - No specific limit - account limit.
@@ -805,13 +851,24 @@ public open class TriggerFunction(
     public fun snapStart(snapStart: SnapStartConf)
 
     /**
-     * Sets the system log level for the function.
+     * (deprecated) Sets the system log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `systemLogLevelV2` as a property instead.
      * @param systemLogLevel Sets the system log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun systemLogLevel(systemLogLevel: String)
+
+    /**
+     * Sets the system log level for the function.
+     *
+     * Default: SystemLogLevel.INFO
+     *
+     * @param systemLogLevelV2 Sets the system log level for the function. 
+     */
+    public fun systemLogLevelV2(systemLogLevelV2: SystemLogLevel)
 
     /**
      * The function execution time (in seconds) after which Lambda terminates the function.
@@ -916,7 +973,25 @@ public open class TriggerFunction(
         Unit = adotInstrumentation(AdotInstrumentationConfig(adotInstrumentation))
 
     /**
-     * Whether to allow the Lambda to send all network traffic.
+     * Whether to allow the Lambda to send all ipv6 network traffic.
+     *
+     * If set to true, there will only be a single egress rule which allows all
+     * outbound ipv6 traffic. If set to false, you must individually add traffic rules to allow the
+     * Lambda to connect to network targets using ipv6.
+     *
+     * Do not specify this property if the `securityGroups` or `securityGroup` property is set.
+     * Instead, configure `allowAllIpv6Outbound` directly on the security group.
+     *
+     * Default: false
+     *
+     * @param allowAllIpv6Outbound Whether to allow the Lambda to send all ipv6 network traffic. 
+     */
+    override fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
+      cdkBuilder.allowAllIpv6Outbound(allowAllIpv6Outbound)
+    }
+
+    /**
+     * Whether to allow the Lambda to send all network traffic (except ipv6).
      *
      * If set to false, you must individually add traffic rules to allow the
      * Lambda to connect to network targets.
@@ -926,7 +1001,8 @@ public open class TriggerFunction(
      *
      * Default: true
      *
-     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic. 
+     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic (except
+     * ipv6). 
      */
     override fun allowAllOutbound(allowAllOutbound: Boolean) {
       cdkBuilder.allowAllOutbound(allowAllOutbound)
@@ -948,14 +1024,27 @@ public open class TriggerFunction(
     }
 
     /**
-     * Sets the application log level for the function.
+     * (deprecated) Sets the application log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `applicationLogLevelV2` as a property instead.
      * @param applicationLogLevel Sets the application log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun applicationLogLevel(applicationLogLevel: String) {
       cdkBuilder.applicationLogLevel(applicationLogLevel)
+    }
+
+    /**
+     * Sets the application log level for the function.
+     *
+     * Default: ApplicationLogLevel.INFO
+     *
+     * @param applicationLogLevelV2 Sets the application log level for the function. 
+     */
+    override fun applicationLogLevelV2(applicationLogLevelV2: ApplicationLogLevel) {
+      cdkBuilder.applicationLogLevelV2(applicationLogLevelV2.let(ApplicationLogLevel.Companion::unwrap))
     }
 
     /**
@@ -1338,12 +1427,14 @@ public open class TriggerFunction(
     override fun layers(vararg layers: ILayerVersion): Unit = layers(layers.toList())
 
     /**
-     * Sets the logFormat for the function.
+     * (deprecated) Sets the logFormat for the function.
      *
      * Default: "Text"
      *
+     * @deprecated Use `loggingFormat` as a property instead.
      * @param logFormat Sets the logFormat for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun logFormat(logFormat: String) {
       cdkBuilder.logFormat(logFormat)
     }
@@ -1557,6 +1648,19 @@ public open class TriggerFunction(
     }
 
     /**
+     * Sets the Recursive Loop Protection for Lambda Function.
+     *
+     * It lets Lambda detect and terminate unintended recusrive loops.
+     *
+     * Default: RecursiveLoop.Terminate
+     *
+     * @param recursiveLoop Sets the Recursive Loop Protection for Lambda Function. 
+     */
+    override fun recursiveLoop(recursiveLoop: RecursiveLoop) {
+      cdkBuilder.recursiveLoop(recursiveLoop.let(RecursiveLoop.Companion::unwrap))
+    }
+
+    /**
      * The maximum of concurrent executions you want to reserve for the function.
      *
      * Default: - No specific limit - account limit.
@@ -1677,14 +1781,27 @@ public open class TriggerFunction(
     }
 
     /**
-     * Sets the system log level for the function.
+     * (deprecated) Sets the system log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `systemLogLevelV2` as a property instead.
      * @param systemLogLevel Sets the system log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun systemLogLevel(systemLogLevel: String) {
       cdkBuilder.systemLogLevel(systemLogLevel)
+    }
+
+    /**
+     * Sets the system log level for the function.
+     *
+     * Default: SystemLogLevel.INFO
+     *
+     * @param systemLogLevelV2 Sets the system log level for the function. 
+     */
+    override fun systemLogLevelV2(systemLogLevelV2: SystemLogLevel) {
+      cdkBuilder.systemLogLevelV2(systemLogLevelV2.let(SystemLogLevel.Companion::unwrap))
     }
 
     /**

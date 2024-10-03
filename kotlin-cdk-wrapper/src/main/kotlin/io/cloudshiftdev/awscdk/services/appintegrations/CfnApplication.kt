@@ -39,8 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .description("description")
  * .name("name")
- * // the properties below are optional
  * .namespace("namespace")
+ * // the properties below are optional
  * .permissions(List.of("permissions"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -53,7 +53,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplication(
   cdkObject: software.amazon.awscdk.services.appintegrations.CfnApplication,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -150,7 +152,7 @@ public open class CfnApplication(
   /**
    * The namespace of the application.
    */
-  public open fun namespace(): String? = unwrap(this).getNamespace()
+  public open fun namespace(): String = unwrap(this).getNamespace()
 
   /**
    * The namespace of the application.
@@ -518,7 +520,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appintegrations.CfnApplication.ApplicationSourceConfigProperty,
-    ) : CdkObject(cdkObject), ApplicationSourceConfigProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationSourceConfigProperty {
       /**
        * The external URL source for the application.
        *
@@ -632,7 +635,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appintegrations.CfnApplication.ExternalUrlConfigProperty,
-    ) : CdkObject(cdkObject), ExternalUrlConfigProperty {
+    ) : CdkObject(cdkObject),
+        ExternalUrlConfigProperty {
       /**
        * The URL to access the application.
        *

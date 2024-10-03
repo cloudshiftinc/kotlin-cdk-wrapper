@@ -27,7 +27,8 @@ public interface IAppsyncFunction : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.IAppsyncFunction,
-  ) : CdkObject(cdkObject), IAppsyncFunction {
+  ) : CdkObject(cdkObject),
+      IAppsyncFunction {
     /**
      * Apply the given removal policy to this resource.
      *

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -54,6 +55,18 @@ public interface AddApplicationTargetsProps : AddRuleProps {
    */
   public fun deregistrationDelay(): Duration? =
       unwrap(this).getDeregistrationDelay()?.let(Duration::wrap)
+
+  /**
+   * Indicates whether anomaly mitigation is enabled.
+   *
+   * Only available when `loadBalancingAlgorithmType` is
+   * `TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM`
+   *
+   * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#automatic-target-weights)
+   */
+  public fun enableAnomalyMitigation(): Boolean? = unwrap(this).getEnableAnomalyMitigation()
 
   /**
    * Health check configuration.
@@ -179,6 +192,13 @@ public interface AddApplicationTargetsProps : AddRuleProps {
     public fun deregistrationDelay(deregistrationDelay: Duration)
 
     /**
+     * @param enableAnomalyMitigation Indicates whether anomaly mitigation is enabled.
+     * Only available when `loadBalancingAlgorithmType` is
+     * `TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM`
+     */
+    public fun enableAnomalyMitigation(enableAnomalyMitigation: Boolean)
+
+    /**
      * @param healthCheck Health check configuration.
      */
     public fun healthCheck(healthCheck: HealthCheck)
@@ -297,6 +317,15 @@ public interface AddApplicationTargetsProps : AddRuleProps {
      */
     override fun deregistrationDelay(deregistrationDelay: Duration) {
       cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * @param enableAnomalyMitigation Indicates whether anomaly mitigation is enabled.
+     * Only available when `loadBalancingAlgorithmType` is
+     * `TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM`
+     */
+    override fun enableAnomalyMitigation(enableAnomalyMitigation: Boolean) {
+      cdkBuilder.enableAnomalyMitigation(enableAnomalyMitigation)
     }
 
     /**
@@ -423,7 +452,8 @@ public interface AddApplicationTargetsProps : AddRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetsProps,
-  ) : CdkObject(cdkObject), AddApplicationTargetsProps {
+  ) : CdkObject(cdkObject),
+      AddApplicationTargetsProps {
     /**
      * Rule applies if matches the conditions.
      *
@@ -443,6 +473,18 @@ public interface AddApplicationTargetsProps : AddRuleProps {
      */
     override fun deregistrationDelay(): Duration? =
         unwrap(this).getDeregistrationDelay()?.let(Duration::wrap)
+
+    /**
+     * Indicates whether anomaly mitigation is enabled.
+     *
+     * Only available when `loadBalancingAlgorithmType` is
+     * `TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM`
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#automatic-target-weights)
+     */
+    override fun enableAnomalyMitigation(): Boolean? = unwrap(this).getEnableAnomalyMitigation()
 
     /**
      * Health check configuration.

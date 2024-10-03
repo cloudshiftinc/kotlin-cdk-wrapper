@@ -66,7 +66,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResolverEndpoint(
   cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -830,7 +832,8 @@ public open class CfnResolverEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint.IpAddressRequestProperty,
-    ) : CdkObject(cdkObject), IpAddressRequestProperty {
+    ) : CdkObject(cdkObject),
+        IpAddressRequestProperty {
       /**
        * The IPv4 address that you want to use for DNS queries.
        *

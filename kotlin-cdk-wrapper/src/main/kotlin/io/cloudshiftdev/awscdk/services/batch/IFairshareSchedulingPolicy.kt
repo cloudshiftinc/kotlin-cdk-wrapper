@@ -72,7 +72,8 @@ public interface IFairshareSchedulingPolicy : ISchedulingPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IFairshareSchedulingPolicy,
-  ) : CdkObject(cdkObject), IFairshareSchedulingPolicy {
+  ) : CdkObject(cdkObject),
+      IFairshareSchedulingPolicy {
     /**
      * Apply the given removal policy to this resource.
      *

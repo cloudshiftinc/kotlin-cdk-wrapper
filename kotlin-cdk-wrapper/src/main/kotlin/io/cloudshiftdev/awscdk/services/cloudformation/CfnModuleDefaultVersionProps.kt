@@ -116,7 +116,8 @@ public interface CfnModuleDefaultVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersionProps,
-  ) : CdkObject(cdkObject), CfnModuleDefaultVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnModuleDefaultVersionProps {
     /**
      * The Amazon Resource Name (ARN) of the module version to set as the default version.
      *

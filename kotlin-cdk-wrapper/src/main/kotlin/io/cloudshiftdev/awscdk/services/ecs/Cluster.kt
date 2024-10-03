@@ -28,29 +28,32 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.Tags;
- * Vpc vpc = Vpc.Builder.create(this, "Vpc").maxAzs(1).build();
- * Cluster cluster = Cluster.Builder.create(this, "EcsCluster").vpc(vpc).build();
- * FargateTaskDefinition taskDefinition = FargateTaskDefinition.Builder.create(this, "TaskDef")
- * .memoryLimitMiB(512)
- * .cpu(256)
- * .build();
- * taskDefinition.addContainer("WebContainer", ContainerDefinitionOptions.builder()
- * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * IVpc vpc = Vpc.fromLookup(this, "Vpc", VpcLookupOptions.builder()
+ * .isDefault(true)
  * .build());
- * Tags.of(taskDefinition).add("my-tag", "my-tag-value");
- * ScheduledFargateTask scheduledFargateTask = ScheduledFargateTask.Builder.create(this,
- * "ScheduledFargateTask")
+ * Cluster cluster = Cluster.Builder.create(this, "ECSCluster").vpc(vpc).build();
+ * TaskDefinition taskDefinition = TaskDefinition.Builder.create(this, "TD")
+ * .compatibility(Compatibility.FARGATE)
+ * .cpu("256")
+ * .memoryMiB("512")
+ * .build();
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("foo/bar"))
+ * .build());
+ * EcsRunTask runTask = EcsRunTask.Builder.create(this, "Run")
+ * .integrationPattern(IntegrationPattern.RUN_JOB)
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .schedule(Schedule.expression("rate(1 minute)"))
- * .propagateTags(PropagatedTagSource.TASK_DEFINITION)
+ * .launchTarget(new EcsFargateLaunchTarget())
+ * .cpu("1024")
+ * .memoryMiB("1048")
  * .build();
  * ```
  */
 public open class Cluster(
   cdkObject: software.amazon.awscdk.services.ecs.Cluster,
-) : Resource(cdkObject), ICluster {
+) : Resource(cdkObject),
+    ICluster {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.Cluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

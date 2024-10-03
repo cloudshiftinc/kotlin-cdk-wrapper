@@ -55,6 +55,36 @@ public open class LogFormat(
     public val DST_PORT: LogFormat =
         LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.DST_PORT)
 
+    public val ECS_CLUSTER_ARN: LogFormat =
+        LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.ECS_CLUSTER_ARN)
+
+    public val ECS_CLUSTER_NAME: LogFormat =
+        LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.ECS_CLUSTER_NAME)
+
+    public val ECS_CONTAINER_ID: LogFormat =
+        LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.ECS_CONTAINER_ID)
+
+    public val ECS_CONTAINER_INSTANCE_ARN: LogFormat =
+        LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.ECS_CONTAINER_INSTANCE_ARN)
+
+    public val ECS_CONTAINER_INSTANCE_ID: LogFormat =
+        LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.ECS_CONTAINER_INSTANCE_ID)
+
+    public val ECS_SECOND_CONTAINER_ID: LogFormat =
+        LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.ECS_SECOND_CONTAINER_ID)
+
+    public val ECS_SERVICE_NAME: LogFormat =
+        LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.ECS_SERVICE_NAME)
+
+    public val ECS_TASK_ARN: LogFormat =
+        LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.ECS_TASK_ARN)
+
+    public val ECS_TASK_DEFINITION_ARN: LogFormat =
+        LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.ECS_TASK_DEFINITION_ARN)
+
+    public val ECS_TASK_ID: LogFormat =
+        LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.ECS_TASK_ID)
+
     public val END_TIMESTAMP: LogFormat =
         LogFormat.wrap(software.amazon.awscdk.services.ec2.LogFormat.END_TIMESTAMP)
 

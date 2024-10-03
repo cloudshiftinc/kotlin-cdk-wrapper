@@ -86,7 +86,8 @@ public interface CfnAttributeGroupAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupAssociationProps,
-  ) : CdkObject(cdkObject), CfnAttributeGroupAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnAttributeGroupAssociationProps {
     /**
      * The name or ID of the application.
      *

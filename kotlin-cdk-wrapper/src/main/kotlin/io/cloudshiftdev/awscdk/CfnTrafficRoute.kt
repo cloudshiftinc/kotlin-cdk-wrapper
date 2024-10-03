@@ -77,7 +77,8 @@ public interface CfnTrafficRoute {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnTrafficRoute,
-  ) : CdkObject(cdkObject), CfnTrafficRoute {
+  ) : CdkObject(cdkObject),
+      CfnTrafficRoute {
     /**
      * The logical id of the target resource.
      */

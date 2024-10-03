@@ -77,7 +77,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTargetGroup(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -341,26 +343,26 @@ public open class CfnTargetGroup(
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   /**
-   * The attributes.
+   * The target group attributes.
    */
   public open fun targetGroupAttributes(): Any? = unwrap(this).getTargetGroupAttributes()
 
   /**
-   * The attributes.
+   * The target group attributes.
    */
   public open fun targetGroupAttributes(`value`: IResolvable) {
     unwrap(this).setTargetGroupAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The attributes.
+   * The target group attributes.
    */
   public open fun targetGroupAttributes(`value`: List<Any>) {
     unwrap(this).setTargetGroupAttributes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * The attributes.
+   * The target group attributes.
    */
   public open fun targetGroupAttributes(vararg `value`: Any): Unit =
       targetGroupAttributes(`value`.toList())
@@ -655,26 +657,26 @@ public open class CfnTargetGroup(
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * The attributes.
+     * The target group attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
-     * @param targetGroupAttributes The attributes. 
+     * @param targetGroupAttributes The target group attributes. 
      */
     public fun targetGroupAttributes(targetGroupAttributes: IResolvable)
 
     /**
-     * The attributes.
+     * The target group attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
-     * @param targetGroupAttributes The attributes. 
+     * @param targetGroupAttributes The target group attributes. 
      */
     public fun targetGroupAttributes(targetGroupAttributes: List<Any>)
 
     /**
-     * The attributes.
+     * The target group attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
-     * @param targetGroupAttributes The attributes. 
+     * @param targetGroupAttributes The target group attributes. 
      */
     public fun targetGroupAttributes(vararg targetGroupAttributes: Any)
 
@@ -1014,30 +1016,30 @@ public open class CfnTargetGroup(
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * The attributes.
+     * The target group attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
-     * @param targetGroupAttributes The attributes. 
+     * @param targetGroupAttributes The target group attributes. 
      */
     override fun targetGroupAttributes(targetGroupAttributes: IResolvable) {
       cdkBuilder.targetGroupAttributes(targetGroupAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The attributes.
+     * The target group attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
-     * @param targetGroupAttributes The attributes. 
+     * @param targetGroupAttributes The target group attributes. 
      */
     override fun targetGroupAttributes(targetGroupAttributes: List<Any>) {
       cdkBuilder.targetGroupAttributes(targetGroupAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * The attributes.
+     * The target group attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)
-     * @param targetGroupAttributes The attributes. 
+     * @param targetGroupAttributes The target group attributes. 
      */
     override fun targetGroupAttributes(vararg targetGroupAttributes: Any): Unit =
         targetGroupAttributes(targetGroupAttributes.toList())
@@ -1262,7 +1264,8 @@ public open class CfnTargetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.MatcherProperty,
-    ) : CdkObject(cdkObject), MatcherProperty {
+    ) : CdkObject(cdkObject),
+        MatcherProperty {
       /**
        * You can specify values between 0 and 99.
        *
@@ -1491,7 +1494,8 @@ public open class CfnTargetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetDescriptionProperty,
-    ) : CdkObject(cdkObject), TargetDescriptionProperty {
+    ) : CdkObject(cdkObject),
+        TargetDescriptionProperty {
       /**
        * An Availability Zone or `all` .
        *
@@ -1953,7 +1957,8 @@ public open class CfnTargetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetGroupAttributeProperty,
-    ) : CdkObject(cdkObject), TargetGroupAttributeProperty {
+    ) : CdkObject(cdkObject),
+        TargetGroupAttributeProperty {
       /**
        * The name of the attribute.
        *

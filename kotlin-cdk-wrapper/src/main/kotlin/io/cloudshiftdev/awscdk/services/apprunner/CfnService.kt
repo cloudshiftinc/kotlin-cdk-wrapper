@@ -134,7 +134,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnService(
   cdkObject: software.amazon.awscdk.services.apprunner.CfnService,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1087,7 +1089,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty,
-    ) : CdkObject(cdkObject), AuthenticationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AuthenticationConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the IAM role that grants the App Runner service access to
        * a source repository.
@@ -1284,7 +1287,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty,
-    ) : CdkObject(cdkObject), CodeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CodeConfigurationProperty {
       /**
        * The basic configuration for building and running the App Runner service.
        *
@@ -1632,7 +1636,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty,
-    ) : CdkObject(cdkObject), CodeConfigurationValuesProperty {
+    ) : CdkObject(cdkObject),
+        CodeConfigurationValuesProperty {
       /**
        * The command App Runner runs to build your application.
        *
@@ -1942,7 +1947,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.CodeRepositoryProperty,
-    ) : CdkObject(cdkObject), CodeRepositoryProperty {
+    ) : CdkObject(cdkObject),
+        CodeRepositoryProperty {
       /**
        * Configuration for building and running the service from a source code repository.
        *
@@ -2090,7 +2096,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty,
-    ) : CdkObject(cdkObject), EgressConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EgressConfigurationProperty {
       /**
        * The type of egress configuration.
        *
@@ -2188,7 +2195,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionConfigurationProperty {
       /**
        * The ARN of the KMS key that's used for encryption.
        *
@@ -2421,7 +2429,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty,
-    ) : CdkObject(cdkObject), HealthCheckConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        HealthCheckConfigurationProperty {
       /**
        * The number of consecutive checks that must succeed before App Runner decides that the
        * service is healthy.
@@ -2765,7 +2774,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty,
-    ) : CdkObject(cdkObject), ImageConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ImageConfigurationProperty {
       /**
        * The port that your application listens to in the container.
        *
@@ -2984,7 +2994,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty,
-    ) : CdkObject(cdkObject), ImageRepositoryProperty {
+    ) : CdkObject(cdkObject),
+        ImageRepositoryProperty {
       /**
        * Configuration for running the identified image.
        *
@@ -3115,7 +3126,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty,
-    ) : CdkObject(cdkObject), IngressConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        IngressConfigurationProperty {
       /**
        * Specifies whether your App Runner service is publicly accessible.
        *
@@ -3258,7 +3270,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty,
-    ) : CdkObject(cdkObject), InstanceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InstanceConfigurationProperty {
       /**
        * The number of CPU units reserved for each instance of your App Runner service.
        *
@@ -3379,7 +3392,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty,
-    ) : CdkObject(cdkObject), KeyValuePairProperty {
+    ) : CdkObject(cdkObject),
+        KeyValuePairProperty {
       /**
        * The key name string to map to a value.
        *
@@ -3606,7 +3620,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NetworkConfigurationProperty {
       /**
        * Network configuration settings for outbound message traffic.
        *
@@ -3781,7 +3796,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.ServiceObservabilityConfigurationProperty,
-    ) : CdkObject(cdkObject), ServiceObservabilityConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServiceObservabilityConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the observability configuration that is associated with
        * the service.
@@ -3912,7 +3928,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.SourceCodeVersionProperty,
-    ) : CdkObject(cdkObject), SourceCodeVersionProperty {
+    ) : CdkObject(cdkObject),
+        SourceCodeVersionProperty {
       /**
        * The type of version identifier.
        *
@@ -4274,7 +4291,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnService.SourceConfigurationProperty,
-    ) : CdkObject(cdkObject), SourceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SourceConfigurationProperty {
       /**
        * Describes the resources that are needed to authenticate access to some source repositories.
        *

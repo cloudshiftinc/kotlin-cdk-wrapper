@@ -30,7 +30,9 @@ import kotlin.jvm.JvmName
  */
 public abstract class PrincipalBase(
   cdkObject: software.amazon.awscdk.services.iam.PrincipalBase,
-) : CdkObject(cdkObject), IAssumeRolePrincipal, IComparablePrincipal {
+) : CdkObject(cdkObject),
+    IAssumeRolePrincipal,
+    IComparablePrincipal {
   /**
    * Add the principal to the AssumeRolePolicyDocument.
    *

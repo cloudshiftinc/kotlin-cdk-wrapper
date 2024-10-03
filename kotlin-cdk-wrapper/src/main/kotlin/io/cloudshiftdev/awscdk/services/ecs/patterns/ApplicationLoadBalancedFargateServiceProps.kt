@@ -23,6 +23,7 @@ import io.cloudshiftdev.awscdk.services.ecs.RuntimePlatform
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationProtocol
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationProtocolVersion
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IpAddressType
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.SslPolicy
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.Boolean
@@ -48,11 +49,18 @@ import kotlin.jvm.JvmName
  * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
  * .build())
- * .taskSubnets(SubnetSelection.builder()
- * .subnets(List.of(Subnet.fromSubnetId(this, "subnet", "VpcISOLATEDSubnet1Subnet80F07FA0")))
- * .build())
- * .loadBalancerName("application-lb-name")
  * .build();
+ * ScalableTaskCount scalableTarget =
+ * loadBalancedFargateService.service.autoScaleTaskCount(EnableScalingProps.builder()
+ * .minCapacity(1)
+ * .maxCapacity(20)
+ * .build());
+ * scalableTarget.scaleOnCpuUtilization("CpuScaling", CpuUtilizationScalingProps.builder()
+ * .targetUtilizationPercent(50)
+ * .build());
+ * scalableTarget.scaleOnMemoryUtilization("MemoryScaling", MemoryUtilizationScalingProps.builder()
+ * .targetUtilizationPercent(50)
+ * .build());
  * ```
  */
 public interface ApplicationLoadBalancedFargateServiceProps :
@@ -263,6 +271,11 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * Can be between 1 and 4000 seconds
      */
     public fun idleTimeout(idleTimeout: Duration)
+
+    /**
+     * @param ipAddressType The type of IP address to use.
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
     /**
      * @param listenerPort Listener port of the application load balancer that will serve traffic to
@@ -682,6 +695,13 @@ public interface ApplicationLoadBalancedFargateServiceProps :
     }
 
     /**
+     * @param ipAddressType The type of IP address to use.
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
+    }
+
+    /**
      * @param listenerPort Listener port of the application load balancer that will serve traffic to
      * the service.
      */
@@ -939,7 +959,8 @@ public interface ApplicationLoadBalancedFargateServiceProps :
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateServiceProps,
-  ) : CdkObject(cdkObject), ApplicationLoadBalancedFargateServiceProps {
+  ) : CdkObject(cdkObject),
+      ApplicationLoadBalancedFargateServiceProps {
     /**
      * Determines whether the service will be assigned a public IP address.
      *
@@ -1115,6 +1136,14 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * Default: - CloudFormation sets idle timeout to 60 seconds
      */
     override fun idleTimeout(): Duration? = unwrap(this).getIdleTimeout()?.let(Duration::wrap)
+
+    /**
+     * The type of IP address to use.
+     *
+     * Default: - IpAddressType.IPV4
+     */
+    override fun ipAddressType(): IpAddressType? =
+        unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
     /**
      * Listener port of the application load balancer that will serve traffic to the service.

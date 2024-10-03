@@ -22,6 +22,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * the [UpdateDatasetGroup](https://docs.aws.amazon.com/forecast/latest/dg/API_UpdateDatasetGroup.html)
  * operation.
  *
+ *
+ * Amazon Forecast is no longer available to new customers. Existing customers of Amazon Forecast
+ * can continue to use the service as normal. [Learn
+ * more"](https://docs.aws.amazon.com/machine-learning/transition-your-amazon-forecast-usage-to-amazon-sagemaker-canvas/)
+ *
+ *
  * After creating a dataset group and adding datasets, you use the dataset group when you create a
  * predictor. For more information, see [Dataset
  * groups](https://docs.aws.amazon.com/forecast/latest/dg/howitworks-datasets-groups.html) .
@@ -59,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDatasetGroup(
   cdkObject: software.amazon.awscdk.services.forecast.CfnDatasetGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

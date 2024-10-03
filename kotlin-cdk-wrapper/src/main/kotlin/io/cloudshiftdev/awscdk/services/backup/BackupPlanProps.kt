@@ -139,7 +139,8 @@ public interface BackupPlanProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.backup.BackupPlanProps,
-  ) : CdkObject(cdkObject), BackupPlanProps {
+  ) : CdkObject(cdkObject),
+      BackupPlanProps {
     /**
      * The display name of the backup plan.
      *

@@ -301,7 +301,8 @@ public interface CloudFormationExecuteChangeSetActionProps : CommonAwsActionProp
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationExecuteChangeSetActionProps,
-  ) : CdkObject(cdkObject), CloudFormationExecuteChangeSetActionProps {
+  ) : CdkObject(cdkObject),
+      CloudFormationExecuteChangeSetActionProps {
     /**
      * The AWS account this Action is supposed to operate in.
      *

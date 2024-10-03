@@ -329,7 +329,8 @@ public interface CfnPluginProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.qbusiness.CfnPluginProps,
-  ) : CdkObject(cdkObject), CfnPluginProps {
+  ) : CdkObject(cdkObject),
+      CfnPluginProps {
     /**
      * The identifier of the application that will contain the plugin.
      *

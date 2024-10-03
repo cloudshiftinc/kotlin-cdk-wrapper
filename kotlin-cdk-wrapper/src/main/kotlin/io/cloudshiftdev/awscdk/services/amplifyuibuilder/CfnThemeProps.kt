@@ -222,7 +222,8 @@ public interface CfnThemeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnThemeProps,
-  ) : CdkObject(cdkObject), CfnThemeProps {
+  ) : CdkObject(cdkObject),
+      CfnThemeProps {
     /**
      * The unique ID for the Amplify app associated with the theme.
      *

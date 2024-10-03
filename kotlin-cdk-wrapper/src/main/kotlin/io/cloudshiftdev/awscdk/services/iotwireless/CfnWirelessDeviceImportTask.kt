@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWirelessDeviceImportTask(
   cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -502,7 +504,8 @@ public open class CfnWirelessDeviceImportTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask.SidewalkProperty,
-    ) : CdkObject(cdkObject), SidewalkProperty {
+    ) : CdkObject(cdkObject),
+        SidewalkProperty {
       /**
        * The CSV file contained in an S3 bucket that's used for adding devices to an import task.
        *

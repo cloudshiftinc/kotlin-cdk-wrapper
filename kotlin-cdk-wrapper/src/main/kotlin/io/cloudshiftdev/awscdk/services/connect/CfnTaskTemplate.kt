@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTaskTemplate(
   cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -765,7 +767,8 @@ public open class CfnTaskTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty,
-    ) : CdkObject(cdkObject), ConstraintsProperty {
+    ) : CdkObject(cdkObject),
+        ConstraintsProperty {
       /**
        * Lists the fields that are invisible to agents.
        *
@@ -910,7 +913,8 @@ public open class CfnTaskTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.DefaultFieldValueProperty,
-    ) : CdkObject(cdkObject), DefaultFieldValueProperty {
+    ) : CdkObject(cdkObject),
+        DefaultFieldValueProperty {
       /**
        * Default value for the field.
        *
@@ -998,7 +1002,8 @@ public open class CfnTaskTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldIdentifierProperty,
-    ) : CdkObject(cdkObject), FieldIdentifierProperty {
+    ) : CdkObject(cdkObject),
+        FieldIdentifierProperty {
       /**
        * The name of the task template field.
        *
@@ -1190,7 +1195,8 @@ public open class CfnTaskTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty,
-    ) : CdkObject(cdkObject), FieldProperty {
+    ) : CdkObject(cdkObject),
+        FieldProperty {
       /**
        * The description of the field.
        *
@@ -1326,7 +1332,8 @@ public open class CfnTaskTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty,
-    ) : CdkObject(cdkObject), InvisibleFieldInfoProperty {
+    ) : CdkObject(cdkObject),
+        InvisibleFieldInfoProperty {
       /**
        * Identifier of the invisible field.
        *
@@ -1437,7 +1444,8 @@ public open class CfnTaskTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty,
-    ) : CdkObject(cdkObject), ReadOnlyFieldInfoProperty {
+    ) : CdkObject(cdkObject),
+        ReadOnlyFieldInfoProperty {
       /**
        * Identifier of the read-only field.
        *
@@ -1548,7 +1556,8 @@ public open class CfnTaskTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty,
-    ) : CdkObject(cdkObject), RequiredFieldInfoProperty {
+    ) : CdkObject(cdkObject),
+        RequiredFieldInfoProperty {
       /**
        * The unique identifier for the field.
        *

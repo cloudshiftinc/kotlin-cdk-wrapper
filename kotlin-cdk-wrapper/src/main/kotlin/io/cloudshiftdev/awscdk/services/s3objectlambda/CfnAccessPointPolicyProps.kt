@@ -86,7 +86,8 @@ public interface CfnAccessPointPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicyProps,
-  ) : CdkObject(cdkObject), CfnAccessPointPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnAccessPointPolicyProps {
     /**
      * An access point with an attached AWS Lambda function used to access transformed data from an
      * Amazon S3 bucket.

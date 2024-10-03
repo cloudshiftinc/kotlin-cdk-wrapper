@@ -230,7 +230,8 @@ public interface CfnCapacityProviderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.CfnCapacityProviderProps,
-  ) : CdkObject(cdkObject), CfnCapacityProviderProps {
+  ) : CdkObject(cdkObject),
+      CfnCapacityProviderProps {
     /**
      * The Auto Scaling group settings for the capacity provider.
      *

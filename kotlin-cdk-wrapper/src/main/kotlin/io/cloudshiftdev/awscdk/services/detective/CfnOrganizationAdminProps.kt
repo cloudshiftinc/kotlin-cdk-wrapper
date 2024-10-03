@@ -64,7 +64,8 @@ public interface CfnOrganizationAdminProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.detective.CfnOrganizationAdminProps,
-  ) : CdkObject(cdkObject), CfnOrganizationAdminProps {
+  ) : CdkObject(cdkObject),
+      CfnOrganizationAdminProps {
     /**
      * The AWS account identifier of the account to designate as the Detective administrator account
      * for the organization.

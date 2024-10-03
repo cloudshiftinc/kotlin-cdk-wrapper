@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRetriever(
   cdkObject: software.amazon.awscdk.services.qbusiness.CfnRetriever,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -495,7 +497,8 @@ public open class CfnRetriever(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnRetriever.KendraIndexConfigurationProperty,
-    ) : CdkObject(cdkObject), KendraIndexConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        KendraIndexConfigurationProperty {
       /**
        * The identifier of the Amazon Kendra index.
        *
@@ -578,7 +581,8 @@ public open class CfnRetriever(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnRetriever.NativeIndexConfigurationProperty,
-    ) : CdkObject(cdkObject), NativeIndexConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NativeIndexConfigurationProperty {
       /**
        * The identifier for the Amazon Q Business index.
        *
@@ -764,7 +768,8 @@ public open class CfnRetriever(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnRetriever.RetrieverConfigurationProperty,
-    ) : CdkObject(cdkObject), RetrieverConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RetrieverConfigurationProperty {
       /**
        * Provides information on how the Amazon Kendra index used as a retriever for your Amazon Q
        * Business application is configured.

@@ -50,7 +50,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProject(
   cdkObject: software.amazon.awscdk.services.devicefarm.CfnProject,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -505,7 +507,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.devicefarm.CfnProject.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
       /**
        * A list of VPC security group IDs.
        *

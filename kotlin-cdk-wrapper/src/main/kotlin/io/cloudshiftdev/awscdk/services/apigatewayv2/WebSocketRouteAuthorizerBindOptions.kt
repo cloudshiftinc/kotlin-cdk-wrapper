@@ -80,7 +80,8 @@ public interface WebSocketRouteAuthorizerBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerBindOptions,
-  ) : CdkObject(cdkObject), WebSocketRouteAuthorizerBindOptions {
+  ) : CdkObject(cdkObject),
+      WebSocketRouteAuthorizerBindOptions {
     /**
      * The route to which the authorizer is being bound.
      */

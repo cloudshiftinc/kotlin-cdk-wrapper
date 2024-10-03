@@ -53,7 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSkill(
   cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -488,7 +489,8 @@ public open class CfnSkill(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty,
-    ) : CdkObject(cdkObject), AuthenticationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AuthenticationConfigurationProperty {
       /**
        * Client ID from Login with Amazon (LWA).
        *
@@ -595,7 +597,8 @@ public open class CfnSkill(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty,
-    ) : CdkObject(cdkObject), OverridesProperty {
+    ) : CdkObject(cdkObject),
+        OverridesProperty {
       /**
        * Overrides to apply to the skill manifest inside of the skill package.
        *
@@ -828,7 +831,8 @@ public open class CfnSkill(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty,
-    ) : CdkObject(cdkObject), SkillPackageProperty {
+    ) : CdkObject(cdkObject),
+        SkillPackageProperty {
       /**
        * Overrides to the skill package to apply when creating or updating the skill.
        *

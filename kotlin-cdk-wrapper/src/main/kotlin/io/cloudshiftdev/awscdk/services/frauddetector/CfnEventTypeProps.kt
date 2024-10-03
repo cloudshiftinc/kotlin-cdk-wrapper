@@ -302,7 +302,8 @@ public interface CfnEventTypeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventTypeProps,
-  ) : CdkObject(cdkObject), CfnEventTypeProps {
+  ) : CdkObject(cdkObject),
+      CfnEventTypeProps {
     /**
      * The event type description.
      *

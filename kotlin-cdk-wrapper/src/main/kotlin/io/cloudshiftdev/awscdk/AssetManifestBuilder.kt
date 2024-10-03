@@ -2,11 +2,11 @@
 
 package io.cloudshiftdev.awscdk
 
-import io.cloudshiftdev.awscdk.cloudassembly.schema.AssetManifestOptions
-import io.cloudshiftdev.awscdk.cloudassembly.schema.DockerImageDestination
-import io.cloudshiftdev.awscdk.cloudassembly.schema.DockerImageSource
-import io.cloudshiftdev.awscdk.cloudassembly.schema.FileDestination
-import io.cloudshiftdev.awscdk.cloudassembly.schema.FileSource
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.AssetManifestOptions
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.DockerImageDestination
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.DockerImageSource
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.FileDestination
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.FileSource
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.String
@@ -65,7 +65,7 @@ public open class AssetManifestBuilder(
    * @param dest 
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("4e1edb95420b1cc4bc59bd1462cbbeac5654f4c6b50d919d3e5a3e7b82595099")
+  @JvmName("54e5456fa066f79fbad9029e272e9bf9de8aad90e1195836eeb7243fb908e06d")
   public open fun addDockerImageAsset(
     stack: Stack,
     sourceHash: String,
@@ -104,7 +104,7 @@ public open class AssetManifestBuilder(
    * @param dest 
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("afa728084935ca1ca8ec5a2a0d7affe349e6fa27eac23ff1b496c72cee9e5a36")
+  @JvmName("72eafdc567a6181964439383b6bcd3ce562703282a903f7cc6a2231e57a363a5")
   public open fun addFileAsset(
     stack: Stack,
     sourceHash: String,
@@ -140,7 +140,7 @@ public open class AssetManifestBuilder(
    * @param target 
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("8b4071378ed8a6722e86a3ca17715f5b4c14db29188a7ef32d099c2276b7db74")
+  @JvmName("58c402a5954ad544e84d12adade7f63acaa16f1da034b40517699778b7c0cfc0")
   public open fun defaultAddDockerImageAsset(
     stack: Stack,
     asset: DockerImageAssetSource,
@@ -177,7 +177,7 @@ public open class AssetManifestBuilder(
    * @param target 
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("da70fe31f1f903fedb3877c6896aa4ef53c6bb6d46fdbda3b083aabd79164f34")
+  @JvmName("3af534afd81e127cca714111a29fd8dba3b9212966d3d315a30f50db18276d88")
   public open fun defaultAddFileAsset(
     stack: Stack,
     asset: FileAssetSource,
@@ -230,7 +230,7 @@ public open class AssetManifestBuilder(
    * @param dependencies
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("cbf9b00226266766a573f3d537da4f8f6df03d9cb32b6699f98aefcec180af75")
+  @JvmName("232b13ecbf611c0b0a19d1341a4d3b360e7053f02c66b171f602813eaf291858")
   public open fun emitManifest(
     stack: Stack,
     session: ISynthesisSession,

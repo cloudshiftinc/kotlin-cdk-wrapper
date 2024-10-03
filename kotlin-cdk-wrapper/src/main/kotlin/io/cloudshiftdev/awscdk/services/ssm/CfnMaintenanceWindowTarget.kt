@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMaintenanceWindowTarget(
   cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -491,7 +492,8 @@ public open class CfnMaintenanceWindowTarget(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget.TargetsProperty,
-    ) : CdkObject(cdkObject), TargetsProperty {
+    ) : CdkObject(cdkObject),
+        TargetsProperty {
       /**
        * User-defined criteria for sending commands that target managed nodes that meet the
        * criteria.

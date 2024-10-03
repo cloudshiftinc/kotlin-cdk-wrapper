@@ -486,7 +486,8 @@ public interface CfnScheduleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.scheduler.CfnScheduleProps,
-  ) : CdkObject(cdkObject), CfnScheduleProps {
+  ) : CdkObject(cdkObject),
+      CfnScheduleProps {
     /**
      * The description you specify for the schedule.
      *

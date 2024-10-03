@@ -96,7 +96,8 @@ public interface CnameInstanceBaseProps : BaseInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.CnameInstanceBaseProps,
-  ) : CdkObject(cdkObject), CnameInstanceBaseProps {
+  ) : CdkObject(cdkObject),
+      CnameInstanceBaseProps {
     /**
      * Custom attributes of the instance.
      *

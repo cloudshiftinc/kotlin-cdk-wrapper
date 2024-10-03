@@ -215,7 +215,8 @@ public interface ExtendedResolverProps : BaseResolverProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.ExtendedResolverProps,
-  ) : CdkObject(cdkObject), ExtendedResolverProps {
+  ) : CdkObject(cdkObject),
+      ExtendedResolverProps {
     /**
      * The caching configuration for this resolver.
      *

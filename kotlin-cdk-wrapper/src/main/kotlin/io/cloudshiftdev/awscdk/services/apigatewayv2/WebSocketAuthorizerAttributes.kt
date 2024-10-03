@@ -89,7 +89,8 @@ public interface WebSocketAuthorizerAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerAttributes,
-  ) : CdkObject(cdkObject), WebSocketAuthorizerAttributes {
+  ) : CdkObject(cdkObject),
+      WebSocketAuthorizerAttributes {
     /**
      * Id of the Authorizer.
      */

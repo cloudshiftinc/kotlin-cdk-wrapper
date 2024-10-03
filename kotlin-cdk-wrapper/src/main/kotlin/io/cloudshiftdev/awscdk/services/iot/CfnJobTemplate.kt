@@ -67,7 +67,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnJobTemplate(
   cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -853,7 +855,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty,
-    ) : CdkObject(cdkObject), AbortConfigProperty {
+    ) : CdkObject(cdkObject),
+        AbortConfigProperty {
       /**
        * The list of criteria that determine when and how to abort the job.
        *
@@ -1005,7 +1008,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.AbortCriteriaProperty,
-    ) : CdkObject(cdkObject), AbortCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        AbortCriteriaProperty {
       /**
        * The type of job action to take to initiate the job abort.
        *
@@ -1202,7 +1206,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.ExponentialRolloutRateProperty,
-    ) : CdkObject(cdkObject), ExponentialRolloutRateProperty {
+    ) : CdkObject(cdkObject),
+        ExponentialRolloutRateProperty {
       /**
        * The minimum number of things that will be notified of a pending job, per minute at the
        * start of job rollout.
@@ -1337,7 +1342,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty,
-    ) : CdkObject(cdkObject), JobExecutionsRetryConfigProperty {
+    ) : CdkObject(cdkObject),
+        JobExecutionsRetryConfigProperty {
       /**
        * The list of criteria that determines how many retries are allowed for each failure type for
        * a job.
@@ -1491,7 +1497,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty,
-    ) : CdkObject(cdkObject), JobExecutionsRolloutConfigProperty {
+    ) : CdkObject(cdkObject),
+        JobExecutionsRolloutConfigProperty {
       /**
        * The rate of increase for a job rollout.
        *
@@ -1606,7 +1613,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty,
-    ) : CdkObject(cdkObject), MaintenanceWindowProperty {
+    ) : CdkObject(cdkObject),
+        MaintenanceWindowProperty {
       /**
        * Displays the duration of the next maintenance window.
        *
@@ -1748,7 +1756,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty,
-    ) : CdkObject(cdkObject), PresignedUrlConfigProperty {
+    ) : CdkObject(cdkObject),
+        PresignedUrlConfigProperty {
       /**
        * How long (in seconds) pre-signed URLs are valid.
        *
@@ -1876,7 +1885,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty,
-    ) : CdkObject(cdkObject), RateIncreaseCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        RateIncreaseCriteriaProperty {
       /**
        * The threshold for number of notified things that will initiate the increase in rate of
        * rollout.
@@ -1985,7 +1995,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.RetryCriteriaProperty,
-    ) : CdkObject(cdkObject), RetryCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        RetryCriteriaProperty {
       /**
        * The type of job execution failures that can initiate a job retry.
        *
@@ -2091,7 +2102,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty,
-    ) : CdkObject(cdkObject), TimeoutConfigProperty {
+    ) : CdkObject(cdkObject),
+        TimeoutConfigProperty {
       /**
        * Specifies the amount of time, in minutes, this device has to finish execution of this job.
        *

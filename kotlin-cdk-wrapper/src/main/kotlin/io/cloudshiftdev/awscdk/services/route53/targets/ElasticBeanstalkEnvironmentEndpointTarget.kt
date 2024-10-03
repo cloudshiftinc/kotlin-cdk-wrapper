@@ -29,7 +29,8 @@ import kotlin.String
  */
 public open class ElasticBeanstalkEnvironmentEndpointTarget(
   cdkObject: software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget,
-) : CdkObject(cdkObject), IAliasRecordTarget {
+) : CdkObject(cdkObject),
+    IAliasRecordTarget {
   public constructor(environmentEndpoint: String) :
       this(software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget(environmentEndpoint)
   )

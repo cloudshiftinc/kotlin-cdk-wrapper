@@ -62,6 +62,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .username("username")
  * .build())
  * .buildSpec("buildSpec")
+ * .cacheConfig(CacheConfigProperty.builder()
+ * .type("type")
+ * .build())
  * .customHeaders("customHeaders")
  * .customRules(List.of(CustomRuleProperty.builder()
  * .source("source")
@@ -91,7 +94,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApp(
   cdkObject: software.amazon.awscdk.services.amplify.CfnApp,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -206,6 +211,33 @@ public open class CfnApp(
   public open fun buildSpec(`value`: String) {
     unwrap(this).setBuildSpec(`value`)
   }
+
+  /**
+   * The cache configuration for the Amplify app.
+   */
+  public open fun cacheConfig(): Any? = unwrap(this).getCacheConfig()
+
+  /**
+   * The cache configuration for the Amplify app.
+   */
+  public open fun cacheConfig(`value`: IResolvable) {
+    unwrap(this).setCacheConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The cache configuration for the Amplify app.
+   */
+  public open fun cacheConfig(`value`: CacheConfigProperty) {
+    unwrap(this).setCacheConfig(`value`.let(CacheConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * The cache configuration for the Amplify app.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f187e29782841bfc5ac88c2ec4036d6538eee77f7b0634a65170c391e0f0c8a7")
+  public open fun cacheConfig(`value`: CacheConfigProperty.Builder.() -> Unit): Unit =
+      cacheConfig(CacheConfigProperty(`value`))
 
   /**
    * The custom HTTP headers for an Amplify app.
@@ -494,6 +526,41 @@ public open class CfnApp(
     public fun buildSpec(buildSpec: String)
 
     /**
+     * The cache configuration for the Amplify app.
+     *
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-cacheconfig)
+     * @param cacheConfig The cache configuration for the Amplify app. 
+     */
+    public fun cacheConfig(cacheConfig: IResolvable)
+
+    /**
+     * The cache configuration for the Amplify app.
+     *
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-cacheconfig)
+     * @param cacheConfig The cache configuration for the Amplify app. 
+     */
+    public fun cacheConfig(cacheConfig: CacheConfigProperty)
+
+    /**
+     * The cache configuration for the Amplify app.
+     *
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-cacheconfig)
+     * @param cacheConfig The cache configuration for the Amplify app. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("521c6fc8926907c5eeb19f9119632538d1ab7beade283438a0e4e9300c2d5b59")
+    public fun cacheConfig(cacheConfig: CacheConfigProperty.Builder.() -> Unit)
+
+    /**
      * The custom HTTP headers for an Amplify app.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-customheaders)
@@ -640,6 +707,13 @@ public open class CfnApp(
      * app, set the platform type to `WEB_COMPUTE` . For an app requiring Amplify Hosting's original
      * SSR support only, set the platform type to `WEB_DYNAMIC` .
      *
+     * If you are deploying an SSG only app with Next.js version 14 or later, you must set the
+     * platform type to `WEB_COMPUTE` and set the artifacts `baseDirectory` to `.next` in the
+     * application's build settings. For an example of the build specification settings, see [Amplify
+     * build settings for a Next.js 14 SSG
+     * application](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-nextjs-app.html#build-setting-detection-ssg-14)
+     * in the *Amplify Hosting User Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-platform)
      * @param platform The platform for the Amplify app. 
      */
@@ -783,6 +857,46 @@ public open class CfnApp(
     override fun buildSpec(buildSpec: String) {
       cdkBuilder.buildSpec(buildSpec)
     }
+
+    /**
+     * The cache configuration for the Amplify app.
+     *
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-cacheconfig)
+     * @param cacheConfig The cache configuration for the Amplify app. 
+     */
+    override fun cacheConfig(cacheConfig: IResolvable) {
+      cdkBuilder.cacheConfig(cacheConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The cache configuration for the Amplify app.
+     *
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-cacheconfig)
+     * @param cacheConfig The cache configuration for the Amplify app. 
+     */
+    override fun cacheConfig(cacheConfig: CacheConfigProperty) {
+      cdkBuilder.cacheConfig(cacheConfig.let(CacheConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * The cache configuration for the Amplify app.
+     *
+     * If you don't specify the cache configuration `type` , Amplify uses the default
+     * `AMPLIFY_MANAGED` setting.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-cacheconfig)
+     * @param cacheConfig The cache configuration for the Amplify app. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("521c6fc8926907c5eeb19f9119632538d1ab7beade283438a0e4e9300c2d5b59")
+    override fun cacheConfig(cacheConfig: CacheConfigProperty.Builder.() -> Unit): Unit =
+        cacheConfig(CacheConfigProperty(cacheConfig))
 
     /**
      * The custom HTTP headers for an Amplify app.
@@ -953,6 +1067,13 @@ public open class CfnApp(
      * For a static app, set the platform type to `WEB` . For a dynamic server-side rendered (SSR)
      * app, set the platform type to `WEB_COMPUTE` . For an app requiring Amplify Hosting's original
      * SSR support only, set the platform type to `WEB_DYNAMIC` .
+     *
+     * If you are deploying an SSG only app with Next.js version 14 or later, you must set the
+     * platform type to `WEB_COMPUTE` and set the artifacts `baseDirectory` to `.next` in the
+     * application's build settings. For an example of the build specification settings, see [Amplify
+     * build settings for a Next.js 14 SSG
+     * application](https://docs.aws.amazon.com/amplify/latest/userguide/deploy-nextjs-app.html#build-setting-detection-ssg-14)
+     * in the *Amplify Hosting User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html#cfn-amplify-app-platform)
      * @param platform The platform for the Amplify app. 
@@ -1513,7 +1634,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplify.CfnApp.AutoBranchCreationConfigProperty,
-    ) : CdkObject(cdkObject), AutoBranchCreationConfigProperty {
+    ) : CdkObject(cdkObject),
+        AutoBranchCreationConfigProperty {
       /**
        * Automated branch creation glob patterns for the Amplify app.
        *
@@ -1751,7 +1873,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplify.CfnApp.BasicAuthConfigProperty,
-    ) : CdkObject(cdkObject), BasicAuthConfigProperty {
+    ) : CdkObject(cdkObject),
+        BasicAuthConfigProperty {
       /**
        * Enables basic authorization for the Amplify app's branches.
        *
@@ -1789,6 +1912,117 @@ public open class CfnApp(
           software.amazon.awscdk.services.amplify.CfnApp.BasicAuthConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.amplify.CfnApp.BasicAuthConfigProperty
+    }
+  }
+
+  /**
+   * Describes the cache configuration for an Amplify app.
+   *
+   * For more information about how Amplify applies an optimal cache configuration for your app
+   * based on the type of content that is being served, see [Managing cache
+   * configuration](https://docs.aws.amazon.com/amplify/latest/userguide/managing-cache-configuration)
+   * in the *Amplify User guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.amplify.*;
+   * CacheConfigProperty cacheConfigProperty = CacheConfigProperty.builder()
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-cacheconfig.html)
+   */
+  public interface CacheConfigProperty {
+    /**
+     * The type of cache configuration to use for an Amplify app.
+     *
+     * The `AMPLIFY_MANAGED` cache configuration automatically applies an optimized cache
+     * configuration for your app based on its platform, routing rules, and rewrite rules. This is the
+     * default setting.
+     *
+     * The `AMPLIFY_MANAGED_NO_COOKIES` cache configuration type is the same as `AMPLIFY_MANAGED` ,
+     * except that it excludes all cookies from the cache key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-cacheconfig.html#cfn-amplify-app-cacheconfig-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [CacheConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The type of cache configuration to use for an Amplify app.
+       * The `AMPLIFY_MANAGED` cache configuration automatically applies an optimized cache
+       * configuration for your app based on its platform, routing rules, and rewrite rules. This is
+       * the default setting.
+       *
+       * The `AMPLIFY_MANAGED_NO_COOKIES` cache configuration type is the same as `AMPLIFY_MANAGED`
+       * , except that it excludes all cookies from the cache key.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.amplify.CfnApp.CacheConfigProperty.Builder =
+          software.amazon.awscdk.services.amplify.CfnApp.CacheConfigProperty.builder()
+
+      /**
+       * @param type The type of cache configuration to use for an Amplify app.
+       * The `AMPLIFY_MANAGED` cache configuration automatically applies an optimized cache
+       * configuration for your app based on its platform, routing rules, and rewrite rules. This is
+       * the default setting.
+       *
+       * The `AMPLIFY_MANAGED_NO_COOKIES` cache configuration type is the same as `AMPLIFY_MANAGED`
+       * , except that it excludes all cookies from the cache key.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.amplify.CfnApp.CacheConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.amplify.CfnApp.CacheConfigProperty,
+    ) : CdkObject(cdkObject),
+        CacheConfigProperty {
+      /**
+       * The type of cache configuration to use for an Amplify app.
+       *
+       * The `AMPLIFY_MANAGED` cache configuration automatically applies an optimized cache
+       * configuration for your app based on its platform, routing rules, and rewrite rules. This is
+       * the default setting.
+       *
+       * The `AMPLIFY_MANAGED_NO_COOKIES` cache configuration type is the same as `AMPLIFY_MANAGED`
+       * , except that it excludes all cookies from the cache key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-cacheconfig.html#cfn-amplify-app-cacheconfig-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CacheConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnApp.CacheConfigProperty):
+          CacheConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CacheConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CacheConfigProperty):
+          software.amazon.awscdk.services.amplify.CfnApp.CacheConfigProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.amplify.CfnApp.CacheConfigProperty
     }
   }
 
@@ -1927,7 +2161,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty,
-    ) : CdkObject(cdkObject), CustomRuleProperty {
+    ) : CdkObject(cdkObject),
+        CustomRuleProperty {
       /**
        * The condition for a URL rewrite or redirect rule, such as a country code.
        *
@@ -2056,7 +2291,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty,
-    ) : CdkObject(cdkObject), EnvironmentVariableProperty {
+    ) : CdkObject(cdkObject),
+        EnvironmentVariableProperty {
       /**
        * The environment variable name.
        *

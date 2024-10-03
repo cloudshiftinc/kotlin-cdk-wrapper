@@ -126,7 +126,8 @@ public interface CommonAwsActionProps : CommonActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.CommonAwsActionProps,
-  ) : CdkObject(cdkObject), CommonAwsActionProps {
+  ) : CdkObject(cdkObject),
+      CommonAwsActionProps {
     /**
      * The physical, human-readable name of the Action.
      *

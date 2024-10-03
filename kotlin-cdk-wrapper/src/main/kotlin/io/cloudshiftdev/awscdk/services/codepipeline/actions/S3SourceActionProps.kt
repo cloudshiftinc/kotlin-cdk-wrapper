@@ -216,7 +216,8 @@ public interface S3SourceActionProps : CommonAwsActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.S3SourceActionProps,
-  ) : CdkObject(cdkObject), S3SourceActionProps {
+  ) : CdkObject(cdkObject),
+      S3SourceActionProps {
     /**
      * The physical, human-readable name of the Action.
      *

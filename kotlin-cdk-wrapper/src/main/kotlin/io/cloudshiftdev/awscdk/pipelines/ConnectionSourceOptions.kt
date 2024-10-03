@@ -172,7 +172,8 @@ public interface ConnectionSourceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.ConnectionSourceOptions,
-  ) : CdkObject(cdkObject), ConnectionSourceOptions {
+  ) : CdkObject(cdkObject),
+      ConnectionSourceOptions {
     /**
      * The action name used for this source in the CodePipeline.
      *

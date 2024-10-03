@@ -209,7 +209,8 @@ public interface EbsOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticsearch.EbsOptions,
-  ) : CdkObject(cdkObject), EbsOptions {
+  ) : CdkObject(cdkObject),
+      EbsOptions {
     /**
      * (deprecated) Specifies whether Amazon EBS volumes are attached to data nodes in the Amazon ES
      * domain.

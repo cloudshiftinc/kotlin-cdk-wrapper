@@ -314,7 +314,8 @@ public interface EcsBlueGreenDeploymentConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.EcsBlueGreenDeploymentConfig,
-  ) : CdkObject(cdkObject), EcsBlueGreenDeploymentConfig {
+  ) : CdkObject(cdkObject),
+      EcsBlueGreenDeploymentConfig {
     /**
      * The target group that will be associated with the 'blue' ECS task set during a blue-green
      * deployment.

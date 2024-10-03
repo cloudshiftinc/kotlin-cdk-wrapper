@@ -166,7 +166,8 @@ public interface CustomLambdaDeploymentConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfigProps,
-  ) : CdkObject(cdkObject), CustomLambdaDeploymentConfigProps {
+  ) : CdkObject(cdkObject),
+      CustomLambdaDeploymentConfigProps {
     /**
      * (deprecated) The verbatim name of the deployment config.
      *

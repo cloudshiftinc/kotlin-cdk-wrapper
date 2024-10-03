@@ -84,7 +84,8 @@ public interface CfnVPCDHCPOptionsAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociationProps,
-  ) : CdkObject(cdkObject), CfnVPCDHCPOptionsAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnVPCDHCPOptionsAssociationProps {
     /**
      * The ID of the DHCP options set, or `default` to associate no DHCP options with the VPC.
      *

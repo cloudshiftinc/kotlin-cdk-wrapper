@@ -121,7 +121,8 @@ public interface ConfigureNatOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.ConfigureNatOptions,
-  ) : CdkObject(cdkObject), ConfigureNatOptions {
+  ) : CdkObject(cdkObject),
+      ConfigureNatOptions {
     /**
      * The public subnets where the NAT providers need to be placed.
      */

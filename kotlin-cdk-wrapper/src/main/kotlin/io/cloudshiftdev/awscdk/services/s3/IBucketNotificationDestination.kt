@@ -24,7 +24,8 @@ public interface IBucketNotificationDestination {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.IBucketNotificationDestination,
-  ) : CdkObject(cdkObject), IBucketNotificationDestination {
+  ) : CdkObject(cdkObject),
+      IBucketNotificationDestination {
     /**
      * Registers this resource to receive notifications for the specified bucket.
      *

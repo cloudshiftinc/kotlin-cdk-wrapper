@@ -43,7 +43,8 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
  */
 public open class LambdaFunction(
   cdkObject: software.amazon.awscdk.services.events.targets.LambdaFunction,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.services.events.targets.LambdaFunction(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )

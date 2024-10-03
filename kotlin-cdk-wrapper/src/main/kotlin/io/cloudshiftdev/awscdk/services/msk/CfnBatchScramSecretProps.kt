@@ -89,7 +89,8 @@ public interface CfnBatchScramSecretProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.msk.CfnBatchScramSecretProps,
-  ) : CdkObject(cdkObject), CfnBatchScramSecretProps {
+  ) : CdkObject(cdkObject),
+      CfnBatchScramSecretProps {
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html#cfn-msk-batchscramsecret-clusterarn)
      */

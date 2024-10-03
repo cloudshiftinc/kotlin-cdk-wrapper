@@ -31,7 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResolverConfig(
   cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverConfig,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

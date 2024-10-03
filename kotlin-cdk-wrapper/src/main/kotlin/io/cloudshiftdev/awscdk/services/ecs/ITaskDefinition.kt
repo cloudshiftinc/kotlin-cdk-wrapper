@@ -60,7 +60,8 @@ public interface ITaskDefinition : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ITaskDefinition,
-  ) : CdkObject(cdkObject), ITaskDefinition {
+  ) : CdkObject(cdkObject),
+      ITaskDefinition {
     /**
      * Apply the given removal policy to this resource.
      *

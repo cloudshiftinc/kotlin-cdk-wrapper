@@ -24,7 +24,8 @@ public interface ICfnRuleConditionExpression : ICfnConditionExpression {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ICfnRuleConditionExpression,
-  ) : CdkObject(cdkObject), ICfnRuleConditionExpression {
+  ) : CdkObject(cdkObject),
+      ICfnRuleConditionExpression {
     /**
      * The creation stack of this resolvable which will be appended to errors thrown during
      * resolution.

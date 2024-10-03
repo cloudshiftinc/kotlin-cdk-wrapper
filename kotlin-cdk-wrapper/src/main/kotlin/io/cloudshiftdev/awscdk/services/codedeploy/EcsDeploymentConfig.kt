@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EcsDeploymentConfig(
   cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig,
-) : BaseDeploymentConfig(cdkObject), IEcsDeploymentConfig {
+) : BaseDeploymentConfig(cdkObject),
+    IEcsDeploymentConfig {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

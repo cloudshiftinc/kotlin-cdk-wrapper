@@ -256,7 +256,8 @@ public interface WebSocketRouteIntegrationConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig,
-  ) : CdkObject(cdkObject), WebSocketRouteIntegrationConfig {
+  ) : CdkObject(cdkObject),
+      WebSocketRouteIntegrationConfig {
     /**
      * Specifies how to handle response payload content type conversions.
      *

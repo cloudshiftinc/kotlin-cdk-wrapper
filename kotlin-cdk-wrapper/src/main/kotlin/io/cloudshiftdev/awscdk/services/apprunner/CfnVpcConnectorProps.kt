@@ -236,7 +236,8 @@ public interface CfnVpcConnectorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcConnectorProps,
-  ) : CdkObject(cdkObject), CfnVpcConnectorProps {
+  ) : CdkObject(cdkObject),
+      CfnVpcConnectorProps {
     /**
      * A list of IDs of security groups that App Runner should use for access to AWS resources under
      * the specified subnets.

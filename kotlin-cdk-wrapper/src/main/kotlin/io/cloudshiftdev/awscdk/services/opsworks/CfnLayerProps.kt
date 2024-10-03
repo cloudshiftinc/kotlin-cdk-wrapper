@@ -855,7 +855,8 @@ public interface CfnLayerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opsworks.CfnLayerProps,
-  ) : CdkObject(cdkObject), CfnLayerProps {
+  ) : CdkObject(cdkObject),
+      CfnLayerProps {
     /**
      * One or more user-defined key-value pairs to be added to the stack attributes.
      *

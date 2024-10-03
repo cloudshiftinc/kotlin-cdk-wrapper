@@ -26,7 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class KeyPair(
   cdkObject: software.amazon.awscdk.services.ec2.KeyPair,
-) : Resource(cdkObject), IKeyPair {
+) : Resource(cdkObject),
+    IKeyPair {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.KeyPair(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

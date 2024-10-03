@@ -29,7 +29,8 @@ public interface IEventDestination {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.IEventDestination,
-  ) : CdkObject(cdkObject), IEventDestination {
+  ) : CdkObject(cdkObject),
+      IEventDestination {
     /**
      * The URI of the extension event destination.
      */

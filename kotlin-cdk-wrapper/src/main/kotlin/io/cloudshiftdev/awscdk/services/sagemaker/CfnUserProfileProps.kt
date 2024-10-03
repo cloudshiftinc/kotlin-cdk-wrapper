@@ -34,6 +34,14 @@ import kotlin.jvm.JvmName
  * .build()))
  * .userSettings(UserSettingsProperty.builder()
  * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+ * .appLifecycleManagement(AppLifecycleManagementProperty.builder()
+ * .idleSettings(IdleSettingsProperty.builder()
+ * .idleTimeoutInMinutes(123)
+ * .lifecycleManagement("lifecycleManagement")
+ * .maxIdleTimeoutInMinutes(123)
+ * .minIdleTimeoutInMinutes(123)
+ * .build())
+ * .build())
  * .customImages(List.of(CustomImageProperty.builder()
  * .appImageConfigName("appImageConfigName")
  * .imageName("imageName")
@@ -42,6 +50,7 @@ import kotlin.jvm.JvmName
  * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
@@ -61,6 +70,14 @@ import kotlin.jvm.JvmName
  * .defaultLandingUri("defaultLandingUri")
  * .executionRole("executionRole")
  * .jupyterLabAppSettings(JupyterLabAppSettingsProperty.builder()
+ * .appLifecycleManagement(AppLifecycleManagementProperty.builder()
+ * .idleSettings(IdleSettingsProperty.builder()
+ * .idleTimeoutInMinutes(123)
+ * .lifecycleManagement("lifecycleManagement")
+ * .maxIdleTimeoutInMinutes(123)
+ * .minIdleTimeoutInMinutes(123)
+ * .build())
+ * .build())
  * .codeRepositories(List.of(CodeRepositoryProperty.builder()
  * .repositoryUrl("repositoryUrl")
  * .build()))
@@ -72,6 +89,7 @@ import kotlin.jvm.JvmName
  * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
@@ -80,9 +98,11 @@ import kotlin.jvm.JvmName
  * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
  * .build())
  * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
  * .customImages(List.of(CustomImageProperty.builder()
@@ -93,9 +113,11 @@ import kotlin.jvm.JvmName
  * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
  * .build())
  * .rStudioServerProAppSettings(RStudioServerProAppSettingsProperty.builder()
  * .accessStatus("accessStatus")
@@ -114,6 +136,10 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .studioWebPortal("studioWebPortal")
+ * .studioWebPortalSettings(StudioWebPortalSettingsProperty.builder()
+ * .hiddenAppTypes(List.of("hiddenAppTypes"))
+ * .hiddenMlTools(List.of("hiddenMlTools"))
+ * .build())
  * .build())
  * .build();
  * ```
@@ -343,7 +369,8 @@ public interface CfnUserProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfileProps,
-  ) : CdkObject(cdkObject), CfnUserProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnUserProfileProps {
     /**
      * The domain ID.
      *

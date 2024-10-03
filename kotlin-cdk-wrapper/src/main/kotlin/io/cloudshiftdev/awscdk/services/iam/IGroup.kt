@@ -30,7 +30,8 @@ public interface IGroup : IIdentity {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IGroup,
-  ) : CdkObject(cdkObject), IGroup {
+  ) : CdkObject(cdkObject),
+      IGroup {
     /**
      * Attaches a managed policy to this principal.
      *

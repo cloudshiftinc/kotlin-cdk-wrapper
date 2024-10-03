@@ -102,7 +102,8 @@ public interface CfnSchemaVersionMetadataProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersionMetadataProps,
-  ) : CdkObject(cdkObject), CfnSchemaVersionMetadataProps {
+  ) : CdkObject(cdkObject),
+      CfnSchemaVersionMetadataProps {
     /**
      * A metadata key in a key-value pair for metadata.
      *

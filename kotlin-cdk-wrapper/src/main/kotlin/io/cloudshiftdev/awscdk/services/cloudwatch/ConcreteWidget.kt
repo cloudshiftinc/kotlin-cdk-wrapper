@@ -17,7 +17,8 @@ import kotlin.collections.Map
  */
 public abstract class ConcreteWidget(
   cdkObject: software.amazon.awscdk.services.cloudwatch.ConcreteWidget,
-) : CdkObject(cdkObject), IWidget {
+) : CdkObject(cdkObject),
+    IWidget {
   /**
    * The amount of vertical grid units the widget will take up.
    */

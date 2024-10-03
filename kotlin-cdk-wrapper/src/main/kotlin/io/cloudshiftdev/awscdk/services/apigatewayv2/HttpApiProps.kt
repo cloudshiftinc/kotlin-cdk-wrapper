@@ -111,6 +111,16 @@ public interface HttpApiProps {
   public fun disableExecuteApiEndpoint(): Boolean? = unwrap(this).getDisableExecuteApiEndpoint()
 
   /**
+   * Whether to set the default route selection expression for the API.
+   *
+   * When enabled, "${request.method} ${request.path}" is set as the default route selection
+   * expression.
+   *
+   * Default: false
+   */
+  public fun routeSelectionExpression(): Boolean? = unwrap(this).getRouteSelectionExpression()
+
+  /**
    * A builder for [HttpApiProps]
    */
   @CdkDslMarker
@@ -190,6 +200,14 @@ public interface HttpApiProps {
      * this if you would like clients to use your custom domain name.
      */
     public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean)
+
+    /**
+     * @param routeSelectionExpression Whether to set the default route selection expression for the
+     * API.
+     * When enabled, "${request.method} ${request.path}" is set as the default route selection
+     * expression.
+     */
+    public fun routeSelectionExpression(routeSelectionExpression: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -294,13 +312,24 @@ public interface HttpApiProps {
       cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint)
     }
 
+    /**
+     * @param routeSelectionExpression Whether to set the default route selection expression for the
+     * API.
+     * When enabled, "${request.method} ${request.path}" is set as the default route selection
+     * expression.
+     */
+    override fun routeSelectionExpression(routeSelectionExpression: Boolean) {
+      cdkBuilder.routeSelectionExpression(routeSelectionExpression)
+    }
+
     public fun build(): software.amazon.awscdk.services.apigatewayv2.HttpApiProps =
         cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApiProps,
-  ) : CdkObject(cdkObject), HttpApiProps {
+  ) : CdkObject(cdkObject),
+      HttpApiProps {
     /**
      * Name for the HTTP API resource.
      *
@@ -378,6 +407,16 @@ public interface HttpApiProps {
      * Default: false execute-api endpoint enabled.
      */
     override fun disableExecuteApiEndpoint(): Boolean? = unwrap(this).getDisableExecuteApiEndpoint()
+
+    /**
+     * Whether to set the default route selection expression for the API.
+     *
+     * When enabled, "${request.method} ${request.path}" is set as the default route selection
+     * expression.
+     *
+     * Default: false
+     */
+    override fun routeSelectionExpression(): Boolean? = unwrap(this).getRouteSelectionExpression()
   }
 
   public companion object {

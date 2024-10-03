@@ -22,7 +22,8 @@ public interface ILogStream : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.ILogStream,
-  ) : CdkObject(cdkObject), ILogStream {
+  ) : CdkObject(cdkObject),
+      ILogStream {
     /**
      * Apply the given removal policy to this resource.
      *

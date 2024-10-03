@@ -58,7 +58,8 @@ public interface FindStateOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.FindStateOptions,
-  ) : CdkObject(cdkObject), FindStateOptions {
+  ) : CdkObject(cdkObject),
+      FindStateOptions {
     /**
      * Whether or not to follow error-handling transitions.
      *

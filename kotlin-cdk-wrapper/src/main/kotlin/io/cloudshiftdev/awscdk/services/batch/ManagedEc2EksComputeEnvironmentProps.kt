@@ -740,7 +740,8 @@ public interface ManagedEc2EksComputeEnvironmentProps : ManagedComputeEnvironmen
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironmentProps,
-  ) : CdkObject(cdkObject), ManagedEc2EksComputeEnvironmentProps {
+  ) : CdkObject(cdkObject),
+      ManagedEc2EksComputeEnvironmentProps {
     /**
      * The allocation strategy to use if not enough instances of the best fitting instance type can
      * be allocated.

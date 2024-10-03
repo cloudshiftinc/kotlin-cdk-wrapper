@@ -64,7 +64,8 @@ public interface IPlacementGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IPlacementGroup,
-  ) : CdkObject(cdkObject), IPlacementGroup {
+  ) : CdkObject(cdkObject),
+      IPlacementGroup {
     /**
      * Apply the given removal policy to this resource.
      *

@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplicationInstance(
   cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -602,7 +604,8 @@ public open class CfnApplicationInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestOverridesPayloadProperty,
-    ) : CdkObject(cdkObject), ManifestOverridesPayloadProperty {
+    ) : CdkObject(cdkObject),
+        ManifestOverridesPayloadProperty {
       /**
        * The overrides document.
        *
@@ -688,7 +691,8 @@ public open class CfnApplicationInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestPayloadProperty,
-    ) : CdkObject(cdkObject), ManifestPayloadProperty {
+    ) : CdkObject(cdkObject),
+        ManifestPayloadProperty {
       /**
        * The application manifest.
        *

@@ -84,7 +84,8 @@ public interface IBuildImage {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.IBuildImage,
-  ) : CdkObject(cdkObject), IBuildImage {
+  ) : CdkObject(cdkObject),
+      IBuildImage {
     /**
      * The default `ComputeType` to use with this image, if one was not specified in
      * `BuildEnvironment#computeType` explicitly.

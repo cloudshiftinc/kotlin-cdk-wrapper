@@ -432,7 +432,8 @@ public interface CfnChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannelProps,
-  ) : CdkObject(cdkObject), CfnChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnChannelProps {
     /**
      * The list of audiences defined in channel.
      *

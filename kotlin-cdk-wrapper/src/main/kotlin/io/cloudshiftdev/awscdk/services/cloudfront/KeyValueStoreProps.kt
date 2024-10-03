@@ -110,7 +110,8 @@ public interface KeyValueStoreProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.KeyValueStoreProps,
-  ) : CdkObject(cdkObject), KeyValueStoreProps {
+  ) : CdkObject(cdkObject),
+      KeyValueStoreProps {
     /**
      * A comment for the Key Value Store.
      *

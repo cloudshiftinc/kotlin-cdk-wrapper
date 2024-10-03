@@ -22,7 +22,8 @@ public interface IFragmentConcatenator {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IFragmentConcatenator,
-  ) : CdkObject(cdkObject), IFragmentConcatenator {
+  ) : CdkObject(cdkObject),
+      IFragmentConcatenator {
     /**
      * Join the fragment on the left and on the right.
      *

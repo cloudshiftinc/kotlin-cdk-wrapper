@@ -207,7 +207,8 @@ public interface DatabaseClusterAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.DatabaseClusterAttributes,
-  ) : CdkObject(cdkObject), DatabaseClusterAttributes {
+  ) : CdkObject(cdkObject),
+      DatabaseClusterAttributes {
     /**
      * Cluster endpoint address.
      *

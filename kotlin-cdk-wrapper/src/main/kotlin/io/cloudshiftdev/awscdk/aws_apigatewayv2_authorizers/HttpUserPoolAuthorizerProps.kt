@@ -151,7 +151,8 @@ public interface HttpUserPoolAuthorizerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizerProps,
-  ) : CdkObject(cdkObject), HttpUserPoolAuthorizerProps {
+  ) : CdkObject(cdkObject),
+      HttpUserPoolAuthorizerProps {
     /**
      * Friendly name of the authorizer.
      *

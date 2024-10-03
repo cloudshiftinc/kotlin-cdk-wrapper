@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGraph(
   cdkObject: software.amazon.awscdk.services.neptunegraph.CfnGraph,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -675,7 +677,8 @@ public open class CfnGraph(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.neptunegraph.CfnGraph.VectorSearchConfigurationProperty,
-    ) : CdkObject(cdkObject), VectorSearchConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        VectorSearchConfigurationProperty {
       /**
        * The number of dimensions.
        *

@@ -31,7 +31,8 @@ import kotlin.jvm.JvmName
  */
 public open class HttpIamAuthorizer(
   cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer,
-) : CdkObject(cdkObject), IHttpRouteAuthorizer {
+) : CdkObject(cdkObject),
+    IHttpRouteAuthorizer {
   public constructor() :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer()
   )

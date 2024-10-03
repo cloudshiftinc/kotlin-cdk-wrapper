@@ -131,7 +131,8 @@ public interface CfnGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.synthetics.CfnGroupProps,
-  ) : CdkObject(cdkObject), CfnGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnGroupProps {
     /**
      * A name for the group. It can include any Unicode characters.
      *

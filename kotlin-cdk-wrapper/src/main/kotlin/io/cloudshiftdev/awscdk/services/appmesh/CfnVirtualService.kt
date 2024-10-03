@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVirtualService(
   cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -495,7 +497,8 @@ public open class CfnVirtualService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty,
-    ) : CdkObject(cdkObject), VirtualNodeServiceProviderProperty {
+    ) : CdkObject(cdkObject),
+        VirtualNodeServiceProviderProperty {
       /**
        * The name of the virtual node that is acting as a service provider.
        *
@@ -581,7 +584,8 @@ public open class CfnVirtualService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualRouterServiceProviderProperty,
-    ) : CdkObject(cdkObject), VirtualRouterServiceProviderProperty {
+    ) : CdkObject(cdkObject),
+        VirtualRouterServiceProviderProperty {
       /**
        * The name of the virtual router that is acting as a service provider.
        *
@@ -745,7 +749,8 @@ public open class CfnVirtualService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceProviderProperty,
-    ) : CdkObject(cdkObject), VirtualServiceProviderProperty {
+    ) : CdkObject(cdkObject),
+        VirtualServiceProviderProperty {
       /**
        * The virtual node associated with a virtual service.
        *
@@ -876,7 +881,8 @@ public open class CfnVirtualService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty,
-    ) : CdkObject(cdkObject), VirtualServiceSpecProperty {
+    ) : CdkObject(cdkObject),
+        VirtualServiceSpecProperty {
       /**
        * The App Mesh object that is acting as the provider for a virtual service.
        *

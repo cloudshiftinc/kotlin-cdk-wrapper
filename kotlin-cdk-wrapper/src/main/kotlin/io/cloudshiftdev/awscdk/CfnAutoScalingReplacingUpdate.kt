@@ -75,7 +75,8 @@ public interface CfnAutoScalingReplacingUpdate {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnAutoScalingReplacingUpdate,
-  ) : CdkObject(cdkObject), CfnAutoScalingReplacingUpdate {
+  ) : CdkObject(cdkObject),
+      CfnAutoScalingReplacingUpdate {
     /**
      *
      */

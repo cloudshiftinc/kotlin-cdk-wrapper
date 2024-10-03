@@ -51,7 +51,8 @@ public interface IServerDeploymentGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.IServerDeploymentGroup,
-  ) : CdkObject(cdkObject), IServerDeploymentGroup {
+  ) : CdkObject(cdkObject),
+      IServerDeploymentGroup {
     /**
      *
      */

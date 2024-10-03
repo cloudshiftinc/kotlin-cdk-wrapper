@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPublicKey(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKey,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -408,7 +409,8 @@ public open class CfnPublicKey(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKey.PublicKeyConfigProperty,
-    ) : CdkObject(cdkObject), PublicKeyConfigProperty {
+    ) : CdkObject(cdkObject),
+        PublicKeyConfigProperty {
       /**
        * A string included in the request to help make sure that the request can't be replayed.
        *

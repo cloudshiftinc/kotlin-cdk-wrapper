@@ -62,7 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApiDestination(
   cdkObject: software.amazon.awscdk.services.events.CfnApiDestination,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

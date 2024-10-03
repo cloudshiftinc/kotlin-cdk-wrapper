@@ -19,7 +19,8 @@ public interface IAnyProducer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IAnyProducer,
-  ) : CdkObject(cdkObject), IAnyProducer {
+  ) : CdkObject(cdkObject),
+      IAnyProducer {
     /**
      * Produce the value.
      *

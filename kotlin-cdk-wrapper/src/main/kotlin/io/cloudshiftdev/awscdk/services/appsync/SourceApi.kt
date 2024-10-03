@@ -95,7 +95,8 @@ public interface SourceApi {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.SourceApi,
-  ) : CdkObject(cdkObject), SourceApi {
+  ) : CdkObject(cdkObject),
+      SourceApi {
     /**
      * Description of the Source API asssociation.
      */

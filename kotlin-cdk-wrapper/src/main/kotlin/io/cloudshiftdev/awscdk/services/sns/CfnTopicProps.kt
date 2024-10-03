@@ -56,26 +56,26 @@ import kotlin.collections.List
  */
 public interface CfnTopicProps {
   /**
-   * The archive policy determines the number of days Amazon SNS retains messages.
+   * The `ArchivePolicy` determines the number of days Amazon SNS retains messages in FIFO topics.
    *
-   * You can set a retention period from 1 to 365 days.
+   * You can set a retention period ranging from 1 to 365 days. This property is only applicable to
+   * FIFO topics; attempting to use it with standard topics will result in a creation failure.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-archivepolicy)
    */
   public fun archivePolicy(): Any? = unwrap(this).getArchivePolicy()
 
   /**
-   * Enables content-based deduplication for FIFO topics.
+   * `ContentBasedDeduplication` enables deduplication of messages based on their content for FIFO
+   * topics.
    *
-   * * By default, `ContentBasedDeduplication` is set to `false` . If you create a FIFO topic and
-   * this attribute is `false` , you must specify a value for the `MessageDeduplicationId` parameter
-   * for the [Publish](https://docs.aws.amazon.com/sns/latest/api/API_Publish.html) action.
-   * * When you set `ContentBasedDeduplication` to `true` , Amazon SNS uses a SHA-256 hash to
-   * generate the `MessageDeduplicationId` using the body of the message (but not the attributes of the
-   * message).
-   *
-   * (Optional) To override the generated value, you can specify a value for the the
-   * `MessageDeduplicationId` parameter for the `Publish` action.
+   * By default, this property is set to false. If you create a FIFO topic with
+   * `ContentBasedDeduplication` set to false, you must provide a `MessageDeduplicationId` for each
+   * `Publish` action. When set to true, Amazon SNS automatically generates a `MessageDeduplicationId`
+   * using a SHA-256 hash of the message body (excluding message attributes). You can optionally
+   * override this generated value by specifying a `MessageDeduplicationId` in the `Publish` action.
+   * Note that this property only applies to FIFO topics; using it with standard topics will cause the
+   * creation to fail.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-contentbaseddeduplication)
    */
@@ -219,37 +219,36 @@ public interface CfnTopicProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param archivePolicy The archive policy determines the number of days Amazon SNS retains
-     * messages.
-     * You can set a retention period from 1 to 365 days.
+     * @param archivePolicy The `ArchivePolicy` determines the number of days Amazon SNS retains
+     * messages in FIFO topics.
+     * You can set a retention period ranging from 1 to 365 days. This property is only applicable
+     * to FIFO topics; attempting to use it with standard topics will result in a creation failure.
      */
     public fun archivePolicy(archivePolicy: Any)
 
     /**
-     * @param contentBasedDeduplication Enables content-based deduplication for FIFO topics.
-     * * By default, `ContentBasedDeduplication` is set to `false` . If you create a FIFO topic and
-     * this attribute is `false` , you must specify a value for the `MessageDeduplicationId` parameter
-     * for the [Publish](https://docs.aws.amazon.com/sns/latest/api/API_Publish.html) action.
-     * * When you set `ContentBasedDeduplication` to `true` , Amazon SNS uses a SHA-256 hash to
-     * generate the `MessageDeduplicationId` using the body of the message (but not the attributes of
-     * the message).
-     *
-     * (Optional) To override the generated value, you can specify a value for the the
-     * `MessageDeduplicationId` parameter for the `Publish` action.
+     * @param contentBasedDeduplication `ContentBasedDeduplication` enables deduplication of
+     * messages based on their content for FIFO topics.
+     * By default, this property is set to false. If you create a FIFO topic with
+     * `ContentBasedDeduplication` set to false, you must provide a `MessageDeduplicationId` for each
+     * `Publish` action. When set to true, Amazon SNS automatically generates a
+     * `MessageDeduplicationId` using a SHA-256 hash of the message body (excluding message
+     * attributes). You can optionally override this generated value by specifying a
+     * `MessageDeduplicationId` in the `Publish` action. Note that this property only applies to FIFO
+     * topics; using it with standard topics will cause the creation to fail.
      */
     public fun contentBasedDeduplication(contentBasedDeduplication: Boolean)
 
     /**
-     * @param contentBasedDeduplication Enables content-based deduplication for FIFO topics.
-     * * By default, `ContentBasedDeduplication` is set to `false` . If you create a FIFO topic and
-     * this attribute is `false` , you must specify a value for the `MessageDeduplicationId` parameter
-     * for the [Publish](https://docs.aws.amazon.com/sns/latest/api/API_Publish.html) action.
-     * * When you set `ContentBasedDeduplication` to `true` , Amazon SNS uses a SHA-256 hash to
-     * generate the `MessageDeduplicationId` using the body of the message (but not the attributes of
-     * the message).
-     *
-     * (Optional) To override the generated value, you can specify a value for the the
-     * `MessageDeduplicationId` parameter for the `Publish` action.
+     * @param contentBasedDeduplication `ContentBasedDeduplication` enables deduplication of
+     * messages based on their content for FIFO topics.
+     * By default, this property is set to false. If you create a FIFO topic with
+     * `ContentBasedDeduplication` set to false, you must provide a `MessageDeduplicationId` for each
+     * `Publish` action. When set to true, Amazon SNS automatically generates a
+     * `MessageDeduplicationId` using a SHA-256 hash of the message body (excluding message
+     * attributes). You can optionally override this generated value by specifying a
+     * `MessageDeduplicationId` in the `Publish` action. Note that this property only applies to FIFO
+     * topics; using it with standard topics will cause the creation to fail.
      */
     public fun contentBasedDeduplication(contentBasedDeduplication: IResolvable)
 
@@ -420,41 +419,40 @@ public interface CfnTopicProps {
         software.amazon.awscdk.services.sns.CfnTopicProps.builder()
 
     /**
-     * @param archivePolicy The archive policy determines the number of days Amazon SNS retains
-     * messages.
-     * You can set a retention period from 1 to 365 days.
+     * @param archivePolicy The `ArchivePolicy` determines the number of days Amazon SNS retains
+     * messages in FIFO topics.
+     * You can set a retention period ranging from 1 to 365 days. This property is only applicable
+     * to FIFO topics; attempting to use it with standard topics will result in a creation failure.
      */
     override fun archivePolicy(archivePolicy: Any) {
       cdkBuilder.archivePolicy(archivePolicy)
     }
 
     /**
-     * @param contentBasedDeduplication Enables content-based deduplication for FIFO topics.
-     * * By default, `ContentBasedDeduplication` is set to `false` . If you create a FIFO topic and
-     * this attribute is `false` , you must specify a value for the `MessageDeduplicationId` parameter
-     * for the [Publish](https://docs.aws.amazon.com/sns/latest/api/API_Publish.html) action.
-     * * When you set `ContentBasedDeduplication` to `true` , Amazon SNS uses a SHA-256 hash to
-     * generate the `MessageDeduplicationId` using the body of the message (but not the attributes of
-     * the message).
-     *
-     * (Optional) To override the generated value, you can specify a value for the the
-     * `MessageDeduplicationId` parameter for the `Publish` action.
+     * @param contentBasedDeduplication `ContentBasedDeduplication` enables deduplication of
+     * messages based on their content for FIFO topics.
+     * By default, this property is set to false. If you create a FIFO topic with
+     * `ContentBasedDeduplication` set to false, you must provide a `MessageDeduplicationId` for each
+     * `Publish` action. When set to true, Amazon SNS automatically generates a
+     * `MessageDeduplicationId` using a SHA-256 hash of the message body (excluding message
+     * attributes). You can optionally override this generated value by specifying a
+     * `MessageDeduplicationId` in the `Publish` action. Note that this property only applies to FIFO
+     * topics; using it with standard topics will cause the creation to fail.
      */
     override fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
       cdkBuilder.contentBasedDeduplication(contentBasedDeduplication)
     }
 
     /**
-     * @param contentBasedDeduplication Enables content-based deduplication for FIFO topics.
-     * * By default, `ContentBasedDeduplication` is set to `false` . If you create a FIFO topic and
-     * this attribute is `false` , you must specify a value for the `MessageDeduplicationId` parameter
-     * for the [Publish](https://docs.aws.amazon.com/sns/latest/api/API_Publish.html) action.
-     * * When you set `ContentBasedDeduplication` to `true` , Amazon SNS uses a SHA-256 hash to
-     * generate the `MessageDeduplicationId` using the body of the message (but not the attributes of
-     * the message).
-     *
-     * (Optional) To override the generated value, you can specify a value for the the
-     * `MessageDeduplicationId` parameter for the `Publish` action.
+     * @param contentBasedDeduplication `ContentBasedDeduplication` enables deduplication of
+     * messages based on their content for FIFO topics.
+     * By default, this property is set to false. If you create a FIFO topic with
+     * `ContentBasedDeduplication` set to false, you must provide a `MessageDeduplicationId` for each
+     * `Publish` action. When set to true, Amazon SNS automatically generates a
+     * `MessageDeduplicationId` using a SHA-256 hash of the message body (excluding message
+     * attributes). You can optionally override this generated value by specifying a
+     * `MessageDeduplicationId` in the `Publish` action. Note that this property only applies to FIFO
+     * topics; using it with standard topics will cause the creation to fail.
      */
     override fun contentBasedDeduplication(contentBasedDeduplication: IResolvable) {
       cdkBuilder.contentBasedDeduplication(contentBasedDeduplication.let(IResolvable.Companion::unwrap))
@@ -653,28 +651,29 @@ public interface CfnTopicProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.CfnTopicProps,
-  ) : CdkObject(cdkObject), CfnTopicProps {
+  ) : CdkObject(cdkObject),
+      CfnTopicProps {
     /**
-     * The archive policy determines the number of days Amazon SNS retains messages.
+     * The `ArchivePolicy` determines the number of days Amazon SNS retains messages in FIFO topics.
      *
-     * You can set a retention period from 1 to 365 days.
+     * You can set a retention period ranging from 1 to 365 days. This property is only applicable
+     * to FIFO topics; attempting to use it with standard topics will result in a creation failure.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-archivepolicy)
      */
     override fun archivePolicy(): Any? = unwrap(this).getArchivePolicy()
 
     /**
-     * Enables content-based deduplication for FIFO topics.
+     * `ContentBasedDeduplication` enables deduplication of messages based on their content for FIFO
+     * topics.
      *
-     * * By default, `ContentBasedDeduplication` is set to `false` . If you create a FIFO topic and
-     * this attribute is `false` , you must specify a value for the `MessageDeduplicationId` parameter
-     * for the [Publish](https://docs.aws.amazon.com/sns/latest/api/API_Publish.html) action.
-     * * When you set `ContentBasedDeduplication` to `true` , Amazon SNS uses a SHA-256 hash to
-     * generate the `MessageDeduplicationId` using the body of the message (but not the attributes of
-     * the message).
-     *
-     * (Optional) To override the generated value, you can specify a value for the the
-     * `MessageDeduplicationId` parameter for the `Publish` action.
+     * By default, this property is set to false. If you create a FIFO topic with
+     * `ContentBasedDeduplication` set to false, you must provide a `MessageDeduplicationId` for each
+     * `Publish` action. When set to true, Amazon SNS automatically generates a
+     * `MessageDeduplicationId` using a SHA-256 hash of the message body (excluding message
+     * attributes). You can optionally override this generated value by specifying a
+     * `MessageDeduplicationId` in the `Publish` action. Note that this property only applies to FIFO
+     * topics; using it with standard topics will cause the creation to fail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html#cfn-sns-topic-contentbaseddeduplication)
      */

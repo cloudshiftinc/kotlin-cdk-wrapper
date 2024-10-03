@@ -36,6 +36,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .peeringId("peeringId")
  * .transitGatewayRouteTableArn("transitGatewayRouteTableArn")
  * // the properties below are optional
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
  * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
  * .attachmentPolicyRuleNumber(123)
  * .segmentName("segmentName")
@@ -55,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTransitGatewayRouteTableAttachment(
   cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -148,6 +159,18 @@ public open class CfnTransitGatewayRouteTableAttachment(
   }
 
   /**
+   * The name of the network function group.
+   */
+  public open fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+  /**
+   * The name of the network function group.
+   */
+  public open fun networkFunctionGroupName(`value`: String) {
+    unwrap(this).setNetworkFunctionGroupName(`value`)
+  }
+
+  /**
    * The ID of the transit gateway peering.
    */
   public open fun peeringId(): String = unwrap(this).getPeeringId()
@@ -158,6 +181,36 @@ public open class CfnTransitGatewayRouteTableAttachment(
   public open fun peeringId(`value`: String) {
     unwrap(this).setPeeringId(`value`)
   }
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  public open fun proposedNetworkFunctionGroupChange(): Any? =
+      unwrap(this).getProposedNetworkFunctionGroupChange()
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  public open fun proposedNetworkFunctionGroupChange(`value`: IResolvable) {
+    unwrap(this).setProposedNetworkFunctionGroupChange(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  public open
+      fun proposedNetworkFunctionGroupChange(`value`: ProposedNetworkFunctionGroupChangeProperty) {
+    unwrap(this).setProposedNetworkFunctionGroupChange(`value`.let(ProposedNetworkFunctionGroupChangeProperty.Companion::unwrap))
+  }
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("3b88e01051b1ad8922f33bbdc87bd9e6e6c535c65fa5be108c3c119fee17a2fc")
+  public open
+      fun proposedNetworkFunctionGroupChange(`value`: ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit):
+      Unit = proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty(`value`))
 
   /**
    * This property is read-only.
@@ -229,12 +282,51 @@ public open class CfnTransitGatewayRouteTableAttachment(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The name of the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-networkfunctiongroupname)
+     * @param networkFunctionGroupName The name of the network function group. 
+     */
+    public fun networkFunctionGroupName(networkFunctionGroupName: String)
+
+    /**
      * The ID of the transit gateway peering.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-peeringid)
      * @param peeringId The ID of the transit gateway peering. 
      */
     public fun peeringId(peeringId: String)
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    public fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable)
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty)
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0f4139e45992c1bbd01956f7da37fa231c1847e0ebff07200f7ebe761e779d18")
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit)
 
     /**
      * This property is read-only.
@@ -310,6 +402,16 @@ public open class CfnTransitGatewayRouteTableAttachment(
         id)
 
     /**
+     * The name of the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-networkfunctiongroupname)
+     * @param networkFunctionGroupName The name of the network function group. 
+     */
+    override fun networkFunctionGroupName(networkFunctionGroupName: String) {
+      cdkBuilder.networkFunctionGroupName(networkFunctionGroupName)
+    }
+
+    /**
      * The ID of the transit gateway peering.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-peeringid)
@@ -318,6 +420,44 @@ public open class CfnTransitGatewayRouteTableAttachment(
     override fun peeringId(peeringId: String) {
       cdkBuilder.peeringId(peeringId)
     }
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(ProposedNetworkFunctionGroupChangeProperty.Companion::unwrap))
+    }
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0f4139e45992c1bbd01956f7da37fa231c1847e0ebff07200f7ebe761e779d18")
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit):
+        Unit =
+        proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty(proposedNetworkFunctionGroupChange))
 
     /**
      * This property is read-only.
@@ -416,6 +556,169 @@ public open class CfnTransitGatewayRouteTableAttachment(
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment =
         wrapped.cdkObject as
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment
+  }
+
+  /**
+   * Describes proposed changes to a network function group.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkmanager.*;
+   * ProposedNetworkFunctionGroupChangeProperty proposedNetworkFunctionGroupChangeProperty =
+   * ProposedNetworkFunctionGroupChangeProperty.builder()
+   * .attachmentPolicyRuleNumber(123)
+   * .networkFunctionGroupName("networkFunctionGroupName")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange.html)
+   */
+  public interface ProposedNetworkFunctionGroupChangeProperty {
+    /**
+     * The proposed new attachment policy rule number for the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange-attachmentpolicyrulenumber)
+     */
+    public fun attachmentPolicyRuleNumber(): Number? = unwrap(this).getAttachmentPolicyRuleNumber()
+
+    /**
+     * The proposed name change for the network function group name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange-networkfunctiongroupname)
+     */
+    public fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+    /**
+     * The list of proposed changes to the key-value tags associated with the network function
+     * group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange-tags)
+     */
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * A builder for [ProposedNetworkFunctionGroupChangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attachmentPolicyRuleNumber The proposed new attachment policy rule number for the
+       * network function group.
+       */
+      public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number)
+
+      /**
+       * @param networkFunctionGroupName The proposed name change for the network function group
+       * name.
+       */
+      public fun networkFunctionGroupName(networkFunctionGroupName: String)
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      public fun tags(tags: List<CfnTag>)
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      public fun tags(vararg tags: CfnTag)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty.Builder
+          =
+          software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty.builder()
+
+      /**
+       * @param attachmentPolicyRuleNumber The proposed new attachment policy rule number for the
+       * network function group.
+       */
+      override fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
+        cdkBuilder.attachmentPolicyRuleNumber(attachmentPolicyRuleNumber)
+      }
+
+      /**
+       * @param networkFunctionGroupName The proposed name change for the network function group
+       * name.
+       */
+      override fun networkFunctionGroupName(networkFunctionGroupName: String) {
+        cdkBuilder.networkFunctionGroupName(networkFunctionGroupName)
+      }
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+      }
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty,
+    ) : CdkObject(cdkObject),
+        ProposedNetworkFunctionGroupChangeProperty {
+      /**
+       * The proposed new attachment policy rule number for the network function group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange-attachmentpolicyrulenumber)
+       */
+      override fun attachmentPolicyRuleNumber(): Number? =
+          unwrap(this).getAttachmentPolicyRuleNumber()
+
+      /**
+       * The proposed name change for the network function group name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange-networkfunctiongroupname)
+       */
+      override fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+      /**
+       * The list of proposed changes to the key-value tags associated with the network function
+       * group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange-tags)
+       */
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ProposedNetworkFunctionGroupChangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty):
+          ProposedNetworkFunctionGroupChangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProposedNetworkFunctionGroupChangeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProposedNetworkFunctionGroupChangeProperty):
+          software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment.ProposedNetworkFunctionGroupChangeProperty
+    }
   }
 
   /**
@@ -531,7 +834,8 @@ public open class CfnTransitGatewayRouteTableAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty,
-    ) : CdkObject(cdkObject), ProposedSegmentChangeProperty {
+    ) : CdkObject(cdkObject),
+        ProposedSegmentChangeProperty {
       /**
        * The rule number in the policy document that applies to this change.
        *

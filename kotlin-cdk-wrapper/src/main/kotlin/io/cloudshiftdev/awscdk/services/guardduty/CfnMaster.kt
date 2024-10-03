@@ -38,7 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMaster(
   cdkObject: software.amazon.awscdk.services.guardduty.CfnMaster,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -108,6 +109,11 @@ public open class CfnMaster(
     /**
      * The unique ID of the detector of the GuardDuty member account.
      *
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-detectorid)
      * @param detectorId The unique ID of the detector of the GuardDuty member account. 
      */
@@ -116,7 +122,9 @@ public open class CfnMaster(
     /**
      * The ID of the invitation that is sent to the account designated as a member account.
      *
-     * You can find the invitation ID by using the ListInvitation action of the GuardDuty API.
+     * You can find the invitation ID by running the
+     * [ListInvitations](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListInvitations.html)
+     * in the *GuardDuty API Reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-invitationid)
      * @param invitationId The ID of the invitation that is sent to the account designated as a
@@ -144,6 +152,11 @@ public open class CfnMaster(
     /**
      * The unique ID of the detector of the GuardDuty member account.
      *
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-detectorid)
      * @param detectorId The unique ID of the detector of the GuardDuty member account. 
      */
@@ -154,7 +167,9 @@ public open class CfnMaster(
     /**
      * The ID of the invitation that is sent to the account designated as a member account.
      *
-     * You can find the invitation ID by using the ListInvitation action of the GuardDuty API.
+     * You can find the invitation ID by running the
+     * [ListInvitations](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListInvitations.html)
+     * in the *GuardDuty API Reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-invitationid)
      * @param invitationId The ID of the invitation that is sent to the account designated as a

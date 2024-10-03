@@ -122,7 +122,8 @@ public interface CfnLifecyclePolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnLifecyclePolicyProps,
-  ) : CdkObject(cdkObject), CfnLifecyclePolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnLifecyclePolicyProps {
     /**
      * The description of the lifecycle policy.
      *

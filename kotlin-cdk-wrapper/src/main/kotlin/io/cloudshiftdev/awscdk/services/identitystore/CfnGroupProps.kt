@@ -36,9 +36,12 @@ public interface CfnGroupProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * A string containing the name of the group.
+   * The display name value for the group.
    *
-   * This value is commonly displayed when the group is referenced.
+   * The length limit is 1,024 characters. This value can consist of letters, accented characters,
+   * symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in
+   * this attribute. This value is specified at the time the group is created and stored as an
+   * attribute of the group object in the identity store.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-displayname)
    */
@@ -62,8 +65,11 @@ public interface CfnGroupProps {
     public fun description(description: String)
 
     /**
-     * @param displayName A string containing the name of the group. 
-     * This value is commonly displayed when the group is referenced.
+     * @param displayName The display name value for the group. 
+     * The length limit is 1,024 characters. This value can consist of letters, accented characters,
+     * symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in
+     * this attribute. This value is specified at the time the group is created and stored as an
+     * attribute of the group object in the identity store.
      */
     public fun displayName(displayName: String)
 
@@ -85,8 +91,11 @@ public interface CfnGroupProps {
     }
 
     /**
-     * @param displayName A string containing the name of the group. 
-     * This value is commonly displayed when the group is referenced.
+     * @param displayName The display name value for the group. 
+     * The length limit is 1,024 characters. This value can consist of letters, accented characters,
+     * symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in
+     * this attribute. This value is specified at the time the group is created and stored as an
+     * attribute of the group object in the identity store.
      */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
@@ -105,7 +114,8 @@ public interface CfnGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupProps,
-  ) : CdkObject(cdkObject), CfnGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnGroupProps {
     /**
      * A string containing the description of the group.
      *
@@ -114,9 +124,12 @@ public interface CfnGroupProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * A string containing the name of the group.
+     * The display name value for the group.
      *
-     * This value is commonly displayed when the group is referenced.
+     * The length limit is 1,024 characters. This value can consist of letters, accented characters,
+     * symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in
+     * this attribute. This value is specified at the time the group is created and stored as an
+     * attribute of the group object in the identity store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-displayname)
      */

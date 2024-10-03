@@ -48,7 +48,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDiscoverer(
   cdkObject: software.amazon.awscdk.services.eventschemas.CfnDiscoverer,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -398,7 +400,8 @@ public open class CfnDiscoverer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eventschemas.CfnDiscoverer.TagsEntryProperty,
-    ) : CdkObject(cdkObject), TagsEntryProperty {
+    ) : CdkObject(cdkObject),
+        TagsEntryProperty {
       /**
        * The key of a key-value pair.
        *

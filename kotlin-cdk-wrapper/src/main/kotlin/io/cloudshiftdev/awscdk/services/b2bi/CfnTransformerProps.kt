@@ -274,7 +274,8 @@ public interface CfnTransformerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformerProps,
-  ) : CdkObject(cdkObject), CfnTransformerProps {
+  ) : CdkObject(cdkObject),
+      CfnTransformerProps {
     /**
      * Returns the details for the EDI standard that is being used for the transformer.
      *

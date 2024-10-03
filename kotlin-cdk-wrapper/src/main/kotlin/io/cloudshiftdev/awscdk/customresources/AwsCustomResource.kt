@@ -52,7 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class AwsCustomResource(
   cdkObject: software.amazon.awscdk.customresources.AwsCustomResource,
-) : CloudshiftdevConstructsConstruct(cdkObject), IGrantable {
+) : CloudshiftdevConstructsConstruct(cdkObject),
+    IGrantable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

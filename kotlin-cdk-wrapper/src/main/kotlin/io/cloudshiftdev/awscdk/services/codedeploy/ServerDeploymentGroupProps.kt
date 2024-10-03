@@ -166,6 +166,16 @@ public interface ServerDeploymentGroupProps {
   public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   /**
+   * Indicates whether the deployment group was configured to have CodeDeploy install a termination
+   * hook into an Auto Scaling group.
+   *
+   * Default: - false
+   *
+   * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-auto-scaling.html#integrations-aws-auto-scaling-behaviors)
+   */
+  public fun terminationHook(): Boolean? = unwrap(this).getTerminationHook()
+
+  /**
    * A builder for [ServerDeploymentGroupProps]
    */
   @CdkDslMarker
@@ -296,6 +306,12 @@ public interface ServerDeploymentGroupProps {
      * @param role The service Role of this Deployment Group.
      */
     public fun role(role: IRole)
+
+    /**
+     * @param terminationHook Indicates whether the deployment group was configured to have
+     * CodeDeploy install a termination hook into an Auto Scaling group.
+     */
+    public fun terminationHook(terminationHook: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -461,13 +477,22 @@ public interface ServerDeploymentGroupProps {
       cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
+    /**
+     * @param terminationHook Indicates whether the deployment group was configured to have
+     * CodeDeploy install a termination hook into an Auto Scaling group.
+     */
+    override fun terminationHook(terminationHook: Boolean) {
+      cdkBuilder.terminationHook(terminationHook)
+    }
+
     public fun build(): software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupProps =
         cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupProps,
-  ) : CdkObject(cdkObject), ServerDeploymentGroupProps {
+  ) : CdkObject(cdkObject),
+      ServerDeploymentGroupProps {
     /**
      * The CloudWatch alarms associated with this Deployment Group.
      *
@@ -600,6 +625,16 @@ public interface ServerDeploymentGroupProps {
      * Default: - A new Role will be created.
      */
     override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+
+    /**
+     * Indicates whether the deployment group was configured to have CodeDeploy install a
+     * termination hook into an Auto Scaling group.
+     *
+     * Default: - false
+     *
+     * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-auto-scaling.html#integrations-aws-auto-scaling-behaviors)
+     */
+    override fun terminationHook(): Boolean? = unwrap(this).getTerminationHook()
   }
 
   public companion object {

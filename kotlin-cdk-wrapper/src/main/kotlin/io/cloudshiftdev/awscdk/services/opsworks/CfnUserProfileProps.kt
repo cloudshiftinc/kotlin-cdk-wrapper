@@ -155,7 +155,8 @@ public interface CfnUserProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opsworks.CfnUserProfileProps,
-  ) : CdkObject(cdkObject), CfnUserProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnUserProfileProps {
     /**
      * Whether users can specify their own SSH public key through the My Settings page.
      *

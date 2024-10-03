@@ -48,7 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEntitlement(
   cdkObject: software.amazon.awscdk.services.appstream.CfnEntitlement,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -428,7 +429,8 @@ public open class CfnEntitlement(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnEntitlement.AttributeProperty,
-    ) : CdkObject(cdkObject), AttributeProperty {
+    ) : CdkObject(cdkObject),
+        AttributeProperty {
       /**
        * A supported AWS IAM SAML PrincipalTag attribute that is matched to a value when a user
        * identity federates to an AppStream 2.0 SAML application.

@@ -40,7 +40,8 @@ public interface CfnWaitConditionHandleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudformation.CfnWaitConditionHandleProps,
-  ) : CdkObject(cdkObject), CfnWaitConditionHandleProps
+  ) : CdkObject(cdkObject),
+      CfnWaitConditionHandleProps
 
   public companion object {
     public operator fun invoke(block: Builder.() -> Unit = {}): CfnWaitConditionHandleProps {

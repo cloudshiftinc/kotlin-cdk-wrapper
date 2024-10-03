@@ -94,7 +94,8 @@ public interface AfterwardsOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.AfterwardsOptions,
-  ) : CdkObject(cdkObject), AfterwardsOptions {
+  ) : CdkObject(cdkObject),
+      AfterwardsOptions {
     /**
      * Whether to include error handling states.
      *

@@ -37,7 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAuthPolicy(
   cdkObject: software.amazon.awscdk.services.vpclattice.CfnAuthPolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

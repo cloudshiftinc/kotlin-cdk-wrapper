@@ -45,6 +45,8 @@ import kotlin.jvm.JvmName
  * .challengeRequiredOnNewDevice(false)
  * .deviceOnlyRememberedOnUserPrompt(false)
  * .build())
+ * .emailAuthenticationMessage("emailAuthenticationMessage")
+ * .emailAuthenticationSubject("emailAuthenticationSubject")
  * .emailConfiguration(EmailConfigurationProperty.builder()
  * .configurationSet("configurationSet")
  * .emailSendingAccount("emailSendingAccount")
@@ -84,6 +86,7 @@ import kotlin.jvm.JvmName
  * .policies(PoliciesProperty.builder()
  * .passwordPolicy(PasswordPolicyProperty.builder()
  * .minimumLength(123)
+ * .passwordHistorySize(123)
  * .requireLowercase(false)
  * .requireNumbers(false)
  * .requireSymbols(false)
@@ -121,6 +124,9 @@ import kotlin.jvm.JvmName
  * .caseSensitive(false)
  * .build())
  * .userPoolAddOns(UserPoolAddOnsProperty.builder()
+ * .advancedSecurityAdditionalFlows(AdvancedSecurityAdditionalFlowsProperty.builder()
+ * .customAuthMode("customAuthMode")
+ * .build())
  * .advancedSecurityMode("advancedSecurityMode")
  * .build())
  * .userPoolName("userPoolName")
@@ -153,7 +159,18 @@ public interface CfnUserPoolProps {
   public fun accountRecoverySetting(): Any? = unwrap(this).getAccountRecoverySetting()
 
   /**
-   * The configuration for creating a new user profile.
+   * The settings for administrator creation of users in a user pool.
+   *
+   * Contains settings for allowing user sign-up, customizing invitation messages to new users, and
+   * the amount of time before temporary passwords expire.
+   *
+   * This data type is a request and response parameter of
+   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+   * and
+   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+   * , and a response parameter of
+   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-admincreateuserconfig)
    */
@@ -211,6 +228,16 @@ public interface CfnUserPoolProps {
   public fun deviceConfiguration(): Any? = unwrap(this).getDeviceConfiguration()
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-emailauthenticationmessage)
+   */
+  public fun emailAuthenticationMessage(): String? = unwrap(this).getEmailAuthenticationMessage()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-emailauthenticationsubject)
+   */
+  public fun emailAuthenticationSubject(): String? = unwrap(this).getEmailAuthenticationSubject()
+
+  /**
    * The email configuration of your user pool.
    *
    * The email configuration type sets your preferred sending method, AWS Region, and sender for
@@ -261,19 +288,10 @@ public interface CfnUserPoolProps {
   public fun enabledMfas(): List<String> = unwrap(this).getEnabledMfas() ?: emptyList()
 
   /**
-   * The Lambda trigger configuration information for the new user pool.
+   * A collection of user pool Lambda triggers.
    *
-   *
-   * In a push model, event sources (such as Amazon S3 and custom applications) need permission to
-   * invoke a function. So you must make an extra call to add permission for these event sources to
-   * invoke your Lambda function.
-   *
-   * For more information on using the Lambda API to add permission, see
-   * [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) .
-   *
-   * For adding permission using the AWS CLI , see
-   * [add-permission](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) .
-   *
+   * Amazon Cognito invokes triggers at several possible stages of authentication operations.
+   * Triggers can modify the outcome of the operations that invoked them.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-lambdaconfig)
    */
@@ -291,7 +309,15 @@ public interface CfnUserPoolProps {
   public fun mfaConfiguration(): String? = unwrap(this).getMfaConfiguration()
 
   /**
-   * The policy associated with a user pool.
+   * A list of user pool policies. Contains the policy that sets password-complexity requirements.
+   *
+   * This data type is a request and response parameter of
+   * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+   * and
+   * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+   * , and a response parameter of
+   * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-policies)
    */
@@ -409,8 +435,13 @@ public interface CfnUserPoolProps {
   public fun usernameConfiguration(): Any? = unwrap(this).getUsernameConfiguration()
 
   /**
-   * The template for the verification message that the user sees when the app requests permission
-   * to access the user's information.
+   * The template for the verification message that your user pool delivers to users who set an
+   * email address or phone number attribute.
+   *
+   * Set the email message type that corresponds to your `DefaultEmailOption` selection. For
+   * `CONFIRM_WITH_LINK` , specify an `EmailMessageByLink` and leave `EmailMessage` blank. For
+   * `CONFIRM_WITH_CODE` , specify an `EmailMessage` and leave `EmailMessageByLink` blank. When you
+   * supply both parameters with either choice, Amazon Cognito returns an error.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-verificationmessagetemplate)
    */
@@ -456,18 +487,48 @@ public interface CfnUserPoolProps {
         fun accountRecoverySetting(accountRecoverySetting: CfnUserPool.AccountRecoverySettingProperty.Builder.() -> Unit)
 
     /**
-     * @param adminCreateUserConfig The configuration for creating a new user profile.
+     * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
+     * Contains settings for allowing user sign-up, customizing invitation messages to new users,
+     * and the amount of time before temporary passwords expire.
+     *
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     public fun adminCreateUserConfig(adminCreateUserConfig: IResolvable)
 
     /**
-     * @param adminCreateUserConfig The configuration for creating a new user profile.
+     * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
+     * Contains settings for allowing user sign-up, customizing invitation messages to new users,
+     * and the amount of time before temporary passwords expire.
+     *
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     public
         fun adminCreateUserConfig(adminCreateUserConfig: CfnUserPool.AdminCreateUserConfigProperty)
 
     /**
-     * @param adminCreateUserConfig The configuration for creating a new user profile.
+     * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
+     * Contains settings for allowing user sign-up, customizing invitation messages to new users,
+     * and the amount of time before temporary passwords expire.
+     *
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f794518daabdad2774e4c8975200c25b556f58d5765e61484e8e043a75a3aa32")
@@ -549,6 +610,16 @@ public interface CfnUserPoolProps {
         fun deviceConfiguration(deviceConfiguration: CfnUserPool.DeviceConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * @param emailAuthenticationMessage the value to be set.
+     */
+    public fun emailAuthenticationMessage(emailAuthenticationMessage: String)
+
+    /**
+     * @param emailAuthenticationSubject the value to be set.
+     */
+    public fun emailAuthenticationSubject(emailAuthenticationSubject: String)
+
+    /**
      * @param emailConfiguration The email configuration of your user pool.
      * The email configuration type sets your preferred sending method, AWS Region, and sender for
      * messages from your user pool.
@@ -619,47 +690,23 @@ public interface CfnUserPoolProps {
     public fun enabledMfas(vararg enabledMfas: String)
 
     /**
-     * @param lambdaConfig The Lambda trigger configuration information for the new user pool.
-     *
-     * In a push model, event sources (such as Amazon S3 and custom applications) need permission to
-     * invoke a function. So you must make an extra call to add permission for these event sources to
-     * invoke your Lambda function.
-     *
-     * For more information on using the Lambda API to add permission, see
-     * [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) .
-     *
-     * For adding permission using the AWS CLI , see
-     * [add-permission](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) .
+     * @param lambdaConfig A collection of user pool Lambda triggers.
+     * Amazon Cognito invokes triggers at several possible stages of authentication operations.
+     * Triggers can modify the outcome of the operations that invoked them.
      */
     public fun lambdaConfig(lambdaConfig: IResolvable)
 
     /**
-     * @param lambdaConfig The Lambda trigger configuration information for the new user pool.
-     *
-     * In a push model, event sources (such as Amazon S3 and custom applications) need permission to
-     * invoke a function. So you must make an extra call to add permission for these event sources to
-     * invoke your Lambda function.
-     *
-     * For more information on using the Lambda API to add permission, see
-     * [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) .
-     *
-     * For adding permission using the AWS CLI , see
-     * [add-permission](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) .
+     * @param lambdaConfig A collection of user pool Lambda triggers.
+     * Amazon Cognito invokes triggers at several possible stages of authentication operations.
+     * Triggers can modify the outcome of the operations that invoked them.
      */
     public fun lambdaConfig(lambdaConfig: CfnUserPool.LambdaConfigProperty)
 
     /**
-     * @param lambdaConfig The Lambda trigger configuration information for the new user pool.
-     *
-     * In a push model, event sources (such as Amazon S3 and custom applications) need permission to
-     * invoke a function. So you must make an extra call to add permission for these event sources to
-     * invoke your Lambda function.
-     *
-     * For more information on using the Lambda API to add permission, see
-     * [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) .
-     *
-     * For adding permission using the AWS CLI , see
-     * [add-permission](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) .
+     * @param lambdaConfig A collection of user pool Lambda triggers.
+     * Amazon Cognito invokes triggers at several possible stages of authentication operations.
+     * Triggers can modify the outcome of the operations that invoked them.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("db420d077990a8f3f5f9aacfd7af72fcdea4ac8959a927526e1d56a2037fca89")
@@ -675,17 +722,41 @@ public interface CfnUserPoolProps {
     public fun mfaConfiguration(mfaConfiguration: String)
 
     /**
-     * @param policies The policy associated with a user pool.
+     * @param policies A list of user pool policies. Contains the policy that sets
+     * password-complexity requirements.
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     public fun policies(policies: IResolvable)
 
     /**
-     * @param policies The policy associated with a user pool.
+     * @param policies A list of user pool policies. Contains the policy that sets
+     * password-complexity requirements.
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     public fun policies(policies: CfnUserPool.PoliciesProperty)
 
     /**
-     * @param policies The policy associated with a user pool.
+     * @param policies A list of user pool policies. Contains the policy that sets
+     * password-complexity requirements.
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("343a2a106aa51ec53bcbb198a72763d39c1daff0913054bb5997ab31e254fc8b")
@@ -895,21 +966,33 @@ public interface CfnUserPoolProps {
         fun usernameConfiguration(usernameConfiguration: CfnUserPool.UsernameConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param verificationMessageTemplate The template for the verification message that the user
-     * sees when the app requests permission to access the user's information.
+     * @param verificationMessageTemplate The template for the verification message that your user
+     * pool delivers to users who set an email address or phone number attribute.
+     * Set the email message type that corresponds to your `DefaultEmailOption` selection. For
+     * `CONFIRM_WITH_LINK` , specify an `EmailMessageByLink` and leave `EmailMessage` blank. For
+     * `CONFIRM_WITH_CODE` , specify an `EmailMessage` and leave `EmailMessageByLink` blank. When you
+     * supply both parameters with either choice, Amazon Cognito returns an error.
      */
     public fun verificationMessageTemplate(verificationMessageTemplate: IResolvable)
 
     /**
-     * @param verificationMessageTemplate The template for the verification message that the user
-     * sees when the app requests permission to access the user's information.
+     * @param verificationMessageTemplate The template for the verification message that your user
+     * pool delivers to users who set an email address or phone number attribute.
+     * Set the email message type that corresponds to your `DefaultEmailOption` selection. For
+     * `CONFIRM_WITH_LINK` , specify an `EmailMessageByLink` and leave `EmailMessage` blank. For
+     * `CONFIRM_WITH_CODE` , specify an `EmailMessage` and leave `EmailMessageByLink` blank. When you
+     * supply both parameters with either choice, Amazon Cognito returns an error.
      */
     public
         fun verificationMessageTemplate(verificationMessageTemplate: CfnUserPool.VerificationMessageTemplateProperty)
 
     /**
-     * @param verificationMessageTemplate The template for the verification message that the user
-     * sees when the app requests permission to access the user's information.
+     * @param verificationMessageTemplate The template for the verification message that your user
+     * pool delivers to users who set an email address or phone number attribute.
+     * Set the email message type that corresponds to your `DefaultEmailOption` selection. For
+     * `CONFIRM_WITH_LINK` , specify an `EmailMessageByLink` and leave `EmailMessage` blank. For
+     * `CONFIRM_WITH_CODE` , specify an `EmailMessage` and leave `EmailMessageByLink` blank. When you
+     * supply both parameters with either choice, Amazon Cognito returns an error.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3013e72971088221a7901816ff1cc9a02b7d294abd0f631b7d9bc30cb5c5116a")
@@ -962,14 +1045,34 @@ public interface CfnUserPoolProps {
         accountRecoverySetting(CfnUserPool.AccountRecoverySettingProperty(accountRecoverySetting))
 
     /**
-     * @param adminCreateUserConfig The configuration for creating a new user profile.
+     * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
+     * Contains settings for allowing user sign-up, customizing invitation messages to new users,
+     * and the amount of time before temporary passwords expire.
+     *
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     override fun adminCreateUserConfig(adminCreateUserConfig: IResolvable) {
       cdkBuilder.adminCreateUserConfig(adminCreateUserConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param adminCreateUserConfig The configuration for creating a new user profile.
+     * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
+     * Contains settings for allowing user sign-up, customizing invitation messages to new users,
+     * and the amount of time before temporary passwords expire.
+     *
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     override
         fun adminCreateUserConfig(adminCreateUserConfig: CfnUserPool.AdminCreateUserConfigProperty) {
@@ -977,7 +1080,17 @@ public interface CfnUserPoolProps {
     }
 
     /**
-     * @param adminCreateUserConfig The configuration for creating a new user profile.
+     * @param adminCreateUserConfig The settings for administrator creation of users in a user pool.
+     * Contains settings for allowing user sign-up, customizing invitation messages to new users,
+     * and the amount of time before temporary passwords expire.
+     *
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f794518daabdad2774e4c8975200c25b556f58d5765e61484e8e043a75a3aa32")
@@ -1074,6 +1187,20 @@ public interface CfnUserPoolProps {
         Unit = deviceConfiguration(CfnUserPool.DeviceConfigurationProperty(deviceConfiguration))
 
     /**
+     * @param emailAuthenticationMessage the value to be set.
+     */
+    override fun emailAuthenticationMessage(emailAuthenticationMessage: String) {
+      cdkBuilder.emailAuthenticationMessage(emailAuthenticationMessage)
+    }
+
+    /**
+     * @param emailAuthenticationSubject the value to be set.
+     */
+    override fun emailAuthenticationSubject(emailAuthenticationSubject: String) {
+      cdkBuilder.emailAuthenticationSubject(emailAuthenticationSubject)
+    }
+
+    /**
      * @param emailConfiguration The email configuration of your user pool.
      * The email configuration type sets your preferred sending method, AWS Region, and sender for
      * messages from your user pool.
@@ -1155,51 +1282,27 @@ public interface CfnUserPoolProps {
     override fun enabledMfas(vararg enabledMfas: String): Unit = enabledMfas(enabledMfas.toList())
 
     /**
-     * @param lambdaConfig The Lambda trigger configuration information for the new user pool.
-     *
-     * In a push model, event sources (such as Amazon S3 and custom applications) need permission to
-     * invoke a function. So you must make an extra call to add permission for these event sources to
-     * invoke your Lambda function.
-     *
-     * For more information on using the Lambda API to add permission, see
-     * [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) .
-     *
-     * For adding permission using the AWS CLI , see
-     * [add-permission](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) .
+     * @param lambdaConfig A collection of user pool Lambda triggers.
+     * Amazon Cognito invokes triggers at several possible stages of authentication operations.
+     * Triggers can modify the outcome of the operations that invoked them.
      */
     override fun lambdaConfig(lambdaConfig: IResolvable) {
       cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param lambdaConfig The Lambda trigger configuration information for the new user pool.
-     *
-     * In a push model, event sources (such as Amazon S3 and custom applications) need permission to
-     * invoke a function. So you must make an extra call to add permission for these event sources to
-     * invoke your Lambda function.
-     *
-     * For more information on using the Lambda API to add permission, see
-     * [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) .
-     *
-     * For adding permission using the AWS CLI , see
-     * [add-permission](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) .
+     * @param lambdaConfig A collection of user pool Lambda triggers.
+     * Amazon Cognito invokes triggers at several possible stages of authentication operations.
+     * Triggers can modify the outcome of the operations that invoked them.
      */
     override fun lambdaConfig(lambdaConfig: CfnUserPool.LambdaConfigProperty) {
       cdkBuilder.lambdaConfig(lambdaConfig.let(CfnUserPool.LambdaConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param lambdaConfig The Lambda trigger configuration information for the new user pool.
-     *
-     * In a push model, event sources (such as Amazon S3 and custom applications) need permission to
-     * invoke a function. So you must make an extra call to add permission for these event sources to
-     * invoke your Lambda function.
-     *
-     * For more information on using the Lambda API to add permission, see
-     * [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) .
-     *
-     * For adding permission using the AWS CLI , see
-     * [add-permission](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) .
+     * @param lambdaConfig A collection of user pool Lambda triggers.
+     * Amazon Cognito invokes triggers at several possible stages of authentication operations.
+     * Triggers can modify the outcome of the operations that invoked them.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("db420d077990a8f3f5f9aacfd7af72fcdea4ac8959a927526e1d56a2037fca89")
@@ -1218,21 +1321,45 @@ public interface CfnUserPoolProps {
     }
 
     /**
-     * @param policies The policy associated with a user pool.
+     * @param policies A list of user pool policies. Contains the policy that sets
+     * password-complexity requirements.
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     override fun policies(policies: IResolvable) {
       cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param policies The policy associated with a user pool.
+     * @param policies A list of user pool policies. Contains the policy that sets
+     * password-complexity requirements.
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     override fun policies(policies: CfnUserPool.PoliciesProperty) {
       cdkBuilder.policies(policies.let(CfnUserPool.PoliciesProperty.Companion::unwrap))
     }
 
     /**
-     * @param policies The policy associated with a user pool.
+     * @param policies A list of user pool policies. Contains the policy that sets
+     * password-complexity requirements.
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("343a2a106aa51ec53bcbb198a72763d39c1daff0913054bb5997ab31e254fc8b")
@@ -1481,16 +1608,24 @@ public interface CfnUserPoolProps {
         usernameConfiguration(CfnUserPool.UsernameConfigurationProperty(usernameConfiguration))
 
     /**
-     * @param verificationMessageTemplate The template for the verification message that the user
-     * sees when the app requests permission to access the user's information.
+     * @param verificationMessageTemplate The template for the verification message that your user
+     * pool delivers to users who set an email address or phone number attribute.
+     * Set the email message type that corresponds to your `DefaultEmailOption` selection. For
+     * `CONFIRM_WITH_LINK` , specify an `EmailMessageByLink` and leave `EmailMessage` blank. For
+     * `CONFIRM_WITH_CODE` , specify an `EmailMessage` and leave `EmailMessageByLink` blank. When you
+     * supply both parameters with either choice, Amazon Cognito returns an error.
      */
     override fun verificationMessageTemplate(verificationMessageTemplate: IResolvable) {
       cdkBuilder.verificationMessageTemplate(verificationMessageTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param verificationMessageTemplate The template for the verification message that the user
-     * sees when the app requests permission to access the user's information.
+     * @param verificationMessageTemplate The template for the verification message that your user
+     * pool delivers to users who set an email address or phone number attribute.
+     * Set the email message type that corresponds to your `DefaultEmailOption` selection. For
+     * `CONFIRM_WITH_LINK` , specify an `EmailMessageByLink` and leave `EmailMessage` blank. For
+     * `CONFIRM_WITH_CODE` , specify an `EmailMessage` and leave `EmailMessageByLink` blank. When you
+     * supply both parameters with either choice, Amazon Cognito returns an error.
      */
     override
         fun verificationMessageTemplate(verificationMessageTemplate: CfnUserPool.VerificationMessageTemplateProperty) {
@@ -1498,8 +1633,12 @@ public interface CfnUserPoolProps {
     }
 
     /**
-     * @param verificationMessageTemplate The template for the verification message that the user
-     * sees when the app requests permission to access the user's information.
+     * @param verificationMessageTemplate The template for the verification message that your user
+     * pool delivers to users who set an email address or phone number attribute.
+     * Set the email message type that corresponds to your `DefaultEmailOption` selection. For
+     * `CONFIRM_WITH_LINK` , specify an `EmailMessageByLink` and leave `EmailMessage` blank. For
+     * `CONFIRM_WITH_CODE` , specify an `EmailMessage` and leave `EmailMessageByLink` blank. When you
+     * supply both parameters with either choice, Amazon Cognito returns an error.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3013e72971088221a7901816ff1cc9a02b7d294abd0f631b7d9bc30cb5c5116a")
@@ -1514,7 +1653,8 @@ public interface CfnUserPoolProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolProps,
-  ) : CdkObject(cdkObject), CfnUserPoolProps {
+  ) : CdkObject(cdkObject),
+      CfnUserPoolProps {
     /**
      * Use this setting to define which verified available method a user can use to recover their
      * password when they call `ForgotPassword` .
@@ -1529,7 +1669,18 @@ public interface CfnUserPoolProps {
     override fun accountRecoverySetting(): Any? = unwrap(this).getAccountRecoverySetting()
 
     /**
-     * The configuration for creating a new user profile.
+     * The settings for administrator creation of users in a user pool.
+     *
+     * Contains settings for allowing user sign-up, customizing invitation messages to new users,
+     * and the amount of time before temporary passwords expire.
+     *
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-admincreateuserconfig)
      */
@@ -1587,6 +1738,18 @@ public interface CfnUserPoolProps {
     override fun deviceConfiguration(): Any? = unwrap(this).getDeviceConfiguration()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-emailauthenticationmessage)
+     */
+    override fun emailAuthenticationMessage(): String? =
+        unwrap(this).getEmailAuthenticationMessage()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-emailauthenticationsubject)
+     */
+    override fun emailAuthenticationSubject(): String? =
+        unwrap(this).getEmailAuthenticationSubject()
+
+    /**
      * The email configuration of your user pool.
      *
      * The email configuration type sets your preferred sending method, AWS Region, and sender for
@@ -1637,19 +1800,10 @@ public interface CfnUserPoolProps {
     override fun enabledMfas(): List<String> = unwrap(this).getEnabledMfas() ?: emptyList()
 
     /**
-     * The Lambda trigger configuration information for the new user pool.
+     * A collection of user pool Lambda triggers.
      *
-     *
-     * In a push model, event sources (such as Amazon S3 and custom applications) need permission to
-     * invoke a function. So you must make an extra call to add permission for these event sources to
-     * invoke your Lambda function.
-     *
-     * For more information on using the Lambda API to add permission, see
-     * [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) .
-     *
-     * For adding permission using the AWS CLI , see
-     * [add-permission](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) .
-     *
+     * Amazon Cognito invokes triggers at several possible stages of authentication operations.
+     * Triggers can modify the outcome of the operations that invoked them.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-lambdaconfig)
      */
@@ -1667,7 +1821,15 @@ public interface CfnUserPoolProps {
     override fun mfaConfiguration(): String? = unwrap(this).getMfaConfiguration()
 
     /**
-     * The policy associated with a user pool.
+     * A list of user pool policies. Contains the policy that sets password-complexity requirements.
+     *
+     * This data type is a request and response parameter of
+     * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+     * and
+     * [UpdateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPool.html)
+     * , and a response parameter of
+     * [DescribeUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPool.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-policies)
      */
@@ -1785,8 +1947,13 @@ public interface CfnUserPoolProps {
     override fun usernameConfiguration(): Any? = unwrap(this).getUsernameConfiguration()
 
     /**
-     * The template for the verification message that the user sees when the app requests permission
-     * to access the user's information.
+     * The template for the verification message that your user pool delivers to users who set an
+     * email address or phone number attribute.
+     *
+     * Set the email message type that corresponds to your `DefaultEmailOption` selection. For
+     * `CONFIRM_WITH_LINK` , specify an `EmailMessageByLink` and leave `EmailMessage` blank. For
+     * `CONFIRM_WITH_CODE` , specify an `EmailMessage` and leave `EmailMessageByLink` blank. When you
+     * supply both parameters with either choice, Amazon Cognito returns an error.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-verificationmessagetemplate)
      */

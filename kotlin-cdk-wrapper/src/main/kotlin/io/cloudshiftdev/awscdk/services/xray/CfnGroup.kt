@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGroup(
   cdkObject: software.amazon.awscdk.services.xray.CfnGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -465,7 +467,8 @@ public open class CfnGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.xray.CfnGroup.InsightsConfigurationProperty,
-    ) : CdkObject(cdkObject), InsightsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InsightsConfigurationProperty {
       /**
        * Set the InsightsEnabled value to true to enable insights or false to disable insights.
        *

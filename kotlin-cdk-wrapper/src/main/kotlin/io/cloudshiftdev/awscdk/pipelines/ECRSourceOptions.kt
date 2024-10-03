@@ -74,7 +74,8 @@ public interface ECRSourceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.ECRSourceOptions,
-  ) : CdkObject(cdkObject), ECRSourceOptions {
+  ) : CdkObject(cdkObject),
+      ECRSourceOptions {
     /**
      * The action name used for this source in the CodePipeline.
      *

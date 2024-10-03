@@ -384,7 +384,8 @@ public interface CfnImageRecipeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipeProps,
-  ) : CdkObject(cdkObject), CfnImageRecipeProps {
+  ) : CdkObject(cdkObject),
+      CfnImageRecipeProps {
     /**
      * Before you create a new AMI, Image Builder launches temporary Amazon EC2 instances to build
      * and test your image configuration.

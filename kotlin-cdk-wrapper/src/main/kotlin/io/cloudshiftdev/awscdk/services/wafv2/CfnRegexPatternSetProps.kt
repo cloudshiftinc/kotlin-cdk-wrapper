@@ -233,7 +233,8 @@ public interface CfnRegexPatternSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.wafv2.CfnRegexPatternSetProps,
-  ) : CdkObject(cdkObject), CfnRegexPatternSetProps {
+  ) : CdkObject(cdkObject),
+      CfnRegexPatternSetProps {
     /**
      * A description of the set that helps with identification.
      *

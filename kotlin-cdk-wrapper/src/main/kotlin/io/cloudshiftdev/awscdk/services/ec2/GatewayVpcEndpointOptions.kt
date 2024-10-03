@@ -124,7 +124,8 @@ public interface GatewayVpcEndpointOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpointOptions,
-  ) : CdkObject(cdkObject), GatewayVpcEndpointOptions {
+  ) : CdkObject(cdkObject),
+      GatewayVpcEndpointOptions {
     /**
      * The service to use for this gateway VPC endpoint.
      */

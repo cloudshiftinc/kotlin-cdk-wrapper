@@ -66,7 +66,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStudio(
   cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudio,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -494,7 +496,8 @@ public open class CfnStudio(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudio.StudioEncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), StudioEncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        StudioEncryptionConfigurationProperty {
       /**
        * The ARN for a KMS key that is used to encrypt studio data.
        *

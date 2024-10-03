@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -42,6 +43,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * CfnIPAM cfnIPAM = CfnIPAM.Builder.create(this, "MyCfnIPAM")
  * .description("description")
+ * .enablePrivateGua(false)
  * .operatingRegions(List.of(IpamOperatingRegionProperty.builder()
  * .regionName("regionName")
  * .build()))
@@ -57,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIPAM(
   cdkObject: software.amazon.awscdk.services.ec2.CfnIPAM,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnIPAM(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -132,6 +136,25 @@ public open class CfnIPAM(
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
+  }
+
+  /**
+   * Enable this option to use your own GUA ranges as private IPv6 addresses.
+   */
+  public open fun enablePrivateGua(): Any? = unwrap(this).getEnablePrivateGua()
+
+  /**
+   * Enable this option to use your own GUA ranges as private IPv6 addresses.
+   */
+  public open fun enablePrivateGua(`value`: Boolean) {
+    unwrap(this).setEnablePrivateGua(`value`)
+  }
+
+  /**
+   * Enable this option to use your own GUA ranges as private IPv6 addresses.
+   */
+  public open fun enablePrivateGua(`value`: IResolvable) {
+    unwrap(this).setEnablePrivateGua(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -214,6 +237,28 @@ public open class CfnIPAM(
      * @param description The description for the IPAM. 
      */
     public fun description(description: String)
+
+    /**
+     * Enable this option to use your own GUA ranges as private IPv6 addresses.
+     *
+     * This option is disabled by default.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-enableprivategua)
+     * @param enablePrivateGua Enable this option to use your own GUA ranges as private IPv6
+     * addresses. 
+     */
+    public fun enablePrivateGua(enablePrivateGua: Boolean)
+
+    /**
+     * Enable this option to use your own GUA ranges as private IPv6 addresses.
+     *
+     * This option is disabled by default.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-enableprivategua)
+     * @param enablePrivateGua Enable this option to use your own GUA ranges as private IPv6
+     * addresses. 
+     */
+    public fun enablePrivateGua(enablePrivateGua: IResolvable)
 
     /**
      * The operating Regions for an IPAM.
@@ -311,6 +356,32 @@ public open class CfnIPAM(
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * Enable this option to use your own GUA ranges as private IPv6 addresses.
+     *
+     * This option is disabled by default.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-enableprivategua)
+     * @param enablePrivateGua Enable this option to use your own GUA ranges as private IPv6
+     * addresses. 
+     */
+    override fun enablePrivateGua(enablePrivateGua: Boolean) {
+      cdkBuilder.enablePrivateGua(enablePrivateGua)
+    }
+
+    /**
+     * Enable this option to use your own GUA ranges as private IPv6 addresses.
+     *
+     * This option is disabled by default.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html#cfn-ec2-ipam-enableprivategua)
+     * @param enablePrivateGua Enable this option to use your own GUA ranges as private IPv6
+     * addresses. 
+     */
+    override fun enablePrivateGua(enablePrivateGua: IResolvable) {
+      cdkBuilder.enablePrivateGua(enablePrivateGua.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -485,7 +556,8 @@ public open class CfnIPAM(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnIPAM.IpamOperatingRegionProperty,
-    ) : CdkObject(cdkObject), IpamOperatingRegionProperty {
+    ) : CdkObject(cdkObject),
+        IpamOperatingRegionProperty {
       /**
        * The name of the operating Region.
        *

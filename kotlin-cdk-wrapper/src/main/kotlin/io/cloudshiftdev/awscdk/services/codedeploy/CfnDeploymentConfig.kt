@@ -65,7 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDeploymentConfig(
   cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -762,7 +763,8 @@ public open class CfnDeploymentConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty,
-    ) : CdkObject(cdkObject), MinimumHealthyHostsPerZoneProperty {
+    ) : CdkObject(cdkObject),
+        MinimumHealthyHostsPerZoneProperty {
       /**
        * The `type` associated with the `MinimumHealthyHostsPerZone` option.
        *
@@ -944,7 +946,8 @@ public open class CfnDeploymentConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty,
-    ) : CdkObject(cdkObject), MinimumHealthyHostsProperty {
+    ) : CdkObject(cdkObject),
+        MinimumHealthyHostsProperty {
       /**
        * The minimum healthy instance type:.
        *
@@ -1086,7 +1089,8 @@ public open class CfnDeploymentConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty,
-    ) : CdkObject(cdkObject), TimeBasedCanaryProperty {
+    ) : CdkObject(cdkObject),
+        TimeBasedCanaryProperty {
       /**
        * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
        * deployment.
@@ -1207,7 +1211,8 @@ public open class CfnDeploymentConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty,
-    ) : CdkObject(cdkObject), TimeBasedLinearProperty {
+    ) : CdkObject(cdkObject),
+        TimeBasedLinearProperty {
       /**
        * The number of minutes between each incremental traffic shift of a `TimeBasedLinear`
        * deployment.
@@ -1455,7 +1460,8 @@ public open class CfnDeploymentConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty,
-    ) : CdkObject(cdkObject), TrafficRoutingConfigProperty {
+    ) : CdkObject(cdkObject),
+        TrafficRoutingConfigProperty {
       /**
        * A configuration that shifts traffic from one version of a Lambda function or ECS task set
        * to another in two increments.
@@ -1791,7 +1797,8 @@ public open class CfnDeploymentConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.ZonalConfigProperty,
-    ) : CdkObject(cdkObject), ZonalConfigProperty {
+    ) : CdkObject(cdkObject),
+        ZonalConfigProperty {
       /**
        * The period of time, in seconds, that CodeDeploy must wait after completing a deployment to
        * the *first* Availability Zone.

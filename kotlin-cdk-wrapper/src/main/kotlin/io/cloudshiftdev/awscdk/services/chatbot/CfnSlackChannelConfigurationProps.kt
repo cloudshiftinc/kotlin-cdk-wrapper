@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.chatbot
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -31,6 +32,10 @@ import kotlin.collections.List
  * .guardrailPolicies(List.of("guardrailPolicies"))
  * .loggingLevel("loggingLevel")
  * .snsTopicArns(List.of("snsTopicArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .userRoleRequired(false)
  * .build();
  * ```
@@ -81,7 +86,7 @@ public interface CfnSlackChannelConfigurationProps {
    * The ID of the Slack channel.
    *
    * To get the ID, open Slack, right click on the channel name in the left pane, then choose Copy
-   * Link. The channel ID is the 9-character string at the end of the URL. For example, `ABCBBLZZZ` .
+   * Link. The channel ID is the character string at the end of the URL. For example, `ABCBBLZZZ` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackchannelid)
    */
@@ -92,9 +97,9 @@ public interface CfnSlackChannelConfigurationProps {
    *
    * To get the workspace ID, you must perform the initial authorization flow with Slack in the AWS
    * Chatbot console. Then you can copy and paste the workspace ID from the console. For more details,
-   * see steps 1-4 in [Setting Up AWS Chatbot with
-   * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/setting-up.html#Setup_intro) in the
-   * *AWS Chatbot User Guide* .
+   * see steps 1-3 in [Tutorial: Get started with
+   * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html) in the *AWS Chatbot
+   * User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackworkspaceid)
    */
@@ -106,6 +111,13 @@ public interface CfnSlackChannelConfigurationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-snstopicarns)
    */
   public fun snsTopicArns(): List<String> = unwrap(this).getSnsTopicArns() ?: emptyList()
+
+  /**
+   * The tags to add to the configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * Enables use of a user role requirement in your chat configuration.
@@ -156,7 +168,7 @@ public interface CfnSlackChannelConfigurationProps {
     /**
      * @param slackChannelId The ID of the Slack channel. 
      * To get the ID, open Slack, right click on the channel name in the left pane, then choose Copy
-     * Link. The channel ID is the 9-character string at the end of the URL. For example, `ABCBBLZZZ` .
+     * Link. The channel ID is the character string at the end of the URL. For example, `ABCBBLZZZ` .
      */
     public fun slackChannelId(slackChannelId: String)
 
@@ -164,9 +176,9 @@ public interface CfnSlackChannelConfigurationProps {
      * @param slackWorkspaceId The ID of the Slack workspace authorized with AWS Chatbot . 
      * To get the workspace ID, you must perform the initial authorization flow with Slack in the
      * AWS Chatbot console. Then you can copy and paste the workspace ID from the console. For more
-     * details, see steps 1-4 in [Setting Up AWS Chatbot with
-     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/setting-up.html#Setup_intro) in the
-     * *AWS Chatbot User Guide* .
+     * details, see steps 1-3 in [Tutorial: Get started with
+     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html) in the *AWS
+     * Chatbot User Guide* .
      */
     public fun slackWorkspaceId(slackWorkspaceId: String)
 
@@ -179,6 +191,16 @@ public interface CfnSlackChannelConfigurationProps {
      * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to AWS Chatbot .
      */
     public fun snsTopicArns(vararg snsTopicArns: String)
+
+    /**
+     * @param tags The tags to add to the configuration.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags The tags to add to the configuration.
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * @param userRoleRequired Enables use of a user role requirement in your chat configuration.
@@ -240,7 +262,7 @@ public interface CfnSlackChannelConfigurationProps {
     /**
      * @param slackChannelId The ID of the Slack channel. 
      * To get the ID, open Slack, right click on the channel name in the left pane, then choose Copy
-     * Link. The channel ID is the 9-character string at the end of the URL. For example, `ABCBBLZZZ` .
+     * Link. The channel ID is the character string at the end of the URL. For example, `ABCBBLZZZ` .
      */
     override fun slackChannelId(slackChannelId: String) {
       cdkBuilder.slackChannelId(slackChannelId)
@@ -250,9 +272,9 @@ public interface CfnSlackChannelConfigurationProps {
      * @param slackWorkspaceId The ID of the Slack workspace authorized with AWS Chatbot . 
      * To get the workspace ID, you must perform the initial authorization flow with Slack in the
      * AWS Chatbot console. Then you can copy and paste the workspace ID from the console. For more
-     * details, see steps 1-4 in [Setting Up AWS Chatbot with
-     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/setting-up.html#Setup_intro) in the
-     * *AWS Chatbot User Guide* .
+     * details, see steps 1-3 in [Tutorial: Get started with
+     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html) in the *AWS
+     * Chatbot User Guide* .
      */
     override fun slackWorkspaceId(slackWorkspaceId: String) {
       cdkBuilder.slackWorkspaceId(slackWorkspaceId)
@@ -270,6 +292,18 @@ public interface CfnSlackChannelConfigurationProps {
      */
     override fun snsTopicArns(vararg snsTopicArns: String): Unit =
         snsTopicArns(snsTopicArns.toList())
+
+    /**
+     * @param tags The tags to add to the configuration.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags The tags to add to the configuration.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
      * @param userRoleRequired Enables use of a user role requirement in your chat configuration.
@@ -291,7 +325,8 @@ public interface CfnSlackChannelConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.chatbot.CfnSlackChannelConfigurationProps,
-  ) : CdkObject(cdkObject), CfnSlackChannelConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnSlackChannelConfigurationProps {
     /**
      * The name of the configuration.
      *
@@ -336,7 +371,7 @@ public interface CfnSlackChannelConfigurationProps {
      * The ID of the Slack channel.
      *
      * To get the ID, open Slack, right click on the channel name in the left pane, then choose Copy
-     * Link. The channel ID is the 9-character string at the end of the URL. For example, `ABCBBLZZZ` .
+     * Link. The channel ID is the character string at the end of the URL. For example, `ABCBBLZZZ` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackchannelid)
      */
@@ -347,9 +382,9 @@ public interface CfnSlackChannelConfigurationProps {
      *
      * To get the workspace ID, you must perform the initial authorization flow with Slack in the
      * AWS Chatbot console. Then you can copy and paste the workspace ID from the console. For more
-     * details, see steps 1-4 in [Setting Up AWS Chatbot with
-     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/setting-up.html#Setup_intro) in the
-     * *AWS Chatbot User Guide* .
+     * details, see steps 1-3 in [Tutorial: Get started with
+     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html) in the *AWS
+     * Chatbot User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackworkspaceid)
      */
@@ -361,6 +396,13 @@ public interface CfnSlackChannelConfigurationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-snstopicarns)
      */
     override fun snsTopicArns(): List<String> = unwrap(this).getSnsTopicArns() ?: emptyList()
+
+    /**
+     * The tags to add to the configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
      * Enables use of a user role requirement in your chat configuration.

@@ -410,7 +410,8 @@ public interface CfnCustomActionTypeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionTypeProps,
-  ) : CdkObject(cdkObject), CfnCustomActionTypeProps {
+  ) : CdkObject(cdkObject),
+      CfnCustomActionTypeProps {
     /**
      * The category of the custom action, such as a build action or a test action.
      *

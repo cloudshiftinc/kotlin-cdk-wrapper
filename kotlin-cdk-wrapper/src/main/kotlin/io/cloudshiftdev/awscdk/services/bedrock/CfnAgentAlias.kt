@@ -53,7 +53,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAgentAlias(
   cdkObject: software.amazon.awscdk.services.bedrock.CfnAgentAlias,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -510,7 +512,8 @@ public open class CfnAgentAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnAgentAlias.AgentAliasHistoryEventProperty,
-    ) : CdkObject(cdkObject), AgentAliasHistoryEventProperty {
+    ) : CdkObject(cdkObject),
+        AgentAliasHistoryEventProperty {
       /**
        * The date that the alias stopped being associated to the version in the
        * `routingConfiguration` object.
@@ -609,7 +612,8 @@ public open class CfnAgentAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnAgentAlias.AgentAliasRoutingConfigurationListItemProperty,
-    ) : CdkObject(cdkObject), AgentAliasRoutingConfigurationListItemProperty {
+    ) : CdkObject(cdkObject),
+        AgentAliasRoutingConfigurationListItemProperty {
       /**
        * The version of the agent with which the alias is associated.
        *

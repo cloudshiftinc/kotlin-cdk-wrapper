@@ -77,7 +77,8 @@ public interface PortRange {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.PortRange,
-  ) : CdkObject(cdkObject), PortRange {
+  ) : CdkObject(cdkObject),
+      PortRange {
     /**
      * The first port in the range of ports, inclusive.
      */

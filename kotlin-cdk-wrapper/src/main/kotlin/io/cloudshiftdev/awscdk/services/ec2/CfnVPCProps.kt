@@ -350,7 +350,8 @@ public interface CfnVPCProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnVPCProps,
-  ) : CdkObject(cdkObject), CfnVPCProps {
+  ) : CdkObject(cdkObject),
+      CfnVPCProps {
     /**
      * The IPv4 network range for the VPC, in CIDR notation.
      *

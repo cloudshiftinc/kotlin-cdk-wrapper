@@ -79,7 +79,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNetworkInsightsPath(
   cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -705,7 +707,8 @@ public open class CfnNetworkInsightsPath(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty,
-    ) : CdkObject(cdkObject), FilterPortRangeProperty {
+    ) : CdkObject(cdkObject),
+        FilterPortRangeProperty {
       /**
        * The first port in the range.
        *
@@ -917,7 +920,8 @@ public open class CfnNetworkInsightsPath(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty,
-    ) : CdkObject(cdkObject), PathFilterProperty {
+    ) : CdkObject(cdkObject),
+        PathFilterProperty {
       /**
        * The destination IPv4 address.
        *

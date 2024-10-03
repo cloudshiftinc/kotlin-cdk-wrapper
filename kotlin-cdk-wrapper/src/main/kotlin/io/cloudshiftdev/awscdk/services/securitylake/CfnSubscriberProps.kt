@@ -335,7 +335,8 @@ public interface CfnSubscriberProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.securitylake.CfnSubscriberProps,
-  ) : CdkObject(cdkObject), CfnSubscriberProps {
+  ) : CdkObject(cdkObject),
+      CfnSubscriberProps {
     /**
      * You can choose to notify subscribers of new objects with an Amazon Simple Queue Service
      * (Amazon SQS) queue or through messaging to an HTTPS endpoint provided by the subscriber.

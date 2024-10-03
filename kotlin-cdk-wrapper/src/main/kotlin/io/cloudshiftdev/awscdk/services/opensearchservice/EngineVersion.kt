@@ -108,6 +108,12 @@ public open class EngineVersion(
     public val OPENSEARCH_2_11: EngineVersion =
         EngineVersion.wrap(software.amazon.awscdk.services.opensearchservice.EngineVersion.OPENSEARCH_2_11)
 
+    public val OPENSEARCH_2_13: EngineVersion =
+        EngineVersion.wrap(software.amazon.awscdk.services.opensearchservice.EngineVersion.OPENSEARCH_2_13)
+
+    public val OPENSEARCH_2_15: EngineVersion =
+        EngineVersion.wrap(software.amazon.awscdk.services.opensearchservice.EngineVersion.OPENSEARCH_2_15)
+
     public val OPENSEARCH_2_3: EngineVersion =
         EngineVersion.wrap(software.amazon.awscdk.services.opensearchservice.EngineVersion.OPENSEARCH_2_3)
 

@@ -89,7 +89,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRule(
   cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -674,7 +676,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * The fixed response action.
        *
@@ -764,7 +767,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty,
-    ) : CdkObject(cdkObject), FixedResponseProperty {
+    ) : CdkObject(cdkObject),
+        FixedResponseProperty {
       /**
        * The HTTP response code.
        *
@@ -930,7 +934,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty,
-    ) : CdkObject(cdkObject), ForwardProperty {
+    ) : CdkObject(cdkObject),
+        ForwardProperty {
       /**
        * The target groups.
        *
@@ -1106,7 +1111,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchProperty,
-    ) : CdkObject(cdkObject), HeaderMatchProperty {
+    ) : CdkObject(cdkObject),
+        HeaderMatchProperty {
       /**
        * Indicates whether the match is case sensitive.
        *
@@ -1246,7 +1252,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchTypeProperty,
-    ) : CdkObject(cdkObject), HeaderMatchTypeProperty {
+    ) : CdkObject(cdkObject),
+        HeaderMatchTypeProperty {
       /**
        * A contains type match.
        *
@@ -1463,7 +1470,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty,
-    ) : CdkObject(cdkObject), HttpMatchProperty {
+    ) : CdkObject(cdkObject),
+        HttpMatchProperty {
       /**
        * The header matches.
        *
@@ -1607,7 +1615,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.MatchProperty,
-    ) : CdkObject(cdkObject), MatchProperty {
+    ) : CdkObject(cdkObject),
+        MatchProperty {
       /**
        * The HTTP criteria that a rule must match.
        *
@@ -1750,7 +1759,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchProperty,
-    ) : CdkObject(cdkObject), PathMatchProperty {
+    ) : CdkObject(cdkObject),
+        PathMatchProperty {
       /**
        * Indicates whether the match is case sensitive.
        *
@@ -1861,7 +1871,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty,
-    ) : CdkObject(cdkObject), PathMatchTypeProperty {
+    ) : CdkObject(cdkObject),
+        PathMatchTypeProperty {
       /**
        * An exact match of the path.
        *
@@ -1986,7 +1997,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.WeightedTargetGroupProperty,
-    ) : CdkObject(cdkObject), WeightedTargetGroupProperty {
+    ) : CdkObject(cdkObject),
+        WeightedTargetGroupProperty {
       /**
        * The ID of the target group.
        *

@@ -103,7 +103,8 @@ public interface InstanceEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpointProps,
-  ) : CdkObject(cdkObject), InstanceEndpointProps {
+  ) : CdkObject(cdkObject),
+      InstanceEndpointProps {
     /**
      * Forward the client IP address.
      *

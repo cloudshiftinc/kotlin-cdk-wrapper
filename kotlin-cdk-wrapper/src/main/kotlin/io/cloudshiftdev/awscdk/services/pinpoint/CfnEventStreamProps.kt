@@ -124,7 +124,8 @@ public interface CfnEventStreamProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnEventStreamProps,
-  ) : CdkObject(cdkObject), CfnEventStreamProps {
+  ) : CdkObject(cdkObject),
+      CfnEventStreamProps {
     /**
      * The unique identifier for the Amazon Pinpoint application that you want to export data from.
      *

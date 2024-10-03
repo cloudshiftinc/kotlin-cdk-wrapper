@@ -157,7 +157,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSegment(
   cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -624,7 +626,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.AttributeDimensionProperty,
-    ) : CdkObject(cdkObject), AttributeDimensionProperty {
+    ) : CdkObject(cdkObject),
+        AttributeDimensionProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-attributedimension.html#cfn-pinpoint-segment-attributedimension-attributetype)
        */
@@ -738,7 +741,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty,
-    ) : CdkObject(cdkObject), BehaviorProperty {
+    ) : CdkObject(cdkObject),
+        BehaviorProperty {
       /**
        * Specifies how recently segment members were active.
        *
@@ -838,7 +842,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty,
-    ) : CdkObject(cdkObject), CoordinatesProperty {
+    ) : CdkObject(cdkObject),
+        CoordinatesProperty {
       /**
        * The latitude coordinate of the location.
        *
@@ -1205,7 +1210,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.DemographicProperty,
-    ) : CdkObject(cdkObject), DemographicProperty {
+    ) : CdkObject(cdkObject),
+        DemographicProperty {
       /**
        * The app version criteria for the segment.
        *
@@ -1370,7 +1376,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty,
-    ) : CdkObject(cdkObject), GPSPointProperty {
+    ) : CdkObject(cdkObject),
+        GPSPointProperty {
       /**
        * The GPS coordinates to measure distance from.
        *
@@ -1689,7 +1696,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty,
-    ) : CdkObject(cdkObject), GroupsProperty {
+    ) : CdkObject(cdkObject),
+        GroupsProperty {
       /**
        * An array that defines the dimensions to include or exclude from the segment.
        *
@@ -1886,7 +1894,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty,
-    ) : CdkObject(cdkObject), LocationProperty {
+    ) : CdkObject(cdkObject),
+        LocationProperty {
       /**
        * The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
        *
@@ -2012,7 +2021,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty,
-    ) : CdkObject(cdkObject), RecencyProperty {
+    ) : CdkObject(cdkObject),
+        RecencyProperty {
       /**
        * The duration to use when determining which users have been active or inactive with your
        * app.
@@ -2361,7 +2371,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty,
-    ) : CdkObject(cdkObject), SegmentDimensionsProperty {
+    ) : CdkObject(cdkObject),
+        SegmentDimensionsProperty {
       /**
        * One or more custom attributes to use as criteria for the segment.
        *
@@ -2597,7 +2608,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty,
-    ) : CdkObject(cdkObject), SegmentGroupsProperty {
+    ) : CdkObject(cdkObject),
+        SegmentGroupsProperty {
       /**
        * Specifies the set of segment criteria to evaluate when handling segment groups for the
        * segment.
@@ -2736,7 +2748,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SetDimensionProperty,
-    ) : CdkObject(cdkObject), SetDimensionProperty {
+    ) : CdkObject(cdkObject),
+        SetDimensionProperty {
       /**
        * The type of segment dimension to use.
        *
@@ -2858,7 +2871,8 @@ public open class CfnSegment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty,
-    ) : CdkObject(cdkObject), SourceSegmentsProperty {
+    ) : CdkObject(cdkObject),
+        SourceSegmentsProperty {
       /**
        * The unique identifier for the source segment.
        *

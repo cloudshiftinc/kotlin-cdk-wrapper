@@ -42,7 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Alias(
   cdkObject: software.amazon.awscdk.services.lambda.Alias,
-) : QualifiedFunctionBase(cdkObject), IAlias {
+) : QualifiedFunctionBase(cdkObject),
+    IAlias {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

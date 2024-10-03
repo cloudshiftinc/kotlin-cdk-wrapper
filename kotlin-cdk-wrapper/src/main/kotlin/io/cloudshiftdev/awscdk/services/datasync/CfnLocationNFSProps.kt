@@ -50,11 +50,12 @@ public interface CfnLocationNFSProps {
   public fun mountOptions(): Any? = unwrap(this).getMountOptions()
 
   /**
-   * Specifies the Amazon Resource Name (ARN) of the DataSync agent that want to connect to your NFS
+   * Specifies the Amazon Resource Name (ARN) of the DataSync agent that can connect to your NFS
    * file server.
    *
-   * You can specify more than one agent. For more information, see [Using multiple agents for
-   * transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html) .
+   * You can specify more than one agent. For more information, see [Using multiple DataSync
+   * agents](https://docs.aws.amazon.com/datasync/latest/userguide/do-i-need-datasync-agent.html#multiple-agents)
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-onpremconfig)
    */
@@ -115,26 +116,29 @@ public interface CfnLocationNFSProps {
     public fun mountOptions(mountOptions: CfnLocationNFS.MountOptionsProperty.Builder.() -> Unit)
 
     /**
-     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that want
-     * to connect to your NFS file server. 
-     * You can specify more than one agent. For more information, see [Using multiple agents for
-     * transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html) .
+     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that can
+     * connect to your NFS file server. 
+     * You can specify more than one agent. For more information, see [Using multiple DataSync
+     * agents](https://docs.aws.amazon.com/datasync/latest/userguide/do-i-need-datasync-agent.html#multiple-agents)
+     * .
      */
     public fun onPremConfig(onPremConfig: IResolvable)
 
     /**
-     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that want
-     * to connect to your NFS file server. 
-     * You can specify more than one agent. For more information, see [Using multiple agents for
-     * transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html) .
+     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that can
+     * connect to your NFS file server. 
+     * You can specify more than one agent. For more information, see [Using multiple DataSync
+     * agents](https://docs.aws.amazon.com/datasync/latest/userguide/do-i-need-datasync-agent.html#multiple-agents)
+     * .
      */
     public fun onPremConfig(onPremConfig: CfnLocationNFS.OnPremConfigProperty)
 
     /**
-     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that want
-     * to connect to your NFS file server. 
-     * You can specify more than one agent. For more information, see [Using multiple agents for
-     * transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html) .
+     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that can
+     * connect to your NFS file server. 
+     * You can specify more than one agent. For more information, see [Using multiple DataSync
+     * agents](https://docs.aws.amazon.com/datasync/latest/userguide/do-i-need-datasync-agent.html#multiple-agents)
+     * .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf5703597528879642bf94644d82f6db8aa573618543415d79049ad5e417fa05")
@@ -201,30 +205,33 @@ public interface CfnLocationNFSProps {
         Unit = mountOptions(CfnLocationNFS.MountOptionsProperty(mountOptions))
 
     /**
-     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that want
-     * to connect to your NFS file server. 
-     * You can specify more than one agent. For more information, see [Using multiple agents for
-     * transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html) .
+     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that can
+     * connect to your NFS file server. 
+     * You can specify more than one agent. For more information, see [Using multiple DataSync
+     * agents](https://docs.aws.amazon.com/datasync/latest/userguide/do-i-need-datasync-agent.html#multiple-agents)
+     * .
      */
     override fun onPremConfig(onPremConfig: IResolvable) {
       cdkBuilder.onPremConfig(onPremConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that want
-     * to connect to your NFS file server. 
-     * You can specify more than one agent. For more information, see [Using multiple agents for
-     * transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html) .
+     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that can
+     * connect to your NFS file server. 
+     * You can specify more than one agent. For more information, see [Using multiple DataSync
+     * agents](https://docs.aws.amazon.com/datasync/latest/userguide/do-i-need-datasync-agent.html#multiple-agents)
+     * .
      */
     override fun onPremConfig(onPremConfig: CfnLocationNFS.OnPremConfigProperty) {
       cdkBuilder.onPremConfig(onPremConfig.let(CfnLocationNFS.OnPremConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that want
-     * to connect to your NFS file server. 
-     * You can specify more than one agent. For more information, see [Using multiple agents for
-     * transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html) .
+     * @param onPremConfig Specifies the Amazon Resource Name (ARN) of the DataSync agent that can
+     * connect to your NFS file server. 
+     * You can specify more than one agent. For more information, see [Using multiple DataSync
+     * agents](https://docs.aws.amazon.com/datasync/latest/userguide/do-i-need-datasync-agent.html#multiple-agents)
+     * .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf5703597528879642bf94644d82f6db8aa573618543415d79049ad5e417fa05")
@@ -273,7 +280,8 @@ public interface CfnLocationNFSProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFSProps,
-  ) : CdkObject(cdkObject), CfnLocationNFSProps {
+  ) : CdkObject(cdkObject),
+      CfnLocationNFSProps {
     /**
      * Specifies the options that DataSync can use to mount your NFS file server.
      *
@@ -282,11 +290,12 @@ public interface CfnLocationNFSProps {
     override fun mountOptions(): Any? = unwrap(this).getMountOptions()
 
     /**
-     * Specifies the Amazon Resource Name (ARN) of the DataSync agent that want to connect to your
-     * NFS file server.
+     * Specifies the Amazon Resource Name (ARN) of the DataSync agent that can connect to your NFS
+     * file server.
      *
-     * You can specify more than one agent. For more information, see [Using multiple agents for
-     * transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html) .
+     * You can specify more than one agent. For more information, see [Using multiple DataSync
+     * agents](https://docs.aws.amazon.com/datasync/latest/userguide/do-i-need-datasync-agent.html#multiple-agents)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-onpremconfig)
      */

@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAlias(
   cdkObject: software.amazon.awscdk.services.gamelift.CfnAlias,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -397,7 +398,8 @@ public open class CfnAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnAlias.RoutingStrategyProperty,
-    ) : CdkObject(cdkObject), RoutingStrategyProperty {
+    ) : CdkObject(cdkObject),
+        RoutingStrategyProperty {
       /**
        * A unique identifier for a fleet that the alias points to.
        *

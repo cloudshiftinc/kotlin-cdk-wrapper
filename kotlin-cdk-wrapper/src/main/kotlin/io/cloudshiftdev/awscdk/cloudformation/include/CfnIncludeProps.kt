@@ -228,7 +228,8 @@ public interface CfnIncludeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cloudformation.include.CfnIncludeProps,
-  ) : CdkObject(cdkObject), CfnIncludeProps {
+  ) : CdkObject(cdkObject),
+      CfnIncludeProps {
     /**
      * Specifies whether to allow cyclical references, effectively disregarding safeguards meant to
      * avoid undeployable templates.

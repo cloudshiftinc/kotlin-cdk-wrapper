@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLoadBalancerTlsCertificate(
   cdkObject: software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificate,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

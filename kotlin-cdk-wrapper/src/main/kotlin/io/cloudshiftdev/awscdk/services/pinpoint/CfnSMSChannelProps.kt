@@ -177,7 +177,8 @@ public interface CfnSMSChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnSMSChannelProps,
-  ) : CdkObject(cdkObject), CfnSMSChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnSMSChannelProps {
     /**
      * The unique identifier for the Amazon Pinpoint application that the SMS channel applies to.
      *

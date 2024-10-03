@@ -100,7 +100,8 @@ public interface NumberAttributeProps : NumberAttributeConstraints, CustomAttrib
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.NumberAttributeProps,
-  ) : CdkObject(cdkObject), NumberAttributeProps {
+  ) : CdkObject(cdkObject),
+      NumberAttributeProps {
     /**
      * Maximum value of this attribute.
      *

@@ -50,7 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataCatalogEncryptionSettings(
   cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -379,7 +380,8 @@ public open class CfnDataCatalogEncryptionSettings(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty,
-    ) : CdkObject(cdkObject), ConnectionPasswordEncryptionProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionPasswordEncryptionProperty {
       /**
        * An AWS KMS key that is used to encrypt the connection password.
        *
@@ -599,7 +601,8 @@ public open class CfnDataCatalogEncryptionSettings(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty,
-    ) : CdkObject(cdkObject), DataCatalogEncryptionSettingsProperty {
+    ) : CdkObject(cdkObject),
+        DataCatalogEncryptionSettingsProperty {
       /**
        * When connection password protection is enabled, the Data Catalog uses a customer-provided
        * key to encrypt the password as part of `CreateConnection` or `UpdateConnection` and store it
@@ -738,7 +741,8 @@ public open class CfnDataCatalogEncryptionSettings(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty,
-    ) : CdkObject(cdkObject), EncryptionAtRestProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionAtRestProperty {
       /**
        * The encryption-at-rest mode for encrypting Data Catalog data.
        *

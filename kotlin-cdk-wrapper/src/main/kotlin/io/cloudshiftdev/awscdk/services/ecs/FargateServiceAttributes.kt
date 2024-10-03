@@ -98,7 +98,8 @@ public interface FargateServiceAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.FargateServiceAttributes,
-  ) : CdkObject(cdkObject), FargateServiceAttributes {
+  ) : CdkObject(cdkObject),
+      FargateServiceAttributes {
     /**
      * The cluster that hosts the service.
      */

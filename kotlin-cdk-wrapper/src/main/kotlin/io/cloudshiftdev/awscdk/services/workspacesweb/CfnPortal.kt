@@ -26,8 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * an `IdentityProvider` and `NetworkSettings` resource. An `IAM Identity Center` web portal does not
  * require an `IdentityProvider` resource.
  *
- * For more information about web portals, see [What is Amazon WorkSpaces
- * Web?](https://docs.aws.amazon.com/workspaces-web/latest/adminguide/what-is-workspaces-web.html.html)
+ * For more information about web portals, see [What is Amazon WorkSpaces Secure
+ * Browser?](https://docs.aws.amazon.com/workspaces-web/latest/adminguide/what-is-workspaces-web.html.html)
  * .
  *
  * Example:
@@ -61,7 +61,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPortal(
   cdkObject: software.amazon.awscdk.services.workspacesweb.CfnPortal,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.workspacesweb.CfnPortal(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -341,15 +343,15 @@ public open class CfnPortal(
      * `Standard` web portals are authenticated directly through your identity provider (IdP). User
      * and group access to your web portal is controlled through your IdP. You need to include an IdP
      * resource in your template to integrate your IdP with your web portal. Completing the
-     * configuration for your IdP requires exchanging WorkSpaces Web’s SP metadata with your IdP’s IdP
-     * metadata. If your IdP requires the SP metadata first before returning the IdP metadata, you
-     * should follow these steps:
+     * configuration for your IdP requires exchanging WorkSpaces Secure Browser’s SP metadata with your
+     * IdP’s IdP metadata. If your IdP requires the SP metadata first before returning the IdP
+     * metadata, you should follow these steps:
      *
      *
      * * Create and deploy a CloudFormation template with a `Standard` portal with no
      * `IdentityProvider` resource.
-     * * Retrieve the SP metadata using `Fn:GetAtt` , the WorkSpaces Web console, or by the calling
-     * the `GetPortalServiceProviderMetadata` API.
+     * * Retrieve the SP metadata using `Fn:GetAtt` , the WorkSpaces Secure Browser console, or by
+     * the calling the `GetPortalServiceProviderMetadata` API.
      * * Submit the data to your IdP.
      * * Add an `IdentityProvider` resource to your CloudFormation template.
      *
@@ -358,7 +360,7 @@ public open class CfnPortal(
      * provide additional features, such as IdP-initiated authentication. Identity sources (including
      * external identity provider integration) and other identity provider information must be
      * configured in IAM Identity Center . User and group assignment must be done through the
-     * WorkSpaces Web console. These cannot be configured in CloudFormation.
+     * WorkSpaces Secure Browser console. These cannot be configured in CloudFormation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-authenticationtype)
      * @param authenticationType The type of authentication integration points used when signing
@@ -507,15 +509,15 @@ public open class CfnPortal(
      * `Standard` web portals are authenticated directly through your identity provider (IdP). User
      * and group access to your web portal is controlled through your IdP. You need to include an IdP
      * resource in your template to integrate your IdP with your web portal. Completing the
-     * configuration for your IdP requires exchanging WorkSpaces Web’s SP metadata with your IdP’s IdP
-     * metadata. If your IdP requires the SP metadata first before returning the IdP metadata, you
-     * should follow these steps:
+     * configuration for your IdP requires exchanging WorkSpaces Secure Browser’s SP metadata with your
+     * IdP’s IdP metadata. If your IdP requires the SP metadata first before returning the IdP
+     * metadata, you should follow these steps:
      *
      *
      * * Create and deploy a CloudFormation template with a `Standard` portal with no
      * `IdentityProvider` resource.
-     * * Retrieve the SP metadata using `Fn:GetAtt` , the WorkSpaces Web console, or by the calling
-     * the `GetPortalServiceProviderMetadata` API.
+     * * Retrieve the SP metadata using `Fn:GetAtt` , the WorkSpaces Secure Browser console, or by
+     * the calling the `GetPortalServiceProviderMetadata` API.
      * * Submit the data to your IdP.
      * * Add an `IdentityProvider` resource to your CloudFormation template.
      *
@@ -524,7 +526,7 @@ public open class CfnPortal(
      * provide additional features, such as IdP-initiated authentication. Identity sources (including
      * external identity provider integration) and other identity provider information must be
      * configured in IAM Identity Center . User and group assignment must be done through the
-     * WorkSpaces Web console. These cannot be configured in CloudFormation.
+     * WorkSpaces Secure Browser console. These cannot be configured in CloudFormation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-authenticationtype)
      * @param authenticationType The type of authentication integration points used when signing

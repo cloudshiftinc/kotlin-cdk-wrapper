@@ -199,7 +199,8 @@ public interface FileAssetLocation {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.FileAssetLocation,
-  ) : CdkObject(cdkObject), FileAssetLocation {
+  ) : CdkObject(cdkObject),
+      FileAssetLocation {
     /**
      * The name of the Amazon S3 bucket.
      */

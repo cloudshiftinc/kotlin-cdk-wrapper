@@ -102,7 +102,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAccountAuditConfiguration(
   cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -577,7 +578,8 @@ public open class CfnAccountAuditConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty,
-    ) : CdkObject(cdkObject), AuditCheckConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AuditCheckConfigurationProperty {
       /**
        * True if this audit check is enabled for this account.
        *
@@ -1694,7 +1696,8 @@ public open class CfnAccountAuditConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationsProperty,
-    ) : CdkObject(cdkObject), AuditCheckConfigurationsProperty {
+    ) : CdkObject(cdkObject),
+        AuditCheckConfigurationsProperty {
       /**
        * Checks the permissiveness of an authenticated Amazon Cognito identity pool role.
        *
@@ -1949,7 +1952,8 @@ public open class CfnAccountAuditConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty,
-    ) : CdkObject(cdkObject), AuditNotificationTargetConfigurationsProperty {
+    ) : CdkObject(cdkObject),
+        AuditNotificationTargetConfigurationsProperty {
       /**
        * The `Sns` notification target.
        *
@@ -2087,7 +2091,8 @@ public open class CfnAccountAuditConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetProperty,
-    ) : CdkObject(cdkObject), AuditNotificationTargetProperty {
+    ) : CdkObject(cdkObject),
+        AuditNotificationTargetProperty {
       /**
        * True if notifications to the target are enabled.
        *

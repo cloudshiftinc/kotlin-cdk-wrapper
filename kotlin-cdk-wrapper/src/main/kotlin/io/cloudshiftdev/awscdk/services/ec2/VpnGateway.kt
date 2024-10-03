@@ -28,7 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class VpnGateway(
   cdkObject: software.amazon.awscdk.services.ec2.VpnGateway,
-) : Resource(cdkObject), IVpnGateway {
+) : Resource(cdkObject),
+    IVpnGateway {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

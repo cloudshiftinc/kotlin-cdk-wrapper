@@ -95,7 +95,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNodegroup(
   cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1599,7 +1601,8 @@ public open class CfnNodegroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.LaunchTemplateSpecificationProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        LaunchTemplateSpecificationProperty {
       /**
        * The ID of the launch template.
        *
@@ -1787,7 +1790,8 @@ public open class CfnNodegroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty,
-    ) : CdkObject(cdkObject), RemoteAccessProperty {
+    ) : CdkObject(cdkObject),
+        RemoteAccessProperty {
       /**
        * The Amazon EC2 SSH key name that provides access for SSH communication with the nodes in
        * the managed node group.
@@ -2001,7 +2005,8 @@ public open class CfnNodegroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty,
-    ) : CdkObject(cdkObject), ScalingConfigProperty {
+    ) : CdkObject(cdkObject),
+        ScalingConfigProperty {
       /**
        * The current number of nodes that the managed node group should maintain.
        *
@@ -2162,7 +2167,8 @@ public open class CfnNodegroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty,
-    ) : CdkObject(cdkObject), TaintProperty {
+    ) : CdkObject(cdkObject),
+        TaintProperty {
       /**
        * The effect of the taint.
        *
@@ -2291,7 +2297,8 @@ public open class CfnNodegroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty,
-    ) : CdkObject(cdkObject), UpdateConfigProperty {
+    ) : CdkObject(cdkObject),
+        UpdateConfigProperty {
       /**
        * The maximum number of nodes unavailable at once during a version update.
        *

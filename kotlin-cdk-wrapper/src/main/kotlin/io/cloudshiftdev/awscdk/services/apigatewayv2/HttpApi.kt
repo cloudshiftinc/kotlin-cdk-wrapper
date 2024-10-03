@@ -34,7 +34,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class HttpApi(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApi,
-) : Resource(cdkObject), IHttpApi, IApi {
+) : Resource(cdkObject),
+    IHttpApi,
+    IApi {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigatewayv2.HttpApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -559,6 +561,19 @@ public open class HttpApi(
      * default endpoint. 
      */
     public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean)
+
+    /**
+     * Whether to set the default route selection expression for the API.
+     *
+     * When enabled, "${request.method} ${request.path}" is set as the default route selection
+     * expression.
+     *
+     * Default: false
+     *
+     * @param routeSelectionExpression Whether to set the default route selection expression for the
+     * API. 
+     */
+    public fun routeSelectionExpression(routeSelectionExpression: Boolean)
   }
 
   private class BuilderImpl(
@@ -721,6 +736,21 @@ public open class HttpApi(
      */
     override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
       cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint)
+    }
+
+    /**
+     * Whether to set the default route selection expression for the API.
+     *
+     * When enabled, "${request.method} ${request.path}" is set as the default route selection
+     * expression.
+     *
+     * Default: false
+     *
+     * @param routeSelectionExpression Whether to set the default route selection expression for the
+     * API. 
+     */
+    override fun routeSelectionExpression(routeSelectionExpression: Boolean) {
+      cdkBuilder.routeSelectionExpression(routeSelectionExpression)
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.HttpApi = cdkBuilder.build()

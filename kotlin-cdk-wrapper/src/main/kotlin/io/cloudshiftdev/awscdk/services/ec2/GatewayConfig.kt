@@ -73,7 +73,8 @@ public interface GatewayConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.GatewayConfig,
-  ) : CdkObject(cdkObject), GatewayConfig {
+  ) : CdkObject(cdkObject),
+      GatewayConfig {
     /**
      * Availability Zone.
      */

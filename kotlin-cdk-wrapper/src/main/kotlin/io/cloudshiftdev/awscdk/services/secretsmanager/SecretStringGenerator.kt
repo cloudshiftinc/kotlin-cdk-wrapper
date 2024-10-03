@@ -294,7 +294,8 @@ public interface SecretStringGenerator {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.SecretStringGenerator,
-  ) : CdkObject(cdkObject), SecretStringGenerator {
+  ) : CdkObject(cdkObject),
+      SecretStringGenerator {
     /**
      * A string that includes characters that shouldn't be included in the generated password.
      *

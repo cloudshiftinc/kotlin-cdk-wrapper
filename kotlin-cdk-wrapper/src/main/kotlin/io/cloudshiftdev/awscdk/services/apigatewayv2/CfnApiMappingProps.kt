@@ -121,7 +121,8 @@ public interface CfnApiMappingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiMappingProps,
-  ) : CdkObject(cdkObject), CfnApiMappingProps {
+  ) : CdkObject(cdkObject),
+      CfnApiMappingProps {
     /**
      * The API identifier.
      *

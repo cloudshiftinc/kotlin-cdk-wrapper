@@ -50,7 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAPNSVoipSandboxChannel(
   cdkObject: software.amazon.awscdk.services.pinpoint.CfnAPNSVoipSandboxChannel,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -42,7 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class FargateTaskDefinition(
   cdkObject: software.amazon.awscdk.services.ecs.FargateTaskDefinition,
-) : TaskDefinition(cdkObject), IFargateTaskDefinition {
+) : TaskDefinition(cdkObject),
+    IFargateTaskDefinition {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.FargateTaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

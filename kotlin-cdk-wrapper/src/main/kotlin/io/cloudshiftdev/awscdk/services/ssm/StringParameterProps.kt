@@ -16,21 +16,19 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // Grant read access to some Role
- * IRole role;
- * // Create a new SSM Parameter holding a String
- * StringParameter param = StringParameter.Builder.create(this, "StringParameter")
- * // description: 'Some user-friendly description',
- * // name: 'ParameterName',
- * .stringValue("Initial parameter value")
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
+ * IFunction func;
+ * StringParameter simpleParameter = StringParameter.Builder.create(this, "StringParameter")
+ * // the parameter name doesn't contain any '/'
+ * .parameterName("parameter")
+ * .stringValue("SOME_VALUE")
+ * .simpleName(true)
  * .build();
- * param.grantRead(role);
- * // Create a new SSM Parameter holding a StringList
- * StringListParameter listParameter = StringListParameter.Builder.create(this,
- * "StringListParameter")
- * // description: 'Some user-friendly description',
- * // name: 'ParameterName',
- * .stringListValue(List.of("Initial parameter value A", "Initial parameter value B"))
+ * StringParameter nonSimpleParameter = StringParameter.Builder.create(this, "StringParameter")
+ * // the parameter name contains '/'
+ * .parameterName(String.format("/%s/my/app/param", func.getFunctionName()))
+ * .stringValue("SOME_VALUE")
+ * .simpleName(false)
  * .build();
  * ```
  */
@@ -88,8 +86,12 @@ public interface StringParameterProps : ParameterOptions {
     public fun parameterName(parameterName: String)
 
     /**
-     * @param simpleName Indicates if the parameter name is a simple name (i.e. does not include "/"
-     * separators).
+     * @param simpleName Indicates whether the parameter name is a simple name.
+     * A parameter name
+     * without any "/" is considered a simple name. If the parameter name includes
+     * "/", setting simpleName to true might cause unintended issues such
+     * as duplicate "/" in the resulting ARN.
+     *
      * This is required only if `parameterName` is a token, which means we
      * are unable to detect if the name is simple or "path-like" for the purpose
      * of rendering SSM parameter ARNs.
@@ -154,8 +156,12 @@ public interface StringParameterProps : ParameterOptions {
     }
 
     /**
-     * @param simpleName Indicates if the parameter name is a simple name (i.e. does not include "/"
-     * separators).
+     * @param simpleName Indicates whether the parameter name is a simple name.
+     * A parameter name
+     * without any "/" is considered a simple name. If the parameter name includes
+     * "/", setting simpleName to true might cause unintended issues such
+     * as duplicate "/" in the resulting ARN.
+     *
      * This is required only if `parameterName` is a token, which means we
      * are unable to detect if the name is simple or "path-like" for the purpose
      * of rendering SSM parameter ARNs.
@@ -198,7 +204,8 @@ public interface StringParameterProps : ParameterOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ssm.StringParameterProps,
-  ) : CdkObject(cdkObject), StringParameterProps {
+  ) : CdkObject(cdkObject),
+      StringParameterProps {
     /**
      * A regular expression used to validate the parameter value.
      *
@@ -232,7 +239,12 @@ public interface StringParameterProps : ParameterOptions {
     override fun parameterName(): String? = unwrap(this).getParameterName()
 
     /**
-     * Indicates if the parameter name is a simple name (i.e. does not include "/" separators).
+     * Indicates whether the parameter name is a simple name.
+     *
+     * A parameter name
+     * without any "/" is considered a simple name. If the parameter name includes
+     * "/", setting simpleName to true might cause unintended issues such
+     * as duplicate "/" in the resulting ARN.
      *
      * This is required only if `parameterName` is a token, which means we
      * are unable to detect if the name is simple or "path-like" for the purpose

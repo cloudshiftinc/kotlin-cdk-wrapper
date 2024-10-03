@@ -76,7 +76,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGroup(
   cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -820,7 +822,8 @@ public open class CfnGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty,
-    ) : CdkObject(cdkObject), ConfigurationItemProperty {
+    ) : CdkObject(cdkObject),
+        ConfigurationItemProperty {
       /**
        * A collection of parameters for this configuration item.
        *
@@ -983,7 +986,8 @@ public open class CfnGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty,
-    ) : CdkObject(cdkObject), ConfigurationParameterProperty {
+    ) : CdkObject(cdkObject),
+        ConfigurationParameterProperty {
       /**
        * The name of the group configuration parameter.
        *
@@ -1235,7 +1239,8 @@ public open class CfnGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty,
-    ) : CdkObject(cdkObject), QueryProperty {
+    ) : CdkObject(cdkObject),
+        QueryProperty {
       /**
        * Specifies limits to the types of resources that can be included in the resource group.
        *
@@ -1514,7 +1519,8 @@ public open class CfnGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty,
-    ) : CdkObject(cdkObject), ResourceQueryProperty {
+    ) : CdkObject(cdkObject),
+        ResourceQueryProperty {
       /**
        * The query that defines the membership of the group.
        *
@@ -1696,7 +1702,8 @@ public open class CfnGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty,
-    ) : CdkObject(cdkObject), TagFilterProperty {
+    ) : CdkObject(cdkObject),
+        TagFilterProperty {
       /**
        * A string that defines a tag key.
        *

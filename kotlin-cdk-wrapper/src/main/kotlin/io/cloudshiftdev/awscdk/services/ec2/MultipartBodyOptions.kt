@@ -116,7 +116,8 @@ public interface MultipartBodyOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.MultipartBodyOptions,
-  ) : CdkObject(cdkObject), MultipartBodyOptions {
+  ) : CdkObject(cdkObject),
+      MultipartBodyOptions {
     /**
      * The body of message.
      *

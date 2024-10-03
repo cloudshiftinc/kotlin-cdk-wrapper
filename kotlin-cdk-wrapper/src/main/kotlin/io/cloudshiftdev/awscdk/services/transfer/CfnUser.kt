@@ -68,7 +68,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUser(
   cdkObject: software.amazon.awscdk.services.transfer.CfnUser,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1031,7 +1033,8 @@ public open class CfnUser(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty,
-    ) : CdkObject(cdkObject), HomeDirectoryMapEntryProperty {
+    ) : CdkObject(cdkObject),
+        HomeDirectoryMapEntryProperty {
       /**
        * Represents an entry for `HomeDirectoryMappings` .
        *
@@ -1209,7 +1212,8 @@ public open class CfnUser(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty,
-    ) : CdkObject(cdkObject), PosixProfileProperty {
+    ) : CdkObject(cdkObject),
+        PosixProfileProperty {
       /**
        * The POSIX group ID used for all EFS operations by this user.
        *

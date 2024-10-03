@@ -173,7 +173,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVirtualGateway(
   cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -620,7 +622,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty,
-    ) : CdkObject(cdkObject), JsonFormatRefProperty {
+    ) : CdkObject(cdkObject),
+        JsonFormatRefProperty {
       /**
        * The specified key for the JSON.
        *
@@ -753,7 +756,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty,
-    ) : CdkObject(cdkObject), LoggingFormatProperty {
+    ) : CdkObject(cdkObject),
+        LoggingFormatProperty {
       /**
        * The logging format for JSON.
        *
@@ -854,7 +858,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty,
-    ) : CdkObject(cdkObject), SubjectAlternativeNameMatchersProperty {
+    ) : CdkObject(cdkObject),
+        SubjectAlternativeNameMatchersProperty {
       /**
        * The values sent must match the specified values exactly.
        *
@@ -967,7 +972,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty,
-    ) : CdkObject(cdkObject), SubjectAlternativeNamesProperty {
+    ) : CdkObject(cdkObject),
+        SubjectAlternativeNamesProperty {
       /**
        * An object that represents the criteria for determining a SANs match.
        *
@@ -1087,7 +1093,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayAccessLogProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayAccessLogProperty {
       /**
        * The file object to send virtual gateway access logs to.
        *
@@ -1232,7 +1239,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayBackendDefaultsProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayBackendDefaultsProperty {
       /**
        * A reference to an object that represents a client policy.
        *
@@ -1381,7 +1389,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayClientPolicyProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayClientPolicyProperty {
       /**
        * A reference to an object that represents a Transport Layer Security (TLS) client policy.
        *
@@ -1663,7 +1672,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayClientPolicyTlsProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayClientPolicyTlsProperty {
       /**
        * A reference to an object that represents a virtual gateway's client's Transport Layer
        * Security (TLS) certificate.
@@ -1882,7 +1892,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayClientTlsCertificateProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayClientTlsCertificateProperty {
       /**
        * An object that represents a local file certificate.
        *
@@ -2112,7 +2123,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayConnectionPoolProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayConnectionPoolProperty {
       /**
        * An object that represents a type of connection pool.
        *
@@ -2285,7 +2297,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayFileAccessLogProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayFileAccessLogProperty {
       /**
        * The specified format for the virtual gateway access logs.
        *
@@ -2386,7 +2399,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayGrpcConnectionPoolProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayGrpcConnectionPoolProperty {
       /**
        * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
        * cluster.
@@ -2621,7 +2635,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayHealthCheckPolicyProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayHealthCheckPolicyProperty {
       /**
        * The number of consecutive successful health checks that must occur before declaring the
        * listener healthy.
@@ -2762,7 +2777,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayHttp2ConnectionPoolProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayHttp2ConnectionPoolProperty {
       /**
        * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream
        * cluster.
@@ -2873,7 +2889,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayHttpConnectionPoolProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayHttpConnectionPoolProperty {
       /**
        * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts
        * in upstream cluster.
@@ -3201,7 +3218,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayListenerProperty {
       /**
        * The connection pool information for the listener.
        *
@@ -3319,7 +3337,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsAcmCertificateProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayListenerTlsAcmCertificateProperty {
       /**
        * The Amazon Resource Name (ARN) for the certificate.
        *
@@ -3544,7 +3563,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsCertificateProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsCertificateProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayListenerTlsCertificateProperty {
       /**
        * A reference to an object that represents an AWS Certificate Manager certificate.
        *
@@ -3672,7 +3692,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsFileCertificateProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayListenerTlsFileCertificateProperty {
       /**
        * The certificate chain for the certificate.
        *
@@ -3906,7 +3927,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayListenerTlsProperty {
       /**
        * An object that represents a Transport Layer Security (TLS) certificate.
        *
@@ -4018,7 +4040,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsSdsCertificateProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayListenerTlsSdsCertificateProperty {
       /**
        * A reference to an object that represents the name of the secret secret requested from the
        * Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a
@@ -4211,7 +4234,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsValidationContextProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayListenerTlsValidationContextProperty {
       /**
        * A reference to an object that represents the SANs for a virtual gateway listener's
        * Transport Layer Security (TLS) validation context.
@@ -4400,7 +4424,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayListenerTlsValidationContextTrustProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayListenerTlsValidationContextTrustProperty {
       /**
        * An object that represents a Transport Layer Security (TLS) validation context trust for a
        * local file.
@@ -4533,7 +4558,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayLoggingProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayLoggingProperty {
       /**
        * The access log configuration.
        *
@@ -4640,7 +4666,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayPortMappingProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayPortMappingProperty {
       /**
        * The port used for the port mapping.
        *
@@ -4976,7 +5003,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewaySpecProperty,
-    ) : CdkObject(cdkObject), VirtualGatewaySpecProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewaySpecProperty {
       /**
        * A reference to an object that represents the defaults for backends.
        *
@@ -5088,7 +5116,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextAcmTrustProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayTlsValidationContextAcmTrustProperty {
       /**
        * One or more ACM Amazon Resource Name (ARN)s.
        *
@@ -5178,7 +5207,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextFileTrustProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayTlsValidationContextFileTrustProperty {
       /**
        * The certificate trust chain for a certificate stored on the file system of the virtual node
        * that the proxy is running on.
@@ -5369,7 +5399,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayTlsValidationContextProperty {
       /**
        * A reference to an object that represents the SANs for a virtual gateway's listener's
        * Transport Layer Security (TLS) validation context.
@@ -5472,7 +5503,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextSdsTrustProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayTlsValidationContextSdsTrustProperty {
       /**
        * A reference to an object that represents the name of the secret for a virtual gateway's
        * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
@@ -5707,7 +5739,8 @@ public open class CfnVirtualGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextTrustProperty,
-    ) : CdkObject(cdkObject), VirtualGatewayTlsValidationContextTrustProperty {
+    ) : CdkObject(cdkObject),
+        VirtualGatewayTlsValidationContextTrustProperty {
       /**
        * A reference to an object that represents a Transport Layer Security (TLS) validation
        * context trust for an AWS Certificate Manager certificate.

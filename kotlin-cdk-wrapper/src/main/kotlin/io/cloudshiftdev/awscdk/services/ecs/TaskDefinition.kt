@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class TaskDefinition(
   cdkObject: software.amazon.awscdk.services.ecs.TaskDefinition,
-) : Resource(cdkObject), ITaskDefinition {
+) : Resource(cdkObject),
+    ITaskDefinition {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

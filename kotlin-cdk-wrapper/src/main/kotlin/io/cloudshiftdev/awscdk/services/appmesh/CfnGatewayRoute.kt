@@ -215,7 +215,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGatewayRoute(
   cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -698,7 +700,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteHostnameMatchProperty,
-    ) : CdkObject(cdkObject), GatewayRouteHostnameMatchProperty {
+    ) : CdkObject(cdkObject),
+        GatewayRouteHostnameMatchProperty {
       /**
        * The exact host name to match on.
        *
@@ -789,7 +792,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteHostnameRewriteProperty,
-    ) : CdkObject(cdkObject), GatewayRouteHostnameRewriteProperty {
+    ) : CdkObject(cdkObject),
+        GatewayRouteHostnameRewriteProperty {
       /**
        * The default target host name to write to.
        *
@@ -983,7 +987,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteMetadataMatchProperty,
-    ) : CdkObject(cdkObject), GatewayRouteMetadataMatchProperty {
+    ) : CdkObject(cdkObject),
+        GatewayRouteMetadataMatchProperty {
       /**
        * The exact method header to be matched on.
        *
@@ -1118,7 +1123,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteRangeMatchProperty,
-    ) : CdkObject(cdkObject), GatewayRouteRangeMatchProperty {
+    ) : CdkObject(cdkObject),
+        GatewayRouteRangeMatchProperty {
       /**
        * The end of the range.
        *
@@ -1504,7 +1510,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteSpecProperty,
-    ) : CdkObject(cdkObject), GatewayRouteSpecProperty {
+    ) : CdkObject(cdkObject),
+        GatewayRouteSpecProperty {
       /**
        * An object that represents the specification of a gRPC gateway route.
        *
@@ -1659,7 +1666,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteTargetProperty,
-    ) : CdkObject(cdkObject), GatewayRouteTargetProperty {
+    ) : CdkObject(cdkObject),
+        GatewayRouteTargetProperty {
       /**
        * The port number of the gateway route target.
        *
@@ -1749,7 +1757,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteVirtualServiceProperty,
-    ) : CdkObject(cdkObject), GatewayRouteVirtualServiceProperty {
+    ) : CdkObject(cdkObject),
+        GatewayRouteVirtualServiceProperty {
       /**
        * The name of the virtual service that traffic is routed to.
        *
@@ -1925,7 +1934,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteActionProperty,
-    ) : CdkObject(cdkObject), GrpcGatewayRouteActionProperty {
+    ) : CdkObject(cdkObject),
+        GrpcGatewayRouteActionProperty {
       /**
        * The gateway route action to rewrite.
        *
@@ -2144,7 +2154,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteMatchProperty,
-    ) : CdkObject(cdkObject), GrpcGatewayRouteMatchProperty {
+    ) : CdkObject(cdkObject),
+        GrpcGatewayRouteMatchProperty {
       /**
        * The gateway route host name to be matched on.
        *
@@ -2343,7 +2354,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteMetadataProperty,
-    ) : CdkObject(cdkObject), GrpcGatewayRouteMetadataProperty {
+    ) : CdkObject(cdkObject),
+        GrpcGatewayRouteMetadataProperty {
       /**
        * Specify `True` to match anything except the match criteria.
        *
@@ -2550,7 +2562,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteProperty,
-    ) : CdkObject(cdkObject), GrpcGatewayRouteProperty {
+    ) : CdkObject(cdkObject),
+        GrpcGatewayRouteProperty {
       /**
        * An object that represents the action to take if a match is determined.
        *
@@ -2669,7 +2682,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteRewriteProperty,
-    ) : CdkObject(cdkObject), GrpcGatewayRouteRewriteProperty {
+    ) : CdkObject(cdkObject),
+        GrpcGatewayRouteRewriteProperty {
       /**
        * The host name of the gateway route to rewrite.
        *
@@ -2851,7 +2865,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteActionProperty,
-    ) : CdkObject(cdkObject), HttpGatewayRouteActionProperty {
+    ) : CdkObject(cdkObject),
+        HttpGatewayRouteActionProperty {
       /**
        * The gateway route action to rewrite.
        *
@@ -3055,7 +3070,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteHeaderMatchProperty,
-    ) : CdkObject(cdkObject), HttpGatewayRouteHeaderMatchProperty {
+    ) : CdkObject(cdkObject),
+        HttpGatewayRouteHeaderMatchProperty {
       /**
        * The value sent by the client must match the specified value exactly.
        *
@@ -3277,7 +3293,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteHeaderProperty,
-    ) : CdkObject(cdkObject), HttpGatewayRouteHeaderProperty {
+    ) : CdkObject(cdkObject),
+        HttpGatewayRouteHeaderProperty {
       /**
        * Specify `True` to match anything except the match criteria.
        *
@@ -3637,7 +3654,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteMatchProperty,
-    ) : CdkObject(cdkObject), HttpGatewayRouteMatchProperty {
+    ) : CdkObject(cdkObject),
+        HttpGatewayRouteMatchProperty {
       /**
        * The client request headers to match on.
        *
@@ -3767,7 +3785,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty,
-    ) : CdkObject(cdkObject), HttpGatewayRoutePathRewriteProperty {
+    ) : CdkObject(cdkObject),
+        HttpGatewayRoutePathRewriteProperty {
       /**
        * The exact path to rewrite.
        *
@@ -3873,7 +3892,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty,
-    ) : CdkObject(cdkObject), HttpGatewayRoutePrefixRewriteProperty {
+    ) : CdkObject(cdkObject),
+        HttpGatewayRoutePrefixRewriteProperty {
       /**
        * The default prefix used to replace the incoming route prefix when rewritten.
        *
@@ -4091,7 +4111,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteProperty,
-    ) : CdkObject(cdkObject), HttpGatewayRouteProperty {
+    ) : CdkObject(cdkObject),
+        HttpGatewayRouteProperty {
       /**
        * An object that represents the action to take if a match is determined.
        *
@@ -4309,7 +4330,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteRewriteProperty,
-    ) : CdkObject(cdkObject), HttpGatewayRouteRewriteProperty {
+    ) : CdkObject(cdkObject),
+        HttpGatewayRouteRewriteProperty {
       /**
        * The host name to rewrite.
        *
@@ -4424,7 +4446,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpPathMatchProperty,
-    ) : CdkObject(cdkObject), HttpPathMatchProperty {
+    ) : CdkObject(cdkObject),
+        HttpPathMatchProperty {
       /**
        * The exact path to match on.
        *
@@ -4514,7 +4537,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpQueryParameterMatchProperty,
-    ) : CdkObject(cdkObject), HttpQueryParameterMatchProperty {
+    ) : CdkObject(cdkObject),
+        HttpQueryParameterMatchProperty {
       /**
        * The exact query parameter to match on.
        *
@@ -4645,7 +4669,8 @@ public open class CfnGatewayRoute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.QueryParameterProperty,
-    ) : CdkObject(cdkObject), QueryParameterProperty {
+    ) : CdkObject(cdkObject),
+        QueryParameterProperty {
       /**
        * The query parameter to match on.
        *

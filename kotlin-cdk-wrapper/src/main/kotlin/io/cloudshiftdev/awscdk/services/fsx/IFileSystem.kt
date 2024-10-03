@@ -19,7 +19,8 @@ public interface IFileSystem : IConnectable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.fsx.IFileSystem,
-  ) : CdkObject(cdkObject), IFileSystem {
+  ) : CdkObject(cdkObject),
+      IFileSystem {
     /**
      * The network connections associated with this resource.
      */

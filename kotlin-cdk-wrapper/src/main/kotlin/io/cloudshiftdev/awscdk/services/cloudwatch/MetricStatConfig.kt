@@ -232,7 +232,8 @@ public interface MetricStatConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.MetricStatConfig,
-  ) : CdkObject(cdkObject), MetricStatConfig {
+  ) : CdkObject(cdkObject),
+      MetricStatConfig {
     /**
      * Account which this metric comes from.
      *

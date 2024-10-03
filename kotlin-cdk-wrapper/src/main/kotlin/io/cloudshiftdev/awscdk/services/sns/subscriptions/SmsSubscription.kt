@@ -26,7 +26,8 @@ import kotlin.collections.Map
  */
 public open class SmsSubscription(
   cdkObject: software.amazon.awscdk.services.sns.subscriptions.SmsSubscription,
-) : CdkObject(cdkObject), ITopicSubscription {
+) : CdkObject(cdkObject),
+    ITopicSubscription {
   public constructor(phoneNumber: String) :
       this(software.amazon.awscdk.services.sns.subscriptions.SmsSubscription(phoneNumber)
   )

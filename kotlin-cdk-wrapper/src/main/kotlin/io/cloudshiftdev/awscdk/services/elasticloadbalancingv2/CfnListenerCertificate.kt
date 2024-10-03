@@ -38,7 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnListenerCertificate(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -286,7 +287,8 @@ public open class CfnListenerCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate.CertificateProperty,
-    ) : CdkObject(cdkObject), CertificateProperty {
+    ) : CdkObject(cdkObject),
+        CertificateProperty {
       /**
        * The Amazon Resource Name (ARN) of the certificate.
        *

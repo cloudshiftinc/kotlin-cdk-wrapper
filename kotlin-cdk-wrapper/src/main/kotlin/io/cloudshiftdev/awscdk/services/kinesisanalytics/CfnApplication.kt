@@ -87,7 +87,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplication(
   cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -523,7 +524,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.CSVMappingParametersProperty,
-    ) : CdkObject(cdkObject), CSVMappingParametersProperty {
+    ) : CdkObject(cdkObject),
+        CSVMappingParametersProperty {
       /**
        * Column delimiter.
        *
@@ -659,7 +661,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputLambdaProcessorProperty,
-    ) : CdkObject(cdkObject), InputLambdaProcessorProperty {
+    ) : CdkObject(cdkObject),
+        InputLambdaProcessorProperty {
       /**
        * The ARN of the [AWS Lambda](https://docs.aws.amazon.com/lambda/) function that operates on
        * records in the stream.
@@ -766,7 +769,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputParallelismProperty,
-    ) : CdkObject(cdkObject), InputParallelismProperty {
+    ) : CdkObject(cdkObject),
+        InputParallelismProperty {
       /**
        * Number of in-application streams to create.
        *
@@ -909,7 +913,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputProcessingConfigurationProperty,
-    ) : CdkObject(cdkObject), InputProcessingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InputProcessingConfigurationProperty {
       /**
        * The
        * [InputLambdaProcessor](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html)
@@ -1424,7 +1429,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputProperty,
-    ) : CdkObject(cdkObject), InputProperty {
+    ) : CdkObject(cdkObject),
+        InputProperty {
       /**
        * Describes the number of in-application streams to create.
        *
@@ -1682,7 +1688,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.InputSchemaProperty,
-    ) : CdkObject(cdkObject), InputSchemaProperty {
+    ) : CdkObject(cdkObject),
+        InputSchemaProperty {
       /**
        * A list of `RecordColumn` objects.
        *
@@ -1781,7 +1788,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.JSONMappingParametersProperty,
-    ) : CdkObject(cdkObject), JSONMappingParametersProperty {
+    ) : CdkObject(cdkObject),
+        JSONMappingParametersProperty {
       /**
        * Path to the top-level parent that contains the records.
        *
@@ -1894,7 +1902,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisFirehoseInputProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseInputProperty {
+    ) : CdkObject(cdkObject),
+        KinesisFirehoseInputProperty {
       /**
        * ARN of the input delivery stream.
        *
@@ -2016,7 +2025,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.KinesisStreamsInputProperty,
-    ) : CdkObject(cdkObject), KinesisStreamsInputProperty {
+    ) : CdkObject(cdkObject),
+        KinesisStreamsInputProperty {
       /**
        * ARN of the input Amazon Kinesis stream to read.
        *
@@ -2207,7 +2217,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.MappingParametersProperty,
-    ) : CdkObject(cdkObject), MappingParametersProperty {
+    ) : CdkObject(cdkObject),
+        MappingParametersProperty {
       /**
        * Provides additional mapping information when the record format uses delimiters (for
        * example, CSV).
@@ -2358,7 +2369,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.RecordColumnProperty,
-    ) : CdkObject(cdkObject), RecordColumnProperty {
+    ) : CdkObject(cdkObject),
+        RecordColumnProperty {
       /**
        * Reference to the data element in the streaming input or the reference data source.
        *
@@ -2530,7 +2542,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication.RecordFormatProperty,
-    ) : CdkObject(cdkObject), RecordFormatProperty {
+    ) : CdkObject(cdkObject),
+        RecordFormatProperty {
       /**
        * When configuring application input at the time of creating or updating an application,
        * provides additional mapping information specific to the record format (such as JSON, CSV, or

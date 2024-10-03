@@ -60,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnQuickConnect(
   cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -432,7 +434,8 @@ public open class CfnQuickConnect(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.PhoneNumberQuickConnectConfigProperty,
-    ) : CdkObject(cdkObject), PhoneNumberQuickConnectConfigProperty {
+    ) : CdkObject(cdkObject),
+        PhoneNumberQuickConnectConfigProperty {
       /**
        * The phone number in E.164 format.
        *
@@ -538,7 +541,8 @@ public open class CfnQuickConnect(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty,
-    ) : CdkObject(cdkObject), QueueQuickConnectConfigProperty {
+    ) : CdkObject(cdkObject),
+        QueueQuickConnectConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the flow.
        *
@@ -809,7 +813,8 @@ public open class CfnQuickConnect(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.QuickConnectConfigProperty,
-    ) : CdkObject(cdkObject), QuickConnectConfigProperty {
+    ) : CdkObject(cdkObject),
+        QuickConnectConfigProperty {
       /**
        * The phone configuration.
        *
@@ -944,7 +949,8 @@ public open class CfnQuickConnect(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.UserQuickConnectConfigProperty,
-    ) : CdkObject(cdkObject), UserQuickConnectConfigProperty {
+    ) : CdkObject(cdkObject),
+        UserQuickConnectConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the flow.
        *

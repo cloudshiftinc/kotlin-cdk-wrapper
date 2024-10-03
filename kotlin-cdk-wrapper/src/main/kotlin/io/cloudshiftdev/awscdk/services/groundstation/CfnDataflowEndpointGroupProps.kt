@@ -227,7 +227,8 @@ public interface CfnDataflowEndpointGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroupProps,
-  ) : CdkObject(cdkObject), CfnDataflowEndpointGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnDataflowEndpointGroupProps {
     /**
      * Amount of time, in seconds, after a contact ends that the Ground Station Dataflow Endpoint
      * Group will be in a `POSTPASS` state.

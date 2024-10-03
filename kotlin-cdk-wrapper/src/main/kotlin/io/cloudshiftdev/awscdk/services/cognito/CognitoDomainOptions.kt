@@ -69,7 +69,8 @@ public interface CognitoDomainOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CognitoDomainOptions,
-  ) : CdkObject(cdkObject), CognitoDomainOptions {
+  ) : CdkObject(cdkObject),
+      CognitoDomainOptions {
     /**
      * The prefix to the Cognito hosted domain name that will be associated with the user pool.
      */

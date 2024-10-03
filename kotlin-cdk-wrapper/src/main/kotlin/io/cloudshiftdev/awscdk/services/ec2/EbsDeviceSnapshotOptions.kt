@@ -21,6 +21,7 @@ import kotlin.Unit
  * EbsDeviceSnapshotOptions ebsDeviceSnapshotOptions = EbsDeviceSnapshotOptions.builder()
  * .deleteOnTermination(false)
  * .iops(123)
+ * .throughput(123)
  * .volumeSize(123)
  * .volumeType(EbsDeviceVolumeType.STANDARD)
  * .build();
@@ -55,6 +56,16 @@ public interface EbsDeviceSnapshotOptions : EbsDeviceOptionsBase {
      * you need at least 100 GiB storage on the volume.
      */
     public fun iops(iops: Number)
+
+    /**
+     * @param throughput The throughput to provision for a `gp3` volume.
+     * Valid Range: Minimum value of 125. Maximum value of 1000.
+     *
+     * `gp3` volumes deliver a consistent baseline throughput performance of 125 MiB/s.
+     * You can provision additional throughput for an additional cost at a ratio of 0.25 MiB/s per
+     * provisioned IOPS.
+     */
+    public fun throughput(throughput: Number)
 
     /**
      * @param volumeSize The volume size, in Gibibytes (GiB).
@@ -92,6 +103,18 @@ public interface EbsDeviceSnapshotOptions : EbsDeviceOptionsBase {
     }
 
     /**
+     * @param throughput The throughput to provision for a `gp3` volume.
+     * Valid Range: Minimum value of 125. Maximum value of 1000.
+     *
+     * `gp3` volumes deliver a consistent baseline throughput performance of 125 MiB/s.
+     * You can provision additional throughput for an additional cost at a ratio of 0.25 MiB/s per
+     * provisioned IOPS.
+     */
+    override fun throughput(throughput: Number) {
+      cdkBuilder.throughput(throughput)
+    }
+
+    /**
      * @param volumeSize The volume size, in Gibibytes (GiB).
      * If you specify volumeSize, it must be equal or greater than the size of the snapshot.
      */
@@ -112,7 +135,8 @@ public interface EbsDeviceSnapshotOptions : EbsDeviceOptionsBase {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.EbsDeviceSnapshotOptions,
-  ) : CdkObject(cdkObject), EbsDeviceSnapshotOptions {
+  ) : CdkObject(cdkObject),
+      EbsDeviceSnapshotOptions {
     /**
      * Indicates whether to delete the volume when the instance is terminated.
      *
@@ -133,6 +157,21 @@ public interface EbsDeviceSnapshotOptions : EbsDeviceOptionsBase {
      * [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html)
      */
     override fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * The throughput to provision for a `gp3` volume.
+     *
+     * Valid Range: Minimum value of 125. Maximum value of 1000.
+     *
+     * `gp3` volumes deliver a consistent baseline throughput performance of 125 MiB/s.
+     * You can provision additional throughput for an additional cost at a ratio of 0.25 MiB/s per
+     * provisioned IOPS.
+     *
+     * Default: - 125 MiB/s.
+     *
+     * [Documentation](https://docs.aws.amazon.com/ebs/latest/userguide/general-purpose.html#gp3-performance)
+     */
+    override fun throughput(): Number? = unwrap(this).getThroughput()
 
     /**
      * The volume size, in Gibibytes (GiB).

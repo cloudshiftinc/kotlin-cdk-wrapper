@@ -276,7 +276,8 @@ public interface WebSocketAwsIntegrationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegrationProps,
-  ) : CdkObject(cdkObject), WebSocketAwsIntegrationProps {
+  ) : CdkObject(cdkObject),
+      WebSocketAwsIntegrationProps {
     /**
      * Specifies how to handle response payload content type conversions.
      *

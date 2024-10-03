@@ -48,7 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfigurationAssociation(
   cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -310,7 +311,8 @@ public open class CfnConfigurationAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty,
-    ) : CdkObject(cdkObject), ConfigurationIdProperty {
+    ) : CdkObject(cdkObject),
+        ConfigurationIdProperty {
       /**
        * The unique ID that Amazon MQ generates for the configuration.
        *

@@ -44,7 +44,8 @@ public interface ISchema {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.ISchema,
-  ) : CdkObject(cdkObject), ISchema {
+  ) : CdkObject(cdkObject),
+      ISchema {
     /**
      * Binds a schema string to a GraphQlApi.
      *

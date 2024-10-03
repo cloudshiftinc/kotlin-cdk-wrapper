@@ -33,7 +33,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Application(
   cdkObject: software.amazon.awscdk.services.appconfig.Application,
-) : Resource(cdkObject), IApplication, IExtensible {
+) : Resource(cdkObject),
+    IApplication,
+    IExtensible {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appconfig.Application(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

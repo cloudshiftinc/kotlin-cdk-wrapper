@@ -17,6 +17,7 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -46,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCoreNetwork(
   cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -84,7 +87,13 @@ public open class CfnCoreNetwork(
   public open fun attrEdges(): IResolvable = unwrap(this).getAttrEdges().let(IResolvable::wrap)
 
   /**
-   * Owner of the core network.
+   * The network function groups associated with a core network.
+   */
+  public open fun attrNetworkFunctionGroups(): IResolvable =
+      unwrap(this).getAttrNetworkFunctionGroups().let(IResolvable::wrap)
+
+  /**
+   * The owner of the core network.
    */
   public open fun attrOwnerAccount(): String = unwrap(this).getAttrOwnerAccount()
 
@@ -425,7 +434,8 @@ public open class CfnCoreNetwork(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty,
-    ) : CdkObject(cdkObject), CoreNetworkEdgeProperty {
+    ) : CdkObject(cdkObject),
+        CoreNetworkEdgeProperty {
       /**
        * The ASN of a core network edge.
        *
@@ -464,6 +474,186 @@ public open class CfnCoreNetwork(
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty
+    }
+  }
+
+  /**
+   * Describes a network function group.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkmanager.*;
+   * CoreNetworkNetworkFunctionGroupProperty coreNetworkNetworkFunctionGroupProperty =
+   * CoreNetworkNetworkFunctionGroupProperty.builder()
+   * .edgeLocations(List.of("edgeLocations"))
+   * .name("name")
+   * .segments(SegmentsProperty.builder()
+   * .sendTo(List.of("sendTo"))
+   * .sendVia(List.of("sendVia"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworknetworkfunctiongroup.html)
+   */
+  public interface CoreNetworkNetworkFunctionGroupProperty {
+    /**
+     * The core network edge locations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworknetworkfunctiongroup.html#cfn-networkmanager-corenetwork-corenetworknetworkfunctiongroup-edgelocations)
+     */
+    public fun edgeLocations(): List<String> = unwrap(this).getEdgeLocations() ?: emptyList()
+
+    /**
+     * The name of the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworknetworkfunctiongroup.html#cfn-networkmanager-corenetwork-corenetworknetworkfunctiongroup-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The segments associated with the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworknetworkfunctiongroup.html#cfn-networkmanager-corenetwork-corenetworknetworkfunctiongroup-segments)
+     */
+    public fun segments(): Any? = unwrap(this).getSegments()
+
+    /**
+     * A builder for [CoreNetworkNetworkFunctionGroupProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param edgeLocations The core network edge locations.
+       */
+      public fun edgeLocations(edgeLocations: List<String>)
+
+      /**
+       * @param edgeLocations The core network edge locations.
+       */
+      public fun edgeLocations(vararg edgeLocations: String)
+
+      /**
+       * @param name The name of the network function group.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param segments The segments associated with the network function group.
+       */
+      public fun segments(segments: IResolvable)
+
+      /**
+       * @param segments The segments associated with the network function group.
+       */
+      public fun segments(segments: SegmentsProperty)
+
+      /**
+       * @param segments The segments associated with the network function group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bc84dbfb73c147f9408f8d81b434398ef4935a84ad613ee87dec028a068c0a3b")
+      public fun segments(segments: SegmentsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkNetworkFunctionGroupProperty.Builder
+          =
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkNetworkFunctionGroupProperty.builder()
+
+      /**
+       * @param edgeLocations The core network edge locations.
+       */
+      override fun edgeLocations(edgeLocations: List<String>) {
+        cdkBuilder.edgeLocations(edgeLocations)
+      }
+
+      /**
+       * @param edgeLocations The core network edge locations.
+       */
+      override fun edgeLocations(vararg edgeLocations: String): Unit =
+          edgeLocations(edgeLocations.toList())
+
+      /**
+       * @param name The name of the network function group.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param segments The segments associated with the network function group.
+       */
+      override fun segments(segments: IResolvable) {
+        cdkBuilder.segments(segments.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param segments The segments associated with the network function group.
+       */
+      override fun segments(segments: SegmentsProperty) {
+        cdkBuilder.segments(segments.let(SegmentsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param segments The segments associated with the network function group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bc84dbfb73c147f9408f8d81b434398ef4935a84ad613ee87dec028a068c0a3b")
+      override fun segments(segments: SegmentsProperty.Builder.() -> Unit): Unit =
+          segments(SegmentsProperty(segments))
+
+      public fun build():
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkNetworkFunctionGroupProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkNetworkFunctionGroupProperty,
+    ) : CdkObject(cdkObject),
+        CoreNetworkNetworkFunctionGroupProperty {
+      /**
+       * The core network edge locations.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworknetworkfunctiongroup.html#cfn-networkmanager-corenetwork-corenetworknetworkfunctiongroup-edgelocations)
+       */
+      override fun edgeLocations(): List<String> = unwrap(this).getEdgeLocations() ?: emptyList()
+
+      /**
+       * The name of the network function group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworknetworkfunctiongroup.html#cfn-networkmanager-corenetwork-corenetworknetworkfunctiongroup-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The segments associated with the network function group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworknetworkfunctiongroup.html#cfn-networkmanager-corenetwork-corenetworknetworkfunctiongroup-segments)
+       */
+      override fun segments(): Any? = unwrap(this).getSegments()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CoreNetworkNetworkFunctionGroupProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkNetworkFunctionGroupProperty):
+          CoreNetworkNetworkFunctionGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CoreNetworkNetworkFunctionGroupProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CoreNetworkNetworkFunctionGroupProperty):
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkNetworkFunctionGroupProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkNetworkFunctionGroupProperty
     }
   }
 
@@ -586,7 +776,8 @@ public open class CfnCoreNetwork(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty,
-    ) : CdkObject(cdkObject), CoreNetworkSegmentProperty {
+    ) : CdkObject(cdkObject),
+        CoreNetworkSegmentProperty {
       /**
        * The Regions where the edges are located.
        *
@@ -624,6 +815,125 @@ public open class CfnCoreNetwork(
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkmanager.*;
+   * SegmentsProperty segmentsProperty = SegmentsProperty.builder()
+   * .sendTo(List.of("sendTo"))
+   * .sendVia(List.of("sendVia"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-segments.html)
+   */
+  public interface SegmentsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-segments.html#cfn-networkmanager-corenetwork-segments-sendto)
+     */
+    public fun sendTo(): List<String> = unwrap(this).getSendTo() ?: emptyList()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-segments.html#cfn-networkmanager-corenetwork-segments-sendvia)
+     */
+    public fun sendVia(): List<String> = unwrap(this).getSendVia() ?: emptyList()
+
+    /**
+     * A builder for [SegmentsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sendTo the value to be set.
+       */
+      public fun sendTo(sendTo: List<String>)
+
+      /**
+       * @param sendTo the value to be set.
+       */
+      public fun sendTo(vararg sendTo: String)
+
+      /**
+       * @param sendVia the value to be set.
+       */
+      public fun sendVia(sendVia: List<String>)
+
+      /**
+       * @param sendVia the value to be set.
+       */
+      public fun sendVia(vararg sendVia: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.SegmentsProperty.Builder =
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.SegmentsProperty.builder()
+
+      /**
+       * @param sendTo the value to be set.
+       */
+      override fun sendTo(sendTo: List<String>) {
+        cdkBuilder.sendTo(sendTo)
+      }
+
+      /**
+       * @param sendTo the value to be set.
+       */
+      override fun sendTo(vararg sendTo: String): Unit = sendTo(sendTo.toList())
+
+      /**
+       * @param sendVia the value to be set.
+       */
+      override fun sendVia(sendVia: List<String>) {
+        cdkBuilder.sendVia(sendVia)
+      }
+
+      /**
+       * @param sendVia the value to be set.
+       */
+      override fun sendVia(vararg sendVia: String): Unit = sendVia(sendVia.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.SegmentsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.SegmentsProperty,
+    ) : CdkObject(cdkObject),
+        SegmentsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-segments.html#cfn-networkmanager-corenetwork-segments-sendto)
+       */
+      override fun sendTo(): List<String> = unwrap(this).getSendTo() ?: emptyList()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-segments.html#cfn-networkmanager-corenetwork-segments-sendvia)
+       */
+      override fun sendVia(): List<String> = unwrap(this).getSendVia() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SegmentsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.SegmentsProperty):
+          SegmentsProperty = CdkObjectWrappers.wrap(cdkObject) as? SegmentsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SegmentsProperty):
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.SegmentsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.SegmentsProperty
     }
   }
 }

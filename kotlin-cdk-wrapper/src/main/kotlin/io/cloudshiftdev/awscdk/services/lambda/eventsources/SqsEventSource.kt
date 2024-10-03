@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda.eventsources
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IEventSource
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import kotlin.Any
@@ -32,7 +33,8 @@ import software.amazon.awscdk.services.sqs.IQueue as AmazonAwscdkServicesSqsIQue
  */
 public open class SqsEventSource(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsEventSource,
-) : CdkObject(cdkObject), IEventSource {
+) : CdkObject(cdkObject),
+    IEventSource {
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
       this(software.amazon.awscdk.services.lambda.eventsources.SqsEventSource(queue.let(CloudshiftdevAwscdkServicesSqsIQueue.Companion::unwrap))
   )
@@ -101,6 +103,16 @@ public open class SqsEventSource(
      * @param enabled If the SQS event source mapping should be enabled. 
      */
     public fun enabled(enabled: Boolean)
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria. 
+     */
+    public fun filterEncryption(filterEncryption: IKey)
 
     /**
      * Add filter criteria option.
@@ -196,6 +208,18 @@ public open class SqsEventSource(
      */
     override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
+    }
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria. 
+     */
+    override fun filterEncryption(filterEncryption: IKey) {
+      cdkBuilder.filterEncryption(filterEncryption.let(IKey.Companion::unwrap))
     }
 
     /**

@@ -183,7 +183,8 @@ public interface LaunchTemplateSpotOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions,
-  ) : CdkObject(cdkObject), LaunchTemplateSpotOptions {
+  ) : CdkObject(cdkObject),
+      LaunchTemplateSpotOptions {
     /**
      * Spot Instances with a defined duration (also known as Spot blocks) are designed not to be
      * interrupted and will run continuously for the duration you select.

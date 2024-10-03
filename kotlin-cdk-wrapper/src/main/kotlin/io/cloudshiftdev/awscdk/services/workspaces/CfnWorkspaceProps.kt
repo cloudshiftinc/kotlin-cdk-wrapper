@@ -81,8 +81,6 @@ public interface CfnWorkspaceProps {
    *
    * This user name must exist in the AWS Directory Service directory for the WorkSpace.
    *
-   * The reserved keyword, `[UNDEFINED]` , is used when creating user-decoupled WorkSpaces.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-username)
    */
   public fun userName(): String
@@ -95,7 +93,7 @@ public interface CfnWorkspaceProps {
   public fun userVolumeEncryptionEnabled(): Any? = unwrap(this).getUserVolumeEncryptionEnabled()
 
   /**
-   * The ARN of the symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
+   * The symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
    *
    * Amazon WorkSpaces does not support asymmetric KMS keys.
    *
@@ -150,8 +148,6 @@ public interface CfnWorkspaceProps {
     /**
      * @param userName The user name of the user for the WorkSpace. 
      * This user name must exist in the AWS Directory Service directory for the WorkSpace.
-     *
-     * The reserved keyword, `[UNDEFINED]` , is used when creating user-decoupled WorkSpaces.
      */
     public fun userName(userName: String)
 
@@ -168,8 +164,8 @@ public interface CfnWorkspaceProps {
     public fun userVolumeEncryptionEnabled(userVolumeEncryptionEnabled: IResolvable)
 
     /**
-     * @param volumeEncryptionKey The ARN of the symmetric AWS KMS key used to encrypt data stored
-     * on your WorkSpace.
+     * @param volumeEncryptionKey The symmetric AWS KMS key used to encrypt data stored on your
+     * WorkSpace.
      * Amazon WorkSpaces does not support asymmetric KMS keys.
      */
     public fun volumeEncryptionKey(volumeEncryptionKey: String)
@@ -242,8 +238,6 @@ public interface CfnWorkspaceProps {
     /**
      * @param userName The user name of the user for the WorkSpace. 
      * This user name must exist in the AWS Directory Service directory for the WorkSpace.
-     *
-     * The reserved keyword, `[UNDEFINED]` , is used when creating user-decoupled WorkSpaces.
      */
     override fun userName(userName: String) {
       cdkBuilder.userName(userName)
@@ -266,8 +260,8 @@ public interface CfnWorkspaceProps {
     }
 
     /**
-     * @param volumeEncryptionKey The ARN of the symmetric AWS KMS key used to encrypt data stored
-     * on your WorkSpace.
+     * @param volumeEncryptionKey The symmetric AWS KMS key used to encrypt data stored on your
+     * WorkSpace.
      * Amazon WorkSpaces does not support asymmetric KMS keys.
      */
     override fun volumeEncryptionKey(volumeEncryptionKey: String) {
@@ -304,7 +298,8 @@ public interface CfnWorkspaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.workspaces.CfnWorkspaceProps,
-  ) : CdkObject(cdkObject), CfnWorkspaceProps {
+  ) : CdkObject(cdkObject),
+      CfnWorkspaceProps {
     /**
      * The identifier of the bundle for the WorkSpace.
      *
@@ -338,8 +333,6 @@ public interface CfnWorkspaceProps {
      *
      * This user name must exist in the AWS Directory Service directory for the WorkSpace.
      *
-     * The reserved keyword, `[UNDEFINED]` , is used when creating user-decoupled WorkSpaces.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-username)
      */
     override fun userName(): String = unwrap(this).getUserName()
@@ -352,7 +345,7 @@ public interface CfnWorkspaceProps {
     override fun userVolumeEncryptionEnabled(): Any? = unwrap(this).getUserVolumeEncryptionEnabled()
 
     /**
-     * The ARN of the symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
+     * The symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
      *
      * Amazon WorkSpaces does not support asymmetric KMS keys.
      *

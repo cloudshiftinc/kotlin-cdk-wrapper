@@ -57,6 +57,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .exportPath("exportPath")
  * .importedFileChunkSize(123)
  * .importPath("importPath")
+ * .metadataConfiguration(MetadataConfigurationProperty.builder()
+ * .iops(123)
+ * .mode("mode")
+ * .build())
  * .perUnitStorageThroughput(123)
  * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
  * .build())
@@ -157,7 +161,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFileSystem(
   cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -236,14 +242,14 @@ public open class CfnFileSystem(
   }
 
   /**
-   * (Optional) For FSx for Lustre file systems, sets the Lustre version for the file system that
-   * you're creating.
+   * For FSx for Lustre file systems, sets the Lustre version for the file system that you're
+   * creating.
    */
   public open fun fileSystemTypeVersion(): String? = unwrap(this).getFileSystemTypeVersion()
 
   /**
-   * (Optional) For FSx for Lustre file systems, sets the Lustre version for the file system that
-   * you're creating.
+   * For FSx for Lustre file systems, sets the Lustre version for the file system that you're
+   * creating.
    */
   public open fun fileSystemTypeVersion(`value`: String) {
     unwrap(this).setFileSystemTypeVersion(`value`)
@@ -498,26 +504,27 @@ public open class CfnFileSystem(
     public fun fileSystemType(fileSystemType: String)
 
     /**
-     * (Optional) For FSx for Lustre file systems, sets the Lustre version for the file system that
-     * you're creating.
+     * For FSx for Lustre file systems, sets the Lustre version for the file system that you're
+     * creating.
      *
      * Valid values are `2.10` , `2.12` , and `2.15` :
      *
-     * * 2.10 is supported by the Scratch and Persistent_1 Lustre deployment types.
-     * * 2.12 and 2.15 are supported by all Lustre deployment types. `2.12` or `2.15` is required
-     * when setting FSx for Lustre `DeploymentType` to `PERSISTENT_2` .
+     * * `2.10` is supported by the Scratch and Persistent_1 Lustre deployment types.
+     * * `2.12` is supported by all Lustre deployment types, except for `PERSISTENT_2` with a
+     * metadata configuration mode.
+     * * `2.15` is supported by all Lustre deployment types and is recommended for all new file
+     * systems.
      *
-     * Default value = `2.10` , except when `DeploymentType` is set to `PERSISTENT_2` , then the
-     * default is `2.12` .
+     * Default value is `2.10` , except for the following deployments:
      *
-     *
-     * If you set `FileSystemTypeVersion` to `2.10` for a `PERSISTENT_2` Lustre deployment type, the
-     * `CreateFileSystem` operation fails.
-     *
+     * * Default value is `2.12` when `DeploymentType` is set to `PERSISTENT_2` without a metadata
+     * configuration mode.
+     * * Default value is `2.15` when `DeploymentType` is set to `PERSISTENT_2` with a metadata
+     * configuration mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-filesystemtypeversion)
-     * @param fileSystemTypeVersion (Optional) For FSx for Lustre file systems, sets the Lustre
-     * version for the file system that you're creating. 
+     * @param fileSystemTypeVersion For FSx for Lustre file systems, sets the Lustre version for the
+     * file system that you're creating. 
      */
     public fun fileSystemTypeVersion(fileSystemTypeVersion: String)
 
@@ -711,8 +718,10 @@ public open class CfnFileSystem(
      * * For `SCRATCH_1` deployment type, valid values are 1200 GiB, 2400 GiB, and increments of
      * 3600 GiB.
      *
-     * *FSx for ONTAP file systems* - The amount of storage capacity that you can configure is from
-     * 1024 GiB up to 196,608 GiB (192 TiB).
+     * *FSx for ONTAP file systems* - The amount of SSD storage capacity that you can configure
+     * depends on the value of the `HAPairs` property. The minimum value is calculated as 1,024 GiB *
+     * HAPairs and the maximum is calculated as 524,288 GiB * HAPairs, up to a maximum amount of SSD
+     * storage capacity of 1,048,576 GiB (1 pebibyte).
      *
      * *FSx for OpenZFS file systems* - The amount of storage capacity that you can configure is
      * from 64 GiB up to 524,288 GiB (512 TiB). If you are creating a file system from a backup, you
@@ -891,26 +900,27 @@ public open class CfnFileSystem(
     }
 
     /**
-     * (Optional) For FSx for Lustre file systems, sets the Lustre version for the file system that
-     * you're creating.
+     * For FSx for Lustre file systems, sets the Lustre version for the file system that you're
+     * creating.
      *
      * Valid values are `2.10` , `2.12` , and `2.15` :
      *
-     * * 2.10 is supported by the Scratch and Persistent_1 Lustre deployment types.
-     * * 2.12 and 2.15 are supported by all Lustre deployment types. `2.12` or `2.15` is required
-     * when setting FSx for Lustre `DeploymentType` to `PERSISTENT_2` .
+     * * `2.10` is supported by the Scratch and Persistent_1 Lustre deployment types.
+     * * `2.12` is supported by all Lustre deployment types, except for `PERSISTENT_2` with a
+     * metadata configuration mode.
+     * * `2.15` is supported by all Lustre deployment types and is recommended for all new file
+     * systems.
      *
-     * Default value = `2.10` , except when `DeploymentType` is set to `PERSISTENT_2` , then the
-     * default is `2.12` .
+     * Default value is `2.10` , except for the following deployments:
      *
-     *
-     * If you set `FileSystemTypeVersion` to `2.10` for a `PERSISTENT_2` Lustre deployment type, the
-     * `CreateFileSystem` operation fails.
-     *
+     * * Default value is `2.12` when `DeploymentType` is set to `PERSISTENT_2` without a metadata
+     * configuration mode.
+     * * Default value is `2.15` when `DeploymentType` is set to `PERSISTENT_2` with a metadata
+     * configuration mode.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-filesystemtypeversion)
-     * @param fileSystemTypeVersion (Optional) For FSx for Lustre file systems, sets the Lustre
-     * version for the file system that you're creating. 
+     * @param fileSystemTypeVersion For FSx for Lustre file systems, sets the Lustre version for the
+     * file system that you're creating. 
      */
     override fun fileSystemTypeVersion(fileSystemTypeVersion: String) {
       cdkBuilder.fileSystemTypeVersion(fileSystemTypeVersion)
@@ -1127,8 +1137,10 @@ public open class CfnFileSystem(
      * * For `SCRATCH_1` deployment type, valid values are 1200 GiB, 2400 GiB, and increments of
      * 3600 GiB.
      *
-     * *FSx for ONTAP file systems* - The amount of storage capacity that you can configure is from
-     * 1024 GiB up to 196,608 GiB (192 TiB).
+     * *FSx for ONTAP file systems* - The amount of SSD storage capacity that you can configure
+     * depends on the value of the `HAPairs` property. The minimum value is calculated as 1,024 GiB *
+     * HAPairs and the maximum is calculated as 524,288 GiB * HAPairs, up to a maximum amount of SSD
+     * storage capacity of 1,048,576 GiB (1 pebibyte).
      *
      * *FSx for OpenZFS file systems* - The amount of storage capacity that you can configure is
      * from 64 GiB up to 524,288 GiB (512 TiB). If you are creating a file system from a backup, you
@@ -1471,7 +1483,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty,
-    ) : CdkObject(cdkObject), AuditLogConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AuditLogConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) for the destination of the audit logs.
        *
@@ -1682,7 +1695,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty,
-    ) : CdkObject(cdkObject), ClientConfigurationsProperty {
+    ) : CdkObject(cdkObject),
+        ClientConfigurationsProperty {
       /**
        * A value that specifies who can mount the file system.
        *
@@ -1834,7 +1848,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty,
-    ) : CdkObject(cdkObject), DiskIopsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DiskIopsConfigurationProperty {
       /**
        * The total number of SSD IOPS provisioned for the file system.
        *
@@ -1896,6 +1911,10 @@ public open class CfnFileSystem(
    * .exportPath("exportPath")
    * .importedFileChunkSize(123)
    * .importPath("importPath")
+   * .metadataConfiguration(MetadataConfigurationProperty.builder()
+   * .iops(123)
+   * .mode("mode")
+   * .build())
    * .perUnitStorageThroughput(123)
    * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
    * .build();
@@ -2005,9 +2024,11 @@ public open class CfnFileSystem(
      *
      * Choose `PERSISTENT_2` for longer-term storage and for latency-sensitive workloads that
      * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports SSD storage, and offers
-     * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). `PERSISTENT_2` is available in a
-     * limited number of AWS Regions . For more information, and an up-to-date list of AWS Regions in
-     * which `PERSISTENT_2` is available, see [File system deployment options for FSx for
+     * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). You can optionally specify a metadata
+     * configuration mode for `PERSISTENT_2` which supports increasing metadata performance.
+     * `PERSISTENT_2` is available in a limited number of AWS Regions . For more information, and an
+     * up-to-date list of AWS Regions in which `PERSISTENT_2` is available, see [File system deployment
+     * options for FSx for
      * Lustre](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types)
      * in the *Amazon FSx for Lustre User Guide* .
      *
@@ -2017,9 +2038,9 @@ public open class CfnFileSystem(
      *
      *
      * Encryption of data in transit is automatically turned on when you access `SCRATCH_2` ,
-     * `PERSISTENT_1` and `PERSISTENT_2` file systems from Amazon EC2 instances that support automatic
-     * encryption in the AWS Regions where they are available. For more information about encryption in
-     * transit for FSx for Lustre file systems, see [Encrypting data in
+     * `PERSISTENT_1` , and `PERSISTENT_2` file systems from Amazon EC2 instances that support
+     * automatic encryption in the AWS Regions where they are available. For more information about
+     * encryption in transit for FSx for Lustre file systems, see [Encrypting data in
      * transit](https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html) in
      * the *Amazon FSx for Lustre User Guide* .
      *
@@ -2103,6 +2124,11 @@ public open class CfnFileSystem(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-importedfilechunksize)
      */
     public fun importedFileChunkSize(): Number? = unwrap(this).getImportedFileChunkSize()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-metadataconfiguration)
+     */
+    public fun metadataConfiguration(): Any? = unwrap(this).getMetadataConfiguration()
 
     /**
      * Required with `PERSISTENT_1` and `PERSISTENT_2` deployment types, provisions the amount of
@@ -2246,9 +2272,11 @@ public open class CfnFileSystem(
        *
        * Choose `PERSISTENT_2` for longer-term storage and for latency-sensitive workloads that
        * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports SSD storage, and offers
-       * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). `PERSISTENT_2` is available in a
-       * limited number of AWS Regions . For more information, and an up-to-date list of AWS Regions in
-       * which `PERSISTENT_2` is available, see [File system deployment options for FSx for
+       * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). You can optionally specify a metadata
+       * configuration mode for `PERSISTENT_2` which supports increasing metadata performance.
+       * `PERSISTENT_2` is available in a limited number of AWS Regions . For more information, and an
+       * up-to-date list of AWS Regions in which `PERSISTENT_2` is available, see [File system
+       * deployment options for FSx for
        * Lustre](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types)
        * in the *Amazon FSx for Lustre User Guide* .
        *
@@ -2258,7 +2286,7 @@ public open class CfnFileSystem(
        *
        *
        * Encryption of data in transit is automatically turned on when you access `SCRATCH_2` ,
-       * `PERSISTENT_1` and `PERSISTENT_2` file systems from Amazon EC2 instances that support
+       * `PERSISTENT_1` , and `PERSISTENT_2` file systems from Amazon EC2 instances that support
        * automatic encryption in the AWS Regions where they are available. For more information about
        * encryption in transit for FSx for Lustre file systems, see [Encrypting data in
        * transit](https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html)
@@ -2328,6 +2356,24 @@ public open class CfnFileSystem(
        * This parameter is not supported for Lustre file systems with a data repository association.
        */
       public fun importedFileChunkSize(importedFileChunkSize: Number)
+
+      /**
+       * @param metadataConfiguration the value to be set.
+       */
+      public fun metadataConfiguration(metadataConfiguration: IResolvable)
+
+      /**
+       * @param metadataConfiguration the value to be set.
+       */
+      public fun metadataConfiguration(metadataConfiguration: MetadataConfigurationProperty)
+
+      /**
+       * @param metadataConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7b1bcf8b5d5e207c49db638538a544c8de11b2cfd28342c58028855c26295682")
+      public
+          fun metadataConfiguration(metadataConfiguration: MetadataConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param perUnitStorageThroughput Required with `PERSISTENT_1` and `PERSISTENT_2` deployment
@@ -2478,9 +2524,11 @@ public open class CfnFileSystem(
        *
        * Choose `PERSISTENT_2` for longer-term storage and for latency-sensitive workloads that
        * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports SSD storage, and offers
-       * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). `PERSISTENT_2` is available in a
-       * limited number of AWS Regions . For more information, and an up-to-date list of AWS Regions in
-       * which `PERSISTENT_2` is available, see [File system deployment options for FSx for
+       * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). You can optionally specify a metadata
+       * configuration mode for `PERSISTENT_2` which supports increasing metadata performance.
+       * `PERSISTENT_2` is available in a limited number of AWS Regions . For more information, and an
+       * up-to-date list of AWS Regions in which `PERSISTENT_2` is available, see [File system
+       * deployment options for FSx for
        * Lustre](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types)
        * in the *Amazon FSx for Lustre User Guide* .
        *
@@ -2490,7 +2538,7 @@ public open class CfnFileSystem(
        *
        *
        * Encryption of data in transit is automatically turned on when you access `SCRATCH_2` ,
-       * `PERSISTENT_1` and `PERSISTENT_2` file systems from Amazon EC2 instances that support
+       * `PERSISTENT_1` , and `PERSISTENT_2` file systems from Amazon EC2 instances that support
        * automatic encryption in the AWS Regions where they are available. For more information about
        * encryption in transit for FSx for Lustre file systems, see [Encrypting data in
        * transit](https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html)
@@ -2572,6 +2620,29 @@ public open class CfnFileSystem(
       }
 
       /**
+       * @param metadataConfiguration the value to be set.
+       */
+      override fun metadataConfiguration(metadataConfiguration: IResolvable) {
+        cdkBuilder.metadataConfiguration(metadataConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param metadataConfiguration the value to be set.
+       */
+      override fun metadataConfiguration(metadataConfiguration: MetadataConfigurationProperty) {
+        cdkBuilder.metadataConfiguration(metadataConfiguration.let(MetadataConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param metadataConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7b1bcf8b5d5e207c49db638538a544c8de11b2cfd28342c58028855c26295682")
+      override
+          fun metadataConfiguration(metadataConfiguration: MetadataConfigurationProperty.Builder.() -> Unit):
+          Unit = metadataConfiguration(MetadataConfigurationProperty(metadataConfiguration))
+
+      /**
        * @param perUnitStorageThroughput Required with `PERSISTENT_1` and `PERSISTENT_2` deployment
        * types, provisions the amount of read and write throughput for each 1 tebibyte (TiB) of file
        * system storage capacity, in MB/s/TiB.
@@ -2612,7 +2683,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.LustreConfigurationProperty,
-    ) : CdkObject(cdkObject), LustreConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LustreConfigurationProperty {
       /**
        * (Optional) When you create your file system, your existing S3 objects appear as file and
        * directory listings.
@@ -2714,9 +2786,11 @@ public open class CfnFileSystem(
        *
        * Choose `PERSISTENT_2` for longer-term storage and for latency-sensitive workloads that
        * require the highest levels of IOPS/throughput. `PERSISTENT_2` supports SSD storage, and offers
-       * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). `PERSISTENT_2` is available in a
-       * limited number of AWS Regions . For more information, and an up-to-date list of AWS Regions in
-       * which `PERSISTENT_2` is available, see [File system deployment options for FSx for
+       * higher `PerUnitStorageThroughput` (up to 1000 MB/s/TiB). You can optionally specify a metadata
+       * configuration mode for `PERSISTENT_2` which supports increasing metadata performance.
+       * `PERSISTENT_2` is available in a limited number of AWS Regions . For more information, and an
+       * up-to-date list of AWS Regions in which `PERSISTENT_2` is available, see [File system
+       * deployment options for FSx for
        * Lustre](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types)
        * in the *Amazon FSx for Lustre User Guide* .
        *
@@ -2726,7 +2800,7 @@ public open class CfnFileSystem(
        *
        *
        * Encryption of data in transit is automatically turned on when you access `SCRATCH_2` ,
-       * `PERSISTENT_1` and `PERSISTENT_2` file systems from Amazon EC2 instances that support
+       * `PERSISTENT_1` , and `PERSISTENT_2` file systems from Amazon EC2 instances that support
        * automatic encryption in the AWS Regions where they are available. For more information about
        * encryption in transit for FSx for Lustre file systems, see [Encrypting data in
        * transit](https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html)
@@ -2814,6 +2888,11 @@ public open class CfnFileSystem(
       override fun importedFileChunkSize(): Number? = unwrap(this).getImportedFileChunkSize()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-metadataconfiguration)
+       */
+      override fun metadataConfiguration(): Any? = unwrap(this).getMetadataConfiguration()
+
+      /**
        * Required with `PERSISTENT_1` and `PERSISTENT_2` deployment types, provisions the amount of
        * read and write throughput for each 1 tebibyte (TiB) of file system storage capacity, in
        * MB/s/TiB.
@@ -2866,6 +2945,106 @@ public open class CfnFileSystem(
           software.amazon.awscdk.services.fsx.CfnFileSystem.LustreConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.fsx.CfnFileSystem.LustreConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * MetadataConfigurationProperty metadataConfigurationProperty =
+   * MetadataConfigurationProperty.builder()
+   * .iops(123)
+   * .mode("mode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-metadataconfiguration.html)
+   */
+  public interface MetadataConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-metadataconfiguration.html#cfn-fsx-filesystem-metadataconfiguration-iops)
+     */
+    public fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-metadataconfiguration.html#cfn-fsx-filesystem-metadataconfiguration-mode)
+     */
+    public fun mode(): String? = unwrap(this).getMode()
+
+    /**
+     * A builder for [MetadataConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param iops the value to be set.
+       */
+      public fun iops(iops: Number)
+
+      /**
+       * @param mode the value to be set.
+       */
+      public fun mode(mode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnFileSystem.MetadataConfigurationProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnFileSystem.MetadataConfigurationProperty.builder()
+
+      /**
+       * @param iops the value to be set.
+       */
+      override fun iops(iops: Number) {
+        cdkBuilder.iops(iops)
+      }
+
+      /**
+       * @param mode the value to be set.
+       */
+      override fun mode(mode: String) {
+        cdkBuilder.mode(mode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fsx.CfnFileSystem.MetadataConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.MetadataConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        MetadataConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-metadataconfiguration.html#cfn-fsx-filesystem-metadataconfiguration-iops)
+       */
+      override fun iops(): Number? = unwrap(this).getIops()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-metadataconfiguration.html#cfn-fsx-filesystem-metadataconfiguration-mode)
+       */
+      override fun mode(): String? = unwrap(this).getMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MetadataConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.MetadataConfigurationProperty):
+          MetadataConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetadataConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MetadataConfigurationProperty):
+          software.amazon.awscdk.services.fsx.CfnFileSystem.MetadataConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnFileSystem.MetadataConfigurationProperty
     }
   }
 
@@ -2955,7 +3134,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty,
-    ) : CdkObject(cdkObject), NfsExportsProperty {
+    ) : CdkObject(cdkObject),
+        NfsExportsProperty {
       /**
        * A list of configuration objects that contain the client and options for mounting the
        * OpenZFS file system.
@@ -3040,11 +3220,15 @@ public open class CfnFileSystem(
     /**
      * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
      *
-     * * `MULTI_AZ_1` - (Default) A high availability file system configured for Multi-AZ redundancy
-     * to tolerate temporary Availability Zone (AZ) unavailability.
-     * * `SINGLE_AZ_1` - A file system configured for Single-AZ redundancy.
+     * * `MULTI_AZ_1` - A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for
+     * ONTAP file system.
+     * * `MULTI_AZ_2` - A high availability file system configured for Multi-AZ redundancy to
+     * tolerate temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+     * * `SINGLE_AZ_1` - A file system configured for Single-AZ redundancy. This is a
+     * first-generation FSx for ONTAP file system.
      * * `SINGLE_AZ_2` - A file system configured with multiple high-availability (HA) pairs for
-     * Single-AZ redundancy.
+     * Single-AZ redundancy. This is a second-generation FSx for ONTAP file system.
      *
      * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to
      * [Choosing a file system deployment
@@ -3086,24 +3270,30 @@ public open class CfnFileSystem(
     /**
      * Specifies how many high-availability (HA) pairs of file servers will power your file system.
      *
-     * Scale-up file systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP
-     * scale-out file systems are powered by up to 12 HA pairs. The value of this property affects the
-     * values of `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information, see
-     * [High-availability (HA) pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html)
-     * in the FSx for ONTAP user guide.
+     * First-generation file systems are powered by 1 HA pair. Second-generation multi-AZ file
+     * systems are powered by 1 HA pair. Second generation single-AZ file systems are powered by up to
+     * 12 HA pairs. The default value is 1. The value of this property affects the values of
+     * `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information, see
+     * [High-availability (HA)
+     * pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs)
+     * in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe over TCP) is
+     * disabled on file systems with more than 6 HA pairs. For more information, see [Using block
+     * storage
+     * protocols](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage)
+     * .
      *
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *
      * * The value of `HAPairs` is less than 1 or greater than 12.
      * * The value of `HAPairs` is greater than 1 and the value of `DeploymentType` is `SINGLE_AZ_1`
-     * or `MULTI_AZ_1` .
+     * , `MULTI_AZ_1` , or `MULTI_AZ_2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-ontapconfiguration.html#cfn-fsx-filesystem-ontapconfiguration-hapairs)
      */
     public fun haPairs(): Number? = unwrap(this).getHaPairs()
 
     /**
-     * Required when `DeploymentType` is set to `MULTI_AZ_1` .
+     * Required when `DeploymentType` is set to `MULTI_AZ_1` or `MULTI_AZ_2` .
      *
      * This specifies the subnet in which you want the preferred file server to be located.
      *
@@ -3155,19 +3345,19 @@ public open class CfnFileSystem(
      * You can define either the `ThroughputCapacityPerHAPair` or the `ThroughputCapacity` when
      * creating a file system, but not both.
      *
-     * This field and `ThroughputCapacity` are the same for scale-up file systems powered by one HA
-     * pair.
+     * This field and `ThroughputCapacity` are the same for file systems powered by one HA pair.
      *
      * * For `SINGLE_AZ_1` and `MULTI_AZ_1` file systems, valid values are 128, 256, 512, 1024,
      * 2048, or 4096 MBps.
-     * * For `SINGLE_AZ_2` file systems, valid values are 3072 or 6144 MBps.
+     * * For `SINGLE_AZ_2` , valid values are 1536, 3072, or 6144 MBps.
+     * * For `MULTI_AZ_2` , valid values are 384, 768, 1536, 3072, or 6144 MBps.
      *
      * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following conditions:
      *
      * * The value of `ThroughputCapacity` and `ThroughputCapacityPerHAPair` are not the same value
      * for file systems with one HA pair.
      * * The value of deployment type is `SINGLE_AZ_2` and `ThroughputCapacity` /
-     * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 12).
+     * `ThroughputCapacityPerHAPair` is not a valid HA pair (a value between 1 and 12).
      * * The value of `ThroughputCapacityPerHAPair` is not a valid value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-ontapconfiguration.html#cfn-fsx-filesystem-ontapconfiguration-throughputcapacityperhapair)
@@ -3213,11 +3403,15 @@ public open class CfnFileSystem(
       /**
        * @param deploymentType Specifies the FSx for ONTAP file system deployment type to use in
        * creating the file system. 
-       * * `MULTI_AZ_1` - (Default) A high availability file system configured for Multi-AZ
-       * redundancy to tolerate temporary Availability Zone (AZ) unavailability.
-       * * `SINGLE_AZ_1` - A file system configured for Single-AZ redundancy.
+       * * `MULTI_AZ_1` - A high availability file system configured for Multi-AZ redundancy to
+       * tolerate temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for
+       * ONTAP file system.
+       * * `MULTI_AZ_2` - A high availability file system configured for Multi-AZ redundancy to
+       * tolerate temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+       * * `SINGLE_AZ_1` - A file system configured for Single-AZ redundancy. This is a
+       * first-generation FSx for ONTAP file system.
        * * `SINGLE_AZ_2` - A file system configured with multiple high-availability (HA) pairs for
-       * Single-AZ redundancy.
+       * Single-AZ redundancy. This is a second-generation FSx for ONTAP file system.
        *
        * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to
        * [Choosing a file system deployment
@@ -3263,24 +3457,30 @@ public open class CfnFileSystem(
       /**
        * @param haPairs Specifies how many high-availability (HA) pairs of file servers will power
        * your file system.
-       * Scale-up file systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP
-       * scale-out file systems are powered by up to 12 HA pairs. The value of this property affects
-       * the values of `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information,
-       * see [High-availability (HA)
-       * pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html) in the FSx for ONTAP
-       * user guide.
+       * First-generation file systems are powered by 1 HA pair. Second-generation multi-AZ file
+       * systems are powered by 1 HA pair. Second generation single-AZ file systems are powered by up
+       * to 12 HA pairs. The default value is 1. The value of this property affects the values of
+       * `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information, see
+       * [High-availability (HA)
+       * pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs)
+       * in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe over TCP) is
+       * disabled on file systems with more than 6 HA pairs. For more information, see [Using block
+       * storage
+       * protocols](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage)
+       * .
        *
        * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following
        * conditions:
        *
        * * The value of `HAPairs` is less than 1 or greater than 12.
        * * The value of `HAPairs` is greater than 1 and the value of `DeploymentType` is
-       * `SINGLE_AZ_1` or `MULTI_AZ_1` .
+       * `SINGLE_AZ_1` , `MULTI_AZ_1` , or `MULTI_AZ_2` .
        */
       public fun haPairs(haPairs: Number)
 
       /**
-       * @param preferredSubnetId Required when `DeploymentType` is set to `MULTI_AZ_1` .
+       * @param preferredSubnetId Required when `DeploymentType` is set to `MULTI_AZ_1` or
+       * `MULTI_AZ_2` .
        * This specifies the subnet in which you want the preferred file server to be located.
        */
       public fun preferredSubnetId(preferredSubnetId: String)
@@ -3338,12 +3538,12 @@ public open class CfnFileSystem(
        * You can define either the `ThroughputCapacityPerHAPair` or the `ThroughputCapacity` when
        * creating a file system, but not both.
        *
-       * This field and `ThroughputCapacity` are the same for scale-up file systems powered by one
-       * HA pair.
+       * This field and `ThroughputCapacity` are the same for file systems powered by one HA pair.
        *
        * * For `SINGLE_AZ_1` and `MULTI_AZ_1` file systems, valid values are 128, 256, 512, 1024,
        * 2048, or 4096 MBps.
-       * * For `SINGLE_AZ_2` file systems, valid values are 3072 or 6144 MBps.
+       * * For `SINGLE_AZ_2` , valid values are 1536, 3072, or 6144 MBps.
+       * * For `MULTI_AZ_2` , valid values are 384, 768, 1536, 3072, or 6144 MBps.
        *
        * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following
        * conditions:
@@ -3351,7 +3551,7 @@ public open class CfnFileSystem(
        * * The value of `ThroughputCapacity` and `ThroughputCapacityPerHAPair` are not the same
        * value for file systems with one HA pair.
        * * The value of deployment type is `SINGLE_AZ_2` and `ThroughputCapacity` /
-       * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 12).
+       * `ThroughputCapacityPerHAPair` is not a valid HA pair (a value between 1 and 12).
        * * The value of `ThroughputCapacityPerHAPair` is not a valid value.
        */
       public fun throughputCapacityPerHaPair(throughputCapacityPerHaPair: Number)
@@ -3396,11 +3596,15 @@ public open class CfnFileSystem(
       /**
        * @param deploymentType Specifies the FSx for ONTAP file system deployment type to use in
        * creating the file system. 
-       * * `MULTI_AZ_1` - (Default) A high availability file system configured for Multi-AZ
-       * redundancy to tolerate temporary Availability Zone (AZ) unavailability.
-       * * `SINGLE_AZ_1` - A file system configured for Single-AZ redundancy.
+       * * `MULTI_AZ_1` - A high availability file system configured for Multi-AZ redundancy to
+       * tolerate temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for
+       * ONTAP file system.
+       * * `MULTI_AZ_2` - A high availability file system configured for Multi-AZ redundancy to
+       * tolerate temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+       * * `SINGLE_AZ_1` - A file system configured for Single-AZ redundancy. This is a
+       * first-generation FSx for ONTAP file system.
        * * `SINGLE_AZ_2` - A file system configured with multiple high-availability (HA) pairs for
-       * Single-AZ redundancy.
+       * Single-AZ redundancy. This is a second-generation FSx for ONTAP file system.
        *
        * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to
        * [Choosing a file system deployment
@@ -3457,26 +3661,32 @@ public open class CfnFileSystem(
       /**
        * @param haPairs Specifies how many high-availability (HA) pairs of file servers will power
        * your file system.
-       * Scale-up file systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP
-       * scale-out file systems are powered by up to 12 HA pairs. The value of this property affects
-       * the values of `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information,
-       * see [High-availability (HA)
-       * pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html) in the FSx for ONTAP
-       * user guide.
+       * First-generation file systems are powered by 1 HA pair. Second-generation multi-AZ file
+       * systems are powered by 1 HA pair. Second generation single-AZ file systems are powered by up
+       * to 12 HA pairs. The default value is 1. The value of this property affects the values of
+       * `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information, see
+       * [High-availability (HA)
+       * pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs)
+       * in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe over TCP) is
+       * disabled on file systems with more than 6 HA pairs. For more information, see [Using block
+       * storage
+       * protocols](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage)
+       * .
        *
        * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following
        * conditions:
        *
        * * The value of `HAPairs` is less than 1 or greater than 12.
        * * The value of `HAPairs` is greater than 1 and the value of `DeploymentType` is
-       * `SINGLE_AZ_1` or `MULTI_AZ_1` .
+       * `SINGLE_AZ_1` , `MULTI_AZ_1` , or `MULTI_AZ_2` .
        */
       override fun haPairs(haPairs: Number) {
         cdkBuilder.haPairs(haPairs)
       }
 
       /**
-       * @param preferredSubnetId Required when `DeploymentType` is set to `MULTI_AZ_1` .
+       * @param preferredSubnetId Required when `DeploymentType` is set to `MULTI_AZ_1` or
+       * `MULTI_AZ_2` .
        * This specifies the subnet in which you want the preferred file server to be located.
        */
       override fun preferredSubnetId(preferredSubnetId: String) {
@@ -3541,12 +3751,12 @@ public open class CfnFileSystem(
        * You can define either the `ThroughputCapacityPerHAPair` or the `ThroughputCapacity` when
        * creating a file system, but not both.
        *
-       * This field and `ThroughputCapacity` are the same for scale-up file systems powered by one
-       * HA pair.
+       * This field and `ThroughputCapacity` are the same for file systems powered by one HA pair.
        *
        * * For `SINGLE_AZ_1` and `MULTI_AZ_1` file systems, valid values are 128, 256, 512, 1024,
        * 2048, or 4096 MBps.
-       * * For `SINGLE_AZ_2` file systems, valid values are 3072 or 6144 MBps.
+       * * For `SINGLE_AZ_2` , valid values are 1536, 3072, or 6144 MBps.
+       * * For `MULTI_AZ_2` , valid values are 384, 768, 1536, 3072, or 6144 MBps.
        *
        * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following
        * conditions:
@@ -3554,7 +3764,7 @@ public open class CfnFileSystem(
        * * The value of `ThroughputCapacity` and `ThroughputCapacityPerHAPair` are not the same
        * value for file systems with one HA pair.
        * * The value of deployment type is `SINGLE_AZ_2` and `ThroughputCapacity` /
-       * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 12).
+       * `ThroughputCapacityPerHAPair` is not a valid HA pair (a value between 1 and 12).
        * * The value of `ThroughputCapacityPerHAPair` is not a valid value.
        */
       override fun throughputCapacityPerHaPair(throughputCapacityPerHaPair: Number) {
@@ -3583,7 +3793,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.OntapConfigurationProperty,
-    ) : CdkObject(cdkObject), OntapConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        OntapConfigurationProperty {
       /**
        * The number of days to retain automatic backups.
        *
@@ -3609,11 +3820,15 @@ public open class CfnFileSystem(
       /**
        * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
        *
-       * * `MULTI_AZ_1` - (Default) A high availability file system configured for Multi-AZ
-       * redundancy to tolerate temporary Availability Zone (AZ) unavailability.
-       * * `SINGLE_AZ_1` - A file system configured for Single-AZ redundancy.
+       * * `MULTI_AZ_1` - A high availability file system configured for Multi-AZ redundancy to
+       * tolerate temporary Availability Zone (AZ) unavailability. This is a first-generation FSx for
+       * ONTAP file system.
+       * * `MULTI_AZ_2` - A high availability file system configured for Multi-AZ redundancy to
+       * tolerate temporary AZ unavailability. This is a second-generation FSx for ONTAP file system.
+       * * `SINGLE_AZ_1` - A file system configured for Single-AZ redundancy. This is a
+       * first-generation FSx for ONTAP file system.
        * * `SINGLE_AZ_2` - A file system configured with multiple high-availability (HA) pairs for
-       * Single-AZ redundancy.
+       * Single-AZ redundancy. This is a second-generation FSx for ONTAP file system.
        *
        * For information about the use cases for Multi-AZ and Single-AZ deployments, refer to
        * [Choosing a file system deployment
@@ -3656,26 +3871,31 @@ public open class CfnFileSystem(
        * Specifies how many high-availability (HA) pairs of file servers will power your file
        * system.
        *
-       * Scale-up file systems are powered by 1 HA pair. The default value is 1. FSx for ONTAP
-       * scale-out file systems are powered by up to 12 HA pairs. The value of this property affects
-       * the values of `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information,
-       * see [High-availability (HA)
-       * pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/HA-pairs.html) in the FSx for ONTAP
-       * user guide.
+       * First-generation file systems are powered by 1 HA pair. Second-generation multi-AZ file
+       * systems are powered by 1 HA pair. Second generation single-AZ file systems are powered by up
+       * to 12 HA pairs. The default value is 1. The value of this property affects the values of
+       * `StorageCapacity` , `Iops` , and `ThroughputCapacity` . For more information, see
+       * [High-availability (HA)
+       * pairs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/administering-file-systems.html#HA-pairs)
+       * in the FSx for ONTAP user guide. Block storage protocol support (iSCSI and NVMe over TCP) is
+       * disabled on file systems with more than 6 HA pairs. For more information, see [Using block
+       * storage
+       * protocols](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html#using-block-storage)
+       * .
        *
        * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following
        * conditions:
        *
        * * The value of `HAPairs` is less than 1 or greater than 12.
        * * The value of `HAPairs` is greater than 1 and the value of `DeploymentType` is
-       * `SINGLE_AZ_1` or `MULTI_AZ_1` .
+       * `SINGLE_AZ_1` , `MULTI_AZ_1` , or `MULTI_AZ_2` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-ontapconfiguration.html#cfn-fsx-filesystem-ontapconfiguration-hapairs)
        */
       override fun haPairs(): Number? = unwrap(this).getHaPairs()
 
       /**
-       * Required when `DeploymentType` is set to `MULTI_AZ_1` .
+       * Required when `DeploymentType` is set to `MULTI_AZ_1` or `MULTI_AZ_2` .
        *
        * This specifies the subnet in which you want the preferred file server to be located.
        *
@@ -3729,12 +3949,12 @@ public open class CfnFileSystem(
        * You can define either the `ThroughputCapacityPerHAPair` or the `ThroughputCapacity` when
        * creating a file system, but not both.
        *
-       * This field and `ThroughputCapacity` are the same for scale-up file systems powered by one
-       * HA pair.
+       * This field and `ThroughputCapacity` are the same for file systems powered by one HA pair.
        *
        * * For `SINGLE_AZ_1` and `MULTI_AZ_1` file systems, valid values are 128, 256, 512, 1024,
        * 2048, or 4096 MBps.
-       * * For `SINGLE_AZ_2` file systems, valid values are 3072 or 6144 MBps.
+       * * For `SINGLE_AZ_2` , valid values are 1536, 3072, or 6144 MBps.
+       * * For `MULTI_AZ_2` , valid values are 384, 768, 1536, 3072, or 6144 MBps.
        *
        * Amazon FSx responds with an HTTP status code 400 (Bad Request) for the following
        * conditions:
@@ -3742,7 +3962,7 @@ public open class CfnFileSystem(
        * * The value of `ThroughputCapacity` and `ThroughputCapacityPerHAPair` are not the same
        * value for file systems with one HA pair.
        * * The value of deployment type is `SINGLE_AZ_2` and `ThroughputCapacity` /
-       * `ThroughputCapacityPerHAPair` is a valid HA pair (a value between 2 and 12).
+       * `ThroughputCapacityPerHAPair` is not a valid HA pair (a value between 1 and 12).
        * * The value of `ThroughputCapacityPerHAPair` is not a valid value.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-ontapconfiguration.html#cfn-fsx-filesystem-ontapconfiguration-throughputcapacityperhapair)
@@ -3884,25 +4104,25 @@ public open class CfnFileSystem(
         unwrap(this).getDailyAutomaticBackupStartTime()
 
     /**
-     * Specifies the file system deployment type.
+     * Specifies the file system deployment type. Valid values are the following:.
      *
-     * Single AZ deployment types are configured for redundancy within a single Availability Zone in
-     * an AWS Region . Valid values are the following:
-     *
-     * * `MULTI_AZ_1` - Creates file systems with high availability that are configured for Multi-AZ
-     * redundancy to tolerate temporary unavailability in Availability Zones (AZs). `Multi_AZ_1` is
-     * available only in the US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific
-     * (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) AWS Regions .
-     * * `SINGLE_AZ_1` - Creates file systems with throughput capacities of 64 - 4,096 MB/s.
-     * `Single_AZ_1` is available in all AWS Regions where Amazon FSx for OpenZFS is available.
+     * * `MULTI_AZ_1` - Creates file systems with high availability and durability by replicating
+     * your data and supporting failover across multiple Availability Zones in the same AWS Region .
+     * * `SINGLE_AZ_HA_2` - Creates file systems with high availability and throughput capacities of
+     * 160 - 10,240 MB/s using an NVMe L2ARC cache by deploying a primary and standby file system
+     * within the same Availability Zone.
+     * * `SINGLE_AZ_HA_1` - Creates file systems with high availability and throughput capacities of
+     * 64 - 4,096 MB/s by deploying a primary and standby file system within the same Availability
+     * Zone.
      * * `SINGLE_AZ_2` - Creates file systems with throughput capacities of 160 - 10,240 MB/s using
-     * an NVMe L2ARC cache. `Single_AZ_2` is available only in the US East (N. Virginia), US East
-     * (Ohio), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland)
-     * AWS Regions .
+     * an NVMe L2ARC cache that automatically recover within a single Availability Zone.
+     * * `SINGLE_AZ_1` - Creates file systems with throughput capacities of 64 - 4,096 MBs that
+     * automatically recover within a single Availability Zone.
      *
-     * For more information, see [Deployment type
+     * For a list of which AWS Regions each deployment type is available in, see [Deployment type
      * availability](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions)
-     * and [File system
+     * . For more information on the differences in performance between deployment types, see [File
+     * system
      * performance](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance)
      * in the *Amazon FSx for OpenZFS User Guide* .
      *
@@ -4073,24 +4293,25 @@ public open class CfnFileSystem(
       public fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String)
 
       /**
-       * @param deploymentType Specifies the file system deployment type. 
-       * Single AZ deployment types are configured for redundancy within a single Availability Zone
-       * in an AWS Region . Valid values are the following:
-       *
-       * * `MULTI_AZ_1` - Creates file systems with high availability that are configured for
-       * Multi-AZ redundancy to tolerate temporary unavailability in Availability Zones (AZs).
-       * `Multi_AZ_1` is available only in the US East (N. Virginia), US East (Ohio), US West (Oregon),
-       * Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) AWS Regions .
-       * * `SINGLE_AZ_1` - Creates file systems with throughput capacities of 64 - 4,096 MB/s.
-       * `Single_AZ_1` is available in all AWS Regions where Amazon FSx for OpenZFS is available.
+       * @param deploymentType Specifies the file system deployment type. Valid values are the
+       * following:. 
+       * * `MULTI_AZ_1` - Creates file systems with high availability and durability by replicating
+       * your data and supporting failover across multiple Availability Zones in the same AWS Region .
+       * * `SINGLE_AZ_HA_2` - Creates file systems with high availability and throughput capacities
+       * of 160 - 10,240 MB/s using an NVMe L2ARC cache by deploying a primary and standby file system
+       * within the same Availability Zone.
+       * * `SINGLE_AZ_HA_1` - Creates file systems with high availability and throughput capacities
+       * of 64 - 4,096 MB/s by deploying a primary and standby file system within the same Availability
+       * Zone.
        * * `SINGLE_AZ_2` - Creates file systems with throughput capacities of 160 - 10,240 MB/s
-       * using an NVMe L2ARC cache. `Single_AZ_2` is available only in the US East (N. Virginia), US
-       * East (Ohio), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe
-       * (Ireland) AWS Regions .
+       * using an NVMe L2ARC cache that automatically recover within a single Availability Zone.
+       * * `SINGLE_AZ_1` - Creates file systems with throughput capacities of 64 - 4,096 MBs that
+       * automatically recover within a single Availability Zone.
        *
-       * For more information, see [Deployment type
+       * For a list of which AWS Regions each deployment type is available in, see [Deployment type
        * availability](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions)
-       * and [File system
+       * . For more information on the differences in performance between deployment types, see [File
+       * system
        * performance](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance)
        * in the *Amazon FSx for OpenZFS User Guide* .
        */
@@ -4308,24 +4529,25 @@ public open class CfnFileSystem(
       }
 
       /**
-       * @param deploymentType Specifies the file system deployment type. 
-       * Single AZ deployment types are configured for redundancy within a single Availability Zone
-       * in an AWS Region . Valid values are the following:
-       *
-       * * `MULTI_AZ_1` - Creates file systems with high availability that are configured for
-       * Multi-AZ redundancy to tolerate temporary unavailability in Availability Zones (AZs).
-       * `Multi_AZ_1` is available only in the US East (N. Virginia), US East (Ohio), US West (Oregon),
-       * Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) AWS Regions .
-       * * `SINGLE_AZ_1` - Creates file systems with throughput capacities of 64 - 4,096 MB/s.
-       * `Single_AZ_1` is available in all AWS Regions where Amazon FSx for OpenZFS is available.
+       * @param deploymentType Specifies the file system deployment type. Valid values are the
+       * following:. 
+       * * `MULTI_AZ_1` - Creates file systems with high availability and durability by replicating
+       * your data and supporting failover across multiple Availability Zones in the same AWS Region .
+       * * `SINGLE_AZ_HA_2` - Creates file systems with high availability and throughput capacities
+       * of 160 - 10,240 MB/s using an NVMe L2ARC cache by deploying a primary and standby file system
+       * within the same Availability Zone.
+       * * `SINGLE_AZ_HA_1` - Creates file systems with high availability and throughput capacities
+       * of 64 - 4,096 MB/s by deploying a primary and standby file system within the same Availability
+       * Zone.
        * * `SINGLE_AZ_2` - Creates file systems with throughput capacities of 160 - 10,240 MB/s
-       * using an NVMe L2ARC cache. `Single_AZ_2` is available only in the US East (N. Virginia), US
-       * East (Ohio), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe
-       * (Ireland) AWS Regions .
+       * using an NVMe L2ARC cache that automatically recover within a single Availability Zone.
+       * * `SINGLE_AZ_1` - Creates file systems with throughput capacities of 64 - 4,096 MBs that
+       * automatically recover within a single Availability Zone.
        *
-       * For more information, see [Deployment type
+       * For a list of which AWS Regions each deployment type is available in, see [Deployment type
        * availability](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions)
-       * and [File system
+       * . For more information on the differences in performance between deployment types, see [File
+       * system
        * performance](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance)
        * in the *Amazon FSx for OpenZFS User Guide* .
        */
@@ -4499,7 +4721,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.OpenZFSConfigurationProperty,
-    ) : CdkObject(cdkObject), OpenZFSConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        OpenZFSConfigurationProperty {
       /**
        * The number of days to retain automatic backups.
        *
@@ -4549,25 +4772,25 @@ public open class CfnFileSystem(
           unwrap(this).getDailyAutomaticBackupStartTime()
 
       /**
-       * Specifies the file system deployment type.
+       * Specifies the file system deployment type. Valid values are the following:.
        *
-       * Single AZ deployment types are configured for redundancy within a single Availability Zone
-       * in an AWS Region . Valid values are the following:
-       *
-       * * `MULTI_AZ_1` - Creates file systems with high availability that are configured for
-       * Multi-AZ redundancy to tolerate temporary unavailability in Availability Zones (AZs).
-       * `Multi_AZ_1` is available only in the US East (N. Virginia), US East (Ohio), US West (Oregon),
-       * Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe (Ireland) AWS Regions .
-       * * `SINGLE_AZ_1` - Creates file systems with throughput capacities of 64 - 4,096 MB/s.
-       * `Single_AZ_1` is available in all AWS Regions where Amazon FSx for OpenZFS is available.
+       * * `MULTI_AZ_1` - Creates file systems with high availability and durability by replicating
+       * your data and supporting failover across multiple Availability Zones in the same AWS Region .
+       * * `SINGLE_AZ_HA_2` - Creates file systems with high availability and throughput capacities
+       * of 160 - 10,240 MB/s using an NVMe L2ARC cache by deploying a primary and standby file system
+       * within the same Availability Zone.
+       * * `SINGLE_AZ_HA_1` - Creates file systems with high availability and throughput capacities
+       * of 64 - 4,096 MB/s by deploying a primary and standby file system within the same Availability
+       * Zone.
        * * `SINGLE_AZ_2` - Creates file systems with throughput capacities of 160 - 10,240 MB/s
-       * using an NVMe L2ARC cache. `Single_AZ_2` is available only in the US East (N. Virginia), US
-       * East (Ohio), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Tokyo), and Europe
-       * (Ireland) AWS Regions .
+       * using an NVMe L2ARC cache that automatically recover within a single Availability Zone.
+       * * `SINGLE_AZ_1` - Creates file systems with throughput capacities of 64 - 4,096 MBs that
+       * automatically recover within a single Availability Zone.
        *
-       * For more information, see [Deployment type
+       * For a list of which AWS Regions each deployment type is available in, see [Deployment type
        * availability](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/availability-durability.html#available-aws-regions)
-       * and [File system
+       * . For more information on the differences in performance between deployment types, see [File
+       * system
        * performance](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#zfs-fs-performance)
        * in the *Amazon FSx for OpenZFS User Guide* .
        *
@@ -5014,7 +5237,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.RootVolumeConfigurationProperty,
-    ) : CdkObject(cdkObject), RootVolumeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RootVolumeConfigurationProperty {
       /**
        * A Boolean value indicating whether tags for the volume should be copied to snapshots of the
        * volume.
@@ -5344,7 +5568,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.SelfManagedActiveDirectoryConfigurationProperty,
-    ) : CdkObject(cdkObject), SelfManagedActiveDirectoryConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SelfManagedActiveDirectoryConfigurationProperty {
       /**
        * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed
        * AD directory.
@@ -5533,7 +5758,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty,
-    ) : CdkObject(cdkObject), UserAndGroupQuotasProperty {
+    ) : CdkObject(cdkObject),
+        UserAndGroupQuotasProperty {
       /**
        * The ID of the user or group that the quota applies to.
        *
@@ -6319,7 +6545,8 @@ public open class CfnFileSystem(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty,
-    ) : CdkObject(cdkObject), WindowsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        WindowsConfigurationProperty {
       /**
        * The ID for an existing AWS Managed Microsoft Active Directory (AD) instance that the file
        * system should join when it's created.

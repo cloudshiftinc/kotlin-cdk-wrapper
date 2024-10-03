@@ -32,7 +32,8 @@ public interface IAccessPoint : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.IAccessPoint,
-  ) : CdkObject(cdkObject), IAccessPoint {
+  ) : CdkObject(cdkObject),
+      IAccessPoint {
     /**
      * The ARN of the AccessPoint.
      */

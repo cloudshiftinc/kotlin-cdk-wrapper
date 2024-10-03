@@ -162,7 +162,8 @@ public interface MixedInstancesPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.MixedInstancesPolicy,
-  ) : CdkObject(cdkObject), MixedInstancesPolicy {
+  ) : CdkObject(cdkObject),
+      MixedInstancesPolicy {
     /**
      * InstancesDistribution to use.
      *

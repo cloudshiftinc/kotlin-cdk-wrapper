@@ -32,7 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAssessmentTarget(
   cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTarget,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.inspector.CfnAssessmentTarget(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

@@ -49,6 +49,14 @@ public abstract class Billing(
     public fun onDemand(): Billing =
         software.amazon.awscdk.services.dynamodb.Billing.onDemand().let(Billing::wrap)
 
+    public fun onDemand(props: MaxThroughputProps): Billing =
+        software.amazon.awscdk.services.dynamodb.Billing.onDemand(props.let(MaxThroughputProps.Companion::unwrap)).let(Billing::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b2f10a653d7a33f885f60c6b3ae383da96cc92eccf202c292466014846b0dd95")
+    public fun onDemand(props: MaxThroughputProps.Builder.() -> Unit): Billing =
+        onDemand(MaxThroughputProps(props))
+
     public fun provisioned(props: ThroughputProps): Billing =
         software.amazon.awscdk.services.dynamodb.Billing.provisioned(props.let(ThroughputProps.Companion::unwrap)).let(Billing::wrap)
 

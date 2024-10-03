@@ -47,7 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class FargateProfile(
   cdkObject: software.amazon.awscdk.services.eks.FargateProfile,
-) : CloudshiftdevConstructsConstruct(cdkObject), ITaggable {
+) : CloudshiftdevConstructsConstruct(cdkObject),
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

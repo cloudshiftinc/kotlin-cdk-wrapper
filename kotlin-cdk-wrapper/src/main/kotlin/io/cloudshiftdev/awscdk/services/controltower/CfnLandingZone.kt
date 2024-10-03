@@ -44,7 +44,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLandingZone(
   cdkObject: software.amazon.awscdk.services.controltower.CfnLandingZone,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

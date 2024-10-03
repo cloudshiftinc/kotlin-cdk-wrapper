@@ -107,7 +107,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInAppTemplate(
   cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -561,7 +563,8 @@ public open class CfnInAppTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty,
-    ) : CdkObject(cdkObject), BodyConfigProperty {
+    ) : CdkObject(cdkObject),
+        BodyConfigProperty {
       /**
        * The text alignment of the main body text of the message.
        *
@@ -900,7 +903,8 @@ public open class CfnInAppTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty,
-    ) : CdkObject(cdkObject), ButtonConfigProperty {
+    ) : CdkObject(cdkObject),
+        ButtonConfigProperty {
       /**
        * Optional button configuration to use for in-app messages sent to Android devices.
        *
@@ -1139,7 +1143,8 @@ public open class CfnInAppTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty,
-    ) : CdkObject(cdkObject), DefaultButtonConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DefaultButtonConfigurationProperty {
       /**
        * The background color of a button, expressed as a hex color code (such as #000000 for
        * black).
@@ -1310,7 +1315,8 @@ public open class CfnInAppTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty,
-    ) : CdkObject(cdkObject), HeaderConfigProperty {
+    ) : CdkObject(cdkObject),
+        HeaderConfigProperty {
       /**
        * The text alignment of the title of the message.
        *
@@ -1698,7 +1704,8 @@ public open class CfnInAppTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty,
-    ) : CdkObject(cdkObject), InAppMessageContentProperty {
+    ) : CdkObject(cdkObject),
+        InAppMessageContentProperty {
       /**
        * The background color for an in-app message banner, expressed as a hex color code (such as
        * #000000 for black).
@@ -1860,7 +1867,8 @@ public open class CfnInAppTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.OverrideButtonConfigurationProperty,
-    ) : CdkObject(cdkObject), OverrideButtonConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        OverrideButtonConfigurationProperty {
       /**
        * The action that occurs when a recipient chooses a button in an in-app message.
        *

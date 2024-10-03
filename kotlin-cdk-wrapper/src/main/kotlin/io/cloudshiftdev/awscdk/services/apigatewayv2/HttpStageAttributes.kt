@@ -70,7 +70,8 @@ public interface HttpStageAttributes : StageAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes,
-  ) : CdkObject(cdkObject), HttpStageAttributes {
+  ) : CdkObject(cdkObject),
+      HttpStageAttributes {
     /**
      * The API to which this stage is associated.
      */

@@ -42,7 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnModuleVersion(
   cdkObject: software.amazon.awscdk.CfnModuleVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -89,7 +90,7 @@ public open class CfnModuleVersion(
    *
    * For more information about extension schemas, see [Resource Provider
    * Schema](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html)
-   * in the *CloudFormation CLI User Guide* .
+   * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
    */
   public open fun attrSchema(): String = unwrap(this).getAttrSchema()
 
@@ -109,7 +110,7 @@ public open class CfnModuleVersion(
    * Valid values include:
    *
    * * `PRIVATE` : The extension is only visible and usable within the account in which it is
-   * registered. AWS CloudFormation marks any extensions you register as `PRIVATE` .
+   * registered. CloudFormation marks any extensions you register as `PRIVATE` .
    * * `PUBLIC` : The extension is publicly visible and usable within any AWS account.
    */
   public open fun attrVisibility(): String = unwrap(this).getAttrVisibility()

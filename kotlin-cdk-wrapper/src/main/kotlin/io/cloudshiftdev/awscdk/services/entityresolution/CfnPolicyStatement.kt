@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPolicyStatement(
   cdkObject: software.amazon.awscdk.services.entityresolution.CfnPolicyStatement,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

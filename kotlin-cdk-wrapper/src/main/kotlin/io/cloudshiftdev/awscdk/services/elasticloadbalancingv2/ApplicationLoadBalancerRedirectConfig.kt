@@ -163,7 +163,8 @@ public interface ApplicationLoadBalancerRedirectConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerRedirectConfig,
-  ) : CdkObject(cdkObject), ApplicationLoadBalancerRedirectConfig {
+  ) : CdkObject(cdkObject),
+      ApplicationLoadBalancerRedirectConfig {
     /**
      * Allow anyone to connect to this listener.
      *

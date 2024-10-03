@@ -261,7 +261,8 @@ public interface CfnLayerVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersionProps,
-  ) : CdkObject(cdkObject), CfnLayerVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnLayerVersionProps {
     /**
      * A list of compatible [instruction set
      * architectures](https://docs.aws.amazon.com/lambda/latest/dg/foundation-arch.html) .

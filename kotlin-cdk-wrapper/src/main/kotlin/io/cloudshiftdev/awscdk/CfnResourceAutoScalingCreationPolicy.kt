@@ -84,7 +84,8 @@ public interface CfnResourceAutoScalingCreationPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnResourceAutoScalingCreationPolicy,
-  ) : CdkObject(cdkObject), CfnResourceAutoScalingCreationPolicy {
+  ) : CdkObject(cdkObject),
+      CfnResourceAutoScalingCreationPolicy {
     /**
      * Specifies the percentage of instances in an Auto Scaling replacement update that must signal
      * success for the update to succeed.

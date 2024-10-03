@@ -22,7 +22,8 @@ public interface INodegroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.INodegroup,
-  ) : CdkObject(cdkObject), INodegroup {
+  ) : CdkObject(cdkObject),
+      INodegroup {
     /**
      * Apply the given removal policy to this resource.
      *

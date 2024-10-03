@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAccessPoint(
   cdkObject: software.amazon.awscdk.services.s3outposts.CfnAccessPoint,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -361,7 +362,8 @@ public open class CfnAccessPoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3outposts.CfnAccessPoint.VpcConfigurationProperty,
-    ) : CdkObject(cdkObject), VpcConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigurationProperty {
       /**
        * Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.
        *

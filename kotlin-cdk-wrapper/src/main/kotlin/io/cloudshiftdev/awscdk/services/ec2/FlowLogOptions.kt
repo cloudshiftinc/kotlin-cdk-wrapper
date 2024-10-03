@@ -192,7 +192,8 @@ public interface FlowLogOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.FlowLogOptions,
-  ) : CdkObject(cdkObject), FlowLogOptions {
+  ) : CdkObject(cdkObject),
+      FlowLogOptions {
     /**
      * Specifies the type of destination to which the flow log data is to be published.
      *

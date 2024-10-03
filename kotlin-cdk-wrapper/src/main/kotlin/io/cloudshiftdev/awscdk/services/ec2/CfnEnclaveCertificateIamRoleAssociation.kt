@@ -50,7 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEnclaveCertificateIamRoleAssociation(
   cdkObject: software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

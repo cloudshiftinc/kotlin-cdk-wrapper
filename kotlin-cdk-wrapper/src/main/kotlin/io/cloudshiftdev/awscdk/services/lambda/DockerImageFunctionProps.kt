@@ -19,6 +19,7 @@ import io.cloudshiftdev.awscdk.services.logs.RetentionDays
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -68,7 +69,19 @@ public interface DockerImageFunctionProps : FunctionOptions {
         fun adotInstrumentation(adotInstrumentation: AdotInstrumentationConfig.Builder.() -> Unit)
 
     /**
-     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic.
+     * @param allowAllIpv6Outbound Whether to allow the Lambda to send all ipv6 network traffic.
+     * If set to true, there will only be a single egress rule which allows all
+     * outbound ipv6 traffic. If set to false, you must individually add traffic rules to allow the
+     * Lambda to connect to network targets using ipv6.
+     *
+     * Do not specify this property if the `securityGroups` or `securityGroup` property is set.
+     * Instead, configure `allowAllIpv6Outbound` directly on the security group.
+     */
+    public fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean)
+
+    /**
+     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic (except
+     * ipv6).
      * If set to false, you must individually add traffic rules to allow the
      * Lambda to connect to network targets.
      *
@@ -86,8 +99,15 @@ public interface DockerImageFunctionProps : FunctionOptions {
 
     /**
      * @param applicationLogLevel Sets the application log level for the function.
+     * @deprecated Use `applicationLogLevelV2` as a property instead.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun applicationLogLevel(applicationLogLevel: String)
+
+    /**
+     * @param applicationLogLevelV2 Sets the application log level for the function.
+     */
+    public fun applicationLogLevelV2(applicationLogLevelV2: ApplicationLogLevel)
 
     /**
      * @param architecture The system architectures compatible with this lambda function.
@@ -234,7 +254,9 @@ public interface DockerImageFunctionProps : FunctionOptions {
 
     /**
      * @param logFormat Sets the logFormat for the function.
+     * @deprecated Use `loggingFormat` as a property instead.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun logFormat(logFormat: String)
 
     /**
@@ -358,6 +380,12 @@ public interface DockerImageFunctionProps : FunctionOptions {
     public fun profilingGroup(profilingGroup: IProfilingGroup)
 
     /**
+     * @param recursiveLoop Sets the Recursive Loop Protection for Lambda Function.
+     * It lets Lambda detect and terminate unintended recusrive loops.
+     */
+    public fun recursiveLoop(recursiveLoop: RecursiveLoop)
+
+    /**
      * @param reservedConcurrentExecutions The maximum of concurrent executions you want to reserve
      * for the function.
      */
@@ -412,8 +440,15 @@ public interface DockerImageFunctionProps : FunctionOptions {
 
     /**
      * @param systemLogLevel Sets the system log level for the function.
+     * @deprecated Use `systemLogLevelV2` as a property instead.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun systemLogLevel(systemLogLevel: String)
+
+    /**
+     * @param systemLogLevelV2 Sets the system log level for the function.
+     */
+    public fun systemLogLevelV2(systemLogLevelV2: SystemLogLevel)
 
     /**
      * @param timeout The function execution time (in seconds) after which Lambda terminates the
@@ -481,7 +516,21 @@ public interface DockerImageFunctionProps : FunctionOptions {
         Unit = adotInstrumentation(AdotInstrumentationConfig(adotInstrumentation))
 
     /**
-     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic.
+     * @param allowAllIpv6Outbound Whether to allow the Lambda to send all ipv6 network traffic.
+     * If set to true, there will only be a single egress rule which allows all
+     * outbound ipv6 traffic. If set to false, you must individually add traffic rules to allow the
+     * Lambda to connect to network targets using ipv6.
+     *
+     * Do not specify this property if the `securityGroups` or `securityGroup` property is set.
+     * Instead, configure `allowAllIpv6Outbound` directly on the security group.
+     */
+    override fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
+      cdkBuilder.allowAllIpv6Outbound(allowAllIpv6Outbound)
+    }
+
+    /**
+     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic (except
+     * ipv6).
      * If set to false, you must individually add traffic rules to allow the
      * Lambda to connect to network targets.
      *
@@ -503,9 +552,18 @@ public interface DockerImageFunctionProps : FunctionOptions {
 
     /**
      * @param applicationLogLevel Sets the application log level for the function.
+     * @deprecated Use `applicationLogLevelV2` as a property instead.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun applicationLogLevel(applicationLogLevel: String) {
       cdkBuilder.applicationLogLevel(applicationLogLevel)
+    }
+
+    /**
+     * @param applicationLogLevelV2 Sets the application log level for the function.
+     */
+    override fun applicationLogLevelV2(applicationLogLevelV2: ApplicationLogLevel) {
+      cdkBuilder.applicationLogLevelV2(applicationLogLevelV2.let(ApplicationLogLevel.Companion::unwrap))
     }
 
     /**
@@ -691,7 +749,9 @@ public interface DockerImageFunctionProps : FunctionOptions {
 
     /**
      * @param logFormat Sets the logFormat for the function.
+     * @deprecated Use `loggingFormat` as a property instead.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun logFormat(logFormat: String) {
       cdkBuilder.logFormat(logFormat)
     }
@@ -842,6 +902,14 @@ public interface DockerImageFunctionProps : FunctionOptions {
     }
 
     /**
+     * @param recursiveLoop Sets the Recursive Loop Protection for Lambda Function.
+     * It lets Lambda detect and terminate unintended recusrive loops.
+     */
+    override fun recursiveLoop(recursiveLoop: RecursiveLoop) {
+      cdkBuilder.recursiveLoop(recursiveLoop.let(RecursiveLoop.Companion::unwrap))
+    }
+
+    /**
      * @param reservedConcurrentExecutions The maximum of concurrent executions you want to reserve
      * for the function.
      */
@@ -909,9 +977,18 @@ public interface DockerImageFunctionProps : FunctionOptions {
 
     /**
      * @param systemLogLevel Sets the system log level for the function.
+     * @deprecated Use `systemLogLevelV2` as a property instead.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun systemLogLevel(systemLogLevel: String) {
       cdkBuilder.systemLogLevel(systemLogLevel)
+    }
+
+    /**
+     * @param systemLogLevelV2 Sets the system log level for the function.
+     */
+    override fun systemLogLevelV2(systemLogLevelV2: SystemLogLevel) {
+      cdkBuilder.systemLogLevelV2(systemLogLevelV2.let(SystemLogLevel.Companion::unwrap))
     }
 
     /**
@@ -971,7 +1048,8 @@ public interface DockerImageFunctionProps : FunctionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.DockerImageFunctionProps,
-  ) : CdkObject(cdkObject), DockerImageFunctionProps {
+  ) : CdkObject(cdkObject),
+      DockerImageFunctionProps {
     /**
      * Specify the configuration of AWS Distro for OpenTelemetry (ADOT) instrumentation.
      *
@@ -983,7 +1061,21 @@ public interface DockerImageFunctionProps : FunctionOptions {
         unwrap(this).getAdotInstrumentation()?.let(AdotInstrumentationConfig::wrap)
 
     /**
-     * Whether to allow the Lambda to send all network traffic.
+     * Whether to allow the Lambda to send all ipv6 network traffic.
+     *
+     * If set to true, there will only be a single egress rule which allows all
+     * outbound ipv6 traffic. If set to false, you must individually add traffic rules to allow the
+     * Lambda to connect to network targets using ipv6.
+     *
+     * Do not specify this property if the `securityGroups` or `securityGroup` property is set.
+     * Instead, configure `allowAllIpv6Outbound` directly on the security group.
+     *
+     * Default: false
+     */
+    override fun allowAllIpv6Outbound(): Boolean? = unwrap(this).getAllowAllIpv6Outbound()
+
+    /**
+     * Whether to allow the Lambda to send all network traffic (except ipv6).
      *
      * If set to false, you must individually add traffic rules to allow the
      * Lambda to connect to network targets.
@@ -1008,11 +1100,22 @@ public interface DockerImageFunctionProps : FunctionOptions {
     override fun allowPublicSubnet(): Boolean? = unwrap(this).getAllowPublicSubnet()
 
     /**
-     * Sets the application log level for the function.
+     * (deprecated) Sets the application log level for the function.
      *
      * Default: "INFO"
+     *
+     * @deprecated Use `applicationLogLevelV2` as a property instead.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun applicationLogLevel(): String? = unwrap(this).getApplicationLogLevel()
+
+    /**
+     * Sets the application log level for the function.
+     *
+     * Default: ApplicationLogLevel.INFO
+     */
+    override fun applicationLogLevelV2(): ApplicationLogLevel? =
+        unwrap(this).getApplicationLogLevelV2()?.let(ApplicationLogLevel::wrap)
 
     /**
      * The system architectures compatible with this lambda function.
@@ -1180,10 +1283,13 @@ public interface DockerImageFunctionProps : FunctionOptions {
         ?: emptyList()
 
     /**
-     * Sets the logFormat for the function.
+     * (deprecated) Sets the logFormat for the function.
      *
      * Default: "Text"
+     *
+     * @deprecated Use `loggingFormat` as a property instead.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun logFormat(): String? = unwrap(this).getLogFormat()
 
     /**
@@ -1331,6 +1437,16 @@ public interface DockerImageFunctionProps : FunctionOptions {
         unwrap(this).getProfilingGroup()?.let(IProfilingGroup::wrap)
 
     /**
+     * Sets the Recursive Loop Protection for Lambda Function.
+     *
+     * It lets Lambda detect and terminate unintended recusrive loops.
+     *
+     * Default: RecursiveLoop.Terminate
+     */
+    override fun recursiveLoop(): RecursiveLoop? =
+        unwrap(this).getRecursiveLoop()?.let(RecursiveLoop::wrap)
+
+    /**
      * The maximum of concurrent executions you want to reserve for the function.
      *
      * Default: - No specific limit - account limit.
@@ -1398,11 +1514,22 @@ public interface DockerImageFunctionProps : FunctionOptions {
     override fun snapStart(): SnapStartConf? = unwrap(this).getSnapStart()?.let(SnapStartConf::wrap)
 
     /**
-     * Sets the system log level for the function.
+     * (deprecated) Sets the system log level for the function.
      *
      * Default: "INFO"
+     *
+     * @deprecated Use `systemLogLevelV2` as a property instead.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun systemLogLevel(): String? = unwrap(this).getSystemLogLevel()
+
+    /**
+     * Sets the system log level for the function.
+     *
+     * Default: SystemLogLevel.INFO
+     */
+    override fun systemLogLevelV2(): SystemLogLevel? =
+        unwrap(this).getSystemLogLevelV2()?.let(SystemLogLevel::wrap)
 
     /**
      * The function execution time (in seconds) after which Lambda terminates the function.

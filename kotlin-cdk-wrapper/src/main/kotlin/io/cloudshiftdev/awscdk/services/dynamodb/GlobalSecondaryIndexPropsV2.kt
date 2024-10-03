@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -30,6 +31,24 @@ import kotlin.jvm.JvmName
  * ```
  */
 public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
+  /**
+   * The maximum read request units.
+   *
+   * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+   *
+   * Default: - inherited from the primary table.
+   */
+  public fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
+
+  /**
+   * The maximum write request units.
+   *
+   * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+   *
+   * Default: - inherited from the primary table.
+   */
+  public fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
+
   /**
    * Partition key attribute definition.
    */
@@ -69,6 +88,18 @@ public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
      * @param indexName The name of the secondary index. 
      */
     public fun indexName(indexName: String)
+
+    /**
+     * @param maxReadRequestUnits The maximum read request units.
+     * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+     */
+    public fun maxReadRequestUnits(maxReadRequestUnits: Number)
+
+    /**
+     * @param maxWriteRequestUnits The maximum write request units.
+     * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+     */
+    public fun maxWriteRequestUnits(maxWriteRequestUnits: Number)
 
     /**
      * @param nonKeyAttributes The non-key attributes that are projected into the secondary index.
@@ -132,6 +163,22 @@ public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
      */
     override fun indexName(indexName: String) {
       cdkBuilder.indexName(indexName)
+    }
+
+    /**
+     * @param maxReadRequestUnits The maximum read request units.
+     * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+     */
+    override fun maxReadRequestUnits(maxReadRequestUnits: Number) {
+      cdkBuilder.maxReadRequestUnits(maxReadRequestUnits)
+    }
+
+    /**
+     * @param maxWriteRequestUnits The maximum write request units.
+     * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+     */
+    override fun maxWriteRequestUnits(maxWriteRequestUnits: Number) {
+      cdkBuilder.maxWriteRequestUnits(maxWriteRequestUnits)
     }
 
     /**
@@ -205,11 +252,30 @@ public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexPropsV2,
-  ) : CdkObject(cdkObject), GlobalSecondaryIndexPropsV2 {
+  ) : CdkObject(cdkObject),
+      GlobalSecondaryIndexPropsV2 {
     /**
      * The name of the secondary index.
      */
     override fun indexName(): String = unwrap(this).getIndexName()
+
+    /**
+     * The maximum read request units.
+     *
+     * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+     *
+     * Default: - inherited from the primary table.
+     */
+    override fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
+
+    /**
+     * The maximum write request units.
+     *
+     * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+     *
+     * Default: - inherited from the primary table.
+     */
+    override fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
 
     /**
      * The non-key attributes that are projected into the secondary index.

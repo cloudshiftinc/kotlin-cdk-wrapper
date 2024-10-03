@@ -162,7 +162,13 @@ public interface SagemakerIntegrationOptions : IntegrationOptions {
     /**
      * @param timeout The maximum amount of time an integration will run before it returns without a
      * response.
-     * Must be between 50 milliseconds and 29 seconds.
+     * By default, the value must be between 50 milliseconds and 29 seconds.
+     * The upper bound can be increased for regional and private Rest APIs only,
+     * via a quota increase request for your acccount.
+     * This increase might require a reduction in your account-level throttle quota limit.
+     * *
+     * See [https://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html Amazon API
+     * Gateway quotas] for more details.
      */
     public fun timeout(timeout: Duration)
 
@@ -303,7 +309,13 @@ public interface SagemakerIntegrationOptions : IntegrationOptions {
     /**
      * @param timeout The maximum amount of time an integration will run before it returns without a
      * response.
-     * Must be between 50 milliseconds and 29 seconds.
+     * By default, the value must be between 50 milliseconds and 29 seconds.
+     * The upper bound can be increased for regional and private Rest APIs only,
+     * via a quota increase request for your acccount.
+     * This increase might require a reduction in your account-level throttle quota limit.
+     * *
+     * See [https://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html Amazon API
+     * Gateway quotas] for more details.
      */
     override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
@@ -323,7 +335,8 @@ public interface SagemakerIntegrationOptions : IntegrationOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.SagemakerIntegrationOptions,
-  ) : CdkObject(cdkObject), SagemakerIntegrationOptions {
+  ) : CdkObject(cdkObject),
+      SagemakerIntegrationOptions {
     /**
      * A list of request parameters whose values are to be cached.
      *
@@ -434,7 +447,12 @@ public interface SagemakerIntegrationOptions : IntegrationOptions {
     /**
      * The maximum amount of time an integration will run before it returns without a response.
      *
-     * Must be between 50 milliseconds and 29 seconds.
+     * By default, the value must be between 50 milliseconds and 29 seconds.
+     * The upper bound can be increased for regional and private Rest APIs only,
+     * via a quota increase request for your acccount.
+     * This increase might require a reduction in your account-level throttle quota limit.
+     * See [https://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html Amazon API
+     * Gateway quotas] for more details.
      *
      * Default: Duration.seconds(29)
      */

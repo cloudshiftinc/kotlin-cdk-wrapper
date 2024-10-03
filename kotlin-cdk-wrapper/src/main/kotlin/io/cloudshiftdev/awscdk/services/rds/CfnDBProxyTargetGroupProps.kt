@@ -41,8 +41,8 @@ import kotlin.jvm.JvmName
  */
 public interface CfnDBProxyTargetGroupProps {
   /**
-   * Settings that control the size and behavior of the connection pool associated with a
-   * `DBProxyTargetGroup` .
+   * Displays the settings that control the size and behavior of the connection pool associated with
+   * a `DBProxyTarget` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)
    */
@@ -89,21 +89,21 @@ public interface CfnDBProxyTargetGroupProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` .
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` .
      */
     public fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable)
 
     /**
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` .
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` .
      */
     public
         fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty)
 
     /**
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` .
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a81dca035ba13cf1b38b5cbc879a23df538a398f0b36ca3a18499b89c43d713a")
@@ -149,16 +149,16 @@ public interface CfnDBProxyTargetGroupProps {
         software.amazon.awscdk.services.rds.CfnDBProxyTargetGroupProps.builder()
 
     /**
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` .
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` .
      */
     override fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable) {
       cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` .
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` .
      */
     override
         fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty) {
@@ -166,8 +166,8 @@ public interface CfnDBProxyTargetGroupProps {
     }
 
     /**
-     * @param connectionPoolConfigurationInfo Settings that control the size and behavior of the
-     * connection pool associated with a `DBProxyTargetGroup` .
+     * @param connectionPoolConfigurationInfo Displays the settings that control the size and
+     * behavior of the connection pool associated with a `DBProxyTarget` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a81dca035ba13cf1b38b5cbc879a23df538a398f0b36ca3a18499b89c43d713a")
@@ -225,10 +225,11 @@ public interface CfnDBProxyTargetGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroupProps,
-  ) : CdkObject(cdkObject), CfnDBProxyTargetGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnDBProxyTargetGroupProps {
     /**
-     * Settings that control the size and behavior of the connection pool associated with a
-     * `DBProxyTargetGroup` .
+     * Displays the settings that control the size and behavior of the connection pool associated
+     * with a `DBProxyTarget` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)
      */

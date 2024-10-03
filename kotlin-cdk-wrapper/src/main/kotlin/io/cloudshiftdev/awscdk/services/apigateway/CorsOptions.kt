@@ -356,7 +356,8 @@ public interface CorsOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.CorsOptions,
-  ) : CdkObject(cdkObject), CorsOptions {
+  ) : CdkObject(cdkObject),
+      CorsOptions {
     /**
      * The Access-Control-Allow-Credentials response header tells browsers whether to expose the
      * response to frontend JavaScript code when the request's credentials mode (Request.credentials)

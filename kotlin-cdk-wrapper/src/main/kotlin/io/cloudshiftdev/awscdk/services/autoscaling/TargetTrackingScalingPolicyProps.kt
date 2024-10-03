@@ -194,7 +194,8 @@ public interface TargetTrackingScalingPolicyProps : BasicTargetTrackingScalingPo
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.TargetTrackingScalingPolicyProps,
-  ) : CdkObject(cdkObject), TargetTrackingScalingPolicyProps {
+  ) : CdkObject(cdkObject),
+      TargetTrackingScalingPolicyProps {
     /**
      *
      */

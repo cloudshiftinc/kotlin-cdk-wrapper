@@ -22,7 +22,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class QueueBase(
   cdkObject: software.amazon.awscdk.services.sqs.QueueBase,
-) : Resource(cdkObject), IQueue {
+) : Resource(cdkObject),
+    IQueue {
   /**
    * Adds a statement to the IAM resource policy associated with this queue.
    *

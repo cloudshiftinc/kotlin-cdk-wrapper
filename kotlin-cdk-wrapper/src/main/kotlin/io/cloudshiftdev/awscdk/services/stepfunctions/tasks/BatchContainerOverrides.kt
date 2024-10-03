@@ -212,7 +212,8 @@ public interface BatchContainerOverrides {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrides,
-  ) : CdkObject(cdkObject), BatchContainerOverrides {
+  ) : CdkObject(cdkObject),
+      BatchContainerOverrides {
     /**
      * The command to send to the container that overrides the default command from the Docker image
      * or the job definition.

@@ -95,7 +95,8 @@ public interface BackendDefaults {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.BackendDefaults,
-  ) : CdkObject(cdkObject), BackendDefaults {
+  ) : CdkObject(cdkObject),
+      BackendDefaults {
     /**
      * TLS properties for Client policy for backend defaults.
      *

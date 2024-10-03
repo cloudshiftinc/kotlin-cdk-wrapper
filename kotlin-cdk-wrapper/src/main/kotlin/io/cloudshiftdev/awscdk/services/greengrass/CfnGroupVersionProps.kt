@@ -234,7 +234,8 @@ public interface CfnGroupVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.greengrass.CfnGroupVersionProps,
-  ) : CdkObject(cdkObject), CfnGroupVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnGroupVersionProps {
     /**
      * The Amazon Resource Name (ARN) of the connector definition version that contains the
      * connectors you want to deploy with the group version.

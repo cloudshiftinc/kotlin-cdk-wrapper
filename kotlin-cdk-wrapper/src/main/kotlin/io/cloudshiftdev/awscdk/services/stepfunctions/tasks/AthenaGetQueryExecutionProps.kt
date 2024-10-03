@@ -282,7 +282,8 @@ public interface AthenaGetQueryExecutionProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryExecutionProps,
-  ) : CdkObject(cdkObject), AthenaGetQueryExecutionProps {
+  ) : CdkObject(cdkObject),
+      AthenaGetQueryExecutionProps {
     /**
      * An optional description for this state.
      *

@@ -104,7 +104,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSecurityProfile(
   cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnSecurityProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -765,7 +767,8 @@ public open class CfnSecurityProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty,
-    ) : CdkObject(cdkObject), AlertTargetProperty {
+    ) : CdkObject(cdkObject),
+        AlertTargetProperty {
       /**
        * The Amazon Resource Name (ARN) of the notification target to which alerts are sent.
        *
@@ -1132,7 +1135,8 @@ public open class CfnSecurityProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorCriteriaProperty,
-    ) : CdkObject(cdkObject), BehaviorCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        BehaviorCriteriaProperty {
       /**
        * The operator that relates the thing measured ( `metric` ) to the criteria (containing a
        * `value` or `statisticalThreshold` ).
@@ -1518,7 +1522,8 @@ public open class CfnSecurityProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty,
-    ) : CdkObject(cdkObject), BehaviorProperty {
+    ) : CdkObject(cdkObject),
+        BehaviorProperty {
       /**
        * The criteria that determine if a device is behaving normally in regard to the `metric` .
        *
@@ -1657,7 +1662,8 @@ public open class CfnSecurityProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty,
-    ) : CdkObject(cdkObject), MachineLearningDetectionConfigProperty {
+    ) : CdkObject(cdkObject),
+        MachineLearningDetectionConfigProperty {
       /**
        * The model confidence level.
        *
@@ -1769,7 +1775,8 @@ public open class CfnSecurityProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty,
-    ) : CdkObject(cdkObject), MetricDimensionProperty {
+    ) : CdkObject(cdkObject),
+        MetricDimensionProperty {
       /**
        * The name of the dimension.
        *
@@ -1949,7 +1956,8 @@ public open class CfnSecurityProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty,
-    ) : CdkObject(cdkObject), MetricToRetainProperty {
+    ) : CdkObject(cdkObject),
+        MetricToRetainProperty {
       /**
        * The value indicates exporting metrics related to the `MetricToRetain` when it's true.
        *
@@ -2222,7 +2230,8 @@ public open class CfnSecurityProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty,
-    ) : CdkObject(cdkObject), MetricValueProperty {
+    ) : CdkObject(cdkObject),
+        MetricValueProperty {
       /**
        * If the `comparisonOperator` calls for a set of CIDRs, use this to specify that set to be
        * compared with the `metric` .
@@ -2367,7 +2376,8 @@ public open class CfnSecurityProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty,
-    ) : CdkObject(cdkObject), MetricsExportConfigProperty {
+    ) : CdkObject(cdkObject),
+        MetricsExportConfigProperty {
       /**
        * The MQTT topic that Device Defender Detect should publish messages to for metrics export.
        *
@@ -2480,7 +2490,8 @@ public open class CfnSecurityProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty,
-    ) : CdkObject(cdkObject), StatisticalThresholdProperty {
+    ) : CdkObject(cdkObject),
+        StatisticalThresholdProperty {
       /**
        * The percentile that resolves to a threshold value by which compliance with a behavior is
        * determined.

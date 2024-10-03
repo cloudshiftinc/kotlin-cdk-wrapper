@@ -29,7 +29,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * work best for your applications, and specify how Amazon EC2 should distribute your fleet capacity
  * within each purchasing model. For more information, see [Launching an EC2
  * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html) in the *Amazon EC2 User
- * Guide for Linux Instances* .
+ * Guide* .
  *
  * Example:
  *
@@ -172,7 +172,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEC2Fleet(
   cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1180,7 +1181,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorCountRequestProperty,
-    ) : CdkObject(cdkObject), AcceleratorCountRequestProperty {
+    ) : CdkObject(cdkObject),
+        AcceleratorCountRequestProperty {
       /**
        * The maximum number of accelerators.
        *
@@ -1303,7 +1305,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRequestProperty {
+    ) : CdkObject(cdkObject),
+        AcceleratorTotalMemoryMiBRequestProperty {
       /**
        * The maximum amount of accelerator memory, in MiB.
        *
@@ -1430,7 +1433,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty,
-    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsRequestProperty {
+    ) : CdkObject(cdkObject),
+        BaselineEbsBandwidthMbpsRequestProperty {
       /**
        * The maximum baseline bandwidth, in Mbps.
        *
@@ -1596,7 +1600,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty,
-    ) : CdkObject(cdkObject), CapacityRebalanceProperty {
+    ) : CdkObject(cdkObject),
+        CapacityRebalanceProperty {
       /**
        * The replacement strategy to use. Only available for fleets of type `maintain` .
        *
@@ -1745,7 +1750,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty,
-    ) : CdkObject(cdkObject), CapacityReservationOptionsRequestProperty {
+    ) : CdkObject(cdkObject),
+        CapacityReservationOptionsRequestProperty {
       /**
        * Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity.
        *
@@ -2021,7 +2027,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty,
-    ) : CdkObject(cdkObject), FleetLaunchTemplateConfigRequestProperty {
+    ) : CdkObject(cdkObject),
+        FleetLaunchTemplateConfigRequestProperty {
       /**
        * The launch template to use.
        *
@@ -2239,6 +2246,12 @@ public open class CfnEC2Fleet(
     /**
      * The number of units provided by the specified instance type.
      *
+     * These are the same units that you chose to set the target capacity in terms of instances, or
+     * a performance characteristic such as vCPUs, memory, or I/O.
+     *
+     * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the
+     * number of instances to the next whole number. If this value is not specified, the default is 1.
+     *
      *
      * When specifying weights, the price used in the `lowest-price` and `price-capacity-optimized`
      * allocation strategies is per *unit* hour (where the instance price is divided by the specified
@@ -2356,6 +2369,13 @@ public open class CfnEC2Fleet(
 
       /**
        * @param weightedCapacity The number of units provided by the specified instance type.
+       * These are the same units that you chose to set the target capacity in terms of instances,
+       * or a performance characteristic such as vCPUs, memory, or I/O.
+       *
+       * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the
+       * number of instances to the next whole number. If this value is not specified, the default is
+       * 1.
+       *
        *
        * When specifying weights, the price used in the `lowest-price` and
        * `price-capacity-optimized` allocation strategies is per *unit* hour (where the instance price
@@ -2493,6 +2513,13 @@ public open class CfnEC2Fleet(
 
       /**
        * @param weightedCapacity The number of units provided by the specified instance type.
+       * These are the same units that you chose to set the target capacity in terms of instances,
+       * or a performance characteristic such as vCPUs, memory, or I/O.
+       *
+       * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the
+       * number of instances to the next whole number. If this value is not specified, the default is
+       * 1.
+       *
        *
        * When specifying weights, the price used in the `lowest-price` and
        * `price-capacity-optimized` allocation strategies is per *unit* hour (where the instance price
@@ -2511,7 +2538,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateOverridesRequestProperty,
-    ) : CdkObject(cdkObject), FleetLaunchTemplateOverridesRequestProperty {
+    ) : CdkObject(cdkObject),
+        FleetLaunchTemplateOverridesRequestProperty {
       /**
        * The Availability Zone in which to launch the instances.
        *
@@ -2598,6 +2626,13 @@ public open class CfnEC2Fleet(
 
       /**
        * The number of units provided by the specified instance type.
+       *
+       * These are the same units that you chose to set the target capacity in terms of instances,
+       * or a performance characteristic such as vCPUs, memory, or I/O.
+       *
+       * If the target capacity divided by this value is not a whole number, Amazon EC2 rounds the
+       * number of instances to the next whole number. If this value is not specified, the default is
+       * 1.
        *
        *
        * When specifying weights, the price used in the `lowest-price` and
@@ -2768,7 +2803,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty,
-    ) : CdkObject(cdkObject), FleetLaunchTemplateSpecificationRequestProperty {
+    ) : CdkObject(cdkObject),
+        FleetLaunchTemplateSpecificationRequestProperty {
       /**
        * The ID of the launch template.
        *
@@ -3171,8 +3207,8 @@ public open class CfnEC2Fleet(
      *
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *
-     * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-     * is based on the per vCPU or per memory price instead of the per instance price.
+     * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+     * threshold is based on the per vCPU or per memory price instead of the per instance price.
      *
      *
      * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -3720,8 +3756,8 @@ public open class CfnEC2Fleet(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -4398,8 +4434,8 @@ public open class CfnEC2Fleet(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -4680,7 +4716,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.InstanceRequirementsRequestProperty,
-    ) : CdkObject(cdkObject), InstanceRequirementsRequestProperty {
+    ) : CdkObject(cdkObject),
+        InstanceRequirementsRequestProperty {
       /**
        * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
        * instance.
@@ -4930,8 +4967,8 @@ public open class CfnEC2Fleet(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -5200,7 +5237,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MaintenanceStrategiesProperty,
-    ) : CdkObject(cdkObject), MaintenanceStrategiesProperty {
+    ) : CdkObject(cdkObject),
+        MaintenanceStrategiesProperty {
       /**
        * The strategy to use when Amazon EC2 emits a signal that your Spot Instance is at an
        * elevated risk of being interrupted.
@@ -5311,7 +5349,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty,
-    ) : CdkObject(cdkObject), MemoryGiBPerVCpuRequestProperty {
+    ) : CdkObject(cdkObject),
+        MemoryGiBPerVCpuRequestProperty {
       /**
        * The maximum amount of memory per vCPU, in GiB.
        *
@@ -5430,7 +5469,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), MemoryMiBRequestProperty {
+    ) : CdkObject(cdkObject),
+        MemoryMiBRequestProperty {
       /**
        * The maximum amount of memory, in MiB.
        *
@@ -5561,7 +5601,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkBandwidthGbpsRequestProperty,
-    ) : CdkObject(cdkObject), NetworkBandwidthGbpsRequestProperty {
+    ) : CdkObject(cdkObject),
+        NetworkBandwidthGbpsRequestProperty {
       /**
        * The maximum amount of network bandwidth, in Gbps.
        *
@@ -5684,7 +5725,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceCountRequestProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInterfaceCountRequestProperty {
       /**
        * The maximum number of network interfaces.
        *
@@ -5787,7 +5829,7 @@ public open class CfnEC2Fleet(
      * final cost might be higher than what you specified for `MaxTotalPrice` . For more information,
      * see [Surplus credits can incur
      * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-     * in the *EC2 User Guide* .
+     * in the *Amazon EC2 User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ondemandoptionsrequest.html#cfn-ec2-ec2fleet-ondemandoptionsrequest-maxtotalprice)
@@ -5797,9 +5839,9 @@ public open class CfnEC2Fleet(
     /**
      * The minimum target capacity for On-Demand Instances in the fleet.
      *
-     * If the minimum target capacity is not reached, the fleet launches no instances.
+     * If this minimum capacity isn't reached, no instances are launched.
      *
-     * Supported only for fleets of type `instant` .
+     * Constraints: Maximum value of `1000` . Supported only for fleets of type `instant` .
      *
      * At least one of the following must be specified: `SingleAvailabilityZone` |
      * `SingleInstanceType`
@@ -5880,15 +5922,15 @@ public open class CfnEC2Fleet(
        * credits, your final cost might be higher than what you specified for `MaxTotalPrice` . For
        * more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        */
       public fun maxTotalPrice(maxTotalPrice: String)
 
       /**
        * @param minTargetCapacity The minimum target capacity for On-Demand Instances in the fleet.
-       * If the minimum target capacity is not reached, the fleet launches no instances.
+       * If this minimum capacity isn't reached, no instances are launched.
        *
-       * Supported only for fleets of type `instant` .
+       * Constraints: Maximum value of `1000` . Supported only for fleets of type `instant` .
        *
        * At least one of the following must be specified: `SingleAvailabilityZone` |
        * `SingleInstanceType`
@@ -5985,7 +6027,7 @@ public open class CfnEC2Fleet(
        * credits, your final cost might be higher than what you specified for `MaxTotalPrice` . For
        * more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        */
       override fun maxTotalPrice(maxTotalPrice: String) {
         cdkBuilder.maxTotalPrice(maxTotalPrice)
@@ -5993,9 +6035,9 @@ public open class CfnEC2Fleet(
 
       /**
        * @param minTargetCapacity The minimum target capacity for On-Demand Instances in the fleet.
-       * If the minimum target capacity is not reached, the fleet launches no instances.
+       * If this minimum capacity isn't reached, no instances are launched.
        *
-       * Supported only for fleets of type `instant` .
+       * Constraints: Maximum value of `1000` . Supported only for fleets of type `instant` .
        *
        * At least one of the following must be specified: `SingleAvailabilityZone` |
        * `SingleInstanceType`
@@ -6047,7 +6089,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.OnDemandOptionsRequestProperty,
-    ) : CdkObject(cdkObject), OnDemandOptionsRequestProperty {
+    ) : CdkObject(cdkObject),
+        OnDemandOptionsRequestProperty {
       /**
        * The strategy that determines the order of the launch template overrides to use in
        * fulfilling On-Demand capacity.
@@ -6083,7 +6126,7 @@ public open class CfnEC2Fleet(
        * credits, your final cost might be higher than what you specified for `MaxTotalPrice` . For
        * more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ondemandoptionsrequest.html#cfn-ec2-ec2fleet-ondemandoptionsrequest-maxtotalprice)
@@ -6093,9 +6136,9 @@ public open class CfnEC2Fleet(
       /**
        * The minimum target capacity for On-Demand Instances in the fleet.
        *
-       * If the minimum target capacity is not reached, the fleet launches no instances.
+       * If this minimum capacity isn't reached, no instances are launched.
        *
-       * Supported only for fleets of type `instant` .
+       * Constraints: Maximum value of `1000` . Supported only for fleets of type `instant` .
        *
        * At least one of the following must be specified: `SingleAvailabilityZone` |
        * `SingleInstanceType`
@@ -6428,7 +6471,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty,
-    ) : CdkObject(cdkObject), PlacementProperty {
+    ) : CdkObject(cdkObject),
+        PlacementProperty {
       /**
        * The affinity setting for the instance on the Dedicated Host.
        *
@@ -6642,7 +6686,7 @@ public open class CfnEC2Fleet(
      * credits, and, if you use surplus credits, your final cost might be higher than what you
      * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
      * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-     * in the *EC2 User Guide* .
+     * in the *Amazon EC2 User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-maxtotalprice)
@@ -6652,9 +6696,9 @@ public open class CfnEC2Fleet(
     /**
      * The minimum target capacity for Spot Instances in the fleet.
      *
-     * If the minimum target capacity is not reached, the fleet launches no instances.
+     * If this minimum capacity isn't reached, no instances are launched.
      *
-     * Supported only for fleets of type `instant` .
+     * Constraints: Maximum value of `1000` . Supported only for fleets of type `instant` .
      *
      * At least one of the following must be specified: `SingleAvailabilityZone` |
      * `SingleInstanceType`
@@ -6762,15 +6806,15 @@ public open class CfnEC2Fleet(
        * credits, and, if you use surplus credits, your final cost might be higher than what you
        * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        */
       public fun maxTotalPrice(maxTotalPrice: String)
 
       /**
        * @param minTargetCapacity The minimum target capacity for Spot Instances in the fleet.
-       * If the minimum target capacity is not reached, the fleet launches no instances.
+       * If this minimum capacity isn't reached, no instances are launched.
        *
-       * Supported only for fleets of type `instant` .
+       * Constraints: Maximum value of `1000` . Supported only for fleets of type `instant` .
        *
        * At least one of the following must be specified: `SingleAvailabilityZone` |
        * `SingleInstanceType`
@@ -6897,7 +6941,7 @@ public open class CfnEC2Fleet(
        * credits, and, if you use surplus credits, your final cost might be higher than what you
        * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        */
       override fun maxTotalPrice(maxTotalPrice: String) {
         cdkBuilder.maxTotalPrice(maxTotalPrice)
@@ -6905,9 +6949,9 @@ public open class CfnEC2Fleet(
 
       /**
        * @param minTargetCapacity The minimum target capacity for Spot Instances in the fleet.
-       * If the minimum target capacity is not reached, the fleet launches no instances.
+       * If this minimum capacity isn't reached, no instances are launched.
        *
-       * Supported only for fleets of type `instant` .
+       * Constraints: Maximum value of `1000` . Supported only for fleets of type `instant` .
        *
        * At least one of the following must be specified: `SingleAvailabilityZone` |
        * `SingleInstanceType`
@@ -6958,7 +7002,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty,
-    ) : CdkObject(cdkObject), SpotOptionsRequestProperty {
+    ) : CdkObject(cdkObject),
+        SpotOptionsRequestProperty {
       /**
        * Indicates how to allocate the target Spot Instance capacity across the Spot Instance pools
        * specified by the EC2 Fleet.
@@ -7030,7 +7075,7 @@ public open class CfnEC2Fleet(
        * credits, and, if you use surplus credits, your final cost might be higher than what you
        * specified for `MaxTotalPrice` . For more information, see [Surplus credits can incur
        * charges](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances-unlimited-mode-concepts.html#unlimited-mode-surplus-credits)
-       * in the *EC2 User Guide* .
+       * in the *Amazon EC2 User Guide* .
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html#cfn-ec2-ec2fleet-spotoptionsrequest-maxtotalprice)
@@ -7040,9 +7085,9 @@ public open class CfnEC2Fleet(
       /**
        * The minimum target capacity for Spot Instances in the fleet.
        *
-       * If the minimum target capacity is not reached, the fleet launches no instances.
+       * If this minimum capacity isn't reached, no instances are launched.
        *
-       * Supported only for fleets of type `instant` .
+       * Constraints: Maximum value of `1000` . Supported only for fleets of type `instant` .
        *
        * At least one of the following must be specified: `SingleAvailabilityZone` |
        * `SingleInstanceType`
@@ -7179,7 +7224,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty,
-    ) : CdkObject(cdkObject), TagSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        TagSpecificationProperty {
       /**
        * The type of resource to tag.
        *
@@ -7367,7 +7413,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty,
-    ) : CdkObject(cdkObject), TargetCapacitySpecificationRequestProperty {
+    ) : CdkObject(cdkObject),
+        TargetCapacitySpecificationRequestProperty {
       /**
        * The default target capacity type.
        *
@@ -7511,7 +7558,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TotalLocalStorageGBRequestProperty,
-    ) : CdkObject(cdkObject), TotalLocalStorageGBRequestProperty {
+    ) : CdkObject(cdkObject),
+        TotalLocalStorageGBRequestProperty {
       /**
        * The maximum amount of total local storage, in GB.
        *
@@ -7633,7 +7681,8 @@ public open class CfnEC2Fleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty,
-    ) : CdkObject(cdkObject), VCpuCountRangeRequestProperty {
+    ) : CdkObject(cdkObject),
+        VCpuCountRangeRequestProperty {
       /**
        * The maximum number of vCPUs.
        *

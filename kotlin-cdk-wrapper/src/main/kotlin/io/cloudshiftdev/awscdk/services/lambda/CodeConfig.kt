@@ -148,7 +148,8 @@ public interface CodeConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.CodeConfig,
-  ) : CdkObject(cdkObject), CodeConfig {
+  ) : CdkObject(cdkObject),
+      CodeConfig {
     /**
      * Docker image configuration (mutually exclusive with `s3Location` and `inlineCode`).
      *

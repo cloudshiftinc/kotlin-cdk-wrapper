@@ -540,7 +540,8 @@ public interface CfnInfluxDBInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.timestream.CfnInfluxDBInstanceProps,
-  ) : CdkObject(cdkObject), CfnInfluxDBInstanceProps {
+  ) : CdkObject(cdkObject),
+      CfnInfluxDBInstanceProps {
     /**
      * The amount of storage to allocate for your DB storage type in GiB (gibibytes).
      *

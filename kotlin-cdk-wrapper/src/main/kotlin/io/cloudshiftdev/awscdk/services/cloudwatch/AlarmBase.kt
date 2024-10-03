@@ -12,7 +12,8 @@ import kotlin.String
  */
 public abstract class AlarmBase(
   cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmBase,
-) : Resource(cdkObject), IAlarm {
+) : Resource(cdkObject),
+    IAlarm {
   /**
    * Trigger this action if the alarm fires.
    *

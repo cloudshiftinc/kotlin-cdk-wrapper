@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class LoadBalancer(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer,
-) : Resource(cdkObject), IConnectable {
+) : Resource(cdkObject),
+    IConnectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

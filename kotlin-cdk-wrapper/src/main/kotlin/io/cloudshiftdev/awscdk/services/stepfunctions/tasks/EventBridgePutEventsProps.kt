@@ -320,7 +320,8 @@ public interface EventBridgePutEventsProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsProps,
-  ) : CdkObject(cdkObject), EventBridgePutEventsProps {
+  ) : CdkObject(cdkObject),
+      EventBridgePutEventsProps {
     /**
      * An optional description for this state.
      *

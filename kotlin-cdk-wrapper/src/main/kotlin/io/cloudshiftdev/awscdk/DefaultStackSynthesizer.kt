@@ -3,9 +3,12 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 import kotlin.jvm.JvmName
 
 /**
@@ -39,7 +42,9 @@ import kotlin.jvm.JvmName
  */
 public open class DefaultStackSynthesizer(
   cdkObject: software.amazon.awscdk.DefaultStackSynthesizer,
-) : StackSynthesizer(cdkObject), IReusableStackSynthesizer, IBoundStackSynthesizer {
+) : StackSynthesizer(cdkObject),
+    IReusableStackSynthesizer,
+    IBoundStackSynthesizer {
   public constructor() : this(software.amazon.awscdk.DefaultStackSynthesizer()
   )
 
@@ -212,6 +217,22 @@ public open class DefaultStackSynthesizer(
     public fun cloudFormationExecutionRole(cloudFormationExecutionRole: String)
 
     /**
+     * Additional options to pass to STS when assuming the deploy role.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `deployRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `deployRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     * @param deployRoleAdditionalOptions Additional options to pass to STS when assuming the deploy
+     * role. 
+     */
+    public fun deployRoleAdditionalOptions(deployRoleAdditionalOptions: Map<String, Any>)
+
+    /**
      * The role to assume to initiate a deployment in this environment.
      *
      * You must supply this if you have given a non-standard name to the publishing role.
@@ -257,6 +278,24 @@ public open class DefaultStackSynthesizer(
      * publishing. 
      */
     public fun fileAssetPublishingExternalId(fileAssetPublishingExternalId: String)
+
+    /**
+     * Additional options to pass to STS when assuming the file asset publishing.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `fileAssetPublishingRoleArn` property
+     * instead.
+     * * `ExternalId` should not be used. Use the dedicated `fileAssetPublishingExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     * @param fileAssetPublishingRoleAdditionalOptions Additional options to pass to STS when
+     * assuming the file asset publishing. 
+     */
+    public
+        fun fileAssetPublishingRoleAdditionalOptions(fileAssetPublishingRoleAdditionalOptions: Map<String, Any>)
 
     /**
      * The role to use to publish file assets to the S3 bucket in this environment.
@@ -313,6 +352,25 @@ public open class DefaultStackSynthesizer(
     public fun imageAssetPublishingExternalId(imageAssetPublishingExternalId: String)
 
     /**
+     * Additional options to pass to STS when assuming the image asset publishing.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `imageAssetPublishingRoleArn` property
+     * instead.
+     * * `ExternalId` should not be used. Use the dedicated `imageAssetPublishingExternalId`
+     * instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     * @param imageAssetPublishingRoleAdditionalOptions Additional options to pass to STS when
+     * assuming the image asset publishing. 
+     */
+    public
+        fun imageAssetPublishingRoleAdditionalOptions(imageAssetPublishingRoleAdditionalOptions: Map<String, Any>)
+
+    /**
      * The role to use to publish image assets to the ECR repository in this environment.
      *
      * You must supply this if you have given a non-standard name to the publishing role.
@@ -342,6 +400,22 @@ public open class DefaultStackSynthesizer(
      * @param imageAssetsRepositoryName Name of the ECR repository to hold Docker Image assets. 
      */
     public fun imageAssetsRepositoryName(imageAssetsRepositoryName: String)
+
+    /**
+     * Additional options to pass to STS when assuming the lookup role.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `lookupRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `lookupRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     * @param lookupRoleAdditionalOptions Additional options to pass to STS when assuming the lookup
+     * role. 
+     */
+    public fun lookupRoleAdditionalOptions(lookupRoleAdditionalOptions: Map<String, Any>)
 
     /**
      * The role to use to look up values from the target AWS account during synthesis.
@@ -438,6 +512,24 @@ public open class DefaultStackSynthesizer(
     }
 
     /**
+     * Additional options to pass to STS when assuming the deploy role.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `deployRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `deployRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     * @param deployRoleAdditionalOptions Additional options to pass to STS when assuming the deploy
+     * role. 
+     */
+    override fun deployRoleAdditionalOptions(deployRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.deployRoleAdditionalOptions(deployRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
      * The role to assume to initiate a deployment in this environment.
      *
      * You must supply this if you have given a non-standard name to the publishing role.
@@ -490,6 +582,26 @@ public open class DefaultStackSynthesizer(
      */
     override fun fileAssetPublishingExternalId(fileAssetPublishingExternalId: String) {
       cdkBuilder.fileAssetPublishingExternalId(fileAssetPublishingExternalId)
+    }
+
+    /**
+     * Additional options to pass to STS when assuming the file asset publishing.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `fileAssetPublishingRoleArn` property
+     * instead.
+     * * `ExternalId` should not be used. Use the dedicated `fileAssetPublishingExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     * @param fileAssetPublishingRoleAdditionalOptions Additional options to pass to STS when
+     * assuming the file asset publishing. 
+     */
+    override
+        fun fileAssetPublishingRoleAdditionalOptions(fileAssetPublishingRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.fileAssetPublishingRoleAdditionalOptions(fileAssetPublishingRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -555,6 +667,27 @@ public open class DefaultStackSynthesizer(
     }
 
     /**
+     * Additional options to pass to STS when assuming the image asset publishing.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `imageAssetPublishingRoleArn` property
+     * instead.
+     * * `ExternalId` should not be used. Use the dedicated `imageAssetPublishingExternalId`
+     * instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     * @param imageAssetPublishingRoleAdditionalOptions Additional options to pass to STS when
+     * assuming the image asset publishing. 
+     */
+    override
+        fun imageAssetPublishingRoleAdditionalOptions(imageAssetPublishingRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.imageAssetPublishingRoleAdditionalOptions(imageAssetPublishingRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
      * The role to use to publish image assets to the ECR repository in this environment.
      *
      * You must supply this if you have given a non-standard name to the publishing role.
@@ -587,6 +720,24 @@ public open class DefaultStackSynthesizer(
      */
     override fun imageAssetsRepositoryName(imageAssetsRepositoryName: String) {
       cdkBuilder.imageAssetsRepositoryName(imageAssetsRepositoryName)
+    }
+
+    /**
+     * Additional options to pass to STS when assuming the lookup role.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `lookupRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `lookupRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     * @param lookupRoleAdditionalOptions Additional options to pass to STS when assuming the lookup
+     * role. 
+     */
+    override fun lookupRoleAdditionalOptions(lookupRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.lookupRoleAdditionalOptions(lookupRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

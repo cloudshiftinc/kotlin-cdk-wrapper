@@ -22,11 +22,14 @@ import kotlin.collections.List
  * import io.cloudshiftdev.awscdk.services.datazone.*;
  * CfnEnvironmentProps cfnEnvironmentProps = CfnEnvironmentProps.builder()
  * .domainIdentifier("domainIdentifier")
- * .environmentProfileIdentifier("environmentProfileIdentifier")
  * .name("name")
  * .projectIdentifier("projectIdentifier")
  * // the properties below are optional
  * .description("description")
+ * .environmentAccountIdentifier("environmentAccountIdentifier")
+ * .environmentAccountRegion("environmentAccountRegion")
+ * .environmentProfileIdentifier("environmentProfileIdentifier")
+ * .environmentRoleArn("environmentRoleArn")
  * .glossaryTerms(List.of("glossaryTerms"))
  * .userParameters(List.of(EnvironmentParameterProperty.builder()
  * .name("name")
@@ -53,12 +56,35 @@ public interface CfnEnvironmentProps {
   public fun domainIdentifier(): String
 
   /**
+   * The identifier of the AWS account in which an environment exists.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-environmentaccountidentifier)
+   */
+  public fun environmentAccountIdentifier(): String? =
+      unwrap(this).getEnvironmentAccountIdentifier()
+
+  /**
+   * The AWS Region in which an environment exists.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-environmentaccountregion)
+   */
+  public fun environmentAccountRegion(): String? = unwrap(this).getEnvironmentAccountRegion()
+
+  /**
    * The identifier of the environment profile that is used to create this Amazon DataZone
    * environment.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-environmentprofileidentifier)
    */
-  public fun environmentProfileIdentifier(): String
+  public fun environmentProfileIdentifier(): String? =
+      unwrap(this).getEnvironmentProfileIdentifier()
+
+  /**
+   * The ARN of the environment role.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-environmentrolearn)
+   */
+  public fun environmentRoleArn(): String? = unwrap(this).getEnvironmentRoleArn()
 
   /**
    * The glossary terms that can be used in this Amazon DataZone environment.
@@ -105,10 +131,26 @@ public interface CfnEnvironmentProps {
     public fun domainIdentifier(domainIdentifier: String)
 
     /**
+     * @param environmentAccountIdentifier The identifier of the AWS account in which an environment
+     * exists.
+     */
+    public fun environmentAccountIdentifier(environmentAccountIdentifier: String)
+
+    /**
+     * @param environmentAccountRegion The AWS Region in which an environment exists.
+     */
+    public fun environmentAccountRegion(environmentAccountRegion: String)
+
+    /**
      * @param environmentProfileIdentifier The identifier of the environment profile that is used to
-     * create this Amazon DataZone environment. 
+     * create this Amazon DataZone environment.
      */
     public fun environmentProfileIdentifier(environmentProfileIdentifier: String)
+
+    /**
+     * @param environmentRoleArn The ARN of the environment role.
+     */
+    public fun environmentRoleArn(environmentRoleArn: String)
 
     /**
      * @param glossaryTerms The glossary terms that can be used in this Amazon DataZone environment.
@@ -167,11 +209,33 @@ public interface CfnEnvironmentProps {
     }
 
     /**
+     * @param environmentAccountIdentifier The identifier of the AWS account in which an environment
+     * exists.
+     */
+    override fun environmentAccountIdentifier(environmentAccountIdentifier: String) {
+      cdkBuilder.environmentAccountIdentifier(environmentAccountIdentifier)
+    }
+
+    /**
+     * @param environmentAccountRegion The AWS Region in which an environment exists.
+     */
+    override fun environmentAccountRegion(environmentAccountRegion: String) {
+      cdkBuilder.environmentAccountRegion(environmentAccountRegion)
+    }
+
+    /**
      * @param environmentProfileIdentifier The identifier of the environment profile that is used to
-     * create this Amazon DataZone environment. 
+     * create this Amazon DataZone environment.
      */
     override fun environmentProfileIdentifier(environmentProfileIdentifier: String) {
       cdkBuilder.environmentProfileIdentifier(environmentProfileIdentifier)
+    }
+
+    /**
+     * @param environmentRoleArn The ARN of the environment role.
+     */
+    override fun environmentRoleArn(environmentRoleArn: String) {
+      cdkBuilder.environmentRoleArn(environmentRoleArn)
     }
 
     /**
@@ -228,7 +292,8 @@ public interface CfnEnvironmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProps,
-  ) : CdkObject(cdkObject), CfnEnvironmentProps {
+  ) : CdkObject(cdkObject),
+      CfnEnvironmentProps {
     /**
      * The description of the environment.
      *
@@ -244,13 +309,35 @@ public interface CfnEnvironmentProps {
     override fun domainIdentifier(): String = unwrap(this).getDomainIdentifier()
 
     /**
+     * The identifier of the AWS account in which an environment exists.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-environmentaccountidentifier)
+     */
+    override fun environmentAccountIdentifier(): String? =
+        unwrap(this).getEnvironmentAccountIdentifier()
+
+    /**
+     * The AWS Region in which an environment exists.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-environmentaccountregion)
+     */
+    override fun environmentAccountRegion(): String? = unwrap(this).getEnvironmentAccountRegion()
+
+    /**
      * The identifier of the environment profile that is used to create this Amazon DataZone
      * environment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-environmentprofileidentifier)
      */
-    override fun environmentProfileIdentifier(): String =
+    override fun environmentProfileIdentifier(): String? =
         unwrap(this).getEnvironmentProfileIdentifier()
+
+    /**
+     * The ARN of the environment role.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-environmentrolearn)
+     */
+    override fun environmentRoleArn(): String? = unwrap(this).getEnvironmentRoleArn()
 
     /**
      * The glossary terms that can be used in this Amazon DataZone environment.

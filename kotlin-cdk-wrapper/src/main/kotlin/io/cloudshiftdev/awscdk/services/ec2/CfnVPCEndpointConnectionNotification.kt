@@ -42,7 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVPCEndpointConnectionNotification(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotification,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

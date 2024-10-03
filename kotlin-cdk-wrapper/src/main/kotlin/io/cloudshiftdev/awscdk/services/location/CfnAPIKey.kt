@@ -56,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAPIKey(
   cdkObject: software.amazon.awscdk.services.location.CfnAPIKey,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1017,7 +1019,8 @@ public open class CfnAPIKey(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty,
-    ) : CdkObject(cdkObject), ApiKeyRestrictionsProperty {
+    ) : CdkObject(cdkObject),
+        ApiKeyRestrictionsProperty {
       /**
        * A list of allowed actions that an API key resource grants permissions to perform.
        *

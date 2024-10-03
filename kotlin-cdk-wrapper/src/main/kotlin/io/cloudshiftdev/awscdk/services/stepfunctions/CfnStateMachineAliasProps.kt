@@ -561,7 +561,8 @@ public interface CfnStateMachineAliasProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAliasProps,
-  ) : CdkObject(cdkObject), CfnStateMachineAliasProps {
+  ) : CdkObject(cdkObject),
+      CfnStateMachineAliasProps {
     /**
      * The settings that enable gradual state machine deployments.
      *

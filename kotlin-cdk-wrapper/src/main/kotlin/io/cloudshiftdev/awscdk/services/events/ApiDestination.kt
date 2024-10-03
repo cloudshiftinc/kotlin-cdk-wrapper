@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ApiDestination(
   cdkObject: software.amazon.awscdk.services.events.ApiDestination,
-) : Resource(cdkObject), IApiDestination {
+) : Resource(cdkObject),
+    IApiDestination {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -159,7 +159,8 @@ public interface CodeBuildProjectProps : TargetBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.targets.CodeBuildProjectProps,
-  ) : CdkObject(cdkObject), CodeBuildProjectProps {
+  ) : CdkObject(cdkObject),
+      CodeBuildProjectProps {
     /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
      * dead-letter

@@ -167,7 +167,8 @@ public interface LogDriverConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.LogDriverConfig,
-  ) : CdkObject(cdkObject), LogDriverConfig {
+  ) : CdkObject(cdkObject),
+      LogDriverConfig {
     /**
      * The log driver to use for the container.
      *

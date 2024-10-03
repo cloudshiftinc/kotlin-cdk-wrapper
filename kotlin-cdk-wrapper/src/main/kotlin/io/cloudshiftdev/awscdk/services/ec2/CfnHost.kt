@@ -18,7 +18,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * and reduce costs by allowing you to use your existing server-bound software licenses. For more
  * information, see [Dedicated
  * Hosts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html) in the
- * *Amazon EC2 User Guide for Linux Instances* .
+ * *Amazon EC2 User Guide* .
  *
  * Example:
  *
@@ -43,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnHost(
   cdkObject: software.amazon.awscdk.services.ec2.CfnHost,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -197,7 +198,7 @@ public open class CfnHost(
      * affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding)
      * in the *Amazon EC2 User Guide* .
      *
-     * Default: `on`
+     * Default: `off`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-autoplacement)
      * @param autoPlacement Indicates whether the host accepts any untargeted instance launches that
@@ -296,7 +297,7 @@ public open class CfnHost(
      * affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding)
      * in the *Amazon EC2 User Guide* .
      *
-     * Default: `on`
+     * Default: `off`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-autoplacement)
      * @param autoPlacement Indicates whether the host accepts any untargeted instance launches that

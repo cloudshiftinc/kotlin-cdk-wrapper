@@ -50,7 +50,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDomain(
   cdkObject: software.amazon.awscdk.services.codeartifact.CfnDomain,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -103,12 +105,12 @@ public open class CfnDomain(
   }
 
   /**
-   * The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
+   * The key used to encrypt the domain.
    */
   public open fun encryptionKey(): String? = unwrap(this).getEncryptionKey()
 
   /**
-   * The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
+   * The key used to encrypt the domain.
    */
   public open fun encryptionKey(`value`: String) {
     unwrap(this).setEncryptionKey(`value`)
@@ -172,11 +174,10 @@ public open class CfnDomain(
     public fun domainName(domainName: String)
 
     /**
-     * The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
+     * The key used to encrypt the domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html#cfn-codeartifact-domain-encryptionkey)
-     * @param encryptionKey The ARN of an AWS Key Management Service (AWS KMS) key associated with a
-     * domain. 
+     * @param encryptionKey The key used to encrypt the domain. 
      */
     public fun encryptionKey(encryptionKey: String)
 
@@ -224,11 +225,10 @@ public open class CfnDomain(
     }
 
     /**
-     * The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
+     * The key used to encrypt the domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html#cfn-codeartifact-domain-encryptionkey)
-     * @param encryptionKey The ARN of an AWS Key Management Service (AWS KMS) key associated with a
-     * domain. 
+     * @param encryptionKey The key used to encrypt the domain. 
      */
     override fun encryptionKey(encryptionKey: String) {
       cdkBuilder.encryptionKey(encryptionKey)

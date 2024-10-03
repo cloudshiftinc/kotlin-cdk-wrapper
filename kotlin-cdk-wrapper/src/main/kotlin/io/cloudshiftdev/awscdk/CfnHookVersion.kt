@@ -38,7 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnHookVersion(
   cdkObject: software.amazon.awscdk.CfnHookVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -450,7 +451,8 @@ public open class CfnHookVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.CfnHookVersion.LoggingConfigProperty,
-    ) : CdkObject(cdkObject), LoggingConfigProperty {
+    ) : CdkObject(cdkObject),
+        LoggingConfigProperty {
       /**
        * The Amazon CloudWatch Logs group to which CloudFormation sends error logging information
        * when invoking the extension's handlers.

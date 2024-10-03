@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class PublicKey(
   cdkObject: software.amazon.awscdk.services.cloudfront.PublicKey,
-) : Resource(cdkObject), IPublicKey {
+) : Resource(cdkObject),
+    IPublicKey {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

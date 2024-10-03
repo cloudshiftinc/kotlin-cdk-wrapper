@@ -97,7 +97,8 @@ public interface AccessPointAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.AccessPointAttributes,
-  ) : CdkObject(cdkObject), AccessPointAttributes {
+  ) : CdkObject(cdkObject),
+      AccessPointAttributes {
     /**
      * The ARN of the AccessPoint One of this, or `accessPointId` is required.
      *

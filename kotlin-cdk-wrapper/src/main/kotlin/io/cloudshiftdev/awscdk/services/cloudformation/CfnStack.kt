@@ -107,7 +107,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStack(
   cdkObject: software.amazon.awscdk.services.cloudformation.CfnStack,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudformation.CfnStack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -193,20 +195,20 @@ public open class CfnStack(
   }
 
   /**
-   * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events.
+   * The Amazon SNS topic ARNs to publish stack related events.
    */
   public open fun notificationArns(): List<String> = unwrap(this).getNotificationArns() ?:
       emptyList()
 
   /**
-   * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events.
+   * The Amazon SNS topic ARNs to publish stack related events.
    */
   public open fun notificationArns(`value`: List<String>) {
     unwrap(this).setNotificationArns(`value`)
   }
 
   /**
-   * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events.
+   * The Amazon SNS topic ARNs to publish stack related events.
    */
   public open fun notificationArns(vararg `value`: String): Unit =
       notificationArns(`value`.toList())
@@ -288,28 +290,24 @@ public open class CfnStack(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related
-     * events.
+     * The Amazon SNS topic ARNs to publish stack related events.
      *
      * You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line
      * Interface (CLI).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-notificationarns)
-     * @param notificationArns The Amazon Simple Notification Service (Amazon SNS) topic ARNs to
-     * publish stack related events. 
+     * @param notificationArns The Amazon SNS topic ARNs to publish stack related events. 
      */
     public fun notificationArns(notificationArns: List<String>)
 
     /**
-     * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related
-     * events.
+     * The Amazon SNS topic ARNs to publish stack related events.
      *
      * You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line
      * Interface (CLI).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-notificationarns)
-     * @param notificationArns The Amazon Simple Notification Service (Amazon SNS) topic ARNs to
-     * publish stack related events. 
+     * @param notificationArns The Amazon SNS topic ARNs to publish stack related events. 
      */
     public fun notificationArns(vararg notificationArns: String)
 
@@ -364,8 +362,8 @@ public open class CfnStack(
     /**
      * Key-value pairs to associate with this stack.
      *
-     * AWS CloudFormation also propagates these tags to the resources created in the stack. A
-     * maximum number of 50 tags can be specified.
+     * CloudFormation also propagates these tags to the resources created in the stack. A maximum
+     * number of 50 tags can be specified.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-tags)
      * @param tags Key-value pairs to associate with this stack. 
@@ -375,8 +373,8 @@ public open class CfnStack(
     /**
      * Key-value pairs to associate with this stack.
      *
-     * AWS CloudFormation also propagates these tags to the resources created in the stack. A
-     * maximum number of 50 tags can be specified.
+     * CloudFormation also propagates these tags to the resources created in the stack. A maximum
+     * number of 50 tags can be specified.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-tags)
      * @param tags Key-value pairs to associate with this stack. 
@@ -425,30 +423,26 @@ public open class CfnStack(
         software.amazon.awscdk.services.cloudformation.CfnStack.Builder.create(scope, id)
 
     /**
-     * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related
-     * events.
+     * The Amazon SNS topic ARNs to publish stack related events.
      *
      * You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line
      * Interface (CLI).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-notificationarns)
-     * @param notificationArns The Amazon Simple Notification Service (Amazon SNS) topic ARNs to
-     * publish stack related events. 
+     * @param notificationArns The Amazon SNS topic ARNs to publish stack related events. 
      */
     override fun notificationArns(notificationArns: List<String>) {
       cdkBuilder.notificationArns(notificationArns)
     }
 
     /**
-     * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related
-     * events.
+     * The Amazon SNS topic ARNs to publish stack related events.
      *
      * You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line
      * Interface (CLI).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-notificationarns)
-     * @param notificationArns The Amazon Simple Notification Service (Amazon SNS) topic ARNs to
-     * publish stack related events. 
+     * @param notificationArns The Amazon SNS topic ARNs to publish stack related events. 
      */
     override fun notificationArns(vararg notificationArns: String): Unit =
         notificationArns(notificationArns.toList())
@@ -508,8 +502,8 @@ public open class CfnStack(
     /**
      * Key-value pairs to associate with this stack.
      *
-     * AWS CloudFormation also propagates these tags to the resources created in the stack. A
-     * maximum number of 50 tags can be specified.
+     * CloudFormation also propagates these tags to the resources created in the stack. A maximum
+     * number of 50 tags can be specified.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-tags)
      * @param tags Key-value pairs to associate with this stack. 
@@ -521,8 +515,8 @@ public open class CfnStack(
     /**
      * Key-value pairs to associate with this stack.
      *
-     * AWS CloudFormation also propagates these tags to the resources created in the stack. A
-     * maximum number of 50 tags can be specified.
+     * CloudFormation also propagates these tags to the resources created in the stack. A maximum
+     * number of 50 tags can be specified.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html#cfn-cloudformation-stack-tags)
      * @param tags Key-value pairs to associate with this stack. 
@@ -702,7 +696,8 @@ public open class CfnStack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudformation.CfnStack.OutputProperty,
-    ) : CdkObject(cdkObject), OutputProperty {
+    ) : CdkObject(cdkObject),
+        OutputProperty {
       /**
        * User defined description associated with the output.
        *

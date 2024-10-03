@@ -171,7 +171,8 @@ public interface ExecuteCommandLogConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ExecuteCommandLogConfiguration,
-  ) : CdkObject(cdkObject), ExecuteCommandLogConfiguration {
+  ) : CdkObject(cdkObject),
+      ExecuteCommandLogConfiguration {
     /**
      * Whether or not to enable encryption on the CloudWatch logs.
      *

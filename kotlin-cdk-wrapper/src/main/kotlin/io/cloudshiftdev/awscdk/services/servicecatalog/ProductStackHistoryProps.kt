@@ -169,7 +169,8 @@ public interface ProductStackHistoryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.ProductStackHistoryProps,
-  ) : CdkObject(cdkObject), ProductStackHistoryProps {
+  ) : CdkObject(cdkObject),
+      ProductStackHistoryProps {
     /**
      * If this is set to true, the ProductStack will not be overwritten if a snapshot is found for
      * the currentVersionName.

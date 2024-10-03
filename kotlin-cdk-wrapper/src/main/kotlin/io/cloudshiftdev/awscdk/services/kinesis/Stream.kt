@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Stream(
   cdkObject: software.amazon.awscdk.services.kinesis.Stream,
-) : Resource(cdkObject), IStream {
+) : Resource(cdkObject),
+    IStream {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.kinesis.Stream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

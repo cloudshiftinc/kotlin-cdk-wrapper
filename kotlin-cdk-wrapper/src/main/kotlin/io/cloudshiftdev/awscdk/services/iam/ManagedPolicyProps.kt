@@ -355,7 +355,8 @@ public interface ManagedPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.ManagedPolicyProps,
-  ) : CdkObject(cdkObject), ManagedPolicyProps {
+  ) : CdkObject(cdkObject),
+      ManagedPolicyProps {
     /**
      * A description of the managed policy.
      *

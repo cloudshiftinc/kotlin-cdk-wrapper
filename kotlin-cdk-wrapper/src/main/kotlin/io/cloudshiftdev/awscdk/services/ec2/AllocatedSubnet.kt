@@ -84,7 +84,8 @@ public interface AllocatedSubnet {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.AllocatedSubnet,
-  ) : CdkObject(cdkObject), AllocatedSubnet {
+  ) : CdkObject(cdkObject),
+      AllocatedSubnet {
     /**
      * IPv4 CIDR Allocations for a Subnet.
      *

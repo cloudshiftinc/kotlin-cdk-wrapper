@@ -120,7 +120,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTask(
   cdkObject: software.amazon.awscdk.services.datasync.CfnTask,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1165,7 +1167,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DeletedProperty,
-    ) : CdkObject(cdkObject), DeletedProperty {
+    ) : CdkObject(cdkObject),
+        DeletedProperty {
       /**
        * Specifies whether you want your task report to include only what went wrong with your
        * transfer or a list of what succeeded and didn't.
@@ -1279,7 +1282,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty,
-    ) : CdkObject(cdkObject), DestinationProperty {
+    ) : CdkObject(cdkObject),
+        DestinationProperty {
       /**
        * Specifies the Amazon S3 bucket where DataSync uploads your task report.
        *
@@ -1388,7 +1392,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty,
-    ) : CdkObject(cdkObject), FilterRuleProperty {
+    ) : CdkObject(cdkObject),
+        FilterRuleProperty {
       /**
        * The type of filter rule to apply.
        *
@@ -1634,7 +1639,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigProperty,
-    ) : CdkObject(cdkObject), ManifestConfigProperty {
+    ) : CdkObject(cdkObject),
+        ManifestConfigProperty {
       /**
        * Specifies what DataSync uses the manifest for.
        *
@@ -1834,7 +1840,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigSourceS3Property,
-    ) : CdkObject(cdkObject), ManifestConfigSourceS3Property {
+    ) : CdkObject(cdkObject),
+        ManifestConfigSourceS3Property {
       /**
        * Specifies the AWS Identity and Access Management (IAM) role that allows DataSync to access
        * your manifest.
@@ -2763,7 +2770,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OptionsProperty,
-    ) : CdkObject(cdkObject), OptionsProperty {
+    ) : CdkObject(cdkObject),
+        OptionsProperty {
       /**
        * A file metadata value that shows the last time that a file was accessed (that is, when the
        * file was read or written to).
@@ -3357,7 +3365,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty,
-    ) : CdkObject(cdkObject), OverridesProperty {
+    ) : CdkObject(cdkObject),
+        OverridesProperty {
       /**
        * Specifies the level of reporting for the files, objects, and directories that DataSync
        * attempted to delete in your destination location.
@@ -3496,7 +3505,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.S3Property,
-    ) : CdkObject(cdkObject), S3Property {
+    ) : CdkObject(cdkObject),
+        S3Property {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-bucketaccessrolearn)
        */
@@ -3591,7 +3601,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty,
-    ) : CdkObject(cdkObject), SkippedProperty {
+    ) : CdkObject(cdkObject),
+        SkippedProperty {
       /**
        * Specifies whether you want your task report to include only what went wrong with your
        * transfer or a list of what succeeded and didn't.
@@ -3710,7 +3721,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SourceProperty,
-    ) : CdkObject(cdkObject), SourceProperty {
+    ) : CdkObject(cdkObject),
+        SourceProperty {
       /**
        * Specifies the S3 bucket where you're hosting your manifest.
        *
@@ -4034,7 +4046,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskReportConfigProperty,
-    ) : CdkObject(cdkObject), TaskReportConfigProperty {
+    ) : CdkObject(cdkObject),
+        TaskReportConfigProperty {
       /**
        * Specifies the Amazon S3 bucket where DataSync uploads your task report.
        *
@@ -4135,10 +4148,22 @@ public open class CfnTask(
    */
   public interface TaskScheduleProperty {
     /**
-     * Specifies your task schedule by using a cron expression in UTC time.
+     * Specifies your task schedule by using a cron or rate expression.
      *
-     * For information about cron expression syntax, see the [*Amazon EventBridge User
-     * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html) .
+     * Use cron expressions for task schedules that run on a specific time and day. For example, the
+     * following cron expression creates a task schedule that runs at 8 AM on the first Wednesday of
+     * every month:
+     *
+     * `cron(0 8 * * 3#1)`
+     *
+     * Use rate expressions for task schedules that run on a regular interval. For example, the
+     * following rate expression creates a task schedule that runs every 12 hours:
+     *
+     * `rate(12 hours)`
+     *
+     * For information about cron and rate expression syntax, see the [*Amazon EventBridge User
+     * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-rule-pattern.html)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-scheduleexpression)
      */
@@ -4166,10 +4191,21 @@ public open class CfnTask(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param scheduleExpression Specifies your task schedule by using a cron expression in UTC
-       * time.
-       * For information about cron expression syntax, see the [*Amazon EventBridge User
-       * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html) .
+       * @param scheduleExpression Specifies your task schedule by using a cron or rate expression.
+       * Use cron expressions for task schedules that run on a specific time and day. For example,
+       * the following cron expression creates a task schedule that runs at 8 AM on the first Wednesday
+       * of every month:
+       *
+       * `cron(0 8 * * 3#1)`
+       *
+       * Use rate expressions for task schedules that run on a regular interval. For example, the
+       * following rate expression creates a task schedule that runs every 12 hours:
+       *
+       * `rate(12 hours)`
+       *
+       * For information about cron and rate expression syntax, see the [*Amazon EventBridge User
+       * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-rule-pattern.html)
+       * .
        */
       public fun scheduleExpression(scheduleExpression: String)
 
@@ -4193,10 +4229,21 @@ public open class CfnTask(
           software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty.builder()
 
       /**
-       * @param scheduleExpression Specifies your task schedule by using a cron expression in UTC
-       * time.
-       * For information about cron expression syntax, see the [*Amazon EventBridge User
-       * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html) .
+       * @param scheduleExpression Specifies your task schedule by using a cron or rate expression.
+       * Use cron expressions for task schedules that run on a specific time and day. For example,
+       * the following cron expression creates a task schedule that runs at 8 AM on the first Wednesday
+       * of every month:
+       *
+       * `cron(0 8 * * 3#1)`
+       *
+       * Use rate expressions for task schedules that run on a regular interval. For example, the
+       * following rate expression creates a task schedule that runs every 12 hours:
+       *
+       * `rate(12 hours)`
+       *
+       * For information about cron and rate expression syntax, see the [*Amazon EventBridge User
+       * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-rule-pattern.html)
+       * .
        */
       override fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
@@ -4223,12 +4270,25 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty,
-    ) : CdkObject(cdkObject), TaskScheduleProperty {
+    ) : CdkObject(cdkObject),
+        TaskScheduleProperty {
       /**
-       * Specifies your task schedule by using a cron expression in UTC time.
+       * Specifies your task schedule by using a cron or rate expression.
        *
-       * For information about cron expression syntax, see the [*Amazon EventBridge User
-       * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html) .
+       * Use cron expressions for task schedules that run on a specific time and day. For example,
+       * the following cron expression creates a task schedule that runs at 8 AM on the first Wednesday
+       * of every month:
+       *
+       * `cron(0 8 * * 3#1)`
+       *
+       * Use rate expressions for task schedules that run on a regular interval. For example, the
+       * following rate expression creates a task schedule that runs every 12 hours:
+       *
+       * `rate(12 hours)`
+       *
+       * For information about cron and rate expression syntax, see the [*Amazon EventBridge User
+       * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-scheduled-rule-pattern.html)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-scheduleexpression)
        */
@@ -4332,7 +4392,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TransferredProperty,
-    ) : CdkObject(cdkObject), TransferredProperty {
+    ) : CdkObject(cdkObject),
+        TransferredProperty {
       /**
        * Specifies whether you want your task report to include only what went wrong with your
        * transfer or a list of what succeeded and didn't.
@@ -4426,7 +4487,8 @@ public open class CfnTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty,
-    ) : CdkObject(cdkObject), VerifiedProperty {
+    ) : CdkObject(cdkObject),
+        VerifiedProperty {
       /**
        * Specifies whether you want your task report to include only what went wrong with your
        * transfer or a list of what succeeded and didn't.

@@ -121,7 +121,8 @@ public interface SignInAliases {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.SignInAliases,
-  ) : CdkObject(cdkObject), SignInAliases {
+  ) : CdkObject(cdkObject),
+      SignInAliases {
     /**
      * Whether a user is allowed to sign up or sign in with an email address.
      *

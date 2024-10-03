@@ -29,7 +29,13 @@ import kotlin.collections.List
  * .logGroupArn("logGroupArn")
  * .build())
  * .eventSource("eventSource")
+ * .firehoseConfiguration(FirehoseConfigurationProperty.builder()
+ * .streamArn("streamArn")
+ * .build())
  * .logLevel("logLevel")
+ * .s3Configuration(S3ConfigurationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .build())
  * .build()))
  * .build();
  * ```
@@ -38,14 +44,16 @@ import kotlin.collections.List
  */
 public interface CfnLogDeliveryConfigurationProps {
   /**
-   * The detailed activity logging destination of a user pool.
+   * A logging destination of a user pool.
+   *
+   * User pools can have multiple logging destinations for message-delivery and user-activity logs.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-logdeliveryconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfigurations)
    */
   public fun logConfigurations(): Any? = unwrap(this).getLogConfigurations()
 
   /**
-   * The ID of the user pool where you configured detailed activity logging.
+   * The ID of the user pool where you configured logging.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-logdeliveryconfiguration.html#cfn-cognito-logdeliveryconfiguration-userpoolid)
    */
@@ -57,22 +65,28 @@ public interface CfnLogDeliveryConfigurationProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param logConfigurations The detailed activity logging destination of a user pool.
+     * @param logConfigurations A logging destination of a user pool.
+     * User pools can have multiple logging destinations for message-delivery and user-activity
+     * logs.
      */
     public fun logConfigurations(logConfigurations: IResolvable)
 
     /**
-     * @param logConfigurations The detailed activity logging destination of a user pool.
+     * @param logConfigurations A logging destination of a user pool.
+     * User pools can have multiple logging destinations for message-delivery and user-activity
+     * logs.
      */
     public fun logConfigurations(logConfigurations: List<Any>)
 
     /**
-     * @param logConfigurations The detailed activity logging destination of a user pool.
+     * @param logConfigurations A logging destination of a user pool.
+     * User pools can have multiple logging destinations for message-delivery and user-activity
+     * logs.
      */
     public fun logConfigurations(vararg logConfigurations: Any)
 
     /**
-     * @param userPoolId The ID of the user pool where you configured detailed activity logging. 
+     * @param userPoolId The ID of the user pool where you configured logging. 
      */
     public fun userPoolId(userPoolId: String)
   }
@@ -83,27 +97,33 @@ public interface CfnLogDeliveryConfigurationProps {
         software.amazon.awscdk.services.cognito.CfnLogDeliveryConfigurationProps.builder()
 
     /**
-     * @param logConfigurations The detailed activity logging destination of a user pool.
+     * @param logConfigurations A logging destination of a user pool.
+     * User pools can have multiple logging destinations for message-delivery and user-activity
+     * logs.
      */
     override fun logConfigurations(logConfigurations: IResolvable) {
       cdkBuilder.logConfigurations(logConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param logConfigurations The detailed activity logging destination of a user pool.
+     * @param logConfigurations A logging destination of a user pool.
+     * User pools can have multiple logging destinations for message-delivery and user-activity
+     * logs.
      */
     override fun logConfigurations(logConfigurations: List<Any>) {
       cdkBuilder.logConfigurations(logConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param logConfigurations The detailed activity logging destination of a user pool.
+     * @param logConfigurations A logging destination of a user pool.
+     * User pools can have multiple logging destinations for message-delivery and user-activity
+     * logs.
      */
     override fun logConfigurations(vararg logConfigurations: Any): Unit =
         logConfigurations(logConfigurations.toList())
 
     /**
-     * @param userPoolId The ID of the user pool where you configured detailed activity logging. 
+     * @param userPoolId The ID of the user pool where you configured logging. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
@@ -115,16 +135,20 @@ public interface CfnLogDeliveryConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfigurationProps,
-  ) : CdkObject(cdkObject), CfnLogDeliveryConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnLogDeliveryConfigurationProps {
     /**
-     * The detailed activity logging destination of a user pool.
+     * A logging destination of a user pool.
+     *
+     * User pools can have multiple logging destinations for message-delivery and user-activity
+     * logs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-logdeliveryconfiguration.html#cfn-cognito-logdeliveryconfiguration-logconfigurations)
      */
     override fun logConfigurations(): Any? = unwrap(this).getLogConfigurations()
 
     /**
-     * The ID of the user pool where you configured detailed activity logging.
+     * The ID of the user pool where you configured logging.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-logdeliveryconfiguration.html#cfn-cognito-logdeliveryconfiguration-userpoolid)
      */

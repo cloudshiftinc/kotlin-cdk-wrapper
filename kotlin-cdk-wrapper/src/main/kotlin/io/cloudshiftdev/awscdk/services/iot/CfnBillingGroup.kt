@@ -49,7 +49,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBillingGroup(
   cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnBillingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -357,7 +359,8 @@ public open class CfnBillingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroup.BillingGroupPropertiesProperty,
-    ) : CdkObject(cdkObject), BillingGroupPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        BillingGroupPropertiesProperty {
       /**
        * The description of the billing group.
        *

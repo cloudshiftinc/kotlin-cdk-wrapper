@@ -253,7 +253,8 @@ public interface MetricProps : CommonMetricOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.MetricProps,
-  ) : CdkObject(cdkObject), MetricProps {
+  ) : CdkObject(cdkObject),
+      MetricProps {
     /**
      * Account which this metric comes from.
      *

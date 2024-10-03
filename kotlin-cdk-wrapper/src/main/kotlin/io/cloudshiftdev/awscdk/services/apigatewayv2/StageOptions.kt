@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
+import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -23,6 +24,7 @@ import kotlin.jvm.JvmName
  * DomainName domainName;
  * StageOptions stageOptions = StageOptions.builder()
  * .autoDeploy(false)
+ * .description("description")
  * .domainMapping(DomainMappingOptions.builder()
  * .domainName(domainName)
  * // the properties below are optional
@@ -42,6 +44,13 @@ public interface StageOptions {
    * Default: false
    */
   public fun autoDeploy(): Boolean? = unwrap(this).getAutoDeploy()
+
+  /**
+   * The description for the API stage.
+   *
+   * Default: - no description
+   */
+  public fun description(): String? = unwrap(this).getDescription()
 
   /**
    * The options for custom domain and api mapping.
@@ -67,6 +76,11 @@ public interface StageOptions {
      * @param autoDeploy Whether updates to an API automatically trigger a new deployment.
      */
     public fun autoDeploy(autoDeploy: Boolean)
+
+    /**
+     * @param description The description for the API stage.
+     */
+    public fun description(description: String)
 
     /**
      * @param domainMapping The options for custom domain and api mapping.
@@ -105,6 +119,13 @@ public interface StageOptions {
     }
 
     /**
+     * @param description The description for the API stage.
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
+    }
+
+    /**
      * @param domainMapping The options for custom domain and api mapping.
      */
     override fun domainMapping(domainMapping: DomainMappingOptions) {
@@ -140,13 +161,21 @@ public interface StageOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.StageOptions,
-  ) : CdkObject(cdkObject), StageOptions {
+  ) : CdkObject(cdkObject),
+      StageOptions {
     /**
      * Whether updates to an API automatically trigger a new deployment.
      *
      * Default: false
      */
     override fun autoDeploy(): Boolean? = unwrap(this).getAutoDeploy()
+
+    /**
+     * The description for the API stage.
+     *
+     * Default: - no description
+     */
+    override fun description(): String? = unwrap(this).getDescription()
 
     /**
      * The options for custom domain and api mapping.

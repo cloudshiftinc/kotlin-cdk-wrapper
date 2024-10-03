@@ -490,7 +490,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCluster(
   cdkObject: software.amazon.awscdk.services.emr.CfnCluster,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -571,30 +573,26 @@ public open class CfnCluster(
   }
 
   /**
-   * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-   * automatically terminates.
+   * An auto-termination policy for an Amazon EMR cluster.
    */
   public open fun autoTerminationPolicy(): Any? = unwrap(this).getAutoTerminationPolicy()
 
   /**
-   * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-   * automatically terminates.
+   * An auto-termination policy for an Amazon EMR cluster.
    */
   public open fun autoTerminationPolicy(`value`: IResolvable) {
     unwrap(this).setAutoTerminationPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-   * automatically terminates.
+   * An auto-termination policy for an Amazon EMR cluster.
    */
   public open fun autoTerminationPolicy(`value`: AutoTerminationPolicyProperty) {
     unwrap(this).setAutoTerminationPolicy(`value`.let(AutoTerminationPolicyProperty.Companion::unwrap))
   }
 
   /**
-   * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-   * automatically terminates.
+   * An auto-termination policy for an Amazon EMR cluster.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d2aaccf20f9ad05b9e2a9b80c53a4e38b8470cf554bcd7d844f3217feba9c542")
@@ -1077,41 +1075,38 @@ public open class CfnCluster(
     public fun autoScalingRole(autoScalingRole: String)
 
     /**
-     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-     * automatically terminates.
+     * An auto-termination policy for an Amazon EMR cluster.
      *
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-autoterminationpolicy)
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates. 
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster. 
      */
     public fun autoTerminationPolicy(autoTerminationPolicy: IResolvable)
 
     /**
-     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-     * automatically terminates.
+     * An auto-termination policy for an Amazon EMR cluster.
      *
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-autoterminationpolicy)
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates. 
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster. 
      */
     public fun autoTerminationPolicy(autoTerminationPolicy: AutoTerminationPolicyProperty)
 
     /**
-     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-     * automatically terminates.
+     * An auto-termination policy for an Amazon EMR cluster.
      *
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-autoterminationpolicy)
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates. 
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("04bf042f7c2a440d931875f8b70e08227df842d1d87d013acf0317b48810b609")
@@ -1616,45 +1611,42 @@ public open class CfnCluster(
     }
 
     /**
-     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-     * automatically terminates.
+     * An auto-termination policy for an Amazon EMR cluster.
      *
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-autoterminationpolicy)
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates. 
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster. 
      */
     override fun autoTerminationPolicy(autoTerminationPolicy: IResolvable) {
       cdkBuilder.autoTerminationPolicy(autoTerminationPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-     * automatically terminates.
+     * An auto-termination policy for an Amazon EMR cluster.
      *
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-autoterminationpolicy)
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates. 
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster. 
      */
     override fun autoTerminationPolicy(autoTerminationPolicy: AutoTerminationPolicyProperty) {
       cdkBuilder.autoTerminationPolicy(autoTerminationPolicy.let(AutoTerminationPolicyProperty.Companion::unwrap))
     }
 
     /**
-     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-     * automatically terminates.
+     * An auto-termination policy for an Amazon EMR cluster.
      *
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-autoterminationpolicy)
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates. 
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("04bf042f7c2a440d931875f8b70e08227df842d1d87d013acf0317b48810b609")
@@ -2345,7 +2337,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty,
-    ) : CdkObject(cdkObject), ApplicationProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationProperty {
       /**
        * This option is for advanced users only.
        *
@@ -2578,7 +2571,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty,
-    ) : CdkObject(cdkObject), AutoScalingPolicyProperty {
+    ) : CdkObject(cdkObject),
+        AutoScalingPolicyProperty {
       /**
        * The upper and lower Amazon EC2 instance limits for an automatic scaling policy.
        *
@@ -2681,7 +2675,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty,
-    ) : CdkObject(cdkObject), AutoTerminationPolicyProperty {
+    ) : CdkObject(cdkObject),
+        AutoTerminationPolicyProperty {
       /**
        * Specifies the amount of idle time in seconds after which the cluster automatically
        * terminates.
@@ -2827,7 +2822,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty,
-    ) : CdkObject(cdkObject), BootstrapActionConfigProperty {
+    ) : CdkObject(cdkObject),
+        BootstrapActionConfigProperty {
       /**
        * The name of the bootstrap action.
        *
@@ -3139,7 +3135,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.CloudWatchAlarmDefinitionProperty,
-    ) : CdkObject(cdkObject), CloudWatchAlarmDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchAlarmDefinitionProperty {
       /**
        * Determines how the metric specified by `MetricName` is compared to the value specified by
        * `Threshold` .
@@ -3424,7 +3421,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ComputeLimitsProperty,
-    ) : CdkObject(cdkObject), ComputeLimitsProperty {
+    ) : CdkObject(cdkObject),
+        ComputeLimitsProperty {
       /**
        * The upper boundary of Amazon EC2 units.
        *
@@ -3647,7 +3645,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty,
-    ) : CdkObject(cdkObject), ConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ConfigurationProperty {
       /**
        * The classification within a configuration.
        *
@@ -3818,7 +3817,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty,
-    ) : CdkObject(cdkObject), EbsBlockDeviceConfigProperty {
+    ) : CdkObject(cdkObject),
+        EbsBlockDeviceConfigProperty {
       /**
        * EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that
        * are requested for the EBS volume attached to an Amazon EC2 instance in the cluster.
@@ -3980,7 +3980,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty,
-    ) : CdkObject(cdkObject), EbsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EbsConfigurationProperty {
       /**
        * An array of Amazon EBS volume specifications attached to a cluster instance.
        *
@@ -4184,7 +4185,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty,
-    ) : CdkObject(cdkObject), HadoopJarStepConfigProperty {
+    ) : CdkObject(cdkObject),
+        HadoopJarStepConfigProperty {
       /**
        * A list of command line arguments passed to the JAR file's main function when executed.
        *
@@ -4570,7 +4572,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty,
-    ) : CdkObject(cdkObject), InstanceFleetConfigProperty {
+    ) : CdkObject(cdkObject),
+        InstanceFleetConfigProperty {
       /**
        * The instance type configurations that define the Amazon EC2 instances in the instance
        * fleet.
@@ -4697,7 +4700,7 @@ public open class CfnCluster(
   public interface InstanceFleetProvisioningSpecificationsProperty {
     /**
      * The launch specification for On-Demand Instances in the instance fleet, which determines the
-     * allocation strategy.
+     * allocation strategy and capacity reservation options.
      *
      *
      * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
@@ -4710,8 +4713,8 @@ public open class CfnCluster(
     public fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
 
     /**
-     * The launch specification for Spot instances in the fleet, which determines the defined
-     * duration, provisioning timeout behavior, and allocation strategy.
+     * The launch specification for Spot instances in the fleet, which determines the allocation
+     * strategy, defined duration, and provisioning timeout behavior.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html#cfn-emr-cluster-instancefleetprovisioningspecifications-spotspecification)
      */
@@ -4724,7 +4727,7 @@ public open class CfnCluster(
     public interface Builder {
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -4734,7 +4737,7 @@ public open class CfnCluster(
 
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -4745,7 +4748,7 @@ public open class CfnCluster(
 
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -4758,19 +4761,19 @@ public open class CfnCluster(
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       public fun spotSpecification(spotSpecification: IResolvable)
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       public fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty)
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("feb9c7ed9ccb5fa3fdaa636ef7684dde558d7eb0ffc5c6e55202ff3c6a0bea6a")
@@ -4786,7 +4789,7 @@ public open class CfnCluster(
 
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -4798,7 +4801,7 @@ public open class CfnCluster(
 
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -4811,7 +4814,7 @@ public open class CfnCluster(
 
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -4826,7 +4829,7 @@ public open class CfnCluster(
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       override fun spotSpecification(spotSpecification: IResolvable) {
         cdkBuilder.spotSpecification(spotSpecification.let(IResolvable.Companion::unwrap))
@@ -4834,7 +4837,7 @@ public open class CfnCluster(
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       override fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
         cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty.Companion::unwrap))
@@ -4842,7 +4845,7 @@ public open class CfnCluster(
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("feb9c7ed9ccb5fa3fdaa636ef7684dde558d7eb0ffc5c6e55202ff3c6a0bea6a")
@@ -4857,10 +4860,11 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty,
-    ) : CdkObject(cdkObject), InstanceFleetProvisioningSpecificationsProperty {
+    ) : CdkObject(cdkObject),
+        InstanceFleetProvisioningSpecificationsProperty {
       /**
        * The launch specification for On-Demand Instances in the instance fleet, which determines
-       * the allocation strategy.
+       * the allocation strategy and capacity reservation options.
        *
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
@@ -4873,8 +4877,8 @@ public open class CfnCluster(
       override fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
 
       /**
-       * The launch specification for Spot instances in the fleet, which determines the defined
-       * duration, provisioning timeout behavior, and allocation strategy.
+       * The launch specification for Spot instances in the fleet, which determines the allocation
+       * strategy, defined duration, and provisioning timeout behavior.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetprovisioningspecifications.html#cfn-emr-cluster-instancefleetprovisioningspecifications-spotspecification)
        */
@@ -5330,7 +5334,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty,
-    ) : CdkObject(cdkObject), InstanceGroupConfigProperty {
+    ) : CdkObject(cdkObject),
+        InstanceGroupConfigProperty {
       /**
        * `AutoScalingPolicy` is a subproperty of the
        * [InstanceGroupConfig](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.html)
@@ -5728,7 +5733,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty,
-    ) : CdkObject(cdkObject), InstanceTypeConfigProperty {
+    ) : CdkObject(cdkObject),
+        InstanceTypeConfigProperty {
       /**
        * The bid price for each Amazon EC2 Spot Instance type as defined by `InstanceType` .
        *
@@ -7142,7 +7148,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.JobFlowInstancesConfigProperty,
-    ) : CdkObject(cdkObject), JobFlowInstancesConfigProperty {
+    ) : CdkObject(cdkObject),
+        JobFlowInstancesConfigProperty {
       /**
        * A list of additional Amazon EC2 security group IDs for the master node.
        *
@@ -7524,7 +7531,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty,
-    ) : CdkObject(cdkObject), KerberosAttributesProperty {
+    ) : CdkObject(cdkObject),
+        KerberosAttributesProperty {
       /**
        * The Active Directory password for `ADDomainJoinUser` .
        *
@@ -7662,7 +7670,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty,
-    ) : CdkObject(cdkObject), KeyValueProperty {
+    ) : CdkObject(cdkObject),
+        KeyValueProperty {
       /**
        * The unique identifier of a key-value pair.
        *
@@ -7809,7 +7818,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty,
-    ) : CdkObject(cdkObject), ManagedScalingPolicyProperty {
+    ) : CdkObject(cdkObject),
+        ManagedScalingPolicyProperty {
       /**
        * The Amazon EC2 unit limits for a managed scaling policy.
        *
@@ -7919,7 +7929,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty,
-    ) : CdkObject(cdkObject), MetricDimensionProperty {
+    ) : CdkObject(cdkObject),
+        MetricDimensionProperty {
       /**
        * The dimension name.
        *
@@ -7981,8 +7992,9 @@ public open class CfnCluster(
     /**
      * Specifies the strategy to use in launching On-Demand instance fleets.
      *
-     * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-     * first.
+     * Available options are `lowest-price` and `prioritized` . `lowest-price` specifies to launch
+     * the instances with the lowest price first, and `prioritized` specifies that Amazon EMR should
+     * launch the instances with the highest priority first. The default is `lowest-price` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandprovisioningspecification.html#cfn-emr-cluster-ondemandprovisioningspecification-allocationstrategy)
      */
@@ -7996,8 +8008,9 @@ public open class CfnCluster(
       /**
        * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
        * fleets. 
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
+       * Available options are `lowest-price` and `prioritized` . `lowest-price` specifies to launch
+       * the instances with the lowest price first, and `prioritized` specifies that Amazon EMR should
+       * launch the instances with the highest priority first. The default is `lowest-price` .
        */
       public fun allocationStrategy(allocationStrategy: String)
     }
@@ -8011,8 +8024,9 @@ public open class CfnCluster(
       /**
        * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
        * fleets. 
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
+       * Available options are `lowest-price` and `prioritized` . `lowest-price` specifies to launch
+       * the instances with the lowest price first, and `prioritized` specifies that Amazon EMR should
+       * launch the instances with the highest priority first. The default is `lowest-price` .
        */
       override fun allocationStrategy(allocationStrategy: String) {
         cdkBuilder.allocationStrategy(allocationStrategy)
@@ -8025,12 +8039,14 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty,
-    ) : CdkObject(cdkObject), OnDemandProvisioningSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        OnDemandProvisioningSpecificationProperty {
       /**
        * Specifies the strategy to use in launching On-Demand instance fleets.
        *
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
+       * Available options are `lowest-price` and `prioritized` . `lowest-price` specifies to launch
+       * the instances with the lowest price first, and `prioritized` specifies that Amazon EMR should
+       * launch the instances with the highest priority first. The default is `lowest-price` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandprovisioningspecification.html#cfn-emr-cluster-ondemandprovisioningspecification-allocationstrategy)
        */
@@ -8149,7 +8165,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty,
-    ) : CdkObject(cdkObject), PlacementGroupConfigProperty {
+    ) : CdkObject(cdkObject),
+        PlacementGroupConfigProperty {
       /**
        * Role of the instance in the cluster.
        *
@@ -8251,7 +8268,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty,
-    ) : CdkObject(cdkObject), PlacementTypeProperty {
+    ) : CdkObject(cdkObject),
+        PlacementTypeProperty {
       /**
        * The Amazon EC2 Availability Zone for the cluster.
        *
@@ -8406,7 +8424,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty,
-    ) : CdkObject(cdkObject), ScalingActionProperty {
+    ) : CdkObject(cdkObject),
+        ScalingActionProperty {
       /**
        * Not available for instance groups.
        *
@@ -8535,7 +8554,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty,
-    ) : CdkObject(cdkObject), ScalingConstraintsProperty {
+    ) : CdkObject(cdkObject),
+        ScalingConstraintsProperty {
       /**
        * The upper boundary of Amazon EC2 instances in an instance group beyond which scaling
        * activities are not allowed to grow.
@@ -8783,7 +8803,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty,
-    ) : CdkObject(cdkObject), ScalingRuleProperty {
+    ) : CdkObject(cdkObject),
+        ScalingRuleProperty {
       /**
        * The conditions that trigger an automatic scaling activity.
        *
@@ -8949,7 +8970,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty,
-    ) : CdkObject(cdkObject), ScalingTriggerProperty {
+    ) : CdkObject(cdkObject),
+        ScalingTriggerProperty {
       /**
        * The definition of a CloudWatch metric alarm.
        *
@@ -9069,7 +9091,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty,
-    ) : CdkObject(cdkObject), ScriptBootstrapActionConfigProperty {
+    ) : CdkObject(cdkObject),
+        ScriptBootstrapActionConfigProperty {
       /**
        * A list of command line arguments to pass to the bootstrap action script.
        *
@@ -9258,7 +9281,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty,
-    ) : CdkObject(cdkObject), SimpleScalingPolicyConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SimpleScalingPolicyConfigurationProperty {
       /**
        * The way in which Amazon EC2 instances are added (if `ScalingAdjustment` is a positive
        * number) or terminated (if `ScalingAdjustment` is a negative number) each time the scaling
@@ -9352,7 +9376,8 @@ public open class CfnCluster(
   public interface SpotProvisioningSpecificationProperty {
     /**
      * Specifies one of the following strategies to launch Spot Instance fleets:
-     * `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified` .
+     * `capacity-optimized` , `price-capacity-optimized` , `lowest-price` , or `diversified` , and
+     * `capacity-optimized-prioritized` .
      *
      * For more information on the provisioning strategies, see [Allocation strategies for Spot
      * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
@@ -9418,8 +9443,8 @@ public open class CfnCluster(
     public interface Builder {
       /**
        * @param allocationStrategy Specifies one of the following strategies to launch Spot Instance
-       * fleets: `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified`
-       * .
+       * fleets: `capacity-optimized` , `price-capacity-optimized` , `lowest-price` , or `diversified`
+       * , and `capacity-optimized-prioritized` .
        * For more information on the provisioning strategies, see [Allocation strategies for Spot
        * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
        * in the *Amazon EC2 User Guide for Linux Instances* .
@@ -9475,8 +9500,8 @@ public open class CfnCluster(
 
       /**
        * @param allocationStrategy Specifies one of the following strategies to launch Spot Instance
-       * fleets: `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified`
-       * .
+       * fleets: `capacity-optimized` , `price-capacity-optimized` , `lowest-price` , or `diversified`
+       * , and `capacity-optimized-prioritized` .
        * For more information on the provisioning strategies, see [Allocation strategies for Spot
        * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
        * in the *Amazon EC2 User Guide for Linux Instances* .
@@ -9538,10 +9563,12 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SpotProvisioningSpecificationProperty,
-    ) : CdkObject(cdkObject), SpotProvisioningSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SpotProvisioningSpecificationProperty {
       /**
        * Specifies one of the following strategies to launch Spot Instance fleets:
-       * `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified` .
+       * `capacity-optimized` , `price-capacity-optimized` , `lowest-price` , or `diversified` , and
+       * `capacity-optimized-prioritized` .
        *
        * For more information on the provisioning strategies, see [Allocation strategies for Spot
        * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
@@ -9758,7 +9785,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty,
-    ) : CdkObject(cdkObject), StepConfigProperty {
+    ) : CdkObject(cdkObject),
+        StepConfigProperty {
       /**
        * The action to take when the cluster step fails.
        *
@@ -9932,7 +9960,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnCluster.VolumeSpecificationProperty,
-    ) : CdkObject(cdkObject), VolumeSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        VolumeSpecificationProperty {
       /**
        * The number of I/O operations per second (IOPS) that the volume supports.
        *

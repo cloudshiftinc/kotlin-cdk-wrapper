@@ -56,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnReportPlan(
   cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -462,7 +464,8 @@ public open class CfnReportPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty,
-    ) : CdkObject(cdkObject), ReportDeliveryChannelProperty {
+    ) : CdkObject(cdkObject),
+        ReportDeliveryChannelProperty {
       /**
        * The format of your reports: `CSV` , `JSON` , or both.
        *
@@ -707,7 +710,8 @@ public open class CfnReportPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty,
-    ) : CdkObject(cdkObject), ReportSettingProperty {
+    ) : CdkObject(cdkObject),
+        ReportSettingProperty {
       /**
        * These are the accounts to be included in the report.
        *

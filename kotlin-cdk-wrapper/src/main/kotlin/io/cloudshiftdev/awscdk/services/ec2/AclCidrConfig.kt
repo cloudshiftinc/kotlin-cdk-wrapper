@@ -73,7 +73,8 @@ public interface AclCidrConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.AclCidrConfig,
-  ) : CdkObject(cdkObject), AclCidrConfig {
+  ) : CdkObject(cdkObject),
+      AclCidrConfig {
     /**
      * Ipv4 CIDR.
      */

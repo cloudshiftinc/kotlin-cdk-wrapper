@@ -165,7 +165,8 @@ public interface CfnBrowserSettingsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.workspacesweb.CfnBrowserSettingsProps,
-  ) : CdkObject(cdkObject), CfnBrowserSettingsProps {
+  ) : CdkObject(cdkObject),
+      CfnBrowserSettingsProps {
     /**
      * Additional encryption context of the browser settings.
      *

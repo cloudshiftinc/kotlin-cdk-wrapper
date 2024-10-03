@@ -37,7 +37,8 @@ public interface INamespace : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.INamespace,
-  ) : CdkObject(cdkObject), INamespace {
+  ) : CdkObject(cdkObject),
+      INamespace {
     /**
      * Apply the given removal policy to this resource.
      *

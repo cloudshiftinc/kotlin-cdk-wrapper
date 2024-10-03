@@ -23,11 +23,9 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.amazonmq.*;
  * CfnBrokerProps cfnBrokerProps = CfnBrokerProps.builder()
- * .autoMinorVersionUpgrade(false)
  * .brokerName("brokerName")
  * .deploymentMode("deploymentMode")
  * .engineType("engineType")
- * .engineVersion("engineVersion")
  * .hostInstanceType("hostInstanceType")
  * .publiclyAccessible(false)
  * .users(List.of(UserProperty.builder()
@@ -40,6 +38,7 @@ import kotlin.jvm.JvmName
  * .build()))
  * // the properties below are optional
  * .authenticationStrategy("authenticationStrategy")
+ * .autoMinorVersionUpgrade(false)
  * .configuration(ConfigurationIdProperty.builder()
  * .id("id")
  * .revision(123)
@@ -51,6 +50,7 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .kmsKeyId("kmsKeyId")
  * .build())
+ * .engineVersion("engineVersion")
  * .ldapServerMetadata(LdapServerMetadataProperty.builder()
  * .hosts(List.of("hosts"))
  * .roleBase("roleBase")
@@ -105,7 +105,7 @@ public interface CfnBrokerProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-autominorversionupgrade)
    */
-  public fun autoMinorVersionUpgrade(): Any
+  public fun autoMinorVersionUpgrade(): Any? = unwrap(this).getAutoMinorVersionUpgrade()
 
   /**
    * The name of the broker.
@@ -189,7 +189,7 @@ public interface CfnBrokerProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-engineversion)
    */
-  public fun engineVersion(): String
+  public fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
   /**
    * The broker's instance type.
@@ -301,7 +301,7 @@ public interface CfnBrokerProps {
 
     /**
      * @param autoMinorVersionUpgrade Enables automatic upgrades to new minor versions for brokers,
-     * as new broker engine versions are released and supported by Amazon MQ. 
+     * as new broker engine versions are released and supported by Amazon MQ.
      * Automatic upgrades occur during the scheduled maintenance window of the broker or after a
      * manual broker reboot.
      */
@@ -309,7 +309,7 @@ public interface CfnBrokerProps {
 
     /**
      * @param autoMinorVersionUpgrade Enables automatic upgrades to new minor versions for brokers,
-     * as new broker engine versions are released and supported by Amazon MQ. 
+     * as new broker engine versions are released and supported by Amazon MQ.
      * Automatic upgrades occur during the scheduled maintenance window of the broker or after a
      * manual broker reboot.
      */
@@ -397,7 +397,7 @@ public interface CfnBrokerProps {
     public fun engineType(engineType: String)
 
     /**
-     * @param engineVersion The version of the broker engine. 
+     * @param engineVersion The version of the broker engine.
      * For a list of supported engine versions, see
      * [Engine](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) in the
      * *Amazon MQ Developer Guide* .
@@ -593,7 +593,7 @@ public interface CfnBrokerProps {
 
     /**
      * @param autoMinorVersionUpgrade Enables automatic upgrades to new minor versions for brokers,
-     * as new broker engine versions are released and supported by Amazon MQ. 
+     * as new broker engine versions are released and supported by Amazon MQ.
      * Automatic upgrades occur during the scheduled maintenance window of the broker or after a
      * manual broker reboot.
      */
@@ -603,7 +603,7 @@ public interface CfnBrokerProps {
 
     /**
      * @param autoMinorVersionUpgrade Enables automatic upgrades to new minor versions for brokers,
-     * as new broker engine versions are released and supported by Amazon MQ. 
+     * as new broker engine versions are released and supported by Amazon MQ.
      * Automatic upgrades occur during the scheduled maintenance window of the broker or after a
      * manual broker reboot.
      */
@@ -713,7 +713,7 @@ public interface CfnBrokerProps {
     }
 
     /**
-     * @param engineVersion The version of the broker engine. 
+     * @param engineVersion The version of the broker engine.
      * For a list of supported engine versions, see
      * [Engine](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) in the
      * *Amazon MQ Developer Guide* .
@@ -936,7 +936,8 @@ public interface CfnBrokerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.amazonmq.CfnBrokerProps,
-  ) : CdkObject(cdkObject), CfnBrokerProps {
+  ) : CdkObject(cdkObject),
+      CfnBrokerProps {
     /**
      * Optional.
      *
@@ -955,7 +956,7 @@ public interface CfnBrokerProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-autominorversionupgrade)
      */
-    override fun autoMinorVersionUpgrade(): Any = unwrap(this).getAutoMinorVersionUpgrade()
+    override fun autoMinorVersionUpgrade(): Any? = unwrap(this).getAutoMinorVersionUpgrade()
 
     /**
      * The name of the broker.
@@ -1039,7 +1040,7 @@ public interface CfnBrokerProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-engineversion)
      */
-    override fun engineVersion(): String = unwrap(this).getEngineVersion()
+    override fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
     /**
      * The broker's instance type.

@@ -70,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVerifiedAccessTrustProvider(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -694,7 +696,8 @@ public open class CfnVerifiedAccessTrustProvider(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty,
-    ) : CdkObject(cdkObject), DeviceOptionsProperty {
+    ) : CdkObject(cdkObject),
+        DeviceOptionsProperty {
       /**
        * The URL AWS Verified Access will use to verify the authenticity of the device tokens.
        *
@@ -903,7 +906,8 @@ public open class CfnVerifiedAccessTrustProvider(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.OidcOptionsProperty,
-    ) : CdkObject(cdkObject), OidcOptionsProperty {
+    ) : CdkObject(cdkObject),
+        OidcOptionsProperty {
       /**
        * The OIDC authorization endpoint.
        *
@@ -1073,7 +1077,8 @@ public open class CfnVerifiedAccessTrustProvider(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.SseSpecificationProperty,
-    ) : CdkObject(cdkObject), SseSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SseSpecificationProperty {
       /**
        * Enable or disable the use of customer managed KMS keys for server side encryption.
        *

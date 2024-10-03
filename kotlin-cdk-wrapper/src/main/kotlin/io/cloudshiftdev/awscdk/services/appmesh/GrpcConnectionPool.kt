@@ -81,7 +81,8 @@ public interface GrpcConnectionPool {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.GrpcConnectionPool,
-  ) : CdkObject(cdkObject), GrpcConnectionPool {
+  ) : CdkObject(cdkObject),
+      GrpcConnectionPool {
     /**
      * The maximum requests in the pool.
      *

@@ -30,7 +30,8 @@ public interface IReusableStackSynthesizer : IStackSynthesizer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IReusableStackSynthesizer,
-  ) : CdkObject(cdkObject), IReusableStackSynthesizer {
+  ) : CdkObject(cdkObject),
+      IReusableStackSynthesizer {
     /**
      * Register a Docker Image Asset.
      *

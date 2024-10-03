@@ -32,7 +32,8 @@ public interface IInstanceProfile : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IInstanceProfile,
-  ) : CdkObject(cdkObject), IInstanceProfile {
+  ) : CdkObject(cdkObject),
+      IInstanceProfile {
     /**
      * Apply the given removal policy to this resource.
      *

@@ -8,34 +8,11 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
-/**
- * Artifact properties for the Construct Tree Artifact.
- *
- * Example:
- *
- * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.cloudassembly.schema.*;
- * TreeArtifactProperties treeArtifactProperties = TreeArtifactProperties.builder()
- * .file("file")
- * .build();
- * ```
- */
 public interface TreeArtifactProperties {
-  /**
-   * Filename of the tree artifact.
-   */
   public fun `file`(): String
 
-  /**
-   * A builder for [TreeArtifactProperties]
-   */
   @CdkDslMarker
   public interface Builder {
-    /**
-     * @param file Filename of the tree artifact. 
-     */
     public fun `file`(`file`: String)
   }
 
@@ -44,9 +21,6 @@ public interface TreeArtifactProperties {
         software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties.Builder =
         software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties.builder()
 
-    /**
-     * @param file Filename of the tree artifact. 
-     */
     override fun `file`(`file`: String) {
       cdkBuilder.`file`(`file`)
     }
@@ -57,10 +31,8 @@ public interface TreeArtifactProperties {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties,
-  ) : CdkObject(cdkObject), TreeArtifactProperties {
-    /**
-     * Filename of the tree artifact.
-     */
+  ) : CdkObject(cdkObject),
+      TreeArtifactProperties {
     override fun `file`(): String = unwrap(this).getFile()
   }
 

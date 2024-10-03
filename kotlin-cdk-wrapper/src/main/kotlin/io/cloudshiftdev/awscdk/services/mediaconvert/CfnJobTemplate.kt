@@ -66,7 +66,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnJobTemplate(
   cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -817,7 +819,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.AccelerationSettingsProperty,
-    ) : CdkObject(cdkObject), AccelerationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AccelerationSettingsProperty {
       /**
        * Specify the conditions when the service will run your job with accelerated transcoding.
        *
@@ -974,7 +977,8 @@ public open class CfnJobTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.HopDestinationProperty,
-    ) : CdkObject(cdkObject), HopDestinationProperty {
+    ) : CdkObject(cdkObject),
+        HopDestinationProperty {
       /**
        * Optional.
        *

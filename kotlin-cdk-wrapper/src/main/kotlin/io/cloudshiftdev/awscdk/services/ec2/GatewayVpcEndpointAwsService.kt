@@ -37,7 +37,8 @@ import kotlin.String
  */
 public open class GatewayVpcEndpointAwsService(
   cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpointAwsService,
-) : CdkObject(cdkObject), IGatewayVpcEndpointService {
+) : CdkObject(cdkObject),
+    IGatewayVpcEndpointService {
   public constructor(name: String) :
       this(software.amazon.awscdk.services.ec2.GatewayVpcEndpointAwsService(name)
   )

@@ -17,7 +17,8 @@ public interface ICachePolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.ICachePolicy,
-  ) : CdkObject(cdkObject), ICachePolicy {
+  ) : CdkObject(cdkObject),
+      ICachePolicy {
     /**
      * The ID of the cache policy.
      */

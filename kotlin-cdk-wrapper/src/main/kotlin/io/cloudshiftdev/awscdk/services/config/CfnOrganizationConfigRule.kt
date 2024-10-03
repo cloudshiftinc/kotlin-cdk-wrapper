@@ -119,7 +119,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnOrganizationConfigRule(
   cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -978,7 +979,8 @@ public open class CfnOrganizationConfigRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty,
-    ) : CdkObject(cdkObject), OrganizationCustomPolicyRuleMetadataProperty {
+    ) : CdkObject(cdkObject),
+        OrganizationCustomPolicyRuleMetadataProperty {
       /**
        * A list of accounts that you can enable debug logging for your organization AWS Config
        * Custom Policy rule.
@@ -1438,7 +1440,8 @@ public open class CfnOrganizationConfigRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty,
-    ) : CdkObject(cdkObject), OrganizationCustomRuleMetadataProperty {
+    ) : CdkObject(cdkObject),
+        OrganizationCustomRuleMetadataProperty {
       /**
        * The description that you provide for your organization AWS Config rule.
        *
@@ -1806,7 +1809,8 @@ public open class CfnOrganizationConfigRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty,
-    ) : CdkObject(cdkObject), OrganizationManagedRuleMetadataProperty {
+    ) : CdkObject(cdkObject),
+        OrganizationManagedRuleMetadataProperty {
       /**
        * The description that you provide for your organization AWS Config rule.
        *

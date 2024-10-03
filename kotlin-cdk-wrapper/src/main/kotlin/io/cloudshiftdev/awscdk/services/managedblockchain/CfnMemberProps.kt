@@ -220,7 +220,8 @@ public interface CfnMemberProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMemberProps,
-  ) : CdkObject(cdkObject), CfnMemberProps {
+  ) : CdkObject(cdkObject),
+      CfnMemberProps {
     /**
      * The unique identifier of the invitation to join the network sent to the account that creates
      * the member.

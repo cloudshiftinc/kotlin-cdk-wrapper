@@ -986,7 +986,8 @@ public interface DomainProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticsearch.DomainProps,
-  ) : CdkObject(cdkObject), DomainProps {
+  ) : CdkObject(cdkObject),
+      DomainProps {
     /**
      * (deprecated) Domain Access policies.
      *

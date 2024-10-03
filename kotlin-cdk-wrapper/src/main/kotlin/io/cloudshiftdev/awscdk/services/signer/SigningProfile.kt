@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class SigningProfile(
   cdkObject: software.amazon.awscdk.services.signer.SigningProfile,
-) : Resource(cdkObject), ISigningProfile {
+) : Resource(cdkObject),
+    ISigningProfile {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

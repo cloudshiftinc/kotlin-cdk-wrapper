@@ -90,7 +90,8 @@ public interface IJobQueue : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IJobQueue,
-  ) : CdkObject(cdkObject), IJobQueue {
+  ) : CdkObject(cdkObject),
+      IJobQueue {
     /**
      * Add a `ComputeEnvironment` to this Queue.
      *

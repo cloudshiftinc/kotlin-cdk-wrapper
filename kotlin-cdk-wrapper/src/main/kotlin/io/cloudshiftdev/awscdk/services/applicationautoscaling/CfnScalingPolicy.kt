@@ -102,7 +102,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnScalingPolicy(
   cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -353,6 +354,8 @@ public open class CfnScalingPolicy(
      * the resource ID. Example: `endpoint/my-end-point/variant/KMeansClustering` .
      * * SageMaker inference component - The resource type is `inference-component` and the unique
      * identifier is the resource ID. Example: `inference-component/my-inference-component` .
+     * * Pool of WorkSpaces - The resource type is `workspacespool` and the unique identifier is the
+     * pool ID. Example: `workspacespool/wspool-123456` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-resourceid)
      * @param resourceId The identifier of the resource associated with the scaling policy. 
@@ -363,11 +366,11 @@ public open class CfnScalingPolicy(
      * The scalable dimension. This string consists of the service namespace, resource type, and
      * scaling property.
      *
-     * * `ecs:service:DesiredCount` - The desired task count of an ECS service.
+     * * `ecs:service:DesiredCount` - The task count of an ECS service.
      * * `elasticmapreduce:instancegroup:InstanceCount` - The instance count of an EMR Instance
      * Group.
      * * `ec2:spot-fleet-request:TargetCapacity` - The target capacity of a Spot Fleet.
-     * * `appstream:fleet:DesiredCapacity` - The desired capacity of an AppStream 2.0 fleet.
+     * * `appstream:fleet:DesiredCapacity` - The capacity of an AppStream 2.0 fleet.
      * * `dynamodb:table:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB table.
      * * `dynamodb:table:WriteCapacityUnits` - The provisioned write capacity for a DynamoDB table.
      * * `dynamodb:index:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB global
@@ -402,6 +405,8 @@ public open class CfnScalingPolicy(
      * SageMaker serverless endpoint.
      * * `sagemaker:inference-component:DesiredCopyCount` - The number of copies across an endpoint
      * for a SageMaker inference component.
+     * * `workspaces:workspacespool:DesiredUserSessions` - The number of user sessions for the
+     * WorkSpaces in the pool.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-scalabledimension)
      * @param scalableDimension The scalable dimension. This string consists of the service
@@ -584,6 +589,8 @@ public open class CfnScalingPolicy(
      * the resource ID. Example: `endpoint/my-end-point/variant/KMeansClustering` .
      * * SageMaker inference component - The resource type is `inference-component` and the unique
      * identifier is the resource ID. Example: `inference-component/my-inference-component` .
+     * * Pool of WorkSpaces - The resource type is `workspacespool` and the unique identifier is the
+     * pool ID. Example: `workspacespool/wspool-123456` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-resourceid)
      * @param resourceId The identifier of the resource associated with the scaling policy. 
@@ -596,11 +603,11 @@ public open class CfnScalingPolicy(
      * The scalable dimension. This string consists of the service namespace, resource type, and
      * scaling property.
      *
-     * * `ecs:service:DesiredCount` - The desired task count of an ECS service.
+     * * `ecs:service:DesiredCount` - The task count of an ECS service.
      * * `elasticmapreduce:instancegroup:InstanceCount` - The instance count of an EMR Instance
      * Group.
      * * `ec2:spot-fleet-request:TargetCapacity` - The target capacity of a Spot Fleet.
-     * * `appstream:fleet:DesiredCapacity` - The desired capacity of an AppStream 2.0 fleet.
+     * * `appstream:fleet:DesiredCapacity` - The capacity of an AppStream 2.0 fleet.
      * * `dynamodb:table:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB table.
      * * `dynamodb:table:WriteCapacityUnits` - The provisioned write capacity for a DynamoDB table.
      * * `dynamodb:index:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB global
@@ -635,6 +642,8 @@ public open class CfnScalingPolicy(
      * SageMaker serverless endpoint.
      * * `sagemaker:inference-component:DesiredCopyCount` - The number of copies across an endpoint
      * for a SageMaker inference component.
+     * * `workspaces:workspacespool:DesiredUserSessions` - The number of user sessions for the
+     * WorkSpaces in the pool.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-scalabledimension)
      * @param scalableDimension The scalable dimension. This string consists of the service
@@ -1076,7 +1085,8 @@ public open class CfnScalingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty,
-    ) : CdkObject(cdkObject), CustomizedMetricSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        CustomizedMetricSpecificationProperty {
       /**
        * The dimensions of the metric.
        *
@@ -1232,7 +1242,8 @@ public open class CfnScalingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.MetricDimensionProperty,
-    ) : CdkObject(cdkObject), MetricDimensionProperty {
+    ) : CdkObject(cdkObject),
+        MetricDimensionProperty {
       /**
        * The name of the dimension.
        *
@@ -1417,7 +1428,8 @@ public open class CfnScalingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.PredefinedMetricSpecificationProperty,
-    ) : CdkObject(cdkObject), PredefinedMetricSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PredefinedMetricSpecificationProperty {
       /**
        * The metric type.
        *
@@ -1642,7 +1654,8 @@ public open class CfnScalingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.StepAdjustmentProperty,
-    ) : CdkObject(cdkObject), StepAdjustmentProperty {
+    ) : CdkObject(cdkObject),
+        StepAdjustmentProperty {
       /**
        * The lower bound for the difference between the alarm threshold and the CloudWatch metric.
        *
@@ -1931,7 +1944,8 @@ public open class CfnScalingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.StepScalingPolicyConfigurationProperty,
-    ) : CdkObject(cdkObject), StepScalingPolicyConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        StepScalingPolicyConfigurationProperty {
       /**
        * Specifies whether the `ScalingAdjustment` value in the `StepAdjustment` property is an
        * absolute number or a percentage of the current capacity.
@@ -2296,7 +2310,8 @@ public open class CfnScalingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricDataQueryProperty,
-    ) : CdkObject(cdkObject), TargetTrackingMetricDataQueryProperty {
+    ) : CdkObject(cdkObject),
+        TargetTrackingMetricDataQueryProperty {
       /**
        * The math expression to perform on the returned data, if this object is performing a math
        * expression.
@@ -2456,7 +2471,8 @@ public open class CfnScalingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricDimensionProperty,
-    ) : CdkObject(cdkObject), TargetTrackingMetricDimensionProperty {
+    ) : CdkObject(cdkObject),
+        TargetTrackingMetricDimensionProperty {
       /**
        * The name of the dimension.
        *
@@ -2676,7 +2692,8 @@ public open class CfnScalingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricProperty,
-    ) : CdkObject(cdkObject), TargetTrackingMetricProperty {
+    ) : CdkObject(cdkObject),
+        TargetTrackingMetricProperty {
       /**
        * The dimensions for the metric.
        *
@@ -2938,7 +2955,8 @@ public open class CfnScalingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricStatProperty,
-    ) : CdkObject(cdkObject), TargetTrackingMetricStatProperty {
+    ) : CdkObject(cdkObject),
+        TargetTrackingMetricStatProperty {
       /**
        * The CloudWatch metric to return, including the metric name, namespace, and dimensions.
        *
@@ -3353,7 +3371,8 @@ public open class CfnScalingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingScalingPolicyConfigurationProperty,
-    ) : CdkObject(cdkObject), TargetTrackingScalingPolicyConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        TargetTrackingScalingPolicyConfigurationProperty {
       /**
        * A customized metric.
        *

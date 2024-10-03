@@ -92,7 +92,8 @@ public interface S3ObjectsItemReaderProps : ItemReaderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.S3ObjectsItemReaderProps,
-  ) : CdkObject(cdkObject), S3ObjectsItemReaderProps {
+  ) : CdkObject(cdkObject),
+      S3ObjectsItemReaderProps {
     /**
      * S3 Bucket containing objects to iterate over or a file with a list to iterate over.
      */

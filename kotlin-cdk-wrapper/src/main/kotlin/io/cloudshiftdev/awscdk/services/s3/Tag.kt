@@ -73,7 +73,8 @@ public interface Tag {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.Tag,
-  ) : CdkObject(cdkObject), Tag {
+  ) : CdkObject(cdkObject),
+      Tag {
     /**
      * key to e tagged.
      */

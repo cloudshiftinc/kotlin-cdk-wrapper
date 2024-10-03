@@ -61,7 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSizeConstraintSet(
   cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSet,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -407,7 +408,8 @@ public open class CfnSizeConstraintSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSet.FieldToMatchProperty,
-    ) : CdkObject(cdkObject), FieldToMatchProperty {
+    ) : CdkObject(cdkObject),
+        FieldToMatchProperty {
       /**
        * When the value of `Type` is `HEADER` , enter the name of the header that you want AWS WAF
        * to search, for example, `User-Agent` or `Referer` .
@@ -897,7 +899,8 @@ public open class CfnSizeConstraintSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSet.SizeConstraintProperty,
-    ) : CdkObject(cdkObject), SizeConstraintProperty {
+    ) : CdkObject(cdkObject),
+        SizeConstraintProperty {
       /**
        * The type of comparison you want AWS WAF to perform.
        *

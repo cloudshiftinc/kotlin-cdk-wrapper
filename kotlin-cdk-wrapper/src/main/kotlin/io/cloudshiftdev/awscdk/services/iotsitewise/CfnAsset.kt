@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAsset(
   cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAsset,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -674,7 +676,8 @@ public open class CfnAsset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetHierarchyProperty,
-    ) : CdkObject(cdkObject), AssetHierarchyProperty {
+    ) : CdkObject(cdkObject),
+        AssetHierarchyProperty {
       /**
        * The Id of the child asset.
        *
@@ -939,7 +942,8 @@ public open class CfnAsset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetPropertyProperty,
-    ) : CdkObject(cdkObject), AssetPropertyProperty {
+    ) : CdkObject(cdkObject),
+        AssetPropertyProperty {
       /**
        * The alias that identifies the property, such as an OPC-UA server data stream path (for
        * example, `/company/windfarm/3/turbine/7/temperature` ).

@@ -45,7 +45,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProject(
   cdkObject: software.amazon.awscdk.services.iotsitewise.CfnProject,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

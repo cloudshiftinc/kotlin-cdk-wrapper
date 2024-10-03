@@ -56,7 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAlias(
   cdkObject: software.amazon.awscdk.services.lambda.CfnAlias,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -74,9 +75,9 @@ public open class CfnAlias(
   )
 
   /**
-   *
+   * The Amazon Resource Name (ARN) of the alias.
    */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+  public open fun attrAliasArn(): String = unwrap(this).getAttrAliasArn()
 
   /**
    * A description of the alias.
@@ -527,7 +528,7 @@ public open class CfnAlias(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-aliasroutingconfiguration.html#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)
      */
-    public fun additionalVersionWeights(): Any
+    public fun additionalVersionWeights(): Any? = unwrap(this).getAdditionalVersionWeights()
 
     /**
      * A builder for [AliasRoutingConfigurationProperty]
@@ -536,19 +537,19 @@ public open class CfnAlias(
     public interface Builder {
       /**
        * @param additionalVersionWeights The second version, and the percentage of traffic that's
-       * routed to it. 
+       * routed to it.
        */
       public fun additionalVersionWeights(additionalVersionWeights: IResolvable)
 
       /**
        * @param additionalVersionWeights The second version, and the percentage of traffic that's
-       * routed to it. 
+       * routed to it.
        */
       public fun additionalVersionWeights(additionalVersionWeights: List<Any>)
 
       /**
        * @param additionalVersionWeights The second version, and the percentage of traffic that's
-       * routed to it. 
+       * routed to it.
        */
       public fun additionalVersionWeights(vararg additionalVersionWeights: Any)
     }
@@ -561,7 +562,7 @@ public open class CfnAlias(
 
       /**
        * @param additionalVersionWeights The second version, and the percentage of traffic that's
-       * routed to it. 
+       * routed to it.
        */
       override fun additionalVersionWeights(additionalVersionWeights: IResolvable) {
         cdkBuilder.additionalVersionWeights(additionalVersionWeights.let(IResolvable.Companion::unwrap))
@@ -569,7 +570,7 @@ public open class CfnAlias(
 
       /**
        * @param additionalVersionWeights The second version, and the percentage of traffic that's
-       * routed to it. 
+       * routed to it.
        */
       override fun additionalVersionWeights(additionalVersionWeights: List<Any>) {
         cdkBuilder.additionalVersionWeights(additionalVersionWeights.map{CdkObjectWrappers.unwrap(it)})
@@ -577,7 +578,7 @@ public open class CfnAlias(
 
       /**
        * @param additionalVersionWeights The second version, and the percentage of traffic that's
-       * routed to it. 
+       * routed to it.
        */
       override fun additionalVersionWeights(vararg additionalVersionWeights: Any): Unit =
           additionalVersionWeights(additionalVersionWeights.toList())
@@ -589,13 +590,14 @@ public open class CfnAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnAlias.AliasRoutingConfigurationProperty,
-    ) : CdkObject(cdkObject), AliasRoutingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AliasRoutingConfigurationProperty {
       /**
        * The second version, and the percentage of traffic that's routed to it.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-aliasroutingconfiguration.html#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)
        */
-      override fun additionalVersionWeights(): Any = unwrap(this).getAdditionalVersionWeights()
+      override fun additionalVersionWeights(): Any? = unwrap(this).getAdditionalVersionWeights()
     }
 
     public companion object {
@@ -675,7 +677,8 @@ public open class CfnAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnAlias.ProvisionedConcurrencyConfigurationProperty,
-    ) : CdkObject(cdkObject), ProvisionedConcurrencyConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ProvisionedConcurrencyConfigurationProperty {
       /**
        * The amount of provisioned concurrency to allocate for the alias.
        *
@@ -781,7 +784,8 @@ public open class CfnAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnAlias.VersionWeightProperty,
-    ) : CdkObject(cdkObject), VersionWeightProperty {
+    ) : CdkObject(cdkObject),
+        VersionWeightProperty {
       /**
        * The qualifier of the second version.
        *

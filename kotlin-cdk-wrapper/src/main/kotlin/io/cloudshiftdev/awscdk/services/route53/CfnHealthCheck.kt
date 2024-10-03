@@ -99,7 +99,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnHealthCheck(
   cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -491,7 +492,8 @@ public open class CfnHealthCheck(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.AlarmIdentifierProperty,
-    ) : CdkObject(cdkObject), AlarmIdentifierProperty {
+    ) : CdkObject(cdkObject),
+        AlarmIdentifierProperty {
       /**
        * The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to
        * determine whether this health check is healthy.
@@ -1758,7 +1760,8 @@ public open class CfnHealthCheck(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty,
-    ) : CdkObject(cdkObject), HealthCheckConfigProperty {
+    ) : CdkObject(cdkObject),
+        HealthCheckConfigProperty {
       /**
        * A complex type that identifies the CloudWatch alarm that you want Amazon Route 53 health
        * checkers to use to determine whether the specified health check is healthy.
@@ -2237,7 +2240,8 @@ public open class CfnHealthCheck(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty,
-    ) : CdkObject(cdkObject), HealthCheckTagProperty {
+    ) : CdkObject(cdkObject),
+        HealthCheckTagProperty {
       /**
        * The value of `Key` depends on the operation that you want to perform:.
        *

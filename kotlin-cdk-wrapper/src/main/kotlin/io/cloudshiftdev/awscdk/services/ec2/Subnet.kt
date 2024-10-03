@@ -38,7 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Subnet(
   cdkObject: software.amazon.awscdk.services.ec2.Subnet,
-) : Resource(cdkObject), ISubnet {
+) : Resource(cdkObject),
+    ISubnet {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

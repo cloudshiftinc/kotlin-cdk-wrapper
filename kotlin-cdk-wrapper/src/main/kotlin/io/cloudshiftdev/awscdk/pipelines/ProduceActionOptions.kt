@@ -39,6 +39,7 @@ import kotlin.jvm.JvmName
  * CodePipeline codePipeline;
  * Construct construct;
  * IFileSystemLocation fileSystemLocation;
+ * Fleet fleet;
  * LogGroup logGroup;
  * PolicyStatement policyStatement;
  * SecurityGroup securityGroup;
@@ -70,6 +71,7 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .type(BuildEnvironmentVariableType.PLAINTEXT)
  * .build()))
+ * .fleet(fleet)
  * .privileged(false)
  * .build())
  * .cache(cache)
@@ -365,7 +367,8 @@ public interface ProduceActionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.ProduceActionOptions,
-  ) : CdkObject(cdkObject), ProduceActionOptions {
+  ) : CdkObject(cdkObject),
+      ProduceActionOptions {
     /**
      * Name the action should get.
      */

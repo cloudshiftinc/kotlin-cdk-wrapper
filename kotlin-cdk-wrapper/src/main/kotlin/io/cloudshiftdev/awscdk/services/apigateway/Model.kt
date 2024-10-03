@@ -45,7 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Model(
   cdkObject: software.amazon.awscdk.services.apigateway.Model,
-) : Resource(cdkObject), IModel {
+) : Resource(cdkObject),
+    IModel {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -180,7 +180,8 @@ public interface CfnDBClusterParameterGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.CfnDBClusterParameterGroupProps,
-  ) : CdkObject(cdkObject), CfnDBClusterParameterGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnDBClusterParameterGroupProps {
     /**
      * The description for the cluster parameter group.
      *

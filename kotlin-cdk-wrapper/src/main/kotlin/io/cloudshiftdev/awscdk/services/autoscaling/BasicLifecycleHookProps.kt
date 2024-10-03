@@ -197,7 +197,8 @@ public interface BasicLifecycleHookProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps,
-  ) : CdkObject(cdkObject), BasicLifecycleHookProps {
+  ) : CdkObject(cdkObject),
+      BasicLifecycleHookProps {
     /**
      * The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an
      * unexpected failure occurs.

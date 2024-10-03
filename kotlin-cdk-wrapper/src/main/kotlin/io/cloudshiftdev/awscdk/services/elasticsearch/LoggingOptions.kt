@@ -282,7 +282,8 @@ public interface LoggingOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticsearch.LoggingOptions,
-  ) : CdkObject(cdkObject), LoggingOptions {
+  ) : CdkObject(cdkObject),
+      LoggingOptions {
     /**
      * (deprecated) Specify if Elasticsearch application logging should be set up.
      *

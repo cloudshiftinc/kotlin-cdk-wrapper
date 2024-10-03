@@ -247,7 +247,8 @@ public interface CfnLocationFSxOpenZFSProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFSProps,
-  ) : CdkObject(cdkObject), CfnLocationFSxOpenZFSProps {
+  ) : CdkObject(cdkObject),
+      CfnLocationFSxOpenZFSProps {
     /**
      * The Amazon Resource Name (ARN) of the FSx for OpenZFS file system.
      *

@@ -198,7 +198,8 @@ public interface RetryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.RetryProps,
-  ) : CdkObject(cdkObject), RetryProps {
+  ) : CdkObject(cdkObject),
+      RetryProps {
     /**
      * Multiplication for how much longer the wait interval gets on every retry.
      *

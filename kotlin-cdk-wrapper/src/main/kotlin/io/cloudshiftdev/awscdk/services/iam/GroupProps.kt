@@ -160,7 +160,8 @@ public interface GroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.GroupProps,
-  ) : CdkObject(cdkObject), GroupProps {
+  ) : CdkObject(cdkObject),
+      GroupProps {
     /**
      * A name for the IAM group.
      *

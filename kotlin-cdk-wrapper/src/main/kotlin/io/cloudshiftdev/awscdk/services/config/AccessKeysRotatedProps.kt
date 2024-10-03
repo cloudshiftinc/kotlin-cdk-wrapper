@@ -21,11 +21,13 @@ import kotlin.collections.Map
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.config.*;
+ * EvaluationMode evaluationMode;
  * Object inputParameters;
  * RuleScope ruleScope;
  * AccessKeysRotatedProps accessKeysRotatedProps = AccessKeysRotatedProps.builder()
  * .configRuleName("configRuleName")
  * .description("description")
+ * .evaluationModes(evaluationMode)
  * .inputParameters(Map.of(
  * "inputParametersKey", inputParameters))
  * .maxAge(Duration.minutes(30))
@@ -56,6 +58,12 @@ public interface AccessKeysRotatedProps : RuleProps {
      * @param description A description about this AWS Config rule.
      */
     public fun description(description: String)
+
+    /**
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in.
+     * The valid values are distinct objects.
+     */
+    public fun evaluationModes(evaluationModes: EvaluationMode)
 
     /**
      * @param inputParameters Input parameter values that are passed to the AWS Config rule.
@@ -98,6 +106,14 @@ public interface AccessKeysRotatedProps : RuleProps {
     }
 
     /**
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in.
+     * The valid values are distinct objects.
+     */
+    override fun evaluationModes(evaluationModes: EvaluationMode) {
+      cdkBuilder.evaluationModes(evaluationModes.let(EvaluationMode.Companion::unwrap))
+    }
+
+    /**
      * @param inputParameters Input parameter values that are passed to the AWS Config rule.
      */
     override fun inputParameters(inputParameters: Map<String, Any>) {
@@ -132,7 +148,8 @@ public interface AccessKeysRotatedProps : RuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.config.AccessKeysRotatedProps,
-  ) : CdkObject(cdkObject), AccessKeysRotatedProps {
+  ) : CdkObject(cdkObject),
+      AccessKeysRotatedProps {
     /**
      * A name for the AWS Config rule.
      *
@@ -146,6 +163,16 @@ public interface AccessKeysRotatedProps : RuleProps {
      * Default: - No description
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects.
+     *
+     * Default: - Detective evaluation mode only
+     */
+    override fun evaluationModes(): EvaluationMode? =
+        unwrap(this).getEvaluationModes()?.let(EvaluationMode::wrap)
 
     /**
      * Input parameter values that are passed to the AWS Config rule.

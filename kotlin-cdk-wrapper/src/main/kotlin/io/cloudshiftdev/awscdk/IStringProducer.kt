@@ -19,7 +19,8 @@ public interface IStringProducer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IStringProducer,
-  ) : CdkObject(cdkObject), IStringProducer {
+  ) : CdkObject(cdkObject),
+      IStringProducer {
     /**
      * Produce the string value.
      *

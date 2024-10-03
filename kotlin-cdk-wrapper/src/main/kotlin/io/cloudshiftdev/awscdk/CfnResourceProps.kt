@@ -80,7 +80,8 @@ public interface CfnResourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnResourceProps,
-  ) : CdkObject(cdkObject), CfnResourceProps {
+  ) : CdkObject(cdkObject),
+      CfnResourceProps {
     /**
      * Resource properties.
      *

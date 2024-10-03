@@ -42,7 +42,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnServiceAction(
   cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceAction,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -399,7 +400,8 @@ public open class CfnServiceAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceAction.DefinitionParameterProperty,
-    ) : CdkObject(cdkObject), DefinitionParameterProperty {
+    ) : CdkObject(cdkObject),
+        DefinitionParameterProperty {
       /**
        * The parameter key.
        *

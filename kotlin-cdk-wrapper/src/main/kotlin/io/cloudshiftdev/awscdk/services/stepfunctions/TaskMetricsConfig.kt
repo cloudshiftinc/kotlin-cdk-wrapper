@@ -102,7 +102,8 @@ public interface TaskMetricsConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.TaskMetricsConfig,
-  ) : CdkObject(cdkObject), TaskMetricsConfig {
+  ) : CdkObject(cdkObject),
+      TaskMetricsConfig {
     /**
      * The dimensions to attach to metrics.
      *

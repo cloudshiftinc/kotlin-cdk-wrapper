@@ -242,7 +242,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTopic(
   cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.quicksight.CfnTopic(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -628,7 +629,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.CellValueSynonymProperty,
-    ) : CdkObject(cdkObject), CellValueSynonymProperty {
+    ) : CdkObject(cdkObject),
+        CellValueSynonymProperty {
       /**
        * The cell value.
        *
@@ -726,7 +728,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.CollectiveConstantProperty,
-    ) : CdkObject(cdkObject), CollectiveConstantProperty {
+    ) : CdkObject(cdkObject),
+        CollectiveConstantProperty {
       /**
        * A list of values for the collective constant.
        *
@@ -870,7 +873,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.ComparativeOrderProperty,
-    ) : CdkObject(cdkObject), ComparativeOrderProperty {
+    ) : CdkObject(cdkObject),
+        ComparativeOrderProperty {
       /**
        * The list of columns to be used in the ordering.
        *
@@ -993,7 +997,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DataAggregationProperty,
-    ) : CdkObject(cdkObject), DataAggregationProperty {
+    ) : CdkObject(cdkObject),
+        DataAggregationProperty {
       /**
        * The level of time precision that is used to aggregate `DateTime` values.
        *
@@ -1529,7 +1534,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DatasetMetadataProperty,
-    ) : CdkObject(cdkObject), DatasetMetadataProperty {
+    ) : CdkObject(cdkObject),
+        DatasetMetadataProperty {
       /**
        * The list of calculated field definitions.
        *
@@ -1731,7 +1737,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DefaultFormattingProperty,
-    ) : CdkObject(cdkObject), DefaultFormattingProperty {
+    ) : CdkObject(cdkObject),
+        DefaultFormattingProperty {
       /**
        * The display format.
        *
@@ -2110,7 +2117,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DisplayFormatOptionsProperty,
-    ) : CdkObject(cdkObject), DisplayFormatOptionsProperty {
+    ) : CdkObject(cdkObject),
+        DisplayFormatOptionsProperty {
       /**
        * Determines the blank cell format.
        *
@@ -2324,7 +2332,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.NamedEntityDefinitionMetricProperty,
-    ) : CdkObject(cdkObject), NamedEntityDefinitionMetricProperty {
+    ) : CdkObject(cdkObject),
+        NamedEntityDefinitionMetricProperty {
       /**
        * The aggregation of a named entity.
        *
@@ -2539,7 +2548,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.NamedEntityDefinitionProperty,
-    ) : CdkObject(cdkObject), NamedEntityDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        NamedEntityDefinitionProperty {
       /**
        * The name of the entity.
        *
@@ -2671,7 +2681,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.NegativeFormatProperty,
-    ) : CdkObject(cdkObject), NegativeFormatProperty {
+    ) : CdkObject(cdkObject),
+        NegativeFormatProperty {
       /**
        * The prefix for a negative format.
        *
@@ -2778,7 +2789,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.RangeConstantProperty,
-    ) : CdkObject(cdkObject), RangeConstantProperty {
+    ) : CdkObject(cdkObject),
+        RangeConstantProperty {
       /**
        * The maximum value for a range constant.
        *
@@ -2919,7 +2931,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.SemanticEntityTypeProperty,
-    ) : CdkObject(cdkObject), SemanticEntityTypeProperty {
+    ) : CdkObject(cdkObject),
+        SemanticEntityTypeProperty {
       /**
        * The semantic entity sub type name.
        *
@@ -3170,7 +3183,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.SemanticTypeProperty,
-    ) : CdkObject(cdkObject), SemanticTypeProperty {
+    ) : CdkObject(cdkObject),
+        SemanticTypeProperty {
       /**
        * The semantic type falsey cell value.
        *
@@ -3386,6 +3400,8 @@ public open class CfnTopic(
     public fun defaultFormatting(): Any? = unwrap(this).getDefaultFormatting()
 
     /**
+     * A Boolean value that indicates if a calculated field is visible in the autocomplete.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccalculatedfield.html#cfn-quicksight-topic-topiccalculatedfield-disableindexing)
      */
     public fun disableIndexing(): Any? = unwrap(this).getDisableIndexing()
@@ -3556,12 +3572,14 @@ public open class CfnTopic(
       public fun defaultFormatting(defaultFormatting: DefaultFormattingProperty.Builder.() -> Unit)
 
       /**
-       * @param disableIndexing the value to be set.
+       * @param disableIndexing A Boolean value that indicates if a calculated field is visible in
+       * the autocomplete.
        */
       public fun disableIndexing(disableIndexing: Boolean)
 
       /**
-       * @param disableIndexing the value to be set.
+       * @param disableIndexing A Boolean value that indicates if a calculated field is visible in
+       * the autocomplete.
        */
       public fun disableIndexing(disableIndexing: IResolvable)
 
@@ -3781,14 +3799,16 @@ public open class CfnTopic(
           Unit = defaultFormatting(DefaultFormattingProperty(defaultFormatting))
 
       /**
-       * @param disableIndexing the value to be set.
+       * @param disableIndexing A Boolean value that indicates if a calculated field is visible in
+       * the autocomplete.
        */
       override fun disableIndexing(disableIndexing: Boolean) {
         cdkBuilder.disableIndexing(disableIndexing)
       }
 
       /**
-       * @param disableIndexing the value to be set.
+       * @param disableIndexing A Boolean value that indicates if a calculated field is visible in
+       * the autocomplete.
        */
       override fun disableIndexing(disableIndexing: IResolvable) {
         cdkBuilder.disableIndexing(disableIndexing.let(IResolvable.Companion::unwrap))
@@ -3903,7 +3923,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicCalculatedFieldProperty,
-    ) : CdkObject(cdkObject), TopicCalculatedFieldProperty {
+    ) : CdkObject(cdkObject),
+        TopicCalculatedFieldProperty {
       /**
        * The default aggregation.
        *
@@ -3980,6 +4001,8 @@ public open class CfnTopic(
       override fun defaultFormatting(): Any? = unwrap(this).getDefaultFormatting()
 
       /**
+       * A Boolean value that indicates if a calculated field is visible in the autocomplete.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccalculatedfield.html#cfn-quicksight-topic-topiccalculatedfield-disableindexing)
        */
       override fun disableIndexing(): Any? = unwrap(this).getDisableIndexing()
@@ -4208,7 +4231,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicCategoryFilterConstantProperty,
-    ) : CdkObject(cdkObject), TopicCategoryFilterConstantProperty {
+    ) : CdkObject(cdkObject),
+        TopicCategoryFilterConstantProperty {
       /**
        * A collective constant used in a category filter.
        *
@@ -4429,7 +4453,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicCategoryFilterProperty,
-    ) : CdkObject(cdkObject), TopicCategoryFilterProperty {
+    ) : CdkObject(cdkObject),
+        TopicCategoryFilterProperty {
       /**
        * The category filter function.
        *
@@ -4630,6 +4655,8 @@ public open class CfnTopic(
     public fun defaultFormatting(): Any? = unwrap(this).getDefaultFormatting()
 
     /**
+     * A Boolean value that indicates whether the column shows in the autocomplete functionality.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccolumn.html#cfn-quicksight-topic-topiccolumn-disableindexing)
      */
     public fun disableIndexing(): Any? = unwrap(this).getDisableIndexing()
@@ -4796,12 +4823,14 @@ public open class CfnTopic(
       public fun defaultFormatting(defaultFormatting: DefaultFormattingProperty.Builder.() -> Unit)
 
       /**
-       * @param disableIndexing the value to be set.
+       * @param disableIndexing A Boolean value that indicates whether the column shows in the
+       * autocomplete functionality.
        */
       public fun disableIndexing(disableIndexing: Boolean)
 
       /**
-       * @param disableIndexing the value to be set.
+       * @param disableIndexing A Boolean value that indicates whether the column shows in the
+       * autocomplete functionality.
        */
       public fun disableIndexing(disableIndexing: IResolvable)
 
@@ -5020,14 +5049,16 @@ public open class CfnTopic(
           Unit = defaultFormatting(DefaultFormattingProperty(defaultFormatting))
 
       /**
-       * @param disableIndexing the value to be set.
+       * @param disableIndexing A Boolean value that indicates whether the column shows in the
+       * autocomplete functionality.
        */
       override fun disableIndexing(disableIndexing: Boolean) {
         cdkBuilder.disableIndexing(disableIndexing)
       }
 
       /**
-       * @param disableIndexing the value to be set.
+       * @param disableIndexing A Boolean value that indicates whether the column shows in the
+       * autocomplete functionality.
        */
       override fun disableIndexing(disableIndexing: IResolvable) {
         cdkBuilder.disableIndexing(disableIndexing.let(IResolvable.Companion::unwrap))
@@ -5134,7 +5165,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicColumnProperty,
-    ) : CdkObject(cdkObject), TopicColumnProperty {
+    ) : CdkObject(cdkObject),
+        TopicColumnProperty {
       /**
        * The type of aggregation that is performed on the column data when it's queried.
        *
@@ -5213,6 +5245,8 @@ public open class CfnTopic(
       override fun defaultFormatting(): Any? = unwrap(this).getDefaultFormatting()
 
       /**
+       * A Boolean value that indicates whether the column shows in the autocomplete functionality.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccolumn.html#cfn-quicksight-topic-topiccolumn-disableindexing)
        */
       override fun disableIndexing(): Any? = unwrap(this).getDisableIndexing()
@@ -5427,7 +5461,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicDateRangeFilterProperty,
-    ) : CdkObject(cdkObject), TopicDateRangeFilterProperty {
+    ) : CdkObject(cdkObject),
+        TopicDateRangeFilterProperty {
       /**
        * The constant used in a date range filter.
        *
@@ -5932,7 +5967,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicFilterProperty,
-    ) : CdkObject(cdkObject), TopicFilterProperty {
+    ) : CdkObject(cdkObject),
+        TopicFilterProperty {
       /**
        * The category filter that is associated with this filter.
        *
@@ -6247,7 +6283,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicNamedEntityProperty,
-    ) : CdkObject(cdkObject), TopicNamedEntityProperty {
+    ) : CdkObject(cdkObject),
+        TopicNamedEntityProperty {
       /**
        * The definition of a named entity.
        *
@@ -6420,7 +6457,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicNumericEqualityFilterProperty,
-    ) : CdkObject(cdkObject), TopicNumericEqualityFilterProperty {
+    ) : CdkObject(cdkObject),
+        TopicNumericEqualityFilterProperty {
       /**
        * An aggregation function that specifies how to calculate the value of a numeric field for a
        * topic.
@@ -6633,7 +6671,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicNumericRangeFilterProperty,
-    ) : CdkObject(cdkObject), TopicNumericRangeFilterProperty {
+    ) : CdkObject(cdkObject),
+        TopicNumericRangeFilterProperty {
       /**
        * An aggregation function that specifies how to calculate the value of a numeric field for a
        * topic, Valid values for this structure are `NO_AGGREGATION` , `SUM` , `AVERAGE` , `COUNT` ,
@@ -6799,7 +6838,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicRangeFilterConstantProperty,
-    ) : CdkObject(cdkObject), TopicRangeFilterConstantProperty {
+    ) : CdkObject(cdkObject),
+        TopicRangeFilterConstantProperty {
       /**
        * The data type of the constant value that is used in a range filter.
        *
@@ -6970,7 +7010,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicRelativeDateFilterProperty,
-    ) : CdkObject(cdkObject), TopicRelativeDateFilterProperty {
+    ) : CdkObject(cdkObject),
+        TopicRelativeDateFilterProperty {
       /**
        * The constant used in a relative date filter.
        *
@@ -7096,7 +7137,8 @@ public open class CfnTopic(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicSingularFilterConstantProperty,
-    ) : CdkObject(cdkObject), TopicSingularFilterConstantProperty {
+    ) : CdkObject(cdkObject),
+        TopicSingularFilterConstantProperty {
       /**
        * The type of the singular filter constant.
        *

@@ -480,7 +480,8 @@ public interface ExternalServiceProps : BaseServiceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ExternalServiceProps,
-  ) : CdkObject(cdkObject), ExternalServiceProps {
+  ) : CdkObject(cdkObject),
+      ExternalServiceProps {
     /**
      * A list of Capacity Provider strategies used to place a service.
      *

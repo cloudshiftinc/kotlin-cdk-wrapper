@@ -37,6 +37,17 @@ import kotlin.jvm.JvmName
  * .framework("framework")
  * .frameworkVersion("frameworkVersion")
  * .imageDigest("imageDigest")
+ * .modelDataSource(ModelDataSourceProperty.builder()
+ * .s3DataSource(S3ModelDataSourceProperty.builder()
+ * .compressionType("compressionType")
+ * .s3DataType("s3DataType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .modelAccessConfig(ModelAccessConfigProperty.builder()
+ * .acceptEula(false)
+ * .build())
+ * .build())
+ * .build())
  * .modelDataUrl("modelDataUrl")
  * .modelInput(modelInput)
  * .nearestModelName("nearestModelName")
@@ -59,6 +70,17 @@ import kotlin.jvm.JvmName
  * .framework("framework")
  * .frameworkVersion("frameworkVersion")
  * .imageDigest("imageDigest")
+ * .modelDataSource(ModelDataSourceProperty.builder()
+ * .s3DataSource(S3ModelDataSourceProperty.builder()
+ * .compressionType("compressionType")
+ * .s3DataType("s3DataType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .modelAccessConfig(ModelAccessConfigProperty.builder()
+ * .acceptEula(false)
+ * .build())
+ * .build())
+ * .build())
  * .modelDataUrl("modelDataUrl")
  * .modelInput(modelInput)
  * .nearestModelName("nearestModelName")
@@ -151,6 +173,17 @@ import kotlin.jvm.JvmName
  * .framework("framework")
  * .frameworkVersion("frameworkVersion")
  * .imageDigest("imageDigest")
+ * .modelDataSource(ModelDataSourceProperty.builder()
+ * .s3DataSource(S3ModelDataSourceProperty.builder()
+ * .compressionType("compressionType")
+ * .s3DataType("s3DataType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .modelAccessConfig(ModelAccessConfigProperty.builder()
+ * .acceptEula(false)
+ * .build())
+ * .build())
+ * .build())
  * .modelDataUrl("modelDataUrl")
  * .modelInput(modelInput)
  * .nearestModelName("nearestModelName")
@@ -169,6 +202,10 @@ import kotlin.jvm.JvmName
  * .repository("repository")
  * .build())
  * .modelApprovalStatus("modelApprovalStatus")
+ * .modelCard(ModelCardProperty.builder()
+ * .modelCardContent("modelCardContent")
+ * .modelCardStatus("modelCardStatus")
+ * .build())
  * .modelMetrics(ModelMetricsProperty.builder()
  * .bias(BiasProperty.builder()
  * .postTrainingReport(MetricsSourceProperty.builder()
@@ -240,6 +277,9 @@ import kotlin.jvm.JvmName
  * .build())
  * .modelPackageVersion(123)
  * .samplePayloadUrl("samplePayloadUrl")
+ * .securityConfig(SecurityConfigProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .build())
  * .skipModelValidation("skipModelValidation")
  * .sourceAlgorithmSpecification(SourceAlgorithmSpecificationProperty.builder()
  * .sourceAlgorithms(List.of(SourceAlgorithmProperty.builder()
@@ -248,6 +288,7 @@ import kotlin.jvm.JvmName
  * .modelDataUrl("modelDataUrl")
  * .build()))
  * .build())
+ * .sourceUri("sourceUri")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -400,6 +441,13 @@ public interface CfnModelPackageProps {
   public fun modelApprovalStatus(): String? = unwrap(this).getModelApprovalStatus()
 
   /**
+   * An Amazon SageMaker Model Card.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelcard)
+   */
+  public fun modelCard(): Any? = unwrap(this).getModelCard()
+
+  /**
    * Metrics for the model.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelmetrics)
@@ -451,6 +499,14 @@ public interface CfnModelPackageProps {
   public fun samplePayloadUrl(): String? = unwrap(this).getSamplePayloadUrl()
 
   /**
+   * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+   * information for regulated workloads with highly sensitive data.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-securityconfig)
+   */
+  public fun securityConfig(): Any? = unwrap(this).getSecurityConfig()
+
+  /**
    * Indicates if you want to skip model validation.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-skipmodelvalidation)
@@ -463,6 +519,13 @@ public interface CfnModelPackageProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-sourcealgorithmspecification)
    */
   public fun sourceAlgorithmSpecification(): Any? = unwrap(this).getSourceAlgorithmSpecification()
+
+  /**
+   * The URI of the source for the model package.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-sourceuri)
+   */
+  public fun sourceUri(): String? = unwrap(this).getSourceUri()
 
   /**
    * A list of the tags associated with the model package.
@@ -670,6 +733,23 @@ public interface CfnModelPackageProps {
     public fun modelApprovalStatus(modelApprovalStatus: String)
 
     /**
+     * @param modelCard An Amazon SageMaker Model Card.
+     */
+    public fun modelCard(modelCard: IResolvable)
+
+    /**
+     * @param modelCard An Amazon SageMaker Model Card.
+     */
+    public fun modelCard(modelCard: CfnModelPackage.ModelCardProperty)
+
+    /**
+     * @param modelCard An Amazon SageMaker Model Card.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("505ebb09f9815b2b7f5d82125c19031a0a8db90fc6527cbae3670eb1056f0122")
+    public fun modelCard(modelCard: CfnModelPackage.ModelCardProperty.Builder.() -> Unit)
+
+    /**
      * @param modelMetrics Metrics for the model.
      */
     public fun modelMetrics(modelMetrics: IResolvable)
@@ -736,6 +816,27 @@ public interface CfnModelPackageProps {
     public fun samplePayloadUrl(samplePayloadUrl: String)
 
     /**
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data.
+     */
+    public fun securityConfig(securityConfig: IResolvable)
+
+    /**
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data.
+     */
+    public fun securityConfig(securityConfig: CfnModelPackage.SecurityConfigProperty)
+
+    /**
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("66ceee6ee26789e2fde6a8f81ce8aaf85f2698a1c87eaecc21310e82ab765b6a")
+    public
+        fun securityConfig(securityConfig: CfnModelPackage.SecurityConfigProperty.Builder.() -> Unit)
+
+    /**
      * @param skipModelValidation Indicates if you want to skip model validation.
      */
     public fun skipModelValidation(skipModelValidation: String)
@@ -761,6 +862,11 @@ public interface CfnModelPackageProps {
     @JvmName("af168644b5d0c74cbc5930d32f3bc5be29d8d5eb83a53c19deb06e95c5892a97")
     public
         fun sourceAlgorithmSpecification(sourceAlgorithmSpecification: CfnModelPackage.SourceAlgorithmSpecificationProperty.Builder.() -> Unit)
+
+    /**
+     * @param sourceUri The URI of the source for the model package.
+     */
+    public fun sourceUri(sourceUri: String)
 
     /**
      * @param tags A list of the tags associated with the model package.
@@ -1031,6 +1137,28 @@ public interface CfnModelPackageProps {
     }
 
     /**
+     * @param modelCard An Amazon SageMaker Model Card.
+     */
+    override fun modelCard(modelCard: IResolvable) {
+      cdkBuilder.modelCard(modelCard.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param modelCard An Amazon SageMaker Model Card.
+     */
+    override fun modelCard(modelCard: CfnModelPackage.ModelCardProperty) {
+      cdkBuilder.modelCard(modelCard.let(CfnModelPackage.ModelCardProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param modelCard An Amazon SageMaker Model Card.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("505ebb09f9815b2b7f5d82125c19031a0a8db90fc6527cbae3670eb1056f0122")
+    override fun modelCard(modelCard: CfnModelPackage.ModelCardProperty.Builder.() -> Unit): Unit =
+        modelCard(CfnModelPackage.ModelCardProperty(modelCard))
+
+    /**
      * @param modelMetrics Metrics for the model.
      */
     override fun modelMetrics(modelMetrics: IResolvable) {
@@ -1119,6 +1247,32 @@ public interface CfnModelPackageProps {
     }
 
     /**
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data.
+     */
+    override fun securityConfig(securityConfig: IResolvable) {
+      cdkBuilder.securityConfig(securityConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data.
+     */
+    override fun securityConfig(securityConfig: CfnModelPackage.SecurityConfigProperty) {
+      cdkBuilder.securityConfig(securityConfig.let(CfnModelPackage.SecurityConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("66ceee6ee26789e2fde6a8f81ce8aaf85f2698a1c87eaecc21310e82ab765b6a")
+    override
+        fun securityConfig(securityConfig: CfnModelPackage.SecurityConfigProperty.Builder.() -> Unit):
+        Unit = securityConfig(CfnModelPackage.SecurityConfigProperty(securityConfig))
+
+    /**
      * @param skipModelValidation Indicates if you want to skip model validation.
      */
     override fun skipModelValidation(skipModelValidation: String) {
@@ -1152,6 +1306,13 @@ public interface CfnModelPackageProps {
         fun sourceAlgorithmSpecification(sourceAlgorithmSpecification: CfnModelPackage.SourceAlgorithmSpecificationProperty.Builder.() -> Unit):
         Unit =
         sourceAlgorithmSpecification(CfnModelPackage.SourceAlgorithmSpecificationProperty(sourceAlgorithmSpecification))
+
+    /**
+     * @param sourceUri The URI of the source for the model package.
+     */
+    override fun sourceUri(sourceUri: String) {
+      cdkBuilder.sourceUri(sourceUri)
+    }
 
     /**
      * @param tags A list of the tags associated with the model package.
@@ -1213,7 +1374,8 @@ public interface CfnModelPackageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackageProps,
-  ) : CdkObject(cdkObject), CfnModelPackageProps {
+  ) : CdkObject(cdkObject),
+      CfnModelPackageProps {
     /**
      * An array of additional Inference Specification objects.
      *
@@ -1317,6 +1479,13 @@ public interface CfnModelPackageProps {
     override fun modelApprovalStatus(): String? = unwrap(this).getModelApprovalStatus()
 
     /**
+     * An Amazon SageMaker Model Card.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelcard)
+     */
+    override fun modelCard(): Any? = unwrap(this).getModelCard()
+
+    /**
      * Metrics for the model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelmetrics)
@@ -1368,6 +1537,14 @@ public interface CfnModelPackageProps {
     override fun samplePayloadUrl(): String? = unwrap(this).getSamplePayloadUrl()
 
     /**
+     * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+     * information for regulated workloads with highly sensitive data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-securityconfig)
+     */
+    override fun securityConfig(): Any? = unwrap(this).getSecurityConfig()
+
+    /**
      * Indicates if you want to skip model validation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-skipmodelvalidation)
@@ -1381,6 +1558,13 @@ public interface CfnModelPackageProps {
      */
     override fun sourceAlgorithmSpecification(): Any? =
         unwrap(this).getSourceAlgorithmSpecification()
+
+    /**
+     * The URI of the source for the model package.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-sourceuri)
+     */
+    override fun sourceUri(): String? = unwrap(this).getSourceUri()
 
     /**
      * A list of the tags associated with the model package.

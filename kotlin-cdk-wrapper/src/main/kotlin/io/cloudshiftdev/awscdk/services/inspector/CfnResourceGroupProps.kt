@@ -116,7 +116,8 @@ public interface CfnResourceGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.inspector.CfnResourceGroupProps,
-  ) : CdkObject(cdkObject), CfnResourceGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnResourceGroupProps {
     /**
      * The tags (key and value pairs) that will be associated with the resource group.
      *

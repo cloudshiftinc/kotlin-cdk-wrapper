@@ -22,8 +22,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html)
  * .
  *
+ * When you remove a `SecretTargetAttachment` from a stack, Secrets Manager removes the database
+ * connection information from the secret with a `PutSecretValue` call.
+ *
  * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
  * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+ * .
+ *
+ * For Amazon Redshift admin user credentials, see
+ * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
  * .
  *
  * Example:
@@ -44,7 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSecretTargetAttachment(
   cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -146,8 +154,10 @@ public open class CfnSecretTargetAttachment(
      * * AWS::RDS::DBInstance
      * * AWS::RDS::DBCluster
      * * AWS::Redshift::Cluster
+     * * AWS::RedshiftServerless::Namespace
      * * AWS::DocDB::DBInstance
      * * AWS::DocDB::DBCluster
+     * * AWS::DocDBElastic::Cluster
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-targettype)
      * @param targetType A string that defines the type of service or database associated with the
@@ -198,8 +208,10 @@ public open class CfnSecretTargetAttachment(
      * * AWS::RDS::DBInstance
      * * AWS::RDS::DBCluster
      * * AWS::Redshift::Cluster
+     * * AWS::RedshiftServerless::Namespace
      * * AWS::DocDB::DBInstance
      * * AWS::DocDB::DBCluster
+     * * AWS::DocDBElastic::Cluster
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-targettype)
      * @param targetType A string that defines the type of service or database associated with the

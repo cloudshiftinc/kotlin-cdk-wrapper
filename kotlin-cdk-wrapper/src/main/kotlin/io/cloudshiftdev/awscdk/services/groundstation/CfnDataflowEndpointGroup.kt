@@ -90,7 +90,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataflowEndpointGroup(
   cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -396,6 +398,8 @@ public open class CfnDataflowEndpointGroup(
   }
 
   /**
+   * Information about AwsGroundStationAgentEndpoint.
+   *
    * Example:
    *
    * ```
@@ -431,26 +435,38 @@ public open class CfnDataflowEndpointGroup(
    */
   public interface AwsGroundStationAgentEndpointProperty {
     /**
+     * The status of AgentEndpoint.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-agentstatus)
      */
     public fun agentStatus(): String? = unwrap(this).getAgentStatus()
 
     /**
+     * The results of the audit.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-auditresults)
      */
     public fun auditResults(): String? = unwrap(this).getAuditResults()
 
     /**
+     * The egress address of AgentEndpoint.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-egressaddress)
      */
     public fun egressAddress(): Any? = unwrap(this).getEgressAddress()
 
     /**
+     * The ingress address of AgentEndpoint.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-ingressaddress)
      */
     public fun ingressAddress(): Any? = unwrap(this).getIngressAddress()
 
     /**
+     * Name string associated with AgentEndpoint.
+     *
+     * Used as a human-readable identifier for AgentEndpoint.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-name)
      */
     public fun name(): String? = unwrap(this).getName()
@@ -461,51 +477,52 @@ public open class CfnDataflowEndpointGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param agentStatus the value to be set.
+       * @param agentStatus The status of AgentEndpoint.
        */
       public fun agentStatus(agentStatus: String)
 
       /**
-       * @param auditResults the value to be set.
+       * @param auditResults The results of the audit.
        */
       public fun auditResults(auditResults: String)
 
       /**
-       * @param egressAddress the value to be set.
+       * @param egressAddress The egress address of AgentEndpoint.
        */
       public fun egressAddress(egressAddress: IResolvable)
 
       /**
-       * @param egressAddress the value to be set.
+       * @param egressAddress The egress address of AgentEndpoint.
        */
       public fun egressAddress(egressAddress: ConnectionDetailsProperty)
 
       /**
-       * @param egressAddress the value to be set.
+       * @param egressAddress The egress address of AgentEndpoint.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("336c132b0d25f767d1059a3ea84a3fa7d3b066d284d3f891e76cf01c17b8e8b2")
       public fun egressAddress(egressAddress: ConnectionDetailsProperty.Builder.() -> Unit)
 
       /**
-       * @param ingressAddress the value to be set.
+       * @param ingressAddress The ingress address of AgentEndpoint.
        */
       public fun ingressAddress(ingressAddress: IResolvable)
 
       /**
-       * @param ingressAddress the value to be set.
+       * @param ingressAddress The ingress address of AgentEndpoint.
        */
       public fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty)
 
       /**
-       * @param ingressAddress the value to be set.
+       * @param ingressAddress The ingress address of AgentEndpoint.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3c53ea6ce13e333e8f4174ace094dcbce169eb410e806083728676510b763997")
       public fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty.Builder.() -> Unit)
 
       /**
-       * @param name the value to be set.
+       * @param name Name string associated with AgentEndpoint.
+       * Used as a human-readable identifier for AgentEndpoint.
        */
       public fun name(name: String)
     }
@@ -517,35 +534,35 @@ public open class CfnDataflowEndpointGroup(
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty.builder()
 
       /**
-       * @param agentStatus the value to be set.
+       * @param agentStatus The status of AgentEndpoint.
        */
       override fun agentStatus(agentStatus: String) {
         cdkBuilder.agentStatus(agentStatus)
       }
 
       /**
-       * @param auditResults the value to be set.
+       * @param auditResults The results of the audit.
        */
       override fun auditResults(auditResults: String) {
         cdkBuilder.auditResults(auditResults)
       }
 
       /**
-       * @param egressAddress the value to be set.
+       * @param egressAddress The egress address of AgentEndpoint.
        */
       override fun egressAddress(egressAddress: IResolvable) {
         cdkBuilder.egressAddress(egressAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param egressAddress the value to be set.
+       * @param egressAddress The egress address of AgentEndpoint.
        */
       override fun egressAddress(egressAddress: ConnectionDetailsProperty) {
         cdkBuilder.egressAddress(egressAddress.let(ConnectionDetailsProperty.Companion::unwrap))
       }
 
       /**
-       * @param egressAddress the value to be set.
+       * @param egressAddress The egress address of AgentEndpoint.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("336c132b0d25f767d1059a3ea84a3fa7d3b066d284d3f891e76cf01c17b8e8b2")
@@ -553,21 +570,21 @@ public open class CfnDataflowEndpointGroup(
           = egressAddress(ConnectionDetailsProperty(egressAddress))
 
       /**
-       * @param ingressAddress the value to be set.
+       * @param ingressAddress The ingress address of AgentEndpoint.
        */
       override fun ingressAddress(ingressAddress: IResolvable) {
         cdkBuilder.ingressAddress(ingressAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param ingressAddress the value to be set.
+       * @param ingressAddress The ingress address of AgentEndpoint.
        */
       override fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty) {
         cdkBuilder.ingressAddress(ingressAddress.let(RangedConnectionDetailsProperty.Companion::unwrap))
       }
 
       /**
-       * @param ingressAddress the value to be set.
+       * @param ingressAddress The ingress address of AgentEndpoint.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3c53ea6ce13e333e8f4174ace094dcbce169eb410e806083728676510b763997")
@@ -576,7 +593,8 @@ public open class CfnDataflowEndpointGroup(
           Unit = ingressAddress(RangedConnectionDetailsProperty(ingressAddress))
 
       /**
-       * @param name the value to be set.
+       * @param name Name string associated with AgentEndpoint.
+       * Used as a human-readable identifier for AgentEndpoint.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -589,28 +607,41 @@ public open class CfnDataflowEndpointGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty,
-    ) : CdkObject(cdkObject), AwsGroundStationAgentEndpointProperty {
+    ) : CdkObject(cdkObject),
+        AwsGroundStationAgentEndpointProperty {
       /**
+       * The status of AgentEndpoint.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-agentstatus)
        */
       override fun agentStatus(): String? = unwrap(this).getAgentStatus()
 
       /**
+       * The results of the audit.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-auditresults)
        */
       override fun auditResults(): String? = unwrap(this).getAuditResults()
 
       /**
+       * The egress address of AgentEndpoint.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-egressaddress)
        */
       override fun egressAddress(): Any? = unwrap(this).getEgressAddress()
 
       /**
+       * The ingress address of AgentEndpoint.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-ingressaddress)
        */
       override fun ingressAddress(): Any? = unwrap(this).getIngressAddress()
 
       /**
+       * Name string associated with AgentEndpoint.
+       *
+       * Used as a human-readable identifier for AgentEndpoint.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html#cfn-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint-name)
        */
       override fun name(): String? = unwrap(this).getName()
@@ -636,6 +667,8 @@ public open class CfnDataflowEndpointGroup(
   }
 
   /**
+   * Egress address of AgentEndpoint with an optional mtu.
+   *
    * Example:
    *
    * ```
@@ -655,11 +688,15 @@ public open class CfnDataflowEndpointGroup(
    */
   public interface ConnectionDetailsProperty {
     /**
+     * Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-mtu)
      */
     public fun mtu(): Number? = unwrap(this).getMtu()
 
     /**
+     * A socket address.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-socketaddress)
      */
     public fun socketAddress(): Any? = unwrap(this).getSocketAddress()
@@ -670,22 +707,22 @@ public open class CfnDataflowEndpointGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param mtu the value to be set.
+       * @param mtu Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
        */
       public fun mtu(mtu: Number)
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A socket address.
        */
       public fun socketAddress(socketAddress: IResolvable)
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A socket address.
        */
       public fun socketAddress(socketAddress: SocketAddressProperty)
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A socket address.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("81ed04a1adb8c8052f056c410ed46e12541ca7ba459450fe5089a62403e919be")
@@ -699,28 +736,28 @@ public open class CfnDataflowEndpointGroup(
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty.builder()
 
       /**
-       * @param mtu the value to be set.
+       * @param mtu Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
        */
       override fun mtu(mtu: Number) {
         cdkBuilder.mtu(mtu)
       }
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A socket address.
        */
       override fun socketAddress(socketAddress: IResolvable) {
         cdkBuilder.socketAddress(socketAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A socket address.
        */
       override fun socketAddress(socketAddress: SocketAddressProperty) {
         cdkBuilder.socketAddress(socketAddress.let(SocketAddressProperty.Companion::unwrap))
       }
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A socket address.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("81ed04a1adb8c8052f056c410ed46e12541ca7ba459450fe5089a62403e919be")
@@ -734,13 +771,18 @@ public open class CfnDataflowEndpointGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty,
-    ) : CdkObject(cdkObject), ConnectionDetailsProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionDetailsProperty {
       /**
+       * Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-mtu)
        */
       override fun mtu(): Number? = unwrap(this).getMtu()
 
       /**
+       * A socket address.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-connectiondetails.html#cfn-groundstation-dataflowendpointgroup-connectiondetails-socketaddress)
        */
       override fun socketAddress(): Any? = unwrap(this).getSocketAddress()
@@ -794,6 +836,10 @@ public open class CfnDataflowEndpointGroup(
     public fun address(): Any? = unwrap(this).getAddress()
 
     /**
+     * Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
+     *
+     * Valid values are between 1400 and 1500. A default value of 1500 is used if not set.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-mtu)
      */
     public fun mtu(): Number? = unwrap(this).getMtu()
@@ -833,7 +879,8 @@ public open class CfnDataflowEndpointGroup(
       public fun address(address: SocketAddressProperty.Builder.() -> Unit)
 
       /**
-       * @param mtu the value to be set.
+       * @param mtu Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
+       * Valid values are between 1400 and 1500. A default value of 1500 is used if not set.
        */
       public fun mtu(mtu: Number)
 
@@ -876,7 +923,8 @@ public open class CfnDataflowEndpointGroup(
           address(SocketAddressProperty(address))
 
       /**
-       * @param mtu the value to be set.
+       * @param mtu Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
+       * Valid values are between 1400 and 1500. A default value of 1500 is used if not set.
        */
       override fun mtu(mtu: Number) {
         cdkBuilder.mtu(mtu)
@@ -900,7 +948,8 @@ public open class CfnDataflowEndpointGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty,
-    ) : CdkObject(cdkObject), DataflowEndpointProperty {
+    ) : CdkObject(cdkObject),
+        DataflowEndpointProperty {
       /**
        * The address and port of an endpoint.
        *
@@ -909,6 +958,10 @@ public open class CfnDataflowEndpointGroup(
       override fun address(): Any? = unwrap(this).getAddress()
 
       /**
+       * Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
+       *
+       * Valid values are between 1400 and 1500. A default value of 1500 is used if not set.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-mtu)
        */
       override fun mtu(): Number? = unwrap(this).getMtu()
@@ -996,6 +1049,8 @@ public open class CfnDataflowEndpointGroup(
    */
   public interface EndpointDetailsProperty {
     /**
+     * An agent endpoint.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html#cfn-groundstation-dataflowendpointgroup-endpointdetails-awsgroundstationagentendpoint)
      */
     public fun awsGroundStationAgentEndpoint(): Any? =
@@ -1021,18 +1076,18 @@ public open class CfnDataflowEndpointGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param awsGroundStationAgentEndpoint the value to be set.
+       * @param awsGroundStationAgentEndpoint An agent endpoint.
        */
       public fun awsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint: IResolvable)
 
       /**
-       * @param awsGroundStationAgentEndpoint the value to be set.
+       * @param awsGroundStationAgentEndpoint An agent endpoint.
        */
       public
           fun awsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint: AwsGroundStationAgentEndpointProperty)
 
       /**
-       * @param awsGroundStationAgentEndpoint the value to be set.
+       * @param awsGroundStationAgentEndpoint An agent endpoint.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("edf47fab2f161f83d66b318160a181035ca11528d076564dc62e03d0642fe3c7")
@@ -1081,14 +1136,14 @@ public open class CfnDataflowEndpointGroup(
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.EndpointDetailsProperty.builder()
 
       /**
-       * @param awsGroundStationAgentEndpoint the value to be set.
+       * @param awsGroundStationAgentEndpoint An agent endpoint.
        */
       override fun awsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint: IResolvable) {
         cdkBuilder.awsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param awsGroundStationAgentEndpoint the value to be set.
+       * @param awsGroundStationAgentEndpoint An agent endpoint.
        */
       override
           fun awsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint: AwsGroundStationAgentEndpointProperty) {
@@ -1096,7 +1151,7 @@ public open class CfnDataflowEndpointGroup(
       }
 
       /**
-       * @param awsGroundStationAgentEndpoint the value to be set.
+       * @param awsGroundStationAgentEndpoint An agent endpoint.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("edf47fab2f161f83d66b318160a181035ca11528d076564dc62e03d0642fe3c7")
@@ -1156,8 +1211,11 @@ public open class CfnDataflowEndpointGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.EndpointDetailsProperty,
-    ) : CdkObject(cdkObject), EndpointDetailsProperty {
+    ) : CdkObject(cdkObject),
+        EndpointDetailsProperty {
       /**
+       * An agent endpoint.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html#cfn-groundstation-dataflowendpointgroup-endpointdetails-awsgroundstationagentendpoint)
        */
       override fun awsGroundStationAgentEndpoint(): Any? =
@@ -1197,6 +1255,8 @@ public open class CfnDataflowEndpointGroup(
   }
 
   /**
+   * An integer range that has a minimum and maximum value.
+   *
    * Example:
    *
    * ```
@@ -1213,11 +1273,15 @@ public open class CfnDataflowEndpointGroup(
    */
   public interface IntegerRangeProperty {
     /**
+     * A maximum value.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-maximum)
      */
     public fun maximum(): Number? = unwrap(this).getMaximum()
 
     /**
+     * A minimum value.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-minimum)
      */
     public fun minimum(): Number? = unwrap(this).getMinimum()
@@ -1228,12 +1292,12 @@ public open class CfnDataflowEndpointGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maximum the value to be set.
+       * @param maximum A maximum value.
        */
       public fun maximum(maximum: Number)
 
       /**
-       * @param minimum the value to be set.
+       * @param minimum A minimum value.
        */
       public fun minimum(minimum: Number)
     }
@@ -1245,14 +1309,14 @@ public open class CfnDataflowEndpointGroup(
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty.builder()
 
       /**
-       * @param maximum the value to be set.
+       * @param maximum A maximum value.
        */
       override fun maximum(maximum: Number) {
         cdkBuilder.maximum(maximum)
       }
 
       /**
-       * @param minimum the value to be set.
+       * @param minimum A minimum value.
        */
       override fun minimum(minimum: Number) {
         cdkBuilder.minimum(minimum)
@@ -1265,13 +1329,18 @@ public open class CfnDataflowEndpointGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty,
-    ) : CdkObject(cdkObject), IntegerRangeProperty {
+    ) : CdkObject(cdkObject),
+        IntegerRangeProperty {
       /**
+       * A maximum value.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-maximum)
        */
       override fun maximum(): Number? = unwrap(this).getMaximum()
 
       /**
+       * A minimum value.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html#cfn-groundstation-dataflowendpointgroup-integerrange-minimum)
        */
       override fun minimum(): Number? = unwrap(this).getMinimum()
@@ -1296,6 +1365,8 @@ public open class CfnDataflowEndpointGroup(
   }
 
   /**
+   * Ingress address of AgentEndpoint with a port range and an optional mtu.
+   *
    * Example:
    *
    * ```
@@ -1319,11 +1390,15 @@ public open class CfnDataflowEndpointGroup(
    */
   public interface RangedConnectionDetailsProperty {
     /**
+     * Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedconnectiondetails.html#cfn-groundstation-dataflowendpointgroup-rangedconnectiondetails-mtu)
      */
     public fun mtu(): Number? = unwrap(this).getMtu()
 
     /**
+     * A ranged socket address.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedconnectiondetails.html#cfn-groundstation-dataflowendpointgroup-rangedconnectiondetails-socketaddress)
      */
     public fun socketAddress(): Any? = unwrap(this).getSocketAddress()
@@ -1334,22 +1409,22 @@ public open class CfnDataflowEndpointGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param mtu the value to be set.
+       * @param mtu Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
        */
       public fun mtu(mtu: Number)
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A ranged socket address.
        */
       public fun socketAddress(socketAddress: IResolvable)
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A ranged socket address.
        */
       public fun socketAddress(socketAddress: RangedSocketAddressProperty)
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A ranged socket address.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3fac8a1455459461b9b6773852bcd890d1366152e576998fba98b1cdb23f6e8a")
@@ -1363,28 +1438,28 @@ public open class CfnDataflowEndpointGroup(
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedConnectionDetailsProperty.builder()
 
       /**
-       * @param mtu the value to be set.
+       * @param mtu Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
        */
       override fun mtu(mtu: Number) {
         cdkBuilder.mtu(mtu)
       }
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A ranged socket address.
        */
       override fun socketAddress(socketAddress: IResolvable) {
         cdkBuilder.socketAddress(socketAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A ranged socket address.
        */
       override fun socketAddress(socketAddress: RangedSocketAddressProperty) {
         cdkBuilder.socketAddress(socketAddress.let(RangedSocketAddressProperty.Companion::unwrap))
       }
 
       /**
-       * @param socketAddress the value to be set.
+       * @param socketAddress A ranged socket address.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3fac8a1455459461b9b6773852bcd890d1366152e576998fba98b1cdb23f6e8a")
@@ -1398,13 +1473,18 @@ public open class CfnDataflowEndpointGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedConnectionDetailsProperty,
-    ) : CdkObject(cdkObject), RangedConnectionDetailsProperty {
+    ) : CdkObject(cdkObject),
+        RangedConnectionDetailsProperty {
       /**
+       * Maximum transmission unit (MTU) size in bytes of a dataflow endpoint.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedconnectiondetails.html#cfn-groundstation-dataflowendpointgroup-rangedconnectiondetails-mtu)
        */
       override fun mtu(): Number? = unwrap(this).getMtu()
 
       /**
+       * A ranged socket address.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedconnectiondetails.html#cfn-groundstation-dataflowendpointgroup-rangedconnectiondetails-socketaddress)
        */
       override fun socketAddress(): Any? = unwrap(this).getSocketAddress()
@@ -1429,6 +1509,8 @@ public open class CfnDataflowEndpointGroup(
   }
 
   /**
+   * A socket address with a port range.
+   *
    * Example:
    *
    * ```
@@ -1448,11 +1530,15 @@ public open class CfnDataflowEndpointGroup(
    */
   public interface RangedSocketAddressProperty {
     /**
+     * IPv4 socket address.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedsocketaddress.html#cfn-groundstation-dataflowendpointgroup-rangedsocketaddress-name)
      */
     public fun name(): String? = unwrap(this).getName()
 
     /**
+     * Port range of a socket address.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedsocketaddress.html#cfn-groundstation-dataflowendpointgroup-rangedsocketaddress-portrange)
      */
     public fun portRange(): Any? = unwrap(this).getPortRange()
@@ -1463,22 +1549,22 @@ public open class CfnDataflowEndpointGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param name the value to be set.
+       * @param name IPv4 socket address.
        */
       public fun name(name: String)
 
       /**
-       * @param portRange the value to be set.
+       * @param portRange Port range of a socket address.
        */
       public fun portRange(portRange: IResolvable)
 
       /**
-       * @param portRange the value to be set.
+       * @param portRange Port range of a socket address.
        */
       public fun portRange(portRange: IntegerRangeProperty)
 
       /**
-       * @param portRange the value to be set.
+       * @param portRange Port range of a socket address.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cde4cf2cf5372804eb7a2b7a391279e90db97ba40d1079ce4579f149aee5dd89")
@@ -1492,28 +1578,28 @@ public open class CfnDataflowEndpointGroup(
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedSocketAddressProperty.builder()
 
       /**
-       * @param name the value to be set.
+       * @param name IPv4 socket address.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
       /**
-       * @param portRange the value to be set.
+       * @param portRange Port range of a socket address.
        */
       override fun portRange(portRange: IResolvable) {
         cdkBuilder.portRange(portRange.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param portRange the value to be set.
+       * @param portRange Port range of a socket address.
        */
       override fun portRange(portRange: IntegerRangeProperty) {
         cdkBuilder.portRange(portRange.let(IntegerRangeProperty.Companion::unwrap))
       }
 
       /**
-       * @param portRange the value to be set.
+       * @param portRange Port range of a socket address.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cde4cf2cf5372804eb7a2b7a391279e90db97ba40d1079ce4579f149aee5dd89")
@@ -1527,13 +1613,18 @@ public open class CfnDataflowEndpointGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedSocketAddressProperty,
-    ) : CdkObject(cdkObject), RangedSocketAddressProperty {
+    ) : CdkObject(cdkObject),
+        RangedSocketAddressProperty {
       /**
+       * IPv4 socket address.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedsocketaddress.html#cfn-groundstation-dataflowendpointgroup-rangedsocketaddress-name)
        */
       override fun name(): String? = unwrap(this).getName()
 
       /**
+       * Port range of a socket address.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedsocketaddress.html#cfn-groundstation-dataflowendpointgroup-rangedsocketaddress-portrange)
        */
       override fun portRange(): Any? = unwrap(this).getPortRange()
@@ -1691,7 +1782,8 @@ public open class CfnDataflowEndpointGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SecurityDetailsProperty,
-    ) : CdkObject(cdkObject), SecurityDetailsProperty {
+    ) : CdkObject(cdkObject),
+        SecurityDetailsProperty {
       /**
        * The ARN of a role which Ground Station has permission to assume, such as
        * `arn:aws:iam::1234567890:role/DataDeliveryServiceRole` .
@@ -1813,7 +1905,8 @@ public open class CfnDataflowEndpointGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty,
-    ) : CdkObject(cdkObject), SocketAddressProperty {
+    ) : CdkObject(cdkObject),
+        SocketAddressProperty {
       /**
        * The name of the endpoint, such as `Endpoint 1` .
        *

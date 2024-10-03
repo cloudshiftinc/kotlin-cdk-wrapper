@@ -63,7 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnImageVersion(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnImageVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -336,7 +336,8 @@ public interface CfnDomainProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomainProps,
-  ) : CdkObject(cdkObject), CfnDomainProps {
+  ) : CdkObject(cdkObject),
+      CfnDomainProps {
     /**
      * The URL of the SQS dead letter queue, which is used for reporting errors associated with
      * ingesting data from third party applications.

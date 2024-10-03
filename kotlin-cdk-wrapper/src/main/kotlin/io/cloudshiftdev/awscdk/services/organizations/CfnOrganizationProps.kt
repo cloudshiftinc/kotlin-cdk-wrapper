@@ -163,7 +163,8 @@ public interface CfnOrganizationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.organizations.CfnOrganizationProps,
-  ) : CdkObject(cdkObject), CfnOrganizationProps {
+  ) : CdkObject(cdkObject),
+      CfnOrganizationProps {
     /**
      * Specifies the feature set supported by the new organization. Each feature set supports
      * different levels of functionality.

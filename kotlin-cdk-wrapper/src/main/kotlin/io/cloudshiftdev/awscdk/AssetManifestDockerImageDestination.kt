@@ -18,6 +18,7 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
+ * Object assumeRoleAdditionalOptions;
  * AssetManifestDockerImageDestination assetManifestDockerImageDestination =
  * AssetManifestDockerImageDestination.builder()
  * .repositoryName("repositoryName")
@@ -26,6 +27,8 @@ import kotlin.jvm.JvmName
  * .role(RoleOptions.builder()
  * .assumeRoleArn("assumeRoleArn")
  * // the properties below are optional
+ * .assumeRoleAdditionalOptions(Map.of(
+ * "assumeRoleAdditionalOptionsKey", assumeRoleAdditionalOptions))
  * .assumeRoleExternalId("assumeRoleExternalId")
  * .build())
  * .build();
@@ -117,7 +120,8 @@ public interface AssetManifestDockerImageDestination {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.AssetManifestDockerImageDestination,
-  ) : CdkObject(cdkObject), AssetManifestDockerImageDestination {
+  ) : CdkObject(cdkObject),
+      AssetManifestDockerImageDestination {
     /**
      * Prefix to add to the asset hash to make the Docker image tag.
      *

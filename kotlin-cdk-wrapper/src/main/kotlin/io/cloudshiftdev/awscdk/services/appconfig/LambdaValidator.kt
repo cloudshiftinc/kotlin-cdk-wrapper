@@ -25,7 +25,8 @@ import kotlin.String
  */
 public abstract class LambdaValidator(
   cdkObject: software.amazon.awscdk.services.appconfig.LambdaValidator,
-) : CdkObject(cdkObject), IValidator {
+) : CdkObject(cdkObject),
+    IValidator {
   /**
    * The content of the validator.
    */

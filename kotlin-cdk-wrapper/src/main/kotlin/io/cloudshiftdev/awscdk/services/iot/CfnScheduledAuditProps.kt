@@ -300,7 +300,8 @@ public interface CfnScheduledAuditProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnScheduledAuditProps,
-  ) : CdkObject(cdkObject), CfnScheduledAuditProps {
+  ) : CdkObject(cdkObject),
+      CfnScheduledAuditProps {
     /**
      * The day of the month on which the scheduled audit is run (if the `frequency` is "MONTHLY").
      *

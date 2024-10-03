@@ -51,7 +51,8 @@ public interface IDestination {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.IDestination,
-  ) : CdkObject(cdkObject), IDestination {
+  ) : CdkObject(cdkObject),
+      IDestination {
     /**
      * Binds this destination to the Lambda function.
      *

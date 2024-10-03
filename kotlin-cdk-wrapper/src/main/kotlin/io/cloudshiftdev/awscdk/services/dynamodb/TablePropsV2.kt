@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 import kotlin.Boolean
 import kotlin.String
@@ -226,6 +227,18 @@ public interface TablePropsV2 : TableOptionsV2 {
     public fun replicas(vararg replicas: ReplicaTableProps)
 
     /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    public fun resourcePolicy(resourcePolicy: PolicyDocument)
+
+    /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b9dfea9d7a274daf54e22bb1703665720d060a86cf5bd785640b17537027e25e")
+    public fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit)
+
+    /**
      * @param sortKey Sort key attribute definition.
      */
     public fun sortKey(sortKey: Attribute)
@@ -388,6 +401,21 @@ public interface TablePropsV2 : TableOptionsV2 {
     override fun replicas(vararg replicas: ReplicaTableProps): Unit = replicas(replicas.toList())
 
     /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    override fun resourcePolicy(resourcePolicy: PolicyDocument) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(PolicyDocument.Companion::unwrap))
+    }
+
+    /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b9dfea9d7a274daf54e22bb1703665720d060a86cf5bd785640b17537027e25e")
+    override fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit): Unit =
+        resourcePolicy(PolicyDocument(resourcePolicy))
+
+    /**
      * @param sortKey Sort key attribute definition.
      */
     override fun sortKey(sortKey: Attribute) {
@@ -439,7 +467,8 @@ public interface TablePropsV2 : TableOptionsV2 {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.TablePropsV2,
-  ) : CdkObject(cdkObject), TablePropsV2 {
+  ) : CdkObject(cdkObject),
+      TablePropsV2 {
     /**
      * The billing mode and capacity settings to apply to the table.
      *
@@ -539,6 +568,16 @@ public interface TablePropsV2 : TableOptionsV2 {
      */
     override fun replicas(): List<ReplicaTableProps> =
         unwrap(this).getReplicas()?.map(ReplicaTableProps::wrap) ?: emptyList()
+
+    /**
+     * Resource policy to assign to DynamoDB Table.
+     *
+     * Default: - No resource policy statements are added to the created table.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-resourcepolicy)
+     */
+    override fun resourcePolicy(): PolicyDocument? =
+        unwrap(this).getResourcePolicy()?.let(PolicyDocument::wrap)
 
     /**
      * Sort key attribute definition.

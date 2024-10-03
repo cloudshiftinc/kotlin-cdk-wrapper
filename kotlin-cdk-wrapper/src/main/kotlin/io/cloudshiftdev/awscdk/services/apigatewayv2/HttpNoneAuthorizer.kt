@@ -48,7 +48,8 @@ import kotlin.jvm.JvmName
  */
 public open class HttpNoneAuthorizer(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpNoneAuthorizer,
-) : CdkObject(cdkObject), IHttpRouteAuthorizer {
+) : CdkObject(cdkObject),
+    IHttpRouteAuthorizer {
   public constructor() : this(software.amazon.awscdk.services.apigatewayv2.HttpNoneAuthorizer()
   )
 

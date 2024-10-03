@@ -147,7 +147,8 @@ public interface GrpcRouteMatch {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.GrpcRouteMatch,
-  ) : CdkObject(cdkObject), GrpcRouteMatch {
+  ) : CdkObject(cdkObject),
+      GrpcRouteMatch {
     /**
      * Create metadata based gRPC route match.
      *

@@ -43,6 +43,12 @@ public interface SubscriptionFilterProps : SubscriptionFilterOptions {
     public fun destination(destination: ILogSubscriptionDestination)
 
     /**
+     * @param distribution The method used to distribute log data to the destination.
+     * This property can only be used with KinesisDestination.
+     */
+    public fun distribution(distribution: Distribution)
+
+    /**
      * @param filterName The name of the subscription filter.
      */
     public fun filterName(filterName: String)
@@ -68,6 +74,14 @@ public interface SubscriptionFilterProps : SubscriptionFilterOptions {
      */
     override fun destination(destination: ILogSubscriptionDestination) {
       cdkBuilder.destination(destination.let(ILogSubscriptionDestination.Companion::unwrap))
+    }
+
+    /**
+     * @param distribution The method used to distribute log data to the destination.
+     * This property can only be used with KinesisDestination.
+     */
+    override fun distribution(distribution: Distribution) {
+      cdkBuilder.distribution(distribution.let(Distribution.Companion::unwrap))
     }
 
     /**
@@ -97,7 +111,8 @@ public interface SubscriptionFilterProps : SubscriptionFilterOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.SubscriptionFilterProps,
-  ) : CdkObject(cdkObject), SubscriptionFilterProps {
+  ) : CdkObject(cdkObject),
+      SubscriptionFilterProps {
     /**
      * The destination to send the filtered events to.
      *
@@ -105,6 +120,16 @@ public interface SubscriptionFilterProps : SubscriptionFilterOptions {
      */
     override fun destination(): ILogSubscriptionDestination =
         unwrap(this).getDestination().let(ILogSubscriptionDestination::wrap)
+
+    /**
+     * The method used to distribute log data to the destination.
+     *
+     * This property can only be used with KinesisDestination.
+     *
+     * Default: Distribution.BY_LOG_STREAM
+     */
+    override fun distribution(): Distribution? =
+        unwrap(this).getDistribution()?.let(Distribution::wrap)
 
     /**
      * The name of the subscription filter.

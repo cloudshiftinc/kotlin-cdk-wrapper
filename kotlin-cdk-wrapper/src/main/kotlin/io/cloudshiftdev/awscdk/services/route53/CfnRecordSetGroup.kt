@@ -80,7 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRecordSetGroup(
   cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53.CfnRecordSetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1311,7 +1312,8 @@ public open class CfnRecordSetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.AliasTargetProperty,
-    ) : CdkObject(cdkObject), AliasTargetProperty {
+    ) : CdkObject(cdkObject),
+        AliasTargetProperty {
       /**
        * *Alias records only:* The value that you specify depends on where you want to route
        * queries:.
@@ -1680,7 +1682,8 @@ public open class CfnRecordSetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty,
-    ) : CdkObject(cdkObject), CidrRoutingConfigProperty {
+    ) : CdkObject(cdkObject),
+        CidrRoutingConfigProperty {
       /**
        * The CIDR collection ID.
        *
@@ -1794,7 +1797,8 @@ public open class CfnRecordSetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty,
-    ) : CdkObject(cdkObject), CoordinatesProperty {
+    ) : CdkObject(cdkObject),
+        CoordinatesProperty {
       /**
        * Specifies a coordinate of the north–south position of a geographic point on the surface of
        * the Earth (-90 - 90).
@@ -1986,7 +1990,8 @@ public open class CfnRecordSetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty,
-    ) : CdkObject(cdkObject), GeoLocationProperty {
+    ) : CdkObject(cdkObject),
+        GeoLocationProperty {
       /**
        * For geolocation resource record sets, a two-letter abbreviation that identifies a
        * continent. Route 53 supports the following continent codes:.
@@ -2259,7 +2264,8 @@ public open class CfnRecordSetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty,
-    ) : CdkObject(cdkObject), GeoProximityLocationProperty {
+    ) : CdkObject(cdkObject),
+        GeoProximityLocationProperty {
       /**
        * The AWS Region the resource you are directing DNS traffic to, is in.
        *
@@ -4118,7 +4124,8 @@ public open class CfnRecordSetGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup.RecordSetProperty,
-    ) : CdkObject(cdkObject), RecordSetProperty {
+    ) : CdkObject(cdkObject),
+        RecordSetProperty {
       /**
        * *Alias resource record sets only:* Information about the AWS resource, such as a CloudFront
        * distribution or an Amazon S3 bucket, that you want to route traffic to.

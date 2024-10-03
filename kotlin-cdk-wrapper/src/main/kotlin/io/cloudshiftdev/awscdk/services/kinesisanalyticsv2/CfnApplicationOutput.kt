@@ -70,7 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplicationOutput(
   cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -357,7 +358,8 @@ public open class CfnApplicationOutput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.DestinationSchemaProperty,
-    ) : CdkObject(cdkObject), DestinationSchemaProperty {
+    ) : CdkObject(cdkObject),
+        DestinationSchemaProperty {
       /**
        * Specifies the format of the records on the output stream.
        *
@@ -443,7 +445,8 @@ public open class CfnApplicationOutput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.KinesisFirehoseOutputProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseOutputProperty {
+    ) : CdkObject(cdkObject),
+        KinesisFirehoseOutputProperty {
       /**
        * The ARN of the destination delivery stream to write to.
        *
@@ -529,7 +532,8 @@ public open class CfnApplicationOutput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.KinesisStreamsOutputProperty,
-    ) : CdkObject(cdkObject), KinesisStreamsOutputProperty {
+    ) : CdkObject(cdkObject),
+        KinesisStreamsOutputProperty {
       /**
        * The ARN of the destination Kinesis data stream to write to.
        *
@@ -633,7 +637,8 @@ public open class CfnApplicationOutput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.LambdaOutputProperty,
-    ) : CdkObject(cdkObject), LambdaOutputProperty {
+    ) : CdkObject(cdkObject),
+        LambdaOutputProperty {
       /**
        * The Amazon Resource Name (ARN) of the destination Lambda function to write to.
        *
@@ -940,7 +945,8 @@ public open class CfnApplicationOutput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.OutputProperty,
-    ) : CdkObject(cdkObject), OutputProperty {
+    ) : CdkObject(cdkObject),
+        OutputProperty {
       /**
        * Describes the data format when records are written to the destination.
        *

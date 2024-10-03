@@ -19,14 +19,14 @@ import kotlin.Unit
  *
  * ```
  * import io.cloudshiftdev.awscdk.services.logs.*;
- * LogConfig logConfig = LogConfig.builder()
- * .retention(RetentionDays.ONE_WEEK)
- * .build();
  * GraphqlApi.Builder.create(this, "api")
  * .authorizationConfig(AuthorizationConfig.builder().build())
  * .name("myApi")
  * .definition(Definition.fromFile(join(__dirname, "myApi.graphql")))
- * .logConfig(logConfig)
+ * .logConfig(LogConfig.builder()
+ * .fieldLogLevel(FieldLogLevel.INFO)
+ * .retention(RetentionDays.ONE_WEEK)
+ * .build())
  * .build();
  * ```
  */
@@ -145,7 +145,8 @@ public interface LogConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.LogConfig,
-  ) : CdkObject(cdkObject), LogConfig {
+  ) : CdkObject(cdkObject),
+      LogConfig {
     /**
      * exclude verbose content.
      *

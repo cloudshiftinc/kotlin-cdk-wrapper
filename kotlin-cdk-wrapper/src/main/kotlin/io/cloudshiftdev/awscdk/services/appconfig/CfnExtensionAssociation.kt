@@ -56,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnExtensionAssociation(
   cdkObject: software.amazon.awscdk.services.appconfig.CfnExtensionAssociation,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appconfig.CfnExtensionAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

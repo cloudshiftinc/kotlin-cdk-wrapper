@@ -37,6 +37,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "MyCfnSigningProfile")
  * .platformId("platformId")
  * // the properties below are optional
+ * .profileName("profileName")
  * .signatureValidityPeriod(SignatureValidityPeriodProperty.builder()
  * .type("type")
  * .value(123)
@@ -52,7 +53,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSigningProfile(
   cdkObject: software.amazon.awscdk.services.signer.CfnSigningProfile,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -108,6 +111,18 @@ public open class CfnSigningProfile(
    */
   public open fun platformId(`value`: String) {
     unwrap(this).setPlatformId(`value`)
+  }
+
+  /**
+   * The name of the signing profile.
+   */
+  public open fun profileName(): String? = unwrap(this).getProfileName()
+
+  /**
+   * The name of the signing profile.
+   */
+  public open fun profileName(`value`: String) {
+    unwrap(this).setProfileName(`value`)
   }
 
   /**
@@ -173,6 +188,14 @@ public open class CfnSigningProfile(
      * @param platformId The ID of a platform that is available for use by a signing profile. 
      */
     public fun platformId(platformId: String)
+
+    /**
+     * The name of the signing profile.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-profilename)
+     * @param profileName The name of the signing profile. 
+     */
+    public fun profileName(profileName: String)
 
     /**
      * The validity period override for any signature generated using this signing profile.
@@ -242,6 +265,16 @@ public open class CfnSigningProfile(
      */
     override fun platformId(platformId: String) {
       cdkBuilder.platformId(platformId)
+    }
+
+    /**
+     * The name of the signing profile.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-profilename)
+     * @param profileName The name of the signing profile. 
+     */
+    override fun profileName(profileName: String) {
+      cdkBuilder.profileName(profileName)
     }
 
     /**
@@ -404,7 +437,8 @@ public open class CfnSigningProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.signer.CfnSigningProfile.SignatureValidityPeriodProperty,
-    ) : CdkObject(cdkObject), SignatureValidityPeriodProperty {
+    ) : CdkObject(cdkObject),
+        SignatureValidityPeriodProperty {
       /**
        * The time unit for signature validity: DAYS | MONTHS | YEARS.
        *

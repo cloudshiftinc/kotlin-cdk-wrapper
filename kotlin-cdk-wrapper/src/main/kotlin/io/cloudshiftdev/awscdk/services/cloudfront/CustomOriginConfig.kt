@@ -265,7 +265,8 @@ public interface CustomOriginConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CustomOriginConfig,
-  ) : CdkObject(cdkObject), CustomOriginConfig {
+  ) : CdkObject(cdkObject),
+      CustomOriginConfig {
     /**
      * The SSL versions to use when interacting with the origin.
      *

@@ -158,7 +158,8 @@ public interface StageDeploymentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.StageDeploymentProps,
-  ) : CdkObject(cdkObject), StageDeploymentProps {
+  ) : CdkObject(cdkObject),
+      StageDeploymentProps {
     /**
      * Additional steps to run after all of the stacks in the stage.
      *

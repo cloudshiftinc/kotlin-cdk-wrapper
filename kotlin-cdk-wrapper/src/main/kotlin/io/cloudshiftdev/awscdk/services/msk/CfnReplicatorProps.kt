@@ -52,6 +52,9 @@ import kotlin.collections.List
  * .startingPosition(ReplicationStartingPositionProperty.builder()
  * .type("type")
  * .build())
+ * .topicNameConfiguration(ReplicationTopicNameConfigurationProperty.builder()
+ * .type("type")
+ * .build())
  * .topicsToExclude(List.of("topicsToExclude"))
  * .build())
  * .build()))
@@ -71,7 +74,7 @@ import kotlin.collections.List
  */
 public interface CfnReplicatorProps {
   /**
-   * The current version of the MSK replicator.
+   * The current version number of the replicator.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-currentversion)
    */
@@ -85,7 +88,7 @@ public interface CfnReplicatorProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * Specifies a list of Kafka clusters which are targets of the replicator.
+   * Kafka Clusters to use in setting up sources / targets for replication.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-kafkaclusters)
    */
@@ -102,20 +105,22 @@ public interface CfnReplicatorProps {
   /**
    * The name of the replicator.
    *
+   * Alpha-numeric characters with '-' are allowed.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-replicatorname)
    */
   public fun replicatorName(): String
 
   /**
-   * The Amazon Resource Name (ARN) of the IAM role used by the replicator to access external
-   * resources.
+   * The ARN of the IAM role used by the replicator to access resources in the customer's account
+   * (e.g source and target clusters).
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-serviceexecutionrolearn)
    */
   public fun serviceExecutionRoleArn(): String
 
   /**
-   * A collection of tags associated with a resource.
+   * List of tags to attach to created Replicator.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-tags)
    */
@@ -127,7 +132,7 @@ public interface CfnReplicatorProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param currentVersion The current version of the MSK replicator.
+     * @param currentVersion The current version number of the replicator.
      */
     public fun currentVersion(currentVersion: String)
 
@@ -137,17 +142,17 @@ public interface CfnReplicatorProps {
     public fun description(description: String)
 
     /**
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     public fun kafkaClusters(kafkaClusters: IResolvable)
 
     /**
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     public fun kafkaClusters(kafkaClusters: List<Any>)
 
     /**
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     public fun kafkaClusters(vararg kafkaClusters: Any)
 
@@ -171,22 +176,23 @@ public interface CfnReplicatorProps {
 
     /**
      * @param replicatorName The name of the replicator. 
+     * Alpha-numeric characters with '-' are allowed.
      */
     public fun replicatorName(replicatorName: String)
 
     /**
-     * @param serviceExecutionRoleArn The Amazon Resource Name (ARN) of the IAM role used by the
-     * replicator to access external resources. 
+     * @param serviceExecutionRoleArn The ARN of the IAM role used by the replicator to access
+     * resources in the customer's account (e.g source and target clusters). 
      */
     public fun serviceExecutionRoleArn(serviceExecutionRoleArn: String)
 
     /**
-     * @param tags A collection of tags associated with a resource.
+     * @param tags List of tags to attach to created Replicator.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags A collection of tags associated with a resource.
+     * @param tags List of tags to attach to created Replicator.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -196,7 +202,7 @@ public interface CfnReplicatorProps {
         software.amazon.awscdk.services.msk.CfnReplicatorProps.builder()
 
     /**
-     * @param currentVersion The current version of the MSK replicator.
+     * @param currentVersion The current version number of the replicator.
      */
     override fun currentVersion(currentVersion: String) {
       cdkBuilder.currentVersion(currentVersion)
@@ -210,21 +216,21 @@ public interface CfnReplicatorProps {
     }
 
     /**
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     override fun kafkaClusters(kafkaClusters: IResolvable) {
       cdkBuilder.kafkaClusters(kafkaClusters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     override fun kafkaClusters(kafkaClusters: List<Any>) {
       cdkBuilder.kafkaClusters(kafkaClusters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     override fun kafkaClusters(vararg kafkaClusters: Any): Unit =
         kafkaClusters(kafkaClusters.toList())
@@ -254,28 +260,29 @@ public interface CfnReplicatorProps {
 
     /**
      * @param replicatorName The name of the replicator. 
+     * Alpha-numeric characters with '-' are allowed.
      */
     override fun replicatorName(replicatorName: String) {
       cdkBuilder.replicatorName(replicatorName)
     }
 
     /**
-     * @param serviceExecutionRoleArn The Amazon Resource Name (ARN) of the IAM role used by the
-     * replicator to access external resources. 
+     * @param serviceExecutionRoleArn The ARN of the IAM role used by the replicator to access
+     * resources in the customer's account (e.g source and target clusters). 
      */
     override fun serviceExecutionRoleArn(serviceExecutionRoleArn: String) {
       cdkBuilder.serviceExecutionRoleArn(serviceExecutionRoleArn)
     }
 
     /**
-     * @param tags A collection of tags associated with a resource.
+     * @param tags List of tags to attach to created Replicator.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags A collection of tags associated with a resource.
+     * @param tags List of tags to attach to created Replicator.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -284,9 +291,10 @@ public interface CfnReplicatorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.msk.CfnReplicatorProps,
-  ) : CdkObject(cdkObject), CfnReplicatorProps {
+  ) : CdkObject(cdkObject),
+      CfnReplicatorProps {
     /**
-     * The current version of the MSK replicator.
+     * The current version number of the replicator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-currentversion)
      */
@@ -300,7 +308,7 @@ public interface CfnReplicatorProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * Specifies a list of Kafka clusters which are targets of the replicator.
+     * Kafka Clusters to use in setting up sources / targets for replication.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-kafkaclusters)
      */
@@ -317,20 +325,22 @@ public interface CfnReplicatorProps {
     /**
      * The name of the replicator.
      *
+     * Alpha-numeric characters with '-' are allowed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-replicatorname)
      */
     override fun replicatorName(): String = unwrap(this).getReplicatorName()
 
     /**
-     * The Amazon Resource Name (ARN) of the IAM role used by the replicator to access external
-     * resources.
+     * The ARN of the IAM role used by the replicator to access resources in the customer's account
+     * (e.g source and target clusters).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-serviceexecutionrolearn)
      */
     override fun serviceExecutionRoleArn(): String = unwrap(this).getServiceExecutionRoleArn()
 
     /**
-     * A collection of tags associated with a resource.
+     * List of tags to attach to created Replicator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-tags)
      */

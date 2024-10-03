@@ -23,7 +23,8 @@ import io.cloudshiftdev.constructs.Construct
  */
 public open class SnsAction(
   cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SnsAction,
-) : CdkObject(cdkObject), IAlarmAction {
+) : CdkObject(cdkObject),
+    IAlarmAction {
   public constructor(topic: ITopic) :
       this(software.amazon.awscdk.services.cloudwatch.actions.SnsAction(topic.let(ITopic.Companion::unwrap))
   )

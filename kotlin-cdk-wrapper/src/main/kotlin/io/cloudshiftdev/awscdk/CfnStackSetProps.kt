@@ -36,6 +36,7 @@ import kotlin.jvm.JvmName
  * .executionRoleName("executionRoleName")
  * .managedExecution(managedExecution)
  * .operationPreferences(OperationPreferencesProperty.builder()
+ * .concurrencyMode("concurrencyMode")
  * .failureToleranceCount(123)
  * .failureTolerancePercentage(123)
  * .maxConcurrentCount(123)
@@ -239,11 +240,11 @@ public interface CfnStackSetProps {
   /**
    * Key-value pairs to associate with this stack.
    *
-   * AWS CloudFormation also propagates these tags to supported resources in the stack. You can
-   * specify a maximum number of 50 tags.
+   * CloudFormation also propagates these tags to supported resources in the stack. You can specify
+   * a maximum number of 50 tags.
    *
-   * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If you
-   * specify an empty value, AWS CloudFormation removes all associated tags.
+   * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you
+   * specify an empty value, CloudFormation removes all associated tags.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-tags)
    */
@@ -482,21 +483,21 @@ public interface CfnStackSetProps {
 
     /**
      * @param tags Key-value pairs to associate with this stack.
-     * AWS CloudFormation also propagates these tags to supported resources in the stack. You can
+     * CloudFormation also propagates these tags to supported resources in the stack. You can
      * specify a maximum number of 50 tags.
      *
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If
-     * you specify an empty value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you
+     * specify an empty value, CloudFormation removes all associated tags.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
      * @param tags Key-value pairs to associate with this stack.
-     * AWS CloudFormation also propagates these tags to supported resources in the stack. You can
+     * CloudFormation also propagates these tags to supported resources in the stack. You can
      * specify a maximum number of 50 tags.
      *
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If
-     * you specify an empty value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you
+     * specify an empty value, CloudFormation removes all associated tags.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -765,11 +766,11 @@ public interface CfnStackSetProps {
 
     /**
      * @param tags Key-value pairs to associate with this stack.
-     * AWS CloudFormation also propagates these tags to supported resources in the stack. You can
+     * CloudFormation also propagates these tags to supported resources in the stack. You can
      * specify a maximum number of 50 tags.
      *
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If
-     * you specify an empty value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you
+     * specify an empty value, CloudFormation removes all associated tags.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
@@ -777,11 +778,11 @@ public interface CfnStackSetProps {
 
     /**
      * @param tags Key-value pairs to associate with this stack.
-     * AWS CloudFormation also propagates these tags to supported resources in the stack. You can
+     * CloudFormation also propagates these tags to supported resources in the stack. You can
      * specify a maximum number of 50 tags.
      *
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If
-     * you specify an empty value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you
+     * specify an empty value, CloudFormation removes all associated tags.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -815,7 +816,8 @@ public interface CfnStackSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnStackSetProps,
-  ) : CdkObject(cdkObject), CfnStackSetProps {
+  ) : CdkObject(cdkObject),
+      CfnStackSetProps {
     /**
      * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.
      *
@@ -982,11 +984,11 @@ public interface CfnStackSetProps {
     /**
      * Key-value pairs to associate with this stack.
      *
-     * AWS CloudFormation also propagates these tags to supported resources in the stack. You can
+     * CloudFormation also propagates these tags to supported resources in the stack. You can
      * specify a maximum number of 50 tags.
      *
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If
-     * you specify an empty value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you
+     * specify an empty value, CloudFormation removes all associated tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-tags)
      */

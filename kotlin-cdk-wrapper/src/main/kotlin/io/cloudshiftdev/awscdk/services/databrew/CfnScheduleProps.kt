@@ -156,7 +156,8 @@ public interface CfnScheduleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.databrew.CfnScheduleProps,
-  ) : CdkObject(cdkObject), CfnScheduleProps {
+  ) : CdkObject(cdkObject),
+      CfnScheduleProps {
     /**
      * The dates and times when the job is to run.
      *

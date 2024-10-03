@@ -26,7 +26,9 @@ import kotlin.Unit
  */
 public interface CfnReceiptRuleSetProps {
   /**
-   * The name of the receipt rule set to reorder.
+   * The name of the receipt rule set to make active.
+   *
+   * Setting this value to null disables all email receiving.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptruleset.html#cfn-ses-receiptruleset-rulesetname)
    */
@@ -38,7 +40,8 @@ public interface CfnReceiptRuleSetProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param ruleSetName The name of the receipt rule set to reorder.
+     * @param ruleSetName The name of the receipt rule set to make active.
+     * Setting this value to null disables all email receiving.
      */
     public fun ruleSetName(ruleSetName: String)
   }
@@ -48,7 +51,8 @@ public interface CfnReceiptRuleSetProps {
         software.amazon.awscdk.services.ses.CfnReceiptRuleSetProps.builder()
 
     /**
-     * @param ruleSetName The name of the receipt rule set to reorder.
+     * @param ruleSetName The name of the receipt rule set to make active.
+     * Setting this value to null disables all email receiving.
      */
     override fun ruleSetName(ruleSetName: String) {
       cdkBuilder.ruleSetName(ruleSetName)
@@ -60,9 +64,12 @@ public interface CfnReceiptRuleSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleSetProps,
-  ) : CdkObject(cdkObject), CfnReceiptRuleSetProps {
+  ) : CdkObject(cdkObject),
+      CfnReceiptRuleSetProps {
     /**
-     * The name of the receipt rule set to reorder.
+     * The name of the receipt rule set to make active.
+     *
+     * Setting this value to null disables all email receiving.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptruleset.html#cfn-ses-receiptruleset-rulesetname)
      */

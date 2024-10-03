@@ -18,7 +18,8 @@ import kotlin.String
 public interface IServerDeploymentConfig : IBaseDeploymentConfig {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.IServerDeploymentConfig,
-  ) : CdkObject(cdkObject), IServerDeploymentConfig {
+  ) : CdkObject(cdkObject),
+      IServerDeploymentConfig {
     /**
      * The ARN of the Deployment Configuration.
      */

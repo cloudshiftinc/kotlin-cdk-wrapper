@@ -183,7 +183,8 @@ public interface CfnAlertProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlertProps,
-  ) : CdkObject(cdkObject), CfnAlertProps {
+  ) : CdkObject(cdkObject),
+      CfnAlertProps {
     /**
      * Action that will be triggered when there is an alert.
      *

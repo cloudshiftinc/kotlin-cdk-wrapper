@@ -57,7 +57,8 @@ public interface AccessLogDestinationConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig,
-  ) : CdkObject(cdkObject), AccessLogDestinationConfig {
+  ) : CdkObject(cdkObject),
+      AccessLogDestinationConfig {
     /**
      * The Amazon Resource Name (ARN) of the destination resource.
      */

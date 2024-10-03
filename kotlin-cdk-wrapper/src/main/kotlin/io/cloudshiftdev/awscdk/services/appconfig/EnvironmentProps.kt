@@ -111,7 +111,8 @@ public interface EnvironmentProps : EnvironmentOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.EnvironmentProps,
-  ) : CdkObject(cdkObject), EnvironmentProps {
+  ) : CdkObject(cdkObject),
+      EnvironmentProps {
     /**
      * The application to be associated with the environment.
      */

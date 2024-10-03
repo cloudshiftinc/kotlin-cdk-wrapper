@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ApplicationListener(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener,
-) : BaseListener(cdkObject), IApplicationListener {
+) : BaseListener(cdkObject),
+    IApplicationListener {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -207,6 +208,11 @@ public open class ApplicationListener(
       unwrap(this).getLoadBalancer().let(IApplicationLoadBalancer::wrap)
 
   /**
+   * The port of the listener.
+   */
+  public open fun port(): Number = unwrap(this).getPort()
+
+  /**
    * Register that a connectable that has been added to this load balancer.
    *
    * Don't call this directly. It is called by ApplicationTargetGroup.
@@ -312,6 +318,28 @@ public open class ApplicationListener(
      * @param loadBalancer The load balancer to attach this listener to. 
      */
     public fun loadBalancer(loadBalancer: IApplicationLoadBalancer)
+
+    /**
+     * The mutual authentication configuration information.
+     *
+     * Default: - No mutual authentication configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/mutual-authentication.html)
+     * @param mutualAuthentication The mutual authentication configuration information. 
+     */
+    public fun mutualAuthentication(mutualAuthentication: MutualAuthentication)
+
+    /**
+     * The mutual authentication configuration information.
+     *
+     * Default: - No mutual authentication configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/mutual-authentication.html)
+     * @param mutualAuthentication The mutual authentication configuration information. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("29c4fd215591a5d0edb40289bebf3bed640722d3baf0b52832fd4113b2918989")
+    public fun mutualAuthentication(mutualAuthentication: MutualAuthentication.Builder.() -> Unit)
 
     /**
      * Allow anyone to connect to the load balancer on the listener port.
@@ -451,6 +479,32 @@ public open class ApplicationListener(
     override fun loadBalancer(loadBalancer: IApplicationLoadBalancer) {
       cdkBuilder.loadBalancer(loadBalancer.let(IApplicationLoadBalancer.Companion::unwrap))
     }
+
+    /**
+     * The mutual authentication configuration information.
+     *
+     * Default: - No mutual authentication configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/mutual-authentication.html)
+     * @param mutualAuthentication The mutual authentication configuration information. 
+     */
+    override fun mutualAuthentication(mutualAuthentication: MutualAuthentication) {
+      cdkBuilder.mutualAuthentication(mutualAuthentication.let(MutualAuthentication.Companion::unwrap))
+    }
+
+    /**
+     * The mutual authentication configuration information.
+     *
+     * Default: - No mutual authentication configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/mutual-authentication.html)
+     * @param mutualAuthentication The mutual authentication configuration information. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("29c4fd215591a5d0edb40289bebf3bed640722d3baf0b52832fd4113b2918989")
+    override
+        fun mutualAuthentication(mutualAuthentication: MutualAuthentication.Builder.() -> Unit):
+        Unit = mutualAuthentication(MutualAuthentication(mutualAuthentication))
 
     /**
      * Allow anyone to connect to the load balancer on the listener port.

@@ -106,7 +106,8 @@ public interface AppMeshProxyConfigurationConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.AppMeshProxyConfigurationConfigProps,
-  ) : CdkObject(cdkObject), AppMeshProxyConfigurationConfigProps {
+  ) : CdkObject(cdkObject),
+      AppMeshProxyConfigurationConfigProps {
     /**
      * The name of the container that will serve as the App Mesh proxy.
      */

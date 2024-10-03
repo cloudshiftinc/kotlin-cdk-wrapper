@@ -47,7 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResourceCollection(
   cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -294,7 +295,8 @@ public open class CfnResourceCollection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty,
-    ) : CdkObject(cdkObject), CloudFormationCollectionFilterProperty {
+    ) : CdkObject(cdkObject),
+        CloudFormationCollectionFilterProperty {
       /**
        * An array of CloudFormation stack names.
        *
@@ -614,7 +616,8 @@ public open class CfnResourceCollection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.ResourceCollectionFilterProperty,
-    ) : CdkObject(cdkObject), ResourceCollectionFilterProperty {
+    ) : CdkObject(cdkObject),
+        ResourceCollectionFilterProperty {
       /**
        * Information about AWS CloudFormation stacks.
        *
@@ -861,7 +864,8 @@ public open class CfnResourceCollection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty,
-    ) : CdkObject(cdkObject), TagCollectionProperty {
+    ) : CdkObject(cdkObject),
+        TagCollectionProperty {
       /**
        * An AWS tag *key* that is used to identify the AWS resources that DevOps Guru analyzes.
        *

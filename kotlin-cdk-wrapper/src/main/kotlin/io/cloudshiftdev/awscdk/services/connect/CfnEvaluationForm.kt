@@ -116,7 +116,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEvaluationForm(
   cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -729,7 +731,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty,
-    ) : CdkObject(cdkObject), EvaluationFormBaseItemProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormBaseItemProperty {
       /**
        * A subsection or inner section of an item.
        *
@@ -945,7 +948,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty,
-    ) : CdkObject(cdkObject), EvaluationFormItemProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormItemProperty {
       /**
        * The information of the question.
        *
@@ -1066,7 +1070,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty,
-    ) : CdkObject(cdkObject), EvaluationFormNumericQuestionAutomationProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormNumericQuestionAutomationProperty {
       /**
        * The property value of the automation.
        *
@@ -1239,7 +1244,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty,
-    ) : CdkObject(cdkObject), EvaluationFormNumericQuestionOptionProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormNumericQuestionOptionProperty {
       /**
        * The flag to mark the option as automatic fail.
        *
@@ -1472,7 +1478,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty,
-    ) : CdkObject(cdkObject), EvaluationFormNumericQuestionPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormNumericQuestionPropertiesProperty {
       /**
        * The automation properties of the numeric question.
        *
@@ -1818,7 +1825,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormQuestionProperty,
-    ) : CdkObject(cdkObject), EvaluationFormQuestionProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormQuestionProperty {
       /**
        * The instructions of the section.
        *
@@ -2075,7 +2083,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormQuestionTypePropertiesProperty,
-    ) : CdkObject(cdkObject), EvaluationFormQuestionTypePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormQuestionTypePropertiesProperty {
       /**
        * The properties of the numeric question.
        *
@@ -2353,7 +2362,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSectionProperty,
-    ) : CdkObject(cdkObject), EvaluationFormSectionProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormSectionProperty {
       /**
        * The instructions of the section.
        *
@@ -2514,7 +2524,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty,
-    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionAutomationOptionProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormSingleSelectQuestionAutomationOptionProperty {
       /**
        * The automation option based on a rule category for the single select question.
        *
@@ -2681,7 +2692,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty,
-    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionAutomationProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormSingleSelectQuestionAutomationProperty {
       /**
        * The identifier of the default answer option, when none of the automation options match the
        * criteria.
@@ -2879,7 +2891,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty,
-    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionOptionProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormSingleSelectQuestionOptionProperty {
       /**
        * The flag to mark the option as automatic fail.
        *
@@ -3129,7 +3142,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty,
-    ) : CdkObject(cdkObject), EvaluationFormSingleSelectQuestionPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationFormSingleSelectQuestionPropertiesProperty {
       /**
        * The display mode of the single select question.
        *
@@ -3233,7 +3247,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty,
-    ) : CdkObject(cdkObject), NumericQuestionPropertyValueAutomationProperty {
+    ) : CdkObject(cdkObject),
+        NumericQuestionPropertyValueAutomationProperty {
       /**
        * The property label of the automation.
        *
@@ -3344,7 +3359,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty,
-    ) : CdkObject(cdkObject), ScoringStrategyProperty {
+    ) : CdkObject(cdkObject),
+        ScoringStrategyProperty {
       /**
        * The scoring mode of the evaluation form.
        *
@@ -3519,7 +3535,8 @@ public open class CfnEvaluationForm(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty,
-    ) : CdkObject(cdkObject), SingleSelectQuestionRuleCategoryAutomationProperty {
+    ) : CdkObject(cdkObject),
+        SingleSelectQuestionRuleCategoryAutomationProperty {
       /**
        * The category name, as defined in Rules.
        *

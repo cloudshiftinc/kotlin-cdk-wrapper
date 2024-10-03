@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProject(
   cdkObject: software.amazon.awscdk.services.databrew.CfnProject,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -469,7 +471,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnProject.SampleProperty,
-    ) : CdkObject(cdkObject), SampleProperty {
+    ) : CdkObject(cdkObject),
+        SampleProperty {
       /**
        * The number of rows in the sample.
        *

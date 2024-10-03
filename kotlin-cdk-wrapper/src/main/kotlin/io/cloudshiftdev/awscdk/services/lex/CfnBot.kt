@@ -37,7 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBot(
   cdkObject: software.amazon.awscdk.services.lex.CfnBot,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -889,7 +890,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.AdvancedRecognitionSettingProperty,
-    ) : CdkObject(cdkObject), AdvancedRecognitionSettingProperty {
+    ) : CdkObject(cdkObject),
+        AdvancedRecognitionSettingProperty {
       /**
        * Enables using the slot values as a custom vocabulary for recognizing user utterances.
        *
@@ -1014,7 +1016,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.AllowedInputTypesProperty,
-    ) : CdkObject(cdkObject), AllowedInputTypesProperty {
+    ) : CdkObject(cdkObject),
+        AllowedInputTypesProperty {
       /**
        * Indicates whether audio input is allowed.
        *
@@ -1217,7 +1220,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.AudioAndDTMFInputSpecificationProperty,
-    ) : CdkObject(cdkObject), AudioAndDTMFInputSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        AudioAndDTMFInputSpecificationProperty {
       /**
        * Specifies the settings on audio input.
        *
@@ -1347,7 +1351,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.AudioLogDestinationProperty,
-    ) : CdkObject(cdkObject), AudioLogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        AudioLogDestinationProperty {
       /**
        * Specifies the Amazon S3 bucket where the audio files are stored.
        *
@@ -1502,7 +1507,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.AudioLogSettingProperty,
-    ) : CdkObject(cdkObject), AudioLogSettingProperty {
+    ) : CdkObject(cdkObject),
+        AudioLogSettingProperty {
       /**
        * Specifies the location of the audio log files collected when conversation logging is
        * enabled for a bot.
@@ -1615,7 +1621,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.AudioSpecificationProperty,
-    ) : CdkObject(cdkObject), AudioSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        AudioSpecificationProperty {
       /**
        * Time for which a bot waits after the customer stops speaking to assume the utterance is
        * finished.
@@ -1764,7 +1771,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.BotAliasLocaleSettingsItemProperty,
-    ) : CdkObject(cdkObject), BotAliasLocaleSettingsItemProperty {
+    ) : CdkObject(cdkObject),
+        BotAliasLocaleSettingsItemProperty {
       /**
        * Specifies locale settings for a locale.
        *
@@ -1934,7 +1942,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.BotAliasLocaleSettingsProperty,
-    ) : CdkObject(cdkObject), BotAliasLocaleSettingsProperty {
+    ) : CdkObject(cdkObject),
+        BotAliasLocaleSettingsProperty {
       /**
        * Specifies the Lambda function that should be used in the locale.
        *
@@ -2033,6 +2042,13 @@ public open class CfnBot(
     /**
      * Defines settings for using an Amazon Polly voice to communicate with a user.
      *
+     * Valid values include:
+     *
+     * * `standard`
+     * * `neural`
+     * * `long-form`
+     * * `generative`
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-voicesettings)
      */
     public fun voiceSettings(): Any? = unwrap(this).getVoiceSettings()
@@ -2112,18 +2128,36 @@ public open class CfnBot(
       /**
        * @param voiceSettings Defines settings for using an Amazon Polly voice to communicate with a
        * user.
+       * Valid values include:
+       *
+       * * `standard`
+       * * `neural`
+       * * `long-form`
+       * * `generative`
        */
       public fun voiceSettings(voiceSettings: IResolvable)
 
       /**
        * @param voiceSettings Defines settings for using an Amazon Polly voice to communicate with a
        * user.
+       * Valid values include:
+       *
+       * * `standard`
+       * * `neural`
+       * * `long-form`
+       * * `generative`
        */
       public fun voiceSettings(voiceSettings: VoiceSettingsProperty)
 
       /**
        * @param voiceSettings Defines settings for using an Amazon Polly voice to communicate with a
        * user.
+       * Valid values include:
+       *
+       * * `standard`
+       * * `neural`
+       * * `long-form`
+       * * `generative`
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f134e87e6455eb7ee5f8d312b4bb55381e0723a5544fd753a59801b52965ded9")
@@ -2223,6 +2257,12 @@ public open class CfnBot(
       /**
        * @param voiceSettings Defines settings for using an Amazon Polly voice to communicate with a
        * user.
+       * Valid values include:
+       *
+       * * `standard`
+       * * `neural`
+       * * `long-form`
+       * * `generative`
        */
       override fun voiceSettings(voiceSettings: IResolvable) {
         cdkBuilder.voiceSettings(voiceSettings.let(IResolvable.Companion::unwrap))
@@ -2231,6 +2271,12 @@ public open class CfnBot(
       /**
        * @param voiceSettings Defines settings for using an Amazon Polly voice to communicate with a
        * user.
+       * Valid values include:
+       *
+       * * `standard`
+       * * `neural`
+       * * `long-form`
+       * * `generative`
        */
       override fun voiceSettings(voiceSettings: VoiceSettingsProperty) {
         cdkBuilder.voiceSettings(voiceSettings.let(VoiceSettingsProperty.Companion::unwrap))
@@ -2239,6 +2285,12 @@ public open class CfnBot(
       /**
        * @param voiceSettings Defines settings for using an Amazon Polly voice to communicate with a
        * user.
+       * Valid values include:
+       *
+       * * `standard`
+       * * `neural`
+       * * `long-form`
+       * * `generative`
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f134e87e6455eb7ee5f8d312b4bb55381e0723a5544fd753a59801b52965ded9")
@@ -2251,7 +2303,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.BotLocaleProperty,
-    ) : CdkObject(cdkObject), BotLocaleProperty {
+    ) : CdkObject(cdkObject),
+        BotLocaleProperty {
       /**
        * Specifies a custom vocabulary to use with a specific locale.
        *
@@ -2303,6 +2356,13 @@ public open class CfnBot(
 
       /**
        * Defines settings for using an Amazon Polly voice to communicate with a user.
+       *
+       * Valid values include:
+       *
+       * * `standard`
+       * * `neural`
+       * * `long-form`
+       * * `generative`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-voicesettings)
        */
@@ -2405,7 +2465,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.ButtonProperty,
-    ) : CdkObject(cdkObject), ButtonProperty {
+    ) : CdkObject(cdkObject),
+        ButtonProperty {
       /**
        * The text that appears on the button.
        *
@@ -2523,7 +2584,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.CloudWatchLogGroupLogDestinationProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogGroupLogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchLogGroupLogDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of the log group where text and metadata logs are delivered.
        *
@@ -2649,7 +2711,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.CodeHookSpecificationProperty,
-    ) : CdkObject(cdkObject), CodeHookSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        CodeHookSpecificationProperty {
       /**
        * Specifies a Lambda function that verifies requests to a bot or fulfills the user's request
        * to a bot.
@@ -2729,7 +2792,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.ConditionProperty,
-    ) : CdkObject(cdkObject), ConditionProperty {
+    ) : CdkObject(cdkObject),
+        ConditionProperty {
       /**
        * The expression string that is evaluated.
        *
@@ -3039,7 +3103,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.ConditionalBranchProperty,
-    ) : CdkObject(cdkObject), ConditionalBranchProperty {
+    ) : CdkObject(cdkObject),
+        ConditionalBranchProperty {
       /**
        * Contains the expression to evaluate.
        *
@@ -3446,7 +3511,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.ConditionalSpecificationProperty,
-    ) : CdkObject(cdkObject), ConditionalSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ConditionalSpecificationProperty {
       /**
        * A list of conditional branches.
        *
@@ -3634,7 +3700,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.ConversationLogSettingsProperty,
-    ) : CdkObject(cdkObject), ConversationLogSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ConversationLogSettingsProperty {
       /**
        * The Amazon S3 settings for logging audio to an S3 bucket.
        *
@@ -3723,7 +3790,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.CustomPayloadProperty,
-    ) : CdkObject(cdkObject), CustomPayloadProperty {
+    ) : CdkObject(cdkObject),
+        CustomPayloadProperty {
       /**
        * The string that is sent to your application.
        *
@@ -3850,7 +3918,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.CustomVocabularyItemProperty,
-    ) : CdkObject(cdkObject), CustomVocabularyItemProperty {
+    ) : CdkObject(cdkObject),
+        CustomVocabularyItemProperty {
       /**
        * The DisplayAs value for the custom vocabulary item from the custom vocabulary list.
        *
@@ -3983,7 +4052,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.CustomVocabularyProperty,
-    ) : CdkObject(cdkObject), CustomVocabularyProperty {
+    ) : CdkObject(cdkObject),
+        CustomVocabularyProperty {
       /**
        * Specifies a list of words that you expect to be used during a conversation with your bot.
        *
@@ -4132,7 +4202,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.DTMFSpecificationProperty,
-    ) : CdkObject(cdkObject), DTMFSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        DTMFSpecificationProperty {
       /**
        * The DTMF character that clears the accumulated DTMF digits and immediately ends the input.
        *
@@ -4341,7 +4412,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.DataPrivacyProperty,
-    ) : CdkObject(cdkObject), DataPrivacyProperty {
+    ) : CdkObject(cdkObject),
+        DataPrivacyProperty {
       /**
        * For each Amazon Lex bot created with the Amazon Lex Model Building Service, you must
        * specify whether your use of Amazon Lex is related to a website, program, or other application
@@ -4594,7 +4666,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.DefaultConditionalBranchProperty,
-    ) : CdkObject(cdkObject), DefaultConditionalBranchProperty {
+    ) : CdkObject(cdkObject),
+        DefaultConditionalBranchProperty {
       /**
        * The next step in the conversation.
        *
@@ -4736,7 +4809,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.DialogActionProperty,
-    ) : CdkObject(cdkObject), DialogActionProperty {
+    ) : CdkObject(cdkObject),
+        DialogActionProperty {
       /**
        * If the dialog action is `ElicitSlot` , defines the slot to elicit from the user.
        *
@@ -4955,7 +5029,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.DialogCodeHookInvocationSettingProperty,
-    ) : CdkObject(cdkObject), DialogCodeHookInvocationSettingProperty {
+    ) : CdkObject(cdkObject),
+        DialogCodeHookInvocationSettingProperty {
       /**
        * Indicates whether a Lambda function should be invoked for the dialog.
        *
@@ -5071,7 +5146,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.DialogCodeHookSettingProperty,
-    ) : CdkObject(cdkObject), DialogCodeHookSettingProperty {
+    ) : CdkObject(cdkObject),
+        DialogCodeHookSettingProperty {
       /**
        * Enables the dialog code hook so that it processes user requests.
        *
@@ -5309,7 +5385,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.DialogStateProperty,
-    ) : CdkObject(cdkObject), DialogStateProperty {
+    ) : CdkObject(cdkObject),
+        DialogStateProperty {
       /**
        * Defines the action that the bot executes at runtime when the conversation reaches this
        * step.
@@ -5447,7 +5524,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.ElicitationCodeHookInvocationSettingProperty,
-    ) : CdkObject(cdkObject), ElicitationCodeHookInvocationSettingProperty {
+    ) : CdkObject(cdkObject),
+        ElicitationCodeHookInvocationSettingProperty {
       /**
        * Indicates whether a Lambda function should be invoked for the dialog.
        *
@@ -5578,7 +5656,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.ExternalSourceSettingProperty,
-    ) : CdkObject(cdkObject), ExternalSourceSettingProperty {
+    ) : CdkObject(cdkObject),
+        ExternalSourceSettingProperty {
       /**
        * Settings required for a slot type based on a grammar that you provide.
        *
@@ -5841,7 +5920,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.FulfillmentCodeHookSettingProperty,
-    ) : CdkObject(cdkObject), FulfillmentCodeHookSettingProperty {
+    ) : CdkObject(cdkObject),
+        FulfillmentCodeHookSettingProperty {
       /**
        * Indicates whether a Lambda function should be invoked to fulfill a specific intent.
        *
@@ -6096,7 +6176,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.FulfillmentStartResponseSpecificationProperty,
-    ) : CdkObject(cdkObject), FulfillmentStartResponseSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        FulfillmentStartResponseSpecificationProperty {
       /**
        * Determines whether the user can interrupt the start message while it is playing.
        *
@@ -6342,7 +6423,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.FulfillmentUpdateResponseSpecificationProperty,
-    ) : CdkObject(cdkObject), FulfillmentUpdateResponseSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        FulfillmentUpdateResponseSpecificationProperty {
       /**
        * Determines whether the user can interrupt an update message while it is playing.
        *
@@ -6707,7 +6789,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.FulfillmentUpdatesSpecificationProperty,
-    ) : CdkObject(cdkObject), FulfillmentUpdatesSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        FulfillmentUpdatesSpecificationProperty {
       /**
        * Determines whether fulfillment updates are sent to the user. When this field is true,
        * updates are sent.
@@ -6848,7 +6931,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.GrammarSlotTypeSettingProperty,
-    ) : CdkObject(cdkObject), GrammarSlotTypeSettingProperty {
+    ) : CdkObject(cdkObject),
+        GrammarSlotTypeSettingProperty {
       /**
        * The source of the grammar used to create the slot type.
        *
@@ -6971,7 +7055,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.GrammarSlotTypeSourceProperty,
-    ) : CdkObject(cdkObject), GrammarSlotTypeSourceProperty {
+    ) : CdkObject(cdkObject),
+        GrammarSlotTypeSourceProperty {
       /**
        * The AWS KMS key required to decrypt the contents of the grammar, if any.
        *
@@ -7179,7 +7264,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.ImageResponseCardProperty,
-    ) : CdkObject(cdkObject), ImageResponseCardProperty {
+    ) : CdkObject(cdkObject),
+        ImageResponseCardProperty {
       /**
        * A list of buttons that should be displayed on the response card.
        *
@@ -7491,7 +7577,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.InitialResponseSettingProperty,
-    ) : CdkObject(cdkObject), InitialResponseSettingProperty {
+    ) : CdkObject(cdkObject),
+        InitialResponseSettingProperty {
       /**
        * Settings that specify the dialog code hook that is called by Amazon Lex at a step of the
        * conversation.
@@ -7598,7 +7685,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.InputContextProperty,
-    ) : CdkObject(cdkObject), InputContextProperty {
+    ) : CdkObject(cdkObject),
+        InputContextProperty {
       /**
        * The name of the context.
        *
@@ -8110,7 +8198,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.IntentClosingSettingProperty,
-    ) : CdkObject(cdkObject), IntentClosingSettingProperty {
+    ) : CdkObject(cdkObject),
+        IntentClosingSettingProperty {
       /**
        * The response that Amazon Lex sends to the user when the intent is complete.
        *
@@ -8962,7 +9051,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.IntentConfirmationSettingProperty,
-    ) : CdkObject(cdkObject), IntentConfirmationSettingProperty {
+    ) : CdkObject(cdkObject),
+        IntentConfirmationSettingProperty {
       /**
        * The `DialogCodeHookInvocationSetting` object associated with intent's confirmation step.
        *
@@ -9218,7 +9308,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.IntentOverrideProperty,
-    ) : CdkObject(cdkObject), IntentOverrideProperty {
+    ) : CdkObject(cdkObject),
+        IntentOverrideProperty {
       /**
        * The name of the intent.
        *
@@ -9948,7 +10039,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.IntentProperty,
-    ) : CdkObject(cdkObject), IntentProperty {
+    ) : CdkObject(cdkObject),
+        IntentProperty {
       /**
        * A description of the intent.
        *
@@ -10210,7 +10302,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.KendraConfigurationProperty,
-    ) : CdkObject(cdkObject), KendraConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        KendraConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon Kendra index that you want the
        * `AMAZON.KendraSearchIntent` intent to search. The index must be in the same account and Region
@@ -10334,7 +10427,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.LambdaCodeHookProperty,
-    ) : CdkObject(cdkObject), LambdaCodeHookProperty {
+    ) : CdkObject(cdkObject),
+        LambdaCodeHookProperty {
       /**
        * The version of the request-response that you want Amazon Lex to use to invoke your Lambda
        * function.
@@ -10546,7 +10640,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.MessageGroupProperty,
-    ) : CdkObject(cdkObject), MessageGroupProperty {
+    ) : CdkObject(cdkObject),
+        MessageGroupProperty {
       /**
        * The primary message that Amazon Lex should send to the user.
        *
@@ -10823,7 +10918,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.MessageProperty,
-    ) : CdkObject(cdkObject), MessageProperty {
+    ) : CdkObject(cdkObject),
+        MessageProperty {
       /**
        * A message in a custom format defined by the client application.
        *
@@ -10971,7 +11067,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.MultipleValuesSettingProperty,
-    ) : CdkObject(cdkObject), MultipleValuesSettingProperty {
+    ) : CdkObject(cdkObject),
+        MultipleValuesSettingProperty {
       /**
        * Indicates whether a slot can return multiple values.
        *
@@ -11065,7 +11162,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.ObfuscationSettingProperty,
-    ) : CdkObject(cdkObject), ObfuscationSettingProperty {
+    ) : CdkObject(cdkObject),
+        ObfuscationSettingProperty {
       /**
        * Value that determines whether Amazon Lex obscures slot values in conversation logs.
        *
@@ -11199,7 +11297,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.OutputContextProperty,
-    ) : CdkObject(cdkObject), OutputContextProperty {
+    ) : CdkObject(cdkObject),
+        OutputContextProperty {
       /**
        * The name of the output context.
        *
@@ -11296,7 +11395,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.PlainTextMessageProperty,
-    ) : CdkObject(cdkObject), PlainTextMessageProperty {
+    ) : CdkObject(cdkObject),
+        PlainTextMessageProperty {
       /**
        * The message to send to the user.
        *
@@ -11841,7 +11941,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.PostDialogCodeHookInvocationSpecificationProperty,
-    ) : CdkObject(cdkObject), PostDialogCodeHookInvocationSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PostDialogCodeHookInvocationSpecificationProperty {
       /**
        * A list of conditional branches to evaluate after the dialog code hook throws an exception
        * or returns with the `State` field of the `Intent` object set to `Failed` .
@@ -12454,7 +12555,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.PostFulfillmentStatusSpecificationProperty,
-    ) : CdkObject(cdkObject), PostFulfillmentStatusSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PostFulfillmentStatusSpecificationProperty {
       /**
        * A list of conditional branches to evaluate after the fulfillment code hook throws an
        * exception or returns with the `State` field of the `Intent` object set to `Failed` .
@@ -12785,7 +12887,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.PromptAttemptSpecificationProperty,
-    ) : CdkObject(cdkObject), PromptAttemptSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PromptAttemptSpecificationProperty {
       /**
        * Indicates whether the user can interrupt a speech prompt attempt from the bot.
        *
@@ -13106,7 +13209,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.PromptSpecificationProperty,
-    ) : CdkObject(cdkObject), PromptSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PromptSpecificationProperty {
       /**
        * Indicates whether the user can interrupt a speech prompt from the bot.
        *
@@ -13331,7 +13435,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.ResponseSpecificationProperty,
-    ) : CdkObject(cdkObject), ResponseSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ResponseSpecificationProperty {
       /**
        * Indicates whether the user can interrupt a speech response from Amazon Lex.
        *
@@ -13467,7 +13572,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.S3BucketLogDestinationProperty,
-    ) : CdkObject(cdkObject), S3BucketLogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        S3BucketLogDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key for encrypting
        * audio log files stored in an Amazon S3 bucket.
@@ -13602,7 +13708,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * The S3 bucket name.
        *
@@ -13693,7 +13800,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SSMLMessageProperty,
-    ) : CdkObject(cdkObject), SSMLMessageProperty {
+    ) : CdkObject(cdkObject),
+        SSMLMessageProperty {
       /**
        * The SSML text that defines the prompt.
        *
@@ -13773,7 +13881,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SampleUtteranceProperty,
-    ) : CdkObject(cdkObject), SampleUtteranceProperty {
+    ) : CdkObject(cdkObject),
+        SampleUtteranceProperty {
       /**
        * A sample utterance that invokes an intent or respond to a slot elicitation prompt.
        *
@@ -13851,7 +13960,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SampleValueProperty,
-    ) : CdkObject(cdkObject), SampleValueProperty {
+    ) : CdkObject(cdkObject),
+        SampleValueProperty {
       /**
        * The value that can be used for a slot type.
        *
@@ -13948,7 +14058,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SentimentAnalysisSettingsProperty,
-    ) : CdkObject(cdkObject), SentimentAnalysisSettingsProperty {
+    ) : CdkObject(cdkObject),
+        SentimentAnalysisSettingsProperty {
       /**
        * Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment of user utterances.
        *
@@ -14052,7 +14163,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SessionAttributeProperty,
-    ) : CdkObject(cdkObject), SessionAttributeProperty {
+    ) : CdkObject(cdkObject),
+        SessionAttributeProperty {
       /**
        * The name of the session attribute.
        *
@@ -14531,7 +14643,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotCaptureSettingProperty,
-    ) : CdkObject(cdkObject), SlotCaptureSettingProperty {
+    ) : CdkObject(cdkObject),
+        SlotCaptureSettingProperty {
       /**
        * A list of conditional branches to evaluate after the slot value is captured.
        *
@@ -14664,7 +14777,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotDefaultValueProperty,
-    ) : CdkObject(cdkObject), SlotDefaultValueProperty {
+    ) : CdkObject(cdkObject),
+        SlotDefaultValueProperty {
       /**
        * The default value to use when a user doesn't provide a value for a slot.
        *
@@ -14785,7 +14899,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotDefaultValueSpecificationProperty,
-    ) : CdkObject(cdkObject), SlotDefaultValueSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SlotDefaultValueSpecificationProperty {
       /**
        * A list of default values.
        *
@@ -14889,7 +15004,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotPriorityProperty,
-    ) : CdkObject(cdkObject), SlotPriorityProperty {
+    ) : CdkObject(cdkObject),
+        SlotPriorityProperty {
       /**
        * The priority that Amazon Lex should apply to the slot.
        *
@@ -15242,7 +15358,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotProperty,
-    ) : CdkObject(cdkObject), SlotProperty {
+    ) : CdkObject(cdkObject),
+        SlotProperty {
       /**
        * The description of the slot.
        *
@@ -15686,7 +15803,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotTypeProperty,
-    ) : CdkObject(cdkObject), SlotTypeProperty {
+    ) : CdkObject(cdkObject),
+        SlotTypeProperty {
       /**
        * A description of the slot type.
        *
@@ -15896,7 +16014,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotTypeValueProperty,
-    ) : CdkObject(cdkObject), SlotTypeValueProperty {
+    ) : CdkObject(cdkObject),
+        SlotTypeValueProperty {
       /**
        * The value of the slot type entry.
        *
@@ -16266,7 +16385,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueElicitationSettingProperty,
-    ) : CdkObject(cdkObject), SlotValueElicitationSettingProperty {
+    ) : CdkObject(cdkObject),
+        SlotValueElicitationSettingProperty {
       /**
        * A list of default values for a slot.
        *
@@ -16454,7 +16574,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueOverrideMapProperty,
-    ) : CdkObject(cdkObject), SlotValueOverrideMapProperty {
+    ) : CdkObject(cdkObject),
+        SlotValueOverrideMapProperty {
       /**
        * The name of the slot.
        *
@@ -16655,7 +16776,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueOverrideProperty,
-    ) : CdkObject(cdkObject), SlotValueOverrideProperty {
+    ) : CdkObject(cdkObject),
+        SlotValueOverrideProperty {
       /**
        * When the shape value is `List` , it indicates that the `values` field contains a list of
        * slot values.
@@ -16764,7 +16886,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueProperty,
-    ) : CdkObject(cdkObject), SlotValueProperty {
+    ) : CdkObject(cdkObject),
+        SlotValueProperty {
       /**
        * The value that Amazon Lex determines for the slot.
        *
@@ -16887,7 +17010,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueRegexFilterProperty,
-    ) : CdkObject(cdkObject), SlotValueRegexFilterProperty {
+    ) : CdkObject(cdkObject),
+        SlotValueRegexFilterProperty {
       /**
        * A regular expression used to validate the value of a slot.
        *
@@ -17135,7 +17259,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueSelectionSettingProperty,
-    ) : CdkObject(cdkObject), SlotValueSelectionSettingProperty {
+    ) : CdkObject(cdkObject),
+        SlotValueSelectionSettingProperty {
       /**
        * Provides settings that enable advanced recognition settings for slot values.
        *
@@ -17405,7 +17530,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.StillWaitingResponseSpecificationProperty,
-    ) : CdkObject(cdkObject), StillWaitingResponseSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        StillWaitingResponseSpecificationProperty {
       /**
        * Indicates that the user can interrupt the response by speaking while the message is being
        * played.
@@ -17681,7 +17807,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.TestBotAliasSettingsProperty,
-    ) : CdkObject(cdkObject), TestBotAliasSettingsProperty {
+    ) : CdkObject(cdkObject),
+        TestBotAliasSettingsProperty {
       /**
        * Specifies settings that are unique to a locale.
        *
@@ -17789,7 +17916,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.TextInputSpecificationProperty,
-    ) : CdkObject(cdkObject), TextInputSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        TextInputSpecificationProperty {
       /**
        * Time for which a bot waits before re-prompting a customer for text input.
        *
@@ -17906,7 +18034,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.TextLogDestinationProperty,
-    ) : CdkObject(cdkObject), TextLogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        TextLogDestinationProperty {
       /**
        * Defines the Amazon CloudWatch Logs log group where text and metadata logs are delivered.
        *
@@ -18056,7 +18185,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.TextLogSettingProperty,
-    ) : CdkObject(cdkObject), TextLogSettingProperty {
+    ) : CdkObject(cdkObject),
+        TextLogSettingProperty {
       /**
        * Specifies the Amazon CloudWatch Logs destination log group for conversation text logs.
        *
@@ -18091,6 +18221,13 @@ public open class CfnBot(
 
   /**
    * Defines settings for using an Amazon Polly voice to communicate with a user.
+   *
+   * Valid values include:
+   *
+   * * `standard`
+   * * `neural`
+   * * `long-form`
+   * * `generative`
    *
    * Example:
    *
@@ -18182,7 +18319,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.VoiceSettingsProperty,
-    ) : CdkObject(cdkObject), VoiceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        VoiceSettingsProperty {
       /**
        * Indicates the type of Amazon Polly voice that Amazon Lex should use for voice interaction
        * with the user.
@@ -18617,7 +18755,8 @@ public open class CfnBot(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBot.WaitAndContinueSpecificationProperty,
-    ) : CdkObject(cdkObject), WaitAndContinueSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        WaitAndContinueSpecificationProperty {
       /**
        * The response that Amazon Lex sends to indicate that the bot is ready to continue the
        * conversation.

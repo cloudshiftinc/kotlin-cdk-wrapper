@@ -504,7 +504,8 @@ public interface SnsPublishProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SnsPublishProps,
-  ) : CdkObject(cdkObject), SnsPublishProps {
+  ) : CdkObject(cdkObject),
+      SnsPublishProps {
     /**
      * An optional description for this state.
      *

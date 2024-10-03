@@ -106,7 +106,8 @@ public interface INetworkTargetGroupMetrics {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkTargetGroupMetrics,
-  ) : CdkObject(cdkObject), INetworkTargetGroupMetrics {
+  ) : CdkObject(cdkObject),
+      INetworkTargetGroupMetrics {
     /**
      * Return the given named metric for this Network Target Group.
      *

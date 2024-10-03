@@ -82,7 +82,7 @@ public interface CfnIpAccessSettingsProps {
   public fun ipRules(): Any
 
   /**
-   * The tags to add to the browser settings resource.
+   * The tags to add to the IP access settings resource.
    *
    * A tag is a key-value pair.
    *
@@ -137,13 +137,13 @@ public interface CfnIpAccessSettingsProps {
     public fun ipRules(vararg ipRules: Any)
 
     /**
-     * @param tags The tags to add to the browser settings resource.
+     * @param tags The tags to add to the IP access settings resource.
      * A tag is a key-value pair.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags The tags to add to the browser settings resource.
+     * @param tags The tags to add to the IP access settings resource.
      * A tag is a key-value pair.
      */
     public fun tags(vararg tags: CfnTag)
@@ -210,7 +210,7 @@ public interface CfnIpAccessSettingsProps {
     override fun ipRules(vararg ipRules: Any): Unit = ipRules(ipRules.toList())
 
     /**
-     * @param tags The tags to add to the browser settings resource.
+     * @param tags The tags to add to the IP access settings resource.
      * A tag is a key-value pair.
      */
     override fun tags(tags: List<CfnTag>) {
@@ -218,7 +218,7 @@ public interface CfnIpAccessSettingsProps {
     }
 
     /**
-     * @param tags The tags to add to the browser settings resource.
+     * @param tags The tags to add to the IP access settings resource.
      * A tag is a key-value pair.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
@@ -229,7 +229,8 @@ public interface CfnIpAccessSettingsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettingsProps,
-  ) : CdkObject(cdkObject), CfnIpAccessSettingsProps {
+  ) : CdkObject(cdkObject),
+      CfnIpAccessSettingsProps {
     /**
      * Additional encryption context of the IP access settings.
      *
@@ -268,7 +269,7 @@ public interface CfnIpAccessSettingsProps {
     override fun ipRules(): Any = unwrap(this).getIpRules()
 
     /**
-     * The tags to add to the browser settings resource.
+     * The tags to add to the IP access settings resource.
      *
      * A tag is a key-value pair.
      *

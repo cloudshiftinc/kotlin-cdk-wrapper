@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFlowTemplate(
   cdkObject: software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -277,7 +278,8 @@ public open class CfnFlowTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate.DefinitionDocumentProperty,
-    ) : CdkObject(cdkObject), DefinitionDocumentProperty {
+    ) : CdkObject(cdkObject),
+        DefinitionDocumentProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotthingsgraph-flowtemplate-definitiondocument.html#cfn-iotthingsgraph-flowtemplate-definitiondocument-language)
        */

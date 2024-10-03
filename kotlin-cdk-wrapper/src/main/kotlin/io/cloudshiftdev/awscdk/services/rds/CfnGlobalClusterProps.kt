@@ -23,6 +23,7 @@ import kotlin.Unit
  * CfnGlobalClusterProps cfnGlobalClusterProps = CfnGlobalClusterProps.builder()
  * .deletionProtection(false)
  * .engine("engine")
+ * .engineLifecycleSupport("engineLifecycleSupport")
  * .engineVersion("engineVersion")
  * .globalClusterIdentifier("globalClusterIdentifier")
  * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
@@ -55,6 +56,34 @@ public interface CfnGlobalClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-engine)
    */
   public fun engine(): String? = unwrap(this).getEngine()
+
+  /**
+   * The life cycle type for this global database cluster.
+   *
+   *
+   * By default, this value is set to `open-source-rds-extended-support` , which enrolls your global
+   * cluster into Amazon RDS Extended Support. At the end of standard support, you can avoid charges
+   * for Extended Support by setting the value to `open-source-rds-extended-support-disabled` . In this
+   * case, creating the global cluster will fail if the DB major version is past its end of standard
+   * support date.
+   *
+   *
+   * This setting only applies to Aurora PostgreSQL-based global databases.
+   *
+   * You can use this setting to enroll your global cluster into Amazon RDS Extended Support. With
+   * RDS Extended Support, you can run the selected major engine version on your global cluster past
+   * the end of standard support for that engine version. For more information, see [Using Amazon RDS
+   * Extended
+   * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+   * the *Amazon Aurora User Guide* .
+   *
+   * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+   *
+   * Default: `open-source-rds-extended-support`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-enginelifecyclesupport)
+   */
+  public fun engineLifecycleSupport(): String? = unwrap(this).getEngineLifecycleSupport()
 
   /**
    * The engine version to use for this global database cluster.
@@ -133,6 +162,31 @@ public interface CfnGlobalClusterProps {
      * uses the engine of the source DB cluster.
      */
     public fun engine(engine: String)
+
+    /**
+     * @param engineLifecycleSupport The life cycle type for this global database cluster.
+     *
+     * By default, this value is set to `open-source-rds-extended-support` , which enrolls your
+     * global cluster into Amazon RDS Extended Support. At the end of standard support, you can avoid
+     * charges for Extended Support by setting the value to `open-source-rds-extended-support-disabled`
+     * . In this case, creating the global cluster will fail if the DB major version is past its end of
+     * standard support date.
+     *
+     *
+     * This setting only applies to Aurora PostgreSQL-based global databases.
+     *
+     * You can use this setting to enroll your global cluster into Amazon RDS Extended Support. With
+     * RDS Extended Support, you can run the selected major engine version on your global cluster past
+     * the end of standard support for that engine version. For more information, see [Using Amazon RDS
+     * Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * the *Amazon Aurora User Guide* .
+     *
+     * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+     *
+     * Default: `open-source-rds-extended-support`
+     */
+    public fun engineLifecycleSupport(engineLifecycleSupport: String)
 
     /**
      * @param engineVersion The engine version to use for this global database cluster.
@@ -219,6 +273,33 @@ public interface CfnGlobalClusterProps {
     }
 
     /**
+     * @param engineLifecycleSupport The life cycle type for this global database cluster.
+     *
+     * By default, this value is set to `open-source-rds-extended-support` , which enrolls your
+     * global cluster into Amazon RDS Extended Support. At the end of standard support, you can avoid
+     * charges for Extended Support by setting the value to `open-source-rds-extended-support-disabled`
+     * . In this case, creating the global cluster will fail if the DB major version is past its end of
+     * standard support date.
+     *
+     *
+     * This setting only applies to Aurora PostgreSQL-based global databases.
+     *
+     * You can use this setting to enroll your global cluster into Amazon RDS Extended Support. With
+     * RDS Extended Support, you can run the selected major engine version on your global cluster past
+     * the end of standard support for that engine version. For more information, see [Using Amazon RDS
+     * Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * the *Amazon Aurora User Guide* .
+     *
+     * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+     *
+     * Default: `open-source-rds-extended-support`
+     */
+    override fun engineLifecycleSupport(engineLifecycleSupport: String) {
+      cdkBuilder.engineLifecycleSupport(engineLifecycleSupport)
+    }
+
+    /**
      * @param engineVersion The engine version to use for this global database cluster.
      * Constraints:
      *
@@ -282,7 +363,8 @@ public interface CfnGlobalClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.CfnGlobalClusterProps,
-  ) : CdkObject(cdkObject), CfnGlobalClusterProps {
+  ) : CdkObject(cdkObject),
+      CfnGlobalClusterProps {
     /**
      * Specifies whether to enable deletion protection for the new global database cluster.
      *
@@ -305,6 +387,34 @@ public interface CfnGlobalClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-engine)
      */
     override fun engine(): String? = unwrap(this).getEngine()
+
+    /**
+     * The life cycle type for this global database cluster.
+     *
+     *
+     * By default, this value is set to `open-source-rds-extended-support` , which enrolls your
+     * global cluster into Amazon RDS Extended Support. At the end of standard support, you can avoid
+     * charges for Extended Support by setting the value to `open-source-rds-extended-support-disabled`
+     * . In this case, creating the global cluster will fail if the DB major version is past its end of
+     * standard support date.
+     *
+     *
+     * This setting only applies to Aurora PostgreSQL-based global databases.
+     *
+     * You can use this setting to enroll your global cluster into Amazon RDS Extended Support. With
+     * RDS Extended Support, you can run the selected major engine version on your global cluster past
+     * the end of standard support for that engine version. For more information, see [Using Amazon RDS
+     * Extended
+     * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
+     * the *Amazon Aurora User Guide* .
+     *
+     * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+     *
+     * Default: `open-source-rds-extended-support`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-enginelifecyclesupport)
+     */
+    override fun engineLifecycleSupport(): String? = unwrap(this).getEngineLifecycleSupport()
 
     /**
      * The engine version to use for this global database cluster.

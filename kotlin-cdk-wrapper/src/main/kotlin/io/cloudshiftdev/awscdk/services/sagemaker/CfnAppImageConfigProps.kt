@@ -325,7 +325,8 @@ public interface CfnAppImageConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfigProps,
-  ) : CdkObject(cdkObject), CfnAppImageConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnAppImageConfigProps {
     /**
      * The name of the AppImageConfig.
      *

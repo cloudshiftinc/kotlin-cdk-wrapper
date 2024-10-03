@@ -158,7 +158,8 @@ public interface LockConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.backup.LockConfiguration,
-  ) : CdkObject(cdkObject), LockConfiguration {
+  ) : CdkObject(cdkObject),
+      LockConfiguration {
     /**
      * The duration before the lock date.
      *

@@ -33,7 +33,7 @@ import kotlin.jvm.JvmName
  * DatabaseInstance sourceInstance;
  * DatabaseInstanceFromSnapshot.Builder.create(this, "Instance")
  * .snapshotIdentifier("my-snapshot")
- * .engine(DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15_2).build()))
+ * .engine(DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_16_3).build()))
  * // optional, defaults to m5.large
  * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.LARGE))
  * .vpc(vpc)
@@ -918,7 +918,8 @@ public interface DatabaseInstanceFromSnapshotProps : DatabaseInstanceSourceProps
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshotProps,
-  ) : CdkObject(cdkObject), DatabaseInstanceFromSnapshotProps {
+  ) : CdkObject(cdkObject),
+      DatabaseInstanceFromSnapshotProps {
     /**
      * The allocated storage size, specified in gibibytes (GiB).
      *

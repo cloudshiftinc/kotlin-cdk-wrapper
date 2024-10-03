@@ -399,7 +399,8 @@ public interface CfnStageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStageProps,
-  ) : CdkObject(cdkObject), CfnStageProps {
+  ) : CdkObject(cdkObject),
+      CfnStageProps {
     /**
      * Settings for logging access in this stage.
      *

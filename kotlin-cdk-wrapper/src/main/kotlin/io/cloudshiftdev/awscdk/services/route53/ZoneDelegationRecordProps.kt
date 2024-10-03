@@ -281,7 +281,8 @@ public interface ZoneDelegationRecordProps : RecordSetOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.ZoneDelegationRecordProps,
-  ) : CdkObject(cdkObject), ZoneDelegationRecordProps {
+  ) : CdkObject(cdkObject),
+      ZoneDelegationRecordProps {
     /**
      * A comment to add on the record.
      *

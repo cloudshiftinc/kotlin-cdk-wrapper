@@ -155,7 +155,8 @@ public interface CodeDeployServerDeployActionProps : CommonAwsActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployActionProps,
-  ) : CdkObject(cdkObject), CodeDeployServerDeployActionProps {
+  ) : CdkObject(cdkObject),
+      CodeDeployServerDeployActionProps {
     /**
      * The physical, human-readable name of the Action.
      *

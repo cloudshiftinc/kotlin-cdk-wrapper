@@ -50,7 +50,8 @@ public interface IServerlessCluster : IResource, IConnectable, ISecretAttachment
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.IServerlessCluster,
-  ) : CdkObject(cdkObject), IServerlessCluster {
+  ) : CdkObject(cdkObject),
+      IServerlessCluster {
     /**
      * Apply the given removal policy to this resource.
      *

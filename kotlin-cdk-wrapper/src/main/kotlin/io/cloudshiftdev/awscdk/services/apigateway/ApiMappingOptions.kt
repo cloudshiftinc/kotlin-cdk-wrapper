@@ -78,7 +78,8 @@ public interface ApiMappingOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.ApiMappingOptions,
-  ) : CdkObject(cdkObject), ApiMappingOptions {
+  ) : CdkObject(cdkObject),
+      ApiMappingOptions {
     /**
      * The api path name that callers of the API must provide in the URL after the domain name (e.g.
      * `example.com/base-path`). If you specify this property, it can't be an empty string.

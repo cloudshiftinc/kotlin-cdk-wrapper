@@ -31,6 +31,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .type("type")
  * // the properties below are optional
  * .bgpAsn(123)
+ * .bgpAsnExtended(123)
  * .certificateArn("certificateArn")
  * .deviceName("deviceName")
  * .tags(List.of(CfnTag.builder()
@@ -44,7 +45,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCustomerGateway(
   cdkObject: software.amazon.awscdk.services.ec2.CfnCustomerGateway,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -67,15 +70,27 @@ public open class CfnCustomerGateway(
   public open fun attrCustomerGatewayId(): String = unwrap(this).getAttrCustomerGatewayId()
 
   /**
-   * For devices that support BGP, the customer gateway's BGP ASN.
+   * For customer gateway devices that support BGP, specify the device's ASN.
    */
   public open fun bgpAsn(): Number? = unwrap(this).getBgpAsn()
 
   /**
-   * For devices that support BGP, the customer gateway's BGP ASN.
+   * For customer gateway devices that support BGP, specify the device's ASN.
    */
   public open fun bgpAsn(`value`: Number) {
     unwrap(this).setBgpAsn(`value`)
+  }
+
+  /**
+   * For customer gateway devices that support BGP, specify the device's ASN.
+   */
+  public open fun bgpAsnExtended(): Number? = unwrap(this).getBgpAsnExtended()
+
+  /**
+   * For customer gateway devices that support BGP, specify the device's ASN.
+   */
+  public open fun bgpAsnExtended(`value`: Number) {
+    unwrap(this).setBgpAsnExtended(`value`)
   }
 
   /**
@@ -164,16 +179,35 @@ public open class CfnCustomerGateway(
   @CdkDslMarker
   public interface Builder {
     /**
-     * For devices that support BGP, the customer gateway's BGP ASN.
+     * For customer gateway devices that support BGP, specify the device's ASN.
+     *
+     * You must specify either `BgpAsn` or `BgpAsnExtended` when creating the customer gateway. If
+     * the ASN is larger than `2,147,483,647` , you must use `BgpAsnExtended` .
      *
      * Default: 65000
+     *
+     * Valid values: `1` to `2,147,483,647`
      *
      * Default: - 65000
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasn)
-     * @param bgpAsn For devices that support BGP, the customer gateway's BGP ASN. 
+     * @param bgpAsn For customer gateway devices that support BGP, specify the device's ASN. 
      */
     public fun bgpAsn(bgpAsn: Number)
+
+    /**
+     * For customer gateway devices that support BGP, specify the device's ASN.
+     *
+     * You must specify either `BgpAsn` or `BgpAsnExtended` when creating the customer gateway. If
+     * the ASN is larger than `2,147,483,647` , you must use `BgpAsnExtended` .
+     *
+     * Valid values: `2,147,483,648` to `4,294,967,295`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasnextended)
+     * @param bgpAsnExtended For customer gateway devices that support BGP, specify the device's
+     * ASN. 
+     */
+    public fun bgpAsnExtended(bgpAsnExtended: Number)
 
     /**
      * The Amazon Resource Name (ARN) for the customer gateway certificate.
@@ -194,7 +228,9 @@ public open class CfnCustomerGateway(
     /**
      * IPv4 address for the customer gateway device's outside interface.
      *
-     * The address must be static.
+     * The address must be static. If `OutsideIpAddressType` in your VPN connection options is set
+     * to `PrivateIpv4` , you can use an RFC6598 or RFC1918 private IPv4 address. If
+     * `OutsideIpAddressType` is set to `PublicIpv4` , you can use a public IPv4 address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-ipaddress)
      * @param ipAddress IPv4 address for the customer gateway device's outside interface. 
@@ -234,17 +270,38 @@ public open class CfnCustomerGateway(
         software.amazon.awscdk.services.ec2.CfnCustomerGateway.Builder.create(scope, id)
 
     /**
-     * For devices that support BGP, the customer gateway's BGP ASN.
+     * For customer gateway devices that support BGP, specify the device's ASN.
+     *
+     * You must specify either `BgpAsn` or `BgpAsnExtended` when creating the customer gateway. If
+     * the ASN is larger than `2,147,483,647` , you must use `BgpAsnExtended` .
      *
      * Default: 65000
+     *
+     * Valid values: `1` to `2,147,483,647`
      *
      * Default: - 65000
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasn)
-     * @param bgpAsn For devices that support BGP, the customer gateway's BGP ASN. 
+     * @param bgpAsn For customer gateway devices that support BGP, specify the device's ASN. 
      */
     override fun bgpAsn(bgpAsn: Number) {
       cdkBuilder.bgpAsn(bgpAsn)
+    }
+
+    /**
+     * For customer gateway devices that support BGP, specify the device's ASN.
+     *
+     * You must specify either `BgpAsn` or `BgpAsnExtended` when creating the customer gateway. If
+     * the ASN is larger than `2,147,483,647` , you must use `BgpAsnExtended` .
+     *
+     * Valid values: `2,147,483,648` to `4,294,967,295`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasnextended)
+     * @param bgpAsnExtended For customer gateway devices that support BGP, specify the device's
+     * ASN. 
+     */
+    override fun bgpAsnExtended(bgpAsnExtended: Number) {
+      cdkBuilder.bgpAsnExtended(bgpAsnExtended)
     }
 
     /**
@@ -270,7 +327,9 @@ public open class CfnCustomerGateway(
     /**
      * IPv4 address for the customer gateway device's outside interface.
      *
-     * The address must be static.
+     * The address must be static. If `OutsideIpAddressType` in your VPN connection options is set
+     * to `PrivateIpv4` , you can use an RFC6598 or RFC1918 private IPv4 address. If
+     * `OutsideIpAddressType` is set to `PublicIpv4` , you can use a public IPv4 address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-ipaddress)
      * @param ipAddress IPv4 address for the customer gateway device's outside interface. 

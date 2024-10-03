@@ -97,7 +97,8 @@ public interface CustomEndpointOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opensearchservice.CustomEndpointOptions,
-  ) : CdkObject(cdkObject), CustomEndpointOptions {
+  ) : CdkObject(cdkObject),
+      CustomEndpointOptions {
     /**
      * The certificate to use.
      *

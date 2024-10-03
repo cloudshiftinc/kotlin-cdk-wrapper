@@ -285,7 +285,8 @@ public interface HttpAuthorizerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpAuthorizerProps,
-  ) : CdkObject(cdkObject), HttpAuthorizerProps {
+  ) : CdkObject(cdkObject),
+      HttpAuthorizerProps {
     /**
      * Name of the authorizer.
      *

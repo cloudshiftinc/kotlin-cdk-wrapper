@@ -234,7 +234,8 @@ public interface FunctionAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.FunctionAttributes,
-  ) : CdkObject(cdkObject), FunctionAttributes {
+  ) : CdkObject(cdkObject),
+      FunctionAttributes {
     /**
      * The architecture of this Lambda Function (this is an optional attribute and defaults to
      * X86_64).

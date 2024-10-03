@@ -115,7 +115,8 @@ public interface CfnServiceActionAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociationProps,
-  ) : CdkObject(cdkObject), CfnServiceActionAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnServiceActionAssociationProps {
     /**
      * The product identifier.
      *

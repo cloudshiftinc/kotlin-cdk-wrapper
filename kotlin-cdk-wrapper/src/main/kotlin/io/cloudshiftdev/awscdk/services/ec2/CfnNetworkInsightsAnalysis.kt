@@ -48,7 +48,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNetworkInsightsAnalysis(
   cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -552,7 +554,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty,
-    ) : CdkObject(cdkObject), AdditionalDetailProperty {
+    ) : CdkObject(cdkObject),
+        AdditionalDetailProperty {
       /**
        * The additional detail code.
        *
@@ -675,7 +678,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty,
-    ) : CdkObject(cdkObject), AlternatePathHintProperty {
+    ) : CdkObject(cdkObject),
+        AlternatePathHintProperty {
       /**
        * The Amazon Resource Name (ARN) of the component.
        *
@@ -906,7 +910,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty,
-    ) : CdkObject(cdkObject), AnalysisAclRuleProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisAclRuleProperty {
       /**
        * The IPv4 address range, in CIDR notation.
        *
@@ -1043,7 +1048,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty,
-    ) : CdkObject(cdkObject), AnalysisComponentProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisComponentProperty {
       /**
        * The Amazon Resource Name (ARN) of the component.
        *
@@ -1153,7 +1159,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty,
-    ) : CdkObject(cdkObject), AnalysisLoadBalancerListenerProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisLoadBalancerListenerProperty {
       /**
        * [Classic Load Balancers] The back-end port for the listener.
        *
@@ -1334,7 +1341,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerTargetProperty,
-    ) : CdkObject(cdkObject), AnalysisLoadBalancerTargetProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisLoadBalancerTargetProperty {
       /**
        * The IP address.
        *
@@ -1597,7 +1605,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty,
-    ) : CdkObject(cdkObject), AnalysisPacketHeaderProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisPacketHeaderProperty {
       /**
        * The destination addresses.
        *
@@ -1690,7 +1699,7 @@ public open class CfnNetworkInsightsAnalysis(
     public fun destinationCidr(): String? = unwrap(this).getDestinationCidr()
 
     /**
-     * The prefix of the AWS service .
+     * The prefix of the AWS service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-destinationprefixlistid)
      */
@@ -1778,7 +1787,7 @@ public open class CfnNetworkInsightsAnalysis(
       public fun destinationCidr(destinationCidr: String)
 
       /**
-       * @param destinationPrefixListId The prefix of the AWS service .
+       * @param destinationPrefixListId The prefix of the AWS service.
        */
       public fun destinationPrefixListId(destinationPrefixListId: String)
 
@@ -1848,7 +1857,7 @@ public open class CfnNetworkInsightsAnalysis(
       }
 
       /**
-       * @param destinationPrefixListId The prefix of the AWS service .
+       * @param destinationPrefixListId The prefix of the AWS service.
        */
       override fun destinationPrefixListId(destinationPrefixListId: String) {
         cdkBuilder.destinationPrefixListId(destinationPrefixListId)
@@ -1930,7 +1939,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty,
-    ) : CdkObject(cdkObject), AnalysisRouteTableRouteProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisRouteTableRouteProperty {
       /**
        * The destination IPv4 address, in CIDR notation.
        *
@@ -1939,7 +1949,7 @@ public open class CfnNetworkInsightsAnalysis(
       override fun destinationCidr(): String? = unwrap(this).getDestinationCidr()
 
       /**
-       * The prefix of the AWS service .
+       * The prefix of the AWS service.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-destinationprefixlistid)
        */
@@ -2228,7 +2238,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty,
-    ) : CdkObject(cdkObject), AnalysisSecurityGroupRuleProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisSecurityGroupRuleProperty {
       /**
        * The IPv4 address range, in CIDR notation.
        *
@@ -4500,7 +4511,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.ExplanationProperty,
-    ) : CdkObject(cdkObject), ExplanationProperty {
+    ) : CdkObject(cdkObject),
+        ExplanationProperty {
       /**
        * The network ACL.
        *
@@ -5955,7 +5967,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PathComponentProperty,
-    ) : CdkObject(cdkObject), PathComponentProperty {
+    ) : CdkObject(cdkObject),
+        PathComponentProperty {
       /**
        * The network ACL rule.
        *
@@ -6170,7 +6183,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty,
-    ) : CdkObject(cdkObject), PortRangeProperty {
+    ) : CdkObject(cdkObject),
+        PortRangeProperty {
       /**
        * The first port in the range.
        *
@@ -6387,7 +6401,8 @@ public open class CfnNetworkInsightsAnalysis(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.TransitGatewayRouteTableRouteProperty,
-    ) : CdkObject(cdkObject), TransitGatewayRouteTableRouteProperty {
+    ) : CdkObject(cdkObject),
+        TransitGatewayRouteTableRouteProperty {
       /**
        * The ID of the route attachment.
        *

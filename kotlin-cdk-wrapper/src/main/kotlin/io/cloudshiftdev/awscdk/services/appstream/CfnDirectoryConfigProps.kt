@@ -281,7 +281,8 @@ public interface CfnDirectoryConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfigProps,
-  ) : CdkObject(cdkObject), CfnDirectoryConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnDirectoryConfigProps {
     /**
      * The certificate-based authentication properties used to authenticate SAML 2.0 Identity
      * Provider (IdP) user identities to Active Directory domain-joined streaming instances.

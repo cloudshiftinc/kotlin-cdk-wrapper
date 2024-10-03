@@ -32,7 +32,8 @@ import kotlin.jvm.JvmName
  */
 public open class FunctionHook(
   cdkObject: software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook,
-) : CdkObject(cdkObject), ILifecycleHookTarget {
+) : CdkObject(cdkObject),
+    ILifecycleHookTarget {
   public constructor(fn: IFunction) :
       this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(fn.let(IFunction.Companion::unwrap))
   )

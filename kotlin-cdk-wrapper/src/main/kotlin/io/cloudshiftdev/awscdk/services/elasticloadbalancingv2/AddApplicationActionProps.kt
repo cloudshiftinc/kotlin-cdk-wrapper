@@ -155,7 +155,8 @@ public interface AddApplicationActionProps : AddRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationActionProps,
-  ) : CdkObject(cdkObject), AddApplicationActionProps {
+  ) : CdkObject(cdkObject),
+      AddApplicationActionProps {
     /**
      * Action to perform.
      */

@@ -192,7 +192,8 @@ public interface VirtualNodeProps : VirtualNodeBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeProps,
-  ) : CdkObject(cdkObject), VirtualNodeProps {
+  ) : CdkObject(cdkObject),
+      VirtualNodeProps {
     /**
      * Access Logging Configuration for the virtual node.
      *

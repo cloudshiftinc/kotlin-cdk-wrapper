@@ -192,7 +192,8 @@ public interface ServiceCatalogDeployActionBeta1Props : CommonAwsActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1Props,
-  ) : CdkObject(cdkObject), ServiceCatalogDeployActionBeta1Props {
+  ) : CdkObject(cdkObject),
+      ServiceCatalogDeployActionBeta1Props {
     /**
      * The physical, human-readable name of the Action.
      *

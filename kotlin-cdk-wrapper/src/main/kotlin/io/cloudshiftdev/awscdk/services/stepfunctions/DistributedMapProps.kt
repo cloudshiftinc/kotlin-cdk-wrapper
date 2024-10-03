@@ -18,11 +18,13 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
- * .maxConcurrency(1)
- * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+ * DistributedMap distributedMap = DistributedMap.Builder.create(this, "DistributedMap")
+ * .mapExecutionType(StateMachineType.EXPRESS)
  * .build();
- * distributedMap.itemProcessor(new Pass(this, "Pass State"));
+ * distributedMap.itemProcessor(new Pass(this, "Pass"), ProcessorConfig.builder()
+ * .mode(ProcessorMode.DISTRIBUTED)
+ * .executionType(ProcessorType.STANDARD)
+ * .build());
  * ```
  */
 public interface DistributedMapProps : MapBaseProps {
@@ -55,6 +57,8 @@ public interface DistributedMapProps : MapBaseProps {
    * MapExecutionType.
    *
    * The execution type of the distributed map state
+   *
+   * This property overwrites ProcessorConfig.executionType
    *
    * Default: StateMachineType.STANDARD
    */
@@ -163,6 +167,8 @@ public interface DistributedMapProps : MapBaseProps {
     /**
      * @param mapExecutionType MapExecutionType.
      * The execution type of the distributed map state
+     *
+     * This property overwrites ProcessorConfig.executionType
      */
     public fun mapExecutionType(mapExecutionType: StateMachineType)
 
@@ -316,6 +322,8 @@ public interface DistributedMapProps : MapBaseProps {
     /**
      * @param mapExecutionType MapExecutionType.
      * The execution type of the distributed map state
+     *
+     * This property overwrites ProcessorConfig.executionType
      */
     override fun mapExecutionType(mapExecutionType: StateMachineType) {
       cdkBuilder.mapExecutionType(mapExecutionType.let(StateMachineType.Companion::unwrap))
@@ -426,7 +434,8 @@ public interface DistributedMapProps : MapBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.DistributedMapProps,
-  ) : CdkObject(cdkObject), DistributedMapProps {
+  ) : CdkObject(cdkObject),
+      DistributedMapProps {
     /**
      * An optional description for this state.
      *
@@ -490,6 +499,8 @@ public interface DistributedMapProps : MapBaseProps {
      * MapExecutionType.
      *
      * The execution type of the distributed map state
+     *
+     * This property overwrites ProcessorConfig.executionType
      *
      * Default: StateMachineType.STANDARD
      */

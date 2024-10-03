@@ -65,7 +65,8 @@ public interface IStage : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IStage,
-  ) : CdkObject(cdkObject), IStage {
+  ) : CdkObject(cdkObject),
+      IStage {
     /**
      * Apply the given removal policy to this resource.
      *

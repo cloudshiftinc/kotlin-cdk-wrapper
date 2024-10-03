@@ -118,7 +118,8 @@ public interface CfnVPNGatewayProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnVPNGatewayProps,
-  ) : CdkObject(cdkObject), CfnVPNGatewayProps {
+  ) : CdkObject(cdkObject),
+      CfnVPNGatewayProps {
     /**
      * The private Autonomous System Number (ASN) for the Amazon side of a BGP session.
      *

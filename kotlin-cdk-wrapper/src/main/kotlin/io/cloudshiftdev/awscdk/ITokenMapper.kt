@@ -21,7 +21,8 @@ public interface ITokenMapper {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ITokenMapper,
-  ) : CdkObject(cdkObject), ITokenMapper {
+  ) : CdkObject(cdkObject),
+      ITokenMapper {
     /**
      * Replace a single token.
      *

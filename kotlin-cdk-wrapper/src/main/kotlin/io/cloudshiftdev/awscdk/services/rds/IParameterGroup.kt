@@ -72,7 +72,8 @@ public interface IParameterGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.IParameterGroup,
-  ) : CdkObject(cdkObject), IParameterGroup {
+  ) : CdkObject(cdkObject),
+      IParameterGroup {
     /**
      * Adds a parameter to this group.
      *

@@ -132,7 +132,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTable(
   cdkObject: software.amazon.awscdk.services.cassandra.CfnTable,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1584,7 +1586,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSettingProperty,
-    ) : CdkObject(cdkObject), AutoScalingSettingProperty {
+    ) : CdkObject(cdkObject),
+        AutoScalingSettingProperty {
       /**
        * This optional parameter enables auto scaling for the table if set to `false` .
        *
@@ -1804,7 +1807,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty,
-    ) : CdkObject(cdkObject), AutoScalingSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        AutoScalingSpecificationProperty {
       /**
        * The auto scaling settings for the table's read capacity.
        *
@@ -2002,7 +2006,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty,
-    ) : CdkObject(cdkObject), BillingModeProperty {
+    ) : CdkObject(cdkObject),
+        BillingModeProperty {
       /**
        * The billing mode for the table:.
        *
@@ -2166,7 +2171,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty,
-    ) : CdkObject(cdkObject), ClusteringKeyColumnProperty {
+    ) : CdkObject(cdkObject),
+        ClusteringKeyColumnProperty {
       /**
        * The name and data type of this clustering key column.
        *
@@ -2305,7 +2311,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ColumnProperty,
-    ) : CdkObject(cdkObject), ColumnProperty {
+    ) : CdkObject(cdkObject),
+        ColumnProperty {
       /**
        * The name of the column.
        *
@@ -2453,7 +2460,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty,
-    ) : CdkObject(cdkObject), EncryptionSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionSpecificationProperty {
       /**
        * The encryption at rest options for the table.
        *
@@ -2595,7 +2603,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty,
-    ) : CdkObject(cdkObject), ProvisionedThroughputProperty {
+    ) : CdkObject(cdkObject),
+        ProvisionedThroughputProperty {
       /**
        * The amount of read capacity that's provisioned for the table.
        *
@@ -2791,7 +2800,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty,
-    ) : CdkObject(cdkObject), ReplicaSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicaSpecificationProperty {
       /**
        * The read capacity auto scaling settings for the multi-Region table in the specified AWS
        * Region.
@@ -2938,7 +2948,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty,
-    ) : CdkObject(cdkObject), ScalingPolicyProperty {
+    ) : CdkObject(cdkObject),
+        ScalingPolicyProperty {
       /**
        * The auto scaling policy that scales a table based on the ratio of consumed to provisioned
        * capacity.
@@ -3158,7 +3169,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty,
-    ) : CdkObject(cdkObject), TargetTrackingScalingPolicyConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        TargetTrackingScalingPolicyConfigurationProperty {
       /**
        * Specifies if `scale-in` is enabled.
        *

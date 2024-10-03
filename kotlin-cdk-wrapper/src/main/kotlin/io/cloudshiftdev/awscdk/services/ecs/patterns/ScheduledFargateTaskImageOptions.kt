@@ -24,20 +24,17 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Vpc vpc = Vpc.Builder.create(this, "Vpc").maxAzs(1).build();
- * Cluster cluster = Cluster.Builder.create(this, "EcsCluster").vpc(vpc).build();
+ * Cluster cluster;
  * ScheduledFargateTask scheduledFargateTask = ScheduledFargateTask.Builder.create(this,
  * "ScheduledFargateTask")
  * .cluster(cluster)
  * .scheduledFargateTaskImageOptions(ScheduledFargateTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .containerName("customContainerName")
  * .memoryLimitMiB(512)
  * .build())
  * .schedule(Schedule.expression("rate(1 minute)"))
- * .tags(List.of(Tag.builder()
- * .key("my-tag")
- * .value("my-tag-value")
- * .build()))
+ * .platformVersion(FargatePlatformVersion.LATEST)
  * .build();
  * ```
  */
@@ -59,6 +56,11 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
      * If you provide a shell command as a single string, you have to quote command-line arguments.
      */
     public fun command(vararg command: String)
+
+    /**
+     * @param containerName Optional name for the container added.
+     */
+    public fun containerName(containerName: String)
 
     /**
      * @param cpu The number of cpu units used by the task.
@@ -189,6 +191,13 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
      * If you provide a shell command as a single string, you have to quote command-line arguments.
      */
     override fun command(vararg command: String): Unit = command(command.toList())
+
+    /**
+     * @param containerName Optional name for the container added.
+     */
+    override fun containerName(containerName: String) {
+      cdkBuilder.containerName(containerName)
+    }
 
     /**
      * @param cpu The number of cpu units used by the task.
@@ -328,7 +337,8 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskImageOptions,
-  ) : CdkObject(cdkObject), ScheduledFargateTaskImageOptions {
+  ) : CdkObject(cdkObject),
+      ScheduledFargateTaskImageOptions {
     /**
      * The command that is passed to the container.
      *
@@ -337,6 +347,13 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
      * Default: - CMD value built into container image.
      */
     override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+
+    /**
+     * Optional name for the container added.
+     *
+     * Default: - ScheduledContainer
+     */
+    override fun containerName(): String? = unwrap(this).getContainerName()
 
     /**
      * The number of cpu units used by the task.

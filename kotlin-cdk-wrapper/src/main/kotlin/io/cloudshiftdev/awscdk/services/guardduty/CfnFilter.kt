@@ -33,6 +33,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.guardduty.*;
  * Object criterion;
  * CfnFilter cfnFilter = CfnFilter.Builder.create(this, "MyCfnFilter")
+ * .detectorId("detectorId")
  * .findingCriteria(FindingCriteriaProperty.builder()
  * .criterion(criterion)
  * .itemType(ConditionProperty.builder()
@@ -50,11 +51,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .notEquals(List.of("notEquals"))
  * .build())
  * .build())
+ * .name("name")
  * // the properties below are optional
  * .action("action")
  * .description("description")
- * .detectorId("detectorId")
- * .name("name")
  * .rank(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -67,7 +67,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFilter(
   cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -109,12 +111,12 @@ public open class CfnFilter(
   }
 
   /**
-   * The ID of the detector belonging to the GuardDuty account that you want to create a filter for.
+   * The detector ID associated with the GuardDuty account for which you want to create a filter.
    */
-  public open fun detectorId(): String? = unwrap(this).getDetectorId()
+  public open fun detectorId(): String = unwrap(this).getDetectorId()
 
   /**
-   * The ID of the detector belonging to the GuardDuty account that you want to create a filter for.
+   * The detector ID associated with the GuardDuty account for which you want to create a filter.
    */
   public open fun detectorId(`value`: String) {
     unwrap(this).setDetectorId(`value`)
@@ -159,7 +161,7 @@ public open class CfnFilter(
   /**
    * The name of the filter.
    */
-  public open fun name(): String? = unwrap(this).getName()
+  public open fun name(): String = unwrap(this).getName()
 
   /**
    * The name of the filter.
@@ -230,12 +232,16 @@ public open class CfnFilter(
     public fun description(description: String)
 
     /**
-     * The ID of the detector belonging to the GuardDuty account that you want to create a filter
-     * for.
+     * The detector ID associated with the GuardDuty account for which you want to create a filter.
+     *
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html#cfn-guardduty-filter-detectorid)
-     * @param detectorId The ID of the detector belonging to the GuardDuty account that you want to
-     * create a filter for. 
+     * @param detectorId The detector ID associated with the GuardDuty account for which you want to
+     * create a filter. 
      */
     public fun detectorId(detectorId: String)
 
@@ -357,12 +363,16 @@ public open class CfnFilter(
     }
 
     /**
-     * The ID of the detector belonging to the GuardDuty account that you want to create a filter
-     * for.
+     * The detector ID associated with the GuardDuty account for which you want to create a filter.
+     *
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html#cfn-guardduty-filter-detectorid)
-     * @param detectorId The ID of the detector belonging to the GuardDuty account that you want to
-     * create a filter for. 
+     * @param detectorId The detector ID associated with the GuardDuty account for which you want to
+     * create a filter. 
      */
     override fun detectorId(detectorId: String) {
       cdkBuilder.detectorId(detectorId)
@@ -840,7 +850,8 @@ public open class CfnFilter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter.ConditionProperty,
-    ) : CdkObject(cdkObject), ConditionProperty {
+    ) : CdkObject(cdkObject),
+        ConditionProperty {
       /**
        * Represents the equal condition to apply to a single field when querying for findings.
        *
@@ -999,8 +1010,8 @@ public open class CfnFilter(
      * * region
      * * severity
      *
-     * To filter on the basis of severity, API and CFN use the following input list for the
-     * condition:
+     * To filter on the basis of severity, the API and AWS CLI use the following input list for the
+     * `FindingCriteria` condition:
      *
      * * *Low* : `["1", "2", "3"]`
      * * *Medium* : `["4", "5", "6"]`
@@ -1008,13 +1019,13 @@ public open class CfnFilter(
      *
      * For more information, see [Severity levels for GuardDuty
      * findings](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings.html#guardduty_findings-severity)
-     * .
+     * in the *Amazon GuardDuty User Guide* .
      *
      * * type
      * * updatedAt
      *
-     * Type: ISO 8601 string format: YYYY-MM-DDTHH:MM:SS.SSSZ or YYYY-MM-DDTHH:MM:SSZ depending on
-     * whether the value contains milliseconds.
+     * Type: ISO 8601 string format: `YYYY-MM-DDTHH:MM:SS.SSSZ` or `YYYY-MM-DDTHH:MM:SSZ` depending
+     * on whether the value contains milliseconds.
      *
      * * resource.accessKeyDetails.accessKeyId
      * * resource.accessKeyDetails.principalId
@@ -1047,10 +1058,12 @@ public open class CfnFilter(
      * * service.action.awsApiCallAction.remoteIpDetails.city.cityName
      * * service.action.awsApiCallAction.remoteIpDetails.country.countryName
      * * service.action.awsApiCallAction.remoteIpDetails.ipAddressV4
+     * * service.action.awsApiCallAction.remoteIpDetails.ipAddressV6
      * * service.action.awsApiCallAction.remoteIpDetails.organization.asn
      * * service.action.awsApiCallAction.remoteIpDetails.organization.asnOrg
      * * service.action.awsApiCallAction.serviceName
      * * service.action.dnsRequestAction.domain
+     * * service.action.dnsRequestAction.domainWithSuffix
      * * service.action.networkConnectionAction.blocked
      * * service.action.networkConnectionAction.connectionDirection
      * * service.action.networkConnectionAction.localPortDetails.port
@@ -1058,13 +1071,19 @@ public open class CfnFilter(
      * * service.action.networkConnectionAction.remoteIpDetails.city.cityName
      * * service.action.networkConnectionAction.remoteIpDetails.country.countryName
      * * service.action.networkConnectionAction.remoteIpDetails.ipAddressV4
+     * * service.action.networkConnectionAction.remoteIpDetails.ipAddressV6
      * * service.action.networkConnectionAction.remoteIpDetails.organization.asn
      * * service.action.networkConnectionAction.remoteIpDetails.organization.asnOrg
      * * service.action.networkConnectionAction.remotePortDetails.port
      * * service.action.awsApiCallAction.remoteAccountDetails.affiliated
      * * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV4
+     * * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6
+     * * service.action.kubernetesApiCallAction.namespace
+     * * service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn
      * * service.action.kubernetesApiCallAction.requestUri
+     * * service.action.kubernetesApiCallAction.statusCode
      * * service.action.networkConnectionAction.localIpDetails.ipAddressV4
+     * * service.action.networkConnectionAction.localIpDetails.ipAddressV6
      * * service.action.networkConnectionAction.protocol
      * * service.action.awsApiCallAction.serviceName
      * * service.action.awsApiCallAction.remoteAccountDetails.accountId
@@ -1080,6 +1099,7 @@ public open class CfnFilter(
      * * service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames.name
      * * service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames.severity
      * * service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames.filePaths.hash
+     * * service.malwareScanDetails.threats.name
      * * resource.ecsClusterDetails.name
      * * resource.ecsClusterDetails.taskDetails.containers.image
      * * resource.ecsClusterDetails.taskDetails.definitionArn
@@ -1124,8 +1144,8 @@ public open class CfnFilter(
        * * region
        * * severity
        *
-       * To filter on the basis of severity, API and CFN use the following input list for the
-       * condition:
+       * To filter on the basis of severity, the API and AWS CLI use the following input list for
+       * the `FindingCriteria` condition:
        *
        * * *Low* : `["1", "2", "3"]`
        * * *Medium* : `["4", "5", "6"]`
@@ -1133,13 +1153,13 @@ public open class CfnFilter(
        *
        * For more information, see [Severity levels for GuardDuty
        * findings](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings.html#guardduty_findings-severity)
-       * .
+       * in the *Amazon GuardDuty User Guide* .
        *
        * * type
        * * updatedAt
        *
-       * Type: ISO 8601 string format: YYYY-MM-DDTHH:MM:SS.SSSZ or YYYY-MM-DDTHH:MM:SSZ depending on
-       * whether the value contains milliseconds.
+       * Type: ISO 8601 string format: `YYYY-MM-DDTHH:MM:SS.SSSZ` or `YYYY-MM-DDTHH:MM:SSZ`
+       * depending on whether the value contains milliseconds.
        *
        * * resource.accessKeyDetails.accessKeyId
        * * resource.accessKeyDetails.principalId
@@ -1172,10 +1192,12 @@ public open class CfnFilter(
        * * service.action.awsApiCallAction.remoteIpDetails.city.cityName
        * * service.action.awsApiCallAction.remoteIpDetails.country.countryName
        * * service.action.awsApiCallAction.remoteIpDetails.ipAddressV4
+       * * service.action.awsApiCallAction.remoteIpDetails.ipAddressV6
        * * service.action.awsApiCallAction.remoteIpDetails.organization.asn
        * * service.action.awsApiCallAction.remoteIpDetails.organization.asnOrg
        * * service.action.awsApiCallAction.serviceName
        * * service.action.dnsRequestAction.domain
+       * * service.action.dnsRequestAction.domainWithSuffix
        * * service.action.networkConnectionAction.blocked
        * * service.action.networkConnectionAction.connectionDirection
        * * service.action.networkConnectionAction.localPortDetails.port
@@ -1183,13 +1205,19 @@ public open class CfnFilter(
        * * service.action.networkConnectionAction.remoteIpDetails.city.cityName
        * * service.action.networkConnectionAction.remoteIpDetails.country.countryName
        * * service.action.networkConnectionAction.remoteIpDetails.ipAddressV4
+       * * service.action.networkConnectionAction.remoteIpDetails.ipAddressV6
        * * service.action.networkConnectionAction.remoteIpDetails.organization.asn
        * * service.action.networkConnectionAction.remoteIpDetails.organization.asnOrg
        * * service.action.networkConnectionAction.remotePortDetails.port
        * * service.action.awsApiCallAction.remoteAccountDetails.affiliated
        * * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV4
+       * * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6
+       * * service.action.kubernetesApiCallAction.namespace
+       * * service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn
        * * service.action.kubernetesApiCallAction.requestUri
+       * * service.action.kubernetesApiCallAction.statusCode
        * * service.action.networkConnectionAction.localIpDetails.ipAddressV4
+       * * service.action.networkConnectionAction.localIpDetails.ipAddressV6
        * * service.action.networkConnectionAction.protocol
        * * service.action.awsApiCallAction.serviceName
        * * service.action.awsApiCallAction.remoteAccountDetails.accountId
@@ -1206,6 +1234,7 @@ public open class CfnFilter(
        * * service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames.severity
        * *
        * service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames.filePaths.hash
+       * * service.malwareScanDetails.threats.name
        * * resource.ecsClusterDetails.name
        * * resource.ecsClusterDetails.taskDetails.containers.image
        * * resource.ecsClusterDetails.taskDetails.definitionArn
@@ -1261,8 +1290,8 @@ public open class CfnFilter(
        * * region
        * * severity
        *
-       * To filter on the basis of severity, API and CFN use the following input list for the
-       * condition:
+       * To filter on the basis of severity, the API and AWS CLI use the following input list for
+       * the `FindingCriteria` condition:
        *
        * * *Low* : `["1", "2", "3"]`
        * * *Medium* : `["4", "5", "6"]`
@@ -1270,13 +1299,13 @@ public open class CfnFilter(
        *
        * For more information, see [Severity levels for GuardDuty
        * findings](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings.html#guardduty_findings-severity)
-       * .
+       * in the *Amazon GuardDuty User Guide* .
        *
        * * type
        * * updatedAt
        *
-       * Type: ISO 8601 string format: YYYY-MM-DDTHH:MM:SS.SSSZ or YYYY-MM-DDTHH:MM:SSZ depending on
-       * whether the value contains milliseconds.
+       * Type: ISO 8601 string format: `YYYY-MM-DDTHH:MM:SS.SSSZ` or `YYYY-MM-DDTHH:MM:SSZ`
+       * depending on whether the value contains milliseconds.
        *
        * * resource.accessKeyDetails.accessKeyId
        * * resource.accessKeyDetails.principalId
@@ -1309,10 +1338,12 @@ public open class CfnFilter(
        * * service.action.awsApiCallAction.remoteIpDetails.city.cityName
        * * service.action.awsApiCallAction.remoteIpDetails.country.countryName
        * * service.action.awsApiCallAction.remoteIpDetails.ipAddressV4
+       * * service.action.awsApiCallAction.remoteIpDetails.ipAddressV6
        * * service.action.awsApiCallAction.remoteIpDetails.organization.asn
        * * service.action.awsApiCallAction.remoteIpDetails.organization.asnOrg
        * * service.action.awsApiCallAction.serviceName
        * * service.action.dnsRequestAction.domain
+       * * service.action.dnsRequestAction.domainWithSuffix
        * * service.action.networkConnectionAction.blocked
        * * service.action.networkConnectionAction.connectionDirection
        * * service.action.networkConnectionAction.localPortDetails.port
@@ -1320,13 +1351,19 @@ public open class CfnFilter(
        * * service.action.networkConnectionAction.remoteIpDetails.city.cityName
        * * service.action.networkConnectionAction.remoteIpDetails.country.countryName
        * * service.action.networkConnectionAction.remoteIpDetails.ipAddressV4
+       * * service.action.networkConnectionAction.remoteIpDetails.ipAddressV6
        * * service.action.networkConnectionAction.remoteIpDetails.organization.asn
        * * service.action.networkConnectionAction.remoteIpDetails.organization.asnOrg
        * * service.action.networkConnectionAction.remotePortDetails.port
        * * service.action.awsApiCallAction.remoteAccountDetails.affiliated
        * * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV4
+       * * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6
+       * * service.action.kubernetesApiCallAction.namespace
+       * * service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn
        * * service.action.kubernetesApiCallAction.requestUri
+       * * service.action.kubernetesApiCallAction.statusCode
        * * service.action.networkConnectionAction.localIpDetails.ipAddressV4
+       * * service.action.networkConnectionAction.localIpDetails.ipAddressV6
        * * service.action.networkConnectionAction.protocol
        * * service.action.awsApiCallAction.serviceName
        * * service.action.awsApiCallAction.remoteAccountDetails.accountId
@@ -1343,6 +1380,7 @@ public open class CfnFilter(
        * * service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames.severity
        * *
        * service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames.filePaths.hash
+       * * service.malwareScanDetails.threats.name
        * * resource.ecsClusterDetails.name
        * * resource.ecsClusterDetails.taskDetails.containers.image
        * * resource.ecsClusterDetails.taskDetails.definitionArn
@@ -1394,7 +1432,8 @@ public open class CfnFilter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter.FindingCriteriaProperty,
-    ) : CdkObject(cdkObject), FindingCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        FindingCriteriaProperty {
       /**
        * Represents a map of finding properties that match specified conditions and values when
        * querying findings.
@@ -1408,8 +1447,8 @@ public open class CfnFilter(
        * * region
        * * severity
        *
-       * To filter on the basis of severity, API and CFN use the following input list for the
-       * condition:
+       * To filter on the basis of severity, the API and AWS CLI use the following input list for
+       * the `FindingCriteria` condition:
        *
        * * *Low* : `["1", "2", "3"]`
        * * *Medium* : `["4", "5", "6"]`
@@ -1417,13 +1456,13 @@ public open class CfnFilter(
        *
        * For more information, see [Severity levels for GuardDuty
        * findings](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings.html#guardduty_findings-severity)
-       * .
+       * in the *Amazon GuardDuty User Guide* .
        *
        * * type
        * * updatedAt
        *
-       * Type: ISO 8601 string format: YYYY-MM-DDTHH:MM:SS.SSSZ or YYYY-MM-DDTHH:MM:SSZ depending on
-       * whether the value contains milliseconds.
+       * Type: ISO 8601 string format: `YYYY-MM-DDTHH:MM:SS.SSSZ` or `YYYY-MM-DDTHH:MM:SSZ`
+       * depending on whether the value contains milliseconds.
        *
        * * resource.accessKeyDetails.accessKeyId
        * * resource.accessKeyDetails.principalId
@@ -1456,10 +1495,12 @@ public open class CfnFilter(
        * * service.action.awsApiCallAction.remoteIpDetails.city.cityName
        * * service.action.awsApiCallAction.remoteIpDetails.country.countryName
        * * service.action.awsApiCallAction.remoteIpDetails.ipAddressV4
+       * * service.action.awsApiCallAction.remoteIpDetails.ipAddressV6
        * * service.action.awsApiCallAction.remoteIpDetails.organization.asn
        * * service.action.awsApiCallAction.remoteIpDetails.organization.asnOrg
        * * service.action.awsApiCallAction.serviceName
        * * service.action.dnsRequestAction.domain
+       * * service.action.dnsRequestAction.domainWithSuffix
        * * service.action.networkConnectionAction.blocked
        * * service.action.networkConnectionAction.connectionDirection
        * * service.action.networkConnectionAction.localPortDetails.port
@@ -1467,13 +1508,19 @@ public open class CfnFilter(
        * * service.action.networkConnectionAction.remoteIpDetails.city.cityName
        * * service.action.networkConnectionAction.remoteIpDetails.country.countryName
        * * service.action.networkConnectionAction.remoteIpDetails.ipAddressV4
+       * * service.action.networkConnectionAction.remoteIpDetails.ipAddressV6
        * * service.action.networkConnectionAction.remoteIpDetails.organization.asn
        * * service.action.networkConnectionAction.remoteIpDetails.organization.asnOrg
        * * service.action.networkConnectionAction.remotePortDetails.port
        * * service.action.awsApiCallAction.remoteAccountDetails.affiliated
        * * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV4
+       * * service.action.kubernetesApiCallAction.remoteIpDetails.ipAddressV6
+       * * service.action.kubernetesApiCallAction.namespace
+       * * service.action.kubernetesApiCallAction.remoteIpDetails.organization.asn
        * * service.action.kubernetesApiCallAction.requestUri
+       * * service.action.kubernetesApiCallAction.statusCode
        * * service.action.networkConnectionAction.localIpDetails.ipAddressV4
+       * * service.action.networkConnectionAction.localIpDetails.ipAddressV6
        * * service.action.networkConnectionAction.protocol
        * * service.action.awsApiCallAction.serviceName
        * * service.action.awsApiCallAction.remoteAccountDetails.accountId
@@ -1490,6 +1537,7 @@ public open class CfnFilter(
        * * service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames.severity
        * *
        * service.ebsVolumeScanDetails.scanDetections.threatDetectedByName.threatNames.filePaths.hash
+       * * service.malwareScanDetails.threats.name
        * * resource.ecsClusterDetails.name
        * * resource.ecsClusterDetails.taskDetails.containers.image
        * * resource.ecsClusterDetails.taskDetails.definitionArn

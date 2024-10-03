@@ -212,7 +212,8 @@ public interface CfnSceneProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSceneProps,
-  ) : CdkObject(cdkObject), CfnSceneProps {
+  ) : CdkObject(cdkObject),
+      CfnSceneProps {
     /**
      * A list of capabilities that the scene uses to render.
      *

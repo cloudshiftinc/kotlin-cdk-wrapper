@@ -300,7 +300,8 @@ public interface IRepository : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecr.IRepository,
-  ) : CdkObject(cdkObject), IRepository {
+  ) : CdkObject(cdkObject),
+      IRepository {
     /**
      * Add a policy statement to the repository's resource policy.
      *

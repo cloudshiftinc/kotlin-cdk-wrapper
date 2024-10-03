@@ -27,6 +27,7 @@ import kotlin.collections.Map
  * .connectionTimeout(Duration.minutes(30))
  * .customHeaders(Map.of(
  * "customHeadersKey", "customHeaders"))
+ * .originAccessControlId("originAccessControlId")
  * .originId("originId")
  * .originPath("originPath")
  * .originShieldEnabled(false)
@@ -69,6 +70,12 @@ public interface OriginProps : OriginOptions {
      * it sends to the origin.
      */
     public fun customHeaders(customHeaders: Map<String, String>)
+
+    /**
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin.
+     */
+    public fun originAccessControlId(originAccessControlId: String)
 
     /**
      * @param originId A unique identifier for the origin.
@@ -127,6 +134,14 @@ public interface OriginProps : OriginOptions {
     }
 
     /**
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin.
+     */
+    override fun originAccessControlId(originAccessControlId: String) {
+      cdkBuilder.originAccessControlId(originAccessControlId)
+    }
+
+    /**
      * @param originId A unique identifier for the origin.
      * This value must be unique within the distribution.
      */
@@ -164,7 +179,8 @@ public interface OriginProps : OriginOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.OriginProps,
-  ) : CdkObject(cdkObject), OriginProps {
+  ) : CdkObject(cdkObject),
+      OriginProps {
     /**
      * The number of times that CloudFront attempts to connect to the origin;
      *
@@ -193,6 +209,13 @@ public interface OriginProps : OriginOptions {
      */
     override fun customHeaders(): Map<String, String> = unwrap(this).getCustomHeaders() ?:
         emptyMap()
+
+    /**
+     * The unique identifier of an origin access control for this origin.
+     *
+     * Default: - no origin access control
+     */
+    override fun originAccessControlId(): String? = unwrap(this).getOriginAccessControlId()
 
     /**
      * A unique identifier for the origin.

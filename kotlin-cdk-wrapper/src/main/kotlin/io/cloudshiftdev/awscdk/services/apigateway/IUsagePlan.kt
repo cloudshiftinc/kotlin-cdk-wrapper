@@ -50,7 +50,8 @@ public interface IUsagePlan : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IUsagePlan,
-  ) : CdkObject(cdkObject), IUsagePlan {
+  ) : CdkObject(cdkObject),
+      IUsagePlan {
     /**
      * Adds an ApiKey.
      *

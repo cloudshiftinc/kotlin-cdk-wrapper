@@ -64,7 +64,8 @@ public interface RepositoryImageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.RepositoryImageProps,
-  ) : CdkObject(cdkObject), RepositoryImageProps {
+  ) : CdkObject(cdkObject),
+      RepositoryImageProps {
     /**
      * The secret to expose to the container that contains the credentials for the image repository.
      *

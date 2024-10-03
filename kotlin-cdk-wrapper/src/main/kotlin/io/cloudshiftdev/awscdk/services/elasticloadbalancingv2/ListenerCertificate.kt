@@ -20,7 +20,8 @@ import kotlin.String
  */
 public open class ListenerCertificate(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCertificate,
-) : CdkObject(cdkObject), IListenerCertificate {
+) : CdkObject(cdkObject),
+    IListenerCertificate {
   /**
    * The ARN of the certificate to use.
    */

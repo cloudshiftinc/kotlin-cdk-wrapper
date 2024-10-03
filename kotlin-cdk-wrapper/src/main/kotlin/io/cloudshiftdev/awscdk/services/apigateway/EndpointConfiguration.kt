@@ -101,7 +101,8 @@ public interface EndpointConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.EndpointConfiguration,
-  ) : CdkObject(cdkObject), EndpointConfiguration {
+  ) : CdkObject(cdkObject),
+      EndpointConfiguration {
     /**
      * A list of endpoint types of an API or its custom domain name.
      *

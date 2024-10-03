@@ -60,7 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPermission(
   cdkObject: software.amazon.awscdk.services.lambda.CfnPermission,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -13,7 +13,7 @@ import kotlin.String
  *
  * ```
  * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
- * .version(KubernetesVersion.V1_29)
+ * .version(KubernetesVersion.V1_30)
  * .endpointAccess(EndpointAccess.PRIVATE)
  * .build();
  * ```

@@ -219,7 +219,8 @@ public interface CfnWebACLProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.waf.CfnWebACLProps,
-  ) : CdkObject(cdkObject), CfnWebACLProps {
+  ) : CdkObject(cdkObject),
+      CfnWebACLProps {
     /**
      * The action to perform if none of the `Rules` contained in the `WebACL` match.
      *

@@ -144,7 +144,8 @@ public interface HttpStepFunctionsIntegrationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegrationProps,
-  ) : CdkObject(cdkObject), HttpStepFunctionsIntegrationProps {
+  ) : CdkObject(cdkObject),
+      HttpStepFunctionsIntegrationProps {
     /**
      * Specifies how to transform HTTP requests before sending them to the backend.
      *

@@ -17,7 +17,8 @@ public interface IStableStringProducer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IStableStringProducer,
-  ) : CdkObject(cdkObject), IStableStringProducer {
+  ) : CdkObject(cdkObject),
+      IStableStringProducer {
     /**
      * Produce the string value.
      */

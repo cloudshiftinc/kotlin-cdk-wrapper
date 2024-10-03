@@ -22,7 +22,6 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.medialive.*;
  * CfnMultiplexprogramProps cfnMultiplexprogramProps = CfnMultiplexprogramProps.builder()
- * .channelId("channelId")
  * .multiplexId("multiplexId")
  * .multiplexProgramSettings(MultiplexProgramSettingsProperty.builder()
  * .programNumber(123)
@@ -68,13 +67,6 @@ import kotlin.jvm.JvmName
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplexprogram.html)
  */
 public interface CfnMultiplexprogramProps {
-  /**
-   * The unique ID of the channel.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplexprogram.html#cfn-medialive-multiplexprogram-channelid)
-   */
-  public fun channelId(): String? = unwrap(this).getChannelId()
-
   /**
    * The unique id of the multiplex.
    *
@@ -133,11 +125,6 @@ public interface CfnMultiplexprogramProps {
    */
   @CdkDslMarker
   public interface Builder {
-    /**
-     * @param channelId The unique ID of the channel.
-     */
-    public fun channelId(channelId: String)
-
     /**
      * @param multiplexId The unique id of the multiplex.
      */
@@ -229,13 +216,6 @@ public interface CfnMultiplexprogramProps {
     private val cdkBuilder:
         software.amazon.awscdk.services.medialive.CfnMultiplexprogramProps.Builder =
         software.amazon.awscdk.services.medialive.CfnMultiplexprogramProps.builder()
-
-    /**
-     * @param channelId The unique ID of the channel.
-     */
-    override fun channelId(channelId: String) {
-      cdkBuilder.channelId(channelId)
-    }
 
     /**
      * @param multiplexId The unique id of the multiplex.
@@ -352,14 +332,8 @@ public interface CfnMultiplexprogramProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogramProps,
-  ) : CdkObject(cdkObject), CfnMultiplexprogramProps {
-    /**
-     * The unique ID of the channel.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplexprogram.html#cfn-medialive-multiplexprogram-channelid)
-     */
-    override fun channelId(): String? = unwrap(this).getChannelId()
-
+  ) : CdkObject(cdkObject),
+      CfnMultiplexprogramProps {
     /**
      * The unique id of the multiplex.
      *

@@ -99,7 +99,8 @@ public interface VolumeAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.VolumeAttributes,
-  ) : CdkObject(cdkObject), VolumeAttributes {
+  ) : CdkObject(cdkObject),
+      VolumeAttributes {
     /**
      * The availability zone that the EBS Volume is contained within (ex: us-west-2a).
      */

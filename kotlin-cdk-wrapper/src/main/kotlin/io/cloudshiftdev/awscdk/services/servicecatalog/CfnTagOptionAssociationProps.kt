@@ -82,7 +82,8 @@ public interface CfnTagOptionAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociationProps,
-  ) : CdkObject(cdkObject), CfnTagOptionAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnTagOptionAssociationProps {
     /**
      * The resource identifier.
      *

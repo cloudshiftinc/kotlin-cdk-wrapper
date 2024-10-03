@@ -61,7 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnByteMatchSet(
   cdkObject: software.amazon.awscdk.services.waf.CfnByteMatchSet,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -859,7 +860,8 @@ public open class CfnByteMatchSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.waf.CfnByteMatchSet.ByteMatchTupleProperty,
-    ) : CdkObject(cdkObject), ByteMatchTupleProperty {
+    ) : CdkObject(cdkObject),
+        ByteMatchTupleProperty {
       /**
        * The part of a web request that you want to inspect, such as a specified header or a query
        * string.
@@ -1232,7 +1234,8 @@ public open class CfnByteMatchSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.waf.CfnByteMatchSet.FieldToMatchProperty,
-    ) : CdkObject(cdkObject), FieldToMatchProperty {
+    ) : CdkObject(cdkObject),
+        FieldToMatchProperty {
       /**
        * When the value of `Type` is `HEADER` , enter the name of the header that you want AWS WAF
        * to search, for example, `User-Agent` or `Referer` .

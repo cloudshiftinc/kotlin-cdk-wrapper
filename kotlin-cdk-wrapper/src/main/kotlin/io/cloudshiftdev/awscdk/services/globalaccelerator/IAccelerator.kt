@@ -49,7 +49,8 @@ public interface IAccelerator : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.IAccelerator,
-  ) : CdkObject(cdkObject), IAccelerator {
+  ) : CdkObject(cdkObject),
+      IAccelerator {
     /**
      * The ARN of the accelerator.
      */

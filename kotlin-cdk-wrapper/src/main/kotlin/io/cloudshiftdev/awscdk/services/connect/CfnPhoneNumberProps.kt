@@ -221,7 +221,8 @@ public interface CfnPhoneNumberProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnPhoneNumberProps,
-  ) : CdkObject(cdkObject), CfnPhoneNumberProps {
+  ) : CdkObject(cdkObject),
+      CfnPhoneNumberProps {
     /**
      * The ISO country code.
      *

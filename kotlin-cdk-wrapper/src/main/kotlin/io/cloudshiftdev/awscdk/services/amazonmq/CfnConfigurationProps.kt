@@ -21,11 +21,11 @@ import kotlin.collections.List
  * CfnConfigurationProps cfnConfigurationProps = CfnConfigurationProps.builder()
  * .data("data")
  * .engineType("engineType")
- * .engineVersion("engineVersion")
  * .name("name")
  * // the properties below are optional
  * .authenticationStrategy("authenticationStrategy")
  * .description("description")
+ * .engineVersion("engineVersion")
  * .tags(List.of(TagsEntryProperty.builder()
  * .key("key")
  * .value("value")
@@ -77,7 +77,7 @@ public interface CfnConfigurationProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-engineversion)
    */
-  public fun engineVersion(): String
+  public fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
   /**
    * The name of the configuration.
@@ -126,7 +126,7 @@ public interface CfnConfigurationProps {
     public fun engineType(engineType: String)
 
     /**
-     * @param engineVersion The version of the broker engine. 
+     * @param engineVersion The version of the broker engine.
      * For a list of supported engine versions, see
      * [](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html)
      */
@@ -186,7 +186,7 @@ public interface CfnConfigurationProps {
     }
 
     /**
-     * @param engineVersion The version of the broker engine. 
+     * @param engineVersion The version of the broker engine.
      * For a list of supported engine versions, see
      * [](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html)
      */
@@ -221,7 +221,8 @@ public interface CfnConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfigurationProps,
-  ) : CdkObject(cdkObject), CfnConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnConfigurationProps {
     /**
      * Optional.
      *
@@ -263,7 +264,7 @@ public interface CfnConfigurationProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-engineversion)
      */
-    override fun engineVersion(): String = unwrap(this).getEngineVersion()
+    override fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
     /**
      * The name of the configuration.

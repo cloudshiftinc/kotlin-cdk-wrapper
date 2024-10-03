@@ -17,7 +17,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class VpnConnectionBase(
   cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionBase,
-) : Resource(cdkObject), IVpnConnection {
+) : Resource(cdkObject),
+    IVpnConnection {
   /**
    * The ASN of the customer gateway.
    */

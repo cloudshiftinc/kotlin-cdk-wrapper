@@ -17,7 +17,8 @@ public interface IStableNumberProducer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IStableNumberProducer,
-  ) : CdkObject(cdkObject), IStableNumberProducer {
+  ) : CdkObject(cdkObject),
+      IStableNumberProducer {
     /**
      * Produce the number value.
      */

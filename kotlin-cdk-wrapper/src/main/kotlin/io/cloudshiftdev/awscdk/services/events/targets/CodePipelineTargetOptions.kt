@@ -133,7 +133,8 @@ public interface CodePipelineTargetOptions : TargetBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.targets.CodePipelineTargetOptions,
-  ) : CdkObject(cdkObject), CodePipelineTargetOptions {
+  ) : CdkObject(cdkObject),
+      CodePipelineTargetOptions {
     /**
      * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
      * dead-letter

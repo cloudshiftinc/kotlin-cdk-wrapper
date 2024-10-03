@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class PrivateDnsNamespace(
   cdkObject: software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace,
-) : Resource(cdkObject), IPrivateDnsNamespace {
+) : Resource(cdkObject),
+    IPrivateDnsNamespace {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

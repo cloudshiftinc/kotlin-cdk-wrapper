@@ -447,7 +447,8 @@ public interface CfnEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointProps,
-  ) : CdkObject(cdkObject), CfnEndpointProps {
+  ) : CdkObject(cdkObject),
+      CfnEndpointProps {
     /**
      * The deployment configuration for an endpoint, which contains the desired deployment strategy
      * and rollback configurations.

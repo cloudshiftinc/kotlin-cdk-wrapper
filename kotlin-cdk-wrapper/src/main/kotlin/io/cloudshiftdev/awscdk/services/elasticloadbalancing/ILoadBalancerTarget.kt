@@ -21,7 +21,8 @@ public interface ILoadBalancerTarget : IConnectable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancing.ILoadBalancerTarget,
-  ) : CdkObject(cdkObject), ILoadBalancerTarget {
+  ) : CdkObject(cdkObject),
+      ILoadBalancerTarget {
     /**
      * Attach load-balanced target to a classic ELB.
      *

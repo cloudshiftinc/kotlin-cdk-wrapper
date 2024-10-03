@@ -21,7 +21,8 @@ import kotlin.Any
  */
 public open class StringConcat(
   cdkObject: software.amazon.awscdk.StringConcat,
-) : CdkObject(cdkObject), IFragmentConcatenator {
+) : CdkObject(cdkObject),
+    IFragmentConcatenator {
   public constructor() : this(software.amazon.awscdk.StringConcat()
   )
 

@@ -46,7 +46,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDatabase(
   cdkObject: software.amazon.awscdk.services.timestream.CfnDatabase,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.timestream.CfnDatabase(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

@@ -51,8 +51,7 @@ public interface BaseLoadBalancerProps {
    * Default: - false for Network Load Balancers and true for Application Load Balancers.
    * This can not be `false` for Application Load Balancers.
    *
-   * [Documentation]( -
-   * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
    */
   public fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
 
@@ -215,15 +214,15 @@ public interface BaseLoadBalancerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerProps,
-  ) : CdkObject(cdkObject), BaseLoadBalancerProps {
+  ) : CdkObject(cdkObject),
+      BaseLoadBalancerProps {
     /**
      * Indicates whether cross-zone load balancing is enabled.
      *
      * Default: - false for Network Load Balancers and true for Application Load Balancers.
      * This can not be `false` for Application Load Balancers.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
      */
     override fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
 

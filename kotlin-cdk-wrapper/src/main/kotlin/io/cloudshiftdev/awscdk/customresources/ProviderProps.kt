@@ -26,17 +26,20 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Function onEvent;
- * Function isComplete;
- * Role myRole;
- * Provider myProvider = Provider.Builder.create(this, "MyProvider")
- * .onEventHandler(onEvent)
- * .isCompleteHandler(isComplete)
- * .logGroup(LogGroup.Builder.create(this, "MyProviderLogs")
- * .retention(RetentionDays.ONE_DAY)
- * .build())
- * .role(myRole)
- * .providerFunctionName("the-lambda-name")
+ * // Create custom resource handler entrypoint
+ * Function handler = Function.Builder.create(this, "my-handler")
+ * .runtime(Runtime.NODEJS_20_X)
+ * .handler("index.handler")
+ * .code(Code.fromInline("\n  exports.handler = async (event, context) =&gt; {\n    return {\n     
+ * PhysicalResourceId: '1234',\n      NoEcho: true,\n      Data: {\n        mySecret: 'secret-value',\n
+ *        hello: 'world',\n        ghToken: 'gho_xxxxxxx',\n      },\n    };\n  };"))
+ * .build();
+ * // Provision a custom resource provider framework
+ * Provider provider = Provider.Builder.create(this, "my-provider")
+ * .onEventHandler(handler)
+ * .build();
+ * CustomResource.Builder.create(this, "my-cr")
+ * .serviceToken(provider.getServiceToken())
  * .build();
  * ```
  */
@@ -489,7 +492,8 @@ public interface ProviderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.customresources.ProviderProps,
-  ) : CdkObject(cdkObject), ProviderProps {
+  ) : CdkObject(cdkObject),
+      ProviderProps {
     /**
      * Whether logging for the waiter state machine is disabled.
      *

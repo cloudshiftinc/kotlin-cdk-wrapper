@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class UserPoolIdentityProviderSaml(
   cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSaml,
-) : Resource(cdkObject), IUserPoolIdentityProvider {
+) : Resource(cdkObject),
+    IUserPoolIdentityProvider {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

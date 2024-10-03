@@ -59,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnOptionGroup(
   cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -110,26 +112,26 @@ public open class CfnOptionGroup(
   }
 
   /**
-   * A list of options and the settings for each option.
+   * A list of all available options for an option group.
    */
   public open fun optionConfigurations(): Any? = unwrap(this).getOptionConfigurations()
 
   /**
-   * A list of options and the settings for each option.
+   * A list of all available options for an option group.
    */
   public open fun optionConfigurations(`value`: IResolvable) {
     unwrap(this).setOptionConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * A list of options and the settings for each option.
+   * A list of all available options for an option group.
    */
   public open fun optionConfigurations(`value`: List<Any>) {
     unwrap(this).setOptionConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * A list of options and the settings for each option.
+   * A list of all available options for an option group.
    */
   public open fun optionConfigurations(vararg `value`: Any): Unit =
       optionConfigurations(`value`.toList())
@@ -164,20 +166,20 @@ public open class CfnOptionGroup(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * An optional array of key-value pairs to apply to this option group.
+   * Tags to assign to the option group.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * An optional array of key-value pairs to apply to this option group.
+   * Tags to assign to the option group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * An optional array of key-value pairs to apply to this option group.
+   * Tags to assign to the option group.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -219,26 +221,26 @@ public open class CfnOptionGroup(
     public fun majorEngineVersion(majorEngineVersion: String)
 
     /**
-     * A list of options and the settings for each option.
+     * A list of all available options for an option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
-     * @param optionConfigurations A list of options and the settings for each option. 
+     * @param optionConfigurations A list of all available options for an option group. 
      */
     public fun optionConfigurations(optionConfigurations: IResolvable)
 
     /**
-     * A list of options and the settings for each option.
+     * A list of all available options for an option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
-     * @param optionConfigurations A list of options and the settings for each option. 
+     * @param optionConfigurations A list of all available options for an option group. 
      */
     public fun optionConfigurations(optionConfigurations: List<Any>)
 
     /**
-     * A list of options and the settings for each option.
+     * A list of all available options for an option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
-     * @param optionConfigurations A list of options and the settings for each option. 
+     * @param optionConfigurations A list of all available options for an option group. 
      */
     public fun optionConfigurations(vararg optionConfigurations: Any)
 
@@ -274,18 +276,18 @@ public open class CfnOptionGroup(
     public fun optionGroupName(optionGroupName: String)
 
     /**
-     * An optional array of key-value pairs to apply to this option group.
+     * Tags to assign to the option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this option group. 
+     * @param tags Tags to assign to the option group. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * An optional array of key-value pairs to apply to this option group.
+     * Tags to assign to the option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this option group. 
+     * @param tags Tags to assign to the option group. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -334,30 +336,30 @@ public open class CfnOptionGroup(
     }
 
     /**
-     * A list of options and the settings for each option.
+     * A list of all available options for an option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
-     * @param optionConfigurations A list of options and the settings for each option. 
+     * @param optionConfigurations A list of all available options for an option group. 
      */
     override fun optionConfigurations(optionConfigurations: IResolvable) {
       cdkBuilder.optionConfigurations(optionConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * A list of options and the settings for each option.
+     * A list of all available options for an option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
-     * @param optionConfigurations A list of options and the settings for each option. 
+     * @param optionConfigurations A list of all available options for an option group. 
      */
     override fun optionConfigurations(optionConfigurations: List<Any>) {
       cdkBuilder.optionConfigurations(optionConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * A list of options and the settings for each option.
+     * A list of all available options for an option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
-     * @param optionConfigurations A list of options and the settings for each option. 
+     * @param optionConfigurations A list of all available options for an option group. 
      */
     override fun optionConfigurations(vararg optionConfigurations: Any): Unit =
         optionConfigurations(optionConfigurations.toList())
@@ -398,20 +400,20 @@ public open class CfnOptionGroup(
     }
 
     /**
-     * An optional array of key-value pairs to apply to this option group.
+     * Tags to assign to the option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this option group. 
+     * @param tags Tags to assign to the option group. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * An optional array of key-value pairs to apply to this option group.
+     * Tags to assign to the option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this option group. 
+     * @param tags Tags to assign to the option group. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -466,7 +468,7 @@ public open class CfnOptionGroup(
    */
   public interface OptionConfigurationProperty {
     /**
-     * A list of DBSecurityGroupMembership name strings used for this option.
+     * A list of DB security groups used for this option.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfiguration.html#cfn-rds-optiongroup-optionconfiguration-dbsecuritygroupmemberships)
      */
@@ -502,7 +504,7 @@ public open class CfnOptionGroup(
     public fun port(): Number? = unwrap(this).getPort()
 
     /**
-     * A list of VpcSecurityGroupMembership name strings used for this option.
+     * A list of VPC security group names used for this option.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfiguration.html#cfn-rds-optiongroup-optionconfiguration-vpcsecuritygroupmemberships)
      */
@@ -515,14 +517,12 @@ public open class CfnOptionGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dbSecurityGroupMemberships A list of DBSecurityGroupMembership name strings used for
-       * this option.
+       * @param dbSecurityGroupMemberships A list of DB security groups used for this option.
        */
       public fun dbSecurityGroupMemberships(dbSecurityGroupMemberships: List<String>)
 
       /**
-       * @param dbSecurityGroupMemberships A list of DBSecurityGroupMembership name strings used for
-       * this option.
+       * @param dbSecurityGroupMemberships A list of DB security groups used for this option.
        */
       public fun dbSecurityGroupMemberships(vararg dbSecurityGroupMemberships: String)
 
@@ -557,14 +557,12 @@ public open class CfnOptionGroup(
       public fun port(port: Number)
 
       /**
-       * @param vpcSecurityGroupMemberships A list of VpcSecurityGroupMembership name strings used
-       * for this option.
+       * @param vpcSecurityGroupMemberships A list of VPC security group names used for this option.
        */
       public fun vpcSecurityGroupMemberships(vpcSecurityGroupMemberships: List<String>)
 
       /**
-       * @param vpcSecurityGroupMemberships A list of VpcSecurityGroupMembership name strings used
-       * for this option.
+       * @param vpcSecurityGroupMemberships A list of VPC security group names used for this option.
        */
       public fun vpcSecurityGroupMemberships(vararg vpcSecurityGroupMemberships: String)
     }
@@ -575,16 +573,14 @@ public open class CfnOptionGroup(
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty.builder()
 
       /**
-       * @param dbSecurityGroupMemberships A list of DBSecurityGroupMembership name strings used for
-       * this option.
+       * @param dbSecurityGroupMemberships A list of DB security groups used for this option.
        */
       override fun dbSecurityGroupMemberships(dbSecurityGroupMemberships: List<String>) {
         cdkBuilder.dbSecurityGroupMemberships(dbSecurityGroupMemberships)
       }
 
       /**
-       * @param dbSecurityGroupMemberships A list of DBSecurityGroupMembership name strings used for
-       * this option.
+       * @param dbSecurityGroupMemberships A list of DB security groups used for this option.
        */
       override fun dbSecurityGroupMemberships(vararg dbSecurityGroupMemberships: String): Unit =
           dbSecurityGroupMemberships(dbSecurityGroupMemberships.toList())
@@ -631,16 +627,14 @@ public open class CfnOptionGroup(
       }
 
       /**
-       * @param vpcSecurityGroupMemberships A list of VpcSecurityGroupMembership name strings used
-       * for this option.
+       * @param vpcSecurityGroupMemberships A list of VPC security group names used for this option.
        */
       override fun vpcSecurityGroupMemberships(vpcSecurityGroupMemberships: List<String>) {
         cdkBuilder.vpcSecurityGroupMemberships(vpcSecurityGroupMemberships)
       }
 
       /**
-       * @param vpcSecurityGroupMemberships A list of VpcSecurityGroupMembership name strings used
-       * for this option.
+       * @param vpcSecurityGroupMemberships A list of VPC security group names used for this option.
        */
       override fun vpcSecurityGroupMemberships(vararg vpcSecurityGroupMemberships: String): Unit =
           vpcSecurityGroupMemberships(vpcSecurityGroupMemberships.toList())
@@ -652,9 +646,10 @@ public open class CfnOptionGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty,
-    ) : CdkObject(cdkObject), OptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        OptionConfigurationProperty {
       /**
-       * A list of DBSecurityGroupMembership name strings used for this option.
+       * A list of DB security groups used for this option.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfiguration.html#cfn-rds-optiongroup-optionconfiguration-dbsecuritygroupmemberships)
        */
@@ -690,7 +685,7 @@ public open class CfnOptionGroup(
       override fun port(): Number? = unwrap(this).getPort()
 
       /**
-       * A list of VpcSecurityGroupMembership name strings used for this option.
+       * A list of VPC security group names used for this option.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfiguration.html#cfn-rds-optiongroup-optionconfiguration-vpcsecuritygroupmemberships)
        */
@@ -790,7 +785,8 @@ public open class CfnOptionGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup.OptionSettingProperty,
-    ) : CdkObject(cdkObject), OptionSettingProperty {
+    ) : CdkObject(cdkObject),
+        OptionSettingProperty {
       /**
        * The name of the option that has settings that you can set.
        *

@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProvisioningTemplate(
   cdkObject: software.amazon.awscdk.services.iot.CfnProvisioningTemplate,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -558,7 +560,8 @@ public open class CfnProvisioningTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnProvisioningTemplate.ProvisioningHookProperty,
-    ) : CdkObject(cdkObject), ProvisioningHookProperty {
+    ) : CdkObject(cdkObject),
+        ProvisioningHookProperty {
       /**
        * The payload that was sent to the target function.
        *

@@ -150,7 +150,8 @@ public interface CfnDocumentationPartProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationPartProps,
-  ) : CdkObject(cdkObject), CfnDocumentationPartProps {
+  ) : CdkObject(cdkObject),
+      CfnDocumentationPartProps {
     /**
      * The location of the targeted API entity of the to-be-created documentation part.
      *

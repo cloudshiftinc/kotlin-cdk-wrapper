@@ -217,7 +217,8 @@ public interface CfnPrivateDnsNamespaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespaceProps,
-  ) : CdkObject(cdkObject), CfnPrivateDnsNamespaceProps {
+  ) : CdkObject(cdkObject),
+      CfnPrivateDnsNamespaceProps {
     /**
      * A description for the namespace.
      *

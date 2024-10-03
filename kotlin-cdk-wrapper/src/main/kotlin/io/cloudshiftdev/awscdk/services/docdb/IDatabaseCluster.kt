@@ -52,7 +52,8 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.IDatabaseCluster,
-  ) : CdkObject(cdkObject), IDatabaseCluster {
+  ) : CdkObject(cdkObject),
+      IDatabaseCluster {
     /**
      * Apply the given removal policy to this resource.
      *

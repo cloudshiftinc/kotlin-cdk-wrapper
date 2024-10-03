@@ -50,7 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDomain(
   cdkObject: software.amazon.awscdk.services.amplify.CfnDomain,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -708,7 +709,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty,
-    ) : CdkObject(cdkObject), CertificateProperty {
+    ) : CdkObject(cdkObject),
+        CertificateProperty {
       /**
        * The Amazon resource name (ARN) for a custom certificate that you have already added to AWS
        * Certificate Manager in your AWS account .
@@ -870,7 +872,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty,
-    ) : CdkObject(cdkObject), CertificateSettingsProperty {
+    ) : CdkObject(cdkObject),
+        CertificateSettingsProperty {
       /**
        * The certificate type.
        *
@@ -1000,7 +1003,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty,
-    ) : CdkObject(cdkObject), SubDomainSettingProperty {
+    ) : CdkObject(cdkObject),
+        SubDomainSettingProperty {
       /**
        * The branch name setting for the subdomain.
        *

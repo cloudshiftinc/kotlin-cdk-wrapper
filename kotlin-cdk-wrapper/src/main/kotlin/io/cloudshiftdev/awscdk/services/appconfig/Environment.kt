@@ -5,6 +5,8 @@ package io.cloudshiftdev.awscdk.services.appconfig
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.iam.Grant
+import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -38,7 +40,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Environment(
   cdkObject: software.amazon.awscdk.services.appconfig.Environment,
-) : Resource(cdkObject), IEnvironment, IExtensible {
+) : Resource(cdkObject),
+    IEnvironment,
+    IExtensible {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -115,6 +119,26 @@ public open class Environment(
    * The ID of the environment.
    */
   public override fun environmentId(): String = unwrap(this).getEnvironmentId()
+
+  /**
+   * Adds an IAM policy statement associated with this environment to an IAM principal's policy.
+   *
+   * @param grantee 
+   * @param actions 
+   */
+  public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
+
+  /**
+   * Permits an IAM principal to perform read operations on this environment's configurations.
+   *
+   * Actions: GetLatestConfiguration, StartConfigurationSession.
+   *
+   * @param identity 
+   */
+  public override fun grantReadConfig(identity: IGrantable): Grant =
+      unwrap(this).grantReadConfig(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The monitors for the environment.

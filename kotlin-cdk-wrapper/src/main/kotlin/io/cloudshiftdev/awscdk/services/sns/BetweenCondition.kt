@@ -90,7 +90,8 @@ public interface BetweenCondition {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.BetweenCondition,
-  ) : CdkObject(cdkObject), BetweenCondition {
+  ) : CdkObject(cdkObject),
+      BetweenCondition {
     /**
      * The start value.
      */

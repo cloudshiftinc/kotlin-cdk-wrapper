@@ -8,7 +8,8 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 public interface IDependable {
   private class Wrapper(
     cdkObject: software.constructs.IDependable,
-  ) : CdkObject(cdkObject), IDependable
+  ) : CdkObject(cdkObject),
+      IDependable
 
   public companion object {
     internal fun wrap(cdkObject: software.constructs.IDependable): IDependable =

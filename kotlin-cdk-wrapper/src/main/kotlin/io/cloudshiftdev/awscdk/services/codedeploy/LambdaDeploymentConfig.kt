@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class LambdaDeploymentConfig(
   cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig,
-) : BaseDeploymentConfig(cdkObject), ILambdaDeploymentConfig {
+) : BaseDeploymentConfig(cdkObject),
+    ILambdaDeploymentConfig {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

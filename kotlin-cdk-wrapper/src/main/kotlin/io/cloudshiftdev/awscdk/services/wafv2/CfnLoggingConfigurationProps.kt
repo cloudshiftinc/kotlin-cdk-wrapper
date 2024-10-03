@@ -285,7 +285,8 @@ public interface CfnLoggingConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfigurationProps,
-  ) : CdkObject(cdkObject), CfnLoggingConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnLoggingConfigurationProps {
     /**
      * The logging destination configuration that you want to associate with the web ACL.
      *

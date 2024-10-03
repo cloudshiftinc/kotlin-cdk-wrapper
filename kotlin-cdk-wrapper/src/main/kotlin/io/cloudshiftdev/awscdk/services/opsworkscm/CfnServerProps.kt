@@ -269,6 +269,12 @@ public interface CfnServerProps {
   public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
 
   /**
+   * The name of the server.
+   *
+   * The server name must be unique within your AWS account, within each region. Server names must
+   * start with a letter; then letters, numbers, or hyphens (-) are allowed, up to a maximum of 40
+   * characters.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-servername)
    */
   public fun serverName(): String? = unwrap(this).getServerName()
@@ -566,7 +572,10 @@ public interface CfnServerProps {
     public fun securityGroupIds(vararg securityGroupIds: String)
 
     /**
-     * @param serverName the value to be set.
+     * @param serverName The name of the server.
+     * The server name must be unique within your AWS account, within each region. Server names must
+     * start with a letter; then letters, numbers, or hyphens (-) are allowed, up to a maximum of 40
+     * characters.
      */
     public fun serverName(serverName: String)
 
@@ -920,7 +929,10 @@ public interface CfnServerProps {
         securityGroupIds(securityGroupIds.toList())
 
     /**
-     * @param serverName the value to be set.
+     * @param serverName The name of the server.
+     * The server name must be unique within your AWS account, within each region. Server names must
+     * start with a letter; then letters, numbers, or hyphens (-) are allowed, up to a maximum of 40
+     * characters.
      */
     override fun serverName(serverName: String) {
       cdkBuilder.serverName(serverName)
@@ -996,7 +1008,8 @@ public interface CfnServerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opsworkscm.CfnServerProps,
-  ) : CdkObject(cdkObject), CfnServerProps {
+  ) : CdkObject(cdkObject),
+      CfnServerProps {
     /**
      * Associate a public IP address with a server that you are launching.
      *
@@ -1212,6 +1225,12 @@ public interface CfnServerProps {
         emptyList()
 
     /**
+     * The name of the server.
+     *
+     * The server name must be unique within your AWS account, within each region. Server names must
+     * start with a letter; then letters, numbers, or hyphens (-) are allowed, up to a maximum of 40
+     * characters.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-servername)
      */
     override fun serverName(): String? = unwrap(this).getServerName()

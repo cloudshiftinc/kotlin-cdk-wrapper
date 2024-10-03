@@ -32,15 +32,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
  * .
  *
+ * For Amazon Redshift admin user credentials, see
+ * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
+ * .
+ *
  * To retrieve a secret in a CloudFormation template, use a *dynamic reference* . For more
  * information, see [Retrieve a secret in an AWS CloudFormation
  * resource](https://docs.aws.amazon.com/secretsmanager/latest/userguide/cfn-example_reference-secret.html)
  * .
- *
- * A common scenario is to first create a secret with `GenerateSecretString` , which generates a
- * password, and then use a dynamic reference to retrieve the username and password from the secret to
- * use as credentials for a new database. See the example *Creating a Redshift cluster and a secret for
- * the admin credentials* .
  *
  * For information about creating a secret in the console, see [Create a
  * secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html)
@@ -90,7 +89,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSecret(
   cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.secretsmanager.CfnSecret(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1156,7 +1157,8 @@ public open class CfnSecret(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret.GenerateSecretStringProperty,
-    ) : CdkObject(cdkObject), GenerateSecretStringProperty {
+    ) : CdkObject(cdkObject),
+        GenerateSecretStringProperty {
       /**
        * A string of the characters that you don't want in the password.
        *
@@ -1347,7 +1349,8 @@ public open class CfnSecret(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty,
-    ) : CdkObject(cdkObject), ReplicaRegionProperty {
+    ) : CdkObject(cdkObject),
+        ReplicaRegionProperty {
       /**
        * The ARN, key ID, or alias of the KMS key to encrypt the secret.
        *

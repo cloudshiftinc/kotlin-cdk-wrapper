@@ -217,7 +217,8 @@ public interface IVpc : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IVpc,
-  ) : CdkObject(cdkObject), IVpc {
+  ) : CdkObject(cdkObject),
+      IVpc {
     /**
      * Adds a new client VPN endpoint to this VPC.
      *

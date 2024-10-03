@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLink(
   cdkObject: software.amazon.awscdk.services.oam.CfnLink,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -602,7 +604,8 @@ public open class CfnLink(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.oam.CfnLink.LinkConfigurationProperty,
-    ) : CdkObject(cdkObject), LinkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LinkConfigurationProperty {
       /**
        * Use this structure to filter which log groups are to share log events from this source
        * account to the monitoring account.
@@ -802,7 +805,8 @@ public open class CfnLink(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.oam.CfnLink.LinkFilterProperty,
-    ) : CdkObject(cdkObject), LinkFilterProperty {
+    ) : CdkObject(cdkObject),
+        LinkFilterProperty {
       /**
        * When used in `MetricConfiguration` this field specifies which metric namespaces are to be
        * shared with the monitoring account.

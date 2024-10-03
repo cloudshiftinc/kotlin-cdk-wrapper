@@ -108,7 +108,8 @@ public interface NetworkUtilizationScalingProps : BaseTargetTrackingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.NetworkUtilizationScalingProps,
-  ) : CdkObject(cdkObject), NetworkUtilizationScalingProps {
+  ) : CdkObject(cdkObject),
+      NetworkUtilizationScalingProps {
     /**
      * Period after a scaling completes before another scaling activity can start.
      *

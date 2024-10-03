@@ -20,7 +20,8 @@ public interface IAlarmAction {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmAction,
-  ) : CdkObject(cdkObject), IAlarmAction {
+  ) : CdkObject(cdkObject),
+      IAlarmAction {
     /**
      * Return the properties required to send alarm actions to this CloudWatch alarm.
      *

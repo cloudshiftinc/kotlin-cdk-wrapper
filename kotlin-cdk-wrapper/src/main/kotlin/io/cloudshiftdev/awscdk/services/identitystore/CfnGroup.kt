@@ -32,7 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGroup(
   cdkObject: software.amazon.awscdk.services.identitystore.CfnGroup,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -67,12 +68,12 @@ public open class CfnGroup(
   }
 
   /**
-   * A string containing the name of the group.
+   * The display name value for the group.
    */
   public open fun displayName(): String = unwrap(this).getDisplayName()
 
   /**
-   * A string containing the name of the group.
+   * The display name value for the group.
    */
   public open fun displayName(`value`: String) {
     unwrap(this).setDisplayName(`value`)
@@ -113,12 +114,15 @@ public open class CfnGroup(
     public fun description(description: String)
 
     /**
-     * A string containing the name of the group.
+     * The display name value for the group.
      *
-     * This value is commonly displayed when the group is referenced.
+     * The length limit is 1,024 characters. This value can consist of letters, accented characters,
+     * symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in
+     * this attribute. This value is specified at the time the group is created and stored as an
+     * attribute of the group object in the identity store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-displayname)
-     * @param displayName A string containing the name of the group. 
+     * @param displayName The display name value for the group. 
      */
     public fun displayName(displayName: String)
 
@@ -149,12 +153,15 @@ public open class CfnGroup(
     }
 
     /**
-     * A string containing the name of the group.
+     * The display name value for the group.
      *
-     * This value is commonly displayed when the group is referenced.
+     * The length limit is 1,024 characters. This value can consist of letters, accented characters,
+     * symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in
+     * this attribute. This value is specified at the time the group is created and stored as an
+     * attribute of the group object in the identity store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-displayname)
-     * @param displayName A string containing the name of the group. 
+     * @param displayName The display name value for the group. 
      */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)

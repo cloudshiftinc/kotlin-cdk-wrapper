@@ -192,7 +192,8 @@ public interface TagProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.TagProps,
-  ) : CdkObject(cdkObject), TagProps {
+  ) : CdkObject(cdkObject),
+      TagProps {
     /**
      * Whether the tag should be applied to instances in an AutoScalingGroup.
      *

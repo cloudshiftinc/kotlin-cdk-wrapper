@@ -310,7 +310,8 @@ public interface CfnFlywheelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheelProps,
-  ) : CdkObject(cdkObject), CfnFlywheelProps {
+  ) : CdkObject(cdkObject),
+      CfnFlywheelProps {
     /**
      * The Amazon Resource Number (ARN) of the active model version.
      *

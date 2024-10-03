@@ -194,7 +194,8 @@ public interface CfnImageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnImageProps,
-  ) : CdkObject(cdkObject), CfnImageProps {
+  ) : CdkObject(cdkObject),
+      CfnImageProps {
     /**
      * The description of the image.
      *

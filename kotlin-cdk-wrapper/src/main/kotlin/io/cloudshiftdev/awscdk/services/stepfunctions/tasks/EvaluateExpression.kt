@@ -219,7 +219,7 @@ public open class EvaluateExpression(
     /**
      * The runtime language to use to evaluate the expression.
      *
-     * Default: lambda.Runtime.NODEJS_18_X
+     * Default: - the latest Lambda node runtime available in your region.
      *
      * @param runtime The runtime language to use to evaluate the expression. 
      */
@@ -432,7 +432,7 @@ public open class EvaluateExpression(
     /**
      * The runtime language to use to evaluate the expression.
      *
-     * Default: lambda.Runtime.NODEJS_18_X
+     * Default: - the latest Lambda node runtime available in your region.
      *
      * @param runtime The runtime language to use to evaluate the expression. 
      */

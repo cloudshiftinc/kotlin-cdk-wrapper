@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEndpointAccess(
   cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -455,7 +456,8 @@ public open class CfnEndpointAccess(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInterfaceProperty {
       /**
        * The Availability Zone.
        *
@@ -635,7 +637,8 @@ public open class CfnEndpointAccess(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcEndpointProperty,
-    ) : CdkObject(cdkObject), VpcEndpointProperty {
+    ) : CdkObject(cdkObject),
+        VpcEndpointProperty {
       /**
        * One or more network interfaces of the endpoint.
        *
@@ -753,7 +756,8 @@ public open class CfnEndpointAccess(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty,
-    ) : CdkObject(cdkObject), VpcSecurityGroupProperty {
+    ) : CdkObject(cdkObject),
+        VpcSecurityGroupProperty {
       /**
        * The status of the endpoint.
        *

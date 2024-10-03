@@ -533,7 +533,8 @@ public interface CfnScheduledQueryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQueryProps,
-  ) : CdkObject(cdkObject), CfnScheduledQueryProps {
+  ) : CdkObject(cdkObject),
+      CfnScheduledQueryProps {
     /**
      * Using a ClientToken makes the call to CreateScheduledQuery idempotent, in other words, making
      * the same request repeatedly will produce the same result.

@@ -317,7 +317,8 @@ public interface CfnMicrosoftADProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.directoryservice.CfnMicrosoftADProps,
-  ) : CdkObject(cdkObject), CfnMicrosoftADProps {
+  ) : CdkObject(cdkObject),
+      CfnMicrosoftADProps {
     /**
      * Specifies an alias for a directory and assigns the alias to the directory.
      *

@@ -27,6 +27,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
  * .
  *
+ * For Amazon Redshift admin user credentials, see
+ * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
+ * .
+ *
  * For the rotation function, you have two options:
  *
  * * You can create a new rotation function based on one of the [Secrets Manager rotation function
@@ -78,7 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRotationSchedule(
   cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -231,6 +236,10 @@ public open class CfnRotationSchedule(
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
      *
+     * For Amazon Redshift admin user credentials, see
+     * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-hostedrotationlambda)
      * @param hostedRotationLambda Creates a new Lambda rotation function based on one of the
      * [Secrets Manager rotation function
@@ -248,6 +257,10 @@ public open class CfnRotationSchedule(
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
      *
+     * For Amazon Redshift admin user credentials, see
+     * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-hostedrotationlambda)
      * @param hostedRotationLambda Creates a new Lambda rotation function based on one of the
      * [Secrets Manager rotation function
@@ -263,6 +276,10 @@ public open class CfnRotationSchedule(
      *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+     * .
+     *
+     * For Amazon Redshift admin user credentials, see
+     * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-hostedrotationlambda)
@@ -335,6 +352,10 @@ public open class CfnRotationSchedule(
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
      *
+     * For Amazon Redshift admin user credentials, see
+     * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
+     * .
+     *
      * To create a new rotation function based on one of the [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * , specify `HostedRotationLambda` instead.
@@ -400,6 +421,10 @@ public open class CfnRotationSchedule(
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
      *
+     * For Amazon Redshift admin user credentials, see
+     * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-hostedrotationlambda)
      * @param hostedRotationLambda Creates a new Lambda rotation function based on one of the
      * [Secrets Manager rotation function
@@ -419,6 +444,10 @@ public open class CfnRotationSchedule(
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
      *
+     * For Amazon Redshift admin user credentials, see
+     * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-hostedrotationlambda)
      * @param hostedRotationLambda Creates a new Lambda rotation function based on one of the
      * [Secrets Manager rotation function
@@ -436,6 +465,10 @@ public open class CfnRotationSchedule(
      *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+     * .
+     *
+     * For Amazon Redshift admin user credentials, see
+     * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-hostedrotationlambda)
@@ -511,6 +544,10 @@ public open class CfnRotationSchedule(
      *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+     * .
+     *
+     * For Amazon Redshift admin user credentials, see
+     * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
      * .
      *
      * To create a new rotation function based on one of the [Secrets Manager rotation function
@@ -605,6 +642,10 @@ public open class CfnRotationSchedule(
    *
    * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
    * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+   * .
+   *
+   * For Amazon Redshift admin user credentials, see
+   * [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
    * .
    *
    * Example:
@@ -1236,7 +1277,8 @@ public open class CfnRotationSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.HostedRotationLambdaProperty,
-    ) : CdkObject(cdkObject), HostedRotationLambdaProperty {
+    ) : CdkObject(cdkObject),
+        HostedRotationLambdaProperty {
       /**
        * A string of the characters that you don't want in the password.
        *
@@ -1671,7 +1713,8 @@ public open class CfnRotationSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.RotationRulesProperty,
-    ) : CdkObject(cdkObject), RotationRulesProperty {
+    ) : CdkObject(cdkObject),
+        RotationRulesProperty {
       /**
        * The number of days between automatic scheduled rotations of the secret.
        *

@@ -242,7 +242,8 @@ public interface CfnHubProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.securityhub.CfnHubProps,
-  ) : CdkObject(cdkObject), CfnHubProps {
+  ) : CdkObject(cdkObject),
+      CfnHubProps {
     /**
      * Whether to automatically enable new controls when they are added to standards that are
      * enabled.

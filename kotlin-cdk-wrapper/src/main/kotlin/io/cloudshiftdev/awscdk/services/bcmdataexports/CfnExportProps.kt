@@ -151,7 +151,8 @@ public interface CfnExportProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.bcmdataexports.CfnExportProps,
-  ) : CdkObject(cdkObject), CfnExportProps {
+  ) : CdkObject(cdkObject),
+      CfnExportProps {
     /**
      * The details that are available for an export.
      *

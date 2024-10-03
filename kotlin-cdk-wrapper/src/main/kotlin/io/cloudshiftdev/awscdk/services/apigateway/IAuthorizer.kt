@@ -23,7 +23,8 @@ public interface IAuthorizer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IAuthorizer,
-  ) : CdkObject(cdkObject), IAuthorizer {
+  ) : CdkObject(cdkObject),
+      IAuthorizer {
     /**
      * The authorization type of this authorizer.
      */

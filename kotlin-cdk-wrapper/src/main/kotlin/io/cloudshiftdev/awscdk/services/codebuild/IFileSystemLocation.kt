@@ -23,7 +23,8 @@ public interface IFileSystemLocation {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.IFileSystemLocation,
-  ) : CdkObject(cdkObject), IFileSystemLocation {
+  ) : CdkObject(cdkObject),
+      IFileSystemLocation {
     /**
      * Called by the project when a file system is added so it can perform binding operations on
      * this file system location.

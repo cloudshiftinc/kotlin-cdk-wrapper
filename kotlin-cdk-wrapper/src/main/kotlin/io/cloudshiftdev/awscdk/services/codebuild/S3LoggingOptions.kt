@@ -116,7 +116,8 @@ public interface S3LoggingOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.S3LoggingOptions,
-  ) : CdkObject(cdkObject), S3LoggingOptions {
+  ) : CdkObject(cdkObject),
+      S3LoggingOptions {
     /**
      * The S3 Bucket to send logs to.
      */

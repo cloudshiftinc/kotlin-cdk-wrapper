@@ -37,7 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnModel(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnModel,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

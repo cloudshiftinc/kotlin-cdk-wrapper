@@ -110,7 +110,8 @@ public interface InstanceProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.InstanceProfileProps,
-  ) : CdkObject(cdkObject), InstanceProfileProps {
+  ) : CdkObject(cdkObject),
+      InstanceProfileProps {
     /**
      * The name of the InstanceProfile to create.
      *

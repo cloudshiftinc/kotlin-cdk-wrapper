@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLocationAzureBlob(
   cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -658,7 +660,8 @@ public open class CfnLocationAzureBlob(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.AzureBlobSasConfigurationProperty,
-    ) : CdkObject(cdkObject), AzureBlobSasConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AzureBlobSasConfigurationProperty {
       /**
        * Specifies a SAS token that provides permissions to access your Azure Blob Storage.
        *

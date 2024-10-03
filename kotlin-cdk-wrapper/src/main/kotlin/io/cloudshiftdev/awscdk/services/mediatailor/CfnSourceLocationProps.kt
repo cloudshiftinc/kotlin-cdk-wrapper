@@ -338,7 +338,8 @@ public interface CfnSourceLocationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocationProps,
-  ) : CdkObject(cdkObject), CfnSourceLocationProps {
+  ) : CdkObject(cdkObject),
+      CfnSourceLocationProps {
     /**
      * The access configuration for the source location.
      *

@@ -69,7 +69,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIdentity(
   cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentity,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -671,7 +673,8 @@ public open class CfnIdentity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentity.MailFromAttributesProperty,
-    ) : CdkObject(cdkObject), MailFromAttributesProperty {
+    ) : CdkObject(cdkObject),
+        MailFromAttributesProperty {
       /**
        * The action that Amazon Pinpoint to takes if it can't read the required MX record for a
        * custom MAIL FROM domain.

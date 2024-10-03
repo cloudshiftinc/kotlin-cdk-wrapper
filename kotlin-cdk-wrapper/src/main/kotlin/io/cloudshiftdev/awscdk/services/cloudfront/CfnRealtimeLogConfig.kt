@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRealtimeLogConfig(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -473,7 +474,8 @@ public open class CfnRealtimeLogConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty,
-    ) : CdkObject(cdkObject), EndPointProperty {
+    ) : CdkObject(cdkObject),
+        EndPointProperty {
       /**
        * Contains information about the Amazon Kinesis data stream where you are sending real-time
        * log data.
@@ -602,7 +604,8 @@ public open class CfnRealtimeLogConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty,
-    ) : CdkObject(cdkObject), KinesisStreamConfigProperty {
+    ) : CdkObject(cdkObject),
+        KinesisStreamConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that
        * CloudFront can use to send real-time log data to your Kinesis data stream.

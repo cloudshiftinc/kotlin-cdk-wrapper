@@ -215,7 +215,8 @@ public interface CfnFirewallRuleGroupAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociationProps,
-  ) : CdkObject(cdkObject), CfnFirewallRuleGroupAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnFirewallRuleGroupAssociationProps {
     /**
      * The unique identifier of the firewall rule group.
      *

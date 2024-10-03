@@ -37,7 +37,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnComponent(
   cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.amplifyuibuilder.CfnComponent(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1570,7 +1572,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ActionParametersProperty,
-    ) : CdkObject(cdkObject), ActionParametersProperty {
+    ) : CdkObject(cdkObject),
+        ActionParametersProperty {
       /**
        * The HTML anchor link to the location to open.
        *
@@ -1897,7 +1900,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty,
-    ) : CdkObject(cdkObject), ComponentBindingPropertiesValuePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ComponentBindingPropertiesValuePropertiesProperty {
       /**
        * An Amazon S3 bucket.
        *
@@ -2123,7 +2127,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty,
-    ) : CdkObject(cdkObject), ComponentBindingPropertiesValueProperty {
+    ) : CdkObject(cdkObject),
+        ComponentBindingPropertiesValueProperty {
       /**
        * Describes the properties to customize with data at runtime.
        *
@@ -2733,7 +2738,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty,
-    ) : CdkObject(cdkObject), ComponentChildProperty {
+    ) : CdkObject(cdkObject),
+        ComponentChildProperty {
       /**
        * The list of `ComponentChild` instances for this component.
        *
@@ -3098,7 +3104,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty,
-    ) : CdkObject(cdkObject), ComponentConditionPropertyProperty {
+    ) : CdkObject(cdkObject),
+        ComponentConditionPropertyProperty {
       /**
        * The value to assign to the property if the condition is not met.
        *
@@ -3376,7 +3383,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentDataConfigurationProperty,
-    ) : CdkObject(cdkObject), ComponentDataConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ComponentDataConfigurationProperty {
       /**
        * A list of IDs to use to bind data to a component.
        *
@@ -3863,7 +3871,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty,
-    ) : CdkObject(cdkObject), ComponentEventProperty {
+    ) : CdkObject(cdkObject),
+        ComponentEventProperty {
       /**
        * The action to perform when a specific event is raised.
        *
@@ -3987,7 +3996,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty,
-    ) : CdkObject(cdkObject), ComponentPropertyBindingPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ComponentPropertyBindingPropertiesProperty {
       /**
        * The data field to bind the property to.
        *
@@ -4555,7 +4565,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty,
-    ) : CdkObject(cdkObject), ComponentPropertyProperty {
+    ) : CdkObject(cdkObject),
+        ComponentPropertyProperty {
       /**
        * The information to bind the component property to data at runtime.
        *
@@ -4783,7 +4794,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty,
-    ) : CdkObject(cdkObject), ComponentVariantProperty {
+    ) : CdkObject(cdkObject),
+        ComponentVariantProperty {
       /**
        * The properties of the component variant that can be overriden when customizing an instance
        * of the component.
@@ -4895,7 +4907,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty,
-    ) : CdkObject(cdkObject), FormBindingElementProperty {
+    ) : CdkObject(cdkObject),
+        FormBindingElementProperty {
       /**
        * The name of the component to retrieve a value from.
        *
@@ -5090,7 +5103,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty,
-    ) : CdkObject(cdkObject), MutationActionSetStateParameterProperty {
+    ) : CdkObject(cdkObject),
+        MutationActionSetStateParameterProperty {
       /**
        * The name of the component that is being modified.
        *
@@ -5333,7 +5347,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty,
-    ) : CdkObject(cdkObject), PredicateProperty {
+    ) : CdkObject(cdkObject),
+        PredicateProperty {
       /**
        * A list of predicates to combine logically.
        *
@@ -5470,7 +5485,8 @@ public open class CfnComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty,
-    ) : CdkObject(cdkObject), SortPropertyProperty {
+    ) : CdkObject(cdkObject),
+        SortPropertyProperty {
       /**
        * The direction of the sort, either ascending or descending.
        *

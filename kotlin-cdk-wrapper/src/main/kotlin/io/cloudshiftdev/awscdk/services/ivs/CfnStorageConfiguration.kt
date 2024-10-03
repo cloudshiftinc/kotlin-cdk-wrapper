@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStorageConfiguration(
   cdkObject: software.amazon.awscdk.services.ivs.CfnStorageConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -397,7 +399,8 @@ public open class CfnStorageConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ivs.CfnStorageConfiguration.S3StorageConfigurationProperty,
-    ) : CdkObject(cdkObject), S3StorageConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        S3StorageConfigurationProperty {
       /**
        * Name of the S3 bucket where recorded video will be stored.
        *

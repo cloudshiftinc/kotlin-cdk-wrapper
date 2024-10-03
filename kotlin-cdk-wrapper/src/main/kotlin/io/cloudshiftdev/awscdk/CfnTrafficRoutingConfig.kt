@@ -146,7 +146,8 @@ public interface CfnTrafficRoutingConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnTrafficRoutingConfig,
-  ) : CdkObject(cdkObject), CfnTrafficRoutingConfig {
+  ) : CdkObject(cdkObject),
+      CfnTrafficRoutingConfig {
     /**
      * The configuration for traffic routing when `type` is
      * `CfnTrafficRoutingType.TIME_BASED_CANARY`.

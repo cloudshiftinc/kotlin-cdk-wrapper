@@ -144,7 +144,8 @@ public interface SourceApiAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.SourceApiAssociationProps,
-  ) : CdkObject(cdkObject), SourceApiAssociationProps {
+  ) : CdkObject(cdkObject),
+      SourceApiAssociationProps {
     /**
      * The description of the source api association.
      *

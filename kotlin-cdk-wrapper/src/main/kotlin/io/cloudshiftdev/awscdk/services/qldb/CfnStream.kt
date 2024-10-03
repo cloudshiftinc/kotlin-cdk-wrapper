@@ -60,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStream(
   cdkObject: software.amazon.awscdk.services.qldb.CfnStream,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -648,7 +650,8 @@ public open class CfnStream(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qldb.CfnStream.KinesisConfigurationProperty,
-    ) : CdkObject(cdkObject), KinesisConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        KinesisConfigurationProperty {
       /**
        * Enables QLDB to publish multiple data records in a single Kinesis Data Streams record,
        * increasing the number of records sent per API call.

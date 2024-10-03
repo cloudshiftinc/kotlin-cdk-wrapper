@@ -94,7 +94,8 @@ public interface ResourcePolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.ResourcePolicyProps,
-  ) : CdkObject(cdkObject), ResourcePolicyProps {
+  ) : CdkObject(cdkObject),
+      ResourcePolicyProps {
     /**
      * Initial statements to add to the resource policy.
      *

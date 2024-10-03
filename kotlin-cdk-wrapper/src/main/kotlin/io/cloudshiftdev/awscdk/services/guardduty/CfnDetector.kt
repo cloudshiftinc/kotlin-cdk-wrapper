@@ -73,7 +73,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDetector(
   cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -91,7 +93,7 @@ public open class CfnDetector(
   )
 
   /**
-   *
+   * The unique ID of the detector.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -675,7 +677,8 @@ public open class CfnDetector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNDataSourceConfigurationsProperty,
-    ) : CdkObject(cdkObject), CFNDataSourceConfigurationsProperty {
+    ) : CdkObject(cdkObject),
+        CFNDataSourceConfigurationsProperty {
       /**
        * Describes which Kubernetes data sources are enabled for a detector.
        *
@@ -793,7 +796,8 @@ public open class CfnDetector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty,
-    ) : CdkObject(cdkObject), CFNFeatureAdditionalConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CFNFeatureAdditionalConfigurationProperty {
       /**
        * Name of the additional configuration.
        *
@@ -862,6 +866,10 @@ public open class CfnDetector(
     /**
      * Name of the feature.
      *
+     * For a list of allowed values, see
+     * [DetectorFeatureConfiguration](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DetectorFeatureConfiguration.html#guardduty-Type-DetectorFeatureConfiguration-name)
+     * in the *GuardDuty API Reference* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureconfiguration.html#cfn-guardduty-detector-cfnfeatureconfiguration-name)
      */
     public fun name(): String
@@ -898,6 +906,9 @@ public open class CfnDetector(
 
       /**
        * @param name Name of the feature. 
+       * For a list of allowed values, see
+       * [DetectorFeatureConfiguration](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DetectorFeatureConfiguration.html#guardduty-Type-DetectorFeatureConfiguration-name)
+       * in the *GuardDuty API Reference* .
        */
       public fun name(name: String)
 
@@ -938,6 +949,9 @@ public open class CfnDetector(
 
       /**
        * @param name Name of the feature. 
+       * For a list of allowed values, see
+       * [DetectorFeatureConfiguration](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DetectorFeatureConfiguration.html#guardduty-Type-DetectorFeatureConfiguration-name)
+       * in the *GuardDuty API Reference* .
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -957,7 +971,8 @@ public open class CfnDetector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureConfigurationProperty,
-    ) : CdkObject(cdkObject), CFNFeatureConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CFNFeatureConfigurationProperty {
       /**
        * Information about the additional configuration of a feature in your account.
        *
@@ -967,6 +982,10 @@ public open class CfnDetector(
 
       /**
        * Name of the feature.
+       *
+       * For a list of allowed values, see
+       * [DetectorFeatureConfiguration](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DetectorFeatureConfiguration.html#guardduty-Type-DetectorFeatureConfiguration-name)
+       * in the *GuardDuty API Reference* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfnfeatureconfiguration.html#cfn-guardduty-detector-cfnfeatureconfiguration-name)
        */
@@ -1070,7 +1089,8 @@ public open class CfnDetector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty,
-    ) : CdkObject(cdkObject), CFNKubernetesAuditLogsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CFNKubernetesAuditLogsConfigurationProperty {
       /**
        * Describes whether Kubernetes audit logs are enabled as a data source for the detector.
        *
@@ -1191,7 +1211,8 @@ public open class CfnDetector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesConfigurationProperty,
-    ) : CdkObject(cdkObject), CFNKubernetesConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CFNKubernetesConfigurationProperty {
       /**
        * Describes whether Kubernetes audit logs are enabled as a data source for the detector.
        *
@@ -1315,7 +1336,8 @@ public open class CfnDetector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNMalwareProtectionConfigurationProperty,
-    ) : CdkObject(cdkObject), CFNMalwareProtectionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CFNMalwareProtectionConfigurationProperty {
       /**
        * Describes the configuration of Malware Protection for EC2 instances with findings.
        *
@@ -1413,7 +1435,8 @@ public open class CfnDetector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty,
-    ) : CdkObject(cdkObject), CFNS3LogsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CFNS3LogsConfigurationProperty {
       /**
        * The status of S3 data event logs as a data source.
        *
@@ -1510,7 +1533,8 @@ public open class CfnDetector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty,
-    ) : CdkObject(cdkObject), CFNScanEc2InstanceWithFindingsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CFNScanEc2InstanceWithFindingsConfigurationProperty {
       /**
        * Describes the configuration for scanning EBS volumes as data source.
        *
@@ -1557,14 +1581,14 @@ public open class CfnDetector(
    */
   public interface TagItemProperty {
     /**
-     * The tag value.
+     * The tag key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-key)
      */
     public fun key(): String
 
     /**
-     * The tag key.
+     * The tag value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-value)
      */
@@ -1576,12 +1600,12 @@ public open class CfnDetector(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param key The tag value. 
+       * @param key The tag key. 
        */
       public fun key(key: String)
 
       /**
-       * @param value The tag key. 
+       * @param value The tag value. 
        */
       public fun `value`(`value`: String)
     }
@@ -1592,14 +1616,14 @@ public open class CfnDetector(
           software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty.builder()
 
       /**
-       * @param key The tag value. 
+       * @param key The tag key. 
        */
       override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
       /**
-       * @param value The tag key. 
+       * @param value The tag value. 
        */
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
@@ -1611,16 +1635,17 @@ public open class CfnDetector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty,
-    ) : CdkObject(cdkObject), TagItemProperty {
+    ) : CdkObject(cdkObject),
+        TagItemProperty {
       /**
-       * The tag value.
+       * The tag key.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-key)
        */
       override fun key(): String = unwrap(this).getKey()
 
       /**
-       * The tag key.
+       * The tag value.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-tagitem.html#cfn-guardduty-detector-tagitem-value)
        */

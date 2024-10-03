@@ -628,7 +628,8 @@ public interface ClusterAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.ClusterAttributes,
-  ) : CdkObject(cdkObject), ClusterAttributes {
+  ) : CdkObject(cdkObject),
+      ClusterAttributes {
     /**
      * An AWS Lambda layer that contains the `aws` CLI.
      *

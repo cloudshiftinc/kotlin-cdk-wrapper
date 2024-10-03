@@ -74,7 +74,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDeployment(
   cdkObject: software.amazon.awscdk.services.appconfig.CfnDeployment,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -628,7 +630,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appconfig.CfnDeployment.DynamicExtensionParametersProperty,
-    ) : CdkObject(cdkObject), DynamicExtensionParametersProperty {
+    ) : CdkObject(cdkObject),
+        DynamicExtensionParametersProperty {
       /**
        * The ARN or ID of the extension for which you are inserting a dynamic parameter.
        *

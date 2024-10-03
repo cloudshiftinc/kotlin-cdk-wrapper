@@ -58,7 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIPSet(
   cdkObject: software.amazon.awscdk.services.waf.regional.CfnIPSet,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -389,7 +390,8 @@ public open class CfnIPSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.waf.regional.CfnIPSet.IPSetDescriptorProperty,
-    ) : CdkObject(cdkObject), IPSetDescriptorProperty {
+    ) : CdkObject(cdkObject),
+        IPSetDescriptorProperty {
       /**
        * Specify `IPV4` or `IPV6` .
        *

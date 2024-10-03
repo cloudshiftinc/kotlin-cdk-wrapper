@@ -136,7 +136,7 @@ public interface CfnStudioComponentProps {
   /**
    * The unique identifier for a studio resource.
    *
-   * In Nimble Studio , all other resources are contained in a studio resource.
+   * In Nimble Studio, all other resources are contained in a studio resource.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-studioid)
    */
@@ -257,7 +257,7 @@ public interface CfnStudioComponentProps {
 
     /**
      * @param studioId The unique identifier for a studio resource. 
-     * In Nimble Studio , all other resources are contained in a studio resource.
+     * In Nimble Studio, all other resources are contained in a studio resource.
      */
     public fun studioId(studioId: String)
 
@@ -397,7 +397,7 @@ public interface CfnStudioComponentProps {
 
     /**
      * @param studioId The unique identifier for a studio resource. 
-     * In Nimble Studio , all other resources are contained in a studio resource.
+     * In Nimble Studio, all other resources are contained in a studio resource.
      */
     override fun studioId(studioId: String) {
       cdkBuilder.studioId(studioId)
@@ -433,7 +433,8 @@ public interface CfnStudioComponentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponentProps,
-  ) : CdkObject(cdkObject), CfnStudioComponentProps {
+  ) : CdkObject(cdkObject),
+      CfnStudioComponentProps {
     /**
      * The configuration of the studio component, based on component type.
      *
@@ -497,7 +498,7 @@ public interface CfnStudioComponentProps {
     /**
      * The unique identifier for a studio resource.
      *
-     * In Nimble Studio , all other resources are contained in a studio resource.
+     * In Nimble Studio, all other resources are contained in a studio resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-studioid)
      */

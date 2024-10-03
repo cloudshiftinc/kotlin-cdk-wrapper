@@ -169,7 +169,8 @@ public interface HttpsRedirectProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.patterns.HttpsRedirectProps,
-  ) : CdkObject(cdkObject), HttpsRedirectProps {
+  ) : CdkObject(cdkObject),
+      HttpsRedirectProps {
     /**
      * The AWS Certificate Manager (ACM) certificate that will be associated with the CloudFront
      * distribution that will be created.

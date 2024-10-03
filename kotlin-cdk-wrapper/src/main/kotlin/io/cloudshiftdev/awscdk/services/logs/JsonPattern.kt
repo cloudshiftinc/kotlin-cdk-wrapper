@@ -22,7 +22,8 @@ import kotlin.String
  */
 public abstract class JsonPattern(
   cdkObject: software.amazon.awscdk.services.logs.JsonPattern,
-) : CdkObject(cdkObject), IFilterPattern {
+) : CdkObject(cdkObject),
+    IFilterPattern {
   /**
    *
    */

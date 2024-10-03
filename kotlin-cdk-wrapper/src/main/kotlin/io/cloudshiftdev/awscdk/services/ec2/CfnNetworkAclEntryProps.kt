@@ -357,7 +357,8 @@ public interface CfnNetworkAclEntryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntryProps,
-  ) : CdkObject(cdkObject), CfnNetworkAclEntryProps {
+  ) : CdkObject(cdkObject),
+      CfnNetworkAclEntryProps {
     /**
      * The IPv4 CIDR range to allow or deny, in CIDR notation (for example, 172.16.0.0/24). You must
      * specify an IPv4 CIDR block or an IPv6 CIDR block.

@@ -37,7 +37,8 @@ public interface ISourceApiAssociation : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.ISourceApiAssociation,
-  ) : CdkObject(cdkObject), ISourceApiAssociation {
+  ) : CdkObject(cdkObject),
+      ISourceApiAssociation {
     /**
      * Apply the given removal policy to this resource.
      *

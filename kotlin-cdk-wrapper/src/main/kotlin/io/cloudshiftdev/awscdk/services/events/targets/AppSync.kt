@@ -44,7 +44,8 @@ import software.amazon.awscdk.services.appsync.IGraphqlApi as AmazonAwscdkServic
  */
 public open class AppSync(
   cdkObject: software.amazon.awscdk.services.events.targets.AppSync,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(appsyncApi: CloudshiftdevAwscdkServicesAppsyncIGraphqlApi,
       props: AppSyncGraphQLApiProps) :
       this(software.amazon.awscdk.services.events.targets.AppSync(appsyncApi.let(CloudshiftdevAwscdkServicesAppsyncIGraphqlApi.Companion::unwrap),

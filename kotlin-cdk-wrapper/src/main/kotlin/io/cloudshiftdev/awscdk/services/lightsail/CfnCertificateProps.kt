@@ -185,7 +185,8 @@ public interface CfnCertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lightsail.CfnCertificateProps,
-  ) : CdkObject(cdkObject), CfnCertificateProps {
+  ) : CdkObject(cdkObject),
+      CfnCertificateProps {
     /**
      * The name of the certificate.
      *

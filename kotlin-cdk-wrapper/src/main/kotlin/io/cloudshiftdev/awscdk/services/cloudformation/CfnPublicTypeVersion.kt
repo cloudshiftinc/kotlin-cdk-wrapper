@@ -58,7 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPublicTypeVersion(
   cdkObject: software.amazon.awscdk.services.cloudformation.CfnPublicTypeVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudformation.CfnPublicTypeVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -218,7 +219,7 @@ public open class CfnPublicTypeVersion(
      * If you don't specify a version number, CloudFormation increments the version number by one
      * minor version release.
      *
-     * You cannot specify a version number the first time you publish a type. AWS CloudFormation
+     * You cannot specify a version number the first time you publish a type. CloudFormation
      * automatically sets the first version number to be `1.0.0` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-publicversionnumber)
@@ -306,7 +307,7 @@ public open class CfnPublicTypeVersion(
      * If you don't specify a version number, CloudFormation increments the version number by one
      * minor version release.
      *
-     * You cannot specify a version number the first time you publish a type. AWS CloudFormation
+     * You cannot specify a version number the first time you publish a type. CloudFormation
      * automatically sets the first version number to be `1.0.0` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-publicversionnumber)

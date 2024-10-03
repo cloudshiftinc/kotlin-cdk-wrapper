@@ -244,7 +244,8 @@ public interface StepScalingPolicyProps : BasicStepScalingPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.StepScalingPolicyProps,
-  ) : CdkObject(cdkObject), StepScalingPolicyProps {
+  ) : CdkObject(cdkObject),
+      StepScalingPolicyProps {
     /**
      * How the adjustment numbers inside 'intervals' are interpreted.
      *

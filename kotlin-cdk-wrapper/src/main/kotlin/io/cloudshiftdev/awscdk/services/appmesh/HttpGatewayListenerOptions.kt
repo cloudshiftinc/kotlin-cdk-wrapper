@@ -165,7 +165,8 @@ public interface HttpGatewayListenerOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayListenerOptions,
-  ) : CdkObject(cdkObject), HttpGatewayListenerOptions {
+  ) : CdkObject(cdkObject),
+      HttpGatewayListenerOptions {
     /**
      * Connection pool for http listeners.
      *

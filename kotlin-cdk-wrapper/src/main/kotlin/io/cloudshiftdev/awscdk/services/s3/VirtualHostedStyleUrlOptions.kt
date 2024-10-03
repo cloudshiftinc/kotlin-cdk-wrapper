@@ -57,7 +57,8 @@ public interface VirtualHostedStyleUrlOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions,
-  ) : CdkObject(cdkObject), VirtualHostedStyleUrlOptions {
+  ) : CdkObject(cdkObject),
+      VirtualHostedStyleUrlOptions {
     /**
      * Specifies the URL includes the region.
      *

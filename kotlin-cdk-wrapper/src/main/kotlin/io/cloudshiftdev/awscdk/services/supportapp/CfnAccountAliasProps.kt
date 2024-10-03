@@ -60,7 +60,8 @@ public interface CfnAccountAliasProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.supportapp.CfnAccountAliasProps,
-  ) : CdkObject(cdkObject), CfnAccountAliasProps {
+  ) : CdkObject(cdkObject),
+      CfnAccountAliasProps {
     /**
      * An alias or short name for an AWS account .
      *

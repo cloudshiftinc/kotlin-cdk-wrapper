@@ -57,7 +57,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * subnetcount = subnetcount + 1;
  * }
  * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
- * .version(KubernetesVersion.V1_29)
+ * .version(KubernetesVersion.V1_30)
  * .vpc(vpc)
  * .ipFamily(IpFamily.IP_V6)
  * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
@@ -68,7 +68,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSubnet(
   cdkObject: software.amazon.awscdk.services.ec2.CfnSubnet,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -131,7 +133,7 @@ public open class CfnSubnet(
   public open fun attrCidrBlock(): String = unwrap(this).getAttrCidrBlock()
 
   /**
-   *
+   * The IPv6 CIDR blocks that are associated with the subnet.
    */
   public open fun attrIpv6CidrBlocks(): List<String> = unwrap(this).getAttrIpv6CidrBlocks()
 
@@ -270,23 +272,6 @@ public open class CfnSubnet(
   public open fun ipv6CidrBlock(`value`: String) {
     unwrap(this).setIpv6CidrBlock(`value`)
   }
-
-  /**
-   * The IPv6 network ranges for the subnet, in CIDR notation.
-   */
-  public open fun ipv6CidrBlocks(): List<String> = unwrap(this).getIpv6CidrBlocks() ?: emptyList()
-
-  /**
-   * The IPv6 network ranges for the subnet, in CIDR notation.
-   */
-  public open fun ipv6CidrBlocks(`value`: List<String>) {
-    unwrap(this).setIpv6CidrBlocks(`value`)
-  }
-
-  /**
-   * The IPv6 network ranges for the subnet, in CIDR notation.
-   */
-  public open fun ipv6CidrBlocks(vararg `value`: String): Unit = ipv6CidrBlocks(`value`.toList())
 
   /**
    * An IPv6 IPAM pool ID for the subnet.
@@ -479,9 +464,14 @@ public open class CfnSubnet(
      * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should
      * return synthetic IPv6 addresses for IPv4-only destinations.
      *
-     * For more information, see [DNS64 and
-     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-nat64-dns64)
+     *
+     * You must first configure a NAT gateway in a public subnet (separate from the subnet
+     * containing the IPv6-only workloads). For example, the subnet containing the NAT gateway should
+     * have a `0.0.0.0/0` route pointing to the internet gateway. For more information, see [Configure
+     * DNS64 and
+     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-nat64-dns64.html#nat-gateway-nat64-dns64-walkthrough)
      * in the *Amazon Virtual Private Cloud User Guide* .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enabledns64)
      * @param enableDns64 Indicates whether DNS queries made to the Amazon-provided DNS Resolver in
@@ -493,9 +483,14 @@ public open class CfnSubnet(
      * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should
      * return synthetic IPv6 addresses for IPv4-only destinations.
      *
-     * For more information, see [DNS64 and
-     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-nat64-dns64)
+     *
+     * You must first configure a NAT gateway in a public subnet (separate from the subnet
+     * containing the IPv6-only workloads). For example, the subnet containing the NAT gateway should
+     * have a `0.0.0.0/0` route pointing to the internet gateway. For more information, see [Configure
+     * DNS64 and
+     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-nat64-dns64.html#nat-gateway-nat64-dns64-walkthrough)
      * in the *Amazon Virtual Private Cloud User Guide* .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enabledns64)
      * @param enableDns64 Indicates whether DNS queries made to the Amazon-provided DNS Resolver in
@@ -540,22 +535,6 @@ public open class CfnSubnet(
      * @param ipv6CidrBlock The IPv6 CIDR block. 
      */
     public fun ipv6CidrBlock(ipv6CidrBlock: String)
-
-    /**
-     * The IPv6 network ranges for the subnet, in CIDR notation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblocks)
-     * @param ipv6CidrBlocks The IPv6 network ranges for the subnet, in CIDR notation. 
-     */
-    public fun ipv6CidrBlocks(ipv6CidrBlocks: List<String>)
-
-    /**
-     * The IPv6 network ranges for the subnet, in CIDR notation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblocks)
-     * @param ipv6CidrBlocks The IPv6 network ranges for the subnet, in CIDR notation. 
-     */
-    public fun ipv6CidrBlocks(vararg ipv6CidrBlocks: String)
 
     /**
      * An IPv6 IPAM pool ID for the subnet.
@@ -753,9 +732,14 @@ public open class CfnSubnet(
      * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should
      * return synthetic IPv6 addresses for IPv4-only destinations.
      *
-     * For more information, see [DNS64 and
-     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-nat64-dns64)
+     *
+     * You must first configure a NAT gateway in a public subnet (separate from the subnet
+     * containing the IPv6-only workloads). For example, the subnet containing the NAT gateway should
+     * have a `0.0.0.0/0` route pointing to the internet gateway. For more information, see [Configure
+     * DNS64 and
+     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-nat64-dns64.html#nat-gateway-nat64-dns64-walkthrough)
      * in the *Amazon Virtual Private Cloud User Guide* .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enabledns64)
      * @param enableDns64 Indicates whether DNS queries made to the Amazon-provided DNS Resolver in
@@ -769,9 +753,14 @@ public open class CfnSubnet(
      * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should
      * return synthetic IPv6 addresses for IPv4-only destinations.
      *
-     * For more information, see [DNS64 and
-     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-nat64-dns64)
+     *
+     * You must first configure a NAT gateway in a public subnet (separate from the subnet
+     * containing the IPv6-only workloads). For example, the subnet containing the NAT gateway should
+     * have a `0.0.0.0/0` route pointing to the internet gateway. For more information, see [Configure
+     * DNS64 and
+     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-nat64-dns64.html#nat-gateway-nat64-dns64-walkthrough)
      * in the *Amazon Virtual Private Cloud User Guide* .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enabledns64)
      * @param enableDns64 Indicates whether DNS queries made to the Amazon-provided DNS Resolver in
@@ -826,25 +815,6 @@ public open class CfnSubnet(
     override fun ipv6CidrBlock(ipv6CidrBlock: String) {
       cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
-
-    /**
-     * The IPv6 network ranges for the subnet, in CIDR notation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblocks)
-     * @param ipv6CidrBlocks The IPv6 network ranges for the subnet, in CIDR notation. 
-     */
-    override fun ipv6CidrBlocks(ipv6CidrBlocks: List<String>) {
-      cdkBuilder.ipv6CidrBlocks(ipv6CidrBlocks)
-    }
-
-    /**
-     * The IPv6 network ranges for the subnet, in CIDR notation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblocks)
-     * @param ipv6CidrBlocks The IPv6 network ranges for the subnet, in CIDR notation. 
-     */
-    override fun ipv6CidrBlocks(vararg ipv6CidrBlocks: String): Unit =
-        ipv6CidrBlocks(ipv6CidrBlocks.toList())
 
     /**
      * An IPv6 IPAM pool ID for the subnet.
@@ -1150,7 +1120,8 @@ public open class CfnSubnet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSubnet.PrivateDnsNameOptionsOnLaunchProperty,
-    ) : CdkObject(cdkObject), PrivateDnsNameOptionsOnLaunchProperty {
+    ) : CdkObject(cdkObject),
+        PrivateDnsNameOptionsOnLaunchProperty {
       /**
        * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
        *

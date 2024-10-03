@@ -81,7 +81,8 @@ public interface FileSystemConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.FileSystemConfig,
-  ) : CdkObject(cdkObject), FileSystemConfig {
+  ) : CdkObject(cdkObject),
+      FileSystemConfig {
     /**
      * File system location wrapper property.
      *

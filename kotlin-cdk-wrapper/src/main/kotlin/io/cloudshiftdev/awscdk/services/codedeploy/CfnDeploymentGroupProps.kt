@@ -1358,7 +1358,8 @@ public interface CfnDeploymentGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroupProps,
-  ) : CdkObject(cdkObject), CfnDeploymentGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnDeploymentGroupProps {
     /**
      * Information about the Amazon CloudWatch alarms that are associated with the deployment group.
      *

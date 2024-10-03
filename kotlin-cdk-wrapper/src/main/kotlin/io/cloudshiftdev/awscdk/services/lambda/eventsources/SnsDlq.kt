@@ -25,7 +25,8 @@ import io.cloudshiftdev.awscdk.services.sns.ITopic
  */
 public open class SnsDlq(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsDlq,
-) : CdkObject(cdkObject), IEventSourceDlq {
+) : CdkObject(cdkObject),
+    IEventSourceDlq {
   public constructor(topic: ITopic) :
       this(software.amazon.awscdk.services.lambda.eventsources.SnsDlq(topic.let(ITopic.Companion::unwrap))
   )

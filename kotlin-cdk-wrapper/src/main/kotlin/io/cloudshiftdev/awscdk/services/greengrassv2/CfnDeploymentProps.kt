@@ -383,7 +383,8 @@ public interface CfnDeploymentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeploymentProps,
-  ) : CdkObject(cdkObject), CfnDeploymentProps {
+  ) : CdkObject(cdkObject),
+      CfnDeploymentProps {
     /**
      * The components to deploy.
      *

@@ -44,7 +44,7 @@ public interface CfnDomainProps {
   public fun domainName(): String
 
   /**
-   * The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
+   * The key used to encrypt the domain.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html#cfn-codeartifact-domain-encryptionkey)
    */
@@ -75,8 +75,7 @@ public interface CfnDomainProps {
     public fun domainName(domainName: String)
 
     /**
-     * @param encryptionKey The ARN of an AWS Key Management Service (AWS KMS) key associated with a
-     * domain.
+     * @param encryptionKey The key used to encrypt the domain.
      */
     public fun encryptionKey(encryptionKey: String)
 
@@ -109,8 +108,7 @@ public interface CfnDomainProps {
     }
 
     /**
-     * @param encryptionKey The ARN of an AWS Key Management Service (AWS KMS) key associated with a
-     * domain.
+     * @param encryptionKey The key used to encrypt the domain.
      */
     override fun encryptionKey(encryptionKey: String) {
       cdkBuilder.encryptionKey(encryptionKey)
@@ -142,7 +140,8 @@ public interface CfnDomainProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codeartifact.CfnDomainProps,
-  ) : CdkObject(cdkObject), CfnDomainProps {
+  ) : CdkObject(cdkObject),
+      CfnDomainProps {
     /**
      * A string that specifies the name of the requested domain.
      *
@@ -151,7 +150,7 @@ public interface CfnDomainProps {
     override fun domainName(): String = unwrap(this).getDomainName()
 
     /**
-     * The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
+     * The key used to encrypt the domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html#cfn-codeartifact-domain-encryptionkey)
      */

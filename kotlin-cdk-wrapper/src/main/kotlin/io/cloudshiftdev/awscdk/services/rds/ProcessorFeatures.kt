@@ -77,7 +77,8 @@ public interface ProcessorFeatures {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ProcessorFeatures,
-  ) : CdkObject(cdkObject), ProcessorFeatures {
+  ) : CdkObject(cdkObject),
+      ProcessorFeatures {
     /**
      * The number of CPU core.
      *

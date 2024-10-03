@@ -121,7 +121,8 @@ public interface RuleTargetInputProperties {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.RuleTargetInputProperties,
-  ) : CdkObject(cdkObject), RuleTargetInputProperties {
+  ) : CdkObject(cdkObject),
+      RuleTargetInputProperties {
     /**
      * Literal input to the target service (must be valid JSON).
      *

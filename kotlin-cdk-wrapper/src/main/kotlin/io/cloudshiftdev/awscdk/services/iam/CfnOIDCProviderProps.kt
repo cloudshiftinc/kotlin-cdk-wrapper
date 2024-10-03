@@ -20,13 +20,12 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.iam.*;
  * CfnOIDCProviderProps cfnOIDCProviderProps = CfnOIDCProviderProps.builder()
- * .thumbprintList(List.of("thumbprintList"))
- * // the properties below are optional
  * .clientIdList(List.of("clientIdList"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .thumbprintList(List.of("thumbprintList"))
  * .url("url")
  * .build();
  * ```
@@ -65,9 +64,13 @@ public interface CfnOIDCProviderProps {
    * [CreateOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html)
    * .
    *
+   * This property is optional. If it is not included, IAM will retrieve and use the top
+   * intermediate certificate authority (CA) thumbprint of the OpenID Connect identity provider server
+   * certificate.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-thumbprintlist)
    */
-  public fun thumbprintList(): List<String>
+  public fun thumbprintList(): List<String> = unwrap(this).getThumbprintList() ?: emptyList()
 
   /**
    * The URL that the IAM OIDC provider resource object is associated with.
@@ -121,19 +124,27 @@ public interface CfnOIDCProviderProps {
 
     /**
      * @param thumbprintList A list of certificate thumbprints that are associated with the
-     * specified IAM OIDC provider resource object. 
+     * specified IAM OIDC provider resource object.
      * For more information, see
      * [CreateOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html)
      * .
+     *
+     * This property is optional. If it is not included, IAM will retrieve and use the top
+     * intermediate certificate authority (CA) thumbprint of the OpenID Connect identity provider
+     * server certificate.
      */
     public fun thumbprintList(thumbprintList: List<String>)
 
     /**
      * @param thumbprintList A list of certificate thumbprints that are associated with the
-     * specified IAM OIDC provider resource object. 
+     * specified IAM OIDC provider resource object.
      * For more information, see
      * [CreateOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html)
      * .
+     *
+     * This property is optional. If it is not included, IAM will retrieve and use the top
+     * intermediate certificate authority (CA) thumbprint of the OpenID Connect identity provider
+     * server certificate.
      */
     public fun thumbprintList(vararg thumbprintList: String)
 
@@ -191,10 +202,14 @@ public interface CfnOIDCProviderProps {
 
     /**
      * @param thumbprintList A list of certificate thumbprints that are associated with the
-     * specified IAM OIDC provider resource object. 
+     * specified IAM OIDC provider resource object.
      * For more information, see
      * [CreateOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html)
      * .
+     *
+     * This property is optional. If it is not included, IAM will retrieve and use the top
+     * intermediate certificate authority (CA) thumbprint of the OpenID Connect identity provider
+     * server certificate.
      */
     override fun thumbprintList(thumbprintList: List<String>) {
       cdkBuilder.thumbprintList(thumbprintList)
@@ -202,10 +217,14 @@ public interface CfnOIDCProviderProps {
 
     /**
      * @param thumbprintList A list of certificate thumbprints that are associated with the
-     * specified IAM OIDC provider resource object. 
+     * specified IAM OIDC provider resource object.
      * For more information, see
      * [CreateOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html)
      * .
+     *
+     * This property is optional. If it is not included, IAM will retrieve and use the top
+     * intermediate certificate authority (CA) thumbprint of the OpenID Connect identity provider
+     * server certificate.
      */
     override fun thumbprintList(vararg thumbprintList: String): Unit =
         thumbprintList(thumbprintList.toList())
@@ -226,7 +245,8 @@ public interface CfnOIDCProviderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.CfnOIDCProviderProps,
-  ) : CdkObject(cdkObject), CfnOIDCProviderProps {
+  ) : CdkObject(cdkObject),
+      CfnOIDCProviderProps {
     /**
      * A list of client IDs (also known as audiences) that are associated with the specified IAM
      * OIDC provider resource object.
@@ -258,9 +278,13 @@ public interface CfnOIDCProviderProps {
      * [CreateOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html)
      * .
      *
+     * This property is optional. If it is not included, IAM will retrieve and use the top
+     * intermediate certificate authority (CA) thumbprint of the OpenID Connect identity provider
+     * server certificate.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-thumbprintlist)
      */
-    override fun thumbprintList(): List<String> = unwrap(this).getThumbprintList()
+    override fun thumbprintList(): List<String> = unwrap(this).getThumbprintList() ?: emptyList()
 
     /**
      * The URL that the IAM OIDC provider resource object is associated with.

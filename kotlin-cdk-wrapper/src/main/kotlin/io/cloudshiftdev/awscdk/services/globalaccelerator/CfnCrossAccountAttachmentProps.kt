@@ -27,8 +27,8 @@ import kotlin.collections.List
  * // the properties below are optional
  * .principals(List.of("principals"))
  * .resources(List.of(ResourceProperty.builder()
+ * .cidr("cidr")
  * .endpointId("endpointId")
- * // the properties below are optional
  * .region("region")
  * .build()))
  * .tags(List.of(CfnTag.builder()
@@ -193,7 +193,8 @@ public interface CfnCrossAccountAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnCrossAccountAttachmentProps,
-  ) : CdkObject(cdkObject), CfnCrossAccountAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnCrossAccountAttachmentProps {
     /**
      * The name of the cross-account attachment.
      *

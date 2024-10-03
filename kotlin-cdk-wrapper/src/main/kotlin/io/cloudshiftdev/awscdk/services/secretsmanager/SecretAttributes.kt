@@ -115,7 +115,8 @@ public interface SecretAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.SecretAttributes,
-  ) : CdkObject(cdkObject), SecretAttributes {
+  ) : CdkObject(cdkObject),
+      SecretAttributes {
     /**
      * The encryption key that is used to encrypt the secret, unless the default SecretsManager key
      * is used.

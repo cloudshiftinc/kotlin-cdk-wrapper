@@ -260,7 +260,8 @@ public interface CfnClassifierProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnClassifierProps,
-  ) : CdkObject(cdkObject), CfnClassifierProps {
+  ) : CdkObject(cdkObject),
+      CfnClassifierProps {
     /**
      * A classifier for comma-separated values (CSV).
      *

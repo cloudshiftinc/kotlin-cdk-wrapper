@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -55,6 +56,13 @@ public interface HttpAlbIntegrationProps : HttpPrivateIntegrationOptions {
     public fun secureServerName(secureServerName: String)
 
     /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    public fun timeout(timeout: Duration)
+
+    /**
      * @param vpcLink The vpc link to be used for the private integration.
      */
     public fun vpcLink(vpcLink: IVpcLink)
@@ -89,6 +97,15 @@ public interface HttpAlbIntegrationProps : HttpPrivateIntegrationOptions {
     }
 
     /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
      * @param vpcLink The vpc link to be used for the private integration.
      */
     override fun vpcLink(vpcLink: IVpcLink) {
@@ -101,7 +118,8 @@ public interface HttpAlbIntegrationProps : HttpPrivateIntegrationOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegrationProps,
-  ) : CdkObject(cdkObject), HttpAlbIntegrationProps {
+  ) : CdkObject(cdkObject),
+      HttpAlbIntegrationProps {
     /**
      * The HTTP method that must be used to invoke the underlying HTTP proxy.
      *
@@ -127,6 +145,15 @@ public interface HttpAlbIntegrationProps : HttpPrivateIntegrationOptions {
      * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-tlsconfig.html)
      */
     override fun secureServerName(): String? = unwrap(this).getSecureServerName()
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     */
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
     /**
      * The vpc link to be used for the private integration.

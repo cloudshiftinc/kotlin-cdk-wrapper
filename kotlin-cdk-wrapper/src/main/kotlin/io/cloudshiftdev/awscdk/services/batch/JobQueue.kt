@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class JobQueue(
   cdkObject: software.amazon.awscdk.services.batch.JobQueue,
-) : Resource(cdkObject), IJobQueue {
+) : Resource(cdkObject),
+    IJobQueue {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.JobQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -214,6 +215,28 @@ public open class JobQueue(
     public fun jobQueueName(jobQueueName: String)
 
     /**
+     * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+     * the specified state longer than specified times.
+     *
+     * Default: - no actions
+     *
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times. 
+     */
+    public fun jobStateTimeLimitActions(jobStateTimeLimitActions: List<JobStateTimeLimitAction>)
+
+    /**
+     * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+     * the specified state longer than specified times.
+     *
+     * Default: - no actions
+     *
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times. 
+     */
+    public fun jobStateTimeLimitActions(vararg jobStateTimeLimitActions: JobStateTimeLimitAction)
+
+    /**
      * The priority of the job queue.
      *
      * Job queues with a higher priority are evaluated first when associated with the same compute
@@ -324,6 +347,31 @@ public open class JobQueue(
     override fun jobQueueName(jobQueueName: String) {
       cdkBuilder.jobQueueName(jobQueueName)
     }
+
+    /**
+     * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+     * the specified state longer than specified times.
+     *
+     * Default: - no actions
+     *
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times. 
+     */
+    override fun jobStateTimeLimitActions(jobStateTimeLimitActions: List<JobStateTimeLimitAction>) {
+      cdkBuilder.jobStateTimeLimitActions(jobStateTimeLimitActions.map(JobStateTimeLimitAction.Companion::unwrap))
+    }
+
+    /**
+     * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+     * the specified state longer than specified times.
+     *
+     * Default: - no actions
+     *
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times. 
+     */
+    override fun jobStateTimeLimitActions(vararg jobStateTimeLimitActions: JobStateTimeLimitAction):
+        Unit = jobStateTimeLimitActions(jobStateTimeLimitActions.toList())
 
     /**
      * The priority of the job queue.

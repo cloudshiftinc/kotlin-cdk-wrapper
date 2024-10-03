@@ -282,7 +282,8 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.assets.AssetOptions,
-  ) : CdkObject(cdkObject), AssetOptions {
+  ) : CdkObject(cdkObject),
+      AssetOptions {
     /**
      * Specify a custom hash for this asset.
      *

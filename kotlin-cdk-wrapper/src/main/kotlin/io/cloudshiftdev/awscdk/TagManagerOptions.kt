@@ -61,7 +61,8 @@ public interface TagManagerOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.TagManagerOptions,
-  ) : CdkObject(cdkObject), TagManagerOptions {
+  ) : CdkObject(cdkObject),
+      TagManagerOptions {
     /**
      * The name of the property in CloudFormation for these tags.
      *

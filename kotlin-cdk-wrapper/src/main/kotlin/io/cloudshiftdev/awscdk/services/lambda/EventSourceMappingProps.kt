@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -23,10 +24,12 @@ import kotlin.collections.Map
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.kms.*;
  * import io.cloudshiftdev.awscdk.services.lambda.*;
  * IEventSourceDlq eventSourceDlq;
  * Object filters;
  * Function function_;
+ * Key key;
  * SourceAccessConfigurationType sourceAccessConfigurationType;
  * EventSourceMappingProps eventSourceMappingProps = EventSourceMappingProps.builder()
  * .target(function_)
@@ -35,6 +38,7 @@ import kotlin.collections.Map
  * .bisectBatchOnError(false)
  * .enabled(false)
  * .eventSourceArn("eventSourceArn")
+ * .filterEncryption(key)
  * .filters(List.of(Map.of(
  * "filtersKey", filters)))
  * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
@@ -95,6 +99,11 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
      * this stream can invoke the Lambda function.
      */
     public fun eventSourceArn(eventSourceArn: String)
+
+    /**
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria.
+     */
+    public fun filterEncryption(filterEncryption: IKey)
 
     /**
      * @param filters Add filter criteria to Event Source.
@@ -272,6 +281,13 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
      */
     override fun eventSourceArn(eventSourceArn: String) {
       cdkBuilder.eventSourceArn(eventSourceArn)
+    }
+
+    /**
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria.
+     */
+    override fun filterEncryption(filterEncryption: IKey) {
+      cdkBuilder.filterEncryption(filterEncryption.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -454,7 +470,8 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.EventSourceMappingProps,
-  ) : CdkObject(cdkObject), EventSourceMappingProps {
+  ) : CdkObject(cdkObject),
+      EventSourceMappingProps {
     /**
      * The largest number of records that AWS Lambda will retrieve from your event source at the
      * time of invoking your function.
@@ -493,6 +510,15 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
      * Default: - not set if using a self managed Kafka cluster, throws an error otherwise
      */
     override fun eventSourceArn(): String? = unwrap(this).getEventSourceArn()
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     */
+    override fun filterEncryption(): IKey? = unwrap(this).getFilterEncryption()?.let(IKey::wrap)
 
     /**
      * Add filter criteria to Event Source.

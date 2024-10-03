@@ -54,7 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConnection(
   cdkObject: software.amazon.awscdk.services.glue.CfnConnection,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -320,6 +321,12 @@ public open class CfnConnection(
      *
      * * Required: `CONNECTION_URL` .
      * * Required: All of ( `USERNAME` , `PASSWORD` ) or `SECRET_ID` .
+     * * `SALESFORCE` - Designates a connection to Salesforce using OAuth authencation.
+     * * Requires the `AuthenticationConfiguration` member to be configured.
+     * * `VIEW_VALIDATION_REDSHIFT` - Designates a connection used for view validation by Amazon
+     * Redshift.
+     * * `VIEW_VALIDATION_ATHENA` - Designates a connection used for view validation by Amazon
+     * Athena.
      * * `NETWORK` - Designates a network connection to a data source within an Amazon Virtual
      * Private Cloud environment (Amazon VPC).
      *
@@ -368,15 +375,13 @@ public open class CfnConnection(
     /**
      * The name of the connection.
      *
-     * Connection will not function as expected without a name.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-connection-connectioninput.html#cfn-glue-connection-connectioninput-name)
      */
     public fun name(): String? = unwrap(this).getName()
 
     /**
-     * A map of physical connection requirements, such as virtual private cloud (VPC) and
-     * `SecurityGroup` , that are needed to successfully make this connection.
+     * The physical connection requirements, such as virtual private cloud (VPC) and `SecurityGroup`
+     * , that are needed to successfully make this connection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-connection-connectioninput.html#cfn-glue-connection-connectioninput-physicalconnectionrequirements)
      */
@@ -428,6 +433,12 @@ public open class CfnConnection(
        *
        * * Required: `CONNECTION_URL` .
        * * Required: All of ( `USERNAME` , `PASSWORD` ) or `SECRET_ID` .
+       * * `SALESFORCE` - Designates a connection to Salesforce using OAuth authencation.
+       * * Requires the `AuthenticationConfiguration` member to be configured.
+       * * `VIEW_VALIDATION_REDSHIFT` - Designates a connection used for view validation by Amazon
+       * Redshift.
+       * * `VIEW_VALIDATION_ATHENA` - Designates a connection used for view validation by Amazon
+       * Athena.
        * * `NETWORK` - Designates a network connection to a data source within an Amazon Virtual
        * Private Cloud environment (Amazon VPC).
        *
@@ -476,28 +487,27 @@ public open class CfnConnection(
 
       /**
        * @param name The name of the connection.
-       * Connection will not function as expected without a name.
        */
       public fun name(name: String)
 
       /**
-       * @param physicalConnectionRequirements A map of physical connection requirements, such as
-       * virtual private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
+       * @param physicalConnectionRequirements The physical connection requirements, such as virtual
+       * private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
        * connection.
        */
       public fun physicalConnectionRequirements(physicalConnectionRequirements: IResolvable)
 
       /**
-       * @param physicalConnectionRequirements A map of physical connection requirements, such as
-       * virtual private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
+       * @param physicalConnectionRequirements The physical connection requirements, such as virtual
+       * private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
        * connection.
        */
       public
           fun physicalConnectionRequirements(physicalConnectionRequirements: PhysicalConnectionRequirementsProperty)
 
       /**
-       * @param physicalConnectionRequirements A map of physical connection requirements, such as
-       * virtual private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
+       * @param physicalConnectionRequirements The physical connection requirements, such as virtual
+       * private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
        * connection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -553,6 +563,12 @@ public open class CfnConnection(
        *
        * * Required: `CONNECTION_URL` .
        * * Required: All of ( `USERNAME` , `PASSWORD` ) or `SECRET_ID` .
+       * * `SALESFORCE` - Designates a connection to Salesforce using OAuth authencation.
+       * * Requires the `AuthenticationConfiguration` member to be configured.
+       * * `VIEW_VALIDATION_REDSHIFT` - Designates a connection used for view validation by Amazon
+       * Redshift.
+       * * `VIEW_VALIDATION_ATHENA` - Designates a connection used for view validation by Amazon
+       * Athena.
        * * `NETWORK` - Designates a network connection to a data source within an Amazon Virtual
        * Private Cloud environment (Amazon VPC).
        *
@@ -608,15 +624,14 @@ public open class CfnConnection(
 
       /**
        * @param name The name of the connection.
-       * Connection will not function as expected without a name.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
       /**
-       * @param physicalConnectionRequirements A map of physical connection requirements, such as
-       * virtual private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
+       * @param physicalConnectionRequirements The physical connection requirements, such as virtual
+       * private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
        * connection.
        */
       override fun physicalConnectionRequirements(physicalConnectionRequirements: IResolvable) {
@@ -624,8 +639,8 @@ public open class CfnConnection(
       }
 
       /**
-       * @param physicalConnectionRequirements A map of physical connection requirements, such as
-       * virtual private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
+       * @param physicalConnectionRequirements The physical connection requirements, such as virtual
+       * private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
        * connection.
        */
       override
@@ -634,8 +649,8 @@ public open class CfnConnection(
       }
 
       /**
-       * @param physicalConnectionRequirements A map of physical connection requirements, such as
-       * virtual private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
+       * @param physicalConnectionRequirements The physical connection requirements, such as virtual
+       * private cloud (VPC) and `SecurityGroup` , that are needed to successfully make this
        * connection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -651,7 +666,8 @@ public open class CfnConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnConnection.ConnectionInputProperty,
-    ) : CdkObject(cdkObject), ConnectionInputProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionInputProperty {
       /**
        * These key-value pairs define parameters for the connection.
        *
@@ -695,6 +711,12 @@ public open class CfnConnection(
        *
        * * Required: `CONNECTION_URL` .
        * * Required: All of ( `USERNAME` , `PASSWORD` ) or `SECRET_ID` .
+       * * `SALESFORCE` - Designates a connection to Salesforce using OAuth authencation.
+       * * Requires the `AuthenticationConfiguration` member to be configured.
+       * * `VIEW_VALIDATION_REDSHIFT` - Designates a connection used for view validation by Amazon
+       * Redshift.
+       * * `VIEW_VALIDATION_ATHENA` - Designates a connection used for view validation by Amazon
+       * Athena.
        * * `NETWORK` - Designates a network connection to a data source within an Amazon Virtual
        * Private Cloud environment (Amazon VPC).
        *
@@ -745,14 +767,12 @@ public open class CfnConnection(
       /**
        * The name of the connection.
        *
-       * Connection will not function as expected without a name.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-connection-connectioninput.html#cfn-glue-connection-connectioninput-name)
        */
       override fun name(): String? = unwrap(this).getName()
 
       /**
-       * A map of physical connection requirements, such as virtual private cloud (VPC) and
+       * The physical connection requirements, such as virtual private cloud (VPC) and
        * `SecurityGroup` , that are needed to successfully make this connection.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-connection-connectioninput.html#cfn-glue-connection-connectioninput-physicalconnectionrequirements)
@@ -780,7 +800,7 @@ public open class CfnConnection(
   }
 
   /**
-   * Specifies the physical requirements for a connection.
+   * The OAuth client app in GetConnection response.
    *
    * Example:
    *
@@ -801,9 +821,6 @@ public open class CfnConnection(
   public interface PhysicalConnectionRequirementsProperty {
     /**
      * The connection's Availability Zone.
-     *
-     * This field is redundant because the specified subnet implies the Availability Zone to be
-     * used. Currently the field must be populated, but it will be deprecated in the future.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-connection-physicalconnectionrequirements.html#cfn-glue-connection-physicalconnectionrequirements-availabilityzone)
      */
@@ -831,8 +848,6 @@ public open class CfnConnection(
     public interface Builder {
       /**
        * @param availabilityZone The connection's Availability Zone.
-       * This field is redundant because the specified subnet implies the Availability Zone to be
-       * used. Currently the field must be populated, but it will be deprecated in the future.
        */
       public fun availabilityZone(availabilityZone: String)
 
@@ -860,8 +875,6 @@ public open class CfnConnection(
 
       /**
        * @param availabilityZone The connection's Availability Zone.
-       * This field is redundant because the specified subnet implies the Availability Zone to be
-       * used. Currently the field must be populated, but it will be deprecated in the future.
        */
       override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
@@ -894,12 +907,10 @@ public open class CfnConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnConnection.PhysicalConnectionRequirementsProperty,
-    ) : CdkObject(cdkObject), PhysicalConnectionRequirementsProperty {
+    ) : CdkObject(cdkObject),
+        PhysicalConnectionRequirementsProperty {
       /**
        * The connection's Availability Zone.
-       *
-       * This field is redundant because the specified subnet implies the Availability Zone to be
-       * used. Currently the field must be populated, but it will be deprecated in the future.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-connection-physicalconnectionrequirements.html#cfn-glue-connection-physicalconnectionrequirements-availabilityzone)
        */

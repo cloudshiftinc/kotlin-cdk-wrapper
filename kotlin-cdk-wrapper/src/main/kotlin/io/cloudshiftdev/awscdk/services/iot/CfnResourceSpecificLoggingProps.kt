@@ -108,7 +108,8 @@ public interface CfnResourceSpecificLoggingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnResourceSpecificLoggingProps,
-  ) : CdkObject(cdkObject), CfnResourceSpecificLoggingProps {
+  ) : CdkObject(cdkObject),
+      CfnResourceSpecificLoggingProps {
     /**
      * The default log level.Valid Values: `DEBUG | INFO | ERROR | WARN | DISABLED`.
      *

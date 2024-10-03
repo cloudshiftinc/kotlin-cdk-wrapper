@@ -126,7 +126,8 @@ public interface CfnAccessPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicyProps,
-  ) : CdkObject(cdkObject), CfnAccessPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnAccessPolicyProps {
     /**
      * The description of the policy.
      *

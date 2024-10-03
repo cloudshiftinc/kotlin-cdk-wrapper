@@ -57,7 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWorkgroup(
   cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -868,7 +870,8 @@ public open class CfnWorkgroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.ConfigParameterProperty,
-    ) : CdkObject(cdkObject), ConfigParameterProperty {
+    ) : CdkObject(cdkObject),
+        ConfigParameterProperty {
       /**
        * The key of the parameter.
        *
@@ -1031,7 +1034,8 @@ public open class CfnWorkgroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.EndpointProperty,
-    ) : CdkObject(cdkObject), EndpointProperty {
+    ) : CdkObject(cdkObject),
+        EndpointProperty {
       /**
        * The DNS address of the VPC endpoint.
        *
@@ -1188,7 +1192,8 @@ public open class CfnWorkgroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInterfaceProperty {
       /**
        * The availability Zone.
        *
@@ -1369,7 +1374,8 @@ public open class CfnWorkgroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.VpcEndpointProperty,
-    ) : CdkObject(cdkObject), VpcEndpointProperty {
+    ) : CdkObject(cdkObject),
+        VpcEndpointProperty {
       /**
        * One or more network interfaces of the endpoint.
        *
@@ -1909,7 +1915,8 @@ public open class CfnWorkgroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.WorkgroupProperty,
-    ) : CdkObject(cdkObject), WorkgroupProperty {
+    ) : CdkObject(cdkObject),
+        WorkgroupProperty {
       /**
        * The base data warehouse capacity of the workgroup in Redshift Processing Units (RPUs).
        *

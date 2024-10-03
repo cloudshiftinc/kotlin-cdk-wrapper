@@ -287,7 +287,8 @@ public interface CfnPipelineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipelineProps,
-  ) : CdkObject(cdkObject), CfnPipelineProps {
+  ) : CdkObject(cdkObject),
+      CfnPipelineProps {
     /**
      * A list of "PipelineActivity" objects.
      *

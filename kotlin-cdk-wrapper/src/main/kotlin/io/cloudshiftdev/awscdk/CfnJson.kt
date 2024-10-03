@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnJson(
   cdkObject: software.amazon.awscdk.CfnJson,
-) : CloudshiftdevConstructsConstruct(cdkObject), IResolvable {
+) : CloudshiftdevConstructsConstruct(cdkObject),
+    IResolvable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

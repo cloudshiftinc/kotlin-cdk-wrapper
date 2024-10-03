@@ -86,7 +86,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class OptionGroup(
   cdkObject: software.amazon.awscdk.services.rds.OptionGroup,
-) : Resource(cdkObject), IOptionGroup {
+) : Resource(cdkObject),
+    IOptionGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

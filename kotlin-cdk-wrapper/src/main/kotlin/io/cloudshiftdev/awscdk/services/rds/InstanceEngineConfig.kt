@@ -100,7 +100,8 @@ public interface InstanceEngineConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.InstanceEngineConfig,
-  ) : CdkObject(cdkObject), InstanceEngineConfig {
+  ) : CdkObject(cdkObject),
+      InstanceEngineConfig {
     /**
      * Features supported by the database engine.
      *

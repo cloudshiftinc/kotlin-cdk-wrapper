@@ -55,8 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .principals(List.of("principals"))
  * .resources(List.of(ResourceProperty.builder()
+ * .cidr("cidr")
  * .endpointId("endpointId")
- * // the properties below are optional
  * .region("region")
  * .build()))
  * .tags(List.of(CfnTag.builder()
@@ -70,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCrossAccountAttachment(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnCrossAccountAttachment,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -386,8 +388,8 @@ public open class CfnCrossAccountAttachment(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.globalaccelerator.*;
    * ResourceProperty resourceProperty = ResourceProperty.builder()
+   * .cidr("cidr")
    * .endpointId("endpointId")
-   * // the properties below are optional
    * .region("region")
    * .build();
    * ```
@@ -396,6 +398,20 @@ public open class CfnCrossAccountAttachment(
    */
   public interface ResourceProperty {
     /**
+     * An IP address range, in CIDR format, that is specified as resource.
+     *
+     * The address must be provisioned and advertised in AWS Global Accelerator by following the
+     * bring your own IP address (BYOIP) process for Global Accelerator
+     *
+     * For more information, see [Bring your own IP addresses
+     * (BYOIP)](https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html) in the AWS
+     * Global Accelerator Developer Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-crossaccountattachment-resource.html#cfn-globalaccelerator-crossaccountattachment-resource-cidr)
+     */
+    public fun cidr(): String? = unwrap(this).getCidr()
+
+    /**
      * The endpoint ID for the endpoint that is specified as a AWS resource.
      *
      * An endpoint ID for the cross-account feature is the ARN of an AWS resource, such as a Network
@@ -403,7 +419,7 @@ public open class CfnCrossAccountAttachment(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-crossaccountattachment-resource.html#cfn-globalaccelerator-crossaccountattachment-resource-endpointid)
      */
-    public fun endpointId(): String
+    public fun endpointId(): String? = unwrap(this).getEndpointId()
 
     /**
      * The AWS Region where a shared endpoint resource is located.
@@ -418,7 +434,18 @@ public open class CfnCrossAccountAttachment(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param endpointId The endpoint ID for the endpoint that is specified as a AWS resource. 
+       * @param cidr An IP address range, in CIDR format, that is specified as resource.
+       * The address must be provisioned and advertised in AWS Global Accelerator by following the
+       * bring your own IP address (BYOIP) process for Global Accelerator
+       *
+       * For more information, see [Bring your own IP addresses
+       * (BYOIP)](https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html) in the AWS
+       * Global Accelerator Developer Guide.
+       */
+      public fun cidr(cidr: String)
+
+      /**
+       * @param endpointId The endpoint ID for the endpoint that is specified as a AWS resource.
        * An endpoint ID for the cross-account feature is the ARN of an AWS resource, such as a
        * Network Load Balancer, that Global Accelerator supports as an endpoint for an accelerator.
        */
@@ -437,7 +464,20 @@ public open class CfnCrossAccountAttachment(
           software.amazon.awscdk.services.globalaccelerator.CfnCrossAccountAttachment.ResourceProperty.builder()
 
       /**
-       * @param endpointId The endpoint ID for the endpoint that is specified as a AWS resource. 
+       * @param cidr An IP address range, in CIDR format, that is specified as resource.
+       * The address must be provisioned and advertised in AWS Global Accelerator by following the
+       * bring your own IP address (BYOIP) process for Global Accelerator
+       *
+       * For more information, see [Bring your own IP addresses
+       * (BYOIP)](https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html) in the AWS
+       * Global Accelerator Developer Guide.
+       */
+      override fun cidr(cidr: String) {
+        cdkBuilder.cidr(cidr)
+      }
+
+      /**
+       * @param endpointId The endpoint ID for the endpoint that is specified as a AWS resource.
        * An endpoint ID for the cross-account feature is the ARN of an AWS resource, such as a
        * Network Load Balancer, that Global Accelerator supports as an endpoint for an accelerator.
        */
@@ -459,7 +499,22 @@ public open class CfnCrossAccountAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnCrossAccountAttachment.ResourceProperty,
-    ) : CdkObject(cdkObject), ResourceProperty {
+    ) : CdkObject(cdkObject),
+        ResourceProperty {
+      /**
+       * An IP address range, in CIDR format, that is specified as resource.
+       *
+       * The address must be provisioned and advertised in AWS Global Accelerator by following the
+       * bring your own IP address (BYOIP) process for Global Accelerator
+       *
+       * For more information, see [Bring your own IP addresses
+       * (BYOIP)](https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html) in the AWS
+       * Global Accelerator Developer Guide.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-crossaccountattachment-resource.html#cfn-globalaccelerator-crossaccountattachment-resource-cidr)
+       */
+      override fun cidr(): String? = unwrap(this).getCidr()
+
       /**
        * The endpoint ID for the endpoint that is specified as a AWS resource.
        *
@@ -468,7 +523,7 @@ public open class CfnCrossAccountAttachment(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-crossaccountattachment-resource.html#cfn-globalaccelerator-crossaccountattachment-resource-endpointid)
        */
-      override fun endpointId(): String = unwrap(this).getEndpointId()
+      override fun endpointId(): String? = unwrap(this).getEndpointId()
 
       /**
        * The AWS Region where a shared endpoint resource is located.

@@ -103,7 +103,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInstanceFleetConfig(
   cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -770,7 +771,8 @@ public open class CfnInstanceFleetConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.ConfigurationProperty,
-    ) : CdkObject(cdkObject), ConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ConfigurationProperty {
       /**
        * The classification within a configuration.
        *
@@ -945,7 +947,8 @@ public open class CfnInstanceFleetConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty,
-    ) : CdkObject(cdkObject), EbsBlockDeviceConfigProperty {
+    ) : CdkObject(cdkObject),
+        EbsBlockDeviceConfigProperty {
       /**
        * EBS volume specifications such as volume type, IOPS, size (GiB) and throughput (MiB/s) that
        * are requested for the EBS volume attached to an Amazon EC2 instance in the cluster.
@@ -1107,7 +1110,8 @@ public open class CfnInstanceFleetConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty,
-    ) : CdkObject(cdkObject), EbsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EbsConfigurationProperty {
       /**
        * An array of Amazon EBS volume specifications attached to a cluster instance.
        *
@@ -1175,7 +1179,7 @@ public open class CfnInstanceFleetConfig(
   public interface InstanceFleetProvisioningSpecificationsProperty {
     /**
      * The launch specification for On-Demand Instances in the instance fleet, which determines the
-     * allocation strategy.
+     * allocation strategy and capacity reservation options.
      *
      *
      * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
@@ -1188,8 +1192,8 @@ public open class CfnInstanceFleetConfig(
     public fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
 
     /**
-     * The launch specification for Spot instances in the fleet, which determines the defined
-     * duration, provisioning timeout behavior, and allocation strategy.
+     * The launch specification for Spot instances in the fleet, which determines the allocation
+     * strategy, defined duration, and provisioning timeout behavior.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html#cfn-emr-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification)
      */
@@ -1202,7 +1206,7 @@ public open class CfnInstanceFleetConfig(
     public interface Builder {
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -1212,7 +1216,7 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -1223,7 +1227,7 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -1236,19 +1240,19 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       public fun spotSpecification(spotSpecification: IResolvable)
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       public fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty)
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("adf4fa6f990e98f7c46c7bfa05dc84b8118c0023a37aef58de9fc82d05931529")
@@ -1264,7 +1268,7 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -1276,7 +1280,7 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -1289,7 +1293,7 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param onDemandSpecification The launch specification for On-Demand Instances in the
-       * instance fleet, which determines the allocation strategy.
+       * instance fleet, which determines the allocation strategy and capacity reservation options.
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
        * excluding 5.0.x versions. On-Demand Instances allocation strategy is available in Amazon EMR
@@ -1304,7 +1308,7 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       override fun spotSpecification(spotSpecification: IResolvable) {
         cdkBuilder.spotSpecification(spotSpecification.let(IResolvable.Companion::unwrap))
@@ -1312,7 +1316,7 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       override fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
         cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty.Companion::unwrap))
@@ -1320,7 +1324,7 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param spotSpecification The launch specification for Spot instances in the fleet, which
-       * determines the defined duration, provisioning timeout behavior, and allocation strategy.
+       * determines the allocation strategy, defined duration, and provisioning timeout behavior.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("adf4fa6f990e98f7c46c7bfa05dc84b8118c0023a37aef58de9fc82d05931529")
@@ -1335,10 +1339,11 @@ public open class CfnInstanceFleetConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty,
-    ) : CdkObject(cdkObject), InstanceFleetProvisioningSpecificationsProperty {
+    ) : CdkObject(cdkObject),
+        InstanceFleetProvisioningSpecificationsProperty {
       /**
        * The launch specification for On-Demand Instances in the instance fleet, which determines
-       * the allocation strategy.
+       * the allocation strategy and capacity reservation options.
        *
        *
        * The instance fleet configuration is available only in Amazon EMR releases 4.8.0 and later,
@@ -1351,8 +1356,8 @@ public open class CfnInstanceFleetConfig(
       override fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
 
       /**
-       * The launch specification for Spot instances in the fleet, which determines the defined
-       * duration, provisioning timeout behavior, and allocation strategy.
+       * The launch specification for Spot instances in the fleet, which determines the allocation
+       * strategy, defined duration, and provisioning timeout behavior.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancefleetprovisioningspecifications.html#cfn-emr-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification)
        */
@@ -1716,7 +1721,8 @@ public open class CfnInstanceFleetConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceTypeConfigProperty,
-    ) : CdkObject(cdkObject), InstanceTypeConfigProperty {
+    ) : CdkObject(cdkObject),
+        InstanceTypeConfigProperty {
       /**
        * The bid price for each Amazon EC2 Spot Instance type as defined by `InstanceType` .
        *
@@ -1834,8 +1840,9 @@ public open class CfnInstanceFleetConfig(
     /**
      * Specifies the strategy to use in launching On-Demand instance fleets.
      *
-     * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-     * first.
+     * Available options are `lowest-price` and `prioritized` . `lowest-price` specifies to launch
+     * the instances with the lowest price first, and `prioritized` specifies that Amazon EMR should
+     * launch the instances with the highest priority first. The default is `lowest-price` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ondemandprovisioningspecification.html#cfn-emr-instancefleetconfig-ondemandprovisioningspecification-allocationstrategy)
      */
@@ -1849,8 +1856,9 @@ public open class CfnInstanceFleetConfig(
       /**
        * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
        * fleets. 
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
+       * Available options are `lowest-price` and `prioritized` . `lowest-price` specifies to launch
+       * the instances with the lowest price first, and `prioritized` specifies that Amazon EMR should
+       * launch the instances with the highest priority first. The default is `lowest-price` .
        */
       public fun allocationStrategy(allocationStrategy: String)
     }
@@ -1864,8 +1872,9 @@ public open class CfnInstanceFleetConfig(
       /**
        * @param allocationStrategy Specifies the strategy to use in launching On-Demand instance
        * fleets. 
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
+       * Available options are `lowest-price` and `prioritized` . `lowest-price` specifies to launch
+       * the instances with the lowest price first, and `prioritized` specifies that Amazon EMR should
+       * launch the instances with the highest priority first. The default is `lowest-price` .
        */
       override fun allocationStrategy(allocationStrategy: String) {
         cdkBuilder.allocationStrategy(allocationStrategy)
@@ -1878,12 +1887,14 @@ public open class CfnInstanceFleetConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty,
-    ) : CdkObject(cdkObject), OnDemandProvisioningSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        OnDemandProvisioningSpecificationProperty {
       /**
        * Specifies the strategy to use in launching On-Demand instance fleets.
        *
-       * Currently, the only option is `lowest-price` (the default), which launches the lowest price
-       * first.
+       * Available options are `lowest-price` and `prioritized` . `lowest-price` specifies to launch
+       * the instances with the lowest price first, and `prioritized` specifies that Amazon EMR should
+       * launch the instances with the highest priority first. The default is `lowest-price` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-ondemandprovisioningspecification.html#cfn-emr-instancefleetconfig-ondemandprovisioningspecification-allocationstrategy)
        */
@@ -1942,7 +1953,8 @@ public open class CfnInstanceFleetConfig(
   public interface SpotProvisioningSpecificationProperty {
     /**
      * Specifies one of the following strategies to launch Spot Instance fleets:
-     * `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified` .
+     * `capacity-optimized` , `price-capacity-optimized` , `lowest-price` , or `diversified` , and
+     * `capacity-optimized-prioritized` .
      *
      * For more information on the provisioning strategies, see [Allocation strategies for Spot
      * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
@@ -2008,8 +2020,8 @@ public open class CfnInstanceFleetConfig(
     public interface Builder {
       /**
        * @param allocationStrategy Specifies one of the following strategies to launch Spot Instance
-       * fleets: `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified`
-       * .
+       * fleets: `capacity-optimized` , `price-capacity-optimized` , `lowest-price` , or `diversified`
+       * , and `capacity-optimized-prioritized` .
        * For more information on the provisioning strategies, see [Allocation strategies for Spot
        * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
        * in the *Amazon EC2 User Guide for Linux Instances* .
@@ -2065,8 +2077,8 @@ public open class CfnInstanceFleetConfig(
 
       /**
        * @param allocationStrategy Specifies one of the following strategies to launch Spot Instance
-       * fleets: `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified`
-       * .
+       * fleets: `capacity-optimized` , `price-capacity-optimized` , `lowest-price` , or `diversified`
+       * , and `capacity-optimized-prioritized` .
        * For more information on the provisioning strategies, see [Allocation strategies for Spot
        * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
        * in the *Amazon EC2 User Guide for Linux Instances* .
@@ -2128,10 +2140,12 @@ public open class CfnInstanceFleetConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty,
-    ) : CdkObject(cdkObject), SpotProvisioningSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SpotProvisioningSpecificationProperty {
       /**
        * Specifies one of the following strategies to launch Spot Instance fleets:
-       * `price-capacity-optimized` , `capacity-optimized` , `lowest-price` , or `diversified` .
+       * `capacity-optimized` , `price-capacity-optimized` , `lowest-price` , or `diversified` , and
+       * `capacity-optimized-prioritized` .
        *
        * For more information on the provisioning strategies, see [Allocation strategies for Spot
        * Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-allocation-strategy.html)
@@ -2345,7 +2359,8 @@ public open class CfnInstanceFleetConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.VolumeSpecificationProperty,
-    ) : CdkObject(cdkObject), VolumeSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        VolumeSpecificationProperty {
       /**
        * The number of I/O operations per second (IOPS) that the volume supports.
        *

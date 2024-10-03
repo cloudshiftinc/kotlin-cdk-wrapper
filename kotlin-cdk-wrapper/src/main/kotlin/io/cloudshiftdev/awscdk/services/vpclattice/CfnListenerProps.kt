@@ -251,7 +251,8 @@ public interface CfnListenerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.vpclattice.CfnListenerProps,
-  ) : CdkObject(cdkObject), CfnListenerProps {
+  ) : CdkObject(cdkObject),
+      CfnListenerProps {
     /**
      * The action for the default rule.
      *

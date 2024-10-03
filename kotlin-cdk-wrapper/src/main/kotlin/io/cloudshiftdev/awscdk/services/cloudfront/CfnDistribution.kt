@@ -43,7 +43,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDistribution(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1642,7 +1644,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CacheBehaviorProperty,
-    ) : CdkObject(cdkObject), CacheBehaviorProperty {
+    ) : CdkObject(cdkObject),
+        CacheBehaviorProperty {
       /**
        * A complex type that controls which HTTP methods CloudFront processes and forwards to your
        * Amazon S3 bucket or your custom origin.
@@ -2279,7 +2282,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CookiesProperty,
-    ) : CdkObject(cdkObject), CookiesProperty {
+    ) : CdkObject(cdkObject),
+        CookiesProperty {
       /**
        * This field is deprecated.
        *
@@ -2605,7 +2609,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CustomErrorResponseProperty,
-    ) : CdkObject(cdkObject), CustomErrorResponseProperty {
+    ) : CdkObject(cdkObject),
+        CustomErrorResponseProperty {
       /**
        * The minimum amount of time, in seconds, that you want CloudFront to cache the HTTP status
        * code specified in `ErrorCode` .
@@ -2976,7 +2981,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CustomOriginConfigProperty,
-    ) : CdkObject(cdkObject), CustomOriginConfigProperty {
+    ) : CdkObject(cdkObject),
+        CustomOriginConfigProperty {
       /**
        * The HTTP port that CloudFront uses to connect to the origin.
        *
@@ -4386,7 +4392,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.DefaultCacheBehaviorProperty,
-    ) : CdkObject(cdkObject), DefaultCacheBehaviorProperty {
+    ) : CdkObject(cdkObject),
+        DefaultCacheBehaviorProperty {
       /**
        * A complex type that controls which HTTP methods CloudFront processes and forwards to your
        * Amazon S3 bucket or your custom origin.
@@ -4946,6 +4953,14 @@ public open class CfnDistribution(
     public fun cacheBehaviors(): Any? = unwrap(this).getCacheBehaviors()
 
     /**
+     * An alias for the CloudFront distribution's domain name.
+     *
+     *
+     * This property is legacy. We recommend that you use
+     * [Aliases](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-aliases)
+     * instead.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-cnames)
      */
     public fun cnamEs(): List<String> = unwrap(this).getCnamEs() ?: emptyList()
@@ -4987,6 +5002,15 @@ public open class CfnDistribution(
     public fun customErrorResponses(): Any? = unwrap(this).getCustomErrorResponses()
 
     /**
+     * The user-defined HTTP server that serves as the origin for content that CloudFront
+     * distributes.
+     *
+     *
+     * This property is legacy. We recommend that you use
+     * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+     * instead.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-customorigin)
      */
     public fun customOrigin(): Any? = unwrap(this).getCustomOrigin()
@@ -5114,12 +5138,16 @@ public open class CfnDistribution(
     /**
      * A complex type that contains information about origin groups for this distribution.
      *
+     * Specify a value for either the `Origins` or `OriginGroups` property.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-origingroups)
      */
     public fun originGroups(): Any? = unwrap(this).getOriginGroups()
 
     /**
      * A complex type that contains information about origins for this distribution.
+     *
+     * Specify a value for either the `Origins` or `OriginGroups` property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-origins)
      */
@@ -5158,6 +5186,14 @@ public open class CfnDistribution(
     public fun restrictions(): Any? = unwrap(this).getRestrictions()
 
     /**
+     * The origin as an Amazon S3 bucket.
+     *
+     *
+     * This property is legacy. We recommend that you use
+     * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+     * instead.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-s3origin)
      */
     public fun s3Origin(): Any? = unwrap(this).getS3Origin()
@@ -5237,12 +5273,20 @@ public open class CfnDistribution(
       public fun cacheBehaviors(vararg cacheBehaviors: Any)
 
       /**
-       * @param cnamEs the value to be set.
+       * @param cnamEs An alias for the CloudFront distribution's domain name.
+       *
+       * This property is legacy. We recommend that you use
+       * [Aliases](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-aliases)
+       * instead.
        */
       public fun cnamEs(cnamEs: List<String>)
 
       /**
-       * @param cnamEs the value to be set.
+       * @param cnamEs An alias for the CloudFront distribution's domain name.
+       *
+       * This property is legacy. We recommend that you use
+       * [Aliases](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-aliases)
+       * instead.
        */
       public fun cnamEs(vararg cnamEs: String)
 
@@ -5295,17 +5339,32 @@ public open class CfnDistribution(
       public fun customErrorResponses(vararg customErrorResponses: Any)
 
       /**
-       * @param customOrigin the value to be set.
+       * @param customOrigin The user-defined HTTP server that serves as the origin for content that
+       * CloudFront distributes.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       public fun customOrigin(customOrigin: IResolvable)
 
       /**
-       * @param customOrigin the value to be set.
+       * @param customOrigin The user-defined HTTP server that serves as the origin for content that
+       * CloudFront distributes.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       public fun customOrigin(customOrigin: LegacyCustomOriginProperty)
 
       /**
-       * @param customOrigin the value to be set.
+       * @param customOrigin The user-defined HTTP server that serves as the origin for content that
+       * CloudFront distributes.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("727a62ee2d654fbc3a1c3b7028a0c1e7cdb5dc3e7d19714972629cd0f8e2e5f0")
@@ -5494,18 +5553,21 @@ public open class CfnDistribution(
       /**
        * @param originGroups A complex type that contains information about origin groups for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       public fun originGroups(originGroups: IResolvable)
 
       /**
        * @param originGroups A complex type that contains information about origin groups for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       public fun originGroups(originGroups: OriginGroupsProperty)
 
       /**
        * @param originGroups A complex type that contains information about origin groups for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5f59d2af37d5e0c1affac226dd716cf3cf68ab60464638dfe4625c532a25e3ad")
@@ -5514,18 +5576,21 @@ public open class CfnDistribution(
       /**
        * @param origins A complex type that contains information about origins for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       public fun origins(origins: IResolvable)
 
       /**
        * @param origins A complex type that contains information about origins for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       public fun origins(origins: List<Any>)
 
       /**
        * @param origins A complex type that contains information about origins for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       public fun origins(vararg origins: Any)
 
@@ -5569,17 +5634,29 @@ public open class CfnDistribution(
       public fun restrictions(restrictions: RestrictionsProperty.Builder.() -> Unit)
 
       /**
-       * @param s3Origin the value to be set.
+       * @param s3Origin The origin as an Amazon S3 bucket.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       public fun s3Origin(s3Origin: IResolvable)
 
       /**
-       * @param s3Origin the value to be set.
+       * @param s3Origin The origin as an Amazon S3 bucket.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       public fun s3Origin(s3Origin: LegacyS3OriginProperty)
 
       /**
-       * @param s3Origin the value to be set.
+       * @param s3Origin The origin as an Amazon S3 bucket.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("634153888b6910f25984f15fc15a9cfd8cfcd431da7d237de24a0c3c46dccd4a")
@@ -5680,14 +5757,22 @@ public open class CfnDistribution(
           cacheBehaviors(cacheBehaviors.toList())
 
       /**
-       * @param cnamEs the value to be set.
+       * @param cnamEs An alias for the CloudFront distribution's domain name.
+       *
+       * This property is legacy. We recommend that you use
+       * [Aliases](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-aliases)
+       * instead.
        */
       override fun cnamEs(cnamEs: List<String>) {
         cdkBuilder.cnamEs(cnamEs)
       }
 
       /**
-       * @param cnamEs the value to be set.
+       * @param cnamEs An alias for the CloudFront distribution's domain name.
+       *
+       * This property is legacy. We recommend that you use
+       * [Aliases](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-aliases)
+       * instead.
        */
       override fun cnamEs(vararg cnamEs: String): Unit = cnamEs(cnamEs.toList())
 
@@ -5749,21 +5834,36 @@ public open class CfnDistribution(
           customErrorResponses(customErrorResponses.toList())
 
       /**
-       * @param customOrigin the value to be set.
+       * @param customOrigin The user-defined HTTP server that serves as the origin for content that
+       * CloudFront distributes.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       override fun customOrigin(customOrigin: IResolvable) {
         cdkBuilder.customOrigin(customOrigin.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param customOrigin the value to be set.
+       * @param customOrigin The user-defined HTTP server that serves as the origin for content that
+       * CloudFront distributes.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       override fun customOrigin(customOrigin: LegacyCustomOriginProperty) {
         cdkBuilder.customOrigin(customOrigin.let(LegacyCustomOriginProperty.Companion::unwrap))
       }
 
       /**
-       * @param customOrigin the value to be set.
+       * @param customOrigin The user-defined HTTP server that serves as the origin for content that
+       * CloudFront distributes.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("727a62ee2d654fbc3a1c3b7028a0c1e7cdb5dc3e7d19714972629cd0f8e2e5f0")
@@ -5975,6 +6075,7 @@ public open class CfnDistribution(
       /**
        * @param originGroups A complex type that contains information about origin groups for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       override fun originGroups(originGroups: IResolvable) {
         cdkBuilder.originGroups(originGroups.let(IResolvable.Companion::unwrap))
@@ -5983,6 +6084,7 @@ public open class CfnDistribution(
       /**
        * @param originGroups A complex type that contains information about origin groups for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       override fun originGroups(originGroups: OriginGroupsProperty) {
         cdkBuilder.originGroups(originGroups.let(OriginGroupsProperty.Companion::unwrap))
@@ -5991,6 +6093,7 @@ public open class CfnDistribution(
       /**
        * @param originGroups A complex type that contains information about origin groups for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5f59d2af37d5e0c1affac226dd716cf3cf68ab60464638dfe4625c532a25e3ad")
@@ -6000,6 +6103,7 @@ public open class CfnDistribution(
       /**
        * @param origins A complex type that contains information about origins for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       override fun origins(origins: IResolvable) {
         cdkBuilder.origins(origins.let(IResolvable.Companion::unwrap))
@@ -6008,6 +6112,7 @@ public open class CfnDistribution(
       /**
        * @param origins A complex type that contains information about origins for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       override fun origins(origins: List<Any>) {
         cdkBuilder.origins(origins.map{CdkObjectWrappers.unwrap(it)})
@@ -6016,6 +6121,7 @@ public open class CfnDistribution(
       /**
        * @param origins A complex type that contains information about origins for this
        * distribution.
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        */
       override fun origins(vararg origins: Any): Unit = origins(origins.toList())
 
@@ -6066,21 +6172,33 @@ public open class CfnDistribution(
           restrictions(RestrictionsProperty(restrictions))
 
       /**
-       * @param s3Origin the value to be set.
+       * @param s3Origin The origin as an Amazon S3 bucket.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       override fun s3Origin(s3Origin: IResolvable) {
         cdkBuilder.s3Origin(s3Origin.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param s3Origin the value to be set.
+       * @param s3Origin The origin as an Amazon S3 bucket.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       override fun s3Origin(s3Origin: LegacyS3OriginProperty) {
         cdkBuilder.s3Origin(s3Origin.let(LegacyS3OriginProperty.Companion::unwrap))
       }
 
       /**
-       * @param s3Origin the value to be set.
+       * @param s3Origin The origin as an Amazon S3 bucket.
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("634153888b6910f25984f15fc15a9cfd8cfcd431da7d237de24a0c3c46dccd4a")
@@ -6159,7 +6277,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.DistributionConfigProperty,
-    ) : CdkObject(cdkObject), DistributionConfigProperty {
+    ) : CdkObject(cdkObject),
+        DistributionConfigProperty {
       /**
        * A complex type that contains information about CNAMEs (alternate domain names), if any, for
        * this distribution.
@@ -6176,6 +6295,14 @@ public open class CfnDistribution(
       override fun cacheBehaviors(): Any? = unwrap(this).getCacheBehaviors()
 
       /**
+       * An alias for the CloudFront distribution's domain name.
+       *
+       *
+       * This property is legacy. We recommend that you use
+       * [Aliases](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-aliases)
+       * instead.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-cnames)
        */
       override fun cnamEs(): List<String> = unwrap(this).getCnamEs() ?: emptyList()
@@ -6217,6 +6344,15 @@ public open class CfnDistribution(
       override fun customErrorResponses(): Any? = unwrap(this).getCustomErrorResponses()
 
       /**
+       * The user-defined HTTP server that serves as the origin for content that CloudFront
+       * distributes.
+       *
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-customorigin)
        */
       override fun customOrigin(): Any? = unwrap(this).getCustomOrigin()
@@ -6344,12 +6480,16 @@ public open class CfnDistribution(
       /**
        * A complex type that contains information about origin groups for this distribution.
        *
+       * Specify a value for either the `Origins` or `OriginGroups` property.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-origingroups)
        */
       override fun originGroups(): Any? = unwrap(this).getOriginGroups()
 
       /**
        * A complex type that contains information about origins for this distribution.
+       *
+       * Specify a value for either the `Origins` or `OriginGroups` property.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-origins)
        */
@@ -6388,6 +6528,14 @@ public open class CfnDistribution(
       override fun restrictions(): Any? = unwrap(this).getRestrictions()
 
       /**
+       * The origin as an Amazon S3 bucket.
+       *
+       *
+       * This property is legacy. We recommend that you use
+       * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+       * instead.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-s3origin)
        */
       override fun s3Origin(): Any? = unwrap(this).getS3Origin()
@@ -7106,7 +7254,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.ForwardedValuesProperty,
-    ) : CdkObject(cdkObject), ForwardedValuesProperty {
+    ) : CdkObject(cdkObject),
+        ForwardedValuesProperty {
       /**
        * This field is deprecated.
        *
@@ -7327,7 +7476,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.FunctionAssociationProperty,
-    ) : CdkObject(cdkObject), FunctionAssociationProperty {
+    ) : CdkObject(cdkObject),
+        FunctionAssociationProperty {
       /**
        * The event type of the function, either `viewer-request` or `viewer-response` .
        *
@@ -7526,7 +7676,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.GeoRestrictionProperty,
-    ) : CdkObject(cdkObject), GeoRestrictionProperty {
+    ) : CdkObject(cdkObject),
+        GeoRestrictionProperty {
       /**
        * A complex type that contains a `Location` element for each country in which you want
        * CloudFront either to distribute your content ( `whitelist` ) or not distribute your content (
@@ -7753,7 +7904,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LambdaFunctionAssociationProperty,
-    ) : CdkObject(cdkObject), LambdaFunctionAssociationProperty {
+    ) : CdkObject(cdkObject),
+        LambdaFunctionAssociationProperty {
       /**
        * Specifies the event type that triggers a Lambda&#64;Edge function invocation. You can
        * specify the following values:.
@@ -7817,6 +7969,19 @@ public open class CfnDistribution(
   }
 
   /**
+   * A custom origin.
+   *
+   * A custom origin is any origin that is *not* an Amazon S3 bucket, with one exception. An Amazon
+   * S3 bucket that is [configured with static website
+   * hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) *is* a custom
+   * origin.
+   *
+   *
+   * This property is legacy. We recommend that you use
+   * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+   * instead.
+   *
+   *
    * Example:
    *
    * ```
@@ -7837,11 +8002,17 @@ public open class CfnDistribution(
    */
   public interface LegacyCustomOriginProperty {
     /**
+     * The domain name assigned to your CloudFront distribution.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-dnsname)
      */
     public fun dnsName(): String
 
     /**
+     * The HTTP port that CloudFront uses to connect to the origin.
+     *
+     * Specify the HTTP port that the origin listens on.
+     *
      * Default: - 80
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-httpport)
@@ -7849,6 +8020,10 @@ public open class CfnDistribution(
     public fun httpPort(): Number? = unwrap(this).getHttpPort()
 
     /**
+     * The HTTPS port that CloudFront uses to connect to the origin.
+     *
+     * Specify the HTTPS port that the origin listens on.
+     *
      * Default: - 443
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-httpsport)
@@ -7856,11 +8031,20 @@ public open class CfnDistribution(
     public fun httpsPort(): Number? = unwrap(this).getHttpsPort()
 
     /**
+     * Specifies the protocol (HTTP or HTTPS) that CloudFront uses to connect to the origin.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-originprotocolpolicy)
      */
     public fun originProtocolPolicy(): String
 
     /**
+     * The minimum SSL/TLS protocol version that CloudFront uses when communicating with your origin
+     * server over HTTPs.
+     *
+     * For more information, see [Minimum Origin SSL
+     * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+     * in the *Amazon CloudFront Developer Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-originsslprotocols)
      */
     public fun originSslProtocols(): List<String>
@@ -7871,32 +8055,43 @@ public open class CfnDistribution(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dnsName the value to be set. 
+       * @param dnsName The domain name assigned to your CloudFront distribution. 
        */
       public fun dnsName(dnsName: String)
 
       /**
-       * @param httpPort the value to be set.
+       * @param httpPort The HTTP port that CloudFront uses to connect to the origin.
+       * Specify the HTTP port that the origin listens on.
        */
       public fun httpPort(httpPort: Number)
 
       /**
-       * @param httpsPort the value to be set.
+       * @param httpsPort The HTTPS port that CloudFront uses to connect to the origin.
+       * Specify the HTTPS port that the origin listens on.
        */
       public fun httpsPort(httpsPort: Number)
 
       /**
-       * @param originProtocolPolicy the value to be set. 
+       * @param originProtocolPolicy Specifies the protocol (HTTP or HTTPS) that CloudFront uses to
+       * connect to the origin. 
        */
       public fun originProtocolPolicy(originProtocolPolicy: String)
 
       /**
-       * @param originSslProtocols the value to be set. 
+       * @param originSslProtocols The minimum SSL/TLS protocol version that CloudFront uses when
+       * communicating with your origin server over HTTPs. 
+       * For more information, see [Minimum Origin SSL
+       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+       * in the *Amazon CloudFront Developer Guide* .
        */
       public fun originSslProtocols(originSslProtocols: List<String>)
 
       /**
-       * @param originSslProtocols the value to be set. 
+       * @param originSslProtocols The minimum SSL/TLS protocol version that CloudFront uses when
+       * communicating with your origin server over HTTPs. 
+       * For more information, see [Minimum Origin SSL
+       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+       * in the *Amazon CloudFront Developer Guide* .
        */
       public fun originSslProtocols(vararg originSslProtocols: String)
     }
@@ -7908,42 +8103,53 @@ public open class CfnDistribution(
           software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyCustomOriginProperty.builder()
 
       /**
-       * @param dnsName the value to be set. 
+       * @param dnsName The domain name assigned to your CloudFront distribution. 
        */
       override fun dnsName(dnsName: String) {
         cdkBuilder.dnsName(dnsName)
       }
 
       /**
-       * @param httpPort the value to be set.
+       * @param httpPort The HTTP port that CloudFront uses to connect to the origin.
+       * Specify the HTTP port that the origin listens on.
        */
       override fun httpPort(httpPort: Number) {
         cdkBuilder.httpPort(httpPort)
       }
 
       /**
-       * @param httpsPort the value to be set.
+       * @param httpsPort The HTTPS port that CloudFront uses to connect to the origin.
+       * Specify the HTTPS port that the origin listens on.
        */
       override fun httpsPort(httpsPort: Number) {
         cdkBuilder.httpsPort(httpsPort)
       }
 
       /**
-       * @param originProtocolPolicy the value to be set. 
+       * @param originProtocolPolicy Specifies the protocol (HTTP or HTTPS) that CloudFront uses to
+       * connect to the origin. 
        */
       override fun originProtocolPolicy(originProtocolPolicy: String) {
         cdkBuilder.originProtocolPolicy(originProtocolPolicy)
       }
 
       /**
-       * @param originSslProtocols the value to be set. 
+       * @param originSslProtocols The minimum SSL/TLS protocol version that CloudFront uses when
+       * communicating with your origin server over HTTPs. 
+       * For more information, see [Minimum Origin SSL
+       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+       * in the *Amazon CloudFront Developer Guide* .
        */
       override fun originSslProtocols(originSslProtocols: List<String>) {
         cdkBuilder.originSslProtocols(originSslProtocols)
       }
 
       /**
-       * @param originSslProtocols the value to be set. 
+       * @param originSslProtocols The minimum SSL/TLS protocol version that CloudFront uses when
+       * communicating with your origin server over HTTPs. 
+       * For more information, see [Minimum Origin SSL
+       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+       * in the *Amazon CloudFront Developer Guide* .
        */
       override fun originSslProtocols(vararg originSslProtocols: String): Unit =
           originSslProtocols(originSslProtocols.toList())
@@ -7955,13 +8161,20 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyCustomOriginProperty,
-    ) : CdkObject(cdkObject), LegacyCustomOriginProperty {
+    ) : CdkObject(cdkObject),
+        LegacyCustomOriginProperty {
       /**
+       * The domain name assigned to your CloudFront distribution.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-dnsname)
        */
       override fun dnsName(): String = unwrap(this).getDnsName()
 
       /**
+       * The HTTP port that CloudFront uses to connect to the origin.
+       *
+       * Specify the HTTP port that the origin listens on.
+       *
        * Default: - 80
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-httpport)
@@ -7969,6 +8182,10 @@ public open class CfnDistribution(
       override fun httpPort(): Number? = unwrap(this).getHttpPort()
 
       /**
+       * The HTTPS port that CloudFront uses to connect to the origin.
+       *
+       * Specify the HTTPS port that the origin listens on.
+       *
        * Default: - 443
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-httpsport)
@@ -7976,11 +8193,20 @@ public open class CfnDistribution(
       override fun httpsPort(): Number? = unwrap(this).getHttpsPort()
 
       /**
+       * Specifies the protocol (HTTP or HTTPS) that CloudFront uses to connect to the origin.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-originprotocolpolicy)
        */
       override fun originProtocolPolicy(): String = unwrap(this).getOriginProtocolPolicy()
 
       /**
+       * The minimum SSL/TLS protocol version that CloudFront uses when communicating with your
+       * origin server over HTTPs.
+       *
+       * For more information, see [Minimum Origin SSL
+       * Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols)
+       * in the *Amazon CloudFront Developer Guide* .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html#cfn-cloudfront-distribution-legacycustomorigin-originsslprotocols)
        */
       override fun originSslProtocols(): List<String> = unwrap(this).getOriginSslProtocols()
@@ -8005,6 +8231,14 @@ public open class CfnDistribution(
   }
 
   /**
+   * The origin as an Amazon S3 bucket.
+   *
+   *
+   * This property is legacy. We recommend that you use
+   * [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+   * instead.
+   *
+   *
    * Example:
    *
    * ```
@@ -8022,11 +8256,24 @@ public open class CfnDistribution(
    */
   public interface LegacyS3OriginProperty {
     /**
+     * The domain name assigned to your CloudFront distribution.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacys3origin.html#cfn-cloudfront-distribution-legacys3origin-dnsname)
      */
     public fun dnsName(): String
 
     /**
+     * The CloudFront origin access identity to associate with the distribution.
+     *
+     * Use an origin access identity to configure the distribution so that end users can only access
+     * objects in an Amazon S3 through CloudFront .
+     *
+     *
+     * This property is legacy. We recommend that you use
+     * [OriginAccessControl](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originaccesscontrol.html)
+     * instead.
+     *
+     *
      * Default: - ""
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacys3origin.html#cfn-cloudfront-distribution-legacys3origin-originaccessidentity)
@@ -8039,12 +8286,20 @@ public open class CfnDistribution(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dnsName the value to be set. 
+       * @param dnsName The domain name assigned to your CloudFront distribution. 
        */
       public fun dnsName(dnsName: String)
 
       /**
-       * @param originAccessIdentity the value to be set.
+       * @param originAccessIdentity The CloudFront origin access identity to associate with the
+       * distribution.
+       * Use an origin access identity to configure the distribution so that end users can only
+       * access objects in an Amazon S3 through CloudFront .
+       *
+       *
+       * This property is legacy. We recommend that you use
+       * [OriginAccessControl](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originaccesscontrol.html)
+       * instead.
        */
       public fun originAccessIdentity(originAccessIdentity: String)
     }
@@ -8056,14 +8311,22 @@ public open class CfnDistribution(
           software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyS3OriginProperty.builder()
 
       /**
-       * @param dnsName the value to be set. 
+       * @param dnsName The domain name assigned to your CloudFront distribution. 
        */
       override fun dnsName(dnsName: String) {
         cdkBuilder.dnsName(dnsName)
       }
 
       /**
-       * @param originAccessIdentity the value to be set.
+       * @param originAccessIdentity The CloudFront origin access identity to associate with the
+       * distribution.
+       * Use an origin access identity to configure the distribution so that end users can only
+       * access objects in an Amazon S3 through CloudFront .
+       *
+       *
+       * This property is legacy. We recommend that you use
+       * [OriginAccessControl](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originaccesscontrol.html)
+       * instead.
        */
       override fun originAccessIdentity(originAccessIdentity: String) {
         cdkBuilder.originAccessIdentity(originAccessIdentity)
@@ -8076,13 +8339,27 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyS3OriginProperty,
-    ) : CdkObject(cdkObject), LegacyS3OriginProperty {
+    ) : CdkObject(cdkObject),
+        LegacyS3OriginProperty {
       /**
+       * The domain name assigned to your CloudFront distribution.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacys3origin.html#cfn-cloudfront-distribution-legacys3origin-dnsname)
        */
       override fun dnsName(): String = unwrap(this).getDnsName()
 
       /**
+       * The CloudFront origin access identity to associate with the distribution.
+       *
+       * Use an origin access identity to configure the distribution so that end users can only
+       * access objects in an Amazon S3 through CloudFront .
+       *
+       *
+       * This property is legacy. We recommend that you use
+       * [OriginAccessControl](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originaccesscontrol.html)
+       * instead.
+       *
+       *
        * Default: - ""
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacys3origin.html#cfn-cloudfront-distribution-legacys3origin-originaccessidentity)
@@ -8257,7 +8534,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LoggingProperty,
-    ) : CdkObject(cdkObject), LoggingProperty {
+    ) : CdkObject(cdkObject),
+        LoggingProperty {
       /**
        * The Amazon S3 bucket to store the access logs in, for example,
        * `myawslogbucket.s3.amazonaws.com` .
@@ -8399,7 +8677,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginCustomHeaderProperty,
-    ) : CdkObject(cdkObject), OriginCustomHeaderProperty {
+    ) : CdkObject(cdkObject),
+        OriginCustomHeaderProperty {
       /**
        * The name of a header that you want CloudFront to send to your origin.
        *
@@ -8532,7 +8811,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupFailoverCriteriaProperty,
-    ) : CdkObject(cdkObject), OriginGroupFailoverCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        OriginGroupFailoverCriteriaProperty {
       /**
        * The status codes that, when returned from the primary origin, will trigger CloudFront to
        * failover to the second origin.
@@ -8616,7 +8896,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupMemberProperty,
-    ) : CdkObject(cdkObject), OriginGroupMemberProperty {
+    ) : CdkObject(cdkObject),
+        OriginGroupMemberProperty {
       /**
        * The ID for an origin in an origin group.
        *
@@ -8742,7 +9023,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupMembersProperty,
-    ) : CdkObject(cdkObject), OriginGroupMembersProperty {
+    ) : CdkObject(cdkObject),
+        OriginGroupMembersProperty {
       /**
        * Items (origins) in an origin group.
        *
@@ -8954,7 +9236,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupProperty,
-    ) : CdkObject(cdkObject), OriginGroupProperty {
+    ) : CdkObject(cdkObject),
+        OriginGroupProperty {
       /**
        * A complex type that contains information about the failover criteria for an origin group.
        *
@@ -9106,7 +9389,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupsProperty,
-    ) : CdkObject(cdkObject), OriginGroupsProperty {
+    ) : CdkObject(cdkObject),
+        OriginGroupsProperty {
       /**
        * The items (origin groups) in a distribution.
        *
@@ -9727,7 +10011,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginProperty,
-    ) : CdkObject(cdkObject), OriginProperty {
+    ) : CdkObject(cdkObject),
+        OriginProperty {
       /**
        * The number of times that CloudFront attempts to connect to the origin.
        *
@@ -10008,7 +10293,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginShieldProperty,
-    ) : CdkObject(cdkObject), OriginShieldProperty {
+    ) : CdkObject(cdkObject),
+        OriginShieldProperty {
       /**
        * A flag that specifies whether Origin Shield is enabled.
        *
@@ -10176,7 +10462,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.RestrictionsProperty,
-    ) : CdkObject(cdkObject), RestrictionsProperty {
+    ) : CdkObject(cdkObject),
+        RestrictionsProperty {
       /**
        * A complex type that controls the countries in which your content is distributed.
        *
@@ -10347,7 +10634,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.S3OriginConfigProperty,
-    ) : CdkObject(cdkObject), S3OriginConfigProperty {
+    ) : CdkObject(cdkObject),
+        S3OriginConfigProperty {
       /**
        * If you're using origin access control (OAC) instead of origin access identity, specify an
        * empty `OriginAccessIdentity` element.
@@ -10500,7 +10788,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.StatusCodesProperty,
-    ) : CdkObject(cdkObject), StatusCodesProperty {
+    ) : CdkObject(cdkObject),
+        StatusCodesProperty {
       /**
        * The items (status codes) for an origin group.
        *
@@ -10946,7 +11235,8 @@ public open class CfnDistribution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.ViewerCertificateProperty,
-    ) : CdkObject(cdkObject), ViewerCertificateProperty {
+    ) : CdkObject(cdkObject),
+        ViewerCertificateProperty {
       /**
        * In CloudFormation, this field name is `AcmCertificateArn` . Note the different
        * capitalization.

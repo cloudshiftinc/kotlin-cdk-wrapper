@@ -28,7 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ExternalTaskDefinition(
   cdkObject: software.amazon.awscdk.services.ecs.ExternalTaskDefinition,
-) : TaskDefinition(cdkObject), IExternalTaskDefinition {
+) : TaskDefinition(cdkObject),
+    IExternalTaskDefinition {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.ExternalTaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

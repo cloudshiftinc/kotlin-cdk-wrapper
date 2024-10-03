@@ -194,7 +194,8 @@ public interface CfnPublicRepositoryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecr.CfnPublicRepositoryProps,
-  ) : CdkObject(cdkObject), CfnPublicRepositoryProps {
+  ) : CdkObject(cdkObject),
+      CfnPublicRepositoryProps {
     /**
      * The details about the repository that are publicly visible in the Amazon ECR Public Gallery.
      *

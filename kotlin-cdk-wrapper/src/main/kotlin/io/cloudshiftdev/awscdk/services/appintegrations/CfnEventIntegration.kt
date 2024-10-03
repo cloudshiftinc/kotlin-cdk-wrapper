@@ -53,7 +53,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEventIntegration(
   cdkObject: software.amazon.awscdk.services.appintegrations.CfnEventIntegration,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -427,7 +429,8 @@ public open class CfnEventIntegration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appintegrations.CfnEventIntegration.EventFilterProperty,
-    ) : CdkObject(cdkObject), EventFilterProperty {
+    ) : CdkObject(cdkObject),
+        EventFilterProperty {
       /**
        * The source of the events.
        *

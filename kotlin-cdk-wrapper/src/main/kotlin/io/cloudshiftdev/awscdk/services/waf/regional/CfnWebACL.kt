@@ -67,7 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWebACL(
   cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -490,7 +491,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * For actions that are associated with a rule, the action that AWS WAF takes when a web
        * request matches all conditions in a rule.
@@ -679,7 +681,8 @@ public open class CfnWebACL(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.RuleProperty,
-    ) : CdkObject(cdkObject), RuleProperty {
+    ) : CdkObject(cdkObject),
+        RuleProperty {
       /**
        * The action that AWS WAF takes when a web request matches all conditions in the rule, such
        * as allow, block, or count the request.

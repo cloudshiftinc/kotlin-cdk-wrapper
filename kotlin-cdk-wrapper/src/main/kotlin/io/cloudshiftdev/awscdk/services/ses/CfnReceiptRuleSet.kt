@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnReceiptRuleSet(
   cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleSet,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnReceiptRuleSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -73,12 +74,12 @@ public open class CfnReceiptRuleSet(
   }
 
   /**
-   * The name of the receipt rule set to reorder.
+   * The name of the receipt rule set to make active.
    */
   public open fun ruleSetName(): String? = unwrap(this).getRuleSetName()
 
   /**
-   * The name of the receipt rule set to reorder.
+   * The name of the receipt rule set to make active.
    */
   public open fun ruleSetName(`value`: String) {
     unwrap(this).setRuleSetName(`value`)
@@ -90,10 +91,12 @@ public open class CfnReceiptRuleSet(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The name of the receipt rule set to reorder.
+     * The name of the receipt rule set to make active.
+     *
+     * Setting this value to null disables all email receiving.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptruleset.html#cfn-ses-receiptruleset-rulesetname)
-     * @param ruleSetName The name of the receipt rule set to reorder. 
+     * @param ruleSetName The name of the receipt rule set to make active. 
      */
     public fun ruleSetName(ruleSetName: String)
   }
@@ -106,10 +109,12 @@ public open class CfnReceiptRuleSet(
         software.amazon.awscdk.services.ses.CfnReceiptRuleSet.Builder.create(scope, id)
 
     /**
-     * The name of the receipt rule set to reorder.
+     * The name of the receipt rule set to make active.
+     *
+     * Setting this value to null disables all email receiving.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptruleset.html#cfn-ses-receiptruleset-rulesetname)
-     * @param ruleSetName The name of the receipt rule set to reorder. 
+     * @param ruleSetName The name of the receipt rule set to make active. 
      */
     override fun ruleSetName(ruleSetName: String) {
       cdkBuilder.ruleSetName(ruleSetName)

@@ -98,7 +98,8 @@ public interface ExternalServiceAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ExternalServiceAttributes,
-  ) : CdkObject(cdkObject), ExternalServiceAttributes {
+  ) : CdkObject(cdkObject),
+      ExternalServiceAttributes {
     /**
      * The cluster that hosts the service.
      */

@@ -127,7 +127,8 @@ public interface UserPoolResourceServerOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.UserPoolResourceServerOptions,
-  ) : CdkObject(cdkObject), UserPoolResourceServerOptions {
+  ) : CdkObject(cdkObject),
+      UserPoolResourceServerOptions {
     /**
      * A unique resource server identifier for the resource server.
      */

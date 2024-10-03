@@ -95,7 +95,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGroup(
   cdkObject: software.amazon.awscdk.services.greengrass.CfnGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -681,7 +683,8 @@ public open class CfnGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnGroup.GroupVersionProperty,
-    ) : CdkObject(cdkObject), GroupVersionProperty {
+    ) : CdkObject(cdkObject),
+        GroupVersionProperty {
       /**
        * The Amazon Resource Name (ARN) of the connector definition version that contains the
        * connectors you want to deploy with the group version.

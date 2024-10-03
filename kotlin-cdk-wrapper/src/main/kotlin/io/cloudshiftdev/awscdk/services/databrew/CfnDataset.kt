@@ -128,7 +128,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataset(
   cdkObject: software.amazon.awscdk.services.databrew.CfnDataset,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -684,7 +686,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty,
-    ) : CdkObject(cdkObject), CsvOptionsProperty {
+    ) : CdkObject(cdkObject),
+        CsvOptionsProperty {
       /**
        * A single character that specifies the delimiter being used in the CSV file.
        *
@@ -879,7 +882,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DataCatalogInputDefinitionProperty,
-    ) : CdkObject(cdkObject), DataCatalogInputDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        DataCatalogInputDefinitionProperty {
       /**
        * The unique identifier of the AWS account that holds the Data Catalog that stores the data.
        *
@@ -1090,7 +1094,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DatabaseInputDefinitionProperty,
-    ) : CdkObject(cdkObject), DatabaseInputDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        DatabaseInputDefinitionProperty {
       /**
        * The table within the target database.
        *
@@ -1375,7 +1380,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty,
-    ) : CdkObject(cdkObject), DatasetParameterProperty {
+    ) : CdkObject(cdkObject),
+        DatasetParameterProperty {
       /**
        * Optional boolean value that defines whether the captured value of this parameter should be
        * loaded as an additional column in the dataset.
@@ -1552,7 +1558,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DatetimeOptionsProperty,
-    ) : CdkObject(cdkObject), DatetimeOptionsProperty {
+    ) : CdkObject(cdkObject),
+        DatetimeOptionsProperty {
       /**
        * Required option, that defines the datetime format used for a date parameter in the Amazon
        * S3 path.
@@ -1760,7 +1767,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.ExcelOptionsProperty,
-    ) : CdkObject(cdkObject), ExcelOptionsProperty {
+    ) : CdkObject(cdkObject),
+        ExcelOptionsProperty {
       /**
        * A variable that specifies whether the first row in the file is parsed as the header.
        *
@@ -1912,7 +1920,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty,
-    ) : CdkObject(cdkObject), FilesLimitProperty {
+    ) : CdkObject(cdkObject),
+        FilesLimitProperty {
       /**
        * The number of Amazon S3 files to select.
        *
@@ -2074,7 +2083,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty,
-    ) : CdkObject(cdkObject), FilterExpressionProperty {
+    ) : CdkObject(cdkObject),
+        FilterExpressionProperty {
       /**
        * The expression which includes condition names followed by substitution variables, possibly
        * grouped and combined with other conditions.
@@ -2187,7 +2197,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty,
-    ) : CdkObject(cdkObject), FilterValueProperty {
+    ) : CdkObject(cdkObject),
+        FilterValueProperty {
       /**
        * The value to be associated with the substitution variable.
        *
@@ -2405,7 +2416,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FormatOptionsProperty,
-    ) : CdkObject(cdkObject), FormatOptionsProperty {
+    ) : CdkObject(cdkObject),
+        FormatOptionsProperty {
       /**
        * Options that define how CSV input is to be interpreted by DataBrew.
        *
@@ -2707,7 +2719,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.InputProperty,
-    ) : CdkObject(cdkObject), InputProperty {
+    ) : CdkObject(cdkObject),
+        InputProperty {
       /**
        * The AWS Glue Data Catalog parameters for the data.
        *
@@ -2823,7 +2836,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty,
-    ) : CdkObject(cdkObject), JsonOptionsProperty {
+    ) : CdkObject(cdkObject),
+        JsonOptionsProperty {
       /**
        * A value that specifies whether JSON input contains embedded new line characters.
        *
@@ -2907,7 +2921,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.MetadataProperty,
-    ) : CdkObject(cdkObject), MetadataProperty {
+    ) : CdkObject(cdkObject),
+        MetadataProperty {
       /**
        * The Amazon Resource Name (ARN) associated with the dataset.
        *
@@ -3160,7 +3175,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.PathOptionsProperty,
-    ) : CdkObject(cdkObject), PathOptionsProperty {
+    ) : CdkObject(cdkObject),
+        PathOptionsProperty {
       /**
        * If provided, this structure imposes a limit on a number of files that should be selected.
        *
@@ -3323,7 +3339,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.PathParameterProperty,
-    ) : CdkObject(cdkObject), PathParameterProperty {
+    ) : CdkObject(cdkObject),
+        PathParameterProperty {
       /**
        * The path parameter definition.
        *
@@ -3432,7 +3449,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * The Amazon S3 bucket name.
        *

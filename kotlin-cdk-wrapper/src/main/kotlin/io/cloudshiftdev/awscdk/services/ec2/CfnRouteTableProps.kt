@@ -95,7 +95,8 @@ public interface CfnRouteTableProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnRouteTableProps,
-  ) : CdkObject(cdkObject), CfnRouteTableProps {
+  ) : CdkObject(cdkObject),
+      CfnRouteTableProps {
     /**
      * Any tags assigned to the route table.
      *

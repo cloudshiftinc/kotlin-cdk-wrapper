@@ -370,7 +370,8 @@ public interface CfnNetworkInsightsPathProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPathProps,
-  ) : CdkObject(cdkObject), CfnNetworkInsightsPathProps {
+  ) : CdkObject(cdkObject),
+      CfnNetworkInsightsPathProps {
     /**
      * The ID or ARN of the destination.
      *

@@ -128,7 +128,8 @@ public interface KeySigningKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.KeySigningKeyProps,
-  ) : CdkObject(cdkObject), KeySigningKeyProps {
+  ) : CdkObject(cdkObject),
+      KeySigningKeyProps {
     /**
      * The hosted zone that this key will be used to sign.
      */

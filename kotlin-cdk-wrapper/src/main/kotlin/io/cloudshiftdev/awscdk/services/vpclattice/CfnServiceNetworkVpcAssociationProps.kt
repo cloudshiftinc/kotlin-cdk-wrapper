@@ -179,7 +179,8 @@ public interface CfnServiceNetworkVpcAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociationProps,
-  ) : CdkObject(cdkObject), CfnServiceNetworkVpcAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnServiceNetworkVpcAssociationProps {
     /**
      * The IDs of the security groups.
      *

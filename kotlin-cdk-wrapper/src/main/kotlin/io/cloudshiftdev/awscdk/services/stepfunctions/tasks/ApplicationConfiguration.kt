@@ -140,7 +140,8 @@ public interface ApplicationConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ApplicationConfiguration,
-  ) : CdkObject(cdkObject), ApplicationConfiguration {
+  ) : CdkObject(cdkObject),
+      ApplicationConfiguration {
     /**
      * The classification within a configuration.
      *

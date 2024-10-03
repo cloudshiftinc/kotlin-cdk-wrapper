@@ -39,7 +39,8 @@ import kotlin.jvm.JvmName
  */
 public open class AwsApi(
   cdkObject: software.amazon.awscdk.services.events.targets.AwsApi,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(props: AwsApiProps) :
       this(software.amazon.awscdk.services.events.targets.AwsApi(props.let(AwsApiProps.Companion::unwrap))
   )

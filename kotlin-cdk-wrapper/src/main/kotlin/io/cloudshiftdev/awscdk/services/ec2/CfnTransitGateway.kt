@@ -75,7 +75,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTransitGateway(
   cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGateway,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnTransitGateway(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

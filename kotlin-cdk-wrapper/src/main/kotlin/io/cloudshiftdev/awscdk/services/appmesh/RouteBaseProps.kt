@@ -85,7 +85,8 @@ public interface RouteBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.RouteBaseProps,
-  ) : CdkObject(cdkObject), RouteBaseProps {
+  ) : CdkObject(cdkObject),
+      RouteBaseProps {
     /**
      * The name of the route.
      *

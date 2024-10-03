@@ -56,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPipeline(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -418,7 +420,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty,
-    ) : CdkObject(cdkObject), ParallelismConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ParallelismConfigurationProperty {
       /**
        * The max number of steps that can be executed in parallel.
        *
@@ -577,7 +580,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty,
-    ) : CdkObject(cdkObject), PipelineDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        PipelineDefinitionProperty {
       /**
        * The [JSON pipeline
        * definition](https://docs.aws.amazon.com/https://aws-sagemaker-mlops.github.io/sagemaker-model-building-pipeline-definition-JSON-schema/)
@@ -738,7 +742,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * The name of the S3 bucket.
        *

@@ -218,7 +218,8 @@ public interface ICfnResourceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ICfnResourceOptions,
-  ) : CdkObject(cdkObject), ICfnResourceOptions {
+  ) : CdkObject(cdkObject),
+      ICfnResourceOptions {
     /**
      * A condition to associate with this resource.
      *

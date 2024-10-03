@@ -243,7 +243,8 @@ public interface OperationsMetricOptions : SystemErrorsForOperationsMetricOption
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.OperationsMetricOptions,
-  ) : CdkObject(cdkObject), OperationsMetricOptions {
+  ) : CdkObject(cdkObject),
+      OperationsMetricOptions {
     /**
      * Account which this metric comes from.
      *

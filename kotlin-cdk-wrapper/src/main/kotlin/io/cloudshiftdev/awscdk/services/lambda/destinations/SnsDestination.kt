@@ -32,7 +32,8 @@ import kotlin.jvm.JvmName
  */
 public open class SnsDestination(
   cdkObject: software.amazon.awscdk.services.lambda.destinations.SnsDestination,
-) : CdkObject(cdkObject), IDestination {
+) : CdkObject(cdkObject),
+    IDestination {
   public constructor(topic: ITopic) :
       this(software.amazon.awscdk.services.lambda.destinations.SnsDestination(topic.let(ITopic.Companion::unwrap))
   )

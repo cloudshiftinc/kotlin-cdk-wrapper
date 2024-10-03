@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRoutingProfile(
   cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -590,7 +592,8 @@ public open class CfnRoutingProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.CrossChannelBehaviorProperty,
-    ) : CdkObject(cdkObject), CrossChannelBehaviorProperty {
+    ) : CdkObject(cdkObject),
+        CrossChannelBehaviorProperty {
       /**
        * Specifies the other channels that can be routed to an agent handling their current channel.
        *
@@ -783,7 +786,8 @@ public open class CfnRoutingProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.MediaConcurrencyProperty,
-    ) : CdkObject(cdkObject), MediaConcurrencyProperty {
+    ) : CdkObject(cdkObject),
+        MediaConcurrencyProperty {
       /**
        * The channels that agents can handle in the Contact Control Panel (CCP).
        *
@@ -985,7 +989,8 @@ public open class CfnRoutingProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueConfigProperty,
-    ) : CdkObject(cdkObject), RoutingProfileQueueConfigProperty {
+    ) : CdkObject(cdkObject),
+        RoutingProfileQueueConfigProperty {
       /**
        * The delay, in seconds, a contact should be in the queue before they are routed to an
        * available agent.
@@ -1114,7 +1119,8 @@ public open class CfnRoutingProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueReferenceProperty,
-    ) : CdkObject(cdkObject), RoutingProfileQueueReferenceProperty {
+    ) : CdkObject(cdkObject),
+        RoutingProfileQueueReferenceProperty {
       /**
        * The channels agents can handle in the Contact Control Panel (CCP) for this routing profile.
        *

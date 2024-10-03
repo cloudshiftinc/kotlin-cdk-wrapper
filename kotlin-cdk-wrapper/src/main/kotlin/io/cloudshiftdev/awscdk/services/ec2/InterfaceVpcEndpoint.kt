@@ -32,7 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class InterfaceVpcEndpoint(
   cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint,
-) : VpcEndpoint(cdkObject), IInterfaceVpcEndpoint {
+) : VpcEndpoint(cdkObject),
+    IInterfaceVpcEndpoint {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

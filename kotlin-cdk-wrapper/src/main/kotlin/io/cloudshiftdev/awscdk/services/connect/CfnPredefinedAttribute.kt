@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPredefinedAttribute(
   cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttribute,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -323,7 +324,8 @@ public open class CfnPredefinedAttribute(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttribute.ValuesProperty,
-    ) : CdkObject(cdkObject), ValuesProperty {
+    ) : CdkObject(cdkObject),
+        ValuesProperty {
       /**
        * Predefined attribute values of type string list.
        *

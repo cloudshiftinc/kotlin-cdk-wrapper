@@ -70,7 +70,8 @@ public interface SubnetIpamOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.SubnetIpamOptions,
-  ) : CdkObject(cdkObject), SubnetIpamOptions {
+  ) : CdkObject(cdkObject),
+      SubnetIpamOptions {
     /**
      * CIDR Allocations for Subnets.
      */

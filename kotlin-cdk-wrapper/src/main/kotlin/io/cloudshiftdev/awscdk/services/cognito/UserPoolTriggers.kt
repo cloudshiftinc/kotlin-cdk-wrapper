@@ -316,7 +316,8 @@ public interface UserPoolTriggers {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.UserPoolTriggers,
-  ) : CdkObject(cdkObject), UserPoolTriggers {
+  ) : CdkObject(cdkObject),
+      UserPoolTriggers {
     /**
      * Creates an authentication challenge.
      *

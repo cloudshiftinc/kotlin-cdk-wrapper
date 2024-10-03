@@ -2,10 +2,10 @@
 
 package io.cloudshiftdev.awscdk.cxapi
 
-import io.cloudshiftdev.awscdk.cloudassembly.schema.ContainerImageAssetMetadataEntry
-import io.cloudshiftdev.awscdk.cloudassembly.schema.FileAssetMetadataEntry
-import io.cloudshiftdev.awscdk.cloudassembly.schema.MetadataEntry
-import io.cloudshiftdev.awscdk.cloudassembly.schema.Tag
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.ContainerImageAssetMetadataEntry
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.FileAssetMetadataEntry
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.MetadataEntry
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.Tag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -56,7 +56,7 @@ public interface MetadataEntryResult : MetadataEntry {
      * @param data The data.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("21032671b9fd8716bfa04fb75b91a465e21e525e6bd0142e4ec3f68c59add044")
+    @JvmName("8569c4f1699cbd420cd28adb4870e6a3db2a0a77d8e7e45c56e02b4c4589ffbc")
     public fun `data`(`data`: FileAssetMetadataEntry.Builder.() -> Unit)
 
     /**
@@ -68,7 +68,7 @@ public interface MetadataEntryResult : MetadataEntry {
      * @param data The data.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("9f31e5c47b3e381ad8ea96d00aab02e299b353aa9c5ef9bfb5c2e428b3578437")
+    @JvmName("60eb9608a2a4e21c49517e87f8d6f05b0f12d8d2f5720571f428aa3c5e4a3ff9")
     public fun `data`(`data`: ContainerImageAssetMetadataEntry.Builder.() -> Unit)
 
     /**
@@ -124,7 +124,7 @@ public interface MetadataEntryResult : MetadataEntry {
      * @param data The data.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("21032671b9fd8716bfa04fb75b91a465e21e525e6bd0142e4ec3f68c59add044")
+    @JvmName("8569c4f1699cbd420cd28adb4870e6a3db2a0a77d8e7e45c56e02b4c4589ffbc")
     override fun `data`(`data`: FileAssetMetadataEntry.Builder.() -> Unit): Unit =
         `data`(FileAssetMetadataEntry(`data`))
 
@@ -139,7 +139,7 @@ public interface MetadataEntryResult : MetadataEntry {
      * @param data The data.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("9f31e5c47b3e381ad8ea96d00aab02e299b353aa9c5ef9bfb5c2e428b3578437")
+    @JvmName("60eb9608a2a4e21c49517e87f8d6f05b0f12d8d2f5720571f428aa3c5e4a3ff9")
     override fun `data`(`data`: ContainerImageAssetMetadataEntry.Builder.() -> Unit): Unit =
         `data`(ContainerImageAssetMetadataEntry(`data`))
 
@@ -186,7 +186,8 @@ public interface MetadataEntryResult : MetadataEntry {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cxapi.MetadataEntryResult,
-  ) : CdkObject(cdkObject), MetadataEntryResult {
+  ) : CdkObject(cdkObject),
+      MetadataEntryResult {
     /**
      * The data.
      *

@@ -94,7 +94,8 @@ public interface OpenIdConnectProviderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.OpenIdConnectProviderProps,
-  ) : CdkObject(cdkObject), OpenIdConnectProviderProps {
+  ) : CdkObject(cdkObject),
+      OpenIdConnectProviderProps {
     /**
      * The URL of the identity provider.
      *

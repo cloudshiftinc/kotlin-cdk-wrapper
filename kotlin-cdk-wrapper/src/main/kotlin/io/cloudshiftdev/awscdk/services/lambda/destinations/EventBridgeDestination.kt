@@ -30,7 +30,8 @@ import kotlin.jvm.JvmName
  */
 public open class EventBridgeDestination(
   cdkObject: software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination,
-) : CdkObject(cdkObject), IDestination {
+) : CdkObject(cdkObject),
+    IDestination {
   public constructor() :
       this(software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination()
   )

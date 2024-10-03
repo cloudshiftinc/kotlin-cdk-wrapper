@@ -84,7 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfigurationRecorder(
   cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -769,7 +770,8 @@ public open class CfnConfigurationRecorder(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty,
-    ) : CdkObject(cdkObject), ExclusionByResourceTypesProperty {
+    ) : CdkObject(cdkObject),
+        ExclusionByResourceTypesProperty {
       /**
        * A comma-separated list of resource types to exclude from recording by the configuration
        * recorder.
@@ -2119,7 +2121,8 @@ public open class CfnConfigurationRecorder(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingGroupProperty,
-    ) : CdkObject(cdkObject), RecordingGroupProperty {
+    ) : CdkObject(cdkObject),
+        RecordingGroupProperty {
       /**
        * Specifies whether AWS Config records configuration changes for all supported resource
        * types, excluding the global IAM resource types.
@@ -2539,7 +2542,8 @@ public open class CfnConfigurationRecorder(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeOverrideProperty,
-    ) : CdkObject(cdkObject), RecordingModeOverrideProperty {
+    ) : CdkObject(cdkObject),
+        RecordingModeOverrideProperty {
       /**
        * A description that you provide for the override.
        *
@@ -2780,7 +2784,8 @@ public open class CfnConfigurationRecorder(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty,
-    ) : CdkObject(cdkObject), RecordingModeProperty {
+    ) : CdkObject(cdkObject),
+        RecordingModeProperty {
       /**
        * The default recording frequency that AWS Config uses to record configuration changes.
        *
@@ -3087,7 +3092,8 @@ public open class CfnConfigurationRecorder(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty,
-    ) : CdkObject(cdkObject), RecordingStrategyProperty {
+    ) : CdkObject(cdkObject),
+        RecordingStrategyProperty {
       /**
        * The recording strategy for the configuration recorder.
        *

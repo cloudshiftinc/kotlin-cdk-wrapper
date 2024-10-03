@@ -35,7 +35,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDatastore(
   cdkObject: software.amazon.awscdk.services.healthimaging.CfnDatastore,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.healthimaging.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

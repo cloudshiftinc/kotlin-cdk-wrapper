@@ -44,7 +44,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIPAMResourceDiscoveryAssociation(
   cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociation,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -173,7 +173,8 @@ public interface CfnInstanceProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.CfnInstanceProfileProps,
-  ) : CdkObject(cdkObject), CfnInstanceProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnInstanceProfileProps {
     /**
      * The name of the instance profile to create.
      *

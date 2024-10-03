@@ -629,7 +629,8 @@ public interface CfnInsightProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.securityhub.CfnInsightProps,
-  ) : CdkObject(cdkObject), CfnInsightProps {
+  ) : CdkObject(cdkObject),
+      CfnInsightProps {
     /**
      * One or more attributes used to filter the findings included in the insight.
      *

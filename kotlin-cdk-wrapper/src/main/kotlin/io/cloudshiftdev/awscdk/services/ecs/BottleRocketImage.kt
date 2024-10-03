@@ -28,7 +28,8 @@ import kotlin.Unit
  */
 public open class BottleRocketImage(
   cdkObject: software.amazon.awscdk.services.ecs.BottleRocketImage,
-) : CdkObject(cdkObject), IMachineImage {
+) : CdkObject(cdkObject),
+    IMachineImage {
   public constructor() : this(software.amazon.awscdk.services.ecs.BottleRocketImage()
   )
 

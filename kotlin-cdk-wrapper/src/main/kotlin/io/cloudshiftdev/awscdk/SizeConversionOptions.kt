@@ -53,7 +53,8 @@ public interface SizeConversionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.SizeConversionOptions,
-  ) : CdkObject(cdkObject), SizeConversionOptions {
+  ) : CdkObject(cdkObject),
+      SizeConversionOptions {
     /**
      * How conversions should behave when it encounters a non-integer result.
      *

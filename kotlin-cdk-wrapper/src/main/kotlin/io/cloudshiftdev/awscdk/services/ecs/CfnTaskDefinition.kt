@@ -39,11 +39,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * *Amazon Elastic Container Service Developer Guide* .
  *
  * You can specify a Docker networking mode for the containers in your task definition with the
- * `networkMode` parameter. The available network modes correspond to those described in [Network
- * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#/network-settings)
- * in the Docker run reference. If you specify the `awsvpc` network mode, the task is allocated an
- * elastic network interface, and you must specify a `NetworkConfiguration` when you create a service
- * or run a task with the task definition. For more information, see [Task
+ * `networkMode` parameter. If you specify the `awsvpc` network mode, the task is allocated an elastic
+ * network interface, and you must specify a
+ * [NetworkConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_NetworkConfiguration.html)
+ * when you create a service or run a task with the task definition. For more information, see [Task
  * Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html) in the
  * *Amazon Elastic Container Service Developer Guide* .
  *
@@ -157,6 +156,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .type("type")
  * .value("value")
  * .build()))
+ * .restartPolicy(RestartPolicyProperty.builder()
+ * .enabled(false)
+ * .ignoredExitCodes(List.of(123))
+ * .restartAttemptPeriod(123)
+ * .build())
  * .secrets(List.of(SecretProperty.builder()
  * .name("name")
  * .valueFrom("valueFrom")
@@ -260,7 +264,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTaskDefinition(
   cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.CfnTaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -676,6 +682,9 @@ public open class CfnTaskDefinition(
      * Fargate launch type, this field is required. You must use one of the following values. The value
      * that you choose determines your range of valid values for the `memory` parameter.
      *
+     * If you use the EC2 launch type, this field is optional. Supported values are between `128`
+     * CPU units ( `0.125` vCPUs) and `10240` CPU units ( `10` vCPUs).
+     *
      * The CPU units cannot be less than 1 vCPU when you use Windows containers on Fargate.
      *
      * * 256 (.25 vCPU) - Available `memory` values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB)
@@ -733,9 +742,8 @@ public open class CfnTaskDefinition(
      * The Amazon Resource Name (ARN) of the task execution role that grants the Amazon ECS
      * container agent permission to make AWS API calls on your behalf.
      *
-     * The task execution IAM role is required depending on the requirements of your task. For more
-     * information, see [Amazon ECS task execution IAM
-     * role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html)
+     * For informationabout the required IAM roles for Amazon ECS, see [IAM roles for Amazon
+     * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security-ecs-iam-role-overview.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-executionrolearn)
@@ -800,14 +808,10 @@ public open class CfnTaskDefinition(
      * containers within the specified task share the same IPC resources. If `none` is specified, then
      * IPC resources within the containers of a task are private and not shared with other containers
      * in a task or on the container instance. If no value is specified, then the IPC resource
-     * namespace sharing depends on the Docker daemon setting on the container instance. For more
-     * information, see [IPC
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
-     * in the *Docker run reference* .
+     * namespace sharing depends on the Docker daemon setting on the container instance.
      *
      * If the `host` IPC mode is used, be aware that there is a heightened risk of undesired IPC
-     * namespace expose. For more information, see [Docker
-     * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+     * namespace expose.
      *
      * If you are setting namespaced kernel parameters using `systemControls` for the containers in
      * the task, the following will apply to your IPC resource namespace. For more information, see
@@ -888,17 +892,15 @@ public open class CfnTaskDefinition(
      *
      *
      * If the network mode is `awsvpc` , the task is allocated an elastic network interface, and you
-     * must specify a `NetworkConfiguration` value when you create a service or run a task with the
-     * task definition. For more information, see [Task
+     * must specify a
+     * [NetworkConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_NetworkConfiguration.html)
+     * value when you create a service or run a task with the task definition. For more information,
+     * see [Task
      * Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
      * If the network mode is `host` , you cannot run multiple instantiations of the same task on a
      * single container instance when port mappings are used.
-     *
-     * For more information, see [Network
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#network-settings)
-     * in the *Docker run reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-networkmode)
      * @param networkMode The Docker networking mode to use for the containers in the task. 
@@ -918,14 +920,10 @@ public open class CfnTaskDefinition(
      * If `task` is specified, all containers within the specified task share the same process
      * namespace.
      *
-     * If no value is specified, the default is a private namespace for each container. For more
-     * information, see [PID
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
-     * in the *Docker run reference* .
+     * If no value is specified, the default is a private namespace for each container.
      *
      * If the `host` PID mode is used, there's a heightened risk of undesired process namespace
-     * exposure. For more information, see [Docker
-     * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+     * exposure.
      *
      *
      * This parameter is not supported for Windows containers. &gt; This parameter is only supported
@@ -1138,6 +1136,11 @@ public open class CfnTaskDefinition(
      * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
+     *
+     * String validation is done on the ECS side. If an invalid string value is given for
+     * `TaskRoleArn` , it may cause the Cloudformation job to hang.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-taskrolearn)
      * @param taskRoleArn The short name or full Amazon Resource Name (ARN) of the AWS Identity and
      * Access Management role that grants containers in the task permission to call AWS APIs on your
@@ -1255,6 +1258,9 @@ public open class CfnTaskDefinition(
      * Fargate launch type, this field is required. You must use one of the following values. The value
      * that you choose determines your range of valid values for the `memory` parameter.
      *
+     * If you use the EC2 launch type, this field is optional. Supported values are between `128`
+     * CPU units ( `0.125` vCPUs) and `10240` CPU units ( `10` vCPUs).
+     *
      * The CPU units cannot be less than 1 vCPU when you use Windows containers on Fargate.
      *
      * * 256 (.25 vCPU) - Available `memory` values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB)
@@ -1319,9 +1325,8 @@ public open class CfnTaskDefinition(
      * The Amazon Resource Name (ARN) of the task execution role that grants the Amazon ECS
      * container agent permission to make AWS API calls on your behalf.
      *
-     * The task execution IAM role is required depending on the requirements of your task. For more
-     * information, see [Amazon ECS task execution IAM
-     * role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html)
+     * For informationabout the required IAM roles for Amazon ECS, see [IAM roles for Amazon
+     * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security-ecs-iam-role-overview.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-executionrolearn)
@@ -1395,14 +1400,10 @@ public open class CfnTaskDefinition(
      * containers within the specified task share the same IPC resources. If `none` is specified, then
      * IPC resources within the containers of a task are private and not shared with other containers
      * in a task or on the container instance. If no value is specified, then the IPC resource
-     * namespace sharing depends on the Docker daemon setting on the container instance. For more
-     * information, see [IPC
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
-     * in the *Docker run reference* .
+     * namespace sharing depends on the Docker daemon setting on the container instance.
      *
      * If the `host` IPC mode is used, be aware that there is a heightened risk of undesired IPC
-     * namespace expose. For more information, see [Docker
-     * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+     * namespace expose.
      *
      * If you are setting namespaced kernel parameters using `systemControls` for the containers in
      * the task, the following will apply to your IPC resource namespace. For more information, see
@@ -1487,17 +1488,15 @@ public open class CfnTaskDefinition(
      *
      *
      * If the network mode is `awsvpc` , the task is allocated an elastic network interface, and you
-     * must specify a `NetworkConfiguration` value when you create a service or run a task with the
-     * task definition. For more information, see [Task
+     * must specify a
+     * [NetworkConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_NetworkConfiguration.html)
+     * value when you create a service or run a task with the task definition. For more information,
+     * see [Task
      * Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
      * If the network mode is `host` , you cannot run multiple instantiations of the same task on a
      * single container instance when port mappings are used.
-     *
-     * For more information, see [Network
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#network-settings)
-     * in the *Docker run reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-networkmode)
      * @param networkMode The Docker networking mode to use for the containers in the task. 
@@ -1519,14 +1518,10 @@ public open class CfnTaskDefinition(
      * If `task` is specified, all containers within the specified task share the same process
      * namespace.
      *
-     * If no value is specified, the default is a private namespace for each container. For more
-     * information, see [PID
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
-     * in the *Docker run reference* .
+     * If no value is specified, the default is a private namespace for each container.
      *
      * If the `host` PID mode is used, there's a heightened risk of undesired process namespace
-     * exposure. For more information, see [Docker
-     * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+     * exposure.
      *
      *
      * This parameter is not supported for Windows containers. &gt; This parameter is only supported
@@ -1762,6 +1757,11 @@ public open class CfnTaskDefinition(
      * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
+     *
+     * String validation is done on the ECS side. If an invalid string value is given for
+     * `TaskRoleArn` , it may cause the Cloudformation job to hang.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-taskrolearn)
      * @param taskRoleArn The short name or full Amazon Resource Name (ARN) of the AWS Identity and
      * Access Management role that grants containers in the task permission to call AWS APIs on your
@@ -1960,7 +1960,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.AuthorizationConfigProperty,
-    ) : CdkObject(cdkObject), AuthorizationConfigProperty {
+    ) : CdkObject(cdkObject),
+        AuthorizationConfigProperty {
       /**
        * The Amazon EFS access point ID to use.
        *
@@ -2122,6 +2123,11 @@ public open class CfnTaskDefinition(
    * .type("type")
    * .value("value")
    * .build()))
+   * .restartPolicy(RestartPolicyProperty.builder()
+   * .enabled(false)
+   * .ignoredExitCodes(List.of(123))
+   * .restartAttemptPeriod(123)
+   * .build())
    * .secrets(List.of(SecretProperty.builder()
    * .name("name")
    * .valueFrom("valueFrom")
@@ -2152,15 +2158,9 @@ public open class CfnTaskDefinition(
     /**
      * The command that's passed to the container.
      *
-     * This parameter maps to `Cmd` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `COMMAND`
-     * parameter to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * . For more information, see
-     * [https://docs.docker.com/engine/reference/builder/#cmd](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd)
-     * . If there are multiple arguments, each argument is a separated string in the array.
+     * This parameter maps to `Cmd` in the docker container create command and the `COMMAND`
+     * parameter to docker run. If there are multiple arguments, each argument is a separated string in
+     * the array.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-command)
      */
@@ -2169,13 +2169,8 @@ public open class CfnTaskDefinition(
     /**
      * The number of `cpu` units reserved for the container.
      *
-     * This parameter maps to `CpuShares` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--cpu-shares` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `CpuShares` in the docker container create commandand the
+     * `--cpu-shares` option to docker run.
      *
      * This field is optional for tasks using the Fargate launch type, and the only requirement is
      * that the total amount of CPU reserved for all containers within a task be lower than the
@@ -2197,19 +2192,19 @@ public open class CfnTaskDefinition(
      * tasks were 100% active all of the time, they would be limited to 512 CPU units.
      *
      * On Linux container instances, the Docker daemon on the container instance uses the CPU value
-     * to calculate the relative CPU share ratios for running containers. For more information, see
-     * [CPU share
-     * constraint](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#cpu-share-constraint)
-     * in the Docker documentation. The minimum valid CPU share value that the Linux kernel allows is
-     * 2. However, the CPU parameter isn't required, and you can use CPU values below 2 in your
-     * container definitions. For CPU values below 2 (including null), the behavior varies based on
-     * your Amazon ECS container agent version:
+     * to calculate the relative CPU share ratios for running containers. The minimum valid CPU share
+     * value that the Linux kernel allows is 2, and the maximum valid CPU share value that the Linux
+     * kernel allows is 262144. However, the CPU parameter isn't required, and you can use CPU values
+     * below 2 or above 262144 in your container definitions. For CPU values below 2 (including null)
+     * or above 262144, the behavior varies based on your Amazon ECS container agent version:
      *
      * * *Agent versions less than or equal to 1.1.0:* Null and zero CPU values are passed to Docker
      * as 0, which Docker then converts to 1,024 CPU shares. CPU values of 1 are passed to Docker as 1,
      * which the Linux kernel converts to two CPU shares.
      * * *Agent versions greater than or equal to 1.2.0:* Null, zero, and CPU values of 1 are passed
      * to Docker as 2.
+     * * *Agent versions greater than or equal to 1.84.0:* CPU values greater than 256 vCPU are
+     * passed to Docker as 256, which is equivalent to 262144 CPU shares.
      *
      * On Windows container instances, the CPU limit is enforced as an absolute limit, or a quota.
      * Windows containers only have access to the specified amount of CPU that's described in the task
@@ -2298,10 +2293,7 @@ public open class CfnTaskDefinition(
     /**
      * When this parameter is true, networking is off within the container.
      *
-     * This parameter maps to `NetworkDisabled` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+     * This parameter maps to `NetworkDisabled` in the docker container create command.
      *
      *
      * This parameter is not supported for Windows containers.
@@ -2314,13 +2306,8 @@ public open class CfnTaskDefinition(
     /**
      * A list of DNS search domains that are presented to the container.
      *
-     * This parameter maps to `DnsSearch` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--dns-search` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `DnsSearch` in the docker container create command and the
+     * `--dns-search` option to docker run.
      *
      *
      * This parameter is not supported for Windows containers.
@@ -2333,13 +2320,8 @@ public open class CfnTaskDefinition(
     /**
      * A list of DNS servers that are presented to the container.
      *
-     * This parameter maps to `Dns` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--dns`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `Dns` in the docker container create command and the `--dns` option to
+     * docker run.
      *
      *
      * This parameter is not supported for Windows containers.
@@ -2352,15 +2334,10 @@ public open class CfnTaskDefinition(
     /**
      * A key/value map of labels to add to the container.
      *
-     * This parameter maps to `Labels` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--label`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * . This parameter requires version 1.18 of the Docker Remote API or greater on your container
-     * instance. To check the Docker Remote API version on your container instance, log in to your
-     * container instance and run the following command: `sudo docker version --format
+     * This parameter maps to `Labels` in the docker container create command and the `--label`
+     * option to docker run. This parameter requires version 1.18 of the Docker Remote API or greater
+     * on your container instance. To check the Docker Remote API version on your container instance,
+     * log in to your container instance and run the following command: `sudo docker version --format
      * '{{.Server.APIVersion}}'`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-dockerlabels)
@@ -2370,9 +2347,7 @@ public open class CfnTaskDefinition(
     /**
      * A list of strings to provide custom configuration for multiple security systems.
      *
-     * For more information about valid values, see [Docker Run Security
-     * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * . This field isn't valid for containers in tasks using the Fargate launch type.
+     * This field isn't valid for containers in tasks using the Fargate launch type.
      *
      * For Linux tasks on EC2, this parameter can be used to reference custom labels for SELinux and
      * AppArmor multi-level security systems.
@@ -2385,13 +2360,8 @@ public open class CfnTaskDefinition(
      * Containers](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html) in the
      * *Amazon Elastic Container Service Developer Guide* .
      *
-     * This parameter maps to `SecurityOpt` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--security-opt` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `SecurityOpt` in the docker container create command and the
+     * `--security-opt` option to docker run.
      *
      *
      * The Amazon ECS container agent running on a container instance must register with the
@@ -2401,10 +2371,6 @@ public open class CfnTaskDefinition(
      * Configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
-     *
-     * For more information about valid values, see [Docker Run Security
-     * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
      *
      * Valid values: "no-new-privileges" | "apparmor:PROFILE" | "label:value" |
      * "credentialspec:CredentialSpecFilePath"
@@ -2422,15 +2388,7 @@ public open class CfnTaskDefinition(
      * and arguments as `command` array items instead.
      *
      * The entry point that's passed to the container. This parameter maps to `Entrypoint` in the
-     * [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--entrypoint` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * . For more information, see
-     * [https://docs.docker.com/engine/reference/builder/#entrypoint](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#entrypoint)
-     * .
+     * docker container create command and the `--entrypoint` option to docker run.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-entrypoint)
      */
@@ -2439,13 +2397,8 @@ public open class CfnTaskDefinition(
     /**
      * The environment variables to pass to a container.
      *
-     * This parameter maps to `Env` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--env`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `Env` in the docker container create command and the `--env` option to
+     * docker run.
      *
      *
      * We don't recommend that you use plaintext environment variables for sensitive information,
@@ -2459,15 +2412,11 @@ public open class CfnTaskDefinition(
     /**
      * A list of files containing the environment variables to pass to a container.
      *
-     * This parameter maps to the `--env-file` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to the `--env-file` option to docker run.
      *
      * You can specify up to ten environment files. The file must have a `.env` file extension. Each
      * line in an environment file contains an environment variable in `VARIABLE=VALUE` format. Lines
-     * beginning with `#` are treated as comments and are ignored. For more information about the
-     * environment variable file syntax, see [Declare default environment variables in
-     * file](https://docs.aws.amazon.com/https://docs.docker.com/compose/env-file/) .
+     * beginning with `#` are treated as comments and are ignored.
      *
      * If there are environment variables specified using the `environment` parameter in a container
      * definition, they take precedence over the variables contained within an environment file. If
@@ -2504,13 +2453,8 @@ public open class CfnTaskDefinition(
      * A list of hostnames and IP address mappings to append to the `/etc/hosts` file on the
      * container.
      *
-     * This parameter maps to `ExtraHosts` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--add-host`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `ExtraHosts` in the docker container create command and the
+     * `--add-host` option to docker run.
      *
      *
      * This parameter isn't supported for Windows containers or tasks that use the `awsvpc` network
@@ -2536,13 +2480,8 @@ public open class CfnTaskDefinition(
     /**
      * The container health check command and associated configuration parameters for the container.
      *
-     * This parameter maps to `HealthCheck` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `HEALTHCHECK` parameter of [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `HealthCheck` in the docker container create command and the
+     * `HEALTHCHECK` parameter of docker run.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-healthcheck)
      */
@@ -2551,13 +2490,8 @@ public open class CfnTaskDefinition(
     /**
      * The hostname to use for your container.
      *
-     * This parameter maps to `Hostname` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--hostname`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `Hostname` in the docker container create command and the `--hostname`
+     * option to docker run.
      *
      *
      * The `hostname` parameter is not supported if you're using the `awsvpc` network mode.
@@ -2574,13 +2508,8 @@ public open class CfnTaskDefinition(
      * registry are available. Other repositories are specified with either `*repository-url* / *image*
      * : *tag*` or `*repository-url* / *image* &#64; *digest*` . Up to 255 letters (uppercase and
      * lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number signs
-     * are allowed. This parameter maps to `Image` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `IMAGE`
-     * parameter of [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * are allowed. This parameter maps to `Image` in the docker container create command and the
+     * `IMAGE` parameter of docker run.
      *
      * * When a new task starts, the Amazon ECS container agent pulls the latest version of the
      * specified image and tag for the container to use. However, subsequent updates to a repository
@@ -2605,13 +2534,8 @@ public open class CfnTaskDefinition(
      * When this parameter is `true` , you can deploy containerized applications that require
      * `stdin` or a `tty` to be allocated.
      *
-     * This parameter maps to `OpenStdin` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--interactive` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `OpenStdin` in the docker container create command and the
+     * `--interactive` option to docker run.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-interactive)
      */
@@ -2623,16 +2547,8 @@ public open class CfnTaskDefinition(
      *
      * This parameter is only supported if the network mode of a task definition is `bridge` . The
      * `name:internalName` construct is analogous to `name:alias` in Docker links. Up to 255 letters
-     * (uppercase and lowercase), numbers, underscores, and hyphens are allowed. For more information
-     * about linking Docker containers, go to [Legacy container
-     * links](https://docs.aws.amazon.com/https://docs.docker.com/network/links/) in the Docker
-     * documentation. This parameter maps to `Links` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--link`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * (uppercase and lowercase), numbers, underscores, and hyphens are allowed.. This parameter maps
+     * to `Links` in the docker container create command and the `--link` option to docker run.
      *
      *
      * This parameter is not supported for Windows containers. &gt; Containers that are collocated
@@ -2662,18 +2578,13 @@ public open class CfnTaskDefinition(
     /**
      * The log configuration specification for the container.
      *
-     * This parameter maps to `LogConfig` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--log-driver` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . By default,
-     * containers use the same logging driver that the Docker daemon uses. However, the container may
-     * use a different logging driver than the Docker daemon by specifying a log driver with this
-     * parameter in the container definition. To use a different logging driver for a container, the
-     * log system must be configured properly on the container instance (or on a different log server
-     * for remote logging options). For more information on the options for different supported log
-     * drivers, see [Configure logging
+     * This parameter maps to `LogConfig` in the docker Create a container command and the
+     * `--log-driver` option to docker run. By default, containers use the same logging driver that the
+     * Docker daemon uses. However, the container may use a different logging driver than the Docker
+     * daemon by specifying a log driver with this parameter in the container definition. To use a
+     * different logging driver for a container, the log system must be configured properly on the
+     * container instance (or on a different log server for remote logging options). For more
+     * information on the options for different supported log drivers, see [Configure logging
      * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/) in
      * the Docker documentation.
      *
@@ -2741,13 +2652,8 @@ public open class CfnTaskDefinition(
      * this soft limit. However, your container can consume more memory when it needs to, up to either
      * the hard limit specified with the `memory` parameter (if applicable), or all of the available
      * memory on the container instance, whichever comes first. This parameter maps to
-     * `MemoryReservation` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--memory-reservation` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * `MemoryReservation` in the docker container create command and the `--memory-reservation` option
+     * to docker run.
      *
      * If a task-level memory value is not specified, you must specify a non-zero integer for one or
      * both of `memory` or `memoryReservation` in a container definition. If you specify both, `memory`
@@ -2774,13 +2680,8 @@ public open class CfnTaskDefinition(
     /**
      * The mount points for data volumes in your container.
      *
-     * This parameter maps to `Volumes` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--volume`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `Volumes` in the docker container create command and the `--volume`
+     * option to docker run.
      *
      * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
      * Windows containers can't mount directories on a different drive, and mount point can't be across
@@ -2796,13 +2697,8 @@ public open class CfnTaskDefinition(
      * If you're linking multiple containers together in a task definition, the `name` of one
      * container can be entered in the `links` of another container to connect the containers. Up to
      * 255 letters (uppercase and lowercase), numbers, underscores, and hyphens are allowed. This
-     * parameter maps to `name` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--name`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * parameter maps to `name` in the docker container create command and the `--name` option to
+     * docker run.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-name)
      */
@@ -2849,13 +2745,8 @@ public open class CfnTaskDefinition(
      * When this parameter is true, the container is given elevated privileges on the host container
      * instance (similar to the `root` user).
      *
-     * This parameter maps to `Privileged` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--privileged` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `Privileged` in the docker container create command and the
+     * `--privileged` option to docker run
      *
      *
      * This parameter is not supported for Windows containers or tasks run on AWS Fargate .
@@ -2868,13 +2759,8 @@ public open class CfnTaskDefinition(
     /**
      * When this parameter is `true` , a TTY is allocated.
      *
-     * This parameter maps to `Tty` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--tty`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `Tty` in the docker container create command and the `--tty` option to
+     * docker run.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-pseudoterminal)
      */
@@ -2883,13 +2769,8 @@ public open class CfnTaskDefinition(
     /**
      * When this parameter is true, the container is given read-only access to its root file system.
      *
-     * This parameter maps to `ReadonlyRootfs` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--read-only` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `ReadonlyRootfs` in the docker container create command and the
+     * `--read-only` option to docker run.
      *
      *
      * This parameter is not supported for Windows containers.
@@ -2914,6 +2795,19 @@ public open class CfnTaskDefinition(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-resourcerequirements)
      */
     public fun resourceRequirements(): Any? = unwrap(this).getResourceRequirements()
+
+    /**
+     * The restart policy for a container.
+     *
+     * When you set up a restart policy, Amazon ECS can restart the container without needing to
+     * replace the task. For more information, see [Restart individual containers in Amazon ECS tasks
+     * with container restart
+     * policies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-restartpolicy)
+     */
+    public fun restartPolicy(): Any? = unwrap(this).getRestartPolicy()
 
     /**
      * The secrets to pass to the container.
@@ -2960,7 +2854,7 @@ public open class CfnTaskDefinition(
      * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the
      * *Amazon Elastic Container Service Developer Guide* .
      *
-     * The valid values are 2-120 seconds.
+     * The valid values for Fargate are 2-120 seconds.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-starttimeout)
      */
@@ -2976,8 +2870,8 @@ public open class CfnTaskDefinition(
      * * Linux platform version `1.3.0` or later.
      * * Windows platform version `1.0.0` or later.
      *
-     * The max stop timeout value is 120 seconds and if the parameter is not specified, the default
-     * value of 30 seconds is used.
+     * For tasks that use the Fargate launch type, the max stop timeout value is 120 seconds and if
+     * the parameter is not specified, the default value of 30 seconds is used.
      *
      * For tasks that use the EC2 launch type, if the `stopTimeout` parameter isn't specified, the
      * value set for the Amazon ECS container agent configuration variable `ECS_CONTAINER_STOP_TIMEOUT`
@@ -2996,7 +2890,7 @@ public open class CfnTaskDefinition(
      * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the
      * *Amazon Elastic Container Service Developer Guide* .
      *
-     * The valid values are 2-120 seconds.
+     * The valid values for Fargate are 2-120 seconds.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-stoptimeout)
      */
@@ -3005,14 +2899,9 @@ public open class CfnTaskDefinition(
     /**
      * A list of namespaced kernel parameters to set in the container.
      *
-     * This parameter maps to `Sysctls` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--sysctl`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer lived
-     * connections.
+     * This parameter maps to `Sysctls` in the docker container create command and the `--sysctl`
+     * option to docker run. For example, you can configure `net.ipv4.tcp_keepalive_time` setting to
+     * maintain longer lived connections.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-systemcontrols)
      */
@@ -3045,13 +2934,8 @@ public open class CfnTaskDefinition(
     /**
      * The user to use inside the container.
      *
-     * This parameter maps to `User` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--user`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `User` in the docker container create command and the `--user` option
+     * to docker run.
      *
      *
      * When running tasks using the `host` network mode, don't run containers using the root user
@@ -3079,13 +2963,8 @@ public open class CfnTaskDefinition(
     /**
      * Data volumes to mount from another container.
      *
-     * This parameter maps to `VolumesFrom` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--volumes-from` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `VolumesFrom` in the docker container create command and the
+     * `--volumes-from` option to docker run.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-volumesfrom)
      */
@@ -3094,13 +2973,8 @@ public open class CfnTaskDefinition(
     /**
      * The working directory to run commands inside the container in.
      *
-     * This parameter maps to `WorkingDir` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--workdir`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `WorkingDir` in the docker container create command and the
+     * `--workdir` option to docker run.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-workingdirectory)
      */
@@ -3113,41 +2987,24 @@ public open class CfnTaskDefinition(
     public interface Builder {
       /**
        * @param command The command that's passed to the container.
-       * This parameter maps to `Cmd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `COMMAND`
-       * parameter to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For more information, see
-       * [https://docs.docker.com/engine/reference/builder/#cmd](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd)
-       * . If there are multiple arguments, each argument is a separated string in the array.
+       * This parameter maps to `Cmd` in the docker container create command and the `COMMAND`
+       * parameter to docker run. If there are multiple arguments, each argument is a separated string
+       * in the array.
        */
       public fun command(command: List<String>)
 
       /**
        * @param command The command that's passed to the container.
-       * This parameter maps to `Cmd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `COMMAND`
-       * parameter to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For more information, see
-       * [https://docs.docker.com/engine/reference/builder/#cmd](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd)
-       * . If there are multiple arguments, each argument is a separated string in the array.
+       * This parameter maps to `Cmd` in the docker container create command and the `COMMAND`
+       * parameter to docker run. If there are multiple arguments, each argument is a separated string
+       * in the array.
        */
       public fun command(vararg command: String)
 
       /**
        * @param cpu The number of `cpu` units reserved for the container.
-       * This parameter maps to `CpuShares` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cpu-shares` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CpuShares` in the docker container create commandand the
+       * `--cpu-shares` option to docker run.
        *
        * This field is optional for tasks using the Fargate launch type, and the only requirement is
        * that the total amount of CPU reserved for all containers within a task be lower than the
@@ -3170,19 +3027,20 @@ public open class CfnTaskDefinition(
        * CPU units.
        *
        * On Linux container instances, the Docker daemon on the container instance uses the CPU
-       * value to calculate the relative CPU share ratios for running containers. For more information,
-       * see [CPU share
-       * constraint](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#cpu-share-constraint)
-       * in the Docker documentation. The minimum valid CPU share value that the Linux kernel allows is
-       * 2. However, the CPU parameter isn't required, and you can use CPU values below 2 in your
-       * container definitions. For CPU values below 2 (including null), the behavior varies based on
-       * your Amazon ECS container agent version:
+       * value to calculate the relative CPU share ratios for running containers. The minimum valid CPU
+       * share value that the Linux kernel allows is 2, and the maximum valid CPU share value that the
+       * Linux kernel allows is 262144. However, the CPU parameter isn't required, and you can use CPU
+       * values below 2 or above 262144 in your container definitions. For CPU values below 2
+       * (including null) or above 262144, the behavior varies based on your Amazon ECS container agent
+       * version:
        *
        * * *Agent versions less than or equal to 1.1.0:* Null and zero CPU values are passed to
        * Docker as 0, which Docker then converts to 1,024 CPU shares. CPU values of 1 are passed to
        * Docker as 1, which the Linux kernel converts to two CPU shares.
        * * *Agent versions greater than or equal to 1.2.0:* Null, zero, and CPU values of 1 are
        * passed to Docker as 2.
+       * * *Agent versions greater than or equal to 1.84.0:* CPU values greater than 256 vCPU are
+       * passed to Docker as 256, which is equivalent to 262144 CPU shares.
        *
        * On Windows container instances, the CPU limit is enforced as an absolute limit, or a quota.
        * Windows containers only have access to the specified amount of CPU that's described in the
@@ -3365,10 +3223,7 @@ public open class CfnTaskDefinition(
       /**
        * @param disableNetworking When this parameter is true, networking is off within the
        * container.
-       * This parameter maps to `NetworkDisabled` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * This parameter maps to `NetworkDisabled` in the docker container create command.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -3378,10 +3233,7 @@ public open class CfnTaskDefinition(
       /**
        * @param disableNetworking When this parameter is true, networking is off within the
        * container.
-       * This parameter maps to `NetworkDisabled` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * This parameter maps to `NetworkDisabled` in the docker container create command.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -3390,13 +3242,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param dnsSearchDomains A list of DNS search domains that are presented to the container.
-       * This parameter maps to `DnsSearch` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--dns-search` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `DnsSearch` in the docker container create command and the
+       * `--dns-search` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -3405,13 +3252,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param dnsSearchDomains A list of DNS search domains that are presented to the container.
-       * This parameter maps to `DnsSearch` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--dns-search` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `DnsSearch` in the docker container create command and the
+       * `--dns-search` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -3420,13 +3262,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param dnsServers A list of DNS servers that are presented to the container.
-       * This parameter maps to `Dns` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--dns`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Dns` in the docker container create command and the `--dns` option
+       * to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -3435,13 +3272,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param dnsServers A list of DNS servers that are presented to the container.
-       * This parameter maps to `Dns` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--dns`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Dns` in the docker container create command and the `--dns` option
+       * to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -3450,30 +3282,20 @@ public open class CfnTaskDefinition(
 
       /**
        * @param dockerLabels A key/value map of labels to add to the container.
-       * This parameter maps to `Labels` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--label`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.18 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
+       * This parameter maps to `Labels` in the docker container create command and the `--label`
+       * option to docker run. This parameter requires version 1.18 of the Docker Remote API or greater
+       * on your container instance. To check the Docker Remote API version on your container instance,
+       * log in to your container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
       public fun dockerLabels(dockerLabels: IResolvable)
 
       /**
        * @param dockerLabels A key/value map of labels to add to the container.
-       * This parameter maps to `Labels` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--label`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.18 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
+       * This parameter maps to `Labels` in the docker container create command and the `--label`
+       * option to docker run. This parameter requires version 1.18 of the Docker Remote API or greater
+       * on your container instance. To check the Docker Remote API version on your container instance,
+       * log in to your container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
       public fun dockerLabels(dockerLabels: Map<String, String>)
@@ -3481,9 +3303,7 @@ public open class CfnTaskDefinition(
       /**
        * @param dockerSecurityOptions A list of strings to provide custom configuration for multiple
        * security systems.
-       * For more information about valid values, see [Docker Run Security
-       * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This field isn't valid for containers in tasks using the Fargate launch type.
+       * This field isn't valid for containers in tasks using the Fargate launch type.
        *
        * For Linux tasks on EC2, this parameter can be used to reference custom labels for SELinux
        * and AppArmor multi-level security systems.
@@ -3496,13 +3316,8 @@ public open class CfnTaskDefinition(
        * Containers](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
        *
-       * This parameter maps to `SecurityOpt` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--security-opt` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `SecurityOpt` in the docker container create command and the
+       * `--security-opt` option to docker run.
        *
        *
        * The Amazon ECS container agent running on a container instance must register with the
@@ -3512,10 +3327,6 @@ public open class CfnTaskDefinition(
        * Configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
        * in the *Amazon Elastic Container Service Developer Guide* .
        *
-       *
-       * For more information about valid values, see [Docker Run Security
-       * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
        *
        * Valid values: "no-new-privileges" | "apparmor:PROFILE" | "label:value" |
        * "credentialspec:CredentialSpecFilePath"
@@ -3525,9 +3336,7 @@ public open class CfnTaskDefinition(
       /**
        * @param dockerSecurityOptions A list of strings to provide custom configuration for multiple
        * security systems.
-       * For more information about valid values, see [Docker Run Security
-       * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This field isn't valid for containers in tasks using the Fargate launch type.
+       * This field isn't valid for containers in tasks using the Fargate launch type.
        *
        * For Linux tasks on EC2, this parameter can be used to reference custom labels for SELinux
        * and AppArmor multi-level security systems.
@@ -3540,13 +3349,8 @@ public open class CfnTaskDefinition(
        * Containers](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
        *
-       * This parameter maps to `SecurityOpt` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--security-opt` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `SecurityOpt` in the docker container create command and the
+       * `--security-opt` option to docker run.
        *
        *
        * The Amazon ECS container agent running on a container instance must register with the
@@ -3556,10 +3360,6 @@ public open class CfnTaskDefinition(
        * Configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
        * in the *Amazon Elastic Container Service Developer Guide* .
        *
-       *
-       * For more information about valid values, see [Docker Run Security
-       * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
        *
        * Valid values: "no-new-privileges" | "apparmor:PROFILE" | "label:value" |
        * "credentialspec:CredentialSpecFilePath"
@@ -3573,15 +3373,7 @@ public open class CfnTaskDefinition(
        * commands and arguments as `command` array items instead.
        *
        * The entry point that's passed to the container. This parameter maps to `Entrypoint` in the
-       * [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--entrypoint` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For more information, see
-       * [https://docs.docker.com/engine/reference/builder/#entrypoint](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#entrypoint)
-       * .
+       * docker container create command and the `--entrypoint` option to docker run.
        */
       public fun entryPoint(entryPoint: List<String>)
 
@@ -3592,27 +3384,14 @@ public open class CfnTaskDefinition(
        * commands and arguments as `command` array items instead.
        *
        * The entry point that's passed to the container. This parameter maps to `Entrypoint` in the
-       * [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--entrypoint` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For more information, see
-       * [https://docs.docker.com/engine/reference/builder/#entrypoint](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#entrypoint)
-       * .
+       * docker container create command and the `--entrypoint` option to docker run.
        */
       public fun entryPoint(vararg entryPoint: String)
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to `Env` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--env`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Env` in the docker container create command and the `--env` option
+       * to docker run.
        *
        *
        * We don't recommend that you use plaintext environment variables for sensitive information,
@@ -3622,13 +3401,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to `Env` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--env`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Env` in the docker container create command and the `--env` option
+       * to docker run.
        *
        *
        * We don't recommend that you use plaintext environment variables for sensitive information,
@@ -3638,13 +3412,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to `Env` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--env`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Env` in the docker container create command and the `--env` option
+       * to docker run.
        *
        *
        * We don't recommend that you use plaintext environment variables for sensitive information,
@@ -3655,15 +3424,11 @@ public open class CfnTaskDefinition(
       /**
        * @param environmentFiles A list of files containing the environment variables to pass to a
        * container.
-       * This parameter maps to the `--env-file` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--env-file` option to docker run.
        *
        * You can specify up to ten environment files. The file must have a `.env` file extension.
        * Each line in an environment file contains an environment variable in `VARIABLE=VALUE` format.
-       * Lines beginning with `#` are treated as comments and are ignored. For more information about
-       * the environment variable file syntax, see [Declare default environment variables in
-       * file](https://docs.aws.amazon.com/https://docs.docker.com/compose/env-file/) .
+       * Lines beginning with `#` are treated as comments and are ignored.
        *
        * If there are environment variables specified using the `environment` parameter in a
        * container definition, they take precedence over the variables contained within an environment
@@ -3678,15 +3443,11 @@ public open class CfnTaskDefinition(
       /**
        * @param environmentFiles A list of files containing the environment variables to pass to a
        * container.
-       * This parameter maps to the `--env-file` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--env-file` option to docker run.
        *
        * You can specify up to ten environment files. The file must have a `.env` file extension.
        * Each line in an environment file contains an environment variable in `VARIABLE=VALUE` format.
-       * Lines beginning with `#` are treated as comments and are ignored. For more information about
-       * the environment variable file syntax, see [Declare default environment variables in
-       * file](https://docs.aws.amazon.com/https://docs.docker.com/compose/env-file/) .
+       * Lines beginning with `#` are treated as comments and are ignored.
        *
        * If there are environment variables specified using the `environment` parameter in a
        * container definition, they take precedence over the variables contained within an environment
@@ -3701,15 +3462,11 @@ public open class CfnTaskDefinition(
       /**
        * @param environmentFiles A list of files containing the environment variables to pass to a
        * container.
-       * This parameter maps to the `--env-file` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--env-file` option to docker run.
        *
        * You can specify up to ten environment files. The file must have a `.env` file extension.
        * Each line in an environment file contains an environment variable in `VARIABLE=VALUE` format.
-       * Lines beginning with `#` are treated as comments and are ignored. For more information about
-       * the environment variable file syntax, see [Declare default environment variables in
-       * file](https://docs.aws.amazon.com/https://docs.docker.com/compose/env-file/) .
+       * Lines beginning with `#` are treated as comments and are ignored.
        *
        * If there are environment variables specified using the `environment` parameter in a
        * container definition, they take precedence over the variables contained within an environment
@@ -3758,13 +3515,8 @@ public open class CfnTaskDefinition(
       /**
        * @param extraHosts A list of hostnames and IP address mappings to append to the `/etc/hosts`
        * file on the container.
-       * This parameter maps to `ExtraHosts` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--add-host` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ExtraHosts` in the docker container create command and the
+       * `--add-host` option to docker run.
        *
        *
        * This parameter isn't supported for Windows containers or tasks that use the `awsvpc`
@@ -3775,13 +3527,8 @@ public open class CfnTaskDefinition(
       /**
        * @param extraHosts A list of hostnames and IP address mappings to append to the `/etc/hosts`
        * file on the container.
-       * This parameter maps to `ExtraHosts` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--add-host` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ExtraHosts` in the docker container create command and the
+       * `--add-host` option to docker run.
        *
        *
        * This parameter isn't supported for Windows containers or tasks that use the `awsvpc`
@@ -3792,13 +3539,8 @@ public open class CfnTaskDefinition(
       /**
        * @param extraHosts A list of hostnames and IP address mappings to append to the `/etc/hosts`
        * file on the container.
-       * This parameter maps to `ExtraHosts` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--add-host` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ExtraHosts` in the docker container create command and the
+       * `--add-host` option to docker run.
        *
        *
        * This parameter isn't supported for Windows containers or tasks that use the `awsvpc`
@@ -3839,39 +3581,24 @@ public open class CfnTaskDefinition(
       /**
        * @param healthCheck The container health check command and associated configuration
        * parameters for the container.
-       * This parameter maps to `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `HEALTHCHECK` parameter of [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `HealthCheck` in the docker container create command and the
+       * `HEALTHCHECK` parameter of docker run.
        */
       public fun healthCheck(healthCheck: IResolvable)
 
       /**
        * @param healthCheck The container health check command and associated configuration
        * parameters for the container.
-       * This parameter maps to `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `HEALTHCHECK` parameter of [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `HealthCheck` in the docker container create command and the
+       * `HEALTHCHECK` parameter of docker run.
        */
       public fun healthCheck(healthCheck: HealthCheckProperty)
 
       /**
        * @param healthCheck The container health check command and associated configuration
        * parameters for the container.
-       * This parameter maps to `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `HEALTHCHECK` parameter of [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `HealthCheck` in the docker container create command and the
+       * `HEALTHCHECK` parameter of docker run.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4837bfb05965defb7163e5c30084bb5c602354f2849160a0750db163cca2bd1d")
@@ -3879,13 +3606,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param hostname The hostname to use for your container.
-       * This parameter maps to `Hostname` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--hostname` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Hostname` in the docker container create command and the
+       * `--hostname` option to docker run.
        *
        *
        * The `hostname` parameter is not supported if you're using the `awsvpc` network mode.
@@ -3898,13 +3620,8 @@ public open class CfnTaskDefinition(
        * registry are available. Other repositories are specified with either `*repository-url* /
        * *image* : *tag*` or `*repository-url* / *image* &#64; *digest*` . Up to 255 letters (uppercase
        * and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number
-       * signs are allowed. This parameter maps to `Image` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `IMAGE`
-       * parameter of [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * signs are allowed. This parameter maps to `Image` in the docker container create command and
+       * the `IMAGE` parameter of docker run.
        *
        * * When a new task starts, the Amazon ECS container agent pulls the latest version of the
        * specified image and tag for the container to use. However, subsequent updates to a repository
@@ -3926,26 +3643,16 @@ public open class CfnTaskDefinition(
       /**
        * @param interactive When this parameter is `true` , you can deploy containerized
        * applications that require `stdin` or a `tty` to be allocated.
-       * This parameter maps to `OpenStdin` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--interactive` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `OpenStdin` in the docker container create command and the
+       * `--interactive` option to docker run.
        */
       public fun interactive(interactive: Boolean)
 
       /**
        * @param interactive When this parameter is `true` , you can deploy containerized
        * applications that require `stdin` or a `tty` to be allocated.
-       * This parameter maps to `OpenStdin` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--interactive` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `OpenStdin` in the docker container create command and the
+       * `--interactive` option to docker run.
        */
       public fun interactive(interactive: IResolvable)
 
@@ -3954,16 +3661,8 @@ public open class CfnTaskDefinition(
        * the need for port mappings.
        * This parameter is only supported if the network mode of a task definition is `bridge` . The
        * `name:internalName` construct is analogous to `name:alias` in Docker links. Up to 255 letters
-       * (uppercase and lowercase), numbers, underscores, and hyphens are allowed. For more information
-       * about linking Docker containers, go to [Legacy container
-       * links](https://docs.aws.amazon.com/https://docs.docker.com/network/links/) in the Docker
-       * documentation. This parameter maps to `Links` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--link`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * (uppercase and lowercase), numbers, underscores, and hyphens are allowed.. This parameter maps
+       * to `Links` in the docker container create command and the `--link` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers. &gt; Containers that are collocated
@@ -3978,16 +3677,8 @@ public open class CfnTaskDefinition(
        * the need for port mappings.
        * This parameter is only supported if the network mode of a task definition is `bridge` . The
        * `name:internalName` construct is analogous to `name:alias` in Docker links. Up to 255 letters
-       * (uppercase and lowercase), numbers, underscores, and hyphens are allowed. For more information
-       * about linking Docker containers, go to [Legacy container
-       * links](https://docs.aws.amazon.com/https://docs.docker.com/network/links/) in the Docker
-       * documentation. This parameter maps to `Links` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--link`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * (uppercase and lowercase), numbers, underscores, and hyphens are allowed.. This parameter maps
+       * to `Links` in the docker container create command and the `--link` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers. &gt; Containers that are collocated
@@ -4031,18 +3722,13 @@ public open class CfnTaskDefinition(
 
       /**
        * @param logConfiguration The log configuration specification for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . By default,
-       * containers use the same logging driver that the Docker daemon uses. However, the container may
-       * use a different logging driver than the Docker daemon by specifying a log driver with this
-       * parameter in the container definition. To use a different logging driver for a container, the
-       * log system must be configured properly on the container instance (or on a different log server
-       * for remote logging options). For more information on the options for different supported log
-       * drivers, see [Configure logging
+       * This parameter maps to `LogConfig` in the docker Create a container command and the
+       * `--log-driver` option to docker run. By default, containers use the same logging driver that
+       * the Docker daemon uses. However, the container may use a different logging driver than the
+       * Docker daemon by specifying a log driver with this parameter in the container definition. To
+       * use a different logging driver for a container, the log system must be configured properly on
+       * the container instance (or on a different log server for remote logging options). For more
+       * information on the options for different supported log drivers, see [Configure logging
        * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
        * in the Docker documentation.
        *
@@ -4071,18 +3757,13 @@ public open class CfnTaskDefinition(
 
       /**
        * @param logConfiguration The log configuration specification for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . By default,
-       * containers use the same logging driver that the Docker daemon uses. However, the container may
-       * use a different logging driver than the Docker daemon by specifying a log driver with this
-       * parameter in the container definition. To use a different logging driver for a container, the
-       * log system must be configured properly on the container instance (or on a different log server
-       * for remote logging options). For more information on the options for different supported log
-       * drivers, see [Configure logging
+       * This parameter maps to `LogConfig` in the docker Create a container command and the
+       * `--log-driver` option to docker run. By default, containers use the same logging driver that
+       * the Docker daemon uses. However, the container may use a different logging driver than the
+       * Docker daemon by specifying a log driver with this parameter in the container definition. To
+       * use a different logging driver for a container, the log system must be configured properly on
+       * the container instance (or on a different log server for remote logging options). For more
+       * information on the options for different supported log drivers, see [Configure logging
        * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
        * in the Docker documentation.
        *
@@ -4111,18 +3792,13 @@ public open class CfnTaskDefinition(
 
       /**
        * @param logConfiguration The log configuration specification for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . By default,
-       * containers use the same logging driver that the Docker daemon uses. However, the container may
-       * use a different logging driver than the Docker daemon by specifying a log driver with this
-       * parameter in the container definition. To use a different logging driver for a container, the
-       * log system must be configured properly on the container instance (or on a different log server
-       * for remote logging options). For more information on the options for different supported log
-       * drivers, see [Configure logging
+       * This parameter maps to `LogConfig` in the docker Create a container command and the
+       * `--log-driver` option to docker run. By default, containers use the same logging driver that
+       * the Docker daemon uses. However, the container may use a different logging driver than the
+       * Docker daemon by specifying a log driver with this parameter in the container definition. To
+       * use a different logging driver for a container, the log system must be configured properly on
+       * the container instance (or on a different log server for remote logging options). For more
+       * information on the options for different supported log drivers, see [Configure logging
        * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
        * in the Docker documentation.
        *
@@ -4186,13 +3862,8 @@ public open class CfnTaskDefinition(
        * to this soft limit. However, your container can consume more memory when it needs to, up to
        * either the hard limit specified with the `memory` parameter (if applicable), or all of the
        * available memory on the container instance, whichever comes first. This parameter maps to
-       * `MemoryReservation` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--memory-reservation` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * `MemoryReservation` in the docker container create command and the `--memory-reservation`
+       * option to docker run.
        *
        * If a task-level memory value is not specified, you must specify a non-zero integer for one
        * or both of `memory` or `memoryReservation` in a container definition. If you specify both,
@@ -4216,13 +3887,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param mountPoints The mount points for data volumes in your container.
-       * This parameter maps to `Volumes` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--volume`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Volumes` in the docker container create command and the `--volume`
+       * option to docker run.
        *
        * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
        * Windows containers can't mount directories on a different drive, and mount point can't be
@@ -4232,13 +3898,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param mountPoints The mount points for data volumes in your container.
-       * This parameter maps to `Volumes` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--volume`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Volumes` in the docker container create command and the `--volume`
+       * option to docker run.
        *
        * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
        * Windows containers can't mount directories on a different drive, and mount point can't be
@@ -4248,13 +3909,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param mountPoints The mount points for data volumes in your container.
-       * This parameter maps to `Volumes` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--volume`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Volumes` in the docker container create command and the `--volume`
+       * option to docker run.
        *
        * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
        * Windows containers can't mount directories on a different drive, and mount point can't be
@@ -4267,13 +3923,8 @@ public open class CfnTaskDefinition(
        * If you're linking multiple containers together in a task definition, the `name` of one
        * container can be entered in the `links` of another container to connect the containers. Up to
        * 255 letters (uppercase and lowercase), numbers, underscores, and hyphens are allowed. This
-       * parameter maps to `name` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--name`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * parameter maps to `name` in the docker container create command and the `--name` option to
+       * docker run.
        */
       public fun name(name: String)
 
@@ -4379,13 +4030,8 @@ public open class CfnTaskDefinition(
       /**
        * @param privileged When this parameter is true, the container is given elevated privileges
        * on the host container instance (similar to the `root` user).
-       * This parameter maps to `Privileged` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--privileged` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Privileged` in the docker container create command and the
+       * `--privileged` option to docker run
        *
        *
        * This parameter is not supported for Windows containers or tasks run on AWS Fargate .
@@ -4395,13 +4041,8 @@ public open class CfnTaskDefinition(
       /**
        * @param privileged When this parameter is true, the container is given elevated privileges
        * on the host container instance (similar to the `root` user).
-       * This parameter maps to `Privileged` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--privileged` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Privileged` in the docker container create command and the
+       * `--privileged` option to docker run
        *
        *
        * This parameter is not supported for Windows containers or tasks run on AWS Fargate .
@@ -4410,38 +4051,23 @@ public open class CfnTaskDefinition(
 
       /**
        * @param pseudoTerminal When this parameter is `true` , a TTY is allocated.
-       * This parameter maps to `Tty` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--tty`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Tty` in the docker container create command and the `--tty` option
+       * to docker run.
        */
       public fun pseudoTerminal(pseudoTerminal: Boolean)
 
       /**
        * @param pseudoTerminal When this parameter is `true` , a TTY is allocated.
-       * This parameter maps to `Tty` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--tty`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Tty` in the docker container create command and the `--tty` option
+       * to docker run.
        */
       public fun pseudoTerminal(pseudoTerminal: IResolvable)
 
       /**
        * @param readonlyRootFilesystem When this parameter is true, the container is given read-only
        * access to its root file system.
-       * This parameter maps to `ReadonlyRootfs` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--read-only` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ReadonlyRootfs` in the docker container create command and the
+       * `--read-only` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -4451,13 +4077,8 @@ public open class CfnTaskDefinition(
       /**
        * @param readonlyRootFilesystem When this parameter is true, the container is given read-only
        * access to its root file system.
-       * This parameter maps to `ReadonlyRootfs` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--read-only` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ReadonlyRootfs` in the docker container create command and the
+       * `--read-only` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -4499,6 +4120,38 @@ public open class CfnTaskDefinition(
        * The only supported resource is a GPU.
        */
       public fun resourceRequirements(vararg resourceRequirements: Any)
+
+      /**
+       * @param restartPolicy The restart policy for a container.
+       * When you set up a restart policy, Amazon ECS can restart the container without needing to
+       * replace the task. For more information, see [Restart individual containers in Amazon ECS tasks
+       * with container restart
+       * policies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun restartPolicy(restartPolicy: IResolvable)
+
+      /**
+       * @param restartPolicy The restart policy for a container.
+       * When you set up a restart policy, Amazon ECS can restart the container without needing to
+       * replace the task. For more information, see [Restart individual containers in Amazon ECS tasks
+       * with container restart
+       * policies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      public fun restartPolicy(restartPolicy: RestartPolicyProperty)
+
+      /**
+       * @param restartPolicy The restart policy for a container.
+       * When you set up a restart policy, Amazon ECS can restart the container without needing to
+       * replace the task. For more information, see [Restart individual containers in Amazon ECS tasks
+       * with container restart
+       * policies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("198a151cb8e21be1a8918576523d86983b03b7a600573a64cfaef9c0bd3b09be")
+      public fun restartPolicy(restartPolicy: RestartPolicyProperty.Builder.() -> Unit)
 
       /**
        * @param secrets The secrets to pass to the container.
@@ -4557,7 +4210,7 @@ public open class CfnTaskDefinition(
        * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
        *
-       * The valid values are 2-120 seconds.
+       * The valid values for Fargate are 2-120 seconds.
        */
       public fun startTimeout(startTimeout: Number)
 
@@ -4570,8 +4223,8 @@ public open class CfnTaskDefinition(
        * * Linux platform version `1.3.0` or later.
        * * Windows platform version `1.0.0` or later.
        *
-       * The max stop timeout value is 120 seconds and if the parameter is not specified, the
-       * default value of 30 seconds is used.
+       * For tasks that use the Fargate launch type, the max stop timeout value is 120 seconds and
+       * if the parameter is not specified, the default value of 30 seconds is used.
        *
        * For tasks that use the EC2 launch type, if the `stopTimeout` parameter isn't specified, the
        * value set for the Amazon ECS container agent configuration variable
@@ -4591,46 +4244,31 @@ public open class CfnTaskDefinition(
        * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
        *
-       * The valid values are 2-120 seconds.
+       * The valid values for Fargate are 2-120 seconds.
        */
       public fun stopTimeout(stopTimeout: Number)
 
       /**
        * @param systemControls A list of namespaced kernel parameters to set in the container.
-       * This parameter maps to `Sysctls` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--sysctl`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
-       * lived connections.
+       * This parameter maps to `Sysctls` in the docker container create command and the `--sysctl`
+       * option to docker run. For example, you can configure `net.ipv4.tcp_keepalive_time` setting to
+       * maintain longer lived connections.
        */
       public fun systemControls(systemControls: IResolvable)
 
       /**
        * @param systemControls A list of namespaced kernel parameters to set in the container.
-       * This parameter maps to `Sysctls` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--sysctl`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
-       * lived connections.
+       * This parameter maps to `Sysctls` in the docker container create command and the `--sysctl`
+       * option to docker run. For example, you can configure `net.ipv4.tcp_keepalive_time` setting to
+       * maintain longer lived connections.
        */
       public fun systemControls(systemControls: List<Any>)
 
       /**
        * @param systemControls A list of namespaced kernel parameters to set in the container.
-       * This parameter maps to `Sysctls` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--sysctl`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
-       * lived connections.
+       * This parameter maps to `Sysctls` in the docker container create command and the `--sysctl`
+       * option to docker run. For example, you can configure `net.ipv4.tcp_keepalive_time` setting to
+       * maintain longer lived connections.
        */
       public fun systemControls(vararg systemControls: Any)
 
@@ -4696,13 +4334,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param user The user to use inside the container.
-       * This parameter maps to `User` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--user`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `User` in the docker container create command and the `--user`
+       * option to docker run.
        *
        *
        * When running tasks using the `host` network mode, don't run containers using the root user
@@ -4726,49 +4359,29 @@ public open class CfnTaskDefinition(
 
       /**
        * @param volumesFrom Data volumes to mount from another container.
-       * This parameter maps to `VolumesFrom` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--volumes-from` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `VolumesFrom` in the docker container create command and the
+       * `--volumes-from` option to docker run.
        */
       public fun volumesFrom(volumesFrom: IResolvable)
 
       /**
        * @param volumesFrom Data volumes to mount from another container.
-       * This parameter maps to `VolumesFrom` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--volumes-from` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `VolumesFrom` in the docker container create command and the
+       * `--volumes-from` option to docker run.
        */
       public fun volumesFrom(volumesFrom: List<Any>)
 
       /**
        * @param volumesFrom Data volumes to mount from another container.
-       * This parameter maps to `VolumesFrom` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--volumes-from` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `VolumesFrom` in the docker container create command and the
+       * `--volumes-from` option to docker run.
        */
       public fun volumesFrom(vararg volumesFrom: Any)
 
       /**
        * @param workingDirectory The working directory to run commands inside the container in.
-       * This parameter maps to `WorkingDir` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--workdir` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `WorkingDir` in the docker container create command and the
+       * `--workdir` option to docker run.
        */
       public fun workingDirectory(workingDirectory: String)
     }
@@ -4781,15 +4394,9 @@ public open class CfnTaskDefinition(
 
       /**
        * @param command The command that's passed to the container.
-       * This parameter maps to `Cmd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `COMMAND`
-       * parameter to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For more information, see
-       * [https://docs.docker.com/engine/reference/builder/#cmd](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd)
-       * . If there are multiple arguments, each argument is a separated string in the array.
+       * This parameter maps to `Cmd` in the docker container create command and the `COMMAND`
+       * parameter to docker run. If there are multiple arguments, each argument is a separated string
+       * in the array.
        */
       override fun command(command: List<String>) {
         cdkBuilder.command(command)
@@ -4797,27 +4404,16 @@ public open class CfnTaskDefinition(
 
       /**
        * @param command The command that's passed to the container.
-       * This parameter maps to `Cmd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `COMMAND`
-       * parameter to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For more information, see
-       * [https://docs.docker.com/engine/reference/builder/#cmd](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd)
-       * . If there are multiple arguments, each argument is a separated string in the array.
+       * This parameter maps to `Cmd` in the docker container create command and the `COMMAND`
+       * parameter to docker run. If there are multiple arguments, each argument is a separated string
+       * in the array.
        */
       override fun command(vararg command: String): Unit = command(command.toList())
 
       /**
        * @param cpu The number of `cpu` units reserved for the container.
-       * This parameter maps to `CpuShares` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cpu-shares` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CpuShares` in the docker container create commandand the
+       * `--cpu-shares` option to docker run.
        *
        * This field is optional for tasks using the Fargate launch type, and the only requirement is
        * that the total amount of CPU reserved for all containers within a task be lower than the
@@ -4840,19 +4436,20 @@ public open class CfnTaskDefinition(
        * CPU units.
        *
        * On Linux container instances, the Docker daemon on the container instance uses the CPU
-       * value to calculate the relative CPU share ratios for running containers. For more information,
-       * see [CPU share
-       * constraint](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#cpu-share-constraint)
-       * in the Docker documentation. The minimum valid CPU share value that the Linux kernel allows is
-       * 2. However, the CPU parameter isn't required, and you can use CPU values below 2 in your
-       * container definitions. For CPU values below 2 (including null), the behavior varies based on
-       * your Amazon ECS container agent version:
+       * value to calculate the relative CPU share ratios for running containers. The minimum valid CPU
+       * share value that the Linux kernel allows is 2, and the maximum valid CPU share value that the
+       * Linux kernel allows is 262144. However, the CPU parameter isn't required, and you can use CPU
+       * values below 2 or above 262144 in your container definitions. For CPU values below 2
+       * (including null) or above 262144, the behavior varies based on your Amazon ECS container agent
+       * version:
        *
        * * *Agent versions less than or equal to 1.1.0:* Null and zero CPU values are passed to
        * Docker as 0, which Docker then converts to 1,024 CPU shares. CPU values of 1 are passed to
        * Docker as 1, which the Linux kernel converts to two CPU shares.
        * * *Agent versions greater than or equal to 1.2.0:* Null, zero, and CPU values of 1 are
        * passed to Docker as 2.
+       * * *Agent versions greater than or equal to 1.84.0:* CPU values greater than 256 vCPU are
+       * passed to Docker as 256, which is equivalent to 262144 CPU shares.
        *
        * On Windows container instances, the CPU limit is enforced as an absolute limit, or a quota.
        * Windows containers only have access to the specified amount of CPU that's described in the
@@ -5044,10 +4641,7 @@ public open class CfnTaskDefinition(
       /**
        * @param disableNetworking When this parameter is true, networking is off within the
        * container.
-       * This parameter maps to `NetworkDisabled` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * This parameter maps to `NetworkDisabled` in the docker container create command.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -5059,10 +4653,7 @@ public open class CfnTaskDefinition(
       /**
        * @param disableNetworking When this parameter is true, networking is off within the
        * container.
-       * This parameter maps to `NetworkDisabled` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * This parameter maps to `NetworkDisabled` in the docker container create command.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -5073,13 +4664,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param dnsSearchDomains A list of DNS search domains that are presented to the container.
-       * This parameter maps to `DnsSearch` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--dns-search` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `DnsSearch` in the docker container create command and the
+       * `--dns-search` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -5090,13 +4676,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param dnsSearchDomains A list of DNS search domains that are presented to the container.
-       * This parameter maps to `DnsSearch` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--dns-search` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `DnsSearch` in the docker container create command and the
+       * `--dns-search` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -5106,13 +4687,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param dnsServers A list of DNS servers that are presented to the container.
-       * This parameter maps to `Dns` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--dns`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Dns` in the docker container create command and the `--dns` option
+       * to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -5123,13 +4699,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param dnsServers A list of DNS servers that are presented to the container.
-       * This parameter maps to `Dns` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--dns`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Dns` in the docker container create command and the `--dns` option
+       * to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -5138,15 +4709,10 @@ public open class CfnTaskDefinition(
 
       /**
        * @param dockerLabels A key/value map of labels to add to the container.
-       * This parameter maps to `Labels` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--label`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.18 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
+       * This parameter maps to `Labels` in the docker container create command and the `--label`
+       * option to docker run. This parameter requires version 1.18 of the Docker Remote API or greater
+       * on your container instance. To check the Docker Remote API version on your container instance,
+       * log in to your container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
       override fun dockerLabels(dockerLabels: IResolvable) {
@@ -5155,15 +4721,10 @@ public open class CfnTaskDefinition(
 
       /**
        * @param dockerLabels A key/value map of labels to add to the container.
-       * This parameter maps to `Labels` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--label`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.18 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
+       * This parameter maps to `Labels` in the docker container create command and the `--label`
+       * option to docker run. This parameter requires version 1.18 of the Docker Remote API or greater
+       * on your container instance. To check the Docker Remote API version on your container instance,
+       * log in to your container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        */
       override fun dockerLabels(dockerLabels: Map<String, String>) {
@@ -5173,9 +4734,7 @@ public open class CfnTaskDefinition(
       /**
        * @param dockerSecurityOptions A list of strings to provide custom configuration for multiple
        * security systems.
-       * For more information about valid values, see [Docker Run Security
-       * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This field isn't valid for containers in tasks using the Fargate launch type.
+       * This field isn't valid for containers in tasks using the Fargate launch type.
        *
        * For Linux tasks on EC2, this parameter can be used to reference custom labels for SELinux
        * and AppArmor multi-level security systems.
@@ -5188,13 +4747,8 @@ public open class CfnTaskDefinition(
        * Containers](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
        *
-       * This parameter maps to `SecurityOpt` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--security-opt` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `SecurityOpt` in the docker container create command and the
+       * `--security-opt` option to docker run.
        *
        *
        * The Amazon ECS container agent running on a container instance must register with the
@@ -5204,10 +4758,6 @@ public open class CfnTaskDefinition(
        * Configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
        * in the *Amazon Elastic Container Service Developer Guide* .
        *
-       *
-       * For more information about valid values, see [Docker Run Security
-       * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
        *
        * Valid values: "no-new-privileges" | "apparmor:PROFILE" | "label:value" |
        * "credentialspec:CredentialSpecFilePath"
@@ -5219,9 +4769,7 @@ public open class CfnTaskDefinition(
       /**
        * @param dockerSecurityOptions A list of strings to provide custom configuration for multiple
        * security systems.
-       * For more information about valid values, see [Docker Run Security
-       * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This field isn't valid for containers in tasks using the Fargate launch type.
+       * This field isn't valid for containers in tasks using the Fargate launch type.
        *
        * For Linux tasks on EC2, this parameter can be used to reference custom labels for SELinux
        * and AppArmor multi-level security systems.
@@ -5234,13 +4782,8 @@ public open class CfnTaskDefinition(
        * Containers](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
        *
-       * This parameter maps to `SecurityOpt` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--security-opt` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `SecurityOpt` in the docker container create command and the
+       * `--security-opt` option to docker run.
        *
        *
        * The Amazon ECS container agent running on a container instance must register with the
@@ -5250,10 +4793,6 @@ public open class CfnTaskDefinition(
        * Configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
        * in the *Amazon Elastic Container Service Developer Guide* .
        *
-       *
-       * For more information about valid values, see [Docker Run Security
-       * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
        *
        * Valid values: "no-new-privileges" | "apparmor:PROFILE" | "label:value" |
        * "credentialspec:CredentialSpecFilePath"
@@ -5268,15 +4807,7 @@ public open class CfnTaskDefinition(
        * commands and arguments as `command` array items instead.
        *
        * The entry point that's passed to the container. This parameter maps to `Entrypoint` in the
-       * [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--entrypoint` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For more information, see
-       * [https://docs.docker.com/engine/reference/builder/#entrypoint](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#entrypoint)
-       * .
+       * docker container create command and the `--entrypoint` option to docker run.
        */
       override fun entryPoint(entryPoint: List<String>) {
         cdkBuilder.entryPoint(entryPoint)
@@ -5289,27 +4820,14 @@ public open class CfnTaskDefinition(
        * commands and arguments as `command` array items instead.
        *
        * The entry point that's passed to the container. This parameter maps to `Entrypoint` in the
-       * [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--entrypoint` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For more information, see
-       * [https://docs.docker.com/engine/reference/builder/#entrypoint](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#entrypoint)
-       * .
+       * docker container create command and the `--entrypoint` option to docker run.
        */
       override fun entryPoint(vararg entryPoint: String): Unit = entryPoint(entryPoint.toList())
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to `Env` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--env`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Env` in the docker container create command and the `--env` option
+       * to docker run.
        *
        *
        * We don't recommend that you use plaintext environment variables for sensitive information,
@@ -5321,13 +4839,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to `Env` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--env`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Env` in the docker container create command and the `--env` option
+       * to docker run.
        *
        *
        * We don't recommend that you use plaintext environment variables for sensitive information,
@@ -5339,13 +4852,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param environment The environment variables to pass to a container.
-       * This parameter maps to `Env` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--env`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Env` in the docker container create command and the `--env` option
+       * to docker run.
        *
        *
        * We don't recommend that you use plaintext environment variables for sensitive information,
@@ -5356,15 +4864,11 @@ public open class CfnTaskDefinition(
       /**
        * @param environmentFiles A list of files containing the environment variables to pass to a
        * container.
-       * This parameter maps to the `--env-file` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--env-file` option to docker run.
        *
        * You can specify up to ten environment files. The file must have a `.env` file extension.
        * Each line in an environment file contains an environment variable in `VARIABLE=VALUE` format.
-       * Lines beginning with `#` are treated as comments and are ignored. For more information about
-       * the environment variable file syntax, see [Declare default environment variables in
-       * file](https://docs.aws.amazon.com/https://docs.docker.com/compose/env-file/) .
+       * Lines beginning with `#` are treated as comments and are ignored.
        *
        * If there are environment variables specified using the `environment` parameter in a
        * container definition, they take precedence over the variables contained within an environment
@@ -5381,15 +4885,11 @@ public open class CfnTaskDefinition(
       /**
        * @param environmentFiles A list of files containing the environment variables to pass to a
        * container.
-       * This parameter maps to the `--env-file` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--env-file` option to docker run.
        *
        * You can specify up to ten environment files. The file must have a `.env` file extension.
        * Each line in an environment file contains an environment variable in `VARIABLE=VALUE` format.
-       * Lines beginning with `#` are treated as comments and are ignored. For more information about
-       * the environment variable file syntax, see [Declare default environment variables in
-       * file](https://docs.aws.amazon.com/https://docs.docker.com/compose/env-file/) .
+       * Lines beginning with `#` are treated as comments and are ignored.
        *
        * If there are environment variables specified using the `environment` parameter in a
        * container definition, they take precedence over the variables contained within an environment
@@ -5406,15 +4906,11 @@ public open class CfnTaskDefinition(
       /**
        * @param environmentFiles A list of files containing the environment variables to pass to a
        * container.
-       * This parameter maps to the `--env-file` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--env-file` option to docker run.
        *
        * You can specify up to ten environment files. The file must have a `.env` file extension.
        * Each line in an environment file contains an environment variable in `VARIABLE=VALUE` format.
-       * Lines beginning with `#` are treated as comments and are ignored. For more information about
-       * the environment variable file syntax, see [Declare default environment variables in
-       * file](https://docs.aws.amazon.com/https://docs.docker.com/compose/env-file/) .
+       * Lines beginning with `#` are treated as comments and are ignored.
        *
        * If there are environment variables specified using the `environment` parameter in a
        * container definition, they take precedence over the variables contained within an environment
@@ -5468,13 +4964,8 @@ public open class CfnTaskDefinition(
       /**
        * @param extraHosts A list of hostnames and IP address mappings to append to the `/etc/hosts`
        * file on the container.
-       * This parameter maps to `ExtraHosts` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--add-host` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ExtraHosts` in the docker container create command and the
+       * `--add-host` option to docker run.
        *
        *
        * This parameter isn't supported for Windows containers or tasks that use the `awsvpc`
@@ -5487,13 +4978,8 @@ public open class CfnTaskDefinition(
       /**
        * @param extraHosts A list of hostnames and IP address mappings to append to the `/etc/hosts`
        * file on the container.
-       * This parameter maps to `ExtraHosts` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--add-host` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ExtraHosts` in the docker container create command and the
+       * `--add-host` option to docker run.
        *
        *
        * This parameter isn't supported for Windows containers or tasks that use the `awsvpc`
@@ -5506,13 +4992,8 @@ public open class CfnTaskDefinition(
       /**
        * @param extraHosts A list of hostnames and IP address mappings to append to the `/etc/hosts`
        * file on the container.
-       * This parameter maps to `ExtraHosts` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--add-host` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ExtraHosts` in the docker container create command and the
+       * `--add-host` option to docker run.
        *
        *
        * This parameter isn't supported for Windows containers or tasks that use the `awsvpc`
@@ -5558,13 +5039,8 @@ public open class CfnTaskDefinition(
       /**
        * @param healthCheck The container health check command and associated configuration
        * parameters for the container.
-       * This parameter maps to `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `HEALTHCHECK` parameter of [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `HealthCheck` in the docker container create command and the
+       * `HEALTHCHECK` parameter of docker run.
        */
       override fun healthCheck(healthCheck: IResolvable) {
         cdkBuilder.healthCheck(healthCheck.let(IResolvable.Companion::unwrap))
@@ -5573,13 +5049,8 @@ public open class CfnTaskDefinition(
       /**
        * @param healthCheck The container health check command and associated configuration
        * parameters for the container.
-       * This parameter maps to `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `HEALTHCHECK` parameter of [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `HealthCheck` in the docker container create command and the
+       * `HEALTHCHECK` parameter of docker run.
        */
       override fun healthCheck(healthCheck: HealthCheckProperty) {
         cdkBuilder.healthCheck(healthCheck.let(HealthCheckProperty.Companion::unwrap))
@@ -5588,13 +5059,8 @@ public open class CfnTaskDefinition(
       /**
        * @param healthCheck The container health check command and associated configuration
        * parameters for the container.
-       * This parameter maps to `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `HEALTHCHECK` parameter of [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `HealthCheck` in the docker container create command and the
+       * `HEALTHCHECK` parameter of docker run.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4837bfb05965defb7163e5c30084bb5c602354f2849160a0750db163cca2bd1d")
@@ -5603,13 +5069,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param hostname The hostname to use for your container.
-       * This parameter maps to `Hostname` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--hostname` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Hostname` in the docker container create command and the
+       * `--hostname` option to docker run.
        *
        *
        * The `hostname` parameter is not supported if you're using the `awsvpc` network mode.
@@ -5624,13 +5085,8 @@ public open class CfnTaskDefinition(
        * registry are available. Other repositories are specified with either `*repository-url* /
        * *image* : *tag*` or `*repository-url* / *image* &#64; *digest*` . Up to 255 letters (uppercase
        * and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number
-       * signs are allowed. This parameter maps to `Image` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `IMAGE`
-       * parameter of [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * signs are allowed. This parameter maps to `Image` in the docker container create command and
+       * the `IMAGE` parameter of docker run.
        *
        * * When a new task starts, the Amazon ECS container agent pulls the latest version of the
        * specified image and tag for the container to use. However, subsequent updates to a repository
@@ -5654,13 +5110,8 @@ public open class CfnTaskDefinition(
       /**
        * @param interactive When this parameter is `true` , you can deploy containerized
        * applications that require `stdin` or a `tty` to be allocated.
-       * This parameter maps to `OpenStdin` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--interactive` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `OpenStdin` in the docker container create command and the
+       * `--interactive` option to docker run.
        */
       override fun interactive(interactive: Boolean) {
         cdkBuilder.interactive(interactive)
@@ -5669,13 +5120,8 @@ public open class CfnTaskDefinition(
       /**
        * @param interactive When this parameter is `true` , you can deploy containerized
        * applications that require `stdin` or a `tty` to be allocated.
-       * This parameter maps to `OpenStdin` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--interactive` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `OpenStdin` in the docker container create command and the
+       * `--interactive` option to docker run.
        */
       override fun interactive(interactive: IResolvable) {
         cdkBuilder.interactive(interactive.let(IResolvable.Companion::unwrap))
@@ -5686,16 +5132,8 @@ public open class CfnTaskDefinition(
        * the need for port mappings.
        * This parameter is only supported if the network mode of a task definition is `bridge` . The
        * `name:internalName` construct is analogous to `name:alias` in Docker links. Up to 255 letters
-       * (uppercase and lowercase), numbers, underscores, and hyphens are allowed. For more information
-       * about linking Docker containers, go to [Legacy container
-       * links](https://docs.aws.amazon.com/https://docs.docker.com/network/links/) in the Docker
-       * documentation. This parameter maps to `Links` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--link`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * (uppercase and lowercase), numbers, underscores, and hyphens are allowed.. This parameter maps
+       * to `Links` in the docker container create command and the `--link` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers. &gt; Containers that are collocated
@@ -5712,16 +5150,8 @@ public open class CfnTaskDefinition(
        * the need for port mappings.
        * This parameter is only supported if the network mode of a task definition is `bridge` . The
        * `name:internalName` construct is analogous to `name:alias` in Docker links. Up to 255 letters
-       * (uppercase and lowercase), numbers, underscores, and hyphens are allowed. For more information
-       * about linking Docker containers, go to [Legacy container
-       * links](https://docs.aws.amazon.com/https://docs.docker.com/network/links/) in the Docker
-       * documentation. This parameter maps to `Links` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--link`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * (uppercase and lowercase), numbers, underscores, and hyphens are allowed.. This parameter maps
+       * to `Links` in the docker container create command and the `--link` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers. &gt; Containers that are collocated
@@ -5770,18 +5200,13 @@ public open class CfnTaskDefinition(
 
       /**
        * @param logConfiguration The log configuration specification for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . By default,
-       * containers use the same logging driver that the Docker daemon uses. However, the container may
-       * use a different logging driver than the Docker daemon by specifying a log driver with this
-       * parameter in the container definition. To use a different logging driver for a container, the
-       * log system must be configured properly on the container instance (or on a different log server
-       * for remote logging options). For more information on the options for different supported log
-       * drivers, see [Configure logging
+       * This parameter maps to `LogConfig` in the docker Create a container command and the
+       * `--log-driver` option to docker run. By default, containers use the same logging driver that
+       * the Docker daemon uses. However, the container may use a different logging driver than the
+       * Docker daemon by specifying a log driver with this parameter in the container definition. To
+       * use a different logging driver for a container, the log system must be configured properly on
+       * the container instance (or on a different log server for remote logging options). For more
+       * information on the options for different supported log drivers, see [Configure logging
        * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
        * in the Docker documentation.
        *
@@ -5812,18 +5237,13 @@ public open class CfnTaskDefinition(
 
       /**
        * @param logConfiguration The log configuration specification for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . By default,
-       * containers use the same logging driver that the Docker daemon uses. However, the container may
-       * use a different logging driver than the Docker daemon by specifying a log driver with this
-       * parameter in the container definition. To use a different logging driver for a container, the
-       * log system must be configured properly on the container instance (or on a different log server
-       * for remote logging options). For more information on the options for different supported log
-       * drivers, see [Configure logging
+       * This parameter maps to `LogConfig` in the docker Create a container command and the
+       * `--log-driver` option to docker run. By default, containers use the same logging driver that
+       * the Docker daemon uses. However, the container may use a different logging driver than the
+       * Docker daemon by specifying a log driver with this parameter in the container definition. To
+       * use a different logging driver for a container, the log system must be configured properly on
+       * the container instance (or on a different log server for remote logging options). For more
+       * information on the options for different supported log drivers, see [Configure logging
        * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
        * in the Docker documentation.
        *
@@ -5854,18 +5274,13 @@ public open class CfnTaskDefinition(
 
       /**
        * @param logConfiguration The log configuration specification for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . By default,
-       * containers use the same logging driver that the Docker daemon uses. However, the container may
-       * use a different logging driver than the Docker daemon by specifying a log driver with this
-       * parameter in the container definition. To use a different logging driver for a container, the
-       * log system must be configured properly on the container instance (or on a different log server
-       * for remote logging options). For more information on the options for different supported log
-       * drivers, see [Configure logging
+       * This parameter maps to `LogConfig` in the docker Create a container command and the
+       * `--log-driver` option to docker run. By default, containers use the same logging driver that
+       * the Docker daemon uses. However, the container may use a different logging driver than the
+       * Docker daemon by specifying a log driver with this parameter in the container definition. To
+       * use a different logging driver for a container, the log system must be configured properly on
+       * the container instance (or on a different log server for remote logging options). For more
+       * information on the options for different supported log drivers, see [Configure logging
        * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
        * in the Docker documentation.
        *
@@ -5932,13 +5347,8 @@ public open class CfnTaskDefinition(
        * to this soft limit. However, your container can consume more memory when it needs to, up to
        * either the hard limit specified with the `memory` parameter (if applicable), or all of the
        * available memory on the container instance, whichever comes first. This parameter maps to
-       * `MemoryReservation` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--memory-reservation` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * `MemoryReservation` in the docker container create command and the `--memory-reservation`
+       * option to docker run.
        *
        * If a task-level memory value is not specified, you must specify a non-zero integer for one
        * or both of `memory` or `memoryReservation` in a container definition. If you specify both,
@@ -5964,13 +5374,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param mountPoints The mount points for data volumes in your container.
-       * This parameter maps to `Volumes` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--volume`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Volumes` in the docker container create command and the `--volume`
+       * option to docker run.
        *
        * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
        * Windows containers can't mount directories on a different drive, and mount point can't be
@@ -5982,13 +5387,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param mountPoints The mount points for data volumes in your container.
-       * This parameter maps to `Volumes` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--volume`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Volumes` in the docker container create command and the `--volume`
+       * option to docker run.
        *
        * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
        * Windows containers can't mount directories on a different drive, and mount point can't be
@@ -6000,13 +5400,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param mountPoints The mount points for data volumes in your container.
-       * This parameter maps to `Volumes` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--volume`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Volumes` in the docker container create command and the `--volume`
+       * option to docker run.
        *
        * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
        * Windows containers can't mount directories on a different drive, and mount point can't be
@@ -6019,13 +5414,8 @@ public open class CfnTaskDefinition(
        * If you're linking multiple containers together in a task definition, the `name` of one
        * container can be entered in the `links` of another container to connect the containers. Up to
        * 255 letters (uppercase and lowercase), numbers, underscores, and hyphens are allowed. This
-       * parameter maps to `name` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--name`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * parameter maps to `name` in the docker container create command and the `--name` option to
+       * docker run.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -6138,13 +5528,8 @@ public open class CfnTaskDefinition(
       /**
        * @param privileged When this parameter is true, the container is given elevated privileges
        * on the host container instance (similar to the `root` user).
-       * This parameter maps to `Privileged` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--privileged` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Privileged` in the docker container create command and the
+       * `--privileged` option to docker run
        *
        *
        * This parameter is not supported for Windows containers or tasks run on AWS Fargate .
@@ -6156,13 +5541,8 @@ public open class CfnTaskDefinition(
       /**
        * @param privileged When this parameter is true, the container is given elevated privileges
        * on the host container instance (similar to the `root` user).
-       * This parameter maps to `Privileged` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--privileged` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Privileged` in the docker container create command and the
+       * `--privileged` option to docker run
        *
        *
        * This parameter is not supported for Windows containers or tasks run on AWS Fargate .
@@ -6173,13 +5553,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param pseudoTerminal When this parameter is `true` , a TTY is allocated.
-       * This parameter maps to `Tty` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--tty`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Tty` in the docker container create command and the `--tty` option
+       * to docker run.
        */
       override fun pseudoTerminal(pseudoTerminal: Boolean) {
         cdkBuilder.pseudoTerminal(pseudoTerminal)
@@ -6187,13 +5562,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param pseudoTerminal When this parameter is `true` , a TTY is allocated.
-       * This parameter maps to `Tty` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--tty`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Tty` in the docker container create command and the `--tty` option
+       * to docker run.
        */
       override fun pseudoTerminal(pseudoTerminal: IResolvable) {
         cdkBuilder.pseudoTerminal(pseudoTerminal.let(IResolvable.Companion::unwrap))
@@ -6202,13 +5572,8 @@ public open class CfnTaskDefinition(
       /**
        * @param readonlyRootFilesystem When this parameter is true, the container is given read-only
        * access to its root file system.
-       * This parameter maps to `ReadonlyRootfs` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--read-only` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ReadonlyRootfs` in the docker container create command and the
+       * `--read-only` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -6220,13 +5585,8 @@ public open class CfnTaskDefinition(
       /**
        * @param readonlyRootFilesystem When this parameter is true, the container is given read-only
        * access to its root file system.
-       * This parameter maps to `ReadonlyRootfs` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--read-only` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ReadonlyRootfs` in the docker container create command and the
+       * `--read-only` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -6280,6 +5640,43 @@ public open class CfnTaskDefinition(
        */
       override fun resourceRequirements(vararg resourceRequirements: Any): Unit =
           resourceRequirements(resourceRequirements.toList())
+
+      /**
+       * @param restartPolicy The restart policy for a container.
+       * When you set up a restart policy, Amazon ECS can restart the container without needing to
+       * replace the task. For more information, see [Restart individual containers in Amazon ECS tasks
+       * with container restart
+       * policies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun restartPolicy(restartPolicy: IResolvable) {
+        cdkBuilder.restartPolicy(restartPolicy.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param restartPolicy The restart policy for a container.
+       * When you set up a restart policy, Amazon ECS can restart the container without needing to
+       * replace the task. For more information, see [Restart individual containers in Amazon ECS tasks
+       * with container restart
+       * policies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      override fun restartPolicy(restartPolicy: RestartPolicyProperty) {
+        cdkBuilder.restartPolicy(restartPolicy.let(RestartPolicyProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param restartPolicy The restart policy for a container.
+       * When you set up a restart policy, Amazon ECS can restart the container without needing to
+       * replace the task. For more information, see [Restart individual containers in Amazon ECS tasks
+       * with container restart
+       * policies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("198a151cb8e21be1a8918576523d86983b03b7a600573a64cfaef9c0bd3b09be")
+      override fun restartPolicy(restartPolicy: RestartPolicyProperty.Builder.() -> Unit): Unit =
+          restartPolicy(RestartPolicyProperty(restartPolicy))
 
       /**
        * @param secrets The secrets to pass to the container.
@@ -6342,7 +5739,7 @@ public open class CfnTaskDefinition(
        * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
        *
-       * The valid values are 2-120 seconds.
+       * The valid values for Fargate are 2-120 seconds.
        */
       override fun startTimeout(startTimeout: Number) {
         cdkBuilder.startTimeout(startTimeout)
@@ -6357,8 +5754,8 @@ public open class CfnTaskDefinition(
        * * Linux platform version `1.3.0` or later.
        * * Windows platform version `1.0.0` or later.
        *
-       * The max stop timeout value is 120 seconds and if the parameter is not specified, the
-       * default value of 30 seconds is used.
+       * For tasks that use the Fargate launch type, the max stop timeout value is 120 seconds and
+       * if the parameter is not specified, the default value of 30 seconds is used.
        *
        * For tasks that use the EC2 launch type, if the `stopTimeout` parameter isn't specified, the
        * value set for the Amazon ECS container agent configuration variable
@@ -6378,7 +5775,7 @@ public open class CfnTaskDefinition(
        * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
        *
-       * The valid values are 2-120 seconds.
+       * The valid values for Fargate are 2-120 seconds.
        */
       override fun stopTimeout(stopTimeout: Number) {
         cdkBuilder.stopTimeout(stopTimeout)
@@ -6386,14 +5783,9 @@ public open class CfnTaskDefinition(
 
       /**
        * @param systemControls A list of namespaced kernel parameters to set in the container.
-       * This parameter maps to `Sysctls` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--sysctl`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
-       * lived connections.
+       * This parameter maps to `Sysctls` in the docker container create command and the `--sysctl`
+       * option to docker run. For example, you can configure `net.ipv4.tcp_keepalive_time` setting to
+       * maintain longer lived connections.
        */
       override fun systemControls(systemControls: IResolvable) {
         cdkBuilder.systemControls(systemControls.let(IResolvable.Companion::unwrap))
@@ -6401,14 +5793,9 @@ public open class CfnTaskDefinition(
 
       /**
        * @param systemControls A list of namespaced kernel parameters to set in the container.
-       * This parameter maps to `Sysctls` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--sysctl`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
-       * lived connections.
+       * This parameter maps to `Sysctls` in the docker container create command and the `--sysctl`
+       * option to docker run. For example, you can configure `net.ipv4.tcp_keepalive_time` setting to
+       * maintain longer lived connections.
        */
       override fun systemControls(systemControls: List<Any>) {
         cdkBuilder.systemControls(systemControls.map{CdkObjectWrappers.unwrap(it)})
@@ -6416,14 +5803,9 @@ public open class CfnTaskDefinition(
 
       /**
        * @param systemControls A list of namespaced kernel parameters to set in the container.
-       * This parameter maps to `Sysctls` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--sysctl`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
-       * lived connections.
+       * This parameter maps to `Sysctls` in the docker container create command and the `--sysctl`
+       * option to docker run. For example, you can configure `net.ipv4.tcp_keepalive_time` setting to
+       * maintain longer lived connections.
        */
       override fun systemControls(vararg systemControls: Any): Unit =
           systemControls(systemControls.toList())
@@ -6494,13 +5876,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param user The user to use inside the container.
-       * This parameter maps to `User` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--user`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `User` in the docker container create command and the `--user`
+       * option to docker run.
        *
        *
        * When running tasks using the `host` network mode, don't run containers using the root user
@@ -6526,13 +5903,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param volumesFrom Data volumes to mount from another container.
-       * This parameter maps to `VolumesFrom` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--volumes-from` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `VolumesFrom` in the docker container create command and the
+       * `--volumes-from` option to docker run.
        */
       override fun volumesFrom(volumesFrom: IResolvable) {
         cdkBuilder.volumesFrom(volumesFrom.let(IResolvable.Companion::unwrap))
@@ -6540,13 +5912,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param volumesFrom Data volumes to mount from another container.
-       * This parameter maps to `VolumesFrom` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--volumes-from` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `VolumesFrom` in the docker container create command and the
+       * `--volumes-from` option to docker run.
        */
       override fun volumesFrom(volumesFrom: List<Any>) {
         cdkBuilder.volumesFrom(volumesFrom.map{CdkObjectWrappers.unwrap(it)})
@@ -6554,25 +5921,15 @@ public open class CfnTaskDefinition(
 
       /**
        * @param volumesFrom Data volumes to mount from another container.
-       * This parameter maps to `VolumesFrom` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--volumes-from` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `VolumesFrom` in the docker container create command and the
+       * `--volumes-from` option to docker run.
        */
       override fun volumesFrom(vararg volumesFrom: Any): Unit = volumesFrom(volumesFrom.toList())
 
       /**
        * @param workingDirectory The working directory to run commands inside the container in.
-       * This parameter maps to `WorkingDir` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--workdir` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `WorkingDir` in the docker container create command and the
+       * `--workdir` option to docker run.
        */
       override fun workingDirectory(workingDirectory: String) {
         cdkBuilder.workingDirectory(workingDirectory)
@@ -6585,19 +5942,14 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDefinitionProperty,
-    ) : CdkObject(cdkObject), ContainerDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        ContainerDefinitionProperty {
       /**
        * The command that's passed to the container.
        *
-       * This parameter maps to `Cmd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `COMMAND`
-       * parameter to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For more information, see
-       * [https://docs.docker.com/engine/reference/builder/#cmd](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd)
-       * . If there are multiple arguments, each argument is a separated string in the array.
+       * This parameter maps to `Cmd` in the docker container create command and the `COMMAND`
+       * parameter to docker run. If there are multiple arguments, each argument is a separated string
+       * in the array.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-command)
        */
@@ -6606,13 +5958,8 @@ public open class CfnTaskDefinition(
       /**
        * The number of `cpu` units reserved for the container.
        *
-       * This parameter maps to `CpuShares` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cpu-shares` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CpuShares` in the docker container create commandand the
+       * `--cpu-shares` option to docker run.
        *
        * This field is optional for tasks using the Fargate launch type, and the only requirement is
        * that the total amount of CPU reserved for all containers within a task be lower than the
@@ -6635,19 +5982,20 @@ public open class CfnTaskDefinition(
        * CPU units.
        *
        * On Linux container instances, the Docker daemon on the container instance uses the CPU
-       * value to calculate the relative CPU share ratios for running containers. For more information,
-       * see [CPU share
-       * constraint](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#cpu-share-constraint)
-       * in the Docker documentation. The minimum valid CPU share value that the Linux kernel allows is
-       * 2. However, the CPU parameter isn't required, and you can use CPU values below 2 in your
-       * container definitions. For CPU values below 2 (including null), the behavior varies based on
-       * your Amazon ECS container agent version:
+       * value to calculate the relative CPU share ratios for running containers. The minimum valid CPU
+       * share value that the Linux kernel allows is 2, and the maximum valid CPU share value that the
+       * Linux kernel allows is 262144. However, the CPU parameter isn't required, and you can use CPU
+       * values below 2 or above 262144 in your container definitions. For CPU values below 2
+       * (including null) or above 262144, the behavior varies based on your Amazon ECS container agent
+       * version:
        *
        * * *Agent versions less than or equal to 1.1.0:* Null and zero CPU values are passed to
        * Docker as 0, which Docker then converts to 1,024 CPU shares. CPU values of 1 are passed to
        * Docker as 1, which the Linux kernel converts to two CPU shares.
        * * *Agent versions greater than or equal to 1.2.0:* Null, zero, and CPU values of 1 are
        * passed to Docker as 2.
+       * * *Agent versions greater than or equal to 1.84.0:* CPU values greater than 256 vCPU are
+       * passed to Docker as 256, which is equivalent to 262144 CPU shares.
        *
        * On Windows container instances, the CPU limit is enforced as an absolute limit, or a quota.
        * Windows containers only have access to the specified amount of CPU that's described in the
@@ -6737,10 +6085,7 @@ public open class CfnTaskDefinition(
       /**
        * When this parameter is true, networking is off within the container.
        *
-       * This parameter maps to `NetworkDisabled` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * This parameter maps to `NetworkDisabled` in the docker container create command.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -6753,13 +6098,8 @@ public open class CfnTaskDefinition(
       /**
        * A list of DNS search domains that are presented to the container.
        *
-       * This parameter maps to `DnsSearch` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--dns-search` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `DnsSearch` in the docker container create command and the
+       * `--dns-search` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -6773,13 +6113,8 @@ public open class CfnTaskDefinition(
       /**
        * A list of DNS servers that are presented to the container.
        *
-       * This parameter maps to `Dns` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--dns`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Dns` in the docker container create command and the `--dns` option
+       * to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -6792,15 +6127,10 @@ public open class CfnTaskDefinition(
       /**
        * A key/value map of labels to add to the container.
        *
-       * This parameter maps to `Labels` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--label`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.18 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
+       * This parameter maps to `Labels` in the docker container create command and the `--label`
+       * option to docker run. This parameter requires version 1.18 of the Docker Remote API or greater
+       * on your container instance. To check the Docker Remote API version on your container instance,
+       * log in to your container instance and run the following command: `sudo docker version --format
        * '{{.Server.APIVersion}}'`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-dockerlabels)
@@ -6810,9 +6140,7 @@ public open class CfnTaskDefinition(
       /**
        * A list of strings to provide custom configuration for multiple security systems.
        *
-       * For more information about valid values, see [Docker Run Security
-       * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This field isn't valid for containers in tasks using the Fargate launch type.
+       * This field isn't valid for containers in tasks using the Fargate launch type.
        *
        * For Linux tasks on EC2, this parameter can be used to reference custom labels for SELinux
        * and AppArmor multi-level security systems.
@@ -6825,13 +6153,8 @@ public open class CfnTaskDefinition(
        * Containers](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/linux-gmsa.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
        *
-       * This parameter maps to `SecurityOpt` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--security-opt` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `SecurityOpt` in the docker container create command and the
+       * `--security-opt` option to docker run.
        *
        *
        * The Amazon ECS container agent running on a container instance must register with the
@@ -6841,10 +6164,6 @@ public open class CfnTaskDefinition(
        * Configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
        * in the *Amazon Elastic Container Service Developer Guide* .
        *
-       *
-       * For more information about valid values, see [Docker Run Security
-       * Configuration](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
        *
        * Valid values: "no-new-privileges" | "apparmor:PROFILE" | "label:value" |
        * "credentialspec:CredentialSpecFilePath"
@@ -6862,15 +6181,7 @@ public open class CfnTaskDefinition(
        * commands and arguments as `command` array items instead.
        *
        * The entry point that's passed to the container. This parameter maps to `Entrypoint` in the
-       * [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--entrypoint` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For more information, see
-       * [https://docs.docker.com/engine/reference/builder/#entrypoint](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#entrypoint)
-       * .
+       * docker container create command and the `--entrypoint` option to docker run.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-entrypoint)
        */
@@ -6879,13 +6190,8 @@ public open class CfnTaskDefinition(
       /**
        * The environment variables to pass to a container.
        *
-       * This parameter maps to `Env` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--env`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Env` in the docker container create command and the `--env` option
+       * to docker run.
        *
        *
        * We don't recommend that you use plaintext environment variables for sensitive information,
@@ -6899,15 +6205,11 @@ public open class CfnTaskDefinition(
       /**
        * A list of files containing the environment variables to pass to a container.
        *
-       * This parameter maps to the `--env-file` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--env-file` option to docker run.
        *
        * You can specify up to ten environment files. The file must have a `.env` file extension.
        * Each line in an environment file contains an environment variable in `VARIABLE=VALUE` format.
-       * Lines beginning with `#` are treated as comments and are ignored. For more information about
-       * the environment variable file syntax, see [Declare default environment variables in
-       * file](https://docs.aws.amazon.com/https://docs.docker.com/compose/env-file/) .
+       * Lines beginning with `#` are treated as comments and are ignored.
        *
        * If there are environment variables specified using the `environment` parameter in a
        * container definition, they take precedence over the variables contained within an environment
@@ -6944,13 +6246,8 @@ public open class CfnTaskDefinition(
        * A list of hostnames and IP address mappings to append to the `/etc/hosts` file on the
        * container.
        *
-       * This parameter maps to `ExtraHosts` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--add-host` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ExtraHosts` in the docker container create command and the
+       * `--add-host` option to docker run.
        *
        *
        * This parameter isn't supported for Windows containers or tasks that use the `awsvpc`
@@ -6977,13 +6274,8 @@ public open class CfnTaskDefinition(
        * The container health check command and associated configuration parameters for the
        * container.
        *
-       * This parameter maps to `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `HEALTHCHECK` parameter of [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `HealthCheck` in the docker container create command and the
+       * `HEALTHCHECK` parameter of docker run.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-healthcheck)
        */
@@ -6992,13 +6284,8 @@ public open class CfnTaskDefinition(
       /**
        * The hostname to use for your container.
        *
-       * This parameter maps to `Hostname` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--hostname` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Hostname` in the docker container create command and the
+       * `--hostname` option to docker run.
        *
        *
        * The `hostname` parameter is not supported if you're using the `awsvpc` network mode.
@@ -7015,13 +6302,8 @@ public open class CfnTaskDefinition(
        * registry are available. Other repositories are specified with either `*repository-url* /
        * *image* : *tag*` or `*repository-url* / *image* &#64; *digest*` . Up to 255 letters (uppercase
        * and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number
-       * signs are allowed. This parameter maps to `Image` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `IMAGE`
-       * parameter of [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * signs are allowed. This parameter maps to `Image` in the docker container create command and
+       * the `IMAGE` parameter of docker run.
        *
        * * When a new task starts, the Amazon ECS container agent pulls the latest version of the
        * specified image and tag for the container to use. However, subsequent updates to a repository
@@ -7046,13 +6328,8 @@ public open class CfnTaskDefinition(
        * When this parameter is `true` , you can deploy containerized applications that require
        * `stdin` or a `tty` to be allocated.
        *
-       * This parameter maps to `OpenStdin` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--interactive` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `OpenStdin` in the docker container create command and the
+       * `--interactive` option to docker run.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-interactive)
        */
@@ -7064,16 +6341,8 @@ public open class CfnTaskDefinition(
        *
        * This parameter is only supported if the network mode of a task definition is `bridge` . The
        * `name:internalName` construct is analogous to `name:alias` in Docker links. Up to 255 letters
-       * (uppercase and lowercase), numbers, underscores, and hyphens are allowed. For more information
-       * about linking Docker containers, go to [Legacy container
-       * links](https://docs.aws.amazon.com/https://docs.docker.com/network/links/) in the Docker
-       * documentation. This parameter maps to `Links` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--link`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * (uppercase and lowercase), numbers, underscores, and hyphens are allowed.. This parameter maps
+       * to `Links` in the docker container create command and the `--link` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers. &gt; Containers that are collocated
@@ -7103,18 +6372,13 @@ public open class CfnTaskDefinition(
       /**
        * The log configuration specification for the container.
        *
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . By default,
-       * containers use the same logging driver that the Docker daemon uses. However, the container may
-       * use a different logging driver than the Docker daemon by specifying a log driver with this
-       * parameter in the container definition. To use a different logging driver for a container, the
-       * log system must be configured properly on the container instance (or on a different log server
-       * for remote logging options). For more information on the options for different supported log
-       * drivers, see [Configure logging
+       * This parameter maps to `LogConfig` in the docker Create a container command and the
+       * `--log-driver` option to docker run. By default, containers use the same logging driver that
+       * the Docker daemon uses. However, the container may use a different logging driver than the
+       * Docker daemon by specifying a log driver with this parameter in the container definition. To
+       * use a different logging driver for a container, the log system must be configured properly on
+       * the container instance (or on a different log server for remote logging options). For more
+       * information on the options for different supported log drivers, see [Configure logging
        * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
        * in the Docker documentation.
        *
@@ -7183,13 +6447,8 @@ public open class CfnTaskDefinition(
        * to this soft limit. However, your container can consume more memory when it needs to, up to
        * either the hard limit specified with the `memory` parameter (if applicable), or all of the
        * available memory on the container instance, whichever comes first. This parameter maps to
-       * `MemoryReservation` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--memory-reservation` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * `MemoryReservation` in the docker container create command and the `--memory-reservation`
+       * option to docker run.
        *
        * If a task-level memory value is not specified, you must specify a non-zero integer for one
        * or both of `memory` or `memoryReservation` in a container definition. If you specify both,
@@ -7216,13 +6475,8 @@ public open class CfnTaskDefinition(
       /**
        * The mount points for data volumes in your container.
        *
-       * This parameter maps to `Volumes` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--volume`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Volumes` in the docker container create command and the `--volume`
+       * option to docker run.
        *
        * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
        * Windows containers can't mount directories on a different drive, and mount point can't be
@@ -7238,13 +6492,8 @@ public open class CfnTaskDefinition(
        * If you're linking multiple containers together in a task definition, the `name` of one
        * container can be entered in the `links` of another container to connect the containers. Up to
        * 255 letters (uppercase and lowercase), numbers, underscores, and hyphens are allowed. This
-       * parameter maps to `name` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--name`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * parameter maps to `name` in the docker container create command and the `--name` option to
+       * docker run.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-name)
        */
@@ -7291,13 +6540,8 @@ public open class CfnTaskDefinition(
        * When this parameter is true, the container is given elevated privileges on the host
        * container instance (similar to the `root` user).
        *
-       * This parameter maps to `Privileged` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--privileged` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Privileged` in the docker container create command and the
+       * `--privileged` option to docker run
        *
        *
        * This parameter is not supported for Windows containers or tasks run on AWS Fargate .
@@ -7310,13 +6554,8 @@ public open class CfnTaskDefinition(
       /**
        * When this parameter is `true` , a TTY is allocated.
        *
-       * This parameter maps to `Tty` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--tty`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Tty` in the docker container create command and the `--tty` option
+       * to docker run.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-pseudoterminal)
        */
@@ -7326,13 +6565,8 @@ public open class CfnTaskDefinition(
        * When this parameter is true, the container is given read-only access to its root file
        * system.
        *
-       * This parameter maps to `ReadonlyRootfs` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--read-only` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `ReadonlyRootfs` in the docker container create command and the
+       * `--read-only` option to docker run.
        *
        *
        * This parameter is not supported for Windows containers.
@@ -7357,6 +6591,19 @@ public open class CfnTaskDefinition(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-resourcerequirements)
        */
       override fun resourceRequirements(): Any? = unwrap(this).getResourceRequirements()
+
+      /**
+       * The restart policy for a container.
+       *
+       * When you set up a restart policy, Amazon ECS can restart the container without needing to
+       * replace the task. For more information, see [Restart individual containers in Amazon ECS tasks
+       * with container restart
+       * policies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-restartpolicy)
+       */
+      override fun restartPolicy(): Any? = unwrap(this).getRestartPolicy()
 
       /**
        * The secrets to pass to the container.
@@ -7403,7 +6650,7 @@ public open class CfnTaskDefinition(
        * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
        *
-       * The valid values are 2-120 seconds.
+       * The valid values for Fargate are 2-120 seconds.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-starttimeout)
        */
@@ -7419,8 +6666,8 @@ public open class CfnTaskDefinition(
        * * Linux platform version `1.3.0` or later.
        * * Windows platform version `1.0.0` or later.
        *
-       * The max stop timeout value is 120 seconds and if the parameter is not specified, the
-       * default value of 30 seconds is used.
+       * For tasks that use the Fargate launch type, the max stop timeout value is 120 seconds and
+       * if the parameter is not specified, the default value of 30 seconds is used.
        *
        * For tasks that use the EC2 launch type, if the `stopTimeout` parameter isn't specified, the
        * value set for the Amazon ECS container agent configuration variable
@@ -7440,7 +6687,7 @@ public open class CfnTaskDefinition(
        * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
        *
-       * The valid values are 2-120 seconds.
+       * The valid values for Fargate are 2-120 seconds.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-stoptimeout)
        */
@@ -7449,14 +6696,9 @@ public open class CfnTaskDefinition(
       /**
        * A list of namespaced kernel parameters to set in the container.
        *
-       * This parameter maps to `Sysctls` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--sysctl`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer
-       * lived connections.
+       * This parameter maps to `Sysctls` in the docker container create command and the `--sysctl`
+       * option to docker run. For example, you can configure `net.ipv4.tcp_keepalive_time` setting to
+       * maintain longer lived connections.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-systemcontrols)
        */
@@ -7489,13 +6731,8 @@ public open class CfnTaskDefinition(
       /**
        * The user to use inside the container.
        *
-       * This parameter maps to `User` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--user`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `User` in the docker container create command and the `--user`
+       * option to docker run.
        *
        *
        * When running tasks using the `host` network mode, don't run containers using the root user
@@ -7523,13 +6760,8 @@ public open class CfnTaskDefinition(
       /**
        * Data volumes to mount from another container.
        *
-       * This parameter maps to `VolumesFrom` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--volumes-from` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `VolumesFrom` in the docker container create command and the
+       * `--volumes-from` option to docker run.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-volumesfrom)
        */
@@ -7538,13 +6770,8 @@ public open class CfnTaskDefinition(
       /**
        * The working directory to run commands inside the container in.
        *
-       * This parameter maps to `WorkingDir` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--workdir` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `WorkingDir` in the docker container create command and the
+       * `--workdir` option to docker run.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html#cfn-ecs-taskdefinition-containerdefinition-workingdirectory)
        */
@@ -7701,7 +6928,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty,
-    ) : CdkObject(cdkObject), ContainerDependencyProperty {
+    ) : CdkObject(cdkObject),
+        ContainerDependencyProperty {
       /**
        * The dependency condition of the container. The following are the available conditions and
        * their behavior:.
@@ -7861,7 +7089,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty,
-    ) : CdkObject(cdkObject), DeviceProperty {
+    ) : CdkObject(cdkObject),
+        DeviceProperty {
       /**
        * The path inside the container at which to expose the host device.
        *
@@ -7950,16 +7179,8 @@ public open class CfnTaskDefinition(
      * The driver value must match the driver name provided by Docker because it is used for task
      * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
      * retrieve the driver name from your container instance. If the driver was installed using another
-     * method, use Docker plugin discovery to retrieve the driver name. For more information, see
-     * [Docker plugin
-     * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
-     * . This parameter maps to `Driver` in the [Create a
-     * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
-     * option to [docker volume
-     * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-     * .
+     * method, use Docker plugin discovery to retrieve the driver name. This parameter maps to `Driver`
+     * in the docker container create command and the `xxdriver` option to docker volume create.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver)
      */
@@ -7968,13 +7189,8 @@ public open class CfnTaskDefinition(
     /**
      * A map of Docker driver-specific options passed through.
      *
-     * This parameter maps to `DriverOpts` in the [Create a
-     * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-     * option to [docker volume
-     * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-     * .
+     * This parameter maps to `DriverOpts` in the docker create-volume command and the `xxopt`
+     * option to docker volume create.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts)
      */
@@ -7983,13 +7199,8 @@ public open class CfnTaskDefinition(
     /**
      * Custom metadata to add to your Docker volume.
      *
-     * This parameter maps to `Labels` in the [Create a
-     * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-     * option to [docker volume
-     * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-     * .
+     * This parameter maps to `Labels` in the docker container create command and the `xxlabel`
+     * option to docker volume create.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels)
      */
@@ -8032,64 +7243,37 @@ public open class CfnTaskDefinition(
        * The driver value must match the driver name provided by Docker because it is used for task
        * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
        * retrieve the driver name from your container instance. If the driver was installed using
-       * another method, use Docker plugin discovery to retrieve the driver name. For more information,
-       * see [Docker plugin
-       * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
-       * . This parameter maps to `Driver` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * another method, use Docker plugin discovery to retrieve the driver name. This parameter maps
+       * to `Driver` in the docker container create command and the `xxdriver` option to docker volume
+       * create.
        */
       public fun driver(driver: String)
 
       /**
        * @param driverOpts A map of Docker driver-specific options passed through.
-       * This parameter maps to `DriverOpts` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * This parameter maps to `DriverOpts` in the docker create-volume command and the `xxopt`
+       * option to docker volume create.
        */
       public fun driverOpts(driverOpts: IResolvable)
 
       /**
        * @param driverOpts A map of Docker driver-specific options passed through.
-       * This parameter maps to `DriverOpts` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * This parameter maps to `DriverOpts` in the docker create-volume command and the `xxopt`
+       * option to docker volume create.
        */
       public fun driverOpts(driverOpts: Map<String, String>)
 
       /**
        * @param labels Custom metadata to add to your Docker volume.
-       * This parameter maps to `Labels` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * This parameter maps to `Labels` in the docker container create command and the `xxlabel`
+       * option to docker volume create.
        */
       public fun labels(labels: IResolvable)
 
       /**
        * @param labels Custom metadata to add to your Docker volume.
-       * This parameter maps to `Labels` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * This parameter maps to `Labels` in the docker container create command and the `xxlabel`
+       * option to docker volume create.
        */
       public fun labels(labels: Map<String, String>)
 
@@ -8133,16 +7317,9 @@ public open class CfnTaskDefinition(
        * The driver value must match the driver name provided by Docker because it is used for task
        * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
        * retrieve the driver name from your container instance. If the driver was installed using
-       * another method, use Docker plugin discovery to retrieve the driver name. For more information,
-       * see [Docker plugin
-       * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
-       * . This parameter maps to `Driver` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * another method, use Docker plugin discovery to retrieve the driver name. This parameter maps
+       * to `Driver` in the docker container create command and the `xxdriver` option to docker volume
+       * create.
        */
       override fun driver(driver: String) {
         cdkBuilder.driver(driver)
@@ -8150,13 +7327,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param driverOpts A map of Docker driver-specific options passed through.
-       * This parameter maps to `DriverOpts` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * This parameter maps to `DriverOpts` in the docker create-volume command and the `xxopt`
+       * option to docker volume create.
        */
       override fun driverOpts(driverOpts: IResolvable) {
         cdkBuilder.driverOpts(driverOpts.let(IResolvable.Companion::unwrap))
@@ -8164,13 +7336,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param driverOpts A map of Docker driver-specific options passed through.
-       * This parameter maps to `DriverOpts` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * This parameter maps to `DriverOpts` in the docker create-volume command and the `xxopt`
+       * option to docker volume create.
        */
       override fun driverOpts(driverOpts: Map<String, String>) {
         cdkBuilder.driverOpts(driverOpts)
@@ -8178,13 +7345,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param labels Custom metadata to add to your Docker volume.
-       * This parameter maps to `Labels` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * This parameter maps to `Labels` in the docker container create command and the `xxlabel`
+       * option to docker volume create.
        */
       override fun labels(labels: IResolvable) {
         cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
@@ -8192,13 +7354,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param labels Custom metadata to add to your Docker volume.
-       * This parameter maps to `Labels` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * This parameter maps to `Labels` in the docker container create command and the `xxlabel`
+       * option to docker volume create.
        */
       override fun labels(labels: Map<String, String>) {
         cdkBuilder.labels(labels)
@@ -8221,7 +7378,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty,
-    ) : CdkObject(cdkObject), DockerVolumeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DockerVolumeConfigurationProperty {
       /**
        * If this value is `true` , the Docker volume is created if it doesn't already exist.
        *
@@ -8239,16 +7397,9 @@ public open class CfnTaskDefinition(
        * The driver value must match the driver name provided by Docker because it is used for task
        * placement. If the driver was installed using the Docker plugin CLI, use `docker plugin ls` to
        * retrieve the driver name from your container instance. If the driver was installed using
-       * another method, use Docker plugin discovery to retrieve the driver name. For more information,
-       * see [Docker plugin
-       * discovery](https://docs.aws.amazon.com/https://docs.docker.com/engine/extend/plugin_api/#plugin-discovery)
-       * . This parameter maps to `Driver` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxdriver`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * another method, use Docker plugin discovery to retrieve the driver name. This parameter maps
+       * to `Driver` in the docker container create command and the `xxdriver` option to docker volume
+       * create.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driver)
        */
@@ -8257,13 +7408,8 @@ public open class CfnTaskDefinition(
       /**
        * A map of Docker driver-specific options passed through.
        *
-       * This parameter maps to `DriverOpts` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxopt`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * This parameter maps to `DriverOpts` in the docker create-volume command and the `xxopt`
+       * option to docker volume create.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-driveropts)
        */
@@ -8272,13 +7418,8 @@ public open class CfnTaskDefinition(
       /**
        * Custom metadata to add to your Docker volume.
        *
-       * This parameter maps to `Labels` in the [Create a
-       * volume](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/VolumeCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `xxlabel`
-       * option to [docker volume
-       * create](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/volume_create/)
-       * .
+       * This parameter maps to `Labels` in the docker container create command and the `xxlabel`
+       * option to docker volume create.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels)
        */
@@ -8556,7 +7697,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty,
-    ) : CdkObject(cdkObject), EFSVolumeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EFSVolumeConfigurationProperty {
       /**
        * The authorization configuration details for the Amazon EFS file system.
        *
@@ -8741,7 +7883,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty,
-    ) : CdkObject(cdkObject), EnvironmentFileProperty {
+    ) : CdkObject(cdkObject),
+        EnvironmentFileProperty {
       /**
        * The file type to use.
        *
@@ -8848,7 +7991,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty,
-    ) : CdkObject(cdkObject), EphemeralStorageProperty {
+    ) : CdkObject(cdkObject),
+        EphemeralStorageProperty {
       /**
        * The total amount, in GiB, of ephemeral storage to set for the task.
        *
@@ -8878,6 +8022,16 @@ public open class CfnTaskDefinition(
   }
 
   /**
+   * The authorization configuration details for Amazon FSx for Windows File Server file system.
+   *
+   * See
+   * [FSxWindowsFileServerVolumeConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_FSxWindowsFileServerVolumeConfiguration.html)
+   * in the *Amazon ECS API Reference* .
+   *
+   * For more information and the input format, see [Amazon FSx for Windows File Server
+   * Volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/wfsx-volumes.html) in the
+   * *Amazon Elastic Container Service Developer Guide* .
+   *
    * Example:
    *
    * ```
@@ -8895,11 +8049,21 @@ public open class CfnTaskDefinition(
    */
   public interface FSxAuthorizationConfigProperty {
     /**
+     * The authorization credential option to use.
+     *
+     * The authorization credential options can be provided using either the Amazon Resource Name
+     * (ARN) of an AWS Secrets Manager secret or SSM Parameter Store parameter. The ARN refers to the
+     * stored credentials.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxauthorizationconfig.html#cfn-ecs-taskdefinition-fsxauthorizationconfig-credentialsparameter)
      */
     public fun credentialsParameter(): String
 
     /**
+     * A fully qualified domain name hosted by an [AWS Directory
+     * Service](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html)
+     * Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxauthorizationconfig.html#cfn-ecs-taskdefinition-fsxauthorizationconfig-domain)
      */
     public fun domain(): String
@@ -8910,12 +8074,17 @@ public open class CfnTaskDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param credentialsParameter the value to be set. 
+       * @param credentialsParameter The authorization credential option to use. 
+       * The authorization credential options can be provided using either the Amazon Resource Name
+       * (ARN) of an AWS Secrets Manager secret or SSM Parameter Store parameter. The ARN refers to the
+       * stored credentials.
        */
       public fun credentialsParameter(credentialsParameter: String)
 
       /**
-       * @param domain the value to be set. 
+       * @param domain A fully qualified domain name hosted by an [AWS Directory
+       * Service](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html)
+       * Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2. 
        */
       public fun domain(domain: String)
     }
@@ -8927,14 +8096,19 @@ public open class CfnTaskDefinition(
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxAuthorizationConfigProperty.builder()
 
       /**
-       * @param credentialsParameter the value to be set. 
+       * @param credentialsParameter The authorization credential option to use. 
+       * The authorization credential options can be provided using either the Amazon Resource Name
+       * (ARN) of an AWS Secrets Manager secret or SSM Parameter Store parameter. The ARN refers to the
+       * stored credentials.
        */
       override fun credentialsParameter(credentialsParameter: String) {
         cdkBuilder.credentialsParameter(credentialsParameter)
       }
 
       /**
-       * @param domain the value to be set. 
+       * @param domain A fully qualified domain name hosted by an [AWS Directory
+       * Service](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html)
+       * Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2. 
        */
       override fun domain(domain: String) {
         cdkBuilder.domain(domain)
@@ -8947,13 +8121,24 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxAuthorizationConfigProperty,
-    ) : CdkObject(cdkObject), FSxAuthorizationConfigProperty {
+    ) : CdkObject(cdkObject),
+        FSxAuthorizationConfigProperty {
       /**
+       * The authorization credential option to use.
+       *
+       * The authorization credential options can be provided using either the Amazon Resource Name
+       * (ARN) of an AWS Secrets Manager secret or SSM Parameter Store parameter. The ARN refers to the
+       * stored credentials.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxauthorizationconfig.html#cfn-ecs-taskdefinition-fsxauthorizationconfig-credentialsparameter)
        */
       override fun credentialsParameter(): String = unwrap(this).getCredentialsParameter()
 
       /**
+       * A fully qualified domain name hosted by an [AWS Directory
+       * Service](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html)
+       * Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxauthorizationconfig.html#cfn-ecs-taskdefinition-fsxauthorizationconfig-domain)
        */
       override fun domain(): String = unwrap(this).getDomain()
@@ -9122,7 +8307,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxWindowsFileServerVolumeConfigurationProperty,
-    ) : CdkObject(cdkObject), FSxWindowsFileServerVolumeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FSxWindowsFileServerVolumeConfigurationProperty {
       /**
        * The authorization configuration details for the Amazon FSx for Windows File Server file
        * system.
@@ -9305,7 +8491,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty,
-    ) : CdkObject(cdkObject), FirelensConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FirelensConfigurationProperty {
       /**
        * The options to use when configuring the log router.
        *
@@ -9355,8 +8542,7 @@ public open class CfnTaskDefinition(
    *
    * Health check parameters that are specified in a container definition override any Docker health
    * checks that exist in the container image (such as those specified in a parent image or from the
-   * image's Dockerfile). This configuration maps to the `HEALTHCHECK` parameter of [docker
-   * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
+   * image's Dockerfile). This configuration maps to the `HEALTHCHECK` parameter of docker run.
    *
    *
    * The Amazon ECS container agent only monitors and reports on the health checks specified in the
@@ -9415,10 +8601,7 @@ public open class CfnTaskDefinition(
      * `CMD-SHELL, curl -f http://localhost/ || exit 1`
      *
      * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-     * information, see `HealthCheck` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+     * information, see `HealthCheck` in the docker container create command
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-command)
      */
@@ -9489,10 +8672,7 @@ public open class CfnTaskDefinition(
        * `CMD-SHELL, curl -f http://localhost/ || exit 1`
        *
        * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-       * information, see `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * information, see `HealthCheck` in the docker container create command
        */
       public fun command(command: List<String>)
 
@@ -9512,10 +8692,7 @@ public open class CfnTaskDefinition(
        * `CMD-SHELL, curl -f http://localhost/ || exit 1`
        *
        * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-       * information, see `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * information, see `HealthCheck` in the docker container create command
        */
       public fun command(vararg command: String)
 
@@ -9572,10 +8749,7 @@ public open class CfnTaskDefinition(
        * `CMD-SHELL, curl -f http://localhost/ || exit 1`
        *
        * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-       * information, see `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * information, see `HealthCheck` in the docker container create command
        */
       override fun command(command: List<String>) {
         cdkBuilder.command(command)
@@ -9597,10 +8771,7 @@ public open class CfnTaskDefinition(
        * `CMD-SHELL, curl -f http://localhost/ || exit 1`
        *
        * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-       * information, see `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * information, see `HealthCheck` in the docker container create command
        */
       override fun command(vararg command: String): Unit = command(command.toList())
 
@@ -9649,7 +8820,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty,
-    ) : CdkObject(cdkObject), HealthCheckProperty {
+    ) : CdkObject(cdkObject),
+        HealthCheckProperty {
       /**
        * A string array representing the command that the container runs to determine if it is
        * healthy.
@@ -9667,10 +8839,7 @@ public open class CfnTaskDefinition(
        * `CMD-SHELL, curl -f http://localhost/ || exit 1`
        *
        * An exit code of 0 indicates success, and non-zero exit code indicates failure. For more
-       * information, see `HealthCheck` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) .
+       * information, see `HealthCheck` in the docker container create command
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-command)
        */
@@ -9814,7 +8983,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty,
-    ) : CdkObject(cdkObject), HostEntryProperty {
+    ) : CdkObject(cdkObject),
+        HostEntryProperty {
       /**
        * The hostname to use in the `/etc/hosts` entry.
        *
@@ -9930,7 +9100,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty,
-    ) : CdkObject(cdkObject), HostVolumePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        HostVolumePropertiesProperty {
       /**
        * When the `host` parameter is used, specify a `sourcePath` to declare the path on the host
        * container instance that's presented to the container.
@@ -10056,7 +9227,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty,
-    ) : CdkObject(cdkObject), InferenceAcceleratorProperty {
+    ) : CdkObject(cdkObject),
+        InferenceAcceleratorProperty {
       /**
        * The Elastic Inference accelerator device name.
        *
@@ -10098,11 +9270,7 @@ public open class CfnTaskDefinition(
    * The Linux capabilities to add or remove from the default Docker configuration for a container
    * defined in the task definition.
    *
-   * For more information about the default capabilities and the non-default available capabilities,
-   * see [Runtime privilege and Linux
-   * capabilities](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)
-   * in the *Docker run reference* . For more detailed information about these Linux capabilities, see
-   * the
+   * For more detailed information about these Linux capabilities, see the
    * [capabilities(7)](https://docs.aws.amazon.com/http://man7.org/linux/man-pages/man7/capabilities.7.html)
    * Linux manual page.
    *
@@ -10125,13 +9293,8 @@ public open class CfnTaskDefinition(
      * The Linux capabilities for the container that have been added to the default configuration
      * provided by Docker.
      *
-     * This parameter maps to `CapAdd` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--cap-add`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `CapAdd` in the docker container create command and the `--cap-add`
+     * option to docker run.
      *
      *
      * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
@@ -10152,13 +9315,8 @@ public open class CfnTaskDefinition(
      * The Linux capabilities for the container that have been removed from the default
      * configuration provided by Docker.
      *
-     * This parameter maps to `CapDrop` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--cap-drop`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `CapDrop` in the docker container create command and the `--cap-drop`
+     * option to docker run.
      *
      * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
      * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
@@ -10179,13 +9337,8 @@ public open class CfnTaskDefinition(
       /**
        * @param add The Linux capabilities for the container that have been added to the default
        * configuration provided by Docker.
-       * This parameter maps to `CapAdd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-add` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CapAdd` in the docker container create command and the `--cap-add`
+       * option to docker run.
        *
        *
        * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
@@ -10204,13 +9357,8 @@ public open class CfnTaskDefinition(
       /**
        * @param add The Linux capabilities for the container that have been added to the default
        * configuration provided by Docker.
-       * This parameter maps to `CapAdd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-add` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CapAdd` in the docker container create command and the `--cap-add`
+       * option to docker run.
        *
        *
        * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
@@ -10229,13 +9377,8 @@ public open class CfnTaskDefinition(
       /**
        * @param drop The Linux capabilities for the container that have been removed from the
        * default configuration provided by Docker.
-       * This parameter maps to `CapDrop` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-drop` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CapDrop` in the docker container create command and the
+       * `--cap-drop` option to docker run.
        *
        * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
        * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
@@ -10250,13 +9393,8 @@ public open class CfnTaskDefinition(
       /**
        * @param drop The Linux capabilities for the container that have been removed from the
        * default configuration provided by Docker.
-       * This parameter maps to `CapDrop` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-drop` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CapDrop` in the docker container create command and the
+       * `--cap-drop` option to docker run.
        *
        * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
        * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
@@ -10277,13 +9415,8 @@ public open class CfnTaskDefinition(
       /**
        * @param add The Linux capabilities for the container that have been added to the default
        * configuration provided by Docker.
-       * This parameter maps to `CapAdd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-add` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CapAdd` in the docker container create command and the `--cap-add`
+       * option to docker run.
        *
        *
        * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
@@ -10304,13 +9437,8 @@ public open class CfnTaskDefinition(
       /**
        * @param add The Linux capabilities for the container that have been added to the default
        * configuration provided by Docker.
-       * This parameter maps to `CapAdd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-add` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CapAdd` in the docker container create command and the `--cap-add`
+       * option to docker run.
        *
        *
        * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
@@ -10329,13 +9457,8 @@ public open class CfnTaskDefinition(
       /**
        * @param drop The Linux capabilities for the container that have been removed from the
        * default configuration provided by Docker.
-       * This parameter maps to `CapDrop` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-drop` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CapDrop` in the docker container create command and the
+       * `--cap-drop` option to docker run.
        *
        * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
        * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
@@ -10352,13 +9475,8 @@ public open class CfnTaskDefinition(
       /**
        * @param drop The Linux capabilities for the container that have been removed from the
        * default configuration provided by Docker.
-       * This parameter maps to `CapDrop` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-drop` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CapDrop` in the docker container create command and the
+       * `--cap-drop` option to docker run.
        *
        * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
        * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
@@ -10377,18 +9495,14 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty,
-    ) : CdkObject(cdkObject), KernelCapabilitiesProperty {
+    ) : CdkObject(cdkObject),
+        KernelCapabilitiesProperty {
       /**
        * The Linux capabilities for the container that have been added to the default configuration
        * provided by Docker.
        *
-       * This parameter maps to `CapAdd` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-add` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CapAdd` in the docker container create command and the `--cap-add`
+       * option to docker run.
        *
        *
        * Tasks launched on AWS Fargate only support adding the `SYS_PTRACE` kernel capability.
@@ -10410,13 +9524,8 @@ public open class CfnTaskDefinition(
        * The Linux capabilities for the container that have been removed from the default
        * configuration provided by Docker.
        *
-       * This parameter maps to `CapDrop` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--cap-drop` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `CapDrop` in the docker container create command and the
+       * `--cap-drop` option to docker run.
        *
        * Valid values: `"ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" |
        * "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" |
@@ -10530,7 +9639,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty,
-    ) : CdkObject(cdkObject), KeyValuePairProperty {
+    ) : CdkObject(cdkObject),
+        KeyValuePairProperty {
       /**
        * The name of the key-value pair.
        *
@@ -10621,13 +9731,8 @@ public open class CfnTaskDefinition(
     /**
      * Any host devices to expose to the container.
      *
-     * This parameter maps to `Devices` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-     * option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to `Devices` in the docker container create command and the `--device`
+     * option to docker run.
      *
      *
      * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
@@ -10641,12 +9746,10 @@ public open class CfnTaskDefinition(
     /**
      * Run an `init` process inside the container that forwards signals and reaps processes.
      *
-     * This parameter maps to the `--init` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-     * instance. To check the Docker Remote API version on your container instance, log in to your
-     * container instance and run the following command: `sudo docker version --format
-     * '{{.Server.APIVersion}}'`
+     * This parameter maps to the `--init` option to docker run. This parameter requires version
+     * 1.25 of the Docker Remote API or greater on your container instance. To check the Docker Remote
+     * API version on your container instance, log in to your container instance and run the following
+     * command: `sudo docker version --format '{{.Server.APIVersion}}'`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled)
      */
@@ -10655,9 +9758,8 @@ public open class CfnTaskDefinition(
     /**
      * The total amount of swap memory (in MiB) a container can use.
      *
-     * This parameter will be translated to the `--memory-swap` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * where the value would be the sum of the container memory plus the `maxSwap` value.
+     * This parameter will be translated to the `--memory-swap` option to docker run where the value
+     * would be the sum of the container memory plus the `maxSwap` value.
      *
      * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
      * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
@@ -10678,9 +9780,7 @@ public open class CfnTaskDefinition(
     /**
      * The value for the size (in MiB) of the `/dev/shm` volume.
      *
-     * This parameter maps to the `--shm-size` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to the `--shm-size` option to docker run.
      *
      *
      * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter is
@@ -10698,9 +9798,7 @@ public open class CfnTaskDefinition(
      * `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted values
      * are whole numbers between `0` and `100` . If the `swappiness` parameter is not specified, a
      * default value of `60` is used. If a value is not specified for `maxSwap` then this parameter is
-     * ignored. This parameter maps to the `--memory-swappiness` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * ignored. This parameter maps to the `--memory-swappiness` option to docker run.
      *
      *
      * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
@@ -10716,9 +9814,7 @@ public open class CfnTaskDefinition(
     /**
      * The container path, mount options, and size (in MiB) of the tmpfs mount.
      *
-     * This parameter maps to the `--tmpfs` option to [docker
-     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-     * .
+     * This parameter maps to the `--tmpfs` option to docker run.
      *
      *
      * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
@@ -10765,13 +9861,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Devices` in the docker container create command and the `--device`
+       * option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
@@ -10781,13 +9872,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Devices` in the docker container create command and the `--device`
+       * option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
@@ -10797,13 +9883,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Devices` in the docker container create command and the `--device`
+       * option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
@@ -10814,32 +9895,27 @@ public open class CfnTaskDefinition(
       /**
        * @param initProcessEnabled Run an `init` process inside the container that forwards signals
        * and reaps processes.
-       * This parameter maps to the `--init` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
+       * This parameter maps to the `--init` option to docker run. This parameter requires version
+       * 1.25 of the Docker Remote API or greater on your container instance. To check the Docker
+       * Remote API version on your container instance, log in to your container instance and run the
+       * following command: `sudo docker version --format '{{.Server.APIVersion}}'`
        */
       public fun initProcessEnabled(initProcessEnabled: Boolean)
 
       /**
        * @param initProcessEnabled Run an `init` process inside the container that forwards signals
        * and reaps processes.
-       * This parameter maps to the `--init` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
+       * This parameter maps to the `--init` option to docker run. This parameter requires version
+       * 1.25 of the Docker Remote API or greater on your container instance. To check the Docker
+       * Remote API version on your container instance, log in to your container instance and run the
+       * following command: `sudo docker version --format '{{.Server.APIVersion}}'`
        */
       public fun initProcessEnabled(initProcessEnabled: IResolvable)
 
       /**
        * @param maxSwap The total amount of swap memory (in MiB) a container can use.
-       * This parameter will be translated to the `--memory-swap` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * where the value would be the sum of the container memory plus the `maxSwap` value.
+       * This parameter will be translated to the `--memory-swap` option to docker run where the
+       * value would be the sum of the container memory plus the `maxSwap` value.
        *
        * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
        * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
@@ -10856,9 +9932,7 @@ public open class CfnTaskDefinition(
 
       /**
        * @param sharedMemorySize The value for the size (in MiB) of the `/dev/shm` volume.
-       * This parameter maps to the `--shm-size` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--shm-size` option to docker run.
        *
        *
        * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter
@@ -10872,9 +9946,8 @@ public open class CfnTaskDefinition(
        * A `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted
        * values are whole numbers between `0` and `100` . If the `swappiness` parameter is not
        * specified, a default value of `60` is used. If a value is not specified for `maxSwap` then
-       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to docker
+       * run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
@@ -10886,9 +9959,7 @@ public open class CfnTaskDefinition(
 
       /**
        * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--tmpfs` option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
@@ -10898,9 +9969,7 @@ public open class CfnTaskDefinition(
 
       /**
        * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--tmpfs` option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
@@ -10910,9 +9979,7 @@ public open class CfnTaskDefinition(
 
       /**
        * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--tmpfs` option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
@@ -10962,13 +10029,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Devices` in the docker container create command and the `--device`
+       * option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
@@ -10980,13 +10042,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Devices` in the docker container create command and the `--device`
+       * option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
@@ -10998,13 +10055,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param devices Any host devices to expose to the container.
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Devices` in the docker container create command and the `--device`
+       * option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
@@ -11015,12 +10067,10 @@ public open class CfnTaskDefinition(
       /**
        * @param initProcessEnabled Run an `init` process inside the container that forwards signals
        * and reaps processes.
-       * This parameter maps to the `--init` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
+       * This parameter maps to the `--init` option to docker run. This parameter requires version
+       * 1.25 of the Docker Remote API or greater on your container instance. To check the Docker
+       * Remote API version on your container instance, log in to your container instance and run the
+       * following command: `sudo docker version --format '{{.Server.APIVersion}}'`
        */
       override fun initProcessEnabled(initProcessEnabled: Boolean) {
         cdkBuilder.initProcessEnabled(initProcessEnabled)
@@ -11029,12 +10079,10 @@ public open class CfnTaskDefinition(
       /**
        * @param initProcessEnabled Run an `init` process inside the container that forwards signals
        * and reaps processes.
-       * This parameter maps to the `--init` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
+       * This parameter maps to the `--init` option to docker run. This parameter requires version
+       * 1.25 of the Docker Remote API or greater on your container instance. To check the Docker
+       * Remote API version on your container instance, log in to your container instance and run the
+       * following command: `sudo docker version --format '{{.Server.APIVersion}}'`
        */
       override fun initProcessEnabled(initProcessEnabled: IResolvable) {
         cdkBuilder.initProcessEnabled(initProcessEnabled.let(IResolvable.Companion::unwrap))
@@ -11042,9 +10090,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param maxSwap The total amount of swap memory (in MiB) a container can use.
-       * This parameter will be translated to the `--memory-swap` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * where the value would be the sum of the container memory plus the `maxSwap` value.
+       * This parameter will be translated to the `--memory-swap` option to docker run where the
+       * value would be the sum of the container memory plus the `maxSwap` value.
        *
        * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
        * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
@@ -11063,9 +10110,7 @@ public open class CfnTaskDefinition(
 
       /**
        * @param sharedMemorySize The value for the size (in MiB) of the `/dev/shm` volume.
-       * This parameter maps to the `--shm-size` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--shm-size` option to docker run.
        *
        *
        * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter
@@ -11081,9 +10126,8 @@ public open class CfnTaskDefinition(
        * A `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted
        * values are whole numbers between `0` and `100` . If the `swappiness` parameter is not
        * specified, a default value of `60` is used. If a value is not specified for `maxSwap` then
-       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to docker
+       * run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
@@ -11097,9 +10141,7 @@ public open class CfnTaskDefinition(
 
       /**
        * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--tmpfs` option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
@@ -11111,9 +10153,7 @@ public open class CfnTaskDefinition(
 
       /**
        * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--tmpfs` option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
@@ -11125,9 +10165,7 @@ public open class CfnTaskDefinition(
 
       /**
        * @param tmpfs The container path, mount options, and size (in MiB) of the tmpfs mount.
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--tmpfs` option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
@@ -11142,7 +10180,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty,
-    ) : CdkObject(cdkObject), LinuxParametersProperty {
+    ) : CdkObject(cdkObject),
+        LinuxParametersProperty {
       /**
        * The Linux capabilities for the container that are added to or dropped from the default
        * configuration provided by Docker.
@@ -11159,13 +10198,8 @@ public open class CfnTaskDefinition(
       /**
        * Any host devices to expose to the container.
        *
-       * This parameter maps to `Devices` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--device`
-       * option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to `Devices` in the docker container create command and the `--device`
+       * option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `devices` parameter isn't
@@ -11179,12 +10213,10 @@ public open class CfnTaskDefinition(
       /**
        * Run an `init` process inside the container that forwards signals and reaps processes.
        *
-       * This parameter maps to the `--init` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * . This parameter requires version 1.25 of the Docker Remote API or greater on your container
-       * instance. To check the Docker Remote API version on your container instance, log in to your
-       * container instance and run the following command: `sudo docker version --format
-       * '{{.Server.APIVersion}}'`
+       * This parameter maps to the `--init` option to docker run. This parameter requires version
+       * 1.25 of the Docker Remote API or greater on your container instance. To check the Docker
+       * Remote API version on your container instance, log in to your container instance and run the
+       * following command: `sudo docker version --format '{{.Server.APIVersion}}'`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled)
        */
@@ -11193,9 +10225,8 @@ public open class CfnTaskDefinition(
       /**
        * The total amount of swap memory (in MiB) a container can use.
        *
-       * This parameter will be translated to the `--memory-swap` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * where the value would be the sum of the container memory plus the `maxSwap` value.
+       * This parameter will be translated to the `--memory-swap` option to docker run where the
+       * value would be the sum of the container memory plus the `maxSwap` value.
        *
        * If a `maxSwap` value of `0` is specified, the container will not use swap. Accepted values
        * are `0` or any positive integer. If the `maxSwap` parameter is omitted, the container will use
@@ -11216,9 +10247,7 @@ public open class CfnTaskDefinition(
       /**
        * The value for the size (in MiB) of the `/dev/shm` volume.
        *
-       * This parameter maps to the `--shm-size` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--shm-size` option to docker run.
        *
        *
        * If you are using tasks that use the Fargate launch type, the `sharedMemorySize` parameter
@@ -11236,9 +10265,8 @@ public open class CfnTaskDefinition(
        * A `swappiness` value of `100` will cause pages to be swapped very aggressively. Accepted
        * values are whole numbers between `0` and `100` . If the `swappiness` parameter is not
        * specified, a default value of `60` is used. If a value is not specified for `maxSwap` then
-       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * this parameter is ignored. This parameter maps to the `--memory-swappiness` option to docker
+       * run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `swappiness` parameter isn't
@@ -11254,9 +10282,7 @@ public open class CfnTaskDefinition(
       /**
        * The container path, mount options, and size (in MiB) of the tmpfs mount.
        *
-       * This parameter maps to the `--tmpfs` option to [docker
-       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-       * .
+       * This parameter maps to the `--tmpfs` option to docker run.
        *
        *
        * If you're using tasks that use the Fargate launch type, the `tmpfs` parameter isn't
@@ -11318,15 +10344,15 @@ public open class CfnTaskDefinition(
      * `awsfirelens` .
      *
      * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd`
-     * , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens` .
+     * , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
      *
-     * For more information about using the `awslogs` log driver, see [Using the awslogs log
-     * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-     * *Amazon Elastic Container Service Developer Guide* .
+     * For more information about using the `awslogs` log driver, see [Send Amazon ECS logs to
+     * CloudWatch](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in
+     * the *Amazon Elastic Container Service Developer Guide* .
      *
-     * For more information about using the `awsfirelens` log driver, see [Custom log
-     * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in the
-     * *Amazon Elastic Container Service Developer Guide* .
+     * For more information about using the `awsfirelens` log driver, see [Send Amazon ECS logs to
+     * an AWS service or AWS
+     * Partner](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) .
      *
      *
      * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
@@ -11375,16 +10401,15 @@ public open class CfnTaskDefinition(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
-       * For more information about using the `awslogs` log driver, see [Using the awslogs log
-       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-       * *Amazon Elastic Container Service Developer Guide* .
-       *
-       * For more information about using the `awsfirelens` log driver, see [Custom log
-       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
+       * For more information about using the `awslogs` log driver, see [Send Amazon ECS logs to
+       * CloudWatch](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * For more information about using the `awsfirelens` log driver, see [Send Amazon ECS logs to
+       * an AWS service or AWS
+       * Partner](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) .
        *
        *
        * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
@@ -11450,16 +10475,15 @@ public open class CfnTaskDefinition(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
-       * For more information about using the `awslogs` log driver, see [Using the awslogs log
-       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-       * *Amazon Elastic Container Service Developer Guide* .
-       *
-       * For more information about using the `awsfirelens` log driver, see [Custom log
-       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
+       * For more information about using the `awslogs` log driver, see [Send Amazon ECS logs to
+       * CloudWatch](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * For more information about using the `awsfirelens` log driver, see [Send Amazon ECS logs to
+       * an AWS service or AWS
+       * Partner](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) .
        *
        *
        * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
@@ -11531,7 +10555,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.LogConfigurationProperty,
-    ) : CdkObject(cdkObject), LogConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LogConfigurationProperty {
       /**
        * The log driver to use for the container.
        *
@@ -11539,16 +10564,15 @@ public open class CfnTaskDefinition(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
-       * For more information about using the `awslogs` log driver, see [Using the awslogs log
-       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-       * *Amazon Elastic Container Service Developer Guide* .
-       *
-       * For more information about using the `awsfirelens` log driver, see [Custom log
-       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
+       * For more information about using the `awslogs` log driver, see [Send Amazon ECS logs to
+       * CloudWatch](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * For more information about using the `awsfirelens` log driver, see [Send Amazon ECS logs to
+       * an AWS service or AWS
+       * Partner](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) .
        *
        *
        * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
@@ -11725,7 +10749,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty,
-    ) : CdkObject(cdkObject), MountPointProperty {
+    ) : CdkObject(cdkObject),
+        MountPointProperty {
       /**
        * The path on the container to mount the host volume at.
        *
@@ -12253,7 +11278,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.PortMappingProperty,
-    ) : CdkObject(cdkObject), PortMappingProperty {
+    ) : CdkObject(cdkObject),
+        PortMappingProperty {
       /**
        * The application protocol that's used for the port mapping.
        *
@@ -12678,7 +11704,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty,
-    ) : CdkObject(cdkObject), ProxyConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ProxyConfigurationProperty {
       /**
        * The name of the container that will serve as the App Mesh proxy.
        *
@@ -12814,7 +11841,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty,
-    ) : CdkObject(cdkObject), RepositoryCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        RepositoryCredentialsProperty {
       /**
        * The Amazon Resource Name (ARN) of the secret containing the private repository credentials.
        *
@@ -12876,8 +11904,6 @@ public open class CfnTaskDefinition(
     /**
      * The type of resource to assign to a container.
      *
-     * The supported values are `GPU` or `InferenceAccelerator` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-resourcerequirement.html#cfn-ecs-taskdefinition-resourcerequirement-type)
      */
     public fun type(): String
@@ -12885,12 +11911,12 @@ public open class CfnTaskDefinition(
     /**
      * The value for the specified resource type.
      *
-     * If the `GPU` type is used, the value is the number of physical `GPUs` the Amazon ECS
-     * container agent reserves for the container. The number of GPUs that's reserved for all
-     * containers in a task can't exceed the number of available GPUs on the container instance that
-     * the task is launched on.
+     * When the type is `GPU` , the value is the number of physical `GPUs` the Amazon ECS container
+     * agent reserves for the container. The number of GPUs that's reserved for all containers in a
+     * task can't exceed the number of available GPUs on the container instance that the task is
+     * launched on.
      *
-     * If the `InferenceAccelerator` type is used, the `value` matches the `deviceName` for an
+     * When the type is `InferenceAccelerator` , the `value` matches the `deviceName` for an
      * [InferenceAccelerator](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html)
      * specified in a task definition.
      *
@@ -12905,18 +11931,17 @@ public open class CfnTaskDefinition(
     public interface Builder {
       /**
        * @param type The type of resource to assign to a container. 
-       * The supported values are `GPU` or `InferenceAccelerator` .
        */
       public fun type(type: String)
 
       /**
        * @param value The value for the specified resource type. 
-       * If the `GPU` type is used, the value is the number of physical `GPUs` the Amazon ECS
+       * When the type is `GPU` , the value is the number of physical `GPUs` the Amazon ECS
        * container agent reserves for the container. The number of GPUs that's reserved for all
        * containers in a task can't exceed the number of available GPUs on the container instance that
        * the task is launched on.
        *
-       * If the `InferenceAccelerator` type is used, the `value` matches the `deviceName` for an
+       * When the type is `InferenceAccelerator` , the `value` matches the `deviceName` for an
        * [InferenceAccelerator](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html)
        * specified in a task definition.
        */
@@ -12931,7 +11956,6 @@ public open class CfnTaskDefinition(
 
       /**
        * @param type The type of resource to assign to a container. 
-       * The supported values are `GPU` or `InferenceAccelerator` .
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -12939,12 +11963,12 @@ public open class CfnTaskDefinition(
 
       /**
        * @param value The value for the specified resource type. 
-       * If the `GPU` type is used, the value is the number of physical `GPUs` the Amazon ECS
+       * When the type is `GPU` , the value is the number of physical `GPUs` the Amazon ECS
        * container agent reserves for the container. The number of GPUs that's reserved for all
        * containers in a task can't exceed the number of available GPUs on the container instance that
        * the task is launched on.
        *
-       * If the `InferenceAccelerator` type is used, the `value` matches the `deviceName` for an
+       * When the type is `InferenceAccelerator` , the `value` matches the `deviceName` for an
        * [InferenceAccelerator](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html)
        * specified in a task definition.
        */
@@ -12959,11 +11983,10 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ResourceRequirementProperty,
-    ) : CdkObject(cdkObject), ResourceRequirementProperty {
+    ) : CdkObject(cdkObject),
+        ResourceRequirementProperty {
       /**
        * The type of resource to assign to a container.
-       *
-       * The supported values are `GPU` or `InferenceAccelerator` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-resourcerequirement.html#cfn-ecs-taskdefinition-resourcerequirement-type)
        */
@@ -12972,12 +11995,12 @@ public open class CfnTaskDefinition(
       /**
        * The value for the specified resource type.
        *
-       * If the `GPU` type is used, the value is the number of physical `GPUs` the Amazon ECS
+       * When the type is `GPU` , the value is the number of physical `GPUs` the Amazon ECS
        * container agent reserves for the container. The number of GPUs that's reserved for all
        * containers in a task can't exceed the number of available GPUs on the container instance that
        * the task is launched on.
        *
-       * If the `InferenceAccelerator` type is used, the `value` matches the `deviceName` for an
+       * When the type is `InferenceAccelerator` , the `value` matches the `deviceName` for an
        * [InferenceAccelerator](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_InferenceAccelerator.html)
        * specified in a task definition.
        *
@@ -13001,6 +12024,230 @@ public open class CfnTaskDefinition(
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.ResourceRequirementProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.ResourceRequirementProperty
+    }
+  }
+
+  /**
+   * You can enable a restart policy for each container defined in your task definition, to overcome
+   * transient failures faster and maintain task availability.
+   *
+   * When you enable a restart policy for a container, Amazon ECS can restart the container if it
+   * exits, without needing to replace the task. For more information, see [Restart individual
+   * containers in Amazon ECS tasks with container restart
+   * policies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * RestartPolicyProperty restartPolicyProperty = RestartPolicyProperty.builder()
+   * .enabled(false)
+   * .ignoredExitCodes(List.of(123))
+   * .restartAttemptPeriod(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-restartpolicy.html)
+   */
+  public interface RestartPolicyProperty {
+    /**
+     * Specifies whether a restart policy is enabled for the container.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-restartpolicy.html#cfn-ecs-taskdefinition-restartpolicy-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A list of exit codes that Amazon ECS will ignore and not attempt a restart on.
+     *
+     * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not ignore
+     * any exit codes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-restartpolicy.html#cfn-ecs-taskdefinition-restartpolicy-ignoredexitcodes)
+     */
+    public fun ignoredExitCodes(): Any? = unwrap(this).getIgnoredExitCodes()
+
+    /**
+     * A period of time (in seconds) that the container must run for before a restart can be
+     * attempted.
+     *
+     * A container can be restarted only once every `restartAttemptPeriod` seconds. If a container
+     * isn't able to run for this time period and exits early, it will not be restarted. You can set a
+     * minimum `restartAttemptPeriod` of 60 seconds and a maximum `restartAttemptPeriod` of 1800
+     * seconds. By default, a container must run for 300 seconds before it can be restarted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-restartpolicy.html#cfn-ecs-taskdefinition-restartpolicy-restartattemptperiod)
+     */
+    public fun restartAttemptPeriod(): Number? = unwrap(this).getRestartAttemptPeriod()
+
+    /**
+     * A builder for [RestartPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Specifies whether a restart policy is enabled for the container.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Specifies whether a restart policy is enabled for the container.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param ignoredExitCodes A list of exit codes that Amazon ECS will ignore and not attempt a
+       * restart on.
+       * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
+       * ignore any exit codes.
+       */
+      public fun ignoredExitCodes(ignoredExitCodes: IResolvable)
+
+      /**
+       * @param ignoredExitCodes A list of exit codes that Amazon ECS will ignore and not attempt a
+       * restart on.
+       * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
+       * ignore any exit codes.
+       */
+      public fun ignoredExitCodes(ignoredExitCodes: List<Number>)
+
+      /**
+       * @param ignoredExitCodes A list of exit codes that Amazon ECS will ignore and not attempt a
+       * restart on.
+       * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
+       * ignore any exit codes.
+       */
+      public fun ignoredExitCodes(vararg ignoredExitCodes: Number)
+
+      /**
+       * @param restartAttemptPeriod A period of time (in seconds) that the container must run for
+       * before a restart can be attempted.
+       * A container can be restarted only once every `restartAttemptPeriod` seconds. If a container
+       * isn't able to run for this time period and exits early, it will not be restarted. You can set
+       * a minimum `restartAttemptPeriod` of 60 seconds and a maximum `restartAttemptPeriod` of 1800
+       * seconds. By default, a container must run for 300 seconds before it can be restarted.
+       */
+      public fun restartAttemptPeriod(restartAttemptPeriod: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RestartPolicyProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RestartPolicyProperty.builder()
+
+      /**
+       * @param enabled Specifies whether a restart policy is enabled for the container.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Specifies whether a restart policy is enabled for the container.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ignoredExitCodes A list of exit codes that Amazon ECS will ignore and not attempt a
+       * restart on.
+       * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
+       * ignore any exit codes.
+       */
+      override fun ignoredExitCodes(ignoredExitCodes: IResolvable) {
+        cdkBuilder.ignoredExitCodes(ignoredExitCodes.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ignoredExitCodes A list of exit codes that Amazon ECS will ignore and not attempt a
+       * restart on.
+       * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
+       * ignore any exit codes.
+       */
+      override fun ignoredExitCodes(ignoredExitCodes: List<Number>) {
+        cdkBuilder.ignoredExitCodes(ignoredExitCodes)
+      }
+
+      /**
+       * @param ignoredExitCodes A list of exit codes that Amazon ECS will ignore and not attempt a
+       * restart on.
+       * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
+       * ignore any exit codes.
+       */
+      override fun ignoredExitCodes(vararg ignoredExitCodes: Number): Unit =
+          ignoredExitCodes(ignoredExitCodes.toList())
+
+      /**
+       * @param restartAttemptPeriod A period of time (in seconds) that the container must run for
+       * before a restart can be attempted.
+       * A container can be restarted only once every `restartAttemptPeriod` seconds. If a container
+       * isn't able to run for this time period and exits early, it will not be restarted. You can set
+       * a minimum `restartAttemptPeriod` of 60 seconds and a maximum `restartAttemptPeriod` of 1800
+       * seconds. By default, a container must run for 300 seconds before it can be restarted.
+       */
+      override fun restartAttemptPeriod(restartAttemptPeriod: Number) {
+        cdkBuilder.restartAttemptPeriod(restartAttemptPeriod)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RestartPolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RestartPolicyProperty,
+    ) : CdkObject(cdkObject),
+        RestartPolicyProperty {
+      /**
+       * Specifies whether a restart policy is enabled for the container.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-restartpolicy.html#cfn-ecs-taskdefinition-restartpolicy-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * A list of exit codes that Amazon ECS will ignore and not attempt a restart on.
+       *
+       * You can specify a maximum of 50 container exit codes. By default, Amazon ECS does not
+       * ignore any exit codes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-restartpolicy.html#cfn-ecs-taskdefinition-restartpolicy-ignoredexitcodes)
+       */
+      override fun ignoredExitCodes(): Any? = unwrap(this).getIgnoredExitCodes()
+
+      /**
+       * A period of time (in seconds) that the container must run for before a restart can be
+       * attempted.
+       *
+       * A container can be restarted only once every `restartAttemptPeriod` seconds. If a container
+       * isn't able to run for this time period and exits early, it will not be restarted. You can set
+       * a minimum `restartAttemptPeriod` of 60 seconds and a maximum `restartAttemptPeriod` of 1800
+       * seconds. By default, a container must run for 300 seconds before it can be restarted.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-restartpolicy.html#cfn-ecs-taskdefinition-restartpolicy-restartattemptperiod)
+       */
+      override fun restartAttemptPeriod(): Number? = unwrap(this).getRestartAttemptPeriod()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RestartPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RestartPolicyProperty):
+          RestartPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? RestartPolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RestartPolicyProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RestartPolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.RestartPolicyProperty
     }
   }
 
@@ -13092,7 +12339,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty,
-    ) : CdkObject(cdkObject), RuntimePlatformProperty {
+    ) : CdkObject(cdkObject),
+        RuntimePlatformProperty {
       /**
        * The CPU architecture.
        *
@@ -13261,7 +12509,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty,
-    ) : CdkObject(cdkObject), SecretProperty {
+    ) : CdkObject(cdkObject),
+        SecretProperty {
       /**
        * The name of the secret.
        *
@@ -13315,14 +12564,9 @@ public open class CfnTaskDefinition(
   /**
    * A list of namespaced kernel parameters to set in the container.
    *
-   * This parameter maps to `Sysctls` in the [Create a
-   * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-   * section of the [Docker Remote
-   * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--sysctl`
-   * option to [docker
-   * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
-   * . For example, you can configure `net.ipv4.tcp_keepalive_time` setting to maintain longer lived
-   * connections.
+   * This parameter maps to `Sysctls` in the docker container create command and the `--sysctl`
+   * option to docker run. For example, you can configure `net.ipv4.tcp_keepalive_time` setting to
+   * maintain longer lived connections.
    *
    * We don't recommend that you specify network-related `systemControls` parameters for multiple
    * containers in a single task that also uses either the `awsvpc` or `host` network mode. Doing this
@@ -13443,7 +12687,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty,
-    ) : CdkObject(cdkObject), SystemControlProperty {
+    ) : CdkObject(cdkObject),
+        SystemControlProperty {
       /**
        * The namespaced kernel parameter to set a `value` for.
        *
@@ -13584,7 +12829,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty,
-    ) : CdkObject(cdkObject), TaskDefinitionPlacementConstraintProperty {
+    ) : CdkObject(cdkObject),
+        TaskDefinitionPlacementConstraintProperty {
       /**
        * A cluster query language expression to apply to the constraint.
        *
@@ -13756,7 +13002,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty,
-    ) : CdkObject(cdkObject), TmpfsProperty {
+    ) : CdkObject(cdkObject),
+        TmpfsProperty {
       /**
        * The absolute file path where the tmpfs volume is to be mounted.
        *
@@ -13808,8 +13055,8 @@ public open class CfnTaskDefinition(
    * Amazon ECS tasks hosted on AWS Fargate use the default resource limit values set by the
    * operating system with the exception of the `nofile` resource limit parameter which AWS Fargate
    * overrides. The `nofile` resource limit sets a restriction on the number of open files that a
-   * container can use. The default `nofile` soft limit is `1024` and the default hard limit is `65535`
-   * .
+   * container can use. The default `nofile` soft limit is `65535` and the default hard limit is
+   * `65535` .
    *
    * You can specify the `ulimit` settings for a container in a task definition.
    *
@@ -13832,6 +13079,9 @@ public open class CfnTaskDefinition(
     /**
      * The hard limit for the `ulimit` type.
      *
+     * The value can be specified in bytes, seconds, or as a count, depending on the `type` of the
+     * `ulimit` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-hardlimit)
      */
     public fun hardLimit(): Number
@@ -13846,6 +13096,9 @@ public open class CfnTaskDefinition(
     /**
      * The soft limit for the `ulimit` type.
      *
+     * The value can be specified in bytes, seconds, or as a count, depending on the `type` of the
+     * `ulimit` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-softlimit)
      */
     public fun softLimit(): Number
@@ -13857,6 +13110,8 @@ public open class CfnTaskDefinition(
     public interface Builder {
       /**
        * @param hardLimit The hard limit for the `ulimit` type. 
+       * The value can be specified in bytes, seconds, or as a count, depending on the `type` of the
+       * `ulimit` .
        */
       public fun hardLimit(hardLimit: Number)
 
@@ -13867,6 +13122,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param softLimit The soft limit for the `ulimit` type. 
+       * The value can be specified in bytes, seconds, or as a count, depending on the `type` of the
+       * `ulimit` .
        */
       public fun softLimit(softLimit: Number)
     }
@@ -13878,6 +13135,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param hardLimit The hard limit for the `ulimit` type. 
+       * The value can be specified in bytes, seconds, or as a count, depending on the `type` of the
+       * `ulimit` .
        */
       override fun hardLimit(hardLimit: Number) {
         cdkBuilder.hardLimit(hardLimit)
@@ -13892,6 +13151,8 @@ public open class CfnTaskDefinition(
 
       /**
        * @param softLimit The soft limit for the `ulimit` type. 
+       * The value can be specified in bytes, seconds, or as a count, depending on the `type` of the
+       * `ulimit` .
        */
       override fun softLimit(softLimit: Number) {
         cdkBuilder.softLimit(softLimit)
@@ -13903,9 +13164,13 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty,
-    ) : CdkObject(cdkObject), UlimitProperty {
+    ) : CdkObject(cdkObject),
+        UlimitProperty {
       /**
        * The hard limit for the `ulimit` type.
+       *
+       * The value can be specified in bytes, seconds, or as a count, depending on the `type` of the
+       * `ulimit` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-hardlimit)
        */
@@ -13920,6 +13185,9 @@ public open class CfnTaskDefinition(
 
       /**
        * The soft limit for the `ulimit` type.
+       *
+       * The value can be specified in bytes, seconds, or as a count, depending on the `type` of the
+       * `ulimit` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ulimit.html#cfn-ecs-taskdefinition-ulimit-softlimit)
        */
@@ -14042,7 +13310,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty,
-    ) : CdkObject(cdkObject), VolumeFromProperty {
+    ) : CdkObject(cdkObject),
+        VolumeFromProperty {
       /**
        * If this value is `true` , the container has read-only access to the volume.
        *
@@ -14582,7 +13851,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeProperty,
-    ) : CdkObject(cdkObject), VolumeProperty {
+    ) : CdkObject(cdkObject),
+        VolumeProperty {
       /**
        * Indicates whether the volume should be configured at launch time.
        *

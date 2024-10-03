@@ -104,7 +104,8 @@ public interface CachingConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.CachingConfig,
-  ) : CdkObject(cdkObject), CachingConfig {
+  ) : CdkObject(cdkObject),
+      CachingConfig {
     /**
      * The caching keys for a resolver that has caching enabled.
      *

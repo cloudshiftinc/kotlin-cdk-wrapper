@@ -292,7 +292,8 @@ public interface CfnWorkflowProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.imagebuilder.CfnWorkflowProps,
-  ) : CdkObject(cdkObject), CfnWorkflowProps {
+  ) : CdkObject(cdkObject),
+      CfnWorkflowProps {
     /**
      * Describes what change has been made in this version of the workflow, or what makes this
      * version different from other versions of the workflow.

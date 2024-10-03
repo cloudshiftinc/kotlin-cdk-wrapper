@@ -61,7 +61,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWorkspace(
   cdkObject: software.amazon.awscdk.services.workspaces.CfnWorkspace,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -192,12 +194,12 @@ public open class CfnWorkspace(
   }
 
   /**
-   * The ARN of the symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
+   * The symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
    */
   public open fun volumeEncryptionKey(): String? = unwrap(this).getVolumeEncryptionKey()
 
   /**
-   * The ARN of the symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
+   * The symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
    */
   public open fun volumeEncryptionKey(`value`: String) {
     unwrap(this).setVolumeEncryptionKey(`value`)
@@ -290,8 +292,6 @@ public open class CfnWorkspace(
      *
      * This user name must exist in the AWS Directory Service directory for the WorkSpace.
      *
-     * The reserved keyword, `[UNDEFINED]` , is used when creating user-decoupled WorkSpaces.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-username)
      * @param userName The user name of the user for the WorkSpace. 
      */
@@ -316,13 +316,13 @@ public open class CfnWorkspace(
     public fun userVolumeEncryptionEnabled(userVolumeEncryptionEnabled: IResolvable)
 
     /**
-     * The ARN of the symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
+     * The symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
      *
      * Amazon WorkSpaces does not support asymmetric KMS keys.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-volumeencryptionkey)
-     * @param volumeEncryptionKey The ARN of the symmetric AWS KMS key used to encrypt data stored
-     * on your WorkSpace. 
+     * @param volumeEncryptionKey The symmetric AWS KMS key used to encrypt data stored on your
+     * WorkSpace. 
      */
     public fun volumeEncryptionKey(volumeEncryptionKey: String)
 
@@ -426,8 +426,6 @@ public open class CfnWorkspace(
      *
      * This user name must exist in the AWS Directory Service directory for the WorkSpace.
      *
-     * The reserved keyword, `[UNDEFINED]` , is used when creating user-decoupled WorkSpaces.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-username)
      * @param userName The user name of the user for the WorkSpace. 
      */
@@ -458,13 +456,13 @@ public open class CfnWorkspace(
     }
 
     /**
-     * The ARN of the symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
+     * The symmetric AWS KMS key used to encrypt data stored on your WorkSpace.
      *
      * Amazon WorkSpaces does not support asymmetric KMS keys.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html#cfn-workspaces-workspace-volumeencryptionkey)
-     * @param volumeEncryptionKey The ARN of the symmetric AWS KMS key used to encrypt data stored
-     * on your WorkSpace. 
+     * @param volumeEncryptionKey The symmetric AWS KMS key used to encrypt data stored on your
+     * WorkSpace. 
      */
     override fun volumeEncryptionKey(volumeEncryptionKey: String) {
       cdkBuilder.volumeEncryptionKey(volumeEncryptionKey)
@@ -569,14 +567,10 @@ public open class CfnWorkspace(
     public fun rootVolumeSizeGib(): Number? = unwrap(this).getRootVolumeSizeGib()
 
     /**
-     * The running mode. For more information, see [Manage the WorkSpace Running
+     * The running mode.
+     *
+     * For more information, see [Manage the WorkSpace Running
      * Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html) .
-     *
-     *
-     * The `MANUAL` value is only supported by Amazon WorkSpaces Core. Contact your account team to
-     * be allow-listed to use this value. For more information, see [Amazon WorkSpaces
-     * Core](https://docs.aws.amazon.com/workspaces/core/) .
-     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-runningmode)
      */
@@ -624,12 +618,9 @@ public open class CfnWorkspace(
       public fun rootVolumeSizeGib(rootVolumeSizeGib: Number)
 
       /**
-       * @param runningMode The running mode. For more information, see [Manage the WorkSpace
-       * Running Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html) .
-       *
-       * The `MANUAL` value is only supported by Amazon WorkSpaces Core. Contact your account team
-       * to be allow-listed to use this value. For more information, see [Amazon WorkSpaces
-       * Core](https://docs.aws.amazon.com/workspaces/core/) .
+       * @param runningMode The running mode.
+       * For more information, see [Manage the WorkSpace Running
+       * Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html) .
        */
       public fun runningMode(runningMode: String)
 
@@ -675,12 +666,9 @@ public open class CfnWorkspace(
       }
 
       /**
-       * @param runningMode The running mode. For more information, see [Manage the WorkSpace
-       * Running Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html) .
-       *
-       * The `MANUAL` value is only supported by Amazon WorkSpaces Core. Contact your account team
-       * to be allow-listed to use this value. For more information, see [Amazon WorkSpaces
-       * Core](https://docs.aws.amazon.com/workspaces/core/) .
+       * @param runningMode The running mode.
+       * For more information, see [Manage the WorkSpace Running
+       * Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html) .
        */
       override fun runningMode(runningMode: String) {
         cdkBuilder.runningMode(runningMode)
@@ -713,7 +701,8 @@ public open class CfnWorkspace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.workspaces.CfnWorkspace.WorkspacePropertiesProperty,
-    ) : CdkObject(cdkObject), WorkspacePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        WorkspacePropertiesProperty {
       /**
        * The compute type.
        *
@@ -736,14 +725,10 @@ public open class CfnWorkspace(
       override fun rootVolumeSizeGib(): Number? = unwrap(this).getRootVolumeSizeGib()
 
       /**
-       * The running mode. For more information, see [Manage the WorkSpace Running
+       * The running mode.
+       *
+       * For more information, see [Manage the WorkSpace Running
        * Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html) .
-       *
-       *
-       * The `MANUAL` value is only supported by Amazon WorkSpaces Core. Contact your account team
-       * to be allow-listed to use this value. For more information, see [Amazon WorkSpaces
-       * Core](https://docs.aws.amazon.com/workspaces/core/) .
-       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html#cfn-workspaces-workspace-workspaceproperties-runningmode)
        */

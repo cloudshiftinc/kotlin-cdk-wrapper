@@ -32,7 +32,8 @@ public interface IRuleTarget {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.IRuleTarget,
-  ) : CdkObject(cdkObject), IRuleTarget {
+  ) : CdkObject(cdkObject),
+      IRuleTarget {
     /**
      * Returns the rule target specification.
      *

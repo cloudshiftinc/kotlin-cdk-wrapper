@@ -54,7 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EmrContainersStartJobRun(
   cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun,
-) : TaskStateBase(cdkObject), IGrantable {
+) : TaskStateBase(cdkObject),
+    IGrantable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

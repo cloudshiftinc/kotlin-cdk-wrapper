@@ -49,7 +49,8 @@ public interface IParameter : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ssm.IParameter,
-  ) : CdkObject(cdkObject), IParameter {
+  ) : CdkObject(cdkObject),
+      IParameter {
     /**
      * Apply the given removal policy to this resource.
      *

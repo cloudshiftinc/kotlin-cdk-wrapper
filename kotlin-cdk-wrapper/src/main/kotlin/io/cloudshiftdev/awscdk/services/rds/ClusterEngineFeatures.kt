@@ -84,7 +84,8 @@ public interface ClusterEngineFeatures {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ClusterEngineFeatures,
-  ) : CdkObject(cdkObject), ClusterEngineFeatures {
+  ) : CdkObject(cdkObject),
+      ClusterEngineFeatures {
     /**
      * Feature name for the DB instance that the IAM role to export to S3 bucket is to be associated
      * with.

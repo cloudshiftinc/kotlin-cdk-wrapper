@@ -30,7 +30,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * findings. The criteria can help you identify and focus on findings that have specific
  * characteristics, such as severity, type, or the name of an affected AWS resource. You can also
  * configure a findings filter to suppress (automatically archive) findings that match the filter's
- * criteria. For more information, see [Filtering
+ * criteria. For more information, see [Filtering Macie
  * findings](https://docs.aws.amazon.com/macie/latest/user/findings-filter-overview.html) in the
  * *Amazon Macie User Guide* .
  *
@@ -75,7 +75,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFindingsFilter(
   cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -486,7 +488,7 @@ public open class CfnFindingsFilter(
    * A *findings filter* , also referred to as a *filter rule* , is a set of custom criteria that
    * specifies which findings to include or exclude from the results of a query for findings. You can
    * also configure a findings filter to suppress (automatically archive) findings that match the
-   * filter's criteria. For more information, see [Filtering
+   * filter's criteria. For more information, see [Filtering Macie
    * findings](https://docs.aws.amazon.com/macie/latest/user/findings-filter-overview.html) in the
    * *Amazon Macie User Guide* .
    *
@@ -683,7 +685,8 @@ public open class CfnFindingsFilter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter.CriterionAdditionalPropertiesProperty,
-    ) : CdkObject(cdkObject), CriterionAdditionalPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        CriterionAdditionalPropertiesProperty {
       /**
        * The value for the specified property matches (equals) the specified value.
        *
@@ -756,7 +759,7 @@ public open class CfnFindingsFilter(
    * A *findings filter* , also referred to as a *filter rule* , is a set of custom criteria that
    * specifies which findings to include or exclude from the results of a query for findings. You can
    * also configure a findings filter to suppress (automatically archive) findings that match the
-   * filter's criteria. For more information, see [Filtering
+   * filter's criteria. For more information, see [Filtering Macie
    * findings](https://docs.aws.amazon.com/macie/latest/user/findings-filter-overview.html) in the
    * *Amazon Macie User Guide* .
    *
@@ -836,7 +839,8 @@ public open class CfnFindingsFilter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingCriteriaProperty,
-    ) : CdkObject(cdkObject), FindingCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        FindingCriteriaProperty {
       /**
        * Specifies a condition that defines the property, operator, and one or more values to use to
        * filter the results.
@@ -934,7 +938,8 @@ public open class CfnFindingsFilter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingsFilterListItemProperty,
-    ) : CdkObject(cdkObject), FindingsFilterListItemProperty {
+    ) : CdkObject(cdkObject),
+        FindingsFilterListItemProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-findingsfilterlistitem.html#cfn-macie-findingsfilter-findingsfilterlistitem-id)
        */

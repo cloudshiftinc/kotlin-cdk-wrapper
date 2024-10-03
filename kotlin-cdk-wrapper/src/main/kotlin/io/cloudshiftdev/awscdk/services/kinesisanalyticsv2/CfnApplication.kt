@@ -56,6 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .applicationSnapshotConfiguration(ApplicationSnapshotConfigurationProperty.builder()
  * .snapshotsEnabled(false)
  * .build())
+ * .applicationSystemRollbackConfiguration(ApplicationSystemRollbackConfigurationProperty.builder()
+ * .rollbackEnabled(false)
+ * .build())
  * .environmentProperties(EnvironmentPropertiesProperty.builder()
  * .propertyGroups(List.of(PropertyGroupProperty.builder()
  * .propertyGroupId("propertyGroupId")
@@ -192,7 +195,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplication(
   cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -882,7 +887,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationCodeConfigurationProperty,
-    ) : CdkObject(cdkObject), ApplicationCodeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationCodeConfigurationProperty {
       /**
        * The location and type of the application code.
        *
@@ -943,6 +949,9 @@ public open class CfnApplication(
    * .build())
    * .applicationSnapshotConfiguration(ApplicationSnapshotConfigurationProperty.builder()
    * .snapshotsEnabled(false)
+   * .build())
+   * .applicationSystemRollbackConfiguration(ApplicationSystemRollbackConfigurationProperty.builder()
+   * .rollbackEnabled(false)
    * .build())
    * .environmentProperties(EnvironmentPropertiesProperty.builder()
    * .propertyGroups(List.of(PropertyGroupProperty.builder()
@@ -1074,6 +1083,15 @@ public open class CfnApplication(
         unwrap(this).getApplicationSnapshotConfiguration()
 
     /**
+     * Describes whether system rollbacks are enabled for a Managed Service for Apache Flink
+     * application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-applicationsystemrollbackconfiguration)
+     */
+    public fun applicationSystemRollbackConfiguration(): Any? =
+        unwrap(this).getApplicationSystemRollbackConfiguration()
+
+    /**
      * Describes execution properties for a Managed Service for Apache Flink application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-environmentproperties)
@@ -1158,6 +1176,29 @@ public open class CfnApplication(
       @JvmName("30c493a91d69b8dc48f8c1ad0ebc0e1b74f07722c317dc8997c11b2c34afac13")
       public
           fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: ApplicationSnapshotConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param applicationSystemRollbackConfiguration Describes whether system rollbacks are
+       * enabled for a Managed Service for Apache Flink application.
+       */
+      public
+          fun applicationSystemRollbackConfiguration(applicationSystemRollbackConfiguration: IResolvable)
+
+      /**
+       * @param applicationSystemRollbackConfiguration Describes whether system rollbacks are
+       * enabled for a Managed Service for Apache Flink application.
+       */
+      public
+          fun applicationSystemRollbackConfiguration(applicationSystemRollbackConfiguration: ApplicationSystemRollbackConfigurationProperty)
+
+      /**
+       * @param applicationSystemRollbackConfiguration Describes whether system rollbacks are
+       * enabled for a Managed Service for Apache Flink application.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5d65c2f61494791a448d88e809457ed8e43339d53871afe30eddab52451ad53b")
+      public
+          fun applicationSystemRollbackConfiguration(applicationSystemRollbackConfiguration: ApplicationSystemRollbackConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param environmentProperties Describes execution properties for a Managed Service for
@@ -1328,6 +1369,35 @@ public open class CfnApplication(
           applicationSnapshotConfiguration(ApplicationSnapshotConfigurationProperty(applicationSnapshotConfiguration))
 
       /**
+       * @param applicationSystemRollbackConfiguration Describes whether system rollbacks are
+       * enabled for a Managed Service for Apache Flink application.
+       */
+      override
+          fun applicationSystemRollbackConfiguration(applicationSystemRollbackConfiguration: IResolvable) {
+        cdkBuilder.applicationSystemRollbackConfiguration(applicationSystemRollbackConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param applicationSystemRollbackConfiguration Describes whether system rollbacks are
+       * enabled for a Managed Service for Apache Flink application.
+       */
+      override
+          fun applicationSystemRollbackConfiguration(applicationSystemRollbackConfiguration: ApplicationSystemRollbackConfigurationProperty) {
+        cdkBuilder.applicationSystemRollbackConfiguration(applicationSystemRollbackConfiguration.let(ApplicationSystemRollbackConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param applicationSystemRollbackConfiguration Describes whether system rollbacks are
+       * enabled for a Managed Service for Apache Flink application.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5d65c2f61494791a448d88e809457ed8e43339d53871afe30eddab52451ad53b")
+      override
+          fun applicationSystemRollbackConfiguration(applicationSystemRollbackConfiguration: ApplicationSystemRollbackConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          applicationSystemRollbackConfiguration(ApplicationSystemRollbackConfigurationProperty(applicationSystemRollbackConfiguration))
+
+      /**
        * @param environmentProperties Describes execution properties for a Managed Service for
        * Apache Flink application.
        */
@@ -1467,7 +1537,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), ApplicationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationConfigurationProperty {
       /**
        * The code location and type parameters for a Managed Service for Apache Flink application.
        *
@@ -1483,6 +1554,15 @@ public open class CfnApplication(
        */
       override fun applicationSnapshotConfiguration(): Any? =
           unwrap(this).getApplicationSnapshotConfiguration()
+
+      /**
+       * Describes whether system rollbacks are enabled for a Managed Service for Apache Flink
+       * application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-applicationsystemrollbackconfiguration)
+       */
+      override fun applicationSystemRollbackConfiguration(): Any? =
+          unwrap(this).getApplicationSystemRollbackConfiguration()
 
       /**
        * Describes execution properties for a Managed Service for Apache Flink application.
@@ -1601,7 +1681,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationMaintenanceConfigurationProperty,
-    ) : CdkObject(cdkObject), ApplicationMaintenanceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationMaintenanceConfigurationProperty {
       /**
        * Specifies the start time of the maintence window.
        *
@@ -1717,7 +1798,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationRestoreConfigurationProperty,
-    ) : CdkObject(cdkObject), ApplicationRestoreConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationRestoreConfigurationProperty {
       /**
        * Specifies how the application should be restored.
        *
@@ -1828,7 +1910,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSnapshotConfigurationProperty,
-    ) : CdkObject(cdkObject), ApplicationSnapshotConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationSnapshotConfigurationProperty {
       /**
        * Describes whether snapshots are enabled for a Managed Service for Apache Flink application.
        *
@@ -1853,6 +1936,109 @@ public open class CfnApplication(
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSnapshotConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSnapshotConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes the system rollback configuration for a Managed Service for Apache Flink application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisanalyticsv2.*;
+   * ApplicationSystemRollbackConfigurationProperty applicationSystemRollbackConfigurationProperty =
+   * ApplicationSystemRollbackConfigurationProperty.builder()
+   * .rollbackEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationsystemrollbackconfiguration.html)
+   */
+  public interface ApplicationSystemRollbackConfigurationProperty {
+    /**
+     * Describes whether system rollbacks are enabled for a Managed Service for Apache Flink
+     * application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationsystemrollbackconfiguration.html#cfn-kinesisanalyticsv2-application-applicationsystemrollbackconfiguration-rollbackenabled)
+     */
+    public fun rollbackEnabled(): Any
+
+    /**
+     * A builder for [ApplicationSystemRollbackConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param rollbackEnabled Describes whether system rollbacks are enabled for a Managed Service
+       * for Apache Flink application. 
+       */
+      public fun rollbackEnabled(rollbackEnabled: Boolean)
+
+      /**
+       * @param rollbackEnabled Describes whether system rollbacks are enabled for a Managed Service
+       * for Apache Flink application. 
+       */
+      public fun rollbackEnabled(rollbackEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSystemRollbackConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSystemRollbackConfigurationProperty.builder()
+
+      /**
+       * @param rollbackEnabled Describes whether system rollbacks are enabled for a Managed Service
+       * for Apache Flink application. 
+       */
+      override fun rollbackEnabled(rollbackEnabled: Boolean) {
+        cdkBuilder.rollbackEnabled(rollbackEnabled)
+      }
+
+      /**
+       * @param rollbackEnabled Describes whether system rollbacks are enabled for a Managed Service
+       * for Apache Flink application. 
+       */
+      override fun rollbackEnabled(rollbackEnabled: IResolvable) {
+        cdkBuilder.rollbackEnabled(rollbackEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSystemRollbackConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSystemRollbackConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ApplicationSystemRollbackConfigurationProperty {
+      /**
+       * Describes whether system rollbacks are enabled for a Managed Service for Apache Flink
+       * application.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationsystemrollbackconfiguration.html#cfn-kinesisanalyticsv2-application-applicationsystemrollbackconfiguration-rollbackenabled)
+       */
+      override fun rollbackEnabled(): Any = unwrap(this).getRollbackEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ApplicationSystemRollbackConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSystemRollbackConfigurationProperty):
+          ApplicationSystemRollbackConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationSystemRollbackConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ApplicationSystemRollbackConfigurationProperty):
+          software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSystemRollbackConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSystemRollbackConfigurationProperty
     }
   }
 
@@ -1948,7 +2134,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CSVMappingParametersProperty,
-    ) : CdkObject(cdkObject), CSVMappingParametersProperty {
+    ) : CdkObject(cdkObject),
+        CSVMappingParametersProperty {
       /**
        * The column delimiter.
        *
@@ -2100,7 +2287,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CatalogConfigurationProperty,
-    ) : CdkObject(cdkObject), CatalogConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CatalogConfigurationProperty {
       /**
        * The configuration parameters for the default Amazon Glue database.
        *
@@ -2136,10 +2324,9 @@ public open class CfnApplication(
    *
    * Checkpointing is the process of persisting application state for fault tolerance. For more
    * information, see [Checkpoints for Fault
-   * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
+   * Tolerance](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/dev/datastream/fault-tolerance/checkpointing/)
    * in the [Apache Flink
-   * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-   * .
+   * Documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master) .
    *
    * Example:
    *
@@ -2213,9 +2400,9 @@ public open class CfnApplication(
      *
      * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
      * otherwise performs continual checkpoint operations. For more information, see [Tuning
-     * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
+     * Checkpointing](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/large_state_tuning/#tuning-checkpointing)
      * in the [Apache Flink
-     * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+     * Documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master)
      * .
      *
      *
@@ -2284,9 +2471,9 @@ public open class CfnApplication(
        * checkpoint operation completes that a new checkpoint operation can start.
        * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
        * otherwise performs continual checkpoint operations. For more information, see [Tuning
-       * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
+       * Checkpointing](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/large_state_tuning/#tuning-checkpointing)
        * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * Documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master)
        * .
        *
        *
@@ -2362,9 +2549,9 @@ public open class CfnApplication(
        * checkpoint operation completes that a new checkpoint operation can start.
        * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
        * otherwise performs continual checkpoint operations. For more information, see [Tuning
-       * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
+       * Checkpointing](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/large_state_tuning/#tuning-checkpointing)
        * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * Documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master)
        * .
        *
        *
@@ -2383,7 +2570,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CheckpointConfigurationProperty,
-    ) : CdkObject(cdkObject), CheckpointConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CheckpointConfigurationProperty {
       /**
        * Describes the interval in milliseconds between checkpoint operations.
        *
@@ -2437,9 +2625,9 @@ public open class CfnApplication(
        *
        * If a checkpoint operation takes longer than the `CheckpointInterval` , the application
        * otherwise performs continual checkpoint operations. For more information, see [Tuning
-       * Checkpointing](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/large_state_tuning.html#tuning-checkpointing)
+       * Checkpointing](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/large_state_tuning/#tuning-checkpointing)
        * in the [Apache Flink
-       * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * Documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master)
        * .
        *
        *
@@ -2609,7 +2797,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CodeContentProperty,
-    ) : CdkObject(cdkObject), CodeContentProperty {
+    ) : CdkObject(cdkObject),
+        CodeContentProperty {
       /**
        * Information about the Amazon S3 bucket that contains the application code.
        *
@@ -2818,7 +3007,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CustomArtifactConfigurationProperty,
-    ) : CdkObject(cdkObject), CustomArtifactConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CustomArtifactConfigurationProperty {
       /**
        * Set this to either `UDF` or `DEPENDENCY_JAR` .
        *
@@ -2973,7 +3163,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.DeployAsApplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), DeployAsApplicationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DeployAsApplicationConfigurationProperty {
       /**
        * The description of an Amazon S3 object that contains the Amazon Data Analytics application,
        * including the Amazon Resource Name (ARN) of the S3 bucket, the name of the Amazon S3 object
@@ -3086,7 +3277,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.EnvironmentPropertiesProperty,
-    ) : CdkObject(cdkObject), EnvironmentPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        EnvironmentPropertiesProperty {
       /**
        * Describes the execution property groups.
        *
@@ -3374,7 +3566,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.FlinkApplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), FlinkApplicationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FlinkApplicationConfigurationProperty {
       /**
        * Describes an application's checkpointing configuration.
        *
@@ -3448,9 +3641,9 @@ public open class CfnApplication(
      * This will happen if the program is updated between snapshots to remove stateful parameters,
      * and state data in the snapshot no longer corresponds to valid application data. For more
      * information, see [Allowing Non-Restored
-     * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+     * State](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/savepoints/#allowing-non-restored-state)
      * in the [Apache Flink
-     * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+     * documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master)
      * .
      *
      *
@@ -3474,9 +3667,9 @@ public open class CfnApplication(
        * This will happen if the program is updated between snapshots to remove stateful parameters,
        * and state data in the snapshot no longer corresponds to valid application data. For more
        * information, see [Allowing Non-Restored
-       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+       * State](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/savepoints/#allowing-non-restored-state)
        * in the [Apache Flink
-       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master)
        * .
        *
        *
@@ -3492,9 +3685,9 @@ public open class CfnApplication(
        * This will happen if the program is updated between snapshots to remove stateful parameters,
        * and state data in the snapshot no longer corresponds to valid application data. For more
        * information, see [Allowing Non-Restored
-       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+       * State](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/savepoints/#allowing-non-restored-state)
        * in the [Apache Flink
-       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master)
        * .
        *
        *
@@ -3517,9 +3710,9 @@ public open class CfnApplication(
        * This will happen if the program is updated between snapshots to remove stateful parameters,
        * and state data in the snapshot no longer corresponds to valid application data. For more
        * information, see [Allowing Non-Restored
-       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+       * State](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/savepoints/#allowing-non-restored-state)
        * in the [Apache Flink
-       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master)
        * .
        *
        *
@@ -3537,9 +3730,9 @@ public open class CfnApplication(
        * This will happen if the program is updated between snapshots to remove stateful parameters,
        * and state data in the snapshot no longer corresponds to valid application data. For more
        * information, see [Allowing Non-Restored
-       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+       * State](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/savepoints/#allowing-non-restored-state)
        * in the [Apache Flink
-       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master)
        * .
        *
        *
@@ -3558,7 +3751,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.FlinkRunConfigurationProperty,
-    ) : CdkObject(cdkObject), FlinkRunConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FlinkRunConfigurationProperty {
       /**
        * When restoring from a snapshot, specifies whether the runtime is allowed to skip a state
        * that cannot be mapped to the new program.
@@ -3566,9 +3760,9 @@ public open class CfnApplication(
        * This will happen if the program is updated between snapshots to remove stateful parameters,
        * and state data in the snapshot no longer corresponds to valid application data. For more
        * information, see [Allowing Non-Restored
-       * State](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/ops/state/savepoints.html#allowing-non-restored-state)
+       * State](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/ops/state/savepoints/#allowing-non-restored-state)
        * in the [Apache Flink
-       * documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+       * documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master)
        * .
        *
        *
@@ -3657,7 +3851,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.GlueDataCatalogConfigurationProperty,
-    ) : CdkObject(cdkObject), GlueDataCatalogConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        GlueDataCatalogConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the database.
        *
@@ -3761,7 +3956,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputLambdaProcessorProperty,
-    ) : CdkObject(cdkObject), InputLambdaProcessorProperty {
+    ) : CdkObject(cdkObject),
+        InputLambdaProcessorProperty {
       /**
        * The ARN of the Amazon Lambda function that operates on records in the stream.
        *
@@ -3851,7 +4047,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputParallelismProperty,
-    ) : CdkObject(cdkObject), InputParallelismProperty {
+    ) : CdkObject(cdkObject),
+        InputParallelismProperty {
       /**
        * The number of in-application streams to create.
        *
@@ -3990,7 +4187,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputProcessingConfigurationProperty,
-    ) : CdkObject(cdkObject), InputProcessingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InputProcessingConfigurationProperty {
       /**
        * The
        * [InputLambdaProcessor](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_InputLambdaProcessor.html)
@@ -4441,7 +4639,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputProperty,
-    ) : CdkObject(cdkObject), InputProperty {
+    ) : CdkObject(cdkObject),
+        InputProperty {
       /**
        * Describes the number of in-application streams to create.
        *
@@ -4687,7 +4886,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputSchemaProperty,
-    ) : CdkObject(cdkObject), InputSchemaProperty {
+    ) : CdkObject(cdkObject),
+        InputSchemaProperty {
       /**
        * A list of `RecordColumn` objects.
        *
@@ -4787,7 +4987,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.JSONMappingParametersProperty,
-    ) : CdkObject(cdkObject), JSONMappingParametersProperty {
+    ) : CdkObject(cdkObject),
+        JSONMappingParametersProperty {
       /**
        * The path to the top-level parent that contains the records.
        *
@@ -4873,7 +5074,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.KinesisFirehoseInputProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseInputProperty {
+    ) : CdkObject(cdkObject),
+        KinesisFirehoseInputProperty {
       /**
        * The Amazon Resource Name (ARN) of the delivery stream.
        *
@@ -4957,7 +5159,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.KinesisStreamsInputProperty,
-    ) : CdkObject(cdkObject), KinesisStreamsInputProperty {
+    ) : CdkObject(cdkObject),
+        KinesisStreamsInputProperty {
       /**
        * The ARN of the input Kinesis data stream to read.
        *
@@ -5139,7 +5342,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MappingParametersProperty,
-    ) : CdkObject(cdkObject), MappingParametersProperty {
+    ) : CdkObject(cdkObject),
+        MappingParametersProperty {
       /**
        * Provides additional mapping information when the record format uses delimiters (for
        * example, CSV).
@@ -5272,7 +5476,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MavenReferenceProperty,
-    ) : CdkObject(cdkObject), MavenReferenceProperty {
+    ) : CdkObject(cdkObject),
+        MavenReferenceProperty {
       /**
        * The artifact ID of the Maven reference.
        *
@@ -5430,7 +5635,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MonitoringConfigurationProperty,
-    ) : CdkObject(cdkObject), MonitoringConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringConfigurationProperty {
       /**
        * Describes whether to use the default CloudWatch logging configuration for an application.
        *
@@ -5482,10 +5688,9 @@ public open class CfnApplication(
    * tasks simultaneously.
    *
    * For more information about parallelism, see [Parallel
-   * Execution](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/parallel.html)
+   * Execution](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master/docs/dev/datastream/execution/parallel/)
    * in the [Apache Flink
-   * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
-   * .
+   * Documentation](https://docs.aws.amazon.com/https://nightlies.apache.org/flink/flink-docs-master) .
    *
    * Example:
    *
@@ -5653,7 +5858,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ParallelismConfigurationProperty,
-    ) : CdkObject(cdkObject), ParallelismConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ParallelismConfigurationProperty {
       /**
        * Describes whether the Managed Service for Apache Flink service can increase the parallelism
        * of the application in response to increased throughput.
@@ -5805,7 +6011,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.PropertyGroupProperty,
-    ) : CdkObject(cdkObject), PropertyGroupProperty {
+    ) : CdkObject(cdkObject),
+        PropertyGroupProperty {
       /**
        * Describes the key of an application execution property key-value pair.
        *
@@ -5944,7 +6151,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RecordColumnProperty,
-    ) : CdkObject(cdkObject), RecordColumnProperty {
+    ) : CdkObject(cdkObject),
+        RecordColumnProperty {
       /**
        * A reference to the data element in the streaming input or the reference data source.
        *
@@ -6113,7 +6321,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RecordFormatProperty,
-    ) : CdkObject(cdkObject), RecordFormatProperty {
+    ) : CdkObject(cdkObject),
+        RecordFormatProperty {
       /**
        * When you configure application input at the time of creating or updating an application,
        * provides additional mapping information specific to the record format (such as JSON, CSV, or
@@ -6304,7 +6513,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RunConfigurationProperty,
-    ) : CdkObject(cdkObject), RunConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RunConfigurationProperty {
       /**
        * Describes the restore behavior of a restarting application.
        *
@@ -6416,7 +6626,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.S3ContentBaseLocationProperty,
-    ) : CdkObject(cdkObject), S3ContentBaseLocationProperty {
+    ) : CdkObject(cdkObject),
+        S3ContentBaseLocationProperty {
       /**
        * The base path for the S3 bucket.
        *
@@ -6548,7 +6759,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.S3ContentLocationProperty,
-    ) : CdkObject(cdkObject), S3ContentLocationProperty {
+    ) : CdkObject(cdkObject),
+        S3ContentLocationProperty {
       /**
        * The Amazon Resource Name (ARN) for the S3 bucket containing the application code.
        *
@@ -6721,7 +6933,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.SqlApplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), SqlApplicationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SqlApplicationConfigurationProperty {
       /**
        * The array of [Input](https://docs.aws.amazon.com/managed-flink/latest/apiv2/API_Input.html)
        * objects describing the input streams used by the application.
@@ -6865,7 +7078,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.VpcConfigurationProperty,
-    ) : CdkObject(cdkObject), VpcConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigurationProperty {
       /**
        * The array of
        * [SecurityGroup](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SecurityGroup.html)
@@ -7182,7 +7396,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ZeppelinApplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), ZeppelinApplicationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ZeppelinApplicationConfigurationProperty {
       /**
        * The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio
        * notebook.
@@ -7299,7 +7514,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ZeppelinMonitoringConfigurationProperty,
-    ) : CdkObject(cdkObject), ZeppelinMonitoringConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ZeppelinMonitoringConfigurationProperty {
       /**
        * The verbosity of the CloudWatch Logs for an application.
        *

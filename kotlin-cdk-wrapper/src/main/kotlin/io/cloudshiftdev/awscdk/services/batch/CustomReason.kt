@@ -120,7 +120,8 @@ public interface CustomReason {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.CustomReason,
-  ) : CdkObject(cdkObject), CustomReason {
+  ) : CdkObject(cdkObject),
+      CustomReason {
     /**
      * A glob string that will match on the job exit code.
      *

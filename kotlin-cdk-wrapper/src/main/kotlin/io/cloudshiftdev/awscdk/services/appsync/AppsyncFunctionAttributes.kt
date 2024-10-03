@@ -57,7 +57,8 @@ public interface AppsyncFunctionAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes,
-  ) : CdkObject(cdkObject), AppsyncFunctionAttributes {
+  ) : CdkObject(cdkObject),
+      AppsyncFunctionAttributes {
     /**
      * the ARN of the AppSync function.
      */

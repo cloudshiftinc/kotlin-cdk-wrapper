@@ -96,7 +96,8 @@ public interface CfnProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53profiles.CfnProfileProps,
-  ) : CdkObject(cdkObject), CfnProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnProfileProps {
     /**
      * Name of the Profile.
      *

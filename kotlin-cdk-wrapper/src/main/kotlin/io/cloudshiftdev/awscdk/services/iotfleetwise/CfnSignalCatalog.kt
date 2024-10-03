@@ -91,7 +91,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSignalCatalog(
   cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -716,7 +718,8 @@ public open class CfnSignalCatalog(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.ActuatorProperty,
-    ) : CdkObject(cdkObject), ActuatorProperty {
+    ) : CdkObject(cdkObject),
+        ActuatorProperty {
       /**
        * (Optional) A list of possible values an actuator can take.
        *
@@ -1026,7 +1029,8 @@ public open class CfnSignalCatalog(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty,
-    ) : CdkObject(cdkObject), AttributeProperty {
+    ) : CdkObject(cdkObject),
+        AttributeProperty {
       /**
        * (Optional) A list of possible values an attribute can be assigned.
        *
@@ -1190,7 +1194,8 @@ public open class CfnSignalCatalog(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty,
-    ) : CdkObject(cdkObject), BranchProperty {
+    ) : CdkObject(cdkObject),
+        BranchProperty {
       /**
        * (Optional) A brief description of the branch.
        *
@@ -1368,7 +1373,8 @@ public open class CfnSignalCatalog(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty,
-    ) : CdkObject(cdkObject), NodeCountsProperty {
+    ) : CdkObject(cdkObject),
+        NodeCountsProperty {
       /**
        * (Optional) The total number of nodes in a vehicle network that represent actuators.
        *
@@ -1757,7 +1763,8 @@ public open class CfnSignalCatalog(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeProperty,
-    ) : CdkObject(cdkObject), NodeProperty {
+    ) : CdkObject(cdkObject),
+        NodeProperty {
       /**
        * (Optional) Information about a node specified as an actuator.
        *
@@ -2016,7 +2023,8 @@ public open class CfnSignalCatalog(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.SensorProperty,
-    ) : CdkObject(cdkObject), SensorProperty {
+    ) : CdkObject(cdkObject),
+        SensorProperty {
       /**
        * (Optional) A list of possible values a sensor can take.
        *

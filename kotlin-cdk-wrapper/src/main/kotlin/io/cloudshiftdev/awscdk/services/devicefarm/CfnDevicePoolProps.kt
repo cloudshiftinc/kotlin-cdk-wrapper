@@ -240,7 +240,8 @@ public interface CfnDevicePoolProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePoolProps,
-  ) : CdkObject(cdkObject), CfnDevicePoolProps {
+  ) : CdkObject(cdkObject),
+      CfnDevicePoolProps {
     /**
      * The device pool's description.
      *

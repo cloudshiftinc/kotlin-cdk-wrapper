@@ -392,7 +392,8 @@ public interface CfnResponsePlanProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlanProps,
-  ) : CdkObject(cdkObject), CfnResponsePlanProps {
+  ) : CdkObject(cdkObject),
+      CfnResponsePlanProps {
     /**
      * The actions that the response plan starts at the beginning of an incident.
      *

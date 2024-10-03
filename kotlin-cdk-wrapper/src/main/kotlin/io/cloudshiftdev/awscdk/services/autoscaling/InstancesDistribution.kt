@@ -297,7 +297,8 @@ public interface InstancesDistribution {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.InstancesDistribution,
-  ) : CdkObject(cdkObject), InstancesDistribution {
+  ) : CdkObject(cdkObject),
+      InstancesDistribution {
     /**
      * Indicates how to allocate instance types to fulfill On-Demand capacity.
      *

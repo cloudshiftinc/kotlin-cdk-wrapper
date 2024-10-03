@@ -28,7 +28,8 @@ import kotlin.String
  */
 public open class InterfaceVpcEndpointService(
   cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpointService,
-) : CdkObject(cdkObject), IInterfaceVpcEndpointService {
+) : CdkObject(cdkObject),
+    IInterfaceVpcEndpointService {
   public constructor(name: String) :
       this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointService(name)
   )

@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLocationFSxOpenZFS(
   cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -522,7 +524,8 @@ public open class CfnLocationFSxOpenZFS(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty,
-    ) : CdkObject(cdkObject), MountOptionsProperty {
+    ) : CdkObject(cdkObject),
+        MountOptionsProperty {
       /**
        * The specific NFS version that you want DataSync to use to mount your NFS share.
        *
@@ -652,7 +655,8 @@ public open class CfnLocationFSxOpenZFS(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty,
-    ) : CdkObject(cdkObject), NFSProperty {
+    ) : CdkObject(cdkObject),
+        NFSProperty {
       /**
        * Represents the mount options that are available for DataSync to access an NFS location.
        *
@@ -770,7 +774,8 @@ public open class CfnLocationFSxOpenZFS(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty,
-    ) : CdkObject(cdkObject), ProtocolProperty {
+    ) : CdkObject(cdkObject),
+        ProtocolProperty {
       /**
        * Represents the Network File System (NFS) protocol that DataSync uses to access your FSx for
        * OpenZFS file system.

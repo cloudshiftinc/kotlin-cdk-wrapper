@@ -17,6 +17,7 @@ import io.cloudshiftdev.awscdk.services.ecs.PropagatedTagSource
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationProtocol
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationProtocolVersion
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IpAddressType
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.SslPolicy
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.Boolean
@@ -88,6 +89,7 @@ import kotlin.jvm.JvmName
  * .enableExecuteCommand(false)
  * .healthCheckGracePeriod(Duration.minutes(30))
  * .idleTimeout(Duration.minutes(30))
+ * .ipAddressType(IpAddressType.IPV4)
  * .listenerPort(123)
  * .loadBalancer(applicationLoadBalancer)
  * .loadBalancerName("loadBalancerName")
@@ -250,6 +252,14 @@ public interface ApplicationLoadBalancedServiceBaseProps {
    * Default: - CloudFormation sets idle timeout to 60 seconds
    */
   public fun idleTimeout(): Duration? = unwrap(this).getIdleTimeout()?.let(Duration::wrap)
+
+  /**
+   * The type of IP address to use.
+   *
+   * Default: - IpAddressType.IPV4
+   */
+  public fun ipAddressType(): IpAddressType? =
+      unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
   /**
    * Listener port of the application load balancer that will serve traffic to the service.
@@ -532,6 +542,11 @@ public interface ApplicationLoadBalancedServiceBaseProps {
     public fun idleTimeout(idleTimeout: Duration)
 
     /**
+     * @param ipAddressType The type of IP address to use.
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
+
+    /**
      * @param listenerPort Listener port of the application load balancer that will serve traffic to
      * the service.
      */
@@ -808,6 +823,13 @@ public interface ApplicationLoadBalancedServiceBaseProps {
     }
 
     /**
+     * @param ipAddressType The type of IP address to use.
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
+    }
+
+    /**
      * @param listenerPort Listener port of the application load balancer that will serve traffic to
      * the service.
      */
@@ -968,7 +990,8 @@ public interface ApplicationLoadBalancedServiceBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBaseProps,
-  ) : CdkObject(cdkObject), ApplicationLoadBalancedServiceBaseProps {
+  ) : CdkObject(cdkObject),
+      ApplicationLoadBalancedServiceBaseProps {
     /**
      * A list of Capacity Provider strategies used to place a service.
      *
@@ -1094,6 +1117,14 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * Default: - CloudFormation sets idle timeout to 60 seconds
      */
     override fun idleTimeout(): Duration? = unwrap(this).getIdleTimeout()?.let(Duration::wrap)
+
+    /**
+     * The type of IP address to use.
+     *
+     * Default: - IpAddressType.IPV4
+     */
+    override fun ipAddressType(): IpAddressType? =
+        unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
     /**
      * Listener port of the application load balancer that will serve traffic to the service.

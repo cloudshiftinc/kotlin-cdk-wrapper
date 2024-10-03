@@ -94,7 +94,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataSource(
   cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1183,7 +1184,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.AuthorizationConfigProperty,
-    ) : CdkObject(cdkObject), AuthorizationConfigProperty {
+    ) : CdkObject(cdkObject),
+        AuthorizationConfigProperty {
       /**
        * The authorization type that the HTTP endpoint requires.
        *
@@ -1300,7 +1302,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.AwsIamConfigProperty,
-    ) : CdkObject(cdkObject), AwsIamConfigProperty {
+    ) : CdkObject(cdkObject),
+        AwsIamConfigProperty {
       /**
        * The signing Region for AWS Identity and Access Management authorization.
        *
@@ -1430,7 +1433,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.DeltaSyncConfigProperty,
-    ) : CdkObject(cdkObject), DeltaSyncConfigProperty {
+    ) : CdkObject(cdkObject),
+        DeltaSyncConfigProperty {
       /**
        * The number of minutes that an Item is stored in the data source.
        *
@@ -1674,7 +1678,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.DynamoDBConfigProperty,
-    ) : CdkObject(cdkObject), DynamoDBConfigProperty {
+    ) : CdkObject(cdkObject),
+        DynamoDBConfigProperty {
       /**
        * The AWS Region.
        *
@@ -1813,7 +1818,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty,
-    ) : CdkObject(cdkObject), ElasticsearchConfigProperty {
+    ) : CdkObject(cdkObject),
+        ElasticsearchConfigProperty {
       /**
        * The AWS Region.
        *
@@ -1910,7 +1916,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty,
-    ) : CdkObject(cdkObject), EventBridgeConfigProperty {
+    ) : CdkObject(cdkObject),
+        EventBridgeConfigProperty {
       /**
        * The event bus pipeline's ARN.
        *
@@ -2054,7 +2061,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty,
-    ) : CdkObject(cdkObject), HttpConfigProperty {
+    ) : CdkObject(cdkObject),
+        HttpConfigProperty {
       /**
        * The authorization configuration.
        *
@@ -2146,7 +2154,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.LambdaConfigProperty,
-    ) : CdkObject(cdkObject), LambdaConfigProperty {
+    ) : CdkObject(cdkObject),
+        LambdaConfigProperty {
       /**
        * The ARN for the Lambda function.
        *
@@ -2254,7 +2263,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty,
-    ) : CdkObject(cdkObject), OpenSearchServiceConfigProperty {
+    ) : CdkObject(cdkObject),
+        OpenSearchServiceConfigProperty {
       /**
        * The AWS Region.
        *
@@ -2430,7 +2440,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.RdsHttpEndpointConfigProperty,
-    ) : CdkObject(cdkObject), RdsHttpEndpointConfigProperty {
+    ) : CdkObject(cdkObject),
+        RdsHttpEndpointConfigProperty {
       /**
        * AWS Region for RDS HTTP endpoint.
        *
@@ -2603,7 +2614,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty,
-    ) : CdkObject(cdkObject), RelationalDatabaseConfigProperty {
+    ) : CdkObject(cdkObject),
+        RelationalDatabaseConfigProperty {
       /**
        * Information about the Amazon RDS resource.
        *

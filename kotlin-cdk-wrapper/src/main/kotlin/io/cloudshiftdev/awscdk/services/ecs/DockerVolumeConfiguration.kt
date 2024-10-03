@@ -147,7 +147,8 @@ public interface DockerVolumeConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.DockerVolumeConfiguration,
-  ) : CdkObject(cdkObject), DockerVolumeConfiguration {
+  ) : CdkObject(cdkObject),
+      DockerVolumeConfiguration {
     /**
      * Specifies whether the Docker volume should be created if it does not already exist.
      *

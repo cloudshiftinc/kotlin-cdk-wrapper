@@ -18,7 +18,8 @@ public interface IReceiptRuleAction {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.IReceiptRuleAction,
-  ) : CdkObject(cdkObject), IReceiptRuleAction {
+  ) : CdkObject(cdkObject),
+      IReceiptRuleAction {
     /**
      * Returns the receipt rule action specification.
      *

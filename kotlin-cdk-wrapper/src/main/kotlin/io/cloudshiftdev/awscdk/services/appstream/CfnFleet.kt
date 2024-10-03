@@ -46,7 +46,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFleet(
   cdkObject: software.amazon.awscdk.services.appstream.CfnFleet,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1486,7 +1488,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty,
-    ) : CdkObject(cdkObject), ComputeCapacityProperty {
+    ) : CdkObject(cdkObject),
+        ComputeCapacityProperty {
       /**
        * The desired number of streaming instances.
        *
@@ -1606,7 +1609,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty,
-    ) : CdkObject(cdkObject), DomainJoinInfoProperty {
+    ) : CdkObject(cdkObject),
+        DomainJoinInfoProperty {
       /**
        * The fully qualified name of the directory (for example, corp.example.com).
        *
@@ -1714,7 +1718,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * The S3 bucket of the S3 object.
        *
@@ -1853,7 +1858,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
       /**
        * The identifiers of the security groups for the fleet.
        *

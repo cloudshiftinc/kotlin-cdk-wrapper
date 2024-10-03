@@ -37,7 +37,8 @@ import kotlin.collections.Map
  */
 public open class GenericLinuxImage(
   cdkObject: software.amazon.awscdk.services.ec2.GenericLinuxImage,
-) : CdkObject(cdkObject), IMachineImage {
+) : CdkObject(cdkObject),
+    IMachineImage {
   public constructor(amiMap: Map<String, String>) :
       this(software.amazon.awscdk.services.ec2.GenericLinuxImage(amiMap)
   )

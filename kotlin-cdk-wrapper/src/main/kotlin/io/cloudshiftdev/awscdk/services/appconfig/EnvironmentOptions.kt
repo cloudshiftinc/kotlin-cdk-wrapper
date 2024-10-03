@@ -111,7 +111,8 @@ public interface EnvironmentOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.EnvironmentOptions,
-  ) : CdkObject(cdkObject), EnvironmentOptions {
+  ) : CdkObject(cdkObject),
+      EnvironmentOptions {
     /**
      * The description of the environment.
      *

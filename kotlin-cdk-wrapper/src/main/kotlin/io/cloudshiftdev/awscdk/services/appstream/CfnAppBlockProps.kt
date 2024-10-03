@@ -333,7 +333,8 @@ public interface CfnAppBlockProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockProps,
-  ) : CdkObject(cdkObject), CfnAppBlockProps {
+  ) : CdkObject(cdkObject),
+      CfnAppBlockProps {
     /**
      * The description of the app block.
      *

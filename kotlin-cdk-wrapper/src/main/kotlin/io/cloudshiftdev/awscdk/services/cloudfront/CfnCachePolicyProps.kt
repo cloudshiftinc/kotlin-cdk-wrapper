@@ -118,7 +118,8 @@ public interface CfnCachePolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicyProps,
-  ) : CdkObject(cdkObject), CfnCachePolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnCachePolicyProps {
     /**
      * The cache policy configuration.
      *

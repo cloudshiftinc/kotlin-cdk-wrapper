@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEnvironmentBlueprintConfiguration(
   cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -486,7 +487,8 @@ public open class CfnEnvironmentBlueprintConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.RegionalParameterProperty,
-    ) : CdkObject(cdkObject), RegionalParameterProperty {
+    ) : CdkObject(cdkObject),
+        RegionalParameterProperty {
       /**
        * A string to string map containing parameters for the region.
        *

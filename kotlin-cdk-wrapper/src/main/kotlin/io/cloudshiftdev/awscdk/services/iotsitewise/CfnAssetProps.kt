@@ -319,7 +319,8 @@ public interface CfnAssetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetProps,
-  ) : CdkObject(cdkObject), CfnAssetProps {
+  ) : CdkObject(cdkObject),
+      CfnAssetProps {
     /**
      * The ID of the asset, in UUID format.
      *

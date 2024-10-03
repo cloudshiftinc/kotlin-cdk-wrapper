@@ -56,7 +56,8 @@ public interface KubectlProviderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.KubectlProviderProps,
-  ) : CdkObject(cdkObject), KubectlProviderProps {
+  ) : CdkObject(cdkObject),
+      KubectlProviderProps {
     /**
      * The cluster to control.
      */

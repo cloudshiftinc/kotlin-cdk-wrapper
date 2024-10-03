@@ -43,7 +43,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnOutpostResolver(
   cdkObject: software.amazon.awscdk.services.route53resolver.CfnOutpostResolver,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

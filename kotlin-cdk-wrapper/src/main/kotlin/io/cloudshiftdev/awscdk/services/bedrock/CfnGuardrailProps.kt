@@ -34,6 +34,12 @@ import kotlin.jvm.JvmName
  * .type("type")
  * .build()))
  * .build())
+ * .contextualGroundingPolicyConfig(ContextualGroundingPolicyConfigProperty.builder()
+ * .filtersConfig(List.of(ContextualGroundingFilterConfigProperty.builder()
+ * .threshold(123)
+ * .type("type")
+ * .build()))
+ * .build())
  * .description("description")
  * .kmsKeyArn("kmsKeyArn")
  * .sensitiveInformationPolicyConfig(SensitiveInformationPolicyConfigProperty.builder()
@@ -91,11 +97,19 @@ public interface CfnGuardrailProps {
   public fun blockedOutputsMessaging(): String
 
   /**
-   * Content policy config for a guardrail.
+   * The content filter policies to configure for the guardrail.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-contentpolicyconfig)
    */
   public fun contentPolicyConfig(): Any? = unwrap(this).getContentPolicyConfig()
+
+  /**
+   * Contextual grounding policy config for a guardrail.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-contextualgroundingpolicyconfig)
+   */
+  public fun contextualGroundingPolicyConfig(): Any? =
+      unwrap(this).getContextualGroundingPolicyConfig()
 
   /**
    * A description of the guardrail.
@@ -105,7 +119,7 @@ public interface CfnGuardrailProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The ARN of the AWS KMS key used to encrypt the guardrail.
+   * The ARN of the AWS KMS key that you use to encrypt the guardrail.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-kmskeyarn)
    */
@@ -119,7 +133,7 @@ public interface CfnGuardrailProps {
   public fun name(): String
 
   /**
-   * Sensitive information policy config for a guardrail.
+   * The sensitive information policy to configure for the guardrail.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-sensitiveinformationpolicyconfig)
    */
@@ -127,27 +141,21 @@ public interface CfnGuardrailProps {
       unwrap(this).getSensitiveInformationPolicyConfig()
 
   /**
-   * Metadata that you can assign to a guardrail as key-value pairs. For more information, see the
-   * following resources:.
-   *
-   * * [Tag naming limits and
-   * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
-   * * [Tagging best
-   * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
+   * The tags that you want to attach to the guardrail.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * Topic policy config for a guardrail.
+   * The topic policies to configure for the guardrail.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-topicpolicyconfig)
    */
   public fun topicPolicyConfig(): Any? = unwrap(this).getTopicPolicyConfig()
 
   /**
-   * Word policy config for a guardrail.
+   * The word policy you configure for the guardrail.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-wordpolicyconfig)
    */
@@ -170,17 +178,17 @@ public interface CfnGuardrailProps {
     public fun blockedOutputsMessaging(blockedOutputsMessaging: String)
 
     /**
-     * @param contentPolicyConfig Content policy config for a guardrail.
+     * @param contentPolicyConfig The content filter policies to configure for the guardrail.
      */
     public fun contentPolicyConfig(contentPolicyConfig: IResolvable)
 
     /**
-     * @param contentPolicyConfig Content policy config for a guardrail.
+     * @param contentPolicyConfig The content filter policies to configure for the guardrail.
      */
     public fun contentPolicyConfig(contentPolicyConfig: CfnGuardrail.ContentPolicyConfigProperty)
 
     /**
-     * @param contentPolicyConfig Content policy config for a guardrail.
+     * @param contentPolicyConfig The content filter policies to configure for the guardrail.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19815e8cf27c365dd7acbd9be8297ec6895dc93c9b34a926909bf6655b7c33c5")
@@ -188,12 +196,31 @@ public interface CfnGuardrailProps {
         fun contentPolicyConfig(contentPolicyConfig: CfnGuardrail.ContentPolicyConfigProperty.Builder.() -> Unit)
 
     /**
+     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail.
+     */
+    public fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: IResolvable)
+
+    /**
+     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail.
+     */
+    public
+        fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: CfnGuardrail.ContextualGroundingPolicyConfigProperty)
+
+    /**
+     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("89ba7bd404745ce6d658d412796eebcd10533b9d6092cf55a3fb98fe06496ce3")
+    public
+        fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: CfnGuardrail.ContextualGroundingPolicyConfigProperty.Builder.() -> Unit)
+
+    /**
      * @param description A description of the guardrail.
      */
     public fun description(description: String)
 
     /**
-     * @param kmsKeyArn The ARN of the AWS KMS key used to encrypt the guardrail.
+     * @param kmsKeyArn The ARN of the AWS KMS key that you use to encrypt the guardrail.
      */
     public fun kmsKeyArn(kmsKeyArn: String)
 
@@ -203,18 +230,21 @@ public interface CfnGuardrailProps {
     public fun name(name: String)
 
     /**
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail.
+     * @param sensitiveInformationPolicyConfig The sensitive information policy to configure for the
+     * guardrail.
      */
     public fun sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig: IResolvable)
 
     /**
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail.
+     * @param sensitiveInformationPolicyConfig The sensitive information policy to configure for the
+     * guardrail.
      */
     public
         fun sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig: CfnGuardrail.SensitiveInformationPolicyConfigProperty)
 
     /**
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail.
+     * @param sensitiveInformationPolicyConfig The sensitive information policy to configure for the
+     * guardrail.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1765821b1324a8bdfa728ab15a49281c39381141ae1e0273c5af259dc9024bfb")
@@ -222,37 +252,27 @@ public interface CfnGuardrailProps {
         fun sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig: CfnGuardrail.SensitiveInformationPolicyConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param tags Metadata that you can assign to a guardrail as key-value pairs. For more
-     * information, see the following resources:.
-     * * [Tag naming limits and
-     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
-     * * [Tagging best
-     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
+     * @param tags The tags that you want to attach to the guardrail.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags Metadata that you can assign to a guardrail as key-value pairs. For more
-     * information, see the following resources:.
-     * * [Tag naming limits and
-     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
-     * * [Tagging best
-     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
+     * @param tags The tags that you want to attach to the guardrail.
      */
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param topicPolicyConfig Topic policy config for a guardrail.
+     * @param topicPolicyConfig The topic policies to configure for the guardrail.
      */
     public fun topicPolicyConfig(topicPolicyConfig: IResolvable)
 
     /**
-     * @param topicPolicyConfig Topic policy config for a guardrail.
+     * @param topicPolicyConfig The topic policies to configure for the guardrail.
      */
     public fun topicPolicyConfig(topicPolicyConfig: CfnGuardrail.TopicPolicyConfigProperty)
 
     /**
-     * @param topicPolicyConfig Topic policy config for a guardrail.
+     * @param topicPolicyConfig The topic policies to configure for the guardrail.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f85221bfe449356beba2aab06bf7dcc9a622f38a9cac8373194669d0739ea42c")
@@ -260,17 +280,17 @@ public interface CfnGuardrailProps {
         fun topicPolicyConfig(topicPolicyConfig: CfnGuardrail.TopicPolicyConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param wordPolicyConfig Word policy config for a guardrail.
+     * @param wordPolicyConfig The word policy you configure for the guardrail.
      */
     public fun wordPolicyConfig(wordPolicyConfig: IResolvable)
 
     /**
-     * @param wordPolicyConfig Word policy config for a guardrail.
+     * @param wordPolicyConfig The word policy you configure for the guardrail.
      */
     public fun wordPolicyConfig(wordPolicyConfig: CfnGuardrail.WordPolicyConfigProperty)
 
     /**
-     * @param wordPolicyConfig Word policy config for a guardrail.
+     * @param wordPolicyConfig The word policy you configure for the guardrail.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7563028a04f12c14dbc0898cb326fc098049ccd11d81aad99acf0e4a94f39bbb")
@@ -298,14 +318,14 @@ public interface CfnGuardrailProps {
     }
 
     /**
-     * @param contentPolicyConfig Content policy config for a guardrail.
+     * @param contentPolicyConfig The content filter policies to configure for the guardrail.
      */
     override fun contentPolicyConfig(contentPolicyConfig: IResolvable) {
       cdkBuilder.contentPolicyConfig(contentPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param contentPolicyConfig Content policy config for a guardrail.
+     * @param contentPolicyConfig The content filter policies to configure for the guardrail.
      */
     override
         fun contentPolicyConfig(contentPolicyConfig: CfnGuardrail.ContentPolicyConfigProperty) {
@@ -313,13 +333,38 @@ public interface CfnGuardrailProps {
     }
 
     /**
-     * @param contentPolicyConfig Content policy config for a guardrail.
+     * @param contentPolicyConfig The content filter policies to configure for the guardrail.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19815e8cf27c365dd7acbd9be8297ec6895dc93c9b34a926909bf6655b7c33c5")
     override
         fun contentPolicyConfig(contentPolicyConfig: CfnGuardrail.ContentPolicyConfigProperty.Builder.() -> Unit):
         Unit = contentPolicyConfig(CfnGuardrail.ContentPolicyConfigProperty(contentPolicyConfig))
+
+    /**
+     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail.
+     */
+    override fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: IResolvable) {
+      cdkBuilder.contextualGroundingPolicyConfig(contextualGroundingPolicyConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail.
+     */
+    override
+        fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: CfnGuardrail.ContextualGroundingPolicyConfigProperty) {
+      cdkBuilder.contextualGroundingPolicyConfig(contextualGroundingPolicyConfig.let(CfnGuardrail.ContextualGroundingPolicyConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param contextualGroundingPolicyConfig Contextual grounding policy config for a guardrail.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("89ba7bd404745ce6d658d412796eebcd10533b9d6092cf55a3fb98fe06496ce3")
+    override
+        fun contextualGroundingPolicyConfig(contextualGroundingPolicyConfig: CfnGuardrail.ContextualGroundingPolicyConfigProperty.Builder.() -> Unit):
+        Unit =
+        contextualGroundingPolicyConfig(CfnGuardrail.ContextualGroundingPolicyConfigProperty(contextualGroundingPolicyConfig))
 
     /**
      * @param description A description of the guardrail.
@@ -329,7 +374,7 @@ public interface CfnGuardrailProps {
     }
 
     /**
-     * @param kmsKeyArn The ARN of the AWS KMS key used to encrypt the guardrail.
+     * @param kmsKeyArn The ARN of the AWS KMS key that you use to encrypt the guardrail.
      */
     override fun kmsKeyArn(kmsKeyArn: String) {
       cdkBuilder.kmsKeyArn(kmsKeyArn)
@@ -343,14 +388,16 @@ public interface CfnGuardrailProps {
     }
 
     /**
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail.
+     * @param sensitiveInformationPolicyConfig The sensitive information policy to configure for the
+     * guardrail.
      */
     override fun sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig: IResolvable) {
       cdkBuilder.sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail.
+     * @param sensitiveInformationPolicyConfig The sensitive information policy to configure for the
+     * guardrail.
      */
     override
         fun sensitiveInformationPolicyConfig(sensitiveInformationPolicyConfig: CfnGuardrail.SensitiveInformationPolicyConfigProperty) {
@@ -358,7 +405,8 @@ public interface CfnGuardrailProps {
     }
 
     /**
-     * @param sensitiveInformationPolicyConfig Sensitive information policy config for a guardrail.
+     * @param sensitiveInformationPolicyConfig The sensitive information policy to configure for the
+     * guardrail.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1765821b1324a8bdfa728ab15a49281c39381141ae1e0273c5af259dc9024bfb")
@@ -368,43 +416,33 @@ public interface CfnGuardrailProps {
         sensitiveInformationPolicyConfig(CfnGuardrail.SensitiveInformationPolicyConfigProperty(sensitiveInformationPolicyConfig))
 
     /**
-     * @param tags Metadata that you can assign to a guardrail as key-value pairs. For more
-     * information, see the following resources:.
-     * * [Tag naming limits and
-     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
-     * * [Tagging best
-     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
+     * @param tags The tags that you want to attach to the guardrail.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags Metadata that you can assign to a guardrail as key-value pairs. For more
-     * information, see the following resources:.
-     * * [Tag naming limits and
-     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
-     * * [Tagging best
-     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
+     * @param tags The tags that you want to attach to the guardrail.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param topicPolicyConfig Topic policy config for a guardrail.
+     * @param topicPolicyConfig The topic policies to configure for the guardrail.
      */
     override fun topicPolicyConfig(topicPolicyConfig: IResolvable) {
       cdkBuilder.topicPolicyConfig(topicPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param topicPolicyConfig Topic policy config for a guardrail.
+     * @param topicPolicyConfig The topic policies to configure for the guardrail.
      */
     override fun topicPolicyConfig(topicPolicyConfig: CfnGuardrail.TopicPolicyConfigProperty) {
       cdkBuilder.topicPolicyConfig(topicPolicyConfig.let(CfnGuardrail.TopicPolicyConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param topicPolicyConfig Topic policy config for a guardrail.
+     * @param topicPolicyConfig The topic policies to configure for the guardrail.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f85221bfe449356beba2aab06bf7dcc9a622f38a9cac8373194669d0739ea42c")
@@ -413,21 +451,21 @@ public interface CfnGuardrailProps {
         Unit = topicPolicyConfig(CfnGuardrail.TopicPolicyConfigProperty(topicPolicyConfig))
 
     /**
-     * @param wordPolicyConfig Word policy config for a guardrail.
+     * @param wordPolicyConfig The word policy you configure for the guardrail.
      */
     override fun wordPolicyConfig(wordPolicyConfig: IResolvable) {
       cdkBuilder.wordPolicyConfig(wordPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param wordPolicyConfig Word policy config for a guardrail.
+     * @param wordPolicyConfig The word policy you configure for the guardrail.
      */
     override fun wordPolicyConfig(wordPolicyConfig: CfnGuardrail.WordPolicyConfigProperty) {
       cdkBuilder.wordPolicyConfig(wordPolicyConfig.let(CfnGuardrail.WordPolicyConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param wordPolicyConfig Word policy config for a guardrail.
+     * @param wordPolicyConfig The word policy you configure for the guardrail.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7563028a04f12c14dbc0898cb326fc098049ccd11d81aad99acf0e4a94f39bbb")
@@ -441,7 +479,8 @@ public interface CfnGuardrailProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.bedrock.CfnGuardrailProps,
-  ) : CdkObject(cdkObject), CfnGuardrailProps {
+  ) : CdkObject(cdkObject),
+      CfnGuardrailProps {
     /**
      * The message to return when the guardrail blocks a prompt.
      *
@@ -457,11 +496,19 @@ public interface CfnGuardrailProps {
     override fun blockedOutputsMessaging(): String = unwrap(this).getBlockedOutputsMessaging()
 
     /**
-     * Content policy config for a guardrail.
+     * The content filter policies to configure for the guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-contentpolicyconfig)
      */
     override fun contentPolicyConfig(): Any? = unwrap(this).getContentPolicyConfig()
+
+    /**
+     * Contextual grounding policy config for a guardrail.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-contextualgroundingpolicyconfig)
+     */
+    override fun contextualGroundingPolicyConfig(): Any? =
+        unwrap(this).getContextualGroundingPolicyConfig()
 
     /**
      * A description of the guardrail.
@@ -471,7 +518,7 @@ public interface CfnGuardrailProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The ARN of the AWS KMS key used to encrypt the guardrail.
+     * The ARN of the AWS KMS key that you use to encrypt the guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-kmskeyarn)
      */
@@ -485,7 +532,7 @@ public interface CfnGuardrailProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * Sensitive information policy config for a guardrail.
+     * The sensitive information policy to configure for the guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-sensitiveinformationpolicyconfig)
      */
@@ -493,27 +540,21 @@ public interface CfnGuardrailProps {
         unwrap(this).getSensitiveInformationPolicyConfig()
 
     /**
-     * Metadata that you can assign to a guardrail as key-value pairs. For more information, see the
-     * following resources:.
-     *
-     * * [Tag naming limits and
-     * requirements](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-conventions)
-     * * [Tagging best
-     * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
+     * The tags that you want to attach to the guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * Topic policy config for a guardrail.
+     * The topic policies to configure for the guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-topicpolicyconfig)
      */
     override fun topicPolicyConfig(): Any? = unwrap(this).getTopicPolicyConfig()
 
     /**
-     * Word policy config for a guardrail.
+     * The word policy you configure for the guardrail.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-wordpolicyconfig)
      */

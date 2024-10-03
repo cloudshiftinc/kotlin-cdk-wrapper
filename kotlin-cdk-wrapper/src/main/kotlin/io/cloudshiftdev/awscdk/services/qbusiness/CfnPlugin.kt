@@ -70,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPlugin(
   cdkObject: software.amazon.awscdk.services.qbusiness.CfnPlugin,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -693,7 +695,8 @@ public open class CfnPlugin(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnPlugin.APISchemaProperty,
-    ) : CdkObject(cdkObject), APISchemaProperty {
+    ) : CdkObject(cdkObject),
+        APISchemaProperty {
       /**
        * The JSON or YAML-formatted payload defining the OpenAPI schema for a custom plugin.
        *
@@ -811,7 +814,8 @@ public open class CfnPlugin(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnPlugin.BasicAuthConfigurationProperty,
-    ) : CdkObject(cdkObject), BasicAuthConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        BasicAuthConfigurationProperty {
       /**
        * The ARN of an IAM role used by Amazon Q Business to access the basic authentication
        * credentials stored in a Secrets Manager secret.
@@ -983,7 +987,8 @@ public open class CfnPlugin(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnPlugin.CustomPluginConfigurationProperty,
-    ) : CdkObject(cdkObject), CustomPluginConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CustomPluginConfigurationProperty {
       /**
        * Contains either details about the S3 object containing the OpenAPI schema for the action
        * group or the JSON or YAML-formatted payload defining the schema.
@@ -1108,7 +1113,8 @@ public open class CfnPlugin(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnPlugin.OAuth2ClientCredentialConfigurationProperty,
-    ) : CdkObject(cdkObject), OAuth2ClientCredentialConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        OAuth2ClientCredentialConfigurationProperty {
       /**
        * The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0 authentication
        * credentials stored in a Secrets Manager secret.
@@ -1326,7 +1332,8 @@ public open class CfnPlugin(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnPlugin.PluginAuthConfigurationProperty,
-    ) : CdkObject(cdkObject), PluginAuthConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PluginAuthConfigurationProperty {
       /**
        * Information about the basic authentication credentials used to configure a plugin.
        *
@@ -1440,7 +1447,8 @@ public open class CfnPlugin(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnPlugin.S3Property,
-    ) : CdkObject(cdkObject), S3Property {
+    ) : CdkObject(cdkObject),
+        S3Property {
       /**
        * The name of the S3 bucket that contains the file.
        *

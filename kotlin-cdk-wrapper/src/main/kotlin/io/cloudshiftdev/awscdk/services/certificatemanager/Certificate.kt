@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Certificate(
   cdkObject: software.amazon.awscdk.services.certificatemanager.Certificate,
-) : Resource(cdkObject), ICertificate {
+) : Resource(cdkObject),
+    ICertificate {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

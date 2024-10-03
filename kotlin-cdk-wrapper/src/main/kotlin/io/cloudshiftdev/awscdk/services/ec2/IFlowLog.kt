@@ -22,7 +22,8 @@ public interface IFlowLog : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IFlowLog,
-  ) : CdkObject(cdkObject), IFlowLog {
+  ) : CdkObject(cdkObject),
+      IFlowLog {
     /**
      * Apply the given removal policy to this resource.
      *

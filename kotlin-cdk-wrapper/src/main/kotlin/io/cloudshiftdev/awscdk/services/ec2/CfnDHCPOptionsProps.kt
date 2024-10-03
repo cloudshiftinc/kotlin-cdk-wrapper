@@ -277,7 +277,8 @@ public interface CfnDHCPOptionsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnDHCPOptionsProps,
-  ) : CdkObject(cdkObject), CfnDHCPOptionsProps {
+  ) : CdkObject(cdkObject),
+      CfnDHCPOptionsProps {
     /**
      * This value is used to complete unqualified DNS hostnames.
      *

@@ -484,7 +484,8 @@ public interface DockerImageAssetSource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.DockerImageAssetSource,
-  ) : CdkObject(cdkObject), DockerImageAssetSource {
+  ) : CdkObject(cdkObject),
+      DockerImageAssetSource {
     /**
      * Unique identifier of the docker image asset and its potential revisions.
      *

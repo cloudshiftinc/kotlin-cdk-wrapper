@@ -110,7 +110,8 @@ public interface CognitoOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opensearchservice.CognitoOptions,
-  ) : CdkObject(cdkObject), CognitoOptions {
+  ) : CdkObject(cdkObject),
+      CognitoOptions {
     /**
      * The Amazon Cognito identity pool ID that you want Amazon OpenSearch Service to use for
      * OpenSearch Dashboards authentication.

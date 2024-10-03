@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConnectPeer(
   cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -550,7 +552,8 @@ public open class CfnConnectPeer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.BgpOptionsProperty,
-    ) : CdkObject(cdkObject), BgpOptionsProperty {
+    ) : CdkObject(cdkObject),
+        BgpOptionsProperty {
       /**
        * The Peer ASN of the BGP.
        *
@@ -693,7 +696,8 @@ public open class CfnConnectPeer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerBgpConfigurationProperty,
-    ) : CdkObject(cdkObject), ConnectPeerBgpConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ConnectPeerBgpConfigurationProperty {
       /**
        * The address of a core network.
        *
@@ -917,7 +921,8 @@ public open class CfnConnectPeer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerConfigurationProperty,
-    ) : CdkObject(cdkObject), ConnectPeerConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ConnectPeerConfigurationProperty {
       /**
        * The Connect peer BGP configurations.
        *

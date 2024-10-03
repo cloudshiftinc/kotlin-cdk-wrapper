@@ -170,7 +170,8 @@ public interface CodeImageConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.CodeImageConfig,
-  ) : CdkObject(cdkObject), CodeImageConfig {
+  ) : CdkObject(cdkObject),
+      CodeImageConfig {
     /**
      * Specify or override the CMD on the specified Docker image or Dockerfile.
      *

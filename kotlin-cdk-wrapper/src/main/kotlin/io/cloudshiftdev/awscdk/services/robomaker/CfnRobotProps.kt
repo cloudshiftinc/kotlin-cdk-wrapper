@@ -144,7 +144,8 @@ public interface CfnRobotProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotProps,
-  ) : CdkObject(cdkObject), CfnRobotProps {
+  ) : CdkObject(cdkObject),
+      CfnRobotProps {
     /**
      * The architecture of the robot.
      *

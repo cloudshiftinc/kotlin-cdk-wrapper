@@ -63,7 +63,8 @@ public interface ChoiceTransitionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions,
-  ) : CdkObject(cdkObject), ChoiceTransitionOptions {
+  ) : CdkObject(cdkObject),
+      ChoiceTransitionOptions {
     /**
      * An optional description for the choice transition.
      *

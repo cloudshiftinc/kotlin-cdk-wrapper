@@ -68,7 +68,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRuleset(
   cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -446,7 +448,8 @@ public open class CfnRuleset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ColumnSelectorProperty,
-    ) : CdkObject(cdkObject), ColumnSelectorProperty {
+    ) : CdkObject(cdkObject),
+        ColumnSelectorProperty {
       /**
        * The name of a column from a dataset.
        *
@@ -827,7 +830,8 @@ public open class CfnRuleset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.RuleProperty,
-    ) : CdkObject(cdkObject), RuleProperty {
+    ) : CdkObject(cdkObject),
+        RuleProperty {
       /**
        * The expression which includes column references, condition names followed by variable
        * references, possibly grouped and combined with other conditions.
@@ -984,7 +988,8 @@ public open class CfnRuleset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty,
-    ) : CdkObject(cdkObject), SubstitutionValueProperty {
+    ) : CdkObject(cdkObject),
+        SubstitutionValueProperty {
       /**
        * Value or column name.
        *
@@ -1125,7 +1130,8 @@ public open class CfnRuleset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty,
-    ) : CdkObject(cdkObject), ThresholdProperty {
+    ) : CdkObject(cdkObject),
+        ThresholdProperty {
       /**
        * The type of a threshold.
        *

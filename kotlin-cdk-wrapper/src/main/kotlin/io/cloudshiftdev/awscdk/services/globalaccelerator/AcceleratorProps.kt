@@ -207,7 +207,8 @@ public interface AcceleratorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.AcceleratorProps,
-  ) : CdkObject(cdkObject), AcceleratorProps {
+  ) : CdkObject(cdkObject),
+      AcceleratorProps {
     /**
      * The name of the accelerator.
      *

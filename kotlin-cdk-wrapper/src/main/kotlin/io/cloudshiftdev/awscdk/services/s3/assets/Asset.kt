@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Asset(
   cdkObject: software.amazon.awscdk.services.s3.assets.Asset,
-) : CloudshiftdevConstructsConstruct(cdkObject), IAsset {
+) : CloudshiftdevConstructsConstruct(cdkObject),
+    IAsset {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -81,7 +81,8 @@ public interface CfnFleetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.robomaker.CfnFleetProps,
-  ) : CdkObject(cdkObject), CfnFleetProps {
+  ) : CdkObject(cdkObject),
+      CfnFleetProps {
     /**
      * The name of the fleet.
      *

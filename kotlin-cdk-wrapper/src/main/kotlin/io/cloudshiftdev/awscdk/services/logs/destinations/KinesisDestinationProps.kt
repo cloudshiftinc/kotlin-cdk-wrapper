@@ -61,7 +61,8 @@ public interface KinesisDestinationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.destinations.KinesisDestinationProps,
-  ) : CdkObject(cdkObject), KinesisDestinationProps {
+  ) : CdkObject(cdkObject),
+      KinesisDestinationProps {
     /**
      * The role to assume to write log events to the destination.
      *

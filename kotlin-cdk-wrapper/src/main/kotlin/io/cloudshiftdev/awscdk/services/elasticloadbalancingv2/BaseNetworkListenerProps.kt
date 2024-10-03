@@ -274,7 +274,8 @@ public interface BaseNetworkListenerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseNetworkListenerProps,
-  ) : CdkObject(cdkObject), BaseNetworkListenerProps {
+  ) : CdkObject(cdkObject),
+      BaseNetworkListenerProps {
     /**
      * Application-Layer Protocol Negotiation (ALPN) is a TLS extension that is sent on the initial
      * TLS handshake hello messages.

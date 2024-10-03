@@ -6,10 +6,12 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 import kotlin.Boolean
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Options used to configure a DynamoDB table.
@@ -20,13 +22,16 @@ import kotlin.collections.List
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+ * import io.cloudshiftdev.awscdk.services.iam.*;
  * import io.cloudshiftdev.awscdk.services.kinesis.*;
+ * PolicyDocument policyDocument;
  * Stream stream;
  * TableOptionsV2 tableOptionsV2 = TableOptionsV2.builder()
  * .contributorInsights(false)
  * .deletionProtection(false)
  * .kinesisStream(stream)
  * .pointInTimeRecovery(false)
+ * .resourcePolicy(policyDocument)
  * .tableClass(TableClass.STANDARD)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -63,6 +68,16 @@ public interface TableOptionsV2 {
    * Default: false
    */
   public fun pointInTimeRecovery(): Boolean? = unwrap(this).getPointInTimeRecovery()
+
+  /**
+   * Resource policy to assign to DynamoDB Table.
+   *
+   * Default: - No resource policy statements are added to the created table.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-resourcepolicy)
+   */
+  public fun resourcePolicy(): PolicyDocument? =
+      unwrap(this).getResourcePolicy()?.let(PolicyDocument::wrap)
 
   /**
    * The table class.
@@ -102,6 +117,18 @@ public interface TableOptionsV2 {
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled.
      */
     public fun pointInTimeRecovery(pointInTimeRecovery: Boolean)
+
+    /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    public fun resourcePolicy(resourcePolicy: PolicyDocument)
+
+    /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("31d9374340158b2b3fe0d25aa45e06e7b7b0405e3e0f1deb28a433bf51c07dc4")
+    public fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit)
 
     /**
      * @param tableClass The table class.
@@ -152,6 +179,21 @@ public interface TableOptionsV2 {
     }
 
     /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    override fun resourcePolicy(resourcePolicy: PolicyDocument) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(PolicyDocument.Companion::unwrap))
+    }
+
+    /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("31d9374340158b2b3fe0d25aa45e06e7b7b0405e3e0f1deb28a433bf51c07dc4")
+    override fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit): Unit =
+        resourcePolicy(PolicyDocument(resourcePolicy))
+
+    /**
      * @param tableClass The table class.
      */
     override fun tableClass(tableClass: TableClass) {
@@ -175,7 +217,8 @@ public interface TableOptionsV2 {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.TableOptionsV2,
-  ) : CdkObject(cdkObject), TableOptionsV2 {
+  ) : CdkObject(cdkObject),
+      TableOptionsV2 {
     /**
      * Whether CloudWatch contributor insights is enabled.
      *
@@ -203,6 +246,16 @@ public interface TableOptionsV2 {
      * Default: false
      */
     override fun pointInTimeRecovery(): Boolean? = unwrap(this).getPointInTimeRecovery()
+
+    /**
+     * Resource policy to assign to DynamoDB Table.
+     *
+     * Default: - No resource policy statements are added to the created table.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-resourcepolicy)
+     */
+    override fun resourcePolicy(): PolicyDocument? =
+        unwrap(this).getResourcePolicy()?.let(PolicyDocument::wrap)
 
     /**
      * The table class.

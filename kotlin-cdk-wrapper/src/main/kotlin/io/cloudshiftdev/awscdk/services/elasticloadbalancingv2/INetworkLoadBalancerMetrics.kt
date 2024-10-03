@@ -278,7 +278,8 @@ public interface INetworkLoadBalancerMetrics {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerMetrics,
-  ) : CdkObject(cdkObject), INetworkLoadBalancerMetrics {
+  ) : CdkObject(cdkObject),
+      INetworkLoadBalancerMetrics {
     /**
      * The total number of concurrent TCP flows (or connections) from clients to targets.
      *

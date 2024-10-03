@@ -45,7 +45,8 @@ import kotlin.Unit
  */
 public open class Sns(
   cdkObject: software.amazon.awscdk.services.ses.actions.Sns,
-) : CdkObject(cdkObject), IReceiptRuleAction {
+) : CdkObject(cdkObject),
+    IReceiptRuleAction {
   public constructor(props: SnsProps) :
       this(software.amazon.awscdk.services.ses.actions.Sns(props.let(SnsProps.Companion::unwrap))
   )

@@ -121,7 +121,8 @@ public interface CfnControlPanelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanelProps,
-  ) : CdkObject(cdkObject), CfnControlPanelProps {
+  ) : CdkObject(cdkObject),
+      CfnControlPanelProps {
     /**
      * The Amazon Resource Name (ARN) of the cluster for the control panel.
      *

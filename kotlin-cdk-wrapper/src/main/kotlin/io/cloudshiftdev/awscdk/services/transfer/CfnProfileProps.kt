@@ -171,7 +171,8 @@ public interface CfnProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.transfer.CfnProfileProps,
-  ) : CdkObject(cdkObject), CfnProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnProfileProps {
     /**
      * The `As2Id` is the *AS2-name* , as defined in the [RFC
      * 4130](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc4130) . For inbound

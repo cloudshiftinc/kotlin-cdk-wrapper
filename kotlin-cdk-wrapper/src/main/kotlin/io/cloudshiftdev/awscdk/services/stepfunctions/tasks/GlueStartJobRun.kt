@@ -28,11 +28,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.glue.alpha.*;
- * Job submitGlue;
- * GlueStartJobRun submitJob = GlueStartJobRun.Builder.create(this, "Submit Job")
- * .glueJobName(submitGlue.getJobName())
- * .integrationPattern(IntegrationPattern.RUN_JOB)
+ * GlueStartJobRun.Builder.create(this, "Task")
+ * .glueJobName("my-glue-job")
+ * .workerConfiguration(WorkerConfigurationProperty.builder()
+ * .workerType(WorkerType.G_1X) // Worker type
+ * .numberOfWorkers(2)
+ * .build())
  * .build();
  * ```
  *
@@ -110,6 +111,15 @@ public open class GlueStartJobRun(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5aee74dc25bc0b12b0d3d4e10ef13dd696dcbd73632ff957db2199f3560ecf65")
     public fun credentials(credentials: Credentials.Builder.() -> Unit)
+
+    /**
+     * The excecution class of the job.
+     *
+     * Default: - STANDARD
+     *
+     * @param executionClass The excecution class of the job. 
+     */
+    public fun executionClass(executionClass: ExecutionClass)
 
     /**
      * Glue job name.
@@ -270,6 +280,27 @@ public open class GlueStartJobRun(
      */
     @Deprecated(message = "deprecated in CDK")
     public fun timeout(timeout: Duration)
+
+    /**
+     * The worker configuration for this run.
+     *
+     * Default: - Default worker configuration in the job definition
+     *
+     * @param workerConfiguration The worker configuration for this run. 
+     */
+    public fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty)
+
+    /**
+     * The worker configuration for this run.
+     *
+     * Default: - Default worker configuration in the job definition
+     *
+     * @param workerConfiguration The worker configuration for this run. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("43e47e27b7583458d69d98613de3eff71c77e1e0daeb70156d05d64c6b45117e")
+    public
+        fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -336,6 +367,17 @@ public open class GlueStartJobRun(
     @JvmName("5aee74dc25bc0b12b0d3d4e10ef13dd696dcbd73632ff957db2199f3560ecf65")
     override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
         credentials(Credentials(credentials))
+
+    /**
+     * The excecution class of the job.
+     *
+     * Default: - STANDARD
+     *
+     * @param executionClass The excecution class of the job. 
+     */
+    override fun executionClass(executionClass: ExecutionClass) {
+      cdkBuilder.executionClass(executionClass.let(ExecutionClass.Companion::unwrap))
+    }
 
     /**
      * Glue job name.
@@ -522,6 +564,30 @@ public open class GlueStartJobRun(
     override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
+
+    /**
+     * The worker configuration for this run.
+     *
+     * Default: - Default worker configuration in the job definition
+     *
+     * @param workerConfiguration The worker configuration for this run. 
+     */
+    override fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty) {
+      cdkBuilder.workerConfiguration(workerConfiguration.let(WorkerConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The worker configuration for this run.
+     *
+     * Default: - Default worker configuration in the job definition
+     *
+     * @param workerConfiguration The worker configuration for this run. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("43e47e27b7583458d69d98613de3eff71c77e1e0daeb70156d05d64c6b45117e")
+    override
+        fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty.Builder.() -> Unit):
+        Unit = workerConfiguration(WorkerConfigurationProperty(workerConfiguration))
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun =
         cdkBuilder.build()

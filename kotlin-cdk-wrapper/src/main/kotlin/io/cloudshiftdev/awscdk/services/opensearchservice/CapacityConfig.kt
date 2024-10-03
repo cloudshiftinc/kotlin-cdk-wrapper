@@ -224,7 +224,8 @@ public interface CapacityConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opensearchservice.CapacityConfig,
-  ) : CdkObject(cdkObject), CapacityConfig {
+  ) : CdkObject(cdkObject),
+      CapacityConfig {
     /**
      * The instance type for your data nodes, such as `m3.medium.search`. For valid values, see
      * [Supported Instance

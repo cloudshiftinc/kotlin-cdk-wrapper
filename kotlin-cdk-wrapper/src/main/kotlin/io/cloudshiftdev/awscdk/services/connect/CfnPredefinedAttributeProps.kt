@@ -133,7 +133,8 @@ public interface CfnPredefinedAttributeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttributeProps,
-  ) : CdkObject(cdkObject), CfnPredefinedAttributeProps {
+  ) : CdkObject(cdkObject),
+      CfnPredefinedAttributeProps {
     /**
      * The Amazon Resource Name (ARN) of the instance.
      *

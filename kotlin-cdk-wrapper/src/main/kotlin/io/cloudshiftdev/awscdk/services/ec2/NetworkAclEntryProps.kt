@@ -153,7 +153,8 @@ public interface NetworkAclEntryProps : CommonNetworkAclEntryOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.NetworkAclEntryProps,
-  ) : CdkObject(cdkObject), NetworkAclEntryProps {
+  ) : CdkObject(cdkObject),
+      NetworkAclEntryProps {
     /**
      * The CIDR range to allow or deny.
      */

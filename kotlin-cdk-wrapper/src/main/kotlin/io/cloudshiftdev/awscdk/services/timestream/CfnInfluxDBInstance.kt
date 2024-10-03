@@ -68,7 +68,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInfluxDBInstance(
   cdkObject: software.amazon.awscdk.services.timestream.CfnInfluxDBInstance,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.timestream.CfnInfluxDBInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -982,7 +984,8 @@ public open class CfnInfluxDBInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.timestream.CfnInfluxDBInstance.LogDeliveryConfigurationProperty,
-    ) : CdkObject(cdkObject), LogDeliveryConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LogDeliveryConfigurationProperty {
       /**
        * Configuration for S3 bucket log delivery.
        *
@@ -1096,7 +1099,8 @@ public open class CfnInfluxDBInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.timestream.CfnInfluxDBInstance.S3ConfigurationProperty,
-    ) : CdkObject(cdkObject), S3ConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        S3ConfigurationProperty {
       /**
        * The bucket name of the customer S3 bucket.
        *

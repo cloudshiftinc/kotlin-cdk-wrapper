@@ -114,7 +114,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfigRule(
   cdkObject: software.amazon.awscdk.services.config.CfnConfigRule,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -890,7 +891,8 @@ public open class CfnConfigRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty,
-    ) : CdkObject(cdkObject), ComplianceProperty {
+    ) : CdkObject(cdkObject),
+        ComplianceProperty {
       /**
        * Indicates whether an AWS resource or AWS Config rule is compliant.
        *
@@ -1063,7 +1065,8 @@ public open class CfnConfigRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty,
-    ) : CdkObject(cdkObject), CustomPolicyDetailsProperty {
+    ) : CdkObject(cdkObject),
+        CustomPolicyDetailsProperty {
       /**
        * The boolean expression for enabling debug logging for your AWS Config Custom Policy rule.
        *
@@ -1173,7 +1176,8 @@ public open class CfnConfigRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty,
-    ) : CdkObject(cdkObject), EvaluationModeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EvaluationModeConfigurationProperty {
       /**
        * The mode of an evaluation.
        *
@@ -1367,7 +1371,8 @@ public open class CfnConfigRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.ScopeProperty,
-    ) : CdkObject(cdkObject), ScopeProperty {
+    ) : CdkObject(cdkObject),
+        ScopeProperty {
       /**
        * The ID of the only AWS resource that you want to trigger an evaluation for the rule.
        *
@@ -1610,7 +1615,8 @@ public open class CfnConfigRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty,
-    ) : CdkObject(cdkObject), SourceDetailProperty {
+    ) : CdkObject(cdkObject),
+        SourceDetailProperty {
       /**
        * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your
        * AWS resources.
@@ -1982,7 +1988,8 @@ public open class CfnConfigRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.SourceProperty,
-    ) : CdkObject(cdkObject), SourceProperty {
+    ) : CdkObject(cdkObject),
+        SourceProperty {
       /**
        * Provides the runtime system, policy definition, and whether debug logging is enabled.
        *

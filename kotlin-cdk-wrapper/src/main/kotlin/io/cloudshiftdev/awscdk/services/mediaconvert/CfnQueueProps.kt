@@ -185,7 +185,8 @@ public interface CfnQueueProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediaconvert.CfnQueueProps,
-  ) : CdkObject(cdkObject), CfnQueueProps {
+  ) : CdkObject(cdkObject),
+      CfnQueueProps {
     /**
      * Optional.
      *

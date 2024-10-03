@@ -97,7 +97,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEndpoint(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -831,7 +833,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty,
-    ) : CdkObject(cdkObject), AlarmProperty {
+    ) : CdkObject(cdkObject),
+        AlarmProperty {
       /**
        * The name of a CloudWatch alarm in your account.
        *
@@ -950,7 +953,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty,
-    ) : CdkObject(cdkObject), AutoRollbackConfigProperty {
+    ) : CdkObject(cdkObject),
+        AutoRollbackConfigProperty {
       /**
        * List of CloudWatch alarms in your account that are configured to monitor metrics on an
        * endpoint.
@@ -1149,7 +1153,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.BlueGreenUpdatePolicyProperty,
-    ) : CdkObject(cdkObject), BlueGreenUpdatePolicyProperty {
+    ) : CdkObject(cdkObject),
+        BlueGreenUpdatePolicyProperty {
       /**
        * Maximum execution timeout for the deployment.
        *
@@ -1290,7 +1295,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.CapacitySizeProperty,
-    ) : CdkObject(cdkObject), CapacitySizeProperty {
+    ) : CdkObject(cdkObject),
+        CapacitySizeProperty {
       /**
        * Specifies the endpoint capacity type.
        *
@@ -1592,7 +1598,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty,
-    ) : CdkObject(cdkObject), DeploymentConfigProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentConfigProperty {
       /**
        * Automatic rollback configuration for handling endpoint deployment failures and recovery.
        *
@@ -1869,7 +1876,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.RollingUpdatePolicyProperty,
-    ) : CdkObject(cdkObject), RollingUpdatePolicyProperty {
+    ) : CdkObject(cdkObject),
+        RollingUpdatePolicyProperty {
       /**
        * Batch size for each rolling step to provision capacity and turn on traffic on the new
        * endpoint fleet, and terminate capacity on the old endpoint fleet.
@@ -2154,7 +2162,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.TrafficRoutingConfigProperty,
-    ) : CdkObject(cdkObject), TrafficRoutingConfigProperty {
+    ) : CdkObject(cdkObject),
+        TrafficRoutingConfigProperty {
       /**
        * Batch size for the first step to turn on traffic on the new endpoint fleet.
        *
@@ -2307,7 +2316,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty,
-    ) : CdkObject(cdkObject), VariantPropertyProperty {
+    ) : CdkObject(cdkObject),
+        VariantPropertyProperty {
       /**
        * The type of variant property. The supported values are:.
        *

@@ -186,7 +186,8 @@ public interface CfnDestinationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotwireless.CfnDestinationProps,
-  ) : CdkObject(cdkObject), CfnDestinationProps {
+  ) : CdkObject(cdkObject),
+      CfnDestinationProps {
     /**
      * The description of the new resource.
      *

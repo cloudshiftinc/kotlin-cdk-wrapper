@@ -329,7 +329,8 @@ public interface ReceiptRuleActionConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleActionConfig,
-  ) : CdkObject(cdkObject), ReceiptRuleActionConfig {
+  ) : CdkObject(cdkObject),
+      ReceiptRuleActionConfig {
     /**
      * Adds a header to the received email.
      */

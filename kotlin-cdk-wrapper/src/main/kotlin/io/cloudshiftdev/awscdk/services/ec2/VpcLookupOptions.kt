@@ -250,7 +250,8 @@ public interface VpcLookupOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.VpcLookupOptions,
-  ) : CdkObject(cdkObject), VpcLookupOptions {
+  ) : CdkObject(cdkObject),
+      VpcLookupOptions {
     /**
      * Whether to match the default VPC.
      *

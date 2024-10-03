@@ -58,6 +58,7 @@ import kotlin.jvm.JvmName
  * "tagsKey", "tags"))
  * .updateToLatestImageVersion(false)
  * .build())
+ * .context("context")
  * .eksConfiguration(EksConfigurationProperty.builder()
  * .eksClusterArn("eksClusterArn")
  * .kubernetesNamespace("kubernetesNamespace")
@@ -99,6 +100,13 @@ public interface CfnComputeEnvironmentProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-computeresources)
    */
   public fun computeResources(): Any? = unwrap(this).getComputeResources()
+
+  /**
+   * Reserved.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-context)
+   */
+  public fun context(): String? = unwrap(this).getContext()
 
   /**
    * The details for the Amazon EKS cluster that supports the compute environment.
@@ -317,6 +325,11 @@ public interface CfnComputeEnvironmentProps {
     @JvmName("1c5aa89e96bc4834f076a358ce0ec44674fba0f607213a72f5e343e80332b474")
     public
         fun computeResources(computeResources: CfnComputeEnvironment.ComputeResourcesProperty.Builder.() -> Unit)
+
+    /**
+     * @param context Reserved.
+     */
+    public fun context(context: String)
 
     /**
      * @param eksConfiguration The details for the Amazon EKS cluster that supports the compute
@@ -607,6 +620,13 @@ public interface CfnComputeEnvironmentProps {
         Unit = computeResources(CfnComputeEnvironment.ComputeResourcesProperty(computeResources))
 
     /**
+     * @param context Reserved.
+     */
+    override fun context(context: String) {
+      cdkBuilder.context(context)
+    }
+
+    /**
      * @param eksConfiguration The details for the Amazon EKS cluster that supports the compute
      * environment.
      */
@@ -872,7 +892,8 @@ public interface CfnComputeEnvironmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironmentProps,
-  ) : CdkObject(cdkObject), CfnComputeEnvironmentProps {
+  ) : CdkObject(cdkObject),
+      CfnComputeEnvironmentProps {
     /**
      * The name for your compute environment.
      *
@@ -895,6 +916,13 @@ public interface CfnComputeEnvironmentProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-computeresources)
      */
     override fun computeResources(): Any? = unwrap(this).getComputeResources()
+
+    /**
+     * Reserved.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-context)
+     */
+    override fun context(): String? = unwrap(this).getContext()
 
     /**
      * The details for the Amazon EKS cluster that supports the compute environment.

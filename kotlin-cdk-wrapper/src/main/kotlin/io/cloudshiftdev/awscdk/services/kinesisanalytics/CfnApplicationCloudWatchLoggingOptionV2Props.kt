@@ -128,7 +128,8 @@ public interface CfnApplicationCloudWatchLoggingOptionV2Props {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2Props,
-  ) : CdkObject(cdkObject), CfnApplicationCloudWatchLoggingOptionV2Props {
+  ) : CdkObject(cdkObject),
+      CfnApplicationCloudWatchLoggingOptionV2Props {
     /**
      * The name of the application.
      *

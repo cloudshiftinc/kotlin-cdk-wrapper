@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -17,8 +18,9 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Amazon CloudFront is a global content delivery network (CDN) service that securely delivers data,
- * videos, applications, and APIs to your viewers with low latency and high transfer speeds.
+ * (deprecated) Amazon CloudFront is a global content delivery network (CDN) service that securely
+ * delivers data, videos, applications, and APIs to your viewers with low latency and high transfer
+ * speeds.
  *
  * CloudFront fronts user provided content and caches it at edge locations across the world.
  *
@@ -37,7 +39,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build();
  * ```
  *
- * This will create a CloudFront distribution that uses your S3Bucket as it's origin.
+ * This will create a CloudFront distribution that uses your S3Bucket as its origin.
  *
  * You can customize the distribution using additional properties from the
  * CloudFrontWebDistributionProps interface.
@@ -60,10 +62,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .viewerCertificate(viewerCertificate)
  * .build();
  * ```
+ *
+ * @deprecated Use `Distribution` instead
  */
 public open class CloudFrontWebDistribution(
   cdkObject: software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution,
-) : Resource(cdkObject), IDistribution {
+) : Resource(cdkObject),
+    IDistribution {
+  @Deprecated(message = "deprecated in CDK")
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -73,6 +79,7 @@ public open class CloudFrontWebDistribution(
       id, props.let(CloudFrontWebDistributionProps.Companion::unwrap))
   )
 
+  @Deprecated(message = "deprecated in CDK")
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -81,48 +88,57 @@ public open class CloudFrontWebDistribution(
   )
 
   /**
-   * The domain name created by CloudFront for this distribution.
+   * (deprecated) The domain name created by CloudFront for this distribution.
    *
    * If you are using aliases for your distribution, this is the domainName your DNS records should
    * point to.
    * (In Route53, you could create an ALIAS record to this value, for example.)
    */
+  @Deprecated(message = "deprecated in CDK")
   public override fun distributionDomainName(): String = unwrap(this).getDistributionDomainName()
 
   /**
-   * The distribution ID for this distribution.
+   * (deprecated) The distribution ID for this distribution.
    */
+  @Deprecated(message = "deprecated in CDK")
   public override fun distributionId(): String = unwrap(this).getDistributionId()
 
   /**
-   * Adds an IAM policy statement associated with this distribution to an IAM principal's policy.
+   * (deprecated) Adds an IAM policy statement associated with this distribution to an IAM
+   * principal's policy.
    *
    * @param identity The principal. 
    * @param actions The set of actions to allow (i.e. "cloudfront:ListInvalidations"). 
    */
+  @Deprecated(message = "deprecated in CDK")
   public override fun grant(identity: IGrantable, vararg actions: String): Grant =
       unwrap(this).grant(identity.let(IGrantable.Companion::unwrap),
       *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
-   * Grant to create invalidations for this bucket to an IAM principal (Role/Group/User).
+   * (deprecated) Grant to create invalidations for this bucket to an IAM principal
+   * (Role/Group/User).
    *
    * @param identity The principal. 
    */
+  @Deprecated(message = "deprecated in CDK")
   public override fun grantCreateInvalidation(identity: IGrantable): Grant =
       unwrap(this).grantCreateInvalidation(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
-   * The logging bucket for this CloudFront distribution.
+   * (deprecated) The logging bucket for this CloudFront distribution.
    *
    * If logging is not enabled for this distribution - this property will be undefined.
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun loggingBucket(): IBucket? = unwrap(this).getLoggingBucket()?.let(IBucket::wrap)
 
   /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.cloudfront.CloudFrontWebDistribution].
+   * (deprecated) A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.cloudfront.CloudFrontWebDistribution].
    */
   @CdkDslMarker
+  @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     /**
      * A comment for this distribution in the CloudFront console.
@@ -526,6 +542,7 @@ public open class CloudFrontWebDistribution(
   }
 
   public companion object {
+    @Deprecated(message = "deprecated in CDK")
     public fun fromDistributionAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
@@ -535,6 +552,7 @@ public open class CloudFrontWebDistribution(
         id,
         attrs.let(CloudFrontWebDistributionAttributes.Companion::unwrap)).let(IDistribution::wrap)
 
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("80a9b75be6523c2010178c9d6779ba47e3ed66833189966b4162046ea7b0dfc4")
     public fun fromDistributionAttributes(

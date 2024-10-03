@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPricingRule(
   cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -652,7 +654,8 @@ public open class CfnPricingRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule.FreeTierProperty,
-    ) : CdkObject(cdkObject), FreeTierProperty {
+    ) : CdkObject(cdkObject),
+        FreeTierProperty {
       /**
        * Activate or deactivate AWS Free Tier.
        *
@@ -762,7 +765,8 @@ public open class CfnPricingRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule.TieringProperty,
-    ) : CdkObject(cdkObject), TieringProperty {
+    ) : CdkObject(cdkObject),
+        TieringProperty {
       /**
        * The possible AWS Free Tier configurations.
        *

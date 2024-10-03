@@ -40,7 +40,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLocalGatewayRouteTable(
   cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTable,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

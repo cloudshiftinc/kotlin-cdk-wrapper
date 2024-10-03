@@ -46,7 +46,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInputSecurityGroup(
   cdkObject: software.amazon.awscdk.services.medialive.CfnInputSecurityGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.medialive.CfnInputSecurityGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -313,7 +315,8 @@ public open class CfnInputSecurityGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnInputSecurityGroup.InputWhitelistRuleCidrProperty,
-    ) : CdkObject(cdkObject), InputWhitelistRuleCidrProperty {
+    ) : CdkObject(cdkObject),
+        InputWhitelistRuleCidrProperty {
       /**
        * An IPv4 CIDR range to include in this input security group.
        *

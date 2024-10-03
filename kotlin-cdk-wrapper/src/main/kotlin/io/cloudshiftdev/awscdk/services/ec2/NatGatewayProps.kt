@@ -69,7 +69,8 @@ public interface NatGatewayProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.NatGatewayProps,
-  ) : CdkObject(cdkObject), NatGatewayProps {
+  ) : CdkObject(cdkObject),
+      NatGatewayProps {
     /**
      * EIP allocation IDs for the NAT gateways.
      *

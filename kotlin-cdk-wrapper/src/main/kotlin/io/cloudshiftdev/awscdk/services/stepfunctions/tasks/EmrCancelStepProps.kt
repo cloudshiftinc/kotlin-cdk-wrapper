@@ -294,7 +294,8 @@ public interface EmrCancelStepProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStepProps,
-  ) : CdkObject(cdkObject), EmrCancelStepProps {
+  ) : CdkObject(cdkObject),
+      EmrCancelStepProps {
     /**
      * The ClusterId to update.
      */

@@ -317,7 +317,8 @@ public interface CfnUpdatePolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnUpdatePolicy,
-  ) : CdkObject(cdkObject), CfnUpdatePolicy {
+  ) : CdkObject(cdkObject),
+      CfnUpdatePolicy {
     /**
      * Specifies whether an Auto Scaling group and the instances it contains are replaced during an
      * update.

@@ -511,7 +511,8 @@ public interface CfnClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dax.CfnClusterProps,
-  ) : CdkObject(cdkObject), CfnClusterProps {
+  ) : CdkObject(cdkObject),
+      CfnClusterProps {
     /**
      * The Availability Zones (AZs) in which the cluster nodes will reside after the cluster has
      * been created or updated.

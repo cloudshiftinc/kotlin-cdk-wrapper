@@ -117,7 +117,8 @@ public interface HostPathVolumeOptions : EksVolumeOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.HostPathVolumeOptions,
-  ) : CdkObject(cdkObject), HostPathVolumeOptions {
+  ) : CdkObject(cdkObject),
+      HostPathVolumeOptions {
     /**
      * The path of the file or directory on the host to mount into containers on the pod.
      *

@@ -39,7 +39,8 @@ public interface SchemaBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.SchemaBindOptions,
-  ) : CdkObject(cdkObject), SchemaBindOptions
+  ) : CdkObject(cdkObject),
+      SchemaBindOptions
 
   public companion object {
     public operator fun invoke(block: Builder.() -> Unit = {}): SchemaBindOptions {

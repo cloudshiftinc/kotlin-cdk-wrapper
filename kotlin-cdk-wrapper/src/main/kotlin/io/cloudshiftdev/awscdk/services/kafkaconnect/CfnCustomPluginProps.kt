@@ -195,7 +195,8 @@ public interface CfnCustomPluginProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnCustomPluginProps,
-  ) : CdkObject(cdkObject), CfnCustomPluginProps {
+  ) : CdkObject(cdkObject),
+      CfnCustomPluginProps {
     /**
      * The format of the plugin file.
      *

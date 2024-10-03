@@ -65,7 +65,8 @@ public interface Credentials {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.Credentials,
-  ) : CdkObject(cdkObject), Credentials {
+  ) : CdkObject(cdkObject),
+      Credentials {
     /**
      * The role to be assumed for executing the Task.
      */

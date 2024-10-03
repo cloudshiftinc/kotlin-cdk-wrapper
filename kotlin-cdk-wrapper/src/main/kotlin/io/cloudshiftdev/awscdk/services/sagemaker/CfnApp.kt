@@ -41,6 +41,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .resourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
@@ -55,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApp(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnApp,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -428,6 +431,7 @@ public open class CfnApp(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * ResourceSpecProperty resourceSpecProperty = ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build();
@@ -449,6 +453,13 @@ public open class CfnApp(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-app-resourcespec.html#cfn-sagemaker-app-resourcespec-instancetype)
      */
     public fun instanceType(): String? = unwrap(this).getInstanceType()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-app-resourcespec.html#cfn-sagemaker-app-resourcespec-lifecycleconfigarn)
+     */
+    public fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
     /**
      * The ARN of the SageMaker image that the image version belongs to.
@@ -480,6 +491,12 @@ public open class CfnApp(
       public fun instanceType(instanceType: String)
 
       /**
+       * @param lifecycleConfigArn The Amazon Resource Name (ARN) of the Lifecycle Configuration
+       * attached to the Resource.
+       */
+      public fun lifecycleConfigArn(lifecycleConfigArn: String)
+
+      /**
        * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
        */
       public fun sageMakerImageArn(sageMakerImageArn: String)
@@ -508,6 +525,14 @@ public open class CfnApp(
       }
 
       /**
+       * @param lifecycleConfigArn The Amazon Resource Name (ARN) of the Lifecycle Configuration
+       * attached to the Resource.
+       */
+      override fun lifecycleConfigArn(lifecycleConfigArn: String) {
+        cdkBuilder.lifecycleConfigArn(lifecycleConfigArn)
+      }
+
+      /**
        * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
        */
       override fun sageMakerImageArn(sageMakerImageArn: String) {
@@ -527,7 +552,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnApp.ResourceSpecProperty,
-    ) : CdkObject(cdkObject), ResourceSpecProperty {
+    ) : CdkObject(cdkObject),
+        ResourceSpecProperty {
       /**
        * The instance type that the image version runs on.
        *
@@ -541,6 +567,13 @@ public open class CfnApp(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-app-resourcespec.html#cfn-sagemaker-app-resourcespec-instancetype)
        */
       override fun instanceType(): String? = unwrap(this).getInstanceType()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-app-resourcespec.html#cfn-sagemaker-app-resourcespec-lifecycleconfigarn)
+       */
+      override fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
       /**
        * The ARN of the SageMaker image that the image version belongs to.

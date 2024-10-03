@@ -70,7 +70,8 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.IFileSystem,
-  ) : CdkObject(cdkObject), IFileSystem {
+  ) : CdkObject(cdkObject),
+      IFileSystem {
     /**
      * Add a statement to the resource's resource policy.
      *

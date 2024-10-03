@@ -79,7 +79,7 @@ public interface CfnConfigurationProfileProps {
    * ://<secret name>.
    * * For an Amazon S3 object, specify the URI in the following format:
    * `s3://&lt;bucket&gt;/&lt;objectKey&gt;` . Here is an example:
-   * `s3://my-bucket/my-app/us-east-1/my-config.json`
+   * `s3://amzn-s3-demo-bucket/my-app/us-east-1/my-config.json`
    * * For an SSM document, specify either the document name in the format
    * `ssm-document://&lt;document name&gt;` or the Amazon Resource Name (ARN).
    *
@@ -172,7 +172,7 @@ public interface CfnConfigurationProfileProps {
      * `secretsmanager` ://<secret name>.
      * * For an Amazon S3 object, specify the URI in the following format:
      * `s3://&lt;bucket&gt;/&lt;objectKey&gt;` . Here is an example:
-     * `s3://my-bucket/my-app/us-east-1/my-config.json`
+     * `s3://amzn-s3-demo-bucket/my-app/us-east-1/my-config.json`
      * * For an SSM document, specify either the document name in the format
      * `ssm-document://&lt;document name&gt;` or the Amazon Resource Name (ARN).
      */
@@ -273,7 +273,7 @@ public interface CfnConfigurationProfileProps {
      * `secretsmanager` ://<secret name>.
      * * For an Amazon S3 object, specify the URI in the following format:
      * `s3://&lt;bucket&gt;/&lt;objectKey&gt;` . Here is an example:
-     * `s3://my-bucket/my-app/us-east-1/my-config.json`
+     * `s3://amzn-s3-demo-bucket/my-app/us-east-1/my-config.json`
      * * For an SSM document, specify either the document name in the format
      * `ssm-document://&lt;document name&gt;` or the Amazon Resource Name (ARN).
      */
@@ -355,7 +355,8 @@ public interface CfnConfigurationProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.CfnConfigurationProfileProps,
-  ) : CdkObject(cdkObject), CfnConfigurationProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnConfigurationProfileProps {
     /**
      * The application ID.
      *
@@ -390,7 +391,7 @@ public interface CfnConfigurationProfileProps {
      * `secretsmanager` ://<secret name>.
      * * For an Amazon S3 object, specify the URI in the following format:
      * `s3://&lt;bucket&gt;/&lt;objectKey&gt;` . Here is an example:
-     * `s3://my-bucket/my-app/us-east-1/my-config.json`
+     * `s3://amzn-s3-demo-bucket/my-app/us-east-1/my-config.json`
      * * For an SSM document, specify either the document name in the format
      * `ssm-document://&lt;document name&gt;` or the Amazon Resource Name (ARN).
      *

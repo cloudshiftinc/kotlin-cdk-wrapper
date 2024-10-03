@@ -160,7 +160,8 @@ public interface CfnFirewallDomainListProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallDomainListProps,
-  ) : CdkObject(cdkObject), CfnFirewallDomainListProps {
+  ) : CdkObject(cdkObject),
+      CfnFirewallDomainListProps {
     /**
      * The fully qualified URL or URI of the file stored in Amazon Simple Storage Service (Amazon
      * S3) that contains the list of domains to import.

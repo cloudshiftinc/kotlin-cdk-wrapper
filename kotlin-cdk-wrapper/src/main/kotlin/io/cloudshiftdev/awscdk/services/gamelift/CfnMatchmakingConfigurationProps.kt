@@ -692,7 +692,8 @@ public interface CfnMatchmakingConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.gamelift.CfnMatchmakingConfigurationProps,
-  ) : CdkObject(cdkObject), CfnMatchmakingConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnMatchmakingConfigurationProps {
     /**
      * A flag that determines whether a match that was created with this configuration must be
      * accepted by the matched players.

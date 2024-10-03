@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDetectorModel(
   cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1334,7 +1336,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * Information needed to clear the timer.
        *
@@ -1573,7 +1576,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty,
-    ) : CdkObject(cdkObject), AssetPropertyTimestampProperty {
+    ) : CdkObject(cdkObject),
+        AssetPropertyTimestampProperty {
       /**
        * The nanosecond offset converted from `timeInSeconds` .
        *
@@ -1797,7 +1801,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty,
-    ) : CdkObject(cdkObject), AssetPropertyValueProperty {
+    ) : CdkObject(cdkObject),
+        AssetPropertyValueProperty {
       /**
        * The quality of the asset property value.
        *
@@ -2006,7 +2011,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty,
-    ) : CdkObject(cdkObject), AssetPropertyVariantProperty {
+    ) : CdkObject(cdkObject),
+        AssetPropertyVariantProperty {
       /**
        * The asset property value is a Boolean value that must be `'TRUE'` or `'FALSE'` .
        *
@@ -2116,7 +2122,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty,
-    ) : CdkObject(cdkObject), ClearTimerProperty {
+    ) : CdkObject(cdkObject),
+        ClearTimerProperty {
       /**
        * The name of the timer to clear.
        *
@@ -2235,7 +2242,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty,
-    ) : CdkObject(cdkObject), DetectorModelDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        DetectorModelDefinitionProperty {
       /**
        * The state that is entered at the creation of each detector (instance).
        *
@@ -2682,7 +2690,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBProperty,
-    ) : CdkObject(cdkObject), DynamoDBProperty {
+    ) : CdkObject(cdkObject),
+        DynamoDBProperty {
       /**
        * The name of the hash key (also called the partition key).
        *
@@ -2979,7 +2988,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property,
-    ) : CdkObject(cdkObject), DynamoDBv2Property {
+    ) : CdkObject(cdkObject),
+        DynamoDBv2Property {
       /**
        * Information needed to configure the payload.
        *
@@ -3257,7 +3267,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty,
-    ) : CdkObject(cdkObject), EventProperty {
+    ) : CdkObject(cdkObject),
+        EventProperty {
       /**
        * The actions to be performed.
        *
@@ -3443,7 +3454,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty,
-    ) : CdkObject(cdkObject), FirehoseProperty {
+    ) : CdkObject(cdkObject),
+        FirehoseProperty {
       /**
        * The name of the Kinesis Data Firehose delivery stream where the data is written.
        *
@@ -3600,7 +3612,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty,
-    ) : CdkObject(cdkObject), IotEventsProperty {
+    ) : CdkObject(cdkObject),
+        IotEventsProperty {
       /**
        * The name of the AWS IoT Events input where the data is sent.
        *
@@ -3851,7 +3864,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty,
-    ) : CdkObject(cdkObject), IotSiteWiseProperty {
+    ) : CdkObject(cdkObject),
+        IotSiteWiseProperty {
       /**
        * The ID of the asset that has the specified property.
        *
@@ -4030,7 +4044,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty,
-    ) : CdkObject(cdkObject), IotTopicPublishProperty {
+    ) : CdkObject(cdkObject),
+        IotTopicPublishProperty {
       /**
        * The MQTT topic of the message.
        *
@@ -4178,7 +4193,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty,
-    ) : CdkObject(cdkObject), LambdaProperty {
+    ) : CdkObject(cdkObject),
+        LambdaProperty {
       /**
        * The ARN of the Lambda function that is executed.
        *
@@ -4412,7 +4428,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnEnterProperty,
-    ) : CdkObject(cdkObject), OnEnterProperty {
+    ) : CdkObject(cdkObject),
+        OnEnterProperty {
       /**
        * Specifies the actions that are performed when the state is entered and the `condition` is
        * `TRUE` .
@@ -4640,7 +4657,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty,
-    ) : CdkObject(cdkObject), OnExitProperty {
+    ) : CdkObject(cdkObject),
+        OnExitProperty {
       /**
        * Specifies the `actions` that are performed when the state is exited and the `condition` is
        * `TRUE` .
@@ -5030,7 +5048,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty,
-    ) : CdkObject(cdkObject), OnInputProperty {
+    ) : CdkObject(cdkObject),
+        OnInputProperty {
       /**
        * Specifies the actions performed when the `condition` evaluates to TRUE.
        *
@@ -5158,7 +5177,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty,
-    ) : CdkObject(cdkObject), PayloadProperty {
+    ) : CdkObject(cdkObject),
+        PayloadProperty {
       /**
        * The content of the payload.
        *
@@ -5255,7 +5275,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty,
-    ) : CdkObject(cdkObject), ResetTimerProperty {
+    ) : CdkObject(cdkObject),
+        ResetTimerProperty {
       /**
        * The name of the timer to reset.
        *
@@ -5397,7 +5418,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty,
-    ) : CdkObject(cdkObject), SetTimerProperty {
+    ) : CdkObject(cdkObject),
+        SetTimerProperty {
       /**
        * The duration of the timer, in seconds.
        *
@@ -5520,7 +5542,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty,
-    ) : CdkObject(cdkObject), SetVariableProperty {
+    ) : CdkObject(cdkObject),
+        SetVariableProperty {
       /**
        * The new value of the variable.
        *
@@ -5665,7 +5688,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty,
-    ) : CdkObject(cdkObject), SnsProperty {
+    ) : CdkObject(cdkObject),
+        SnsProperty {
       /**
        * You can configure the action payload when you send a message as an Amazon SNS push
        * notification.
@@ -5853,7 +5877,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SqsProperty,
-    ) : CdkObject(cdkObject), SqsProperty {
+    ) : CdkObject(cdkObject),
+        SqsProperty {
       /**
        * You can configure the action payload when you send a message to an Amazon SQS queue.
        *
@@ -6099,7 +6124,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty,
-    ) : CdkObject(cdkObject), StateProperty {
+    ) : CdkObject(cdkObject),
+        StateProperty {
       /**
        * When entering this state, perform these `actions` if the `condition` is TRUE.
        *
@@ -6405,7 +6431,8 @@ public open class CfnDetectorModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty,
-    ) : CdkObject(cdkObject), TransitionEventProperty {
+    ) : CdkObject(cdkObject),
+        TransitionEventProperty {
       /**
        * The actions to be performed.
        *

@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVdmAttributes(
   cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributes,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnVdmAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -297,7 +298,8 @@ public open class CfnVdmAttributes(
   }
 
   /**
-   * Settings for your VDM configuration as applicable to the Dashboard.
+   * An object containing additional settings for your VDM configuration as applicable to the
+   * Dashboard.
    *
    * Example:
    *
@@ -359,7 +361,8 @@ public open class CfnVdmAttributes(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributes.DashboardAttributesProperty,
-    ) : CdkObject(cdkObject), DashboardAttributesProperty {
+    ) : CdkObject(cdkObject),
+        DashboardAttributesProperty {
       /**
        * Specifies the status of your VDM engagement metrics collection. Can be one of the
        * following:.
@@ -391,7 +394,8 @@ public open class CfnVdmAttributes(
   }
 
   /**
-   * Settings for your VDM configuration as applicable to the Guardian.
+   * An object containing additional settings for your VDM configuration as applicable to the
+   * Guardian.
    *
    * Example:
    *
@@ -453,7 +457,8 @@ public open class CfnVdmAttributes(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributes.GuardianAttributesProperty,
-    ) : CdkObject(cdkObject), GuardianAttributesProperty {
+    ) : CdkObject(cdkObject),
+        GuardianAttributesProperty {
       /**
        * Specifies the status of your VDM optimized shared delivery. Can be one of the following:.
        *

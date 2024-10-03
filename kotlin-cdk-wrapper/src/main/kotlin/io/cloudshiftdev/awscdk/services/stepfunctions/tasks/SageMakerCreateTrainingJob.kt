@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class SageMakerCreateTrainingJob(
   cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob,
-) : TaskStateBase(cdkObject), IGrantable, IConnectable {
+) : TaskStateBase(cdkObject),
+    IGrantable,
+    IConnectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -230,6 +232,8 @@ public open class SageMakerCreateTrainingJob(
      * Describes the various datasets (e.g. train, validation, test) and the Amazon S3 location
      * where stored.
      *
+     * Default: - No inputDataConfig
+     *
      * @param inputDataConfig Describes the various datasets (e.g. train, validation, test) and the
      * Amazon S3 location where stored. 
      */
@@ -238,6 +242,8 @@ public open class SageMakerCreateTrainingJob(
     /**
      * Describes the various datasets (e.g. train, validation, test) and the Amazon S3 location
      * where stored.
+     *
+     * Default: - No inputDataConfig
      *
      * @param inputDataConfig Describes the various datasets (e.g. train, validation, test) and the
      * Amazon S3 location where stored. 
@@ -606,6 +612,8 @@ public open class SageMakerCreateTrainingJob(
      * Describes the various datasets (e.g. train, validation, test) and the Amazon S3 location
      * where stored.
      *
+     * Default: - No inputDataConfig
+     *
      * @param inputDataConfig Describes the various datasets (e.g. train, validation, test) and the
      * Amazon S3 location where stored. 
      */
@@ -616,6 +624,8 @@ public open class SageMakerCreateTrainingJob(
     /**
      * Describes the various datasets (e.g. train, validation, test) and the Amazon S3 location
      * where stored.
+     *
+     * Default: - No inputDataConfig
      *
      * @param inputDataConfig Describes the various datasets (e.g. train, validation, test) and the
      * Amazon S3 location where stored. 

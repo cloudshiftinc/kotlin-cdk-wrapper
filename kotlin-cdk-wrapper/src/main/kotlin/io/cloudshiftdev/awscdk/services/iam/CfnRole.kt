@@ -61,7 +61,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRole(
   cdkObject: software.amazon.awscdk.services.iam.CfnRole,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -949,7 +951,8 @@ public open class CfnRole(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iam.CfnRole.PolicyProperty,
-    ) : CdkObject(cdkObject), PolicyProperty {
+    ) : CdkObject(cdkObject),
+        PolicyProperty {
       /**
        * The entire contents of the policy that defines permissions.
        *

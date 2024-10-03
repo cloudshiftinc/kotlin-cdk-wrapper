@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ReportGroup(
   cdkObject: software.amazon.awscdk.services.codebuild.ReportGroup,
-) : Resource(cdkObject), IReportGroup {
+) : Resource(cdkObject),
+    IReportGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codebuild.ReportGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -81,6 +82,18 @@ public open class ReportGroup(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * If true, deleting the report group force deletes the contents of the report group.
+     *
+     * If false, the report group must be empty before attempting to delete it.
+     *
+     * Default: false
+     *
+     * @param deleteReports If true, deleting the report group force deletes the contents of the
+     * report group. 
+     */
+    public fun deleteReports(deleteReports: Boolean)
+
     /**
      * An optional S3 bucket to export the reports to.
      *
@@ -143,6 +156,20 @@ public open class ReportGroup(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.ReportGroup.Builder =
         software.amazon.awscdk.services.codebuild.ReportGroup.Builder.create(scope, id)
+
+    /**
+     * If true, deleting the report group force deletes the contents of the report group.
+     *
+     * If false, the report group must be empty before attempting to delete it.
+     *
+     * Default: false
+     *
+     * @param deleteReports If true, deleting the report group force deletes the contents of the
+     * report group. 
+     */
+    override fun deleteReports(deleteReports: Boolean) {
+      cdkBuilder.deleteReports(deleteReports)
+    }
 
     /**
      * An optional S3 bucket to export the reports to.

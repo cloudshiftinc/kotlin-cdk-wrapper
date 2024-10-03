@@ -120,7 +120,8 @@ public interface CfnCodeDeployLambdaAliasUpdate {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate,
-  ) : CdkObject(cdkObject), CfnCodeDeployLambdaAliasUpdate {
+  ) : CdkObject(cdkObject),
+      CfnCodeDeployLambdaAliasUpdate {
     /**
      * The name of the Lambda function to run after traffic routing completes.
      */

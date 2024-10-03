@@ -23,7 +23,8 @@ public interface IBaseDeploymentConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.IBaseDeploymentConfig,
-  ) : CdkObject(cdkObject), IBaseDeploymentConfig {
+  ) : CdkObject(cdkObject),
+      IBaseDeploymentConfig {
     /**
      * The ARN of the Deployment Configuration.
      */

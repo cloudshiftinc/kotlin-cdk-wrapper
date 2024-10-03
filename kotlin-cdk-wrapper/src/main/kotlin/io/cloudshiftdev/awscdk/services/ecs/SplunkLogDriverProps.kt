@@ -411,7 +411,8 @@ public interface SplunkLogDriverProps : BaseLogDriverProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.SplunkLogDriverProps,
-  ) : CdkObject(cdkObject), SplunkLogDriverProps {
+  ) : CdkObject(cdkObject),
+      SplunkLogDriverProps {
     /**
      * Name to use for validating server certificate.
      *

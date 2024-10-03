@@ -37,8 +37,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .build());
  * pipeline.addStage(prod, AddStageOpts.builder()
- * .pre(List.of(
- * new ManualApprovalStep("PromoteToProd")))
+ * .pre(List.of(new ManualApprovalStep("PromoteToProd")))
  * .build());
  * ```
  */

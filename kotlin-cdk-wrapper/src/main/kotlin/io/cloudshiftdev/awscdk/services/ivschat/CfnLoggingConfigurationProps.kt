@@ -190,7 +190,8 @@ public interface CfnLoggingConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfigurationProps,
-  ) : CdkObject(cdkObject), CfnLoggingConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnLoggingConfigurationProps {
     /**
      * The DestinationConfiguration is a complex type that contains information about where chat
      * content will be logged.

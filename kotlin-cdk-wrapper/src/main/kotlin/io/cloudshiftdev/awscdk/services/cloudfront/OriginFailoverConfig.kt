@@ -93,7 +93,8 @@ public interface OriginFailoverConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.OriginFailoverConfig,
-  ) : CdkObject(cdkObject), OriginFailoverConfig {
+  ) : CdkObject(cdkObject),
+      OriginFailoverConfig {
     /**
      * The origin to use as the fallback origin.
      */

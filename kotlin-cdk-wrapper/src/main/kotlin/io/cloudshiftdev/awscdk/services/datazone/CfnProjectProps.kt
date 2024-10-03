@@ -133,7 +133,8 @@ public interface CfnProjectProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datazone.CfnProjectProps,
-  ) : CdkObject(cdkObject), CfnProjectProps {
+  ) : CdkObject(cdkObject),
+      CfnProjectProps {
     /**
      * The description of a project.
      *

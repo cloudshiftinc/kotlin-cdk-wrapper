@@ -425,7 +425,8 @@ public interface CfnAccessEntryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntryProps,
-  ) : CdkObject(cdkObject), CfnAccessEntryProps {
+  ) : CdkObject(cdkObject),
+      CfnAccessEntryProps {
     /**
      * The access policies to associate to the access entry.
      *

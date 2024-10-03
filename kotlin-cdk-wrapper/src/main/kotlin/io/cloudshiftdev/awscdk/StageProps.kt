@@ -270,7 +270,8 @@ public interface StageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.StageProps,
-  ) : CdkObject(cdkObject), StageProps {
+  ) : CdkObject(cdkObject),
+      StageProps {
     /**
      * Default AWS environment (account/region) for `Stack`s in this `Stage`.
      *

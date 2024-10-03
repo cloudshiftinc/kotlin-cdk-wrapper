@@ -22,7 +22,8 @@ public interface IVpcEndpoint : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IVpcEndpoint,
-  ) : CdkObject(cdkObject), IVpcEndpoint {
+  ) : CdkObject(cdkObject),
+      IVpcEndpoint {
     /**
      * Apply the given removal policy to this resource.
      *

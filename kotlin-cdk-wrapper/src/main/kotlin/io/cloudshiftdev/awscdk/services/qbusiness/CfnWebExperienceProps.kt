@@ -3,12 +3,15 @@
 package io.cloudshiftdev.awscdk.services.qbusiness
 
 import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnWebExperience`.
@@ -22,6 +25,15 @@ import kotlin.collections.List
  * CfnWebExperienceProps cfnWebExperienceProps = CfnWebExperienceProps.builder()
  * .applicationId("applicationId")
  * // the properties below are optional
+ * .identityProviderConfiguration(IdentityProviderConfigurationProperty.builder()
+ * .openIdConnectConfiguration(OpenIDConnectProviderConfigurationProperty.builder()
+ * .secretsArn("secretsArn")
+ * .secretsRole("secretsRole")
+ * .build())
+ * .samlConfiguration(SamlProviderConfigurationProperty.builder()
+ * .authenticationUrl("authenticationUrl")
+ * .build())
+ * .build())
  * .roleArn("roleArn")
  * .samplePromptsControlMode("samplePromptsControlMode")
  * .subtitle("subtitle")
@@ -45,7 +57,21 @@ public interface CfnWebExperienceProps {
   public fun applicationId(): String
 
   /**
+   * Provides information about the identity provider (IdP) used to authenticate end users of an
+   * Amazon Q Business web experience.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-identityproviderconfiguration)
+   */
+  public fun identityProviderConfiguration(): Any? = unwrap(this).getIdentityProviderConfiguration()
+
+  /**
    * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+   *
+   *
+   * You must provide this value if you're using IAM Identity Center to manage end user access to
+   * your application. If you're using legacy identity management to manage user access, you don't need
+   * to provide this value.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-rolearn)
    */
@@ -100,8 +126,34 @@ public interface CfnWebExperienceProps {
     public fun applicationId(applicationId: String)
 
     /**
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience.
+     */
+    public fun identityProviderConfiguration(identityProviderConfiguration: IResolvable)
+
+    /**
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience.
+     */
+    public
+        fun identityProviderConfiguration(identityProviderConfiguration: CfnWebExperience.IdentityProviderConfigurationProperty)
+
+    /**
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e1334806cf79c952d418cfe28c0781a9868ab9e4f550f7fc6adf7114b645a4f5")
+    public
+        fun identityProviderConfiguration(identityProviderConfiguration: CfnWebExperience.IdentityProviderConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param roleArn The Amazon Resource Name (ARN) of the service role attached to your web
      * experience.
+     *
+     * You must provide this value if you're using IAM Identity Center to manage end user access to
+     * your application. If you're using legacy identity management to manage user access, you don't
+     * need to provide this value.
      */
     public fun roleArn(roleArn: String)
 
@@ -155,8 +207,40 @@ public interface CfnWebExperienceProps {
     }
 
     /**
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience.
+     */
+    override fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
+      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience.
+     */
+    override
+        fun identityProviderConfiguration(identityProviderConfiguration: CfnWebExperience.IdentityProviderConfigurationProperty) {
+      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(CfnWebExperience.IdentityProviderConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param identityProviderConfiguration Provides information about the identity provider (IdP)
+     * used to authenticate end users of an Amazon Q Business web experience.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e1334806cf79c952d418cfe28c0781a9868ab9e4f550f7fc6adf7114b645a4f5")
+    override
+        fun identityProviderConfiguration(identityProviderConfiguration: CfnWebExperience.IdentityProviderConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        identityProviderConfiguration(CfnWebExperience.IdentityProviderConfigurationProperty(identityProviderConfiguration))
+
+    /**
      * @param roleArn The Amazon Resource Name (ARN) of the service role attached to your web
      * experience.
+     *
+     * You must provide this value if you're using IAM Identity Center to manage end user access to
+     * your application. If you're using legacy identity management to manage user access, you don't
+     * need to provide this value.
      */
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
@@ -215,7 +299,8 @@ public interface CfnWebExperienceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperienceProps,
-  ) : CdkObject(cdkObject), CfnWebExperienceProps {
+  ) : CdkObject(cdkObject),
+      CfnWebExperienceProps {
     /**
      * The identifier of the Amazon Q Business web experience.
      *
@@ -224,7 +309,22 @@ public interface CfnWebExperienceProps {
     override fun applicationId(): String = unwrap(this).getApplicationId()
 
     /**
+     * Provides information about the identity provider (IdP) used to authenticate end users of an
+     * Amazon Q Business web experience.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-identityproviderconfiguration)
+     */
+    override fun identityProviderConfiguration(): Any? =
+        unwrap(this).getIdentityProviderConfiguration()
+
+    /**
      * The Amazon Resource Name (ARN) of the service role attached to your web experience.
+     *
+     *
+     * You must provide this value if you're using IAM Identity Center to manage end user access to
+     * your application. If you're using legacy identity management to manage user access, you don't
+     * need to provide this value.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-rolearn)
      */

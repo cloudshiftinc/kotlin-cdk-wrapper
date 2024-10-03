@@ -828,7 +828,8 @@ public interface CfnAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ssm.CfnAssociationProps,
-  ) : CdkObject(cdkObject), CfnAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnAssociationProps {
     /**
      * By default, when you create a new association, the system runs it immediately after it is
      * created and then according to the schedule you specified.

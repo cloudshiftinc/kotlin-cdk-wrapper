@@ -63,7 +63,8 @@ public interface LambdaDeploymentConfigImportProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps,
-  ) : CdkObject(cdkObject), LambdaDeploymentConfigImportProps {
+  ) : CdkObject(cdkObject),
+      LambdaDeploymentConfigImportProps {
     /**
      * The physical, human-readable name of the custom CodeDeploy Lambda Deployment Configuration
      * that we are referencing.

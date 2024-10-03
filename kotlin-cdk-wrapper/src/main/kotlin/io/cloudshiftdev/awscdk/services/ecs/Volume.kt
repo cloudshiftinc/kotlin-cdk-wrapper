@@ -301,7 +301,8 @@ public interface Volume {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.Volume,
-  ) : CdkObject(cdkObject), Volume {
+  ) : CdkObject(cdkObject),
+      Volume {
     /**
      * Indicates if the volume should be configured at launch.
      *

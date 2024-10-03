@@ -497,11 +497,11 @@ public interface CfnClusterProps {
   public fun autoScalingRole(): String? = unwrap(this).getAutoScalingRole()
 
   /**
-   * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-   * automatically terminates.
+   * An auto-termination policy for an Amazon EMR cluster.
    *
-   * For alternative cluster termination options, see [Control cluster
-   * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+   * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+   * automatically terminates. For alternative cluster termination options, see [Control cluster
+   * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-autoterminationpolicy)
    */
@@ -765,27 +765,27 @@ public interface CfnClusterProps {
     public fun autoScalingRole(autoScalingRole: String)
 
     /**
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates.
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster.
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      */
     public fun autoTerminationPolicy(autoTerminationPolicy: IResolvable)
 
     /**
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates.
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster.
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      */
     public
         fun autoTerminationPolicy(autoTerminationPolicy: CfnCluster.AutoTerminationPolicyProperty)
 
     /**
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates.
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster.
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8f3240acf26a1c9c7b4ba81bd6a1e25256e5be8202b4c67f86b93242c1944044")
@@ -1124,20 +1124,20 @@ public interface CfnClusterProps {
     }
 
     /**
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates.
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster.
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      */
     override fun autoTerminationPolicy(autoTerminationPolicy: IResolvable) {
       cdkBuilder.autoTerminationPolicy(autoTerminationPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates.
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster.
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      */
     override
         fun autoTerminationPolicy(autoTerminationPolicy: CfnCluster.AutoTerminationPolicyProperty) {
@@ -1145,10 +1145,10 @@ public interface CfnClusterProps {
     }
 
     /**
-     * @param autoTerminationPolicy An auto-termination policy defines the amount of idle time in
-     * seconds after which a cluster automatically terminates.
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * @param autoTerminationPolicy An auto-termination policy for an Amazon EMR cluster.
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8f3240acf26a1c9c7b4ba81bd6a1e25256e5be8202b4c67f86b93242c1944044")
@@ -1518,7 +1518,8 @@ public interface CfnClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.emr.CfnClusterProps,
-  ) : CdkObject(cdkObject), CfnClusterProps {
+  ) : CdkObject(cdkObject),
+      CfnClusterProps {
     /**
      * A JSON string for selecting additional features.
      *
@@ -1546,11 +1547,11 @@ public interface CfnClusterProps {
     override fun autoScalingRole(): String? = unwrap(this).getAutoScalingRole()
 
     /**
-     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
-     * automatically terminates.
+     * An auto-termination policy for an Amazon EMR cluster.
      *
-     * For alternative cluster termination options, see [Control cluster
-     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
+     * An auto-termination policy defines the amount of idle time in seconds after which a cluster
+     * automatically terminates. For alternative cluster termination options, see [Control cluster
+     * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html#cfn-emr-cluster-autoterminationpolicy)
      */

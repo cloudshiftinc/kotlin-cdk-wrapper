@@ -438,7 +438,8 @@ public interface CfnEnvironmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.m2.CfnEnvironmentProps,
-  ) : CdkObject(cdkObject), CfnEnvironmentProps {
+  ) : CdkObject(cdkObject),
+      CfnEnvironmentProps {
     /**
      * The description of the runtime environment.
      *

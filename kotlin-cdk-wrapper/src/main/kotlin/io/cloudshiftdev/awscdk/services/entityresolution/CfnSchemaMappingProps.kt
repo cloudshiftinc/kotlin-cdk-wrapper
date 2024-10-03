@@ -27,6 +27,7 @@ import kotlin.collections.List
  * .type("type")
  * // the properties below are optional
  * .groupName("groupName")
+ * .hashed(false)
  * .matchKey("matchKey")
  * .subType("subType")
  * .build()))
@@ -188,7 +189,8 @@ public interface CfnSchemaMappingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.entityresolution.CfnSchemaMappingProps,
-  ) : CdkObject(cdkObject), CfnSchemaMappingProps {
+  ) : CdkObject(cdkObject),
+      CfnSchemaMappingProps {
     /**
      * A description of the schema.
      *

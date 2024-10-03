@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ClientVpnEndpoint(
   cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpoint,
-) : Resource(cdkObject), IClientVpnEndpoint {
+) : Resource(cdkObject),
+    IClientVpnEndpoint {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

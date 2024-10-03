@@ -152,7 +152,8 @@ public interface VpnConnectionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionOptions,
-  ) : CdkObject(cdkObject), VpnConnectionOptions {
+  ) : CdkObject(cdkObject),
+      VpnConnectionOptions {
     /**
      * The ASN of the customer gateway.
      *

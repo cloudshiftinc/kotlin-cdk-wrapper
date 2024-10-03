@@ -13,7 +13,9 @@ import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.AdotInstrumentationConfig
+import io.cloudshiftdev.awscdk.services.lambda.ApplicationLogLevel
 import io.cloudshiftdev.awscdk.services.lambda.Architecture
+import io.cloudshiftdev.awscdk.services.lambda.Code
 import io.cloudshiftdev.awscdk.services.lambda.FileSystem
 import io.cloudshiftdev.awscdk.services.lambda.Function
 import io.cloudshiftdev.awscdk.services.lambda.ICodeSigningConfig
@@ -24,9 +26,11 @@ import io.cloudshiftdev.awscdk.services.lambda.LambdaInsightsVersion
 import io.cloudshiftdev.awscdk.services.lambda.LogRetentionRetryOptions
 import io.cloudshiftdev.awscdk.services.lambda.LoggingFormat
 import io.cloudshiftdev.awscdk.services.lambda.ParamsAndSecretsLayerVersion
+import io.cloudshiftdev.awscdk.services.lambda.RecursiveLoop
 import io.cloudshiftdev.awscdk.services.lambda.Runtime
 import io.cloudshiftdev.awscdk.services.lambda.RuntimeManagementMode
 import io.cloudshiftdev.awscdk.services.lambda.SnapStartConf
+import io.cloudshiftdev.awscdk.services.lambda.SystemLogLevel
 import io.cloudshiftdev.awscdk.services.lambda.Tracing
 import io.cloudshiftdev.awscdk.services.lambda.VersionOptions
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
@@ -34,6 +38,7 @@ import io.cloudshiftdev.awscdk.services.logs.RetentionDays
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -115,7 +120,23 @@ public open class NodejsFunction(
         fun adotInstrumentation(adotInstrumentation: AdotInstrumentationConfig.Builder.() -> Unit)
 
     /**
-     * Whether to allow the Lambda to send all network traffic.
+     * Whether to allow the Lambda to send all ipv6 network traffic.
+     *
+     * If set to true, there will only be a single egress rule which allows all
+     * outbound ipv6 traffic. If set to false, you must individually add traffic rules to allow the
+     * Lambda to connect to network targets using ipv6.
+     *
+     * Do not specify this property if the `securityGroups` or `securityGroup` property is set.
+     * Instead, configure `allowAllIpv6Outbound` directly on the security group.
+     *
+     * Default: false
+     *
+     * @param allowAllIpv6Outbound Whether to allow the Lambda to send all ipv6 network traffic. 
+     */
+    public fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean)
+
+    /**
+     * Whether to allow the Lambda to send all network traffic (except ipv6).
      *
      * If set to false, you must individually add traffic rules to allow the
      * Lambda to connect to network targets.
@@ -125,7 +146,8 @@ public open class NodejsFunction(
      *
      * Default: true
      *
-     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic. 
+     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic (except
+     * ipv6). 
      */
     public fun allowAllOutbound(allowAllOutbound: Boolean)
 
@@ -143,13 +165,24 @@ public open class NodejsFunction(
     public fun allowPublicSubnet(allowPublicSubnet: Boolean)
 
     /**
-     * Sets the application log level for the function.
+     * (deprecated) Sets the application log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `applicationLogLevelV2` as a property instead.
      * @param applicationLogLevel Sets the application log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun applicationLogLevel(applicationLogLevel: String)
+
+    /**
+     * Sets the application log level for the function.
+     *
+     * Default: ApplicationLogLevel.INFO
+     *
+     * @param applicationLogLevelV2 Sets the application log level for the function. 
+     */
+    public fun applicationLogLevelV2(applicationLogLevelV2: ApplicationLogLevel)
 
     /**
      * The system architectures compatible with this lambda function.
@@ -161,16 +194,25 @@ public open class NodejsFunction(
     public fun architecture(architecture: Architecture)
 
     /**
-     * Whether to automatically reuse TCP connections when working with the AWS SDK for JavaScript.
+     * The `AWS_NODEJS_CONNECTION_REUSE_ENABLED` environment variable does not exist in the AWS SDK
+     * for JavaScript v3.
+     *
+     * This prop will be deprecated when the Lambda Node16 runtime is deprecated on June 12, 2024.
+     * See https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy
+     *
+     * Info for Node 16 runtimes / SDK v2 users:
+     *
+     * Whether to automatically reuse TCP connections when working with the AWS
+     * SDK for JavaScript v2.
      *
      * This sets the `AWS_NODEJS_CONNECTION_REUSE_ENABLED` environment variable
      * to `1`.
      *
-     * Default: true
+     * Default: - false (obsolete) for runtimes >= Node 18, true for runtimes <= Node 16.
      *
-     * [Documentation](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/node-reusing-connections.html)
-     * @param awsSdkConnectionReuse Whether to automatically reuse TCP connections when working with
-     * the AWS SDK for JavaScript. 
+     * [Documentation](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/node-reusing-connections.html)
+     * @param awsSdkConnectionReuse The `AWS_NODEJS_CONNECTION_REUSE_ENABLED` environment variable
+     * does not exist in the AWS SDK for JavaScript v3. 
      */
     public fun awsSdkConnectionReuse(awsSdkConnectionReuse: Boolean)
 
@@ -195,6 +237,20 @@ public open class NodejsFunction(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8a534dcd38b65c9bf9cc5957ff6675fe7a6cb2f6af18de84d8c3a07bac02ae65")
     public fun bundling(bundling: BundlingOptions.Builder.() -> Unit)
+
+    /**
+     * The code that will be deployed to the Lambda Handler.
+     *
+     * If included, then properties related to
+     * bundling of the code are ignored.
+     *
+     * * If the `code` field is specified, then you must include the `handler` property.
+     *
+     * Default: - the code is bundled by esbuild
+     *
+     * @param code The code that will be deployed to the Lambda Handler. 
+     */
+    public fun code(code: Code)
 
     /**
      * Code signing config associated with this function.
@@ -381,8 +437,15 @@ public open class NodejsFunction(
     /**
      * The name of the exported handler in the entry file.
      *
-     * The handler is prefixed with `index.` unless the specified handler value contains a `.`,
-     * in which case it is used as-is.
+     * * If the `code` property is supplied, then you must include the `handler` property. The
+     * handler should be the name of the file
+     * that contains the exported handler and the function that should be called when the AWS Lambda
+     * is invoked. For example, if
+     * you had a file called `myLambda.js` and the function to be invoked was `myHandler`, then you
+     * should input `handler` property as `myLambda.myHandler`.
+     * * If the `code` property is not supplied and the handler input does not contain a `.`, then
+     * the handler is prefixed with `index.` (index period). Otherwise,
+     * the handler property is not modified.
      *
      * Default: handler
      *
@@ -464,12 +527,14 @@ public open class NodejsFunction(
     public fun layers(vararg layers: ILayerVersion)
 
     /**
-     * Sets the logFormat for the function.
+     * (deprecated) Sets the logFormat for the function.
      *
      * Default: "Text"
      *
+     * @deprecated Use `loggingFormat` as a property instead.
      * @param logFormat Sets the logFormat for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun logFormat(logFormat: String)
 
     /**
@@ -667,6 +732,17 @@ public open class NodejsFunction(
     public fun projectRoot(projectRoot: String)
 
     /**
+     * Sets the Recursive Loop Protection for Lambda Function.
+     *
+     * It lets Lambda detect and terminate unintended recusrive loops.
+     *
+     * Default: RecursiveLoop.Terminate
+     *
+     * @param recursiveLoop Sets the Recursive Loop Protection for Lambda Function. 
+     */
+    public fun recursiveLoop(recursiveLoop: RecursiveLoop)
+
+    /**
      * The maximum of concurrent executions you want to reserve for the function.
      *
      * Default: - No specific limit - account limit.
@@ -773,13 +849,24 @@ public open class NodejsFunction(
     public fun snapStart(snapStart: SnapStartConf)
 
     /**
-     * Sets the system log level for the function.
+     * (deprecated) Sets the system log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `systemLogLevelV2` as a property instead.
      * @param systemLogLevel Sets the system log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun systemLogLevel(systemLogLevel: String)
+
+    /**
+     * Sets the system log level for the function.
+     *
+     * Default: SystemLogLevel.INFO
+     *
+     * @param systemLogLevelV2 Sets the system log level for the function. 
+     */
+    public fun systemLogLevelV2(systemLogLevelV2: SystemLogLevel)
 
     /**
      * The function execution time (in seconds) after which Lambda terminates the function.
@@ -884,7 +971,25 @@ public open class NodejsFunction(
         Unit = adotInstrumentation(AdotInstrumentationConfig(adotInstrumentation))
 
     /**
-     * Whether to allow the Lambda to send all network traffic.
+     * Whether to allow the Lambda to send all ipv6 network traffic.
+     *
+     * If set to true, there will only be a single egress rule which allows all
+     * outbound ipv6 traffic. If set to false, you must individually add traffic rules to allow the
+     * Lambda to connect to network targets using ipv6.
+     *
+     * Do not specify this property if the `securityGroups` or `securityGroup` property is set.
+     * Instead, configure `allowAllIpv6Outbound` directly on the security group.
+     *
+     * Default: false
+     *
+     * @param allowAllIpv6Outbound Whether to allow the Lambda to send all ipv6 network traffic. 
+     */
+    override fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
+      cdkBuilder.allowAllIpv6Outbound(allowAllIpv6Outbound)
+    }
+
+    /**
+     * Whether to allow the Lambda to send all network traffic (except ipv6).
      *
      * If set to false, you must individually add traffic rules to allow the
      * Lambda to connect to network targets.
@@ -894,7 +999,8 @@ public open class NodejsFunction(
      *
      * Default: true
      *
-     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic. 
+     * @param allowAllOutbound Whether to allow the Lambda to send all network traffic (except
+     * ipv6). 
      */
     override fun allowAllOutbound(allowAllOutbound: Boolean) {
       cdkBuilder.allowAllOutbound(allowAllOutbound)
@@ -916,14 +1022,27 @@ public open class NodejsFunction(
     }
 
     /**
-     * Sets the application log level for the function.
+     * (deprecated) Sets the application log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `applicationLogLevelV2` as a property instead.
      * @param applicationLogLevel Sets the application log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun applicationLogLevel(applicationLogLevel: String) {
       cdkBuilder.applicationLogLevel(applicationLogLevel)
+    }
+
+    /**
+     * Sets the application log level for the function.
+     *
+     * Default: ApplicationLogLevel.INFO
+     *
+     * @param applicationLogLevelV2 Sets the application log level for the function. 
+     */
+    override fun applicationLogLevelV2(applicationLogLevelV2: ApplicationLogLevel) {
+      cdkBuilder.applicationLogLevelV2(applicationLogLevelV2.let(ApplicationLogLevel.Companion::unwrap))
     }
 
     /**
@@ -938,16 +1057,25 @@ public open class NodejsFunction(
     }
 
     /**
-     * Whether to automatically reuse TCP connections when working with the AWS SDK for JavaScript.
+     * The `AWS_NODEJS_CONNECTION_REUSE_ENABLED` environment variable does not exist in the AWS SDK
+     * for JavaScript v3.
+     *
+     * This prop will be deprecated when the Lambda Node16 runtime is deprecated on June 12, 2024.
+     * See https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy
+     *
+     * Info for Node 16 runtimes / SDK v2 users:
+     *
+     * Whether to automatically reuse TCP connections when working with the AWS
+     * SDK for JavaScript v2.
      *
      * This sets the `AWS_NODEJS_CONNECTION_REUSE_ENABLED` environment variable
      * to `1`.
      *
-     * Default: true
+     * Default: - false (obsolete) for runtimes >= Node 18, true for runtimes <= Node 16.
      *
-     * [Documentation](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/node-reusing-connections.html)
-     * @param awsSdkConnectionReuse Whether to automatically reuse TCP connections when working with
-     * the AWS SDK for JavaScript. 
+     * [Documentation](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/node-reusing-connections.html)
+     * @param awsSdkConnectionReuse The `AWS_NODEJS_CONNECTION_REUSE_ENABLED` environment variable
+     * does not exist in the AWS SDK for JavaScript v3. 
      */
     override fun awsSdkConnectionReuse(awsSdkConnectionReuse: Boolean) {
       cdkBuilder.awsSdkConnectionReuse(awsSdkConnectionReuse)
@@ -977,6 +1105,22 @@ public open class NodejsFunction(
     @JvmName("8a534dcd38b65c9bf9cc5957ff6675fe7a6cb2f6af18de84d8c3a07bac02ae65")
     override fun bundling(bundling: BundlingOptions.Builder.() -> Unit): Unit =
         bundling(BundlingOptions(bundling))
+
+    /**
+     * The code that will be deployed to the Lambda Handler.
+     *
+     * If included, then properties related to
+     * bundling of the code are ignored.
+     *
+     * * If the `code` field is specified, then you must include the `handler` property.
+     *
+     * Default: - the code is bundled by esbuild
+     *
+     * @param code The code that will be deployed to the Lambda Handler. 
+     */
+    override fun code(code: Code) {
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
+    }
 
     /**
      * Code signing config associated with this function.
@@ -1192,8 +1336,15 @@ public open class NodejsFunction(
     /**
      * The name of the exported handler in the entry file.
      *
-     * The handler is prefixed with `index.` unless the specified handler value contains a `.`,
-     * in which case it is used as-is.
+     * * If the `code` property is supplied, then you must include the `handler` property. The
+     * handler should be the name of the file
+     * that contains the exported handler and the function that should be called when the AWS Lambda
+     * is invoked. For example, if
+     * you had a file called `myLambda.js` and the function to be invoked was `myHandler`, then you
+     * should input `handler` property as `myLambda.myHandler`.
+     * * If the `code` property is not supplied and the handler input does not contain a `.`, then
+     * the handler is prefixed with `index.` (index period). Otherwise,
+     * the handler property is not modified.
      *
      * Default: handler
      *
@@ -1286,12 +1437,14 @@ public open class NodejsFunction(
     override fun layers(vararg layers: ILayerVersion): Unit = layers(layers.toList())
 
     /**
-     * Sets the logFormat for the function.
+     * (deprecated) Sets the logFormat for the function.
      *
      * Default: "Text"
      *
+     * @deprecated Use `loggingFormat` as a property instead.
      * @param logFormat Sets the logFormat for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun logFormat(logFormat: String) {
       cdkBuilder.logFormat(logFormat)
     }
@@ -1518,6 +1671,19 @@ public open class NodejsFunction(
     }
 
     /**
+     * Sets the Recursive Loop Protection for Lambda Function.
+     *
+     * It lets Lambda detect and terminate unintended recusrive loops.
+     *
+     * Default: RecursiveLoop.Terminate
+     *
+     * @param recursiveLoop Sets the Recursive Loop Protection for Lambda Function. 
+     */
+    override fun recursiveLoop(recursiveLoop: RecursiveLoop) {
+      cdkBuilder.recursiveLoop(recursiveLoop.let(RecursiveLoop.Companion::unwrap))
+    }
+
+    /**
      * The maximum of concurrent executions you want to reserve for the function.
      *
      * Default: - No specific limit - account limit.
@@ -1639,14 +1805,27 @@ public open class NodejsFunction(
     }
 
     /**
-     * Sets the system log level for the function.
+     * (deprecated) Sets the system log level for the function.
      *
      * Default: "INFO"
      *
+     * @deprecated Use `systemLogLevelV2` as a property instead.
      * @param systemLogLevel Sets the system log level for the function. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun systemLogLevel(systemLogLevel: String) {
       cdkBuilder.systemLogLevel(systemLogLevel)
+    }
+
+    /**
+     * Sets the system log level for the function.
+     *
+     * Default: SystemLogLevel.INFO
+     *
+     * @param systemLogLevelV2 Sets the system log level for the function. 
+     */
+    override fun systemLogLevelV2(systemLogLevelV2: SystemLogLevel) {
+      cdkBuilder.systemLogLevelV2(systemLogLevelV2.let(SystemLogLevel.Companion::unwrap))
     }
 
     /**

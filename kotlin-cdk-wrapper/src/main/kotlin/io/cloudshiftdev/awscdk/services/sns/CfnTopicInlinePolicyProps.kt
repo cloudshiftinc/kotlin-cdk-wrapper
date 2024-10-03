@@ -86,7 +86,8 @@ public interface CfnTopicInlinePolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.CfnTopicInlinePolicyProps,
-  ) : CdkObject(cdkObject), CfnTopicInlinePolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnTopicInlinePolicyProps {
     /**
      * A policy document that contains permissions to add to the specified Amazon SNS topic.
      *

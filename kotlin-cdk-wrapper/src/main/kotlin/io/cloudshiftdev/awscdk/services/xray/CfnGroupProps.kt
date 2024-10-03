@@ -200,7 +200,8 @@ public interface CfnGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.xray.CfnGroupProps,
-  ) : CdkObject(cdkObject), CfnGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnGroupProps {
     /**
      * The filter expression defining the parameters to include traces.
      *

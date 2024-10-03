@@ -77,7 +77,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStack(
   cdkObject: software.amazon.awscdk.services.appstream.CfnStack,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appstream.CfnStack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1098,7 +1100,8 @@ public open class CfnStack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty,
-    ) : CdkObject(cdkObject), AccessEndpointProperty {
+    ) : CdkObject(cdkObject),
+        AccessEndpointProperty {
       /**
        * The type of interface endpoint.
        *
@@ -1233,7 +1236,8 @@ public open class CfnStack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty,
-    ) : CdkObject(cdkObject), ApplicationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationSettingsProperty {
       /**
        * Enables or disables persistent application settings for users during their streaming
        * sessions.
@@ -1376,7 +1380,8 @@ public open class CfnStack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty,
-    ) : CdkObject(cdkObject), StorageConnectorProperty {
+    ) : CdkObject(cdkObject),
+        StorageConnectorProperty {
       /**
        * The type of storage connector.
        *
@@ -1477,7 +1482,8 @@ public open class CfnStack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty,
-    ) : CdkObject(cdkObject), StreamingExperienceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        StreamingExperienceSettingsProperty {
       /**
        * The preferred protocol that you want to use while streaming your application.
        *
@@ -1625,7 +1631,8 @@ public open class CfnStack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty,
-    ) : CdkObject(cdkObject), UserSettingProperty {
+    ) : CdkObject(cdkObject),
+        UserSettingProperty {
       /**
        * The action that is enabled or disabled.
        *

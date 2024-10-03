@@ -77,7 +77,8 @@ public interface OrderedComputeEnvironment {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.OrderedComputeEnvironment,
-  ) : CdkObject(cdkObject), OrderedComputeEnvironment {
+  ) : CdkObject(cdkObject),
+      OrderedComputeEnvironment {
     /**
      * The ComputeEnvironment to link to this JobQueue.
      */

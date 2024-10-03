@@ -136,7 +136,8 @@ public interface IMesh : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.IMesh,
-  ) : CdkObject(cdkObject), IMesh {
+  ) : CdkObject(cdkObject),
+      IMesh {
     /**
      * Creates a new VirtualGateway in this Mesh.
      *

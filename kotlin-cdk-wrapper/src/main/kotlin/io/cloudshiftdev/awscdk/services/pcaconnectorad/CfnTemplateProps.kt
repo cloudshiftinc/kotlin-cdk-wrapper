@@ -464,7 +464,8 @@ public interface CfnTemplateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateProps,
-  ) : CdkObject(cdkObject), CfnTemplateProps {
+  ) : CdkObject(cdkObject),
+      CfnTemplateProps {
     /**
      * The Amazon Resource Name (ARN) that was returned when you called
      * [CreateConnector](https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_CreateConnector.html)

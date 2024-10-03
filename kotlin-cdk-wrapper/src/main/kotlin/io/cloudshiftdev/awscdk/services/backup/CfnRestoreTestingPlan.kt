@@ -47,6 +47,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .scheduleExpression("scheduleExpression")
  * // the properties below are optional
  * .scheduleExpressionTimezone("scheduleExpressionTimezone")
+ * .scheduleStatus("scheduleStatus")
  * .startWindowHours(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -59,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRestoreTestingPlan(
   cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingPlan,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -166,6 +169,18 @@ public open class CfnRestoreTestingPlan(
   }
 
   /**
+   *
+   */
+  public open fun scheduleStatus(): String? = unwrap(this).getScheduleStatus()
+
+  /**
+   *
+   */
+  public open fun scheduleStatus(`value`: String) {
+    unwrap(this).setScheduleStatus(`value`)
+  }
+
+  /**
    * Defaults to 24 hours.
    */
   public open fun startWindowHours(): Number? = unwrap(this).getStartWindowHours()
@@ -264,6 +279,12 @@ public open class CfnRestoreTestingPlan(
      * @param scheduleExpressionTimezone Optional. 
      */
     public fun scheduleExpressionTimezone(scheduleExpressionTimezone: String)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-schedulestatus)
+     * @param scheduleStatus 
+     */
+    public fun scheduleStatus(scheduleStatus: String)
 
     /**
      * Defaults to 24 hours.
@@ -385,6 +406,14 @@ public open class CfnRestoreTestingPlan(
      */
     override fun scheduleExpressionTimezone(scheduleExpressionTimezone: String) {
       cdkBuilder.scheduleExpressionTimezone(scheduleExpressionTimezone)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-schedulestatus)
+     * @param scheduleStatus 
+     */
+    override fun scheduleStatus(scheduleStatus: String) {
+      cdkBuilder.scheduleStatus(scheduleStatus)
     }
 
     /**
@@ -685,7 +714,8 @@ public open class CfnRestoreTestingPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingPlan.RestoreTestingRecoveryPointSelectionProperty,
-    ) : CdkObject(cdkObject), RestoreTestingRecoveryPointSelectionProperty {
+    ) : CdkObject(cdkObject),
+        RestoreTestingRecoveryPointSelectionProperty {
       /**
        * Acceptable values include "LATEST_WITHIN_WINDOW" or "RANDOM_WITHIN_WINDOW".
        *

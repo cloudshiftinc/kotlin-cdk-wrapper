@@ -100,7 +100,8 @@ public interface UserPoolConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.UserPoolConfig,
-  ) : CdkObject(cdkObject), UserPoolConfig {
+  ) : CdkObject(cdkObject),
+      UserPoolConfig {
     /**
      * the optional app id regex.
      *

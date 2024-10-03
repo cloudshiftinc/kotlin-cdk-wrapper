@@ -15,14 +15,16 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * StateMachine stateMachine = StateMachine.Builder.create(this, "SM")
- * .definitionBody(DefinitionBody.fromChainable(Wait.Builder.create(this,
- * "Hello").time(WaitTime.duration(Duration.seconds(10))).build()))
- * .build();
- * TopicRule.Builder.create(this, "TopicRule")
- * .sql(IotSql.fromStringAsVer20160323("SELECT * FROM 'device/+/data'"))
- * .actions(List.of(
- * new StepFunctionsStateMachineAction(stateMachine)))
+ * import io.cloudshiftdev.awscdk.services.kms.*;
+ * import io.cloudshiftdev.awscdk.*;
+ * Key kmsKey = new Key(this, "Key");
+ * StateMachine stateMachine = StateMachine.Builder.create(this,
+ * "StateMachineWithCMKEncryptionConfiguration")
+ * .stateMachineName("StateMachineWithCMKEncryptionConfiguration")
+ * .definitionBody(DefinitionBody.fromChainable(Chain.start(new Pass(this, "Pass"))))
+ * .stateMachineType(StateMachineType.STANDARD)
+ * .encryptionConfiguration(new CustomerManagedEncryptionConfiguration(kmsKey,
+ * Duration.seconds(60)))
  * .build();
  * ```
  */

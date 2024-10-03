@@ -37,7 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CustomLambdaDeploymentConfig(
   cdkObject: software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfig,
-) : Resource(cdkObject), ILambdaDeploymentConfig {
+) : Resource(cdkObject),
+    ILambdaDeploymentConfig {
   @Deprecated(message = "deprecated in CDK")
   public constructor(
     scope: CloudshiftdevConstructsConstruct,

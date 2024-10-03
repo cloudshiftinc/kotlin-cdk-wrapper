@@ -118,7 +118,8 @@ public interface BlockDevice {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.BlockDevice,
-  ) : CdkObject(cdkObject), BlockDevice {
+  ) : CdkObject(cdkObject),
+      BlockDevice {
     /**
      * The device name exposed to the EC2 instance.
      *

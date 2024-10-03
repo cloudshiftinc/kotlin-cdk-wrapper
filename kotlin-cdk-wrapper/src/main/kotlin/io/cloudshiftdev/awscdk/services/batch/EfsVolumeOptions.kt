@@ -247,7 +247,8 @@ public interface EfsVolumeOptions : EcsVolumeOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.EfsVolumeOptions,
-  ) : CdkObject(cdkObject), EfsVolumeOptions {
+  ) : CdkObject(cdkObject),
+      EfsVolumeOptions {
     /**
      * The Amazon EFS access point ID to use.
      *

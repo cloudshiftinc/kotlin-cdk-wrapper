@@ -43,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnKeyValueStore(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyValueStore,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -71,7 +72,11 @@ public open class CfnKeyValueStore(
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
+   * The current status of the key value store.
    *
+   * For more information, see [Key value store
+   * statuses](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/kvs-with-functions-create.html#key-value-store-status)
+   * in the *.*
    */
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
@@ -342,7 +347,8 @@ public open class CfnKeyValueStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyValueStore.ImportSourceProperty,
-    ) : CdkObject(cdkObject), ImportSourceProperty {
+    ) : CdkObject(cdkObject),
+        ImportSourceProperty {
       /**
        * The Amazon Resource Name (ARN) of the import source for the key value store.
        *

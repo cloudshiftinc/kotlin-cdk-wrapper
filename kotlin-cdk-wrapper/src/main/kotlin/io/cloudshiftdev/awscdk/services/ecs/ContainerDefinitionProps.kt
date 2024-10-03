@@ -795,7 +795,8 @@ public interface ContainerDefinitionProps : ContainerDefinitionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ContainerDefinitionProps,
-  ) : CdkObject(cdkObject), ContainerDefinitionProps {
+  ) : CdkObject(cdkObject),
+      ContainerDefinitionProps {
     /**
      * The command that is passed to the container.
      *

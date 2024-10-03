@@ -16,7 +16,8 @@ import kotlin.String
 public interface IWebSocketAuthorizer : IAuthorizer {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketAuthorizer,
-  ) : CdkObject(cdkObject), IWebSocketAuthorizer {
+  ) : CdkObject(cdkObject),
+      IWebSocketAuthorizer {
     /**
      * Apply the given removal policy to this resource.
      *

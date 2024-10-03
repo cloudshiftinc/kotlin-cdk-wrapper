@@ -263,7 +263,8 @@ public interface CommonClusterOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.CommonClusterOptions,
-  ) : CdkObject(cdkObject), CommonClusterOptions {
+  ) : CdkObject(cdkObject),
+      CommonClusterOptions {
     /**
      * Name for the cluster.
      *

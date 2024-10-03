@@ -192,7 +192,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLifecyclePolicy(
   cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.dlm.CfnLifecyclePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1170,7 +1172,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * The rule for copying shared snapshots across Regions.
        *
@@ -1313,7 +1316,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRetainRuleProperty,
-    ) : CdkObject(cdkObject), ArchiveRetainRuleProperty {
+    ) : CdkObject(cdkObject),
+        ArchiveRetainRuleProperty {
       /**
        * Information about retention period in the Amazon EBS Snapshots Archive.
        *
@@ -1429,7 +1433,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRuleProperty,
-    ) : CdkObject(cdkObject), ArchiveRuleProperty {
+    ) : CdkObject(cdkObject),
+        ArchiveRuleProperty {
       /**
        * Information about the retention period for the snapshot archiving rule.
        *
@@ -1767,7 +1772,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CreateRuleProperty,
-    ) : CdkObject(cdkObject), CreateRuleProperty {
+    ) : CdkObject(cdkObject),
+        CreateRuleProperty {
       /**
        * The schedule, as a Cron expression.
        *
@@ -2040,7 +2046,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyActionProperty,
-    ) : CdkObject(cdkObject), CrossRegionCopyActionProperty {
+    ) : CdkObject(cdkObject),
+        CrossRegionCopyActionProperty {
       /**
        * The encryption settings for the copied snapshot.
        *
@@ -2175,7 +2182,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyDeprecateRuleProperty,
-    ) : CdkObject(cdkObject), CrossRegionCopyDeprecateRuleProperty {
+    ) : CdkObject(cdkObject),
+        CrossRegionCopyDeprecateRuleProperty {
       /**
        * The period after which to deprecate the cross-Region AMI copies.
        *
@@ -2306,7 +2314,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyRetainRuleProperty,
-    ) : CdkObject(cdkObject), CrossRegionCopyRetainRuleProperty {
+    ) : CdkObject(cdkObject),
+        CrossRegionCopyRetainRuleProperty {
       /**
        * The amount of time to retain a cross-Region snapshot or AMI copy.
        *
@@ -2682,7 +2691,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyRuleProperty,
-    ) : CdkObject(cdkObject), CrossRegionCopyRuleProperty {
+    ) : CdkObject(cdkObject),
+        CrossRegionCopyRuleProperty {
       /**
        * The Amazon Resource Name (ARN) of the AWS KMS key to use for EBS encryption.
        *
@@ -2889,7 +2899,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.DeprecateRuleProperty,
-    ) : CdkObject(cdkObject), DeprecateRuleProperty {
+    ) : CdkObject(cdkObject),
+        DeprecateRuleProperty {
       /**
        * If the schedule has a count-based retention rule, this parameter specifies the number of
        * oldest AMIs to deprecate.
@@ -3048,7 +3059,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the AWS KMS key to use for EBS encryption.
        *
@@ -3232,7 +3244,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventParametersProperty,
-    ) : CdkObject(cdkObject), EventParametersProperty {
+    ) : CdkObject(cdkObject),
+        EventParametersProperty {
       /**
        * The snapshot description that can trigger the policy.
        *
@@ -3395,7 +3408,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventSourceProperty,
-    ) : CdkObject(cdkObject), EventSourceProperty {
+    ) : CdkObject(cdkObject),
+        EventSourceProperty {
       /**
        * Information about the event.
        *
@@ -3567,7 +3581,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ExclusionsProperty,
-    ) : CdkObject(cdkObject), ExclusionsProperty {
+    ) : CdkObject(cdkObject),
+        ExclusionsProperty {
       /**
        * *[Default policies for EBS snapshots only]* Indicates whether to exclude volumes that are
        * attached to instances as the boot volume.
@@ -3748,7 +3763,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.FastRestoreRuleProperty,
-    ) : CdkObject(cdkObject), FastRestoreRuleProperty {
+    ) : CdkObject(cdkObject),
+        FastRestoreRuleProperty {
       /**
        * The Availability Zones in which to enable fast snapshot restore.
        *
@@ -4017,7 +4033,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ParametersProperty,
-    ) : CdkObject(cdkObject), ParametersProperty {
+    ) : CdkObject(cdkObject),
+        ParametersProperty {
       /**
        * *[Custom snapshot policies that target instances only]* Indicates whether to exclude the
        * root volume from multi-volume snapshot sets.
@@ -5095,7 +5112,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.PolicyDetailsProperty,
-    ) : CdkObject(cdkObject), PolicyDetailsProperty {
+    ) : CdkObject(cdkObject),
+        PolicyDetailsProperty {
       /**
        * *[Event-based policies only]* The actions to be performed when the event-based policy is
        * activated.
@@ -5472,7 +5490,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.RetainRuleProperty,
-    ) : CdkObject(cdkObject), RetainRuleProperty {
+    ) : CdkObject(cdkObject),
+        RetainRuleProperty {
       /**
        * The number of snapshots to retain for each volume, up to a maximum of 1000.
        *
@@ -5658,7 +5677,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.RetentionArchiveTierProperty,
-    ) : CdkObject(cdkObject), RetentionArchiveTierProperty {
+    ) : CdkObject(cdkObject),
+        RetentionArchiveTierProperty {
       /**
        * The maximum number of snapshots to retain in the archive storage tier for each volume.
        *
@@ -6413,7 +6433,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScheduleProperty,
-    ) : CdkObject(cdkObject), ScheduleProperty {
+    ) : CdkObject(cdkObject),
+        ScheduleProperty {
       /**
        * *[Custom snapshot policies that target volumes only]* The snapshot archiving rule for the
        * schedule.
@@ -6925,7 +6946,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScriptProperty,
-    ) : CdkObject(cdkObject), ScriptProperty {
+    ) : CdkObject(cdkObject),
+        ScriptProperty {
       /**
        * Indicates whether Amazon Data Lifecycle Manager should default to crash-consistent
        * snapshots if the pre script fails.
@@ -7151,7 +7173,8 @@ public open class CfnLifecyclePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ShareRuleProperty,
-    ) : CdkObject(cdkObject), ShareRuleProperty {
+    ) : CdkObject(cdkObject),
+        ShareRuleProperty {
       /**
        * The IDs of the AWS accounts with which to share the snapshots.
        *

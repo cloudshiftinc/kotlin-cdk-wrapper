@@ -17,7 +17,8 @@ public interface IManagedPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IManagedPolicy,
-  ) : CdkObject(cdkObject), IManagedPolicy {
+  ) : CdkObject(cdkObject),
+      IManagedPolicy {
     /**
      * The ARN of the managed policy.
      */

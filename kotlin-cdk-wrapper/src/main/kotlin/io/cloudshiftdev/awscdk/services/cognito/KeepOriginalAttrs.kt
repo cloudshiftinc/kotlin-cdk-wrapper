@@ -86,7 +86,8 @@ public interface KeepOriginalAttrs {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.KeepOriginalAttrs,
-  ) : CdkObject(cdkObject), KeepOriginalAttrs {
+  ) : CdkObject(cdkObject),
+      KeepOriginalAttrs {
     /**
      * Whether the email address of the user should remain the original value until the new email
      * address is verified.

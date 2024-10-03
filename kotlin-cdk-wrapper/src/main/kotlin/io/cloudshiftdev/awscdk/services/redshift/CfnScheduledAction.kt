@@ -64,7 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnScheduledAction(
   cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -323,7 +324,7 @@ public open class CfnScheduledAction(
      * A JSON format string of the Amazon Redshift API operation with input parameters.
      *
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-targetaction)
@@ -336,7 +337,7 @@ public open class CfnScheduledAction(
      * A JSON format string of the Amazon Redshift API operation with input parameters.
      *
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-targetaction)
@@ -349,7 +350,7 @@ public open class CfnScheduledAction(
      * A JSON format string of the Amazon Redshift API operation with input parameters.
      *
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-targetaction)
@@ -481,7 +482,7 @@ public open class CfnScheduledAction(
      * A JSON format string of the Amazon Redshift API operation with input parameters.
      *
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-targetaction)
@@ -496,7 +497,7 @@ public open class CfnScheduledAction(
      * A JSON format string of the Amazon Redshift API operation with input parameters.
      *
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-targetaction)
@@ -511,7 +512,7 @@ public open class CfnScheduledAction(
      * A JSON format string of the Amazon Redshift API operation with input parameters.
      *
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-targetaction)
@@ -605,7 +606,8 @@ public open class CfnScheduledAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty,
-    ) : CdkObject(cdkObject), PauseClusterMessageProperty {
+    ) : CdkObject(cdkObject),
+        PauseClusterMessageProperty {
       /**
        * The identifier of the cluster to be paused.
        *
@@ -805,7 +807,8 @@ public open class CfnScheduledAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ResizeClusterMessageProperty,
-    ) : CdkObject(cdkObject), ResizeClusterMessageProperty {
+    ) : CdkObject(cdkObject),
+        ResizeClusterMessageProperty {
       /**
        * A boolean value indicating whether the resize operation is using the classic resize
        * process.
@@ -926,7 +929,8 @@ public open class CfnScheduledAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ResumeClusterMessageProperty,
-    ) : CdkObject(cdkObject), ResumeClusterMessageProperty {
+    ) : CdkObject(cdkObject),
+        ResumeClusterMessageProperty {
       /**
        * The identifier of the cluster to be resumed.
        *
@@ -1141,7 +1145,8 @@ public open class CfnScheduledAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ScheduledActionTypeProperty,
-    ) : CdkObject(cdkObject), ScheduledActionTypeProperty {
+    ) : CdkObject(cdkObject),
+        ScheduledActionTypeProperty {
       /**
        * An action that runs a `PauseCluster` API operation.
        *

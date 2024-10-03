@@ -79,7 +79,8 @@ public interface BootstraplessSynthesizerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.BootstraplessSynthesizerProps,
-  ) : CdkObject(cdkObject), BootstraplessSynthesizerProps {
+  ) : CdkObject(cdkObject),
+      BootstraplessSynthesizerProps {
     /**
      * The CFN execution Role ARN to use.
      *

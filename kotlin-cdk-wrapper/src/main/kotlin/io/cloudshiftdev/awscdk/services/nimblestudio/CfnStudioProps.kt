@@ -224,7 +224,8 @@ public interface CfnStudioProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioProps,
-  ) : CdkObject(cdkObject), CfnStudioProps {
+  ) : CdkObject(cdkObject),
+      CfnStudioProps {
     /**
      * The IAM role that studio admins assume when logging in to the Nimble Studio portal.
      *

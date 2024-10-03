@@ -147,7 +147,8 @@ public interface CfnArchiveProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.CfnArchiveProps,
-  ) : CdkObject(cdkObject), CfnArchiveProps {
+  ) : CdkObject(cdkObject),
+      CfnArchiveProps {
     /**
      * The name for the archive to create.
      *

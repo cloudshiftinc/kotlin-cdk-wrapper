@@ -126,7 +126,8 @@ public interface ServiceDiscoveryConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscoveryConfig,
-  ) : CdkObject(cdkObject), ServiceDiscoveryConfig {
+  ) : CdkObject(cdkObject),
+      ServiceDiscoveryConfig {
     /**
      * Cloud Map based Service Discovery.
      *

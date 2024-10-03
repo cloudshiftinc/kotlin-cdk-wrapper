@@ -33,7 +33,8 @@ import kotlin.jvm.JvmName
  */
 public open class LinuxArmBuildImage(
   cdkObject: software.amazon.awscdk.services.codebuild.LinuxArmBuildImage,
-) : CdkObject(cdkObject), IBuildImage {
+) : CdkObject(cdkObject),
+    IBuildImage {
   /**
    * The default `ComputeType` to use with this image, if one was not specified in
    * `BuildEnvironment#computeType` explicitly.
@@ -78,8 +79,7 @@ public open class LinuxArmBuildImage(
   public override fun type(): String = unwrap(this).getType()
 
   /**
-   * Validates by checking the BuildEnvironment computeType as aarch64 images only support
-   * ComputeType.SMALL and ComputeType.LARGE.
+   * Validates by checking the BuildEnvironments' images are not Lambda ComputeTypes.
    *
    * @param buildEnvironment BuildEnvironment. 
    */
@@ -87,8 +87,7 @@ public open class LinuxArmBuildImage(
       unwrap(this).validate(buildEnvironment.let(BuildEnvironment.Companion::unwrap))
 
   /**
-   * Validates by checking the BuildEnvironment computeType as aarch64 images only support
-   * ComputeType.SMALL and ComputeType.LARGE.
+   * Validates by checking the BuildEnvironments' images are not Lambda ComputeTypes.
    *
    * @param buildEnvironment BuildEnvironment. 
    */

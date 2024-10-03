@@ -54,7 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataCellsFilter(
   cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -626,7 +627,8 @@ public open class CfnDataCellsFilter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.ColumnWildcardProperty,
-    ) : CdkObject(cdkObject), ColumnWildcardProperty {
+    ) : CdkObject(cdkObject),
+        ColumnWildcardProperty {
       /**
        * Excludes column names.
        *
@@ -732,7 +734,8 @@ public open class CfnDataCellsFilter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.RowFilterProperty,
-    ) : CdkObject(cdkObject), RowFilterProperty {
+    ) : CdkObject(cdkObject),
+        RowFilterProperty {
       /**
        * A wildcard for all rows.
        *

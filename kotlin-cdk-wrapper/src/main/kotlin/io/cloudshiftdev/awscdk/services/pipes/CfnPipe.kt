@@ -61,6 +61,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .inputTemplate("inputTemplate")
  * .build())
+ * .kmsKeyIdentifier("kmsKeyIdentifier")
  * .logConfiguration(PipeLogConfigurationProperty.builder()
  * .cloudwatchLogsLogDestination(CloudwatchLogsLogDestinationProperty.builder()
  * .logGroupArn("logGroupArn")
@@ -316,6 +317,32 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .stepFunctionStateMachineParameters(PipeTargetStateMachineParametersProperty.builder()
  * .invocationType("invocationType")
  * .build())
+ * .timestreamParameters(PipeTargetTimestreamParametersProperty.builder()
+ * .dimensionMappings(List.of(DimensionMappingProperty.builder()
+ * .dimensionName("dimensionName")
+ * .dimensionValue("dimensionValue")
+ * .dimensionValueType("dimensionValueType")
+ * .build()))
+ * .timeValue("timeValue")
+ * .versionValue("versionValue")
+ * // the properties below are optional
+ * .epochTimeUnit("epochTimeUnit")
+ * .multiMeasureMappings(List.of(MultiMeasureMappingProperty.builder()
+ * .multiMeasureAttributeMappings(List.of(MultiMeasureAttributeMappingProperty.builder()
+ * .measureValue("measureValue")
+ * .measureValueType("measureValueType")
+ * .multiMeasureAttributeName("multiMeasureAttributeName")
+ * .build()))
+ * .multiMeasureName("multiMeasureName")
+ * .build()))
+ * .singleMeasureMappings(List.of(SingleMeasureMappingProperty.builder()
+ * .measureName("measureName")
+ * .measureValue("measureValue")
+ * .measureValueType("measureValueType")
+ * .build()))
+ * .timeFieldType("timeFieldType")
+ * .timestampFormat("timestampFormat")
+ * .build())
  * .build())
  * .build();
  * ```
@@ -324,7 +351,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPipe(
   cdkObject: software.amazon.awscdk.services.pipes.CfnPipe,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -439,6 +468,20 @@ public open class CfnPipe(
    */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
+  }
+
+  /**
+   * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use
+   * a customer managed key to encrypt pipe data.
+   */
+  public open fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
+
+  /**
+   * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use
+   * a customer managed key to encrypt pipe data.
+   */
+  public open fun kmsKeyIdentifier(`value`: String) {
+    unwrap(this).setKmsKeyIdentifier(`value`)
   }
 
   /**
@@ -644,6 +687,29 @@ public open class CfnPipe(
         fun enrichmentParameters(enrichmentParameters: PipeEnrichmentParametersProperty.Builder.() -> Unit)
 
     /**
+     * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to
+     * use a customer managed key to encrypt pipe data.
+     *
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * To update a pipe that is using the default AWS owned key to use a customer managed key
+     * instead, or update a pipe that is using a customer managed key to use a different customer
+     * managed key, specify a customer managed key identifier.
+     *
+     * To update a pipe that is using a customer managed key to use the default AWS owned key ,
+     * specify an empty string.
+     *
+     * For more information, see [Managing
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS
+     * Key Management Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pipes-pipe.html#cfn-pipes-pipe-kmskeyidentifier)
+     * @param kmsKeyIdentifier The identifier of the AWS KMS customer managed key for EventBridge to
+     * use, if you choose to use a customer managed key to encrypt pipe data. 
+     */
+    public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
+
+    /**
      * The logging configuration settings for the pipe.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pipes-pipe.html#cfn-pipes-pipe-logconfiguration)
@@ -845,6 +911,31 @@ public open class CfnPipe(
     override
         fun enrichmentParameters(enrichmentParameters: PipeEnrichmentParametersProperty.Builder.() -> Unit):
         Unit = enrichmentParameters(PipeEnrichmentParametersProperty(enrichmentParameters))
+
+    /**
+     * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to
+     * use a customer managed key to encrypt pipe data.
+     *
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * To update a pipe that is using the default AWS owned key to use a customer managed key
+     * instead, or update a pipe that is using a customer managed key to use a different customer
+     * managed key, specify a customer managed key identifier.
+     *
+     * To update a pipe that is using a customer managed key to use the default AWS owned key ,
+     * specify an empty string.
+     *
+     * For more information, see [Managing
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS
+     * Key Management Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pipes-pipe.html#cfn-pipes-pipe-kmskeyidentifier)
+     * @param kmsKeyIdentifier The identifier of the AWS KMS customer managed key for EventBridge to
+     * use, if you choose to use a customer managed key to encrypt pipe data. 
+     */
+    override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
+      cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
+    }
 
     /**
      * The logging configuration settings for the pipe.
@@ -1175,7 +1266,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.AwsVpcConfigurationProperty,
-    ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AwsVpcConfigurationProperty {
       /**
        * Specifies whether the task's elastic network interface receives a public IP address.
        *
@@ -1283,7 +1375,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchArrayPropertiesProperty,
-    ) : CdkObject(cdkObject), BatchArrayPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        BatchArrayPropertiesProperty {
       /**
        * The size of the array, if this is an array batch job.
        *
@@ -1563,7 +1656,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchContainerOverridesProperty,
-    ) : CdkObject(cdkObject), BatchContainerOverridesProperty {
+    ) : CdkObject(cdkObject),
+        BatchContainerOverridesProperty {
       /**
        * The command to send to the container that overrides the default command from the Docker
        * image or the task definition.
@@ -1719,7 +1813,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchEnvironmentVariableProperty,
-    ) : CdkObject(cdkObject), BatchEnvironmentVariableProperty {
+    ) : CdkObject(cdkObject),
+        BatchEnvironmentVariableProperty {
       /**
        * The name of the key-value pair.
        *
@@ -1830,7 +1925,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchJobDependencyProperty,
-    ) : CdkObject(cdkObject), BatchJobDependencyProperty {
+    ) : CdkObject(cdkObject),
+        BatchJobDependencyProperty {
       /**
        * The job ID of the AWS Batch job that's associated with this dependency.
        *
@@ -2201,7 +2297,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchResourceRequirementProperty,
-    ) : CdkObject(cdkObject), BatchResourceRequirementProperty {
+    ) : CdkObject(cdkObject),
+        BatchResourceRequirementProperty {
       /**
        * The type of resource to assign to a container.
        *
@@ -2389,7 +2486,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchRetryStrategyProperty,
-    ) : CdkObject(cdkObject), BatchRetryStrategyProperty {
+    ) : CdkObject(cdkObject),
+        BatchRetryStrategyProperty {
       /**
        * The number of times to move a job to the `RUNNABLE` status.
        *
@@ -2545,7 +2643,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.CapacityProviderStrategyItemProperty,
-    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
+    ) : CdkObject(cdkObject),
+        CapacityProviderStrategyItemProperty {
       /**
        * The base value designates how many tasks, at a minimum, to run on the specified capacity
        * provider.
@@ -2662,7 +2761,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.CloudwatchLogsLogDestinationProperty,
-    ) : CdkObject(cdkObject), CloudwatchLogsLogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        CloudwatchLogsLogDestinationProperty {
       /**
        * The AWS Resource Name (ARN) for the CloudWatch log group to which EventBridge sends the log
        * records.
@@ -2751,7 +2851,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.DeadLetterConfigProperty,
-    ) : CdkObject(cdkObject), DeadLetterConfigProperty {
+    ) : CdkObject(cdkObject),
+        DeadLetterConfigProperty {
       /**
        * The ARN of the specified target for the dead-letter queue.
        *
@@ -2778,6 +2879,154 @@ public open class CfnPipe(
           software.amazon.awscdk.services.pipes.CfnPipe.DeadLetterConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.pipes.CfnPipe.DeadLetterConfigProperty
+    }
+  }
+
+  /**
+   * Maps source data to a dimension in the target Timestream for LiveAnalytics table.
+   *
+   * For more information, see [Amazon Timestream for LiveAnalytics
+   * concepts](https://docs.aws.amazon.com/timestream/latest/developerguide/concepts.html)
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pipes.*;
+   * DimensionMappingProperty dimensionMappingProperty = DimensionMappingProperty.builder()
+   * .dimensionName("dimensionName")
+   * .dimensionValue("dimensionValue")
+   * .dimensionValueType("dimensionValueType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-dimensionmapping.html)
+   */
+  public interface DimensionMappingProperty {
+    /**
+     * The metadata attributes of the time series.
+     *
+     * For example, the name and Availability Zone of an Amazon EC2 instance or the name of the
+     * manufacturer of a wind turbine are dimensions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-dimensionmapping.html#cfn-pipes-pipe-dimensionmapping-dimensionname)
+     */
+    public fun dimensionName(): String
+
+    /**
+     * Dynamic path to the dimension value in the source event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-dimensionmapping.html#cfn-pipes-pipe-dimensionmapping-dimensionvalue)
+     */
+    public fun dimensionValue(): String
+
+    /**
+     * The data type of the dimension for the time-series data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-dimensionmapping.html#cfn-pipes-pipe-dimensionmapping-dimensionvaluetype)
+     */
+    public fun dimensionValueType(): String
+
+    /**
+     * A builder for [DimensionMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensionName The metadata attributes of the time series. 
+       * For example, the name and Availability Zone of an Amazon EC2 instance or the name of the
+       * manufacturer of a wind turbine are dimensions.
+       */
+      public fun dimensionName(dimensionName: String)
+
+      /**
+       * @param dimensionValue Dynamic path to the dimension value in the source event. 
+       */
+      public fun dimensionValue(dimensionValue: String)
+
+      /**
+       * @param dimensionValueType The data type of the dimension for the time-series data. 
+       */
+      public fun dimensionValueType(dimensionValueType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pipes.CfnPipe.DimensionMappingProperty.Builder =
+          software.amazon.awscdk.services.pipes.CfnPipe.DimensionMappingProperty.builder()
+
+      /**
+       * @param dimensionName The metadata attributes of the time series. 
+       * For example, the name and Availability Zone of an Amazon EC2 instance or the name of the
+       * manufacturer of a wind turbine are dimensions.
+       */
+      override fun dimensionName(dimensionName: String) {
+        cdkBuilder.dimensionName(dimensionName)
+      }
+
+      /**
+       * @param dimensionValue Dynamic path to the dimension value in the source event. 
+       */
+      override fun dimensionValue(dimensionValue: String) {
+        cdkBuilder.dimensionValue(dimensionValue)
+      }
+
+      /**
+       * @param dimensionValueType The data type of the dimension for the time-series data. 
+       */
+      override fun dimensionValueType(dimensionValueType: String) {
+        cdkBuilder.dimensionValueType(dimensionValueType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.pipes.CfnPipe.DimensionMappingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.DimensionMappingProperty,
+    ) : CdkObject(cdkObject),
+        DimensionMappingProperty {
+      /**
+       * The metadata attributes of the time series.
+       *
+       * For example, the name and Availability Zone of an Amazon EC2 instance or the name of the
+       * manufacturer of a wind turbine are dimensions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-dimensionmapping.html#cfn-pipes-pipe-dimensionmapping-dimensionname)
+       */
+      override fun dimensionName(): String = unwrap(this).getDimensionName()
+
+      /**
+       * Dynamic path to the dimension value in the source event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-dimensionmapping.html#cfn-pipes-pipe-dimensionmapping-dimensionvalue)
+       */
+      override fun dimensionValue(): String = unwrap(this).getDimensionValue()
+
+      /**
+       * The data type of the dimension for the time-series data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-dimensionmapping.html#cfn-pipes-pipe-dimensionmapping-dimensionvaluetype)
+       */
+      override fun dimensionValueType(): String = unwrap(this).getDimensionValueType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DimensionMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.DimensionMappingProperty):
+          DimensionMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionMappingProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DimensionMappingProperty):
+          software.amazon.awscdk.services.pipes.CfnPipe.DimensionMappingProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pipes.CfnPipe.DimensionMappingProperty
     }
   }
 
@@ -3149,7 +3398,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsContainerOverrideProperty,
-    ) : CdkObject(cdkObject), EcsContainerOverrideProperty {
+    ) : CdkObject(cdkObject),
+        EcsContainerOverrideProperty {
       /**
        * The command to send to the container that overrides the default command from the Docker
        * image or the task definition.
@@ -3348,7 +3598,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsEnvironmentFileProperty,
-    ) : CdkObject(cdkObject), EcsEnvironmentFileProperty {
+    ) : CdkObject(cdkObject),
+        EcsEnvironmentFileProperty {
       /**
        * The file type to use.
        *
@@ -3472,7 +3723,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsEnvironmentVariableProperty,
-    ) : CdkObject(cdkObject), EcsEnvironmentVariableProperty {
+    ) : CdkObject(cdkObject),
+        EcsEnvironmentVariableProperty {
       /**
        * The name of the key-value pair.
        *
@@ -3514,13 +3766,13 @@ public open class CfnPipe(
    * The amount of ephemeral storage to allocate for the task.
    *
    * This parameter is used to expand the total amount of ephemeral storage available, beyond the
-   * default amount, for tasks hosted on Fargate . For more information, see [Fargate task
+   * default amount, for tasks hosted on Fargate. For more information, see [Fargate task
    * storage](https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html) in the
    * *Amazon ECS User Guide for Fargate* .
    *
    *
    * This parameter is only supported for tasks hosted on Fargate using Linux platform version
-   * `1.4.0` or later. This parameter is not supported for Windows containers on Fargate .
+   * `1.4.0` or later. This parameter is not supported for Windows containers on Fargate.
    *
    *
    * Example:
@@ -3579,7 +3831,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsEphemeralStorageProperty,
-    ) : CdkObject(cdkObject), EcsEphemeralStorageProperty {
+    ) : CdkObject(cdkObject),
+        EcsEphemeralStorageProperty {
       /**
        * The total amount, in GiB, of ephemeral storage to set for the task.
        *
@@ -3695,7 +3948,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsInferenceAcceleratorOverrideProperty,
-    ) : CdkObject(cdkObject), EcsInferenceAcceleratorOverrideProperty {
+    ) : CdkObject(cdkObject),
+        EcsInferenceAcceleratorOverrideProperty {
       /**
        * The Elastic Inference accelerator device name to override for the task.
        *
@@ -3840,7 +4094,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsResourceRequirementProperty,
-    ) : CdkObject(cdkObject), EcsResourceRequirementProperty {
+    ) : CdkObject(cdkObject),
+        EcsResourceRequirementProperty {
       /**
        * The type of resource to assign to a container.
        *
@@ -4232,7 +4487,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsTaskOverrideProperty,
-    ) : CdkObject(cdkObject), EcsTaskOverrideProperty {
+    ) : CdkObject(cdkObject),
+        EcsTaskOverrideProperty {
       /**
        * One or more container overrides that are sent to a task.
        *
@@ -4402,7 +4658,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.FilterCriteriaProperty,
-    ) : CdkObject(cdkObject), FilterCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        FilterCriteriaProperty {
       /**
        * The event patterns.
        *
@@ -4485,7 +4742,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
+    ) : CdkObject(cdkObject),
+        FilterProperty {
       /**
        * The event pattern.
        *
@@ -4568,7 +4826,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.FirehoseLogDestinationProperty,
-    ) : CdkObject(cdkObject), FirehoseLogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        FirehoseLogDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Firehose delivery stream to which EventBridge
        * delivers the pipe log records.
@@ -4651,7 +4910,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.MQBrokerAccessCredentialsProperty,
-    ) : CdkObject(cdkObject), MQBrokerAccessCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        MQBrokerAccessCredentialsProperty {
       /**
        * The ARN of the Secrets Manager secret.
        *
@@ -4753,7 +5013,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.MSKAccessCredentialsProperty,
-    ) : CdkObject(cdkObject), MSKAccessCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        MSKAccessCredentialsProperty {
       /**
        * The ARN of the Secrets Manager secret.
        *
@@ -4784,6 +5045,292 @@ public open class CfnPipe(
           software.amazon.awscdk.services.pipes.CfnPipe.MSKAccessCredentialsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.pipes.CfnPipe.MSKAccessCredentialsProperty
+    }
+  }
+
+  /**
+   * A mapping of a source event data field to a measure in a Timestream for LiveAnalytics record.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pipes.*;
+   * MultiMeasureAttributeMappingProperty multiMeasureAttributeMappingProperty =
+   * MultiMeasureAttributeMappingProperty.builder()
+   * .measureValue("measureValue")
+   * .measureValueType("measureValueType")
+   * .multiMeasureAttributeName("multiMeasureAttributeName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasureattributemapping.html)
+   */
+  public interface MultiMeasureAttributeMappingProperty {
+    /**
+     * Dynamic path to the measurement attribute in the source event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasureattributemapping.html#cfn-pipes-pipe-multimeasureattributemapping-measurevalue)
+     */
+    public fun measureValue(): String
+
+    /**
+     * Data type of the measurement attribute in the source event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasureattributemapping.html#cfn-pipes-pipe-multimeasureattributemapping-measurevaluetype)
+     */
+    public fun measureValueType(): String
+
+    /**
+     * Target measure name to be used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasureattributemapping.html#cfn-pipes-pipe-multimeasureattributemapping-multimeasureattributename)
+     */
+    public fun multiMeasureAttributeName(): String
+
+    /**
+     * A builder for [MultiMeasureAttributeMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param measureValue Dynamic path to the measurement attribute in the source event. 
+       */
+      public fun measureValue(measureValue: String)
+
+      /**
+       * @param measureValueType Data type of the measurement attribute in the source event. 
+       */
+      public fun measureValueType(measureValueType: String)
+
+      /**
+       * @param multiMeasureAttributeName Target measure name to be used. 
+       */
+      public fun multiMeasureAttributeName(multiMeasureAttributeName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureAttributeMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureAttributeMappingProperty.builder()
+
+      /**
+       * @param measureValue Dynamic path to the measurement attribute in the source event. 
+       */
+      override fun measureValue(measureValue: String) {
+        cdkBuilder.measureValue(measureValue)
+      }
+
+      /**
+       * @param measureValueType Data type of the measurement attribute in the source event. 
+       */
+      override fun measureValueType(measureValueType: String) {
+        cdkBuilder.measureValueType(measureValueType)
+      }
+
+      /**
+       * @param multiMeasureAttributeName Target measure name to be used. 
+       */
+      override fun multiMeasureAttributeName(multiMeasureAttributeName: String) {
+        cdkBuilder.multiMeasureAttributeName(multiMeasureAttributeName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureAttributeMappingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureAttributeMappingProperty,
+    ) : CdkObject(cdkObject),
+        MultiMeasureAttributeMappingProperty {
+      /**
+       * Dynamic path to the measurement attribute in the source event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasureattributemapping.html#cfn-pipes-pipe-multimeasureattributemapping-measurevalue)
+       */
+      override fun measureValue(): String = unwrap(this).getMeasureValue()
+
+      /**
+       * Data type of the measurement attribute in the source event.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasureattributemapping.html#cfn-pipes-pipe-multimeasureattributemapping-measurevaluetype)
+       */
+      override fun measureValueType(): String = unwrap(this).getMeasureValueType()
+
+      /**
+       * Target measure name to be used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasureattributemapping.html#cfn-pipes-pipe-multimeasureattributemapping-multimeasureattributename)
+       */
+      override fun multiMeasureAttributeName(): String = unwrap(this).getMultiMeasureAttributeName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MultiMeasureAttributeMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureAttributeMappingProperty):
+          MultiMeasureAttributeMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiMeasureAttributeMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MultiMeasureAttributeMappingProperty):
+          software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureAttributeMappingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureAttributeMappingProperty
+    }
+  }
+
+  /**
+   * Maps multiple measures from the source event to the same Timestream for LiveAnalytics record.
+   *
+   * For more information, see [Amazon Timestream for LiveAnalytics
+   * concepts](https://docs.aws.amazon.com/timestream/latest/developerguide/concepts.html)
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pipes.*;
+   * MultiMeasureMappingProperty multiMeasureMappingProperty = MultiMeasureMappingProperty.builder()
+   * .multiMeasureAttributeMappings(List.of(MultiMeasureAttributeMappingProperty.builder()
+   * .measureValue("measureValue")
+   * .measureValueType("measureValueType")
+   * .multiMeasureAttributeName("multiMeasureAttributeName")
+   * .build()))
+   * .multiMeasureName("multiMeasureName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasuremapping.html)
+   */
+  public interface MultiMeasureMappingProperty {
+    /**
+     * Mappings that represent multiple source event fields mapped to measures in the same
+     * Timestream for LiveAnalytics record.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasuremapping.html#cfn-pipes-pipe-multimeasuremapping-multimeasureattributemappings)
+     */
+    public fun multiMeasureAttributeMappings(): Any
+
+    /**
+     * The name of the multiple measurements per record (multi-measure).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasuremapping.html#cfn-pipes-pipe-multimeasuremapping-multimeasurename)
+     */
+    public fun multiMeasureName(): String
+
+    /**
+     * A builder for [MultiMeasureMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param multiMeasureAttributeMappings Mappings that represent multiple source event fields
+       * mapped to measures in the same Timestream for LiveAnalytics record. 
+       */
+      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable)
+
+      /**
+       * @param multiMeasureAttributeMappings Mappings that represent multiple source event fields
+       * mapped to measures in the same Timestream for LiveAnalytics record. 
+       */
+      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>)
+
+      /**
+       * @param multiMeasureAttributeMappings Mappings that represent multiple source event fields
+       * mapped to measures in the same Timestream for LiveAnalytics record. 
+       */
+      public fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any)
+
+      /**
+       * @param multiMeasureName The name of the multiple measurements per record (multi-measure). 
+       */
+      public fun multiMeasureName(multiMeasureName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureMappingProperty.Builder =
+          software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureMappingProperty.builder()
+
+      /**
+       * @param multiMeasureAttributeMappings Mappings that represent multiple source event fields
+       * mapped to measures in the same Timestream for LiveAnalytics record. 
+       */
+      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
+        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param multiMeasureAttributeMappings Mappings that represent multiple source event fields
+       * mapped to measures in the same Timestream for LiveAnalytics record. 
+       */
+      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
+        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param multiMeasureAttributeMappings Mappings that represent multiple source event fields
+       * mapped to measures in the same Timestream for LiveAnalytics record. 
+       */
+      override fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any): Unit =
+          multiMeasureAttributeMappings(multiMeasureAttributeMappings.toList())
+
+      /**
+       * @param multiMeasureName The name of the multiple measurements per record (multi-measure). 
+       */
+      override fun multiMeasureName(multiMeasureName: String) {
+        cdkBuilder.multiMeasureName(multiMeasureName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureMappingProperty,
+    ) : CdkObject(cdkObject),
+        MultiMeasureMappingProperty {
+      /**
+       * Mappings that represent multiple source event fields mapped to measures in the same
+       * Timestream for LiveAnalytics record.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasuremapping.html#cfn-pipes-pipe-multimeasuremapping-multimeasureattributemappings)
+       */
+      override fun multiMeasureAttributeMappings(): Any =
+          unwrap(this).getMultiMeasureAttributeMappings()
+
+      /**
+       * The name of the multiple measurements per record (multi-measure).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-multimeasuremapping.html#cfn-pipes-pipe-multimeasuremapping-multimeasurename)
+       */
+      override fun multiMeasureName(): String = unwrap(this).getMultiMeasureName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MultiMeasureMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureMappingProperty):
+          MultiMeasureMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiMeasureMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MultiMeasureMappingProperty):
+          software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureMappingProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pipes.CfnPipe.MultiMeasureMappingProperty
     }
   }
 
@@ -4890,7 +5437,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NetworkConfigurationProperty {
       /**
        * Use this structure to specify the VPC subnets and security groups for the task, and whether
        * a public IP address is to be used.
@@ -5073,7 +5621,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeEnrichmentHttpParametersProperty,
-    ) : CdkObject(cdkObject), PipeEnrichmentHttpParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeEnrichmentHttpParametersProperty {
       /**
        * The headers that need to be sent as part of request invoking the API Gateway REST API or
        * EventBridge ApiDestination.
@@ -5285,7 +5834,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeEnrichmentParametersProperty,
-    ) : CdkObject(cdkObject), PipeEnrichmentParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeEnrichmentParametersProperty {
       /**
        * Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or
        * EventBridge ApiDestination.
@@ -5626,7 +6176,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeLogConfigurationProperty,
-    ) : CdkObject(cdkObject), PipeLogConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PipeLogConfigurationProperty {
       /**
        * The logging configuration settings for the pipe.
        *
@@ -5841,7 +6392,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceActiveMQBrokerParametersProperty,
-    ) : CdkObject(cdkObject), PipeSourceActiveMQBrokerParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeSourceActiveMQBrokerParametersProperty {
       /**
        * The maximum number of records to include in each batch.
        *
@@ -5942,7 +6494,7 @@ public open class CfnPipe(
         unwrap(this).getMaximumBatchingWindowInSeconds()
 
     /**
-     * (Streams only) Discard records older than the specified age.
+     * Discard records older than the specified age.
      *
      * The default value is -1, which sets the maximum age to infinite. When the value is set to
      * infinite, EventBridge never discards old records.
@@ -5952,7 +6504,7 @@ public open class CfnPipe(
     public fun maximumRecordAgeInSeconds(): Number? = unwrap(this).getMaximumRecordAgeInSeconds()
 
     /**
-     * (Streams only) Discard records after the specified number of retries.
+     * Discard records after the specified number of retries.
      *
      * The default value is -1, which sets the maximum number of retries to infinite. When
      * MaximumRetryAttempts is infinite, EventBridge retries failed records until the record expires in
@@ -5963,7 +6515,7 @@ public open class CfnPipe(
     public fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
 
     /**
-     * (Streams only) Define how to handle item process failures.
+     * Define how to handle item process failures.
      *
      * `AUTOMATIC_BISECT` halves each batch and retry each half until all the records are processed
      * or there is one failed message left in the batch.
@@ -5973,7 +6525,7 @@ public open class CfnPipe(
     public fun onPartialBatchItemFailure(): String? = unwrap(this).getOnPartialBatchItemFailure()
 
     /**
-     * (Streams only) The number of batches to process concurrently from each shard.
+     * The number of batches to process concurrently from each shard.
      *
      * The default value is 1.
      *
@@ -6023,16 +6575,14 @@ public open class CfnPipe(
       public fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number)
 
       /**
-       * @param maximumRecordAgeInSeconds (Streams only) Discard records older than the specified
-       * age.
+       * @param maximumRecordAgeInSeconds Discard records older than the specified age.
        * The default value is -1, which sets the maximum age to infinite. When the value is set to
        * infinite, EventBridge never discards old records.
        */
       public fun maximumRecordAgeInSeconds(maximumRecordAgeInSeconds: Number)
 
       /**
-       * @param maximumRetryAttempts (Streams only) Discard records after the specified number of
-       * retries.
+       * @param maximumRetryAttempts Discard records after the specified number of retries.
        * The default value is -1, which sets the maximum number of retries to infinite. When
        * MaximumRetryAttempts is infinite, EventBridge retries failed records until the record expires
        * in the event source.
@@ -6040,15 +6590,14 @@ public open class CfnPipe(
       public fun maximumRetryAttempts(maximumRetryAttempts: Number)
 
       /**
-       * @param onPartialBatchItemFailure (Streams only) Define how to handle item process failures.
+       * @param onPartialBatchItemFailure Define how to handle item process failures.
        * `AUTOMATIC_BISECT` halves each batch and retry each half until all the records are
        * processed or there is one failed message left in the batch.
        */
       public fun onPartialBatchItemFailure(onPartialBatchItemFailure: String)
 
       /**
-       * @param parallelizationFactor (Streams only) The number of batches to process concurrently
-       * from each shard.
+       * @param parallelizationFactor The number of batches to process concurrently from each shard.
        * The default value is 1.
        */
       public fun parallelizationFactor(parallelizationFactor: Number)
@@ -6104,8 +6653,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param maximumRecordAgeInSeconds (Streams only) Discard records older than the specified
-       * age.
+       * @param maximumRecordAgeInSeconds Discard records older than the specified age.
        * The default value is -1, which sets the maximum age to infinite. When the value is set to
        * infinite, EventBridge never discards old records.
        */
@@ -6114,8 +6662,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param maximumRetryAttempts (Streams only) Discard records after the specified number of
-       * retries.
+       * @param maximumRetryAttempts Discard records after the specified number of retries.
        * The default value is -1, which sets the maximum number of retries to infinite. When
        * MaximumRetryAttempts is infinite, EventBridge retries failed records until the record expires
        * in the event source.
@@ -6125,7 +6672,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param onPartialBatchItemFailure (Streams only) Define how to handle item process failures.
+       * @param onPartialBatchItemFailure Define how to handle item process failures.
        * `AUTOMATIC_BISECT` halves each batch and retry each half until all the records are
        * processed or there is one failed message left in the batch.
        */
@@ -6134,8 +6681,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param parallelizationFactor (Streams only) The number of batches to process concurrently
-       * from each shard.
+       * @param parallelizationFactor The number of batches to process concurrently from each shard.
        * The default value is 1.
        */
       override fun parallelizationFactor(parallelizationFactor: Number) {
@@ -6158,7 +6704,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceDynamoDBStreamParametersProperty,
-    ) : CdkObject(cdkObject), PipeSourceDynamoDBStreamParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeSourceDynamoDBStreamParametersProperty {
       /**
        * The maximum number of records to include in each batch.
        *
@@ -6182,7 +6729,7 @@ public open class CfnPipe(
           unwrap(this).getMaximumBatchingWindowInSeconds()
 
       /**
-       * (Streams only) Discard records older than the specified age.
+       * Discard records older than the specified age.
        *
        * The default value is -1, which sets the maximum age to infinite. When the value is set to
        * infinite, EventBridge never discards old records.
@@ -6193,7 +6740,7 @@ public open class CfnPipe(
           unwrap(this).getMaximumRecordAgeInSeconds()
 
       /**
-       * (Streams only) Discard records after the specified number of retries.
+       * Discard records after the specified number of retries.
        *
        * The default value is -1, which sets the maximum number of retries to infinite. When
        * MaximumRetryAttempts is infinite, EventBridge retries failed records until the record expires
@@ -6204,7 +6751,7 @@ public open class CfnPipe(
       override fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
 
       /**
-       * (Streams only) Define how to handle item process failures.
+       * Define how to handle item process failures.
        *
        * `AUTOMATIC_BISECT` halves each batch and retry each half until all the records are
        * processed or there is one failed message left in the batch.
@@ -6215,7 +6762,7 @@ public open class CfnPipe(
           unwrap(this).getOnPartialBatchItemFailure()
 
       /**
-       * (Streams only) The number of batches to process concurrently from each shard.
+       * The number of batches to process concurrently from each shard.
        *
        * The default value is 1.
        *
@@ -6304,7 +6851,7 @@ public open class CfnPipe(
         unwrap(this).getMaximumBatchingWindowInSeconds()
 
     /**
-     * (Streams only) Discard records older than the specified age.
+     * Discard records older than the specified age.
      *
      * The default value is -1, which sets the maximum age to infinite. When the value is set to
      * infinite, EventBridge never discards old records.
@@ -6314,7 +6861,7 @@ public open class CfnPipe(
     public fun maximumRecordAgeInSeconds(): Number? = unwrap(this).getMaximumRecordAgeInSeconds()
 
     /**
-     * (Streams only) Discard records after the specified number of retries.
+     * Discard records after the specified number of retries.
      *
      * The default value is -1, which sets the maximum number of retries to infinite. When
      * MaximumRetryAttempts is infinite, EventBridge retries failed records until the record expires in
@@ -6325,7 +6872,7 @@ public open class CfnPipe(
     public fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
 
     /**
-     * (Streams only) Define how to handle item process failures.
+     * Define how to handle item process failures.
      *
      * `AUTOMATIC_BISECT` halves each batch and retry each half until all the records are processed
      * or there is one failed message left in the batch.
@@ -6335,7 +6882,7 @@ public open class CfnPipe(
     public fun onPartialBatchItemFailure(): String? = unwrap(this).getOnPartialBatchItemFailure()
 
     /**
-     * (Streams only) The number of batches to process concurrently from each shard.
+     * The number of batches to process concurrently from each shard.
      *
      * The default value is 1.
      *
@@ -6344,7 +6891,7 @@ public open class CfnPipe(
     public fun parallelizationFactor(): Number? = unwrap(this).getParallelizationFactor()
 
     /**
-     * (Streams only) The position in a stream from which to start reading.
+     * The position in a stream from which to start reading.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourcekinesisstreamparameters.html#cfn-pipes-pipe-pipesourcekinesisstreamparameters-startingposition)
      */
@@ -6391,16 +6938,14 @@ public open class CfnPipe(
       public fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number)
 
       /**
-       * @param maximumRecordAgeInSeconds (Streams only) Discard records older than the specified
-       * age.
+       * @param maximumRecordAgeInSeconds Discard records older than the specified age.
        * The default value is -1, which sets the maximum age to infinite. When the value is set to
        * infinite, EventBridge never discards old records.
        */
       public fun maximumRecordAgeInSeconds(maximumRecordAgeInSeconds: Number)
 
       /**
-       * @param maximumRetryAttempts (Streams only) Discard records after the specified number of
-       * retries.
+       * @param maximumRetryAttempts Discard records after the specified number of retries.
        * The default value is -1, which sets the maximum number of retries to infinite. When
        * MaximumRetryAttempts is infinite, EventBridge retries failed records until the record expires
        * in the event source.
@@ -6408,22 +6953,20 @@ public open class CfnPipe(
       public fun maximumRetryAttempts(maximumRetryAttempts: Number)
 
       /**
-       * @param onPartialBatchItemFailure (Streams only) Define how to handle item process failures.
+       * @param onPartialBatchItemFailure Define how to handle item process failures.
        * `AUTOMATIC_BISECT` halves each batch and retry each half until all the records are
        * processed or there is one failed message left in the batch.
        */
       public fun onPartialBatchItemFailure(onPartialBatchItemFailure: String)
 
       /**
-       * @param parallelizationFactor (Streams only) The number of batches to process concurrently
-       * from each shard.
+       * @param parallelizationFactor The number of batches to process concurrently from each shard.
        * The default value is 1.
        */
       public fun parallelizationFactor(parallelizationFactor: Number)
 
       /**
-       * @param startingPosition (Streams only) The position in a stream from which to start
-       * reading. 
+       * @param startingPosition The position in a stream from which to start reading. 
        */
       public fun startingPosition(startingPosition: String)
 
@@ -6477,8 +7020,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param maximumRecordAgeInSeconds (Streams only) Discard records older than the specified
-       * age.
+       * @param maximumRecordAgeInSeconds Discard records older than the specified age.
        * The default value is -1, which sets the maximum age to infinite. When the value is set to
        * infinite, EventBridge never discards old records.
        */
@@ -6487,8 +7029,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param maximumRetryAttempts (Streams only) Discard records after the specified number of
-       * retries.
+       * @param maximumRetryAttempts Discard records after the specified number of retries.
        * The default value is -1, which sets the maximum number of retries to infinite. When
        * MaximumRetryAttempts is infinite, EventBridge retries failed records until the record expires
        * in the event source.
@@ -6498,7 +7039,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param onPartialBatchItemFailure (Streams only) Define how to handle item process failures.
+       * @param onPartialBatchItemFailure Define how to handle item process failures.
        * `AUTOMATIC_BISECT` halves each batch and retry each half until all the records are
        * processed or there is one failed message left in the batch.
        */
@@ -6507,8 +7048,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param parallelizationFactor (Streams only) The number of batches to process concurrently
-       * from each shard.
+       * @param parallelizationFactor The number of batches to process concurrently from each shard.
        * The default value is 1.
        */
       override fun parallelizationFactor(parallelizationFactor: Number) {
@@ -6516,8 +7056,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param startingPosition (Streams only) The position in a stream from which to start
-       * reading. 
+       * @param startingPosition The position in a stream from which to start reading. 
        */
       override fun startingPosition(startingPosition: String) {
         cdkBuilder.startingPosition(startingPosition)
@@ -6538,7 +7077,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceKinesisStreamParametersProperty,
-    ) : CdkObject(cdkObject), PipeSourceKinesisStreamParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeSourceKinesisStreamParametersProperty {
       /**
        * The maximum number of records to include in each batch.
        *
@@ -6562,7 +7102,7 @@ public open class CfnPipe(
           unwrap(this).getMaximumBatchingWindowInSeconds()
 
       /**
-       * (Streams only) Discard records older than the specified age.
+       * Discard records older than the specified age.
        *
        * The default value is -1, which sets the maximum age to infinite. When the value is set to
        * infinite, EventBridge never discards old records.
@@ -6573,7 +7113,7 @@ public open class CfnPipe(
           unwrap(this).getMaximumRecordAgeInSeconds()
 
       /**
-       * (Streams only) Discard records after the specified number of retries.
+       * Discard records after the specified number of retries.
        *
        * The default value is -1, which sets the maximum number of retries to infinite. When
        * MaximumRetryAttempts is infinite, EventBridge retries failed records until the record expires
@@ -6584,7 +7124,7 @@ public open class CfnPipe(
       override fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
 
       /**
-       * (Streams only) Define how to handle item process failures.
+       * Define how to handle item process failures.
        *
        * `AUTOMATIC_BISECT` halves each batch and retry each half until all the records are
        * processed or there is one failed message left in the batch.
@@ -6595,7 +7135,7 @@ public open class CfnPipe(
           unwrap(this).getOnPartialBatchItemFailure()
 
       /**
-       * (Streams only) The number of batches to process concurrently from each shard.
+       * The number of batches to process concurrently from each shard.
        *
        * The default value is 1.
        *
@@ -6604,7 +7144,7 @@ public open class CfnPipe(
       override fun parallelizationFactor(): Number? = unwrap(this).getParallelizationFactor()
 
       /**
-       * (Streams only) The position in a stream from which to start reading.
+       * The position in a stream from which to start reading.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourcekinesisstreamparameters.html#cfn-pipes-pipe-pipesourcekinesisstreamparameters-startingposition)
        */
@@ -6697,7 +7237,7 @@ public open class CfnPipe(
         unwrap(this).getMaximumBatchingWindowInSeconds()
 
     /**
-     * (Streams only) The position in a stream from which to start reading.
+     * The position in a stream from which to start reading.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourcemanagedstreamingkafkaparameters.html#cfn-pipes-pipe-pipesourcemanagedstreamingkafkaparameters-startingposition)
      */
@@ -6748,8 +7288,7 @@ public open class CfnPipe(
       public fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number)
 
       /**
-       * @param startingPosition (Streams only) The position in a stream from which to start
-       * reading.
+       * @param startingPosition The position in a stream from which to start reading.
        */
       public fun startingPosition(startingPosition: String)
 
@@ -6809,8 +7348,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param startingPosition (Streams only) The position in a stream from which to start
-       * reading.
+       * @param startingPosition The position in a stream from which to start reading.
        */
       override fun startingPosition(startingPosition: String) {
         cdkBuilder.startingPosition(startingPosition)
@@ -6830,7 +7368,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceManagedStreamingKafkaParametersProperty,
-    ) : CdkObject(cdkObject), PipeSourceManagedStreamingKafkaParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeSourceManagedStreamingKafkaParametersProperty {
       /**
        * The maximum number of records to include in each batch.
        *
@@ -6861,7 +7400,7 @@ public open class CfnPipe(
           unwrap(this).getMaximumBatchingWindowInSeconds()
 
       /**
-       * (Streams only) The position in a stream from which to start reading.
+       * The position in a stream from which to start reading.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourcemanagedstreamingkafkaparameters.html#cfn-pipes-pipe-pipesourcemanagedstreamingkafkaparameters-startingposition)
        */
@@ -7049,7 +7588,7 @@ public open class CfnPipe(
     public fun rabbitMqBrokerParameters(): Any? = unwrap(this).getRabbitMqBrokerParameters()
 
     /**
-     * The parameters for using a stream as a source.
+     * The parameters for using a self-managed Apache Kafka stream as a source.
      *
      * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This includes
      * both clusters you manage yourself, as well as those hosted by a third-party provider, such as
@@ -7207,7 +7746,8 @@ public open class CfnPipe(
           fun rabbitMqBrokerParameters(rabbitMqBrokerParameters: PipeSourceRabbitMQBrokerParametersProperty.Builder.() -> Unit)
 
       /**
-       * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * @param selfManagedKafkaParameters The parameters for using a self-managed Apache Kafka
+       * stream as a source.
        * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
        * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
        * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
@@ -7220,7 +7760,8 @@ public open class CfnPipe(
       public fun selfManagedKafkaParameters(selfManagedKafkaParameters: IResolvable)
 
       /**
-       * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * @param selfManagedKafkaParameters The parameters for using a self-managed Apache Kafka
+       * stream as a source.
        * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
        * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
        * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
@@ -7234,7 +7775,8 @@ public open class CfnPipe(
           fun selfManagedKafkaParameters(selfManagedKafkaParameters: PipeSourceSelfManagedKafkaParametersProperty)
 
       /**
-       * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * @param selfManagedKafkaParameters The parameters for using a self-managed Apache Kafka
+       * stream as a source.
        * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
        * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
        * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
@@ -7439,7 +7981,8 @@ public open class CfnPipe(
           rabbitMqBrokerParameters(PipeSourceRabbitMQBrokerParametersProperty(rabbitMqBrokerParameters))
 
       /**
-       * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * @param selfManagedKafkaParameters The parameters for using a self-managed Apache Kafka
+       * stream as a source.
        * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
        * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
        * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
@@ -7454,7 +7997,8 @@ public open class CfnPipe(
       }
 
       /**
-       * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * @param selfManagedKafkaParameters The parameters for using a self-managed Apache Kafka
+       * stream as a source.
        * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
        * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
        * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
@@ -7470,7 +8014,8 @@ public open class CfnPipe(
       }
 
       /**
-       * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * @param selfManagedKafkaParameters The parameters for using a self-managed Apache Kafka
+       * stream as a source.
        * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
        * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
        * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
@@ -7516,7 +8061,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceParametersProperty,
-    ) : CdkObject(cdkObject), PipeSourceParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeSourceParametersProperty {
       /**
        * The parameters for using an Active MQ broker as a source.
        *
@@ -7568,7 +8114,7 @@ public open class CfnPipe(
       override fun rabbitMqBrokerParameters(): Any? = unwrap(this).getRabbitMqBrokerParameters()
 
       /**
-       * The parameters for using a stream as a source.
+       * The parameters for using a self-managed Apache Kafka stream as a source.
        *
        * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
        * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
@@ -7776,7 +8322,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceRabbitMQBrokerParametersProperty,
-    ) : CdkObject(cdkObject), PipeSourceRabbitMQBrokerParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeSourceRabbitMQBrokerParametersProperty {
       /**
        * The maximum number of records to include in each batch.
        *
@@ -7834,7 +8381,7 @@ public open class CfnPipe(
   }
 
   /**
-   * The parameters for using a stream as a source.
+   * The parameters for using a self-managed Apache Kafka stream as a source.
    *
    * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This includes
    * both clusters you manage yourself, as well as those hosted by a third-party provider, such as
@@ -7922,7 +8469,7 @@ public open class CfnPipe(
     public fun serverRootCaCertificate(): String? = unwrap(this).getServerRootCaCertificate()
 
     /**
-     * (Streams only) The position in a stream from which to start reading.
+     * The position in a stream from which to start reading.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourceselfmanagedkafkaparameters.html#cfn-pipes-pipe-pipesourceselfmanagedkafkaparameters-startingposition)
      */
@@ -7998,8 +8545,7 @@ public open class CfnPipe(
       public fun serverRootCaCertificate(serverRootCaCertificate: String)
 
       /**
-       * @param startingPosition (Streams only) The position in a stream from which to start
-       * reading.
+       * @param startingPosition The position in a stream from which to start reading.
        */
       public fun startingPosition(startingPosition: String)
 
@@ -8102,8 +8648,7 @@ public open class CfnPipe(
       }
 
       /**
-       * @param startingPosition (Streams only) The position in a stream from which to start
-       * reading.
+       * @param startingPosition The position in a stream from which to start reading.
        */
       override fun startingPosition(startingPosition: String) {
         cdkBuilder.startingPosition(startingPosition)
@@ -8148,7 +8693,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceSelfManagedKafkaParametersProperty,
-    ) : CdkObject(cdkObject), PipeSourceSelfManagedKafkaParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeSourceSelfManagedKafkaParametersProperty {
       /**
        * An array of server URLs.
        *
@@ -8194,7 +8740,7 @@ public open class CfnPipe(
       override fun serverRootCaCertificate(): String? = unwrap(this).getServerRootCaCertificate()
 
       /**
-       * (Streams only) The position in a stream from which to start reading.
+       * The position in a stream from which to start reading.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourceselfmanagedkafkaparameters.html#cfn-pipes-pipe-pipesourceselfmanagedkafkaparameters-startingposition)
        */
@@ -8312,7 +8858,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceSqsQueueParametersProperty,
-    ) : CdkObject(cdkObject), PipeSourceSqsQueueParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeSourceSqsQueueParametersProperty {
       /**
        * The maximum number of records to include in each batch.
        *
@@ -8766,7 +9313,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetBatchJobParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetBatchJobParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetBatchJobParametersProperty {
       /**
        * The array properties for the submitted job, such as the size of the array.
        *
@@ -8938,7 +9486,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetCloudWatchLogsParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetCloudWatchLogsParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetCloudWatchLogsParametersProperty {
       /**
        * The name of the log stream.
        *
@@ -9732,7 +10281,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetEcsTaskParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetEcsTaskParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetEcsTaskParametersProperty {
       /**
        * The capacity provider strategy to use for the task.
        *
@@ -10088,7 +10638,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetEventBridgeEventBusParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetEventBridgeEventBusParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetEventBridgeEventBusParametersProperty {
       /**
        * A free-form string, with a maximum of 128 characters, used to decide what fields to expect
        * in the event detail.
@@ -10304,7 +10855,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetHttpParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetHttpParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetHttpParametersProperty {
       /**
        * The headers that need to be sent as part of request invoking the API Gateway REST API or
        * EventBridge ApiDestination.
@@ -10424,7 +10976,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetKinesisStreamParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetKinesisStreamParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetKinesisStreamParametersProperty {
       /**
        * Determines which shard in the stream the data record is assigned to.
        *
@@ -10554,7 +11107,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetLambdaFunctionParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetLambdaFunctionParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetLambdaFunctionParametersProperty {
       /**
        * Specify whether to invoke the function synchronously or asynchronously.
        *
@@ -10714,6 +11268,13 @@ public open class CfnPipe(
      */
     public fun stepFunctionStateMachineParameters(): Any? =
         unwrap(this).getStepFunctionStateMachineParameters()
+
+    /**
+     * The parameters for using a Timestream for LiveAnalytics table as a target.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetparameters.html#cfn-pipes-pipe-pipetargetparameters-timestreamparameters)
+     */
+    public fun timestreamParameters(): Any? = unwrap(this).getTimestreamParameters()
 
     /**
      * A builder for [PipeTargetParametersProperty]
@@ -10951,6 +11512,27 @@ public open class CfnPipe(
       @JvmName("c98c038add2c0bc4e1ab167709d03310995337108c405ec86f15195d3bfad285")
       public
           fun stepFunctionStateMachineParameters(stepFunctionStateMachineParameters: PipeTargetStateMachineParametersProperty.Builder.() -> Unit)
+
+      /**
+       * @param timestreamParameters The parameters for using a Timestream for LiveAnalytics table
+       * as a target.
+       */
+      public fun timestreamParameters(timestreamParameters: IResolvable)
+
+      /**
+       * @param timestreamParameters The parameters for using a Timestream for LiveAnalytics table
+       * as a target.
+       */
+      public fun timestreamParameters(timestreamParameters: PipeTargetTimestreamParametersProperty)
+
+      /**
+       * @param timestreamParameters The parameters for using a Timestream for LiveAnalytics table
+       * as a target.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a736d11199c58179e7d1553936ff1f728a8f05cd9efad0010eafc0dc666c1212")
+      public
+          fun timestreamParameters(timestreamParameters: PipeTargetTimestreamParametersProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -11256,13 +11838,41 @@ public open class CfnPipe(
           Unit =
           stepFunctionStateMachineParameters(PipeTargetStateMachineParametersProperty(stepFunctionStateMachineParameters))
 
+      /**
+       * @param timestreamParameters The parameters for using a Timestream for LiveAnalytics table
+       * as a target.
+       */
+      override fun timestreamParameters(timestreamParameters: IResolvable) {
+        cdkBuilder.timestreamParameters(timestreamParameters.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param timestreamParameters The parameters for using a Timestream for LiveAnalytics table
+       * as a target.
+       */
+      override
+          fun timestreamParameters(timestreamParameters: PipeTargetTimestreamParametersProperty) {
+        cdkBuilder.timestreamParameters(timestreamParameters.let(PipeTargetTimestreamParametersProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param timestreamParameters The parameters for using a Timestream for LiveAnalytics table
+       * as a target.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a736d11199c58179e7d1553936ff1f728a8f05cd9efad0010eafc0dc666c1212")
+      override
+          fun timestreamParameters(timestreamParameters: PipeTargetTimestreamParametersProperty.Builder.() -> Unit):
+          Unit = timestreamParameters(PipeTargetTimestreamParametersProperty(timestreamParameters))
+
       public fun build(): software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetParametersProperty
           = cdkBuilder.build()
     }
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetParametersProperty {
       /**
        * The parameters for using an AWS Batch job as a target.
        *
@@ -11357,6 +11967,13 @@ public open class CfnPipe(
        */
       override fun stepFunctionStateMachineParameters(): Any? =
           unwrap(this).getStepFunctionStateMachineParameters()
+
+      /**
+       * The parameters for using a Timestream for LiveAnalytics table as a target.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetparameters.html#cfn-pipes-pipe-pipetargetparameters-timestreamparameters)
+       */
+      override fun timestreamParameters(): Any? = unwrap(this).getTimestreamParameters()
     }
 
     public companion object {
@@ -11423,7 +12040,7 @@ public open class CfnPipe(
     /**
      * The name or ARN of the secret that enables access to the database.
      *
-     * Required when authenticating using Secrets Manager .
+     * Required when authenticating using Secrets Manager.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetredshiftdataparameters.html#cfn-pipes-pipe-pipetargetredshiftdataparameters-secretmanagerarn)
      */
@@ -11473,7 +12090,7 @@ public open class CfnPipe(
 
       /**
        * @param secretManagerArn The name or ARN of the secret that enables access to the database.
-       * Required when authenticating using Secrets Manager .
+       * Required when authenticating using Secrets Manager.
        */
       public fun secretManagerArn(secretManagerArn: String)
 
@@ -11530,7 +12147,7 @@ public open class CfnPipe(
 
       /**
        * @param secretManagerArn The name or ARN of the secret that enables access to the database.
-       * Required when authenticating using Secrets Manager .
+       * Required when authenticating using Secrets Manager.
        */
       override fun secretManagerArn(secretManagerArn: String) {
         cdkBuilder.secretManagerArn(secretManagerArn)
@@ -11579,7 +12196,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetRedshiftDataParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetRedshiftDataParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetRedshiftDataParametersProperty {
       /**
        * The name of the database.
        *
@@ -11601,7 +12219,7 @@ public open class CfnPipe(
       /**
        * The name or ARN of the secret that enables access to the database.
        *
-       * Required when authenticating using Secrets Manager .
+       * Required when authenticating using Secrets Manager.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetredshiftdataparameters.html#cfn-pipes-pipe-pipetargetredshiftdataparameters-secretmanagerarn)
        */
@@ -11740,7 +12358,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSageMakerPipelineParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetSageMakerPipelineParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetSageMakerPipelineParametersProperty {
       /**
        * List of Parameter names and values for SageMaker Model Building Pipeline execution.
        *
@@ -11850,7 +12469,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSqsQueueParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetSqsQueueParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetSqsQueueParametersProperty {
       /**
        * This parameter applies only to FIFO (first-in-first-out) queues.
        *
@@ -11991,7 +12611,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetStateMachineParametersProperty,
-    ) : CdkObject(cdkObject), PipeTargetStateMachineParametersProperty {
+    ) : CdkObject(cdkObject),
+        PipeTargetStateMachineParametersProperty {
       /**
        * Specify whether to invoke the Step Functions state machine synchronously or asynchronously.
        *
@@ -12032,6 +12653,489 @@ public open class CfnPipe(
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetStateMachineParametersProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetStateMachineParametersProperty
+    }
+  }
+
+  /**
+   * The parameters for using a Timestream for LiveAnalytics table as a target.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pipes.*;
+   * PipeTargetTimestreamParametersProperty pipeTargetTimestreamParametersProperty =
+   * PipeTargetTimestreamParametersProperty.builder()
+   * .dimensionMappings(List.of(DimensionMappingProperty.builder()
+   * .dimensionName("dimensionName")
+   * .dimensionValue("dimensionValue")
+   * .dimensionValueType("dimensionValueType")
+   * .build()))
+   * .timeValue("timeValue")
+   * .versionValue("versionValue")
+   * // the properties below are optional
+   * .epochTimeUnit("epochTimeUnit")
+   * .multiMeasureMappings(List.of(MultiMeasureMappingProperty.builder()
+   * .multiMeasureAttributeMappings(List.of(MultiMeasureAttributeMappingProperty.builder()
+   * .measureValue("measureValue")
+   * .measureValueType("measureValueType")
+   * .multiMeasureAttributeName("multiMeasureAttributeName")
+   * .build()))
+   * .multiMeasureName("multiMeasureName")
+   * .build()))
+   * .singleMeasureMappings(List.of(SingleMeasureMappingProperty.builder()
+   * .measureName("measureName")
+   * .measureValue("measureValue")
+   * .measureValueType("measureValueType")
+   * .build()))
+   * .timeFieldType("timeFieldType")
+   * .timestampFormat("timestampFormat")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html)
+   */
+  public interface PipeTargetTimestreamParametersProperty {
+    /**
+     * Map source data to dimensions in the target Timestream for LiveAnalytics table.
+     *
+     * For more information, see [Amazon Timestream for LiveAnalytics
+     * concepts](https://docs.aws.amazon.com/timestream/latest/developerguide/concepts.html)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-dimensionmappings)
+     */
+    public fun dimensionMappings(): Any
+
+    /**
+     * The granularity of the time units used. Default is `MILLISECONDS` .
+     *
+     * Required if `TimeFieldType` is specified as `EPOCH` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-epochtimeunit)
+     */
+    public fun epochTimeUnit(): String? = unwrap(this).getEpochTimeUnit()
+
+    /**
+     * Maps multiple measures from the source event to the same record in the specified Timestream
+     * for LiveAnalytics table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-multimeasuremappings)
+     */
+    public fun multiMeasureMappings(): Any? = unwrap(this).getMultiMeasureMappings()
+
+    /**
+     * Mappings of single source data fields to individual records in the specified Timestream for
+     * LiveAnalytics table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-singlemeasuremappings)
+     */
+    public fun singleMeasureMappings(): Any? = unwrap(this).getSingleMeasureMappings()
+
+    /**
+     * The type of time value used.
+     *
+     * The default is `EPOCH` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-timefieldtype)
+     */
+    public fun timeFieldType(): String? = unwrap(this).getTimeFieldType()
+
+    /**
+     * Dynamic path to the source data field that represents the time value for your data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-timevalue)
+     */
+    public fun timeValue(): String
+
+    /**
+     * How to format the timestamps. For example, `YYYY-MM-DDThh:mm:ss.sssTZD` .
+     *
+     * Required if `TimeFieldType` is specified as `TIMESTAMP_FORMAT` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-timestampformat)
+     */
+    public fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
+
+    /**
+     * 64 bit version value or source data field that represents the version value for your data.
+     *
+     * Write requests with a higher version number will update the existing measure values of the
+     * record and version. In cases where the measure value is the same, the version will still be
+     * updated.
+     *
+     * Default value is 1.
+     *
+     * Timestream for LiveAnalytics does not support updating partial measure values in a record.
+     *
+     * Write requests for duplicate data with a higher version number will update the existing
+     * measure value and version. In cases where the measure value is the same, `Version` will still be
+     * updated. Default value is `1` .
+     *
+     *
+     * `Version` must be `1` or greater, or you will receive a `ValidationException` error.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-versionvalue)
+     */
+    public fun versionValue(): String
+
+    /**
+     * A builder for [PipeTargetTimestreamParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dimensionMappings Map source data to dimensions in the target Timestream for
+       * LiveAnalytics table. 
+       * For more information, see [Amazon Timestream for LiveAnalytics
+       * concepts](https://docs.aws.amazon.com/timestream/latest/developerguide/concepts.html)
+       */
+      public fun dimensionMappings(dimensionMappings: IResolvable)
+
+      /**
+       * @param dimensionMappings Map source data to dimensions in the target Timestream for
+       * LiveAnalytics table. 
+       * For more information, see [Amazon Timestream for LiveAnalytics
+       * concepts](https://docs.aws.amazon.com/timestream/latest/developerguide/concepts.html)
+       */
+      public fun dimensionMappings(dimensionMappings: List<Any>)
+
+      /**
+       * @param dimensionMappings Map source data to dimensions in the target Timestream for
+       * LiveAnalytics table. 
+       * For more information, see [Amazon Timestream for LiveAnalytics
+       * concepts](https://docs.aws.amazon.com/timestream/latest/developerguide/concepts.html)
+       */
+      public fun dimensionMappings(vararg dimensionMappings: Any)
+
+      /**
+       * @param epochTimeUnit The granularity of the time units used. Default is `MILLISECONDS` .
+       * Required if `TimeFieldType` is specified as `EPOCH` .
+       */
+      public fun epochTimeUnit(epochTimeUnit: String)
+
+      /**
+       * @param multiMeasureMappings Maps multiple measures from the source event to the same record
+       * in the specified Timestream for LiveAnalytics table.
+       */
+      public fun multiMeasureMappings(multiMeasureMappings: IResolvable)
+
+      /**
+       * @param multiMeasureMappings Maps multiple measures from the source event to the same record
+       * in the specified Timestream for LiveAnalytics table.
+       */
+      public fun multiMeasureMappings(multiMeasureMappings: List<Any>)
+
+      /**
+       * @param multiMeasureMappings Maps multiple measures from the source event to the same record
+       * in the specified Timestream for LiveAnalytics table.
+       */
+      public fun multiMeasureMappings(vararg multiMeasureMappings: Any)
+
+      /**
+       * @param singleMeasureMappings Mappings of single source data fields to individual records in
+       * the specified Timestream for LiveAnalytics table.
+       */
+      public fun singleMeasureMappings(singleMeasureMappings: IResolvable)
+
+      /**
+       * @param singleMeasureMappings Mappings of single source data fields to individual records in
+       * the specified Timestream for LiveAnalytics table.
+       */
+      public fun singleMeasureMappings(singleMeasureMappings: List<Any>)
+
+      /**
+       * @param singleMeasureMappings Mappings of single source data fields to individual records in
+       * the specified Timestream for LiveAnalytics table.
+       */
+      public fun singleMeasureMappings(vararg singleMeasureMappings: Any)
+
+      /**
+       * @param timeFieldType The type of time value used.
+       * The default is `EPOCH` .
+       */
+      public fun timeFieldType(timeFieldType: String)
+
+      /**
+       * @param timeValue Dynamic path to the source data field that represents the time value for
+       * your data. 
+       */
+      public fun timeValue(timeValue: String)
+
+      /**
+       * @param timestampFormat How to format the timestamps. For example,
+       * `YYYY-MM-DDThh:mm:ss.sssTZD` .
+       * Required if `TimeFieldType` is specified as `TIMESTAMP_FORMAT` .
+       */
+      public fun timestampFormat(timestampFormat: String)
+
+      /**
+       * @param versionValue 64 bit version value or source data field that represents the version
+       * value for your data. 
+       * Write requests with a higher version number will update the existing measure values of the
+       * record and version. In cases where the measure value is the same, the version will still be
+       * updated.
+       *
+       * Default value is 1.
+       *
+       * Timestream for LiveAnalytics does not support updating partial measure values in a record.
+       *
+       * Write requests for duplicate data with a higher version number will update the existing
+       * measure value and version. In cases where the measure value is the same, `Version` will still
+       * be updated. Default value is `1` .
+       *
+       *
+       * `Version` must be `1` or greater, or you will receive a `ValidationException` error.
+       */
+      public fun versionValue(versionValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetTimestreamParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetTimestreamParametersProperty.builder()
+
+      /**
+       * @param dimensionMappings Map source data to dimensions in the target Timestream for
+       * LiveAnalytics table. 
+       * For more information, see [Amazon Timestream for LiveAnalytics
+       * concepts](https://docs.aws.amazon.com/timestream/latest/developerguide/concepts.html)
+       */
+      override fun dimensionMappings(dimensionMappings: IResolvable) {
+        cdkBuilder.dimensionMappings(dimensionMappings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param dimensionMappings Map source data to dimensions in the target Timestream for
+       * LiveAnalytics table. 
+       * For more information, see [Amazon Timestream for LiveAnalytics
+       * concepts](https://docs.aws.amazon.com/timestream/latest/developerguide/concepts.html)
+       */
+      override fun dimensionMappings(dimensionMappings: List<Any>) {
+        cdkBuilder.dimensionMappings(dimensionMappings.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param dimensionMappings Map source data to dimensions in the target Timestream for
+       * LiveAnalytics table. 
+       * For more information, see [Amazon Timestream for LiveAnalytics
+       * concepts](https://docs.aws.amazon.com/timestream/latest/developerguide/concepts.html)
+       */
+      override fun dimensionMappings(vararg dimensionMappings: Any): Unit =
+          dimensionMappings(dimensionMappings.toList())
+
+      /**
+       * @param epochTimeUnit The granularity of the time units used. Default is `MILLISECONDS` .
+       * Required if `TimeFieldType` is specified as `EPOCH` .
+       */
+      override fun epochTimeUnit(epochTimeUnit: String) {
+        cdkBuilder.epochTimeUnit(epochTimeUnit)
+      }
+
+      /**
+       * @param multiMeasureMappings Maps multiple measures from the source event to the same record
+       * in the specified Timestream for LiveAnalytics table.
+       */
+      override fun multiMeasureMappings(multiMeasureMappings: IResolvable) {
+        cdkBuilder.multiMeasureMappings(multiMeasureMappings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param multiMeasureMappings Maps multiple measures from the source event to the same record
+       * in the specified Timestream for LiveAnalytics table.
+       */
+      override fun multiMeasureMappings(multiMeasureMappings: List<Any>) {
+        cdkBuilder.multiMeasureMappings(multiMeasureMappings.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param multiMeasureMappings Maps multiple measures from the source event to the same record
+       * in the specified Timestream for LiveAnalytics table.
+       */
+      override fun multiMeasureMappings(vararg multiMeasureMappings: Any): Unit =
+          multiMeasureMappings(multiMeasureMappings.toList())
+
+      /**
+       * @param singleMeasureMappings Mappings of single source data fields to individual records in
+       * the specified Timestream for LiveAnalytics table.
+       */
+      override fun singleMeasureMappings(singleMeasureMappings: IResolvable) {
+        cdkBuilder.singleMeasureMappings(singleMeasureMappings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param singleMeasureMappings Mappings of single source data fields to individual records in
+       * the specified Timestream for LiveAnalytics table.
+       */
+      override fun singleMeasureMappings(singleMeasureMappings: List<Any>) {
+        cdkBuilder.singleMeasureMappings(singleMeasureMappings.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param singleMeasureMappings Mappings of single source data fields to individual records in
+       * the specified Timestream for LiveAnalytics table.
+       */
+      override fun singleMeasureMappings(vararg singleMeasureMappings: Any): Unit =
+          singleMeasureMappings(singleMeasureMappings.toList())
+
+      /**
+       * @param timeFieldType The type of time value used.
+       * The default is `EPOCH` .
+       */
+      override fun timeFieldType(timeFieldType: String) {
+        cdkBuilder.timeFieldType(timeFieldType)
+      }
+
+      /**
+       * @param timeValue Dynamic path to the source data field that represents the time value for
+       * your data. 
+       */
+      override fun timeValue(timeValue: String) {
+        cdkBuilder.timeValue(timeValue)
+      }
+
+      /**
+       * @param timestampFormat How to format the timestamps. For example,
+       * `YYYY-MM-DDThh:mm:ss.sssTZD` .
+       * Required if `TimeFieldType` is specified as `TIMESTAMP_FORMAT` .
+       */
+      override fun timestampFormat(timestampFormat: String) {
+        cdkBuilder.timestampFormat(timestampFormat)
+      }
+
+      /**
+       * @param versionValue 64 bit version value or source data field that represents the version
+       * value for your data. 
+       * Write requests with a higher version number will update the existing measure values of the
+       * record and version. In cases where the measure value is the same, the version will still be
+       * updated.
+       *
+       * Default value is 1.
+       *
+       * Timestream for LiveAnalytics does not support updating partial measure values in a record.
+       *
+       * Write requests for duplicate data with a higher version number will update the existing
+       * measure value and version. In cases where the measure value is the same, `Version` will still
+       * be updated. Default value is `1` .
+       *
+       *
+       * `Version` must be `1` or greater, or you will receive a `ValidationException` error.
+       */
+      override fun versionValue(versionValue: String) {
+        cdkBuilder.versionValue(versionValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetTimestreamParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetTimestreamParametersProperty,
+    ) : CdkObject(cdkObject),
+        PipeTargetTimestreamParametersProperty {
+      /**
+       * Map source data to dimensions in the target Timestream for LiveAnalytics table.
+       *
+       * For more information, see [Amazon Timestream for LiveAnalytics
+       * concepts](https://docs.aws.amazon.com/timestream/latest/developerguide/concepts.html)
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-dimensionmappings)
+       */
+      override fun dimensionMappings(): Any = unwrap(this).getDimensionMappings()
+
+      /**
+       * The granularity of the time units used. Default is `MILLISECONDS` .
+       *
+       * Required if `TimeFieldType` is specified as `EPOCH` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-epochtimeunit)
+       */
+      override fun epochTimeUnit(): String? = unwrap(this).getEpochTimeUnit()
+
+      /**
+       * Maps multiple measures from the source event to the same record in the specified Timestream
+       * for LiveAnalytics table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-multimeasuremappings)
+       */
+      override fun multiMeasureMappings(): Any? = unwrap(this).getMultiMeasureMappings()
+
+      /**
+       * Mappings of single source data fields to individual records in the specified Timestream for
+       * LiveAnalytics table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-singlemeasuremappings)
+       */
+      override fun singleMeasureMappings(): Any? = unwrap(this).getSingleMeasureMappings()
+
+      /**
+       * The type of time value used.
+       *
+       * The default is `EPOCH` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-timefieldtype)
+       */
+      override fun timeFieldType(): String? = unwrap(this).getTimeFieldType()
+
+      /**
+       * Dynamic path to the source data field that represents the time value for your data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-timevalue)
+       */
+      override fun timeValue(): String = unwrap(this).getTimeValue()
+
+      /**
+       * How to format the timestamps. For example, `YYYY-MM-DDThh:mm:ss.sssTZD` .
+       *
+       * Required if `TimeFieldType` is specified as `TIMESTAMP_FORMAT` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-timestampformat)
+       */
+      override fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
+
+      /**
+       * 64 bit version value or source data field that represents the version value for your data.
+       *
+       * Write requests with a higher version number will update the existing measure values of the
+       * record and version. In cases where the measure value is the same, the version will still be
+       * updated.
+       *
+       * Default value is 1.
+       *
+       * Timestream for LiveAnalytics does not support updating partial measure values in a record.
+       *
+       * Write requests for duplicate data with a higher version number will update the existing
+       * measure value and version. In cases where the measure value is the same, `Version` will still
+       * be updated. Default value is `1` .
+       *
+       *
+       * `Version` must be `1` or greater, or you will receive a `ValidationException` error.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargettimestreamparameters.html#cfn-pipes-pipe-pipetargettimestreamparameters-versionvalue)
+       */
+      override fun versionValue(): String = unwrap(this).getVersionValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PipeTargetTimestreamParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetTimestreamParametersProperty):
+          PipeTargetTimestreamParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetTimestreamParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PipeTargetTimestreamParametersProperty):
+          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetTimestreamParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetTimestreamParametersProperty
     }
   }
 
@@ -12134,7 +13238,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PlacementConstraintProperty,
-    ) : CdkObject(cdkObject), PlacementConstraintProperty {
+    ) : CdkObject(cdkObject),
+        PlacementConstraintProperty {
       /**
        * A cluster query language expression to apply to the constraint.
        *
@@ -12286,7 +13391,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PlacementStrategyProperty,
-    ) : CdkObject(cdkObject), PlacementStrategyProperty {
+    ) : CdkObject(cdkObject),
+        PlacementStrategyProperty {
       /**
        * The field to apply the placement strategy against.
        *
@@ -12370,10 +13476,7 @@ public open class CfnPipe(
     /**
      * The format EventBridge uses for the log records.
      *
-     * * `json` : JSON
-     * * `plain` : Plain text
-     * * `w3c` : [W3C extended logging file
-     * format](https://docs.aws.amazon.com/https://www.w3.org/TR/WD-logfile)
+     * EventBridge currently only supports `json` formatting.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-s3logdestination.html#cfn-pipes-pipe-s3logdestination-outputformat)
      */
@@ -12409,10 +13512,7 @@ public open class CfnPipe(
 
       /**
        * @param outputFormat The format EventBridge uses for the log records.
-       * * `json` : JSON
-       * * `plain` : Plain text
-       * * `w3c` : [W3C extended logging file
-       * format](https://docs.aws.amazon.com/https://www.w3.org/TR/WD-logfile)
+       * EventBridge currently only supports `json` formatting.
        */
       public fun outputFormat(outputFormat: String)
 
@@ -12448,10 +13548,7 @@ public open class CfnPipe(
 
       /**
        * @param outputFormat The format EventBridge uses for the log records.
-       * * `json` : JSON
-       * * `plain` : Plain text
-       * * `w3c` : [W3C extended logging file
-       * format](https://docs.aws.amazon.com/https://www.w3.org/TR/WD-logfile)
+       * EventBridge currently only supports `json` formatting.
        */
       override fun outputFormat(outputFormat: String) {
         cdkBuilder.outputFormat(outputFormat)
@@ -12473,7 +13570,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.S3LogDestinationProperty,
-    ) : CdkObject(cdkObject), S3LogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        S3LogDestinationProperty {
       /**
        * The name of the Amazon S3 bucket to which EventBridge delivers the log records for the
        * pipe.
@@ -12493,10 +13591,7 @@ public open class CfnPipe(
       /**
        * The format EventBridge uses for the log records.
        *
-       * * `json` : JSON
-       * * `plain` : Plain text
-       * * `w3c` : [W3C extended logging file
-       * format](https://docs.aws.amazon.com/https://www.w3.org/TR/WD-logfile)
+       * EventBridge currently only supports `json` formatting.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-s3logdestination.html#cfn-pipes-pipe-s3logdestination-outputformat)
        */
@@ -12607,7 +13702,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.SageMakerPipelineParameterProperty,
-    ) : CdkObject(cdkObject), SageMakerPipelineParameterProperty {
+    ) : CdkObject(cdkObject),
+        SageMakerPipelineParameterProperty {
       /**
        * Name of parameter to start execution of a SageMaker Model Building Pipeline.
        *
@@ -12759,7 +13855,8 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationCredentialsProperty,
-    ) : CdkObject(cdkObject), SelfManagedKafkaAccessConfigurationCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        SelfManagedKafkaAccessConfigurationCredentialsProperty {
       /**
        * The ARN of the Secrets Manager secret.
        *
@@ -12832,7 +13929,7 @@ public open class CfnPipe(
      * Specifies the security groups associated with the stream.
      *
      * These security groups must all be in the same VPC. You can specify as many as five security
-     * groups. If you do not specify a security group, the default security group for the VPC is used.
+     * groups.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-selfmanagedkafkaaccessconfigurationvpc.html#cfn-pipes-pipe-selfmanagedkafkaaccessconfigurationvpc-securitygroup)
      */
@@ -12855,16 +13952,14 @@ public open class CfnPipe(
       /**
        * @param securityGroup Specifies the security groups associated with the stream.
        * These security groups must all be in the same VPC. You can specify as many as five security
-       * groups. If you do not specify a security group, the default security group for the VPC is
-       * used.
+       * groups.
        */
       public fun securityGroup(securityGroup: List<String>)
 
       /**
        * @param securityGroup Specifies the security groups associated with the stream.
        * These security groups must all be in the same VPC. You can specify as many as five security
-       * groups. If you do not specify a security group, the default security group for the VPC is
-       * used.
+       * groups.
        */
       public fun securityGroup(vararg securityGroup: String)
 
@@ -12890,8 +13985,7 @@ public open class CfnPipe(
       /**
        * @param securityGroup Specifies the security groups associated with the stream.
        * These security groups must all be in the same VPC. You can specify as many as five security
-       * groups. If you do not specify a security group, the default security group for the VPC is
-       * used.
+       * groups.
        */
       override fun securityGroup(securityGroup: List<String>) {
         cdkBuilder.securityGroup(securityGroup)
@@ -12900,8 +13994,7 @@ public open class CfnPipe(
       /**
        * @param securityGroup Specifies the security groups associated with the stream.
        * These security groups must all be in the same VPC. You can specify as many as five security
-       * groups. If you do not specify a security group, the default security group for the VPC is
-       * used.
+       * groups.
        */
       override fun securityGroup(vararg securityGroup: String): Unit =
           securityGroup(securityGroup.toList())
@@ -12927,13 +14020,13 @@ public open class CfnPipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationVpcProperty,
-    ) : CdkObject(cdkObject), SelfManagedKafkaAccessConfigurationVpcProperty {
+    ) : CdkObject(cdkObject),
+        SelfManagedKafkaAccessConfigurationVpcProperty {
       /**
        * Specifies the security groups associated with the stream.
        *
        * These security groups must all be in the same VPC. You can specify as many as five security
-       * groups. If you do not specify a security group, the default security group for the VPC is
-       * used.
+       * groups.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-selfmanagedkafkaaccessconfigurationvpc.html#cfn-pipes-pipe-selfmanagedkafkaaccessconfigurationvpc-securitygroup)
        */
@@ -12965,6 +14058,148 @@ public open class CfnPipe(
           software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationVpcProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationVpcProperty
+    }
+  }
+
+  /**
+   * Maps a single source data field to a single record in the specified Timestream for
+   * LiveAnalytics table.
+   *
+   * For more information, see [Amazon Timestream for LiveAnalytics
+   * concepts](https://docs.aws.amazon.com/timestream/latest/developerguide/concepts.html)
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pipes.*;
+   * SingleMeasureMappingProperty singleMeasureMappingProperty =
+   * SingleMeasureMappingProperty.builder()
+   * .measureName("measureName")
+   * .measureValue("measureValue")
+   * .measureValueType("measureValueType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-singlemeasuremapping.html)
+   */
+  public interface SingleMeasureMappingProperty {
+    /**
+     * Target measure name for the measurement attribute in the Timestream table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-singlemeasuremapping.html#cfn-pipes-pipe-singlemeasuremapping-measurename)
+     */
+    public fun measureName(): String
+
+    /**
+     * Dynamic path of the source field to map to the measure in the record.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-singlemeasuremapping.html#cfn-pipes-pipe-singlemeasuremapping-measurevalue)
+     */
+    public fun measureValue(): String
+
+    /**
+     * Data type of the source field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-singlemeasuremapping.html#cfn-pipes-pipe-singlemeasuremapping-measurevaluetype)
+     */
+    public fun measureValueType(): String
+
+    /**
+     * A builder for [SingleMeasureMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param measureName Target measure name for the measurement attribute in the Timestream
+       * table. 
+       */
+      public fun measureName(measureName: String)
+
+      /**
+       * @param measureValue Dynamic path of the source field to map to the measure in the record. 
+       */
+      public fun measureValue(measureValue: String)
+
+      /**
+       * @param measureValueType Data type of the source field. 
+       */
+      public fun measureValueType(measureValueType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.pipes.CfnPipe.SingleMeasureMappingProperty.Builder =
+          software.amazon.awscdk.services.pipes.CfnPipe.SingleMeasureMappingProperty.builder()
+
+      /**
+       * @param measureName Target measure name for the measurement attribute in the Timestream
+       * table. 
+       */
+      override fun measureName(measureName: String) {
+        cdkBuilder.measureName(measureName)
+      }
+
+      /**
+       * @param measureValue Dynamic path of the source field to map to the measure in the record. 
+       */
+      override fun measureValue(measureValue: String) {
+        cdkBuilder.measureValue(measureValue)
+      }
+
+      /**
+       * @param measureValueType Data type of the source field. 
+       */
+      override fun measureValueType(measureValueType: String) {
+        cdkBuilder.measureValueType(measureValueType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.pipes.CfnPipe.SingleMeasureMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.SingleMeasureMappingProperty,
+    ) : CdkObject(cdkObject),
+        SingleMeasureMappingProperty {
+      /**
+       * Target measure name for the measurement attribute in the Timestream table.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-singlemeasuremapping.html#cfn-pipes-pipe-singlemeasuremapping-measurename)
+       */
+      override fun measureName(): String = unwrap(this).getMeasureName()
+
+      /**
+       * Dynamic path of the source field to map to the measure in the record.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-singlemeasuremapping.html#cfn-pipes-pipe-singlemeasuremapping-measurevalue)
+       */
+      override fun measureValue(): String = unwrap(this).getMeasureValue()
+
+      /**
+       * Data type of the source field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-singlemeasuremapping.html#cfn-pipes-pipe-singlemeasuremapping-measurevaluetype)
+       */
+      override fun measureValueType(): String = unwrap(this).getMeasureValueType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SingleMeasureMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.SingleMeasureMappingProperty):
+          SingleMeasureMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingleMeasureMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SingleMeasureMappingProperty):
+          software.amazon.awscdk.services.pipes.CfnPipe.SingleMeasureMappingProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.pipes.CfnPipe.SingleMeasureMappingProperty
     }
   }
 }

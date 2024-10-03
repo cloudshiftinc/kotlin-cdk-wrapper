@@ -27,7 +27,8 @@ import kotlin.jvm.JvmName
  */
 public open class TopicHook(
   cdkObject: software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook,
-) : CdkObject(cdkObject), ILifecycleHookTarget {
+) : CdkObject(cdkObject),
+    ILifecycleHookTarget {
   public constructor(topic: ITopic) :
       this(software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook(topic.let(ITopic.Companion::unwrap))
   )

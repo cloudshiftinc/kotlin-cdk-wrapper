@@ -137,7 +137,8 @@ public interface CfnByteMatchSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.waf.regional.CfnByteMatchSetProps,
-  ) : CdkObject(cdkObject), CfnByteMatchSetProps {
+  ) : CdkObject(cdkObject),
+      CfnByteMatchSetProps {
     /**
      * Specifies the bytes (typically a string that corresponds with ASCII characters) that you want
      * AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search,

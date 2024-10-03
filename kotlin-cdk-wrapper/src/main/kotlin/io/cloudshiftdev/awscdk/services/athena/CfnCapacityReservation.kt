@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCapacityReservation(
   cdkObject: software.amazon.awscdk.services.athena.CfnCapacityReservation,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -495,7 +497,8 @@ public open class CfnCapacityReservation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentConfigurationProperty,
-    ) : CdkObject(cdkObject), CapacityAssignmentConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CapacityAssignmentConfigurationProperty {
       /**
        * The list of assignments that make up the capacity assignment configuration.
        *
@@ -589,7 +592,8 @@ public open class CfnCapacityReservation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentProperty,
-    ) : CdkObject(cdkObject), CapacityAssignmentProperty {
+    ) : CdkObject(cdkObject),
+        CapacityAssignmentProperty {
       /**
        * The list of workgroup names for the capacity assignment.
        *

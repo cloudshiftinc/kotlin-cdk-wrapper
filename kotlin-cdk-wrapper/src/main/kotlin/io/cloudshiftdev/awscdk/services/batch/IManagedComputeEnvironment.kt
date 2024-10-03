@@ -126,7 +126,8 @@ public interface IManagedComputeEnvironment : IComputeEnvironment, IConnectable,
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IManagedComputeEnvironment,
-  ) : CdkObject(cdkObject), IManagedComputeEnvironment {
+  ) : CdkObject(cdkObject),
+      IManagedComputeEnvironment {
     /**
      * Apply the given removal policy to this resource.
      *

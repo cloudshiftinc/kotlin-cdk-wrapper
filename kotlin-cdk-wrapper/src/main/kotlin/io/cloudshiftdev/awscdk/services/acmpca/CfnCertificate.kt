@@ -144,7 +144,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCertificate(
   cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -973,7 +974,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty,
-    ) : CdkObject(cdkObject), ApiPassthroughProperty {
+    ) : CdkObject(cdkObject),
+        ApiPassthroughProperty {
       /**
        * Specifies X.509 extension information for a certificate.
        *
@@ -1089,7 +1091,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty,
-    ) : CdkObject(cdkObject), CustomAttributeProperty {
+    ) : CdkObject(cdkObject),
+        CustomAttributeProperty {
       /**
        * Specifies the object identifier (OID) of the attribute type of the relative distinguished
        * name (RDN).
@@ -1240,7 +1243,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty,
-    ) : CdkObject(cdkObject), CustomExtensionProperty {
+    ) : CdkObject(cdkObject),
+        CustomExtensionProperty {
       /**
        * Specifies the critical flag of the X.509 extension.
        *
@@ -1357,7 +1361,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty,
-    ) : CdkObject(cdkObject), EdiPartyNameProperty {
+    ) : CdkObject(cdkObject),
+        EdiPartyNameProperty {
       /**
        * Specifies the name assigner.
        *
@@ -1475,7 +1480,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty,
-    ) : CdkObject(cdkObject), ExtendedKeyUsageProperty {
+    ) : CdkObject(cdkObject),
+        ExtendedKeyUsageProperty {
       /**
        * Specifies a custom `ExtendedKeyUsage` with an object identifier (OID).
        *
@@ -1938,7 +1944,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty,
-    ) : CdkObject(cdkObject), ExtensionsProperty {
+    ) : CdkObject(cdkObject),
+        ExtensionsProperty {
       /**
        * Contains a sequence of one or more policy information terms, each of which consists of an
        * object identifier (OID) and optional qualifiers.
@@ -2365,7 +2372,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty,
-    ) : CdkObject(cdkObject), GeneralNameProperty {
+    ) : CdkObject(cdkObject),
+        GeneralNameProperty {
       /**
        * Contains information about the certificate subject.
        *
@@ -2792,7 +2800,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty,
-    ) : CdkObject(cdkObject), KeyUsageProperty {
+    ) : CdkObject(cdkObject),
+        KeyUsageProperty {
       /**
        * Key can be used to sign CRLs.
        *
@@ -2969,7 +2978,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty,
-    ) : CdkObject(cdkObject), OtherNameProperty {
+    ) : CdkObject(cdkObject),
+        OtherNameProperty {
       /**
        * Specifies an OID.
        *
@@ -3124,7 +3134,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyInformationProperty,
-    ) : CdkObject(cdkObject), PolicyInformationProperty {
+    ) : CdkObject(cdkObject),
+        PolicyInformationProperty {
       /**
        * Specifies the object identifier (OID) of the certificate policy under which the certificate
        * was issued.
@@ -3278,7 +3289,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty,
-    ) : CdkObject(cdkObject), PolicyQualifierInfoProperty {
+    ) : CdkObject(cdkObject),
+        PolicyQualifierInfoProperty {
       /**
        * Identifies the qualifier modifying a `CertPolicyId` .
        *
@@ -3373,7 +3385,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty,
-    ) : CdkObject(cdkObject), QualifierProperty {
+    ) : CdkObject(cdkObject),
+        QualifierProperty {
       /**
        * Contains a pointer to a certification practice statement (CPS) published by the CA.
        *
@@ -3845,7 +3858,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.SubjectProperty,
-    ) : CdkObject(cdkObject), SubjectProperty {
+    ) : CdkObject(cdkObject),
+        SubjectProperty {
       /**
        * For CA and end-entity certificates in a private PKI, the common name (CN) can be any string
        * within the length limit.
@@ -4070,7 +4084,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ValidityProperty,
-    ) : CdkObject(cdkObject), ValidityProperty {
+    ) : CdkObject(cdkObject),
+        ValidityProperty {
       /**
        * Specifies whether the `Value` parameter represents days, months, or years.
        *

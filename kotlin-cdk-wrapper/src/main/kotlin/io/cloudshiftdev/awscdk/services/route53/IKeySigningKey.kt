@@ -32,7 +32,8 @@ public interface IKeySigningKey : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.IKeySigningKey,
-  ) : CdkObject(cdkObject), IKeySigningKey {
+  ) : CdkObject(cdkObject),
+      IKeySigningKey {
     /**
      * Apply the given removal policy to this resource.
      *

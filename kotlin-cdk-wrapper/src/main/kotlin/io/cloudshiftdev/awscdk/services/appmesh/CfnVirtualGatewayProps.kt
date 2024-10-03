@@ -333,7 +333,8 @@ public interface CfnVirtualGatewayProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGatewayProps,
-  ) : CdkObject(cdkObject), CfnVirtualGatewayProps {
+  ) : CdkObject(cdkObject),
+      CfnVirtualGatewayProps {
     /**
      * The name of the service mesh that the virtual gateway resides in.
      *

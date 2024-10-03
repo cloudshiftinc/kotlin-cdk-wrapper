@@ -63,6 +63,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .jdbcTargets(List.of(JdbcTargetProperty.builder()
  * .connectionName("connectionName")
+ * .enableAdditionalMetadata(List.of("enableAdditionalMetadata"))
  * .exclusions(List.of("exclusions"))
  * .path("path")
  * .build()))
@@ -109,7 +110,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCrawler(
   cdkObject: software.amazon.awscdk.services.glue.CfnCrawler,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1163,7 +1166,8 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty,
-    ) : CdkObject(cdkObject), CatalogTargetProperty {
+    ) : CdkObject(cdkObject),
+        CatalogTargetProperty {
       /**
        * The name of the connection for an Amazon S3-backed Data Catalog table to be a target of the
        * crawl when using a `Catalog` connection type paired with a `NETWORK` Connection type.
@@ -1381,7 +1385,8 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty,
-    ) : CdkObject(cdkObject), DeltaTargetProperty {
+    ) : CdkObject(cdkObject),
+        DeltaTargetProperty {
       /**
        * The name of the connection to use to connect to the Delta table target.
        *
@@ -1483,7 +1488,8 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty,
-    ) : CdkObject(cdkObject), DynamoDBTargetProperty {
+    ) : CdkObject(cdkObject),
+        DynamoDBTargetProperty {
       /**
        * The name of the DynamoDB table to crawl.
        *
@@ -1654,7 +1660,8 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty,
-    ) : CdkObject(cdkObject), IcebergTargetProperty {
+    ) : CdkObject(cdkObject),
+        IcebergTargetProperty {
       /**
        * The name of the connection to use to connect to the Iceberg target.
        *
@@ -1716,6 +1723,7 @@ public open class CfnCrawler(
    * import io.cloudshiftdev.awscdk.services.glue.*;
    * JdbcTargetProperty jdbcTargetProperty = JdbcTargetProperty.builder()
    * .connectionName("connectionName")
+   * .enableAdditionalMetadata(List.of("enableAdditionalMetadata"))
    * .exclusions(List.of("exclusions"))
    * .path("path")
    * .build();
@@ -1730,6 +1738,19 @@ public open class CfnCrawler(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-connectionname)
      */
     public fun connectionName(): String? = unwrap(this).getConnectionName()
+
+    /**
+     * Specify a value of `RAWTYPES` or `COMMENTS` to enable additional metadata in table responses.
+     *
+     * `RAWTYPES` provides the native-level datatype. `COMMENTS` provides comments associated with a
+     * column or table in the database.
+     *
+     * If you do not need additional metadata, keep the field empty.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-enableadditionalmetadata)
+     */
+    public fun enableAdditionalMetadata(): List<String> = unwrap(this).getEnableAdditionalMetadata()
+        ?: emptyList()
 
     /**
      * A list of glob patterns used to exclude from the crawl.
@@ -1757,6 +1778,26 @@ public open class CfnCrawler(
        * @param connectionName The name of the connection to use to connect to the JDBC target.
        */
       public fun connectionName(connectionName: String)
+
+      /**
+       * @param enableAdditionalMetadata Specify a value of `RAWTYPES` or `COMMENTS` to enable
+       * additional metadata in table responses.
+       * `RAWTYPES` provides the native-level datatype. `COMMENTS` provides comments associated with
+       * a column or table in the database.
+       *
+       * If you do not need additional metadata, keep the field empty.
+       */
+      public fun enableAdditionalMetadata(enableAdditionalMetadata: List<String>)
+
+      /**
+       * @param enableAdditionalMetadata Specify a value of `RAWTYPES` or `COMMENTS` to enable
+       * additional metadata in table responses.
+       * `RAWTYPES` provides the native-level datatype. `COMMENTS` provides comments associated with
+       * a column or table in the database.
+       *
+       * If you do not need additional metadata, keep the field empty.
+       */
+      public fun enableAdditionalMetadata(vararg enableAdditionalMetadata: String)
 
       /**
        * @param exclusions A list of glob patterns used to exclude from the crawl.
@@ -1791,6 +1832,29 @@ public open class CfnCrawler(
       }
 
       /**
+       * @param enableAdditionalMetadata Specify a value of `RAWTYPES` or `COMMENTS` to enable
+       * additional metadata in table responses.
+       * `RAWTYPES` provides the native-level datatype. `COMMENTS` provides comments associated with
+       * a column or table in the database.
+       *
+       * If you do not need additional metadata, keep the field empty.
+       */
+      override fun enableAdditionalMetadata(enableAdditionalMetadata: List<String>) {
+        cdkBuilder.enableAdditionalMetadata(enableAdditionalMetadata)
+      }
+
+      /**
+       * @param enableAdditionalMetadata Specify a value of `RAWTYPES` or `COMMENTS` to enable
+       * additional metadata in table responses.
+       * `RAWTYPES` provides the native-level datatype. `COMMENTS` provides comments associated with
+       * a column or table in the database.
+       *
+       * If you do not need additional metadata, keep the field empty.
+       */
+      override fun enableAdditionalMetadata(vararg enableAdditionalMetadata: String): Unit =
+          enableAdditionalMetadata(enableAdditionalMetadata.toList())
+
+      /**
        * @param exclusions A list of glob patterns used to exclude from the crawl.
        * For more information, see [Catalog Tables with a
        * Crawler](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html) .
@@ -1819,13 +1883,28 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty,
-    ) : CdkObject(cdkObject), JdbcTargetProperty {
+    ) : CdkObject(cdkObject),
+        JdbcTargetProperty {
       /**
        * The name of the connection to use to connect to the JDBC target.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-connectionname)
        */
       override fun connectionName(): String? = unwrap(this).getConnectionName()
+
+      /**
+       * Specify a value of `RAWTYPES` or `COMMENTS` to enable additional metadata in table
+       * responses.
+       *
+       * `RAWTYPES` provides the native-level datatype. `COMMENTS` provides comments associated with
+       * a column or table in the database.
+       *
+       * If you do not need additional metadata, keep the field empty.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html#cfn-glue-crawler-jdbctarget-enableadditionalmetadata)
+       */
+      override fun enableAdditionalMetadata(): List<String> =
+          unwrap(this).getEnableAdditionalMetadata() ?: emptyList()
 
       /**
        * A list of glob patterns used to exclude from the crawl.
@@ -1959,7 +2038,8 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.LakeFormationConfigurationProperty,
-    ) : CdkObject(cdkObject), LakeFormationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LakeFormationConfigurationProperty {
       /**
        * Required for cross account crawls.
        *
@@ -2073,7 +2153,8 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty,
-    ) : CdkObject(cdkObject), MongoDBTargetProperty {
+    ) : CdkObject(cdkObject),
+        MongoDBTargetProperty {
       /**
        * The name of the connection to use to connect to the Amazon DocumentDB or MongoDB target.
        *
@@ -2190,7 +2271,8 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty,
-    ) : CdkObject(cdkObject), RecrawlPolicyProperty {
+    ) : CdkObject(cdkObject),
+        RecrawlPolicyProperty {
       /**
        * Specifies whether to crawl the entire dataset again or to crawl only folders that were
        * added since the last crawler run.
@@ -2418,7 +2500,8 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.S3TargetProperty,
-    ) : CdkObject(cdkObject), S3TargetProperty {
+    ) : CdkObject(cdkObject),
+        S3TargetProperty {
       /**
        * The name of a connection which allows a job or crawler to access data in Amazon S3 within
        * an Amazon Virtual Private Cloud environment (Amazon VPC).
@@ -2553,7 +2636,8 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty,
-    ) : CdkObject(cdkObject), ScheduleProperty {
+    ) : CdkObject(cdkObject),
+        ScheduleProperty {
       /**
        * A `cron` expression used to specify the schedule.
        *
@@ -2710,7 +2794,8 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty,
-    ) : CdkObject(cdkObject), SchemaChangePolicyProperty {
+    ) : CdkObject(cdkObject),
+        SchemaChangePolicyProperty {
       /**
        * The deletion behavior when the crawler finds a deleted object.
        *
@@ -2795,6 +2880,7 @@ public open class CfnCrawler(
    * .build()))
    * .jdbcTargets(List.of(JdbcTargetProperty.builder()
    * .connectionName("connectionName")
+   * .enableAdditionalMetadata(List.of("enableAdditionalMetadata"))
    * .exclusions(List.of("exclusions"))
    * .path("path")
    * .build()))
@@ -3125,7 +3211,8 @@ public open class CfnCrawler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty,
-    ) : CdkObject(cdkObject), TargetsProperty {
+    ) : CdkObject(cdkObject),
+        TargetsProperty {
       /**
        * Specifies AWS Glue Data Catalog targets.
        *

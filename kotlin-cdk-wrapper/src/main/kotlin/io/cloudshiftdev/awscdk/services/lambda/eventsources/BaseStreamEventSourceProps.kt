@@ -169,7 +169,8 @@ public interface BaseStreamEventSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.eventsources.BaseStreamEventSourceProps,
-  ) : CdkObject(cdkObject), BaseStreamEventSourceProps {
+  ) : CdkObject(cdkObject),
+      BaseStreamEventSourceProps {
     /**
      * The largest number of records that AWS Lambda will retrieve from your event source at the
      * time of invoking your function.

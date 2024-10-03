@@ -386,7 +386,8 @@ public interface CfnAPIKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.location.CfnAPIKeyProps,
-  ) : CdkObject(cdkObject), CfnAPIKeyProps {
+  ) : CdkObject(cdkObject),
+      CfnAPIKeyProps {
     /**
      * Updates the description for the API key resource.
      *

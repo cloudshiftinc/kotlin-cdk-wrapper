@@ -331,7 +331,8 @@ public interface CfnSamplingRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRuleProps,
-  ) : CdkObject(cdkObject), CfnSamplingRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnSamplingRuleProps {
     /**
      * (deprecated) The ARN of the sampling rule.
      *

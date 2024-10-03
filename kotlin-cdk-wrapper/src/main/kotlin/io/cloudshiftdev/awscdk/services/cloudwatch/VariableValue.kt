@@ -82,7 +82,8 @@ public interface VariableValue {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.VariableValue,
-  ) : CdkObject(cdkObject), VariableValue {
+  ) : CdkObject(cdkObject),
+      VariableValue {
     /**
      * Optional label for the selected item.
      *

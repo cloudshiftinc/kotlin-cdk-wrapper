@@ -145,7 +145,8 @@ public interface CfnPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyProps,
-  ) : CdkObject(cdkObject), CfnPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnPolicyProps {
     /**
      * Specifies the policy type and content to use for the new or updated policy.
      *

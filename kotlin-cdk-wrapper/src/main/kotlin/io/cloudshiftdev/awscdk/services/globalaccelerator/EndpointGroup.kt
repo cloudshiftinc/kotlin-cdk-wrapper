@@ -38,7 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EndpointGroup(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.EndpointGroup,
-) : Resource(cdkObject), IEndpointGroup {
+) : Resource(cdkObject),
+    IEndpointGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

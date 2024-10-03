@@ -20,7 +20,8 @@ public interface IListProducer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IListProducer,
-  ) : CdkObject(cdkObject), IListProducer {
+  ) : CdkObject(cdkObject),
+      IListProducer {
     /**
      * Produce the list value.
      *

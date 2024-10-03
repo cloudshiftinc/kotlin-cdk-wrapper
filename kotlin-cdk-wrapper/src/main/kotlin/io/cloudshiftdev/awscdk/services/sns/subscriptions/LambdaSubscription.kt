@@ -38,7 +38,8 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
  */
 public open class LambdaSubscription(
   cdkObject: software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription,
-) : CdkObject(cdkObject), ITopicSubscription {
+) : CdkObject(cdkObject),
+    ITopicSubscription {
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )

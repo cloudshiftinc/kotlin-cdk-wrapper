@@ -24,8 +24,7 @@ import kotlin.collections.List
  * .build()))
  * .build());
  * pipeline.addStage(prod, AddStageOpts.builder()
- * .pre(List.of(
- * new ManualApprovalStep("PromoteToProd")))
+ * .pre(List.of(new ManualApprovalStep("PromoteToProd")))
  * .build());
  * ```
  */
@@ -133,7 +132,8 @@ public interface AddStageOpts {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.AddStageOpts,
-  ) : CdkObject(cdkObject), AddStageOpts {
+  ) : CdkObject(cdkObject),
+      AddStageOpts {
     /**
      * Additional steps to run after all of the stacks in the stage.
      *

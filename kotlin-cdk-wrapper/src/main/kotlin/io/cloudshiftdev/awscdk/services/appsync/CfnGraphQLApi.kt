@@ -107,7 +107,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGraphQLApi(
   cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1578,7 +1580,8 @@ public open class CfnGraphQLApi(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.AdditionalAuthenticationProviderProperty,
-    ) : CdkObject(cdkObject), AdditionalAuthenticationProviderProperty {
+    ) : CdkObject(cdkObject),
+        AdditionalAuthenticationProviderProperty {
       /**
        * The authentication type for API key, AWS Identity and Access Management , OIDC, Amazon
        * Cognito user pools , or AWS Lambda .
@@ -1733,7 +1736,8 @@ public open class CfnGraphQLApi(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.CognitoUserPoolConfigProperty,
-    ) : CdkObject(cdkObject), CognitoUserPoolConfigProperty {
+    ) : CdkObject(cdkObject),
+        CognitoUserPoolConfigProperty {
       /**
        * A regular expression for validating the incoming Amazon Cognito user pool app client ID.
        *
@@ -1977,7 +1981,8 @@ public open class CfnGraphQLApi(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.EnhancedMetricsConfigProperty,
-    ) : CdkObject(cdkObject), EnhancedMetricsConfigProperty {
+    ) : CdkObject(cdkObject),
+        EnhancedMetricsConfigProperty {
       /**
        * Controls how data source metrics will be emitted to CloudWatch. Data source metrics
        * include:.
@@ -2198,7 +2203,8 @@ public open class CfnGraphQLApi(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty,
-    ) : CdkObject(cdkObject), LambdaAuthorizerConfigProperty {
+    ) : CdkObject(cdkObject),
+        LambdaAuthorizerConfigProperty {
       /**
        * The number of seconds a response should be cached for.
        *
@@ -2297,16 +2303,28 @@ public open class CfnGraphQLApi(
     public fun excludeVerboseContent(): Any? = unwrap(this).getExcludeVerboseContent()
 
     /**
-     * The field logging level. Values can be NONE, ERROR, or ALL.
+     * The field logging level. Values can be NONE, ERROR, INFO, DEBUG, or ALL.
      *
      * * *NONE* : No field-level logs are captured.
-     * * *ERROR* : Logs the following information only for the fields that are in error:
+     * * *ERROR* : Logs the following information *only* for the fields that are in the error
+     * category:
      * * The error section in the server response.
      * * Field-level errors.
      * * The generated request/response functions that got resolved for error fields.
+     * * *INFO* : Logs the following information *only* for the fields that are in the info and
+     * error categories:
+     * * Info-level messages.
+     * * The user messages sent through `$util.log.info` and `console.log` .
+     * * Field-level tracing and mapping logs are not shown.
+     * * *DEBUG* : Logs the following information *only* for the fields that are in the debug, info,
+     * and error categories:
+     * * Debug-level messages.
+     * * The user messages sent through `$util.log.info` , `$util.log.debug` , `console.log` , and
+     * `console.debug` .
+     * * Field-level tracing and mapping logs are not shown.
      * * *ALL* : The following information is logged for all fields in the query:
      * * Field-level tracing information.
-     * * The generated request/response functions that got resolved for each field.
+     * * The generated request/response functions that were resolved for each field.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel)
      */
@@ -2336,15 +2354,28 @@ public open class CfnGraphQLApi(
       public fun excludeVerboseContent(excludeVerboseContent: IResolvable)
 
       /**
-       * @param fieldLogLevel The field logging level. Values can be NONE, ERROR, or ALL.
+       * @param fieldLogLevel The field logging level. Values can be NONE, ERROR, INFO, DEBUG, or
+       * ALL.
        * * *NONE* : No field-level logs are captured.
-       * * *ERROR* : Logs the following information only for the fields that are in error:
+       * * *ERROR* : Logs the following information *only* for the fields that are in the error
+       * category:
        * * The error section in the server response.
        * * Field-level errors.
        * * The generated request/response functions that got resolved for error fields.
+       * * *INFO* : Logs the following information *only* for the fields that are in the info and
+       * error categories:
+       * * Info-level messages.
+       * * The user messages sent through `$util.log.info` and `console.log` .
+       * * Field-level tracing and mapping logs are not shown.
+       * * *DEBUG* : Logs the following information *only* for the fields that are in the debug,
+       * info, and error categories:
+       * * Debug-level messages.
+       * * The user messages sent through `$util.log.info` , `$util.log.debug` , `console.log` , and
+       * `console.debug` .
+       * * Field-level tracing and mapping logs are not shown.
        * * *ALL* : The following information is logged for all fields in the query:
        * * Field-level tracing information.
-       * * The generated request/response functions that got resolved for each field.
+       * * The generated request/response functions that were resolved for each field.
        */
       public fun fieldLogLevel(fieldLogLevel: String)
     }
@@ -2379,15 +2410,28 @@ public open class CfnGraphQLApi(
       }
 
       /**
-       * @param fieldLogLevel The field logging level. Values can be NONE, ERROR, or ALL.
+       * @param fieldLogLevel The field logging level. Values can be NONE, ERROR, INFO, DEBUG, or
+       * ALL.
        * * *NONE* : No field-level logs are captured.
-       * * *ERROR* : Logs the following information only for the fields that are in error:
+       * * *ERROR* : Logs the following information *only* for the fields that are in the error
+       * category:
        * * The error section in the server response.
        * * Field-level errors.
        * * The generated request/response functions that got resolved for error fields.
+       * * *INFO* : Logs the following information *only* for the fields that are in the info and
+       * error categories:
+       * * Info-level messages.
+       * * The user messages sent through `$util.log.info` and `console.log` .
+       * * Field-level tracing and mapping logs are not shown.
+       * * *DEBUG* : Logs the following information *only* for the fields that are in the debug,
+       * info, and error categories:
+       * * Debug-level messages.
+       * * The user messages sent through `$util.log.info` , `$util.log.debug` , `console.log` , and
+       * `console.debug` .
+       * * Field-level tracing and mapping logs are not shown.
        * * *ALL* : The following information is logged for all fields in the query:
        * * Field-level tracing information.
-       * * The generated request/response functions that got resolved for each field.
+       * * The generated request/response functions that were resolved for each field.
        */
       override fun fieldLogLevel(fieldLogLevel: String) {
         cdkBuilder.fieldLogLevel(fieldLogLevel)
@@ -2399,7 +2443,8 @@ public open class CfnGraphQLApi(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty,
-    ) : CdkObject(cdkObject), LogConfigProperty {
+    ) : CdkObject(cdkObject),
+        LogConfigProperty {
       /**
        * The service role that AWS AppSync will assume to publish to Amazon CloudWatch Logs in your
        * account.
@@ -2417,16 +2462,28 @@ public open class CfnGraphQLApi(
       override fun excludeVerboseContent(): Any? = unwrap(this).getExcludeVerboseContent()
 
       /**
-       * The field logging level. Values can be NONE, ERROR, or ALL.
+       * The field logging level. Values can be NONE, ERROR, INFO, DEBUG, or ALL.
        *
        * * *NONE* : No field-level logs are captured.
-       * * *ERROR* : Logs the following information only for the fields that are in error:
+       * * *ERROR* : Logs the following information *only* for the fields that are in the error
+       * category:
        * * The error section in the server response.
        * * Field-level errors.
        * * The generated request/response functions that got resolved for error fields.
+       * * *INFO* : Logs the following information *only* for the fields that are in the info and
+       * error categories:
+       * * Info-level messages.
+       * * The user messages sent through `$util.log.info` and `console.log` .
+       * * Field-level tracing and mapping logs are not shown.
+       * * *DEBUG* : Logs the following information *only* for the fields that are in the debug,
+       * info, and error categories:
+       * * Debug-level messages.
+       * * The user messages sent through `$util.log.info` , `$util.log.debug` , `console.log` , and
+       * `console.debug` .
+       * * Field-level tracing and mapping logs are not shown.
        * * *ALL* : The following information is logged for all fields in the query:
        * * Field-level tracing information.
-       * * The generated request/response functions that got resolved for each field.
+       * * The generated request/response functions that were resolved for each field.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel)
        */
@@ -2586,7 +2643,8 @@ public open class CfnGraphQLApi(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty,
-    ) : CdkObject(cdkObject), OpenIDConnectConfigProperty {
+    ) : CdkObject(cdkObject),
+        OpenIDConnectConfigProperty {
       /**
        * The number of milliseconds that a token is valid after being authenticated.
        *
@@ -2773,7 +2831,8 @@ public open class CfnGraphQLApi(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty,
-    ) : CdkObject(cdkObject), UserPoolConfigProperty {
+    ) : CdkObject(cdkObject),
+        UserPoolConfigProperty {
       /**
        * A regular expression for validating the incoming Amazon Cognito user pool app client ID.
        *

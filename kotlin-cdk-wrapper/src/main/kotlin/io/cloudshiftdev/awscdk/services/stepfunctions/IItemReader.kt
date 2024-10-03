@@ -44,7 +44,8 @@ public interface IItemReader {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.IItemReader,
-  ) : CdkObject(cdkObject), IItemReader {
+  ) : CdkObject(cdkObject),
+      IItemReader {
     /**
      * S3 Bucket containing objects to iterate over or a file with a list to iterate over.
      */

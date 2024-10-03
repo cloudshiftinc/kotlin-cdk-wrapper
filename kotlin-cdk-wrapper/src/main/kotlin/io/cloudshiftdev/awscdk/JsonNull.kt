@@ -22,7 +22,8 @@ import kotlin.collections.List
  */
 public open class JsonNull(
   cdkObject: software.amazon.awscdk.JsonNull,
-) : CdkObject(cdkObject), IResolvable {
+) : CdkObject(cdkObject),
+    IResolvable {
   /**
    * The creation stack of this resolvable which will be appended to errors thrown during
    * resolution.

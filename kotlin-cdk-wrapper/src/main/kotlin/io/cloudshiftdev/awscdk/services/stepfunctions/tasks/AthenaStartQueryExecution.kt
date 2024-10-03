@@ -270,6 +270,17 @@ public open class AthenaStartQueryExecution(
     public fun resultPath(resultPath: String)
 
     /**
+     * Specifies, in minutes, the maximum age of a previous query result that Athena should consider
+     * for reuse.
+     *
+     * Default: - Query results are not reused
+     *
+     * @param resultReuseConfigurationMaxAge Specifies, in minutes, the maximum age of a previous
+     * query result that Athena should consider for reuse. 
+     */
+    public fun resultReuseConfigurationMaxAge(resultReuseConfigurationMaxAge: Duration)
+
+    /**
      * The JSON that will replace the state's raw result and become the effective result before
      * ResultPath is applied.
      *
@@ -561,6 +572,19 @@ public open class AthenaStartQueryExecution(
      */
     override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
+    }
+
+    /**
+     * Specifies, in minutes, the maximum age of a previous query result that Athena should consider
+     * for reuse.
+     *
+     * Default: - Query results are not reused
+     *
+     * @param resultReuseConfigurationMaxAge Specifies, in minutes, the maximum age of a previous
+     * query result that Athena should consider for reuse. 
+     */
+    override fun resultReuseConfigurationMaxAge(resultReuseConfigurationMaxAge: Duration) {
+      cdkBuilder.resultReuseConfigurationMaxAge(resultReuseConfigurationMaxAge.let(Duration.Companion::unwrap))
     }
 
     /**

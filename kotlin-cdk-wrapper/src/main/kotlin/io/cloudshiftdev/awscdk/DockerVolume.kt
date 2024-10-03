@@ -101,7 +101,8 @@ public interface DockerVolume {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.DockerVolume,
-  ) : CdkObject(cdkObject), DockerVolume {
+  ) : CdkObject(cdkObject),
+      DockerVolume {
     /**
      * Mount consistency.
      *

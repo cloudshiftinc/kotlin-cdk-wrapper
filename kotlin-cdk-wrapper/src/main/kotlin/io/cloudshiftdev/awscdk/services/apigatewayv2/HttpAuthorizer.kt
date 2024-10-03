@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class HttpAuthorizer(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer,
-) : Resource(cdkObject), IHttpAuthorizer {
+) : Resource(cdkObject),
+    IHttpAuthorizer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

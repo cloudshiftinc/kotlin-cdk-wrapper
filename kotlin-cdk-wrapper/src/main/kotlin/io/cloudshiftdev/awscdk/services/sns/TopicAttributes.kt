@@ -81,7 +81,8 @@ public interface TopicAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.TopicAttributes,
-  ) : CdkObject(cdkObject), TopicAttributes {
+  ) : CdkObject(cdkObject),
+      TopicAttributes {
     /**
      * Whether content-based deduplication is enabled.
      *

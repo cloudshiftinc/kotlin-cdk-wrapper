@@ -33,7 +33,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnGroupMembershipProps {
   /**
-   * The unique identifier for a group in the identity store.
+   * The identifier for a group in the identity store.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-groupid)
    */
@@ -62,7 +62,7 @@ public interface CfnGroupMembershipProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param groupId The unique identifier for a group in the identity store. 
+     * @param groupId The identifier for a group in the identity store. 
      */
     public fun groupId(groupId: String)
 
@@ -101,7 +101,7 @@ public interface CfnGroupMembershipProps {
         software.amazon.awscdk.services.identitystore.CfnGroupMembershipProps.builder()
 
     /**
-     * @param groupId The unique identifier for a group in the identity store. 
+     * @param groupId The identifier for a group in the identity store. 
      */
     override fun groupId(groupId: String) {
       cdkBuilder.groupId(groupId)
@@ -148,9 +148,10 @@ public interface CfnGroupMembershipProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembershipProps,
-  ) : CdkObject(cdkObject), CfnGroupMembershipProps {
+  ) : CdkObject(cdkObject),
+      CfnGroupMembershipProps {
     /**
-     * The unique identifier for a group in the identity store.
+     * The identifier for a group in the identity store.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-groupid)
      */

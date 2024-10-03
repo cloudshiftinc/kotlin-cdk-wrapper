@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTableOptimizer(
   cdkObject: software.amazon.awscdk.services.glue.CfnTableOptimizer,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -425,7 +426,8 @@ public open class CfnTableOptimizer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnTableOptimizer.TableOptimizerConfigurationProperty,
-    ) : CdkObject(cdkObject), TableOptimizerConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        TableOptimizerConfigurationProperty {
       /**
        * Whether the table optimization is enabled.
        *

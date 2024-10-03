@@ -76,7 +76,8 @@ public interface ProfilingGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codeguruprofiler.ProfilingGroupProps,
-  ) : CdkObject(cdkObject), ProfilingGroupProps {
+  ) : CdkObject(cdkObject),
+      ProfilingGroupProps {
     /**
      * The compute platform of the profiling group.
      *

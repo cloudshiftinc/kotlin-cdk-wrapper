@@ -77,7 +77,8 @@ public interface INetworkLoadBalancer : ILoadBalancerV2, IVpcEndpointServiceLoad
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer,
-  ) : CdkObject(cdkObject), INetworkLoadBalancer {
+  ) : CdkObject(cdkObject),
+      INetworkLoadBalancer {
     /**
      * Add a listener to this load balancer.
      *

@@ -27,7 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class AccessPoint(
   cdkObject: software.amazon.awscdk.services.efs.AccessPoint,
-) : Resource(cdkObject), IAccessPoint {
+) : Resource(cdkObject),
+    IAccessPoint {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

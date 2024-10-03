@@ -49,6 +49,7 @@ import kotlin.jvm.JvmName
  * .build()))
  * .jdbcTargets(List.of(JdbcTargetProperty.builder()
  * .connectionName("connectionName")
+ * .enableAdditionalMetadata(List.of("enableAdditionalMetadata"))
  * .exclusions(List.of("exclusions"))
  * .path("path")
  * .build()))
@@ -611,7 +612,8 @@ public interface CfnCrawlerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnCrawlerProps,
-  ) : CdkObject(cdkObject), CfnCrawlerProps {
+  ) : CdkObject(cdkObject),
+      CfnCrawlerProps {
     /**
      * A list of UTF-8 strings that specify the names of custom classifiers that are associated with
      * the crawler.

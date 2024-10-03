@@ -186,7 +186,8 @@ public interface VirtualNodeListenerConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig,
-  ) : CdkObject(cdkObject), VirtualNodeListenerConfig {
+  ) : CdkObject(cdkObject),
+      VirtualNodeListenerConfig {
     /**
      * Single listener config for a VirtualNode.
      */

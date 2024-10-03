@@ -72,7 +72,8 @@ public interface TagOptionsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.TagOptionsProps,
-  ) : CdkObject(cdkObject), TagOptionsProps {
+  ) : CdkObject(cdkObject),
+      TagOptionsProps {
     /**
      * The values that are allowed to be set for specific tags.
      *

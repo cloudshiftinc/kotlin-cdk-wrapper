@@ -178,7 +178,8 @@ public interface CfnPackageVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.panorama.CfnPackageVersionProps,
-  ) : CdkObject(cdkObject), CfnPackageVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnPackageVersionProps {
     /**
      * Whether to mark the new version as the latest version.
      *

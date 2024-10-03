@@ -169,7 +169,8 @@ public interface CfnNetworkInsightsAnalysisProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysisProps,
-  ) : CdkObject(cdkObject), CfnNetworkInsightsAnalysisProps {
+  ) : CdkObject(cdkObject),
+      CfnNetworkInsightsAnalysisProps {
     /**
      * The member accounts that contain resources that the path can traverse.
      *

@@ -87,7 +87,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnContainer(
   cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1075,7 +1077,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty,
-    ) : CdkObject(cdkObject), ContainerProperty {
+    ) : CdkObject(cdkObject),
+        ContainerProperty {
       /**
        * The launch command for the container.
        *
@@ -1301,7 +1304,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty,
-    ) : CdkObject(cdkObject), ContainerServiceDeploymentProperty {
+    ) : CdkObject(cdkObject),
+        ContainerServiceDeploymentProperty {
       /**
        * An object that describes the configuration for the containers of the deployment.
        *
@@ -1428,7 +1432,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty,
-    ) : CdkObject(cdkObject), EcrImagePullerRoleProperty {
+    ) : CdkObject(cdkObject),
+        EcrImagePullerRoleProperty {
       /**
        * A boolean value that indicates whether the `ECRImagePullerRole` is active.
        *
@@ -1543,7 +1548,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty,
-    ) : CdkObject(cdkObject), EnvironmentVariableProperty {
+    ) : CdkObject(cdkObject),
+        EnvironmentVariableProperty {
       /**
        * The environment variable value.
        *
@@ -1773,7 +1779,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty,
-    ) : CdkObject(cdkObject), HealthCheckConfigProperty {
+    ) : CdkObject(cdkObject),
+        HealthCheckConfigProperty {
       /**
        * The number of consecutive health check successes required before moving the container to
        * the `Healthy` state.
@@ -1930,7 +1937,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty,
-    ) : CdkObject(cdkObject), PortInfoProperty {
+    ) : CdkObject(cdkObject),
+        PortInfoProperty {
       /**
        * The open firewall ports of the container.
        *
@@ -2076,7 +2084,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty,
-    ) : CdkObject(cdkObject), PrivateRegistryAccessProperty {
+    ) : CdkObject(cdkObject),
+        PrivateRegistryAccessProperty {
       /**
        * An object that describes the activation status of the role that you can use to grant a
        * Lightsail container service access to Amazon ECR private repositories.
@@ -2194,7 +2203,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty,
-    ) : CdkObject(cdkObject), PublicDomainNameProperty {
+    ) : CdkObject(cdkObject),
+        PublicDomainNameProperty {
       /**
        * The name of the certificate for the public domains.
        *
@@ -2368,7 +2378,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty,
-    ) : CdkObject(cdkObject), PublicEndpointProperty {
+    ) : CdkObject(cdkObject),
+        PublicEndpointProperty {
       /**
        * The name of the container entry of the deployment that the endpoint configuration applies
        * to.

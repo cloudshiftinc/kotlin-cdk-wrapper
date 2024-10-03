@@ -93,7 +93,8 @@ public interface EnvironmentPlaceholderValues {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cxapi.EnvironmentPlaceholderValues,
-  ) : CdkObject(cdkObject), EnvironmentPlaceholderValues {
+  ) : CdkObject(cdkObject),
+      EnvironmentPlaceholderValues {
     /**
      * Return the account.
      */

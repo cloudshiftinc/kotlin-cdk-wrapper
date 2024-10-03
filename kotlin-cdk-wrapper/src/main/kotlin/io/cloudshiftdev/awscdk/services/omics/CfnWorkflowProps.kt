@@ -238,7 +238,8 @@ public interface CfnWorkflowProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.omics.CfnWorkflowProps,
-  ) : CdkObject(cdkObject), CfnWorkflowProps {
+  ) : CdkObject(cdkObject),
+      CfnWorkflowProps {
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-accelerators)
      */

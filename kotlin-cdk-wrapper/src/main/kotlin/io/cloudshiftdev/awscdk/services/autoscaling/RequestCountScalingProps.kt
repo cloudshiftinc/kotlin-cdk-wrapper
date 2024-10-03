@@ -105,7 +105,8 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.RequestCountScalingProps,
-  ) : CdkObject(cdkObject), RequestCountScalingProps {
+  ) : CdkObject(cdkObject),
+      RequestCountScalingProps {
     /**
      * Period after a scaling completes before another scaling activity can start.
      *

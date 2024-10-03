@@ -292,7 +292,8 @@ public interface CfnInAppTemplateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplateProps,
-  ) : CdkObject(cdkObject), CfnInAppTemplateProps {
+  ) : CdkObject(cdkObject),
+      CfnInAppTemplateProps {
     /**
      * An object that contains information about the content of an in-app message, including its
      * title and body text, text colors, background colors, images, buttons, and behaviors.

@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnServicePrincipalName(
   cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalName,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

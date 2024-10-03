@@ -120,7 +120,8 @@ public interface FileCopyOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.FileCopyOptions,
-  ) : CdkObject(cdkObject), FileCopyOptions {
+  ) : CdkObject(cdkObject),
+      FileCopyOptions {
     /**
      * File paths matching the patterns will be excluded.
      *

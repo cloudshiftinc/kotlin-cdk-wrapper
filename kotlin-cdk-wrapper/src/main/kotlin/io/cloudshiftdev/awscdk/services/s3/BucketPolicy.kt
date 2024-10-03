@@ -23,20 +23,47 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * policy if one doesn't exist yet, otherwise it will add to the existing
  * policy.
  *
- * Prefer to use `addToResourcePolicy()` instead.
+ * The bucket policy method is implemented differently than `addToResourcePolicy()`
+ * as `BucketPolicy()` creates a new policy without knowing one earlier existed.
+ * e.g. if during Bucket creation, if `autoDeleteObject:true`, these policies are
+ * added to the bucket policy:
+ * ["s3:DeleteObject*", "s3:GetBucket*", "s3:List*", "s3:PutBucketPolicy"],
+ * and when you add a new BucketPolicy with ["s3:GetObject", "s3:ListBucket"] on
+ * this existing bucket, invoking `BucketPolicy()` will create a new Policy
+ * without knowing one earlier exists already, so it creates a new one.
+ * In this case, the custom resource handler will not have access to
+ * `s3:GetBucketTagging` action which will cause failure during deletion of stack.
+ *
+ * Hence its strongly recommended to use `addToResourcePolicy()` method to add
+ * new permissions to existing policy.
  *
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.*;
- * import io.cloudshiftdev.awscdk.services.s3.*;
- * Bucket bucket;
- * BucketPolicy bucketPolicy = BucketPolicy.Builder.create(this, "MyBucketPolicy")
- * .bucket(bucket)
- * // the properties below are optional
- * .removalPolicy(RemovalPolicy.DESTROY)
+ * String bucketName = "my-favorite-bucket-name";
+ * Bucket accessLogsBucket = Bucket.Builder.create(this, "AccessLogsBucket")
+ * .objectOwnership(ObjectOwnership.BUCKET_OWNER_ENFORCED)
+ * .bucketName(bucketName)
+ * .build();
+ * CfnBucketPolicy bucketPolicy = CfnBucketPolicy.Builder.create(this, "BucketPolicy")
+ * .bucket(bucketName)
+ * .policyDocument(Map.of(
+ * "Statement", List.of(Map.of(
+ * "Action", "s3:*",
+ * "Effect", "Deny",
+ * "Principal", Map.of(
+ * "AWS", "*"),
+ * "Resource", List.of(accessLogsBucket.getBucketArn(), String.format("%s/ *",
+ * accessLogsBucket.getBucketArn())))),
+ * "Version", "2012-10-17"))
+ * .build();
+ * // Wrap L1 Construct with L2 Bucket Policy Construct. Subsequent
+ * // generated bucket policy to allow access log delivery would append
+ * // to the current policy.
+ * BucketPolicy.fromCfnBucketPolicy(bucketPolicy);
+ * Bucket bucket = Bucket.Builder.create(this, "MyBucket")
+ * .serverAccessLogsBucket(accessLogsBucket)
+ * .serverAccessLogsPrefix("logs")
  * .build();
  * ```
  */

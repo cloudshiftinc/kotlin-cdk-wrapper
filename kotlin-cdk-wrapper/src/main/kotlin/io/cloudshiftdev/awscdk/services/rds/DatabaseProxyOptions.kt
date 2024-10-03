@@ -583,7 +583,8 @@ public interface DatabaseProxyOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.DatabaseProxyOptions,
-  ) : CdkObject(cdkObject), DatabaseProxyOptions {
+  ) : CdkObject(cdkObject),
+      DatabaseProxyOptions {
     /**
      * The duration for a proxy to wait for a connection to become available in the connection pool.
      *

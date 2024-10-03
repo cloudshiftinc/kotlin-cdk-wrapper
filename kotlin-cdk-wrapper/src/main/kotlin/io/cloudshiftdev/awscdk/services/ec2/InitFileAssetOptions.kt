@@ -384,7 +384,8 @@ public interface InitFileAssetOptions : InitFileOptions, AssetOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.InitFileAssetOptions,
-  ) : CdkObject(cdkObject), InitFileAssetOptions {
+  ) : CdkObject(cdkObject),
+      InitFileAssetOptions {
     /**
      * Specify a custom hash for this asset.
      *

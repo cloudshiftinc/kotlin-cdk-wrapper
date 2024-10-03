@@ -229,7 +229,8 @@ public interface CfnCapacityReservationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.athena.CfnCapacityReservationProps,
-  ) : CdkObject(cdkObject), CfnCapacityReservationProps {
+  ) : CdkObject(cdkObject),
+      CfnCapacityReservationProps {
     /**
      * Assigns Athena workgroups (and hence their queries) to capacity reservations.
      *

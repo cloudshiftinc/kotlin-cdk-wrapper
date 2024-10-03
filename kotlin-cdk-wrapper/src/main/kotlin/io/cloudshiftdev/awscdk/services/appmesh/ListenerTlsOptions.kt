@@ -146,7 +146,8 @@ public interface ListenerTlsOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.ListenerTlsOptions,
-  ) : CdkObject(cdkObject), ListenerTlsOptions {
+  ) : CdkObject(cdkObject),
+      ListenerTlsOptions {
     /**
      * Represents TLS certificate.
      */

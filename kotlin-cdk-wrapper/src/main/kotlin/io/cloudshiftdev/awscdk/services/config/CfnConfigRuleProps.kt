@@ -469,7 +469,8 @@ public interface CfnConfigRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.config.CfnConfigRuleProps,
-  ) : CdkObject(cdkObject), CfnConfigRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnConfigRuleProps {
     /**
      * Indicates whether an AWS resource or AWS Config rule is compliant and provides the number of
      * contributors that affect the compliance.

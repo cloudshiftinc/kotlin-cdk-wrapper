@@ -2,9 +2,11 @@
 
 package io.cloudshiftdev.awscdk.services.fsx
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -55,6 +57,34 @@ public interface LustreConfiguration {
    */
   public fun autoImportPolicy(): LustreAutoImportPolicy? =
       unwrap(this).getAutoImportPolicy()?.let(LustreAutoImportPolicy::wrap)
+
+  /**
+   * The number of days to retain automatic backups.
+   *
+   * Setting this property to 0 disables automatic backups.
+   * You can retain automatic backups for a maximum of 90 days.
+   *
+   * Automatic Backups is not supported on scratch file systems.
+   *
+   * Default: Duration.days(0)
+   */
+  public fun automaticBackupRetention(): Duration? =
+      unwrap(this).getAutomaticBackupRetention()?.let(Duration::wrap)
+
+  /**
+   * A boolean flag indicating whether tags for the file system should be copied to backups.
+   *
+   * Default: - false
+   */
+  public fun copyTagsToBackups(): Boolean? = unwrap(this).getCopyTagsToBackups()
+
+  /**
+   * Start time for 30-minute daily automatic backup window in Coordinated Universal Time (UTC).
+   *
+   * Default: - no backup window
+   */
+  public fun dailyAutomaticBackupStartTime(): DailyAutomaticBackupStartTime? =
+      unwrap(this).getDailyAutomaticBackupStartTime()?.let(DailyAutomaticBackupStartTime::wrap)
 
   /**
    * Sets the data compression configuration for the file system.
@@ -156,6 +186,37 @@ public interface LustreConfiguration {
     public fun autoImportPolicy(autoImportPolicy: LustreAutoImportPolicy)
 
     /**
+     * @param automaticBackupRetention The number of days to retain automatic backups.
+     * Setting this property to 0 disables automatic backups.
+     * You can retain automatic backups for a maximum of 90 days.
+     *
+     * Automatic Backups is not supported on scratch file systems.
+     */
+    public fun automaticBackupRetention(automaticBackupRetention: Duration)
+
+    /**
+     * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should be
+     * copied to backups.
+     */
+    public fun copyTagsToBackups(copyTagsToBackups: Boolean)
+
+    /**
+     * @param dailyAutomaticBackupStartTime Start time for 30-minute daily automatic backup window
+     * in Coordinated Universal Time (UTC).
+     */
+    public
+        fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: DailyAutomaticBackupStartTime)
+
+    /**
+     * @param dailyAutomaticBackupStartTime Start time for 30-minute daily automatic backup window
+     * in Coordinated Universal Time (UTC).
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("19e5f86627647ec5c7fa70811d55cee7c555c19a53ba2a8d7f8f069f3f223e98")
+    public
+        fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: DailyAutomaticBackupStartTime.Builder.() -> Unit)
+
+    /**
      * @param dataCompressionType Sets the data compression configuration for the file system.
      * For more information, see [Lustre data
      * compression](https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html) in the
@@ -251,6 +312,45 @@ public interface LustreConfiguration {
     }
 
     /**
+     * @param automaticBackupRetention The number of days to retain automatic backups.
+     * Setting this property to 0 disables automatic backups.
+     * You can retain automatic backups for a maximum of 90 days.
+     *
+     * Automatic Backups is not supported on scratch file systems.
+     */
+    override fun automaticBackupRetention(automaticBackupRetention: Duration) {
+      cdkBuilder.automaticBackupRetention(automaticBackupRetention.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * @param copyTagsToBackups A boolean flag indicating whether tags for the file system should be
+     * copied to backups.
+     */
+    override fun copyTagsToBackups(copyTagsToBackups: Boolean) {
+      cdkBuilder.copyTagsToBackups(copyTagsToBackups)
+    }
+
+    /**
+     * @param dailyAutomaticBackupStartTime Start time for 30-minute daily automatic backup window
+     * in Coordinated Universal Time (UTC).
+     */
+    override
+        fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: DailyAutomaticBackupStartTime) {
+      cdkBuilder.dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime.let(DailyAutomaticBackupStartTime.Companion::unwrap))
+    }
+
+    /**
+     * @param dailyAutomaticBackupStartTime Start time for 30-minute daily automatic backup window
+     * in Coordinated Universal Time (UTC).
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("19e5f86627647ec5c7fa70811d55cee7c555c19a53ba2a8d7f8f069f3f223e98")
+    override
+        fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: DailyAutomaticBackupStartTime.Builder.() -> Unit):
+        Unit =
+        dailyAutomaticBackupStartTime(DailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime))
+
+    /**
      * @param dataCompressionType Sets the data compression configuration for the file system.
      * For more information, see [Lustre data
      * compression](https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html) in the
@@ -342,7 +442,8 @@ public interface LustreConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.fsx.LustreConfiguration,
-  ) : CdkObject(cdkObject), LustreConfiguration {
+  ) : CdkObject(cdkObject),
+      LustreConfiguration {
     /**
      * Available with `Scratch` and `Persistent_1` deployment types.
      *
@@ -363,6 +464,34 @@ public interface LustreConfiguration {
      */
     override fun autoImportPolicy(): LustreAutoImportPolicy? =
         unwrap(this).getAutoImportPolicy()?.let(LustreAutoImportPolicy::wrap)
+
+    /**
+     * The number of days to retain automatic backups.
+     *
+     * Setting this property to 0 disables automatic backups.
+     * You can retain automatic backups for a maximum of 90 days.
+     *
+     * Automatic Backups is not supported on scratch file systems.
+     *
+     * Default: Duration.days(0)
+     */
+    override fun automaticBackupRetention(): Duration? =
+        unwrap(this).getAutomaticBackupRetention()?.let(Duration::wrap)
+
+    /**
+     * A boolean flag indicating whether tags for the file system should be copied to backups.
+     *
+     * Default: - false
+     */
+    override fun copyTagsToBackups(): Boolean? = unwrap(this).getCopyTagsToBackups()
+
+    /**
+     * Start time for 30-minute daily automatic backup window in Coordinated Universal Time (UTC).
+     *
+     * Default: - no backup window
+     */
+    override fun dailyAutomaticBackupStartTime(): DailyAutomaticBackupStartTime? =
+        unwrap(this).getDailyAutomaticBackupStartTime()?.let(DailyAutomaticBackupStartTime::wrap)
 
     /**
      * Sets the data compression configuration for the file system.

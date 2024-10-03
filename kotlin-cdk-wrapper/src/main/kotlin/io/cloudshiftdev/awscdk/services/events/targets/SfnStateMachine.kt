@@ -45,7 +45,8 @@ import software.amazon.awscdk.services.stepfunctions.IStateMachine as AmazonAwsc
  */
 public open class SfnStateMachine(
   cdkObject: software.amazon.awscdk.services.events.targets.SfnStateMachine,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(machine: CloudshiftdevAwscdkServicesStepfunctionsIStateMachine) :
       this(software.amazon.awscdk.services.events.targets.SfnStateMachine(machine.let(CloudshiftdevAwscdkServicesStepfunctionsIStateMachine.Companion::unwrap))
   )

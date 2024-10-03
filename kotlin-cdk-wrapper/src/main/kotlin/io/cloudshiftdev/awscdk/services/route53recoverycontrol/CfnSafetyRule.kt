@@ -79,7 +79,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSafetyRule(
   cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -800,7 +802,8 @@ public open class CfnSafetyRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty,
-    ) : CdkObject(cdkObject), AssertionRuleProperty {
+    ) : CdkObject(cdkObject),
+        AssertionRuleProperty {
       /**
        * The routing controls that are part of transactions that are evaluated to determine if a
        * request to change a routing control state is allowed.
@@ -1018,7 +1021,8 @@ public open class CfnSafetyRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty,
-    ) : CdkObject(cdkObject), GatingRuleProperty {
+    ) : CdkObject(cdkObject),
+        GatingRuleProperty {
       /**
        * An array of gating routing control Amazon Resource Names (ARNs).
        *
@@ -1196,7 +1200,8 @@ public open class CfnSafetyRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty,
-    ) : CdkObject(cdkObject), RuleConfigProperty {
+    ) : CdkObject(cdkObject),
+        RuleConfigProperty {
       /**
        * Logical negation of the rule.
        *

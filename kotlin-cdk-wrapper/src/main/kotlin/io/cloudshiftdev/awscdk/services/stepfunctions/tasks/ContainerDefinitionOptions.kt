@@ -190,7 +190,8 @@ public interface ContainerDefinitionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionOptions,
-  ) : CdkObject(cdkObject), ContainerDefinitionOptions {
+  ) : CdkObject(cdkObject),
+      ContainerDefinitionOptions {
     /**
      * This parameter is ignored for models that contain only a PrimaryContainer.
      *

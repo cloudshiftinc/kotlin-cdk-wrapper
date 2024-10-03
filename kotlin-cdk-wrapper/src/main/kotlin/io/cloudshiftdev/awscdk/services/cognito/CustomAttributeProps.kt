@@ -89,7 +89,8 @@ public interface CustomAttributeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CustomAttributeProps,
-  ) : CdkObject(cdkObject), CustomAttributeProps {
+  ) : CdkObject(cdkObject),
+      CustomAttributeProps {
     /**
      * Specifies whether the value of the attribute can be changed.
      *

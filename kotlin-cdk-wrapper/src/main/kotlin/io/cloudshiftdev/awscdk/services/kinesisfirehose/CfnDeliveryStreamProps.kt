@@ -127,6 +127,16 @@ public interface CfnDeliveryStreamProps {
       unwrap(this).getHttpEndpointDestinationConfiguration()
 
   /**
+   * Specifies the destination configure settings for Apache Iceberg Table.
+   *
+   * Amazon Data Firehose is in preview release and is subject to change.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration)
+   */
+  public fun icebergDestinationConfiguration(): Any? =
+      unwrap(this).getIcebergDestinationConfiguration()
+
+  /**
    * When a Kinesis stream is used as the source for the delivery stream, a
    * [KinesisStreamSourceConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html)
    * containing the Kinesis stream ARN and the role ARN for the source stream.
@@ -413,6 +423,31 @@ public interface CfnDeliveryStreamProps {
     @JvmName("3a5c22a455fb650d9f0de8899a1fc1e3714d9e35a5d04431c07358704b22c2fe")
     public
         fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param icebergDestinationConfiguration Specifies the destination configure settings for
+     * Apache Iceberg Table.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    public fun icebergDestinationConfiguration(icebergDestinationConfiguration: IResolvable)
+
+    /**
+     * @param icebergDestinationConfiguration Specifies the destination configure settings for
+     * Apache Iceberg Table.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    public
+        fun icebergDestinationConfiguration(icebergDestinationConfiguration: CfnDeliveryStream.IcebergDestinationConfigurationProperty)
+
+    /**
+     * @param icebergDestinationConfiguration Specifies the destination configure settings for
+     * Apache Iceberg Table.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("484f7d6c612844105ad2074cd8d8320f4f5b531fd1100f259474d8b5f7d008a0")
+    public
+        fun icebergDestinationConfiguration(icebergDestinationConfiguration: CfnDeliveryStream.IcebergDestinationConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param kinesisStreamSourceConfiguration When a Kinesis stream is used as the source for the
@@ -880,6 +915,37 @@ public interface CfnDeliveryStreamProps {
         httpEndpointDestinationConfiguration(CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty(httpEndpointDestinationConfiguration))
 
     /**
+     * @param icebergDestinationConfiguration Specifies the destination configure settings for
+     * Apache Iceberg Table.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    override fun icebergDestinationConfiguration(icebergDestinationConfiguration: IResolvable) {
+      cdkBuilder.icebergDestinationConfiguration(icebergDestinationConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param icebergDestinationConfiguration Specifies the destination configure settings for
+     * Apache Iceberg Table.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    override
+        fun icebergDestinationConfiguration(icebergDestinationConfiguration: CfnDeliveryStream.IcebergDestinationConfigurationProperty) {
+      cdkBuilder.icebergDestinationConfiguration(icebergDestinationConfiguration.let(CfnDeliveryStream.IcebergDestinationConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param icebergDestinationConfiguration Specifies the destination configure settings for
+     * Apache Iceberg Table.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("484f7d6c612844105ad2074cd8d8320f4f5b531fd1100f259474d8b5f7d008a0")
+    override
+        fun icebergDestinationConfiguration(icebergDestinationConfiguration: CfnDeliveryStream.IcebergDestinationConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        icebergDestinationConfiguration(CfnDeliveryStream.IcebergDestinationConfigurationProperty(icebergDestinationConfiguration))
+
+    /**
      * @param kinesisStreamSourceConfiguration When a Kinesis stream is used as the source for the
      * delivery stream, a
      * [KinesisStreamSourceConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html)
@@ -1153,7 +1219,8 @@ public interface CfnDeliveryStreamProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStreamProps,
-  ) : CdkObject(cdkObject), CfnDeliveryStreamProps {
+  ) : CdkObject(cdkObject),
+      CfnDeliveryStreamProps {
     /**
      * Describes the configuration of a destination in the Serverless offering for Amazon OpenSearch
      * Service.
@@ -1238,6 +1305,16 @@ public interface CfnDeliveryStreamProps {
      */
     override fun httpEndpointDestinationConfiguration(): Any? =
         unwrap(this).getHttpEndpointDestinationConfiguration()
+
+    /**
+     * Specifies the destination configure settings for Apache Iceberg Table.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration)
+     */
+    override fun icebergDestinationConfiguration(): Any? =
+        unwrap(this).getIcebergDestinationConfiguration()
 
     /**
      * When a Kinesis stream is used as the source for the delivery stream, a

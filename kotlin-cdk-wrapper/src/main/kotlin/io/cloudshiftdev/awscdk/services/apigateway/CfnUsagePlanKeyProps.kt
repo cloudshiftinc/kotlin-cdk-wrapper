@@ -103,7 +103,8 @@ public interface CfnUsagePlanKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlanKeyProps,
-  ) : CdkObject(cdkObject), CfnUsagePlanKeyProps {
+  ) : CdkObject(cdkObject),
+      CfnUsagePlanKeyProps {
     /**
      * The Id of the UsagePlanKey resource.
      *

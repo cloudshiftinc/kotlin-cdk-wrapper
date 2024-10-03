@@ -672,7 +672,8 @@ public interface CfnRoleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.CfnRoleProps,
-  ) : CdkObject(cdkObject), CfnRoleProps {
+  ) : CdkObject(cdkObject),
+      CfnRoleProps {
     /**
      * The trust policy that is associated with this role.
      *

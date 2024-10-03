@@ -49,7 +49,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnContactList(
   cdkObject: software.amazon.awscdk.services.ses.CfnContactList,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnContactList(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -440,7 +442,8 @@ public open class CfnContactList(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnContactList.TopicProperty,
-    ) : CdkObject(cdkObject), TopicProperty {
+    ) : CdkObject(cdkObject),
+        TopicProperty {
       /**
        * The default subscription status to be applied to a contact if the contact has not noted
        * their preference for subscribing to a topic.

@@ -145,7 +145,8 @@ public interface ILogGroup : IResourceWithPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.ILogGroup,
-  ) : CdkObject(cdkObject), ILogGroup {
+  ) : CdkObject(cdkObject),
+      ILogGroup {
     /**
      * Create a new Metric Filter on this Log Group.
      *

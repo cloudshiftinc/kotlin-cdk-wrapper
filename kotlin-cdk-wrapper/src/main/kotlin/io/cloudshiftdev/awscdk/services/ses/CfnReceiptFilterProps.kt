@@ -103,7 +103,8 @@ public interface CfnReceiptFilterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilterProps,
-  ) : CdkObject(cdkObject), CfnReceiptFilterProps {
+  ) : CdkObject(cdkObject),
+      CfnReceiptFilterProps {
     /**
      * A data structure that describes the IP address filter to create, which consists of a name, an
      * IP address range, and whether to allow or block mail from it.

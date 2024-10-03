@@ -13,7 +13,8 @@ import kotlin.String
  */
 public abstract class FileSystemBase(
   cdkObject: software.amazon.awscdk.services.fsx.FileSystemBase,
-) : Resource(cdkObject), IFileSystem {
+) : Resource(cdkObject),
+    IFileSystem {
   /**
    * The security groups/rules used to allow network connections to the file system.
    */

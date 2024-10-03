@@ -60,7 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnOrganization(
   cdkObject: software.amazon.awscdk.services.organizations.CfnOrganization,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.organizations.CfnOrganization(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

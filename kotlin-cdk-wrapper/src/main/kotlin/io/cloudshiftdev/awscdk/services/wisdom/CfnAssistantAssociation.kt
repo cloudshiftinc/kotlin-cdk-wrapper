@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAssistantAssociation(
   cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantAssociation,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -388,7 +390,8 @@ public open class CfnAssistantAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantAssociation.AssociationDataProperty,
-    ) : CdkObject(cdkObject), AssociationDataProperty {
+    ) : CdkObject(cdkObject),
+        AssociationDataProperty {
       /**
        * The identifier of the knowledge base.
        *

@@ -60,7 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDBSecurityGroupIngress(
   cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroupIngress,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

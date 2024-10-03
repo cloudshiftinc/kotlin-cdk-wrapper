@@ -113,7 +113,8 @@ public interface WaveOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.WaveOptions,
-  ) : CdkObject(cdkObject), WaveOptions {
+  ) : CdkObject(cdkObject),
+      WaveOptions {
     /**
      * Additional steps to run after all of the stages in the wave.
      *

@@ -32,7 +32,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class HostedConfiguration(
   cdkObject: software.amazon.awscdk.services.appconfig.HostedConfiguration,
-) : CloudshiftdevConstructsConstruct(cdkObject), IConfiguration, IExtensible {
+) : CloudshiftdevConstructsConstruct(cdkObject),
+    IConfiguration,
+    IExtensible {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -70,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCollaboration(
   cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -891,7 +893,8 @@ public open class CfnCollaboration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty,
-    ) : CdkObject(cdkObject), DataEncryptionMetadataProperty {
+    ) : CdkObject(cdkObject),
+        DataEncryptionMetadataProperty {
       /**
        * Indicates whether encrypted tables can contain cleartext data ( `TRUE` ) or are to
        * cryptographically process every column ( `FALSE` ).
@@ -1136,7 +1139,8 @@ public open class CfnCollaboration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty,
-    ) : CdkObject(cdkObject), MemberSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        MemberSpecificationProperty {
       /**
        * The identifier used to reference members of the collaboration.
        *
@@ -1284,7 +1288,8 @@ public open class CfnCollaboration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty,
-    ) : CdkObject(cdkObject), PaymentConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PaymentConfigurationProperty {
       /**
        * The collaboration member's payment responsibilities set by the collaboration creator for
        * query compute costs.
@@ -1426,7 +1431,8 @@ public open class CfnCollaboration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty,
-    ) : CdkObject(cdkObject), QueryComputePaymentConfigProperty {
+    ) : CdkObject(cdkObject),
+        QueryComputePaymentConfigProperty {
       /**
        * Indicates whether the collaboration creator has configured the collaboration member to pay
        * for query compute costs ( `TRUE` ) or has not configured the collaboration member to pay for

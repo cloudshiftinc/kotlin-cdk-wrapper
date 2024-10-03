@@ -230,7 +230,8 @@ public interface Channel {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Channel,
-  ) : CdkObject(cdkObject), Channel {
+  ) : CdkObject(cdkObject),
+      Channel {
     /**
      * Name of the channel.
      */

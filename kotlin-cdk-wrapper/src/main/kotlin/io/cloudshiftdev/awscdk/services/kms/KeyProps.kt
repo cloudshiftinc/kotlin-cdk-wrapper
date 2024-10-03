@@ -112,6 +112,22 @@ public interface KeyProps {
   public fun keyUsage(): KeyUsage? = unwrap(this).getKeyUsage()?.let(KeyUsage::wrap)
 
   /**
+   * Creates a multi-Region primary key that you can replicate in other AWS Regions.
+   *
+   * You can't change the `multiRegion` value after the KMS key is created.
+   *
+   * IMPORTANT: If you change the value of the `multiRegion` property on an existing KMS key, the
+   * update request fails,
+   * regardless of the value of the UpdateReplacePolicy attribute.
+   * This prevents you from accidentally deleting a KMS key by changing an immutable property value.
+   *
+   * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html)
+   */
+  public fun multiRegion(): Boolean? = unwrap(this).getMultiRegion()
+
+  /**
    * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been
    * removed from a CloudFormation stack.
    *
@@ -229,6 +245,19 @@ public interface KeyProps {
      * and a new key is created with the specified value.
      */
     public fun keyUsage(keyUsage: KeyUsage)
+
+    /**
+     * @param multiRegion Creates a multi-Region primary key that you can replicate in other AWS
+     * Regions.
+     * You can't change the `multiRegion` value after the KMS key is created.
+     *
+     * IMPORTANT: If you change the value of the `multiRegion` property on an existing KMS key, the
+     * update request fails,
+     * regardless of the value of the UpdateReplacePolicy attribute.
+     * This prevents you from accidentally deleting a KMS key by changing an immutable property
+     * value.
+     */
+    public fun multiRegion(multiRegion: Boolean)
 
     /**
      * @param pendingWindow Specifies the number of days in the waiting period before AWS KMS
@@ -363,6 +392,21 @@ public interface KeyProps {
     }
 
     /**
+     * @param multiRegion Creates a multi-Region primary key that you can replicate in other AWS
+     * Regions.
+     * You can't change the `multiRegion` value after the KMS key is created.
+     *
+     * IMPORTANT: If you change the value of the `multiRegion` property on an existing KMS key, the
+     * update request fails,
+     * regardless of the value of the UpdateReplacePolicy attribute.
+     * This prevents you from accidentally deleting a KMS key by changing an immutable property
+     * value.
+     */
+    override fun multiRegion(multiRegion: Boolean) {
+      cdkBuilder.multiRegion(multiRegion)
+    }
+
+    /**
      * @param pendingWindow Specifies the number of days in the waiting period before AWS KMS
      * deletes a CMK that has been removed from a CloudFormation stack.
      * When you remove a customer master key (CMK) from a CloudFormation stack, AWS KMS schedules
@@ -427,7 +471,8 @@ public interface KeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kms.KeyProps,
-  ) : CdkObject(cdkObject), KeyProps {
+  ) : CdkObject(cdkObject),
+      KeyProps {
     /**
      * A list of principals to add as key administrators to the key policy.
      *
@@ -497,6 +542,23 @@ public interface KeyProps {
      * Default: KeyUsage.ENCRYPT_DECRYPT
      */
     override fun keyUsage(): KeyUsage? = unwrap(this).getKeyUsage()?.let(KeyUsage::wrap)
+
+    /**
+     * Creates a multi-Region primary key that you can replicate in other AWS Regions.
+     *
+     * You can't change the `multiRegion` value after the KMS key is created.
+     *
+     * IMPORTANT: If you change the value of the `multiRegion` property on an existing KMS key, the
+     * update request fails,
+     * regardless of the value of the UpdateReplacePolicy attribute.
+     * This prevents you from accidentally deleting a KMS key by changing an immutable property
+     * value.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html)
+     */
+    override fun multiRegion(): Boolean? = unwrap(this).getMultiRegion()
 
     /**
      * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been

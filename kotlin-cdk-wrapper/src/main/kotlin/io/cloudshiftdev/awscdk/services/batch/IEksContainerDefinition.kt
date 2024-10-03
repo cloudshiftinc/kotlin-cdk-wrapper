@@ -284,7 +284,8 @@ public interface IEksContainerDefinition : IConstruct {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IEksContainerDefinition,
-  ) : CdkObject(cdkObject), IEksContainerDefinition {
+  ) : CdkObject(cdkObject),
+      IEksContainerDefinition {
     /**
      * Mount a Volume to this container.
      *

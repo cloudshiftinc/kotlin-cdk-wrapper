@@ -71,7 +71,8 @@ public interface CfnTag {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnTag,
-  ) : CdkObject(cdkObject), CfnTag {
+  ) : CdkObject(cdkObject),
+      CfnTag {
     /**
      *
      */

@@ -55,7 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAccessPolicy(
   cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -545,7 +546,8 @@ public open class CfnAccessPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyIdentityProperty,
-    ) : CdkObject(cdkObject), AccessPolicyIdentityProperty {
+    ) : CdkObject(cdkObject),
+        AccessPolicyIdentityProperty {
       /**
        * An IAM role identity.
        *
@@ -722,7 +724,8 @@ public open class CfnAccessPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty,
-    ) : CdkObject(cdkObject), AccessPolicyResourceProperty {
+    ) : CdkObject(cdkObject),
+        AccessPolicyResourceProperty {
       /**
        * Identifies an AWS IoT SiteWise Monitor portal.
        *
@@ -823,7 +826,8 @@ public open class CfnAccessPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty,
-    ) : CdkObject(cdkObject), IamRoleProperty {
+    ) : CdkObject(cdkObject),
+        IamRoleProperty {
       /**
        * The ARN of the IAM role.
        *
@@ -925,7 +929,8 @@ public open class CfnAccessPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty,
-    ) : CdkObject(cdkObject), IamUserProperty {
+    ) : CdkObject(cdkObject),
+        IamUserProperty {
       /**
        * The ARN of the IAM user. For more information, see [IAM
        * ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html) in the *IAM
@@ -1012,7 +1017,8 @@ public open class CfnAccessPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.PortalProperty,
-    ) : CdkObject(cdkObject), PortalProperty {
+    ) : CdkObject(cdkObject),
+        PortalProperty {
       /**
        * The ID of the portal.
        *
@@ -1093,7 +1099,8 @@ public open class CfnAccessPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.ProjectProperty,
-    ) : CdkObject(cdkObject), ProjectProperty {
+    ) : CdkObject(cdkObject),
+        ProjectProperty {
       /**
        * The ID of the project.
        *
@@ -1173,7 +1180,8 @@ public open class CfnAccessPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty,
-    ) : CdkObject(cdkObject), UserProperty {
+    ) : CdkObject(cdkObject),
+        UserProperty {
       /**
        * The IAM Identity Center ID of the user.
        *

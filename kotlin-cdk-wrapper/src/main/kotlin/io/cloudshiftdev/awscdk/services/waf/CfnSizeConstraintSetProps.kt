@@ -115,7 +115,8 @@ public interface CfnSizeConstraintSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSetProps,
-  ) : CdkObject(cdkObject), CfnSizeConstraintSetProps {
+  ) : CdkObject(cdkObject),
+      CfnSizeConstraintSetProps {
     /**
      * The name, if any, of the `SizeConstraintSet` .
      *

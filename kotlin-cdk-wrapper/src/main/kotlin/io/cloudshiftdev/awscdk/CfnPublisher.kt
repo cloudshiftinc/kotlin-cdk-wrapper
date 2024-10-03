@@ -37,7 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPublisher(
   cdkObject: software.amazon.awscdk.CfnPublisher,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -171,7 +172,7 @@ public open class CfnPublisher(
      *
      * For more information, see [Registering your account to publish CloudFormation
      * extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs)
-     * in the *CloudFormation CLI User Guide* .
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html#cfn-cloudformation-publisher-connectionarn)
      * @param connectionArn If you are using a Bitbucket or GitHub account for identity
@@ -229,7 +230,7 @@ public open class CfnPublisher(
      *
      * For more information, see [Registering your account to publish CloudFormation
      * extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs)
-     * in the *CloudFormation CLI User Guide* .
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html#cfn-cloudformation-publisher-connectionarn)
      * @param connectionArn If you are using a Bitbucket or GitHub account for identity

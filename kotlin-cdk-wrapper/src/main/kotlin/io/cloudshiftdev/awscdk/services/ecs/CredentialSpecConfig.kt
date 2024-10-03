@@ -74,7 +74,8 @@ public interface CredentialSpecConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.CredentialSpecConfig,
-  ) : CdkObject(cdkObject), CredentialSpecConfig {
+  ) : CdkObject(cdkObject),
+      CredentialSpecConfig {
     /**
      * Location of the CredSpec file.
      */

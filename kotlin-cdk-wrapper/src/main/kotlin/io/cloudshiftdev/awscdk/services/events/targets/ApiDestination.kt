@@ -42,7 +42,8 @@ import software.amazon.awscdk.services.events.IApiDestination as AmazonAwscdkSer
  */
 public open class ApiDestination(
   cdkObject: software.amazon.awscdk.services.events.targets.ApiDestination,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(apiDestination: CloudshiftdevAwscdkServicesEventsIApiDestination) :
       this(software.amazon.awscdk.services.events.targets.ApiDestination(apiDestination.let(CloudshiftdevAwscdkServicesEventsIApiDestination.Companion::unwrap))
   )

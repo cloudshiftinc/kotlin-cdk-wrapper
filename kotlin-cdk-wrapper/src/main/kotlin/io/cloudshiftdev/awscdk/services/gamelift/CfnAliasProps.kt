@@ -146,7 +146,8 @@ public interface CfnAliasProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.gamelift.CfnAliasProps,
-  ) : CdkObject(cdkObject), CfnAliasProps {
+  ) : CdkObject(cdkObject),
+      CfnAliasProps {
     /**
      * A human-readable description of the alias.
      *

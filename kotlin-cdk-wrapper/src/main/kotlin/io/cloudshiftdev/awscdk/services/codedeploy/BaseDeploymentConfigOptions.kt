@@ -61,7 +61,8 @@ public interface BaseDeploymentConfigOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigOptions,
-  ) : CdkObject(cdkObject), BaseDeploymentConfigOptions {
+  ) : CdkObject(cdkObject),
+      BaseDeploymentConfigOptions {
     /**
      * The physical, human-readable name of the Deployment Configuration.
      *

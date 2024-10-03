@@ -98,7 +98,8 @@ public interface Selector {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.Selector,
-  ) : CdkObject(cdkObject), Selector {
+  ) : CdkObject(cdkObject),
+      Selector {
     /**
      * The Kubernetes labels that the selector should match.
      *

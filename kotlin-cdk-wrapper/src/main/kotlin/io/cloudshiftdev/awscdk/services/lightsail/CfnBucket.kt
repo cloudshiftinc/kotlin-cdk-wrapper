@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBucket(
   cdkObject: software.amazon.awscdk.services.lightsail.CfnBucket,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -732,7 +734,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnBucket.AccessRulesProperty,
-    ) : CdkObject(cdkObject), AccessRulesProperty {
+    ) : CdkObject(cdkObject),
+        AccessRulesProperty {
       /**
        * A Boolean value indicating whether the access control list (ACL) permissions that are
        * applied to individual objects override the `GetObject` option that is currently specified.

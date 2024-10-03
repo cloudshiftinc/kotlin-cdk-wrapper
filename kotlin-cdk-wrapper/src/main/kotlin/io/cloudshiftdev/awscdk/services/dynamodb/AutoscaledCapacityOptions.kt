@@ -139,7 +139,8 @@ public interface AutoscaledCapacityOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.AutoscaledCapacityOptions,
-  ) : CdkObject(cdkObject), AutoscaledCapacityOptions {
+  ) : CdkObject(cdkObject),
+      AutoscaledCapacityOptions {
     /**
      * The maximum allowable capacity.
      */

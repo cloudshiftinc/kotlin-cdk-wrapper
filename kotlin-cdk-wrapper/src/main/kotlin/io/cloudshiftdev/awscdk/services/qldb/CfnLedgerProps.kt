@@ -394,7 +394,8 @@ public interface CfnLedgerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.qldb.CfnLedgerProps,
-  ) : CdkObject(cdkObject), CfnLedgerProps {
+  ) : CdkObject(cdkObject),
+      CfnLedgerProps {
     /**
      * Specifies whether the ledger is protected from being deleted by any user.
      *

@@ -188,7 +188,8 @@ public interface GrpcRetryPolicy : HttpRetryPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.GrpcRetryPolicy,
-  ) : CdkObject(cdkObject), GrpcRetryPolicy {
+  ) : CdkObject(cdkObject),
+      GrpcRetryPolicy {
     /**
      * gRPC events on which to retry.
      *

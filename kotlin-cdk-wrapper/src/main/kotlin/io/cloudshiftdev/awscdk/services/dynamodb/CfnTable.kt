@@ -168,7 +168,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTable(
   cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -435,26 +437,26 @@ public open class CfnTable(
       localSecondaryIndexes(`value`.toList())
 
   /**
-   *
+   * Sets the maximum number of read and write units for the specified on-demand table.
    */
   public open fun onDemandThroughput(): Any? = unwrap(this).getOnDemandThroughput()
 
   /**
-   *
+   * Sets the maximum number of read and write units for the specified on-demand table.
    */
   public open fun onDemandThroughput(`value`: IResolvable) {
     unwrap(this).setOnDemandThroughput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * Sets the maximum number of read and write units for the specified on-demand table.
    */
   public open fun onDemandThroughput(`value`: OnDemandThroughputProperty) {
     unwrap(this).setOnDemandThroughput(`value`.let(OnDemandThroughputProperty.Companion::unwrap))
   }
 
   /**
-   *
+   * Sets the maximum number of read and write units for the specified on-demand table.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("c93adda1db198600681d4d1f3eccea6b279138abfc98c48df8f9700db8fe154c")
@@ -1050,20 +1052,38 @@ public open class CfnTable(
     public fun localSecondaryIndexes(vararg localSecondaryIndexes: Any)
 
     /**
+     * Sets the maximum number of read and write units for the specified on-demand table.
+     *
+     * If you use this property, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits` ,
+     * or both.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
-     * @param onDemandThroughput 
+     * @param onDemandThroughput Sets the maximum number of read and write units for the specified
+     * on-demand table. 
      */
     public fun onDemandThroughput(onDemandThroughput: IResolvable)
 
     /**
+     * Sets the maximum number of read and write units for the specified on-demand table.
+     *
+     * If you use this property, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits` ,
+     * or both.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
-     * @param onDemandThroughput 
+     * @param onDemandThroughput Sets the maximum number of read and write units for the specified
+     * on-demand table. 
      */
     public fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty)
 
     /**
+     * Sets the maximum number of read and write units for the specified on-demand table.
+     *
+     * If you use this property, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits` ,
+     * or both.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
-     * @param onDemandThroughput 
+     * @param onDemandThroughput Sets the maximum number of read and write units for the specified
+     * on-demand table. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c6881b07c0f5d8cd3d66f6ea81853d9f53c08aefb6c5ca373298c0dee1bf8c5d")
@@ -1796,24 +1816,42 @@ public open class CfnTable(
         localSecondaryIndexes(localSecondaryIndexes.toList())
 
     /**
+     * Sets the maximum number of read and write units for the specified on-demand table.
+     *
+     * If you use this property, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits` ,
+     * or both.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
-     * @param onDemandThroughput 
+     * @param onDemandThroughput Sets the maximum number of read and write units for the specified
+     * on-demand table. 
      */
     override fun onDemandThroughput(onDemandThroughput: IResolvable) {
       cdkBuilder.onDemandThroughput(onDemandThroughput.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * Sets the maximum number of read and write units for the specified on-demand table.
+     *
+     * If you use this property, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits` ,
+     * or both.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
-     * @param onDemandThroughput 
+     * @param onDemandThroughput Sets the maximum number of read and write units for the specified
+     * on-demand table. 
      */
     override fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty) {
       cdkBuilder.onDemandThroughput(onDemandThroughput.let(OnDemandThroughputProperty.Companion::unwrap))
     }
 
     /**
+     * Sets the maximum number of read and write units for the specified on-demand table.
+     *
+     * If you use this property, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits` ,
+     * or both.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
-     * @param onDemandThroughput 
+     * @param onDemandThroughput Sets the maximum number of read and write units for the specified
+     * on-demand table. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c6881b07c0f5d8cd3d66f6ea81853d9f53c08aefb6c5ca373298c0dee1bf8c5d")
@@ -2274,7 +2312,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.AttributeDefinitionProperty,
-    ) : CdkObject(cdkObject), AttributeDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        AttributeDefinitionProperty {
       /**
        * A name for the attribute.
        *
@@ -2385,7 +2424,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ContributorInsightsSpecificationProperty,
-    ) : CdkObject(cdkObject), ContributorInsightsSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ContributorInsightsSpecificationProperty {
       /**
        * Indicates whether CloudWatch Contributor Insights are to be enabled (true) or disabled
        * (false).
@@ -2518,7 +2558,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.CsvProperty,
-    ) : CdkObject(cdkObject), CsvProperty {
+    ) : CdkObject(cdkObject),
+        CsvProperty {
       /**
        * The delimiter used for separating items in the CSV file being imported.
        *
@@ -2629,6 +2670,11 @@ public open class CfnTable(
     public fun keySchema(): Any
 
     /**
+     * The maximum number of read and write units for the specified global secondary index.
+     *
+     * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits` ,
+     * or both.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-ondemandthroughput)
      */
     public fun onDemandThroughput(): Any? = unwrap(this).getOnDemandThroughput()
@@ -2731,17 +2777,26 @@ public open class CfnTable(
       public fun keySchema(vararg keySchema: Any)
 
       /**
-       * @param onDemandThroughput the value to be set.
+       * @param onDemandThroughput The maximum number of read and write units for the specified
+       * global secondary index.
+       * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
+       * , or both.
        */
       public fun onDemandThroughput(onDemandThroughput: IResolvable)
 
       /**
-       * @param onDemandThroughput the value to be set.
+       * @param onDemandThroughput The maximum number of read and write units for the specified
+       * global secondary index.
+       * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
+       * , or both.
        */
       public fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty)
 
       /**
-       * @param onDemandThroughput the value to be set.
+       * @param onDemandThroughput The maximum number of read and write units for the specified
+       * global secondary index.
+       * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
+       * , or both.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cae04943fcb210d89eebb92f56cb35dc3b451709e92e9481802f625359c0f6ef")
@@ -2893,21 +2948,30 @@ public open class CfnTable(
       override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
 
       /**
-       * @param onDemandThroughput the value to be set.
+       * @param onDemandThroughput The maximum number of read and write units for the specified
+       * global secondary index.
+       * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
+       * , or both.
        */
       override fun onDemandThroughput(onDemandThroughput: IResolvable) {
         cdkBuilder.onDemandThroughput(onDemandThroughput.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param onDemandThroughput the value to be set.
+       * @param onDemandThroughput The maximum number of read and write units for the specified
+       * global secondary index.
+       * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
+       * , or both.
        */
       override fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty) {
         cdkBuilder.onDemandThroughput(onDemandThroughput.let(OnDemandThroughputProperty.Companion::unwrap))
       }
 
       /**
-       * @param onDemandThroughput the value to be set.
+       * @param onDemandThroughput The maximum number of read and write units for the specified
+       * global secondary index.
+       * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
+       * , or both.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cae04943fcb210d89eebb92f56cb35dc3b451709e92e9481802f625359c0f6ef")
@@ -2988,7 +3052,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.GlobalSecondaryIndexProperty,
-    ) : CdkObject(cdkObject), GlobalSecondaryIndexProperty {
+    ) : CdkObject(cdkObject),
+        GlobalSecondaryIndexProperty {
       /**
        * The settings used to enable or disable CloudWatch Contributor Insights for the specified
        * global secondary index.
@@ -3026,6 +3091,11 @@ public open class CfnTable(
       override fun keySchema(): Any = unwrap(this).getKeySchema()
 
       /**
+       * The maximum number of read and write units for the specified global secondary index.
+       *
+       * If you use this parameter, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits`
+       * , or both.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-ondemandthroughput)
        */
       override fun onDemandThroughput(): Any? = unwrap(this).getOnDemandThroughput()
@@ -3260,7 +3330,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ImportSourceSpecificationProperty,
-    ) : CdkObject(cdkObject), ImportSourceSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ImportSourceSpecificationProperty {
       /**
        * Type of compression to be used on the input coming from the imported table.
        *
@@ -3404,7 +3475,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.InputFormatOptionsProperty,
-    ) : CdkObject(cdkObject), InputFormatOptionsProperty {
+    ) : CdkObject(cdkObject),
+        InputFormatOptionsProperty {
       /**
        * The options for imported source files in CSV format.
        *
@@ -3553,7 +3625,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.KeySchemaProperty,
-    ) : CdkObject(cdkObject), KeySchemaProperty {
+    ) : CdkObject(cdkObject),
+        KeySchemaProperty {
       /**
        * The name of a key attribute.
        *
@@ -3685,7 +3758,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.KinesisStreamSpecificationProperty,
-    ) : CdkObject(cdkObject), KinesisStreamSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        KinesisStreamSpecificationProperty {
       /**
        * The precision for the time and date that the stream was created.
        *
@@ -3965,7 +4039,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.LocalSecondaryIndexProperty,
-    ) : CdkObject(cdkObject), LocalSecondaryIndexProperty {
+    ) : CdkObject(cdkObject),
+        LocalSecondaryIndexProperty {
       /**
        * The name of the local secondary index.
        *
@@ -4024,6 +4099,11 @@ public open class CfnTable(
   }
 
   /**
+   * Sets the maximum number of read and write units for the specified on-demand table.
+   *
+   * If you use this property, you must specify `MaxReadRequestUnits` , `MaxWriteRequestUnits` , or
+   * both.
+   *
    * Example:
    *
    * ```
@@ -4040,11 +4120,23 @@ public open class CfnTable(
    */
   public interface OnDemandThroughputProperty {
     /**
+     * Maximum number of read request units for the specified table.
+     *
+     * To specify a maximum `OnDemandThroughput` on your table, set the value of
+     * `MaxReadRequestUnits` as greater than or equal to 1. To remove the maximum `OnDemandThroughput`
+     * that is currently set on your table, set the value of `MaxReadRequestUnits` to -1.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ondemandthroughput.html#cfn-dynamodb-table-ondemandthroughput-maxreadrequestunits)
      */
     public fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
 
     /**
+     * Maximum number of write request units for the specified table.
+     *
+     * To specify a maximum `OnDemandThroughput` on your table, set the value of
+     * `MaxWriteRequestUnits` as greater than or equal to 1. To remove the maximum `OnDemandThroughput`
+     * that is currently set on your table, set the value of `MaxWriteRequestUnits` to -1.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ondemandthroughput.html#cfn-dynamodb-table-ondemandthroughput-maxwriterequestunits)
      */
     public fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
@@ -4055,12 +4147,20 @@ public open class CfnTable(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxReadRequestUnits the value to be set.
+       * @param maxReadRequestUnits Maximum number of read request units for the specified table.
+       * To specify a maximum `OnDemandThroughput` on your table, set the value of
+       * `MaxReadRequestUnits` as greater than or equal to 1. To remove the maximum
+       * `OnDemandThroughput` that is currently set on your table, set the value of
+       * `MaxReadRequestUnits` to -1.
        */
       public fun maxReadRequestUnits(maxReadRequestUnits: Number)
 
       /**
-       * @param maxWriteRequestUnits the value to be set.
+       * @param maxWriteRequestUnits Maximum number of write request units for the specified table.
+       * To specify a maximum `OnDemandThroughput` on your table, set the value of
+       * `MaxWriteRequestUnits` as greater than or equal to 1. To remove the maximum
+       * `OnDemandThroughput` that is currently set on your table, set the value of
+       * `MaxWriteRequestUnits` to -1.
        */
       public fun maxWriteRequestUnits(maxWriteRequestUnits: Number)
     }
@@ -4071,14 +4171,22 @@ public open class CfnTable(
           software.amazon.awscdk.services.dynamodb.CfnTable.OnDemandThroughputProperty.builder()
 
       /**
-       * @param maxReadRequestUnits the value to be set.
+       * @param maxReadRequestUnits Maximum number of read request units for the specified table.
+       * To specify a maximum `OnDemandThroughput` on your table, set the value of
+       * `MaxReadRequestUnits` as greater than or equal to 1. To remove the maximum
+       * `OnDemandThroughput` that is currently set on your table, set the value of
+       * `MaxReadRequestUnits` to -1.
        */
       override fun maxReadRequestUnits(maxReadRequestUnits: Number) {
         cdkBuilder.maxReadRequestUnits(maxReadRequestUnits)
       }
 
       /**
-       * @param maxWriteRequestUnits the value to be set.
+       * @param maxWriteRequestUnits Maximum number of write request units for the specified table.
+       * To specify a maximum `OnDemandThroughput` on your table, set the value of
+       * `MaxWriteRequestUnits` as greater than or equal to 1. To remove the maximum
+       * `OnDemandThroughput` that is currently set on your table, set the value of
+       * `MaxWriteRequestUnits` to -1.
        */
       override fun maxWriteRequestUnits(maxWriteRequestUnits: Number) {
         cdkBuilder.maxWriteRequestUnits(maxWriteRequestUnits)
@@ -4091,13 +4199,28 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.OnDemandThroughputProperty,
-    ) : CdkObject(cdkObject), OnDemandThroughputProperty {
+    ) : CdkObject(cdkObject),
+        OnDemandThroughputProperty {
       /**
+       * Maximum number of read request units for the specified table.
+       *
+       * To specify a maximum `OnDemandThroughput` on your table, set the value of
+       * `MaxReadRequestUnits` as greater than or equal to 1. To remove the maximum
+       * `OnDemandThroughput` that is currently set on your table, set the value of
+       * `MaxReadRequestUnits` to -1.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ondemandthroughput.html#cfn-dynamodb-table-ondemandthroughput-maxreadrequestunits)
        */
       override fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
 
       /**
+       * Maximum number of write request units for the specified table.
+       *
+       * To specify a maximum `OnDemandThroughput` on your table, set the value of
+       * `MaxWriteRequestUnits` as greater than or equal to 1. To remove the maximum
+       * `OnDemandThroughput` that is currently set on your table, set the value of
+       * `MaxWriteRequestUnits` to -1.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ondemandthroughput.html#cfn-dynamodb-table-ondemandthroughput-maxwriterequestunits)
        */
       override fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
@@ -4193,7 +4316,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.PointInTimeRecoverySpecificationProperty,
-    ) : CdkObject(cdkObject), PointInTimeRecoverySpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PointInTimeRecoverySpecificationProperty {
       /**
        * Indicates whether point in time recovery is enabled (true) or disabled (false) on the
        * table.
@@ -4348,7 +4472,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ProjectionProperty,
-    ) : CdkObject(cdkObject), ProjectionProperty {
+    ) : CdkObject(cdkObject),
+        ProjectionProperty {
       /**
        * Represents the non-key attribute names which will be projected into the index.
        *
@@ -4513,7 +4638,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ProvisionedThroughputProperty,
-    ) : CdkObject(cdkObject), ProvisionedThroughputProperty {
+    ) : CdkObject(cdkObject),
+        ProvisionedThroughputProperty {
       /**
        * The maximum number of strongly consistent reads consumed per second before DynamoDB returns
        * a `ThrottlingException` .
@@ -4676,7 +4802,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ResourcePolicyProperty,
-    ) : CdkObject(cdkObject), ResourcePolicyProperty {
+    ) : CdkObject(cdkObject),
+        ResourcePolicyProperty {
       /**
        * A resource-based policy document that contains permissions to add to the specified DynamoDB
        * table, index, or both.
@@ -4810,7 +4937,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.S3BucketSourceProperty,
-    ) : CdkObject(cdkObject), S3BucketSourceProperty {
+    ) : CdkObject(cdkObject),
+        S3BucketSourceProperty {
       /**
        * The S3 bucket that is being imported from.
        *
@@ -4997,7 +5125,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.SSESpecificationProperty,
-    ) : CdkObject(cdkObject), SSESpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SSESpecificationProperty {
       /**
        * The AWS KMS key that should be used for the AWS KMS encryption.
        *
@@ -5263,7 +5392,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.StreamSpecificationProperty,
-    ) : CdkObject(cdkObject), StreamSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        StreamSpecificationProperty {
       /**
        * Creates or updates a resource-based policy document that contains the permissions for
        * DynamoDB resources, such as a table's streams.
@@ -5432,7 +5562,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.TimeToLiveSpecificationProperty,
-    ) : CdkObject(cdkObject), TimeToLiveSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        TimeToLiveSpecificationProperty {
       /**
        * The name of the TTL attribute used to store the expiration time for items in the table.
        *

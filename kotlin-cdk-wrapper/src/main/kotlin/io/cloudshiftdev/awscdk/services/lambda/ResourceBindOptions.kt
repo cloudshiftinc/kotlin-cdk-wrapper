@@ -60,7 +60,8 @@ public interface ResourceBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.ResourceBindOptions,
-  ) : CdkObject(cdkObject), ResourceBindOptions {
+  ) : CdkObject(cdkObject),
+      ResourceBindOptions {
     /**
      * The name of the CloudFormation property to annotate with asset metadata.
      *

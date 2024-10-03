@@ -96,7 +96,8 @@ public interface CfnServicePrincipalNameProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalNameProps,
-  ) : CdkObject(cdkObject), CfnServicePrincipalNameProps {
+  ) : CdkObject(cdkObject),
+      CfnServicePrincipalNameProps {
     /**
      * The Amazon Resource Name (ARN) that was returned when you called
      * [CreateConnector.html](https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_CreateConnector.html)

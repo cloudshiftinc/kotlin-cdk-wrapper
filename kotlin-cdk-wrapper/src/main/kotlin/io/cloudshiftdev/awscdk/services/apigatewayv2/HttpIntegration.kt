@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
@@ -17,6 +18,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
  * HttpApi httpApi;
  * IntegrationCredentials integrationCredentials;
@@ -35,12 +37,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .parameterMapping(parameterMapping)
  * .payloadFormatVersion(payloadFormatVersion)
  * .secureServerName("secureServerName")
+ * .timeout(Duration.minutes(30))
  * .build();
  * ```
  */
 public open class HttpIntegration(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpIntegration,
-) : Resource(cdkObject), IHttpIntegration {
+) : Resource(cdkObject),
+    IHttpIntegration {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -178,6 +182,18 @@ public open class HttpIntegration(
      * @param secureServerName Specifies the TLS configuration for a private integration. 
      */
     public fun secureServerName(secureServerName: String)
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     *
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response. 
+     */
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -314,6 +330,20 @@ public open class HttpIntegration(
      */
     override fun secureServerName(secureServerName: String) {
       cdkBuilder.secureServerName(secureServerName)
+    }
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     *
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response. 
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.HttpIntegration =

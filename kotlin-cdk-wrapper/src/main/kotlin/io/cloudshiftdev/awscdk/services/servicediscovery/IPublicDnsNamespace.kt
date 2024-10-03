@@ -16,7 +16,8 @@ import kotlin.String
 public interface IPublicDnsNamespace : INamespace {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.IPublicDnsNamespace,
-  ) : CdkObject(cdkObject), IPublicDnsNamespace {
+  ) : CdkObject(cdkObject),
+      IPublicDnsNamespace {
     /**
      * Apply the given removal policy to this resource.
      *

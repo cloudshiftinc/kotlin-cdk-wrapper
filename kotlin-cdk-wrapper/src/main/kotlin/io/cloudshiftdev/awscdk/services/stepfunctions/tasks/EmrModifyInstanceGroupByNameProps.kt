@@ -348,7 +348,8 @@ public interface EmrModifyInstanceGroupByNameProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByNameProps,
-  ) : CdkObject(cdkObject), EmrModifyInstanceGroupByNameProps {
+  ) : CdkObject(cdkObject),
+      EmrModifyInstanceGroupByNameProps {
     /**
      * The ClusterId to update.
      */

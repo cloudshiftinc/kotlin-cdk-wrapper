@@ -69,7 +69,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFHIRDatastore(
   cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -678,7 +680,8 @@ public open class CfnFHIRDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty,
-    ) : CdkObject(cdkObject), CreatedAtProperty {
+    ) : CdkObject(cdkObject),
+        CreatedAtProperty {
       /**
        * Nanoseconds.
        *
@@ -908,7 +911,8 @@ public open class CfnFHIRDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.IdentityProviderConfigurationProperty,
-    ) : CdkObject(cdkObject), IdentityProviderConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        IdentityProviderConfigurationProperty {
       /**
        * The authorization strategy that you selected when you created the data store.
        *
@@ -1071,7 +1075,8 @@ public open class CfnFHIRDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.KmsEncryptionConfigProperty,
-    ) : CdkObject(cdkObject), KmsEncryptionConfigProperty {
+    ) : CdkObject(cdkObject),
+        KmsEncryptionConfigProperty {
       /**
        * The type of customer-managed-key(CMK) used for encryption.
        *
@@ -1171,7 +1176,8 @@ public open class CfnFHIRDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty,
-    ) : CdkObject(cdkObject), PreloadDataConfigProperty {
+    ) : CdkObject(cdkObject),
+        PreloadDataConfigProperty {
       /**
        * The type of preloaded data.
        *
@@ -1294,7 +1300,8 @@ public open class CfnFHIRDatastore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty,
-    ) : CdkObject(cdkObject), SseConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SseConfigurationProperty {
       /**
        * The server-side encryption key configuration for a customer provided encryption key (CMK).
        *

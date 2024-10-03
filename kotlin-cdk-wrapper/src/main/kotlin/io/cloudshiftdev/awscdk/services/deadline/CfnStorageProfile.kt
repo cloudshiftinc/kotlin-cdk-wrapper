@@ -29,9 +29,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnStorageProfile cfnStorageProfile = CfnStorageProfile.Builder.create(this,
  * "MyCfnStorageProfile")
  * .displayName("displayName")
+ * .farmId("farmId")
  * .osFamily("osFamily")
  * // the properties below are optional
- * .farmId("farmId")
  * .fileSystemLocations(List.of(FileSystemLocationProperty.builder()
  * .name("name")
  * .path("path")
@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStorageProfile(
   cdkObject: software.amazon.awscdk.services.deadline.CfnStorageProfile,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -81,7 +82,7 @@ public open class CfnStorageProfile(
   /**
    * The unique identifier of the farm that contains the storage profile.
    */
-  public open fun farmId(): String? = unwrap(this).getFarmId()
+  public open fun farmId(): String = unwrap(this).getFarmId()
 
   /**
    * The unique identifier of the farm that contains the storage profile.
@@ -144,6 +145,11 @@ public open class CfnStorageProfile(
     /**
      * The display name of the storage profile summary to update.
      *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-storageprofile.html#cfn-deadline-storageprofile-displayname)
      * @param displayName The display name of the storage profile summary to update. 
      */
@@ -202,6 +208,11 @@ public open class CfnStorageProfile(
 
     /**
      * The display name of the storage profile summary to update.
+     *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-storageprofile.html#cfn-deadline-storageprofile-displayname)
      * @param displayName The display name of the storage profile summary to update. 
@@ -382,7 +393,8 @@ public open class CfnStorageProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnStorageProfile.FileSystemLocationProperty,
-    ) : CdkObject(cdkObject), FileSystemLocationProperty {
+    ) : CdkObject(cdkObject),
+        FileSystemLocationProperty {
       /**
        * The location name.
        *

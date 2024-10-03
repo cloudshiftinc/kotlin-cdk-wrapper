@@ -720,7 +720,8 @@ public interface CfnEndpointConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfigProps,
-  ) : CdkObject(cdkObject), CfnEndpointConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnEndpointConfigProps {
     /**
      * Specifies configuration for how an endpoint performs asynchronous inference.
      *

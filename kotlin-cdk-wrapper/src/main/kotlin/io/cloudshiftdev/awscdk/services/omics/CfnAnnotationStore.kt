@@ -60,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAnnotationStore(
   cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -591,7 +593,8 @@ public open class CfnAnnotationStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty,
-    ) : CdkObject(cdkObject), ReferenceItemProperty {
+    ) : CdkObject(cdkObject),
+        ReferenceItemProperty {
       /**
        * The reference's ARN.
        *
@@ -692,7 +695,8 @@ public open class CfnAnnotationStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty,
-    ) : CdkObject(cdkObject), SseConfigProperty {
+    ) : CdkObject(cdkObject),
+        SseConfigProperty {
       /**
        * An encryption key ARN.
        *
@@ -813,7 +817,8 @@ public open class CfnAnnotationStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty,
-    ) : CdkObject(cdkObject), StoreOptionsProperty {
+    ) : CdkObject(cdkObject),
+        StoreOptionsProperty {
       /**
        * Formatting options for a TSV file.
        *
@@ -948,7 +953,8 @@ public open class CfnAnnotationStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.TsvStoreOptionsProperty,
-    ) : CdkObject(cdkObject), TsvStoreOptionsProperty {
+    ) : CdkObject(cdkObject),
+        TsvStoreOptionsProperty {
       /**
        * The store's annotation type.
        *

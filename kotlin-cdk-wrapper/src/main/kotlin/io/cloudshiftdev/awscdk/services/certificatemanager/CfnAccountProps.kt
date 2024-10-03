@@ -125,7 +125,8 @@ public interface CfnAccountProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.certificatemanager.CfnAccountProps,
-  ) : CdkObject(cdkObject), CfnAccountProps {
+  ) : CdkObject(cdkObject),
+      CfnAccountProps {
     /**
      * Object containing expiration events options associated with an AWS account .
      *

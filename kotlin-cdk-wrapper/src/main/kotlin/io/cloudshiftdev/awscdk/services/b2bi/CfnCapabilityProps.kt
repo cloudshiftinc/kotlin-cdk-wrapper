@@ -266,7 +266,8 @@ public interface CfnCapabilityProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.b2bi.CfnCapabilityProps,
-  ) : CdkObject(cdkObject), CfnCapabilityProps {
+  ) : CdkObject(cdkObject),
+      CfnCapabilityProps {
     /**
      * Specifies a structure that contains the details for a capability.
      *

@@ -388,7 +388,8 @@ public interface CfnTopicProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.quicksight.CfnTopicProps,
-  ) : CdkObject(cdkObject), CfnTopicProps {
+  ) : CdkObject(cdkObject),
+      CfnTopicProps {
     /**
      * The ID of the AWS account that you want to create a topic in.
      *

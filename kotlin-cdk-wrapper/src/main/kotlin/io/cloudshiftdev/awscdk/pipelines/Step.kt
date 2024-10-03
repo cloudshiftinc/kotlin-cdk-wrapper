@@ -33,7 +33,8 @@ import kotlin.collections.List
  * {
  * // This is where you control what type of Action gets added to the
  * // CodePipeline
- * stage.addAction(JenkinsAction.Builder.create()
+ * stage.addAction(
+ * JenkinsAction.Builder.create()
  * // Copy 'actionName' and 'runOrder' from the options
  * .actionName(options.getActionName())
  * .runOrder(options.getRunOrder())
@@ -51,7 +52,8 @@ import kotlin.collections.List
  */
 public abstract class Step(
   cdkObject: software.amazon.awscdk.pipelines.Step,
-) : CdkObject(cdkObject), IFileSetProducer {
+) : CdkObject(cdkObject),
+    IFileSetProducer {
   /**
    * Add a dependency on another step.
    *

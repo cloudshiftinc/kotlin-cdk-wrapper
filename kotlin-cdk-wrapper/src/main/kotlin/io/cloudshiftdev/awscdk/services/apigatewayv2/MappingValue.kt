@@ -28,7 +28,8 @@ import kotlin.String
  */
 public open class MappingValue(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.MappingValue,
-) : CdkObject(cdkObject), IMappingValue {
+) : CdkObject(cdkObject),
+    IMappingValue {
   /**
    * Represents a Mapping Value.
    */

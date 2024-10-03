@@ -39,7 +39,8 @@ public interface IAlias : IFunction {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.IAlias,
-  ) : CdkObject(cdkObject), IAlias {
+  ) : CdkObject(cdkObject),
+      IAlias {
     /**
      * Adds an event source to this function.
      *
@@ -240,12 +241,31 @@ public interface IAlias : IFunction {
         unwrap(this).grantInvokeCompositePrincipal(compositePrincipal.let(CompositePrincipal.Companion::unwrap)).map(Grant::wrap)
 
     /**
+     * Grant the given identity permissions to invoke the $LATEST version or unqualified version of
+     * this Lambda.
+     *
+     * @param identity 
+     */
+    override fun grantInvokeLatestVersion(identity: IGrantable): Grant =
+        unwrap(this).grantInvokeLatestVersion(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+    /**
      * Grant the given identity permissions to invoke this Lambda Function URL.
      *
      * @param identity 
      */
     override fun grantInvokeUrl(identity: IGrantable): Grant =
         unwrap(this).grantInvokeUrl(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+    /**
+     * Grant the given identity permissions to invoke the given version of this Lambda.
+     *
+     * @param identity 
+     * @param version 
+     */
+    override fun grantInvokeVersion(identity: IGrantable, version: IVersion): Grant =
+        unwrap(this).grantInvokeVersion(identity.let(IGrantable.Companion::unwrap),
+        version.let(IVersion.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * The principal to grant permissions to.

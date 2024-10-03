@@ -19,7 +19,8 @@ public interface IMachineImage {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IMachineImage,
-  ) : CdkObject(cdkObject), IMachineImage {
+  ) : CdkObject(cdkObject),
+      IMachineImage {
     /**
      * Return the image to use in the given context.
      *

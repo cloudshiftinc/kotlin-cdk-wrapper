@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRepository(
   cdkObject: software.amazon.awscdk.services.ecr.CfnRepository,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecr.CfnRepository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -721,7 +723,7 @@ public open class CfnRepository(
    *
    * By default, when no encryption configuration is set or the `AES256` encryption type is used,
    * Amazon ECR uses server-side encryption with Amazon S3-managed encryption keys which encrypts your
-   * data at rest using an AES-256 encryption algorithm. This does not require any action on your part.
+   * data at rest using an AES256 encryption algorithm. This does not require any action on your part.
    *
    * For more control over the encryption of the contents of your repository, you can use
    * server-side encryption with AWS Key Management Service key stored in AWS Key Management Service (
@@ -752,17 +754,21 @@ public open class CfnRepository(
      * If you use the `KMS` encryption type, the contents of the repository will be encrypted using
      * server-side encryption with AWS Key Management Service key stored in AWS KMS . When you use AWS
      * KMS to encrypt your data, you can either use the default AWS managed AWS KMS key for Amazon ECR,
-     * or specify your own AWS KMS key, which you already created. For more information, see
-     * [Protecting data using server-side encryption with an AWS KMS key stored in AWS Key Management
-     * Service (SSE-KMS)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in
-     * the *Amazon Simple Storage Service Console Developer Guide* .
+     * or specify your own AWS KMS key, which you already created.
+     *
+     * If you use the `KMS_DSSE` encryption type, the contents of the repository will be encrypted
+     * with two layers of encryption using server-side encryption with the AWS KMS Management Service
+     * key stored in AWS KMS . Similar to the `KMS` encryption type, you can either use the default AWS
+     * managed AWS KMS key for Amazon ECR, or specify your own AWS KMS key, which you've already
+     * created.
      *
      * If you use the `AES256` encryption type, Amazon ECR uses server-side encryption with Amazon
-     * S3-managed encryption keys which encrypts the images in the repository using an AES-256
-     * encryption algorithm. For more information, see [Protecting data using server-side encryption
-     * with Amazon S3-managed encryption keys
-     * (SSE-S3)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in the
-     * *Amazon Simple Storage Service Console Developer Guide* .
+     * S3-managed encryption keys which encrypts the images in the repository using an AES256
+     * encryption algorithm.
+     *
+     * For more information, see [Amazon ECR encryption at
+     * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
+     * *Amazon Elastic Container Registry User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-encryptionconfiguration.html#cfn-ecr-repository-encryptionconfiguration-encryptiontype)
      */
@@ -789,18 +795,21 @@ public open class CfnRepository(
        * If you use the `KMS` encryption type, the contents of the repository will be encrypted
        * using server-side encryption with AWS Key Management Service key stored in AWS KMS . When you
        * use AWS KMS to encrypt your data, you can either use the default AWS managed AWS KMS key for
-       * Amazon ECR, or specify your own AWS KMS key, which you already created. For more information,
-       * see [Protecting data using server-side encryption with an AWS KMS key stored in AWS Key
-       * Management Service
-       * (SSE-KMS)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the
-       * *Amazon Simple Storage Service Console Developer Guide* .
+       * Amazon ECR, or specify your own AWS KMS key, which you already created.
+       *
+       * If you use the `KMS_DSSE` encryption type, the contents of the repository will be encrypted
+       * with two layers of encryption using server-side encryption with the AWS KMS Management Service
+       * key stored in AWS KMS . Similar to the `KMS` encryption type, you can either use the default
+       * AWS managed AWS KMS key for Amazon ECR, or specify your own AWS KMS key, which you've already
+       * created.
        *
        * If you use the `AES256` encryption type, Amazon ECR uses server-side encryption with Amazon
-       * S3-managed encryption keys which encrypts the images in the repository using an AES-256
-       * encryption algorithm. For more information, see [Protecting data using server-side encryption
-       * with Amazon S3-managed encryption keys
-       * (SSE-S3)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in
-       * the *Amazon Simple Storage Service Console Developer Guide* .
+       * S3-managed encryption keys which encrypts the images in the repository using an AES256
+       * encryption algorithm.
+       *
+       * For more information, see [Amazon ECR encryption at
+       * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
+       * *Amazon Elastic Container Registry User Guide* .
        */
       public fun encryptionType(encryptionType: String)
 
@@ -825,18 +834,21 @@ public open class CfnRepository(
        * If you use the `KMS` encryption type, the contents of the repository will be encrypted
        * using server-side encryption with AWS Key Management Service key stored in AWS KMS . When you
        * use AWS KMS to encrypt your data, you can either use the default AWS managed AWS KMS key for
-       * Amazon ECR, or specify your own AWS KMS key, which you already created. For more information,
-       * see [Protecting data using server-side encryption with an AWS KMS key stored in AWS Key
-       * Management Service
-       * (SSE-KMS)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the
-       * *Amazon Simple Storage Service Console Developer Guide* .
+       * Amazon ECR, or specify your own AWS KMS key, which you already created.
+       *
+       * If you use the `KMS_DSSE` encryption type, the contents of the repository will be encrypted
+       * with two layers of encryption using server-side encryption with the AWS KMS Management Service
+       * key stored in AWS KMS . Similar to the `KMS` encryption type, you can either use the default
+       * AWS managed AWS KMS key for Amazon ECR, or specify your own AWS KMS key, which you've already
+       * created.
        *
        * If you use the `AES256` encryption type, Amazon ECR uses server-side encryption with Amazon
-       * S3-managed encryption keys which encrypts the images in the repository using an AES-256
-       * encryption algorithm. For more information, see [Protecting data using server-side encryption
-       * with Amazon S3-managed encryption keys
-       * (SSE-S3)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in
-       * the *Amazon Simple Storage Service Console Developer Guide* .
+       * S3-managed encryption keys which encrypts the images in the repository using an AES256
+       * encryption algorithm.
+       *
+       * For more information, see [Amazon ECR encryption at
+       * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
+       * *Amazon Elastic Container Registry User Guide* .
        */
       override fun encryptionType(encryptionType: String) {
         cdkBuilder.encryptionType(encryptionType)
@@ -860,25 +872,29 @@ public open class CfnRepository(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionConfigurationProperty {
       /**
        * The encryption type to use.
        *
        * If you use the `KMS` encryption type, the contents of the repository will be encrypted
        * using server-side encryption with AWS Key Management Service key stored in AWS KMS . When you
        * use AWS KMS to encrypt your data, you can either use the default AWS managed AWS KMS key for
-       * Amazon ECR, or specify your own AWS KMS key, which you already created. For more information,
-       * see [Protecting data using server-side encryption with an AWS KMS key stored in AWS Key
-       * Management Service
-       * (SSE-KMS)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html) in the
-       * *Amazon Simple Storage Service Console Developer Guide* .
+       * Amazon ECR, or specify your own AWS KMS key, which you already created.
+       *
+       * If you use the `KMS_DSSE` encryption type, the contents of the repository will be encrypted
+       * with two layers of encryption using server-side encryption with the AWS KMS Management Service
+       * key stored in AWS KMS . Similar to the `KMS` encryption type, you can either use the default
+       * AWS managed AWS KMS key for Amazon ECR, or specify your own AWS KMS key, which you've already
+       * created.
        *
        * If you use the `AES256` encryption type, Amazon ECR uses server-side encryption with Amazon
-       * S3-managed encryption keys which encrypts the images in the repository using an AES-256
-       * encryption algorithm. For more information, see [Protecting data using server-side encryption
-       * with Amazon S3-managed encryption keys
-       * (SSE-S3)](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html) in
-       * the *Amazon Simple Storage Service Console Developer Guide* .
+       * S3-managed encryption keys which encrypts the images in the repository using an AES256
+       * encryption algorithm.
+       *
+       * For more information, see [Amazon ECR encryption at
+       * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the
+       * *Amazon Elastic Container Registry User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-encryptionconfiguration.html#cfn-ecr-repository-encryptionconfiguration-encryptiontype)
        */
@@ -1002,7 +1018,8 @@ public open class CfnRepository(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty,
-    ) : CdkObject(cdkObject), ImageScanningConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ImageScanningConfigurationProperty {
       /**
        * The setting that determines whether images are scanned after being pushed to a repository.
        *
@@ -1117,7 +1134,8 @@ public open class CfnRepository(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty,
-    ) : CdkObject(cdkObject), LifecyclePolicyProperty {
+    ) : CdkObject(cdkObject),
+        LifecyclePolicyProperty {
       /**
        * The JSON repository policy text to apply to the repository.
        *

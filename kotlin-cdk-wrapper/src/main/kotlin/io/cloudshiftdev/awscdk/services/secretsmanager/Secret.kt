@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Secret(
   cdkObject: software.amazon.awscdk.services.secretsmanager.Secret,
-) : Resource(cdkObject), ISecret {
+) : Resource(cdkObject),
+    ISecret {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.secretsmanager.Secret(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

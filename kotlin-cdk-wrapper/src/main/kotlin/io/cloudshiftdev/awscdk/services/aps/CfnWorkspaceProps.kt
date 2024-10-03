@@ -249,7 +249,8 @@ public interface CfnWorkspaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.aps.CfnWorkspaceProps,
-  ) : CdkObject(cdkObject), CfnWorkspaceProps {
+  ) : CdkObject(cdkObject),
+      CfnWorkspaceProps {
     /**
      * The alert manager definition, a YAML configuration for the alert manager in your Amazon
      * Managed Service for Prometheus workspace.

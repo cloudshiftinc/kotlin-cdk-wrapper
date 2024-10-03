@@ -202,7 +202,8 @@ public interface CfnExtensionAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.CfnExtensionAssociationProps,
-  ) : CdkObject(cdkObject), CfnExtensionAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnExtensionAssociationProps {
     /**
      * The name, the ID, or the Amazon Resource Name (ARN) of the extension.
      *

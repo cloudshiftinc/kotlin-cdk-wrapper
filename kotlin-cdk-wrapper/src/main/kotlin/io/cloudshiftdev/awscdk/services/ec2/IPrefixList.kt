@@ -22,7 +22,8 @@ public interface IPrefixList : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IPrefixList,
-  ) : CdkObject(cdkObject), IPrefixList {
+  ) : CdkObject(cdkObject),
+      IPrefixList {
     /**
      * Apply the given removal policy to this resource.
      *

@@ -232,7 +232,8 @@ public interface IResource : io.cloudshiftdev.awscdk.IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IResource,
-  ) : CdkObject(cdkObject), IResource {
+  ) : CdkObject(cdkObject),
+      IResource {
     /**
      * Adds an OPTIONS method to this resource which responds to Cross-Origin Resource Sharing
      * (CORS) preflight requests.

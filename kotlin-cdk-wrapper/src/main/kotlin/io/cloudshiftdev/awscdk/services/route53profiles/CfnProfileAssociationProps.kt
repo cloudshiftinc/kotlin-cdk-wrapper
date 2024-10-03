@@ -57,7 +57,7 @@ public interface CfnProfileAssociationProps {
   public fun profileId(): String
 
   /**
-   * The Amazon Resource Name (ARN) of the VPC.
+   * The ID of the VPC.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53profiles-profileassociation.html#cfn-route53profiles-profileassociation-resourceid)
    */
@@ -91,7 +91,7 @@ public interface CfnProfileAssociationProps {
     public fun profileId(profileId: String)
 
     /**
-     * @param resourceId The Amazon Resource Name (ARN) of the VPC. 
+     * @param resourceId The ID of the VPC. 
      */
     public fun resourceId(resourceId: String)
 
@@ -133,7 +133,7 @@ public interface CfnProfileAssociationProps {
     }
 
     /**
-     * @param resourceId The Amazon Resource Name (ARN) of the VPC. 
+     * @param resourceId The ID of the VPC. 
      */
     override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
@@ -157,7 +157,8 @@ public interface CfnProfileAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53profiles.CfnProfileAssociationProps,
-  ) : CdkObject(cdkObject), CfnProfileAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnProfileAssociationProps {
     /**
      * The Amazon Resource Name (ARN) of the profile association to a VPC.
      *
@@ -180,7 +181,7 @@ public interface CfnProfileAssociationProps {
     override fun profileId(): String = unwrap(this).getProfileId()
 
     /**
-     * The Amazon Resource Name (ARN) of the VPC.
+     * The ID of the VPC.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53profiles-profileassociation.html#cfn-route53profiles-profileassociation-resourceid)
      */

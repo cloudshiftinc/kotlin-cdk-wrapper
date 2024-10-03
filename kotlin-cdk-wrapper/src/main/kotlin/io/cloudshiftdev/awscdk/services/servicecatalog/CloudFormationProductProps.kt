@@ -274,7 +274,8 @@ public interface CloudFormationProductProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationProductProps,
-  ) : CdkObject(cdkObject), CloudFormationProductProps {
+  ) : CdkObject(cdkObject),
+      CloudFormationProductProps {
     /**
      * The description of the product.
      *

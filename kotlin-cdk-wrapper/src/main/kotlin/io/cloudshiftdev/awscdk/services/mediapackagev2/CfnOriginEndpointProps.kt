@@ -26,10 +26,37 @@ import kotlin.jvm.JvmName
  * CfnOriginEndpointProps cfnOriginEndpointProps = CfnOriginEndpointProps.builder()
  * .channelGroupName("channelGroupName")
  * .channelName("channelName")
+ * .containerType("containerType")
  * .originEndpointName("originEndpointName")
  * // the properties below are optional
- * .containerType("containerType")
+ * .dashManifests(List.of(DashManifestConfigurationProperty.builder()
+ * .manifestName("manifestName")
+ * // the properties below are optional
+ * .drmSignaling("drmSignaling")
+ * .filterConfiguration(FilterConfigurationProperty.builder()
+ * .end("end")
+ * .manifestFilter("manifestFilter")
+ * .start("start")
+ * .timeDelaySeconds(123)
+ * .build())
+ * .manifestWindowSeconds(123)
+ * .minBufferTimeSeconds(123)
+ * .minUpdatePeriodSeconds(123)
+ * .periodTriggers(List.of("periodTriggers"))
+ * .scteDash(ScteDashProperty.builder()
+ * .adMarkerDash("adMarkerDash")
+ * .build())
+ * .segmentTemplateFormat("segmentTemplateFormat")
+ * .suggestedPresentationDelaySeconds(123)
+ * .utcTiming(DashUtcTimingProperty.builder()
+ * .timingMode("timingMode")
+ * .timingSource("timingSource")
+ * .build())
+ * .build()))
  * .description("description")
+ * .forceEndpointErrorConfiguration(ForceEndpointErrorConfigurationProperty.builder()
+ * .endpointErrorConditions(List.of("endpointErrorConditions"))
+ * .build())
  * .hlsManifests(List.of(HlsManifestConfigurationProperty.builder()
  * .manifestName("manifestName")
  * // the properties below are optional
@@ -123,7 +150,14 @@ public interface CfnOriginEndpointProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-containertype)
    */
-  public fun containerType(): String? = unwrap(this).getContainerType()
+  public fun containerType(): String
+
+  /**
+   * A DASH manifest configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-dashmanifests)
+   */
+  public fun dashManifests(): Any? = unwrap(this).getDashManifests()
 
   /**
    * The description associated with the origin endpoint.
@@ -131,6 +165,14 @@ public interface CfnOriginEndpointProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * The failover settings for the endpoint.</p>.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
+   */
+  public fun forceEndpointErrorConfiguration(): Any? =
+      unwrap(this).getForceEndpointErrorConfiguration()
 
   /**
    * The HLS manfiests associated with the origin endpoint configuration.
@@ -194,14 +236,48 @@ public interface CfnOriginEndpointProps {
     public fun channelName(channelName: String)
 
     /**
-     * @param containerType The container type associated with the origin endpoint configuration.
+     * @param containerType The container type associated with the origin endpoint configuration. 
      */
     public fun containerType(containerType: String)
+
+    /**
+     * @param dashManifests A DASH manifest configuration.
+     */
+    public fun dashManifests(dashManifests: IResolvable)
+
+    /**
+     * @param dashManifests A DASH manifest configuration.
+     */
+    public fun dashManifests(dashManifests: List<Any>)
+
+    /**
+     * @param dashManifests A DASH manifest configuration.
+     */
+    public fun dashManifests(vararg dashManifests: Any)
 
     /**
      * @param description The description associated with the origin endpoint.
      */
     public fun description(description: String)
+
+    /**
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     */
+    public fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: IResolvable)
+
+    /**
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     */
+    public
+        fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty)
+
+    /**
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2c860eeca035db7ada9cfea1747ec40f43d4a9093396800a7d6cbcb1de92bd6d")
+    public
+        fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration.
@@ -298,11 +374,31 @@ public interface CfnOriginEndpointProps {
     }
 
     /**
-     * @param containerType The container type associated with the origin endpoint configuration.
+     * @param containerType The container type associated with the origin endpoint configuration. 
      */
     override fun containerType(containerType: String) {
       cdkBuilder.containerType(containerType)
     }
+
+    /**
+     * @param dashManifests A DASH manifest configuration.
+     */
+    override fun dashManifests(dashManifests: IResolvable) {
+      cdkBuilder.dashManifests(dashManifests.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param dashManifests A DASH manifest configuration.
+     */
+    override fun dashManifests(dashManifests: List<Any>) {
+      cdkBuilder.dashManifests(dashManifests.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param dashManifests A DASH manifest configuration.
+     */
+    override fun dashManifests(vararg dashManifests: Any): Unit =
+        dashManifests(dashManifests.toList())
 
     /**
      * @param description The description associated with the origin endpoint.
@@ -310,6 +406,31 @@ public interface CfnOriginEndpointProps {
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     */
+    override fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: IResolvable) {
+      cdkBuilder.forceEndpointErrorConfiguration(forceEndpointErrorConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     */
+    override
+        fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty) {
+      cdkBuilder.forceEndpointErrorConfiguration(forceEndpointErrorConfiguration.let(CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2c860eeca035db7ada9cfea1747ec40f43d4a9093396800a7d6cbcb1de92bd6d")
+    override
+        fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        forceEndpointErrorConfiguration(CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty(forceEndpointErrorConfiguration))
 
     /**
      * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration.
@@ -410,7 +531,8 @@ public interface CfnOriginEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointProps,
-  ) : CdkObject(cdkObject), CfnOriginEndpointProps {
+  ) : CdkObject(cdkObject),
+      CfnOriginEndpointProps {
     /**
      * The name of the channel group associated with the origin endpoint configuration.
      *
@@ -430,7 +552,14 @@ public interface CfnOriginEndpointProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-containertype)
      */
-    override fun containerType(): String? = unwrap(this).getContainerType()
+    override fun containerType(): String = unwrap(this).getContainerType()
+
+    /**
+     * A DASH manifest configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-dashmanifests)
+     */
+    override fun dashManifests(): Any? = unwrap(this).getDashManifests()
 
     /**
      * The description associated with the origin endpoint.
@@ -438,6 +567,14 @@ public interface CfnOriginEndpointProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The failover settings for the endpoint.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
+     */
+    override fun forceEndpointErrorConfiguration(): Any? =
+        unwrap(this).getForceEndpointErrorConfiguration()
 
     /**
      * The HLS manfiests associated with the origin endpoint configuration.

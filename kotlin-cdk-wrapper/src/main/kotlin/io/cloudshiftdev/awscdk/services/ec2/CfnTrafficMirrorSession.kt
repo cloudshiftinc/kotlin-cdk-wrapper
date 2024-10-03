@@ -57,7 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTrafficMirrorSession(
   cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorSession,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -288,8 +290,8 @@ public open class CfnTrafficMirrorSession(
      * The VXLAN ID for the Traffic Mirror session.
      *
      * For more information about the VXLAN protocol, see [RFC
-     * 7348](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc7348) . If you do not specify a
-     * `VirtualNetworkId` , an account-wide unique id is chosen at random.
+     * 7348](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc7348) . If you do not
+     * specify a `VirtualNetworkId` , an account-wide unique ID is chosen at random.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html#cfn-ec2-trafficmirrorsession-virtualnetworkid)
      * @param virtualNetworkId The VXLAN ID for the Traffic Mirror session. 
@@ -404,8 +406,8 @@ public open class CfnTrafficMirrorSession(
      * The VXLAN ID for the Traffic Mirror session.
      *
      * For more information about the VXLAN protocol, see [RFC
-     * 7348](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc7348) . If you do not specify a
-     * `VirtualNetworkId` , an account-wide unique id is chosen at random.
+     * 7348](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc7348) . If you do not
+     * specify a `VirtualNetworkId` , an account-wide unique ID is chosen at random.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html#cfn-ec2-trafficmirrorsession-virtualnetworkid)
      * @param virtualNetworkId The VXLAN ID for the Traffic Mirror session. 

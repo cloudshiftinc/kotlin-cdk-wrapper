@@ -95,7 +95,8 @@ public interface CfnNetworkAclProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclProps,
-  ) : CdkObject(cdkObject), CfnNetworkAclProps {
+  ) : CdkObject(cdkObject),
+      CfnNetworkAclProps {
     /**
      * The tags for the network ACL.
      *

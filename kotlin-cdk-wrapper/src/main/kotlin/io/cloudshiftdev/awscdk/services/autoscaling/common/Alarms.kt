@@ -72,7 +72,8 @@ public interface Alarms {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.common.Alarms,
-  ) : CdkObject(cdkObject), Alarms {
+  ) : CdkObject(cdkObject),
+      Alarms {
     /**
      *
      */

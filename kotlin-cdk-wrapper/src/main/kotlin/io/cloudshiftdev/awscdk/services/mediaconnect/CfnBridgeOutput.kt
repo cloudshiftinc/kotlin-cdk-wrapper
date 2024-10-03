@@ -43,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBridgeOutput(
   cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -392,7 +393,8 @@ public open class CfnBridgeOutput(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput.BridgeNetworkOutputProperty,
-    ) : CdkObject(cdkObject), BridgeNetworkOutputProperty {
+    ) : CdkObject(cdkObject),
+        BridgeNetworkOutputProperty {
       /**
        * The network output IP Address.
        *

@@ -122,7 +122,8 @@ public interface CfnIPAMPoolCidrProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPoolCidrProps,
-  ) : CdkObject(cdkObject), CfnIPAMPoolCidrProps {
+  ) : CdkObject(cdkObject),
+      CfnIPAMPoolCidrProps {
     /**
      * The CIDR provisioned to the IPAM pool.
      *

@@ -5,94 +5,33 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
 
-/**
- * Query to AMI context provider.
- *
- * Example:
- *
- * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.cloudassembly.schema.*;
- * AmiContextQuery amiContextQuery = AmiContextQuery.builder()
- * .account("account")
- * .filters(Map.of(
- * "filtersKey", List.of("filters")))
- * .region("region")
- * // the properties below are optional
- * .lookupRoleArn("lookupRoleArn")
- * .owners(List.of("owners"))
- * .build();
- * ```
- */
-public interface AmiContextQuery {
-  /**
-   * Account to query.
-   */
-  public fun account(): String
-
-  /**
-   * Filters to DescribeImages call.
-   */
+public interface AmiContextQuery : ContextLookupRoleOptions {
   public fun filters(): Map<String, List<String>>
 
-  /**
-   * The ARN of the role that should be used to look up the missing values.
-   *
-   * Default: - None
-   */
-  public fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
-
-  /**
-   * Owners to DescribeImages call.
-   *
-   * Default: - All owners
-   */
   public fun owners(): List<String> = unwrap(this).getOwners() ?: emptyList()
 
-  /**
-   * Region to query.
-   */
-  public fun region(): String
-
-  /**
-   * A builder for [AmiContextQuery]
-   */
   @CdkDslMarker
   public interface Builder {
-    /**
-     * @param account Account to query. 
-     */
     public fun account(account: String)
 
-    /**
-     * @param filters Filters to DescribeImages call. 
-     */
+    public fun assumeRoleAdditionalOptions(assumeRoleAdditionalOptions: Map<String, Any>)
+
     public fun filters(filters: Map<String, List<String>>)
 
-    /**
-     * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
-     */
     public fun lookupRoleArn(lookupRoleArn: String)
 
-    /**
-     * @param owners Owners to DescribeImages call.
-     */
+    public fun lookupRoleExternalId(lookupRoleExternalId: String)
+
     public fun owners(owners: List<String>)
 
-    /**
-     * @param owners Owners to DescribeImages call.
-     */
     public fun owners(vararg owners: String)
 
-    /**
-     * @param region Region to query. 
-     */
     public fun region(region: String)
   }
 
@@ -100,42 +39,32 @@ public interface AmiContextQuery {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.AmiContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.AmiContextQuery.builder()
 
-    /**
-     * @param account Account to query. 
-     */
     override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    /**
-     * @param filters Filters to DescribeImages call. 
-     */
+    override fun assumeRoleAdditionalOptions(assumeRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.assumeRoleAdditionalOptions(assumeRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
     override fun filters(filters: Map<String, List<String>>) {
       cdkBuilder.filters(filters)
     }
 
-    /**
-     * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
-     */
     override fun lookupRoleArn(lookupRoleArn: String) {
       cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    /**
-     * @param owners Owners to DescribeImages call.
-     */
+    override fun lookupRoleExternalId(lookupRoleExternalId: String) {
+      cdkBuilder.lookupRoleExternalId(lookupRoleExternalId)
+    }
+
     override fun owners(owners: List<String>) {
       cdkBuilder.owners(owners)
     }
 
-    /**
-     * @param owners Owners to DescribeImages call.
-     */
     override fun owners(vararg owners: String): Unit = owners(owners.toList())
 
-    /**
-     * @param region Region to query. 
-     */
     override fun region(region: String) {
       cdkBuilder.region(region)
     }
@@ -146,34 +75,21 @@ public interface AmiContextQuery {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cloudassembly.schema.AmiContextQuery,
-  ) : CdkObject(cdkObject), AmiContextQuery {
-    /**
-     * Account to query.
-     */
+  ) : CdkObject(cdkObject),
+      AmiContextQuery {
     override fun account(): String = unwrap(this).getAccount()
 
-    /**
-     * Filters to DescribeImages call.
-     */
+    override fun assumeRoleAdditionalOptions(): Map<String, Any> =
+        unwrap(this).getAssumeRoleAdditionalOptions() ?: emptyMap()
+
     override fun filters(): Map<String, List<String>> = unwrap(this).getFilters() ?: emptyMap()
 
-    /**
-     * The ARN of the role that should be used to look up the missing values.
-     *
-     * Default: - None
-     */
     override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
-    /**
-     * Owners to DescribeImages call.
-     *
-     * Default: - All owners
-     */
+    override fun lookupRoleExternalId(): String? = unwrap(this).getLookupRoleExternalId()
+
     override fun owners(): List<String> = unwrap(this).getOwners() ?: emptyList()
 
-    /**
-     * Region to query.
-     */
     override fun region(): String = unwrap(this).getRegion()
   }
 

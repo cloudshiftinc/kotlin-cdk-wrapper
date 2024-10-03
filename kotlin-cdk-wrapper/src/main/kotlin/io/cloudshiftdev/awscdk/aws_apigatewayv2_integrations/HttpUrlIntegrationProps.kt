@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -17,12 +18,14 @@ import kotlin.Unit
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
  * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.*;
  * ParameterMapping parameterMapping;
  * HttpUrlIntegrationProps httpUrlIntegrationProps = HttpUrlIntegrationProps.builder()
  * .method(HttpMethod.ANY)
  * .parameterMapping(parameterMapping)
+ * .timeout(Duration.minutes(30))
  * .build();
  * ```
  */
@@ -45,6 +48,15 @@ public interface HttpUrlIntegrationProps {
       unwrap(this).getParameterMapping()?.let(ParameterMapping::wrap)
 
   /**
+   * The maximum amount of time an integration will run before it returns without a response.
+   *
+   * Must be between 50 milliseconds and 29 seconds.
+   *
+   * Default: Duration.seconds(29)
+   */
+  public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+  /**
    * A builder for [HttpUrlIntegrationProps]
    */
   @CdkDslMarker
@@ -59,6 +71,13 @@ public interface HttpUrlIntegrationProps {
      * backend.
      */
     public fun parameterMapping(parameterMapping: ParameterMapping)
+
+    /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -81,13 +100,23 @@ public interface HttpUrlIntegrationProps {
       cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
+    /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegrationProps
         = cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegrationProps,
-  ) : CdkObject(cdkObject), HttpUrlIntegrationProps {
+  ) : CdkObject(cdkObject),
+      HttpUrlIntegrationProps {
     /**
      * The HTTP method that must be used to invoke the underlying HTTP proxy.
      *
@@ -104,6 +133,15 @@ public interface HttpUrlIntegrationProps {
      */
     override fun parameterMapping(): ParameterMapping? =
         unwrap(this).getParameterMapping()?.let(ParameterMapping::wrap)
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     */
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
   }
 
   public companion object {

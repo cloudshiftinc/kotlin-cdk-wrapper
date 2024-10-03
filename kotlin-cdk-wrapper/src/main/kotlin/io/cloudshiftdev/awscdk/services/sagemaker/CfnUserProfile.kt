@@ -59,6 +59,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .userSettings(UserSettingsProperty.builder()
  * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+ * .appLifecycleManagement(AppLifecycleManagementProperty.builder()
+ * .idleSettings(IdleSettingsProperty.builder()
+ * .idleTimeoutInMinutes(123)
+ * .lifecycleManagement("lifecycleManagement")
+ * .maxIdleTimeoutInMinutes(123)
+ * .minIdleTimeoutInMinutes(123)
+ * .build())
+ * .build())
  * .customImages(List.of(CustomImageProperty.builder()
  * .appImageConfigName("appImageConfigName")
  * .imageName("imageName")
@@ -67,6 +75,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
@@ -86,6 +95,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .defaultLandingUri("defaultLandingUri")
  * .executionRole("executionRole")
  * .jupyterLabAppSettings(JupyterLabAppSettingsProperty.builder()
+ * .appLifecycleManagement(AppLifecycleManagementProperty.builder()
+ * .idleSettings(IdleSettingsProperty.builder()
+ * .idleTimeoutInMinutes(123)
+ * .lifecycleManagement("lifecycleManagement")
+ * .maxIdleTimeoutInMinutes(123)
+ * .minIdleTimeoutInMinutes(123)
+ * .build())
+ * .build())
  * .codeRepositories(List.of(CodeRepositoryProperty.builder()
  * .repositoryUrl("repositoryUrl")
  * .build()))
@@ -97,6 +114,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
@@ -105,9 +123,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
  * .build())
  * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
  * .customImages(List.of(CustomImageProperty.builder()
@@ -118,9 +138,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
+ * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
  * .build())
  * .rStudioServerProAppSettings(RStudioServerProAppSettingsProperty.builder()
  * .accessStatus("accessStatus")
@@ -139,6 +161,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .studioWebPortal("studioWebPortal")
+ * .studioWebPortalSettings(StudioWebPortalSettingsProperty.builder()
+ * .hiddenAppTypes(List.of("hiddenAppTypes"))
+ * .hiddenMlTools(List.of("hiddenMlTools"))
+ * .build())
  * .build())
  * .build();
  * ```
@@ -147,7 +173,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUserProfile(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -528,6 +556,123 @@ public open class CfnUserProfile(
   }
 
   /**
+   * Settings that are used to configure and manage the lifecycle of Amazon SageMaker Studio
+   * applications.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * AppLifecycleManagementProperty appLifecycleManagementProperty =
+   * AppLifecycleManagementProperty.builder()
+   * .idleSettings(IdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .lifecycleManagement("lifecycleManagement")
+   * .maxIdleTimeoutInMinutes(123)
+   * .minIdleTimeoutInMinutes(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-applifecyclemanagement.html)
+   */
+  public interface AppLifecycleManagementProperty {
+    /**
+     * Settings related to idle shutdown of Studio applications.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-applifecyclemanagement.html#cfn-sagemaker-userprofile-applifecyclemanagement-idlesettings)
+     */
+    public fun idleSettings(): Any? = unwrap(this).getIdleSettings()
+
+    /**
+     * A builder for [AppLifecycleManagementProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      public fun idleSettings(idleSettings: IResolvable)
+
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      public fun idleSettings(idleSettings: IdleSettingsProperty)
+
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b783d802ec4416d0a011b4c9df2d467ce624de0cd437e05afc8336eb17760982")
+      public fun idleSettings(idleSettings: IdleSettingsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.AppLifecycleManagementProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.AppLifecycleManagementProperty.builder()
+
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      override fun idleSettings(idleSettings: IResolvable) {
+        cdkBuilder.idleSettings(idleSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      override fun idleSettings(idleSettings: IdleSettingsProperty) {
+        cdkBuilder.idleSettings(idleSettings.let(IdleSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param idleSettings Settings related to idle shutdown of Studio applications.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b783d802ec4416d0a011b4c9df2d467ce624de0cd437e05afc8336eb17760982")
+      override fun idleSettings(idleSettings: IdleSettingsProperty.Builder.() -> Unit): Unit =
+          idleSettings(IdleSettingsProperty(idleSettings))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.AppLifecycleManagementProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.AppLifecycleManagementProperty,
+    ) : CdkObject(cdkObject),
+        AppLifecycleManagementProperty {
+      /**
+       * Settings related to idle shutdown of Studio applications.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-applifecyclemanagement.html#cfn-sagemaker-userprofile-applifecyclemanagement-idlesettings)
+       */
+      override fun idleSettings(): Any? = unwrap(this).getIdleSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AppLifecycleManagementProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.AppLifecycleManagementProperty):
+          AppLifecycleManagementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AppLifecycleManagementProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AppLifecycleManagementProperty):
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.AppLifecycleManagementProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.AppLifecycleManagementProperty
+    }
+  }
+
+  /**
    * The Code Editor application settings.
    *
    * For more information about Code Editor, see [Get started with Code Editor in Amazon
@@ -541,6 +686,14 @@ public open class CfnUserProfile(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * CodeEditorAppSettingsProperty codeEditorAppSettingsProperty =
    * CodeEditorAppSettingsProperty.builder()
+   * .appLifecycleManagement(AppLifecycleManagementProperty.builder()
+   * .idleSettings(IdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .lifecycleManagement("lifecycleManagement")
+   * .maxIdleTimeoutInMinutes(123)
+   * .minIdleTimeoutInMinutes(123)
+   * .build())
+   * .build())
    * .customImages(List.of(CustomImageProperty.builder()
    * .appImageConfigName("appImageConfigName")
    * .imageName("imageName")
@@ -549,6 +702,7 @@ public open class CfnUserProfile(
    * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
@@ -559,6 +713,13 @@ public open class CfnUserProfile(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-codeeditorappsettings.html)
    */
   public interface CodeEditorAppSettingsProperty {
+    /**
+     * Settings that are used to configure and manage the lifecycle of CodeEditor applications.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-codeeditorappsettings.html#cfn-sagemaker-userprofile-codeeditorappsettings-applifecyclemanagement)
+     */
+    public fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
+
     /**
      * A list of custom SageMaker images that are configured to run as a Code Editor app.
      *
@@ -587,6 +748,27 @@ public open class CfnUserProfile(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications.
+       */
+      public fun appLifecycleManagement(appLifecycleManagement: IResolvable)
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications.
+       */
+      public fun appLifecycleManagement(appLifecycleManagement: AppLifecycleManagementProperty)
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("114b94f11f0b3bd78cc1a75be83a1ee6fa0ca8ed64f69ad43241f252a96fc512")
+      public
+          fun appLifecycleManagement(appLifecycleManagement: AppLifecycleManagementProperty.Builder.() -> Unit)
+
       /**
        * @param customImages A list of custom SageMaker images that are configured to run as a Code
        * Editor app.
@@ -643,6 +825,32 @@ public open class CfnUserProfile(
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeEditorAppSettingsProperty.Builder
           =
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeEditorAppSettingsProperty.builder()
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications.
+       */
+      override fun appLifecycleManagement(appLifecycleManagement: IResolvable) {
+        cdkBuilder.appLifecycleManagement(appLifecycleManagement.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications.
+       */
+      override fun appLifecycleManagement(appLifecycleManagement: AppLifecycleManagementProperty) {
+        cdkBuilder.appLifecycleManagement(appLifecycleManagement.let(AppLifecycleManagementProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param appLifecycleManagement Settings that are used to configure and manage the lifecycle
+       * of CodeEditor applications.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("114b94f11f0b3bd78cc1a75be83a1ee6fa0ca8ed64f69ad43241f252a96fc512")
+      override
+          fun appLifecycleManagement(appLifecycleManagement: AppLifecycleManagementProperty.Builder.() -> Unit):
+          Unit = appLifecycleManagement(AppLifecycleManagementProperty(appLifecycleManagement))
 
       /**
        * @param customImages A list of custom SageMaker images that are configured to run as a Code
@@ -715,7 +923,15 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeEditorAppSettingsProperty,
-    ) : CdkObject(cdkObject), CodeEditorAppSettingsProperty {
+    ) : CdkObject(cdkObject),
+        CodeEditorAppSettingsProperty {
+      /**
+       * Settings that are used to configure and manage the lifecycle of CodeEditor applications.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-codeeditorappsettings.html#cfn-sagemaker-userprofile-codeeditorappsettings-applifecyclemanagement)
+       */
+      override fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
+
       /**
        * A list of custom SageMaker images that are configured to run as a Code Editor app.
        *
@@ -813,7 +1029,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeRepositoryProperty,
-    ) : CdkObject(cdkObject), CodeRepositoryProperty {
+    ) : CdkObject(cdkObject),
+        CodeRepositoryProperty {
       /**
        * The URL of the Git repository.
        *
@@ -932,7 +1149,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.CustomFileSystemConfigProperty,
-    ) : CdkObject(cdkObject), CustomFileSystemConfigProperty {
+    ) : CdkObject(cdkObject),
+        CustomFileSystemConfigProperty {
       /**
        * The settings for a custom Amazon EFS file system.
        *
@@ -1061,7 +1279,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.CustomImageProperty,
-    ) : CdkObject(cdkObject), CustomImageProperty {
+    ) : CdkObject(cdkObject),
+        CustomImageProperty {
       /**
        * The name of the AppImageConfig.
        *
@@ -1180,7 +1399,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.CustomPosixUserConfigProperty,
-    ) : CdkObject(cdkObject), CustomPosixUserConfigProperty {
+    ) : CdkObject(cdkObject),
+        CustomPosixUserConfigProperty {
       /**
        * The POSIX group ID.
        *
@@ -1291,7 +1511,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.DefaultEbsStorageSettingsProperty,
-    ) : CdkObject(cdkObject), DefaultEbsStorageSettingsProperty {
+    ) : CdkObject(cdkObject),
+        DefaultEbsStorageSettingsProperty {
       /**
        * The default size of the EBS storage volume for a space.
        *
@@ -1417,7 +1638,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.DefaultSpaceStorageSettingsProperty,
-    ) : CdkObject(cdkObject), DefaultSpaceStorageSettingsProperty {
+    ) : CdkObject(cdkObject),
+        DefaultSpaceStorageSettingsProperty {
       /**
        * The default EBS storage settings for a space.
        *
@@ -1528,7 +1750,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.EFSFileSystemConfigProperty,
-    ) : CdkObject(cdkObject), EFSFileSystemConfigProperty {
+    ) : CdkObject(cdkObject),
+        EFSFileSystemConfigProperty {
       /**
        * The ID of your Amazon EFS file system.
        *
@@ -1565,6 +1788,177 @@ public open class CfnUserProfile(
   }
 
   /**
+   * Settings related to idle shutdown of Studio applications.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * IdleSettingsProperty idleSettingsProperty = IdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .lifecycleManagement("lifecycleManagement")
+   * .maxIdleTimeoutInMinutes(123)
+   * .minIdleTimeoutInMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-idlesettings.html)
+   */
+  public interface IdleSettingsProperty {
+    /**
+     * The time that SageMaker waits after the application becomes idle before shutting it down.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-idlesettings.html#cfn-sagemaker-userprofile-idlesettings-idletimeoutinminutes)
+     */
+    public fun idleTimeoutInMinutes(): Number? = unwrap(this).getIdleTimeoutInMinutes()
+
+    /**
+     * Indicates whether idle shutdown is activated for the application type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-idlesettings.html#cfn-sagemaker-userprofile-idlesettings-lifecyclemanagement)
+     */
+    public fun lifecycleManagement(): String? = unwrap(this).getLifecycleManagement()
+
+    /**
+     * The maximum value in minutes that custom idle shutdown can be set to by the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-idlesettings.html#cfn-sagemaker-userprofile-idlesettings-maxidletimeoutinminutes)
+     */
+    public fun maxIdleTimeoutInMinutes(): Number? = unwrap(this).getMaxIdleTimeoutInMinutes()
+
+    /**
+     * The minimum value in minutes that custom idle shutdown can be set to by the user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-idlesettings.html#cfn-sagemaker-userprofile-idlesettings-minidletimeoutinminutes)
+     */
+    public fun minIdleTimeoutInMinutes(): Number? = unwrap(this).getMinIdleTimeoutInMinutes()
+
+    /**
+     * A builder for [IdleSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param idleTimeoutInMinutes The time that SageMaker waits after the application becomes
+       * idle before shutting it down.
+       */
+      public fun idleTimeoutInMinutes(idleTimeoutInMinutes: Number)
+
+      /**
+       * @param lifecycleManagement Indicates whether idle shutdown is activated for the application
+       * type.
+       */
+      public fun lifecycleManagement(lifecycleManagement: String)
+
+      /**
+       * @param maxIdleTimeoutInMinutes The maximum value in minutes that custom idle shutdown can
+       * be set to by the user.
+       */
+      public fun maxIdleTimeoutInMinutes(maxIdleTimeoutInMinutes: Number)
+
+      /**
+       * @param minIdleTimeoutInMinutes The minimum value in minutes that custom idle shutdown can
+       * be set to by the user.
+       */
+      public fun minIdleTimeoutInMinutes(minIdleTimeoutInMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.IdleSettingsProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.IdleSettingsProperty.builder()
+
+      /**
+       * @param idleTimeoutInMinutes The time that SageMaker waits after the application becomes
+       * idle before shutting it down.
+       */
+      override fun idleTimeoutInMinutes(idleTimeoutInMinutes: Number) {
+        cdkBuilder.idleTimeoutInMinutes(idleTimeoutInMinutes)
+      }
+
+      /**
+       * @param lifecycleManagement Indicates whether idle shutdown is activated for the application
+       * type.
+       */
+      override fun lifecycleManagement(lifecycleManagement: String) {
+        cdkBuilder.lifecycleManagement(lifecycleManagement)
+      }
+
+      /**
+       * @param maxIdleTimeoutInMinutes The maximum value in minutes that custom idle shutdown can
+       * be set to by the user.
+       */
+      override fun maxIdleTimeoutInMinutes(maxIdleTimeoutInMinutes: Number) {
+        cdkBuilder.maxIdleTimeoutInMinutes(maxIdleTimeoutInMinutes)
+      }
+
+      /**
+       * @param minIdleTimeoutInMinutes The minimum value in minutes that custom idle shutdown can
+       * be set to by the user.
+       */
+      override fun minIdleTimeoutInMinutes(minIdleTimeoutInMinutes: Number) {
+        cdkBuilder.minIdleTimeoutInMinutes(minIdleTimeoutInMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.IdleSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.IdleSettingsProperty,
+    ) : CdkObject(cdkObject),
+        IdleSettingsProperty {
+      /**
+       * The time that SageMaker waits after the application becomes idle before shutting it down.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-idlesettings.html#cfn-sagemaker-userprofile-idlesettings-idletimeoutinminutes)
+       */
+      override fun idleTimeoutInMinutes(): Number? = unwrap(this).getIdleTimeoutInMinutes()
+
+      /**
+       * Indicates whether idle shutdown is activated for the application type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-idlesettings.html#cfn-sagemaker-userprofile-idlesettings-lifecyclemanagement)
+       */
+      override fun lifecycleManagement(): String? = unwrap(this).getLifecycleManagement()
+
+      /**
+       * The maximum value in minutes that custom idle shutdown can be set to by the user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-idlesettings.html#cfn-sagemaker-userprofile-idlesettings-maxidletimeoutinminutes)
+       */
+      override fun maxIdleTimeoutInMinutes(): Number? = unwrap(this).getMaxIdleTimeoutInMinutes()
+
+      /**
+       * The minimum value in minutes that custom idle shutdown can be set to by the user.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-idlesettings.html#cfn-sagemaker-userprofile-idlesettings-minidletimeoutinminutes)
+       */
+      override fun minIdleTimeoutInMinutes(): Number? = unwrap(this).getMinIdleTimeoutInMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IdleSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.IdleSettingsProperty):
+          IdleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? IdleSettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IdleSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.IdleSettingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.IdleSettingsProperty
+    }
+  }
+
+  /**
    * The settings for the JupyterLab application.
    *
    * Example:
@@ -1575,6 +1969,14 @@ public open class CfnUserProfile(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * JupyterLabAppSettingsProperty jupyterLabAppSettingsProperty =
    * JupyterLabAppSettingsProperty.builder()
+   * .appLifecycleManagement(AppLifecycleManagementProperty.builder()
+   * .idleSettings(IdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .lifecycleManagement("lifecycleManagement")
+   * .maxIdleTimeoutInMinutes(123)
+   * .minIdleTimeoutInMinutes(123)
+   * .build())
+   * .build())
    * .codeRepositories(List.of(CodeRepositoryProperty.builder()
    * .repositoryUrl("repositoryUrl")
    * .build()))
@@ -1586,6 +1988,7 @@ public open class CfnUserProfile(
    * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
@@ -1596,6 +1999,13 @@ public open class CfnUserProfile(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterlabappsettings.html)
    */
   public interface JupyterLabAppSettingsProperty {
+    /**
+     * Indicates whether idle shutdown is activated for JupyterLab applications.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterlabappsettings.html#cfn-sagemaker-userprofile-jupyterlabappsettings-applifecyclemanagement)
+     */
+    public fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
+
     /**
      * A list of Git repositories that SageMaker automatically displays to users for cloning in the
      * JupyterLab application.
@@ -1635,6 +2045,27 @@ public open class CfnUserProfile(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param appLifecycleManagement Indicates whether idle shutdown is activated for JupyterLab
+       * applications.
+       */
+      public fun appLifecycleManagement(appLifecycleManagement: IResolvable)
+
+      /**
+       * @param appLifecycleManagement Indicates whether idle shutdown is activated for JupyterLab
+       * applications.
+       */
+      public fun appLifecycleManagement(appLifecycleManagement: AppLifecycleManagementProperty)
+
+      /**
+       * @param appLifecycleManagement Indicates whether idle shutdown is activated for JupyterLab
+       * applications.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a1fd009218e52d4f1525aa7699036c6876e258a096e3ba5327c1564723cd3fd3")
+      public
+          fun appLifecycleManagement(appLifecycleManagement: AppLifecycleManagementProperty.Builder.() -> Unit)
+
       /**
        * @param codeRepositories A list of Git repositories that SageMaker automatically displays to
        * users for cloning in the JupyterLab application.
@@ -1711,6 +2142,32 @@ public open class CfnUserProfile(
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.JupyterLabAppSettingsProperty.Builder
           =
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.JupyterLabAppSettingsProperty.builder()
+
+      /**
+       * @param appLifecycleManagement Indicates whether idle shutdown is activated for JupyterLab
+       * applications.
+       */
+      override fun appLifecycleManagement(appLifecycleManagement: IResolvable) {
+        cdkBuilder.appLifecycleManagement(appLifecycleManagement.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param appLifecycleManagement Indicates whether idle shutdown is activated for JupyterLab
+       * applications.
+       */
+      override fun appLifecycleManagement(appLifecycleManagement: AppLifecycleManagementProperty) {
+        cdkBuilder.appLifecycleManagement(appLifecycleManagement.let(AppLifecycleManagementProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param appLifecycleManagement Indicates whether idle shutdown is activated for JupyterLab
+       * applications.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a1fd009218e52d4f1525aa7699036c6876e258a096e3ba5327c1564723cd3fd3")
+      override
+          fun appLifecycleManagement(appLifecycleManagement: AppLifecycleManagementProperty.Builder.() -> Unit):
+          Unit = appLifecycleManagement(AppLifecycleManagementProperty(appLifecycleManagement))
 
       /**
        * @param codeRepositories A list of Git repositories that SageMaker automatically displays to
@@ -1808,7 +2265,15 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.JupyterLabAppSettingsProperty,
-    ) : CdkObject(cdkObject), JupyterLabAppSettingsProperty {
+    ) : CdkObject(cdkObject),
+        JupyterLabAppSettingsProperty {
+      /**
+       * Indicates whether idle shutdown is activated for JupyterLab applications.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterlabappsettings.html#cfn-sagemaker-userprofile-jupyterlabappsettings-applifecyclemanagement)
+       */
+      override fun appLifecycleManagement(): Any? = unwrap(this).getAppLifecycleManagement()
+
       /**
        * A list of Git repositories that SageMaker automatically displays to users for cloning in
        * the JupyterLab application.
@@ -1875,9 +2340,11 @@ public open class CfnUserProfile(
    * JupyterServerAppSettingsProperty.builder()
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
+   * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
    * .build();
    * ```
    *
@@ -1891,6 +2358,21 @@ public open class CfnUserProfile(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterserverappsettings.html#cfn-sagemaker-userprofile-jupyterserverappsettings-defaultresourcespec)
      */
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the
+     * JupyterServerApp.
+     *
+     * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+     *
+     *
+     * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterserverappsettings.html#cfn-sagemaker-userprofile-jupyterserverappsettings-lifecycleconfigarns)
+     */
+    public fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+        emptyList()
 
     /**
      * A builder for [JupyterServerAppSettingsProperty]
@@ -1916,6 +2398,26 @@ public open class CfnUserProfile(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9d3d4d19541e54e09bc7bb368f2f97abc698620b1132fbc08d27f1001b95348")
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the JupyterServerApp.
+       * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the JupyterServerApp.
+       * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      public fun lifecycleConfigArns(vararg lifecycleConfigArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1950,6 +2452,29 @@ public open class CfnUserProfile(
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the JupyterServerApp.
+       * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
+        cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
+      }
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the JupyterServerApp.
+       * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      override fun lifecycleConfigArns(vararg lifecycleConfigArns: String): Unit =
+          lifecycleConfigArns(lifecycleConfigArns.toList())
+
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.JupyterServerAppSettingsProperty
           = cdkBuilder.build()
@@ -1957,7 +2482,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.JupyterServerAppSettingsProperty,
-    ) : CdkObject(cdkObject), JupyterServerAppSettingsProperty {
+    ) : CdkObject(cdkObject),
+        JupyterServerAppSettingsProperty {
       /**
        * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
        * used by the JupyterServer app.
@@ -1965,6 +2491,21 @@ public open class CfnUserProfile(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterserverappsettings.html#cfn-sagemaker-userprofile-jupyterserverappsettings-defaultresourcespec)
        */
       override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the
+       * JupyterServerApp.
+       *
+       * If you use this parameter, the `DefaultResourceSpec` parameter is also required.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterserverappsettings.html#cfn-sagemaker-userprofile-jupyterserverappsettings-lifecycleconfigarns)
+       */
+      override fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+          emptyList()
     }
 
     public companion object {
@@ -2004,9 +2545,11 @@ public open class CfnUserProfile(
    * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
+   * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
    * .build();
    * ```
    *
@@ -2033,6 +2576,19 @@ public open class CfnUserProfile(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-kernelgatewayappsettings.html#cfn-sagemaker-userprofile-kernelgatewayappsettings-defaultresourcespec)
      */
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user
+     * profile or domain.
+     *
+     *
+     * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-kernelgatewayappsettings.html#cfn-sagemaker-userprofile-kernelgatewayappsettings-lifecycleconfigarns)
+     */
+    public fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+        emptyList()
 
     /**
      * A builder for [KernelGatewayAppSettingsProperty]
@@ -2088,6 +2644,22 @@ public open class CfnUserProfile(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("022649f98f5cda55073bad04f6fc522085ccdef224b56a15e01a99347bff0a30")
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the the user profile or domain.
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the the user profile or domain.
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      public fun lifecycleConfigArns(vararg lifecycleConfigArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2157,6 +2729,25 @@ public open class CfnUserProfile(
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the the user profile or domain.
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
+        cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
+      }
+
+      /**
+       * @param lifecycleConfigArns The Amazon Resource Name (ARN) of the Lifecycle Configurations
+       * attached to the the user profile or domain.
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       */
+      override fun lifecycleConfigArns(vararg lifecycleConfigArns: String): Unit =
+          lifecycleConfigArns(lifecycleConfigArns.toList())
+
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.KernelGatewayAppSettingsProperty
           = cdkBuilder.build()
@@ -2164,7 +2755,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.KernelGatewayAppSettingsProperty,
-    ) : CdkObject(cdkObject), KernelGatewayAppSettingsProperty {
+    ) : CdkObject(cdkObject),
+        KernelGatewayAppSettingsProperty {
       /**
        * A list of custom SageMaker images that are configured to run as a KernelGateway app.
        *
@@ -2185,6 +2777,19 @@ public open class CfnUserProfile(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-kernelgatewayappsettings.html#cfn-sagemaker-userprofile-kernelgatewayappsettings-defaultresourcespec)
        */
       override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user
+       * profile or domain.
+       *
+       *
+       * To remove a Lifecycle Config, you must set `LifecycleConfigArns` to an empty list.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-kernelgatewayappsettings.html#cfn-sagemaker-userprofile-kernelgatewayappsettings-lifecycleconfigarns)
+       */
+      override fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+          emptyList()
     }
 
     public companion object {
@@ -2292,7 +2897,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.RStudioServerProAppSettingsProperty,
-    ) : CdkObject(cdkObject), RStudioServerProAppSettingsProperty {
+    ) : CdkObject(cdkObject),
+        RStudioServerProAppSettingsProperty {
       /**
        * Indicates whether the current user has access to the `RStudioServerPro` app.
        *
@@ -2342,6 +2948,7 @@ public open class CfnUserProfile(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * ResourceSpecProperty resourceSpecProperty = ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build();
@@ -2363,6 +2970,13 @@ public open class CfnUserProfile(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html#cfn-sagemaker-userprofile-resourcespec-instancetype)
      */
     public fun instanceType(): String? = unwrap(this).getInstanceType()
+
+    /**
+     * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html#cfn-sagemaker-userprofile-resourcespec-lifecycleconfigarn)
+     */
+    public fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
     /**
      * The ARN of the SageMaker image that the image version belongs to.
@@ -2394,6 +3008,12 @@ public open class CfnUserProfile(
       public fun instanceType(instanceType: String)
 
       /**
+       * @param lifecycleConfigArn The Amazon Resource Name (ARN) of the Lifecycle Configuration
+       * attached to the Resource.
+       */
+      public fun lifecycleConfigArn(lifecycleConfigArn: String)
+
+      /**
        * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
        */
       public fun sageMakerImageArn(sageMakerImageArn: String)
@@ -2422,6 +3042,14 @@ public open class CfnUserProfile(
       }
 
       /**
+       * @param lifecycleConfigArn The Amazon Resource Name (ARN) of the Lifecycle Configuration
+       * attached to the Resource.
+       */
+      override fun lifecycleConfigArn(lifecycleConfigArn: String) {
+        cdkBuilder.lifecycleConfigArn(lifecycleConfigArn)
+      }
+
+      /**
        * @param sageMakerImageArn The ARN of the SageMaker image that the image version belongs to.
        */
       override fun sageMakerImageArn(sageMakerImageArn: String) {
@@ -2442,7 +3070,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.ResourceSpecProperty,
-    ) : CdkObject(cdkObject), ResourceSpecProperty {
+    ) : CdkObject(cdkObject),
+        ResourceSpecProperty {
       /**
        * The instance type that the image version runs on.
        *
@@ -2456,6 +3085,13 @@ public open class CfnUserProfile(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html#cfn-sagemaker-userprofile-resourcespec-instancetype)
        */
       override fun instanceType(): String? = unwrap(this).getInstanceType()
+
+      /**
+       * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html#cfn-sagemaker-userprofile-resourcespec-lifecycleconfigarn)
+       */
+      override fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
       /**
        * The ARN of the SageMaker image that the image version belongs to.
@@ -2602,7 +3238,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.SharingSettingsProperty,
-    ) : CdkObject(cdkObject), SharingSettingsProperty {
+    ) : CdkObject(cdkObject),
+        SharingSettingsProperty {
       /**
        * Whether to include the notebook cell output when sharing the notebook.
        *
@@ -2648,6 +3285,158 @@ public open class CfnUserProfile(
   }
 
   /**
+   * Studio settings.
+   *
+   * If these settings are applied on a user level, they take priority over the settings applied on
+   * a domain level.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * StudioWebPortalSettingsProperty studioWebPortalSettingsProperty =
+   * StudioWebPortalSettingsProperty.builder()
+   * .hiddenAppTypes(List.of("hiddenAppTypes"))
+   * .hiddenMlTools(List.of("hiddenMlTools"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html)
+   */
+  public interface StudioWebPortalSettingsProperty {
+    /**
+     * The [Applications supported in
+     * Studio](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-apps.html) that are
+     * hidden from the Studio left navigation pane.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddenapptypes)
+     */
+    public fun hiddenAppTypes(): List<String> = unwrap(this).getHiddenAppTypes() ?: emptyList()
+
+    /**
+     * The machine learning tools that are hidden from the Studio left navigation pane.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddenmltools)
+     */
+    public fun hiddenMlTools(): List<String> = unwrap(this).getHiddenMlTools() ?: emptyList()
+
+    /**
+     * A builder for [StudioWebPortalSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param hiddenAppTypes The [Applications supported in
+       * Studio](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-apps.html) that are
+       * hidden from the Studio left navigation pane.
+       */
+      public fun hiddenAppTypes(hiddenAppTypes: List<String>)
+
+      /**
+       * @param hiddenAppTypes The [Applications supported in
+       * Studio](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-apps.html) that are
+       * hidden from the Studio left navigation pane.
+       */
+      public fun hiddenAppTypes(vararg hiddenAppTypes: String)
+
+      /**
+       * @param hiddenMlTools The machine learning tools that are hidden from the Studio left
+       * navigation pane.
+       */
+      public fun hiddenMlTools(hiddenMlTools: List<String>)
+
+      /**
+       * @param hiddenMlTools The machine learning tools that are hidden from the Studio left
+       * navigation pane.
+       */
+      public fun hiddenMlTools(vararg hiddenMlTools: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.StudioWebPortalSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.StudioWebPortalSettingsProperty.builder()
+
+      /**
+       * @param hiddenAppTypes The [Applications supported in
+       * Studio](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-apps.html) that are
+       * hidden from the Studio left navigation pane.
+       */
+      override fun hiddenAppTypes(hiddenAppTypes: List<String>) {
+        cdkBuilder.hiddenAppTypes(hiddenAppTypes)
+      }
+
+      /**
+       * @param hiddenAppTypes The [Applications supported in
+       * Studio](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-apps.html) that are
+       * hidden from the Studio left navigation pane.
+       */
+      override fun hiddenAppTypes(vararg hiddenAppTypes: String): Unit =
+          hiddenAppTypes(hiddenAppTypes.toList())
+
+      /**
+       * @param hiddenMlTools The machine learning tools that are hidden from the Studio left
+       * navigation pane.
+       */
+      override fun hiddenMlTools(hiddenMlTools: List<String>) {
+        cdkBuilder.hiddenMlTools(hiddenMlTools)
+      }
+
+      /**
+       * @param hiddenMlTools The machine learning tools that are hidden from the Studio left
+       * navigation pane.
+       */
+      override fun hiddenMlTools(vararg hiddenMlTools: String): Unit =
+          hiddenMlTools(hiddenMlTools.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.StudioWebPortalSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.StudioWebPortalSettingsProperty,
+    ) : CdkObject(cdkObject),
+        StudioWebPortalSettingsProperty {
+      /**
+       * The [Applications supported in
+       * Studio](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-apps.html) that are
+       * hidden from the Studio left navigation pane.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddenapptypes)
+       */
+      override fun hiddenAppTypes(): List<String> = unwrap(this).getHiddenAppTypes() ?: emptyList()
+
+      /**
+       * The machine learning tools that are hidden from the Studio left navigation pane.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddenmltools)
+       */
+      override fun hiddenMlTools(): List<String> = unwrap(this).getHiddenMlTools() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StudioWebPortalSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.StudioWebPortalSettingsProperty):
+          StudioWebPortalSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StudioWebPortalSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StudioWebPortalSettingsProperty):
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.StudioWebPortalSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnUserProfile.StudioWebPortalSettingsProperty
+    }
+  }
+
+  /**
    * A collection of settings that apply to users of Amazon SageMaker Studio.
    *
    * These settings are specified when the
@@ -2668,6 +3457,14 @@ public open class CfnUserProfile(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * UserSettingsProperty userSettingsProperty = UserSettingsProperty.builder()
    * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+   * .appLifecycleManagement(AppLifecycleManagementProperty.builder()
+   * .idleSettings(IdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .lifecycleManagement("lifecycleManagement")
+   * .maxIdleTimeoutInMinutes(123)
+   * .minIdleTimeoutInMinutes(123)
+   * .build())
+   * .build())
    * .customImages(List.of(CustomImageProperty.builder()
    * .appImageConfigName("appImageConfigName")
    * .imageName("imageName")
@@ -2676,6 +3473,7 @@ public open class CfnUserProfile(
    * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
@@ -2695,6 +3493,14 @@ public open class CfnUserProfile(
    * .defaultLandingUri("defaultLandingUri")
    * .executionRole("executionRole")
    * .jupyterLabAppSettings(JupyterLabAppSettingsProperty.builder()
+   * .appLifecycleManagement(AppLifecycleManagementProperty.builder()
+   * .idleSettings(IdleSettingsProperty.builder()
+   * .idleTimeoutInMinutes(123)
+   * .lifecycleManagement("lifecycleManagement")
+   * .maxIdleTimeoutInMinutes(123)
+   * .minIdleTimeoutInMinutes(123)
+   * .build())
+   * .build())
    * .codeRepositories(List.of(CodeRepositoryProperty.builder()
    * .repositoryUrl("repositoryUrl")
    * .build()))
@@ -2706,6 +3512,7 @@ public open class CfnUserProfile(
    * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
@@ -2714,9 +3521,11 @@ public open class CfnUserProfile(
    * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
+   * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
    * .build())
    * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
    * .customImages(List.of(CustomImageProperty.builder()
@@ -2727,9 +3536,11 @@ public open class CfnUserProfile(
    * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
+   * .lifecycleConfigArn("lifecycleConfigArn")
    * .sageMakerImageArn("sageMakerImageArn")
    * .sageMakerImageVersionArn("sageMakerImageVersionArn")
    * .build())
+   * .lifecycleConfigArns(List.of("lifecycleConfigArns"))
    * .build())
    * .rStudioServerProAppSettings(RStudioServerProAppSettingsProperty.builder()
    * .accessStatus("accessStatus")
@@ -2748,6 +3559,10 @@ public open class CfnUserProfile(
    * .build())
    * .build())
    * .studioWebPortal("studioWebPortal")
+   * .studioWebPortalSettings(StudioWebPortalSettingsProperty.builder()
+   * .hiddenAppTypes(List.of("hiddenAppTypes"))
+   * .hiddenMlTools(List.of("hiddenMlTools"))
+   * .build())
    * .build();
    * ```
    *
@@ -2865,6 +3680,16 @@ public open class CfnUserProfile(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-studiowebportal)
      */
     public fun studioWebPortal(): String? = unwrap(this).getStudioWebPortal()
+
+    /**
+     * Studio settings.
+     *
+     * If these settings are applied on a user level, they take priority over the settings applied
+     * on a domain level.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-studiowebportalsettings)
+     */
+    public fun studioWebPortalSettings(): Any? = unwrap(this).getStudioWebPortalSettings()
 
     /**
      * A builder for [UserSettingsProperty]
@@ -3094,6 +3919,30 @@ public open class CfnUserProfile(
        * default experience for the domain.
        */
       public fun studioWebPortal(studioWebPortal: String)
+
+      /**
+       * @param studioWebPortalSettings Studio settings.
+       * If these settings are applied on a user level, they take priority over the settings applied
+       * on a domain level.
+       */
+      public fun studioWebPortalSettings(studioWebPortalSettings: IResolvable)
+
+      /**
+       * @param studioWebPortalSettings Studio settings.
+       * If these settings are applied on a user level, they take priority over the settings applied
+       * on a domain level.
+       */
+      public fun studioWebPortalSettings(studioWebPortalSettings: StudioWebPortalSettingsProperty)
+
+      /**
+       * @param studioWebPortalSettings Studio settings.
+       * If these settings are applied on a user level, they take priority over the settings applied
+       * on a domain level.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b1a5f3b8aa827421c1c5f3236a4f7eed67dc78a0e858b7492865f030410b3297")
+      public
+          fun studioWebPortalSettings(studioWebPortalSettings: StudioWebPortalSettingsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3382,6 +4231,36 @@ public open class CfnUserProfile(
         cdkBuilder.studioWebPortal(studioWebPortal)
       }
 
+      /**
+       * @param studioWebPortalSettings Studio settings.
+       * If these settings are applied on a user level, they take priority over the settings applied
+       * on a domain level.
+       */
+      override fun studioWebPortalSettings(studioWebPortalSettings: IResolvable) {
+        cdkBuilder.studioWebPortalSettings(studioWebPortalSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param studioWebPortalSettings Studio settings.
+       * If these settings are applied on a user level, they take priority over the settings applied
+       * on a domain level.
+       */
+      override
+          fun studioWebPortalSettings(studioWebPortalSettings: StudioWebPortalSettingsProperty) {
+        cdkBuilder.studioWebPortalSettings(studioWebPortalSettings.let(StudioWebPortalSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param studioWebPortalSettings Studio settings.
+       * If these settings are applied on a user level, they take priority over the settings applied
+       * on a domain level.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b1a5f3b8aa827421c1c5f3236a4f7eed67dc78a0e858b7492865f030410b3297")
+      override
+          fun studioWebPortalSettings(studioWebPortalSettings: StudioWebPortalSettingsProperty.Builder.() -> Unit):
+          Unit = studioWebPortalSettings(StudioWebPortalSettingsProperty(studioWebPortalSettings))
+
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.UserSettingsProperty =
           cdkBuilder.build()
@@ -3389,7 +4268,8 @@ public open class CfnUserProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.UserSettingsProperty,
-    ) : CdkObject(cdkObject), UserSettingsProperty {
+    ) : CdkObject(cdkObject),
+        UserSettingsProperty {
       /**
        * The Code Editor application settings.
        *
@@ -3502,6 +4382,16 @@ public open class CfnUserProfile(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-studiowebportal)
        */
       override fun studioWebPortal(): String? = unwrap(this).getStudioWebPortal()
+
+      /**
+       * Studio settings.
+       *
+       * If these settings are applied on a user level, they take priority over the settings applied
+       * on a domain level.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-studiowebportalsettings)
+       */
+      override fun studioWebPortalSettings(): Any? = unwrap(this).getStudioWebPortalSettings()
     }
 
     public companion object {

@@ -86,7 +86,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApp(
   cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1195,7 +1197,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty,
-    ) : CdkObject(cdkObject), EventSubscriptionProperty {
+    ) : CdkObject(cdkObject),
+        EventSubscriptionProperty {
       /**
        * The type of event you would like to subscribe and get notification for.
        *
@@ -1430,7 +1433,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty,
-    ) : CdkObject(cdkObject), PermissionModelProperty {
+    ) : CdkObject(cdkObject),
+        PermissionModelProperty {
       /**
        * Defines a list of role Amazon Resource Names (ARNs) to be used in other accounts.
        *
@@ -1694,7 +1698,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty,
-    ) : CdkObject(cdkObject), PhysicalResourceIdProperty {
+    ) : CdkObject(cdkObject),
+        PhysicalResourceIdProperty {
       /**
        * The AWS account that owns the physical resource.
        *
@@ -1980,7 +1985,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty,
-    ) : CdkObject(cdkObject), ResourceMappingProperty {
+    ) : CdkObject(cdkObject),
+        ResourceMappingProperty {
       /**
        * Name of the Amazon Elastic Kubernetes Service cluster and namespace that this resource is
        * mapped to when the `mappingType` is `EKS` .

@@ -985,7 +985,8 @@ public interface CfnDomainProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomainProps,
-  ) : CdkObject(cdkObject), CfnDomainProps {
+  ) : CdkObject(cdkObject),
+      CfnDomainProps {
     /**
      * An AWS Identity and Access Management ( IAM ) policy document that specifies who can access
      * the OpenSearch Service domain and their permissions.

@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConnector(
   cdkObject: software.amazon.awscdk.services.transfer.CfnConnector,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -845,7 +847,8 @@ public open class CfnConnector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty,
-    ) : CdkObject(cdkObject), As2ConfigProperty {
+    ) : CdkObject(cdkObject),
+        As2ConfigProperty {
       /**
        * Provides Basic authentication support to the AS2 Connectors API.
        *
@@ -1201,7 +1204,8 @@ public open class CfnConnector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty,
-    ) : CdkObject(cdkObject), SftpConfigProperty {
+    ) : CdkObject(cdkObject),
+        SftpConfigProperty {
       /**
        * The public portion of the host key, or keys, that are used to identify the external server
        * to which you are connecting.

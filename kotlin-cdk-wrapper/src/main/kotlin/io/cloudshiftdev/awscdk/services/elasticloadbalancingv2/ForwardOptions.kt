@@ -65,7 +65,8 @@ public interface ForwardOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ForwardOptions,
-  ) : CdkObject(cdkObject), ForwardOptions {
+  ) : CdkObject(cdkObject),
+      ForwardOptions {
     /**
      * For how long clients should be directed to the same target group.
      *

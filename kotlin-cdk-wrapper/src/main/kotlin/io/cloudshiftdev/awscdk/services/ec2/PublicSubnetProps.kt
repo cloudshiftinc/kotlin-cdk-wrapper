@@ -121,7 +121,8 @@ public interface PublicSubnetProps : SubnetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.PublicSubnetProps,
-  ) : CdkObject(cdkObject), PublicSubnetProps {
+  ) : CdkObject(cdkObject),
+      PublicSubnetProps {
     /**
      * Indicates whether a network interface created in this subnet receives an IPv6 address.
      *

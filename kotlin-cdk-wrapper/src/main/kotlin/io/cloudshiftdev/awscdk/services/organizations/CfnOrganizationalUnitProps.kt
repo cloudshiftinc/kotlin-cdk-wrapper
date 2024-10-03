@@ -214,7 +214,8 @@ public interface CfnOrganizationalUnitProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.organizations.CfnOrganizationalUnitProps,
-  ) : CdkObject(cdkObject), CfnOrganizationalUnitProps {
+  ) : CdkObject(cdkObject),
+      CfnOrganizationalUnitProps {
     /**
      * The friendly name of this OU.
      *

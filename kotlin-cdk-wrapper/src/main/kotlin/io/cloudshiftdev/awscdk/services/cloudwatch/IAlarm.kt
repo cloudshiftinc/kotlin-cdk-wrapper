@@ -27,7 +27,8 @@ public interface IAlarm : IAlarmRule, IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarm,
-  ) : CdkObject(cdkObject), IAlarm {
+  ) : CdkObject(cdkObject),
+      IAlarm {
     /**
      * Alarm ARN (i.e. arn:aws:cloudwatch:<region>:<account-id>:alarm:Foo).
      */

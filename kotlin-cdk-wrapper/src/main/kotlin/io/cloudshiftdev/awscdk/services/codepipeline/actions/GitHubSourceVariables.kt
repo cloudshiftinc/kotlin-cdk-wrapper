@@ -169,7 +169,8 @@ public interface GitHubSourceVariables {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.GitHubSourceVariables,
-  ) : CdkObject(cdkObject), GitHubSourceVariables {
+  ) : CdkObject(cdkObject),
+      GitHubSourceVariables {
     /**
      * The date the currently last commit on the tracked branch was authored, in ISO-8601 format.
      */

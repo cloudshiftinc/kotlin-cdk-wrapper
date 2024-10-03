@@ -141,7 +141,8 @@ public interface MatchFailure {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.assertions.MatchFailure,
-  ) : CdkObject(cdkObject), MatchFailure {
+  ) : CdkObject(cdkObject),
+      MatchFailure {
     /**
      * The cost of this particular mismatch.
      *

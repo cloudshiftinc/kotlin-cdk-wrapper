@@ -64,7 +64,8 @@ public interface ICertificate : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.certificatemanager.ICertificate,
-  ) : CdkObject(cdkObject), ICertificate {
+  ) : CdkObject(cdkObject),
+      ICertificate {
     /**
      * Apply the given removal policy to this resource.
      *

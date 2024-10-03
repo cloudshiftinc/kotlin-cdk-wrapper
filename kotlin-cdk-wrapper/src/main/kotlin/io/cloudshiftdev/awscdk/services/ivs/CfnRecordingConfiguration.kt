@@ -66,7 +66,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRecordingConfiguration(
   cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -742,7 +744,8 @@ public open class CfnRecordingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty,
-    ) : CdkObject(cdkObject), DestinationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DestinationConfigurationProperty {
       /**
        * An S3 destination configuration where recorded videos will be stored.
        *
@@ -899,7 +902,8 @@ public open class CfnRecordingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty,
-    ) : CdkObject(cdkObject), RenditionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RenditionConfigurationProperty {
       /**
        * The set of renditions are recorded for a stream.
        *
@@ -1001,7 +1005,8 @@ public open class CfnRecordingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty,
-    ) : CdkObject(cdkObject), S3DestinationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        S3DestinationConfigurationProperty {
       /**
        * Location (S3 bucket name) where recorded videos will be stored.
        *
@@ -1259,7 +1264,8 @@ public open class CfnRecordingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty,
-    ) : CdkObject(cdkObject), ThumbnailConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ThumbnailConfigurationProperty {
       /**
        * Thumbnail recording mode. Valid values:.
        *

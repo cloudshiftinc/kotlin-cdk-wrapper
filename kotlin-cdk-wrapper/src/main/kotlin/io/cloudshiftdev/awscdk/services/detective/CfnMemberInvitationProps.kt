@@ -172,7 +172,8 @@ public interface CfnMemberInvitationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.detective.CfnMemberInvitationProps,
-  ) : CdkObject(cdkObject), CfnMemberInvitationProps {
+  ) : CdkObject(cdkObject),
+      CfnMemberInvitationProps {
     /**
      * Whether to send an invitation email to the member account.
      *

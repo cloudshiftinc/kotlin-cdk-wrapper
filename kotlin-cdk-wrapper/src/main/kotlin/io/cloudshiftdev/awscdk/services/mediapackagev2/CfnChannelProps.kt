@@ -24,6 +24,7 @@ import kotlin.collections.List
  * .channelName("channelName")
  * // the properties below are optional
  * .description("description")
+ * .inputType("inputType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -56,6 +57,11 @@ public interface CfnChannelProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputtype)
+   */
+  public fun inputType(): String? = unwrap(this).getInputType()
+
+  /**
    * The tags associated with the channel.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-tags)
@@ -82,6 +88,11 @@ public interface CfnChannelProps {
      * @param description The description of the channel.
      */
     public fun description(description: String)
+
+    /**
+     * @param inputType the value to be set.
+     */
+    public fun inputType(inputType: String)
 
     /**
      * @param tags The tags associated with the channel.
@@ -121,6 +132,13 @@ public interface CfnChannelProps {
     }
 
     /**
+     * @param inputType the value to be set.
+     */
+    override fun inputType(inputType: String) {
+      cdkBuilder.inputType(inputType)
+    }
+
+    /**
      * @param tags The tags associated with the channel.
      */
     override fun tags(tags: List<CfnTag>) {
@@ -138,7 +156,8 @@ public interface CfnChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelProps,
-  ) : CdkObject(cdkObject), CfnChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnChannelProps {
     /**
      * The name of the channel group associated with the channel configuration.
      *
@@ -159,6 +178,11 @@ public interface CfnChannelProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputtype)
+     */
+    override fun inputType(): String? = unwrap(this).getInputType()
 
     /**
      * The tags associated with the channel.

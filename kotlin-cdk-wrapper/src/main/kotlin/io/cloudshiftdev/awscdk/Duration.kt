@@ -20,19 +20,18 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Role myRole;
- * AwsCustomResource.Builder.create(this, "Customized")
- * .role(myRole) // must be assumable by the `lambda.amazonaws.com` service principal
- * .timeout(Duration.minutes(10)) // defaults to 2 minutes
- * .memorySize(1025) // defaults to 512 if installLatestAwsSdk is true
- * .logGroup(LogGroup.Builder.create(this, "AwsCustomResourceLogs")
- * .retention(RetentionDays.ONE_DAY)
- * .build())
- * .functionName("my-custom-name") // defaults to a CloudFormation generated name
- * .removalPolicy(RemovalPolicy.RETAIN) // defaults to `RemovalPolicy.DESTROY`
- * .policy(AwsCustomResourcePolicy.fromSdkCalls(SdkCallsPolicyOptions.builder()
- * .resources(AwsCustomResourcePolicy.ANY_RESOURCE)
+ * Application application;
+ * Bucket bucket;
+ * SourcedConfiguration.Builder.create(this, "MySourcedConfiguration")
+ * .application(application)
+ * .location(ConfigurationSource.fromBucket(bucket, "path/to/file.json"))
+ * .deploymentStrategy(DeploymentStrategy.Builder.create(this, "MyDeploymentStrategy")
+ * .rolloutStrategy(RolloutStrategy.linear(RolloutStrategyProps.builder()
+ * .growthFactor(15)
+ * .deploymentDuration(Duration.minutes(30))
+ * .finalBakeTime(Duration.minutes(15))
  * .build()))
+ * .build())
  * .build();
  * ```
  */

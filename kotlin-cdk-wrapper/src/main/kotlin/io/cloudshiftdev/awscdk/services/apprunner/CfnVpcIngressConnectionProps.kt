@@ -197,7 +197,8 @@ public interface CfnVpcIngressConnectionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcIngressConnectionProps,
-  ) : CdkObject(cdkObject), CfnVpcIngressConnectionProps {
+  ) : CdkObject(cdkObject),
+      CfnVpcIngressConnectionProps {
     /**
      * Specifications for the customer’s Amazon VPC and the related AWS PrivateLink VPC endpoint
      * that are used to create the VPC Ingress Connection resource.

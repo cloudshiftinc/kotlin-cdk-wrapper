@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -14,15 +15,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
- * "CodeDeployDeploymentGroup")
- * .deploymentConfig(ServerDeploymentConfig.ALL_AT_ONCE)
+ * ServerDeploymentConfig deploymentConfig = ServerDeploymentConfig.Builder.create(this,
+ * "DeploymentConfiguration")
+ * .deploymentConfigName("MyDeploymentConfiguration") // optional property
+ * // one of these is required, but both cannot be specified at the same time
+ * .minimumHealthyHosts(MinimumHealthyHosts.count(2))
  * .build();
  * ```
  */
 public open class ServerDeploymentConfig(
   cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig,
-) : BaseDeploymentConfig(cdkObject), IServerDeploymentConfig {
+) : BaseDeploymentConfig(cdkObject),
+    IServerDeploymentConfig {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -60,6 +64,30 @@ public open class ServerDeploymentConfig(
      * @param minimumHealthyHosts Minimum number of healthy hosts. 
      */
     public fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts)
+
+    /**
+     * Configure CodeDeploy to deploy your application to one Availability Zone at a time within an
+     * AWS Region.
+     *
+     * Default: - deploy your application to a random selection of hosts across a Region
+     *
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region. 
+     */
+    public fun zonalConfig(zonalConfig: ZonalConfig)
+
+    /**
+     * Configure CodeDeploy to deploy your application to one Availability Zone at a time within an
+     * AWS Region.
+     *
+     * Default: - deploy your application to a random selection of hosts across a Region
+     *
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3705e1ebbc3f8dae2c5941e11c4ec0aa14384b967b8548cf7b90bf02f9115f22")
+    public fun zonalConfig(zonalConfig: ZonalConfig.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -90,6 +118,33 @@ public open class ServerDeploymentConfig(
     override fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts) {
       cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHosts.Companion::unwrap))
     }
+
+    /**
+     * Configure CodeDeploy to deploy your application to one Availability Zone at a time within an
+     * AWS Region.
+     *
+     * Default: - deploy your application to a random selection of hosts across a Region
+     *
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region. 
+     */
+    override fun zonalConfig(zonalConfig: ZonalConfig) {
+      cdkBuilder.zonalConfig(zonalConfig.let(ZonalConfig.Companion::unwrap))
+    }
+
+    /**
+     * Configure CodeDeploy to deploy your application to one Availability Zone at a time within an
+     * AWS Region.
+     *
+     * Default: - deploy your application to a random selection of hosts across a Region
+     *
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3705e1ebbc3f8dae2c5941e11c4ec0aa14384b967b8548cf7b90bf02f9115f22")
+    override fun zonalConfig(zonalConfig: ZonalConfig.Builder.() -> Unit): Unit =
+        zonalConfig(ZonalConfig(zonalConfig))
 
     public fun build(): software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig =
         cdkBuilder.build()

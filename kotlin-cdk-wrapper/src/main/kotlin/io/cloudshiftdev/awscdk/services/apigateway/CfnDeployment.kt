@@ -95,7 +95,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDeployment(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -541,7 +542,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty,
-    ) : CdkObject(cdkObject), AccessLogSettingProperty {
+    ) : CdkObject(cdkObject),
+        AccessLogSettingProperty {
       /**
        * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose
        * delivery stream to receive access logs.
@@ -725,7 +727,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty,
-    ) : CdkObject(cdkObject), CanarySettingProperty {
+    ) : CdkObject(cdkObject),
+        CanarySettingProperty {
       /**
        * The percent (0-100) of traffic diverted to a canary deployment.
        *
@@ -917,7 +920,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty,
-    ) : CdkObject(cdkObject), DeploymentCanarySettingsProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentCanarySettingsProperty {
       /**
        * The percentage (0.0-100.0) of traffic routed to the canary deployment.
        *
@@ -1308,7 +1312,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty,
-    ) : CdkObject(cdkObject), MethodSettingProperty {
+    ) : CdkObject(cdkObject),
+        MethodSettingProperty {
       /**
        * Specifies whether the cached responses are encrypted.
        *
@@ -2147,7 +2152,8 @@ public open class CfnDeployment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.StageDescriptionProperty,
-    ) : CdkObject(cdkObject), StageDescriptionProperty {
+    ) : CdkObject(cdkObject),
+        StageDescriptionProperty {
       /**
        * Specifies settings for logging access in this stage.
        *

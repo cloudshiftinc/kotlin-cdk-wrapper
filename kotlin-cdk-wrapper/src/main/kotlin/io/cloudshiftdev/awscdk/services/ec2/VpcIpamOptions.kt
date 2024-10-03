@@ -98,7 +98,8 @@ public interface VpcIpamOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.VpcIpamOptions,
-  ) : CdkObject(cdkObject), VpcIpamOptions {
+  ) : CdkObject(cdkObject),
+      VpcIpamOptions {
     /**
      * CIDR Block for Vpc.
      *

@@ -122,7 +122,8 @@ public interface CfnSubnetCidrBlockProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetCidrBlockProps,
-  ) : CdkObject(cdkObject), CfnSubnetCidrBlockProps {
+  ) : CdkObject(cdkObject),
+      CfnSubnetCidrBlockProps {
     /**
      * The IPv6 network range for the subnet, in CIDR notation.
      *

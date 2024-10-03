@@ -36,7 +36,8 @@ public interface BuildImageConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.BuildImageConfig,
-  ) : CdkObject(cdkObject), BuildImageConfig
+  ) : CdkObject(cdkObject),
+      BuildImageConfig
 
   public companion object {
     public operator fun invoke(block: Builder.() -> Unit = {}): BuildImageConfig {

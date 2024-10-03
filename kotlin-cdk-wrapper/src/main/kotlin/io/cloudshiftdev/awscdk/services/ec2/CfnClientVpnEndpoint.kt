@@ -91,7 +91,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnClientVpnEndpoint(
   cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1212,7 +1213,8 @@ public open class CfnClientVpnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty,
-    ) : CdkObject(cdkObject), CertificateAuthenticationRequestProperty {
+    ) : CdkObject(cdkObject),
+        CertificateAuthenticationRequestProperty {
       /**
        * The ARN of the client certificate.
        *
@@ -1494,7 +1496,8 @@ public open class CfnClientVpnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientAuthenticationRequestProperty,
-    ) : CdkObject(cdkObject), ClientAuthenticationRequestProperty {
+    ) : CdkObject(cdkObject),
+        ClientAuthenticationRequestProperty {
       /**
        * Information about the Active Directory to be used, if applicable.
        *
@@ -1646,7 +1649,8 @@ public open class CfnClientVpnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty,
-    ) : CdkObject(cdkObject), ClientConnectOptionsProperty {
+    ) : CdkObject(cdkObject),
+        ClientConnectOptionsProperty {
       /**
        * Indicates whether client connect options are enabled.
        *
@@ -1801,7 +1805,8 @@ public open class CfnClientVpnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty,
-    ) : CdkObject(cdkObject), ClientLoginBannerOptionsProperty {
+    ) : CdkObject(cdkObject),
+        ClientLoginBannerOptionsProperty {
       /**
        * Customizable text that will be displayed in a banner on AWS provided clients when a VPN
        * session is established.
@@ -1958,7 +1963,8 @@ public open class CfnClientVpnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ConnectionLogOptionsProperty,
-    ) : CdkObject(cdkObject), ConnectionLogOptionsProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionLogOptionsProperty {
       /**
        * The name of the CloudWatch Logs log group.
        *
@@ -2057,7 +2063,8 @@ public open class CfnClientVpnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty,
-    ) : CdkObject(cdkObject), DirectoryServiceAuthenticationRequestProperty {
+    ) : CdkObject(cdkObject),
+        DirectoryServiceAuthenticationRequestProperty {
       /**
        * The ID of the Active Directory to be used for authentication.
        *
@@ -2164,7 +2171,8 @@ public open class CfnClientVpnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty,
-    ) : CdkObject(cdkObject), FederatedAuthenticationRequestProperty {
+    ) : CdkObject(cdkObject),
+        FederatedAuthenticationRequestProperty {
       /**
        * The Amazon Resource Name (ARN) of the IAM SAML identity provider.
        *
@@ -2202,16 +2210,7 @@ public open class CfnClientVpnEndpoint(
   }
 
   /**
-   * The tags to apply to a resource when the resource is being created.
-   *
-   * When you specify a tag, you must specify the resource type to tag, otherwise the request will
-   * fail.
-   *
-   *
-   * The `Valid Values` lists all the resource types that can be tagged. However, the action you're
-   * using might not support tagging all of these resource types. If you try to tag a resource type
-   * that is unsupported for the action you're using, you'll get an error.
-   *
+   * Specifies the tags to apply to the Client VPN endpoint.
    *
    * Example:
    *
@@ -2234,6 +2233,8 @@ public open class CfnClientVpnEndpoint(
     /**
      * The type of resource to tag.
      *
+     * To tag a Client VPN endpoint, `ResourceType` must be `client-vpn-endpoint` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-resourcetype)
      */
     public fun resourceType(): String
@@ -2252,6 +2253,7 @@ public open class CfnClientVpnEndpoint(
     public interface Builder {
       /**
        * @param resourceType The type of resource to tag. 
+       * To tag a Client VPN endpoint, `ResourceType` must be `client-vpn-endpoint` .
        */
       public fun resourceType(resourceType: String)
 
@@ -2274,6 +2276,7 @@ public open class CfnClientVpnEndpoint(
 
       /**
        * @param resourceType The type of resource to tag. 
+       * To tag a Client VPN endpoint, `ResourceType` must be `client-vpn-endpoint` .
        */
       override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
@@ -2298,9 +2301,12 @@ public open class CfnClientVpnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty,
-    ) : CdkObject(cdkObject), TagSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        TagSpecificationProperty {
       /**
        * The type of resource to tag.
+       *
+       * To tag a Client VPN endpoint, `ResourceType` must be `client-vpn-endpoint` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-resourcetype)
        */

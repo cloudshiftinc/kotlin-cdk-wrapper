@@ -154,7 +154,8 @@ public interface CfnCoreNetworkProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetworkProps,
-  ) : CdkObject(cdkObject), CfnCoreNetworkProps {
+  ) : CdkObject(cdkObject),
+      CfnCoreNetworkProps {
     /**
      * The description of a core network.
      *

@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EksContainerDefinition(
   cdkObject: software.amazon.awscdk.services.batch.EksContainerDefinition,
-) : CloudshiftdevConstructsConstruct(cdkObject), IEksContainerDefinition {
+) : CloudshiftdevConstructsConstruct(cdkObject),
+    IEksContainerDefinition {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -22,7 +22,8 @@ public interface IAuthorizer : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IAuthorizer,
-  ) : CdkObject(cdkObject), IAuthorizer {
+  ) : CdkObject(cdkObject),
+      IAuthorizer {
     /**
      * Apply the given removal policy to this resource.
      *

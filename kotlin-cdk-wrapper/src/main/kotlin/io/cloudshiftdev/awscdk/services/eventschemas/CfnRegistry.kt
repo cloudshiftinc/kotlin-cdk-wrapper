@@ -42,7 +42,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRegistry(
   cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistry,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.eventschemas.CfnRegistry(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -311,7 +313,8 @@ public open class CfnRegistry(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistry.TagsEntryProperty,
-    ) : CdkObject(cdkObject), TagsEntryProperty {
+    ) : CdkObject(cdkObject),
+        TagsEntryProperty {
       /**
        * The key of a key-value pair.
        *

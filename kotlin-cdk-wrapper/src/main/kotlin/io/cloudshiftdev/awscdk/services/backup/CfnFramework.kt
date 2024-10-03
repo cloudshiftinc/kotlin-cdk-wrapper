@@ -61,7 +61,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFramework(
   cdkObject: software.amazon.awscdk.services.backup.CfnFramework,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -456,7 +458,8 @@ public open class CfnFramework(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty,
-    ) : CdkObject(cdkObject), ControlInputParameterProperty {
+    ) : CdkObject(cdkObject),
+        ControlInputParameterProperty {
       /**
        * The name of a parameter, for example, `BackupPlanFrequency` .
        *
@@ -670,7 +673,8 @@ public open class CfnFramework(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty,
-    ) : CdkObject(cdkObject), ControlScopeProperty {
+    ) : CdkObject(cdkObject),
+        ControlScopeProperty {
       /**
        * The ID of the only AWS resource that you want your control scope to contain.
        *
@@ -865,7 +869,8 @@ public open class CfnFramework(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty,
-    ) : CdkObject(cdkObject), FrameworkControlProperty {
+    ) : CdkObject(cdkObject),
+        FrameworkControlProperty {
       /**
        * The name/value pairs.
        *

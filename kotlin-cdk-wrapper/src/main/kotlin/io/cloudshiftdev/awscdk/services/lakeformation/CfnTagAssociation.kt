@@ -96,7 +96,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTagAssociation(
   cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -436,7 +437,8 @@ public open class CfnTagAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty,
-    ) : CdkObject(cdkObject), DatabaseResourceProperty {
+    ) : CdkObject(cdkObject),
+        DatabaseResourceProperty {
       /**
        * The identifier for the Data Catalog .
        *
@@ -642,7 +644,8 @@ public open class CfnTagAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty,
-    ) : CdkObject(cdkObject), LFTagPairProperty {
+    ) : CdkObject(cdkObject),
+        LFTagPairProperty {
       /**
        * The identifier for the Data Catalog .
        *
@@ -953,7 +956,8 @@ public open class CfnTagAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.ResourceProperty,
-    ) : CdkObject(cdkObject), ResourceProperty {
+    ) : CdkObject(cdkObject),
+        ResourceProperty {
       /**
        * The identifier for the Data Catalog.
        *
@@ -1158,7 +1162,8 @@ public open class CfnTagAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty,
-    ) : CdkObject(cdkObject), TableResourceProperty {
+    ) : CdkObject(cdkObject),
+        TableResourceProperty {
       /**
        * The identifier for the Data Catalog .
        *
@@ -1370,7 +1375,8 @@ public open class CfnTagAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableWithColumnsResourceProperty,
-    ) : CdkObject(cdkObject), TableWithColumnsResourceProperty {
+    ) : CdkObject(cdkObject),
+        TableWithColumnsResourceProperty {
       /**
        * A wildcard object representing every table under a database.
        *

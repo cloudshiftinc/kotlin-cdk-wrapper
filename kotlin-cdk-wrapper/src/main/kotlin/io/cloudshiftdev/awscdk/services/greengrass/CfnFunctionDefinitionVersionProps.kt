@@ -212,7 +212,8 @@ public interface CfnFunctionDefinitionVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersionProps,
-  ) : CdkObject(cdkObject), CfnFunctionDefinitionVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnFunctionDefinitionVersionProps {
     /**
      * The default configuration that applies to all Lambda functions in the group.
      *

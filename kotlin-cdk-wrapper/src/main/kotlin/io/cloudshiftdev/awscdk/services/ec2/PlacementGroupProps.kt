@@ -15,14 +15,15 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.ec2.*;
- * PlacementGroupProps placementGroupProps = PlacementGroupProps.builder()
- * .partitions(123)
- * .placementGroupName("placementGroupName")
- * .spreadLevel(PlacementGroupSpreadLevel.HOST)
- * .strategy(PlacementGroupStrategy.CLUSTER)
+ * InstanceType instanceType;
+ * PlacementGroup pg = PlacementGroup.Builder.create(this, "test-pg")
+ * .strategy(PlacementGroupStrategy.SPREAD)
+ * .build();
+ * Instance.Builder.create(this, "Instance")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(MachineImage.latestAmazonLinux2023())
+ * .placementGroup(pg)
  * .build();
  * ```
  */
@@ -163,7 +164,8 @@ public interface PlacementGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.PlacementGroupProps,
-  ) : CdkObject(cdkObject), PlacementGroupProps {
+  ) : CdkObject(cdkObject),
+      PlacementGroupProps {
     /**
      * The number of partitions.
      *

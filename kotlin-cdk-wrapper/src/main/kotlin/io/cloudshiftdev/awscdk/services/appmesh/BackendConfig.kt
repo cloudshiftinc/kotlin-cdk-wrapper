@@ -112,7 +112,8 @@ public interface BackendConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.BackendConfig,
-  ) : CdkObject(cdkObject), BackendConfig {
+  ) : CdkObject(cdkObject),
+      BackendConfig {
     /**
      * Config for a Virtual Service backend.
      */

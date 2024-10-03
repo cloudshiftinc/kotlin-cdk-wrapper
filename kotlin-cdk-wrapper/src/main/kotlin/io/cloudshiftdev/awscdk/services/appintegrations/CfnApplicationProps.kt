@@ -32,8 +32,8 @@ import kotlin.jvm.JvmName
  * .build())
  * .description("description")
  * .name("name")
- * // the properties below are optional
  * .namespace("namespace")
+ * // the properties below are optional
  * .permissions(List.of("permissions"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -71,7 +71,7 @@ public interface CfnApplicationProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-application.html#cfn-appintegrations-application-namespace)
    */
-  public fun namespace(): String? = unwrap(this).getNamespace()
+  public fun namespace(): String
 
   /**
    * The configuration of events or requests that the application has access to.
@@ -127,7 +127,7 @@ public interface CfnApplicationProps {
     public fun name(name: String)
 
     /**
-     * @param namespace The namespace of the application.
+     * @param namespace The namespace of the application. 
      */
     public fun namespace(namespace: String)
 
@@ -204,7 +204,7 @@ public interface CfnApplicationProps {
     }
 
     /**
-     * @param namespace The namespace of the application.
+     * @param namespace The namespace of the application. 
      */
     override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
@@ -244,7 +244,8 @@ public interface CfnApplicationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appintegrations.CfnApplicationProps,
-  ) : CdkObject(cdkObject), CfnApplicationProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationProps {
     /**
      * The configuration for where the application should be loaded from.
      *
@@ -271,7 +272,7 @@ public interface CfnApplicationProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-application.html#cfn-appintegrations-application-namespace)
      */
-    override fun namespace(): String? = unwrap(this).getNamespace()
+    override fun namespace(): String = unwrap(this).getNamespace()
 
     /**
      * The configuration of events or requests that the application has access to.

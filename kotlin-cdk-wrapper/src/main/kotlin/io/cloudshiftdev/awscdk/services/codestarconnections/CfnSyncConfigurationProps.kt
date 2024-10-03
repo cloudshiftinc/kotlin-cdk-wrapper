@@ -217,7 +217,8 @@ public interface CfnSyncConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codestarconnections.CfnSyncConfigurationProps,
-  ) : CdkObject(cdkObject), CfnSyncConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnSyncConfigurationProps {
     /**
      * The branch associated with a specific sync configuration.
      *

@@ -672,7 +672,8 @@ public interface CfnOriginEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpointProps,
-  ) : CdkObject(cdkObject), CfnOriginEndpointProps {
+  ) : CdkObject(cdkObject),
+      CfnOriginEndpointProps {
     /**
      * Parameters for CDN authorization.
      *

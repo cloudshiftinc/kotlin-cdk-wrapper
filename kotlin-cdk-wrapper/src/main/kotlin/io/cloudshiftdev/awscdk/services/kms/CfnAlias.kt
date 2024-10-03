@@ -67,7 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAlias(
   cdkObject: software.amazon.awscdk.services.kms.CfnAlias,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

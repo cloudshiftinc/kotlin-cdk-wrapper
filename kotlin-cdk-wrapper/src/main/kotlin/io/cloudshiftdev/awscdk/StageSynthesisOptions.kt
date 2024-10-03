@@ -106,7 +106,8 @@ public interface StageSynthesisOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.StageSynthesisOptions,
-  ) : CdkObject(cdkObject), StageSynthesisOptions {
+  ) : CdkObject(cdkObject),
+      StageSynthesisOptions {
     /**
      * Force a re-synth, even if the stage has already been synthesized.
      *

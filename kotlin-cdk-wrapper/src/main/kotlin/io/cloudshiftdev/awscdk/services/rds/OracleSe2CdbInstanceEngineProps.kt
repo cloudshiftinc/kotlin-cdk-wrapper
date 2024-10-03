@@ -60,7 +60,8 @@ public interface OracleSe2CdbInstanceEngineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.OracleSe2CdbInstanceEngineProps,
-  ) : CdkObject(cdkObject), OracleSe2CdbInstanceEngineProps {
+  ) : CdkObject(cdkObject),
+      OracleSe2CdbInstanceEngineProps {
     /**
      * The exact version of the engine to use.
      */

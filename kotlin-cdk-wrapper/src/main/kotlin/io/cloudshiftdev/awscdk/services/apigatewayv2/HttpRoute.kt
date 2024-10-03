@@ -38,7 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class HttpRoute(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRoute,
-) : Resource(cdkObject), IHttpRoute {
+) : Resource(cdkObject),
+    IHttpRoute {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

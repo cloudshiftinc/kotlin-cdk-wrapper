@@ -177,7 +177,8 @@ public interface CfnPresetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediaconvert.CfnPresetProps,
-  ) : CdkObject(cdkObject), CfnPresetProps {
+  ) : CdkObject(cdkObject),
+      CfnPresetProps {
     /**
      * The new category for the preset, if you are changing it.
      *

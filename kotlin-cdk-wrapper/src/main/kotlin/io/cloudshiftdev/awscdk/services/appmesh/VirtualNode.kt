@@ -48,7 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class VirtualNode(
   cdkObject: software.amazon.awscdk.services.appmesh.VirtualNode,
-) : Resource(cdkObject), IVirtualNode {
+) : Resource(cdkObject),
+    IVirtualNode {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

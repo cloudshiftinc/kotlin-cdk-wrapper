@@ -88,7 +88,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDeliveryChannel(
   cdkObject: software.amazon.awscdk.services.config.CfnDeliveryChannel,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -560,7 +561,8 @@ public open class CfnDeliveryChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty,
-    ) : CdkObject(cdkObject), ConfigSnapshotDeliveryPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ConfigSnapshotDeliveryPropertiesProperty {
       /**
        * The frequency with which AWS Config delivers configuration snapshots.
        *

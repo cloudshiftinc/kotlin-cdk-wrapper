@@ -6,12 +6,15 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * Properties used to configure a replica table.
@@ -39,6 +42,15 @@ public interface ReplicaTableProps : TableOptionsV2 {
   public fun globalSecondaryIndexOptions(): Map<String, ReplicaGlobalSecondaryIndexOptions> =
       unwrap(this).getGlobalSecondaryIndexOptions()?.mapValues{ReplicaGlobalSecondaryIndexOptions.wrap(it.value)}
       ?: emptyMap()
+
+  /**
+   * The maxium read request units.
+   *
+   * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+   *
+   * Default: - inherited from the primary table
+   */
+  public fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
 
   /**
    * The read capacity.
@@ -82,6 +94,12 @@ public interface ReplicaTableProps : TableOptionsV2 {
     public fun kinesisStream(kinesisStream: IStream)
 
     /**
+     * @param maxReadRequestUnits The maxium read request units.
+     * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+     */
+    public fun maxReadRequestUnits(maxReadRequestUnits: Number)
+
+    /**
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled.
      */
     public fun pointInTimeRecovery(pointInTimeRecovery: Boolean)
@@ -96,6 +114,18 @@ public interface ReplicaTableProps : TableOptionsV2 {
      * @param region The region that the replica table will be created in. 
      */
     public fun region(region: String)
+
+    /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    public fun resourcePolicy(resourcePolicy: PolicyDocument)
+
+    /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5e81c0a5c30615a10c90f2beb8354b9e6323cb71e5ea34dda62cb5e785d0c397")
+    public fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit)
 
     /**
      * @param tableClass The table class.
@@ -148,6 +178,14 @@ public interface ReplicaTableProps : TableOptionsV2 {
     }
 
     /**
+     * @param maxReadRequestUnits The maxium read request units.
+     * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+     */
+    override fun maxReadRequestUnits(maxReadRequestUnits: Number) {
+      cdkBuilder.maxReadRequestUnits(maxReadRequestUnits)
+    }
+
+    /**
      * @param pointInTimeRecovery Whether point-in-time recovery is enabled.
      */
     override fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
@@ -168,6 +206,21 @@ public interface ReplicaTableProps : TableOptionsV2 {
     override fun region(region: String) {
       cdkBuilder.region(region)
     }
+
+    /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    override fun resourcePolicy(resourcePolicy: PolicyDocument) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(PolicyDocument.Companion::unwrap))
+    }
+
+    /**
+     * @param resourcePolicy Resource policy to assign to DynamoDB Table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5e81c0a5c30615a10c90f2beb8354b9e6323cb71e5ea34dda62cb5e785d0c397")
+    override fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit): Unit =
+        resourcePolicy(PolicyDocument(resourcePolicy))
 
     /**
      * @param tableClass The table class.
@@ -194,7 +247,8 @@ public interface ReplicaTableProps : TableOptionsV2 {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.ReplicaTableProps,
-  ) : CdkObject(cdkObject), ReplicaTableProps {
+  ) : CdkObject(cdkObject),
+      ReplicaTableProps {
     /**
      * Whether CloudWatch contributor insights is enabled.
      *
@@ -226,6 +280,15 @@ public interface ReplicaTableProps : TableOptionsV2 {
     override fun kinesisStream(): IStream? = unwrap(this).getKinesisStream()?.let(IStream::wrap)
 
     /**
+     * The maxium read request units.
+     *
+     * Note: This can only be configured if the primary table billing is PAY_PER_REQUEST.
+     *
+     * Default: - inherited from the primary table
+     */
+    override fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
+
+    /**
      * Whether point-in-time recovery is enabled.
      *
      * Default: false
@@ -245,6 +308,16 @@ public interface ReplicaTableProps : TableOptionsV2 {
      * The region that the replica table will be created in.
      */
     override fun region(): String = unwrap(this).getRegion()
+
+    /**
+     * Resource policy to assign to DynamoDB Table.
+     *
+     * Default: - No resource policy statements are added to the created table.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-resourcepolicy)
+     */
+    override fun resourcePolicy(): PolicyDocument? =
+        unwrap(this).getResourcePolicy()?.let(PolicyDocument::wrap)
 
     /**
      * The table class.

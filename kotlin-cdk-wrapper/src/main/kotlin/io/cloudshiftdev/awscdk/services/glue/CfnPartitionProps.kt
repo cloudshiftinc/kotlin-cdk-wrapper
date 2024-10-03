@@ -208,7 +208,8 @@ public interface CfnPartitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnPartitionProps,
-  ) : CdkObject(cdkObject), CfnPartitionProps {
+  ) : CdkObject(cdkObject),
+      CfnPartitionProps {
     /**
      * The AWS account ID of the catalog in which the partion is to be created.
      *

@@ -22,7 +22,8 @@ public interface IConfigurationSetEventDestination : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.IConfigurationSetEventDestination,
-  ) : CdkObject(cdkObject), IConfigurationSetEventDestination {
+  ) : CdkObject(cdkObject),
+      IConfigurationSetEventDestination {
     /**
      * Apply the given removal policy to this resource.
      *

@@ -57,7 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMultiplex(
   cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -502,7 +504,8 @@ public open class CfnMultiplex(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexMediaConnectOutputDestinationSettingsProperty,
-    ) : CdkObject(cdkObject), MultiplexMediaConnectOutputDestinationSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MultiplexMediaConnectOutputDestinationSettingsProperty {
       /**
        * The MediaConnect entitlement ARN available as a Flow source.
        *
@@ -629,7 +632,8 @@ public open class CfnMultiplex(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty,
-    ) : CdkObject(cdkObject), MultiplexOutputDestinationProperty {
+    ) : CdkObject(cdkObject),
+        MultiplexOutputDestinationProperty {
       /**
        * Multiplex MediaConnect output destination settings.
        *
@@ -776,7 +780,8 @@ public open class CfnMultiplex(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty,
-    ) : CdkObject(cdkObject), MultiplexSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MultiplexSettingsProperty {
       /**
        * Maximum video buffer delay in milliseconds.
        *

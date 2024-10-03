@@ -79,6 +79,13 @@ public interface ITopic : IResource, INotificationRuleTarget {
   public fun grantPublish(identity: IGrantable): Grant
 
   /**
+   * Grant topic subscribing permissions to the given identity.
+   *
+   * @param identity 
+   */
+  public fun grantSubscribe(identity: IGrantable): Grant
+
+  /**
    * Return the given named metric for this Topic.
    *
    * @param metricName 
@@ -393,7 +400,8 @@ public interface ITopic : IResource, INotificationRuleTarget {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.ITopic,
-  ) : CdkObject(cdkObject), ITopic {
+  ) : CdkObject(cdkObject),
+      ITopic {
     /**
      * Subscribe some endpoint to this topic.
      *
@@ -484,6 +492,14 @@ public interface ITopic : IResource, INotificationRuleTarget {
      */
     override fun grantPublish(identity: IGrantable): Grant =
         unwrap(this).grantPublish(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+    /**
+     * Grant topic subscribing permissions to the given identity.
+     *
+     * @param identity 
+     */
+    override fun grantSubscribe(identity: IGrantable): Grant =
+        unwrap(this).grantSubscribe(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Return the given named metric for this Topic.

@@ -207,7 +207,8 @@ public interface IntegrationResponse {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IntegrationResponse,
-  ) : CdkObject(cdkObject), IntegrationResponse {
+  ) : CdkObject(cdkObject),
+      IntegrationResponse {
     /**
      * Specifies how to handle request payload content type conversions.
      *

@@ -84,6 +84,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .authenticationMode("authenticationMode")
  * .bootstrapClusterCreatorAdminPermissions(false)
  * .build())
+ * .bootstrapSelfManagedAddons(false)
  * .encryptionConfig(List.of(EncryptionConfigProperty.builder()
  * .provider(ProviderProperty.builder()
  * .keyArn("keyArn")
@@ -115,6 +116,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .key("key")
  * .value("value")
  * .build()))
+ * .upgradePolicy(UpgradePolicyProperty.builder()
+ * .supportType("supportType")
+ * .build())
  * .version("version")
  * .build();
  * ```
@@ -123,7 +127,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCluster(
   cdkObject: software.amazon.awscdk.services.eks.CfnCluster,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -229,6 +235,28 @@ public open class CfnCluster(
    */
   public open fun attrOpenIdConnectIssuerUrl(): String =
       unwrap(this).getAttrOpenIdConnectIssuerUrl()
+
+  /**
+   * If you set this value to `False` when creating a cluster, the default networking add-ons will
+   * not be installed.
+   */
+  public open fun bootstrapSelfManagedAddons(): Any? = unwrap(this).getBootstrapSelfManagedAddons()
+
+  /**
+   * If you set this value to `False` when creating a cluster, the default networking add-ons will
+   * not be installed.
+   */
+  public open fun bootstrapSelfManagedAddons(`value`: Boolean) {
+    unwrap(this).setBootstrapSelfManagedAddons(`value`)
+  }
+
+  /**
+   * If you set this value to `False` when creating a cluster, the default networking add-ons will
+   * not be installed.
+   */
+  public open fun bootstrapSelfManagedAddons(`value`: IResolvable) {
+    unwrap(this).setBootstrapSelfManagedAddons(`value`.let(IResolvable.Companion::unwrap))
+  }
 
   /**
    * The encryption configuration for the cluster.
@@ -422,6 +450,33 @@ public open class CfnCluster(
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   /**
+   * This value indicates if extended support is enabled or disabled for the cluster.
+   */
+  public open fun upgradePolicy(): Any? = unwrap(this).getUpgradePolicy()
+
+  /**
+   * This value indicates if extended support is enabled or disabled for the cluster.
+   */
+  public open fun upgradePolicy(`value`: IResolvable) {
+    unwrap(this).setUpgradePolicy(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * This value indicates if extended support is enabled or disabled for the cluster.
+   */
+  public open fun upgradePolicy(`value`: UpgradePolicyProperty) {
+    unwrap(this).setUpgradePolicy(`value`.let(UpgradePolicyProperty.Companion::unwrap))
+  }
+
+  /**
+   * This value indicates if extended support is enabled or disabled for the cluster.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("e69ccee578f12c8e9cb0abed5977b54f980bf5d1b6b05306d9b143cdbdaf1394")
+  public open fun upgradePolicy(`value`: UpgradePolicyProperty.Builder.() -> Unit): Unit =
+      upgradePolicy(UpgradePolicyProperty(`value`))
+
+  /**
    * The desired Kubernetes version for your cluster.
    */
   public open fun version(): String? = unwrap(this).getVersion()
@@ -463,6 +518,36 @@ public open class CfnCluster(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ec4c1a7d3a6de171eddcfa8c911dcb17d9b0926ae11adb71b6e5b373e025c017")
     public fun accessConfig(accessConfig: AccessConfigProperty.Builder.() -> Unit)
+
+    /**
+     * If you set this value to `False` when creating a cluster, the default networking add-ons will
+     * not be installed.
+     *
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     *
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the
+     * default networking add-ons.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-bootstrapselfmanagedaddons)
+     * @param bootstrapSelfManagedAddons If you set this value to `False` when creating a cluster,
+     * the default networking add-ons will not be installed. 
+     */
+    public fun bootstrapSelfManagedAddons(bootstrapSelfManagedAddons: Boolean)
+
+    /**
+     * If you set this value to `False` when creating a cluster, the default networking add-ons will
+     * not be installed.
+     *
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     *
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the
+     * default networking add-ons.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-bootstrapselfmanagedaddons)
+     * @param bootstrapSelfManagedAddons If you set this value to `False` when creating a cluster,
+     * the default networking add-ons will not be installed. 
+     */
+    public fun bootstrapSelfManagedAddons(bootstrapSelfManagedAddons: IResolvable)
 
     /**
      * The encryption configuration for the cluster.
@@ -692,6 +777,44 @@ public open class CfnCluster(
     public fun tags(vararg tags: CfnTag)
 
     /**
+     * This value indicates if extended support is enabled or disabled for the cluster.
+     *
+     * [Learn more about EKS Extended Support in the EKS User
+     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
+     * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
+     * cluster. 
+     */
+    public fun upgradePolicy(upgradePolicy: IResolvable)
+
+    /**
+     * This value indicates if extended support is enabled or disabled for the cluster.
+     *
+     * [Learn more about EKS Extended Support in the EKS User
+     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
+     * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
+     * cluster. 
+     */
+    public fun upgradePolicy(upgradePolicy: UpgradePolicyProperty)
+
+    /**
+     * This value indicates if extended support is enabled or disabled for the cluster.
+     *
+     * [Learn more about EKS Extended Support in the EKS User
+     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
+     * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
+     * cluster. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("601ae62ea260d8c8be3a285492a900d0cbe0a0c0b9f0e2f85dc07038bd73d839")
+    public fun upgradePolicy(upgradePolicy: UpgradePolicyProperty.Builder.() -> Unit)
+
+    /**
      * The desired Kubernetes version for your cluster.
      *
      * If you don't specify a value here, the default version available in Amazon EKS is used.
@@ -743,6 +866,40 @@ public open class CfnCluster(
     @JvmName("ec4c1a7d3a6de171eddcfa8c911dcb17d9b0926ae11adb71b6e5b373e025c017")
     override fun accessConfig(accessConfig: AccessConfigProperty.Builder.() -> Unit): Unit =
         accessConfig(AccessConfigProperty(accessConfig))
+
+    /**
+     * If you set this value to `False` when creating a cluster, the default networking add-ons will
+     * not be installed.
+     *
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     *
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the
+     * default networking add-ons.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-bootstrapselfmanagedaddons)
+     * @param bootstrapSelfManagedAddons If you set this value to `False` when creating a cluster,
+     * the default networking add-ons will not be installed. 
+     */
+    override fun bootstrapSelfManagedAddons(bootstrapSelfManagedAddons: Boolean) {
+      cdkBuilder.bootstrapSelfManagedAddons(bootstrapSelfManagedAddons)
+    }
+
+    /**
+     * If you set this value to `False` when creating a cluster, the default networking add-ons will
+     * not be installed.
+     *
+     * The default networking addons include vpc-cni, coredns, and kube-proxy.
+     *
+     * Use this option when you plan to install third-party alternative add-ons or self-manage the
+     * default networking add-ons.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-bootstrapselfmanagedaddons)
+     * @param bootstrapSelfManagedAddons If you set this value to `False` when creating a cluster,
+     * the default networking add-ons will not be installed. 
+     */
+    override fun bootstrapSelfManagedAddons(bootstrapSelfManagedAddons: IResolvable) {
+      cdkBuilder.bootstrapSelfManagedAddons(bootstrapSelfManagedAddons.let(IResolvable.Companion::unwrap))
+    }
 
     /**
      * The encryption configuration for the cluster.
@@ -1004,6 +1161,49 @@ public open class CfnCluster(
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
+     * This value indicates if extended support is enabled or disabled for the cluster.
+     *
+     * [Learn more about EKS Extended Support in the EKS User
+     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
+     * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
+     * cluster. 
+     */
+    override fun upgradePolicy(upgradePolicy: IResolvable) {
+      cdkBuilder.upgradePolicy(upgradePolicy.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * This value indicates if extended support is enabled or disabled for the cluster.
+     *
+     * [Learn more about EKS Extended Support in the EKS User
+     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
+     * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
+     * cluster. 
+     */
+    override fun upgradePolicy(upgradePolicy: UpgradePolicyProperty) {
+      cdkBuilder.upgradePolicy(upgradePolicy.let(UpgradePolicyProperty.Companion::unwrap))
+    }
+
+    /**
+     * This value indicates if extended support is enabled or disabled for the cluster.
+     *
+     * [Learn more about EKS Extended Support in the EKS User
+     * Guide.](https://docs.aws.amazon.com/eks/latest/userguide/extended-support-control.html)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-upgradepolicy)
+     * @param upgradePolicy This value indicates if extended support is enabled or disabled for the
+     * cluster. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("601ae62ea260d8c8be3a285492a900d0cbe0a0c0b9f0e2f85dc07038bd73d839")
+    override fun upgradePolicy(upgradePolicy: UpgradePolicyProperty.Builder.() -> Unit): Unit =
+        upgradePolicy(UpgradePolicyProperty(upgradePolicy))
+
+    /**
      * The desired Kubernetes version for your cluster.
      *
      * If you don't specify a value here, the default version available in Amazon EKS is used.
@@ -1153,7 +1353,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnCluster.AccessConfigProperty,
-    ) : CdkObject(cdkObject), AccessConfigProperty {
+    ) : CdkObject(cdkObject),
+        AccessConfigProperty {
       /**
        * The desired authentication mode for the cluster.
        *
@@ -1308,7 +1509,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ClusterLoggingProperty,
-    ) : CdkObject(cdkObject), ClusterLoggingProperty {
+    ) : CdkObject(cdkObject),
+        ClusterLoggingProperty {
       /**
        * The enabled control plane logs for your cluster. All log types are disabled if the array is
        * empty.
@@ -1407,7 +1609,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty,
-    ) : CdkObject(cdkObject), ControlPlanePlacementProperty {
+    ) : CdkObject(cdkObject),
+        ControlPlanePlacementProperty {
       /**
        * The name of the placement group for the Kubernetes control plane instances.
        *
@@ -1554,7 +1757,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionConfigProperty {
       /**
        * The encryption provider for the cluster.
        *
@@ -1781,7 +1985,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty,
-    ) : CdkObject(cdkObject), KubernetesNetworkConfigProperty {
+    ) : CdkObject(cdkObject),
+        KubernetesNetworkConfigProperty {
       /**
        * Specify which IP family is used to assign Kubernetes pod and service IP addresses.
        *
@@ -1952,7 +2157,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty,
-    ) : CdkObject(cdkObject), LoggingProperty {
+    ) : CdkObject(cdkObject),
+        LoggingProperty {
       /**
        * The cluster control plane logging configuration for your cluster.
        *
@@ -2034,7 +2240,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty,
-    ) : CdkObject(cdkObject), LoggingTypeConfigProperty {
+    ) : CdkObject(cdkObject),
+        LoggingTypeConfigProperty {
       /**
        * The name of the log type.
        *
@@ -2268,7 +2475,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty,
-    ) : CdkObject(cdkObject), OutpostConfigProperty {
+    ) : CdkObject(cdkObject),
+        OutpostConfigProperty {
       /**
        * The Amazon EC2 instance type that you want to use for your local Amazon EKS cluster on
        * Outposts.
@@ -2401,7 +2609,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty,
-    ) : CdkObject(cdkObject), ProviderProperty {
+    ) : CdkObject(cdkObject),
+        ProviderProperty {
       /**
        * Amazon Resource Name (ARN) or alias of the KMS key.
        *
@@ -2798,7 +3007,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty,
-    ) : CdkObject(cdkObject), ResourcesVpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        ResourcesVpcConfigProperty {
       /**
        * Set this value to `true` to enable private access for your cluster's Kubernetes API server
        * endpoint.
@@ -2889,6 +3099,87 @@ public open class CfnCluster(
           software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty
+    }
+  }
+
+  /**
+   * An object representing the Upgrade Policy to use for the cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * UpgradePolicyProperty upgradePolicyProperty = UpgradePolicyProperty.builder()
+   * .supportType("supportType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-upgradepolicy.html)
+   */
+  public interface UpgradePolicyProperty {
+    /**
+     * Specify the support type for your cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-upgradepolicy.html#cfn-eks-cluster-upgradepolicy-supporttype)
+     */
+    public fun supportType(): String? = unwrap(this).getSupportType()
+
+    /**
+     * A builder for [UpgradePolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param supportType Specify the support type for your cluster.
+       */
+      public fun supportType(supportType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.UpgradePolicyProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.UpgradePolicyProperty.builder()
+
+      /**
+       * @param supportType Specify the support type for your cluster.
+       */
+      override fun supportType(supportType: String) {
+        cdkBuilder.supportType(supportType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.UpgradePolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.UpgradePolicyProperty,
+    ) : CdkObject(cdkObject),
+        UpgradePolicyProperty {
+      /**
+       * Specify the support type for your cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-upgradepolicy.html#cfn-eks-cluster-upgradepolicy-supporttype)
+       */
+      override fun supportType(): String? = unwrap(this).getSupportType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): UpgradePolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.UpgradePolicyProperty):
+          UpgradePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? UpgradePolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: UpgradePolicyProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.UpgradePolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.UpgradePolicyProperty
     }
   }
 }

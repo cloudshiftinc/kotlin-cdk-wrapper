@@ -22,9 +22,10 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.route53resolver.*;
  * CfnResolverRuleProps cfnResolverRuleProps = CfnResolverRuleProps.builder()
- * .domainName("domainName")
  * .ruleType("ruleType")
  * // the properties below are optional
+ * .delegationRecord("delegationRecord")
+ * .domainName("domainName")
  * .name("name")
  * .resolverEndpointId("resolverEndpointId")
  * .tags(List.of(CfnTag.builder()
@@ -44,6 +45,13 @@ import kotlin.collections.List
  */
 public interface CfnResolverRuleProps {
   /**
+   * The name server domain for queries to be delegated to if a query matches the delegation record.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-delegationrecord)
+   */
+  public fun delegationRecord(): String? = unwrap(this).getDelegationRecord()
+
+  /**
    * DNS queries for this domain name are forwarded to the IP addresses that are specified in
    * `TargetIps` .
    *
@@ -52,7 +60,7 @@ public interface CfnResolverRuleProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-domainname)
    */
-  public fun domainName(): String
+  public fun domainName(): String? = unwrap(this).getDomainName()
 
   /**
    * The name for the Resolver rule, which you specified when you created the Resolver rule.
@@ -110,8 +118,14 @@ public interface CfnResolverRuleProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param delegationRecord The name server domain for queries to be delegated to if a query
+     * matches the delegation record.
+     */
+    public fun delegationRecord(delegationRecord: String)
+
+    /**
      * @param domainName DNS queries for this domain name are forwarded to the IP addresses that are
-     * specified in `TargetIps` . 
+     * specified in `TargetIps` .
      * If a query matches multiple Resolver rules (example.com and www.example.com), the query is
      * routed using the Resolver rule that contains the most specific domain name (www.example.com).
      */
@@ -182,8 +196,16 @@ public interface CfnResolverRuleProps {
         software.amazon.awscdk.services.route53resolver.CfnResolverRuleProps.builder()
 
     /**
+     * @param delegationRecord The name server domain for queries to be delegated to if a query
+     * matches the delegation record.
+     */
+    override fun delegationRecord(delegationRecord: String) {
+      cdkBuilder.delegationRecord(delegationRecord)
+    }
+
+    /**
      * @param domainName DNS queries for this domain name are forwarded to the IP addresses that are
-     * specified in `TargetIps` . 
+     * specified in `TargetIps` .
      * If a query matches multiple Resolver rules (example.com and www.example.com), the query is
      * routed using the Resolver rule that contains the most specific domain name (www.example.com).
      */
@@ -267,7 +289,16 @@ public interface CfnResolverRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRuleProps,
-  ) : CdkObject(cdkObject), CfnResolverRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnResolverRuleProps {
+    /**
+     * The name server domain for queries to be delegated to if a query matches the delegation
+     * record.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-delegationrecord)
+     */
+    override fun delegationRecord(): String? = unwrap(this).getDelegationRecord()
+
     /**
      * DNS queries for this domain name are forwarded to the IP addresses that are specified in
      * `TargetIps` .
@@ -277,7 +308,7 @@ public interface CfnResolverRuleProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-domainname)
      */
-    override fun domainName(): String = unwrap(this).getDomainName()
+    override fun domainName(): String? = unwrap(this).getDomainName()
 
     /**
      * The name for the Resolver rule, which you specified when you created the Resolver rule.

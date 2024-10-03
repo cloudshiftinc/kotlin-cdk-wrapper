@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDevice(
   cdkObject: software.amazon.awscdk.services.networkmanager.CfnDevice,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -679,7 +681,8 @@ public open class CfnDevice(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnDevice.AWSLocationProperty,
-    ) : CdkObject(cdkObject), AWSLocationProperty {
+    ) : CdkObject(cdkObject),
+        AWSLocationProperty {
       /**
        * The Amazon Resource Name (ARN) of the subnet that the device is located in.
        *
@@ -808,7 +811,8 @@ public open class CfnDevice(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnDevice.LocationProperty,
-    ) : CdkObject(cdkObject), LocationProperty {
+    ) : CdkObject(cdkObject),
+        LocationProperty {
       /**
        * The physical address.
        *

@@ -35,7 +35,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class WebSocketApi(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApi,
-) : Resource(cdkObject), IWebSocketApi, IApi {
+) : Resource(cdkObject),
+    IWebSocketApi,
+    IApi {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigatewayv2.WebSocketApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

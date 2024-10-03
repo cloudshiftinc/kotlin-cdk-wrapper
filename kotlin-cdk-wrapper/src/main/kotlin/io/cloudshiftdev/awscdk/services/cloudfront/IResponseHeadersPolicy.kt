@@ -17,7 +17,8 @@ public interface IResponseHeadersPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.IResponseHeadersPolicy,
-  ) : CdkObject(cdkObject), IResponseHeadersPolicy {
+  ) : CdkObject(cdkObject),
+      IResponseHeadersPolicy {
     /**
      * The ID of the response headers policy.
      */

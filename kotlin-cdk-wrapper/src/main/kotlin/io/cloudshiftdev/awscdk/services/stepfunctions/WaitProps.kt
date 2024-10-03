@@ -109,7 +109,8 @@ public interface WaitProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.WaitProps,
-  ) : CdkObject(cdkObject), WaitProps {
+  ) : CdkObject(cdkObject),
+      WaitProps {
     /**
      * An optional description for this state.
      *

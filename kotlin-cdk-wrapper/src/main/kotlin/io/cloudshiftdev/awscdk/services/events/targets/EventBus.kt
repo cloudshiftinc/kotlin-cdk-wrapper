@@ -29,7 +29,8 @@ import software.amazon.awscdk.services.events.IEventBus as AmazonAwscdkServicesE
  */
 public open class EventBus(
   cdkObject: software.amazon.awscdk.services.events.targets.EventBus,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(eventBus: CloudshiftdevAwscdkServicesEventsIEventBus) :
       this(software.amazon.awscdk.services.events.targets.EventBus(eventBus.let(CloudshiftdevAwscdkServicesEventsIEventBus.Companion::unwrap))
   )

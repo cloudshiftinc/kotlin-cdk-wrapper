@@ -131,7 +131,8 @@ public interface CfnIPAMScopeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMScopeProps,
-  ) : CdkObject(cdkObject), CfnIPAMScopeProps {
+  ) : CdkObject(cdkObject),
+      CfnIPAMScopeProps {
     /**
      * The description of the scope.
      *

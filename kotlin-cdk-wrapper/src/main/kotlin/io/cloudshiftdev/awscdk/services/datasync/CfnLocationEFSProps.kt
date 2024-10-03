@@ -44,30 +44,39 @@ import kotlin.jvm.JvmName
  */
 public interface CfnLocationEFSProps {
   /**
-   * Specifies the Amazon Resource Name (ARN) of the access point that DataSync uses to access the
+   * Specifies the Amazon Resource Name (ARN) of the access point that DataSync uses to mount your
    * Amazon EFS file system.
+   *
+   * For more information, see [Accessing restricted file
+   * systems](https://docs.aws.amazon.com/datasync/latest/userguide/create-efs-location.html#create-efs-location-iam)
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-accesspointarn)
    */
   public fun accessPointArn(): String? = unwrap(this).getAccessPointArn()
 
   /**
-   * Specifies the subnet and security groups DataSync uses to access your Amazon EFS file system.
+   * Specifies the subnet and security groups DataSync uses to connect to one of your Amazon EFS
+   * file system's [mount targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-ec2config)
    */
   public fun ec2Config(): Any
 
   /**
-   * Specifies the ARN for the Amazon EFS file system.
+   * Specifies the ARN for your Amazon EFS file system.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-efsfilesystemarn)
    */
   public fun efsFilesystemArn(): String? = unwrap(this).getEfsFilesystemArn()
 
   /**
-   * Specifies an AWS Identity and Access Management (IAM) role that DataSync assumes when mounting
-   * the Amazon EFS file system.
+   * Specifies an AWS Identity and Access Management (IAM) role that allows DataSync to access your
+   * Amazon EFS file system.
+   *
+   * For information on creating this role, see [Creating a DataSync IAM role for file system
+   * access](https://docs.aws.amazon.com/datasync/latest/userguide/create-efs-location.html#create-efs-location-iam-role)
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-filesystemaccessrolearn)
    */
@@ -75,7 +84,7 @@ public interface CfnLocationEFSProps {
 
   /**
    * Specifies whether you want DataSync to use Transport Layer Security (TLS) 1.2 encryption when
-   * it copies data to or from the Amazon EFS file system.
+   * it transfers data to or from your Amazon EFS file system.
    *
    * If you specify an access point using `AccessPointArn` or an IAM role using
    * `FileSystemAccessRoleArn` , you must set this parameter to `TLS1_2` .
@@ -88,11 +97,12 @@ public interface CfnLocationEFSProps {
    * Specifies a mount path for your Amazon EFS file system.
    *
    * This is where DataSync reads or writes data (depending on if this is a source or destination
-   * location). By default, DataSync uses the root directory, but you can also include subdirectories.
+   * location) on your file system.
    *
-   *
-   * You must specify a value with forward slashes (for example, `/path/to/folder` ).
-   *
+   * By default, DataSync uses the root directory (or [access
+   * point](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) if you provide one by
+   * using `AccessPointArn` ). You can also include subdirectories using forward slashes (for example,
+   * `/path/to/folder` ).
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-subdirectory)
    */
@@ -115,44 +125,53 @@ public interface CfnLocationEFSProps {
   public interface Builder {
     /**
      * @param accessPointArn Specifies the Amazon Resource Name (ARN) of the access point that
-     * DataSync uses to access the Amazon EFS file system.
+     * DataSync uses to mount your Amazon EFS file system.
+     * For more information, see [Accessing restricted file
+     * systems](https://docs.aws.amazon.com/datasync/latest/userguide/create-efs-location.html#create-efs-location-iam)
+     * .
      */
     public fun accessPointArn(accessPointArn: String)
 
     /**
-     * @param ec2Config Specifies the subnet and security groups DataSync uses to access your Amazon
-     * EFS file system. 
+     * @param ec2Config Specifies the subnet and security groups DataSync uses to connect to one of
+     * your Amazon EFS file system's [mount
+     * targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) . 
      */
     public fun ec2Config(ec2Config: IResolvable)
 
     /**
-     * @param ec2Config Specifies the subnet and security groups DataSync uses to access your Amazon
-     * EFS file system. 
+     * @param ec2Config Specifies the subnet and security groups DataSync uses to connect to one of
+     * your Amazon EFS file system's [mount
+     * targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) . 
      */
     public fun ec2Config(ec2Config: CfnLocationEFS.Ec2ConfigProperty)
 
     /**
-     * @param ec2Config Specifies the subnet and security groups DataSync uses to access your Amazon
-     * EFS file system. 
+     * @param ec2Config Specifies the subnet and security groups DataSync uses to connect to one of
+     * your Amazon EFS file system's [mount
+     * targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) . 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3af66aa99dca56cb35a3347bb145188a2ff6c86fa7d4f760b1442dcabf27da27")
     public fun ec2Config(ec2Config: CfnLocationEFS.Ec2ConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param efsFilesystemArn Specifies the ARN for the Amazon EFS file system.
+     * @param efsFilesystemArn Specifies the ARN for your Amazon EFS file system.
      */
     public fun efsFilesystemArn(efsFilesystemArn: String)
 
     /**
      * @param fileSystemAccessRoleArn Specifies an AWS Identity and Access Management (IAM) role
-     * that DataSync assumes when mounting the Amazon EFS file system.
+     * that allows DataSync to access your Amazon EFS file system.
+     * For information on creating this role, see [Creating a DataSync IAM role for file system
+     * access](https://docs.aws.amazon.com/datasync/latest/userguide/create-efs-location.html#create-efs-location-iam-role)
+     * .
      */
     public fun fileSystemAccessRoleArn(fileSystemAccessRoleArn: String)
 
     /**
      * @param inTransitEncryption Specifies whether you want DataSync to use Transport Layer
-     * Security (TLS) 1.2 encryption when it copies data to or from the Amazon EFS file system.
+     * Security (TLS) 1.2 encryption when it transfers data to or from your Amazon EFS file system.
      * If you specify an access point using `AccessPointArn` or an IAM role using
      * `FileSystemAccessRoleArn` , you must set this parameter to `TLS1_2` .
      */
@@ -161,11 +180,12 @@ public interface CfnLocationEFSProps {
     /**
      * @param subdirectory Specifies a mount path for your Amazon EFS file system.
      * This is where DataSync reads or writes data (depending on if this is a source or destination
-     * location). By default, DataSync uses the root directory, but you can also include
-     * subdirectories.
+     * location) on your file system.
      *
-     *
-     * You must specify a value with forward slashes (for example, `/path/to/folder` ).
+     * By default, DataSync uses the root directory (or [access
+     * point](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) if you provide one by
+     * using `AccessPointArn` ). You can also include subdirectories using forward slashes (for
+     * example, `/path/to/folder` ).
      */
     public fun subdirectory(subdirectory: String)
 
@@ -192,31 +212,37 @@ public interface CfnLocationEFSProps {
 
     /**
      * @param accessPointArn Specifies the Amazon Resource Name (ARN) of the access point that
-     * DataSync uses to access the Amazon EFS file system.
+     * DataSync uses to mount your Amazon EFS file system.
+     * For more information, see [Accessing restricted file
+     * systems](https://docs.aws.amazon.com/datasync/latest/userguide/create-efs-location.html#create-efs-location-iam)
+     * .
      */
     override fun accessPointArn(accessPointArn: String) {
       cdkBuilder.accessPointArn(accessPointArn)
     }
 
     /**
-     * @param ec2Config Specifies the subnet and security groups DataSync uses to access your Amazon
-     * EFS file system. 
+     * @param ec2Config Specifies the subnet and security groups DataSync uses to connect to one of
+     * your Amazon EFS file system's [mount
+     * targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) . 
      */
     override fun ec2Config(ec2Config: IResolvable) {
       cdkBuilder.ec2Config(ec2Config.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param ec2Config Specifies the subnet and security groups DataSync uses to access your Amazon
-     * EFS file system. 
+     * @param ec2Config Specifies the subnet and security groups DataSync uses to connect to one of
+     * your Amazon EFS file system's [mount
+     * targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) . 
      */
     override fun ec2Config(ec2Config: CfnLocationEFS.Ec2ConfigProperty) {
       cdkBuilder.ec2Config(ec2Config.let(CfnLocationEFS.Ec2ConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param ec2Config Specifies the subnet and security groups DataSync uses to access your Amazon
-     * EFS file system. 
+     * @param ec2Config Specifies the subnet and security groups DataSync uses to connect to one of
+     * your Amazon EFS file system's [mount
+     * targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) . 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3af66aa99dca56cb35a3347bb145188a2ff6c86fa7d4f760b1442dcabf27da27")
@@ -224,7 +250,7 @@ public interface CfnLocationEFSProps {
         ec2Config(CfnLocationEFS.Ec2ConfigProperty(ec2Config))
 
     /**
-     * @param efsFilesystemArn Specifies the ARN for the Amazon EFS file system.
+     * @param efsFilesystemArn Specifies the ARN for your Amazon EFS file system.
      */
     override fun efsFilesystemArn(efsFilesystemArn: String) {
       cdkBuilder.efsFilesystemArn(efsFilesystemArn)
@@ -232,7 +258,10 @@ public interface CfnLocationEFSProps {
 
     /**
      * @param fileSystemAccessRoleArn Specifies an AWS Identity and Access Management (IAM) role
-     * that DataSync assumes when mounting the Amazon EFS file system.
+     * that allows DataSync to access your Amazon EFS file system.
+     * For information on creating this role, see [Creating a DataSync IAM role for file system
+     * access](https://docs.aws.amazon.com/datasync/latest/userguide/create-efs-location.html#create-efs-location-iam-role)
+     * .
      */
     override fun fileSystemAccessRoleArn(fileSystemAccessRoleArn: String) {
       cdkBuilder.fileSystemAccessRoleArn(fileSystemAccessRoleArn)
@@ -240,7 +269,7 @@ public interface CfnLocationEFSProps {
 
     /**
      * @param inTransitEncryption Specifies whether you want DataSync to use Transport Layer
-     * Security (TLS) 1.2 encryption when it copies data to or from the Amazon EFS file system.
+     * Security (TLS) 1.2 encryption when it transfers data to or from your Amazon EFS file system.
      * If you specify an access point using `AccessPointArn` or an IAM role using
      * `FileSystemAccessRoleArn` , you must set this parameter to `TLS1_2` .
      */
@@ -251,11 +280,12 @@ public interface CfnLocationEFSProps {
     /**
      * @param subdirectory Specifies a mount path for your Amazon EFS file system.
      * This is where DataSync reads or writes data (depending on if this is a source or destination
-     * location). By default, DataSync uses the root directory, but you can also include
-     * subdirectories.
+     * location) on your file system.
      *
-     *
-     * You must specify a value with forward slashes (for example, `/path/to/folder` ).
+     * By default, DataSync uses the root directory (or [access
+     * point](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) if you provide one by
+     * using `AccessPointArn` ). You can also include subdirectories using forward slashes (for
+     * example, `/path/to/folder` ).
      */
     override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
@@ -285,32 +315,42 @@ public interface CfnLocationEFSProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datasync.CfnLocationEFSProps,
-  ) : CdkObject(cdkObject), CfnLocationEFSProps {
+  ) : CdkObject(cdkObject),
+      CfnLocationEFSProps {
     /**
-     * Specifies the Amazon Resource Name (ARN) of the access point that DataSync uses to access the
+     * Specifies the Amazon Resource Name (ARN) of the access point that DataSync uses to mount your
      * Amazon EFS file system.
+     *
+     * For more information, see [Accessing restricted file
+     * systems](https://docs.aws.amazon.com/datasync/latest/userguide/create-efs-location.html#create-efs-location-iam)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-accesspointarn)
      */
     override fun accessPointArn(): String? = unwrap(this).getAccessPointArn()
 
     /**
-     * Specifies the subnet and security groups DataSync uses to access your Amazon EFS file system.
+     * Specifies the subnet and security groups DataSync uses to connect to one of your Amazon EFS
+     * file system's [mount targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-ec2config)
      */
     override fun ec2Config(): Any = unwrap(this).getEc2Config()
 
     /**
-     * Specifies the ARN for the Amazon EFS file system.
+     * Specifies the ARN for your Amazon EFS file system.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-efsfilesystemarn)
      */
     override fun efsFilesystemArn(): String? = unwrap(this).getEfsFilesystemArn()
 
     /**
-     * Specifies an AWS Identity and Access Management (IAM) role that DataSync assumes when
-     * mounting the Amazon EFS file system.
+     * Specifies an AWS Identity and Access Management (IAM) role that allows DataSync to access
+     * your Amazon EFS file system.
+     *
+     * For information on creating this role, see [Creating a DataSync IAM role for file system
+     * access](https://docs.aws.amazon.com/datasync/latest/userguide/create-efs-location.html#create-efs-location-iam-role)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-filesystemaccessrolearn)
      */
@@ -318,7 +358,7 @@ public interface CfnLocationEFSProps {
 
     /**
      * Specifies whether you want DataSync to use Transport Layer Security (TLS) 1.2 encryption when
-     * it copies data to or from the Amazon EFS file system.
+     * it transfers data to or from your Amazon EFS file system.
      *
      * If you specify an access point using `AccessPointArn` or an IAM role using
      * `FileSystemAccessRoleArn` , you must set this parameter to `TLS1_2` .
@@ -331,12 +371,12 @@ public interface CfnLocationEFSProps {
      * Specifies a mount path for your Amazon EFS file system.
      *
      * This is where DataSync reads or writes data (depending on if this is a source or destination
-     * location). By default, DataSync uses the root directory, but you can also include
-     * subdirectories.
+     * location) on your file system.
      *
-     *
-     * You must specify a value with forward slashes (for example, `/path/to/folder` ).
-     *
+     * By default, DataSync uses the root directory (or [access
+     * point](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) if you provide one by
+     * using `AccessPointArn` ). You can also include subdirectories using forward slashes (for
+     * example, `/path/to/folder` ).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-subdirectory)
      */

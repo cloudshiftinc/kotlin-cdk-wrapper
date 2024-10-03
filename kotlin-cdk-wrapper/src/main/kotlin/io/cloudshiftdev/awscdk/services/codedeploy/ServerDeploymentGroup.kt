@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ServerDeploymentGroup(
   cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup,
-) : Resource(cdkObject), IServerDeploymentGroup {
+) : Resource(cdkObject),
+    IServerDeploymentGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -325,6 +326,18 @@ public open class ServerDeploymentGroup(
      * @param role The service Role of this Deployment Group. 
      */
     public fun role(role: IRole)
+
+    /**
+     * Indicates whether the deployment group was configured to have CodeDeploy install a
+     * termination hook into an Auto Scaling group.
+     *
+     * Default: - false
+     *
+     * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-auto-scaling.html#integrations-aws-auto-scaling-behaviors)
+     * @param terminationHook Indicates whether the deployment group was configured to have
+     * CodeDeploy install a termination hook into an Auto Scaling group. 
+     */
+    public fun terminationHook(terminationHook: Boolean)
   }
 
   private class BuilderImpl(
@@ -575,6 +588,20 @@ public open class ServerDeploymentGroup(
      */
     override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole.Companion::unwrap))
+    }
+
+    /**
+     * Indicates whether the deployment group was configured to have CodeDeploy install a
+     * termination hook into an Auto Scaling group.
+     *
+     * Default: - false
+     *
+     * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-auto-scaling.html#integrations-aws-auto-scaling-behaviors)
+     * @param terminationHook Indicates whether the deployment group was configured to have
+     * CodeDeploy install a termination hook into an Auto Scaling group. 
+     */
+    override fun terminationHook(terminationHook: Boolean) {
+      cdkBuilder.terminationHook(terminationHook)
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup =

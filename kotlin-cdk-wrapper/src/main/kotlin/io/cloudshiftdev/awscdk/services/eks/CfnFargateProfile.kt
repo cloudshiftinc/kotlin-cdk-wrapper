@@ -84,7 +84,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFargateProfile(
   cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -559,7 +561,8 @@ public open class CfnFargateProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile.LabelProperty,
-    ) : CdkObject(cdkObject), LabelProperty {
+    ) : CdkObject(cdkObject),
+        LabelProperty {
       /**
        * Enter a key.
        *
@@ -706,7 +709,8 @@ public open class CfnFargateProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile.SelectorProperty,
-    ) : CdkObject(cdkObject), SelectorProperty {
+    ) : CdkObject(cdkObject),
+        SelectorProperty {
       /**
        * The Kubernetes labels that the selector should match.
        *

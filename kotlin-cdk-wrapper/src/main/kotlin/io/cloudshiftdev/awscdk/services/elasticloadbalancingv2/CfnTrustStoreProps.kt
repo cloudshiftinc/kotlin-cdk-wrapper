@@ -164,7 +164,8 @@ public interface CfnTrustStoreProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreProps,
-  ) : CdkObject(cdkObject), CfnTrustStoreProps {
+  ) : CdkObject(cdkObject),
+      CfnTrustStoreProps {
     /**
      * The Amazon S3 bucket for the ca certificates bundle.
      *

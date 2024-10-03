@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class NetworkLoadBalancer(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer,
-) : BaseLoadBalancer(cdkObject), INetworkLoadBalancer {
+) : BaseLoadBalancer(cdkObject),
+    INetworkLoadBalancer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -481,8 +482,7 @@ public open class NetworkLoadBalancer(
      * Default: - false for Network Load Balancers and true for Application Load Balancers.
      * This can not be `false` for Application Load Balancers.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
      * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled. 
      */
     public fun crossZoneEnabled(crossZoneEnabled: Boolean)
@@ -622,8 +622,7 @@ public open class NetworkLoadBalancer(
      * Default: - false for Network Load Balancers and true for Application Load Balancers.
      * This can not be `false` for Application Load Balancers.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
      * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled. 
      */
     override fun crossZoneEnabled(crossZoneEnabled: Boolean) {

@@ -219,7 +219,8 @@ public interface BatchJobProps : TargetBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.targets.BatchJobProps,
-  ) : CdkObject(cdkObject), BatchJobProps {
+  ) : CdkObject(cdkObject),
+      BatchJobProps {
     /**
      * The number of times to attempt to retry, if the job fails.
      *

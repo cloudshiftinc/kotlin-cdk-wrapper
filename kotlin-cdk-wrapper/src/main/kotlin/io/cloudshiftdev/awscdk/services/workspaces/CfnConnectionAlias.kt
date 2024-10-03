@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConnectionAlias(
   cdkObject: software.amazon.awscdk.services.workspaces.CfnConnectionAlias,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -349,7 +351,8 @@ public open class CfnConnectionAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.workspaces.CfnConnectionAlias.ConnectionAliasAssociationProperty,
-    ) : CdkObject(cdkObject), ConnectionAliasAssociationProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionAliasAssociationProperty {
       /**
        * The identifier of the AWS account that associated the connection alias with a directory.
        *

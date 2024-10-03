@@ -34,7 +34,8 @@ public interface IDomainName : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IDomainName,
-  ) : CdkObject(cdkObject), IDomainName {
+  ) : CdkObject(cdkObject),
+      IDomainName {
     /**
      * Apply the given removal policy to this resource.
      *

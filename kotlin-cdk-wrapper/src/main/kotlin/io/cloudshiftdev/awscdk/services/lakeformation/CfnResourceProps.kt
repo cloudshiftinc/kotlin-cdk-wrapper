@@ -194,7 +194,8 @@ public interface CfnResourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lakeformation.CfnResourceProps,
-  ) : CdkObject(cdkObject), CfnResourceProps {
+  ) : CdkObject(cdkObject),
+      CfnResourceProps {
     /**
      * Indicates whether the data access of tables pointing to the location can be managed by both
      * Lake Formation permissions as well as Amazon S3 bucket policies.

@@ -480,7 +480,8 @@ public interface CfnDataSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datazone.CfnDataSourceProps,
-  ) : CdkObject(cdkObject), CfnDataSourceProps {
+  ) : CdkObject(cdkObject),
+      CfnDataSourceProps {
     /**
      * The metadata forms attached to the assets that the data source works with.
      *

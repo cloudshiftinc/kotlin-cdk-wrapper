@@ -59,6 +59,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .build())
  * .customerManagedKey("customerManagedKey")
+ * .deepLinkAllowed("deepLinkAllowed")
  * .disconnectTimeoutInMinutes(123)
  * .idleDisconnectTimeoutInMinutes(123)
  * .tags(List.of(CfnTag.builder()
@@ -72,7 +73,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUserSettings(
   cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -182,6 +185,20 @@ public open class CfnUserSettings(
    */
   public open fun customerManagedKey(`value`: String) {
     unwrap(this).setCustomerManagedKey(`value`)
+  }
+
+  /**
+   * Specifies whether the user can use deep links that open automatically when connecting to a
+   * session.
+   */
+  public open fun deepLinkAllowed(): String? = unwrap(this).getDeepLinkAllowed()
+
+  /**
+   * Specifies whether the user can use deep links that open automatically when connecting to a
+   * session.
+   */
+  public open fun deepLinkAllowed(`value`: String) {
+    unwrap(this).setDeepLinkAllowed(`value`)
   }
 
   /**
@@ -360,6 +377,16 @@ public open class CfnUserSettings(
     public fun customerManagedKey(customerManagedKey: String)
 
     /**
+     * Specifies whether the user can use deep links that open automatically when connecting to a
+     * session.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-deeplinkallowed)
+     * @param deepLinkAllowed Specifies whether the user can use deep links that open automatically
+     * when connecting to a session. 
+     */
+    public fun deepLinkAllowed(deepLinkAllowed: String)
+
+    /**
      * The amount of time that a streaming session remains active after users disconnect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-disconnecttimeoutinminutes)
@@ -523,6 +550,18 @@ public open class CfnUserSettings(
      */
     override fun customerManagedKey(customerManagedKey: String) {
       cdkBuilder.customerManagedKey(customerManagedKey)
+    }
+
+    /**
+     * Specifies whether the user can use deep links that open automatically when connecting to a
+     * session.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-deeplinkallowed)
+     * @param deepLinkAllowed Specifies whether the user can use deep links that open automatically
+     * when connecting to a session. 
+     */
+    override fun deepLinkAllowed(deepLinkAllowed: String) {
+      cdkBuilder.deepLinkAllowed(deepLinkAllowed)
     }
 
     /**
@@ -735,7 +774,8 @@ public open class CfnUserSettings(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty,
-    ) : CdkObject(cdkObject), CookieSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        CookieSpecificationProperty {
       /**
        * The domain of the cookie.
        *
@@ -921,7 +961,8 @@ public open class CfnUserSettings(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty,
-    ) : CdkObject(cdkObject), CookieSynchronizationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CookieSynchronizationConfigurationProperty {
       /**
        * The list of cookie specifications that are allowed to be synchronized to the remote
        * browser.

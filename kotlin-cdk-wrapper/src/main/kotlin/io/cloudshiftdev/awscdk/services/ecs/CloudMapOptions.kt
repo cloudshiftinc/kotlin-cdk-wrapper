@@ -198,7 +198,8 @@ public interface CloudMapOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.CloudMapOptions,
-  ) : CdkObject(cdkObject), CloudMapOptions {
+  ) : CdkObject(cdkObject),
+      CloudMapOptions {
     /**
      * The service discovery namespace for the Cloud Map service to attach to the ECS service.
      *

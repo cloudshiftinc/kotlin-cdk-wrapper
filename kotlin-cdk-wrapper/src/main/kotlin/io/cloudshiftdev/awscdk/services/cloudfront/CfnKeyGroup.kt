@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnKeyGroup(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyGroup,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -314,7 +315,8 @@ public open class CfnKeyGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyGroup.KeyGroupConfigProperty,
-    ) : CdkObject(cdkObject), KeyGroupConfigProperty {
+    ) : CdkObject(cdkObject),
+        KeyGroupConfigProperty {
       /**
        * A comment to describe the key group.
        *

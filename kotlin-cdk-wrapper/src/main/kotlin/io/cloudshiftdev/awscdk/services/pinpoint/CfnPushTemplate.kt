@@ -90,7 +90,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPushTemplate(
   cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1052,7 +1054,8 @@ public open class CfnPushTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty,
-    ) : CdkObject(cdkObject), APNSPushNotificationTemplateProperty {
+    ) : CdkObject(cdkObject),
+        APNSPushNotificationTemplateProperty {
       /**
        * The action to occur if a recipient taps a push notification that's based on the message
        * template.
@@ -1391,7 +1394,8 @@ public open class CfnPushTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.AndroidPushNotificationTemplateProperty,
-    ) : CdkObject(cdkObject), AndroidPushNotificationTemplateProperty {
+    ) : CdkObject(cdkObject),
+        AndroidPushNotificationTemplateProperty {
       /**
        * The action to occur if a recipient taps a push notification that's based on the message
        * template.
@@ -1687,7 +1691,8 @@ public open class CfnPushTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty,
-    ) : CdkObject(cdkObject), DefaultPushNotificationTemplateProperty {
+    ) : CdkObject(cdkObject),
+        DefaultPushNotificationTemplateProperty {
       /**
        * The action to occur if a recipient taps a push notification that's based on the message
        * template.

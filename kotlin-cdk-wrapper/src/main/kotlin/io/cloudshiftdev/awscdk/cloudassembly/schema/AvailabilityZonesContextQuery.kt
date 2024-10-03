@@ -5,63 +5,22 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 
-/**
- * Query to availability zone context provider.
- *
- * Example:
- *
- * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.cloudassembly.schema.*;
- * AvailabilityZonesContextQuery availabilityZonesContextQuery =
- * AvailabilityZonesContextQuery.builder()
- * .account("account")
- * .region("region")
- * // the properties below are optional
- * .lookupRoleArn("lookupRoleArn")
- * .build();
- * ```
- */
-public interface AvailabilityZonesContextQuery {
-  /**
-   * Query account.
-   */
-  public fun account(): String
-
-  /**
-   * The ARN of the role that should be used to look up the missing values.
-   *
-   * Default: - None
-   */
-  public fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
-
-  /**
-   * Query region.
-   */
-  public fun region(): String
-
-  /**
-   * A builder for [AvailabilityZonesContextQuery]
-   */
+public interface AvailabilityZonesContextQuery : ContextLookupRoleOptions {
   @CdkDslMarker
   public interface Builder {
-    /**
-     * @param account Query account. 
-     */
     public fun account(account: String)
 
-    /**
-     * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
-     */
+    public fun assumeRoleAdditionalOptions(assumeRoleAdditionalOptions: Map<String, Any>)
+
     public fun lookupRoleArn(lookupRoleArn: String)
 
-    /**
-     * @param region Query region. 
-     */
+    public fun lookupRoleExternalId(lookupRoleExternalId: String)
+
     public fun region(region: String)
   }
 
@@ -70,23 +29,22 @@ public interface AvailabilityZonesContextQuery {
         software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery.builder()
 
-    /**
-     * @param account Query account. 
-     */
     override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    /**
-     * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
-     */
+    override fun assumeRoleAdditionalOptions(assumeRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.assumeRoleAdditionalOptions(assumeRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
     override fun lookupRoleArn(lookupRoleArn: String) {
       cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    /**
-     * @param region Query region. 
-     */
+    override fun lookupRoleExternalId(lookupRoleExternalId: String) {
+      cdkBuilder.lookupRoleExternalId(lookupRoleExternalId)
+    }
+
     override fun region(region: String) {
       cdkBuilder.region(region)
     }
@@ -97,22 +55,17 @@ public interface AvailabilityZonesContextQuery {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery,
-  ) : CdkObject(cdkObject), AvailabilityZonesContextQuery {
-    /**
-     * Query account.
-     */
+  ) : CdkObject(cdkObject),
+      AvailabilityZonesContextQuery {
     override fun account(): String = unwrap(this).getAccount()
 
-    /**
-     * The ARN of the role that should be used to look up the missing values.
-     *
-     * Default: - None
-     */
+    override fun assumeRoleAdditionalOptions(): Map<String, Any> =
+        unwrap(this).getAssumeRoleAdditionalOptions() ?: emptyMap()
+
     override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
-    /**
-     * Query region.
-     */
+    override fun lookupRoleExternalId(): String? = unwrap(this).getLookupRoleExternalId()
+
     override fun region(): String = unwrap(this).getRegion()
   }
 

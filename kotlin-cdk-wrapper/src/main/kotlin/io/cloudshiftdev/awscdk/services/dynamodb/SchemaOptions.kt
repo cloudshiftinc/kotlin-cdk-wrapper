@@ -111,7 +111,8 @@ public interface SchemaOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.SchemaOptions,
-  ) : CdkObject(cdkObject), SchemaOptions {
+  ) : CdkObject(cdkObject),
+      SchemaOptions {
     /**
      * Partition key attribute definition.
      */

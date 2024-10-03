@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAsset(
   cdkObject: software.amazon.awscdk.services.mediapackage.CfnAsset,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -500,7 +502,8 @@ public open class CfnAsset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediapackage.CfnAsset.EgressEndpointProperty,
-    ) : CdkObject(cdkObject), EgressEndpointProperty {
+    ) : CdkObject(cdkObject),
+        EgressEndpointProperty {
       /**
        * The ID of a packaging configuration that's applied to this asset.
        *

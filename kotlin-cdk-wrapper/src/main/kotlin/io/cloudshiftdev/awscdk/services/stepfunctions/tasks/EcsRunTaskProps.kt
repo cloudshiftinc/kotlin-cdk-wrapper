@@ -83,6 +83,15 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
       unwrap(this).getContainerOverrides()?.map(ContainerOverride::wrap) ?: emptyList()
 
   /**
+   * Cpu setting override.
+   *
+   * Default: - No override
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskOverride.html)
+   */
+  public fun cpu(): String? = unwrap(this).getCpu()
+
+  /**
    * Whether ECS Exec should be enabled.
    *
    * Default: false
@@ -98,6 +107,15 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
    * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html)
    */
   public fun launchTarget(): IEcsLaunchTarget
+
+  /**
+   * Memory setting override.
+   *
+   * Default: - No override
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskOverride.html)
+   */
+  public fun memoryMiB(): String? = unwrap(this).getMemoryMiB()
 
   /**
    * Specifies whether to propagate the tags from the task definition to the task.
@@ -176,6 +194,11 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
     public fun containerOverrides(vararg containerOverrides: ContainerOverride)
 
     /**
+     * @param cpu Cpu setting override.
+     */
+    public fun cpu(cpu: String)
+
+    /**
      * @param credentials Credentials for an IAM Role that the State Machine assumes for executing
      * the task.
      * This enables cross-account resource invocations.
@@ -232,6 +255,11 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * your tasks and services are hosted. 
      */
     public fun launchTarget(launchTarget: IEcsLaunchTarget)
+
+    /**
+     * @param memoryMiB Memory setting override.
+     */
+    public fun memoryMiB(memoryMiB: String)
 
     /**
      * @param outputPath JSONPath expression to select select a portion of the state output to pass
@@ -362,6 +390,13 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
         containerOverrides(containerOverrides.toList())
 
     /**
+     * @param cpu Cpu setting override.
+     */
+    override fun cpu(cpu: String) {
+      cdkBuilder.cpu(cpu)
+    }
+
+    /**
      * @param credentials Credentials for an IAM Role that the State Machine assumes for executing
      * the task.
      * This enables cross-account resource invocations.
@@ -432,6 +467,13 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      */
     override fun launchTarget(launchTarget: IEcsLaunchTarget) {
       cdkBuilder.launchTarget(launchTarget.let(IEcsLaunchTarget.Companion::unwrap))
+    }
+
+    /**
+     * @param memoryMiB Memory setting override.
+     */
+    override fun memoryMiB(memoryMiB: String) {
+      cdkBuilder.memoryMiB(memoryMiB)
     }
 
     /**
@@ -550,7 +592,8 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTaskProps,
-  ) : CdkObject(cdkObject), EcsRunTaskProps {
+  ) : CdkObject(cdkObject),
+      EcsRunTaskProps {
     /**
      * Assign public IP addresses to each task.
      *
@@ -579,6 +622,15 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      */
     override fun containerOverrides(): List<ContainerOverride> =
         unwrap(this).getContainerOverrides()?.map(ContainerOverride::wrap) ?: emptyList()
+
+    /**
+     * Cpu setting override.
+     *
+     * Default: - No override
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskOverride.html)
+     */
+    override fun cpu(): String? = unwrap(this).getCpu()
 
     /**
      * Credentials for an IAM Role that the State Machine assumes for executing the task.
@@ -656,6 +708,15 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      */
     override fun launchTarget(): IEcsLaunchTarget =
         unwrap(this).getLaunchTarget().let(IEcsLaunchTarget::wrap)
+
+    /**
+     * Memory setting override.
+     *
+     * Default: - No override
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskOverride.html)
+     */
+    override fun memoryMiB(): String? = unwrap(this).getMemoryMiB()
 
     /**
      * JSONPath expression to select select a portion of the state output to pass to the next state.

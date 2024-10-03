@@ -48,7 +48,7 @@ public interface CfnPublisherProps {
    *
    * For more information, see [Registering your account to publish CloudFormation
    * extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs)
-   * in the *CloudFormation CLI User Guide* .
+   * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html#cfn-cloudformation-publisher-connectionarn)
    */
@@ -82,7 +82,7 @@ public interface CfnPublisherProps {
      * verification, the Amazon Resource Name (ARN) for your connection to that account.
      * For more information, see [Registering your account to publish CloudFormation
      * extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs)
-     * in the *CloudFormation CLI User Guide* .
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      */
     public fun connectionArn(connectionArn: String)
   }
@@ -118,7 +118,7 @@ public interface CfnPublisherProps {
      * verification, the Amazon Resource Name (ARN) for your connection to that account.
      * For more information, see [Registering your account to publish CloudFormation
      * extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs)
-     * in the *CloudFormation CLI User Guide* .
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      */
     override fun connectionArn(connectionArn: String) {
       cdkBuilder.connectionArn(connectionArn)
@@ -130,7 +130,8 @@ public interface CfnPublisherProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudformation.CfnPublisherProps,
-  ) : CdkObject(cdkObject), CfnPublisherProps {
+  ) : CdkObject(cdkObject),
+      CfnPublisherProps {
     /**
      * Whether you accept the [Terms and
      * Conditions](https://docs.aws.amazon.com/https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf)
@@ -149,7 +150,7 @@ public interface CfnPublisherProps {
      *
      * For more information, see [Registering your account to publish CloudFormation
      * extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs)
-     * in the *CloudFormation CLI User Guide* .
+     * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html#cfn-cloudformation-publisher-connectionarn)
      */

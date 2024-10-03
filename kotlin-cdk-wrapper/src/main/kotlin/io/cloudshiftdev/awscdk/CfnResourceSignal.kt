@@ -104,7 +104,8 @@ public interface CfnResourceSignal {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnResourceSignal,
-  ) : CdkObject(cdkObject), CfnResourceSignal {
+  ) : CdkObject(cdkObject),
+      CfnResourceSignal {
     /**
      * The number of success signals AWS CloudFormation must receive before it sets the resource
      * status as CREATE_COMPLETE.

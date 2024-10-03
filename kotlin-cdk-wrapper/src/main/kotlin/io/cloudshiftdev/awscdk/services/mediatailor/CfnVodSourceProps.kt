@@ -187,7 +187,8 @@ public interface CfnVodSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediatailor.CfnVodSourceProps,
-  ) : CdkObject(cdkObject), CfnVodSourceProps {
+  ) : CdkObject(cdkObject),
+      CfnVodSourceProps {
     /**
      * The HTTP package configurations for the VOD source.
      *

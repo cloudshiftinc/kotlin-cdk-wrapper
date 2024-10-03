@@ -36,6 +36,12 @@ import kotlin.jvm.JvmName
  * .definitionString("definitionString")
  * .definitionSubstitutions(Map.of(
  * "definitionSubstitutionsKey", "definitionSubstitutions"))
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .kmsDataKeyReusePeriodSeconds(123)
+ * .kmsKeyId("kmsKeyId")
+ * .build())
  * .loggingConfiguration(LoggingConfigurationProperty.builder()
  * .destinations(List.of(LogDestinationProperty.builder()
  * .cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty.builder()
@@ -105,6 +111,13 @@ public interface CfnStateMachineProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definitionsubstitutions)
    */
   public fun definitionSubstitutions(): Any? = unwrap(this).getDefinitionSubstitutions()
+
+  /**
+   * Encryption configuration for the state machine.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-encryptionconfiguration)
+   */
+  public fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
 
   /**
    * Defines what execution history events are logged and where they are logged.
@@ -243,6 +256,25 @@ public interface CfnStateMachineProps {
      * Substitutions must follow the syntax: `${key_name}` or `${variable_1,variable_2,...}` .
      */
     public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
+
+    /**
+     * @param encryptionConfiguration Encryption configuration for the state machine.
+     */
+    public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
+
+    /**
+     * @param encryptionConfiguration Encryption configuration for the state machine.
+     */
+    public
+        fun encryptionConfiguration(encryptionConfiguration: CfnStateMachine.EncryptionConfigurationProperty)
+
+    /**
+     * @param encryptionConfiguration Encryption configuration for the state machine.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e2cebb5a5f42b9219706d4bb4df6f67e191897bef4ccb168a93a61c5020321a1")
+    public
+        fun encryptionConfiguration(encryptionConfiguration: CfnStateMachine.EncryptionConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param loggingConfiguration Defines what execution history events are logged and where they
@@ -428,6 +460,31 @@ public interface CfnStateMachineProps {
     }
 
     /**
+     * @param encryptionConfiguration Encryption configuration for the state machine.
+     */
+    override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param encryptionConfiguration Encryption configuration for the state machine.
+     */
+    override
+        fun encryptionConfiguration(encryptionConfiguration: CfnStateMachine.EncryptionConfigurationProperty) {
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(CfnStateMachine.EncryptionConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param encryptionConfiguration Encryption configuration for the state machine.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e2cebb5a5f42b9219706d4bb4df6f67e191897bef4ccb168a93a61c5020321a1")
+    override
+        fun encryptionConfiguration(encryptionConfiguration: CfnStateMachine.EncryptionConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        encryptionConfiguration(CfnStateMachine.EncryptionConfigurationProperty(encryptionConfiguration))
+
+    /**
      * @param loggingConfiguration Defines what execution history events are logged and where they
      * are logged.
      *
@@ -554,7 +611,8 @@ public interface CfnStateMachineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineProps,
-  ) : CdkObject(cdkObject), CfnStateMachineProps {
+  ) : CdkObject(cdkObject),
+      CfnStateMachineProps {
     /**
      * The Amazon States Language definition of the state machine.
      *
@@ -600,6 +658,13 @@ public interface CfnStateMachineProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definitionsubstitutions)
      */
     override fun definitionSubstitutions(): Any? = unwrap(this).getDefinitionSubstitutions()
+
+    /**
+     * Encryption configuration for the state machine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-encryptionconfiguration)
+     */
+    override fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
 
     /**
      * Defines what execution history events are logged and where they are logged.

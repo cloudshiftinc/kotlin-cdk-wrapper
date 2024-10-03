@@ -39,6 +39,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .inputTemplate("inputTemplate")
  * .build())
+ * .kmsKeyIdentifier("kmsKeyIdentifier")
  * .logConfiguration(PipeLogConfigurationProperty.builder()
  * .cloudwatchLogsLogDestination(CloudwatchLogsLogDestinationProperty.builder()
  * .logGroupArn("logGroupArn")
@@ -294,6 +295,32 @@ import kotlin.jvm.JvmName
  * .stepFunctionStateMachineParameters(PipeTargetStateMachineParametersProperty.builder()
  * .invocationType("invocationType")
  * .build())
+ * .timestreamParameters(PipeTargetTimestreamParametersProperty.builder()
+ * .dimensionMappings(List.of(DimensionMappingProperty.builder()
+ * .dimensionName("dimensionName")
+ * .dimensionValue("dimensionValue")
+ * .dimensionValueType("dimensionValueType")
+ * .build()))
+ * .timeValue("timeValue")
+ * .versionValue("versionValue")
+ * // the properties below are optional
+ * .epochTimeUnit("epochTimeUnit")
+ * .multiMeasureMappings(List.of(MultiMeasureMappingProperty.builder()
+ * .multiMeasureAttributeMappings(List.of(MultiMeasureAttributeMappingProperty.builder()
+ * .measureValue("measureValue")
+ * .measureValueType("measureValueType")
+ * .multiMeasureAttributeName("multiMeasureAttributeName")
+ * .build()))
+ * .multiMeasureName("multiMeasureName")
+ * .build()))
+ * .singleMeasureMappings(List.of(SingleMeasureMappingProperty.builder()
+ * .measureName("measureName")
+ * .measureValue("measureValue")
+ * .measureValueType("measureValueType")
+ * .build()))
+ * .timeFieldType("timeFieldType")
+ * .timestampFormat("timestampFormat")
+ * .build())
  * .build())
  * .build();
  * ```
@@ -328,6 +355,27 @@ public interface CfnPipeProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pipes-pipe.html#cfn-pipes-pipe-enrichmentparameters)
    */
   public fun enrichmentParameters(): Any? = unwrap(this).getEnrichmentParameters()
+
+  /**
+   * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use
+   * a customer managed key to encrypt pipe data.
+   *
+   * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+   *
+   * To update a pipe that is using the default AWS owned key to use a customer managed key instead,
+   * or update a pipe that is using a customer managed key to use a different customer managed key,
+   * specify a customer managed key identifier.
+   *
+   * To update a pipe that is using a customer managed key to use the default AWS owned key ,
+   * specify an empty string.
+   *
+   * For more information, see [Managing
+   * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS Key
+   * Management Service Developer Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pipes-pipe.html#cfn-pipes-pipe-kmskeyidentifier)
+   */
+  public fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
 
   /**
    * The logging configuration settings for the pipe.
@@ -427,6 +475,24 @@ public interface CfnPipeProps {
     @JvmName("0297dbc28c3ba5edc57c9c34d955342e189ad447fcd53049c41e0c325b322e2c")
     public
         fun enrichmentParameters(enrichmentParameters: CfnPipe.PipeEnrichmentParametersProperty.Builder.() -> Unit)
+
+    /**
+     * @param kmsKeyIdentifier The identifier of the AWS KMS customer managed key for EventBridge to
+     * use, if you choose to use a customer managed key to encrypt pipe data.
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * To update a pipe that is using the default AWS owned key to use a customer managed key
+     * instead, or update a pipe that is using a customer managed key to use a different customer
+     * managed key, specify a customer managed key identifier.
+     *
+     * To update a pipe that is using a customer managed key to use the default AWS owned key ,
+     * specify an empty string.
+     *
+     * For more information, see [Managing
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS
+     * Key Management Service Developer Guide* .
+     */
+    public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
 
     /**
      * @param logConfiguration The logging configuration settings for the pipe.
@@ -570,6 +636,26 @@ public interface CfnPipeProps {
         Unit = enrichmentParameters(CfnPipe.PipeEnrichmentParametersProperty(enrichmentParameters))
 
     /**
+     * @param kmsKeyIdentifier The identifier of the AWS KMS customer managed key for EventBridge to
+     * use, if you choose to use a customer managed key to encrypt pipe data.
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * To update a pipe that is using the default AWS owned key to use a customer managed key
+     * instead, or update a pipe that is using a customer managed key to use a different customer
+     * managed key, specify a customer managed key identifier.
+     *
+     * To update a pipe that is using a customer managed key to use the default AWS owned key ,
+     * specify an empty string.
+     *
+     * For more information, see [Managing
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS
+     * Key Management Service Developer Guide* .
+     */
+    override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
+      cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
+    }
+
+    /**
      * @param logConfiguration The logging configuration settings for the pipe.
      */
     override fun logConfiguration(logConfiguration: IResolvable) {
@@ -690,7 +776,8 @@ public interface CfnPipeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pipes.CfnPipeProps,
-  ) : CdkObject(cdkObject), CfnPipeProps {
+  ) : CdkObject(cdkObject),
+      CfnPipeProps {
     /**
      * A description of the pipe.
      *
@@ -718,6 +805,27 @@ public interface CfnPipeProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pipes-pipe.html#cfn-pipes-pipe-enrichmentparameters)
      */
     override fun enrichmentParameters(): Any? = unwrap(this).getEnrichmentParameters()
+
+    /**
+     * The identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to
+     * use a customer managed key to encrypt pipe data.
+     *
+     * The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.
+     *
+     * To update a pipe that is using the default AWS owned key to use a customer managed key
+     * instead, or update a pipe that is using a customer managed key to use a different customer
+     * managed key, specify a customer managed key identifier.
+     *
+     * To update a pipe that is using a customer managed key to use the default AWS owned key ,
+     * specify an empty string.
+     *
+     * For more information, see [Managing
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/getting-started.html) in the *AWS
+     * Key Management Service Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pipes-pipe.html#cfn-pipes-pipe-kmskeyidentifier)
+     */
+    override fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
 
     /**
      * The logging configuration settings for the pipe.

@@ -68,7 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfigurationTemplate(
   cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -759,7 +760,8 @@ public open class CfnConfigurationTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.ConfigurationOptionSettingProperty,
-    ) : CdkObject(cdkObject), ConfigurationOptionSettingProperty {
+    ) : CdkObject(cdkObject),
+        ConfigurationOptionSettingProperty {
       /**
        * A unique namespace that identifies the option's associated AWS resource.
        *
@@ -892,7 +894,8 @@ public open class CfnConfigurationTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty,
-    ) : CdkObject(cdkObject), SourceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SourceConfigurationProperty {
       /**
        * The name of the application associated with the configuration.
        *

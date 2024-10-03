@@ -30,6 +30,7 @@ import kotlin.collections.List
  * .databaseName("databaseName")
  * .secretId("secretId")
  * .build()))
+ * .databaseArn("databaseArn")
  * .instances(List.of("instances"))
  * .sapInstanceNumber("sapInstanceNumber")
  * .sid("sid")
@@ -63,6 +64,13 @@ public interface CfnApplicationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-credentials)
    */
   public fun credentials(): Any? = unwrap(this).getCredentials()
+
+  /**
+   * The Amazon Resource Name (ARN) of the database.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-databasearn)
+   */
+  public fun databaseArn(): String? = unwrap(this).getDatabaseArn()
 
   /**
    * The Amazon EC2 instances on which your SAP application is running.
@@ -121,6 +129,11 @@ public interface CfnApplicationProps {
      * @param credentials The credentials of the SAP application.
      */
     public fun credentials(vararg credentials: Any)
+
+    /**
+     * @param databaseArn The Amazon Resource Name (ARN) of the database.
+     */
+    public fun databaseArn(databaseArn: String)
 
     /**
      * @param instances The Amazon EC2 instances on which your SAP application is running.
@@ -192,6 +205,13 @@ public interface CfnApplicationProps {
     override fun credentials(vararg credentials: Any): Unit = credentials(credentials.toList())
 
     /**
+     * @param databaseArn The Amazon Resource Name (ARN) of the database.
+     */
+    override fun databaseArn(databaseArn: String) {
+      cdkBuilder.databaseArn(databaseArn)
+    }
+
+    /**
      * @param instances The Amazon EC2 instances on which your SAP application is running.
      */
     override fun instances(instances: List<String>) {
@@ -235,7 +255,8 @@ public interface CfnApplicationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.systemsmanagersap.CfnApplicationProps,
-  ) : CdkObject(cdkObject), CfnApplicationProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationProps {
     /**
      * The ID of the application.
      *
@@ -256,6 +277,13 @@ public interface CfnApplicationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-credentials)
      */
     override fun credentials(): Any? = unwrap(this).getCredentials()
+
+    /**
+     * The Amazon Resource Name (ARN) of the database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-databasearn)
+     */
+    override fun databaseArn(): String? = unwrap(this).getDatabaseArn()
 
     /**
      * The Amazon EC2 instances on which your SAP application is running.

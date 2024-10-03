@@ -107,7 +107,8 @@ public interface S3SourceProps : SourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.S3SourceProps,
-  ) : CdkObject(cdkObject), S3SourceProps {
+  ) : CdkObject(cdkObject),
+      S3SourceProps {
     /**
      *
      */

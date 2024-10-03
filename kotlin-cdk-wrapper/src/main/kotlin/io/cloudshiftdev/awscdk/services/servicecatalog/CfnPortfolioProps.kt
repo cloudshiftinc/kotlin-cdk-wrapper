@@ -163,7 +163,8 @@ public interface CfnPortfolioProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CfnPortfolioProps,
-  ) : CdkObject(cdkObject), CfnPortfolioProps {
+  ) : CdkObject(cdkObject),
+      CfnPortfolioProps {
     /**
      * The language code.
      *

@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
 import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
@@ -156,6 +157,11 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
     public fun enabled(enabled: Boolean)
 
     /**
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria.
+     */
+    public fun filterEncryption(filterEncryption: IKey)
+
+    /**
      * @param filters Add filter criteria to Event Source.
      */
     public fun filters(filters: List<Map<String, Any>>)
@@ -297,6 +303,13 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
     }
 
     /**
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria.
+     */
+    override fun filterEncryption(filterEncryption: IKey) {
+      cdkBuilder.filterEncryption(filterEncryption.let(IKey.Companion::unwrap))
+    }
+
+    /**
      * @param filters Add filter criteria to Event Source.
      */
     override fun filters(filters: List<Map<String, Any>>) {
@@ -396,7 +409,8 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSourceProps,
-  ) : CdkObject(cdkObject), SelfManagedKafkaEventSourceProps {
+  ) : CdkObject(cdkObject),
+      SelfManagedKafkaEventSourceProps {
     /**
      * The authentication method for your Kafka cluster.
      *
@@ -453,6 +467,15 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * Default: true
      */
     override fun enabled(): Boolean? = unwrap(this).getEnabled()
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     */
+    override fun filterEncryption(): IKey? = unwrap(this).getFilterEncryption()?.let(IKey::wrap)
 
     /**
      * Add filter criteria to Event Source.

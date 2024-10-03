@@ -333,7 +333,8 @@ public interface CfnDataLakeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.securitylake.CfnDataLakeProps,
-  ) : CdkObject(cdkObject), CfnDataLakeProps {
+  ) : CdkObject(cdkObject),
+      CfnDataLakeProps {
     /**
      * Provides encryption details of the Amazon Security Lake object.
      *

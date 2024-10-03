@@ -27,7 +27,8 @@ import kotlin.String
  * {
  * // This is where you control what type of Action gets added to the
  * // CodePipeline
- * stage.addAction(JenkinsAction.Builder.create()
+ * stage.addAction(
+ * JenkinsAction.Builder.create()
  * // Copy 'actionName' and 'runOrder' from the options
  * .actionName(options.getActionName())
  * .runOrder(options.getRunOrder())
@@ -45,7 +46,8 @@ import kotlin.String
  */
 public open class FileSet(
   cdkObject: software.amazon.awscdk.pipelines.FileSet,
-) : CdkObject(cdkObject), IFileSetProducer {
+) : CdkObject(cdkObject),
+    IFileSetProducer {
   public constructor(id: String) : this(software.amazon.awscdk.pipelines.FileSet(id)
   )
 

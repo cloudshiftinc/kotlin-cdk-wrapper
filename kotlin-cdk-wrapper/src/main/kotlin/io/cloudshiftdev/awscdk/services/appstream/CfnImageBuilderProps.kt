@@ -581,7 +581,8 @@ public interface CfnImageBuilderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilderProps,
-  ) : CdkObject(cdkObject), CfnImageBuilderProps {
+  ) : CdkObject(cdkObject),
+      CfnImageBuilderProps {
     /**
      * The list of virtual private cloud (VPC) interface endpoint objects.
      *

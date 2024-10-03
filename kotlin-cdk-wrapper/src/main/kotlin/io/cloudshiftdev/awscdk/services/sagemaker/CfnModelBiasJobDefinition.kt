@@ -135,7 +135,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnModelBiasJobDefinition(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1342,7 +1344,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.BatchTransformInputProperty,
-    ) : CdkObject(cdkObject), BatchTransformInputProperty {
+    ) : CdkObject(cdkObject),
+        BatchTransformInputProperty {
       /**
        * The Amazon S3 location being used to capture the data.
        *
@@ -1590,7 +1593,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ClusterConfigProperty,
-    ) : CdkObject(cdkObject), ClusterConfigProperty {
+    ) : CdkObject(cdkObject),
+        ClusterConfigProperty {
       /**
        * The number of ML compute instances to use in the model monitoring job.
        *
@@ -1698,7 +1702,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ConstraintsResourceProperty,
-    ) : CdkObject(cdkObject), ConstraintsResourceProperty {
+    ) : CdkObject(cdkObject),
+        ConstraintsResourceProperty {
       /**
        * The Amazon S3 URI for the constraints resource.
        *
@@ -1791,7 +1796,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.CsvProperty,
-    ) : CdkObject(cdkObject), CsvProperty {
+    ) : CdkObject(cdkObject),
+        CsvProperty {
       /**
        * A boolean flag indicating if given CSV has header.
        *
@@ -1980,7 +1986,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.DatasetFormatProperty,
-    ) : CdkObject(cdkObject), DatasetFormatProperty {
+    ) : CdkObject(cdkObject),
+        DatasetFormatProperty {
       /**
        * The CSV format.
        *
@@ -2313,7 +2320,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.EndpointInputProperty,
-    ) : CdkObject(cdkObject), EndpointInputProperty {
+    ) : CdkObject(cdkObject),
+        EndpointInputProperty {
       /**
        * If specified, monitoring jobs substract this time from the end time.
        *
@@ -2487,7 +2495,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.JsonProperty,
-    ) : CdkObject(cdkObject), JsonProperty {
+    ) : CdkObject(cdkObject),
+        JsonProperty {
       /**
        * A boolean flag indicating if it is JSON line format.
        *
@@ -2633,7 +2642,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ModelBiasAppSpecificationProperty,
-    ) : CdkObject(cdkObject), ModelBiasAppSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ModelBiasAppSpecificationProperty {
       /**
        * JSON formatted S3 file that defines bias parameters.
        *
@@ -2786,7 +2796,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty,
-    ) : CdkObject(cdkObject), ModelBiasBaselineConfigProperty {
+    ) : CdkObject(cdkObject),
+        ModelBiasBaselineConfigProperty {
       /**
        * The name of the baseline model bias job.
        *
@@ -3036,7 +3047,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ModelBiasJobInputProperty,
-    ) : CdkObject(cdkObject), ModelBiasJobInputProperty {
+    ) : CdkObject(cdkObject),
+        ModelBiasJobInputProperty {
       /**
        * Input object for the batch transform job.
        *
@@ -3133,7 +3145,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringGroundTruthS3InputProperty,
-    ) : CdkObject(cdkObject), MonitoringGroundTruthS3InputProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringGroundTruthS3InputProperty {
       /**
        * The address of the Amazon S3 location of the ground truth labels.
        *
@@ -3279,7 +3292,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringOutputConfigProperty,
-    ) : CdkObject(cdkObject), MonitoringOutputConfigProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringOutputConfigProperty {
       /**
        * The AWS Key Management Service ( AWS KMS ) key that Amazon SageMaker uses to encrypt the
        * model artifacts at rest using Amazon S3 server-side encryption.
@@ -3409,7 +3423,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringOutputProperty,
-    ) : CdkObject(cdkObject), MonitoringOutputProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringOutputProperty {
       /**
        * The Amazon S3 storage location where the results of a monitoring job are saved.
        *
@@ -3530,7 +3545,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringResourcesProperty,
-    ) : CdkObject(cdkObject), MonitoringResourcesProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringResourcesProperty {
       /**
        * The configuration for the cluster resources used to run the processing job.
        *
@@ -3741,7 +3757,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.NetworkConfigProperty,
-    ) : CdkObject(cdkObject), NetworkConfigProperty {
+    ) : CdkObject(cdkObject),
+        NetworkConfigProperty {
       /**
        * Whether to encrypt all communications between distributed processing jobs.
        *
@@ -3897,7 +3914,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.S3OutputProperty,
-    ) : CdkObject(cdkObject), S3OutputProperty {
+    ) : CdkObject(cdkObject),
+        S3OutputProperty {
       /**
        * The local path to the Amazon S3 storage location where Amazon SageMaker saves the results
        * of a monitoring job.
@@ -3944,11 +3962,9 @@ public open class CfnModelBiasJobDefinition(
   }
 
   /**
-   * Specifies a limit to how long a model training job or model compilation job can run.
+   * Specifies a limit to how long a job can run.
    *
-   * It also specifies how long a managed spot training job has to complete. When the job reaches
-   * the time limit, SageMaker ends the training or compilation job. Use this API to cap model training
-   * costs.
+   * When the job reaches the time limit, SageMaker ends the job. Use this API to cap costs.
    *
    * To stop a training job, SageMaker sends the algorithm the `SIGTERM` signal, which delays job
    * termination for 120 seconds. Algorithms can use this 120-second window to save the model
@@ -4055,7 +4071,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.StoppingConditionProperty,
-    ) : CdkObject(cdkObject), StoppingConditionProperty {
+    ) : CdkObject(cdkObject),
+        StoppingConditionProperty {
       /**
        * The maximum length of time, in seconds, that a training or compilation job can run before
        * it is stopped.
@@ -4222,7 +4239,8 @@ public open class CfnModelBiasJobDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
       /**
        * The VPC security group IDs, in the form `sg-xxxxxxxx` .
        *

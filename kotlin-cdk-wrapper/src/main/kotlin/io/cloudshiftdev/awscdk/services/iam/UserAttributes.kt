@@ -56,7 +56,8 @@ public interface UserAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.UserAttributes,
-  ) : CdkObject(cdkObject), UserAttributes {
+  ) : CdkObject(cdkObject),
+      UserAttributes {
     /**
      * The ARN of the user.
      *

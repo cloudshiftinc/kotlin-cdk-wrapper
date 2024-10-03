@@ -189,7 +189,8 @@ public interface CfnProjectProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.devicefarm.CfnProjectProps,
-  ) : CdkObject(cdkObject), CfnProjectProps {
+  ) : CdkObject(cdkObject),
+      CfnProjectProps {
     /**
      * Sets the execution timeout value (in minutes) for a project.
      *

@@ -36,7 +36,8 @@ import kotlin.Unit
  */
 public open class ListenerPort(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancing.ListenerPort,
-) : CdkObject(cdkObject), IConnectable {
+) : CdkObject(cdkObject),
+    IConnectable {
   public constructor(securityGroup: ISecurityGroup, defaultPort: Port) :
       this(software.amazon.awscdk.services.elasticloadbalancing.ListenerPort(securityGroup.let(ISecurityGroup.Companion::unwrap),
       defaultPort.let(Port.Companion::unwrap))

@@ -144,7 +144,8 @@ public interface CfnServiceNetworkProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkProps,
-  ) : CdkObject(cdkObject), CfnServiceNetworkProps {
+  ) : CdkObject(cdkObject),
+      CfnServiceNetworkProps {
     /**
      * The type of IAM policy.
      *

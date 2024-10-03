@@ -108,7 +108,8 @@ public interface CfnReplicationConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfigurationProps,
-  ) : CdkObject(cdkObject), CfnReplicationConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnReplicationConfigurationProps {
     /**
      * The replication configuration for a registry.
      *

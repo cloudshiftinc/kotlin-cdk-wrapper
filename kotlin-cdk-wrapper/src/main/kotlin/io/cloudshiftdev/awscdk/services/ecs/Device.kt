@@ -115,7 +115,8 @@ public interface Device {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.Device,
-  ) : CdkObject(cdkObject), Device {
+  ) : CdkObject(cdkObject),
+      Device {
     /**
      * The path inside the container at which to expose the host device.
      *

@@ -57,7 +57,8 @@ public interface ResourcePolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps,
-  ) : CdkObject(cdkObject), ResourcePolicyProps {
+  ) : CdkObject(cdkObject),
+      ResourcePolicyProps {
     /**
      * The secret to attach a resource-based permissions policy.
      */

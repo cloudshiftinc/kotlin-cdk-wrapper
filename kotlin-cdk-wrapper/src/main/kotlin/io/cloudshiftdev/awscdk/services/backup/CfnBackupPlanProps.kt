@@ -155,7 +155,8 @@ public interface CfnBackupPlanProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlanProps,
-  ) : CdkObject(cdkObject), CfnBackupPlanProps {
+  ) : CdkObject(cdkObject),
+      CfnBackupPlanProps {
     /**
      * Uniquely identifies the backup plan to be associated with the selection of resources.
      *

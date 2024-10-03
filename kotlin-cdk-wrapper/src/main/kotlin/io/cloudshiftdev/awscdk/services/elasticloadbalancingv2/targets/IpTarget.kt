@@ -33,7 +33,9 @@ import kotlin.String
  */
 public open class IpTarget(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget,
-) : CdkObject(cdkObject), IApplicationLoadBalancerTarget, INetworkLoadBalancerTarget {
+) : CdkObject(cdkObject),
+    IApplicationLoadBalancerTarget,
+    INetworkLoadBalancerTarget {
   public constructor(ipAddress: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget(ipAddress)
   )

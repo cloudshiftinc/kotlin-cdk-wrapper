@@ -323,7 +323,8 @@ public interface DatabaseClusterFromSnapshotProps {
    * This feature is only supported by the Aurora database engine.
    *
    * This property must not be used if `s3ExportBuckets` is used.
-   *
+   * To use this property with Aurora PostgreSQL, it must be configured with the S3 export feature
+   * enabled when creating the DatabaseClusterEngine
    * For MySQL:
    *
    * Default: - New role is created if `s3ExportBuckets` is set, no role is defined otherwise
@@ -353,7 +354,8 @@ public interface DatabaseClusterFromSnapshotProps {
    * This feature is only supported by the Aurora database engine.
    *
    * This property must not be used if `s3ImportBuckets` is used.
-   *
+   * To use this property with Aurora PostgreSQL, it must be configured with the S3 import feature
+   * enabled when creating the DatabaseClusterEngine
    * For MySQL:
    *
    * Default: - New role is created if `s3ImportBuckets` is set, no role is defined otherwise
@@ -699,7 +701,8 @@ public interface DatabaseClusterFromSnapshotProps {
      * This feature is only supported by the Aurora database engine.
      *
      * This property must not be used if `s3ExportBuckets` is used.
-     *
+     * To use this property with Aurora PostgreSQL, it must be configured with the S3 export feature
+     * enabled when creating the DatabaseClusterEngine
      * For MySQL:
      */
     public fun s3ExportRole(s3ExportRole: IRole)
@@ -727,7 +730,8 @@ public interface DatabaseClusterFromSnapshotProps {
      * This feature is only supported by the Aurora database engine.
      *
      * This property must not be used if `s3ImportBuckets` is used.
-     *
+     * To use this property with Aurora PostgreSQL, it must be configured with the S3 import feature
+     * enabled when creating the DatabaseClusterEngine
      * For MySQL:
      */
     public fun s3ImportRole(s3ImportRole: IRole)
@@ -1111,7 +1115,8 @@ public interface DatabaseClusterFromSnapshotProps {
      * This feature is only supported by the Aurora database engine.
      *
      * This property must not be used if `s3ExportBuckets` is used.
-     *
+     * To use this property with Aurora PostgreSQL, it must be configured with the S3 export feature
+     * enabled when creating the DatabaseClusterEngine
      * For MySQL:
      */
     override fun s3ExportRole(s3ExportRole: IRole) {
@@ -1144,7 +1149,8 @@ public interface DatabaseClusterFromSnapshotProps {
      * This feature is only supported by the Aurora database engine.
      *
      * This property must not be used if `s3ImportBuckets` is used.
-     *
+     * To use this property with Aurora PostgreSQL, it must be configured with the S3 import feature
+     * enabled when creating the DatabaseClusterEngine
      * For MySQL:
      */
     override fun s3ImportRole(s3ImportRole: IRole) {
@@ -1271,7 +1277,8 @@ public interface DatabaseClusterFromSnapshotProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterFromSnapshotProps,
-  ) : CdkObject(cdkObject), DatabaseClusterFromSnapshotProps {
+  ) : CdkObject(cdkObject),
+      DatabaseClusterFromSnapshotProps {
     /**
      * The number of seconds to set a cluster's target backtrack window to.
      *
@@ -1558,7 +1565,8 @@ public interface DatabaseClusterFromSnapshotProps {
      * This feature is only supported by the Aurora database engine.
      *
      * This property must not be used if `s3ExportBuckets` is used.
-     *
+     * To use this property with Aurora PostgreSQL, it must be configured with the S3 export feature
+     * enabled when creating the DatabaseClusterEngine
      * For MySQL:
      *
      * Default: - New role is created if `s3ExportBuckets` is set, no role is defined otherwise
@@ -1588,7 +1596,8 @@ public interface DatabaseClusterFromSnapshotProps {
      * This feature is only supported by the Aurora database engine.
      *
      * This property must not be used if `s3ImportBuckets` is used.
-     *
+     * To use this property with Aurora PostgreSQL, it must be configured with the S3 import feature
+     * enabled when creating the DatabaseClusterEngine
      * For MySQL:
      *
      * Default: - New role is created if `s3ImportBuckets` is set, no role is defined otherwise

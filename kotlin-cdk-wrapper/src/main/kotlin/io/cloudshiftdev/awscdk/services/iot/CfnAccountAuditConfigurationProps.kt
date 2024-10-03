@@ -348,7 +348,8 @@ public interface CfnAccountAuditConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfigurationProps,
-  ) : CdkObject(cdkObject), CfnAccountAuditConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnAccountAuditConfigurationProps {
     /**
      * The ID of the account.
      *

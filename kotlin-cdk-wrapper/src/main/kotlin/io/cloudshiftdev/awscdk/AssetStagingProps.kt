@@ -252,7 +252,8 @@ public interface AssetStagingProps : FingerprintOptions, AssetOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.AssetStagingProps,
-  ) : CdkObject(cdkObject), AssetStagingProps {
+  ) : CdkObject(cdkObject),
+      AssetStagingProps {
     /**
      * Specify a custom hash for this asset.
      *

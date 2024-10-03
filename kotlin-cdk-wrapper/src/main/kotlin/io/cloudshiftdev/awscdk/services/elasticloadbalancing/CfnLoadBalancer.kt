@@ -104,7 +104,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLoadBalancer(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1692,7 +1694,8 @@ public open class CfnLoadBalancer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AccessLoggingPolicyProperty,
-    ) : CdkObject(cdkObject), AccessLoggingPolicyProperty {
+    ) : CdkObject(cdkObject),
+        AccessLoggingPolicyProperty {
       /**
        * The interval for publishing the access logs. You can specify an interval of either 5
        * minutes or 60 minutes.
@@ -1831,7 +1834,8 @@ public open class CfnLoadBalancer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AppCookieStickinessPolicyProperty,
-    ) : CdkObject(cdkObject), AppCookieStickinessPolicyProperty {
+    ) : CdkObject(cdkObject),
+        AppCookieStickinessPolicyProperty {
       /**
        * The name of the application cookie used for stickiness.
        *
@@ -1960,7 +1964,8 @@ public open class CfnLoadBalancer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty,
-    ) : CdkObject(cdkObject), ConnectionDrainingPolicyProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionDrainingPolicyProperty {
       /**
        * Specifies whether connection draining is enabled for the load balancer.
        *
@@ -2053,7 +2058,8 @@ public open class CfnLoadBalancer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionSettingsProperty,
-    ) : CdkObject(cdkObject), ConnectionSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionSettingsProperty {
       /**
        * The time, in seconds, that the connection is allowed to be idle (no data has been sent over
        * the connection) before it is closed by the load balancer.
@@ -2276,7 +2282,8 @@ public open class CfnLoadBalancer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.HealthCheckProperty,
-    ) : CdkObject(cdkObject), HealthCheckProperty {
+    ) : CdkObject(cdkObject),
+        HealthCheckProperty {
       /**
        * The number of consecutive health checks successes required before moving the instance to
        * the `Healthy` state.
@@ -2444,7 +2451,8 @@ public open class CfnLoadBalancer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty,
-    ) : CdkObject(cdkObject), LBCookieStickinessPolicyProperty {
+    ) : CdkObject(cdkObject),
+        LBCookieStickinessPolicyProperty {
       /**
        * The time period, in seconds, after which the cookie should be considered stale.
        *
@@ -2687,7 +2695,8 @@ public open class CfnLoadBalancer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty,
-    ) : CdkObject(cdkObject), ListenersProperty {
+    ) : CdkObject(cdkObject),
+        ListenersProperty {
       /**
        * The port on which the instance is listening.
        *
@@ -2959,7 +2968,8 @@ public open class CfnLoadBalancer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty,
-    ) : CdkObject(cdkObject), PoliciesProperty {
+    ) : CdkObject(cdkObject),
+        PoliciesProperty {
       /**
        * The policy attributes.
        *

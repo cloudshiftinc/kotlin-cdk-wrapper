@@ -61,7 +61,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDBSecurityGroup(
   cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -109,16 +111,12 @@ public open class CfnDBSecurityGroup(
       dbSecurityGroupIngress(`value`.toList())
 
   /**
-   * The identifier of an Amazon VPC.
-   *
-   * This property indicates the VPC that this DB security group belongs to.
+   * The identifier of an Amazon virtual private cloud (VPC).
    */
   public open fun ec2VpcId(): String? = unwrap(this).getEc2VpcId()
 
   /**
-   * The identifier of an Amazon VPC.
-   *
-   * This property indicates the VPC that this DB security group belongs to.
+   * The identifier of an Amazon virtual private cloud (VPC).
    */
   public open fun ec2VpcId(`value`: String) {
     unwrap(this).setEc2VpcId(`value`)
@@ -151,20 +149,20 @@ public open class CfnDBSecurityGroup(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * An optional array of key-value pairs to apply to this DB security group.
+   * Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * An optional array of key-value pairs to apply to this DB security group.
+   * Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * An optional array of key-value pairs to apply to this DB security group.
+   * Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -198,17 +196,17 @@ public open class CfnDBSecurityGroup(
     public fun dbSecurityGroupIngress(vararg dbSecurityGroupIngress: Any)
 
     /**
-     * The identifier of an Amazon VPC. This property indicates the VPC that this DB security group
-     * belongs to.
+     * The identifier of an Amazon virtual private cloud (VPC).
+     *
+     * This property indicates the VPC that this DB security group belongs to.
      *
      *
-     * The `EC2VpcId` property is for backward compatibility with older regions, and is no longer
-     * recommended for providing security information to an RDS DB instance.
+     * This property is included for backwards compatibility and is no longer recommended for
+     * providing security information to an RDS DB instance.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsecuritygroup.html#cfn-rds-dbsecuritygroup-ec2vpcid)
-     * @param ec2VpcId The identifier of an Amazon VPC. This property indicates the VPC that this DB
-     * security group belongs to. 
+     * @param ec2VpcId The identifier of an Amazon virtual private cloud (VPC). 
      */
     public fun ec2VpcId(ec2VpcId: String)
 
@@ -221,18 +219,30 @@ public open class CfnDBSecurityGroup(
     public fun groupDescription(groupDescription: String)
 
     /**
-     * An optional array of key-value pairs to apply to this DB security group.
+     * Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+     *
+     * For more information, see [Tagging Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+     * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in
+     * the *Amazon Aurora User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsecuritygroup.html#cfn-rds-dbsecuritygroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB security group. 
+     * @param tags Metadata assigned to an Amazon RDS resource consisting of a key-value pair. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * An optional array of key-value pairs to apply to this DB security group.
+     * Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+     *
+     * For more information, see [Tagging Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+     * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in
+     * the *Amazon Aurora User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsecuritygroup.html#cfn-rds-dbsecuritygroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB security group. 
+     * @param tags Metadata assigned to an Amazon RDS resource consisting of a key-value pair. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -274,17 +284,17 @@ public open class CfnDBSecurityGroup(
         dbSecurityGroupIngress(dbSecurityGroupIngress.toList())
 
     /**
-     * The identifier of an Amazon VPC. This property indicates the VPC that this DB security group
-     * belongs to.
+     * The identifier of an Amazon virtual private cloud (VPC).
+     *
+     * This property indicates the VPC that this DB security group belongs to.
      *
      *
-     * The `EC2VpcId` property is for backward compatibility with older regions, and is no longer
-     * recommended for providing security information to an RDS DB instance.
+     * This property is included for backwards compatibility and is no longer recommended for
+     * providing security information to an RDS DB instance.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsecuritygroup.html#cfn-rds-dbsecuritygroup-ec2vpcid)
-     * @param ec2VpcId The identifier of an Amazon VPC. This property indicates the VPC that this DB
-     * security group belongs to. 
+     * @param ec2VpcId The identifier of an Amazon virtual private cloud (VPC). 
      */
     override fun ec2VpcId(ec2VpcId: String) {
       cdkBuilder.ec2VpcId(ec2VpcId)
@@ -301,20 +311,32 @@ public open class CfnDBSecurityGroup(
     }
 
     /**
-     * An optional array of key-value pairs to apply to this DB security group.
+     * Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+     *
+     * For more information, see [Tagging Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+     * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in
+     * the *Amazon Aurora User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsecuritygroup.html#cfn-rds-dbsecuritygroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB security group. 
+     * @param tags Metadata assigned to an Amazon RDS resource consisting of a key-value pair. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * An optional array of key-value pairs to apply to this DB security group.
+     * Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+     *
+     * For more information, see [Tagging Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+     * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in
+     * the *Amazon Aurora User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsecuritygroup.html#cfn-rds-dbsecuritygroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB security group. 
+     * @param tags Metadata assigned to an Amazon RDS resource consisting of a key-value pair. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -500,7 +522,8 @@ public open class CfnDBSecurityGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroup.IngressProperty,
-    ) : CdkObject(cdkObject), IngressProperty {
+    ) : CdkObject(cdkObject),
+        IngressProperty {
       /**
        * The IP range to authorize.
        *

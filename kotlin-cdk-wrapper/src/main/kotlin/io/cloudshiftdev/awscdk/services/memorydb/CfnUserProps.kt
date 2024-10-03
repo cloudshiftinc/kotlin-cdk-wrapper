@@ -169,7 +169,8 @@ public interface CfnUserProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.memorydb.CfnUserProps,
-  ) : CdkObject(cdkObject), CfnUserProps {
+  ) : CdkObject(cdkObject),
+      CfnUserProps {
     /**
      * Access permissions string used for this user.
      *

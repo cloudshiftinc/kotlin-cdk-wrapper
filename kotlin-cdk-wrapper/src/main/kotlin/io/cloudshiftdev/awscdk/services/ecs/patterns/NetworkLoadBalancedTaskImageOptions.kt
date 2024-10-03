@@ -314,7 +314,8 @@ public interface NetworkLoadBalancedTaskImageOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageOptions,
-  ) : CdkObject(cdkObject), NetworkLoadBalancedTaskImageOptions {
+  ) : CdkObject(cdkObject),
+      NetworkLoadBalancedTaskImageOptions {
     /**
      * The container name value to be specified in the task definition.
      *

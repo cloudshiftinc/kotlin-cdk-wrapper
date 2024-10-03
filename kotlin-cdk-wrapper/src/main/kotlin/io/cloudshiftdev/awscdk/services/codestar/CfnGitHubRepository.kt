@@ -59,7 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGitHubRepository(
   cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -607,7 +608,8 @@ public open class CfnGitHubRepository(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository.CodeProperty,
-    ) : CdkObject(cdkObject), CodeProperty {
+    ) : CdkObject(cdkObject),
+        CodeProperty {
       /**
        * Information about the Amazon S3 bucket that contains a ZIP file of code to be committed to
        * the repository.
@@ -736,7 +738,8 @@ public open class CfnGitHubRepository(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository.S3Property,
-    ) : CdkObject(cdkObject), S3Property {
+    ) : CdkObject(cdkObject),
+        S3Property {
       /**
        * The name of the Amazon S3 bucket that contains the ZIP file with the content to be
        * committed to the new repository.

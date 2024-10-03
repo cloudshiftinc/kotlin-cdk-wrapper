@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSimpleTable(
   cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sam.CfnSimpleTable(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -467,7 +469,8 @@ public open class CfnSimpleTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty,
-    ) : CdkObject(cdkObject), PrimaryKeyProperty {
+    ) : CdkObject(cdkObject),
+        PrimaryKeyProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-primarykey.html#cfn-serverless-simpletable-primarykey-name)
        */
@@ -567,7 +570,8 @@ public open class CfnSimpleTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty,
-    ) : CdkObject(cdkObject), ProvisionedThroughputProperty {
+    ) : CdkObject(cdkObject),
+        ProvisionedThroughputProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-provisionedthroughput.html#cfn-serverless-simpletable-provisionedthroughput-readcapacityunits)
        */
@@ -659,7 +663,8 @@ public open class CfnSimpleTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty,
-    ) : CdkObject(cdkObject), SSESpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SSESpecificationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-ssespecification.html#cfn-serverless-simpletable-ssespecification-sseenabled)
        */

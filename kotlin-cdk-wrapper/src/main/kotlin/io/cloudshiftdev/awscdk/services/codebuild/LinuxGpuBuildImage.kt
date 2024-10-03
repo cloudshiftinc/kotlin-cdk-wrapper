@@ -30,7 +30,8 @@ import kotlin.jvm.JvmName
  */
 public open class LinuxGpuBuildImage(
   cdkObject: software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage,
-) : CdkObject(cdkObject), IBindableBuildImage {
+) : CdkObject(cdkObject),
+    IBindableBuildImage {
   /**
    * Function that allows the build image access to the construct tree.
    *

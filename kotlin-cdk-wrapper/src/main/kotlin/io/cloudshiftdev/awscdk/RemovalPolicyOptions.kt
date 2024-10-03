@@ -79,7 +79,8 @@ public interface RemovalPolicyOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.RemovalPolicyOptions,
-  ) : CdkObject(cdkObject), RemovalPolicyOptions {
+  ) : CdkObject(cdkObject),
+      RemovalPolicyOptions {
     /**
      * Apply the same deletion policy to the resource's "UpdateReplacePolicy".
      *

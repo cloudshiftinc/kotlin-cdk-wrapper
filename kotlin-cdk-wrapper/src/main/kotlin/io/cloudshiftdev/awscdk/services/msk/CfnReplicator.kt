@@ -22,7 +22,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Resource Type definition for AWS::MSK::Replicator.
+ * Creates the replicator.
  *
  * Example:
  *
@@ -61,6 +61,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .startingPosition(ReplicationStartingPositionProperty.builder()
  * .type("type")
  * .build())
+ * .topicNameConfiguration(ReplicationTopicNameConfigurationProperty.builder()
+ * .type("type")
+ * .build())
  * .topicsToExclude(List.of("topicsToExclude"))
  * .build())
  * .build()))
@@ -80,7 +83,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnReplicator(
   cdkObject: software.amazon.awscdk.services.msk.CfnReplicator,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -109,12 +114,12 @@ public open class CfnReplicator(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   * The current version of the MSK replicator.
+   * The current version number of the replicator.
    */
   public open fun currentVersion(): String? = unwrap(this).getCurrentVersion()
 
   /**
-   * The current version of the MSK replicator.
+   * The current version number of the replicator.
    */
   public open fun currentVersion(`value`: String) {
     unwrap(this).setCurrentVersion(`value`)
@@ -142,26 +147,26 @@ public open class CfnReplicator(
   }
 
   /**
-   * Specifies a list of Kafka clusters which are targets of the replicator.
+   * Kafka Clusters to use in setting up sources / targets for replication.
    */
   public open fun kafkaClusters(): Any = unwrap(this).getKafkaClusters()
 
   /**
-   * Specifies a list of Kafka clusters which are targets of the replicator.
+   * Kafka Clusters to use in setting up sources / targets for replication.
    */
   public open fun kafkaClusters(`value`: IResolvable) {
     unwrap(this).setKafkaClusters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specifies a list of Kafka clusters which are targets of the replicator.
+   * Kafka Clusters to use in setting up sources / targets for replication.
    */
   public open fun kafkaClusters(`value`: List<Any>) {
     unwrap(this).setKafkaClusters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * Specifies a list of Kafka clusters which are targets of the replicator.
+   * Kafka Clusters to use in setting up sources / targets for replication.
    */
   public open fun kafkaClusters(vararg `value`: Any): Unit = kafkaClusters(`value`.toList())
 
@@ -207,33 +212,33 @@ public open class CfnReplicator(
   }
 
   /**
-   * The Amazon Resource Name (ARN) of the IAM role used by the replicator to access external
-   * resources.
+   * The ARN of the IAM role used by the replicator to access resources in the customer's account
+   * (e.g source and target clusters).
    */
   public open fun serviceExecutionRoleArn(): String = unwrap(this).getServiceExecutionRoleArn()
 
   /**
-   * The Amazon Resource Name (ARN) of the IAM role used by the replicator to access external
-   * resources.
+   * The ARN of the IAM role used by the replicator to access resources in the customer's account
+   * (e.g source and target clusters).
    */
   public open fun serviceExecutionRoleArn(`value`: String) {
     unwrap(this).setServiceExecutionRoleArn(`value`)
   }
 
   /**
-   * A collection of tags associated with a resource.
+   * List of tags to attach to created Replicator.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * A collection of tags associated with a resource.
+   * List of tags to attach to created Replicator.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * A collection of tags associated with a resource.
+   * List of tags to attach to created Replicator.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -243,10 +248,10 @@ public open class CfnReplicator(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The current version of the MSK replicator.
+     * The current version number of the replicator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-currentversion)
-     * @param currentVersion The current version of the MSK replicator. 
+     * @param currentVersion The current version number of the replicator. 
      */
     public fun currentVersion(currentVersion: String)
 
@@ -259,26 +264,26 @@ public open class CfnReplicator(
     public fun description(description: String)
 
     /**
-     * Specifies a list of Kafka clusters which are targets of the replicator.
+     * Kafka Clusters to use in setting up sources / targets for replication.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-kafkaclusters)
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     public fun kafkaClusters(kafkaClusters: IResolvable)
 
     /**
-     * Specifies a list of Kafka clusters which are targets of the replicator.
+     * Kafka Clusters to use in setting up sources / targets for replication.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-kafkaclusters)
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     public fun kafkaClusters(kafkaClusters: List<Any>)
 
     /**
-     * Specifies a list of Kafka clusters which are targets of the replicator.
+     * Kafka Clusters to use in setting up sources / targets for replication.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-kafkaclusters)
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     public fun kafkaClusters(vararg kafkaClusters: Any)
 
@@ -315,34 +320,36 @@ public open class CfnReplicator(
     /**
      * The name of the replicator.
      *
+     * Alpha-numeric characters with '-' are allowed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-replicatorname)
      * @param replicatorName The name of the replicator. 
      */
     public fun replicatorName(replicatorName: String)
 
     /**
-     * The Amazon Resource Name (ARN) of the IAM role used by the replicator to access external
-     * resources.
+     * The ARN of the IAM role used by the replicator to access resources in the customer's account
+     * (e.g source and target clusters).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-serviceexecutionrolearn)
-     * @param serviceExecutionRoleArn The Amazon Resource Name (ARN) of the IAM role used by the
-     * replicator to access external resources. 
+     * @param serviceExecutionRoleArn The ARN of the IAM role used by the replicator to access
+     * resources in the customer's account (e.g source and target clusters). 
      */
     public fun serviceExecutionRoleArn(serviceExecutionRoleArn: String)
 
     /**
-     * A collection of tags associated with a resource.
+     * List of tags to attach to created Replicator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-tags)
-     * @param tags A collection of tags associated with a resource. 
+     * @param tags List of tags to attach to created Replicator. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * A collection of tags associated with a resource.
+     * List of tags to attach to created Replicator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-tags)
-     * @param tags A collection of tags associated with a resource. 
+     * @param tags List of tags to attach to created Replicator. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -355,10 +362,10 @@ public open class CfnReplicator(
         software.amazon.awscdk.services.msk.CfnReplicator.Builder.create(scope, id)
 
     /**
-     * The current version of the MSK replicator.
+     * The current version number of the replicator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-currentversion)
-     * @param currentVersion The current version of the MSK replicator. 
+     * @param currentVersion The current version number of the replicator. 
      */
     override fun currentVersion(currentVersion: String) {
       cdkBuilder.currentVersion(currentVersion)
@@ -375,30 +382,30 @@ public open class CfnReplicator(
     }
 
     /**
-     * Specifies a list of Kafka clusters which are targets of the replicator.
+     * Kafka Clusters to use in setting up sources / targets for replication.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-kafkaclusters)
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     override fun kafkaClusters(kafkaClusters: IResolvable) {
       cdkBuilder.kafkaClusters(kafkaClusters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Specifies a list of Kafka clusters which are targets of the replicator.
+     * Kafka Clusters to use in setting up sources / targets for replication.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-kafkaclusters)
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     override fun kafkaClusters(kafkaClusters: List<Any>) {
       cdkBuilder.kafkaClusters(kafkaClusters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * Specifies a list of Kafka clusters which are targets of the replicator.
+     * Kafka Clusters to use in setting up sources / targets for replication.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-kafkaclusters)
-     * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
+     * @param kafkaClusters Kafka Clusters to use in setting up sources / targets for replication. 
      */
     override fun kafkaClusters(vararg kafkaClusters: Any): Unit =
         kafkaClusters(kafkaClusters.toList())
@@ -441,6 +448,8 @@ public open class CfnReplicator(
     /**
      * The name of the replicator.
      *
+     * Alpha-numeric characters with '-' are allowed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-replicatorname)
      * @param replicatorName The name of the replicator. 
      */
@@ -449,32 +458,32 @@ public open class CfnReplicator(
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the IAM role used by the replicator to access external
-     * resources.
+     * The ARN of the IAM role used by the replicator to access resources in the customer's account
+     * (e.g source and target clusters).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-serviceexecutionrolearn)
-     * @param serviceExecutionRoleArn The Amazon Resource Name (ARN) of the IAM role used by the
-     * replicator to access external resources. 
+     * @param serviceExecutionRoleArn The ARN of the IAM role used by the replicator to access
+     * resources in the customer's account (e.g source and target clusters). 
      */
     override fun serviceExecutionRoleArn(serviceExecutionRoleArn: String) {
       cdkBuilder.serviceExecutionRoleArn(serviceExecutionRoleArn)
     }
 
     /**
-     * A collection of tags associated with a resource.
+     * List of tags to attach to created Replicator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-tags)
-     * @param tags A collection of tags associated with a resource. 
+     * @param tags List of tags to attach to created Replicator. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * A collection of tags associated with a resource.
+     * List of tags to attach to created Replicator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-tags)
-     * @param tags A collection of tags associated with a resource. 
+     * @param tags List of tags to attach to created Replicator. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -502,7 +511,7 @@ public open class CfnReplicator(
   }
 
   /**
-   * Details of an Amazon MSK cluster.
+   * Details of an Amazon MSK Cluster.
    *
    * Example:
    *
@@ -519,7 +528,7 @@ public open class CfnReplicator(
    */
   public interface AmazonMskClusterProperty {
     /**
-     * The ARN of an Amazon MSK cluster.
+     * The Amazon Resource Name (ARN) of an Amazon MSK cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-amazonmskcluster.html#cfn-msk-replicator-amazonmskcluster-mskclusterarn)
      */
@@ -531,7 +540,7 @@ public open class CfnReplicator(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param mskClusterArn The ARN of an Amazon MSK cluster. 
+       * @param mskClusterArn The Amazon Resource Name (ARN) of an Amazon MSK cluster. 
        */
       public fun mskClusterArn(mskClusterArn: String)
     }
@@ -542,7 +551,7 @@ public open class CfnReplicator(
           software.amazon.awscdk.services.msk.CfnReplicator.AmazonMskClusterProperty.builder()
 
       /**
-       * @param mskClusterArn The ARN of an Amazon MSK cluster. 
+       * @param mskClusterArn The Amazon Resource Name (ARN) of an Amazon MSK cluster. 
        */
       override fun mskClusterArn(mskClusterArn: String) {
         cdkBuilder.mskClusterArn(mskClusterArn)
@@ -554,9 +563,10 @@ public open class CfnReplicator(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.AmazonMskClusterProperty,
-    ) : CdkObject(cdkObject), AmazonMskClusterProperty {
+    ) : CdkObject(cdkObject),
+        AmazonMskClusterProperty {
       /**
-       * The ARN of an Amazon MSK cluster.
+       * The Amazon Resource Name (ARN) of an Amazon MSK cluster.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-amazonmskcluster.html#cfn-msk-replicator-amazonmskcluster-mskclusterarn)
        */
@@ -582,7 +592,7 @@ public open class CfnReplicator(
   }
 
   /**
-   * Configuration relating to consumer group replication.
+   * Details about consumer group replication.
    *
    * Example:
    *
@@ -620,7 +630,7 @@ public open class CfnReplicator(
     public fun consumerGroupsToReplicate(): List<String>
 
     /**
-     * Whether to periodically check for new consumer groups.
+     * Enables synchronization of consumer groups to target cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-detectandcopynewconsumergroups)
      */
@@ -628,8 +638,9 @@ public open class CfnReplicator(
         unwrap(this).getDetectAndCopyNewConsumerGroups()
 
     /**
-     * Whether to periodically write the translated offsets to __consumer_offsets topic in target
-     * cluster.
+     * Enables synchronization of consumer group offsets to target cluster.
+     *
+     * The translated offsets will be written to topic __consumer_offsets.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-synchroniseconsumergroupoffsets)
      */
@@ -666,26 +677,28 @@ public open class CfnReplicator(
       public fun consumerGroupsToReplicate(vararg consumerGroupsToReplicate: String)
 
       /**
-       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
-       * groups.
+       * @param detectAndCopyNewConsumerGroups Enables synchronization of consumer groups to target
+       * cluster.
        */
       public fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: Boolean)
 
       /**
-       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
-       * groups.
+       * @param detectAndCopyNewConsumerGroups Enables synchronization of consumer groups to target
+       * cluster.
        */
       public fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: IResolvable)
 
       /**
-       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
-       * to __consumer_offsets topic in target cluster.
+       * @param synchroniseConsumerGroupOffsets Enables synchronization of consumer group offsets to
+       * target cluster.
+       * The translated offsets will be written to topic __consumer_offsets.
        */
       public fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: Boolean)
 
       /**
-       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
-       * to __consumer_offsets topic in target cluster.
+       * @param synchroniseConsumerGroupOffsets Enables synchronization of consumer group offsets to
+       * target cluster.
+       * The translated offsets will be written to topic __consumer_offsets.
        */
       public fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: IResolvable)
     }
@@ -727,32 +740,34 @@ public open class CfnReplicator(
           consumerGroupsToReplicate(consumerGroupsToReplicate.toList())
 
       /**
-       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
-       * groups.
+       * @param detectAndCopyNewConsumerGroups Enables synchronization of consumer groups to target
+       * cluster.
        */
       override fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: Boolean) {
         cdkBuilder.detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups)
       }
 
       /**
-       * @param detectAndCopyNewConsumerGroups Whether to periodically check for new consumer
-       * groups.
+       * @param detectAndCopyNewConsumerGroups Enables synchronization of consumer groups to target
+       * cluster.
        */
       override fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: IResolvable) {
         cdkBuilder.detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
-       * to __consumer_offsets topic in target cluster.
+       * @param synchroniseConsumerGroupOffsets Enables synchronization of consumer group offsets to
+       * target cluster.
+       * The translated offsets will be written to topic __consumer_offsets.
        */
       override fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: Boolean) {
         cdkBuilder.synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets)
       }
 
       /**
-       * @param synchroniseConsumerGroupOffsets Whether to periodically write the translated offsets
-       * to __consumer_offsets topic in target cluster.
+       * @param synchroniseConsumerGroupOffsets Enables synchronization of consumer group offsets to
+       * target cluster.
+       * The translated offsets will be written to topic __consumer_offsets.
        */
       override fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: IResolvable) {
         cdkBuilder.synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets.let(IResolvable.Companion::unwrap))
@@ -765,7 +780,8 @@ public open class CfnReplicator(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty,
-    ) : CdkObject(cdkObject), ConsumerGroupReplicationProperty {
+    ) : CdkObject(cdkObject),
+        ConsumerGroupReplicationProperty {
       /**
        * List of regular expression patterns indicating the consumer groups that should not be
        * replicated.
@@ -784,7 +800,7 @@ public open class CfnReplicator(
           unwrap(this).getConsumerGroupsToReplicate()
 
       /**
-       * Whether to periodically check for new consumer groups.
+       * Enables synchronization of consumer groups to target cluster.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-detectandcopynewconsumergroups)
        */
@@ -792,8 +808,9 @@ public open class CfnReplicator(
           unwrap(this).getDetectAndCopyNewConsumerGroups()
 
       /**
-       * Whether to periodically write the translated offsets to __consumer_offsets topic in target
-       * cluster.
+       * Enables synchronization of consumer group offsets to target cluster.
+       *
+       * The translated offsets will be written to topic __consumer_offsets.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-consumergroupreplication.html#cfn-msk-replicator-consumergroupreplication-synchroniseconsumergroupoffsets)
        */
@@ -820,7 +837,7 @@ public open class CfnReplicator(
   }
 
   /**
-   * Details of an Amazon VPC which has network connectivity to the Kafka cluster.
+   * Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.
    *
    * Example:
    *
@@ -840,20 +857,14 @@ public open class CfnReplicator(
    */
   public interface KafkaClusterClientVpcConfigProperty {
     /**
-     * The AWS security groups to associate with the elastic network interfaces in order to specify
-     * what the replicator has access to.
-     *
-     * If a security group is not specified, the default security group associated with the VPC is
-     * used.
+     * The security groups to attach to the ENIs for the broker nodes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkaclusterclientvpcconfig.html#cfn-msk-replicator-kafkaclusterclientvpcconfig-securitygroupids)
      */
     public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
 
     /**
-     * The list of subnets to connect to in the virtual private cloud (VPC).
-     *
-     * AWS creates elastic network interfaces inside these subnets.
+     * The list of subnets in the client VPC to connect to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkaclusterclientvpcconfig.html#cfn-msk-replicator-kafkaclusterclientvpcconfig-subnetids)
      */
@@ -865,30 +876,22 @@ public open class CfnReplicator(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param securityGroupIds The AWS security groups to associate with the elastic network
-       * interfaces in order to specify what the replicator has access to.
-       * If a security group is not specified, the default security group associated with the VPC is
-       * used.
+       * @param securityGroupIds The security groups to attach to the ENIs for the broker nodes.
        */
       public fun securityGroupIds(securityGroupIds: List<String>)
 
       /**
-       * @param securityGroupIds The AWS security groups to associate with the elastic network
-       * interfaces in order to specify what the replicator has access to.
-       * If a security group is not specified, the default security group associated with the VPC is
-       * used.
+       * @param securityGroupIds The security groups to attach to the ENIs for the broker nodes.
        */
       public fun securityGroupIds(vararg securityGroupIds: String)
 
       /**
-       * @param subnetIds The list of subnets to connect to in the virtual private cloud (VPC). 
-       * AWS creates elastic network interfaces inside these subnets.
+       * @param subnetIds The list of subnets in the client VPC to connect to. 
        */
       public fun subnetIds(subnetIds: List<String>)
 
       /**
-       * @param subnetIds The list of subnets to connect to in the virtual private cloud (VPC). 
-       * AWS creates elastic network interfaces inside these subnets.
+       * @param subnetIds The list of subnets in the client VPC to connect to. 
        */
       public fun subnetIds(vararg subnetIds: String)
     }
@@ -900,35 +903,27 @@ public open class CfnReplicator(
           software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterClientVpcConfigProperty.builder()
 
       /**
-       * @param securityGroupIds The AWS security groups to associate with the elastic network
-       * interfaces in order to specify what the replicator has access to.
-       * If a security group is not specified, the default security group associated with the VPC is
-       * used.
+       * @param securityGroupIds The security groups to attach to the ENIs for the broker nodes.
        */
       override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
       /**
-       * @param securityGroupIds The AWS security groups to associate with the elastic network
-       * interfaces in order to specify what the replicator has access to.
-       * If a security group is not specified, the default security group associated with the VPC is
-       * used.
+       * @param securityGroupIds The security groups to attach to the ENIs for the broker nodes.
        */
       override fun securityGroupIds(vararg securityGroupIds: String): Unit =
           securityGroupIds(securityGroupIds.toList())
 
       /**
-       * @param subnetIds The list of subnets to connect to in the virtual private cloud (VPC). 
-       * AWS creates elastic network interfaces inside these subnets.
+       * @param subnetIds The list of subnets in the client VPC to connect to. 
        */
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
       /**
-       * @param subnetIds The list of subnets to connect to in the virtual private cloud (VPC). 
-       * AWS creates elastic network interfaces inside these subnets.
+       * @param subnetIds The list of subnets in the client VPC to connect to. 
        */
       override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
@@ -939,13 +934,10 @@ public open class CfnReplicator(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterClientVpcConfigProperty,
-    ) : CdkObject(cdkObject), KafkaClusterClientVpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        KafkaClusterClientVpcConfigProperty {
       /**
-       * The AWS security groups to associate with the elastic network interfaces in order to
-       * specify what the replicator has access to.
-       *
-       * If a security group is not specified, the default security group associated with the VPC is
-       * used.
+       * The security groups to attach to the ENIs for the broker nodes.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkaclusterclientvpcconfig.html#cfn-msk-replicator-kafkaclusterclientvpcconfig-securitygroupids)
        */
@@ -953,9 +945,7 @@ public open class CfnReplicator(
           emptyList()
 
       /**
-       * The list of subnets to connect to in the virtual private cloud (VPC).
-       *
-       * AWS creates elastic network interfaces inside these subnets.
+       * The list of subnets in the client VPC to connect to.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkaclusterclientvpcconfig.html#cfn-msk-replicator-kafkaclusterclientvpcconfig-subnetids)
        */
@@ -982,7 +972,7 @@ public open class CfnReplicator(
   }
 
   /**
-   * Details of a Kafka cluster for replication.
+   * Information about Kafka Cluster to be used as source / target for replication.
    *
    * Example:
    *
@@ -1006,14 +996,14 @@ public open class CfnReplicator(
    */
   public interface KafkaClusterProperty {
     /**
-     * Details of an Amazon MSK cluster.
+     * Details of an Amazon MSK Cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkacluster.html#cfn-msk-replicator-kafkacluster-amazonmskcluster)
      */
     public fun amazonMskCluster(): Any
 
     /**
-     * Details of an Amazon VPC which has network connectivity to the Kafka cluster.
+     * Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkacluster.html#cfn-msk-replicator-kafkacluster-vpcconfig)
      */
@@ -1025,37 +1015,37 @@ public open class CfnReplicator(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param amazonMskCluster Details of an Amazon MSK cluster. 
+       * @param amazonMskCluster Details of an Amazon MSK Cluster. 
        */
       public fun amazonMskCluster(amazonMskCluster: IResolvable)
 
       /**
-       * @param amazonMskCluster Details of an Amazon MSK cluster. 
+       * @param amazonMskCluster Details of an Amazon MSK Cluster. 
        */
       public fun amazonMskCluster(amazonMskCluster: AmazonMskClusterProperty)
 
       /**
-       * @param amazonMskCluster Details of an Amazon MSK cluster. 
+       * @param amazonMskCluster Details of an Amazon MSK Cluster. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dda93ffc922370d5d74a50c420b24e226789fea4da484ef0c991e73974b1ce90")
       public fun amazonMskCluster(amazonMskCluster: AmazonMskClusterProperty.Builder.() -> Unit)
 
       /**
-       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Kafka
-       * cluster. 
+       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Apache
+       * Kafka cluster. 
        */
       public fun vpcConfig(vpcConfig: IResolvable)
 
       /**
-       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Kafka
-       * cluster. 
+       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Apache
+       * Kafka cluster. 
        */
       public fun vpcConfig(vpcConfig: KafkaClusterClientVpcConfigProperty)
 
       /**
-       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Kafka
-       * cluster. 
+       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Apache
+       * Kafka cluster. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("971c41287b8b9b103a2fd7f3b3412307fa940f7bd71dd3482fcf4ea230d661f3")
@@ -1068,21 +1058,21 @@ public open class CfnReplicator(
           software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterProperty.builder()
 
       /**
-       * @param amazonMskCluster Details of an Amazon MSK cluster. 
+       * @param amazonMskCluster Details of an Amazon MSK Cluster. 
        */
       override fun amazonMskCluster(amazonMskCluster: IResolvable) {
         cdkBuilder.amazonMskCluster(amazonMskCluster.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param amazonMskCluster Details of an Amazon MSK cluster. 
+       * @param amazonMskCluster Details of an Amazon MSK Cluster. 
        */
       override fun amazonMskCluster(amazonMskCluster: AmazonMskClusterProperty) {
         cdkBuilder.amazonMskCluster(amazonMskCluster.let(AmazonMskClusterProperty.Companion::unwrap))
       }
 
       /**
-       * @param amazonMskCluster Details of an Amazon MSK cluster. 
+       * @param amazonMskCluster Details of an Amazon MSK Cluster. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dda93ffc922370d5d74a50c420b24e226789fea4da484ef0c991e73974b1ce90")
@@ -1090,24 +1080,24 @@ public open class CfnReplicator(
           Unit = amazonMskCluster(AmazonMskClusterProperty(amazonMskCluster))
 
       /**
-       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Kafka
-       * cluster. 
+       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Apache
+       * Kafka cluster. 
        */
       override fun vpcConfig(vpcConfig: IResolvable) {
         cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Kafka
-       * cluster. 
+       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Apache
+       * Kafka cluster. 
        */
       override fun vpcConfig(vpcConfig: KafkaClusterClientVpcConfigProperty) {
         cdkBuilder.vpcConfig(vpcConfig.let(KafkaClusterClientVpcConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Kafka
-       * cluster. 
+       * @param vpcConfig Details of an Amazon VPC which has network connectivity to the Apache
+       * Kafka cluster. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("971c41287b8b9b103a2fd7f3b3412307fa940f7bd71dd3482fcf4ea230d661f3")
@@ -1120,16 +1110,17 @@ public open class CfnReplicator(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterProperty,
-    ) : CdkObject(cdkObject), KafkaClusterProperty {
+    ) : CdkObject(cdkObject),
+        KafkaClusterProperty {
       /**
-       * Details of an Amazon MSK cluster.
+       * Details of an Amazon MSK Cluster.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkacluster.html#cfn-msk-replicator-kafkacluster-amazonmskcluster)
        */
       override fun amazonMskCluster(): Any = unwrap(this).getAmazonMskCluster()
 
       /**
-       * Details of an Amazon VPC which has network connectivity to the Kafka cluster.
+       * Details of an Amazon VPC which has network connectivity to the Apache Kafka cluster.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkacluster.html#cfn-msk-replicator-kafkacluster-vpcconfig)
        */
@@ -1183,6 +1174,9 @@ public open class CfnReplicator(
    * .startingPosition(ReplicationStartingPositionProperty.builder()
    * .type("type")
    * .build())
+   * .topicNameConfiguration(ReplicationTopicNameConfigurationProperty.builder()
+   * .type("type")
+   * .build())
    * .topicsToExclude(List.of("topicsToExclude"))
    * .build())
    * .build();
@@ -1199,27 +1193,29 @@ public open class CfnReplicator(
     public fun consumerGroupReplication(): Any
 
     /**
-     * Amazon Resource Name of the source Kafka cluster.
+     * The ARN of the source Kafka cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-sourcekafkaclusterarn)
      */
     public fun sourceKafkaClusterArn(): String
 
     /**
-     * The type of compression to use writing records to target Kafka cluster.
+     * The compression type to use when producing records to target cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-targetcompressiontype)
      */
     public fun targetCompressionType(): String
 
     /**
-     * Amazon Resource Name of the target Kafka cluster.
+     * The ARN of the target Kafka cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-targetkafkaclusterarn)
      */
     public fun targetKafkaClusterArn(): String
 
     /**
+     * Configuration relating to topic replication.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-topicreplication)
      */
     public fun topicReplication(): Any
@@ -1249,33 +1245,33 @@ public open class CfnReplicator(
           fun consumerGroupReplication(consumerGroupReplication: ConsumerGroupReplicationProperty.Builder.() -> Unit)
 
       /**
-       * @param sourceKafkaClusterArn Amazon Resource Name of the source Kafka cluster. 
+       * @param sourceKafkaClusterArn The ARN of the source Kafka cluster. 
        */
       public fun sourceKafkaClusterArn(sourceKafkaClusterArn: String)
 
       /**
-       * @param targetCompressionType The type of compression to use writing records to target Kafka
+       * @param targetCompressionType The compression type to use when producing records to target
        * cluster. 
        */
       public fun targetCompressionType(targetCompressionType: String)
 
       /**
-       * @param targetKafkaClusterArn Amazon Resource Name of the target Kafka cluster. 
+       * @param targetKafkaClusterArn The ARN of the target Kafka cluster. 
        */
       public fun targetKafkaClusterArn(targetKafkaClusterArn: String)
 
       /**
-       * @param topicReplication the value to be set. 
+       * @param topicReplication Configuration relating to topic replication. 
        */
       public fun topicReplication(topicReplication: IResolvable)
 
       /**
-       * @param topicReplication the value to be set. 
+       * @param topicReplication Configuration relating to topic replication. 
        */
       public fun topicReplication(topicReplication: TopicReplicationProperty)
 
       /**
-       * @param topicReplication the value to be set. 
+       * @param topicReplication Configuration relating to topic replication. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b4ee2bf42bc2bd82f557b0d4373d457139166eb17a251e2f001dc2ab5ced9364")
@@ -1313,14 +1309,14 @@ public open class CfnReplicator(
           consumerGroupReplication(ConsumerGroupReplicationProperty(consumerGroupReplication))
 
       /**
-       * @param sourceKafkaClusterArn Amazon Resource Name of the source Kafka cluster. 
+       * @param sourceKafkaClusterArn The ARN of the source Kafka cluster. 
        */
       override fun sourceKafkaClusterArn(sourceKafkaClusterArn: String) {
         cdkBuilder.sourceKafkaClusterArn(sourceKafkaClusterArn)
       }
 
       /**
-       * @param targetCompressionType The type of compression to use writing records to target Kafka
+       * @param targetCompressionType The compression type to use when producing records to target
        * cluster. 
        */
       override fun targetCompressionType(targetCompressionType: String) {
@@ -1328,28 +1324,28 @@ public open class CfnReplicator(
       }
 
       /**
-       * @param targetKafkaClusterArn Amazon Resource Name of the target Kafka cluster. 
+       * @param targetKafkaClusterArn The ARN of the target Kafka cluster. 
        */
       override fun targetKafkaClusterArn(targetKafkaClusterArn: String) {
         cdkBuilder.targetKafkaClusterArn(targetKafkaClusterArn)
       }
 
       /**
-       * @param topicReplication the value to be set. 
+       * @param topicReplication Configuration relating to topic replication. 
        */
       override fun topicReplication(topicReplication: IResolvable) {
         cdkBuilder.topicReplication(topicReplication.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param topicReplication the value to be set. 
+       * @param topicReplication Configuration relating to topic replication. 
        */
       override fun topicReplication(topicReplication: TopicReplicationProperty) {
         cdkBuilder.topicReplication(topicReplication.let(TopicReplicationProperty.Companion::unwrap))
       }
 
       /**
-       * @param topicReplication the value to be set. 
+       * @param topicReplication Configuration relating to topic replication. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b4ee2bf42bc2bd82f557b0d4373d457139166eb17a251e2f001dc2ab5ced9364")
@@ -1362,7 +1358,8 @@ public open class CfnReplicator(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ReplicationInfoProperty,
-    ) : CdkObject(cdkObject), ReplicationInfoProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationInfoProperty {
       /**
        * Configuration relating to consumer group replication.
        *
@@ -1371,27 +1368,29 @@ public open class CfnReplicator(
       override fun consumerGroupReplication(): Any = unwrap(this).getConsumerGroupReplication()
 
       /**
-       * Amazon Resource Name of the source Kafka cluster.
+       * The ARN of the source Kafka cluster.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-sourcekafkaclusterarn)
        */
       override fun sourceKafkaClusterArn(): String = unwrap(this).getSourceKafkaClusterArn()
 
       /**
-       * The type of compression to use writing records to target Kafka cluster.
+       * The compression type to use when producing records to target cluster.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-targetcompressiontype)
        */
       override fun targetCompressionType(): String = unwrap(this).getTargetCompressionType()
 
       /**
-       * Amazon Resource Name of the target Kafka cluster.
+       * The ARN of the target Kafka cluster.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-targetkafkaclusterarn)
        */
       override fun targetKafkaClusterArn(): String = unwrap(this).getTargetKafkaClusterArn()
 
       /**
+       * Configuration relating to topic replication.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-topicreplication)
        */
       override fun topicReplication(): Any = unwrap(this).getTopicReplication()
@@ -1416,7 +1415,7 @@ public open class CfnReplicator(
   }
 
   /**
-   * Configuration for specifying the position in the topics to start replicating from.
+   * Specifies the position in the topics to start replicating from.
    *
    * Example:
    *
@@ -1471,7 +1470,8 @@ public open class CfnReplicator(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ReplicationStartingPositionProperty,
-    ) : CdkObject(cdkObject), ReplicationStartingPositionProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationStartingPositionProperty {
       /**
        * The type of replication starting position.
        *
@@ -1500,6 +1500,98 @@ public open class CfnReplicator(
   }
 
   /**
+   * Configuration for specifying replicated topic names will be the same as their corresponding
+   * upstream topics or prefixed with source cluster alias.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.msk.*;
+   * ReplicationTopicNameConfigurationProperty replicationTopicNameConfigurationProperty =
+   * ReplicationTopicNameConfigurationProperty.builder()
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationtopicnameconfiguration.html)
+   */
+  public interface ReplicationTopicNameConfigurationProperty {
+    /**
+     * The type of replication topic name configuration, identical to upstream topic name or
+     * prefixed with source cluster alias.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationtopicnameconfiguration.html#cfn-msk-replicator-replicationtopicnameconfiguration-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [ReplicationTopicNameConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The type of replication topic name configuration, identical to upstream topic
+       * name or prefixed with source cluster alias.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationTopicNameConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationTopicNameConfigurationProperty.builder()
+
+      /**
+       * @param type The type of replication topic name configuration, identical to upstream topic
+       * name or prefixed with source cluster alias.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationTopicNameConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ReplicationTopicNameConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ReplicationTopicNameConfigurationProperty {
+      /**
+       * The type of replication topic name configuration, identical to upstream topic name or
+       * prefixed with source cluster alias.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationtopicnameconfiguration.html#cfn-msk-replicator-replicationtopicnameconfiguration-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ReplicationTopicNameConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ReplicationTopicNameConfigurationProperty):
+          ReplicationTopicNameConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationTopicNameConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplicationTopicNameConfigurationProperty):
+          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationTopicNameConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationTopicNameConfigurationProperty
+    }
+  }
+
+  /**
+   * Details about topic replication.
+   *
    * Example:
    *
    * ```
@@ -1513,6 +1605,9 @@ public open class CfnReplicator(
    * .copyTopicConfigurations(false)
    * .detectAndCopyNewTopics(false)
    * .startingPosition(ReplicationStartingPositionProperty.builder()
+   * .type("type")
+   * .build())
+   * .topicNameConfiguration(ReplicationTopicNameConfigurationProperty.builder()
    * .type("type")
    * .build())
    * .topicsToExclude(List.of("topicsToExclude"))
@@ -1546,11 +1641,19 @@ public open class CfnReplicator(
     public fun detectAndCopyNewTopics(): Any? = unwrap(this).getDetectAndCopyNewTopics()
 
     /**
-     * Configuration for specifying the position in the topics to start replicating from.
+     * Specifies the position in the topics to start replicating from.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-startingposition)
      */
     public fun startingPosition(): Any? = unwrap(this).getStartingPosition()
+
+    /**
+     * Configuration for specifying replicated topic names will be the same as their corresponding
+     * upstream topics or prefixed with source cluster alias.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-topicnameconfiguration)
+     */
+    public fun topicNameConfiguration(): Any? = unwrap(this).getTopicNameConfiguration()
 
     /**
      * List of regular expression patterns indicating the topics that should not be replicated.
@@ -1606,25 +1709,44 @@ public open class CfnReplicator(
       public fun detectAndCopyNewTopics(detectAndCopyNewTopics: IResolvable)
 
       /**
-       * @param startingPosition Configuration for specifying the position in the topics to start
-       * replicating from.
+       * @param startingPosition Specifies the position in the topics to start replicating from.
        */
       public fun startingPosition(startingPosition: IResolvable)
 
       /**
-       * @param startingPosition Configuration for specifying the position in the topics to start
-       * replicating from.
+       * @param startingPosition Specifies the position in the topics to start replicating from.
        */
       public fun startingPosition(startingPosition: ReplicationStartingPositionProperty)
 
       /**
-       * @param startingPosition Configuration for specifying the position in the topics to start
-       * replicating from.
+       * @param startingPosition Specifies the position in the topics to start replicating from.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b216c9fb6cd3c2d96380696c26c913ca537b6a0175cb86fa24f15fddcce2b9d6")
       public
           fun startingPosition(startingPosition: ReplicationStartingPositionProperty.Builder.() -> Unit)
+
+      /**
+       * @param topicNameConfiguration Configuration for specifying replicated topic names will be
+       * the same as their corresponding upstream topics or prefixed with source cluster alias.
+       */
+      public fun topicNameConfiguration(topicNameConfiguration: IResolvable)
+
+      /**
+       * @param topicNameConfiguration Configuration for specifying replicated topic names will be
+       * the same as their corresponding upstream topics or prefixed with source cluster alias.
+       */
+      public
+          fun topicNameConfiguration(topicNameConfiguration: ReplicationTopicNameConfigurationProperty)
+
+      /**
+       * @param topicNameConfiguration Configuration for specifying replicated topic names will be
+       * the same as their corresponding upstream topics or prefixed with source cluster alias.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dbfb614ac0eacc55a86aaf8ba669177fdb9f9719e3449e0f3aed36a970d4b533")
+      public
+          fun topicNameConfiguration(topicNameConfiguration: ReplicationTopicNameConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param topicsToExclude List of regular expression patterns indicating the topics that
@@ -1703,30 +1825,55 @@ public open class CfnReplicator(
       }
 
       /**
-       * @param startingPosition Configuration for specifying the position in the topics to start
-       * replicating from.
+       * @param startingPosition Specifies the position in the topics to start replicating from.
        */
       override fun startingPosition(startingPosition: IResolvable) {
         cdkBuilder.startingPosition(startingPosition.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param startingPosition Configuration for specifying the position in the topics to start
-       * replicating from.
+       * @param startingPosition Specifies the position in the topics to start replicating from.
        */
       override fun startingPosition(startingPosition: ReplicationStartingPositionProperty) {
         cdkBuilder.startingPosition(startingPosition.let(ReplicationStartingPositionProperty.Companion::unwrap))
       }
 
       /**
-       * @param startingPosition Configuration for specifying the position in the topics to start
-       * replicating from.
+       * @param startingPosition Specifies the position in the topics to start replicating from.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b216c9fb6cd3c2d96380696c26c913ca537b6a0175cb86fa24f15fddcce2b9d6")
       override
           fun startingPosition(startingPosition: ReplicationStartingPositionProperty.Builder.() -> Unit):
           Unit = startingPosition(ReplicationStartingPositionProperty(startingPosition))
+
+      /**
+       * @param topicNameConfiguration Configuration for specifying replicated topic names will be
+       * the same as their corresponding upstream topics or prefixed with source cluster alias.
+       */
+      override fun topicNameConfiguration(topicNameConfiguration: IResolvable) {
+        cdkBuilder.topicNameConfiguration(topicNameConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param topicNameConfiguration Configuration for specifying replicated topic names will be
+       * the same as their corresponding upstream topics or prefixed with source cluster alias.
+       */
+      override
+          fun topicNameConfiguration(topicNameConfiguration: ReplicationTopicNameConfigurationProperty) {
+        cdkBuilder.topicNameConfiguration(topicNameConfiguration.let(ReplicationTopicNameConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param topicNameConfiguration Configuration for specifying replicated topic names will be
+       * the same as their corresponding upstream topics or prefixed with source cluster alias.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("dbfb614ac0eacc55a86aaf8ba669177fdb9f9719e3449e0f3aed36a970d4b533")
+      override
+          fun topicNameConfiguration(topicNameConfiguration: ReplicationTopicNameConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          topicNameConfiguration(ReplicationTopicNameConfigurationProperty(topicNameConfiguration))
 
       /**
        * @param topicsToExclude List of regular expression patterns indicating the topics that
@@ -1764,7 +1911,8 @@ public open class CfnReplicator(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty,
-    ) : CdkObject(cdkObject), TopicReplicationProperty {
+    ) : CdkObject(cdkObject),
+        TopicReplicationProperty {
       /**
        * Whether to periodically configure remote topic ACLs to match their corresponding upstream
        * topics.
@@ -1790,11 +1938,19 @@ public open class CfnReplicator(
       override fun detectAndCopyNewTopics(): Any? = unwrap(this).getDetectAndCopyNewTopics()
 
       /**
-       * Configuration for specifying the position in the topics to start replicating from.
+       * Specifies the position in the topics to start replicating from.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-startingposition)
        */
       override fun startingPosition(): Any? = unwrap(this).getStartingPosition()
+
+      /**
+       * Configuration for specifying replicated topic names will be the same as their corresponding
+       * upstream topics or prefixed with source cluster alias.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-topicnameconfiguration)
+       */
+      override fun topicNameConfiguration(): Any? = unwrap(this).getTopicNameConfiguration()
 
       /**
        * List of regular expression patterns indicating the topics that should not be replicated.

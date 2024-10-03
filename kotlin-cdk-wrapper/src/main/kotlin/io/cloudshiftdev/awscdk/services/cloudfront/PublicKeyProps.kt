@@ -115,7 +115,8 @@ public interface PublicKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.PublicKeyProps,
-  ) : CdkObject(cdkObject), PublicKeyProps {
+  ) : CdkObject(cdkObject),
+      PublicKeyProps {
     /**
      * A comment to describe the public key.
      *

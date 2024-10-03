@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNamespace(
   cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespace,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1230,7 +1232,8 @@ public open class CfnNamespace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespace.NamespaceProperty,
-    ) : CdkObject(cdkObject), NamespaceProperty {
+    ) : CdkObject(cdkObject),
+        NamespaceProperty {
       /**
        * The Amazon Resource Name (ARN) for the namespace's admin user credentials secret.
        *
@@ -1452,7 +1455,8 @@ public open class CfnNamespace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty,
-    ) : CdkObject(cdkObject), SnapshotCopyConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SnapshotCopyConfigurationProperty {
       /**
        * The ID of the KMS key to use to encrypt your snapshots in the destination AWS Region .
        *

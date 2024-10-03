@@ -171,7 +171,8 @@ public interface DomainNameProps : DomainNameOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.DomainNameProps,
-  ) : CdkObject(cdkObject), DomainNameProps {
+  ) : CdkObject(cdkObject),
+      DomainNameProps {
     /**
      * The base path name that callers of the API must provide in the URL after the domain name
      * (e.g. `example.com/base-path`). If you specify this property, it can't be an empty string.

@@ -35,6 +35,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .desiredSoftwareSetId("desiredSoftwareSetId")
  * .desktopEndpoint("desktopEndpoint")
+ * .deviceCreationTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .kmsKeyArn("kmsKeyArn")
  * .maintenanceWindow(MaintenanceWindowProperty.builder()
  * .type("type")
@@ -60,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEnvironment(
   cdkObject: software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -174,6 +180,31 @@ public open class CfnEnvironment(
   public open fun desktopEndpoint(`value`: String) {
     unwrap(this).setDesktopEndpoint(`value`)
   }
+
+  /**
+   * The tag keys and optional values for the newly created devices for this environment.
+   */
+  public open fun deviceCreationTags(): Any? = unwrap(this).getDeviceCreationTags()
+
+  /**
+   * The tag keys and optional values for the newly created devices for this environment.
+   */
+  public open fun deviceCreationTags(`value`: IResolvable) {
+    unwrap(this).setDeviceCreationTags(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The tag keys and optional values for the newly created devices for this environment.
+   */
+  public open fun deviceCreationTags(`value`: List<Any>) {
+    unwrap(this).setDeviceCreationTags(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * The tag keys and optional values for the newly created devices for this environment.
+   */
+  public open fun deviceCreationTags(vararg `value`: Any): Unit =
+      deviceCreationTags(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -311,6 +342,33 @@ public open class CfnEnvironment(
     public fun desktopEndpoint(desktopEndpoint: String)
 
     /**
+     * The tag keys and optional values for the newly created devices for this environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-devicecreationtags)
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment. 
+     */
+    public fun deviceCreationTags(deviceCreationTags: IResolvable)
+
+    /**
+     * The tag keys and optional values for the newly created devices for this environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-devicecreationtags)
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment. 
+     */
+    public fun deviceCreationTags(deviceCreationTags: List<Any>)
+
+    /**
+     * The tag keys and optional values for the newly created devices for this environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-devicecreationtags)
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment. 
+     */
+    public fun deviceCreationTags(vararg deviceCreationTags: Any)
+
+    /**
      * The Amazon Resource Name (ARN) of the AWS Key Management Service key used to encrypt the
      * environment.
      *
@@ -437,6 +495,38 @@ public open class CfnEnvironment(
     override fun desktopEndpoint(desktopEndpoint: String) {
       cdkBuilder.desktopEndpoint(desktopEndpoint)
     }
+
+    /**
+     * The tag keys and optional values for the newly created devices for this environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-devicecreationtags)
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment. 
+     */
+    override fun deviceCreationTags(deviceCreationTags: IResolvable) {
+      cdkBuilder.deviceCreationTags(deviceCreationTags.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The tag keys and optional values for the newly created devices for this environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-devicecreationtags)
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment. 
+     */
+    override fun deviceCreationTags(deviceCreationTags: List<Any>) {
+      cdkBuilder.deviceCreationTags(deviceCreationTags.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * The tag keys and optional values for the newly created devices for this environment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-devicecreationtags)
+     * @param deviceCreationTags The tag keys and optional values for the newly created devices for
+     * this environment. 
+     */
+    override fun deviceCreationTags(vararg deviceCreationTags: Any): Unit =
+        deviceCreationTags(deviceCreationTags.toList())
 
     /**
      * The Amazon Resource Name (ARN) of the AWS Key Management Service key used to encrypt the
@@ -756,7 +846,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment.MaintenanceWindowProperty,
-    ) : CdkObject(cdkObject), MaintenanceWindowProperty {
+    ) : CdkObject(cdkObject),
+        MaintenanceWindowProperty {
       /**
        * The option to set the maintenance window during the device local time or Universal
        * Coordinated Time (UTC).

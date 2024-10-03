@@ -59,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCodeRepository(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnCodeRepository,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -440,7 +442,8 @@ public open class CfnCodeRepository(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnCodeRepository.GitConfigProperty,
-    ) : CdkObject(cdkObject), GitConfigProperty {
+    ) : CdkObject(cdkObject),
+        GitConfigProperty {
       /**
        * The default branch for the Git repository.
        *

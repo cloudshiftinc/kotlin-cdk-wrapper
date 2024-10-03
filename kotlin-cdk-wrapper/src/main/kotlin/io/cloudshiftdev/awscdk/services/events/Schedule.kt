@@ -17,21 +17,16 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.ecs.*;
- * ICluster cluster;
- * TaskDefinition taskDefinition;
+ * import io.cloudshiftdev.awscdk.services.redshiftserverless.*;
+ * CfnWorkgroup workgroup;
  * Rule rule = Rule.Builder.create(this, "Rule")
  * .schedule(Schedule.rate(Duration.hours(1)))
  * .build();
- * rule.addTarget(
- * EcsTask.Builder.create()
- * .cluster(cluster)
- * .taskDefinition(taskDefinition)
- * .propagateTags(PropagatedTagSource.TASK_DEFINITION)
- * .tags(List.of(Tag.builder()
- * .key("my-tag")
- * .value("my-tag-value")
- * .build()))
+ * Queue dlq = new Queue(this, "DeadLetterQueue");
+ * rule.addTarget(RedshiftQuery.Builder.create(workgroup.getAttrWorkgroupWorkgroupArn())
+ * .database("dev")
+ * .deadLetterQueue(dlq)
+ * .sql(List.of("SELECT * FROM foo", "SELECT * FROM baz"))
  * .build());
  * ```
  *

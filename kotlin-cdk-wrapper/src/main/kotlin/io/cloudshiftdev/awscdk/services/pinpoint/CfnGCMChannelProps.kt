@@ -179,7 +179,8 @@ public interface CfnGCMChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnGCMChannelProps,
-  ) : CdkObject(cdkObject), CfnGCMChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnGCMChannelProps {
     /**
      * The Web API key, also called the *server key* , that you received from Google to communicate
      * with Google services.

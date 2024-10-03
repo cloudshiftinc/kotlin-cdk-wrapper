@@ -127,8 +127,6 @@ public interface CfnFlowSourceProps {
    *
    * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
    *
-   * Default: - 2000
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxlatency)
    */
   public fun maxLatency(): Number? = unwrap(this).getMaxLatency()
@@ -139,8 +137,6 @@ public interface CfnFlowSourceProps {
    * In streams that use the SRT protocol, this value that you set on your MediaConnect source or
    * output represents the minimal potential latency of that connection. The latency of the stream is
    * set to the highest number between the sender’s minimum latency and the receiver’s minimum latency.
-   *
-   * Default: - 2000
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-minlatency)
    */
@@ -572,7 +568,8 @@ public interface CfnFlowSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSourceProps,
-  ) : CdkObject(cdkObject), CfnFlowSourceProps {
+  ) : CdkObject(cdkObject),
+      CfnFlowSourceProps {
     /**
      * The type of encryption that is used on the content ingested from the source.
      *
@@ -636,8 +633,6 @@ public interface CfnFlowSourceProps {
      *
      * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
      *
-     * Default: - 2000
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxlatency)
      */
     override fun maxLatency(): Number? = unwrap(this).getMaxLatency()
@@ -649,8 +644,6 @@ public interface CfnFlowSourceProps {
      * output represents the minimal potential latency of that connection. The latency of the stream is
      * set to the highest number between the sender’s minimum latency and the receiver’s minimum
      * latency.
-     *
-     * Default: - 2000
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-minlatency)
      */

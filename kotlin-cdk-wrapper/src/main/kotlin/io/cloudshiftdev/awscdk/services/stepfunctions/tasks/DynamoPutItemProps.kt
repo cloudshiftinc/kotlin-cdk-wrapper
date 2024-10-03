@@ -453,7 +453,8 @@ public interface DynamoPutItemProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItemProps,
-  ) : CdkObject(cdkObject), DynamoPutItemProps {
+  ) : CdkObject(cdkObject),
+      DynamoPutItemProps {
     /**
      * An optional description for this state.
      *

@@ -53,7 +53,8 @@ public interface IProfilingGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codeguruprofiler.IProfilingGroup,
-  ) : CdkObject(cdkObject), IProfilingGroup {
+  ) : CdkObject(cdkObject),
+      IProfilingGroup {
     /**
      * Apply the given removal policy to this resource.
      *

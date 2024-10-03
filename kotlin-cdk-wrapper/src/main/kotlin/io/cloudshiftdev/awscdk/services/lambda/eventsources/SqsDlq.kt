@@ -32,7 +32,8 @@ import io.cloudshiftdev.awscdk.services.sqs.IQueue
  */
 public open class SqsDlq(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsDlq,
-) : CdkObject(cdkObject), IEventSourceDlq {
+) : CdkObject(cdkObject),
+    IEventSourceDlq {
   public constructor(queue: IQueue) :
       this(software.amazon.awscdk.services.lambda.eventsources.SqsDlq(queue.let(IQueue.Companion::unwrap))
   )

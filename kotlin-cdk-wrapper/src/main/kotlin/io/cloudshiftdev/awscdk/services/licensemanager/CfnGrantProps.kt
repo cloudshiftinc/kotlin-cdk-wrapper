@@ -202,7 +202,8 @@ public interface CfnGrantProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.licensemanager.CfnGrantProps,
-  ) : CdkObject(cdkObject), CfnGrantProps {
+  ) : CdkObject(cdkObject),
+      CfnGrantProps {
     /**
      * Allowed operations for the grant.
      *

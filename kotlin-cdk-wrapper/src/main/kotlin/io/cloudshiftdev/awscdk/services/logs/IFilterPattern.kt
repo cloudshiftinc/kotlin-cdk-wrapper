@@ -17,7 +17,8 @@ public interface IFilterPattern {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.IFilterPattern,
-  ) : CdkObject(cdkObject), IFilterPattern {
+  ) : CdkObject(cdkObject),
+      IFilterPattern {
     /**
      *
      */

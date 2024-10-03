@@ -22,6 +22,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Creates a security profile.
  *
+ * For information about security profiles, see [Security
+ * Profiles](https://docs.aws.amazon.com/connect/latest/adminguide/connect-security-profiles.html) in
+ * the *Amazon Connect Administrator Guide* . For a mapping of the API name and user interface name of
+ * the security profile permissions, see [List of security profile
+ * permissions](https://docs.aws.amazon.com/connect/latest/adminguide/security-profile-list.html) .
+ *
  * Example:
  *
  * ```
@@ -57,7 +63,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSecurityProfile(
   cdkObject: software.amazon.awscdk.services.connect.CfnSecurityProfile,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -797,7 +805,8 @@ public open class CfnSecurityProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnSecurityProfile.ApplicationProperty,
-    ) : CdkObject(cdkObject), ApplicationProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationProperty {
       /**
        * The permissions that the agent is granted on the application.
        *

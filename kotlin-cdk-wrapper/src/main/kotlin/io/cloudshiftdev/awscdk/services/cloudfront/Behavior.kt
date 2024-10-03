@@ -488,7 +488,8 @@ public interface Behavior {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.Behavior,
-  ) : CdkObject(cdkObject), Behavior {
+  ) : CdkObject(cdkObject),
+      Behavior {
     /**
      * The method this CloudFront distribution responds do.
      *

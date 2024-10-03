@@ -750,7 +750,8 @@ public interface CfnClientVpnEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpointProps,
-  ) : CdkObject(cdkObject), CfnClientVpnEndpointProps {
+  ) : CdkObject(cdkObject),
+      CfnClientVpnEndpointProps {
     /**
      * Information about the authentication method to be used to authenticate clients.
      *

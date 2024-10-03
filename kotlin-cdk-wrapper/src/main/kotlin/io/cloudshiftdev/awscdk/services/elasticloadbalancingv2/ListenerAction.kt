@@ -29,26 +29,33 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * ApplicationListener listener;
- * ApplicationTargetGroup myTargetGroup;
- * listener.addAction("DefaultAction", AddApplicationActionProps.builder()
- * .action(ListenerAction.authenticateOidc(AuthenticateOidcOptions.builder()
- * .authorizationEndpoint("https://example.com/openid")
- * // Other OIDC properties here
- * .clientId("...")
- * .clientSecret(SecretValue.secretsManager("..."))
- * .issuer("...")
- * .tokenEndpoint("...")
- * .userInfoEndpoint("...")
- * // Next
- * .next(ListenerAction.forward(List.of(myTargetGroup)))
- * .build()))
+ * import io.cloudshiftdev.awscdk.services.certificatemanager.*;
+ * Certificate certificate;
+ * ApplicationLoadBalancer lb;
+ * Bucket bucket;
+ * TrustStore trustStore = TrustStore.Builder.create(this, "Store")
+ * .bucket(bucket)
+ * .key("rootCA_cert.pem")
+ * .build();
+ * lb.addListener("Listener", BaseApplicationListenerProps.builder()
+ * .port(443)
+ * .protocol(ApplicationProtocol.HTTPS)
+ * .certificates(List.of(certificate))
+ * // mTLS settings
+ * .mutualAuthentication(MutualAuthentication.builder()
+ * .ignoreClientCertificateExpiry(false)
+ * .mutualAuthenticationMode(MutualAuthenticationMode.VERIFY)
+ * .trustStore(trustStore)
+ * .build())
+ * .defaultAction(ListenerAction.fixedResponse(200,
+ * FixedResponseOptions.builder().contentType("text/plain").messageBody("Success mTLS").build()))
  * .build());
  * ```
  */
 public open class ListenerAction(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction,
-) : CdkObject(cdkObject), IListenerAction {
+) : CdkObject(cdkObject),
+    IListenerAction {
   /**
    * Called when the action is being used in a listener.
    *

@@ -173,7 +173,8 @@ public interface PasswordPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.PasswordPolicy,
-  ) : CdkObject(cdkObject), PasswordPolicy {
+  ) : CdkObject(cdkObject),
+      PasswordPolicy {
     /**
      * Minimum length required for a user's password.
      *

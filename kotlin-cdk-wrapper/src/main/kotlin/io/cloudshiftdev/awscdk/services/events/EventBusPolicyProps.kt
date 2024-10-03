@@ -114,7 +114,8 @@ public interface EventBusPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.EventBusPolicyProps,
-  ) : CdkObject(cdkObject), EventBusPolicyProps {
+  ) : CdkObject(cdkObject),
+      EventBusPolicyProps {
     /**
      * The event bus to which the policy applies.
      */

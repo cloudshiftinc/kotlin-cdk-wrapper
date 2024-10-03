@@ -114,7 +114,8 @@ public interface TemplateRule {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.TemplateRule,
-  ) : CdkObject(cdkObject), TemplateRule {
+  ) : CdkObject(cdkObject),
+      TemplateRule {
     /**
      * A list of assertions that make up the rule.
      */

@@ -192,7 +192,8 @@ public interface CfnResiliencyPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicyProps,
-  ) : CdkObject(cdkObject), CfnResiliencyPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnResiliencyPolicyProps {
     /**
      * Specifies a high-level geographical location constraint for where your resilience policy data
      * can be stored.

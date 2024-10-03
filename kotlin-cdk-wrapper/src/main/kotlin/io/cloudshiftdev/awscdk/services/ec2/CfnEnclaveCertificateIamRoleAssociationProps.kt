@@ -87,7 +87,8 @@ public interface CfnEnclaveCertificateIamRoleAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociationProps,
-  ) : CdkObject(cdkObject), CfnEnclaveCertificateIamRoleAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnEnclaveCertificateIamRoleAssociationProps {
     /**
      * The ARN of the ACM certificate with which to associate the IAM role.
      *

@@ -115,7 +115,8 @@ public interface SecretsManagerSecretOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.SecretsManagerSecretOptions,
-  ) : CdkObject(cdkObject), SecretsManagerSecretOptions {
+  ) : CdkObject(cdkObject),
+      SecretsManagerSecretOptions {
     /**
      * The key of a JSON field to retrieve.
      *

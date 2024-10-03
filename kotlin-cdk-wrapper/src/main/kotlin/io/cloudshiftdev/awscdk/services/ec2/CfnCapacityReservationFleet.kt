@@ -64,7 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCapacityReservationFleet(
   cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -265,7 +266,7 @@ public open class CfnCapacityReservationFleet(
      * Currently, only the `prioritized` allocation strategy is supported. For more information, see
      * [Allocation
      * strategy](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy)
-     * in the Amazon EC2 User Guide.
+     * in the *Amazon EC2 User Guide* .
      *
      * Valid values: `prioritized`
      *
@@ -437,7 +438,7 @@ public open class CfnCapacityReservationFleet(
      * values are based on units that make sense for your workload. For more information, see [Total
      * target
      * capacity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity)
-     * in the Amazon EC2 User Guide.
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-totaltargetcapacity)
      * @param totalTargetCapacity The total number of capacity units to be reserved by the Capacity
@@ -460,7 +461,7 @@ public open class CfnCapacityReservationFleet(
      * Currently, only the `prioritized` allocation strategy is supported. For more information, see
      * [Allocation
      * strategy](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy)
-     * in the Amazon EC2 User Guide.
+     * in the *Amazon EC2 User Guide* .
      *
      * Valid values: `prioritized`
      *
@@ -658,7 +659,7 @@ public open class CfnCapacityReservationFleet(
      * values are based on units that make sense for your workload. For more information, see [Total
      * target
      * capacity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity)
-     * in the Amazon EC2 User Guide.
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-totaltargetcapacity)
      * @param totalTargetCapacity The total number of capacity units to be reserved by the Capacity
@@ -774,7 +775,7 @@ public open class CfnCapacityReservationFleet(
      * prioritized for use. A lower value indicates a high priority. For more information, see
      * [Instance type
      * priority](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority)
-     * in the Amazon EC2 User Guide.
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-instancetypespecification.html#cfn-ec2-capacityreservationfleet-instancetypespecification-priority)
      */
@@ -852,7 +853,7 @@ public open class CfnCapacityReservationFleet(
        * be prioritized for use. A lower value indicates a high priority. For more information, see
        * [Instance type
        * priority](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority)
-       * in the Amazon EC2 User Guide.
+       * in the *Amazon EC2 User Guide* .
        */
       public fun priority(priority: Number)
 
@@ -939,7 +940,7 @@ public open class CfnCapacityReservationFleet(
        * be prioritized for use. A lower value indicates a high priority. For more information, see
        * [Instance type
        * priority](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority)
-       * in the Amazon EC2 User Guide.
+       * in the *Amazon EC2 User Guide* .
        */
       override fun priority(priority: Number) {
         cdkBuilder.priority(priority)
@@ -966,7 +967,8 @@ public open class CfnCapacityReservationFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.InstanceTypeSpecificationProperty,
-    ) : CdkObject(cdkObject), InstanceTypeSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        InstanceTypeSpecificationProperty {
       /**
        * The Availability Zone in which the Capacity Reservation Fleet reserves the capacity.
        *
@@ -1020,7 +1022,7 @@ public open class CfnCapacityReservationFleet(
        * be prioritized for use. A lower value indicates a high priority. For more information, see
        * [Instance type
        * priority](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#instance-priority)
-       * in the Amazon EC2 User Guide.
+       * in the *Amazon EC2 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-instancetypespecification.html#cfn-ec2-capacityreservationfleet-instancetypespecification-priority)
        */
@@ -1167,7 +1169,8 @@ public open class CfnCapacityReservationFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty,
-    ) : CdkObject(cdkObject), TagSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        TagSpecificationProperty {
       /**
        * The type of resource to tag on creation. Specify `capacity-reservation-fleet` .
        *

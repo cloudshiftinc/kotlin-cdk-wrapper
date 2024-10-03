@@ -228,7 +228,8 @@ public interface HttpGatewayRouteMatch {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRouteMatch,
-  ) : CdkObject(cdkObject), HttpGatewayRouteMatch {
+  ) : CdkObject(cdkObject),
+      HttpGatewayRouteMatch {
     /**
      * Specifies the client request headers to match on.
      *

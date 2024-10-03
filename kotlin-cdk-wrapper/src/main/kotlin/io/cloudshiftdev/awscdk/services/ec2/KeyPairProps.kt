@@ -205,7 +205,8 @@ public interface KeyPairProps : ResourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.KeyPairProps,
-  ) : CdkObject(cdkObject), KeyPairProps {
+  ) : CdkObject(cdkObject),
+      KeyPairProps {
     /**
      * The AWS account ID this resource belongs to.
      *

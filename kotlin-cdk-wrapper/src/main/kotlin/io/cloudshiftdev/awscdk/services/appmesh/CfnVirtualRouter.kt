@@ -62,7 +62,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVirtualRouter(
   cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -515,7 +517,8 @@ public open class CfnVirtualRouter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty,
-    ) : CdkObject(cdkObject), PortMappingProperty {
+    ) : CdkObject(cdkObject),
+        PortMappingProperty {
       /**
        * The port used for the port mapping.
        *
@@ -637,7 +640,8 @@ public open class CfnVirtualRouter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty,
-    ) : CdkObject(cdkObject), VirtualRouterListenerProperty {
+    ) : CdkObject(cdkObject),
+        VirtualRouterListenerProperty {
       /**
        * The port mapping information for the listener.
        *
@@ -752,7 +756,8 @@ public open class CfnVirtualRouter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty,
-    ) : CdkObject(cdkObject), VirtualRouterSpecProperty {
+    ) : CdkObject(cdkObject),
+        VirtualRouterSpecProperty {
       /**
        * The listeners that the virtual router is expected to receive inbound traffic from.
        *

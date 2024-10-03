@@ -116,7 +116,8 @@ public interface CfnVPCEndpointServicePermissionsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissionsProps,
-  ) : CdkObject(cdkObject), CfnVPCEndpointServicePermissionsProps {
+  ) : CdkObject(cdkObject),
+      CfnVPCEndpointServicePermissionsProps {
     /**
      * The Amazon Resource Names (ARN) of one or more principals (for example, users, IAM roles, and
      * AWS accounts ).

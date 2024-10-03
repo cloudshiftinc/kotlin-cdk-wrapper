@@ -127,7 +127,8 @@ public interface CfnAccessLogSubscriptionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscriptionProps,
-  ) : CdkObject(cdkObject), CfnAccessLogSubscriptionProps {
+  ) : CdkObject(cdkObject),
+      CfnAccessLogSubscriptionProps {
     /**
      * The Amazon Resource Name (ARN) of the destination.
      *

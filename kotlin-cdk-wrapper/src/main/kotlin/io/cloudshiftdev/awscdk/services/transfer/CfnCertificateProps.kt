@@ -228,7 +228,8 @@ public interface CfnCertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.transfer.CfnCertificateProps,
-  ) : CdkObject(cdkObject), CfnCertificateProps {
+  ) : CdkObject(cdkObject),
+      CfnCertificateProps {
     /**
      * An optional date that specifies when the certificate becomes active.
      *

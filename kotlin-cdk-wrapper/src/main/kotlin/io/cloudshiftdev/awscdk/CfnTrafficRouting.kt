@@ -153,7 +153,8 @@ public interface CfnTrafficRouting {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnTrafficRouting,
-  ) : CdkObject(cdkObject), CfnTrafficRouting {
+  ) : CdkObject(cdkObject),
+      CfnTrafficRouting {
     /**
      * The listener to be used by your load balancer to direct traffic to your target groups.
      */

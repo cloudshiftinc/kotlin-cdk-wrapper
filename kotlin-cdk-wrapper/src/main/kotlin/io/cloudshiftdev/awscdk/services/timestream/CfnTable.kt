@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTable(
   cdkObject: software.amazon.awscdk.services.timestream.CfnTable,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -646,7 +648,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty,
-    ) : CdkObject(cdkObject), MagneticStoreRejectedDataLocationProperty {
+    ) : CdkObject(cdkObject),
+        MagneticStoreRejectedDataLocationProperty {
       /**
        * Configuration of an S3 location to write error reports for records rejected,
        * asynchronously, during magnetic store writes.
@@ -813,7 +816,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreWritePropertiesProperty,
-    ) : CdkObject(cdkObject), MagneticStoreWritePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        MagneticStoreWritePropertiesProperty {
       /**
        * A flag to enable magnetic store writes.
        *
@@ -961,7 +965,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty,
-    ) : CdkObject(cdkObject), PartitionKeyProperty {
+    ) : CdkObject(cdkObject),
+        PartitionKeyProperty {
       /**
        * The level of enforcement for the specification of a dimension key in ingested records.
        *
@@ -1088,7 +1093,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty,
-    ) : CdkObject(cdkObject), RetentionPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        RetentionPropertiesProperty {
       /**
        * The duration for which data must be stored in the magnetic store.
        *
@@ -1245,7 +1251,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.timestream.CfnTable.S3ConfigurationProperty,
-    ) : CdkObject(cdkObject), S3ConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        S3ConfigurationProperty {
       /**
        * The bucket name of the customer S3 bucket.
        *
@@ -1404,7 +1411,8 @@ public open class CfnTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.timestream.CfnTable.SchemaProperty,
-    ) : CdkObject(cdkObject), SchemaProperty {
+    ) : CdkObject(cdkObject),
+        SchemaProperty {
       /**
        * A non-empty list of partition keys defining the attributes used to partition the table
        * data.

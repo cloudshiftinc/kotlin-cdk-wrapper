@@ -29,7 +29,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.medialive.*;
  * CfnMultiplexprogram cfnMultiplexprogram = CfnMultiplexprogram.Builder.create(this,
  * "MyCfnMultiplexprogram")
- * .channelId("channelId")
  * .multiplexId("multiplexId")
  * .multiplexProgramSettings(MultiplexProgramSettingsProperty.builder()
  * .programNumber(123)
@@ -76,7 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMultiplexprogram(
   cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.medialive.CfnMultiplexprogram(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -101,14 +101,7 @@ public open class CfnMultiplexprogram(
   /**
    * The unique ID of the channel.
    */
-  public open fun channelId(): String? = unwrap(this).getChannelId()
-
-  /**
-   * The unique ID of the channel.
-   */
-  public open fun channelId(`value`: String) {
-    unwrap(this).setChannelId(`value`)
-  }
+  public open fun attrChannelId(): String = unwrap(this).getAttrChannelId()
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -245,14 +238,6 @@ public open class CfnMultiplexprogram(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The unique ID of the channel.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplexprogram.html#cfn-medialive-multiplexprogram-channelid)
-     * @param channelId The unique ID of the channel. 
-     */
-    public fun channelId(channelId: String)
-
-    /**
      * The unique id of the multiplex.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplexprogram.html#cfn-medialive-multiplexprogram-multiplexid)
@@ -387,16 +372,6 @@ public open class CfnMultiplexprogram(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.Builder =
         software.amazon.awscdk.services.medialive.CfnMultiplexprogram.Builder.create(scope, id)
-
-    /**
-     * The unique ID of the channel.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-multiplexprogram.html#cfn-medialive-multiplexprogram-channelid)
-     * @param channelId The unique ID of the channel. 
-     */
-    override fun channelId(channelId: String) {
-      cdkBuilder.channelId(channelId)
-    }
 
     /**
      * The unique id of the multiplex.
@@ -932,7 +907,8 @@ public open class CfnMultiplexprogram(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty,
-    ) : CdkObject(cdkObject), MultiplexProgramPacketIdentifiersMapProperty {
+    ) : CdkObject(cdkObject),
+        MultiplexProgramPacketIdentifiersMapProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-multiplexprogram-multiplexprogrampacketidentifiersmap.html#cfn-medialive-multiplexprogram-multiplexprogrampacketidentifiersmap-audiopids)
        */
@@ -1097,7 +1073,8 @@ public open class CfnMultiplexprogram(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPipelineDetailProperty,
-    ) : CdkObject(cdkObject), MultiplexProgramPipelineDetailProperty {
+    ) : CdkObject(cdkObject),
+        MultiplexProgramPipelineDetailProperty {
       /**
        * Identifies the channel pipeline that is currently active for the pipeline (identified by
        * PipelineId) in the multiplex.
@@ -1209,7 +1186,8 @@ public open class CfnMultiplexprogram(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty,
-    ) : CdkObject(cdkObject), MultiplexProgramServiceDescriptorProperty {
+    ) : CdkObject(cdkObject),
+        MultiplexProgramServiceDescriptorProperty {
       /**
        * Name of the provider.
        *
@@ -1435,7 +1413,8 @@ public open class CfnMultiplexprogram(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramSettingsProperty,
-    ) : CdkObject(cdkObject), MultiplexProgramSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MultiplexProgramSettingsProperty {
       /**
        * Indicates which pipeline is preferred by the multiplex for program ingest.
        *
@@ -1592,7 +1571,8 @@ public open class CfnMultiplexprogram(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexStatmuxVideoSettingsProperty,
-    ) : CdkObject(cdkObject), MultiplexStatmuxVideoSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MultiplexStatmuxVideoSettingsProperty {
       /**
        * Maximum statmux bitrate.
        *
@@ -1760,7 +1740,8 @@ public open class CfnMultiplexprogram(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty,
-    ) : CdkObject(cdkObject), MultiplexVideoSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MultiplexVideoSettingsProperty {
       /**
        * The constant bitrate configuration for the video encode.
        *

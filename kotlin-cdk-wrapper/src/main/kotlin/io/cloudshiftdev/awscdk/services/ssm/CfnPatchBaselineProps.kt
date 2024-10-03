@@ -81,7 +81,7 @@ public interface CfnPatchBaselineProps {
    * A list of explicitly approved patches for the baseline.
    *
    * For information about accepted formats for lists of approved patches and rejected patches, see
-   * [About package name formats for approved and rejected patch
+   * [Package name formats for approved and rejected patch
    * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
    * in the *AWS Systems Manager User Guide* .
    *
@@ -169,7 +169,7 @@ public interface CfnPatchBaselineProps {
    * A list of explicitly rejected patches for the baseline.
    *
    * For information about accepted formats for lists of approved patches and rejected patches, see
-   * [About package name formats for approved and rejected patch
+   * [Package name formats for approved and rejected patch
    * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
    * in the *AWS Systems Manager User Guide* .
    *
@@ -180,14 +180,21 @@ public interface CfnPatchBaselineProps {
   /**
    * The action for Patch Manager to take on patches included in the `RejectedPackages` list.
    *
-   * * *`ALLOW_AS_DEPENDENCY`* : A package in the `Rejected` patches list is installed only if it is
-   * a dependency of another package. It is considered compliant with the patch baseline, and its
-   * status is reported as `InstalledOther` . This is the default action if no option is specified.
-   * * *BLOCK* : Packages in the *Rejected patches* list, and packages that include them as
-   * dependencies, aren't installed by Patch Manager under any circumstances. If a package was
-   * installed before it was added to the *Rejected patches* list, or is installed outside of Patch
+   * * **ALLOW_AS_DEPENDENCY** - *Linux and macOS* : A package in the rejected patches list is
+   * installed only if it is a dependency of another package. It is considered compliant with the patch
+   * baseline, and its status is reported as `INSTALLED_OTHER` . This is the default action if no
+   * option is specified.
+   *
+   * *Windows Server* : Windows Server doesn't support the concept of package dependencies. If a
+   * package in the rejected patches list and already installed on the node, its status is reported as
+   * `INSTALLED_OTHER` . Any package not already installed on the node is skipped. This is the default
+   * action if no option is specified.
+   *
+   * * **BLOCK** - *All OSs* : Packages in the rejected patches list, and packages that include them
+   * as dependencies, aren't installed by Patch Manager under any circumstances. If a package was
+   * installed before it was added to the rejected patches list, or is installed outside of Patch
    * Manager afterward, it's considered noncompliant with the patch baseline and its status is reported
-   * as *InstalledRejected* .
+   * as `INSTALLED_REJECTED` .
    *
    * Default: - "ALLOW_AS_DEPENDENCY"
    *
@@ -241,7 +248,7 @@ public interface CfnPatchBaselineProps {
     /**
      * @param approvedPatches A list of explicitly approved patches for the baseline.
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      */
@@ -250,7 +257,7 @@ public interface CfnPatchBaselineProps {
     /**
      * @param approvedPatches A list of explicitly approved patches for the baseline.
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      */
@@ -336,7 +343,7 @@ public interface CfnPatchBaselineProps {
     /**
      * @param rejectedPatches A list of explicitly rejected patches for the baseline.
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      */
@@ -345,7 +352,7 @@ public interface CfnPatchBaselineProps {
     /**
      * @param rejectedPatches A list of explicitly rejected patches for the baseline.
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      */
@@ -354,14 +361,21 @@ public interface CfnPatchBaselineProps {
     /**
      * @param rejectedPatchesAction The action for Patch Manager to take on patches included in the
      * `RejectedPackages` list.
-     * * *`ALLOW_AS_DEPENDENCY`* : A package in the `Rejected` patches list is installed only if it
-     * is a dependency of another package. It is considered compliant with the patch baseline, and its
-     * status is reported as `InstalledOther` . This is the default action if no option is specified.
-     * * *BLOCK* : Packages in the *Rejected patches* list, and packages that include them as
-     * dependencies, aren't installed by Patch Manager under any circumstances. If a package was
-     * installed before it was added to the *Rejected patches* list, or is installed outside of Patch
+     * * **ALLOW_AS_DEPENDENCY** - *Linux and macOS* : A package in the rejected patches list is
+     * installed only if it is a dependency of another package. It is considered compliant with the
+     * patch baseline, and its status is reported as `INSTALLED_OTHER` . This is the default action if
+     * no option is specified.
+     *
+     * *Windows Server* : Windows Server doesn't support the concept of package dependencies. If a
+     * package in the rejected patches list and already installed on the node, its status is reported
+     * as `INSTALLED_OTHER` . Any package not already installed on the node is skipped. This is the
+     * default action if no option is specified.
+     *
+     * * **BLOCK** - *All OSs* : Packages in the rejected patches list, and packages that include
+     * them as dependencies, aren't installed by Patch Manager under any circumstances. If a package
+     * was installed before it was added to the rejected patches list, or is installed outside of Patch
      * Manager afterward, it's considered noncompliant with the patch baseline and its status is
-     * reported as *InstalledRejected* .
+     * reported as `INSTALLED_REJECTED` .
      */
     public fun rejectedPatchesAction(rejectedPatchesAction: String)
 
@@ -433,7 +447,7 @@ public interface CfnPatchBaselineProps {
     /**
      * @param approvedPatches A list of explicitly approved patches for the baseline.
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      */
@@ -444,7 +458,7 @@ public interface CfnPatchBaselineProps {
     /**
      * @param approvedPatches A list of explicitly approved patches for the baseline.
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      */
@@ -554,7 +568,7 @@ public interface CfnPatchBaselineProps {
     /**
      * @param rejectedPatches A list of explicitly rejected patches for the baseline.
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      */
@@ -565,7 +579,7 @@ public interface CfnPatchBaselineProps {
     /**
      * @param rejectedPatches A list of explicitly rejected patches for the baseline.
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      */
@@ -575,14 +589,21 @@ public interface CfnPatchBaselineProps {
     /**
      * @param rejectedPatchesAction The action for Patch Manager to take on patches included in the
      * `RejectedPackages` list.
-     * * *`ALLOW_AS_DEPENDENCY`* : A package in the `Rejected` patches list is installed only if it
-     * is a dependency of another package. It is considered compliant with the patch baseline, and its
-     * status is reported as `InstalledOther` . This is the default action if no option is specified.
-     * * *BLOCK* : Packages in the *Rejected patches* list, and packages that include them as
-     * dependencies, aren't installed by Patch Manager under any circumstances. If a package was
-     * installed before it was added to the *Rejected patches* list, or is installed outside of Patch
+     * * **ALLOW_AS_DEPENDENCY** - *Linux and macOS* : A package in the rejected patches list is
+     * installed only if it is a dependency of another package. It is considered compliant with the
+     * patch baseline, and its status is reported as `INSTALLED_OTHER` . This is the default action if
+     * no option is specified.
+     *
+     * *Windows Server* : Windows Server doesn't support the concept of package dependencies. If a
+     * package in the rejected patches list and already installed on the node, its status is reported
+     * as `INSTALLED_OTHER` . Any package not already installed on the node is skipped. This is the
+     * default action if no option is specified.
+     *
+     * * **BLOCK** - *All OSs* : Packages in the rejected patches list, and packages that include
+     * them as dependencies, aren't installed by Patch Manager under any circumstances. If a package
+     * was installed before it was added to the rejected patches list, or is installed outside of Patch
      * Manager afterward, it's considered noncompliant with the patch baseline and its status is
-     * reported as *InstalledRejected* .
+     * reported as `INSTALLED_REJECTED` .
      */
     override fun rejectedPatchesAction(rejectedPatchesAction: String) {
       cdkBuilder.rejectedPatchesAction(rejectedPatchesAction)
@@ -637,7 +658,8 @@ public interface CfnPatchBaselineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaselineProps,
-  ) : CdkObject(cdkObject), CfnPatchBaselineProps {
+  ) : CdkObject(cdkObject),
+      CfnPatchBaselineProps {
     /**
      * A set of rules used to include patches in the baseline.
      *
@@ -649,7 +671,7 @@ public interface CfnPatchBaselineProps {
      * A list of explicitly approved patches for the baseline.
      *
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      *
@@ -737,7 +759,7 @@ public interface CfnPatchBaselineProps {
      * A list of explicitly rejected patches for the baseline.
      *
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      *
@@ -748,14 +770,21 @@ public interface CfnPatchBaselineProps {
     /**
      * The action for Patch Manager to take on patches included in the `RejectedPackages` list.
      *
-     * * *`ALLOW_AS_DEPENDENCY`* : A package in the `Rejected` patches list is installed only if it
-     * is a dependency of another package. It is considered compliant with the patch baseline, and its
-     * status is reported as `InstalledOther` . This is the default action if no option is specified.
-     * * *BLOCK* : Packages in the *Rejected patches* list, and packages that include them as
-     * dependencies, aren't installed by Patch Manager under any circumstances. If a package was
-     * installed before it was added to the *Rejected patches* list, or is installed outside of Patch
+     * * **ALLOW_AS_DEPENDENCY** - *Linux and macOS* : A package in the rejected patches list is
+     * installed only if it is a dependency of another package. It is considered compliant with the
+     * patch baseline, and its status is reported as `INSTALLED_OTHER` . This is the default action if
+     * no option is specified.
+     *
+     * *Windows Server* : Windows Server doesn't support the concept of package dependencies. If a
+     * package in the rejected patches list and already installed on the node, its status is reported
+     * as `INSTALLED_OTHER` . Any package not already installed on the node is skipped. This is the
+     * default action if no option is specified.
+     *
+     * * **BLOCK** - *All OSs* : Packages in the rejected patches list, and packages that include
+     * them as dependencies, aren't installed by Patch Manager under any circumstances. If a package
+     * was installed before it was added to the rejected patches list, or is installed outside of Patch
      * Manager afterward, it's considered noncompliant with the patch baseline and its status is
-     * reported as *InstalledRejected* .
+     * reported as `INSTALLED_REJECTED` .
      *
      * Default: - "ALLOW_AS_DEPENDENCY"
      *

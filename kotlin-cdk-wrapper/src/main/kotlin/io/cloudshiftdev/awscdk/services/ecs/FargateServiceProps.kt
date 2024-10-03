@@ -593,7 +593,8 @@ public interface FargateServiceProps : BaseServiceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.FargateServiceProps,
-  ) : CdkObject(cdkObject), FargateServiceProps {
+  ) : CdkObject(cdkObject),
+      FargateServiceProps {
     /**
      * Specifies whether the task's elastic network interface receives a public IP address.
      *

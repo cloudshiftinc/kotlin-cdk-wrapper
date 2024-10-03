@@ -225,7 +225,8 @@ public interface CfnObservabilityConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apprunner.CfnObservabilityConfigurationProps,
-  ) : CdkObject(cdkObject), CfnObservabilityConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnObservabilityConfigurationProps {
     /**
      * A name for the observability configuration.
      *

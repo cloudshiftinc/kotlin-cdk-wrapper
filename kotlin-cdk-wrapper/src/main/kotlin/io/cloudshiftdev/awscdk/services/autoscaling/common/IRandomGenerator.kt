@@ -24,7 +24,8 @@ public interface IRandomGenerator {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.common.IRandomGenerator,
-  ) : CdkObject(cdkObject), IRandomGenerator {
+  ) : CdkObject(cdkObject),
+      IRandomGenerator {
     /**
      *
      */

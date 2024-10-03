@@ -44,12 +44,20 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .customerGatewayId("customerGatewayId")
  * .type("type")
  * // the properties below are optional
+ * .enableAcceleration(false)
+ * .localIpv4NetworkCidr("localIpv4NetworkCidr")
+ * .localIpv6NetworkCidr("localIpv6NetworkCidr")
+ * .outsideIpAddressType("outsideIpAddressType")
+ * .remoteIpv4NetworkCidr("remoteIpv4NetworkCidr")
+ * .remoteIpv6NetworkCidr("remoteIpv6NetworkCidr")
  * .staticRoutesOnly(false)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
  * .transitGatewayId("transitGatewayId")
+ * .transportTransitGatewayAttachmentId("transportTransitGatewayAttachmentId")
+ * .tunnelInsideIpVersion("tunnelInsideIpVersion")
  * .vpnGatewayId("vpnGatewayId")
  * .vpnTunnelOptionsSpecifications(List.of(VpnTunnelOptionsSpecificationProperty.builder()
  * .preSharedKey("preSharedKey")
@@ -62,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVPNConnection(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnection,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -97,12 +107,91 @@ public open class CfnVPNConnection(
   }
 
   /**
+   * Indicate whether to enable acceleration for the VPN connection.
+   */
+  public open fun enableAcceleration(): Any? = unwrap(this).getEnableAcceleration()
+
+  /**
+   * Indicate whether to enable acceleration for the VPN connection.
+   */
+  public open fun enableAcceleration(`value`: Boolean) {
+    unwrap(this).setEnableAcceleration(`value`)
+  }
+
+  /**
+   * Indicate whether to enable acceleration for the VPN connection.
+   */
+  public open fun enableAcceleration(`value`: IResolvable) {
+    unwrap(this).setEnableAcceleration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
    * Examines the CloudFormation resource and discloses attributes.
    *
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
+  }
+
+  /**
+   * The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+   */
+  public open fun localIpv4NetworkCidr(): String? = unwrap(this).getLocalIpv4NetworkCidr()
+
+  /**
+   * The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+   */
+  public open fun localIpv4NetworkCidr(`value`: String) {
+    unwrap(this).setLocalIpv4NetworkCidr(`value`)
+  }
+
+  /**
+   * The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+   */
+  public open fun localIpv6NetworkCidr(): String? = unwrap(this).getLocalIpv6NetworkCidr()
+
+  /**
+   * The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+   */
+  public open fun localIpv6NetworkCidr(`value`: String) {
+    unwrap(this).setLocalIpv6NetworkCidr(`value`)
+  }
+
+  /**
+   * The type of IPv4 address assigned to the outside interface of the customer gateway device.
+   */
+  public open fun outsideIpAddressType(): String? = unwrap(this).getOutsideIpAddressType()
+
+  /**
+   * The type of IPv4 address assigned to the outside interface of the customer gateway device.
+   */
+  public open fun outsideIpAddressType(`value`: String) {
+    unwrap(this).setOutsideIpAddressType(`value`)
+  }
+
+  /**
+   * The IPv4 CIDR on the AWS side of the VPN connection.
+   */
+  public open fun remoteIpv4NetworkCidr(): String? = unwrap(this).getRemoteIpv4NetworkCidr()
+
+  /**
+   * The IPv4 CIDR on the AWS side of the VPN connection.
+   */
+  public open fun remoteIpv4NetworkCidr(`value`: String) {
+    unwrap(this).setRemoteIpv4NetworkCidr(`value`)
+  }
+
+  /**
+   * The IPv6 CIDR on the AWS side of the VPN connection.
+   */
+  public open fun remoteIpv6NetworkCidr(): String? = unwrap(this).getRemoteIpv6NetworkCidr()
+
+  /**
+   * The IPv6 CIDR on the AWS side of the VPN connection.
+   */
+  public open fun remoteIpv6NetworkCidr(`value`: String) {
+    unwrap(this).setRemoteIpv6NetworkCidr(`value`)
   }
 
   /**
@@ -157,6 +246,31 @@ public open class CfnVPNConnection(
    */
   public open fun transitGatewayId(`value`: String) {
     unwrap(this).setTransitGatewayId(`value`)
+  }
+
+  /**
+   * The transit gateway attachment ID to use for the VPN tunnel.
+   */
+  public open fun transportTransitGatewayAttachmentId(): String? =
+      unwrap(this).getTransportTransitGatewayAttachmentId()
+
+  /**
+   * The transit gateway attachment ID to use for the VPN tunnel.
+   */
+  public open fun transportTransitGatewayAttachmentId(`value`: String) {
+    unwrap(this).setTransportTransitGatewayAttachmentId(`value`)
+  }
+
+  /**
+   * Indicate whether the VPN tunnels process IPv4 or IPv6 traffic.
+   */
+  public open fun tunnelInsideIpVersion(): String? = unwrap(this).getTunnelInsideIpVersion()
+
+  /**
+   * Indicate whether the VPN tunnels process IPv4 or IPv6 traffic.
+   */
+  public open fun tunnelInsideIpVersion(`value`: String) {
+    unwrap(this).setTunnelInsideIpVersion(`value`)
   }
 
   /**
@@ -223,6 +337,81 @@ public open class CfnVPNConnection(
     public fun customerGatewayId(customerGatewayId: String)
 
     /**
+     * Indicate whether to enable acceleration for the VPN connection.
+     *
+     * Default: `false`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-enableacceleration)
+     * @param enableAcceleration Indicate whether to enable acceleration for the VPN connection. 
+     */
+    public fun enableAcceleration(enableAcceleration: Boolean)
+
+    /**
+     * Indicate whether to enable acceleration for the VPN connection.
+     *
+     * Default: `false`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-enableacceleration)
+     * @param enableAcceleration Indicate whether to enable acceleration for the VPN connection. 
+     */
+    public fun enableAcceleration(enableAcceleration: IResolvable)
+
+    /**
+     * The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+     *
+     * Default: `0.0.0.0/0`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-localipv4networkcidr)
+     * @param localIpv4NetworkCidr The IPv4 CIDR on the customer gateway (on-premises) side of the
+     * VPN connection. 
+     */
+    public fun localIpv4NetworkCidr(localIpv4NetworkCidr: String)
+
+    /**
+     * The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+     *
+     * Default: `::/0`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-localipv6networkcidr)
+     * @param localIpv6NetworkCidr The IPv6 CIDR on the customer gateway (on-premises) side of the
+     * VPN connection. 
+     */
+    public fun localIpv6NetworkCidr(localIpv6NetworkCidr: String)
+
+    /**
+     * The type of IPv4 address assigned to the outside interface of the customer gateway device.
+     *
+     * Valid values: `PrivateIpv4` | `PublicIpv4`
+     *
+     * Default: `PublicIpv4`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-outsideipaddresstype)
+     * @param outsideIpAddressType The type of IPv4 address assigned to the outside interface of the
+     * customer gateway device. 
+     */
+    public fun outsideIpAddressType(outsideIpAddressType: String)
+
+    /**
+     * The IPv4 CIDR on the AWS side of the VPN connection.
+     *
+     * Default: `0.0.0.0/0`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-remoteipv4networkcidr)
+     * @param remoteIpv4NetworkCidr The IPv4 CIDR on the AWS side of the VPN connection. 
+     */
+    public fun remoteIpv4NetworkCidr(remoteIpv4NetworkCidr: String)
+
+    /**
+     * The IPv6 CIDR on the AWS side of the VPN connection.
+     *
+     * Default: `::/0`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-remoteipv6networkcidr)
+     * @param remoteIpv6NetworkCidr The IPv6 CIDR on the AWS side of the VPN connection. 
+     */
+    public fun remoteIpv6NetworkCidr(remoteIpv6NetworkCidr: String)
+
+    /**
      * Indicates whether the VPN connection uses static routes only.
      *
      * Static routes must be used for devices that don't support BGP.
@@ -273,6 +462,27 @@ public open class CfnVPNConnection(
      * @param transitGatewayId The ID of the transit gateway associated with the VPN connection. 
      */
     public fun transitGatewayId(transitGatewayId: String)
+
+    /**
+     * The transit gateway attachment ID to use for the VPN tunnel.
+     *
+     * Required if `OutsideIpAddressType` is set to `PrivateIpv4` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-transporttransitgatewayattachmentid)
+     * @param transportTransitGatewayAttachmentId The transit gateway attachment ID to use for the
+     * VPN tunnel. 
+     */
+    public fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String)
+
+    /**
+     * Indicate whether the VPN tunnels process IPv4 or IPv6 traffic.
+     *
+     * Default: `ipv4`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-tunnelinsideipversion)
+     * @param tunnelInsideIpVersion Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. 
+     */
+    public fun tunnelInsideIpVersion(tunnelInsideIpVersion: String)
 
     /**
      * The type of VPN connection.
@@ -336,6 +546,95 @@ public open class CfnVPNConnection(
     }
 
     /**
+     * Indicate whether to enable acceleration for the VPN connection.
+     *
+     * Default: `false`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-enableacceleration)
+     * @param enableAcceleration Indicate whether to enable acceleration for the VPN connection. 
+     */
+    override fun enableAcceleration(enableAcceleration: Boolean) {
+      cdkBuilder.enableAcceleration(enableAcceleration)
+    }
+
+    /**
+     * Indicate whether to enable acceleration for the VPN connection.
+     *
+     * Default: `false`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-enableacceleration)
+     * @param enableAcceleration Indicate whether to enable acceleration for the VPN connection. 
+     */
+    override fun enableAcceleration(enableAcceleration: IResolvable) {
+      cdkBuilder.enableAcceleration(enableAcceleration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+     *
+     * Default: `0.0.0.0/0`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-localipv4networkcidr)
+     * @param localIpv4NetworkCidr The IPv4 CIDR on the customer gateway (on-premises) side of the
+     * VPN connection. 
+     */
+    override fun localIpv4NetworkCidr(localIpv4NetworkCidr: String) {
+      cdkBuilder.localIpv4NetworkCidr(localIpv4NetworkCidr)
+    }
+
+    /**
+     * The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+     *
+     * Default: `::/0`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-localipv6networkcidr)
+     * @param localIpv6NetworkCidr The IPv6 CIDR on the customer gateway (on-premises) side of the
+     * VPN connection. 
+     */
+    override fun localIpv6NetworkCidr(localIpv6NetworkCidr: String) {
+      cdkBuilder.localIpv6NetworkCidr(localIpv6NetworkCidr)
+    }
+
+    /**
+     * The type of IPv4 address assigned to the outside interface of the customer gateway device.
+     *
+     * Valid values: `PrivateIpv4` | `PublicIpv4`
+     *
+     * Default: `PublicIpv4`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-outsideipaddresstype)
+     * @param outsideIpAddressType The type of IPv4 address assigned to the outside interface of the
+     * customer gateway device. 
+     */
+    override fun outsideIpAddressType(outsideIpAddressType: String) {
+      cdkBuilder.outsideIpAddressType(outsideIpAddressType)
+    }
+
+    /**
+     * The IPv4 CIDR on the AWS side of the VPN connection.
+     *
+     * Default: `0.0.0.0/0`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-remoteipv4networkcidr)
+     * @param remoteIpv4NetworkCidr The IPv4 CIDR on the AWS side of the VPN connection. 
+     */
+    override fun remoteIpv4NetworkCidr(remoteIpv4NetworkCidr: String) {
+      cdkBuilder.remoteIpv4NetworkCidr(remoteIpv4NetworkCidr)
+    }
+
+    /**
+     * The IPv6 CIDR on the AWS side of the VPN connection.
+     *
+     * Default: `::/0`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-remoteipv6networkcidr)
+     * @param remoteIpv6NetworkCidr The IPv6 CIDR on the AWS side of the VPN connection. 
+     */
+    override fun remoteIpv6NetworkCidr(remoteIpv6NetworkCidr: String) {
+      cdkBuilder.remoteIpv6NetworkCidr(remoteIpv6NetworkCidr)
+    }
+
+    /**
      * Indicates whether the VPN connection uses static routes only.
      *
      * Static routes must be used for devices that don't support BGP.
@@ -393,6 +692,31 @@ public open class CfnVPNConnection(
      */
     override fun transitGatewayId(transitGatewayId: String) {
       cdkBuilder.transitGatewayId(transitGatewayId)
+    }
+
+    /**
+     * The transit gateway attachment ID to use for the VPN tunnel.
+     *
+     * Required if `OutsideIpAddressType` is set to `PrivateIpv4` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-transporttransitgatewayattachmentid)
+     * @param transportTransitGatewayAttachmentId The transit gateway attachment ID to use for the
+     * VPN tunnel. 
+     */
+    override fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String) {
+      cdkBuilder.transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId)
+    }
+
+    /**
+     * Indicate whether the VPN tunnels process IPv4 or IPv6 traffic.
+     *
+     * Default: `ipv4`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-tunnelinsideipversion)
+     * @param tunnelInsideIpVersion Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. 
+     */
+    override fun tunnelInsideIpVersion(tunnelInsideIpVersion: String) {
+      cdkBuilder.tunnelInsideIpVersion(tunnelInsideIpVersion)
     }
 
     /**
@@ -597,7 +921,8 @@ public open class CfnVPNConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnection.VpnTunnelOptionsSpecificationProperty,
-    ) : CdkObject(cdkObject), VpnTunnelOptionsSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        VpnTunnelOptionsSpecificationProperty {
       /**
        * The pre-shared key (PSK) to establish initial authentication between the virtual private
        * gateway and customer gateway.

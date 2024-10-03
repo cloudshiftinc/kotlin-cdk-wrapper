@@ -102,7 +102,8 @@ public interface CfnClientCertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.CfnClientCertificateProps,
-  ) : CdkObject(cdkObject), CfnClientCertificateProps {
+  ) : CdkObject(cdkObject),
+      CfnClientCertificateProps {
     /**
      * The description of the client certificate.
      *

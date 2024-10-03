@@ -14,6 +14,7 @@ import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.awscdk.services.logs.LogRetentionRetryOptions
 import io.cloudshiftdev.awscdk.services.logs.RetentionDays
 import io.cloudshiftdev.awscdk.services.sns.ITopic
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -40,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class SlackChannelConfiguration(
   cdkObject: software.amazon.awscdk.services.chatbot.SlackChannelConfiguration,
-) : Resource(cdkObject), ISlackChannelConfiguration {
+) : Resource(cdkObject),
+    ISlackChannelConfiguration {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -296,6 +298,15 @@ public open class SlackChannelConfiguration(
      * @param slackWorkspaceId The ID of the Slack workspace authorized with AWS Chatbot. 
      */
     public fun slackWorkspaceId(slackWorkspaceId: String)
+
+    /**
+     * Enables use of a user role requirement in your chat configuration.
+     *
+     * Default: false
+     *
+     * @param userRoleRequired Enables use of a user role requirement in your chat configuration. 
+     */
+    public fun userRoleRequired(userRoleRequired: Boolean)
   }
 
   private class BuilderImpl(
@@ -472,6 +483,17 @@ public open class SlackChannelConfiguration(
      */
     override fun slackWorkspaceId(slackWorkspaceId: String) {
       cdkBuilder.slackWorkspaceId(slackWorkspaceId)
+    }
+
+    /**
+     * Enables use of a user role requirement in your chat configuration.
+     *
+     * Default: false
+     *
+     * @param userRoleRequired Enables use of a user role requirement in your chat configuration. 
+     */
+    override fun userRoleRequired(userRoleRequired: Boolean) {
+      cdkBuilder.userRoleRequired(userRoleRequired)
     }
 
     public fun build(): software.amazon.awscdk.services.chatbot.SlackChannelConfiguration =

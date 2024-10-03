@@ -22,7 +22,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class DatabaseClusterBase(
   cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterBase,
-) : Resource(cdkObject), IDatabaseCluster {
+) : Resource(cdkObject),
+    IDatabaseCluster {
   /**
    * Add a new db proxy to this cluster.
    *

@@ -86,7 +86,8 @@ public interface CfnSubnetRouteTableAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociationProps,
-  ) : CdkObject(cdkObject), CfnSubnetRouteTableAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnSubnetRouteTableAssociationProps {
     /**
      * The ID of the route table.
      *

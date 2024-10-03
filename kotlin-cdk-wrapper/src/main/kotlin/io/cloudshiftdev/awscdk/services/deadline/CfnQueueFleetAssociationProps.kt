@@ -102,7 +102,8 @@ public interface CfnQueueFleetAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.deadline.CfnQueueFleetAssociationProps,
-  ) : CdkObject(cdkObject), CfnQueueFleetAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnQueueFleetAssociationProps {
     /**
      * The identifier of the farm that contains the queue and the fleet.
      *

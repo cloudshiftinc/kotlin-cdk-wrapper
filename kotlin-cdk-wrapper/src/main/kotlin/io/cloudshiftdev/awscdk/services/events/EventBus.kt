@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -22,6 +23,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * ```
  * EventBus bus = EventBus.Builder.create(this, "bus")
  * .eventBusName("MyCustomEventBus")
+ * .description("MyCustomEventBus")
  * .build();
  * bus.archive("MyArchive", BaseArchiveProps.builder()
  * .archiveName("MyCustomEventBusArchive")
@@ -35,7 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EventBus(
   cdkObject: software.amazon.awscdk.services.events.EventBus,
-) : Resource(cdkObject), IEventBus {
+) : Resource(cdkObject),
+    IEventBus {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.events.EventBus(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -139,6 +142,18 @@ public open class EventBus(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The event bus description.
+     *
+     * The description can be up to 512 characters long.
+     *
+     * Default: - no description
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-description)
+     * @param description The event bus description. 
+     */
+    public fun description(description: String)
+
+    /**
      * The name of the event bus you are creating Note: If 'eventSourceName' is passed in, you
      * cannot set this.
      *
@@ -159,6 +174,15 @@ public open class EventBus(
      * Note: If 'eventBusName' is passed in, you cannot set this. 
      */
     public fun eventSourceName(eventSourceName: String)
+
+    /**
+     * The customer managed key that encrypt events on this event bus.
+     *
+     * Default: - Use an AWS managed key
+     *
+     * @param kmsKey The customer managed key that encrypt events on this event bus. 
+     */
+    public fun kmsKey(kmsKey: IKey)
   }
 
   private class BuilderImpl(
@@ -167,6 +191,20 @@ public open class EventBus(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.EventBus.Builder =
         software.amazon.awscdk.services.events.EventBus.Builder.create(scope, id)
+
+    /**
+     * The event bus description.
+     *
+     * The description can be up to 512 characters long.
+     *
+     * Default: - no description
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-description)
+     * @param description The event bus description. 
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
+    }
 
     /**
      * The name of the event bus you are creating Note: If 'eventSourceName' is passed in, you
@@ -192,6 +230,17 @@ public open class EventBus(
      */
     override fun eventSourceName(eventSourceName: String) {
       cdkBuilder.eventSourceName(eventSourceName)
+    }
+
+    /**
+     * The customer managed key that encrypt events on this event bus.
+     *
+     * Default: - Use an AWS managed key
+     *
+     * @param kmsKey The customer managed key that encrypt events on this event bus. 
+     */
+    override fun kmsKey(kmsKey: IKey) {
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.EventBus = cdkBuilder.build()

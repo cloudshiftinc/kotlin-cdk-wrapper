@@ -85,7 +85,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAssessment(
   cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.auditmanager.CfnAssessment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -874,7 +876,8 @@ public open class CfnAssessment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty,
-    ) : CdkObject(cdkObject), AWSAccountProperty {
+    ) : CdkObject(cdkObject),
+        AWSAccountProperty {
       /**
        * The email address that's associated with the AWS account .
        *
@@ -970,7 +973,8 @@ public open class CfnAssessment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty,
-    ) : CdkObject(cdkObject), AWSServiceProperty {
+    ) : CdkObject(cdkObject),
+        AWSServiceProperty {
       /**
        * The name of the AWS service .
        *
@@ -1074,7 +1078,8 @@ public open class CfnAssessment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty,
-    ) : CdkObject(cdkObject), AssessmentReportsDestinationProperty {
+    ) : CdkObject(cdkObject),
+        AssessmentReportsDestinationProperty {
       /**
        * The destination bucket where Audit Manager stores assessment reports.
        *
@@ -1404,7 +1409,8 @@ public open class CfnAssessment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty,
-    ) : CdkObject(cdkObject), DelegationProperty {
+    ) : CdkObject(cdkObject),
+        DelegationProperty {
       /**
        * The identifier for the assessment that's associated with the delegation.
        *
@@ -1609,7 +1615,8 @@ public open class CfnAssessment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty,
-    ) : CdkObject(cdkObject), RoleProperty {
+    ) : CdkObject(cdkObject),
+        RoleProperty {
       /**
        * The Amazon Resource Name (ARN) of the IAM role.
        *
@@ -1685,6 +1692,12 @@ public open class CfnAssessment(
     /**
      * The AWS services that are included in the scope of the assessment.
      *
+     *
+     * This API parameter is no longer supported. If you use this parameter to specify one or more
+     * AWS services , Audit Manager ignores this input. Instead, the value for `awsServices` will show
+     * as empty.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html#cfn-auditmanager-assessment-scope-awsservices)
      */
     public fun awsServices(): Any? = unwrap(this).getAwsServices()
@@ -1711,16 +1724,28 @@ public open class CfnAssessment(
 
       /**
        * @param awsServices The AWS services that are included in the scope of the assessment.
+       *
+       * This API parameter is no longer supported. If you use this parameter to specify one or more
+       * AWS services , Audit Manager ignores this input. Instead, the value for `awsServices` will
+       * show as empty.
        */
       public fun awsServices(awsServices: IResolvable)
 
       /**
        * @param awsServices The AWS services that are included in the scope of the assessment.
+       *
+       * This API parameter is no longer supported. If you use this parameter to specify one or more
+       * AWS services , Audit Manager ignores this input. Instead, the value for `awsServices` will
+       * show as empty.
        */
       public fun awsServices(awsServices: List<Any>)
 
       /**
        * @param awsServices The AWS services that are included in the scope of the assessment.
+       *
+       * This API parameter is no longer supported. If you use this parameter to specify one or more
+       * AWS services , Audit Manager ignores this input. Instead, the value for `awsServices` will
+       * show as empty.
        */
       public fun awsServices(vararg awsServices: Any)
     }
@@ -1751,6 +1776,10 @@ public open class CfnAssessment(
 
       /**
        * @param awsServices The AWS services that are included in the scope of the assessment.
+       *
+       * This API parameter is no longer supported. If you use this parameter to specify one or more
+       * AWS services , Audit Manager ignores this input. Instead, the value for `awsServices` will
+       * show as empty.
        */
       override fun awsServices(awsServices: IResolvable) {
         cdkBuilder.awsServices(awsServices.let(IResolvable.Companion::unwrap))
@@ -1758,6 +1787,10 @@ public open class CfnAssessment(
 
       /**
        * @param awsServices The AWS services that are included in the scope of the assessment.
+       *
+       * This API parameter is no longer supported. If you use this parameter to specify one or more
+       * AWS services , Audit Manager ignores this input. Instead, the value for `awsServices` will
+       * show as empty.
        */
       override fun awsServices(awsServices: List<Any>) {
         cdkBuilder.awsServices(awsServices.map{CdkObjectWrappers.unwrap(it)})
@@ -1765,6 +1798,10 @@ public open class CfnAssessment(
 
       /**
        * @param awsServices The AWS services that are included in the scope of the assessment.
+       *
+       * This API parameter is no longer supported. If you use this parameter to specify one or more
+       * AWS services , Audit Manager ignores this input. Instead, the value for `awsServices` will
+       * show as empty.
        */
       override fun awsServices(vararg awsServices: Any): Unit = awsServices(awsServices.toList())
 
@@ -1774,7 +1811,8 @@ public open class CfnAssessment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty,
-    ) : CdkObject(cdkObject), ScopeProperty {
+    ) : CdkObject(cdkObject),
+        ScopeProperty {
       /**
        * The AWS accounts that are included in the scope of the assessment.
        *
@@ -1784,6 +1822,12 @@ public open class CfnAssessment(
 
       /**
        * The AWS services that are included in the scope of the assessment.
+       *
+       *
+       * This API parameter is no longer supported. If you use this parameter to specify one or more
+       * AWS services , Audit Manager ignores this input. Instead, the value for `awsServices` will
+       * show as empty.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html#cfn-auditmanager-assessment-scope-awsservices)
        */

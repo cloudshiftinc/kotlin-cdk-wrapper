@@ -224,7 +224,8 @@ public interface CfnEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpointProps,
-  ) : CdkObject(cdkObject), CfnEndpointProps {
+  ) : CdkObject(cdkObject),
+      CfnEndpointProps {
     /**
      * The container for the type of connectivity used to access the Amazon S3 on Outposts endpoint.
      *

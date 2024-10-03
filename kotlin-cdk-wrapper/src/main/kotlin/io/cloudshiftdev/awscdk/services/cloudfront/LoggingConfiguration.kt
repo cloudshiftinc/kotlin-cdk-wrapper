@@ -102,7 +102,8 @@ public interface LoggingConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.LoggingConfiguration,
-  ) : CdkObject(cdkObject), LoggingConfiguration {
+  ) : CdkObject(cdkObject),
+      LoggingConfiguration {
     /**
      * Bucket to log requests to.
      *

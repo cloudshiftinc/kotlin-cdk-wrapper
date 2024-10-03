@@ -165,7 +165,8 @@ public interface LambdaAuthorizerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.LambdaAuthorizerProps,
-  ) : CdkObject(cdkObject), LambdaAuthorizerProps {
+  ) : CdkObject(cdkObject),
+      LambdaAuthorizerProps {
     /**
      * An optional IAM role for APIGateway to assume before calling the Lambda-based authorizer.
      *

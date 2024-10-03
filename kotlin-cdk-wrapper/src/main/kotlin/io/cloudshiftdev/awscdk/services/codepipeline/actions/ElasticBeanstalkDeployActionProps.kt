@@ -169,7 +169,8 @@ public interface ElasticBeanstalkDeployActionProps : CommonAwsActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployActionProps,
-  ) : CdkObject(cdkObject), ElasticBeanstalkDeployActionProps {
+  ) : CdkObject(cdkObject),
+      ElasticBeanstalkDeployActionProps {
     /**
      * The physical, human-readable name of the Action.
      *

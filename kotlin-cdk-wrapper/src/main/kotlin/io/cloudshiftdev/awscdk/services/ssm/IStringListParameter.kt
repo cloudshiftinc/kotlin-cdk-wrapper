@@ -27,7 +27,8 @@ public interface IStringListParameter : IParameter {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ssm.IStringListParameter,
-  ) : CdkObject(cdkObject), IStringListParameter {
+  ) : CdkObject(cdkObject),
+      IStringListParameter {
     /**
      * Apply the given removal policy to this resource.
      *

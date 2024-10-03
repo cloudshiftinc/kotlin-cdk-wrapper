@@ -34,7 +34,8 @@ import kotlin.Unit
  */
 public open class Lambda(
   cdkObject: software.amazon.awscdk.services.ses.actions.Lambda,
-) : CdkObject(cdkObject), IReceiptRuleAction {
+) : CdkObject(cdkObject),
+    IReceiptRuleAction {
   public constructor(props: LambdaProps) :
       this(software.amazon.awscdk.services.ses.actions.Lambda(props.let(LambdaProps.Companion::unwrap))
   )

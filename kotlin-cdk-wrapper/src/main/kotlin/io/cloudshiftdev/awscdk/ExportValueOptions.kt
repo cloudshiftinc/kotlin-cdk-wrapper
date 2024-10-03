@@ -77,7 +77,8 @@ public interface ExportValueOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ExportValueOptions,
-  ) : CdkObject(cdkObject), ExportValueOptions {
+  ) : CdkObject(cdkObject),
+      ExportValueOptions {
     /**
      * The description of the outputs.
      *

@@ -22,7 +22,6 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.events.*;
  * CfnConnectionProps cfnConnectionProps = CfnConnectionProps.builder()
  * .authorizationType("authorizationType")
- * // the properties below are optional
  * .authParameters(AuthParametersProperty.builder()
  * .apiKeyAuthParameters(ApiKeyAuthParametersProperty.builder()
  * .apiKeyName("apiKeyName")
@@ -82,6 +81,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .build())
+ * // the properties below are optional
  * .description("description")
  * .name("name")
  * .build();
@@ -96,7 +96,7 @@ public interface CfnConnectionProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authparameters)
    */
-  public fun authParameters(): Any? = unwrap(this).getAuthParameters()
+  public fun authParameters(): Any
 
   /**
    * The type of authorization to use for the connection.
@@ -130,19 +130,19 @@ public interface CfnConnectionProps {
   public interface Builder {
     /**
      * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint.
+     * authorization parameters to use to authorize with the endpoint. 
      */
     public fun authParameters(authParameters: IResolvable)
 
     /**
      * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint.
+     * authorization parameters to use to authorize with the endpoint. 
      */
     public fun authParameters(authParameters: CfnConnection.AuthParametersProperty)
 
     /**
      * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint.
+     * authorization parameters to use to authorize with the endpoint. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf937ae1aa8f4c90c97e3448b625c5c03492ccadd908836c6f18632e7bbb3499")
@@ -173,7 +173,7 @@ public interface CfnConnectionProps {
 
     /**
      * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint.
+     * authorization parameters to use to authorize with the endpoint. 
      */
     override fun authParameters(authParameters: IResolvable) {
       cdkBuilder.authParameters(authParameters.let(IResolvable.Companion::unwrap))
@@ -181,7 +181,7 @@ public interface CfnConnectionProps {
 
     /**
      * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint.
+     * authorization parameters to use to authorize with the endpoint. 
      */
     override fun authParameters(authParameters: CfnConnection.AuthParametersProperty) {
       cdkBuilder.authParameters(authParameters.let(CfnConnection.AuthParametersProperty.Companion::unwrap))
@@ -189,7 +189,7 @@ public interface CfnConnectionProps {
 
     /**
      * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint.
+     * authorization parameters to use to authorize with the endpoint. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf937ae1aa8f4c90c97e3448b625c5c03492ccadd908836c6f18632e7bbb3499")
@@ -226,14 +226,15 @@ public interface CfnConnectionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.CfnConnectionProps,
-  ) : CdkObject(cdkObject), CfnConnectionProps {
+  ) : CdkObject(cdkObject),
+      CfnConnectionProps {
     /**
      * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters
      * to use to authorize with the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authparameters)
      */
-    override fun authParameters(): Any? = unwrap(this).getAuthParameters()
+    override fun authParameters(): Any = unwrap(this).getAuthParameters()
 
     /**
      * The type of authorization to use for the connection.

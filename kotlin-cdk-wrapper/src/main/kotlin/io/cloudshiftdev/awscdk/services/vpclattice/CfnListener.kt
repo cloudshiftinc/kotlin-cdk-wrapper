@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnListener(
   cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -586,7 +588,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty,
-    ) : CdkObject(cdkObject), DefaultActionProperty {
+    ) : CdkObject(cdkObject),
+        DefaultActionProperty {
       /**
        * Describes an action that returns a custom HTTP response.
        *
@@ -676,7 +679,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.FixedResponseProperty,
-    ) : CdkObject(cdkObject), FixedResponseProperty {
+    ) : CdkObject(cdkObject),
+        FixedResponseProperty {
       /**
        * The HTTP response code.
        *
@@ -842,7 +846,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.ForwardProperty,
-    ) : CdkObject(cdkObject), ForwardProperty {
+    ) : CdkObject(cdkObject),
+        ForwardProperty {
       /**
        * The target groups.
        *
@@ -970,7 +975,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty,
-    ) : CdkObject(cdkObject), WeightedTargetGroupProperty {
+    ) : CdkObject(cdkObject),
+        WeightedTargetGroupProperty {
       /**
        * The ID of the target group.
        *

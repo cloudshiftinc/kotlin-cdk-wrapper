@@ -272,7 +272,8 @@ public interface BehaviorOptions : AddBehaviorOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.BehaviorOptions,
-  ) : CdkObject(cdkObject), BehaviorOptions {
+  ) : CdkObject(cdkObject),
+      BehaviorOptions {
     /**
      * HTTP methods to allow for this behavior.
      *

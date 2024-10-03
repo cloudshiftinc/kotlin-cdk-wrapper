@@ -27,7 +27,8 @@ public interface IEndpoint {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpoint,
-  ) : CdkObject(cdkObject), IEndpoint {
+  ) : CdkObject(cdkObject),
+      IEndpoint {
     /**
      * The region where the endpoint is located.
      *

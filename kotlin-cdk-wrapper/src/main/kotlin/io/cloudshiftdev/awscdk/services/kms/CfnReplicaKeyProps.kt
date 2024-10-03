@@ -621,7 +621,8 @@ public interface CfnReplicaKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kms.CfnReplicaKeyProps,
-  ) : CdkObject(cdkObject), CfnReplicaKeyProps {
+  ) : CdkObject(cdkObject),
+      CfnReplicaKeyProps {
     /**
      * A description of the KMS key.
      *

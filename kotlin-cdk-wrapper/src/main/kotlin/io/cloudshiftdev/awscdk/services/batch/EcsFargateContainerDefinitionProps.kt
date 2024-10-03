@@ -370,7 +370,8 @@ public interface EcsFargateContainerDefinitionProps : EcsContainerDefinitionProp
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.EcsFargateContainerDefinitionProps,
-  ) : CdkObject(cdkObject), EcsFargateContainerDefinitionProps {
+  ) : CdkObject(cdkObject),
+      EcsFargateContainerDefinitionProps {
     /**
      * Indicates whether the job has a public IP address.
      *

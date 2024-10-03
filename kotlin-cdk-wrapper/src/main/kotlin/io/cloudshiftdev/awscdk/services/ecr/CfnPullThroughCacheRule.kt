@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPullThroughCacheRule(
   cdkObject: software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

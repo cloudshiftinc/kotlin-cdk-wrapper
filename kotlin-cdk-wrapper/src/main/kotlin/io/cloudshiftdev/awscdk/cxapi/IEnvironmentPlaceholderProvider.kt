@@ -27,7 +27,8 @@ public interface IEnvironmentPlaceholderProvider {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cxapi.IEnvironmentPlaceholderProvider,
-  ) : CdkObject(cdkObject), IEnvironmentPlaceholderProvider {
+  ) : CdkObject(cdkObject),
+      IEnvironmentPlaceholderProvider {
     /**
      * Return the account.
      */

@@ -145,7 +145,8 @@ public interface CfnWorkspaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnWorkspaceProps,
-  ) : CdkObject(cdkObject), CfnWorkspaceProps {
+  ) : CdkObject(cdkObject),
+      CfnWorkspaceProps {
     /**
      * The description of the workspace.
      *

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.services.cloudfront.OriginBindConfig
 import io.cloudshiftdev.awscdk.services.cloudfront.OriginBindOptions
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -20,7 +21,7 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket as CloudshiftdevAwscdkService
 import software.amazon.awscdk.services.s3.IBucket as AmazonAwscdkServicesS3IBucket
 
 /**
- * An Origin that is backed by an S3 bucket.
+ * (deprecated) An Origin that is backed by an S3 bucket.
  *
  * If the bucket is configured for website hosting, this origin will be configured to use the bucket
  * as an
@@ -46,48 +47,60 @@ import software.amazon.awscdk.services.s3.IBucket as AmazonAwscdkServicesS3IBuck
  * .build())
  * .build();
  * ```
+ *
+ * @deprecated Use `S3BucketOrigin` or `S3StaticWebsiteOrigin` instead.
  */
 public open class S3Origin(
   cdkObject: software.amazon.awscdk.services.cloudfront.origins.S3Origin,
-) : CdkObject(cdkObject), IOrigin {
+) : CdkObject(cdkObject),
+    IOrigin {
+  @Deprecated(message = "deprecated in CDK")
   public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket) :
       this(software.amazon.awscdk.services.cloudfront.origins.S3Origin(bucket.let(CloudshiftdevAwscdkServicesS3IBucket.Companion::unwrap))
   )
 
+  @Deprecated(message = "deprecated in CDK")
   public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket, props: S3OriginProps) :
       this(software.amazon.awscdk.services.cloudfront.origins.S3Origin(bucket.let(CloudshiftdevAwscdkServicesS3IBucket.Companion::unwrap),
       props.let(S3OriginProps.Companion::unwrap))
   )
 
+  @Deprecated(message = "deprecated in CDK")
   public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket,
       props: S3OriginProps.Builder.() -> Unit) : this(bucket, S3OriginProps(props)
   )
 
   /**
-   * The method called when a given Origin is added (for the first time) to a Distribution.
+   * (deprecated) The method called when a given Origin is added (for the first time) to a
+   * Distribution.
    *
    * @param scope 
    * @param options 
    */
+  @Deprecated(message = "deprecated in CDK")
   public override fun bind(scope: Construct, options: OriginBindOptions): OriginBindConfig =
       unwrap(this).bind(scope.let(Construct.Companion::unwrap),
       options.let(OriginBindOptions.Companion::unwrap)).let(OriginBindConfig::wrap)
 
   /**
-   * The method called when a given Origin is added (for the first time) to a Distribution.
+   * (deprecated) The method called when a given Origin is added (for the first time) to a
+   * Distribution.
    *
    * @param scope 
    * @param options 
    */
+  @Deprecated(message = "deprecated in CDK")
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("a4d8f445ceb4e4ebb177be4645de7fd3d72f0f5d66bcf420280cc1b7bc73b342")
   public override fun bind(scope: Construct, options: OriginBindOptions.Builder.() -> Unit):
       OriginBindConfig = bind(scope, OriginBindOptions(options))
 
   /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.cloudfront.origins.S3Origin].
+   * (deprecated) A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.cloudfront.origins.S3Origin].
    */
   @CdkDslMarker
+  @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     /**
      * The number of times that CloudFront attempts to connect to the origin;
@@ -124,6 +137,16 @@ public open class S3Origin(
      * it sends to the origin. 
      */
     public fun customHeaders(customHeaders: Map<String, String>)
+
+    /**
+     * The unique identifier of an origin access control for this origin.
+     *
+     * Default: - no origin access control
+     *
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin. 
+     */
+    public fun originAccessControlId(originAccessControlId: String)
 
     /**
      * An optional Origin Access Identity of the origin identity cloudfront will use when calling
@@ -230,6 +253,18 @@ public open class S3Origin(
      */
     override fun customHeaders(customHeaders: Map<String, String>) {
       cdkBuilder.customHeaders(customHeaders)
+    }
+
+    /**
+     * The unique identifier of an origin access control for this origin.
+     *
+     * Default: - no origin access control
+     *
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin. 
+     */
+    override fun originAccessControlId(originAccessControlId: String) {
+      cdkBuilder.originAccessControlId(originAccessControlId)
     }
 
     /**

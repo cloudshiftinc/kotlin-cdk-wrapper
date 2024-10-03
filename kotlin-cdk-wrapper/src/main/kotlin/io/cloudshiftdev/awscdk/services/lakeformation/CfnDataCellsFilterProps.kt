@@ -321,7 +321,8 @@ public interface CfnDataCellsFilterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilterProps,
-  ) : CdkObject(cdkObject), CfnDataCellsFilterProps {
+  ) : CdkObject(cdkObject),
+      CfnDataCellsFilterProps {
     /**
      * An array of UTF-8 strings.
      *

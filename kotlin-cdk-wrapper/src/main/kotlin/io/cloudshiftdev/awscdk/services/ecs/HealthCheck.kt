@@ -204,7 +204,8 @@ public interface HealthCheck {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.HealthCheck,
-  ) : CdkObject(cdkObject), HealthCheck {
+  ) : CdkObject(cdkObject),
+      HealthCheck {
     /**
      * A string array representing the command that the container runs to determine if it is
      * healthy.

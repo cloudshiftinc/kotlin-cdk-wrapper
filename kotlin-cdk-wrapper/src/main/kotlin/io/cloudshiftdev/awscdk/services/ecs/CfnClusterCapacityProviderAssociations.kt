@@ -45,7 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnClusterCapacityProviderAssociations(
   cdkObject: software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -442,7 +443,8 @@ public open class CfnClusterCapacityProviderAssociations(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations.CapacityProviderStrategyProperty,
-    ) : CdkObject(cdkObject), CapacityProviderStrategyProperty {
+    ) : CdkObject(cdkObject),
+        CapacityProviderStrategyProperty {
       /**
        * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
        * provider.

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -38,10 +39,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.kms.*;
  * import io.cloudshiftdev.awscdk.services.lambda.*;
  * IEventSourceDlq eventSourceDlq;
  * Object filters;
  * Function function_;
+ * Key key;
  * SourceAccessConfigurationType sourceAccessConfigurationType;
  * EventSourceMapping eventSourceMapping = EventSourceMapping.Builder.create(this,
  * "MyEventSourceMapping")
@@ -51,6 +54,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .bisectBatchOnError(false)
  * .enabled(false)
  * .eventSourceArn("eventSourceArn")
+ * .filterEncryption(key)
  * .filters(List.of(Map.of(
  * "filtersKey", filters)))
  * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
@@ -76,7 +80,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EventSourceMapping(
   cdkObject: software.amazon.awscdk.services.lambda.EventSourceMapping,
-) : Resource(cdkObject), IEventSourceMapping {
+) : Resource(cdkObject),
+    IEventSourceMapping {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -157,6 +162,16 @@ public open class EventSourceMapping(
      * @param eventSourceArn The Amazon Resource Name (ARN) of the event source. 
      */
     public fun eventSourceArn(eventSourceArn: String)
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria. 
+     */
+    public fun filterEncryption(filterEncryption: IKey)
 
     /**
      * Add filter criteria to Event Source.
@@ -467,6 +482,18 @@ public open class EventSourceMapping(
      */
     override fun eventSourceArn(eventSourceArn: String) {
       cdkBuilder.eventSourceArn(eventSourceArn)
+    }
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria. 
+     */
+    override fun filterEncryption(filterEncryption: IKey) {
+      cdkBuilder.filterEncryption(filterEncryption.let(IKey.Companion::unwrap))
     }
 
     /**

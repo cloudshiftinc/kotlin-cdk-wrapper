@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConnector(
   cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnConnector,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -372,7 +374,8 @@ public open class CfnConnector(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty,
-    ) : CdkObject(cdkObject), VpcInformationProperty {
+    ) : CdkObject(cdkObject),
+        VpcInformationProperty {
       /**
        * The security groups used with the connector.
        *

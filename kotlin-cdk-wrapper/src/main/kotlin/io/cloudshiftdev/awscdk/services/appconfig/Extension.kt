@@ -32,7 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Extension(
   cdkObject: software.amazon.awscdk.services.appconfig.Extension,
-) : Resource(cdkObject), IExtension {
+) : Resource(cdkObject),
+    IExtension {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

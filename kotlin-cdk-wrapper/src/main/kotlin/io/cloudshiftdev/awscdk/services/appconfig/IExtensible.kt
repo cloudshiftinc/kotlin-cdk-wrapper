@@ -271,7 +271,8 @@ public interface IExtensible {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.IExtensible,
-  ) : CdkObject(cdkObject), IExtensible {
+  ) : CdkObject(cdkObject),
+      IExtensible {
     /**
      * Adds an extension association to the derived resource.
      *

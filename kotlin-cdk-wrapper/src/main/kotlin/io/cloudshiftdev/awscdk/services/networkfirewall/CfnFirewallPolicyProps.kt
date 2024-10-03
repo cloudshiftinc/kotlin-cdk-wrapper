@@ -233,7 +233,8 @@ public interface CfnFirewallPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicyProps,
-  ) : CdkObject(cdkObject), CfnFirewallPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnFirewallPolicyProps {
     /**
      * A description of the firewall policy.
      *

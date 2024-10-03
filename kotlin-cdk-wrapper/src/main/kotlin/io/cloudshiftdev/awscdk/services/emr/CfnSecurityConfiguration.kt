@@ -70,7 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSecurityConfiguration(
   cdkObject: software.amazon.awscdk.services.emr.CfnSecurityConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -136,6 +137,10 @@ public open class CfnSecurityConfiguration(
     /**
      * The security configuration details in JSON format.
      *
+     * For JSON parameters and examples, see [Use Security Configurations to Set Up Cluster
+     * Security](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-security-configurations.html)
+     * in the *Amazon EMR Management Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html#cfn-emr-securityconfiguration-securityconfiguration)
      * @param securityConfiguration The security configuration details in JSON format. 
      */
@@ -161,6 +166,10 @@ public open class CfnSecurityConfiguration(
 
     /**
      * The security configuration details in JSON format.
+     *
+     * For JSON parameters and examples, see [Use Security Configurations to Set Up Cluster
+     * Security](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-security-configurations.html)
+     * in the *Amazon EMR Management Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html#cfn-emr-securityconfiguration-securityconfiguration)
      * @param securityConfiguration The security configuration details in JSON format. 

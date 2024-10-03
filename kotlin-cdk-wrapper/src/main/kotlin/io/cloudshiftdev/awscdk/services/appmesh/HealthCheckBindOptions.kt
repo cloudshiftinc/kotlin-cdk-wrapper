@@ -58,7 +58,8 @@ public interface HealthCheckBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.HealthCheckBindOptions,
-  ) : CdkObject(cdkObject), HealthCheckBindOptions {
+  ) : CdkObject(cdkObject),
+      HealthCheckBindOptions {
     /**
      * Port for Health Check interface.
      *

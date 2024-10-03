@@ -58,7 +58,8 @@ public interface BatchBuildConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.BatchBuildConfig,
-  ) : CdkObject(cdkObject), BatchBuildConfig {
+  ) : CdkObject(cdkObject),
+      BatchBuildConfig {
     /**
      * The IAM batch service Role of this Project.
      */

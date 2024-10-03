@@ -943,7 +943,8 @@ public interface CfnLoadBalancerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancerProps,
-  ) : CdkObject(cdkObject), CfnLoadBalancerProps {
+  ) : CdkObject(cdkObject),
+      CfnLoadBalancerProps {
     /**
      * Information about where and how access logs are stored for the load balancer.
      *

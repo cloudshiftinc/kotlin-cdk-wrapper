@@ -173,7 +173,8 @@ public interface LookupMachineImageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.LookupMachineImageProps,
-  ) : CdkObject(cdkObject), LookupMachineImageProps {
+  ) : CdkObject(cdkObject),
+      LookupMachineImageProps {
     /**
      * Additional filters on the AMI.
      *

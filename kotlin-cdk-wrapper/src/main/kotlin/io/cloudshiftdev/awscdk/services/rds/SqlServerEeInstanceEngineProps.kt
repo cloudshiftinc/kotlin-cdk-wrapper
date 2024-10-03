@@ -66,7 +66,8 @@ public interface SqlServerEeInstanceEngineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.SqlServerEeInstanceEngineProps,
-  ) : CdkObject(cdkObject), SqlServerEeInstanceEngineProps {
+  ) : CdkObject(cdkObject),
+      SqlServerEeInstanceEngineProps {
     /**
      * The exact version of the engine to use.
      */

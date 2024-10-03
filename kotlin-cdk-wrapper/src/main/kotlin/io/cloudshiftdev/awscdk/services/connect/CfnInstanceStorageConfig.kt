@@ -62,7 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInstanceStorageConfig(
   cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -667,7 +668,8 @@ public open class CfnInstanceStorageConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionConfigProperty {
       /**
        * The type of encryption.
        *
@@ -765,7 +767,8 @@ public open class CfnInstanceStorageConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisFirehoseConfigProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseConfigProperty {
+    ) : CdkObject(cdkObject),
+        KinesisFirehoseConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the delivery stream.
        *
@@ -847,7 +850,8 @@ public open class CfnInstanceStorageConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty,
-    ) : CdkObject(cdkObject), KinesisStreamConfigProperty {
+    ) : CdkObject(cdkObject),
+        KinesisStreamConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the data stream.
        *
@@ -1010,7 +1014,8 @@ public open class CfnInstanceStorageConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty,
-    ) : CdkObject(cdkObject), KinesisVideoStreamConfigProperty {
+    ) : CdkObject(cdkObject),
+        KinesisVideoStreamConfigProperty {
       /**
        * The encryption configuration.
        *
@@ -1181,7 +1186,8 @@ public open class CfnInstanceStorageConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty,
-    ) : CdkObject(cdkObject), S3ConfigProperty {
+    ) : CdkObject(cdkObject),
+        S3ConfigProperty {
       /**
        * The S3 bucket name.
        *

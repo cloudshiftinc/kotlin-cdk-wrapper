@@ -26,7 +26,7 @@ import kotlin.Unit
  * .subnetType(SubnetType.PUBLIC)
  * .build())
  * .vpc(vpc)
- * .caCertificate(CaCertificate.RDS_CA_RSA4096_G1)
+ * .removalPolicy(RemovalPolicy.SNAPSHOT)
  * .build();
  * ```
  */
@@ -143,7 +143,8 @@ public interface Login {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.Login,
-  ) : CdkObject(cdkObject), Login {
+  ) : CdkObject(cdkObject),
+      Login {
     /**
      * Specifies characters to not include in generated passwords.
      *

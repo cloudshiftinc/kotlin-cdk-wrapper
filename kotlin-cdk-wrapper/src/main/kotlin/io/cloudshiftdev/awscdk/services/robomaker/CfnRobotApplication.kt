@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRobotApplication(
   cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -500,7 +502,8 @@ public open class CfnRobotApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty,
-    ) : CdkObject(cdkObject), RobotSoftwareSuiteProperty {
+    ) : CdkObject(cdkObject),
+        RobotSoftwareSuiteProperty {
       /**
        * The name of the robot software suite.
        *
@@ -633,7 +636,8 @@ public open class CfnRobotApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication.SourceConfigProperty,
-    ) : CdkObject(cdkObject), SourceConfigProperty {
+    ) : CdkObject(cdkObject),
+        SourceConfigProperty {
       /**
        * The target processor architecture for the application.
        *

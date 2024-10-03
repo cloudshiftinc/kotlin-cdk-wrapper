@@ -133,7 +133,8 @@ public interface CfnAccessPointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPointProps,
-  ) : CdkObject(cdkObject), CfnAccessPointProps {
+  ) : CdkObject(cdkObject),
+      CfnAccessPointProps {
     /**
      * The name of this access point.
      *

@@ -272,7 +272,8 @@ public interface CfnAPNSVoipChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnAPNSVoipChannelProps,
-  ) : CdkObject(cdkObject), CfnAPNSVoipChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnAPNSVoipChannelProps {
     /**
      * The unique identifier for the Amazon Pinpoint application that the APNs VoIP channel applies
      * to.

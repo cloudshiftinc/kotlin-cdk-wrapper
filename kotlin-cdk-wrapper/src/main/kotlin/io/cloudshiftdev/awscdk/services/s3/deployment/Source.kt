@@ -27,14 +27,17 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Bucket websiteBucket;
- * BucketDeployment deployment = BucketDeployment.Builder.create(this, "DeployWebsite")
- * .sources(List.of(Source.asset(join(__dirname, "my-website"))))
- * .destinationBucket(websiteBucket)
+ * Bucket destinationBucket;
+ * BucketDeployment deployment = BucketDeployment.Builder.create(this, "DeployFiles")
+ * .sources(List.of(Source.asset(join(__dirname, "source-files"))))
+ * .destinationBucket(destinationBucket)
  * .build();
- * new ConstructThatReadsFromTheBucket(this, "Consumer", Map.of(
- * // Use 'deployment.deployedBucket' instead of 'websiteBucket' here
- * "bucket", deployment.getDeployedBucket()));
+ * deployment.handlerRole.addToPolicy(
+ * PolicyStatement.Builder.create()
+ * .actions(List.of("kms:Decrypt", "kms:DescribeKey"))
+ * .effect(Effect.ALLOW)
+ * .resources(List.of("&lt;encryption key ARN&gt;"))
+ * .build());
  * ```
  */
 public open class Source(

@@ -413,7 +413,8 @@ public interface CfnProjectProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.evidently.CfnProjectProps,
-  ) : CdkObject(cdkObject), CfnProjectProps {
+  ) : CdkObject(cdkObject),
+      CfnProjectProps {
     /**
      * Use this parameter if the project will use *client-side evaluation powered by AWS AppConfig*
      * .

@@ -115,7 +115,8 @@ public interface CfnPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnPolicyProps,
-  ) : CdkObject(cdkObject), CfnPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnPolicyProps {
     /**
      * The JSON document that describes the policy.
      *

@@ -24,7 +24,8 @@ import kotlin.collections.List
  */
 public abstract class Product(
   cdkObject: software.amazon.awscdk.services.servicecatalog.Product,
-) : Resource(cdkObject), IProduct {
+) : Resource(cdkObject),
+    IProduct {
   /**
    * The asset buckets of a product created via product stack.
    */

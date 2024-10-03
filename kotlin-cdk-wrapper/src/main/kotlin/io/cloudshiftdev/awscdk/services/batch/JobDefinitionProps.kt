@@ -205,7 +205,8 @@ public interface JobDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.JobDefinitionProps,
-  ) : CdkObject(cdkObject), JobDefinitionProps {
+  ) : CdkObject(cdkObject),
+      JobDefinitionProps {
     /**
      * The name of this job definition.
      *

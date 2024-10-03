@@ -402,7 +402,8 @@ public interface ActionProperties {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.ActionProperties,
-  ) : CdkObject(cdkObject), ActionProperties {
+  ) : CdkObject(cdkObject),
+      ActionProperties {
     /**
      * The account the Action is supposed to live in.
      *

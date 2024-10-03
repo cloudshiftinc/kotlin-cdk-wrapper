@@ -224,7 +224,8 @@ public interface CfnDRTAccessProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.shield.CfnDRTAccessProps,
-  ) : CdkObject(cdkObject), CfnDRTAccessProps {
+  ) : CdkObject(cdkObject),
+      CfnDRTAccessProps {
     /**
      * Authorizes the Shield Response Team (SRT) to access the specified Amazon S3 bucket containing
      * log data such as Application Load Balancer access logs, CloudFront logs, or logs from third

@@ -60,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLoggingConfiguration(
   cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -417,7 +419,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.CloudWatchLogsDestinationConfigurationProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsDestinationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchLogsDestinationConfigurationProperty {
       /**
        * Name of the Amazon Cloudwatch Logs destination where chat activity will be logged.
        *
@@ -645,7 +648,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.DestinationConfigurationProperty,
-    ) : CdkObject(cdkObject), DestinationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DestinationConfigurationProperty {
       /**
        * An Amazon CloudWatch Logs destination configuration where chat activity will be logged.
        *
@@ -746,7 +750,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty,
-    ) : CdkObject(cdkObject), FirehoseDestinationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FirehoseDestinationConfigurationProperty {
       /**
        * Name of the Amazon Kinesis Firehose delivery stream where chat activity will be logged.
        *
@@ -831,7 +836,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.S3DestinationConfigurationProperty,
-    ) : CdkObject(cdkObject), S3DestinationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        S3DestinationConfigurationProperty {
       /**
        * Name of the Amazon S3 bucket where chat activity will be logged.
        *

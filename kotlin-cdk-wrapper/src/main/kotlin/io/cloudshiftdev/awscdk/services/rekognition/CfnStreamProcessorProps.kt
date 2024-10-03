@@ -953,7 +953,8 @@ public interface CfnStreamProcessorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessorProps,
-  ) : CdkObject(cdkObject), CfnStreamProcessorProps {
+  ) : CdkObject(cdkObject),
+      CfnStreamProcessorProps {
     /**
      * List of BoundingBox objects, each of which denotes a region of interest on screen.
      *

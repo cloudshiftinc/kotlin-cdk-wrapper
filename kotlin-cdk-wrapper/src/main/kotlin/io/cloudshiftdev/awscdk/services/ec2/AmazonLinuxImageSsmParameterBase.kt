@@ -11,7 +11,8 @@ import io.cloudshiftdev.constructs.Construct
  */
 public abstract class AmazonLinuxImageSsmParameterBase(
   cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBase,
-) : CdkObject(cdkObject), IMachineImage {
+) : CdkObject(cdkObject),
+    IMachineImage {
   /**
    * Return the image to use in the given context.
    *

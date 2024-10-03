@@ -168,7 +168,8 @@ public interface VersionProps : VersionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.VersionProps,
-  ) : CdkObject(cdkObject), VersionProps {
+  ) : CdkObject(cdkObject),
+      VersionProps {
     /**
      * SHA256 of the version of the Lambda source code.
      *

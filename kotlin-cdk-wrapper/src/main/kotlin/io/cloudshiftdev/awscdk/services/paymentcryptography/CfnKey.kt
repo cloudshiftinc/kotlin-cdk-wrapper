@@ -92,7 +92,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnKey(
   cdkObject: software.amazon.awscdk.services.paymentcryptography.CfnKey,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -676,7 +678,8 @@ public open class CfnKey(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.paymentcryptography.CfnKey.KeyAttributesProperty,
-    ) : CdkObject(cdkObject), KeyAttributesProperty {
+    ) : CdkObject(cdkObject),
+        KeyAttributesProperty {
       /**
        * The key algorithm to be use during creation of an AWS Payment Cryptography key.
        *
@@ -1100,7 +1103,8 @@ public open class CfnKey(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.paymentcryptography.CfnKey.KeyModesOfUseProperty,
-    ) : CdkObject(cdkObject), KeyModesOfUseProperty {
+    ) : CdkObject(cdkObject),
+        KeyModesOfUseProperty {
       /**
        * Speciﬁes whether an AWS Payment Cryptography key can be used to decrypt data.
        *

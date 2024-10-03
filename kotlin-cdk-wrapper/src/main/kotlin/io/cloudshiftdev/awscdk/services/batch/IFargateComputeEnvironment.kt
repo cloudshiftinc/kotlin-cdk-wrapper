@@ -25,7 +25,8 @@ import kotlin.collections.List
 public interface IFargateComputeEnvironment : IManagedComputeEnvironment {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IFargateComputeEnvironment,
-  ) : CdkObject(cdkObject), IFargateComputeEnvironment {
+  ) : CdkObject(cdkObject),
+      IFargateComputeEnvironment {
     /**
      * Apply the given removal policy to this resource.
      *

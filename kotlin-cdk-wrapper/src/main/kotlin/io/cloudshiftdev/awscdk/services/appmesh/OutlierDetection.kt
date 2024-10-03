@@ -130,7 +130,8 @@ public interface OutlierDetection {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.OutlierDetection,
-  ) : CdkObject(cdkObject), OutlierDetection {
+  ) : CdkObject(cdkObject),
+      OutlierDetection {
     /**
      * The base amount of time for which a host is ejected.
      */

@@ -148,7 +148,8 @@ public interface GitHubSourceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.GitHubSourceOptions,
-  ) : CdkObject(cdkObject), GitHubSourceOptions {
+  ) : CdkObject(cdkObject),
+      GitHubSourceOptions {
     /**
      * The action name used for this source in the CodePipeline.
      *

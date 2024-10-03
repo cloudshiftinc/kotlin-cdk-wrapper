@@ -38,7 +38,8 @@ public interface IResolvable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IResolvable,
-  ) : CdkObject(cdkObject), IResolvable {
+  ) : CdkObject(cdkObject),
+      IResolvable {
     /**
      * The creation stack of this resolvable which will be appended to errors thrown during
      * resolution.

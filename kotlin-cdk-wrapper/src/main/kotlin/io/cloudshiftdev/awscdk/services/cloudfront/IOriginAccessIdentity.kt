@@ -34,7 +34,8 @@ public interface IOriginAccessIdentity : IResource, IGrantable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.IOriginAccessIdentity,
-  ) : CdkObject(cdkObject), IOriginAccessIdentity {
+  ) : CdkObject(cdkObject),
+      IOriginAccessIdentity {
     /**
      * Apply the given removal policy to this resource.
      *

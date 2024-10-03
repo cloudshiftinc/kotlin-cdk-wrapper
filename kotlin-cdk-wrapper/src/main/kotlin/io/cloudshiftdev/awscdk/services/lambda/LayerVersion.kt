@@ -27,7 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class LayerVersion(
   cdkObject: software.amazon.awscdk.services.lambda.LayerVersion,
-) : Resource(cdkObject), ILayerVersion {
+) : Resource(cdkObject),
+    ILayerVersion {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

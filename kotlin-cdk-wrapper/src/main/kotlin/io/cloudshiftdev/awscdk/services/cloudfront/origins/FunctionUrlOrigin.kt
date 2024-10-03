@@ -105,6 +105,16 @@ public open class FunctionUrlOrigin(
     public fun keepaliveTimeout(keepaliveTimeout: Duration)
 
     /**
+     * The unique identifier of an origin access control for this origin.
+     *
+     * Default: - no origin access control
+     *
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin. 
+     */
+    public fun originAccessControlId(originAccessControlId: String)
+
+    /**
      * A unique identifier for the origin.
      *
      * This value must be unique within the distribution.
@@ -235,6 +245,18 @@ public open class FunctionUrlOrigin(
      */
     override fun keepaliveTimeout(keepaliveTimeout: Duration) {
       cdkBuilder.keepaliveTimeout(keepaliveTimeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * The unique identifier of an origin access control for this origin.
+     *
+     * Default: - no origin access control
+     *
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin. 
+     */
+    override fun originAccessControlId(originAccessControlId: String) {
+      cdkBuilder.originAccessControlId(originAccessControlId)
     }
 
     /**

@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSchedulingPolicy(
   cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.CfnSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -494,7 +496,8 @@ public open class CfnSchedulingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty,
-    ) : CdkObject(cdkObject), FairsharePolicyProperty {
+    ) : CdkObject(cdkObject),
+        FairsharePolicyProperty {
       /**
        * A value used to reserve some of the available maximum vCPU for fair share identifiers that
        * aren't already used.
@@ -676,7 +679,8 @@ public open class CfnSchedulingPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty,
-    ) : CdkObject(cdkObject), ShareAttributesProperty {
+    ) : CdkObject(cdkObject),
+        ShareAttributesProperty {
       /**
        * A fair share identifier or fair share identifier prefix.
        *

@@ -6,7 +6,8 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 
 public open class DependencyGroup(
   cdkObject: software.constructs.DependencyGroup,
-) : CdkObject(cdkObject), IDependable {
+) : CdkObject(cdkObject),
+    IDependable {
   public constructor(deps: IDependable) :
       this(software.constructs.DependencyGroup(deps.let(IDependable.Companion::unwrap))
   )

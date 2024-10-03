@@ -16,9 +16,9 @@ import kotlin.Unit
  *
  * ```
  * Cluster.Builder.create(this, "HelloEKS")
- * .version(KubernetesVersion.V1_29)
+ * .version(KubernetesVersion.V1_30)
  * .albController(AlbControllerOptions.builder()
- * .version(AlbControllerVersion.V2_6_2)
+ * .version(AlbControllerVersion.V2_8_2)
  * .build())
  * .build();
  * ```
@@ -121,7 +121,8 @@ public interface AlbControllerOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.AlbControllerOptions,
-  ) : CdkObject(cdkObject), AlbControllerOptions {
+  ) : CdkObject(cdkObject),
+      AlbControllerOptions {
     /**
      * The IAM policy to apply to the service account.
      *

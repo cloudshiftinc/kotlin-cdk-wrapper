@@ -203,7 +203,8 @@ public interface DashboardVariableOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.DashboardVariableOptions,
-  ) : CdkObject(cdkObject), DashboardVariableOptions {
+  ) : CdkObject(cdkObject),
+      DashboardVariableOptions {
     /**
      * Optional default value.
      *

@@ -39,8 +39,6 @@ import kotlin.jvm.JvmName
  */
 public interface CfnConfigurationProps {
   /**
-   * The description of the configuration.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
@@ -51,26 +49,16 @@ public interface CfnConfigurationProps {
   public fun kafkaVersionsList(): List<String> = unwrap(this).getKafkaVersionsList() ?: emptyList()
 
   /**
-   * Latest revision of the configuration.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-latestrevision)
    */
   public fun latestRevision(): Any? = unwrap(this).getLatestRevision()
 
   /**
-   * The name of the configuration.
-   *
-   * Configuration names are strings that match the regex "^[0-9A-Za-z][0-9A-Za-z-]{0,}$".
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-name)
    */
   public fun name(): String
 
   /**
-   * Contents of the server.properties file. When using the API, you must ensure that the contents
-   * of the file are base64 encoded. When using the console, the SDK, or the CLI, the contents of
-   * server.properties can be in plaintext.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-serverproperties)
    */
   public fun serverProperties(): String
@@ -81,7 +69,7 @@ public interface CfnConfigurationProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param description The description of the configuration.
+     * @param description the value to be set.
      */
     public fun description(description: String)
 
@@ -96,17 +84,17 @@ public interface CfnConfigurationProps {
     public fun kafkaVersionsList(vararg kafkaVersionsList: String)
 
     /**
-     * @param latestRevision Latest revision of the configuration.
+     * @param latestRevision the value to be set.
      */
     public fun latestRevision(latestRevision: IResolvable)
 
     /**
-     * @param latestRevision Latest revision of the configuration.
+     * @param latestRevision the value to be set.
      */
     public fun latestRevision(latestRevision: CfnConfiguration.LatestRevisionProperty)
 
     /**
-     * @param latestRevision Latest revision of the configuration.
+     * @param latestRevision the value to be set.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b0d5b7745687c027d7615e97a5a5910469bb1a8c24279cee0902098c91e4f089")
@@ -114,15 +102,12 @@ public interface CfnConfigurationProps {
         fun latestRevision(latestRevision: CfnConfiguration.LatestRevisionProperty.Builder.() -> Unit)
 
     /**
-     * @param name The name of the configuration. 
-     * Configuration names are strings that match the regex "^[0-9A-Za-z][0-9A-Za-z-]{0,}$".
+     * @param name the value to be set. 
      */
     public fun name(name: String)
 
     /**
-     * @param serverProperties Contents of the server.properties file. When using the API, you must
-     * ensure that the contents of the file are base64 encoded. When using the console, the SDK, or the
-     * CLI, the contents of server.properties can be in plaintext. 
+     * @param serverProperties the value to be set. 
      */
     public fun serverProperties(serverProperties: String)
   }
@@ -132,7 +117,7 @@ public interface CfnConfigurationProps {
         software.amazon.awscdk.services.msk.CfnConfigurationProps.builder()
 
     /**
-     * @param description The description of the configuration.
+     * @param description the value to be set.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -152,21 +137,21 @@ public interface CfnConfigurationProps {
         kafkaVersionsList(kafkaVersionsList.toList())
 
     /**
-     * @param latestRevision Latest revision of the configuration.
+     * @param latestRevision the value to be set.
      */
     override fun latestRevision(latestRevision: IResolvable) {
       cdkBuilder.latestRevision(latestRevision.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param latestRevision Latest revision of the configuration.
+     * @param latestRevision the value to be set.
      */
     override fun latestRevision(latestRevision: CfnConfiguration.LatestRevisionProperty) {
       cdkBuilder.latestRevision(latestRevision.let(CfnConfiguration.LatestRevisionProperty.Companion::unwrap))
     }
 
     /**
-     * @param latestRevision Latest revision of the configuration.
+     * @param latestRevision the value to be set.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b0d5b7745687c027d7615e97a5a5910469bb1a8c24279cee0902098c91e4f089")
@@ -175,17 +160,14 @@ public interface CfnConfigurationProps {
         Unit = latestRevision(CfnConfiguration.LatestRevisionProperty(latestRevision))
 
     /**
-     * @param name The name of the configuration. 
-     * Configuration names are strings that match the regex "^[0-9A-Za-z][0-9A-Za-z-]{0,}$".
+     * @param name the value to be set. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * @param serverProperties Contents of the server.properties file. When using the API, you must
-     * ensure that the contents of the file are base64 encoded. When using the console, the SDK, or the
-     * CLI, the contents of server.properties can be in plaintext. 
+     * @param serverProperties the value to be set. 
      */
     override fun serverProperties(serverProperties: String) {
       cdkBuilder.serverProperties(serverProperties)
@@ -197,10 +179,9 @@ public interface CfnConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.msk.CfnConfigurationProps,
-  ) : CdkObject(cdkObject), CfnConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnConfigurationProps {
     /**
-     * The description of the configuration.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
@@ -212,26 +193,16 @@ public interface CfnConfigurationProps {
         emptyList()
 
     /**
-     * Latest revision of the configuration.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-latestrevision)
      */
     override fun latestRevision(): Any? = unwrap(this).getLatestRevision()
 
     /**
-     * The name of the configuration.
-     *
-     * Configuration names are strings that match the regex "^[0-9A-Za-z][0-9A-Za-z-]{0,}$".
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-name)
      */
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * Contents of the server.properties file. When using the API, you must ensure that the contents
-     * of the file are base64 encoded. When using the console, the SDK, or the CLI, the contents of
-     * server.properties can be in plaintext.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html#cfn-msk-configuration-serverproperties)
      */
     override fun serverProperties(): String = unwrap(this).getServerProperties()

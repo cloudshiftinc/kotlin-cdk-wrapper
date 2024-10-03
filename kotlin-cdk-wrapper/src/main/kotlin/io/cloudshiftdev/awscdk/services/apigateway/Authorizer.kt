@@ -14,7 +14,8 @@ import kotlin.String
  */
 public abstract class Authorizer(
   cdkObject: software.amazon.awscdk.services.apigateway.Authorizer,
-) : Resource(cdkObject), IAuthorizer {
+) : Resource(cdkObject),
+    IAuthorizer {
   /**
    * The authorization type of this authorizer.
    */

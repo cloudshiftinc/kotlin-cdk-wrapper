@@ -76,7 +76,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfigurationProfile(
   cdkObject: software.amazon.awscdk.services.appconfig.CfnConfigurationProfile,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -300,7 +302,7 @@ public open class CfnConfigurationProfile(
      * `secretsmanager` ://<secret name>.
      * * For an Amazon S3 object, specify the URI in the following format:
      * `s3://&lt;bucket&gt;/&lt;objectKey&gt;` . Here is an example:
-     * `s3://my-bucket/my-app/us-east-1/my-config.json`
+     * `s3://amzn-s3-demo-bucket/my-app/us-east-1/my-config.json`
      * * For an SSM document, specify either the document name in the format
      * `ssm-document://&lt;document name&gt;` or the Amazon Resource Name (ARN).
      *
@@ -448,7 +450,7 @@ public open class CfnConfigurationProfile(
      * `secretsmanager` ://<secret name>.
      * * For an Amazon S3 object, specify the URI in the following format:
      * `s3://&lt;bucket&gt;/&lt;objectKey&gt;` . Here is an example:
-     * `s3://my-bucket/my-app/us-east-1/my-config.json`
+     * `s3://amzn-s3-demo-bucket/my-app/us-east-1/my-config.json`
      * * For an SSM document, specify either the document name in the format
      * `ssm-document://&lt;document name&gt;` or the Amazon Resource Name (ARN).
      *
@@ -666,7 +668,8 @@ public open class CfnConfigurationProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appconfig.CfnConfigurationProfile.ValidatorsProperty,
-    ) : CdkObject(cdkObject), ValidatorsProperty {
+    ) : CdkObject(cdkObject),
+        ValidatorsProperty {
       /**
        * Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda function.
        *

@@ -325,7 +325,8 @@ public interface CfnAuthorizerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnAuthorizerProps,
-  ) : CdkObject(cdkObject), CfnAuthorizerProps {
+  ) : CdkObject(cdkObject),
+      CfnAuthorizerProps {
     /**
      * The authorizer's Lambda function ARN.
      *

@@ -129,7 +129,8 @@ public interface BuildEnvironmentVariable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable,
-  ) : CdkObject(cdkObject), BuildEnvironmentVariable {
+  ) : CdkObject(cdkObject),
+      BuildEnvironmentVariable {
     /**
      * The type of environment variable.
      *

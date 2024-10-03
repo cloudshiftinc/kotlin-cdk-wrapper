@@ -63,7 +63,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnChannel(
   cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iotanalytics.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -539,7 +541,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty,
-    ) : CdkObject(cdkObject), ChannelStorageProperty {
+    ) : CdkObject(cdkObject),
+        ChannelStorageProperty {
       /**
        * Used to store channel data in an S3 bucket that you manage.
        *
@@ -684,7 +687,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property,
-    ) : CdkObject(cdkObject), CustomerManagedS3Property {
+    ) : CdkObject(cdkObject),
+        CustomerManagedS3Property {
       /**
        * The name of the S3 bucket in which channel data is stored.
        *
@@ -819,7 +823,8 @@ public open class CfnChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.RetentionPeriodProperty,
-    ) : CdkObject(cdkObject), RetentionPeriodProperty {
+    ) : CdkObject(cdkObject),
+        RetentionPeriodProperty {
       /**
        * The number of days that message data is kept.
        *

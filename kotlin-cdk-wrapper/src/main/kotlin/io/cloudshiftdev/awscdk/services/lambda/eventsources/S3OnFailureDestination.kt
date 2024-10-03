@@ -36,7 +36,8 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket
  */
 public open class S3OnFailureDestination(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination,
-) : CdkObject(cdkObject), IEventSourceDlq {
+) : CdkObject(cdkObject),
+    IEventSourceDlq {
   public constructor(bucket: IBucket) :
       this(software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination(bucket.let(IBucket.Companion::unwrap))
   )

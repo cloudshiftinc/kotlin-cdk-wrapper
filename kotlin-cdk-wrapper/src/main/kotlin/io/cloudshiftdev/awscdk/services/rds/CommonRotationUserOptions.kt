@@ -215,7 +215,8 @@ public interface CommonRotationUserOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.CommonRotationUserOptions,
-  ) : CdkObject(cdkObject), CommonRotationUserOptions {
+  ) : CdkObject(cdkObject),
+      CommonRotationUserOptions {
     /**
      * Specifies the number of days after the previous rotation before Secrets Manager triggers the
      * next automatic rotation.

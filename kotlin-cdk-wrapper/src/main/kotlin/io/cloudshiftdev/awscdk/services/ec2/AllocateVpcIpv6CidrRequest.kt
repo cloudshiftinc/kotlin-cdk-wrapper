@@ -77,7 +77,8 @@ public interface AllocateVpcIpv6CidrRequest {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.AllocateVpcIpv6CidrRequest,
-  ) : CdkObject(cdkObject), AllocateVpcIpv6CidrRequest {
+  ) : CdkObject(cdkObject),
+      AllocateVpcIpv6CidrRequest {
     /**
      * The VPC construct to attach to.
      */

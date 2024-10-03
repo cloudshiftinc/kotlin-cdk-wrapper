@@ -234,7 +234,8 @@ public interface MapProps : MapBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.MapProps,
-  ) : CdkObject(cdkObject), MapProps {
+  ) : CdkObject(cdkObject),
+      MapProps {
     /**
      * An optional description for this state.
      *

@@ -52,7 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Alias(
   cdkObject: software.amazon.awscdk.services.kms.Alias,
-) : Resource(cdkObject), IAlias {
+) : Resource(cdkObject),
+    IAlias {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

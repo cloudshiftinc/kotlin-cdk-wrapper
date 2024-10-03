@@ -18,7 +18,8 @@ import io.cloudshiftdev.constructs.IConstruct
  */
 public open class AutoScalingGroupRequireImdsv2Aspect(
   cdkObject: software.amazon.awscdk.services.autoscaling.AutoScalingGroupRequireImdsv2Aspect,
-) : CdkObject(cdkObject), IAspect {
+) : CdkObject(cdkObject),
+    IAspect {
   public constructor() :
       this(software.amazon.awscdk.services.autoscaling.AutoScalingGroupRequireImdsv2Aspect()
   )

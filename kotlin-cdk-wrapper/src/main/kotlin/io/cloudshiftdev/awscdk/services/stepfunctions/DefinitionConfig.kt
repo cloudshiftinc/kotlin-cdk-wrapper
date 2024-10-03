@@ -118,7 +118,8 @@ public interface DefinitionConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionConfig,
-  ) : CdkObject(cdkObject), DefinitionConfig {
+  ) : CdkObject(cdkObject),
+      DefinitionConfig {
     /**
      *
      */

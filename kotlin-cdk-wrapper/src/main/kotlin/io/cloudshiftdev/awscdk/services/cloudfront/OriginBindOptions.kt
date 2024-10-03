@@ -19,10 +19,21 @@ import kotlin.Unit
  * import io.cloudshiftdev.awscdk.services.cloudfront.*;
  * OriginBindOptions originBindOptions = OriginBindOptions.builder()
  * .originId("originId")
+ * // the properties below are optional
+ * .distributionId("distributionId")
  * .build();
  * ```
  */
 public interface OriginBindOptions {
+  /**
+   * The identifier of the Distribution this Origin is used for.
+   *
+   * This is used to grant origin access permissions to the distribution for origin access control.
+   *
+   * Default: - no distribution id
+   */
+  public fun distributionId(): String? = unwrap(this).getDistributionId()
+
   /**
    * The identifier of this Origin, as assigned by the Distribution this Origin has been used added
    * to.
@@ -35,6 +46,13 @@ public interface OriginBindOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param distributionId The identifier of the Distribution this Origin is used for.
+     * This is used to grant origin access permissions to the distribution for origin access
+     * control.
+     */
+    public fun distributionId(distributionId: String)
+
+    /**
      * @param originId The identifier of this Origin, as assigned by the Distribution this Origin
      * has been used added to. 
      */
@@ -44,6 +62,15 @@ public interface OriginBindOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.OriginBindOptions.Builder =
         software.amazon.awscdk.services.cloudfront.OriginBindOptions.builder()
+
+    /**
+     * @param distributionId The identifier of the Distribution this Origin is used for.
+     * This is used to grant origin access permissions to the distribution for origin access
+     * control.
+     */
+    override fun distributionId(distributionId: String) {
+      cdkBuilder.distributionId(distributionId)
+    }
 
     /**
      * @param originId The identifier of this Origin, as assigned by the Distribution this Origin
@@ -59,7 +86,18 @@ public interface OriginBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.OriginBindOptions,
-  ) : CdkObject(cdkObject), OriginBindOptions {
+  ) : CdkObject(cdkObject),
+      OriginBindOptions {
+    /**
+     * The identifier of the Distribution this Origin is used for.
+     *
+     * This is used to grant origin access permissions to the distribution for origin access
+     * control.
+     *
+     * Default: - no distribution id
+     */
+    override fun distributionId(): String? = unwrap(this).getDistributionId()
+
     /**
      * The identifier of this Origin, as assigned by the Distribution this Origin has been used
      * added to.

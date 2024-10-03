@@ -56,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAnalysisTemplate(
   cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -639,7 +641,8 @@ public open class CfnAnalysisTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty,
-    ) : CdkObject(cdkObject), AnalysisParameterProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisParameterProperty {
       /**
        * Optional.
        *
@@ -752,7 +755,8 @@ public open class CfnAnalysisTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty,
-    ) : CdkObject(cdkObject), AnalysisSchemaProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisSchemaProperty {
       /**
        * The tables referenced in the analysis schema.
        *
@@ -834,7 +838,8 @@ public open class CfnAnalysisTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty,
-    ) : CdkObject(cdkObject), AnalysisSourceProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisSourceProperty {
       /**
        * The query text.
        *

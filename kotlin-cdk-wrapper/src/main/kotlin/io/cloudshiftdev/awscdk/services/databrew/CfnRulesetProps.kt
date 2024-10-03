@@ -217,7 +217,8 @@ public interface CfnRulesetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.databrew.CfnRulesetProps,
-  ) : CdkObject(cdkObject), CfnRulesetProps {
+  ) : CdkObject(cdkObject),
+      CfnRulesetProps {
     /**
      * The description of the ruleset.
      *

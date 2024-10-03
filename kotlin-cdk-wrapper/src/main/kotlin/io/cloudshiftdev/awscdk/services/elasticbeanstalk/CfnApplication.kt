@@ -56,7 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplication(
   cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticbeanstalk.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -456,7 +457,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationResourceLifecycleConfigProperty,
-    ) : CdkObject(cdkObject), ApplicationResourceLifecycleConfigProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationResourceLifecycleConfigProperty {
       /**
        * The ARN of an IAM service role that Elastic Beanstalk has permission to assume.
        *
@@ -662,7 +664,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationVersionLifecycleConfigProperty,
-    ) : CdkObject(cdkObject), ApplicationVersionLifecycleConfigProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationVersionLifecycleConfigProperty {
       /**
        * Specify a max age rule to restrict the length of time that application versions are
        * retained for an application.
@@ -831,7 +834,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty,
-    ) : CdkObject(cdkObject), MaxAgeRuleProperty {
+    ) : CdkObject(cdkObject),
+        MaxAgeRuleProperty {
       /**
        * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk
        * deletes the application version.
@@ -1006,7 +1010,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty,
-    ) : CdkObject(cdkObject), MaxCountRuleProperty {
+    ) : CdkObject(cdkObject),
+        MaxCountRuleProperty {
       /**
        * Set to `true` to delete a version's source bundle from Amazon S3 when Elastic Beanstalk
        * deletes the application version.

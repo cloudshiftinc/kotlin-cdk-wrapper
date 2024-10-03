@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class UserPoolIdentityProviderAmazon(
   cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderAmazon,
-) : Resource(cdkObject), IUserPoolIdentityProvider {
+) : Resource(cdkObject),
+    IUserPoolIdentityProvider {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

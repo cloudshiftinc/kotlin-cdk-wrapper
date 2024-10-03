@@ -362,7 +362,8 @@ public interface ScheduledTaskBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledTaskBaseProps,
-  ) : CdkObject(cdkObject), ScheduledTaskBaseProps {
+  ) : CdkObject(cdkObject),
+      ScheduledTaskBaseProps {
     /**
      * The name of the cluster that hosts the service.
      *

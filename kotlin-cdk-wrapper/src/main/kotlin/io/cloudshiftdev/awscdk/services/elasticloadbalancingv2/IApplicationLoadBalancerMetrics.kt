@@ -785,7 +785,8 @@ public interface IApplicationLoadBalancerMetrics {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancerMetrics,
-  ) : CdkObject(cdkObject), IApplicationLoadBalancerMetrics {
+  ) : CdkObject(cdkObject),
+      IApplicationLoadBalancerMetrics {
     /**
      * The total number of concurrent TCP connections active from clients to the load balancer and
      * from the load balancer to targets.

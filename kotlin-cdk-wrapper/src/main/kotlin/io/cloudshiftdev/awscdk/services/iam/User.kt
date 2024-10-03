@@ -30,7 +30,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class User(
   cdkObject: software.amazon.awscdk.services.iam.User,
-) : Resource(cdkObject), IIdentity, IUser {
+) : Resource(cdkObject),
+    IIdentity,
+    IUser {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.User(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

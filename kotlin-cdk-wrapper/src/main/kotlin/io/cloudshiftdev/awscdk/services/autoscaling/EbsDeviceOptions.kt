@@ -134,7 +134,8 @@ public interface EbsDeviceOptions : EbsDeviceOptionsBase {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.EbsDeviceOptions,
-  ) : CdkObject(cdkObject), EbsDeviceOptions {
+  ) : CdkObject(cdkObject),
+      EbsDeviceOptions {
     /**
      * Indicates whether to delete the volume when the instance is terminated.
      *

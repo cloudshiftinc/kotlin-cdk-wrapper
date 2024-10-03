@@ -19,7 +19,8 @@ public interface INumberProducer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.INumberProducer,
-  ) : CdkObject(cdkObject), INumberProducer {
+  ) : CdkObject(cdkObject),
+      INumberProducer {
     /**
      * Produce the number value.
      *

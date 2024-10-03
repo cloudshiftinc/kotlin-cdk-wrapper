@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ExternalService(
   cdkObject: software.amazon.awscdk.services.ecs.ExternalService,
-) : BaseService(cdkObject), IExternalService {
+) : BaseService(cdkObject),
+    IExternalService {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

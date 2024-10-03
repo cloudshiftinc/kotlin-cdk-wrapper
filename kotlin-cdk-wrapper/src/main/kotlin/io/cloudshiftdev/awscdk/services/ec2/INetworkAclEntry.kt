@@ -21,7 +21,8 @@ public interface INetworkAclEntry : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.INetworkAclEntry,
-  ) : CdkObject(cdkObject), INetworkAclEntry {
+  ) : CdkObject(cdkObject),
+      INetworkAclEntry {
     /**
      * Apply the given removal policy to this resource.
      *

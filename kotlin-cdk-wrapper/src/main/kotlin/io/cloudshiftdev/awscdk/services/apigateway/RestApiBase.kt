@@ -25,7 +25,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class RestApiBase(
   cdkObject: software.amazon.awscdk.services.apigateway.RestApiBase,
-) : Resource(cdkObject), IRestApi {
+) : Resource(cdkObject),
+    IRestApi {
   /**
    * Add an ApiKey to the deploymentStage.
    *

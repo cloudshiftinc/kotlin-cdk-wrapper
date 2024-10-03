@@ -87,7 +87,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMetricStream(
   cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1038,7 +1040,8 @@ public open class CfnMetricStream(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty,
-    ) : CdkObject(cdkObject), MetricStreamFilterProperty {
+    ) : CdkObject(cdkObject),
+        MetricStreamFilterProperty {
       /**
        * The names of the metrics to either include or exclude from the metric stream.
        *
@@ -1208,7 +1211,8 @@ public open class CfnMetricStream(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty,
-    ) : CdkObject(cdkObject), MetricStreamStatisticsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        MetricStreamStatisticsConfigurationProperty {
       /**
        * The additional statistics to stream for the metrics listed in `IncludeMetrics` .
        *
@@ -1320,7 +1324,8 @@ public open class CfnMetricStream(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty,
-    ) : CdkObject(cdkObject), MetricStreamStatisticsMetricProperty {
+    ) : CdkObject(cdkObject),
+        MetricStreamStatisticsMetricProperty {
       /**
        * The name of the metric.
        *

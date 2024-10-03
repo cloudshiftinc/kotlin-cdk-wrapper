@@ -95,7 +95,8 @@ public interface SourceApiAssociationAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.SourceApiAssociationAttributes,
-  ) : CdkObject(cdkObject), SourceApiAssociationAttributes {
+  ) : CdkObject(cdkObject),
+      SourceApiAssociationAttributes {
     /**
      * The association arn.
      */

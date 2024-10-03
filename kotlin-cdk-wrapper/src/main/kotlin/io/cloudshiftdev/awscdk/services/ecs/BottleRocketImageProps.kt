@@ -140,7 +140,8 @@ public interface BottleRocketImageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.BottleRocketImageProps,
-  ) : CdkObject(cdkObject), BottleRocketImageProps {
+  ) : CdkObject(cdkObject),
+      BottleRocketImageProps {
     /**
      * The CPU architecture.
      *

@@ -87,7 +87,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnExperiment(
   cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1128,7 +1130,8 @@ public open class CfnExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.MetricGoalObjectProperty,
-    ) : CdkObject(cdkObject), MetricGoalObjectProperty {
+    ) : CdkObject(cdkObject),
+        MetricGoalObjectProperty {
       /**
        * `INCREASE` means that a variation with a higher number for this metric is performing
        * better.
@@ -1331,7 +1334,8 @@ public open class CfnExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty,
-    ) : CdkObject(cdkObject), OnlineAbConfigObjectProperty {
+    ) : CdkObject(cdkObject),
+        OnlineAbConfigObjectProperty {
       /**
        * The name of the variation that is to be the default variation that the other variations are
        * compared to.
@@ -1506,7 +1510,8 @@ public open class CfnExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.RunningStatusObjectProperty,
-    ) : CdkObject(cdkObject), RunningStatusObjectProperty {
+    ) : CdkObject(cdkObject),
+        RunningStatusObjectProperty {
       /**
        * If you are using AWS CloudFormation to start the experiment, use this field to specify when
        * the experiment is to end.
@@ -1683,7 +1688,8 @@ public open class CfnExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentObjectProperty,
-    ) : CdkObject(cdkObject), TreatmentObjectProperty {
+    ) : CdkObject(cdkObject),
+        TreatmentObjectProperty {
       /**
        * The description of the treatment.
        *
@@ -1816,7 +1822,8 @@ public open class CfnExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty,
-    ) : CdkObject(cdkObject), TreatmentToWeightProperty {
+    ) : CdkObject(cdkObject),
+        TreatmentToWeightProperty {
       /**
        * The portion of experiment traffic to allocate to this treatment.
        *

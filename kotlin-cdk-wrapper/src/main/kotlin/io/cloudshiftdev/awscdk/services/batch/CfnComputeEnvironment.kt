@@ -171,6 +171,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "tagsKey", "tags"))
  * .updateToLatestImageVersion(false)
  * .build())
+ * .context("context")
  * .eksConfiguration(EksConfigurationProperty.builder()
  * .eksClusterArn("eksClusterArn")
  * .kubernetesNamespace("kubernetesNamespace")
@@ -192,7 +193,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnComputeEnvironment(
   cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -257,6 +260,18 @@ public open class CfnComputeEnvironment(
   @JvmName("a5848bb91251b86183b3ea469b2c7529ed7ab8f70dbbc389524f94cd0e5079fb")
   public open fun computeResources(`value`: ComputeResourcesProperty.Builder.() -> Unit): Unit =
       computeResources(ComputeResourcesProperty(`value`))
+
+  /**
+   * Reserved.
+   */
+  public open fun context(): String? = unwrap(this).getContext()
+
+  /**
+   * Reserved.
+   */
+  public open fun context(`value`: String) {
+    unwrap(this).setContext(`value`)
+  }
 
   /**
    * The details for the Amazon EKS cluster that supports the compute environment.
@@ -472,6 +487,14 @@ public open class CfnComputeEnvironment(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e68d3d39757a2bb02d27a14eaf143cce0c2876be80e425917f05c02c84205abb")
     public fun computeResources(computeResources: ComputeResourcesProperty.Builder.() -> Unit)
+
+    /**
+     * Reserved.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-context)
+     * @param context Reserved. 
+     */
+    public fun context(context: String)
 
     /**
      * The details for the Amazon EKS cluster that supports the compute environment.
@@ -835,6 +858,16 @@ public open class CfnComputeEnvironment(
     @JvmName("e68d3d39757a2bb02d27a14eaf143cce0c2876be80e425917f05c02c84205abb")
     override fun computeResources(computeResources: ComputeResourcesProperty.Builder.() -> Unit):
         Unit = computeResources(ComputeResourcesProperty(computeResources))
+
+    /**
+     * Reserved.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-context)
+     * @param context Reserved. 
+     */
+    override fun context(context: String) {
+      cdkBuilder.context(context)
+    }
 
     /**
      * The details for the Amazon EKS cluster that supports the compute environment.
@@ -2847,7 +2880,8 @@ public open class CfnComputeEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.ComputeResourcesProperty,
-    ) : CdkObject(cdkObject), ComputeResourcesProperty {
+    ) : CdkObject(cdkObject),
+        ComputeResourcesProperty {
       /**
        * The allocation strategy to use for the compute resource if not enough instances of the best
        * fitting instance type can be allocated.
@@ -3580,7 +3614,8 @@ public open class CfnComputeEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty,
-    ) : CdkObject(cdkObject), Ec2ConfigurationObjectProperty {
+    ) : CdkObject(cdkObject),
+        Ec2ConfigurationObjectProperty {
       /**
        * The AMI ID used for instances launched in the compute environment that match the image
        * type.
@@ -3777,7 +3812,8 @@ public open class CfnComputeEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty,
-    ) : CdkObject(cdkObject), EksConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EksConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon EKS cluster.
        *
@@ -3979,7 +4015,8 @@ public open class CfnComputeEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        LaunchTemplateSpecificationProperty {
       /**
        * The ID of the launch template.
        *
@@ -4151,7 +4188,8 @@ public open class CfnComputeEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty,
-    ) : CdkObject(cdkObject), UpdatePolicyProperty {
+    ) : CdkObject(cdkObject),
+        UpdatePolicyProperty {
       /**
        * Specifies the job timeout (in minutes) when the compute environment infrastructure is
        * updated.

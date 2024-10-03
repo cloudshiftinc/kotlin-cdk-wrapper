@@ -81,7 +81,8 @@ public interface AclPortRange {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.AclPortRange,
-  ) : CdkObject(cdkObject), AclPortRange {
+  ) : CdkObject(cdkObject),
+      AclPortRange {
     /**
      * The first port in the range.
      *

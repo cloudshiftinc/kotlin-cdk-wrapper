@@ -78,7 +78,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTrigger(
   cdkObject: software.amazon.awscdk.services.glue.CfnTrigger,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -118,11 +120,6 @@ public open class CfnTrigger(
    * The actions initiated by this trigger.
    */
   public open fun actions(vararg `value`: Any): Unit = actions(`value`.toList())
-
-  /**
-   * Reserved for future use.
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
    * A description of this trigger.
@@ -909,7 +906,8 @@ public open class CfnTrigger(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * The job arguments used when this trigger fires.
        *
@@ -1128,7 +1126,8 @@ public open class CfnTrigger(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty,
-    ) : CdkObject(cdkObject), ConditionProperty {
+    ) : CdkObject(cdkObject),
+        ConditionProperty {
       /**
        * The state of the crawler to which this condition applies.
        *
@@ -1269,7 +1268,8 @@ public open class CfnTrigger(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty,
-    ) : CdkObject(cdkObject), EventBatchingConditionProperty {
+    ) : CdkObject(cdkObject),
+        EventBatchingConditionProperty {
       /**
        * Number of events that must be received from Amazon EventBridge before EventBridge event
        * trigger fires.
@@ -1364,7 +1364,8 @@ public open class CfnTrigger(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty,
-    ) : CdkObject(cdkObject), NotificationPropertyProperty {
+    ) : CdkObject(cdkObject),
+        NotificationPropertyProperty {
       /**
        * After a job run starts, the number of minutes to wait before sending a job run delay
        * notification.
@@ -1497,7 +1498,8 @@ public open class CfnTrigger(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty,
-    ) : CdkObject(cdkObject), PredicateProperty {
+    ) : CdkObject(cdkObject),
+        PredicateProperty {
       /**
        * A list of the conditions that determine when the trigger will fire.
        *

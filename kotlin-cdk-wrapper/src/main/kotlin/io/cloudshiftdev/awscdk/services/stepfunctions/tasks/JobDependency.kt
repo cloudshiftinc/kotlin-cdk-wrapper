@@ -79,7 +79,8 @@ public interface JobDependency {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.JobDependency,
-  ) : CdkObject(cdkObject), JobDependency {
+  ) : CdkObject(cdkObject),
+      JobDependency {
     /**
      * The job ID of the AWS Batch job associated with this dependency.
      *

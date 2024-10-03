@@ -27,7 +27,8 @@ public interface IRealtimeLogConfig : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.IRealtimeLogConfig,
-  ) : CdkObject(cdkObject), IRealtimeLogConfig {
+  ) : CdkObject(cdkObject),
+      IRealtimeLogConfig {
     /**
      * Apply the given removal policy to this resource.
      *

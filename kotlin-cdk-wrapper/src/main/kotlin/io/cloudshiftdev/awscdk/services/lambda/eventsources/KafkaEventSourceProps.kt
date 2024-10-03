@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
 import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
@@ -26,11 +27,13 @@ import kotlin.collections.Map
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.kms.*;
  * import io.cloudshiftdev.awscdk.services.lambda.*;
  * import io.cloudshiftdev.awscdk.services.lambda.eventsources.*;
  * import io.cloudshiftdev.awscdk.services.secretsmanager.*;
  * IEventSourceDlq eventSourceDlq;
  * Object filters;
+ * Key key;
  * Secret secret;
  * KafkaEventSourceProps kafkaEventSourceProps = KafkaEventSourceProps.builder()
  * .startingPosition(StartingPosition.TRIM_HORIZON)
@@ -39,6 +42,7 @@ import kotlin.collections.Map
  * .batchSize(123)
  * .consumerGroupId("consumerGroupId")
  * .enabled(false)
+ * .filterEncryption(key)
  * .filters(List.of(Map.of(
  * "filtersKey", filters)))
  * .maxBatchingWindow(Duration.minutes(30))
@@ -60,6 +64,15 @@ public interface KafkaEventSourceProps : BaseStreamEventSourceProps {
    * [Documentation](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-consumer-group-id)
    */
   public fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
+
+  /**
+   * Add Customer managed KMS key to encrypt Filter Criteria.
+   *
+   * Default: - none
+   *
+   * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+   */
+  public fun filterEncryption(): IKey? = unwrap(this).getFilterEncryption()?.let(IKey::wrap)
 
   /**
    * Add filter criteria to Event Source.
@@ -127,6 +140,11 @@ public interface KafkaEventSourceProps : BaseStreamEventSourceProps {
      * @param enabled If the stream event source mapping should be enabled.
      */
     public fun enabled(enabled: Boolean)
+
+    /**
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria.
+     */
+    public fun filterEncryption(filterEncryption: IKey)
 
     /**
      * @param filters Add filter criteria to Event Source.
@@ -211,6 +229,13 @@ public interface KafkaEventSourceProps : BaseStreamEventSourceProps {
     }
 
     /**
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria.
+     */
+    override fun filterEncryption(filterEncryption: IKey) {
+      cdkBuilder.filterEncryption(filterEncryption.let(IKey.Companion::unwrap))
+    }
+
+    /**
      * @param filters Add filter criteria to Event Source.
      */
     override fun filters(filters: List<Map<String, Any>>) {
@@ -268,7 +293,8 @@ public interface KafkaEventSourceProps : BaseStreamEventSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.eventsources.KafkaEventSourceProps,
-  ) : CdkObject(cdkObject), KafkaEventSourceProps {
+  ) : CdkObject(cdkObject),
+      KafkaEventSourceProps {
     /**
      * The largest number of records that AWS Lambda will retrieve from your event source at the
      * time of invoking your function.
@@ -309,6 +335,15 @@ public interface KafkaEventSourceProps : BaseStreamEventSourceProps {
      * Default: true
      */
     override fun enabled(): Boolean? = unwrap(this).getEnabled()
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     */
+    override fun filterEncryption(): IKey? = unwrap(this).getFilterEncryption()?.let(IKey::wrap)
 
     /**
      * Add filter criteria to Event Source.

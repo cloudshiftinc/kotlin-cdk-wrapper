@@ -23,7 +23,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class TopicBase(
   cdkObject: software.amazon.awscdk.services.sns.TopicBase,
-) : Resource(cdkObject), ITopic {
+) : Resource(cdkObject),
+    ITopic {
   /**
    * Subscribe some endpoint to this topic.
    *
@@ -86,6 +87,14 @@ public abstract class TopicBase(
    */
   public override fun grantPublish(grantee: IGrantable): Grant =
       unwrap(this).grantPublish(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
+
+  /**
+   * Grant topic subscribing permissions to the given identity.
+   *
+   * @param grantee 
+   */
+  public override fun grantSubscribe(grantee: IGrantable): Grant =
+      unwrap(this).grantSubscribe(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Return the given named metric for this Topic.

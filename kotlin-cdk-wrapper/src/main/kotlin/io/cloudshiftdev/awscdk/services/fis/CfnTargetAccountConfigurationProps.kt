@@ -123,7 +123,8 @@ public interface CfnTargetAccountConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.fis.CfnTargetAccountConfigurationProps,
-  ) : CdkObject(cdkObject), CfnTargetAccountConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnTargetAccountConfigurationProps {
     /**
      * The AWS account ID of the target account.
      *

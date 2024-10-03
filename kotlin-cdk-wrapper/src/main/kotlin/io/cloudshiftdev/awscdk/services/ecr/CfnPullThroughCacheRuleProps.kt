@@ -129,7 +129,8 @@ public interface CfnPullThroughCacheRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecr.CfnPullThroughCacheRuleProps,
-  ) : CdkObject(cdkObject), CfnPullThroughCacheRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnPullThroughCacheRuleProps {
     /**
      * The ARN of the Secrets Manager secret associated with the pull through cache rule.
      *

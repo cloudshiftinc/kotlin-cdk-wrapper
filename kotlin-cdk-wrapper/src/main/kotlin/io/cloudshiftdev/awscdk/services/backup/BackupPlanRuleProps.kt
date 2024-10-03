@@ -296,7 +296,8 @@ public interface BackupPlanRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.backup.BackupPlanRuleProps,
-  ) : CdkObject(cdkObject), BackupPlanRuleProps {
+  ) : CdkObject(cdkObject),
+      BackupPlanRuleProps {
     /**
      * The backup vault where backups are.
      *

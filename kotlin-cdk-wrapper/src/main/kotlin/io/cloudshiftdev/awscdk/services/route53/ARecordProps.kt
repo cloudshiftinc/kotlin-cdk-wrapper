@@ -255,7 +255,8 @@ public interface ARecordProps : RecordSetOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.ARecordProps,
-  ) : CdkObject(cdkObject), ARecordProps {
+  ) : CdkObject(cdkObject),
+      ARecordProps {
     /**
      * A comment to add on the record.
      *

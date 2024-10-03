@@ -101,7 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLaunchConfiguration(
   cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1598,7 +1599,8 @@ public open class CfnLaunchConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
+    ) : CdkObject(cdkObject),
+        BlockDeviceMappingProperty {
       /**
        * The device name assigned to the volume (for example, `/dev/sdh` or `xvdh` ).
        *
@@ -2047,7 +2049,8 @@ public open class CfnLaunchConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty,
-    ) : CdkObject(cdkObject), BlockDeviceProperty {
+    ) : CdkObject(cdkObject),
+        BlockDeviceProperty {
       /**
        * Indicates whether the volume is deleted on instance termination.
        *
@@ -2331,7 +2334,8 @@ public open class CfnLaunchConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.MetadataOptionsProperty,
-    ) : CdkObject(cdkObject), MetadataOptionsProperty {
+    ) : CdkObject(cdkObject),
+        MetadataOptionsProperty {
       /**
        * This parameter enables or disables the HTTP metadata endpoint on your instances.
        *

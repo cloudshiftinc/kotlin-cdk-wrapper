@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFleet(
   cdkObject: software.amazon.awscdk.services.robomaker.CfnFleet,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.robomaker.CfnFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

@@ -22,7 +22,8 @@ public interface IUserPoolResourceServer : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.IUserPoolResourceServer,
-  ) : CdkObject(cdkObject), IUserPoolResourceServer {
+  ) : CdkObject(cdkObject),
+      IUserPoolResourceServer {
     /**
      * Apply the given removal policy to this resource.
      *

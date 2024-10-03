@@ -269,7 +269,8 @@ public interface TxtRecordProps : RecordSetOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.TxtRecordProps,
-  ) : CdkObject(cdkObject), TxtRecordProps {
+  ) : CdkObject(cdkObject),
+      TxtRecordProps {
     /**
      * A comment to add on the record.
      *

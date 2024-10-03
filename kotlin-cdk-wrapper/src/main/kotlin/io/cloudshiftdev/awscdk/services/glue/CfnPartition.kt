@@ -93,7 +93,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPartition(
   cdkObject: software.amazon.awscdk.services.glue.CfnPartition,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -438,7 +439,8 @@ public open class CfnPartition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty,
-    ) : CdkObject(cdkObject), ColumnProperty {
+    ) : CdkObject(cdkObject),
+        ColumnProperty {
       /**
        * A free-form text comment.
        *
@@ -555,7 +557,8 @@ public open class CfnPartition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnPartition.OrderProperty,
-    ) : CdkObject(cdkObject), OrderProperty {
+    ) : CdkObject(cdkObject),
+        OrderProperty {
       /**
        * The name of the column.
        *
@@ -797,7 +800,8 @@ public open class CfnPartition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty,
-    ) : CdkObject(cdkObject), PartitionInputProperty {
+    ) : CdkObject(cdkObject),
+        PartitionInputProperty {
       /**
        * These key-value pairs define partition parameters.
        *
@@ -952,7 +956,8 @@ public open class CfnPartition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty,
-    ) : CdkObject(cdkObject), SchemaIdProperty {
+    ) : CdkObject(cdkObject),
+        SchemaIdProperty {
       /**
        * The name of the schema registry that contains the schema.
        *
@@ -1140,7 +1145,8 @@ public open class CfnPartition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty,
-    ) : CdkObject(cdkObject), SchemaReferenceProperty {
+    ) : CdkObject(cdkObject),
+        SchemaReferenceProperty {
       /**
        * A structure that contains schema identity fields.
        *
@@ -1285,7 +1291,8 @@ public open class CfnPartition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty,
-    ) : CdkObject(cdkObject), SerdeInfoProperty {
+    ) : CdkObject(cdkObject),
+        SerdeInfoProperty {
       /**
        * Name of the SerDe.
        *
@@ -1455,7 +1462,8 @@ public open class CfnPartition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty,
-    ) : CdkObject(cdkObject), SkewedInfoProperty {
+    ) : CdkObject(cdkObject),
+        SkewedInfoProperty {
       /**
        * A list of names of columns that contain skewed values.
        *
@@ -2017,7 +2025,8 @@ public open class CfnPartition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty,
-    ) : CdkObject(cdkObject), StorageDescriptorProperty {
+    ) : CdkObject(cdkObject),
+        StorageDescriptorProperty {
       /**
        * A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
        *

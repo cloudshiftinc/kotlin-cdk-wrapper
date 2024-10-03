@@ -47,13 +47,13 @@ public interface CfnInstanceConnectEndpointProps {
   public fun clientToken(): String? = unwrap(this).getClientToken()
 
   /**
-   * Indicates whether your client's IP address is preserved as the source. The value is `true` or
-   * `false` .
+   * Indicates whether the client IP address is preserved as the source. The following are the
+   * possible values.
    *
-   * * If `true` , your client's IP address is used when you connect to a resource.
-   * * If `false` , the elastic network interface IP address is used when you connect to a resource.
+   * * `true` - Use the client IP address as the source.
+   * * `false` - Use the network interface IP address as the source.
    *
-   * Default: `true`
+   * Default: `false`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instanceconnectendpoint.html#cfn-ec2-instanceconnectendpoint-preserveclientip)
    */
@@ -95,24 +95,22 @@ public interface CfnInstanceConnectEndpointProps {
     public fun clientToken(clientToken: String)
 
     /**
-     * @param preserveClientIp Indicates whether your client's IP address is preserved as the
-     * source. The value is `true` or `false` .
-     * * If `true` , your client's IP address is used when you connect to a resource.
-     * * If `false` , the elastic network interface IP address is used when you connect to a
-     * resource.
+     * @param preserveClientIp Indicates whether the client IP address is preserved as the source.
+     * The following are the possible values.
+     * * `true` - Use the client IP address as the source.
+     * * `false` - Use the network interface IP address as the source.
      *
-     * Default: `true`
+     * Default: `false`
      */
     public fun preserveClientIp(preserveClientIp: Boolean)
 
     /**
-     * @param preserveClientIp Indicates whether your client's IP address is preserved as the
-     * source. The value is `true` or `false` .
-     * * If `true` , your client's IP address is used when you connect to a resource.
-     * * If `false` , the elastic network interface IP address is used when you connect to a
-     * resource.
+     * @param preserveClientIp Indicates whether the client IP address is preserved as the source.
+     * The following are the possible values.
+     * * `true` - Use the client IP address as the source.
+     * * `false` - Use the network interface IP address as the source.
      *
-     * Default: `true`
+     * Default: `false`
      */
     public fun preserveClientIp(preserveClientIp: IResolvable)
 
@@ -160,26 +158,24 @@ public interface CfnInstanceConnectEndpointProps {
     }
 
     /**
-     * @param preserveClientIp Indicates whether your client's IP address is preserved as the
-     * source. The value is `true` or `false` .
-     * * If `true` , your client's IP address is used when you connect to a resource.
-     * * If `false` , the elastic network interface IP address is used when you connect to a
-     * resource.
+     * @param preserveClientIp Indicates whether the client IP address is preserved as the source.
+     * The following are the possible values.
+     * * `true` - Use the client IP address as the source.
+     * * `false` - Use the network interface IP address as the source.
      *
-     * Default: `true`
+     * Default: `false`
      */
     override fun preserveClientIp(preserveClientIp: Boolean) {
       cdkBuilder.preserveClientIp(preserveClientIp)
     }
 
     /**
-     * @param preserveClientIp Indicates whether your client's IP address is preserved as the
-     * source. The value is `true` or `false` .
-     * * If `true` , your client's IP address is used when you connect to a resource.
-     * * If `false` , the elastic network interface IP address is used when you connect to a
-     * resource.
+     * @param preserveClientIp Indicates whether the client IP address is preserved as the source.
+     * The following are the possible values.
+     * * `true` - Use the client IP address as the source.
+     * * `false` - Use the network interface IP address as the source.
      *
-     * Default: `true`
+     * Default: `false`
      */
     override fun preserveClientIp(preserveClientIp: IResolvable) {
       cdkBuilder.preserveClientIp(preserveClientIp.let(IResolvable.Companion::unwrap))
@@ -227,7 +223,8 @@ public interface CfnInstanceConnectEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpointProps,
-  ) : CdkObject(cdkObject), CfnInstanceConnectEndpointProps {
+  ) : CdkObject(cdkObject),
+      CfnInstanceConnectEndpointProps {
     /**
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.
      *
@@ -236,14 +233,13 @@ public interface CfnInstanceConnectEndpointProps {
     override fun clientToken(): String? = unwrap(this).getClientToken()
 
     /**
-     * Indicates whether your client's IP address is preserved as the source. The value is `true` or
-     * `false` .
+     * Indicates whether the client IP address is preserved as the source. The following are the
+     * possible values.
      *
-     * * If `true` , your client's IP address is used when you connect to a resource.
-     * * If `false` , the elastic network interface IP address is used when you connect to a
-     * resource.
+     * * `true` - Use the client IP address as the source.
+     * * `false` - Use the network interface IP address as the source.
      *
-     * Default: `true`
+     * Default: `false`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instanceconnectendpoint.html#cfn-ec2-instanceconnectendpoint-preserveclientip)
      */

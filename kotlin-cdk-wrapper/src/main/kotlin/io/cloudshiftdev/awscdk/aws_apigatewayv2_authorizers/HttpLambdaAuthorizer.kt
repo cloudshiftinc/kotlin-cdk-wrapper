@@ -40,7 +40,8 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
  */
 public open class HttpLambdaAuthorizer(
   cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizer,
-) : CdkObject(cdkObject), IHttpRouteAuthorizer {
+) : CdkObject(cdkObject),
+    IHttpRouteAuthorizer {
   public constructor(id: String, handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizer(id,
       handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))

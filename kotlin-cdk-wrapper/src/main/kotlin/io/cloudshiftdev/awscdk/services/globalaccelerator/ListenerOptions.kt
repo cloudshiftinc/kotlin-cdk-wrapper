@@ -172,7 +172,8 @@ public interface ListenerOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.ListenerOptions,
-  ) : CdkObject(cdkObject), ListenerOptions {
+  ) : CdkObject(cdkObject),
+      ListenerOptions {
     /**
      * Client affinity to direct all requests from a user to the same endpoint.
      *

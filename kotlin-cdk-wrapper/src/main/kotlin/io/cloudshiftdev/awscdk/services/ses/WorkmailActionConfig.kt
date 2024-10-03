@@ -80,7 +80,8 @@ public interface WorkmailActionConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.WorkmailActionConfig,
-  ) : CdkObject(cdkObject), WorkmailActionConfig {
+  ) : CdkObject(cdkObject),
+      WorkmailActionConfig {
     /**
      * The Amazon Resource Name (ARN) of the Amazon WorkMail organization.
      */

@@ -244,7 +244,8 @@ public interface CreateAlarmOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.CreateAlarmOptions,
-  ) : CdkObject(cdkObject), CreateAlarmOptions {
+  ) : CdkObject(cdkObject),
+      CreateAlarmOptions {
     /**
      * Whether the actions for this alarm are enabled.
      *

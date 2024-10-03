@@ -64,7 +64,7 @@ public interface AddNetworkTargetsProps {
   public fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
 
   /**
-   * The port on which the listener listens for requests.
+   * The port on which the target receives traffic.
    *
    * Default: Determined from protocol if known
    */
@@ -138,7 +138,7 @@ public interface AddNetworkTargetsProps {
     public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit)
 
     /**
-     * @param port The port on which the listener listens for requests. 
+     * @param port The port on which the target receives traffic. 
      */
     public fun port(port: Number)
 
@@ -212,7 +212,7 @@ public interface AddNetworkTargetsProps {
         healthCheck(HealthCheck(healthCheck))
 
     /**
-     * @param port The port on which the listener listens for requests. 
+     * @param port The port on which the target receives traffic. 
      */
     override fun port(port: Number) {
       cdkBuilder.port(port)
@@ -275,7 +275,8 @@ public interface AddNetworkTargetsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkTargetsProps,
-  ) : CdkObject(cdkObject), AddNetworkTargetsProps {
+  ) : CdkObject(cdkObject),
+      AddNetworkTargetsProps {
     /**
      * The amount of time for Elastic Load Balancing to wait before deregistering a target.
      *
@@ -297,7 +298,7 @@ public interface AddNetworkTargetsProps {
     override fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
 
     /**
-     * The port on which the listener listens for requests.
+     * The port on which the target receives traffic.
      *
      * Default: Determined from protocol if known
      */

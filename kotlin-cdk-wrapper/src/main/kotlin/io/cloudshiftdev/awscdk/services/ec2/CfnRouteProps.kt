@@ -376,7 +376,8 @@ public interface CfnRouteProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnRouteProps,
-  ) : CdkObject(cdkObject), CfnRouteProps {
+  ) : CdkObject(cdkObject),
+      CfnRouteProps {
     /**
      * The ID of the carrier gateway.
      *

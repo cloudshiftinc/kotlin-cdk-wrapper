@@ -30,7 +30,8 @@ import io.cloudshiftdev.awscdk.services.route53.IRecordSet
  */
 public open class ApiGatewayDomain(
   cdkObject: software.amazon.awscdk.services.route53.targets.ApiGatewayDomain,
-) : CdkObject(cdkObject), IAliasRecordTarget {
+) : CdkObject(cdkObject),
+    IAliasRecordTarget {
   public constructor(domainName: IDomainName) :
       this(software.amazon.awscdk.services.route53.targets.ApiGatewayDomain(domainName.let(IDomainName.Companion::unwrap))
   )

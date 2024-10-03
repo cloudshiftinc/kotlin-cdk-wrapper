@@ -55,7 +55,8 @@ public interface ActionConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.ActionConfig,
-  ) : CdkObject(cdkObject), ActionConfig {
+  ) : CdkObject(cdkObject),
+      ActionConfig {
     /**
      *
      */

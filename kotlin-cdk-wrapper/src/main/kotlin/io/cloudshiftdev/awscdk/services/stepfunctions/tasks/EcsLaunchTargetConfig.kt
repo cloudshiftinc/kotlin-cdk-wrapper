@@ -63,7 +63,8 @@ public interface EcsLaunchTargetConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig,
-  ) : CdkObject(cdkObject), EcsLaunchTargetConfig {
+  ) : CdkObject(cdkObject),
+      EcsLaunchTargetConfig {
     /**
      * Additional parameters to pass to the base task.
      *

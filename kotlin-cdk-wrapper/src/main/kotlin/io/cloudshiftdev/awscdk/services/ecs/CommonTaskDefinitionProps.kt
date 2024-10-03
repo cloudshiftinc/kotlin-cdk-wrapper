@@ -217,7 +217,8 @@ public interface CommonTaskDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.CommonTaskDefinitionProps,
-  ) : CdkObject(cdkObject), CommonTaskDefinitionProps {
+  ) : CdkObject(cdkObject),
+      CommonTaskDefinitionProps {
     /**
      * The name of the IAM task execution role that grants the ECS agent permission to call AWS APIs
      * on your behalf.

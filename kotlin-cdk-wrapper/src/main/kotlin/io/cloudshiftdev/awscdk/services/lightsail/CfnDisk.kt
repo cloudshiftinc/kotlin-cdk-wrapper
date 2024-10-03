@@ -59,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDisk(
   cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -703,7 +705,8 @@ public open class CfnDisk(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty,
-    ) : CdkObject(cdkObject), AddOnProperty {
+    ) : CdkObject(cdkObject),
+        AddOnProperty {
       /**
        * The add-on type (for example, `AutoSnapshot` ).
        *
@@ -823,7 +826,8 @@ public open class CfnDisk(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty,
-    ) : CdkObject(cdkObject), AutoSnapshotAddOnProperty {
+    ) : CdkObject(cdkObject),
+        AutoSnapshotAddOnProperty {
       /**
        * The daily time when an automatic snapshot will be created.
        *
@@ -930,7 +934,8 @@ public open class CfnDisk(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty,
-    ) : CdkObject(cdkObject), LocationProperty {
+    ) : CdkObject(cdkObject),
+        LocationProperty {
       /**
        * The Availability Zone where the disk is located.
        *

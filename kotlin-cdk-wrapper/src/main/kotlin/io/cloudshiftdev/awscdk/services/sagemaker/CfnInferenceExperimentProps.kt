@@ -559,7 +559,8 @@ public interface CfnInferenceExperimentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperimentProps,
-  ) : CdkObject(cdkObject), CfnInferenceExperimentProps {
+  ) : CdkObject(cdkObject),
+      CfnInferenceExperimentProps {
     /**
      * The Amazon S3 location and configuration for storing inference request and response data.
      *

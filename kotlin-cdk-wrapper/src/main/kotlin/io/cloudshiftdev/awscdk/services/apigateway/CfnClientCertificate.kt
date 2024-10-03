@@ -39,7 +39,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnClientCertificate(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnClientCertificate,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnClientCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

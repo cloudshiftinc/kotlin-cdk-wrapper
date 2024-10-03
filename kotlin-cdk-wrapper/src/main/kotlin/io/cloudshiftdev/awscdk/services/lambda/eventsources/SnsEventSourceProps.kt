@@ -91,7 +91,8 @@ public interface SnsEventSourceProps : LambdaSubscriptionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsEventSourceProps,
-  ) : CdkObject(cdkObject), SnsEventSourceProps {
+  ) : CdkObject(cdkObject),
+      SnsEventSourceProps {
     /**
      * Queue to be used as dead letter queue.
      *

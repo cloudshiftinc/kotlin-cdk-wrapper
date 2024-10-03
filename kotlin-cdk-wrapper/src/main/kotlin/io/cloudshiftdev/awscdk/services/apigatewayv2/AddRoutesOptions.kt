@@ -177,7 +177,8 @@ public interface AddRoutesOptions : BatchHttpRouteOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.AddRoutesOptions,
-  ) : CdkObject(cdkObject), AddRoutesOptions {
+  ) : CdkObject(cdkObject),
+      AddRoutesOptions {
     /**
      * The list of OIDC scopes to include in the authorization.
      *

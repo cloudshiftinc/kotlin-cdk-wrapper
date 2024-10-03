@@ -80,7 +80,8 @@ public interface EcsMachineImage {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.EcsMachineImage,
-  ) : CdkObject(cdkObject), EcsMachineImage {
+  ) : CdkObject(cdkObject),
+      EcsMachineImage {
     /**
      * The machine image to use.
      *

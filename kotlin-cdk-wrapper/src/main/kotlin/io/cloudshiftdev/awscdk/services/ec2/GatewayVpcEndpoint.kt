@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class GatewayVpcEndpoint(
   cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpoint,
-) : VpcEndpoint(cdkObject), IGatewayVpcEndpoint {
+) : VpcEndpoint(cdkObject),
+    IGatewayVpcEndpoint {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

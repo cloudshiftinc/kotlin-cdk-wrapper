@@ -131,6 +131,14 @@ public interface ICluster : IResource, IConnectable {
       ServiceAccount
 
   /**
+   * The authentication mode for the cluster.
+   *
+   * Default: AuthenticationMode.CONFIG_MAP
+   */
+  public fun authenticationMode(): AuthenticationMode? =
+      unwrap(this).getAuthenticationMode()?.let(AuthenticationMode::wrap)
+
+  /**
    * An AWS Lambda layer that contains the `aws` CLI.
    *
    * If not defined, a default layer will be used containing the AWS CLI 1.x.
@@ -237,6 +245,21 @@ public interface ICluster : IResource, IConnectable {
       options: AutoScalingGroupOptions.Builder.() -> Unit)
 
   /**
+   * The EKS Pod Identity Agent addon for the EKS cluster.
+   *
+   * The EKS Pod Identity Agent is responsible for managing the temporary credentials
+   * used by pods in the cluster to access AWS resources. It runs as a DaemonSet on
+   * each node and provides the necessary credentials to the pods based on their
+   * associated service account.
+   *
+   * This property returns the `CfnAddon` resource representing the EKS Pod Identity
+   * Agent addon. If the addon has not been created yet, it will be created and
+   * returned.
+   */
+  public fun eksPodIdentityAgent(): IAddon? =
+      unwrap(this).getEksPodIdentityAgent()?.let(IAddon::wrap)
+
+  /**
    * Specify which IP family is used to assign Kubernetes pod and service IP addresses.
    *
    * Default: - IpFamily.IP_V4
@@ -336,7 +359,8 @@ public interface ICluster : IResource, IConnectable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.ICluster,
-  ) : CdkObject(cdkObject), ICluster {
+  ) : CdkObject(cdkObject),
+      ICluster {
     /**
      * Defines a CDK8s chart in this cluster.
      *
@@ -464,6 +488,14 @@ public interface ICluster : IResource, IConnectable {
     }
 
     /**
+     * The authentication mode for the cluster.
+     *
+     * Default: AuthenticationMode.CONFIG_MAP
+     */
+    override fun authenticationMode(): AuthenticationMode? =
+        unwrap(this).getAuthenticationMode()?.let(AuthenticationMode::wrap)
+
+    /**
      * An AWS Lambda layer that contains the `aws` CLI.
      *
      * If not defined, a default layer will be used containing the AWS CLI 1.x.
@@ -583,6 +615,21 @@ public interface ICluster : IResource, IConnectable {
      * The network connections associated with this resource.
      */
     override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
+
+    /**
+     * The EKS Pod Identity Agent addon for the EKS cluster.
+     *
+     * The EKS Pod Identity Agent is responsible for managing the temporary credentials
+     * used by pods in the cluster to access AWS resources. It runs as a DaemonSet on
+     * each node and provides the necessary credentials to the pods based on their
+     * associated service account.
+     *
+     * This property returns the `CfnAddon` resource representing the EKS Pod Identity
+     * Agent addon. If the addon has not been created yet, it will be created and
+     * returned.
+     */
+    override fun eksPodIdentityAgent(): IAddon? =
+        unwrap(this).getEksPodIdentityAgent()?.let(IAddon::wrap)
 
     /**
      * The environment this resource belongs to.

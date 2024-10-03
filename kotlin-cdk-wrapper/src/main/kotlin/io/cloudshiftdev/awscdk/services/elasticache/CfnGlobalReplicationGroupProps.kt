@@ -55,7 +55,8 @@ public interface CfnGlobalReplicationGroupProps {
    * Specifies whether a read-only replica is automatically promoted to read/write primary if the
    * existing primary fails.
    *
-   * `AutomaticFailoverEnabled` must be enabled for Redis (cluster mode enabled) replication groups.
+   * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
+   * groups.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-automaticfailoverenabled)
    */
@@ -78,7 +79,7 @@ public interface CfnGlobalReplicationGroupProps {
   public fun cacheParameterGroupName(): String? = unwrap(this).getCacheParameterGroupName()
 
   /**
-   * The Elasticache Redis engine version.
+   * The Elasticache Redis OSS engine version.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-engineversion)
    */
@@ -131,7 +132,7 @@ public interface CfnGlobalReplicationGroupProps {
     /**
      * @param automaticFailoverEnabled Specifies whether a read-only replica is automatically
      * promoted to read/write primary if the existing primary fails.
-     * `AutomaticFailoverEnabled` must be enabled for Redis (cluster mode enabled) replication
+     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
      * groups.
      */
     public fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean)
@@ -139,7 +140,7 @@ public interface CfnGlobalReplicationGroupProps {
     /**
      * @param automaticFailoverEnabled Specifies whether a read-only replica is automatically
      * promoted to read/write primary if the existing primary fails.
-     * `AutomaticFailoverEnabled` must be enabled for Redis (cluster mode enabled) replication
+     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
      * groups.
      */
     public fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable)
@@ -157,7 +158,7 @@ public interface CfnGlobalReplicationGroupProps {
     public fun cacheParameterGroupName(cacheParameterGroupName: String)
 
     /**
-     * @param engineVersion The Elasticache Redis engine version.
+     * @param engineVersion The Elasticache Redis OSS engine version.
      */
     public fun engineVersion(engineVersion: String)
 
@@ -216,7 +217,7 @@ public interface CfnGlobalReplicationGroupProps {
     /**
      * @param automaticFailoverEnabled Specifies whether a read-only replica is automatically
      * promoted to read/write primary if the existing primary fails.
-     * `AutomaticFailoverEnabled` must be enabled for Redis (cluster mode enabled) replication
+     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
      * groups.
      */
     override fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean) {
@@ -226,7 +227,7 @@ public interface CfnGlobalReplicationGroupProps {
     /**
      * @param automaticFailoverEnabled Specifies whether a read-only replica is automatically
      * promoted to read/write primary if the existing primary fails.
-     * `AutomaticFailoverEnabled` must be enabled for Redis (cluster mode enabled) replication
+     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
      * groups.
      */
     override fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
@@ -250,7 +251,7 @@ public interface CfnGlobalReplicationGroupProps {
     }
 
     /**
-     * @param engineVersion The Elasticache Redis engine version.
+     * @param engineVersion The Elasticache Redis OSS engine version.
      */
     override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
@@ -323,12 +324,13 @@ public interface CfnGlobalReplicationGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroupProps,
-  ) : CdkObject(cdkObject), CfnGlobalReplicationGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnGlobalReplicationGroupProps {
     /**
      * Specifies whether a read-only replica is automatically promoted to read/write primary if the
      * existing primary fails.
      *
-     * `AutomaticFailoverEnabled` must be enabled for Redis (cluster mode enabled) replication
+     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
      * groups.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-automaticfailoverenabled)
@@ -352,7 +354,7 @@ public interface CfnGlobalReplicationGroupProps {
     override fun cacheParameterGroupName(): String? = unwrap(this).getCacheParameterGroupName()
 
     /**
-     * The Elasticache Redis engine version.
+     * The Elasticache Redis OSS engine version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-engineversion)
      */

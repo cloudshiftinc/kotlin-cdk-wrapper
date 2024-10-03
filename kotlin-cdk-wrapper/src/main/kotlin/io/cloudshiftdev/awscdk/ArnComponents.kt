@@ -12,25 +12,30 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * PublicHostedZone subZone = PublicHostedZone.Builder.create(this, "SubZone")
- * .zoneName("sub.someexample.com")
- * .build();
- * // import the delegation role by constructing the roleArn
- * String delegationRoleArn = Stack.of(this).formatArn(ArnComponents.builder()
- * .region("") // IAM is global in each partition
- * .service("iam")
- * .account("parent-account-id")
- * .resource("role")
- * .resourceName("MyDelegationRole")
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer;
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration;
+ * // This function handles your connect route
+ * Function connectHandler;
+ * WebSocketApi webSocketApi = new WebSocketApi(this, "WebSocketApi");
+ * webSocketApi.addRoute("$connect", WebSocketRouteOptions.builder()
+ * .integration(new WebSocketLambdaIntegration("Integration", connectHandler))
+ * .authorizer(new WebSocketIamAuthorizer())
  * .build());
- * IRole delegationRole = Role.fromRoleArn(this, "DelegationRole", delegationRoleArn);
- * // create the record
- * // create the record
- * CrossAccountZoneDelegationRecord.Builder.create(this, "delegate")
- * .delegatedZone(subZone)
- * .parentHostedZoneName("someexample.com") // or you can use parentHostedZoneId
- * .delegationRole(delegationRole)
- * .build();
+ * // Create an IAM user (identity)
+ * User user = new User(this, "User");
+ * String webSocketArn = Stack.of(this).formatArn(ArnComponents.builder()
+ * .service("execute-api")
+ * .resource(webSocketApi.getApiId())
+ * .build());
+ * // Grant access to the IAM user
+ * user.attachInlinePolicy(Policy.Builder.create(this, "AllowInvoke")
+ * .statements(List.of(
+ * PolicyStatement.Builder.create()
+ * .actions(List.of("execute-api:Invoke"))
+ * .effect(Effect.ALLOW)
+ * .resources(List.of(webSocketArn))
+ * .build()))
+ * .build());
  * ```
  */
 public interface ArnComponents {
@@ -88,7 +93,7 @@ public interface ArnComponents {
 
   /**
    * The service namespace that identifies the AWS product (for example, 's3', 'iam',
-   * 'codepipline').
+   * 'codepipeline').
    */
   public fun service(): String
 
@@ -139,7 +144,7 @@ public interface ArnComponents {
 
     /**
      * @param service The service namespace that identifies the AWS product (for example, 's3',
-     * 'iam', 'codepipline'). 
+     * 'iam', 'codepipeline'). 
      */
     public fun service(service: String)
   }
@@ -202,7 +207,7 @@ public interface ArnComponents {
 
     /**
      * @param service The service namespace that identifies the AWS product (for example, 's3',
-     * 'iam', 'codepipline'). 
+     * 'iam', 'codepipeline'). 
      */
     override fun service(service: String) {
       cdkBuilder.service(service)
@@ -213,7 +218,8 @@ public interface ArnComponents {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ArnComponents,
-  ) : CdkObject(cdkObject), ArnComponents {
+  ) : CdkObject(cdkObject),
+      ArnComponents {
     /**
      * The ID of the AWS account that owns the resource, without the hyphens.
      *
@@ -268,7 +274,7 @@ public interface ArnComponents {
 
     /**
      * The service namespace that identifies the AWS product (for example, 's3', 'iam',
-     * 'codepipline').
+     * 'codepipeline').
      */
     override fun service(): String = unwrap(this).getService()
   }

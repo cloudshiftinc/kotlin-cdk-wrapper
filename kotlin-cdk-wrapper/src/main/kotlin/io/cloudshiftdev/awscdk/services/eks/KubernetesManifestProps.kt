@@ -264,7 +264,8 @@ public interface KubernetesManifestProps : KubernetesManifestOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.KubernetesManifestProps,
-  ) : CdkObject(cdkObject), KubernetesManifestProps {
+  ) : CdkObject(cdkObject),
+      KubernetesManifestProps {
     /**
      * The EKS cluster to apply this manifest to.
      *

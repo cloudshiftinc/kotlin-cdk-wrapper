@@ -85,7 +85,8 @@ public interface IStackSynthesizer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IStackSynthesizer,
-  ) : CdkObject(cdkObject), IStackSynthesizer {
+  ) : CdkObject(cdkObject),
+      IStackSynthesizer {
     /**
      * Register a Docker Image Asset.
      *

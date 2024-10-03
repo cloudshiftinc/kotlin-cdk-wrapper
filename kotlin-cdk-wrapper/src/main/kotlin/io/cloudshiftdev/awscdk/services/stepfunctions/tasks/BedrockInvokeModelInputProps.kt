@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.Location
+import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -15,17 +16,13 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
- * BedrockInvokeModelInputProps bedrockInvokeModelInputProps =
- * BedrockInvokeModelInputProps.builder()
- * .s3Location(Location.builder()
- * .bucketName("bucketName")
- * .objectKey("objectKey")
- * // the properties below are optional
- * .objectVersion("objectVersion")
- * .build())
+ * import io.cloudshiftdev.awscdk.services.bedrock.*;
+ * FoundationModel model = FoundationModel.fromFoundationModelId(this, "Model",
+ * FoundationModelIdentifier.AMAZON_TITAN_TEXT_G1_EXPRESS_V1);
+ * BedrockInvokeModel task = BedrockInvokeModel.Builder.create(this, "Prompt Model")
+ * .model(model)
+ * .input(BedrockInvokeModelInputProps.builder().s3InputUri(JsonPath.stringAt("$.prompt")).build())
+ * .output(BedrockInvokeModelOutputProps.builder().s3OutputUri(JsonPath.stringAt("$.prompt")).build())
  * .build();
  * ```
  *
@@ -33,11 +30,20 @@ import kotlin.jvm.JvmName
  */
 public interface BedrockInvokeModelInputProps {
   /**
+   * The source location where the API response is written.
+   *
+   * This field can be used to specify s3 URI in the form of token
+   *
+   * Default: - The API response body is returned in the result.
+   */
+  public fun s3InputUri(): String? = unwrap(this).getS3InputUri()
+
+  /**
    * S3 object to retrieve the input data from.
    *
    * If the S3 location is not set, then the Body must be set.
    *
-   * Default: Input data is retrieved from the `body` field
+   * Default: - Input data is retrieved from the `body` field
    */
   public fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
 
@@ -46,6 +52,12 @@ public interface BedrockInvokeModelInputProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param s3InputUri The source location where the API response is written.
+     * This field can be used to specify s3 URI in the form of token
+     */
+    public fun s3InputUri(s3InputUri: String)
+
     /**
      * @param s3Location S3 object to retrieve the input data from.
      * If the S3 location is not set, then the Body must be set.
@@ -65,6 +77,14 @@ public interface BedrockInvokeModelInputProps {
     private val cdkBuilder:
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelInputProps.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelInputProps.builder()
+
+    /**
+     * @param s3InputUri The source location where the API response is written.
+     * This field can be used to specify s3 URI in the form of token
+     */
+    override fun s3InputUri(s3InputUri: String) {
+      cdkBuilder.s3InputUri(s3InputUri)
+    }
 
     /**
      * @param s3Location S3 object to retrieve the input data from.
@@ -90,13 +110,23 @@ public interface BedrockInvokeModelInputProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelInputProps,
-  ) : CdkObject(cdkObject), BedrockInvokeModelInputProps {
+  ) : CdkObject(cdkObject),
+      BedrockInvokeModelInputProps {
+    /**
+     * The source location where the API response is written.
+     *
+     * This field can be used to specify s3 URI in the form of token
+     *
+     * Default: - The API response body is returned in the result.
+     */
+    override fun s3InputUri(): String? = unwrap(this).getS3InputUri()
+
     /**
      * S3 object to retrieve the input data from.
      *
      * If the S3 location is not set, then the Body must be set.
      *
-     * Default: Input data is retrieved from the `body` field
+     * Default: - Input data is retrieved from the `body` field
      */
     override fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
   }

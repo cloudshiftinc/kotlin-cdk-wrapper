@@ -23,6 +23,7 @@ import kotlin.Unit
  * .destination(logSubscriptionDestination)
  * .filterPattern(filterPattern)
  * // the properties below are optional
+ * .distribution(Distribution.BY_LOG_STREAM)
  * .filterName("filterName")
  * .build();
  * ```
@@ -34,6 +35,15 @@ public interface SubscriptionFilterOptions {
    * For example, a Kinesis stream or a Lambda function.
    */
   public fun destination(): ILogSubscriptionDestination
+
+  /**
+   * The method used to distribute log data to the destination.
+   *
+   * This property can only be used with KinesisDestination.
+   *
+   * Default: Distribution.BY_LOG_STREAM
+   */
+  public fun distribution(): Distribution? = unwrap(this).getDistribution()?.let(Distribution::wrap)
 
   /**
    * The name of the subscription filter.
@@ -59,6 +69,12 @@ public interface SubscriptionFilterOptions {
     public fun destination(destination: ILogSubscriptionDestination)
 
     /**
+     * @param distribution The method used to distribute log data to the destination.
+     * This property can only be used with KinesisDestination.
+     */
+    public fun distribution(distribution: Distribution)
+
+    /**
      * @param filterName The name of the subscription filter.
      */
     public fun filterName(filterName: String)
@@ -82,6 +98,14 @@ public interface SubscriptionFilterOptions {
     }
 
     /**
+     * @param distribution The method used to distribute log data to the destination.
+     * This property can only be used with KinesisDestination.
+     */
+    override fun distribution(distribution: Distribution) {
+      cdkBuilder.distribution(distribution.let(Distribution.Companion::unwrap))
+    }
+
+    /**
      * @param filterName The name of the subscription filter.
      */
     override fun filterName(filterName: String) {
@@ -101,7 +125,8 @@ public interface SubscriptionFilterOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.SubscriptionFilterOptions,
-  ) : CdkObject(cdkObject), SubscriptionFilterOptions {
+  ) : CdkObject(cdkObject),
+      SubscriptionFilterOptions {
     /**
      * The destination to send the filtered events to.
      *
@@ -109,6 +134,16 @@ public interface SubscriptionFilterOptions {
      */
     override fun destination(): ILogSubscriptionDestination =
         unwrap(this).getDestination().let(ILogSubscriptionDestination::wrap)
+
+    /**
+     * The method used to distribute log data to the destination.
+     *
+     * This property can only be used with KinesisDestination.
+     *
+     * Default: Distribution.BY_LOG_STREAM
+     */
+    override fun distribution(): Distribution? =
+        unwrap(this).getDistribution()?.let(Distribution::wrap)
 
     /**
      * The name of the subscription filter.

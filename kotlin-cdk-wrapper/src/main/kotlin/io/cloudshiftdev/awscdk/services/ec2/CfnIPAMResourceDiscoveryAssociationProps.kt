@@ -129,7 +129,8 @@ public interface CfnIPAMResourceDiscoveryAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociationProps,
-  ) : CdkObject(cdkObject), CfnIPAMResourceDiscoveryAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnIPAMResourceDiscoveryAssociationProps {
     /**
      * The IPAM ID.
      *

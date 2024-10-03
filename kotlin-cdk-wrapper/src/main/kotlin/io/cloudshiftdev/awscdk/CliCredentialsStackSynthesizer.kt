@@ -45,7 +45,9 @@ import kotlin.jvm.JvmName
  */
 public open class CliCredentialsStackSynthesizer(
   cdkObject: software.amazon.awscdk.CliCredentialsStackSynthesizer,
-) : StackSynthesizer(cdkObject), IReusableStackSynthesizer, IBoundStackSynthesizer {
+) : StackSynthesizer(cdkObject),
+    IReusableStackSynthesizer,
+    IBoundStackSynthesizer {
   public constructor() : this(software.amazon.awscdk.CliCredentialsStackSynthesizer()
   )
 

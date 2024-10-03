@@ -39,17 +39,18 @@ import kotlin.jvm.JvmName
  * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
  * .build())
  * .replicationConfigIdentifier("replicationConfigIdentifier")
- * .replicationSettings(replicationSettings)
  * .replicationType("replicationType")
- * .resourceIdentifier("resourceIdentifier")
  * .sourceEndpointArn("sourceEndpointArn")
- * .supplementalSettings(supplementalSettings)
  * .tableMappings(tableMappings)
+ * .targetEndpointArn("targetEndpointArn")
+ * // the properties below are optional
+ * .replicationSettings(replicationSettings)
+ * .resourceIdentifier("resourceIdentifier")
+ * .supplementalSettings(supplementalSettings)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
- * .targetEndpointArn("targetEndpointArn")
  * .build();
  * ```
  *
@@ -61,7 +62,7 @@ public interface CfnReplicationConfigProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-computeconfig)
    */
-  public fun computeConfig(): Any? = unwrap(this).getComputeConfig()
+  public fun computeConfig(): Any
 
   /**
    * A unique identifier that you want to use to create a `ReplicationConfigArn` that is returned as
@@ -75,7 +76,7 @@ public interface CfnReplicationConfigProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-replicationconfigidentifier)
    */
-  public fun replicationConfigIdentifier(): String? = unwrap(this).getReplicationConfigIdentifier()
+  public fun replicationConfigIdentifier(): String
 
   /**
    * Optional JSON settings for AWS DMS Serverless replications that are provisioned using this
@@ -100,7 +101,7 @@ public interface CfnReplicationConfigProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-replicationtype)
    */
-  public fun replicationType(): String? = unwrap(this).getReplicationType()
+  public fun replicationType(): String
 
   /**
    * Optional unique value or name that you set for a given resource that can be used to construct
@@ -120,7 +121,7 @@ public interface CfnReplicationConfigProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-sourceendpointarn)
    */
-  public fun sourceEndpointArn(): String? = unwrap(this).getSourceEndpointArn()
+  public fun sourceEndpointArn(): String
 
   /**
    * Optional JSON settings for specifying supplemental data.
@@ -142,7 +143,7 @@ public interface CfnReplicationConfigProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-tablemappings)
    */
-  public fun tableMappings(): Any? = unwrap(this).getTableMappings()
+  public fun tableMappings(): Any
 
   /**
    * One or more optional tags associated with resources used by the AWS DMS Serverless replication.
@@ -160,7 +161,7 @@ public interface CfnReplicationConfigProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-targetendpointarn)
    */
-  public fun targetEndpointArn(): String? = unwrap(this).getTargetEndpointArn()
+  public fun targetEndpointArn(): String
 
   /**
    * A builder for [CfnReplicationConfigProps]
@@ -169,19 +170,19 @@ public interface CfnReplicationConfigProps {
   public interface Builder {
     /**
      * @param computeConfig Configuration parameters for provisioning an AWS DMS Serverless
-     * replication.
+     * replication. 
      */
     public fun computeConfig(computeConfig: IResolvable)
 
     /**
      * @param computeConfig Configuration parameters for provisioning an AWS DMS Serverless
-     * replication.
+     * replication. 
      */
     public fun computeConfig(computeConfig: CfnReplicationConfig.ComputeConfigProperty)
 
     /**
      * @param computeConfig Configuration parameters for provisioning an AWS DMS Serverless
-     * replication.
+     * replication. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48f0a1ddb325030aa58029aeabf6302e1a395a57e340bb964b54170359f95fe0")
@@ -190,7 +191,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param replicationConfigIdentifier A unique identifier that you want to use to create a
-     * `ReplicationConfigArn` that is returned as part of the output from this action.
+     * `ReplicationConfigArn` that is returned as part of the output from this action. 
      * You can then pass this output `ReplicationConfigArn` as the value of the
      * `ReplicationConfigArn` option for other actions to identify both AWS DMS Serverless replications
      * and replication configurations that you want those actions to operate on. For some actions, you
@@ -210,7 +211,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param replicationType The type of AWS DMS Serverless replication to provision using this
-     * replication configuration.
+     * replication configuration. 
      * Possible values:
      *
      * * `"full-load"`
@@ -230,7 +231,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param sourceEndpointArn The Amazon Resource Name (ARN) of the source endpoint for this AWS
-     * DMS Serverless replication configuration.
+     * DMS Serverless replication configuration. 
      */
     public fun sourceEndpointArn(sourceEndpointArn: String)
 
@@ -243,7 +244,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param tableMappings JSON table mappings for AWS DMS Serverless replications that are
-     * provisioned using this replication configuration.
+     * provisioned using this replication configuration. 
      * For more information, see [Specifying table selection and transformations rules using
      * JSON](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.SelectionTransformation.html)
      * .
@@ -268,7 +269,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param targetEndpointArn The Amazon Resource Name (ARN) of the target endpoint for this AWS
-     * DMS serverless replication configuration.
+     * DMS serverless replication configuration. 
      */
     public fun targetEndpointArn(targetEndpointArn: String)
   }
@@ -279,7 +280,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param computeConfig Configuration parameters for provisioning an AWS DMS Serverless
-     * replication.
+     * replication. 
      */
     override fun computeConfig(computeConfig: IResolvable) {
       cdkBuilder.computeConfig(computeConfig.let(IResolvable.Companion::unwrap))
@@ -287,7 +288,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param computeConfig Configuration parameters for provisioning an AWS DMS Serverless
-     * replication.
+     * replication. 
      */
     override fun computeConfig(computeConfig: CfnReplicationConfig.ComputeConfigProperty) {
       cdkBuilder.computeConfig(computeConfig.let(CfnReplicationConfig.ComputeConfigProperty.Companion::unwrap))
@@ -295,7 +296,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param computeConfig Configuration parameters for provisioning an AWS DMS Serverless
-     * replication.
+     * replication. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48f0a1ddb325030aa58029aeabf6302e1a395a57e340bb964b54170359f95fe0")
@@ -305,7 +306,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param replicationConfigIdentifier A unique identifier that you want to use to create a
-     * `ReplicationConfigArn` that is returned as part of the output from this action.
+     * `ReplicationConfigArn` that is returned as part of the output from this action. 
      * You can then pass this output `ReplicationConfigArn` as the value of the
      * `ReplicationConfigArn` option for other actions to identify both AWS DMS Serverless replications
      * and replication configurations that you want those actions to operate on. For some actions, you
@@ -329,7 +330,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param replicationType The type of AWS DMS Serverless replication to provision using this
-     * replication configuration.
+     * replication configuration. 
      * Possible values:
      *
      * * `"full-load"`
@@ -353,7 +354,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param sourceEndpointArn The Amazon Resource Name (ARN) of the source endpoint for this AWS
-     * DMS Serverless replication configuration.
+     * DMS Serverless replication configuration. 
      */
     override fun sourceEndpointArn(sourceEndpointArn: String) {
       cdkBuilder.sourceEndpointArn(sourceEndpointArn)
@@ -370,7 +371,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param tableMappings JSON table mappings for AWS DMS Serverless replications that are
-     * provisioned using this replication configuration.
+     * provisioned using this replication configuration. 
      * For more information, see [Specifying table selection and transformations rules using
      * JSON](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.SelectionTransformation.html)
      * .
@@ -399,7 +400,7 @@ public interface CfnReplicationConfigProps {
 
     /**
      * @param targetEndpointArn The Amazon Resource Name (ARN) of the target endpoint for this AWS
-     * DMS serverless replication configuration.
+     * DMS serverless replication configuration. 
      */
     override fun targetEndpointArn(targetEndpointArn: String) {
       cdkBuilder.targetEndpointArn(targetEndpointArn)
@@ -411,13 +412,14 @@ public interface CfnReplicationConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfigProps,
-  ) : CdkObject(cdkObject), CfnReplicationConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnReplicationConfigProps {
     /**
      * Configuration parameters for provisioning an AWS DMS Serverless replication.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-computeconfig)
      */
-    override fun computeConfig(): Any? = unwrap(this).getComputeConfig()
+    override fun computeConfig(): Any = unwrap(this).getComputeConfig()
 
     /**
      * A unique identifier that you want to use to create a `ReplicationConfigArn` that is returned
@@ -431,7 +433,7 @@ public interface CfnReplicationConfigProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-replicationconfigidentifier)
      */
-    override fun replicationConfigIdentifier(): String? =
+    override fun replicationConfigIdentifier(): String =
         unwrap(this).getReplicationConfigIdentifier()
 
     /**
@@ -457,7 +459,7 @@ public interface CfnReplicationConfigProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-replicationtype)
      */
-    override fun replicationType(): String? = unwrap(this).getReplicationType()
+    override fun replicationType(): String = unwrap(this).getReplicationType()
 
     /**
      * Optional unique value or name that you set for a given resource that can be used to construct
@@ -477,7 +479,7 @@ public interface CfnReplicationConfigProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-sourceendpointarn)
      */
-    override fun sourceEndpointArn(): String? = unwrap(this).getSourceEndpointArn()
+    override fun sourceEndpointArn(): String = unwrap(this).getSourceEndpointArn()
 
     /**
      * Optional JSON settings for specifying supplemental data.
@@ -499,7 +501,7 @@ public interface CfnReplicationConfigProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-tablemappings)
      */
-    override fun tableMappings(): Any? = unwrap(this).getTableMappings()
+    override fun tableMappings(): Any = unwrap(this).getTableMappings()
 
     /**
      * One or more optional tags associated with resources used by the AWS DMS Serverless
@@ -518,7 +520,7 @@ public interface CfnReplicationConfigProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationconfig.html#cfn-dms-replicationconfig-targetendpointarn)
      */
-    override fun targetEndpointArn(): String? = unwrap(this).getTargetEndpointArn()
+    override fun targetEndpointArn(): String = unwrap(this).getTargetEndpointArn()
   }
 
   public companion object {

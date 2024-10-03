@@ -71,7 +71,8 @@ public interface OrganizationsDeploymentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.OrganizationsDeploymentProps,
-  ) : CdkObject(cdkObject), OrganizationsDeploymentProps {
+  ) : CdkObject(cdkObject),
+      OrganizationsDeploymentProps {
     /**
      * Automatically deploy to new accounts added to Organizational Units.
      *

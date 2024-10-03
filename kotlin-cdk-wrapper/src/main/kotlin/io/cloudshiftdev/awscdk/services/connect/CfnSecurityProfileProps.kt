@@ -393,7 +393,8 @@ public interface CfnSecurityProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnSecurityProfileProps,
-  ) : CdkObject(cdkObject), CfnSecurityProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnSecurityProfileProps {
     /**
      * The identifier of the hierarchy group that a security profile uses to restrict access to
      * resources in Amazon Connect.

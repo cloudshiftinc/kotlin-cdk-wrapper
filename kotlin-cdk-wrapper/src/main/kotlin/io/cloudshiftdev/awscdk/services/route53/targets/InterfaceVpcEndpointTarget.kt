@@ -26,7 +26,8 @@ import io.cloudshiftdev.awscdk.services.route53.IRecordSet
  */
 public open class InterfaceVpcEndpointTarget(
   cdkObject: software.amazon.awscdk.services.route53.targets.InterfaceVpcEndpointTarget,
-) : CdkObject(cdkObject), IAliasRecordTarget {
+) : CdkObject(cdkObject),
+    IAliasRecordTarget {
   public constructor(vpcEndpoint: InterfaceVpcEndpoint) :
       this(software.amazon.awscdk.services.route53.targets.InterfaceVpcEndpointTarget(vpcEndpoint.let(InterfaceVpcEndpoint.Companion::unwrap))
   )

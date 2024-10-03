@@ -197,7 +197,8 @@ public interface StreamProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kinesis.StreamProps,
-  ) : CdkObject(cdkObject), StreamProps {
+  ) : CdkObject(cdkObject),
+      StreamProps {
     /**
      * The kind of server-side encryption to apply to this stream.
      *

@@ -37,7 +37,8 @@ public interface ILambdaDeploymentGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaDeploymentGroup,
-  ) : CdkObject(cdkObject), ILambdaDeploymentGroup {
+  ) : CdkObject(cdkObject),
+      ILambdaDeploymentGroup {
     /**
      * The reference to the CodeDeploy Lambda Application that this Deployment Group belongs to.
      */

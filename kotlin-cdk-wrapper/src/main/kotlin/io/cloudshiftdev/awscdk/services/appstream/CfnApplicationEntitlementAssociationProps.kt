@@ -104,7 +104,8 @@ public interface CfnApplicationEntitlementAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociationProps,
-  ) : CdkObject(cdkObject), CfnApplicationEntitlementAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationEntitlementAssociationProps {
     /**
      * The identifier of the application.
      *

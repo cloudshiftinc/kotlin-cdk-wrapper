@@ -40,7 +40,7 @@ import kotlin.Unit
  * subnetcount = subnetcount + 1;
  * }
  * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
- * .version(KubernetesVersion.V1_29)
+ * .version(KubernetesVersion.V1_30)
  * .vpc(vpc)
  * .ipFamily(IpFamily.IP_V6)
  * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
@@ -311,7 +311,8 @@ public interface CfnVPCCidrBlockProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnVPCCidrBlockProps,
-  ) : CdkObject(cdkObject), CfnVPCCidrBlockProps {
+  ) : CdkObject(cdkObject),
+      CfnVPCCidrBlockProps {
     /**
      * Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC.
      *

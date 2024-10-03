@@ -60,7 +60,8 @@ public interface TransferAccelerationUrlOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions,
-  ) : CdkObject(cdkObject), TransferAccelerationUrlOptions {
+  ) : CdkObject(cdkObject),
+      TransferAccelerationUrlOptions {
     /**
      * Dual-stack support to connect to the bucket over IPv6.
      *

@@ -276,7 +276,8 @@ public interface CfnAPNSVoipSandboxChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnAPNSVoipSandboxChannelProps,
-  ) : CdkObject(cdkObject), CfnAPNSVoipSandboxChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnAPNSVoipSandboxChannelProps {
     /**
      * The unique identifier for the application that the APNs VoIP sandbox channel applies to.
      *

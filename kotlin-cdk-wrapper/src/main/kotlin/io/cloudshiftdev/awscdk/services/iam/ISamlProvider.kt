@@ -22,7 +22,8 @@ public interface ISamlProvider : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.ISamlProvider,
-  ) : CdkObject(cdkObject), ISamlProvider {
+  ) : CdkObject(cdkObject),
+      ISamlProvider {
     /**
      * Apply the given removal policy to this resource.
      *

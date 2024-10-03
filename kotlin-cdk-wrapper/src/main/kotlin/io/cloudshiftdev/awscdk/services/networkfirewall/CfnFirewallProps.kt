@@ -395,7 +395,8 @@ public interface CfnFirewallProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallProps,
-  ) : CdkObject(cdkObject), CfnFirewallProps {
+  ) : CdkObject(cdkObject),
+      CfnFirewallProps {
     /**
      * A flag indicating whether it is possible to delete the firewall.
      *

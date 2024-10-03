@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class GatewayRoute(
   cdkObject: software.amazon.awscdk.services.appmesh.GatewayRoute,
-) : Resource(cdkObject), IGatewayRoute {
+) : Resource(cdkObject),
+    IGatewayRoute {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

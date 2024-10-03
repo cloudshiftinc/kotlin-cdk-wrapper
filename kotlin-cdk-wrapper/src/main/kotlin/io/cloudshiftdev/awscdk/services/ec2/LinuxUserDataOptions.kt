@@ -58,7 +58,8 @@ public interface LinuxUserDataOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.LinuxUserDataOptions,
-  ) : CdkObject(cdkObject), LinuxUserDataOptions {
+  ) : CdkObject(cdkObject),
+      LinuxUserDataOptions {
     /**
      * Shebang for the UserData script.
      *

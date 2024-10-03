@@ -75,7 +75,8 @@ public interface GatewayRouteAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteAttributes,
-  ) : CdkObject(cdkObject), GatewayRouteAttributes {
+  ) : CdkObject(cdkObject),
+      GatewayRouteAttributes {
     /**
      * The name of the GatewayRoute.
      */

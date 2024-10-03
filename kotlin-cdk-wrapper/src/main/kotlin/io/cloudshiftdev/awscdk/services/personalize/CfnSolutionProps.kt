@@ -304,7 +304,8 @@ public interface CfnSolutionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.personalize.CfnSolutionProps,
-  ) : CdkObject(cdkObject), CfnSolutionProps {
+  ) : CdkObject(cdkObject),
+      CfnSolutionProps {
     /**
      * The Amazon Resource Name (ARN) of the dataset group that provides the training data.
      *

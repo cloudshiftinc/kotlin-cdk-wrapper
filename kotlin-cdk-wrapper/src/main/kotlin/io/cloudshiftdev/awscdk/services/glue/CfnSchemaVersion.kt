@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSchemaVersion(
   cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -329,7 +330,8 @@ public open class CfnSchemaVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersion.SchemaProperty,
-    ) : CdkObject(cdkObject), SchemaProperty {
+    ) : CdkObject(cdkObject),
+        SchemaProperty {
       /**
        * The name of the registry where the schema is stored.
        *

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda.eventsources
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
@@ -118,6 +119,16 @@ public open class KinesisEventSource(
      * @param enabled If the stream event source mapping should be enabled. 
      */
     public fun enabled(enabled: Boolean)
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria. 
+     */
+    public fun filterEncryption(filterEncryption: IKey)
 
     /**
      * Add filter criteria option.
@@ -299,6 +310,18 @@ public open class KinesisEventSource(
      */
     override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
+    }
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria. 
+     */
+    override fun filterEncryption(filterEncryption: IKey) {
+      cdkBuilder.filterEncryption(filterEncryption.let(IKey.Companion::unwrap))
     }
 
     /**

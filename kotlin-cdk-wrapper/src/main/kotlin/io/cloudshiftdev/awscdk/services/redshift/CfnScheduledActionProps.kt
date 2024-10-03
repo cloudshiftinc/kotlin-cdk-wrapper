@@ -130,7 +130,7 @@ public interface CfnScheduledActionProps {
    * A JSON format string of the Amazon Redshift API operation with input parameters.
    *
    * "
-   * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+   * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
    * ".
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-targetaction)
@@ -209,7 +209,7 @@ public interface CfnScheduledActionProps {
      * @param targetAction A JSON format string of the Amazon Redshift API operation with input
      * parameters.
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      */
     public fun targetAction(targetAction: IResolvable)
@@ -218,7 +218,7 @@ public interface CfnScheduledActionProps {
      * @param targetAction A JSON format string of the Amazon Redshift API operation with input
      * parameters.
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      */
     public fun targetAction(targetAction: CfnScheduledAction.ScheduledActionTypeProperty)
@@ -227,7 +227,7 @@ public interface CfnScheduledActionProps {
      * @param targetAction A JSON format string of the Amazon Redshift API operation with input
      * parameters.
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -323,7 +323,7 @@ public interface CfnScheduledActionProps {
      * @param targetAction A JSON format string of the Amazon Redshift API operation with input
      * parameters.
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      */
     override fun targetAction(targetAction: IResolvable) {
@@ -334,7 +334,7 @@ public interface CfnScheduledActionProps {
      * @param targetAction A JSON format string of the Amazon Redshift API operation with input
      * parameters.
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      */
     override fun targetAction(targetAction: CfnScheduledAction.ScheduledActionTypeProperty) {
@@ -345,7 +345,7 @@ public interface CfnScheduledActionProps {
      * @param targetAction A JSON format string of the Amazon Redshift API operation with input
      * parameters.
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -360,7 +360,8 @@ public interface CfnScheduledActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledActionProps,
-  ) : CdkObject(cdkObject), CfnScheduledActionProps {
+  ) : CdkObject(cdkObject),
+      CfnScheduledActionProps {
     /**
      * If true, the schedule is enabled.
      *
@@ -440,7 +441,7 @@ public interface CfnScheduledActionProps {
      * A JSON format string of the Amazon Redshift API operation with input parameters.
      *
      * "
-     * `{\"ResizeCluster\":{\"NodeType\":\"ds2.8xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
+     * `{\"ResizeCluster\":{\"NodeType\":\"ra3.4xlarge\",\"ClusterIdentifier\":\"my-test-cluster\",\"NumberOfNodes\":3}}`
      * ".
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-targetaction)

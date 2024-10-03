@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWirelessGateway(
   cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGateway,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -508,7 +510,8 @@ public open class CfnWirelessGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGateway.LoRaWANGatewayProperty,
-    ) : CdkObject(cdkObject), LoRaWANGatewayProperty {
+    ) : CdkObject(cdkObject),
+        LoRaWANGatewayProperty {
       /**
        * The gateway's EUI value.
        *

@@ -69,7 +69,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMigrationProject(
   cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.dms.CfnMigrationProject(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -910,7 +912,8 @@ public open class CfnMigrationProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject.DataProviderDescriptorProperty,
-    ) : CdkObject(cdkObject), DataProviderDescriptorProperty {
+    ) : CdkObject(cdkObject),
+        DataProviderDescriptorProperty {
       /**
        * The Amazon Resource Name (ARN) of the data provider.
        *
@@ -1037,7 +1040,8 @@ public open class CfnMigrationProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject.SchemaConversionApplicationAttributesProperty,
-    ) : CdkObject(cdkObject), SchemaConversionApplicationAttributesProperty {
+    ) : CdkObject(cdkObject),
+        SchemaConversionApplicationAttributesProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-migrationproject-schemaconversionapplicationattributes.html#cfn-dms-migrationproject-schemaconversionapplicationattributes-s3bucketpath)
        */

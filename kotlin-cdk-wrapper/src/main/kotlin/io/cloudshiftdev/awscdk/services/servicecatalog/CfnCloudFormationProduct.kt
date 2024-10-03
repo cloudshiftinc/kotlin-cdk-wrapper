@@ -74,7 +74,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCloudFormationProduct(
   cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -920,7 +922,8 @@ public open class CfnCloudFormationProduct(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty,
-    ) : CdkObject(cdkObject), CodeStarParametersProperty {
+    ) : CdkObject(cdkObject),
+        CodeStarParametersProperty {
       /**
        * The absolute path wehre the artifact resides within the repo and branch, formatted as
        * "folder/file.json.".
@@ -1059,7 +1062,8 @@ public open class CfnCloudFormationProduct(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty,
-    ) : CdkObject(cdkObject), ConnectionParametersProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionParametersProperty {
       /**
        * Provides `ConnectionType` details.
        *
@@ -1295,7 +1299,8 @@ public open class CfnCloudFormationProduct(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty,
-    ) : CdkObject(cdkObject), ProvisioningArtifactPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ProvisioningArtifactPropertiesProperty {
       /**
        * The description of the provisioning artifact, including how it differs from the previous
        * provisioning artifact.
@@ -1487,7 +1492,8 @@ public open class CfnCloudFormationProduct(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.SourceConnectionProperty,
-    ) : CdkObject(cdkObject), SourceConnectionProperty {
+    ) : CdkObject(cdkObject),
+        SourceConnectionProperty {
       /**
        * The connection details based on the connection `Type` .
        *

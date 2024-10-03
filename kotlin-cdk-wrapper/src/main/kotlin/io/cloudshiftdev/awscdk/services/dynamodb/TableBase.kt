@@ -8,8 +8,12 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.IMetric
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
+import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.iam.IResourceWithPolicy
+import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
+import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Deprecated
 import kotlin.String
@@ -21,7 +25,35 @@ import kotlin.jvm.JvmName
  */
 public abstract class TableBase(
   cdkObject: software.amazon.awscdk.services.dynamodb.TableBase,
-) : Resource(cdkObject), ITable {
+) : Resource(cdkObject),
+    ITable,
+    IResourceWithPolicy {
+  /**
+   * Adds a statement to the resource policy associated with this file system.
+   *
+   * A resource policy will be automatically created upon the first call to `addToResourcePolicy`.
+   *
+   * Note that this does not work with imported file systems.
+   *
+   * @param statement The policy statement to add. 
+   */
+  public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
+
+  /**
+   * Adds a statement to the resource policy associated with this file system.
+   *
+   * A resource policy will be automatically created upon the first call to `addToResourcePolicy`.
+   *
+   * Note that this does not work with imported file systems.
+   *
+   * @param statement The policy statement to add. 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
+  public override fun addToResourcePolicy(statement: PolicyStatement.Builder.() -> Unit):
+      AddToResourcePolicyResult = addToResourcePolicy(PolicyStatement(statement))
+
   /**
    * KMS encryption key, if this table uses a customer-managed encryption key.
    */
@@ -538,6 +570,27 @@ public abstract class TableBase(
   @JvmName("f5d5bbd29687f3904b7ec5d90b962683d72c5b8f6c61b1a25526eb0415b87f7f")
   public override fun metricUserErrors(props: MetricOptions.Builder.() -> Unit): Metric =
       metricUserErrors(MetricOptions(props))
+
+  /**
+   * Resource policy to assign to table.
+   */
+  public open fun resourcePolicy(): PolicyDocument? =
+      unwrap(this).getResourcePolicy()?.let(PolicyDocument::wrap)
+
+  /**
+   * Resource policy to assign to table.
+   */
+  public open fun resourcePolicy(`value`: PolicyDocument) {
+    unwrap(this).setResourcePolicy(`value`.let(PolicyDocument.Companion::unwrap))
+  }
+
+  /**
+   * Resource policy to assign to table.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("86a422cdfbd7ab1eb4700fbb0990116f2f653f87b45d5d6a5ce2846099e124d0")
+  public open fun resourcePolicy(`value`: PolicyDocument.Builder.() -> Unit): Unit =
+      resourcePolicy(PolicyDocument(`value`))
 
   /**
    * Arn of the dynamodb table.

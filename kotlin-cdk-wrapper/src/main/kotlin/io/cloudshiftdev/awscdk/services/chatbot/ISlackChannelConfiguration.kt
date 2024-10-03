@@ -88,7 +88,8 @@ public interface ISlackChannelConfiguration : IResource, IGrantable, INotificati
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.chatbot.ISlackChannelConfiguration,
-  ) : CdkObject(cdkObject), ISlackChannelConfiguration {
+  ) : CdkObject(cdkObject),
+      ISlackChannelConfiguration {
     /**
      * Adds a statement to the IAM role.
      *

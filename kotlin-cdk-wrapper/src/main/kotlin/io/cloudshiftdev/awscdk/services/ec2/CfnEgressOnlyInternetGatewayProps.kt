@@ -62,7 +62,8 @@ public interface CfnEgressOnlyInternetGatewayProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGatewayProps,
-  ) : CdkObject(cdkObject), CfnEgressOnlyInternetGatewayProps {
+  ) : CdkObject(cdkObject),
+      CfnEgressOnlyInternetGatewayProps {
     /**
      * The ID of the VPC for which to create the egress-only internet gateway.
      *

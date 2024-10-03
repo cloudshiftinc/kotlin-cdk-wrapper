@@ -16,7 +16,8 @@ import kotlin.String
 public interface IFargateService : IService {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.IFargateService,
-  ) : CdkObject(cdkObject), IFargateService {
+  ) : CdkObject(cdkObject),
+      IFargateService {
     /**
      * Apply the given removal policy to this resource.
      *

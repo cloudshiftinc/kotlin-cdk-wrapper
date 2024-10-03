@@ -38,7 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAccount(
   cdkObject: software.amazon.awscdk.services.certificatemanager.CfnAccount,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -297,7 +298,8 @@ public open class CfnAccount(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.certificatemanager.CfnAccount.ExpiryEventsConfigurationProperty,
-    ) : CdkObject(cdkObject), ExpiryEventsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ExpiryEventsConfigurationProperty {
       /**
        * This option specifies the number of days prior to certificate expiration when ACM starts
        * generating `EventBridge` events.

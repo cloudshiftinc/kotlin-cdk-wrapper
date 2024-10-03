@@ -36,7 +36,8 @@ public interface IFunctionUrl : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.IFunctionUrl,
-  ) : CdkObject(cdkObject), IFunctionUrl {
+  ) : CdkObject(cdkObject),
+      IFunctionUrl {
     /**
      * Apply the given removal policy to this resource.
      *

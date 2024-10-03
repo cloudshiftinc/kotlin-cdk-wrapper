@@ -194,7 +194,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAssetModel(
   cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -286,12 +288,12 @@ public open class CfnAssetModel(
       assetModelHierarchies(`value`.toList())
 
   /**
-   * A unique, friendly name for the asset model.
+   * A unique name for the asset model.
    */
   public open fun assetModelName(): String = unwrap(this).getAssetModelName()
 
   /**
-   * A unique, friendly name for the asset model.
+   * A unique name for the asset model.
    */
   public open fun assetModelName(`value`: String) {
     unwrap(this).setAssetModelName(`value`)
@@ -516,10 +518,10 @@ public open class CfnAssetModel(
     public fun assetModelHierarchies(vararg assetModelHierarchies: Any)
 
     /**
-     * A unique, friendly name for the asset model.
+     * A unique name for the asset model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodelname)
-     * @param assetModelName A unique, friendly name for the asset model. 
+     * @param assetModelName A unique name for the asset model. 
      */
     public fun assetModelName(assetModelName: String)
 
@@ -765,10 +767,10 @@ public open class CfnAssetModel(
         assetModelHierarchies(assetModelHierarchies.toList())
 
     /**
-     * A unique, friendly name for the asset model.
+     * A unique name for the asset model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodelname)
-     * @param assetModelName A unique, friendly name for the asset model. 
+     * @param assetModelName A unique name for the asset model. 
      */
     override fun assetModelName(assetModelName: String) {
       cdkBuilder.assetModelName(assetModelName)
@@ -1288,7 +1290,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelCompositeModelProperty,
-    ) : CdkObject(cdkObject), AssetModelCompositeModelProperty {
+    ) : CdkObject(cdkObject),
+        AssetModelCompositeModelProperty {
       /**
        * The ID of a component model which is reused to create this composite model.
        *
@@ -1666,7 +1669,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty,
-    ) : CdkObject(cdkObject), AssetModelHierarchyProperty {
+    ) : CdkObject(cdkObject),
+        AssetModelHierarchyProperty {
       /**
        * The ID of the asset model, in UUID format.
        *
@@ -2084,7 +2088,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty,
-    ) : CdkObject(cdkObject), AssetModelPropertyProperty {
+    ) : CdkObject(cdkObject),
+        AssetModelPropertyProperty {
       /**
        * The data type of the asset model property.
        *
@@ -2252,7 +2257,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty,
-    ) : CdkObject(cdkObject), AttributeProperty {
+    ) : CdkObject(cdkObject),
+        AttributeProperty {
       /**
        * The default value of the asset model property attribute.
        *
@@ -2397,7 +2403,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.ExpressionVariableProperty,
-    ) : CdkObject(cdkObject), ExpressionVariableProperty {
+    ) : CdkObject(cdkObject),
+        ExpressionVariableProperty {
       /**
        * The friendly name of the variable to be used in the expression.
        *
@@ -2641,7 +2648,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricProperty,
-    ) : CdkObject(cdkObject), MetricProperty {
+    ) : CdkObject(cdkObject),
+        MetricProperty {
       /**
        * The mathematical expression that defines the metric aggregation function.
        *
@@ -2778,7 +2786,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty,
-    ) : CdkObject(cdkObject), MetricWindowProperty {
+    ) : CdkObject(cdkObject),
+        MetricWindowProperty {
       /**
        * The tumbling time interval window.
        *
@@ -2861,7 +2870,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.PropertyPathDefinitionProperty,
-    ) : CdkObject(cdkObject), PropertyPathDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        PropertyPathDefinitionProperty {
       /**
        * The name of the path segment.
        *
@@ -3188,7 +3198,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.PropertyTypeProperty,
-    ) : CdkObject(cdkObject), PropertyTypeProperty {
+    ) : CdkObject(cdkObject),
+        PropertyTypeProperty {
       /**
        * Specifies an asset attribute property.
        *
@@ -3385,7 +3396,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TransformProperty,
-    ) : CdkObject(cdkObject), TransformProperty {
+    ) : CdkObject(cdkObject),
+        TransformProperty {
       /**
        * The mathematical expression that defines the transformation function.
        *
@@ -3639,7 +3651,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty,
-    ) : CdkObject(cdkObject), TumblingWindowProperty {
+    ) : CdkObject(cdkObject),
+        TumblingWindowProperty {
       /**
        * The time interval for the tumbling window. The interval time must be between 1 minute and 1
        * week.
@@ -4038,7 +4051,8 @@ public open class CfnAssetModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.VariableValueProperty,
-    ) : CdkObject(cdkObject), VariableValueProperty {
+    ) : CdkObject(cdkObject),
+        VariableValueProperty {
       /**
        * The external ID of the hierarchy being referenced.
        *

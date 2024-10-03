@@ -119,7 +119,8 @@ public interface ApplicationListenerLookupOptions : BaseListenerLookupOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerLookupOptions,
-  ) : CdkObject(cdkObject), ApplicationListenerLookupOptions {
+  ) : CdkObject(cdkObject),
+      ApplicationListenerLookupOptions {
     /**
      * ARN of the listener to look up.
      *

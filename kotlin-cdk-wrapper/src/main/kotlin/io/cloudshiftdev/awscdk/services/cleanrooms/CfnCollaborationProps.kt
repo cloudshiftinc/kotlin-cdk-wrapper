@@ -404,7 +404,8 @@ public interface CfnCollaborationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaborationProps,
-  ) : CdkObject(cdkObject), CfnCollaborationProps {
+  ) : CdkObject(cdkObject),
+      CfnCollaborationProps {
     /**
      * A display name of the collaboration creator.
      *

@@ -20,7 +20,8 @@ public interface IContainerDefinition {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.IContainerDefinition,
-  ) : CdkObject(cdkObject), IContainerDefinition {
+  ) : CdkObject(cdkObject),
+      IContainerDefinition {
     /**
      * Called when the ContainerDefinition is used by a SageMaker task.
      *

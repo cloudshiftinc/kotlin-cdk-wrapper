@@ -297,7 +297,8 @@ public interface EmrSetClusterTerminationProtectionProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrSetClusterTerminationProtectionProps,
-  ) : CdkObject(cdkObject), EmrSetClusterTerminationProtectionProps {
+  ) : CdkObject(cdkObject),
+      EmrSetClusterTerminationProtectionProps {
     /**
      * The ClusterId to update.
      */

@@ -137,7 +137,8 @@ public interface ChoiceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceProps,
-  ) : CdkObject(cdkObject), ChoiceProps {
+  ) : CdkObject(cdkObject),
+      ChoiceProps {
     /**
      * An optional description for this state.
      *

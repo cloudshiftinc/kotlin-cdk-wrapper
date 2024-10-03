@@ -93,7 +93,8 @@ public interface PublicDnsNamespaceAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.PublicDnsNamespaceAttributes,
-  ) : CdkObject(cdkObject), PublicDnsNamespaceAttributes {
+  ) : CdkObject(cdkObject),
+      PublicDnsNamespaceAttributes {
     /**
      * Namespace ARN for the Namespace.
      */

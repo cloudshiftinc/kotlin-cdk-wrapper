@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFeature(
   cdkObject: software.amazon.awscdk.services.evidently.CfnFeature,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -706,7 +708,8 @@ public open class CfnFeature(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnFeature.EntityOverrideProperty,
-    ) : CdkObject(cdkObject), EntityOverrideProperty {
+    ) : CdkObject(cdkObject),
+        EntityOverrideProperty {
       /**
        * The entity ID to be served the variation specified in `Variation` .
        *
@@ -894,7 +897,8 @@ public open class CfnFeature(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnFeature.VariationObjectProperty,
-    ) : CdkObject(cdkObject), VariationObjectProperty {
+    ) : CdkObject(cdkObject),
+        VariationObjectProperty {
       /**
        * The value assigned to this variation, if the variation type is boolean.
        *

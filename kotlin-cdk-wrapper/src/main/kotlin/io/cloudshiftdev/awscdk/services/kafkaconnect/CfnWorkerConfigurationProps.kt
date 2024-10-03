@@ -139,7 +139,8 @@ public interface CfnWorkerConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnWorkerConfigurationProps,
-  ) : CdkObject(cdkObject), CfnWorkerConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnWorkerConfigurationProps {
     /**
      * The description of a worker configuration.
      *

@@ -295,7 +295,7 @@ public interface CfnInstanceProps {
    *
    * This parameter is valid only if the instance meets the [hibernation
    * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-   * . For more information, see [Hibernate your
+   * . For more information, see [Hibernate your Amazon EC2
    * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
    * User Guide* .
    *
@@ -920,7 +920,7 @@ public interface CfnInstanceProps {
      * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -932,7 +932,7 @@ public interface CfnInstanceProps {
      * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -944,7 +944,7 @@ public interface CfnInstanceProps {
      * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -1715,7 +1715,7 @@ public interface CfnInstanceProps {
      * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -1729,7 +1729,7 @@ public interface CfnInstanceProps {
      * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -1743,7 +1743,7 @@ public interface CfnInstanceProps {
      * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *
@@ -2287,7 +2287,8 @@ public interface CfnInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnInstanceProps,
-  ) : CdkObject(cdkObject), CfnInstanceProps {
+  ) : CdkObject(cdkObject),
+      CfnInstanceProps {
     /**
      * This property is reserved for internal use.
      *
@@ -2438,7 +2439,7 @@ public interface CfnInstanceProps {
      *
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
+     * . For more information, see [Hibernate your Amazon EC2
      * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
      * User Guide* .
      *

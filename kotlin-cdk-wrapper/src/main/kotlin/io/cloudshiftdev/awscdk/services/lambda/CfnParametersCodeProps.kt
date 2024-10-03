@@ -96,7 +96,8 @@ public interface CfnParametersCodeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.CfnParametersCodeProps,
-  ) : CdkObject(cdkObject), CfnParametersCodeProps {
+  ) : CdkObject(cdkObject),
+      CfnParametersCodeProps {
     /**
      * The CloudFormation parameter that represents the name of the S3 Bucket where the Lambda code
      * will be located in.

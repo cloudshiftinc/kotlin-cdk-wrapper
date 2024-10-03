@@ -74,7 +74,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVerifiedAccessEndpoint(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -993,7 +995,8 @@ public open class CfnVerifiedAccessEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty,
-    ) : CdkObject(cdkObject), LoadBalancerOptionsProperty {
+    ) : CdkObject(cdkObject),
+        LoadBalancerOptionsProperty {
       /**
        * The ARN of the load balancer.
        *
@@ -1138,7 +1141,8 @@ public open class CfnVerifiedAccessEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceOptionsProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInterfaceOptionsProperty {
       /**
        * The ID of the network interface.
        *
@@ -1280,7 +1284,8 @@ public open class CfnVerifiedAccessEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.SseSpecificationProperty,
-    ) : CdkObject(cdkObject), SseSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SseSpecificationProperty {
       /**
        * Enable or disable the use of customer managed KMS keys for server side encryption.
        *

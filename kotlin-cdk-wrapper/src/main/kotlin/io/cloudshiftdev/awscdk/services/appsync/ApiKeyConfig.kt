@@ -107,7 +107,8 @@ public interface ApiKeyConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.ApiKeyConfig,
-  ) : CdkObject(cdkObject), ApiKeyConfig {
+  ) : CdkObject(cdkObject),
+      ApiKeyConfig {
     /**
      * Description of API key.
      *

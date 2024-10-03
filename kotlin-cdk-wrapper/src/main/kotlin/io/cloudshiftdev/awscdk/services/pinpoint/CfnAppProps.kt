@@ -92,7 +92,8 @@ public interface CfnAppProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnAppProps,
-  ) : CdkObject(cdkObject), CfnAppProps {
+  ) : CdkObject(cdkObject),
+      CfnAppProps {
     /**
      * The display name of the application.
      *

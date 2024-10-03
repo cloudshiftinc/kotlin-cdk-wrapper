@@ -8,13 +8,14 @@ import io.cloudshiftdev.awscdk.services.events.IRule
 import io.cloudshiftdev.awscdk.services.events.IRuleTarget
 import io.cloudshiftdev.awscdk.services.events.RuleTargetConfig
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import io.cloudshiftdev.awscdk.services.kinesisfirehose.CfnDeliveryStream as CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream as AmazonAwscdkServicesKinesisfirehoseCfnDeliveryStream
 
 /**
- * Customize the Firehose Stream Event Target.
+ * (deprecated) Customize the Firehose Stream Event Target.
  *
  * Example:
  *
@@ -31,49 +32,59 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream as Amaz
  * .message(ruleTargetInput)
  * .build();
  * ```
+ *
+ * @deprecated Use KinesisFirehoseStreamV2
  */
 public open class KinesisFirehoseStream(
   cdkObject: software.amazon.awscdk.services.events.targets.KinesisFirehoseStream,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
+  @Deprecated(message = "deprecated in CDK")
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream) :
       this(software.amazon.awscdk.services.events.targets.KinesisFirehoseStream(stream.let(CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream.Companion::unwrap))
   )
 
+  @Deprecated(message = "deprecated in CDK")
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream,
       props: KinesisFirehoseStreamProps) :
       this(software.amazon.awscdk.services.events.targets.KinesisFirehoseStream(stream.let(CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream.Companion::unwrap),
       props.let(KinesisFirehoseStreamProps.Companion::unwrap))
   )
 
+  @Deprecated(message = "deprecated in CDK")
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream,
       props: KinesisFirehoseStreamProps.Builder.() -> Unit) : this(stream,
       KinesisFirehoseStreamProps(props)
   )
 
   /**
-   * Returns a RuleTarget that can be used to trigger this Firehose Stream as a result from a Event
-   * Bridge event.
+   * (deprecated) Returns a RuleTarget that can be used to trigger this Firehose Stream as a result
+   * from a Event Bridge event.
    *
    * @param _rule 
    * @param _id
    */
+  @Deprecated(message = "deprecated in CDK")
   public override fun bind(rule: IRule): RuleTargetConfig =
       unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
-   * Returns a RuleTarget that can be used to trigger this Firehose Stream as a result from a Event
-   * Bridge event.
+   * (deprecated) Returns a RuleTarget that can be used to trigger this Firehose Stream as a result
+   * from a Event Bridge event.
    *
    * @param _rule 
    * @param _id
    */
+  @Deprecated(message = "deprecated in CDK")
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
       unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.KinesisFirehoseStream].
+   * (deprecated) A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.events.targets.KinesisFirehoseStream].
    */
   @CdkDslMarker
+  @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     /**
      * The message to send to the stream.

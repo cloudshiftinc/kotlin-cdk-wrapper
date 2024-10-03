@@ -60,7 +60,8 @@ public interface IClusterEngine : IEngine {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.IClusterEngine,
-  ) : CdkObject(cdkObject), IClusterEngine {
+  ) : CdkObject(cdkObject),
+      IClusterEngine {
     /**
      * Method called when the engine is used to create a new cluster.
      *

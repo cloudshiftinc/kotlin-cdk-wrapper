@@ -27,7 +27,8 @@ public interface IFunction : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.IFunction,
-  ) : CdkObject(cdkObject), IFunction {
+  ) : CdkObject(cdkObject),
+      IFunction {
     /**
      * Apply the given removal policy to this resource.
      *

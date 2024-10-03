@@ -29,7 +29,8 @@ public interface IInterfaceVpcEndpointService {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IInterfaceVpcEndpointService,
-  ) : CdkObject(cdkObject), IInterfaceVpcEndpointService {
+  ) : CdkObject(cdkObject),
+      IInterfaceVpcEndpointService {
     /**
      * The name of the service.
      */

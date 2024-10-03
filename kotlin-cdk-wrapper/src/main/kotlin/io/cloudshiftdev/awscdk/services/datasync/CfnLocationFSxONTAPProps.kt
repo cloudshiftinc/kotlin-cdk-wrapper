@@ -304,7 +304,8 @@ public interface CfnLocationFSxONTAPProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAPProps,
-  ) : CdkObject(cdkObject), CfnLocationFSxONTAPProps {
+  ) : CdkObject(cdkObject),
+      CfnLocationFSxONTAPProps {
     /**
      * Specifies the data transfer protocol that DataSync uses to access your Amazon FSx file
      * system.

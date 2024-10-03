@@ -88,6 +88,10 @@ import kotlin.jvm.JvmName
  * .certificates(List.of(CertificateProperty.builder()
  * .certificateArn("certificateArn")
  * .build()))
+ * .listenerAttributes(List.of(ListenerAttributeProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .mutualAuthentication(MutualAuthenticationProperty.builder()
  * .ignoreClientCertificateExpiry(false)
  * .mode("mode")
@@ -132,6 +136,11 @@ public interface CfnListenerProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-defaultactions)
    */
   public fun defaultActions(): Any
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
+   */
+  public fun listenerAttributes(): Any? = unwrap(this).getListenerAttributes()
 
   /**
    * The Amazon Resource Name (ARN) of the load balancer.
@@ -258,6 +267,21 @@ public interface CfnListenerProps {
      * .
      */
     public fun defaultActions(vararg defaultActions: Any)
+
+    /**
+     * @param listenerAttributes the value to be set.
+     */
+    public fun listenerAttributes(listenerAttributes: IResolvable)
+
+    /**
+     * @param listenerAttributes the value to be set.
+     */
+    public fun listenerAttributes(listenerAttributes: List<Any>)
+
+    /**
+     * @param listenerAttributes the value to be set.
+     */
+    public fun listenerAttributes(vararg listenerAttributes: Any)
 
     /**
      * @param loadBalancerArn The Amazon Resource Name (ARN) of the load balancer. 
@@ -398,6 +422,26 @@ public interface CfnListenerProps {
         defaultActions(defaultActions.toList())
 
     /**
+     * @param listenerAttributes the value to be set.
+     */
+    override fun listenerAttributes(listenerAttributes: IResolvable) {
+      cdkBuilder.listenerAttributes(listenerAttributes.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param listenerAttributes the value to be set.
+     */
+    override fun listenerAttributes(listenerAttributes: List<Any>) {
+      cdkBuilder.listenerAttributes(listenerAttributes.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param listenerAttributes the value to be set.
+     */
+    override fun listenerAttributes(vararg listenerAttributes: Any): Unit =
+        listenerAttributes(listenerAttributes.toList())
+
+    /**
      * @param loadBalancerArn The Amazon Resource Name (ARN) of the load balancer. 
      */
     override fun loadBalancerArn(loadBalancerArn: String) {
@@ -469,7 +513,8 @@ public interface CfnListenerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerProps,
-  ) : CdkObject(cdkObject), CfnListenerProps {
+  ) : CdkObject(cdkObject),
+      CfnListenerProps {
     /**
      * [TLS listener] The name of the Application-Layer Protocol Negotiation (ALPN) policy.
      *
@@ -500,6 +545,11 @@ public interface CfnListenerProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-defaultactions)
      */
     override fun defaultActions(): Any = unwrap(this).getDefaultActions()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
+     */
+    override fun listenerAttributes(): Any? = unwrap(this).getListenerAttributes()
 
     /**
      * The Amazon Resource Name (ARN) of the load balancer.

@@ -74,7 +74,8 @@ public interface RuleScope {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.RuleScope,
-  ) : CdkObject(cdkObject), RuleScope {
+  ) : CdkObject(cdkObject),
+      RuleScope {
     /**
      * The construct ID to use for the rule.
      */

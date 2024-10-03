@@ -25,7 +25,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * to specify configuration properties for the extension. For more information, see [Configuring
  * extensions at the account
  * level](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration)
- * in the *CloudFormation User Guide* .
+ * in the *AWS CloudFormation User Guide* .
  *
  * Example:
  *
@@ -55,7 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTypeActivation(
   cdkObject: software.amazon.awscdk.CfnTypeActivation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.CfnTypeActivation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -675,7 +676,8 @@ public open class CfnTypeActivation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.CfnTypeActivation.LoggingConfigProperty,
-    ) : CdkObject(cdkObject), LoggingConfigProperty {
+    ) : CdkObject(cdkObject),
+        LoggingConfigProperty {
       /**
        * The Amazon CloudWatch Logs group to which CloudFormation sends error logging information
        * when invoking the extension's handlers.

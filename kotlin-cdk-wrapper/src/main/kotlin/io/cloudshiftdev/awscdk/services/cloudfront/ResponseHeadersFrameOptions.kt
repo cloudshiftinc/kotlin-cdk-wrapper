@@ -48,7 +48,7 @@ import kotlin.Unit
  * .frameOptions(ResponseHeadersFrameOptions.builder().frameOption(HeadersFrameOption.DENY).override(true).build())
  * .referrerPolicy(ResponseHeadersReferrerPolicy.builder().referrerPolicy(HeadersReferrerPolicy.NO_REFERRER).override(true).build())
  * .strictTransportSecurity(ResponseHeadersStrictTransportSecurity.builder().accessControlMaxAge(Duration.seconds(600)).includeSubdomains(true).override(true).build())
- * .xssProtection(ResponseHeadersXSSProtection.builder().protection(true).modeBlock(true).reportUri("https://example.com/csp-report").override(true).build())
+ * .xssProtection(ResponseHeadersXSSProtection.builder().protection(true).modeBlock(false).reportUri("https://example.com/csp-report").override(true).build())
  * .build())
  * .removeHeaders(List.of("Server"))
  * .serverTimingSamplingRate(50)
@@ -118,7 +118,8 @@ public interface ResponseHeadersFrameOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersFrameOptions,
-  ) : CdkObject(cdkObject), ResponseHeadersFrameOptions {
+  ) : CdkObject(cdkObject),
+      ResponseHeadersFrameOptions {
     /**
      * The value of the X-Frame-Options HTTP response header.
      */

@@ -96,7 +96,8 @@ public interface SignInUrlOptions : BaseUrlOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.SignInUrlOptions,
-  ) : CdkObject(cdkObject), SignInUrlOptions {
+  ) : CdkObject(cdkObject),
+      SignInUrlOptions {
     /**
      * Whether to return the FIPS-compliant endpoint.
      *

@@ -77,7 +77,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApi(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigatewayv2.CfnApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1156,7 +1158,8 @@ public open class CfnApi(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi.BodyS3LocationProperty,
-    ) : CdkObject(cdkObject), BodyS3LocationProperty {
+    ) : CdkObject(cdkObject),
+        BodyS3LocationProperty {
       /**
        * The S3 bucket that contains the OpenAPI definition to import.
        *
@@ -1457,7 +1460,8 @@ public open class CfnApi(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi.CorsProperty,
-    ) : CdkObject(cdkObject), CorsProperty {
+    ) : CdkObject(cdkObject),
+        CorsProperty {
       /**
        * Specifies whether credentials are included in the CORS request.
        *

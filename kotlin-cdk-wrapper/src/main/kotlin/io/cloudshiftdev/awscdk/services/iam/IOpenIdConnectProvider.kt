@@ -27,7 +27,8 @@ public interface IOpenIdConnectProvider : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IOpenIdConnectProvider,
-  ) : CdkObject(cdkObject), IOpenIdConnectProvider {
+  ) : CdkObject(cdkObject),
+      IOpenIdConnectProvider {
     /**
      * Apply the given removal policy to this resource.
      *

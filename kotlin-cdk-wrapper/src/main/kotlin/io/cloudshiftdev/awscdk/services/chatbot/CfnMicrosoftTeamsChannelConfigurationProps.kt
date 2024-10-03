@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.chatbot
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -32,6 +33,10 @@ import kotlin.collections.List
  * .guardrailPolicies(List.of("guardrailPolicies"))
  * .loggingLevel("loggingLevel")
  * .snsTopicArns(List.of("snsTopicArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .userRoleRequired(false)
  * .build();
  * ```
@@ -86,11 +91,18 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
   public fun snsTopicArns(): List<String> = unwrap(this).getSnsTopicArns() ?: emptyList()
 
   /**
+   * The tags to add to the configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
    * The ID of the Microsoft Team authorized with AWS Chatbot .
    *
    * To get the team ID, you must perform the initial authorization flow with Microsoft Teams in the
    * AWS Chatbot console. Then you can copy and paste the team ID from the console. For more details,
-   * see steps 1-4 in [Get started with Microsoft
+   * see steps 1-3 in [Get started with Microsoft
    * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
    * in the *AWS Chatbot Administrator Guide* .
    *
@@ -179,10 +191,20 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     public fun snsTopicArns(vararg snsTopicArns: String)
 
     /**
+     * @param tags The tags to add to the configuration.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags The tags to add to the configuration.
+     */
+    public fun tags(vararg tags: CfnTag)
+
+    /**
      * @param teamId The ID of the Microsoft Team authorized with AWS Chatbot . 
      * To get the team ID, you must perform the initial authorization flow with Microsoft Teams in
      * the AWS Chatbot console. Then you can copy and paste the team ID from the console. For more
-     * details, see steps 1-4 in [Get started with Microsoft
+     * details, see steps 1-3 in [Get started with Microsoft
      * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
      * in the *AWS Chatbot Administrator Guide* .
      */
@@ -277,10 +299,22 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
         snsTopicArns(snsTopicArns.toList())
 
     /**
+     * @param tags The tags to add to the configuration.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags The tags to add to the configuration.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
      * @param teamId The ID of the Microsoft Team authorized with AWS Chatbot . 
      * To get the team ID, you must perform the initial authorization flow with Microsoft Teams in
      * the AWS Chatbot console. Then you can copy and paste the team ID from the console. For more
-     * details, see steps 1-4 in [Get started with Microsoft
+     * details, see steps 1-3 in [Get started with Microsoft
      * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
      * in the *AWS Chatbot Administrator Guide* .
      */
@@ -331,7 +365,8 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfigurationProps,
-  ) : CdkObject(cdkObject), CfnMicrosoftTeamsChannelConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnMicrosoftTeamsChannelConfigurationProps {
     /**
      * The name of the configuration.
      *
@@ -380,11 +415,18 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     override fun snsTopicArns(): List<String> = unwrap(this).getSnsTopicArns() ?: emptyList()
 
     /**
+     * The tags to add to the configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
      * The ID of the Microsoft Team authorized with AWS Chatbot .
      *
      * To get the team ID, you must perform the initial authorization flow with Microsoft Teams in
      * the AWS Chatbot console. Then you can copy and paste the team ID from the console. For more
-     * details, see steps 1-4 in [Get started with Microsoft
+     * details, see steps 1-3 in [Get started with Microsoft
      * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup)
      * in the *AWS Chatbot Administrator Guide* .
      *

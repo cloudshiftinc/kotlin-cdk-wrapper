@@ -89,7 +89,8 @@ public interface VirtualServiceBackendOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceBackendOptions,
-  ) : CdkObject(cdkObject), VirtualServiceBackendOptions {
+  ) : CdkObject(cdkObject),
+      VirtualServiceBackendOptions {
     /**
      * TLS properties for  Client policy for the backend.
      *

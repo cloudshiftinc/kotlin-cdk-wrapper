@@ -740,7 +740,8 @@ public interface CfnLifecyclePolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicyProps,
-  ) : CdkObject(cdkObject), CfnLifecyclePolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnLifecyclePolicyProps {
     /**
      * *[Default policies only]* Indicates whether the policy should copy tags from the source
      * resource to the snapshot or AMI.

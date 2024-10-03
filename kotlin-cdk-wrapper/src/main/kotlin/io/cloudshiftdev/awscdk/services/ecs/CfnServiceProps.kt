@@ -1584,7 +1584,8 @@ public interface CfnServiceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.CfnServiceProps,
-  ) : CdkObject(cdkObject), CfnServiceProps {
+  ) : CdkObject(cdkObject),
+      CfnServiceProps {
     /**
      * The capacity provider strategy to use for the service.
      *

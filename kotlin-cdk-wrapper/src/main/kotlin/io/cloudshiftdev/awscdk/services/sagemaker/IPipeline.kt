@@ -36,7 +36,8 @@ public interface IPipeline : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.IPipeline,
-  ) : CdkObject(cdkObject), IPipeline {
+  ) : CdkObject(cdkObject),
+      IPipeline {
     /**
      * Apply the given removal policy to this resource.
      *

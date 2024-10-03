@@ -57,7 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class VirtualGateway(
   cdkObject: software.amazon.awscdk.services.appmesh.VirtualGateway,
-) : Resource(cdkObject), IVirtualGateway {
+) : Resource(cdkObject),
+    IVirtualGateway {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

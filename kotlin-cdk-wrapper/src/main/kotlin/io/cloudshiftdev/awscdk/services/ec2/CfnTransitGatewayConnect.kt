@@ -53,7 +53,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTransitGatewayConnect(
   cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -380,7 +382,8 @@ public open class CfnTransitGatewayConnect(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty,
-    ) : CdkObject(cdkObject), TransitGatewayConnectOptionsProperty {
+    ) : CdkObject(cdkObject),
+        TransitGatewayConnectOptionsProperty {
       /**
        * The tunnel protocol.
        *

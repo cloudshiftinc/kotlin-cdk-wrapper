@@ -749,7 +749,8 @@ public interface CfnFlowProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appflow.CfnFlowProps,
-  ) : CdkObject(cdkObject), CfnFlowProps {
+  ) : CdkObject(cdkObject),
+      CfnFlowProps {
     /**
      * A user-entered description of the flow.
      *

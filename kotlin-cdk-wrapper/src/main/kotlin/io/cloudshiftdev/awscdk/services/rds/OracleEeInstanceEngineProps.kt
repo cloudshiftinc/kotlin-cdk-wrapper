@@ -58,7 +58,8 @@ public interface OracleEeInstanceEngineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.OracleEeInstanceEngineProps,
-  ) : CdkObject(cdkObject), OracleEeInstanceEngineProps {
+  ) : CdkObject(cdkObject),
+      OracleEeInstanceEngineProps {
     /**
      * The exact version of the engine to use.
      */

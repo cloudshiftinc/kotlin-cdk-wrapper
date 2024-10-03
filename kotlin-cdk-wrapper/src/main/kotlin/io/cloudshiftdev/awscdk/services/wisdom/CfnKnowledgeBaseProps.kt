@@ -377,7 +377,8 @@ public interface CfnKnowledgeBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBaseProps,
-  ) : CdkObject(cdkObject), CfnKnowledgeBaseProps {
+  ) : CdkObject(cdkObject),
+      CfnKnowledgeBaseProps {
     /**
      * The description.
      *

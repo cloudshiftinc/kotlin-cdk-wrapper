@@ -63,7 +63,8 @@ public interface IApi : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IApi,
-  ) : CdkObject(cdkObject), IApi {
+  ) : CdkObject(cdkObject),
+      IApi {
     /**
      * The default endpoint for an API.
      */

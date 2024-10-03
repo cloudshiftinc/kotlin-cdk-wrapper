@@ -72,7 +72,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDeliverySource(
   cdkObject: software.amazon.awscdk.services.logs.CfnDeliverySource,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

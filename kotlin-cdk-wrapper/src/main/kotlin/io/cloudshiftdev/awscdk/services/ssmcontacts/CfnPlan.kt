@@ -23,6 +23,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Information about the stages and on-call rotation teams associated with an escalation plan or
  * engagement plan.
  *
+ *
+ * *Template example* : We recommend creating all Incident Manager `Contacts` resources using a
+ * single AWS CloudFormation template. For a demonstration, see the examples for
+ * [AWS::SSMContacts::Contacts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html)
+ * .
+ *
+ *
  * Example:
  *
  * ```
@@ -54,7 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPlan(
   cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -375,7 +383,8 @@ public open class CfnPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.ChannelTargetInfoProperty,
-    ) : CdkObject(cdkObject), ChannelTargetInfoProperty {
+    ) : CdkObject(cdkObject),
+        ChannelTargetInfoProperty {
       /**
        * The Amazon Resource Name (ARN) of the contact channel.
        *
@@ -501,7 +510,8 @@ public open class CfnPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.ContactTargetInfoProperty,
-    ) : CdkObject(cdkObject), ContactTargetInfoProperty {
+    ) : CdkObject(cdkObject),
+        ContactTargetInfoProperty {
       /**
        * The Amazon Resource Name (ARN) of the contact.
        *
@@ -652,7 +662,8 @@ public open class CfnPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.StageProperty,
-    ) : CdkObject(cdkObject), StageProperty {
+    ) : CdkObject(cdkObject),
+        StageProperty {
       /**
        * The time to wait until beginning the next stage.
        *
@@ -827,7 +838,8 @@ public open class CfnPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty,
-    ) : CdkObject(cdkObject), TargetsProperty {
+    ) : CdkObject(cdkObject),
+        TargetsProperty {
       /**
        * Information about the contact channel that Incident Manager engages.
        *

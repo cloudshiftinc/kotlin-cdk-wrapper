@@ -41,7 +41,8 @@ public interface IMetric {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.IMetric,
-  ) : CdkObject(cdkObject), IMetric {
+  ) : CdkObject(cdkObject),
+      IMetric {
     /**
      * Inspect the details of the metric object.
      */

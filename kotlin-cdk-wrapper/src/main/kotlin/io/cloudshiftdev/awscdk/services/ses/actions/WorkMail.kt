@@ -38,7 +38,8 @@ import kotlin.Unit
  */
 public open class WorkMail(
   cdkObject: software.amazon.awscdk.services.ses.actions.WorkMail,
-) : CdkObject(cdkObject), IReceiptRuleAction {
+) : CdkObject(cdkObject),
+    IReceiptRuleAction {
   public constructor(props: WorkMailProps) :
       this(software.amazon.awscdk.services.ses.actions.WorkMail(props.let(WorkMailProps.Companion::unwrap))
   )

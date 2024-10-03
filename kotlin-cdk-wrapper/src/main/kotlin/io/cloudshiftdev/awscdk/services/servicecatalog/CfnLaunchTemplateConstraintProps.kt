@@ -151,7 +151,8 @@ public interface CfnLaunchTemplateConstraintProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraintProps,
-  ) : CdkObject(cdkObject), CfnLaunchTemplateConstraintProps {
+  ) : CdkObject(cdkObject),
+      CfnLaunchTemplateConstraintProps {
     /**
      * The language code.
      *

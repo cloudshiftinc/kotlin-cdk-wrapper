@@ -57,7 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSubscriptionDefinitionVersion(
   cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -390,7 +391,8 @@ public open class CfnSubscriptionDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersion.SubscriptionProperty,
-    ) : CdkObject(cdkObject), SubscriptionProperty {
+    ) : CdkObject(cdkObject),
+        SubscriptionProperty {
       /**
        * A descriptive or arbitrary ID for the subscription.
        *

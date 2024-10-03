@@ -439,7 +439,8 @@ public interface CfnConfigurationTemplateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplateProps,
-  ) : CdkObject(cdkObject), CfnConfigurationTemplateProps {
+  ) : CdkObject(cdkObject),
+      CfnConfigurationTemplateProps {
     /**
      * The name of the Elastic Beanstalk application to associate with this configuration template.
      *

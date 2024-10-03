@@ -89,7 +89,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAllowList(
   cdkObject: software.amazon.awscdk.services.macie.CfnAllowList,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -457,7 +459,7 @@ public open class CfnAllowList(
    * The criteria can be:
    *
    * * The location and name of an Amazon Simple Storage Service ( Amazon S3 ) object that lists
-   * specific, predefined text to ignore ( `S3WordsList` ), or
+   * specific predefined text to ignore ( `S3WordsList` ), or
    * * A regular expression ( `Regex` ) that defines a text pattern to ignore.
    *
    * The criteria must specify either an S3 object or a regular expression. It can't specify both.
@@ -572,7 +574,8 @@ public open class CfnAllowList(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty,
-    ) : CdkObject(cdkObject), CriteriaProperty {
+    ) : CdkObject(cdkObject),
+        CriteriaProperty {
       /**
        * The regular expression ( *regex* ) that defines the text pattern to ignore.
        *
@@ -711,7 +714,8 @@ public open class CfnAllowList(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty,
-    ) : CdkObject(cdkObject), S3WordsListProperty {
+    ) : CdkObject(cdkObject),
+        S3WordsListProperty {
       /**
        * The full name of the S3 bucket that contains the object.
        *

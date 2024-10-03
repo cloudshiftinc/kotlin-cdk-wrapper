@@ -456,7 +456,8 @@ public interface EventPattern {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.EventPattern,
-  ) : CdkObject(cdkObject), EventPattern {
+  ) : CdkObject(cdkObject),
+      EventPattern {
     /**
      * The 12-digit number identifying an AWS account.
      *

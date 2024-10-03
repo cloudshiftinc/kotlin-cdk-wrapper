@@ -682,7 +682,8 @@ public open class DatabaseCluster(
      * This feature is only supported by the Aurora database engine.
      *
      * This property must not be used if `s3ExportBuckets` is used.
-     *
+     * To use this property with Aurora PostgreSQL, it must be configured with the S3 export feature
+     * enabled when creating the DatabaseClusterEngine
      * For MySQL:
      *
      * Default: - New role is created if `s3ExportBuckets` is set, no role is defined otherwise
@@ -730,7 +731,8 @@ public open class DatabaseCluster(
      * This feature is only supported by the Aurora database engine.
      *
      * This property must not be used if `s3ImportBuckets` is used.
-     *
+     * To use this property with Aurora PostgreSQL, it must be configured with the S3 import feature
+     * enabled when creating the DatabaseClusterEngine
      * For MySQL:
      *
      * Default: - New role is created if `s3ImportBuckets` is set, no role is defined otherwise
@@ -1320,7 +1322,8 @@ public open class DatabaseCluster(
      * This feature is only supported by the Aurora database engine.
      *
      * This property must not be used if `s3ExportBuckets` is used.
-     *
+     * To use this property with Aurora PostgreSQL, it must be configured with the S3 export feature
+     * enabled when creating the DatabaseClusterEngine
      * For MySQL:
      *
      * Default: - New role is created if `s3ExportBuckets` is set, no role is defined otherwise
@@ -1373,7 +1376,8 @@ public open class DatabaseCluster(
      * This feature is only supported by the Aurora database engine.
      *
      * This property must not be used if `s3ImportBuckets` is used.
-     *
+     * To use this property with Aurora PostgreSQL, it must be configured with the S3 import feature
+     * enabled when creating the DatabaseClusterEngine
      * For MySQL:
      *
      * Default: - New role is created if `s3ImportBuckets` is set, no role is defined otherwise

@@ -19,7 +19,8 @@ public interface INextable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.INextable,
-  ) : CdkObject(cdkObject), INextable {
+  ) : CdkObject(cdkObject),
+      INextable {
     /**
      * Go to the indicated state after this state.
      *

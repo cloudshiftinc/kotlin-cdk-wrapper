@@ -22,7 +22,8 @@ public interface IConfigurationSet : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.IConfigurationSet,
-  ) : CdkObject(cdkObject), IConfigurationSet {
+  ) : CdkObject(cdkObject),
+      IConfigurationSet {
     /**
      * Apply the given removal policy to this resource.
      *

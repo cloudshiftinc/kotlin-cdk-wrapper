@@ -70,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPackageGroup(
   cdkObject: software.amazon.awscdk.services.codeartifact.CfnPackageGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -552,7 +554,8 @@ public open class CfnPackageGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codeartifact.CfnPackageGroup.OriginConfigurationProperty,
-    ) : CdkObject(cdkObject), OriginConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        OriginConfigurationProperty {
       /**
        * The origin configuration settings that determine how package versions can enter
        * repositories.
@@ -687,7 +690,8 @@ public open class CfnPackageGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codeartifact.CfnPackageGroup.RestrictionTypeProperty,
-    ) : CdkObject(cdkObject), RestrictionTypeProperty {
+    ) : CdkObject(cdkObject),
+        RestrictionTypeProperty {
       /**
        * The repositories to add to the allowed repositories list.
        *
@@ -928,7 +932,8 @@ public open class CfnPackageGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codeartifact.CfnPackageGroup.RestrictionsProperty,
-    ) : CdkObject(cdkObject), RestrictionsProperty {
+    ) : CdkObject(cdkObject),
+        RestrictionsProperty {
       /**
        * The package group origin restriction setting for external, upstream repositories.
        *

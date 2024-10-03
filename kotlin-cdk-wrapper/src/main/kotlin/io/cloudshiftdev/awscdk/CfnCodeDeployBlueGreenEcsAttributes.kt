@@ -151,7 +151,8 @@ public interface CfnCodeDeployBlueGreenEcsAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenEcsAttributes,
-  ) : CdkObject(cdkObject), CfnCodeDeployBlueGreenEcsAttributes {
+  ) : CdkObject(cdkObject),
+      CfnCodeDeployBlueGreenEcsAttributes {
     /**
      * The logical IDs of the blue and green, respectively, AWS::ECS::TaskDefinition task
      * definitions.

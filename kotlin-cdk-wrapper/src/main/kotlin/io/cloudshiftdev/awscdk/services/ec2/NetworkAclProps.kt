@@ -141,7 +141,8 @@ public interface NetworkAclProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.NetworkAclProps,
-  ) : CdkObject(cdkObject), NetworkAclProps {
+  ) : CdkObject(cdkObject),
+      NetworkAclProps {
     /**
      * The name of the NetworkAcl.
      *

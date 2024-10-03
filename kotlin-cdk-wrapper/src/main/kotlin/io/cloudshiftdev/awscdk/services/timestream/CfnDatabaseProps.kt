@@ -121,7 +121,8 @@ public interface CfnDatabaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.timestream.CfnDatabaseProps,
-  ) : CdkObject(cdkObject), CfnDatabaseProps {
+  ) : CdkObject(cdkObject),
+      CfnDatabaseProps {
     /**
      * The name of the Timestream database.
      *

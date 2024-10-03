@@ -85,7 +85,8 @@ public interface CfnThingPrincipalAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnThingPrincipalAttachmentProps,
-  ) : CdkObject(cdkObject), CfnThingPrincipalAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnThingPrincipalAttachmentProps {
     /**
      * The principal, which can be a certificate ARN (as returned from the `CreateCertificate`
      * operation) or an Amazon Cognito ID.

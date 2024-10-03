@@ -58,7 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNetworkAclEntry(
   cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -689,7 +690,8 @@ public open class CfnNetworkAclEntry(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.IcmpProperty,
-    ) : CdkObject(cdkObject), IcmpProperty {
+    ) : CdkObject(cdkObject),
+        IcmpProperty {
       /**
        * The Internet Control Message Protocol (ICMP) code.
        *
@@ -809,7 +811,8 @@ public open class CfnNetworkAclEntry(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.PortRangeProperty,
-    ) : CdkObject(cdkObject), PortRangeProperty {
+    ) : CdkObject(cdkObject),
+        PortRangeProperty {
       /**
        * The first port in the range.
        *

@@ -40,8 +40,6 @@ public interface CfnEIPAssociationProps {
   public fun allocationId(): String? = unwrap(this).getAllocationId()
 
   /**
-   * (deprecated) The Elastic IP address to associate with the instance.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eipassociation.html#cfn-ec2-eipassociation-eip)
    * @deprecated this property has been deprecated
    */
@@ -91,7 +89,7 @@ public interface CfnEIPAssociationProps {
     public fun allocationId(allocationId: String)
 
     /**
-     * @param eip The Elastic IP address to associate with the instance.
+     * @param eip the value to be set.
      * @deprecated this property has been deprecated
      */
     @Deprecated(message = "deprecated in CDK")
@@ -134,7 +132,7 @@ public interface CfnEIPAssociationProps {
     }
 
     /**
-     * @param eip The Elastic IP address to associate with the instance.
+     * @param eip the value to be set.
      * @deprecated this property has been deprecated
      */
     @Deprecated(message = "deprecated in CDK")
@@ -177,7 +175,8 @@ public interface CfnEIPAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnEIPAssociationProps,
-  ) : CdkObject(cdkObject), CfnEIPAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnEIPAssociationProps {
     /**
      * The allocation ID.
      *
@@ -188,8 +187,6 @@ public interface CfnEIPAssociationProps {
     override fun allocationId(): String? = unwrap(this).getAllocationId()
 
     /**
-     * (deprecated) The Elastic IP address to associate with the instance.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eipassociation.html#cfn-ec2-eipassociation-eip)
      * @deprecated this property has been deprecated
      */

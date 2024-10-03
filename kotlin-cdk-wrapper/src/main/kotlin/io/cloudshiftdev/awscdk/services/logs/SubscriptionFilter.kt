@@ -60,6 +60,17 @@ public open class SubscriptionFilter(
     public fun destination(destination: ILogSubscriptionDestination)
 
     /**
+     * The method used to distribute log data to the destination.
+     *
+     * This property can only be used with KinesisDestination.
+     *
+     * Default: Distribution.BY_LOG_STREAM
+     *
+     * @param distribution The method used to distribute log data to the destination. 
+     */
+    public fun distribution(distribution: Distribution)
+
+    /**
      * The name of the subscription filter.
      *
      * Default: Automatically generated
@@ -99,6 +110,19 @@ public open class SubscriptionFilter(
      */
     override fun destination(destination: ILogSubscriptionDestination) {
       cdkBuilder.destination(destination.let(ILogSubscriptionDestination.Companion::unwrap))
+    }
+
+    /**
+     * The method used to distribute log data to the destination.
+     *
+     * This property can only be used with KinesisDestination.
+     *
+     * Default: Distribution.BY_LOG_STREAM
+     *
+     * @param distribution The method used to distribute log data to the destination. 
+     */
+    override fun distribution(distribution: Distribution) {
+      cdkBuilder.distribution(distribution.let(Distribution.Companion::unwrap))
     }
 
     /**

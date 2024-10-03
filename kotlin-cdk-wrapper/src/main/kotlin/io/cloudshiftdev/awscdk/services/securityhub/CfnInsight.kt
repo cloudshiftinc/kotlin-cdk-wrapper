@@ -513,7 +513,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInsight(
   cdkObject: software.amazon.awscdk.services.securityhub.CfnInsight,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1981,6 +1982,8 @@ public open class CfnInsight(
     /**
      * Deprecated. The normalized severity of a finding. Instead of providing `Normalized` , provide
      * `Label` .
+     *
+     * The value of `Normalized` can be an integer between `0` and `100` .
      *
      * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
      * automatically as follows.
@@ -3882,6 +3885,8 @@ public open class CfnInsight(
       /**
        * @param severityNormalized Deprecated. The normalized severity of a finding. Instead of
        * providing `Normalized` , provide `Label` .
+       * The value of `Normalized` can be an integer between `0` and `100` .
+       *
        * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
@@ -3896,6 +3901,8 @@ public open class CfnInsight(
       /**
        * @param severityNormalized Deprecated. The normalized severity of a finding. Instead of
        * providing `Normalized` , provide `Label` .
+       * The value of `Normalized` can be an integer between `0` and `100` .
+       *
        * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
@@ -3910,6 +3917,8 @@ public open class CfnInsight(
       /**
        * @param severityNormalized Deprecated. The normalized severity of a finding. Instead of
        * providing `Normalized` , provide `Label` .
+       * The value of `Normalized` can be an integer between `0` and `100` .
+       *
        * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
@@ -6476,6 +6485,8 @@ public open class CfnInsight(
       /**
        * @param severityNormalized Deprecated. The normalized severity of a finding. Instead of
        * providing `Normalized` , provide `Label` .
+       * The value of `Normalized` can be an integer between `0` and `100` .
+       *
        * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
@@ -6492,6 +6503,8 @@ public open class CfnInsight(
       /**
        * @param severityNormalized Deprecated. The normalized severity of a finding. Instead of
        * providing `Normalized` , provide `Label` .
+       * The value of `Normalized` can be an integer between `0` and `100` .
+       *
        * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
@@ -6508,6 +6521,8 @@ public open class CfnInsight(
       /**
        * @param severityNormalized Deprecated. The normalized severity of a finding. Instead of
        * providing `Normalized` , provide `Label` .
+       * The value of `Normalized` can be an integer between `0` and `100` .
+       *
        * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
@@ -7046,7 +7061,8 @@ public open class CfnInsight(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnInsight.AwsSecurityFindingFiltersProperty,
-    ) : CdkObject(cdkObject), AwsSecurityFindingFiltersProperty {
+    ) : CdkObject(cdkObject),
+        AwsSecurityFindingFiltersProperty {
       /**
        * The AWS account ID in which a finding is generated.
        *
@@ -7798,6 +7814,8 @@ public open class CfnInsight(
        * Deprecated. The normalized severity of a finding. Instead of providing `Normalized` ,
        * provide `Label` .
        *
+       * The value of `Normalized` can be an integer between `0` and `100` .
+       *
        * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
@@ -8083,7 +8101,8 @@ public open class CfnInsight(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnInsight.BooleanFilterProperty,
-    ) : CdkObject(cdkObject), BooleanFilterProperty {
+    ) : CdkObject(cdkObject),
+        BooleanFilterProperty {
       /**
        * The value of the boolean.
        *
@@ -8293,7 +8312,8 @@ public open class CfnInsight(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnInsight.DateFilterProperty,
-    ) : CdkObject(cdkObject), DateFilterProperty {
+    ) : CdkObject(cdkObject),
+        DateFilterProperty {
       /**
        * A date range for the date filter.
        *
@@ -8429,7 +8449,8 @@ public open class CfnInsight(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnInsight.DateRangeProperty,
-    ) : CdkObject(cdkObject), DateRangeProperty {
+    ) : CdkObject(cdkObject),
+        DateRangeProperty {
       /**
        * A date range unit for the date filter.
        *
@@ -8516,7 +8537,8 @@ public open class CfnInsight(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnInsight.IpFilterProperty,
-    ) : CdkObject(cdkObject), IpFilterProperty {
+    ) : CdkObject(cdkObject),
+        IpFilterProperty {
       /**
        * A finding's CIDR value.
        *
@@ -8597,7 +8619,8 @@ public open class CfnInsight(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnInsight.KeywordFilterProperty,
-    ) : CdkObject(cdkObject), KeywordFilterProperty {
+    ) : CdkObject(cdkObject),
+        KeywordFilterProperty {
       /**
        * A value for the keyword.
        *
@@ -8867,7 +8890,8 @@ public open class CfnInsight(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnInsight.MapFilterProperty,
-    ) : CdkObject(cdkObject), MapFilterProperty {
+    ) : CdkObject(cdkObject),
+        MapFilterProperty {
       /**
        * The condition to apply to the key value when filtering Security Hub findings with a map
        * filter.
@@ -9059,7 +9083,8 @@ public open class CfnInsight(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnInsight.NumberFilterProperty,
-    ) : CdkObject(cdkObject), NumberFilterProperty {
+    ) : CdkObject(cdkObject),
+        NumberFilterProperty {
       /**
        * The equal-to condition to be applied to a single field when querying for findings.
        *
@@ -9368,7 +9393,8 @@ public open class CfnInsight(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnInsight.StringFilterProperty,
-    ) : CdkObject(cdkObject), StringFilterProperty {
+    ) : CdkObject(cdkObject),
+        StringFilterProperty {
       /**
        * The condition to apply to a string value when filtering Security Hub findings.
        *

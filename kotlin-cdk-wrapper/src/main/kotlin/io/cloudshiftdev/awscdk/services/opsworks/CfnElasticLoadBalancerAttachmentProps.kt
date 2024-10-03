@@ -85,7 +85,8 @@ public interface CfnElasticLoadBalancerAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachmentProps,
-  ) : CdkObject(cdkObject), CfnElasticLoadBalancerAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnElasticLoadBalancerAttachmentProps {
     /**
      * The Elastic Load Balancing instance name.
      *

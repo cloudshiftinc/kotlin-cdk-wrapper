@@ -71,12 +71,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .matchingKeys(List.of("matchingKeys"))
  * .ruleName("ruleName")
  * .build()))
+ * // the properties below are optional
+ * .matchPurpose("matchPurpose")
  * .build())
  * .build())
  * .roleArn("roleArn")
  * .workflowName("workflowName")
  * // the properties below are optional
  * .description("description")
+ * .incrementalRunConfig(IncrementalRunConfigProperty.builder()
+ * .incrementalRunType("incrementalRunType")
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -88,7 +93,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMatchingWorkflow(
   cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -137,6 +144,33 @@ public open class CfnMatchingWorkflow(
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
+
+  /**
+   * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+   */
+  public open fun incrementalRunConfig(): Any? = unwrap(this).getIncrementalRunConfig()
+
+  /**
+   * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+   */
+  public open fun incrementalRunConfig(`value`: IResolvable) {
+    unwrap(this).setIncrementalRunConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+   */
+  public open fun incrementalRunConfig(`value`: IncrementalRunConfigProperty) {
+    unwrap(this).setIncrementalRunConfig(`value`.let(IncrementalRunConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("90ffe2e7f6db0307f2b6a6e31a31a4aef716d634071f1b20842a1b4037e06544")
+  public open fun incrementalRunConfig(`value`: IncrementalRunConfigProperty.Builder.() -> Unit):
+      Unit = incrementalRunConfig(IncrementalRunConfigProperty(`value`))
 
   /**
    * A list of `InputSource` objects, which have the fields `InputSourceARN` and `SchemaName` .
@@ -282,6 +316,36 @@ public open class CfnMatchingWorkflow(
     public fun description(description: String)
 
     /**
+     * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig)
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field. 
+     */
+    public fun incrementalRunConfig(incrementalRunConfig: IResolvable)
+
+    /**
+     * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig)
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field. 
+     */
+    public fun incrementalRunConfig(incrementalRunConfig: IncrementalRunConfigProperty)
+
+    /**
+     * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig)
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7aeed0f0a3a97eec4f77433dae8de7575dcffb0342a130911098750aeda84925")
+    public
+        fun incrementalRunConfig(incrementalRunConfig: IncrementalRunConfigProperty.Builder.() -> Unit)
+
+    /**
      * A list of `InputSource` objects, which have the fields `InputSourceARN` and `SchemaName` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-inputsourceconfig)
@@ -424,6 +488,41 @@ public open class CfnMatchingWorkflow(
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig)
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field. 
+     */
+    override fun incrementalRunConfig(incrementalRunConfig: IResolvable) {
+      cdkBuilder.incrementalRunConfig(incrementalRunConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig)
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field. 
+     */
+    override fun incrementalRunConfig(incrementalRunConfig: IncrementalRunConfigProperty) {
+      cdkBuilder.incrementalRunConfig(incrementalRunConfig.let(IncrementalRunConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-matchingworkflow.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig)
+     * @param incrementalRunConfig An object which defines an incremental run type and has only
+     * `incrementalRunType` as a field. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7aeed0f0a3a97eec4f77433dae8de7575dcffb0342a130911098750aeda84925")
+    override
+        fun incrementalRunConfig(incrementalRunConfig: IncrementalRunConfigProperty.Builder.() -> Unit):
+        Unit = incrementalRunConfig(IncrementalRunConfigProperty(incrementalRunConfig))
 
     /**
      * A list of `InputSource` objects, which have the fields `InputSourceARN` and `SchemaName` .
@@ -597,6 +696,96 @@ public open class CfnMatchingWorkflow(
   }
 
   /**
+   * An object which defines an incremental run type and has only `incrementalRunType` as a field.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
+   * IncrementalRunConfigProperty incrementalRunConfigProperty =
+   * IncrementalRunConfigProperty.builder()
+   * .incrementalRunType("incrementalRunType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-incrementalrunconfig.html)
+   */
+  public interface IncrementalRunConfigProperty {
+    /**
+     * The type of incremental run.
+     *
+     * It takes only one value: `IMMEDIATE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-incrementalrunconfig.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig-incrementalruntype)
+     */
+    public fun incrementalRunType(): String
+
+    /**
+     * A builder for [IncrementalRunConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param incrementalRunType The type of incremental run. 
+       * It takes only one value: `IMMEDIATE` .
+       */
+      public fun incrementalRunType(incrementalRunType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IncrementalRunConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IncrementalRunConfigProperty.builder()
+
+      /**
+       * @param incrementalRunType The type of incremental run. 
+       * It takes only one value: `IMMEDIATE` .
+       */
+      override fun incrementalRunType(incrementalRunType: String) {
+        cdkBuilder.incrementalRunType(incrementalRunType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IncrementalRunConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IncrementalRunConfigProperty,
+    ) : CdkObject(cdkObject),
+        IncrementalRunConfigProperty {
+      /**
+       * The type of incremental run.
+       *
+       * It takes only one value: `IMMEDIATE` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-incrementalrunconfig.html#cfn-entityresolution-matchingworkflow-incrementalrunconfig-incrementalruntype)
+       */
+      override fun incrementalRunType(): String = unwrap(this).getIncrementalRunType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IncrementalRunConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IncrementalRunConfigProperty):
+          IncrementalRunConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IncrementalRunConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IncrementalRunConfigProperty):
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IncrementalRunConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IncrementalRunConfigProperty
+    }
+  }
+
+  /**
    * An object containing `InputSourceARN` , `SchemaName` , and `ApplyNormalization` .
    *
    * Example:
@@ -726,7 +915,8 @@ public open class CfnMatchingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty,
-    ) : CdkObject(cdkObject), InputSourceProperty {
+    ) : CdkObject(cdkObject),
+        InputSourceProperty {
       /**
        * Normalizes the attributes defined in the schema in the input data.
        *
@@ -833,7 +1023,8 @@ public open class CfnMatchingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty,
-    ) : CdkObject(cdkObject), IntermediateSourceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        IntermediateSourceConfigurationProperty {
       /**
        * The Amazon S3 location (bucket and prefix).
        *
@@ -958,7 +1149,8 @@ public open class CfnMatchingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty,
-    ) : CdkObject(cdkObject), OutputAttributeProperty {
+    ) : CdkObject(cdkObject),
+        OutputAttributeProperty {
       /**
        * Enables the ability to hash the column values in the output.
        *
@@ -1198,7 +1390,8 @@ public open class CfnMatchingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputSourceProperty,
-    ) : CdkObject(cdkObject), OutputSourceProperty {
+    ) : CdkObject(cdkObject),
+        OutputSourceProperty {
       /**
        * Normalizes the attributes defined in the schema in the input data.
        *
@@ -1418,7 +1611,8 @@ public open class CfnMatchingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ProviderPropertiesProperty,
-    ) : CdkObject(cdkObject), ProviderPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ProviderPropertiesProperty {
       /**
        * The Amazon S3 location that temporarily stores your data while it processes.
        *
@@ -1489,6 +1683,8 @@ public open class CfnMatchingWorkflow(
    * .matchingKeys(List.of("matchingKeys"))
    * .ruleName("ruleName")
    * .build()))
+   * // the properties below are optional
+   * .matchPurpose("matchPurpose")
    * .build())
    * .build();
    * ```
@@ -1641,7 +1837,8 @@ public open class CfnMatchingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ResolutionTechniquesProperty,
-    ) : CdkObject(cdkObject), ResolutionTechniquesProperty {
+    ) : CdkObject(cdkObject),
+        ResolutionTechniquesProperty {
       /**
        * The properties of the provider service.
        *
@@ -1686,8 +1883,9 @@ public open class CfnMatchingWorkflow(
   }
 
   /**
-   * An object which defines the list of matching rules to run and has a field `Rules` , which is a
-   * list of rule objects.
+   * An object which defines the list of matching rules to run in a matching workflow.
+   *
+   * RuleBasedProperties contain a `Rules` field, which is a list of rule objects.
    *
    * Example:
    *
@@ -1701,6 +1899,8 @@ public open class CfnMatchingWorkflow(
    * .matchingKeys(List.of("matchingKeys"))
    * .ruleName("ruleName")
    * .build()))
+   * // the properties below are optional
+   * .matchPurpose("matchPurpose")
    * .build();
    * ```
    *
@@ -1708,19 +1908,33 @@ public open class CfnMatchingWorkflow(
    */
   public interface RuleBasedPropertiesProperty {
     /**
-     * The comparison type.
+     * The comparison type. You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the
+     * `attributeMatchingModel` .
      *
-     * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
-     * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
-     * type. For example, if the value of the `Email` field of Profile A and the value of
-     * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
-     * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
-     * example, only when the value of the `Email` field of Profile A and the value of the `Email`
-     * field of Profile B matches, the two profiles are matched on the `Email` type.
+     * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+     * attribute type. For example, if the value of the `Email` field of Profile A and the value of
+     * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email`
+     * attribute type.
+     *
+     * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+     * exact match. For example, for the `Email` attribute type, the system will only consider it a
+     * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+     * Profile B.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-attributematchingmodel)
      */
     public fun attributeMatchingModel(): String
+
+    /**
+     * An indicator of whether to generate IDs and index the data or not.
+     *
+     * If you choose `IDENTIFIER_GENERATION` , the process generates IDs and indexes the data.
+     *
+     * If you choose `INDEXING` , the process indexes the data without generating IDs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-matchpurpose)
+     */
+    public fun matchPurpose(): String? = unwrap(this).getMatchPurpose()
 
     /**
      * A list of `Rule` objects, each of which have fields `RuleName` and `MatchingKeys` .
@@ -1735,16 +1949,27 @@ public open class CfnMatchingWorkflow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attributeMatchingModel The comparison type. 
-       * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
-       * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
-       * type. For example, if the value of the `Email` field of Profile A and the value of
-       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
-       * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
-       * example, only when the value of the `Email` field of Profile A and the value of the `Email`
-       * field of Profile B matches, the two profiles are matched on the `Email` type.
+       * @param attributeMatchingModel The comparison type. You can either choose `ONE_TO_ONE` or
+       * `MANY_TO_MANY` as the `attributeMatchingModel` . 
+       * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+       * attribute type. For example, if the value of the `Email` field of Profile A and the value of
+       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email`
+       * attribute type.
+       *
+       * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+       * exact match. For example, for the `Email` attribute type, the system will only consider it a
+       * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+       * Profile B.
        */
       public fun attributeMatchingModel(attributeMatchingModel: String)
+
+      /**
+       * @param matchPurpose An indicator of whether to generate IDs and index the data or not.
+       * If you choose `IDENTIFIER_GENERATION` , the process generates IDs and indexes the data.
+       *
+       * If you choose `INDEXING` , the process indexes the data without generating IDs.
+       */
+      public fun matchPurpose(matchPurpose: String)
 
       /**
        * @param rules A list of `Rule` objects, each of which have fields `RuleName` and
@@ -1772,17 +1997,30 @@ public open class CfnMatchingWorkflow(
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty.builder()
 
       /**
-       * @param attributeMatchingModel The comparison type. 
-       * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
-       * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
-       * type. For example, if the value of the `Email` field of Profile A and the value of
-       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
-       * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
-       * example, only when the value of the `Email` field of Profile A and the value of the `Email`
-       * field of Profile B matches, the two profiles are matched on the `Email` type.
+       * @param attributeMatchingModel The comparison type. You can either choose `ONE_TO_ONE` or
+       * `MANY_TO_MANY` as the `attributeMatchingModel` . 
+       * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+       * attribute type. For example, if the value of the `Email` field of Profile A and the value of
+       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email`
+       * attribute type.
+       *
+       * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+       * exact match. For example, for the `Email` attribute type, the system will only consider it a
+       * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+       * Profile B.
        */
       override fun attributeMatchingModel(attributeMatchingModel: String) {
         cdkBuilder.attributeMatchingModel(attributeMatchingModel)
+      }
+
+      /**
+       * @param matchPurpose An indicator of whether to generate IDs and index the data or not.
+       * If you choose `IDENTIFIER_GENERATION` , the process generates IDs and indexes the data.
+       *
+       * If you choose `INDEXING` , the process indexes the data without generating IDs.
+       */
+      override fun matchPurpose(matchPurpose: String) {
+        cdkBuilder.matchPurpose(matchPurpose)
       }
 
       /**
@@ -1814,21 +2052,36 @@ public open class CfnMatchingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty,
-    ) : CdkObject(cdkObject), RuleBasedPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        RuleBasedPropertiesProperty {
       /**
-       * The comparison type.
+       * The comparison type. You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the
+       * `attributeMatchingModel` .
        *
-       * You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the AttributeMatchingModel. When
-       * choosing `MANY_TO_MANY` , the system can match attributes across the sub-types of an attribute
-       * type. For example, if the value of the `Email` field of Profile A and the value of
-       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email` type.
-       * When choosing `ONE_TO_ONE` ,the system can only match if the sub-types are exact matches. For
-       * example, only when the value of the `Email` field of Profile A and the value of the `Email`
-       * field of Profile B matches, the two profiles are matched on the `Email` type.
+       * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+       * attribute type. For example, if the value of the `Email` field of Profile A and the value of
+       * `BusinessEmail` field of Profile B matches, the two profiles are matched on the `Email`
+       * attribute type.
+       *
+       * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+       * exact match. For example, for the `Email` attribute type, the system will only consider it a
+       * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+       * Profile B.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-attributematchingmodel)
        */
       override fun attributeMatchingModel(): String = unwrap(this).getAttributeMatchingModel()
+
+      /**
+       * An indicator of whether to generate IDs and index the data or not.
+       *
+       * If you choose `IDENTIFIER_GENERATION` , the process generates IDs and indexes the data.
+       *
+       * If you choose `INDEXING` , the process indexes the data without generating IDs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-rulebasedproperties.html#cfn-entityresolution-matchingworkflow-rulebasedproperties-matchpurpose)
+       */
+      override fun matchPurpose(): String? = unwrap(this).getMatchPurpose()
 
       /**
        * A list of `Rule` objects, each of which have fields `RuleName` and `MatchingKeys` .
@@ -1953,7 +2206,8 @@ public open class CfnMatchingWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleProperty,
-    ) : CdkObject(cdkObject), RuleProperty {
+    ) : CdkObject(cdkObject),
+        RuleProperty {
       /**
        * A list of `MatchingKeys` .
        *

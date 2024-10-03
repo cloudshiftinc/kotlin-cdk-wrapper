@@ -109,7 +109,8 @@ public interface FileSystemAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.fsx.FileSystemAttributes,
-  ) : CdkObject(cdkObject), FileSystemAttributes {
+  ) : CdkObject(cdkObject),
+      FileSystemAttributes {
     /**
      * The DNS name assigned to this file system.
      */

@@ -177,7 +177,8 @@ public interface CfnUserProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appstream.CfnUserProps,
-  ) : CdkObject(cdkObject), CfnUserProps {
+  ) : CdkObject(cdkObject),
+      CfnUserProps {
     /**
      * The authentication type for the user.
      *

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.Location
+import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -15,17 +16,13 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
- * BedrockInvokeModelOutputProps bedrockInvokeModelOutputProps =
- * BedrockInvokeModelOutputProps.builder()
- * .s3Location(Location.builder()
- * .bucketName("bucketName")
- * .objectKey("objectKey")
- * // the properties below are optional
- * .objectVersion("objectVersion")
- * .build())
+ * import io.cloudshiftdev.awscdk.services.bedrock.*;
+ * FoundationModel model = FoundationModel.fromFoundationModelId(this, "Model",
+ * FoundationModelIdentifier.AMAZON_TITAN_TEXT_G1_EXPRESS_V1);
+ * BedrockInvokeModel task = BedrockInvokeModel.Builder.create(this, "Prompt Model")
+ * .model(model)
+ * .input(BedrockInvokeModelInputProps.builder().s3InputUri(JsonPath.stringAt("$.prompt")).build())
+ * .output(BedrockInvokeModelOutputProps.builder().s3OutputUri(JsonPath.stringAt("$.prompt")).build())
  * .build();
  * ```
  *
@@ -38,9 +35,18 @@ public interface BedrockInvokeModelOutputProps {
    * If you specify this field, the API response body is replaced with
    * a reference to the Amazon S3 location of the original output.
    *
-   * Default: Response body is returned in the task result
+   * Default: - Response body is returned in the task result
    */
   public fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
+
+  /**
+   * The destination location where the API response is written.
+   *
+   * This field can be used to specify s3 URI in the form of token
+   *
+   * Default: - The API response body is returned in the result.
+   */
+  public fun s3OutputUri(): String? = unwrap(this).getS3OutputUri()
 
   /**
    * A builder for [BedrockInvokeModelOutputProps]
@@ -62,6 +68,12 @@ public interface BedrockInvokeModelOutputProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e5257a3476a510565c590204e38431da4e61b6b37c4c561db431ef52d6de54db")
     public fun s3Location(s3Location: Location.Builder.() -> Unit)
+
+    /**
+     * @param s3OutputUri The destination location where the API response is written.
+     * This field can be used to specify s3 URI in the form of token
+     */
+    public fun s3OutputUri(s3OutputUri: String)
   }
 
   private class BuilderImpl : Builder {
@@ -88,6 +100,14 @@ public interface BedrockInvokeModelOutputProps {
     override fun s3Location(s3Location: Location.Builder.() -> Unit): Unit =
         s3Location(Location(s3Location))
 
+    /**
+     * @param s3OutputUri The destination location where the API response is written.
+     * This field can be used to specify s3 URI in the form of token
+     */
+    override fun s3OutputUri(s3OutputUri: String) {
+      cdkBuilder.s3OutputUri(s3OutputUri)
+    }
+
     public fun build():
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps =
         cdkBuilder.build()
@@ -95,16 +115,26 @@ public interface BedrockInvokeModelOutputProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps,
-  ) : CdkObject(cdkObject), BedrockInvokeModelOutputProps {
+  ) : CdkObject(cdkObject),
+      BedrockInvokeModelOutputProps {
     /**
      * S3 object where the Bedrock InvokeModel API response is written.
      *
      * If you specify this field, the API response body is replaced with
      * a reference to the Amazon S3 location of the original output.
      *
-     * Default: Response body is returned in the task result
+     * Default: - Response body is returned in the task result
      */
     override fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
+
+    /**
+     * The destination location where the API response is written.
+     *
+     * This field can be used to specify s3 URI in the form of token
+     *
+     * Default: - The API response body is returned in the result.
+     */
+    override fun s3OutputUri(): String? = unwrap(this).getS3OutputUri()
   }
 
   public companion object {

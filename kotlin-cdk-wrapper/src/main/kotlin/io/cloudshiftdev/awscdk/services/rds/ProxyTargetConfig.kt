@@ -137,7 +137,8 @@ public interface ProxyTargetConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ProxyTargetConfig,
-  ) : CdkObject(cdkObject), ProxyTargetConfig {
+  ) : CdkObject(cdkObject),
+      ProxyTargetConfig {
     /**
      * The database clusters to which this proxy connects.
      *

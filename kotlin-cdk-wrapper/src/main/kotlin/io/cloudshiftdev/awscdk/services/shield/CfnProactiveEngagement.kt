@@ -69,7 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProactiveEngagement(
   cdkObject: software.amazon.awscdk.services.shield.CfnProactiveEngagement,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -465,7 +466,8 @@ public open class CfnProactiveEngagement(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.shield.CfnProactiveEngagement.EmergencyContactProperty,
-    ) : CdkObject(cdkObject), EmergencyContactProperty {
+    ) : CdkObject(cdkObject),
+        EmergencyContactProperty {
       /**
        * Additional notes regarding the contact.
        *

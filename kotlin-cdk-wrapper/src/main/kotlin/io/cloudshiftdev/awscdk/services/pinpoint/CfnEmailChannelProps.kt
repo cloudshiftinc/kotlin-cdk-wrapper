@@ -217,7 +217,8 @@ public interface CfnEmailChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailChannelProps,
-  ) : CdkObject(cdkObject), CfnEmailChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnEmailChannelProps {
     /**
      * The unique identifier for the Amazon Pinpoint application that you're specifying the email
      * channel for.

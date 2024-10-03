@@ -43,7 +43,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSignalingChannel(
   cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

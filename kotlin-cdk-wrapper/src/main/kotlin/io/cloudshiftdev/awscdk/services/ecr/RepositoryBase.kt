@@ -22,7 +22,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class RepositoryBase(
   cdkObject: software.amazon.awscdk.services.ecr.RepositoryBase,
-) : Resource(cdkObject), IRepository {
+) : Resource(cdkObject),
+    IRepository {
   /**
    * Add a policy statement to the repository's resource policy.
    *

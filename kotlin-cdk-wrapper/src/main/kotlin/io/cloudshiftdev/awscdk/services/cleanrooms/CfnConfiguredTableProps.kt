@@ -50,23 +50,27 @@ import kotlin.jvm.JvmName
  * .build()))
  * .scalarFunctions(List.of("scalarFunctions"))
  * // the properties below are optional
+ * .additionalAnalyses("additionalAnalyses")
  * .allowedJoinOperators(List.of("allowedJoinOperators"))
  * .joinRequired("joinRequired")
  * .build())
  * .custom(AnalysisRuleCustomProperty.builder()
  * .allowedAnalyses(List.of("allowedAnalyses"))
  * // the properties below are optional
+ * .additionalAnalyses("additionalAnalyses")
  * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
  * .differentialPrivacy(DifferentialPrivacyProperty.builder()
  * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
  * .name("name")
  * .build()))
  * .build())
+ * .disallowedOutputColumns(List.of("disallowedOutputColumns"))
  * .build())
  * .list(AnalysisRuleListProperty.builder()
  * .joinColumns(List.of("joinColumns"))
  * .listColumns(List.of("listColumns"))
  * // the properties below are optional
+ * .additionalAnalyses("additionalAnalyses")
  * .allowedJoinOperators(List.of("allowedJoinOperators"))
  * .build())
  * .build())
@@ -101,7 +105,7 @@ public interface CfnConfiguredTableProps {
   public fun analysisMethod(): String
 
   /**
-   * The entire created analysis rule.
+   * The analysis rule that was created for the configured table.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysisrules)
    */
@@ -163,17 +167,17 @@ public interface CfnConfiguredTableProps {
     public fun analysisMethod(analysisMethod: String)
 
     /**
-     * @param analysisRules The entire created analysis rule.
+     * @param analysisRules The analysis rule that was created for the configured table.
      */
     public fun analysisRules(analysisRules: IResolvable)
 
     /**
-     * @param analysisRules The entire created analysis rule.
+     * @param analysisRules The analysis rule that was created for the configured table.
      */
     public fun analysisRules(analysisRules: List<Any>)
 
     /**
-     * @param analysisRules The entire created analysis rule.
+     * @param analysisRules The analysis rule that was created for the configured table.
      */
     public fun analysisRules(vararg analysisRules: Any)
 
@@ -251,21 +255,21 @@ public interface CfnConfiguredTableProps {
     }
 
     /**
-     * @param analysisRules The entire created analysis rule.
+     * @param analysisRules The analysis rule that was created for the configured table.
      */
     override fun analysisRules(analysisRules: IResolvable) {
       cdkBuilder.analysisRules(analysisRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param analysisRules The entire created analysis rule.
+     * @param analysisRules The analysis rule that was created for the configured table.
      */
     override fun analysisRules(analysisRules: List<Any>) {
       cdkBuilder.analysisRules(analysisRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param analysisRules The entire created analysis rule.
+     * @param analysisRules The analysis rule that was created for the configured table.
      */
     override fun analysisRules(vararg analysisRules: Any): Unit =
         analysisRules(analysisRules.toList())
@@ -331,7 +335,8 @@ public interface CfnConfiguredTableProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableProps,
-  ) : CdkObject(cdkObject), CfnConfiguredTableProps {
+  ) : CdkObject(cdkObject),
+      CfnConfiguredTableProps {
     /**
      * The columns within the underlying AWS Glue table that can be utilized within collaborations.
      *
@@ -349,7 +354,7 @@ public interface CfnConfiguredTableProps {
     override fun analysisMethod(): String = unwrap(this).getAnalysisMethod()
 
     /**
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysisrules)
      */

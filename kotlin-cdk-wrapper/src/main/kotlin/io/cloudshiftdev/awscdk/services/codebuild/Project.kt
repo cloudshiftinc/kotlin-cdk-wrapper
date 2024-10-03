@@ -54,7 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Project(
   cdkObject: software.amazon.awscdk.services.codebuild.Project,
-) : Resource(cdkObject), IProject {
+) : Resource(cdkObject),
+    IProject {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1165,8 +1166,7 @@ public open class Project(
      *
      * Default: - private subnets if available else public subnets
      *
-     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html for
-     * more details.)
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html)
      * @param subnetSelection Where to place the network interfaces within the VPC. 
      */
     public fun subnetSelection(subnetSelection: SubnetSelection)
@@ -1192,8 +1192,7 @@ public open class Project(
      *
      * Default: - private subnets if available else public subnets
      *
-     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html for
-     * more details.)
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html)
      * @param subnetSelection Where to place the network interfaces within the VPC. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -1212,6 +1211,15 @@ public open class Project(
      * complete. 
      */
     public fun timeout(timeout: Duration)
+
+    /**
+     * Specifies the visibility of the project's builds.
+     *
+     * Default: - no visibility is set
+     *
+     * @param visibility Specifies the visibility of the project's builds. 
+     */
+    public fun visibility(visibility: ProjectVisibility)
 
     /**
      * VPC network to place codebuild network interfaces.
@@ -1659,8 +1667,7 @@ public open class Project(
      *
      * Default: - private subnets if available else public subnets
      *
-     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html for
-     * more details.)
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html)
      * @param subnetSelection Where to place the network interfaces within the VPC. 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
@@ -1688,8 +1695,7 @@ public open class Project(
      *
      * Default: - private subnets if available else public subnets
      *
-     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html for
-     * more details.)
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html)
      * @param subnetSelection Where to place the network interfaces within the VPC. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -1710,6 +1716,17 @@ public open class Project(
      */
     override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * Specifies the visibility of the project's builds.
+     *
+     * Default: - no visibility is set
+     *
+     * @param visibility Specifies the visibility of the project's builds. 
+     */
+    override fun visibility(visibility: ProjectVisibility) {
+      cdkBuilder.visibility(visibility.let(ProjectVisibility.Companion::unwrap))
     }
 
     /**

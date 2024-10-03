@@ -10,6 +10,8 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -32,6 +34,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .name("name")
  * .roleArns(List.of("roleArns"))
  * // the properties below are optional
+ * .acceptRoleSessionName(false)
+ * .attributeMappings(List.of(AttributeMappingProperty.builder()
+ * .certificateField("certificateField")
+ * .mappingRules(List.of(MappingRuleProperty.builder()
+ * .specifier("specifier")
+ * .build()))
+ * .build()))
  * .durationSeconds(123)
  * .enabled(false)
  * .managedPolicyArns(List.of("managedPolicyArns"))
@@ -48,7 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProfile(
   cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnProfile,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -66,6 +77,28 @@ public open class CfnProfile(
   )
 
   /**
+   * Used to determine if a custom role session name will be accepted in a temporary credential
+   * request.
+   */
+  public open fun acceptRoleSessionName(): Any? = unwrap(this).getAcceptRoleSessionName()
+
+  /**
+   * Used to determine if a custom role session name will be accepted in a temporary credential
+   * request.
+   */
+  public open fun acceptRoleSessionName(`value`: Boolean) {
+    unwrap(this).setAcceptRoleSessionName(`value`)
+  }
+
+  /**
+   * Used to determine if a custom role session name will be accepted in a temporary credential
+   * request.
+   */
+  public open fun acceptRoleSessionName(`value`: IResolvable) {
+    unwrap(this).setAcceptRoleSessionName(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
    * The ARN of the profile.
    */
   public open fun attrProfileArn(): String = unwrap(this).getAttrProfileArn()
@@ -74,6 +107,30 @@ public open class CfnProfile(
    * The unique primary identifier of the Profile.
    */
   public open fun attrProfileId(): String = unwrap(this).getAttrProfileId()
+
+  /**
+   * A mapping applied to the authenticating end-entity certificate.
+   */
+  public open fun attributeMappings(): Any? = unwrap(this).getAttributeMappings()
+
+  /**
+   * A mapping applied to the authenticating end-entity certificate.
+   */
+  public open fun attributeMappings(`value`: IResolvable) {
+    unwrap(this).setAttributeMappings(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * A mapping applied to the authenticating end-entity certificate.
+   */
+  public open fun attributeMappings(`value`: List<Any>) {
+    unwrap(this).setAttributeMappings(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * A mapping applied to the authenticating end-entity certificate.
+   */
+  public open fun attributeMappings(vararg `value`: Any): Unit = attributeMappings(`value`.toList())
 
   /**
    * The number of seconds vended session credentials will be valid for.
@@ -226,6 +283,50 @@ public open class CfnProfile(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Used to determine if a custom role session name will be accepted in a temporary credential
+     * request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-acceptrolesessionname)
+     * @param acceptRoleSessionName Used to determine if a custom role session name will be accepted
+     * in a temporary credential request. 
+     */
+    public fun acceptRoleSessionName(acceptRoleSessionName: Boolean)
+
+    /**
+     * Used to determine if a custom role session name will be accepted in a temporary credential
+     * request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-acceptrolesessionname)
+     * @param acceptRoleSessionName Used to determine if a custom role session name will be accepted
+     * in a temporary credential request. 
+     */
+    public fun acceptRoleSessionName(acceptRoleSessionName: IResolvable)
+
+    /**
+     * A mapping applied to the authenticating end-entity certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-attributemappings)
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate. 
+     */
+    public fun attributeMappings(attributeMappings: IResolvable)
+
+    /**
+     * A mapping applied to the authenticating end-entity certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-attributemappings)
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate. 
+     */
+    public fun attributeMappings(attributeMappings: List<Any>)
+
+    /**
+     * A mapping applied to the authenticating end-entity certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-attributemappings)
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate. 
+     */
+    public fun attributeMappings(vararg attributeMappings: Any)
+
+    /**
      * The number of seconds vended session credentials will be valid for.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-durationseconds)
@@ -349,6 +450,59 @@ public open class CfnProfile(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rolesanywhere.CfnProfile.Builder =
         software.amazon.awscdk.services.rolesanywhere.CfnProfile.Builder.create(scope, id)
+
+    /**
+     * Used to determine if a custom role session name will be accepted in a temporary credential
+     * request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-acceptrolesessionname)
+     * @param acceptRoleSessionName Used to determine if a custom role session name will be accepted
+     * in a temporary credential request. 
+     */
+    override fun acceptRoleSessionName(acceptRoleSessionName: Boolean) {
+      cdkBuilder.acceptRoleSessionName(acceptRoleSessionName)
+    }
+
+    /**
+     * Used to determine if a custom role session name will be accepted in a temporary credential
+     * request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-acceptrolesessionname)
+     * @param acceptRoleSessionName Used to determine if a custom role session name will be accepted
+     * in a temporary credential request. 
+     */
+    override fun acceptRoleSessionName(acceptRoleSessionName: IResolvable) {
+      cdkBuilder.acceptRoleSessionName(acceptRoleSessionName.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * A mapping applied to the authenticating end-entity certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-attributemappings)
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate. 
+     */
+    override fun attributeMappings(attributeMappings: IResolvable) {
+      cdkBuilder.attributeMappings(attributeMappings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * A mapping applied to the authenticating end-entity certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-attributemappings)
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate. 
+     */
+    override fun attributeMappings(attributeMappings: List<Any>) {
+      cdkBuilder.attributeMappings(attributeMappings.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * A mapping applied to the authenticating end-entity certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-attributemappings)
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate. 
+     */
+    override fun attributeMappings(vararg attributeMappings: Any): Unit =
+        attributeMappings(attributeMappings.toList())
 
     /**
      * The number of seconds vended session credentials will be valid for.
@@ -511,5 +665,226 @@ public open class CfnProfile(
     internal fun unwrap(wrapped: CfnProfile):
         software.amazon.awscdk.services.rolesanywhere.CfnProfile = wrapped.cdkObject as
         software.amazon.awscdk.services.rolesanywhere.CfnProfile
+  }
+
+  /**
+   * A mapping applied to the authenticating end-entity certificate.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rolesanywhere.*;
+   * AttributeMappingProperty attributeMappingProperty = AttributeMappingProperty.builder()
+   * .certificateField("certificateField")
+   * .mappingRules(List.of(MappingRuleProperty.builder()
+   * .specifier("specifier")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-profile-attributemapping.html)
+   */
+  public interface AttributeMappingProperty {
+    /**
+     * Fields (x509Subject, x509Issuer and x509SAN) within X.509 certificates.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-profile-attributemapping.html#cfn-rolesanywhere-profile-attributemapping-certificatefield)
+     */
+    public fun certificateField(): String
+
+    /**
+     * A list of mapping entries for every supported specifier or sub-field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-profile-attributemapping.html#cfn-rolesanywhere-profile-attributemapping-mappingrules)
+     */
+    public fun mappingRules(): Any
+
+    /**
+     * A builder for [AttributeMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param certificateField Fields (x509Subject, x509Issuer and x509SAN) within X.509
+       * certificates. 
+       */
+      public fun certificateField(certificateField: String)
+
+      /**
+       * @param mappingRules A list of mapping entries for every supported specifier or sub-field. 
+       */
+      public fun mappingRules(mappingRules: IResolvable)
+
+      /**
+       * @param mappingRules A list of mapping entries for every supported specifier or sub-field. 
+       */
+      public fun mappingRules(mappingRules: List<Any>)
+
+      /**
+       * @param mappingRules A list of mapping entries for every supported specifier or sub-field. 
+       */
+      public fun mappingRules(vararg mappingRules: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rolesanywhere.CfnProfile.AttributeMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.rolesanywhere.CfnProfile.AttributeMappingProperty.builder()
+
+      /**
+       * @param certificateField Fields (x509Subject, x509Issuer and x509SAN) within X.509
+       * certificates. 
+       */
+      override fun certificateField(certificateField: String) {
+        cdkBuilder.certificateField(certificateField)
+      }
+
+      /**
+       * @param mappingRules A list of mapping entries for every supported specifier or sub-field. 
+       */
+      override fun mappingRules(mappingRules: IResolvable) {
+        cdkBuilder.mappingRules(mappingRules.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param mappingRules A list of mapping entries for every supported specifier or sub-field. 
+       */
+      override fun mappingRules(mappingRules: List<Any>) {
+        cdkBuilder.mappingRules(mappingRules.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param mappingRules A list of mapping entries for every supported specifier or sub-field. 
+       */
+      override fun mappingRules(vararg mappingRules: Any): Unit =
+          mappingRules(mappingRules.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.rolesanywhere.CfnProfile.AttributeMappingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnProfile.AttributeMappingProperty,
+    ) : CdkObject(cdkObject),
+        AttributeMappingProperty {
+      /**
+       * Fields (x509Subject, x509Issuer and x509SAN) within X.509 certificates.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-profile-attributemapping.html#cfn-rolesanywhere-profile-attributemapping-certificatefield)
+       */
+      override fun certificateField(): String = unwrap(this).getCertificateField()
+
+      /**
+       * A list of mapping entries for every supported specifier or sub-field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-profile-attributemapping.html#cfn-rolesanywhere-profile-attributemapping-mappingrules)
+       */
+      override fun mappingRules(): Any = unwrap(this).getMappingRules()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnProfile.AttributeMappingProperty):
+          AttributeMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeMappingProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AttributeMappingProperty):
+          software.amazon.awscdk.services.rolesanywhere.CfnProfile.AttributeMappingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.rolesanywhere.CfnProfile.AttributeMappingProperty
+    }
+  }
+
+  /**
+   * A single mapping entry for each supported specifier or sub-field.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.rolesanywhere.*;
+   * MappingRuleProperty mappingRuleProperty = MappingRuleProperty.builder()
+   * .specifier("specifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-profile-mappingrule.html)
+   */
+  public interface MappingRuleProperty {
+    /**
+     * Specifier within a certificate field, such as CN, OU, or UID from the Subject field.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-profile-mappingrule.html#cfn-rolesanywhere-profile-mappingrule-specifier)
+     */
+    public fun specifier(): String
+
+    /**
+     * A builder for [MappingRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param specifier Specifier within a certificate field, such as CN, OU, or UID from the
+       * Subject field. 
+       */
+      public fun specifier(specifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.rolesanywhere.CfnProfile.MappingRuleProperty.Builder =
+          software.amazon.awscdk.services.rolesanywhere.CfnProfile.MappingRuleProperty.builder()
+
+      /**
+       * @param specifier Specifier within a certificate field, such as CN, OU, or UID from the
+       * Subject field. 
+       */
+      override fun specifier(specifier: String) {
+        cdkBuilder.specifier(specifier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.rolesanywhere.CfnProfile.MappingRuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnProfile.MappingRuleProperty,
+    ) : CdkObject(cdkObject),
+        MappingRuleProperty {
+      /**
+       * Specifier within a certificate field, such as CN, OU, or UID from the Subject field.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-profile-mappingrule.html#cfn-rolesanywhere-profile-mappingrule-specifier)
+       */
+      override fun specifier(): String = unwrap(this).getSpecifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MappingRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnProfile.MappingRuleProperty):
+          MappingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? MappingRuleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MappingRuleProperty):
+          software.amazon.awscdk.services.rolesanywhere.CfnProfile.MappingRuleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.rolesanywhere.CfnProfile.MappingRuleProperty
+    }
   }
 }

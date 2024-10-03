@@ -54,7 +54,8 @@ public interface IInstanceEngine : IEngine {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.IInstanceEngine,
-  ) : CdkObject(cdkObject), IInstanceEngine {
+  ) : CdkObject(cdkObject),
+      IInstanceEngine {
     /**
      * Method called when the engine is used to create a new instance.
      *

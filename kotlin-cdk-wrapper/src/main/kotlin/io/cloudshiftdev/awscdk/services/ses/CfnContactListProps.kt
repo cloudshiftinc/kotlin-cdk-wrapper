@@ -172,7 +172,8 @@ public interface CfnContactListProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.CfnContactListProps,
-  ) : CdkObject(cdkObject), CfnContactListProps {
+  ) : CdkObject(cdkObject),
+      CfnContactListProps {
     /**
      * The name of the contact list.
      *

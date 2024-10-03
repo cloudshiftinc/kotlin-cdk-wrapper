@@ -395,7 +395,8 @@ public interface CfnEnvironmentEC2Props {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2Props,
-  ) : CdkObject(cdkObject), CfnEnvironmentEC2Props {
+  ) : CdkObject(cdkObject),
+      CfnEnvironmentEC2Props {
     /**
      * The number of minutes until the running instance is shut down after the environment was last
      * used.

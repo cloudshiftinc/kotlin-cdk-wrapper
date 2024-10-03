@@ -137,14 +137,34 @@ import kotlin.jvm.JvmName
  * .targetValue(123)
  * // the properties below are optional
  * .customizedMetricSpecification(CustomizedMetricSpecificationProperty.builder()
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .metrics(List.of(TargetTrackingMetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(TargetTrackingMetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
  * .metricName("metricName")
  * .namespace("namespace")
- * .statistic("statistic")
  * // the properties below are optional
  * .dimensions(List.of(MetricDimensionProperty.builder()
  * .name("name")
  * .value("value")
  * .build()))
+ * .build())
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .namespace("namespace")
+ * .statistic("statistic")
  * .unit("unit")
  * .build())
  * .disableScaleIn(false)
@@ -777,7 +797,8 @@ public interface CfnScalingPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicyProps,
-  ) : CdkObject(cdkObject), CfnScalingPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnScalingPolicyProps {
     /**
      * Specifies how the scaling adjustment is interpreted (for example, an absolute number or a
      * percentage).

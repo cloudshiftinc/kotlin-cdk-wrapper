@@ -109,7 +109,8 @@ public interface JenkinsProviderAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderAttributes,
-  ) : CdkObject(cdkObject), JenkinsProviderAttributes {
+  ) : CdkObject(cdkObject),
+      JenkinsProviderAttributes {
     /**
      * The name of the Jenkins provider that you set in the AWS CodePipeline plugin configuration of
      * your Jenkins project.

@@ -51,6 +51,8 @@ public interface CachePolicyProps {
   /**
    * A comment to describe the cache policy.
    *
+   * The comment cannot be longer than 128 characters.
+   *
    * Default: - no comment
    */
   public fun comment(): String? = unwrap(this).getComment()
@@ -137,6 +139,7 @@ public interface CachePolicyProps {
 
     /**
      * @param comment A comment to describe the cache policy.
+     * The comment cannot be longer than 128 characters.
      */
     public fun comment(comment: String)
 
@@ -203,6 +206,7 @@ public interface CachePolicyProps {
 
     /**
      * @param comment A comment to describe the cache policy.
+     * The comment cannot be longer than 128 characters.
      */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
@@ -278,7 +282,8 @@ public interface CachePolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CachePolicyProps,
-  ) : CdkObject(cdkObject), CachePolicyProps {
+  ) : CdkObject(cdkObject),
+      CachePolicyProps {
     /**
      * A unique name to identify the cache policy.
      *
@@ -290,6 +295,8 @@ public interface CachePolicyProps {
 
     /**
      * A comment to describe the cache policy.
+     *
+     * The comment cannot be longer than 128 characters.
      *
      * Default: - no comment
      */

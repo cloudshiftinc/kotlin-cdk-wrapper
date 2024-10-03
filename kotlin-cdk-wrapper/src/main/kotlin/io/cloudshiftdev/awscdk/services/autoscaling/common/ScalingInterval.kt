@@ -131,7 +131,8 @@ public interface ScalingInterval {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.common.ScalingInterval,
-  ) : CdkObject(cdkObject), ScalingInterval {
+  ) : CdkObject(cdkObject),
+      ScalingInterval {
     /**
      * The capacity adjustment to apply in this interval.
      *

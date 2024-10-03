@@ -278,7 +278,8 @@ public interface CfnRouteCalculatorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.location.CfnRouteCalculatorProps,
-  ) : CdkObject(cdkObject), CfnRouteCalculatorProps {
+  ) : CdkObject(cdkObject),
+      CfnRouteCalculatorProps {
     /**
      * The name of the route calculator resource.
      *

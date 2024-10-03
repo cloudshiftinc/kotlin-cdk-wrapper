@@ -34,7 +34,8 @@ public interface IEcsApplication : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.IEcsApplication,
-  ) : CdkObject(cdkObject), IEcsApplication {
+  ) : CdkObject(cdkObject),
+      IEcsApplication {
     /**
      *
      */

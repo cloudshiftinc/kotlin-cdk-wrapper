@@ -34,6 +34,9 @@ import kotlin.jvm.JvmName
  * .build()))
  * .build())
  * .enabled(false)
+ * .eventBridgeDestination(EventBridgeDestinationProperty.builder()
+ * .eventBusArn("eventBusArn")
+ * .build())
  * .kinesisFirehoseDestination(KinesisFirehoseDestinationProperty.builder()
  * .deliveryStreamArn("deliveryStreamArn")
  * .iamRoleArn("iamRoleArn")
@@ -57,7 +60,7 @@ public interface CfnConfigurationSetEventDestinationProps {
   public fun configurationSetName(): String
 
   /**
-   * The event destination object.
+   * An object that defines the event destination.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
    */
@@ -75,18 +78,18 @@ public interface CfnConfigurationSetEventDestinationProps {
     public fun configurationSetName(configurationSetName: String)
 
     /**
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     public fun eventDestination(eventDestination: IResolvable)
 
     /**
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     public
         fun eventDestination(eventDestination: CfnConfigurationSetEventDestination.EventDestinationProperty)
 
     /**
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("23aacf5cf24571485028814a8aa03c67b3b3c3144f61ce9dfdea5bc6c91855c6")
@@ -108,14 +111,14 @@ public interface CfnConfigurationSetEventDestinationProps {
     }
 
     /**
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     override fun eventDestination(eventDestination: IResolvable) {
       cdkBuilder.eventDestination(eventDestination.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     override
         fun eventDestination(eventDestination: CfnConfigurationSetEventDestination.EventDestinationProperty) {
@@ -123,7 +126,7 @@ public interface CfnConfigurationSetEventDestinationProps {
     }
 
     /**
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("23aacf5cf24571485028814a8aa03c67b3b3c3144f61ce9dfdea5bc6c91855c6")
@@ -138,7 +141,8 @@ public interface CfnConfigurationSetEventDestinationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestinationProps,
-  ) : CdkObject(cdkObject), CfnConfigurationSetEventDestinationProps {
+  ) : CdkObject(cdkObject),
+      CfnConfigurationSetEventDestinationProps {
     /**
      * The name of the configuration set that contains the event destination.
      *
@@ -147,7 +151,7 @@ public interface CfnConfigurationSetEventDestinationProps {
     override fun configurationSetName(): String = unwrap(this).getConfigurationSetName()
 
     /**
-     * The event destination object.
+     * An object that defines the event destination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
      */

@@ -68,10 +68,71 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .name("name")
  * // the properties below are optional
+ * .beforeEntry(BeforeEntryConditionsProperty.builder()
+ * .conditions(List.of(ConditionProperty.builder()
+ * .result("result")
+ * .rules(List.of(RuleDeclarationProperty.builder()
+ * .configuration(configuration)
+ * .inputArtifacts(List.of(InputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .name("name")
+ * .region("region")
+ * .roleArn("roleArn")
+ * .ruleTypeId(RuleTypeIdProperty.builder()
+ * .category("category")
+ * .owner("owner")
+ * .provider("provider")
+ * .version("version")
+ * .build())
+ * .build()))
+ * .build()))
+ * .build())
  * .blockers(List.of(BlockerDeclarationProperty.builder()
  * .name("name")
  * .type("type")
  * .build()))
+ * .onFailure(FailureConditionsProperty.builder()
+ * .conditions(List.of(ConditionProperty.builder()
+ * .result("result")
+ * .rules(List.of(RuleDeclarationProperty.builder()
+ * .configuration(configuration)
+ * .inputArtifacts(List.of(InputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .name("name")
+ * .region("region")
+ * .roleArn("roleArn")
+ * .ruleTypeId(RuleTypeIdProperty.builder()
+ * .category("category")
+ * .owner("owner")
+ * .provider("provider")
+ * .version("version")
+ * .build())
+ * .build()))
+ * .build()))
+ * .result("result")
+ * .build())
+ * .onSuccess(SuccessConditionsProperty.builder()
+ * .conditions(List.of(ConditionProperty.builder()
+ * .result("result")
+ * .rules(List.of(RuleDeclarationProperty.builder()
+ * .configuration(configuration)
+ * .inputArtifacts(List.of(InputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .name("name")
+ * .region("region")
+ * .roleArn("roleArn")
+ * .ruleTypeId(RuleTypeIdProperty.builder()
+ * .category("category")
+ * .owner("owner")
+ * .provider("provider")
+ * .version("version")
+ * .build())
+ * .build()))
+ * .build()))
+ * .build())
  * .build()))
  * // the properties below are optional
  * .artifactStore(ArtifactStoreProperty.builder()
@@ -153,7 +214,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPipeline(
   cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -220,11 +283,6 @@ public open class CfnPipeline(
    * A mapping of `artifactStore` objects and their corresponding AWS Regions.
    */
   public open fun artifactStores(vararg `value`: Any): Unit = artifactStores(`value`.toList())
-
-  /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
    * The version of the pipeline.
@@ -569,6 +627,8 @@ public open class CfnPipeline(
      *
      * The default mode is SUPERSEDED.
      *
+     * Default: - "SUPERSEDED"
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-executionmode)
      * @param executionMode The method that the pipeline will use to handle multiple executions. 
      */
@@ -904,6 +964,8 @@ public open class CfnPipeline(
      * The method that the pipeline will use to handle multiple executions.
      *
      * The default mode is SUPERSEDED.
+     *
+     * Default: - "SUPERSEDED"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-executionmode)
      * @param executionMode The method that the pipeline will use to handle multiple executions. 
@@ -1660,7 +1722,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty,
-    ) : CdkObject(cdkObject), ActionDeclarationProperty {
+    ) : CdkObject(cdkObject),
+        ActionDeclarationProperty {
       /**
        * Specifies the action type and the provider of the action.
        *
@@ -1968,7 +2031,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty,
-    ) : CdkObject(cdkObject), ActionTypeIdProperty {
+    ) : CdkObject(cdkObject),
+        ActionTypeIdProperty {
       /**
        * A category defines what kind of action can be taken in the stage, and constrains the
        * provider type for the action.
@@ -2191,7 +2255,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty,
-    ) : CdkObject(cdkObject), ArtifactStoreMapProperty {
+    ) : CdkObject(cdkObject),
+        ArtifactStoreMapProperty {
       /**
        * Represents information about the S3 bucket where artifacts are stored for the pipeline.
        *
@@ -2407,7 +2472,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty,
-    ) : CdkObject(cdkObject), ArtifactStoreProperty {
+    ) : CdkObject(cdkObject),
+        ArtifactStoreProperty {
       /**
        * The encryption key used to encrypt the data in the artifact store, such as an AWS Key
        * Management Service ( AWS KMS) key.
@@ -2455,6 +2521,130 @@ public open class CfnPipeline(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty
+    }
+  }
+
+  /**
+   * The conditions for making checks for entry to a stage.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * Object configuration;
+   * BeforeEntryConditionsProperty beforeEntryConditionsProperty =
+   * BeforeEntryConditionsProperty.builder()
+   * .conditions(List.of(ConditionProperty.builder()
+   * .result("result")
+   * .rules(List.of(RuleDeclarationProperty.builder()
+   * .configuration(configuration)
+   * .inputArtifacts(List.of(InputArtifactProperty.builder()
+   * .name("name")
+   * .build()))
+   * .name("name")
+   * .region("region")
+   * .roleArn("roleArn")
+   * .ruleTypeId(RuleTypeIdProperty.builder()
+   * .category("category")
+   * .owner("owner")
+   * .provider("provider")
+   * .version("version")
+   * .build())
+   * .build()))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-beforeentryconditions.html)
+   */
+  public interface BeforeEntryConditionsProperty {
+    /**
+     * The conditions that are configured as entry conditions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-beforeentryconditions.html#cfn-codepipeline-pipeline-beforeentryconditions-conditions)
+     */
+    public fun conditions(): Any? = unwrap(this).getConditions()
+
+    /**
+     * A builder for [BeforeEntryConditionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param conditions The conditions that are configured as entry conditions.
+       */
+      public fun conditions(conditions: IResolvable)
+
+      /**
+       * @param conditions The conditions that are configured as entry conditions.
+       */
+      public fun conditions(conditions: List<Any>)
+
+      /**
+       * @param conditions The conditions that are configured as entry conditions.
+       */
+      public fun conditions(vararg conditions: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.BeforeEntryConditionsProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.BeforeEntryConditionsProperty.builder()
+
+      /**
+       * @param conditions The conditions that are configured as entry conditions.
+       */
+      override fun conditions(conditions: IResolvable) {
+        cdkBuilder.conditions(conditions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param conditions The conditions that are configured as entry conditions.
+       */
+      override fun conditions(conditions: List<Any>) {
+        cdkBuilder.conditions(conditions.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param conditions The conditions that are configured as entry conditions.
+       */
+      override fun conditions(vararg conditions: Any): Unit = conditions(conditions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.BeforeEntryConditionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.BeforeEntryConditionsProperty,
+    ) : CdkObject(cdkObject),
+        BeforeEntryConditionsProperty {
+      /**
+       * The conditions that are configured as entry conditions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-beforeentryconditions.html#cfn-codepipeline-pipeline-beforeentryconditions-conditions)
+       */
+      override fun conditions(): Any? = unwrap(this).getConditions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BeforeEntryConditionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.BeforeEntryConditionsProperty):
+          BeforeEntryConditionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BeforeEntryConditionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BeforeEntryConditionsProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.BeforeEntryConditionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.BeforeEntryConditionsProperty
     }
   }
 
@@ -2533,7 +2723,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty,
-    ) : CdkObject(cdkObject), BlockerDeclarationProperty {
+    ) : CdkObject(cdkObject),
+        BlockerDeclarationProperty {
       /**
        * Reserved for future use.
        *
@@ -2564,6 +2755,159 @@ public open class CfnPipeline(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty
+    }
+  }
+
+  /**
+   * The condition for the stage.
+   *
+   * A condition is made up of the rules and the result for the condition.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * Object configuration;
+   * ConditionProperty conditionProperty = ConditionProperty.builder()
+   * .result("result")
+   * .rules(List.of(RuleDeclarationProperty.builder()
+   * .configuration(configuration)
+   * .inputArtifacts(List.of(InputArtifactProperty.builder()
+   * .name("name")
+   * .build()))
+   * .name("name")
+   * .region("region")
+   * .roleArn("roleArn")
+   * .ruleTypeId(RuleTypeIdProperty.builder()
+   * .category("category")
+   * .owner("owner")
+   * .provider("provider")
+   * .version("version")
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-condition.html)
+   */
+  public interface ConditionProperty {
+    /**
+     * The action to be done when the condition is met.
+     *
+     * For example, rolling back an execution for a failure condition.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-condition.html#cfn-codepipeline-pipeline-condition-result)
+     */
+    public fun result(): String? = unwrap(this).getResult()
+
+    /**
+     * The rules that make up the condition.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-condition.html#cfn-codepipeline-pipeline-condition-rules)
+     */
+    public fun rules(): Any? = unwrap(this).getRules()
+
+    /**
+     * A builder for [ConditionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param result The action to be done when the condition is met.
+       * For example, rolling back an execution for a failure condition.
+       */
+      public fun result(result: String)
+
+      /**
+       * @param rules The rules that make up the condition.
+       */
+      public fun rules(rules: IResolvable)
+
+      /**
+       * @param rules The rules that make up the condition.
+       */
+      public fun rules(rules: List<Any>)
+
+      /**
+       * @param rules The rules that make up the condition.
+       */
+      public fun rules(vararg rules: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ConditionProperty.Builder =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ConditionProperty.builder()
+
+      /**
+       * @param result The action to be done when the condition is met.
+       * For example, rolling back an execution for a failure condition.
+       */
+      override fun result(result: String) {
+        cdkBuilder.result(result)
+      }
+
+      /**
+       * @param rules The rules that make up the condition.
+       */
+      override fun rules(rules: IResolvable) {
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param rules The rules that make up the condition.
+       */
+      override fun rules(rules: List<Any>) {
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param rules The rules that make up the condition.
+       */
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
+
+      public fun build(): software.amazon.awscdk.services.codepipeline.CfnPipeline.ConditionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ConditionProperty,
+    ) : CdkObject(cdkObject),
+        ConditionProperty {
+      /**
+       * The action to be done when the condition is met.
+       *
+       * For example, rolling back an execution for a failure condition.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-condition.html#cfn-codepipeline-pipeline-condition-result)
+       */
+      override fun result(): String? = unwrap(this).getResult()
+
+      /**
+       * The rules that make up the condition.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-condition.html#cfn-codepipeline-pipeline-condition-rules)
+       */
+      override fun rules(): Any? = unwrap(this).getRules()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConditionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ConditionProperty):
+          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ConditionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConditionProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ConditionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.ConditionProperty
     }
   }
 
@@ -2673,7 +3017,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty,
-    ) : CdkObject(cdkObject), EncryptionKeyProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionKeyProperty {
       /**
        * The ID used to identify the key.
        *
@@ -2715,6 +3060,159 @@ public open class CfnPipeline(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty
+    }
+  }
+
+  /**
+   * The configuration that specifies the result, such as rollback, to occur upon stage failure.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * Object configuration;
+   * FailureConditionsProperty failureConditionsProperty = FailureConditionsProperty.builder()
+   * .conditions(List.of(ConditionProperty.builder()
+   * .result("result")
+   * .rules(List.of(RuleDeclarationProperty.builder()
+   * .configuration(configuration)
+   * .inputArtifacts(List.of(InputArtifactProperty.builder()
+   * .name("name")
+   * .build()))
+   * .name("name")
+   * .region("region")
+   * .roleArn("roleArn")
+   * .ruleTypeId(RuleTypeIdProperty.builder()
+   * .category("category")
+   * .owner("owner")
+   * .provider("provider")
+   * .version("version")
+   * .build())
+   * .build()))
+   * .build()))
+   * .result("result")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-failureconditions.html)
+   */
+  public interface FailureConditionsProperty {
+    /**
+     * The conditions that are configured as failure conditions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-failureconditions.html#cfn-codepipeline-pipeline-failureconditions-conditions)
+     */
+    public fun conditions(): Any? = unwrap(this).getConditions()
+
+    /**
+     * The specified result for when the failure conditions are met, such as rolling back the stage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-failureconditions.html#cfn-codepipeline-pipeline-failureconditions-result)
+     */
+    public fun result(): String? = unwrap(this).getResult()
+
+    /**
+     * A builder for [FailureConditionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param conditions The conditions that are configured as failure conditions.
+       */
+      public fun conditions(conditions: IResolvable)
+
+      /**
+       * @param conditions The conditions that are configured as failure conditions.
+       */
+      public fun conditions(conditions: List<Any>)
+
+      /**
+       * @param conditions The conditions that are configured as failure conditions.
+       */
+      public fun conditions(vararg conditions: Any)
+
+      /**
+       * @param result The specified result for when the failure conditions are met, such as rolling
+       * back the stage.
+       */
+      public fun result(result: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.FailureConditionsProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.FailureConditionsProperty.builder()
+
+      /**
+       * @param conditions The conditions that are configured as failure conditions.
+       */
+      override fun conditions(conditions: IResolvable) {
+        cdkBuilder.conditions(conditions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param conditions The conditions that are configured as failure conditions.
+       */
+      override fun conditions(conditions: List<Any>) {
+        cdkBuilder.conditions(conditions.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param conditions The conditions that are configured as failure conditions.
+       */
+      override fun conditions(vararg conditions: Any): Unit = conditions(conditions.toList())
+
+      /**
+       * @param result The specified result for when the failure conditions are met, such as rolling
+       * back the stage.
+       */
+      override fun result(result: String) {
+        cdkBuilder.result(result)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.FailureConditionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.FailureConditionsProperty,
+    ) : CdkObject(cdkObject),
+        FailureConditionsProperty {
+      /**
+       * The conditions that are configured as failure conditions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-failureconditions.html#cfn-codepipeline-pipeline-failureconditions-conditions)
+       */
+      override fun conditions(): Any? = unwrap(this).getConditions()
+
+      /**
+       * The specified result for when the failure conditions are met, such as rolling back the
+       * stage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-failureconditions.html#cfn-codepipeline-pipeline-failureconditions-result)
+       */
+      override fun result(): String? = unwrap(this).getResult()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FailureConditionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.FailureConditionsProperty):
+          FailureConditionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FailureConditionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FailureConditionsProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.FailureConditionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.FailureConditionsProperty
     }
   }
 
@@ -2824,7 +3322,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty,
-    ) : CdkObject(cdkObject), GitBranchFilterCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        GitBranchFilterCriteriaProperty {
       /**
        * The list of patterns of Git branches that, when a commit is pushed, are to be excluded from
        * starting the pipeline.
@@ -3059,7 +3558,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty,
-    ) : CdkObject(cdkObject), GitConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        GitConfigurationProperty {
       /**
        * The field where the repository event that will start the pipeline is specified as pull
        * requests.
@@ -3215,7 +3715,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty,
-    ) : CdkObject(cdkObject), GitFilePathFilterCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        GitFilePathFilterCriteriaProperty {
       /**
        * The list of patterns of Git repository file paths that, when a commit is pushed, are to be
        * excluded from starting the pipeline.
@@ -3436,7 +3937,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty,
-    ) : CdkObject(cdkObject), GitPullRequestFilterProperty {
+    ) : CdkObject(cdkObject),
+        GitPullRequestFilterProperty {
       /**
        * The field that specifies to filter on branches for the pull request trigger configuration.
        *
@@ -3665,7 +4167,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty,
-    ) : CdkObject(cdkObject), GitPushFilterProperty {
+    ) : CdkObject(cdkObject),
+        GitPushFilterProperty {
       /**
        * The field that specifies to filter on branches for the push trigger configuration.
        *
@@ -3814,7 +4317,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty,
-    ) : CdkObject(cdkObject), GitTagFilterCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        GitTagFilterCriteriaProperty {
       /**
        * The list of patterns of Git tags that, when pushed, are to be excluded from starting the
        * pipeline.
@@ -3932,7 +4436,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty,
-    ) : CdkObject(cdkObject), InputArtifactProperty {
+    ) : CdkObject(cdkObject),
+        InputArtifactProperty {
       /**
        * The name of the artifact to be worked on (for example, "My App").
        *
@@ -4042,7 +4547,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty,
-    ) : CdkObject(cdkObject), OutputArtifactProperty {
+    ) : CdkObject(cdkObject),
+        OutputArtifactProperty {
       /**
        * The name of the output of an artifact, such as "My App".
        *
@@ -4225,7 +4731,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty,
-    ) : CdkObject(cdkObject), PipelineTriggerDeclarationProperty {
+    ) : CdkObject(cdkObject),
+        PipelineTriggerDeclarationProperty {
       /**
        * Provides the filter criteria and the source stage for the repository event that starts the
        * pipeline, such as Git tags.
@@ -4259,6 +4766,480 @@ public open class CfnPipeline(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty
+    }
+  }
+
+  /**
+   * Represents information about the rule to be created for an associated condition.
+   *
+   * An example would be creating a new rule for an entry condition, such as a rule that checks for
+   * a test result before allowing the run to enter the deployment stage.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * Object configuration;
+   * RuleDeclarationProperty ruleDeclarationProperty = RuleDeclarationProperty.builder()
+   * .configuration(configuration)
+   * .inputArtifacts(List.of(InputArtifactProperty.builder()
+   * .name("name")
+   * .build()))
+   * .name("name")
+   * .region("region")
+   * .roleArn("roleArn")
+   * .ruleTypeId(RuleTypeIdProperty.builder()
+   * .category("category")
+   * .owner("owner")
+   * .provider("provider")
+   * .version("version")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html)
+   */
+  public interface RuleDeclarationProperty {
+    /**
+     * The action configuration fields for the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-configuration)
+     */
+    public fun configuration(): Any? = unwrap(this).getConfiguration()
+
+    /**
+     * The input artifacts fields for the rule, such as specifying an input file for the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-inputartifacts)
+     */
+    public fun inputArtifacts(): Any? = unwrap(this).getInputArtifacts()
+
+    /**
+     * The name of the rule that is created for the condition, such as CheckAllResults.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The Region for the condition associated with the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-region)
+     */
+    public fun region(): String? = unwrap(this).getRegion()
+
+    /**
+     * The pipeline role ARN associated with the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-rolearn)
+     */
+    public fun roleArn(): String? = unwrap(this).getRoleArn()
+
+    /**
+     * The ID for the rule type, which is made up of the combined values for category, owner,
+     * provider, and version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-ruletypeid)
+     */
+    public fun ruleTypeId(): Any? = unwrap(this).getRuleTypeId()
+
+    /**
+     * A builder for [RuleDeclarationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param configuration The action configuration fields for the rule.
+       */
+      public fun configuration(configuration: Any)
+
+      /**
+       * @param inputArtifacts The input artifacts fields for the rule, such as specifying an input
+       * file for the rule.
+       */
+      public fun inputArtifacts(inputArtifacts: IResolvable)
+
+      /**
+       * @param inputArtifacts The input artifacts fields for the rule, such as specifying an input
+       * file for the rule.
+       */
+      public fun inputArtifacts(inputArtifacts: List<Any>)
+
+      /**
+       * @param inputArtifacts The input artifacts fields for the rule, such as specifying an input
+       * file for the rule.
+       */
+      public fun inputArtifacts(vararg inputArtifacts: Any)
+
+      /**
+       * @param name The name of the rule that is created for the condition, such as
+       * CheckAllResults.
+       */
+      public fun name(name: String)
+
+      /**
+       * @param region The Region for the condition associated with the rule.
+       */
+      public fun region(region: String)
+
+      /**
+       * @param roleArn The pipeline role ARN associated with the rule.
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param ruleTypeId The ID for the rule type, which is made up of the combined values for
+       * category, owner, provider, and version.
+       */
+      public fun ruleTypeId(ruleTypeId: IResolvable)
+
+      /**
+       * @param ruleTypeId The ID for the rule type, which is made up of the combined values for
+       * category, owner, provider, and version.
+       */
+      public fun ruleTypeId(ruleTypeId: RuleTypeIdProperty)
+
+      /**
+       * @param ruleTypeId The ID for the rule type, which is made up of the combined values for
+       * category, owner, provider, and version.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("61b2082f5015c0f123336765dcaa6a805691941bf3776ff63854afb715a827e1")
+      public fun ruleTypeId(ruleTypeId: RuleTypeIdProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleDeclarationProperty.Builder =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleDeclarationProperty.builder()
+
+      /**
+       * @param configuration The action configuration fields for the rule.
+       */
+      override fun configuration(configuration: Any) {
+        cdkBuilder.configuration(configuration)
+      }
+
+      /**
+       * @param inputArtifacts The input artifacts fields for the rule, such as specifying an input
+       * file for the rule.
+       */
+      override fun inputArtifacts(inputArtifacts: IResolvable) {
+        cdkBuilder.inputArtifacts(inputArtifacts.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param inputArtifacts The input artifacts fields for the rule, such as specifying an input
+       * file for the rule.
+       */
+      override fun inputArtifacts(inputArtifacts: List<Any>) {
+        cdkBuilder.inputArtifacts(inputArtifacts.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param inputArtifacts The input artifacts fields for the rule, such as specifying an input
+       * file for the rule.
+       */
+      override fun inputArtifacts(vararg inputArtifacts: Any): Unit =
+          inputArtifacts(inputArtifacts.toList())
+
+      /**
+       * @param name The name of the rule that is created for the condition, such as
+       * CheckAllResults.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param region The Region for the condition associated with the rule.
+       */
+      override fun region(region: String) {
+        cdkBuilder.region(region)
+      }
+
+      /**
+       * @param roleArn The pipeline role ARN associated with the rule.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param ruleTypeId The ID for the rule type, which is made up of the combined values for
+       * category, owner, provider, and version.
+       */
+      override fun ruleTypeId(ruleTypeId: IResolvable) {
+        cdkBuilder.ruleTypeId(ruleTypeId.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ruleTypeId The ID for the rule type, which is made up of the combined values for
+       * category, owner, provider, and version.
+       */
+      override fun ruleTypeId(ruleTypeId: RuleTypeIdProperty) {
+        cdkBuilder.ruleTypeId(ruleTypeId.let(RuleTypeIdProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ruleTypeId The ID for the rule type, which is made up of the combined values for
+       * category, owner, provider, and version.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("61b2082f5015c0f123336765dcaa6a805691941bf3776ff63854afb715a827e1")
+      override fun ruleTypeId(ruleTypeId: RuleTypeIdProperty.Builder.() -> Unit): Unit =
+          ruleTypeId(RuleTypeIdProperty(ruleTypeId))
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleDeclarationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleDeclarationProperty,
+    ) : CdkObject(cdkObject),
+        RuleDeclarationProperty {
+      /**
+       * The action configuration fields for the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-configuration)
+       */
+      override fun configuration(): Any? = unwrap(this).getConfiguration()
+
+      /**
+       * The input artifacts fields for the rule, such as specifying an input file for the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-inputartifacts)
+       */
+      override fun inputArtifacts(): Any? = unwrap(this).getInputArtifacts()
+
+      /**
+       * The name of the rule that is created for the condition, such as CheckAllResults.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The Region for the condition associated with the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-region)
+       */
+      override fun region(): String? = unwrap(this).getRegion()
+
+      /**
+       * The pipeline role ARN associated with the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-rolearn)
+       */
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
+
+      /**
+       * The ID for the rule type, which is made up of the combined values for category, owner,
+       * provider, and version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-ruletypeid)
+       */
+      override fun ruleTypeId(): Any? = unwrap(this).getRuleTypeId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuleDeclarationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleDeclarationProperty):
+          RuleDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleDeclarationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RuleDeclarationProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleDeclarationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleDeclarationProperty
+    }
+  }
+
+  /**
+   * The ID for the rule type, which is made up of the combined values for category, owner,
+   * provider, and version.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * RuleTypeIdProperty ruleTypeIdProperty = RuleTypeIdProperty.builder()
+   * .category("category")
+   * .owner("owner")
+   * .provider("provider")
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruletypeid.html)
+   */
+  public interface RuleTypeIdProperty {
+    /**
+     * A category defines what kind of rule can be run in the stage, and constrains the provider
+     * type for the rule.
+     *
+     * The valid category is `Rule` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruletypeid.html#cfn-codepipeline-pipeline-ruletypeid-category)
+     */
+    public fun category(): String? = unwrap(this).getCategory()
+
+    /**
+     * The creator of the rule being called.
+     *
+     * The valid value for the `Owner` field in the rule category is `AWS` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruletypeid.html#cfn-codepipeline-pipeline-ruletypeid-owner)
+     */
+    public fun owner(): String? = unwrap(this).getOwner()
+
+    /**
+     * The rule provider, such as the `DeploymentWindow` rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruletypeid.html#cfn-codepipeline-pipeline-ruletypeid-provider)
+     */
+    public fun provider(): String? = unwrap(this).getProvider()
+
+    /**
+     * A string that describes the rule version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruletypeid.html#cfn-codepipeline-pipeline-ruletypeid-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [RuleTypeIdProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param category A category defines what kind of rule can be run in the stage, and
+       * constrains the provider type for the rule.
+       * The valid category is `Rule` .
+       */
+      public fun category(category: String)
+
+      /**
+       * @param owner The creator of the rule being called.
+       * The valid value for the `Owner` field in the rule category is `AWS` .
+       */
+      public fun owner(owner: String)
+
+      /**
+       * @param provider The rule provider, such as the `DeploymentWindow` rule.
+       */
+      public fun provider(provider: String)
+
+      /**
+       * @param version A string that describes the rule version.
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleTypeIdProperty.Builder =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleTypeIdProperty.builder()
+
+      /**
+       * @param category A category defines what kind of rule can be run in the stage, and
+       * constrains the provider type for the rule.
+       * The valid category is `Rule` .
+       */
+      override fun category(category: String) {
+        cdkBuilder.category(category)
+      }
+
+      /**
+       * @param owner The creator of the rule being called.
+       * The valid value for the `Owner` field in the rule category is `AWS` .
+       */
+      override fun owner(owner: String) {
+        cdkBuilder.owner(owner)
+      }
+
+      /**
+       * @param provider The rule provider, such as the `DeploymentWindow` rule.
+       */
+      override fun provider(provider: String) {
+        cdkBuilder.provider(provider)
+      }
+
+      /**
+       * @param version A string that describes the rule version.
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleTypeIdProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleTypeIdProperty,
+    ) : CdkObject(cdkObject),
+        RuleTypeIdProperty {
+      /**
+       * A category defines what kind of rule can be run in the stage, and constrains the provider
+       * type for the rule.
+       *
+       * The valid category is `Rule` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruletypeid.html#cfn-codepipeline-pipeline-ruletypeid-category)
+       */
+      override fun category(): String? = unwrap(this).getCategory()
+
+      /**
+       * The creator of the rule being called.
+       *
+       * The valid value for the `Owner` field in the rule category is `AWS` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruletypeid.html#cfn-codepipeline-pipeline-ruletypeid-owner)
+       */
+      override fun owner(): String? = unwrap(this).getOwner()
+
+      /**
+       * The rule provider, such as the `DeploymentWindow` rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruletypeid.html#cfn-codepipeline-pipeline-ruletypeid-provider)
+       */
+      override fun provider(): String? = unwrap(this).getProvider()
+
+      /**
+       * A string that describes the rule version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruletypeid.html#cfn-codepipeline-pipeline-ruletypeid-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuleTypeIdProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleTypeIdProperty):
+          RuleTypeIdProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleTypeIdProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RuleTypeIdProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleTypeIdProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RuleTypeIdProperty
     }
   }
 
@@ -4297,10 +5278,71 @@ public open class CfnPipeline(
    * .build()))
    * .name("name")
    * // the properties below are optional
+   * .beforeEntry(BeforeEntryConditionsProperty.builder()
+   * .conditions(List.of(ConditionProperty.builder()
+   * .result("result")
+   * .rules(List.of(RuleDeclarationProperty.builder()
+   * .configuration(configuration)
+   * .inputArtifacts(List.of(InputArtifactProperty.builder()
+   * .name("name")
+   * .build()))
+   * .name("name")
+   * .region("region")
+   * .roleArn("roleArn")
+   * .ruleTypeId(RuleTypeIdProperty.builder()
+   * .category("category")
+   * .owner("owner")
+   * .provider("provider")
+   * .version("version")
+   * .build())
+   * .build()))
+   * .build()))
+   * .build())
    * .blockers(List.of(BlockerDeclarationProperty.builder()
    * .name("name")
    * .type("type")
    * .build()))
+   * .onFailure(FailureConditionsProperty.builder()
+   * .conditions(List.of(ConditionProperty.builder()
+   * .result("result")
+   * .rules(List.of(RuleDeclarationProperty.builder()
+   * .configuration(configuration)
+   * .inputArtifacts(List.of(InputArtifactProperty.builder()
+   * .name("name")
+   * .build()))
+   * .name("name")
+   * .region("region")
+   * .roleArn("roleArn")
+   * .ruleTypeId(RuleTypeIdProperty.builder()
+   * .category("category")
+   * .owner("owner")
+   * .provider("provider")
+   * .version("version")
+   * .build())
+   * .build()))
+   * .build()))
+   * .result("result")
+   * .build())
+   * .onSuccess(SuccessConditionsProperty.builder()
+   * .conditions(List.of(ConditionProperty.builder()
+   * .result("result")
+   * .rules(List.of(RuleDeclarationProperty.builder()
+   * .configuration(configuration)
+   * .inputArtifacts(List.of(InputArtifactProperty.builder()
+   * .name("name")
+   * .build()))
+   * .name("name")
+   * .region("region")
+   * .roleArn("roleArn")
+   * .ruleTypeId(RuleTypeIdProperty.builder()
+   * .category("category")
+   * .owner("owner")
+   * .provider("provider")
+   * .version("version")
+   * .build())
+   * .build()))
+   * .build()))
+   * .build())
    * .build();
    * ```
    *
@@ -4315,6 +5357,16 @@ public open class CfnPipeline(
     public fun actions(): Any
 
     /**
+     * The method to use when a stage allows entry.
+     *
+     * For example, configuring this field for conditions will allow entry to the stage when the
+     * conditions are met.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-beforeentry)
+     */
+    public fun beforeEntry(): Any? = unwrap(this).getBeforeEntry()
+
+    /**
      * Reserved for future use.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-blockers)
@@ -4327,6 +5379,26 @@ public open class CfnPipeline(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-name)
      */
     public fun name(): String
+
+    /**
+     * The method to use when a stage has not completed successfully.
+     *
+     * For example, configuring this field for rollback will roll back a failed stage automatically
+     * to the last successful pipeline execution in the stage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-onfailure)
+     */
+    public fun onFailure(): Any? = unwrap(this).getOnFailure()
+
+    /**
+     * The method to use when a stage has succeeded.
+     *
+     * For example, configuring this field for conditions will allow the stage to succeed when the
+     * conditions are met.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-onsuccess)
+     */
+    public fun onSuccess(): Any? = unwrap(this).getOnSuccess()
 
     /**
      * A builder for [StageDeclarationProperty]
@@ -4349,6 +5421,29 @@ public open class CfnPipeline(
       public fun actions(vararg actions: Any)
 
       /**
+       * @param beforeEntry The method to use when a stage allows entry.
+       * For example, configuring this field for conditions will allow entry to the stage when the
+       * conditions are met.
+       */
+      public fun beforeEntry(beforeEntry: IResolvable)
+
+      /**
+       * @param beforeEntry The method to use when a stage allows entry.
+       * For example, configuring this field for conditions will allow entry to the stage when the
+       * conditions are met.
+       */
+      public fun beforeEntry(beforeEntry: BeforeEntryConditionsProperty)
+
+      /**
+       * @param beforeEntry The method to use when a stage allows entry.
+       * For example, configuring this field for conditions will allow entry to the stage when the
+       * conditions are met.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8dbb1eab7fd97554a551465e01e2d90a907e6441fabdefbb53d7df95a84480be")
+      public fun beforeEntry(beforeEntry: BeforeEntryConditionsProperty.Builder.() -> Unit)
+
+      /**
        * @param blockers Reserved for future use.
        */
       public fun blockers(blockers: IResolvable)
@@ -4367,6 +5462,52 @@ public open class CfnPipeline(
        * @param name The name of the stage. 
        */
       public fun name(name: String)
+
+      /**
+       * @param onFailure The method to use when a stage has not completed successfully.
+       * For example, configuring this field for rollback will roll back a failed stage
+       * automatically to the last successful pipeline execution in the stage.
+       */
+      public fun onFailure(onFailure: IResolvable)
+
+      /**
+       * @param onFailure The method to use when a stage has not completed successfully.
+       * For example, configuring this field for rollback will roll back a failed stage
+       * automatically to the last successful pipeline execution in the stage.
+       */
+      public fun onFailure(onFailure: FailureConditionsProperty)
+
+      /**
+       * @param onFailure The method to use when a stage has not completed successfully.
+       * For example, configuring this field for rollback will roll back a failed stage
+       * automatically to the last successful pipeline execution in the stage.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4c6e0dbf179ccee8d0ab2dabb47f8a736d9ad278bda6cb08974dc4dccb574cb9")
+      public fun onFailure(onFailure: FailureConditionsProperty.Builder.() -> Unit)
+
+      /**
+       * @param onSuccess The method to use when a stage has succeeded.
+       * For example, configuring this field for conditions will allow the stage to succeed when the
+       * conditions are met.
+       */
+      public fun onSuccess(onSuccess: IResolvable)
+
+      /**
+       * @param onSuccess The method to use when a stage has succeeded.
+       * For example, configuring this field for conditions will allow the stage to succeed when the
+       * conditions are met.
+       */
+      public fun onSuccess(onSuccess: SuccessConditionsProperty)
+
+      /**
+       * @param onSuccess The method to use when a stage has succeeded.
+       * For example, configuring this field for conditions will allow the stage to succeed when the
+       * conditions are met.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b06be9ab8f13ba274fdd172a8d20effc92949b4f771014843c72951c2342466b")
+      public fun onSuccess(onSuccess: SuccessConditionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -4395,6 +5536,34 @@ public open class CfnPipeline(
       override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       /**
+       * @param beforeEntry The method to use when a stage allows entry.
+       * For example, configuring this field for conditions will allow entry to the stage when the
+       * conditions are met.
+       */
+      override fun beforeEntry(beforeEntry: IResolvable) {
+        cdkBuilder.beforeEntry(beforeEntry.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param beforeEntry The method to use when a stage allows entry.
+       * For example, configuring this field for conditions will allow entry to the stage when the
+       * conditions are met.
+       */
+      override fun beforeEntry(beforeEntry: BeforeEntryConditionsProperty) {
+        cdkBuilder.beforeEntry(beforeEntry.let(BeforeEntryConditionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param beforeEntry The method to use when a stage allows entry.
+       * For example, configuring this field for conditions will allow entry to the stage when the
+       * conditions are met.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8dbb1eab7fd97554a551465e01e2d90a907e6441fabdefbb53d7df95a84480be")
+      override fun beforeEntry(beforeEntry: BeforeEntryConditionsProperty.Builder.() -> Unit): Unit
+          = beforeEntry(BeforeEntryConditionsProperty(beforeEntry))
+
+      /**
        * @param blockers Reserved for future use.
        */
       override fun blockers(blockers: IResolvable) {
@@ -4420,6 +5589,62 @@ public open class CfnPipeline(
         cdkBuilder.name(name)
       }
 
+      /**
+       * @param onFailure The method to use when a stage has not completed successfully.
+       * For example, configuring this field for rollback will roll back a failed stage
+       * automatically to the last successful pipeline execution in the stage.
+       */
+      override fun onFailure(onFailure: IResolvable) {
+        cdkBuilder.onFailure(onFailure.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param onFailure The method to use when a stage has not completed successfully.
+       * For example, configuring this field for rollback will roll back a failed stage
+       * automatically to the last successful pipeline execution in the stage.
+       */
+      override fun onFailure(onFailure: FailureConditionsProperty) {
+        cdkBuilder.onFailure(onFailure.let(FailureConditionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param onFailure The method to use when a stage has not completed successfully.
+       * For example, configuring this field for rollback will roll back a failed stage
+       * automatically to the last successful pipeline execution in the stage.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4c6e0dbf179ccee8d0ab2dabb47f8a736d9ad278bda6cb08974dc4dccb574cb9")
+      override fun onFailure(onFailure: FailureConditionsProperty.Builder.() -> Unit): Unit =
+          onFailure(FailureConditionsProperty(onFailure))
+
+      /**
+       * @param onSuccess The method to use when a stage has succeeded.
+       * For example, configuring this field for conditions will allow the stage to succeed when the
+       * conditions are met.
+       */
+      override fun onSuccess(onSuccess: IResolvable) {
+        cdkBuilder.onSuccess(onSuccess.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param onSuccess The method to use when a stage has succeeded.
+       * For example, configuring this field for conditions will allow the stage to succeed when the
+       * conditions are met.
+       */
+      override fun onSuccess(onSuccess: SuccessConditionsProperty) {
+        cdkBuilder.onSuccess(onSuccess.let(SuccessConditionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param onSuccess The method to use when a stage has succeeded.
+       * For example, configuring this field for conditions will allow the stage to succeed when the
+       * conditions are met.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b06be9ab8f13ba274fdd172a8d20effc92949b4f771014843c72951c2342466b")
+      override fun onSuccess(onSuccess: SuccessConditionsProperty.Builder.() -> Unit): Unit =
+          onSuccess(SuccessConditionsProperty(onSuccess))
+
       public fun build():
           software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty =
           cdkBuilder.build()
@@ -4427,13 +5652,24 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty,
-    ) : CdkObject(cdkObject), StageDeclarationProperty {
+    ) : CdkObject(cdkObject),
+        StageDeclarationProperty {
       /**
        * The actions included in a stage.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-actions)
        */
       override fun actions(): Any = unwrap(this).getActions()
+
+      /**
+       * The method to use when a stage allows entry.
+       *
+       * For example, configuring this field for conditions will allow entry to the stage when the
+       * conditions are met.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-beforeentry)
+       */
+      override fun beforeEntry(): Any? = unwrap(this).getBeforeEntry()
 
       /**
        * Reserved for future use.
@@ -4448,6 +5684,26 @@ public open class CfnPipeline(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-name)
        */
       override fun name(): String = unwrap(this).getName()
+
+      /**
+       * The method to use when a stage has not completed successfully.
+       *
+       * For example, configuring this field for rollback will roll back a failed stage
+       * automatically to the last successful pipeline execution in the stage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-onfailure)
+       */
+      override fun onFailure(): Any? = unwrap(this).getOnFailure()
+
+      /**
+       * The method to use when a stage has succeeded.
+       *
+       * For example, configuring this field for conditions will allow the stage to succeed when the
+       * conditions are met.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html#cfn-codepipeline-pipeline-stagedeclaration-onsuccess)
+       */
+      override fun onSuccess(): Any? = unwrap(this).getOnSuccess()
     }
 
     public companion object {
@@ -4553,7 +5809,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty,
-    ) : CdkObject(cdkObject), StageTransitionProperty {
+    ) : CdkObject(cdkObject),
+        StageTransitionProperty {
       /**
        * The reason given to the user that a stage is disabled, such as waiting for manual approval
        * or manual tests.
@@ -4588,6 +5845,129 @@ public open class CfnPipeline(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty
+    }
+  }
+
+  /**
+   * The conditions for making checks that, if met, succeed a stage.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * Object configuration;
+   * SuccessConditionsProperty successConditionsProperty = SuccessConditionsProperty.builder()
+   * .conditions(List.of(ConditionProperty.builder()
+   * .result("result")
+   * .rules(List.of(RuleDeclarationProperty.builder()
+   * .configuration(configuration)
+   * .inputArtifacts(List.of(InputArtifactProperty.builder()
+   * .name("name")
+   * .build()))
+   * .name("name")
+   * .region("region")
+   * .roleArn("roleArn")
+   * .ruleTypeId(RuleTypeIdProperty.builder()
+   * .category("category")
+   * .owner("owner")
+   * .provider("provider")
+   * .version("version")
+   * .build())
+   * .build()))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-successconditions.html)
+   */
+  public interface SuccessConditionsProperty {
+    /**
+     * The conditions that are success conditions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-successconditions.html#cfn-codepipeline-pipeline-successconditions-conditions)
+     */
+    public fun conditions(): Any? = unwrap(this).getConditions()
+
+    /**
+     * A builder for [SuccessConditionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param conditions The conditions that are success conditions.
+       */
+      public fun conditions(conditions: IResolvable)
+
+      /**
+       * @param conditions The conditions that are success conditions.
+       */
+      public fun conditions(conditions: List<Any>)
+
+      /**
+       * @param conditions The conditions that are success conditions.
+       */
+      public fun conditions(vararg conditions: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.SuccessConditionsProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.SuccessConditionsProperty.builder()
+
+      /**
+       * @param conditions The conditions that are success conditions.
+       */
+      override fun conditions(conditions: IResolvable) {
+        cdkBuilder.conditions(conditions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param conditions The conditions that are success conditions.
+       */
+      override fun conditions(conditions: List<Any>) {
+        cdkBuilder.conditions(conditions.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param conditions The conditions that are success conditions.
+       */
+      override fun conditions(vararg conditions: Any): Unit = conditions(conditions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.SuccessConditionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.SuccessConditionsProperty,
+    ) : CdkObject(cdkObject),
+        SuccessConditionsProperty {
+      /**
+       * The conditions that are success conditions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-successconditions.html#cfn-codepipeline-pipeline-successconditions-conditions)
+       */
+      override fun conditions(): Any? = unwrap(this).getConditions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SuccessConditionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.SuccessConditionsProperty):
+          SuccessConditionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SuccessConditionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SuccessConditionsProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.SuccessConditionsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.SuccessConditionsProperty
     }
   }
 
@@ -4694,7 +6074,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.VariableDeclarationProperty,
-    ) : CdkObject(cdkObject), VariableDeclarationProperty {
+    ) : CdkObject(cdkObject),
+        VariableDeclarationProperty {
       /**
        * The value of a pipeline-level variable.
        *

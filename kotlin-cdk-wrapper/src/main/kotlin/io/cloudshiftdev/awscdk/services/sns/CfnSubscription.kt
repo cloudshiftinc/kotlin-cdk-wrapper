@@ -17,7 +17,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon SNS topic.
  *
- * For a subscription to be created, the owner of the endpoint must confirm the subscription.
+ * For a subscription to be created, the owner of the endpoint must` confirm the subscription.
  *
  * Example:
  *
@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSubscription(
   cdkObject: software.amazon.awscdk.services.sns.CfnSubscription,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -67,9 +68,9 @@ public open class CfnSubscription(
   )
 
   /**
-   *
+   * Arn of the subscription.
    */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+  public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
    * The delivery policy JSON assigned to the subscription.
@@ -186,12 +187,14 @@ public open class CfnSubscription(
   }
 
   /**
-   *
+   * Specifies whether Amazon SNS resends the notification to the subscription when a message's
+   * attribute changes.
    */
   public open fun replayPolicy(): Any? = unwrap(this).getReplayPolicy()
 
   /**
-   *
+   * Specifies whether Amazon SNS resends the notification to the subscription when a message's
+   * attribute changes.
    */
   public open fun replayPolicy(`value`: Any) {
     unwrap(this).setReplayPolicy(`value`)
@@ -355,8 +358,12 @@ public open class CfnSubscription(
     public fun region(region: String)
 
     /**
+     * Specifies whether Amazon SNS resends the notification to the subscription when a message's
+     * attribute changes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-replaypolicy)
-     * @param replayPolicy 
+     * @param replayPolicy Specifies whether Amazon SNS resends the notification to the subscription
+     * when a message's attribute changes. 
      */
     public fun replayPolicy(replayPolicy: Any)
 
@@ -542,8 +549,12 @@ public open class CfnSubscription(
     }
 
     /**
+     * Specifies whether Amazon SNS resends the notification to the subscription when a message's
+     * attribute changes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-replaypolicy)
-     * @param replayPolicy 
+     * @param replayPolicy Specifies whether Amazon SNS resends the notification to the subscription
+     * when a message's attribute changes. 
      */
     override fun replayPolicy(replayPolicy: Any) {
       cdkBuilder.replayPolicy(replayPolicy)

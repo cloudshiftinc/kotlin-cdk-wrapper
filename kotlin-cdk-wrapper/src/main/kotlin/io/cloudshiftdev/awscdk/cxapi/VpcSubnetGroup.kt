@@ -124,7 +124,8 @@ public interface VpcSubnetGroup {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cxapi.VpcSubnetGroup,
-  ) : CdkObject(cdkObject), VpcSubnetGroup {
+  ) : CdkObject(cdkObject),
+      VpcSubnetGroup {
     /**
      * The name of the subnet group, determined by looking at the tags of of the subnets that belong
      * to it.

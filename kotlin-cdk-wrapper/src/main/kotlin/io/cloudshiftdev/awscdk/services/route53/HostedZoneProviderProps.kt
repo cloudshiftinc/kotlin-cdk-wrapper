@@ -112,7 +112,8 @@ public interface HostedZoneProviderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.HostedZoneProviderProps,
-  ) : CdkObject(cdkObject), HostedZoneProviderProps {
+  ) : CdkObject(cdkObject),
+      HostedZoneProviderProps {
     /**
      * The zone domain e.g. example.com.
      */

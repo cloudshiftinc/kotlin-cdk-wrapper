@@ -94,6 +94,16 @@ import kotlin.jvm.JvmName
  * .kinesisParameters(KinesisParametersProperty.builder()
  * .partitionKeyPath("partitionKeyPath")
  * .build())
+ * .redshiftDataParameters(RedshiftDataParametersProperty.builder()
+ * .database("database")
+ * // the properties below are optional
+ * .dbUser("dbUser")
+ * .secretManagerArn("secretManagerArn")
+ * .sql("sql")
+ * .sqls(List.of("sqls"))
+ * .statementName("statementName")
+ * .withEvent(false)
+ * .build())
  * .retryPolicy(RetryPolicyProperty.builder()
  * .maximumEventAgeInSeconds(123)
  * .maximumRetryAttempts(123)
@@ -174,6 +184,14 @@ public interface RuleTargetConfig {
    */
   public fun kinesisParameters(): CfnRule.KinesisParametersProperty? =
       unwrap(this).getKinesisParameters()?.let(CfnRule.KinesisParametersProperty::wrap)
+
+  /**
+   * Parameters used when the rule invokes Amazon Redshift Queries.
+   *
+   * Default: - no parameters set
+   */
+  public fun redshiftDataParameters(): CfnRule.RedshiftDataParametersProperty? =
+      unwrap(this).getRedshiftDataParameters()?.let(CfnRule.RedshiftDataParametersProperty::wrap)
 
   /**
    * A RetryPolicy object that includes information about the retry policy settings.
@@ -316,6 +334,20 @@ public interface RuleTargetConfig {
     @JvmName("0d24b7ccb7ef0d1fda33628839d220084ce7edb8bc579e0255a35223090460ca")
     public
         fun kinesisParameters(kinesisParameters: CfnRule.KinesisParametersProperty.Builder.() -> Unit)
+
+    /**
+     * @param redshiftDataParameters Parameters used when the rule invokes Amazon Redshift Queries.
+     */
+    public
+        fun redshiftDataParameters(redshiftDataParameters: CfnRule.RedshiftDataParametersProperty)
+
+    /**
+     * @param redshiftDataParameters Parameters used when the rule invokes Amazon Redshift Queries.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5a0a924bfe5d6d9baa7fc8c0b1263ffa80e2ec38ea528ec68fdd2129b17aab7f")
+    public
+        fun redshiftDataParameters(redshiftDataParameters: CfnRule.RedshiftDataParametersProperty.Builder.() -> Unit)
 
     /**
      * @param retryPolicy A RetryPolicy object that includes information about the retry policy
@@ -502,6 +534,24 @@ public interface RuleTargetConfig {
         Unit = kinesisParameters(CfnRule.KinesisParametersProperty(kinesisParameters))
 
     /**
+     * @param redshiftDataParameters Parameters used when the rule invokes Amazon Redshift Queries.
+     */
+    override
+        fun redshiftDataParameters(redshiftDataParameters: CfnRule.RedshiftDataParametersProperty) {
+      cdkBuilder.redshiftDataParameters(redshiftDataParameters.let(CfnRule.RedshiftDataParametersProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param redshiftDataParameters Parameters used when the rule invokes Amazon Redshift Queries.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5a0a924bfe5d6d9baa7fc8c0b1263ffa80e2ec38ea528ec68fdd2129b17aab7f")
+    override
+        fun redshiftDataParameters(redshiftDataParameters: CfnRule.RedshiftDataParametersProperty.Builder.() -> Unit):
+        Unit =
+        redshiftDataParameters(CfnRule.RedshiftDataParametersProperty(redshiftDataParameters))
+
+    /**
      * @param retryPolicy A RetryPolicy object that includes information about the retry policy
      * settings.
      */
@@ -578,7 +628,8 @@ public interface RuleTargetConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.RuleTargetConfig,
-  ) : CdkObject(cdkObject), RuleTargetConfig {
+  ) : CdkObject(cdkObject),
+      RuleTargetConfig {
     /**
      * Contains the GraphQL operation to be parsed and executed, if the event target is an AWS
      * AppSync API.
@@ -640,6 +691,14 @@ public interface RuleTargetConfig {
      */
     override fun kinesisParameters(): CfnRule.KinesisParametersProperty? =
         unwrap(this).getKinesisParameters()?.let(CfnRule.KinesisParametersProperty::wrap)
+
+    /**
+     * Parameters used when the rule invokes Amazon Redshift Queries.
+     *
+     * Default: - no parameters set
+     */
+    override fun redshiftDataParameters(): CfnRule.RedshiftDataParametersProperty? =
+        unwrap(this).getRedshiftDataParameters()?.let(CfnRule.RedshiftDataParametersProperty::wrap)
 
     /**
      * A RetryPolicy object that includes information about the retry policy settings.

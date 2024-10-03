@@ -164,7 +164,7 @@ public interface CfnRuleProps {
    *
    * For more information, see [Events and Event
    * Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
-   * in the *Amazon EventBridge User Guide* .
+   * in the **Amazon EventBridge User Guide** .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html#cfn-events-rule-eventpattern)
    */
@@ -217,7 +217,7 @@ public interface CfnRuleProps {
    * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html#logging-management-events)
    * in the *CloudTrail User Guide* , and [Filtering management events from AWS
    * services](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html#eb-service-event-cloudtrail)
-   * in the *Amazon EventBridge User Guide* .
+   * in the **Amazon EventBridge User Guide** .
    *
    * This value is only valid for rules on the
    * [default](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is-how-it-works-concepts.html#eb-bus-concepts-buses)
@@ -243,8 +243,8 @@ public interface CfnRuleProps {
    *
    *
    * For a list of services you can configure as targets for events, see [EventBridge
-   * targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html) in the *Amazon
-   * EventBridge User Guide* .
+   * targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html) in the **Amazon
+   * EventBridge User Guide** .
    *
    * Creating rules with built-in targets is supported only in the AWS Management Console . The
    * built-in targets are:
@@ -268,7 +268,7 @@ public interface CfnRuleProps {
    *
    * For more information, see [Authentication and Access
    * Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html)
-   * in the *Amazon EventBridge User Guide* .
+   * in the **Amazon EventBridge User Guide** .
    *
    * If another AWS account is in the same region and has granted you permission (using
    * `PutPermission` ), you can send events to that account. Set that account's event bus as a target
@@ -347,7 +347,7 @@ public interface CfnRuleProps {
      * @param eventPattern The event pattern of the rule.
      * For more information, see [Events and Event
      * Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      */
     public fun eventPattern(eventPattern: Any)
 
@@ -390,7 +390,7 @@ public interface CfnRuleProps {
      * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html#logging-management-events)
      * in the *CloudTrail User Guide* , and [Filtering management events from AWS
      * services](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html#eb-service-event-cloudtrail)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      *
      * This value is only valid for rules on the
      * [default](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is-how-it-works-concepts.html#eb-bus-concepts-buses)
@@ -414,7 +414,7 @@ public interface CfnRuleProps {
      *
      * For a list of services you can configure as targets for events, see [EventBridge
      * targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html) in the
-     * *Amazon EventBridge User Guide* .
+     * **Amazon EventBridge User Guide** .
      *
      * Creating rules with built-in targets is supported only in the AWS Management Console . The
      * built-in targets are:
@@ -439,7 +439,7 @@ public interface CfnRuleProps {
      *
      * For more information, see [Authentication and Access
      * Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      *
      * If another AWS account is in the same region and has granted you permission (using
      * `PutPermission` ), you can send events to that account. Set that account's event bus as a target
@@ -511,7 +511,7 @@ public interface CfnRuleProps {
      *
      * For a list of services you can configure as targets for events, see [EventBridge
      * targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html) in the
-     * *Amazon EventBridge User Guide* .
+     * **Amazon EventBridge User Guide** .
      *
      * Creating rules with built-in targets is supported only in the AWS Management Console . The
      * built-in targets are:
@@ -536,7 +536,7 @@ public interface CfnRuleProps {
      *
      * For more information, see [Authentication and Access
      * Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      *
      * If another AWS account is in the same region and has granted you permission (using
      * `PutPermission` ), you can send events to that account. Set that account's event bus as a target
@@ -608,7 +608,7 @@ public interface CfnRuleProps {
      *
      * For a list of services you can configure as targets for events, see [EventBridge
      * targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html) in the
-     * *Amazon EventBridge User Guide* .
+     * **Amazon EventBridge User Guide** .
      *
      * Creating rules with built-in targets is supported only in the AWS Management Console . The
      * built-in targets are:
@@ -633,7 +633,7 @@ public interface CfnRuleProps {
      *
      * For more information, see [Authentication and Access
      * Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      *
      * If another AWS account is in the same region and has granted you permission (using
      * `PutPermission` ), you can send events to that account. Set that account's event bus as a target
@@ -716,7 +716,7 @@ public interface CfnRuleProps {
      * @param eventPattern The event pattern of the rule.
      * For more information, see [Events and Event
      * Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      */
     override fun eventPattern(eventPattern: Any) {
       cdkBuilder.eventPattern(eventPattern)
@@ -767,7 +767,7 @@ public interface CfnRuleProps {
      * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html#logging-management-events)
      * in the *CloudTrail User Guide* , and [Filtering management events from AWS
      * services](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html#eb-service-event-cloudtrail)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      *
      * This value is only valid for rules on the
      * [default](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is-how-it-works-concepts.html#eb-bus-concepts-buses)
@@ -793,7 +793,7 @@ public interface CfnRuleProps {
      *
      * For a list of services you can configure as targets for events, see [EventBridge
      * targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html) in the
-     * *Amazon EventBridge User Guide* .
+     * **Amazon EventBridge User Guide** .
      *
      * Creating rules with built-in targets is supported only in the AWS Management Console . The
      * built-in targets are:
@@ -818,7 +818,7 @@ public interface CfnRuleProps {
      *
      * For more information, see [Authentication and Access
      * Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      *
      * If another AWS account is in the same region and has granted you permission (using
      * `PutPermission` ), you can send events to that account. Set that account's event bus as a target
@@ -892,7 +892,7 @@ public interface CfnRuleProps {
      *
      * For a list of services you can configure as targets for events, see [EventBridge
      * targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html) in the
-     * *Amazon EventBridge User Guide* .
+     * **Amazon EventBridge User Guide** .
      *
      * Creating rules with built-in targets is supported only in the AWS Management Console . The
      * built-in targets are:
@@ -917,7 +917,7 @@ public interface CfnRuleProps {
      *
      * For more information, see [Authentication and Access
      * Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      *
      * If another AWS account is in the same region and has granted you permission (using
      * `PutPermission` ), you can send events to that account. Set that account's event bus as a target
@@ -991,7 +991,7 @@ public interface CfnRuleProps {
      *
      * For a list of services you can configure as targets for events, see [EventBridge
      * targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html) in the
-     * *Amazon EventBridge User Guide* .
+     * **Amazon EventBridge User Guide** .
      *
      * Creating rules with built-in targets is supported only in the AWS Management Console . The
      * built-in targets are:
@@ -1016,7 +1016,7 @@ public interface CfnRuleProps {
      *
      * For more information, see [Authentication and Access
      * Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      *
      * If another AWS account is in the same region and has granted you permission (using
      * `PutPermission` ), you can send events to that account. Set that account's event bus as a target
@@ -1080,7 +1080,8 @@ public interface CfnRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.CfnRuleProps,
-  ) : CdkObject(cdkObject), CfnRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnRuleProps {
     /**
      * The description of the rule.
      *
@@ -1102,7 +1103,7 @@ public interface CfnRuleProps {
      *
      * For more information, see [Events and Event
      * Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html#cfn-events-rule-eventpattern)
      */
@@ -1156,7 +1157,7 @@ public interface CfnRuleProps {
      * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html#logging-management-events)
      * in the *CloudTrail User Guide* , and [Filtering management events from AWS
      * services](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html#eb-service-event-cloudtrail)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      *
      * This value is only valid for rules on the
      * [default](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is-how-it-works-concepts.html#eb-bus-concepts-buses)
@@ -1183,7 +1184,7 @@ public interface CfnRuleProps {
      *
      * For a list of services you can configure as targets for events, see [EventBridge
      * targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html) in the
-     * *Amazon EventBridge User Guide* .
+     * **Amazon EventBridge User Guide** .
      *
      * Creating rules with built-in targets is supported only in the AWS Management Console . The
      * built-in targets are:
@@ -1208,7 +1209,7 @@ public interface CfnRuleProps {
      *
      * For more information, see [Authentication and Access
      * Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html)
-     * in the *Amazon EventBridge User Guide* .
+     * in the **Amazon EventBridge User Guide** .
      *
      * If another AWS account is in the same region and has granted you permission (using
      * `PutPermission` ), you can send events to that account. Set that account's event bus as a target

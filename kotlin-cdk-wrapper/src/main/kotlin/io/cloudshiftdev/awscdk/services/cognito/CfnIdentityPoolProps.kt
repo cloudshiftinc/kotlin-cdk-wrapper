@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.cognito
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -93,6 +94,17 @@ public interface CfnIdentityPoolProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypoolname)
    */
   public fun identityPoolName(): String? = unwrap(this).getIdentityPoolName()
+
+  /**
+   * Tags to assign to the identity pool.
+   *
+   * A tag is a label that you can apply to identity pools to categorize and manage them in
+   * different ways, such as by purpose, owner, environment, or other criteria.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypooltags)
+   */
+  public fun identityPoolTags(): List<CfnTag> =
+      unwrap(this).getIdentityPoolTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * The Amazon Resource Names (ARNs) of the OpenID connect providers.
@@ -209,6 +221,20 @@ public interface CfnIdentityPoolProps {
      * *Pattern* : `[\w\s+=,.&#64;-]+`
      */
     public fun identityPoolName(identityPoolName: String)
+
+    /**
+     * @param identityPoolTags Tags to assign to the identity pool.
+     * A tag is a label that you can apply to identity pools to categorize and manage them in
+     * different ways, such as by purpose, owner, environment, or other criteria.
+     */
+    public fun identityPoolTags(identityPoolTags: List<CfnTag>)
+
+    /**
+     * @param identityPoolTags Tags to assign to the identity pool.
+     * A tag is a label that you can apply to identity pools to categorize and manage them in
+     * different ways, such as by purpose, owner, environment, or other criteria.
+     */
+    public fun identityPoolTags(vararg identityPoolTags: CfnTag)
 
     /**
      * @param openIdConnectProviderArns The Amazon Resource Names (ARNs) of the OpenID connect
@@ -368,6 +394,23 @@ public interface CfnIdentityPoolProps {
     }
 
     /**
+     * @param identityPoolTags Tags to assign to the identity pool.
+     * A tag is a label that you can apply to identity pools to categorize and manage them in
+     * different ways, such as by purpose, owner, environment, or other criteria.
+     */
+    override fun identityPoolTags(identityPoolTags: List<CfnTag>) {
+      cdkBuilder.identityPoolTags(identityPoolTags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param identityPoolTags Tags to assign to the identity pool.
+     * A tag is a label that you can apply to identity pools to categorize and manage them in
+     * different ways, such as by purpose, owner, environment, or other criteria.
+     */
+    override fun identityPoolTags(vararg identityPoolTags: CfnTag): Unit =
+        identityPoolTags(identityPoolTags.toList())
+
+    /**
      * @param openIdConnectProviderArns The Amazon Resource Names (ARNs) of the OpenID connect
      * providers.
      */
@@ -432,7 +475,8 @@ public interface CfnIdentityPoolProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolProps,
-  ) : CdkObject(cdkObject), CfnIdentityPoolProps {
+  ) : CdkObject(cdkObject),
+      CfnIdentityPoolProps {
     /**
      * Enables the Basic (Classic) authentication flow.
      *
@@ -496,6 +540,17 @@ public interface CfnIdentityPoolProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypoolname)
      */
     override fun identityPoolName(): String? = unwrap(this).getIdentityPoolName()
+
+    /**
+     * Tags to assign to the identity pool.
+     *
+     * A tag is a label that you can apply to identity pools to categorize and manage them in
+     * different ways, such as by purpose, owner, environment, or other criteria.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypooltags)
+     */
+    override fun identityPoolTags(): List<CfnTag> =
+        unwrap(this).getIdentityPoolTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
      * The Amazon Resource Names (ARNs) of the OpenID connect providers.

@@ -76,7 +76,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFunctionConfiguration(
   cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -845,7 +846,8 @@ public open class CfnFunctionConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty,
-    ) : CdkObject(cdkObject), AppSyncRuntimeProperty {
+    ) : CdkObject(cdkObject),
+        AppSyncRuntimeProperty {
       /**
        * The `name` of the runtime to use.
        *
@@ -941,7 +943,8 @@ public open class CfnFunctionConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty,
-    ) : CdkObject(cdkObject), LambdaConflictHandlerConfigProperty {
+    ) : CdkObject(cdkObject),
+        LambdaConflictHandlerConfigProperty {
       /**
        * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
        *
@@ -1133,7 +1136,8 @@ public open class CfnFunctionConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty,
-    ) : CdkObject(cdkObject), SyncConfigProperty {
+    ) : CdkObject(cdkObject),
+        SyncConfigProperty {
       /**
        * The Conflict Detection strategy to use.
        *

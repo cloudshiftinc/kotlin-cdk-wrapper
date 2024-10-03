@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Service(
   cdkObject: software.amazon.awscdk.services.servicediscovery.Service,
-) : Resource(cdkObject), IService {
+) : Resource(cdkObject),
+    IService {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

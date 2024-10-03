@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInstance(
   cdkObject: software.amazon.awscdk.services.connect.CfnInstance,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -654,7 +656,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnInstance.AttributesProperty,
-    ) : CdkObject(cdkObject), AttributesProperty {
+    ) : CdkObject(cdkObject),
+        AttributesProperty {
       /**
        * Boolean flag which enables AUTO_RESOLVE_BEST_VOICES on an instance.
        *

@@ -15,8 +15,8 @@ import kotlin.Unit
  *
  * ```
  * Fail fail = Fail.Builder.create(this, "Fail")
- * .errorPath(JsonPath.stringAt("$.someError"))
- * .causePath(JsonPath.stringAt("$.someCause"))
+ * .errorPath(JsonPath.format("error: {}.", JsonPath.stringAt("$.someError")))
+ * .causePath("States.Format('cause: {}.', $.someCause)")
  * .build();
  * ```
  */
@@ -30,6 +30,10 @@ public interface FailProps {
 
   /**
    * JsonPath expression to select part of the state to be the cause to this state.
+   *
+   * You can also use an intrinsic function that returns a string to specify this property.
+   * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+   * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
    *
    * Default: - No cause path
    */
@@ -51,6 +55,10 @@ public interface FailProps {
 
   /**
    * JsonPath expression to select part of the state to be the error to this state.
+   *
+   * You can also use an intrinsic function that returns a string to specify this property.
+   * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+   * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
    *
    * Default: - No error path
    */
@@ -76,6 +84,9 @@ public interface FailProps {
     /**
      * @param causePath JsonPath expression to select part of the state to be the cause to this
      * state.
+     * You can also use an intrinsic function that returns a string to specify this property.
+     * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+     * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
      */
     public fun causePath(causePath: String)
 
@@ -92,6 +103,9 @@ public interface FailProps {
     /**
      * @param errorPath JsonPath expression to select part of the state to be the error to this
      * state.
+     * You can also use an intrinsic function that returns a string to specify this property.
+     * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+     * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
      */
     public fun errorPath(errorPath: String)
 
@@ -115,6 +129,9 @@ public interface FailProps {
     /**
      * @param causePath JsonPath expression to select part of the state to be the cause to this
      * state.
+     * You can also use an intrinsic function that returns a string to specify this property.
+     * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+     * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
      */
     override fun causePath(causePath: String) {
       cdkBuilder.causePath(causePath)
@@ -137,6 +154,9 @@ public interface FailProps {
     /**
      * @param errorPath JsonPath expression to select part of the state to be the error to this
      * state.
+     * You can also use an intrinsic function that returns a string to specify this property.
+     * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+     * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
      */
     override fun errorPath(errorPath: String) {
       cdkBuilder.errorPath(errorPath)
@@ -154,7 +174,8 @@ public interface FailProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.FailProps,
-  ) : CdkObject(cdkObject), FailProps {
+  ) : CdkObject(cdkObject),
+      FailProps {
     /**
      * A description for the cause of the failure.
      *
@@ -164,6 +185,10 @@ public interface FailProps {
 
     /**
      * JsonPath expression to select part of the state to be the cause to this state.
+     *
+     * You can also use an intrinsic function that returns a string to specify this property.
+     * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+     * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
      *
      * Default: - No cause path
      */
@@ -185,6 +210,10 @@ public interface FailProps {
 
     /**
      * JsonPath expression to select part of the state to be the error to this state.
+     *
+     * You can also use an intrinsic function that returns a string to specify this property.
+     * The allowed functions include States.Format, States.JsonToString, States.ArrayGetItem,
+     * States.Base64Encode, States.Base64Decode, States.Hash, and States.UUID.
      *
      * Default: - No error path
      */

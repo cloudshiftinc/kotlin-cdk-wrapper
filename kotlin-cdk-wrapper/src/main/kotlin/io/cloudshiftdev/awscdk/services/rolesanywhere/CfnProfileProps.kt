@@ -27,6 +27,13 @@ import kotlin.collections.List
  * .name("name")
  * .roleArns(List.of("roleArns"))
  * // the properties below are optional
+ * .acceptRoleSessionName(false)
+ * .attributeMappings(List.of(AttributeMappingProperty.builder()
+ * .certificateField("certificateField")
+ * .mappingRules(List.of(MappingRuleProperty.builder()
+ * .specifier("specifier")
+ * .build()))
+ * .build()))
  * .durationSeconds(123)
  * .enabled(false)
  * .managedPolicyArns(List.of("managedPolicyArns"))
@@ -42,6 +49,21 @@ import kotlin.collections.List
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html)
  */
 public interface CfnProfileProps {
+  /**
+   * Used to determine if a custom role session name will be accepted in a temporary credential
+   * request.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-acceptrolesessionname)
+   */
+  public fun acceptRoleSessionName(): Any? = unwrap(this).getAcceptRoleSessionName()
+
+  /**
+   * A mapping applied to the authenticating end-entity certificate.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-attributemappings)
+   */
+  public fun attributeMappings(): Any? = unwrap(this).getAttributeMappings()
+
   /**
    * The number of seconds vended session credentials will be valid for.
    *
@@ -106,6 +128,33 @@ public interface CfnProfileProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param acceptRoleSessionName Used to determine if a custom role session name will be accepted
+     * in a temporary credential request.
+     */
+    public fun acceptRoleSessionName(acceptRoleSessionName: Boolean)
+
+    /**
+     * @param acceptRoleSessionName Used to determine if a custom role session name will be accepted
+     * in a temporary credential request.
+     */
+    public fun acceptRoleSessionName(acceptRoleSessionName: IResolvable)
+
+    /**
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate.
+     */
+    public fun attributeMappings(attributeMappings: IResolvable)
+
+    /**
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate.
+     */
+    public fun attributeMappings(attributeMappings: List<Any>)
+
+    /**
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate.
+     */
+    public fun attributeMappings(vararg attributeMappings: Any)
+
     /**
      * @param durationSeconds The number of seconds vended session credentials will be valid for.
      */
@@ -182,6 +231,42 @@ public interface CfnProfileProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rolesanywhere.CfnProfileProps.Builder =
         software.amazon.awscdk.services.rolesanywhere.CfnProfileProps.builder()
+
+    /**
+     * @param acceptRoleSessionName Used to determine if a custom role session name will be accepted
+     * in a temporary credential request.
+     */
+    override fun acceptRoleSessionName(acceptRoleSessionName: Boolean) {
+      cdkBuilder.acceptRoleSessionName(acceptRoleSessionName)
+    }
+
+    /**
+     * @param acceptRoleSessionName Used to determine if a custom role session name will be accepted
+     * in a temporary credential request.
+     */
+    override fun acceptRoleSessionName(acceptRoleSessionName: IResolvable) {
+      cdkBuilder.acceptRoleSessionName(acceptRoleSessionName.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate.
+     */
+    override fun attributeMappings(attributeMappings: IResolvable) {
+      cdkBuilder.attributeMappings(attributeMappings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate.
+     */
+    override fun attributeMappings(attributeMappings: List<Any>) {
+      cdkBuilder.attributeMappings(attributeMappings.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param attributeMappings A mapping applied to the authenticating end-entity certificate.
+     */
+    override fun attributeMappings(vararg attributeMappings: Any): Unit =
+        attributeMappings(attributeMappings.toList())
 
     /**
      * @param durationSeconds The number of seconds vended session credentials will be valid for.
@@ -282,7 +367,23 @@ public interface CfnProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnProfileProps,
-  ) : CdkObject(cdkObject), CfnProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnProfileProps {
+    /**
+     * Used to determine if a custom role session name will be accepted in a temporary credential
+     * request.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-acceptrolesessionname)
+     */
+    override fun acceptRoleSessionName(): Any? = unwrap(this).getAcceptRoleSessionName()
+
+    /**
+     * A mapping applied to the authenticating end-entity certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html#cfn-rolesanywhere-profile-attributemappings)
+     */
+    override fun attributeMappings(): Any? = unwrap(this).getAttributeMappings()
+
     /**
      * The number of seconds vended session credentials will be valid for.
      *

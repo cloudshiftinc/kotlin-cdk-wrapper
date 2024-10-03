@@ -73,6 +73,7 @@ import kotlin.jvm.JvmName
  * .port("port")
  * .build())
  * .engine("engine")
+ * .engineLifecycleSupport("engineLifecycleSupport")
  * .engineVersion("engineVersion")
  * .iops(123)
  * .kmsKeyId("kmsKeyId")
@@ -247,11 +248,7 @@ public interface CfnDBInstanceProps {
       unwrap(this).getAutomaticBackupReplicationKmsKeyId()
 
   /**
-   * The destination region for the backup replication of the DB instance.
-   *
-   * For more info, see [Replicating automated backups to another AWS
-   * Region](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html) in the
-   * *Amazon RDS User Guide* .
+   * The AWS Region associated with the automated backup.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-automaticbackupreplicationregion)
    */
@@ -299,8 +296,6 @@ public interface CfnDBInstanceProps {
    *
    * * Must be a value from 0 to 35
    * * Can't be set to 0 if the DB instance is a source to read replicas
-   *
-   * Default: - 1
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-backupretentionperiod)
    */
@@ -403,7 +398,9 @@ public interface CfnDBInstanceProps {
   public fun customIamInstanceProfile(): String? = unwrap(this).getCustomIamInstanceProfile()
 
   /**
-   * The identifier of the DB cluster that the instance will belong to.
+   * The identifier of the DB cluster that this DB instance will belong to.
+   *
+   * This setting doesn't apply to RDS Custom DB instances.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbclusteridentifier)
    */
@@ -643,7 +640,6 @@ public interface CfnDBInstanceProps {
    * * `DBClusterIdentifier`
    * * `DBName`
    * * `DeleteAutomatedBackups`
-   * * `EnablePerformanceInsights`
    * * `KmsKeyId`
    * * `MasterUsername`
    * * `MasterUserPassword`
@@ -670,14 +666,12 @@ public interface CfnDBInstanceProps {
    *
    * If there's no DB subnet group, then the DB instance isn't a VPC DB instance.
    *
-   * For more information about using Amazon RDS in a VPC, see [Using Amazon RDS with Amazon Virtual
-   * Private Cloud (VPC)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the
-   * *Amazon RDS User Guide* .
+   * For more information about using Amazon RDS in a VPC, see [Amazon VPC and Amazon
+   * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS User
+   * Guide* .
    *
-   * *Amazon Aurora*
-   *
-   * Not applicable. The DB subnet group is managed by the DB cluster. If specified, the setting
-   * must match the DB cluster setting.
+   * This setting doesn't apply to Amazon Aurora DB instances. The DB subnet group is managed by the
+   * DB cluster. If specified, the setting must match the DB cluster setting.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbsubnetgroupname)
    */
@@ -707,17 +701,15 @@ public interface CfnDBInstanceProps {
   public fun deleteAutomatedBackups(): Any? = unwrap(this).getDeleteAutomatedBackups()
 
   /**
-   * A value that indicates whether the DB instance has deletion protection enabled.
+   * Specifies whether the DB instance has deletion protection enabled.
    *
    * The database can't be deleted when deletion protection is enabled. By default, deletion
-   * protection is disabled. For more information, see [Deleting a DB
+   * protection isn't enabled. For more information, see [Deleting a DB
    * Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html) .
    *
-   * *Amazon Aurora*
-   *
-   * Not applicable. You can enable or disable deletion protection for the DB cluster. For more
-   * information, see `CreateDBCluster` . DB instances in a DB cluster can be deleted even when
-   * deletion protection is enabled for the DB cluster.
+   * This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion
+   * protection for the DB cluster. For more information, see `CreateDBCluster` . DB instances in a DB
+   * cluster can be deleted even when deletion protection is enabled for the DB cluster.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-deletionprotection)
    */
@@ -926,6 +918,34 @@ public interface CfnDBInstanceProps {
   public fun engine(): String? = unwrap(this).getEngine()
 
   /**
+   * The life cycle type for this DB instance.
+   *
+   *
+   * By default, this value is set to `open-source-rds-extended-support` , which enrolls your DB
+   * instance into Amazon RDS Extended Support. At the end of standard support, you can avoid charges
+   * for Extended Support by setting the value to `open-source-rds-extended-support-disabled` . In this
+   * case, creating the DB instance will fail if the DB major version is past its end of standard
+   * support date.
+   *
+   *
+   * This setting applies only to RDS for MySQL and RDS for PostgreSQL. For Amazon Aurora DB
+   * instances, the life cycle type is managed by the DB cluster.
+   *
+   * You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With RDS
+   * Extended Support, you can run the selected major engine version on your DB instance past the end
+   * of standard support for that engine version. For more information, see [Using Amazon RDS Extended
+   * Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html) in the
+   * *Amazon RDS User Guide* .
+   *
+   * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+   *
+   * Default: `open-source-rds-extended-support`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-enginelifecyclesupport)
+   */
+  public fun engineLifecycleSupport(): String? = unwrap(this).getEngineLifecycleSupport()
+
+  /**
    * The version number of the database engine to use.
    *
    * For a list of valid engine versions, use the `DescribeDBEngineVersions` action.
@@ -1016,8 +1036,14 @@ public interface CfnDBInstanceProps {
    * uses the default KMS key. If you specify this property, you must set the StorageEncrypted property
    * to true.
    *
-   * If you specify the `SourceDBInstanceIdentifier` property, the value is inherited from the
-   * source DB instance if the read replica is created in the same region.
+   * If you specify the `SourceDBInstanceIdentifier` or `SourceDbiResourceId` property, don't
+   * specify this property. The value is inherited from the source DB instance, and if the DB instance
+   * is encrypted, the specified `KmsKeyId` property is used. However, if the source DB instance is in
+   * a different AWS Region, you must specify a KMS key ID.
+   *
+   * If you specify the `SourceDBInstanceAutomatedBackupsArn` property, don't specify this property.
+   * The value is inherited from the source DB instance automated backup, and if the automated backup
+   * is encrypted, the specified `KmsKeyId` property is used.
    *
    * If you create an encrypted read replica in a different AWS Region, then you must specify a KMS
    * key for the destination AWS Region. KMS encryption keys are specific to the region that they're
@@ -1218,16 +1244,16 @@ public interface CfnDBInstanceProps {
    * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the
    * DB instance.
    *
-   * To disable collection of Enhanced Monitoring metrics, specify 0. The default is 0.
+   * To disable collection of Enhanced Monitoring metrics, specify `0` .
    *
    * If `MonitoringRoleArn` is specified, then you must set `MonitoringInterval` to a value other
-   * than 0.
+   * than `0` .
    *
-   * This setting doesn't apply to RDS Custom.
+   * This setting doesn't apply to RDS Custom DB instances.
    *
-   * Valid Values: `0, 1, 5, 10, 15, 30, 60`
+   * Valid Values: `0 | 1 | 5 | 10 | 15 | 30 | 60`
    *
-   * Default: - 0
+   * Default: `0`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-monitoringinterval)
    */
@@ -1252,18 +1278,14 @@ public interface CfnDBInstanceProps {
   public fun monitoringRoleArn(): String? = unwrap(this).getMonitoringRoleArn()
 
   /**
-   * Specifies whether the database instance is a Multi-AZ DB instance deployment.
+   * Specifies whether the DB instance is a Multi-AZ deployment.
    *
-   * You can't set the `AvailabilityZone` parameter if the `MultiAZ` parameter is set to true.
+   * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
    *
-   * For more information, see [Multi-AZ deployments for high
-   * availability](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html) in the
-   * *Amazon RDS User Guide* .
+   * This setting doesn't apply to the following DB instances:
    *
-   * *Amazon Aurora*
-   *
-   * Not applicable. Amazon Aurora storage is replicated across all of the Availability Zones and
-   * doesn't require the `MultiAZ` option to be set.
+   * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
+   * * RDS Custom
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-multiaz)
    */
@@ -1349,13 +1371,23 @@ public interface CfnDBInstanceProps {
   /**
    * The port number on which the database accepts connections.
    *
-   * *Amazon Aurora*
+   * This setting doesn't apply to Aurora DB instances. The port number is managed by the cluster.
    *
-   * Not applicable. The port number is managed by the DB cluster.
+   * Valid Values: `1150-65535`
    *
-   * *Db2*
+   * Default:
    *
-   * Default value: `50000`
+   * * RDS for Db2 - `50000`
+   * * RDS for MariaDB - `3306`
+   * * RDS for Microsoft SQL Server - `1433`
+   * * RDS for MySQL - `3306`
+   * * RDS for Oracle - `1521`
+   * * RDS for PostgreSQL - `5432`
+   *
+   * Constraints:
+   *
+   * * For RDS for Microsoft SQL Server, the value can't be `1234` , `1434` , `3260` , `3343` ,
+   * `3389` , `47001` , or `49152-49156` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-port)
    */
@@ -1432,8 +1464,6 @@ public interface CfnDBInstanceProps {
    *
    * Valid Values: `0 - 15`
    *
-   * Default: - 1
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-promotiontier)
    */
   public fun promotionTier(): Number? = unwrap(this).getPromotionTier()
@@ -1473,6 +1503,11 @@ public interface CfnDBInstanceProps {
 
   /**
    * The date and time to restore from.
+   *
+   * This parameter applies to point-in-time recovery. For more information, see [Restoring a DB
+   * instance to a specified
+   * time](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html) in the in the *Amazon
+   * RDS User Guide* .
    *
    * Constraints:
    *
@@ -1530,7 +1565,11 @@ public interface CfnDBInstanceProps {
    *
    * The `SourceDBInstanceIdentifier` property determines whether a DB instance is a read replica.
    * If you remove the `SourceDBInstanceIdentifier` property from your template and then update your
-   * stack, AWS CloudFormation promotes the Read Replica to a standalone DB instance.
+   * stack, AWS CloudFormation promotes the read replica to a standalone DB instance.
+   *
+   * If you specify the `UseLatestRestorableTime` or `RestoreTime` properties in conjunction with
+   * the `SourceDBInstanceIdentifier` property, RDS restores the DB instance to the requested point in
+   * time, thereby creating a new DB instance.
    *
    *
    * * If you specify a source DB instance that uses VPC security groups, we recommend that you
@@ -1579,9 +1618,12 @@ public interface CfnDBInstanceProps {
    *
    * If you specify the `KmsKeyId` property, then you must enable encryption.
    *
-   * If you specify the `SourceDBInstanceIdentifier` property, don't specify this property. The
-   * value is inherited from the source DB instance, and if the DB instance is encrypted, the specified
-   * `KmsKeyId` property is used.
+   * If you specify the `SourceDBInstanceIdentifier` or `SourceDbiResourceId` property, don't
+   * specify this property. The value is inherited from the source DB instance, and if the DB instance
+   * is encrypted, the specified `KmsKeyId` property is used.
+   *
+   * If you specify the `SourceDBInstanceAutomatedBackupsArn` property, don't specify this property.
+   * The value is inherited from the source DB instance automated backup.
    *
    * If you specify `DBSnapshotIdentifier` property, don't specify this property. The value is
    * inherited from the snapshot.
@@ -1621,7 +1663,7 @@ public interface CfnDBInstanceProps {
   public fun storageType(): String? = unwrap(this).getStorageType()
 
   /**
-   * An optional array of key-value pairs to apply to this DB instance.
+   * Tags to assign to the DB instance.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-tags)
    */
@@ -1665,7 +1707,10 @@ public interface CfnDBInstanceProps {
   /**
    * Specifies whether the DB instance is restored from the latest backup time.
    *
-   * By default, the DB instance isn't restored from the latest backup time.
+   * By default, the DB instance isn't restored from the latest backup time. This parameter applies
+   * to point-in-time recovery. For more information, see [Restoring a DB instance to a specified
+   * time](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html) in the in the *Amazon
+   * RDS User Guide* .
    *
    * Constraints:
    *
@@ -1867,11 +1912,7 @@ public interface CfnDBInstanceProps {
     public fun automaticBackupReplicationKmsKeyId(automaticBackupReplicationKmsKeyId: String)
 
     /**
-     * @param automaticBackupReplicationRegion The destination region for the backup replication of
-     * the DB instance.
-     * For more info, see [Replicating automated backups to another AWS
-     * Region](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html) in
-     * the *Amazon RDS User Guide* .
+     * @param automaticBackupReplicationRegion The AWS Region associated with the automated backup.
      */
     public fun automaticBackupReplicationRegion(automaticBackupReplicationRegion: String)
 
@@ -2047,7 +2088,9 @@ public interface CfnDBInstanceProps {
     public fun customIamInstanceProfile(customIamInstanceProfile: String)
 
     /**
-     * @param dbClusterIdentifier The identifier of the DB cluster that the instance will belong to.
+     * @param dbClusterIdentifier The identifier of the DB cluster that this DB instance will belong
+     * to.
+     * This setting doesn't apply to RDS Custom DB instances.
      */
     public fun dbClusterIdentifier(dbClusterIdentifier: String)
 
@@ -2312,7 +2355,6 @@ public interface CfnDBInstanceProps {
      * * `DBClusterIdentifier`
      * * `DBName`
      * * `DeleteAutomatedBackups`
-     * * `EnablePerformanceInsights`
      * * `KmsKeyId`
      * * `MasterUsername`
      * * `MasterUserPassword`
@@ -2336,15 +2378,12 @@ public interface CfnDBInstanceProps {
      *
      * If there's no DB subnet group, then the DB instance isn't a VPC DB instance.
      *
-     * For more information about using Amazon RDS in a VPC, see [Using Amazon RDS with Amazon
-     * Virtual Private Cloud
-     * (VPC)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS
+     * For more information about using Amazon RDS in a VPC, see [Amazon VPC and Amazon
+     * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS
      * User Guide* .
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. The DB subnet group is managed by the DB cluster. If specified, the setting
-     * must match the DB cluster setting.
+     * This setting doesn't apply to Amazon Aurora DB instances. The DB subnet group is managed by
+     * the DB cluster. If specified, the setting must match the DB cluster setting.
      */
     public fun dbSubnetGroupName(dbSubnetGroupName: String)
 
@@ -2387,32 +2426,26 @@ public interface CfnDBInstanceProps {
     public fun deleteAutomatedBackups(deleteAutomatedBackups: IResolvable)
 
     /**
-     * @param deletionProtection A value that indicates whether the DB instance has deletion
-     * protection enabled.
+     * @param deletionProtection Specifies whether the DB instance has deletion protection enabled.
      * The database can't be deleted when deletion protection is enabled. By default, deletion
-     * protection is disabled. For more information, see [Deleting a DB
+     * protection isn't enabled. For more information, see [Deleting a DB
      * Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html) .
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. You can enable or disable deletion protection for the DB cluster. For more
-     * information, see `CreateDBCluster` . DB instances in a DB cluster can be deleted even when
-     * deletion protection is enabled for the DB cluster.
+     * This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion
+     * protection for the DB cluster. For more information, see `CreateDBCluster` . DB instances in a
+     * DB cluster can be deleted even when deletion protection is enabled for the DB cluster.
      */
     public fun deletionProtection(deletionProtection: Boolean)
 
     /**
-     * @param deletionProtection A value that indicates whether the DB instance has deletion
-     * protection enabled.
+     * @param deletionProtection Specifies whether the DB instance has deletion protection enabled.
      * The database can't be deleted when deletion protection is enabled. By default, deletion
-     * protection is disabled. For more information, see [Deleting a DB
+     * protection isn't enabled. For more information, see [Deleting a DB
      * Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html) .
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. You can enable or disable deletion protection for the DB cluster. For more
-     * information, see `CreateDBCluster` . DB instances in a DB cluster can be deleted even when
-     * deletion protection is enabled for the DB cluster.
+     * This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion
+     * protection for the DB cluster. For more information, see `CreateDBCluster` . DB instances in a
+     * DB cluster can be deleted even when deletion protection is enabled for the DB cluster.
      */
     public fun deletionProtection(deletionProtection: IResolvable)
 
@@ -2682,6 +2715,31 @@ public interface CfnDBInstanceProps {
     public fun engine(engine: String)
 
     /**
+     * @param engineLifecycleSupport The life cycle type for this DB instance.
+     *
+     * By default, this value is set to `open-source-rds-extended-support` , which enrolls your DB
+     * instance into Amazon RDS Extended Support. At the end of standard support, you can avoid charges
+     * for Extended Support by setting the value to `open-source-rds-extended-support-disabled` . In
+     * this case, creating the DB instance will fail if the DB major version is past its end of
+     * standard support date.
+     *
+     *
+     * This setting applies only to RDS for MySQL and RDS for PostgreSQL. For Amazon Aurora DB
+     * instances, the life cycle type is managed by the DB cluster.
+     *
+     * You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With
+     * RDS Extended Support, you can run the selected major engine version on your DB instance past the
+     * end of standard support for that engine version. For more information, see [Using Amazon RDS
+     * Extended Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
+     * in the *Amazon RDS User Guide* .
+     *
+     * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+     *
+     * Default: `open-source-rds-extended-support`
+     */
+    public fun engineLifecycleSupport(engineLifecycleSupport: String)
+
+    /**
      * @param engineVersion The version number of the database engine to use.
      * For a list of valid engine versions, use the `DescribeDBEngineVersions` action.
      *
@@ -2765,8 +2823,14 @@ public interface CfnDBInstanceProps {
      * CloudFormation uses the default KMS key. If you specify this property, you must set the
      * StorageEncrypted property to true.
      *
-     * If you specify the `SourceDBInstanceIdentifier` property, the value is inherited from the
-     * source DB instance if the read replica is created in the same region.
+     * If you specify the `SourceDBInstanceIdentifier` or `SourceDbiResourceId` property, don't
+     * specify this property. The value is inherited from the source DB instance, and if the DB
+     * instance is encrypted, the specified `KmsKeyId` property is used. However, if the source DB
+     * instance is in a different AWS Region, you must specify a KMS key ID.
+     *
+     * If you specify the `SourceDBInstanceAutomatedBackupsArn` property, don't specify this
+     * property. The value is inherited from the source DB instance automated backup, and if the
+     * automated backup is encrypted, the specified `KmsKeyId` property is used.
      *
      * If you create an encrypted read replica in a different AWS Region, then you must specify a
      * KMS key for the destination AWS Region. KMS encryption keys are specific to the region that
@@ -2982,14 +3046,16 @@ public interface CfnDBInstanceProps {
     /**
      * @param monitoringInterval The interval, in seconds, between points when Enhanced Monitoring
      * metrics are collected for the DB instance.
-     * To disable collection of Enhanced Monitoring metrics, specify 0. The default is 0.
+     * To disable collection of Enhanced Monitoring metrics, specify `0` .
      *
      * If `MonitoringRoleArn` is specified, then you must set `MonitoringInterval` to a value other
-     * than 0.
+     * than `0` .
      *
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      *
-     * Valid Values: `0, 1, 5, 10, 15, 30, 60`
+     * Valid Values: `0 | 1 | 5 | 10 | 15 | 30 | 60`
+     *
+     * Default: `0`
      */
     public fun monitoringInterval(monitoringInterval: Number)
 
@@ -3009,32 +3075,24 @@ public interface CfnDBInstanceProps {
     public fun monitoringRoleArn(monitoringRoleArn: String)
 
     /**
-     * @param multiAz Specifies whether the database instance is a Multi-AZ DB instance deployment.
-     * You can't set the `AvailabilityZone` parameter if the `MultiAZ` parameter is set to true.
+     * @param multiAz Specifies whether the DB instance is a Multi-AZ deployment.
+     * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
      *
-     * For more information, see [Multi-AZ deployments for high
-     * availability](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html) in
-     * the *Amazon RDS User Guide* .
+     * This setting doesn't apply to the following DB instances:
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. Amazon Aurora storage is replicated across all of the Availability Zones and
-     * doesn't require the `MultiAZ` option to be set.
+     * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
+     * * RDS Custom
      */
     public fun multiAz(multiAz: Boolean)
 
     /**
-     * @param multiAz Specifies whether the database instance is a Multi-AZ DB instance deployment.
-     * You can't set the `AvailabilityZone` parameter if the `MultiAZ` parameter is set to true.
+     * @param multiAz Specifies whether the DB instance is a Multi-AZ deployment.
+     * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
      *
-     * For more information, see [Multi-AZ deployments for high
-     * availability](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html) in
-     * the *Amazon RDS User Guide* .
+     * This setting doesn't apply to the following DB instances:
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. Amazon Aurora storage is replicated across all of the Availability Zones and
-     * doesn't require the `MultiAZ` option to be set.
+     * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
+     * * RDS Custom
      */
     public fun multiAz(multiAz: IResolvable)
 
@@ -3105,13 +3163,23 @@ public interface CfnDBInstanceProps {
 
     /**
      * @param port The port number on which the database accepts connections.
-     * *Amazon Aurora*
+     * This setting doesn't apply to Aurora DB instances. The port number is managed by the cluster.
      *
-     * Not applicable. The port number is managed by the DB cluster.
+     * Valid Values: `1150-65535`
      *
-     * *Db2*
+     * Default:
      *
-     * Default value: `50000`
+     * * RDS for Db2 - `50000`
+     * * RDS for MariaDB - `3306`
+     * * RDS for Microsoft SQL Server - `1433`
+     * * RDS for MySQL - `3306`
+     * * RDS for Oracle - `1521`
+     * * RDS for PostgreSQL - `5432`
+     *
+     * Constraints:
+     *
+     * * For RDS for Microsoft SQL Server, the value can't be `1234` , `1434` , `3260` , `3343` ,
+     * `3389` , `47001` , or `49152-49156` .
      */
     public fun port(port: String)
 
@@ -3234,6 +3302,11 @@ public interface CfnDBInstanceProps {
 
     /**
      * @param restoreTime The date and time to restore from.
+     * This parameter applies to point-in-time recovery. For more information, see [Restoring a DB
+     * instance to a specified
+     * time](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html) in the in the
+     * *Amazon RDS User Guide* .
+     *
      * Constraints:
      *
      * * Must be a time in Universal Coordinated Time (UTC) format.
@@ -3283,7 +3356,11 @@ public interface CfnDBInstanceProps {
      *
      * The `SourceDBInstanceIdentifier` property determines whether a DB instance is a read replica.
      * If you remove the `SourceDBInstanceIdentifier` property from your template and then update your
-     * stack, AWS CloudFormation promotes the Read Replica to a standalone DB instance.
+     * stack, AWS CloudFormation promotes the read replica to a standalone DB instance.
+     *
+     * If you specify the `UseLatestRestorableTime` or `RestoreTime` properties in conjunction with
+     * the `SourceDBInstanceIdentifier` property, RDS restores the DB instance to the requested point
+     * in time, thereby creating a new DB instance.
      *
      *
      * * If you specify a source DB instance that uses VPC security groups, we recommend that you
@@ -3326,9 +3403,12 @@ public interface CfnDBInstanceProps {
      * default, it isn't encrypted.
      * If you specify the `KmsKeyId` property, then you must enable encryption.
      *
-     * If you specify the `SourceDBInstanceIdentifier` property, don't specify this property. The
-     * value is inherited from the source DB instance, and if the DB instance is encrypted, the
-     * specified `KmsKeyId` property is used.
+     * If you specify the `SourceDBInstanceIdentifier` or `SourceDbiResourceId` property, don't
+     * specify this property. The value is inherited from the source DB instance, and if the DB
+     * instance is encrypted, the specified `KmsKeyId` property is used.
+     *
+     * If you specify the `SourceDBInstanceAutomatedBackupsArn` property, don't specify this
+     * property. The value is inherited from the source DB instance automated backup.
      *
      * If you specify `DBSnapshotIdentifier` property, don't specify this property. The value is
      * inherited from the snapshot.
@@ -3344,9 +3424,12 @@ public interface CfnDBInstanceProps {
      * default, it isn't encrypted.
      * If you specify the `KmsKeyId` property, then you must enable encryption.
      *
-     * If you specify the `SourceDBInstanceIdentifier` property, don't specify this property. The
-     * value is inherited from the source DB instance, and if the DB instance is encrypted, the
-     * specified `KmsKeyId` property is used.
+     * If you specify the `SourceDBInstanceIdentifier` or `SourceDbiResourceId` property, don't
+     * specify this property. The value is inherited from the source DB instance, and if the DB
+     * instance is encrypted, the specified `KmsKeyId` property is used.
+     *
+     * If you specify the `SourceDBInstanceAutomatedBackupsArn` property, don't specify this
+     * property. The value is inherited from the source DB instance automated backup.
      *
      * If you specify `DBSnapshotIdentifier` property, don't specify this property. The value is
      * inherited from the snapshot.
@@ -3379,12 +3462,12 @@ public interface CfnDBInstanceProps {
     public fun storageType(storageType: String)
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this DB instance.
+     * @param tags Tags to assign to the DB instance.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this DB instance.
+     * @param tags Tags to assign to the DB instance.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -3428,7 +3511,10 @@ public interface CfnDBInstanceProps {
     /**
      * @param useLatestRestorableTime Specifies whether the DB instance is restored from the latest
      * backup time.
-     * By default, the DB instance isn't restored from the latest backup time.
+     * By default, the DB instance isn't restored from the latest backup time. This parameter
+     * applies to point-in-time recovery. For more information, see [Restoring a DB instance to a
+     * specified time](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html) in the in
+     * the *Amazon RDS User Guide* .
      *
      * Constraints:
      *
@@ -3439,7 +3525,10 @@ public interface CfnDBInstanceProps {
     /**
      * @param useLatestRestorableTime Specifies whether the DB instance is restored from the latest
      * backup time.
-     * By default, the DB instance isn't restored from the latest backup time.
+     * By default, the DB instance isn't restored from the latest backup time. This parameter
+     * applies to point-in-time recovery. For more information, see [Restoring a DB instance to a
+     * specified time](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html) in the in
+     * the *Amazon RDS User Guide* .
      *
      * Constraints:
      *
@@ -3691,11 +3780,7 @@ public interface CfnDBInstanceProps {
     }
 
     /**
-     * @param automaticBackupReplicationRegion The destination region for the backup replication of
-     * the DB instance.
-     * For more info, see [Replicating automated backups to another AWS
-     * Region](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html) in
-     * the *Amazon RDS User Guide* .
+     * @param automaticBackupReplicationRegion The AWS Region associated with the automated backup.
      */
     override fun automaticBackupReplicationRegion(automaticBackupReplicationRegion: String) {
       cdkBuilder.automaticBackupReplicationRegion(automaticBackupReplicationRegion)
@@ -3896,7 +3981,9 @@ public interface CfnDBInstanceProps {
     }
 
     /**
-     * @param dbClusterIdentifier The identifier of the DB cluster that the instance will belong to.
+     * @param dbClusterIdentifier The identifier of the DB cluster that this DB instance will belong
+     * to.
+     * This setting doesn't apply to RDS Custom DB instances.
      */
     override fun dbClusterIdentifier(dbClusterIdentifier: String) {
       cdkBuilder.dbClusterIdentifier(dbClusterIdentifier)
@@ -4176,7 +4263,6 @@ public interface CfnDBInstanceProps {
      * * `DBClusterIdentifier`
      * * `DBName`
      * * `DeleteAutomatedBackups`
-     * * `EnablePerformanceInsights`
      * * `KmsKeyId`
      * * `MasterUsername`
      * * `MasterUserPassword`
@@ -4202,15 +4288,12 @@ public interface CfnDBInstanceProps {
      *
      * If there's no DB subnet group, then the DB instance isn't a VPC DB instance.
      *
-     * For more information about using Amazon RDS in a VPC, see [Using Amazon RDS with Amazon
-     * Virtual Private Cloud
-     * (VPC)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS
+     * For more information about using Amazon RDS in a VPC, see [Amazon VPC and Amazon
+     * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS
      * User Guide* .
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. The DB subnet group is managed by the DB cluster. If specified, the setting
-     * must match the DB cluster setting.
+     * This setting doesn't apply to Amazon Aurora DB instances. The DB subnet group is managed by
+     * the DB cluster. If specified, the setting must match the DB cluster setting.
      */
     override fun dbSubnetGroupName(dbSubnetGroupName: String) {
       cdkBuilder.dbSubnetGroupName(dbSubnetGroupName)
@@ -4263,34 +4346,28 @@ public interface CfnDBInstanceProps {
     }
 
     /**
-     * @param deletionProtection A value that indicates whether the DB instance has deletion
-     * protection enabled.
+     * @param deletionProtection Specifies whether the DB instance has deletion protection enabled.
      * The database can't be deleted when deletion protection is enabled. By default, deletion
-     * protection is disabled. For more information, see [Deleting a DB
+     * protection isn't enabled. For more information, see [Deleting a DB
      * Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html) .
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. You can enable or disable deletion protection for the DB cluster. For more
-     * information, see `CreateDBCluster` . DB instances in a DB cluster can be deleted even when
-     * deletion protection is enabled for the DB cluster.
+     * This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion
+     * protection for the DB cluster. For more information, see `CreateDBCluster` . DB instances in a
+     * DB cluster can be deleted even when deletion protection is enabled for the DB cluster.
      */
     override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
     /**
-     * @param deletionProtection A value that indicates whether the DB instance has deletion
-     * protection enabled.
+     * @param deletionProtection Specifies whether the DB instance has deletion protection enabled.
      * The database can't be deleted when deletion protection is enabled. By default, deletion
-     * protection is disabled. For more information, see [Deleting a DB
+     * protection isn't enabled. For more information, see [Deleting a DB
      * Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html) .
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. You can enable or disable deletion protection for the DB cluster. For more
-     * information, see `CreateDBCluster` . DB instances in a DB cluster can be deleted even when
-     * deletion protection is enabled for the DB cluster.
+     * This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion
+     * protection for the DB cluster. For more information, see `CreateDBCluster` . DB instances in a
+     * DB cluster can be deleted even when deletion protection is enabled for the DB cluster.
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
       cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
@@ -4593,6 +4670,33 @@ public interface CfnDBInstanceProps {
     }
 
     /**
+     * @param engineLifecycleSupport The life cycle type for this DB instance.
+     *
+     * By default, this value is set to `open-source-rds-extended-support` , which enrolls your DB
+     * instance into Amazon RDS Extended Support. At the end of standard support, you can avoid charges
+     * for Extended Support by setting the value to `open-source-rds-extended-support-disabled` . In
+     * this case, creating the DB instance will fail if the DB major version is past its end of
+     * standard support date.
+     *
+     *
+     * This setting applies only to RDS for MySQL and RDS for PostgreSQL. For Amazon Aurora DB
+     * instances, the life cycle type is managed by the DB cluster.
+     *
+     * You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With
+     * RDS Extended Support, you can run the selected major engine version on your DB instance past the
+     * end of standard support for that engine version. For more information, see [Using Amazon RDS
+     * Extended Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
+     * in the *Amazon RDS User Guide* .
+     *
+     * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+     *
+     * Default: `open-source-rds-extended-support`
+     */
+    override fun engineLifecycleSupport(engineLifecycleSupport: String) {
+      cdkBuilder.engineLifecycleSupport(engineLifecycleSupport)
+    }
+
+    /**
      * @param engineVersion The version number of the database engine to use.
      * For a list of valid engine versions, use the `DescribeDBEngineVersions` action.
      *
@@ -4680,8 +4784,14 @@ public interface CfnDBInstanceProps {
      * CloudFormation uses the default KMS key. If you specify this property, you must set the
      * StorageEncrypted property to true.
      *
-     * If you specify the `SourceDBInstanceIdentifier` property, the value is inherited from the
-     * source DB instance if the read replica is created in the same region.
+     * If you specify the `SourceDBInstanceIdentifier` or `SourceDbiResourceId` property, don't
+     * specify this property. The value is inherited from the source DB instance, and if the DB
+     * instance is encrypted, the specified `KmsKeyId` property is used. However, if the source DB
+     * instance is in a different AWS Region, you must specify a KMS key ID.
+     *
+     * If you specify the `SourceDBInstanceAutomatedBackupsArn` property, don't specify this
+     * property. The value is inherited from the source DB instance automated backup, and if the
+     * automated backup is encrypted, the specified `KmsKeyId` property is used.
      *
      * If you create an encrypted read replica in a different AWS Region, then you must specify a
      * KMS key for the destination AWS Region. KMS encryption keys are specific to the region that
@@ -4916,14 +5026,16 @@ public interface CfnDBInstanceProps {
     /**
      * @param monitoringInterval The interval, in seconds, between points when Enhanced Monitoring
      * metrics are collected for the DB instance.
-     * To disable collection of Enhanced Monitoring metrics, specify 0. The default is 0.
+     * To disable collection of Enhanced Monitoring metrics, specify `0` .
      *
      * If `MonitoringRoleArn` is specified, then you must set `MonitoringInterval` to a value other
-     * than 0.
+     * than `0` .
      *
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      *
-     * Valid Values: `0, 1, 5, 10, 15, 30, 60`
+     * Valid Values: `0 | 1 | 5 | 10 | 15 | 30 | 60`
+     *
+     * Default: `0`
      */
     override fun monitoringInterval(monitoringInterval: Number) {
       cdkBuilder.monitoringInterval(monitoringInterval)
@@ -4947,34 +5059,26 @@ public interface CfnDBInstanceProps {
     }
 
     /**
-     * @param multiAz Specifies whether the database instance is a Multi-AZ DB instance deployment.
-     * You can't set the `AvailabilityZone` parameter if the `MultiAZ` parameter is set to true.
+     * @param multiAz Specifies whether the DB instance is a Multi-AZ deployment.
+     * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
      *
-     * For more information, see [Multi-AZ deployments for high
-     * availability](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html) in
-     * the *Amazon RDS User Guide* .
+     * This setting doesn't apply to the following DB instances:
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. Amazon Aurora storage is replicated across all of the Availability Zones and
-     * doesn't require the `MultiAZ` option to be set.
+     * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
+     * * RDS Custom
      */
     override fun multiAz(multiAz: Boolean) {
       cdkBuilder.multiAz(multiAz)
     }
 
     /**
-     * @param multiAz Specifies whether the database instance is a Multi-AZ DB instance deployment.
-     * You can't set the `AvailabilityZone` parameter if the `MultiAZ` parameter is set to true.
+     * @param multiAz Specifies whether the DB instance is a Multi-AZ deployment.
+     * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
      *
-     * For more information, see [Multi-AZ deployments for high
-     * availability](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html) in
-     * the *Amazon RDS User Guide* .
+     * This setting doesn't apply to the following DB instances:
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. Amazon Aurora storage is replicated across all of the Availability Zones and
-     * doesn't require the `MultiAZ` option to be set.
+     * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
+     * * RDS Custom
      */
     override fun multiAz(multiAz: IResolvable) {
       cdkBuilder.multiAz(multiAz.let(IResolvable.Companion::unwrap))
@@ -5057,13 +5161,23 @@ public interface CfnDBInstanceProps {
 
     /**
      * @param port The port number on which the database accepts connections.
-     * *Amazon Aurora*
+     * This setting doesn't apply to Aurora DB instances. The port number is managed by the cluster.
      *
-     * Not applicable. The port number is managed by the DB cluster.
+     * Valid Values: `1150-65535`
      *
-     * *Db2*
+     * Default:
      *
-     * Default value: `50000`
+     * * RDS for Db2 - `50000`
+     * * RDS for MariaDB - `3306`
+     * * RDS for Microsoft SQL Server - `1433`
+     * * RDS for MySQL - `3306`
+     * * RDS for Oracle - `1521`
+     * * RDS for PostgreSQL - `5432`
+     *
+     * Constraints:
+     *
+     * * For RDS for Microsoft SQL Server, the value can't be `1234` , `1434` , `3260` , `3343` ,
+     * `3389` , `47001` , or `49152-49156` .
      */
     override fun port(port: String) {
       cdkBuilder.port(port)
@@ -5205,6 +5319,11 @@ public interface CfnDBInstanceProps {
 
     /**
      * @param restoreTime The date and time to restore from.
+     * This parameter applies to point-in-time recovery. For more information, see [Restoring a DB
+     * instance to a specified
+     * time](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html) in the in the
+     * *Amazon RDS User Guide* .
+     *
      * Constraints:
      *
      * * Must be a time in Universal Coordinated Time (UTC) format.
@@ -5260,7 +5379,11 @@ public interface CfnDBInstanceProps {
      *
      * The `SourceDBInstanceIdentifier` property determines whether a DB instance is a read replica.
      * If you remove the `SourceDBInstanceIdentifier` property from your template and then update your
-     * stack, AWS CloudFormation promotes the Read Replica to a standalone DB instance.
+     * stack, AWS CloudFormation promotes the read replica to a standalone DB instance.
+     *
+     * If you specify the `UseLatestRestorableTime` or `RestoreTime` properties in conjunction with
+     * the `SourceDBInstanceIdentifier` property, RDS restores the DB instance to the requested point
+     * in time, thereby creating a new DB instance.
      *
      *
      * * If you specify a source DB instance that uses VPC security groups, we recommend that you
@@ -5309,9 +5432,12 @@ public interface CfnDBInstanceProps {
      * default, it isn't encrypted.
      * If you specify the `KmsKeyId` property, then you must enable encryption.
      *
-     * If you specify the `SourceDBInstanceIdentifier` property, don't specify this property. The
-     * value is inherited from the source DB instance, and if the DB instance is encrypted, the
-     * specified `KmsKeyId` property is used.
+     * If you specify the `SourceDBInstanceIdentifier` or `SourceDbiResourceId` property, don't
+     * specify this property. The value is inherited from the source DB instance, and if the DB
+     * instance is encrypted, the specified `KmsKeyId` property is used.
+     *
+     * If you specify the `SourceDBInstanceAutomatedBackupsArn` property, don't specify this
+     * property. The value is inherited from the source DB instance automated backup.
      *
      * If you specify `DBSnapshotIdentifier` property, don't specify this property. The value is
      * inherited from the snapshot.
@@ -5329,9 +5455,12 @@ public interface CfnDBInstanceProps {
      * default, it isn't encrypted.
      * If you specify the `KmsKeyId` property, then you must enable encryption.
      *
-     * If you specify the `SourceDBInstanceIdentifier` property, don't specify this property. The
-     * value is inherited from the source DB instance, and if the DB instance is encrypted, the
-     * specified `KmsKeyId` property is used.
+     * If you specify the `SourceDBInstanceIdentifier` or `SourceDbiResourceId` property, don't
+     * specify this property. The value is inherited from the source DB instance, and if the DB
+     * instance is encrypted, the specified `KmsKeyId` property is used.
+     *
+     * If you specify the `SourceDBInstanceAutomatedBackupsArn` property, don't specify this
+     * property. The value is inherited from the source DB instance automated backup.
      *
      * If you specify `DBSnapshotIdentifier` property, don't specify this property. The value is
      * inherited from the snapshot.
@@ -5370,14 +5499,14 @@ public interface CfnDBInstanceProps {
     }
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this DB instance.
+     * @param tags Tags to assign to the DB instance.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this DB instance.
+     * @param tags Tags to assign to the DB instance.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -5431,7 +5560,10 @@ public interface CfnDBInstanceProps {
     /**
      * @param useLatestRestorableTime Specifies whether the DB instance is restored from the latest
      * backup time.
-     * By default, the DB instance isn't restored from the latest backup time.
+     * By default, the DB instance isn't restored from the latest backup time. This parameter
+     * applies to point-in-time recovery. For more information, see [Restoring a DB instance to a
+     * specified time](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html) in the in
+     * the *Amazon RDS User Guide* .
      *
      * Constraints:
      *
@@ -5444,7 +5576,10 @@ public interface CfnDBInstanceProps {
     /**
      * @param useLatestRestorableTime Specifies whether the DB instance is restored from the latest
      * backup time.
-     * By default, the DB instance isn't restored from the latest backup time.
+     * By default, the DB instance isn't restored from the latest backup time. This parameter
+     * applies to point-in-time recovery. For more information, see [Restoring a DB instance to a
+     * specified time](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html) in the in
+     * the *Amazon RDS User Guide* .
      *
      * Constraints:
      *
@@ -5538,7 +5673,8 @@ public interface CfnDBInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.CfnDBInstanceProps,
-  ) : CdkObject(cdkObject), CfnDBInstanceProps {
+  ) : CdkObject(cdkObject),
+      CfnDBInstanceProps {
     /**
      * The amount of storage in gibibytes (GiB) to be initially allocated for the database instance.
      *
@@ -5660,11 +5796,7 @@ public interface CfnDBInstanceProps {
         unwrap(this).getAutomaticBackupReplicationKmsKeyId()
 
     /**
-     * The destination region for the backup replication of the DB instance.
-     *
-     * For more info, see [Replicating automated backups to another AWS
-     * Region](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html) in
-     * the *Amazon RDS User Guide* .
+     * The AWS Region associated with the automated backup.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-automaticbackupreplicationregion)
      */
@@ -5712,8 +5844,6 @@ public interface CfnDBInstanceProps {
      *
      * * Must be a value from 0 to 35
      * * Can't be set to 0 if the DB instance is a source to read replicas
-     *
-     * Default: - 1
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-backupretentionperiod)
      */
@@ -5816,7 +5946,9 @@ public interface CfnDBInstanceProps {
     override fun customIamInstanceProfile(): String? = unwrap(this).getCustomIamInstanceProfile()
 
     /**
-     * The identifier of the DB cluster that the instance will belong to.
+     * The identifier of the DB cluster that this DB instance will belong to.
+     *
+     * This setting doesn't apply to RDS Custom DB instances.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbclusteridentifier)
      */
@@ -6061,7 +6193,6 @@ public interface CfnDBInstanceProps {
      * * `DBClusterIdentifier`
      * * `DBName`
      * * `DeleteAutomatedBackups`
-     * * `EnablePerformanceInsights`
      * * `KmsKeyId`
      * * `MasterUsername`
      * * `MasterUserPassword`
@@ -6088,15 +6219,12 @@ public interface CfnDBInstanceProps {
      *
      * If there's no DB subnet group, then the DB instance isn't a VPC DB instance.
      *
-     * For more information about using Amazon RDS in a VPC, see [Using Amazon RDS with Amazon
-     * Virtual Private Cloud
-     * (VPC)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS
+     * For more information about using Amazon RDS in a VPC, see [Amazon VPC and Amazon
+     * RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS
      * User Guide* .
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. The DB subnet group is managed by the DB cluster. If specified, the setting
-     * must match the DB cluster setting.
+     * This setting doesn't apply to Amazon Aurora DB instances. The DB subnet group is managed by
+     * the DB cluster. If specified, the setting must match the DB cluster setting.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-dbsubnetgroupname)
      */
@@ -6126,17 +6254,15 @@ public interface CfnDBInstanceProps {
     override fun deleteAutomatedBackups(): Any? = unwrap(this).getDeleteAutomatedBackups()
 
     /**
-     * A value that indicates whether the DB instance has deletion protection enabled.
+     * Specifies whether the DB instance has deletion protection enabled.
      *
      * The database can't be deleted when deletion protection is enabled. By default, deletion
-     * protection is disabled. For more information, see [Deleting a DB
+     * protection isn't enabled. For more information, see [Deleting a DB
      * Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html) .
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. You can enable or disable deletion protection for the DB cluster. For more
-     * information, see `CreateDBCluster` . DB instances in a DB cluster can be deleted even when
-     * deletion protection is enabled for the DB cluster.
+     * This setting doesn't apply to Amazon Aurora DB instances. You can enable or disable deletion
+     * protection for the DB cluster. For more information, see `CreateDBCluster` . DB instances in a
+     * DB cluster can be deleted even when deletion protection is enabled for the DB cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-deletionprotection)
      */
@@ -6346,6 +6472,34 @@ public interface CfnDBInstanceProps {
     override fun engine(): String? = unwrap(this).getEngine()
 
     /**
+     * The life cycle type for this DB instance.
+     *
+     *
+     * By default, this value is set to `open-source-rds-extended-support` , which enrolls your DB
+     * instance into Amazon RDS Extended Support. At the end of standard support, you can avoid charges
+     * for Extended Support by setting the value to `open-source-rds-extended-support-disabled` . In
+     * this case, creating the DB instance will fail if the DB major version is past its end of
+     * standard support date.
+     *
+     *
+     * This setting applies only to RDS for MySQL and RDS for PostgreSQL. For Amazon Aurora DB
+     * instances, the life cycle type is managed by the DB cluster.
+     *
+     * You can use this setting to enroll your DB instance into Amazon RDS Extended Support. With
+     * RDS Extended Support, you can run the selected major engine version on your DB instance past the
+     * end of standard support for that engine version. For more information, see [Using Amazon RDS
+     * Extended Support](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html)
+     * in the *Amazon RDS User Guide* .
+     *
+     * Valid Values: `open-source-rds-extended-support | open-source-rds-extended-support-disabled`
+     *
+     * Default: `open-source-rds-extended-support`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-enginelifecyclesupport)
+     */
+    override fun engineLifecycleSupport(): String? = unwrap(this).getEngineLifecycleSupport()
+
+    /**
      * The version number of the database engine to use.
      *
      * For a list of valid engine versions, use the `DescribeDBEngineVersions` action.
@@ -6436,8 +6590,14 @@ public interface CfnDBInstanceProps {
      * CloudFormation uses the default KMS key. If you specify this property, you must set the
      * StorageEncrypted property to true.
      *
-     * If you specify the `SourceDBInstanceIdentifier` property, the value is inherited from the
-     * source DB instance if the read replica is created in the same region.
+     * If you specify the `SourceDBInstanceIdentifier` or `SourceDbiResourceId` property, don't
+     * specify this property. The value is inherited from the source DB instance, and if the DB
+     * instance is encrypted, the specified `KmsKeyId` property is used. However, if the source DB
+     * instance is in a different AWS Region, you must specify a KMS key ID.
+     *
+     * If you specify the `SourceDBInstanceAutomatedBackupsArn` property, don't specify this
+     * property. The value is inherited from the source DB instance automated backup, and if the
+     * automated backup is encrypted, the specified `KmsKeyId` property is used.
      *
      * If you create an encrypted read replica in a different AWS Region, then you must specify a
      * KMS key for the destination AWS Region. KMS encryption keys are specific to the region that
@@ -6638,16 +6798,16 @@ public interface CfnDBInstanceProps {
      * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for
      * the DB instance.
      *
-     * To disable collection of Enhanced Monitoring metrics, specify 0. The default is 0.
+     * To disable collection of Enhanced Monitoring metrics, specify `0` .
      *
      * If `MonitoringRoleArn` is specified, then you must set `MonitoringInterval` to a value other
-     * than 0.
+     * than `0` .
      *
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom DB instances.
      *
-     * Valid Values: `0, 1, 5, 10, 15, 30, 60`
+     * Valid Values: `0 | 1 | 5 | 10 | 15 | 30 | 60`
      *
-     * Default: - 0
+     * Default: `0`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-monitoringinterval)
      */
@@ -6672,18 +6832,14 @@ public interface CfnDBInstanceProps {
     override fun monitoringRoleArn(): String? = unwrap(this).getMonitoringRoleArn()
 
     /**
-     * Specifies whether the database instance is a Multi-AZ DB instance deployment.
+     * Specifies whether the DB instance is a Multi-AZ deployment.
      *
-     * You can't set the `AvailabilityZone` parameter if the `MultiAZ` parameter is set to true.
+     * You can't set the `AvailabilityZone` parameter if the DB instance is a Multi-AZ deployment.
      *
-     * For more information, see [Multi-AZ deployments for high
-     * availability](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html) in
-     * the *Amazon RDS User Guide* .
+     * This setting doesn't apply to the following DB instances:
      *
-     * *Amazon Aurora*
-     *
-     * Not applicable. Amazon Aurora storage is replicated across all of the Availability Zones and
-     * doesn't require the `MultiAZ` option to be set.
+     * * Amazon Aurora (DB instance Availability Zones (AZs) are managed by the DB cluster.)
+     * * RDS Custom
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-multiaz)
      */
@@ -6771,13 +6927,23 @@ public interface CfnDBInstanceProps {
     /**
      * The port number on which the database accepts connections.
      *
-     * *Amazon Aurora*
+     * This setting doesn't apply to Aurora DB instances. The port number is managed by the cluster.
      *
-     * Not applicable. The port number is managed by the DB cluster.
+     * Valid Values: `1150-65535`
      *
-     * *Db2*
+     * Default:
      *
-     * Default value: `50000`
+     * * RDS for Db2 - `50000`
+     * * RDS for MariaDB - `3306`
+     * * RDS for Microsoft SQL Server - `1433`
+     * * RDS for MySQL - `3306`
+     * * RDS for Oracle - `1521`
+     * * RDS for PostgreSQL - `5432`
+     *
+     * Constraints:
+     *
+     * * For RDS for Microsoft SQL Server, the value can't be `1234` , `1434` , `3260` , `3343` ,
+     * `3389` , `47001` , or `49152-49156` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-port)
      */
@@ -6855,8 +7021,6 @@ public interface CfnDBInstanceProps {
      *
      * Valid Values: `0 - 15`
      *
-     * Default: - 1
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-promotiontier)
      */
     override fun promotionTier(): Number? = unwrap(this).getPromotionTier()
@@ -6896,6 +7060,11 @@ public interface CfnDBInstanceProps {
 
     /**
      * The date and time to restore from.
+     *
+     * This parameter applies to point-in-time recovery. For more information, see [Restoring a DB
+     * instance to a specified
+     * time](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html) in the in the
+     * *Amazon RDS User Guide* .
      *
      * Constraints:
      *
@@ -6953,7 +7122,11 @@ public interface CfnDBInstanceProps {
      *
      * The `SourceDBInstanceIdentifier` property determines whether a DB instance is a read replica.
      * If you remove the `SourceDBInstanceIdentifier` property from your template and then update your
-     * stack, AWS CloudFormation promotes the Read Replica to a standalone DB instance.
+     * stack, AWS CloudFormation promotes the read replica to a standalone DB instance.
+     *
+     * If you specify the `UseLatestRestorableTime` or `RestoreTime` properties in conjunction with
+     * the `SourceDBInstanceIdentifier` property, RDS restores the DB instance to the requested point
+     * in time, thereby creating a new DB instance.
      *
      *
      * * If you specify a source DB instance that uses VPC security groups, we recommend that you
@@ -7003,9 +7176,12 @@ public interface CfnDBInstanceProps {
      *
      * If you specify the `KmsKeyId` property, then you must enable encryption.
      *
-     * If you specify the `SourceDBInstanceIdentifier` property, don't specify this property. The
-     * value is inherited from the source DB instance, and if the DB instance is encrypted, the
-     * specified `KmsKeyId` property is used.
+     * If you specify the `SourceDBInstanceIdentifier` or `SourceDbiResourceId` property, don't
+     * specify this property. The value is inherited from the source DB instance, and if the DB
+     * instance is encrypted, the specified `KmsKeyId` property is used.
+     *
+     * If you specify the `SourceDBInstanceAutomatedBackupsArn` property, don't specify this
+     * property. The value is inherited from the source DB instance automated backup.
      *
      * If you specify `DBSnapshotIdentifier` property, don't specify this property. The value is
      * inherited from the snapshot.
@@ -7046,7 +7222,7 @@ public interface CfnDBInstanceProps {
     override fun storageType(): String? = unwrap(this).getStorageType()
 
     /**
-     * An optional array of key-value pairs to apply to this DB instance.
+     * Tags to assign to the DB instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-tags)
      */
@@ -7091,7 +7267,10 @@ public interface CfnDBInstanceProps {
     /**
      * Specifies whether the DB instance is restored from the latest backup time.
      *
-     * By default, the DB instance isn't restored from the latest backup time.
+     * By default, the DB instance isn't restored from the latest backup time. This parameter
+     * applies to point-in-time recovery. For more information, see [Restoring a DB instance to a
+     * specified time](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html) in the in
+     * the *Amazon RDS User Guide* .
      *
      * Constraints:
      *

@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSequenceStore(
   cdkObject: software.amazon.awscdk.services.omics.CfnSequenceStore,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -410,7 +412,8 @@ public open class CfnSequenceStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.omics.CfnSequenceStore.SseConfigProperty,
-    ) : CdkObject(cdkObject), SseConfigProperty {
+    ) : CdkObject(cdkObject),
+        SseConfigProperty {
       /**
        * An encryption key ARN.
        *

@@ -128,7 +128,8 @@ public interface LoggingConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.LoggingConfig,
-  ) : CdkObject(cdkObject), LoggingConfig {
+  ) : CdkObject(cdkObject),
+      LoggingConfig {
     /**
      * The IAM role to be used when logging failed message deliveries in Amazon CloudWatch.
      *

@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUser(
   cdkObject: software.amazon.awscdk.services.memorydb.CfnUser,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -388,7 +390,8 @@ public open class CfnUser(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.memorydb.CfnUser.AuthenticationModeProperty,
-    ) : CdkObject(cdkObject), AuthenticationModeProperty {
+    ) : CdkObject(cdkObject),
+        AuthenticationModeProperty {
       /**
        * The password(s) used for authentication.
        *

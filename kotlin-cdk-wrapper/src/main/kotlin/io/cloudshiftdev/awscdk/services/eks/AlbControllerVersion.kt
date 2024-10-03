@@ -15,9 +15,9 @@ import kotlin.String
  *
  * ```
  * Cluster.Builder.create(this, "HelloEKS")
- * .version(KubernetesVersion.V1_29)
+ * .version(KubernetesVersion.V1_30)
  * .albController(AlbControllerOptions.builder()
- * .version(AlbControllerVersion.V2_6_2)
+ * .version(AlbControllerVersion.V2_8_2)
  * .build())
  * .build();
  * ```
@@ -124,6 +124,24 @@ public open class AlbControllerVersion(
 
     public val V2_6_2: AlbControllerVersion =
         AlbControllerVersion.wrap(software.amazon.awscdk.services.eks.AlbControllerVersion.V2_6_2)
+
+    public val V2_7_0: AlbControllerVersion =
+        AlbControllerVersion.wrap(software.amazon.awscdk.services.eks.AlbControllerVersion.V2_7_0)
+
+    public val V2_7_1: AlbControllerVersion =
+        AlbControllerVersion.wrap(software.amazon.awscdk.services.eks.AlbControllerVersion.V2_7_1)
+
+    public val V2_7_2: AlbControllerVersion =
+        AlbControllerVersion.wrap(software.amazon.awscdk.services.eks.AlbControllerVersion.V2_7_2)
+
+    public val V2_8_0: AlbControllerVersion =
+        AlbControllerVersion.wrap(software.amazon.awscdk.services.eks.AlbControllerVersion.V2_8_0)
+
+    public val V2_8_1: AlbControllerVersion =
+        AlbControllerVersion.wrap(software.amazon.awscdk.services.eks.AlbControllerVersion.V2_8_1)
+
+    public val V2_8_2: AlbControllerVersion =
+        AlbControllerVersion.wrap(software.amazon.awscdk.services.eks.AlbControllerVersion.V2_8_2)
 
     public fun of(version: String): AlbControllerVersion =
         software.amazon.awscdk.services.eks.AlbControllerVersion.of(version).let(AlbControllerVersion::wrap)

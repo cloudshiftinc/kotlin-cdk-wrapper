@@ -49,7 +49,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnClusterParameterGroup(
   cdkObject: software.amazon.awscdk.services.redshift.CfnClusterParameterGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -489,7 +491,8 @@ public open class CfnClusterParameterGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshift.CfnClusterParameterGroup.ParameterProperty,
-    ) : CdkObject(cdkObject), ParameterProperty {
+    ) : CdkObject(cdkObject),
+        ParameterProperty {
       /**
        * The name of the parameter.
        *

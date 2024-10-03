@@ -278,7 +278,8 @@ public interface PortMapping {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.PortMapping,
-  ) : CdkObject(cdkObject), PortMapping {
+  ) : CdkObject(cdkObject),
+      PortMapping {
     /**
      * The protocol used by Service Connect.
      *

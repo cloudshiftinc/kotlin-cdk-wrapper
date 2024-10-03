@@ -126,7 +126,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNetworkInsightsAccessScope(
   cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -633,7 +635,8 @@ public open class CfnNetworkInsightsAccessScope(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty,
-    ) : CdkObject(cdkObject), AccessScopePathRequestProperty {
+    ) : CdkObject(cdkObject),
+        AccessScopePathRequestProperty {
       /**
        * The destination.
        *
@@ -928,7 +931,8 @@ public open class CfnNetworkInsightsAccessScope(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty,
-    ) : CdkObject(cdkObject), PacketHeaderStatementRequestProperty {
+    ) : CdkObject(cdkObject),
+        PacketHeaderStatementRequestProperty {
       /**
        * The destination addresses.
        *
@@ -1149,7 +1153,8 @@ public open class CfnNetworkInsightsAccessScope(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty,
-    ) : CdkObject(cdkObject), PathStatementRequestProperty {
+    ) : CdkObject(cdkObject),
+        PathStatementRequestProperty {
       /**
        * The packet header statement.
        *
@@ -1280,7 +1285,8 @@ public open class CfnNetworkInsightsAccessScope(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty,
-    ) : CdkObject(cdkObject), ResourceStatementRequestProperty {
+    ) : CdkObject(cdkObject),
+        ResourceStatementRequestProperty {
       /**
        * The resource types.
        *
@@ -1402,7 +1408,8 @@ public open class CfnNetworkInsightsAccessScope(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty,
-    ) : CdkObject(cdkObject), ThroughResourcesStatementRequestProperty {
+    ) : CdkObject(cdkObject),
+        ThroughResourcesStatementRequestProperty {
       /**
        * The resource statement.
        *

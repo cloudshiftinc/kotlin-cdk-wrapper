@@ -29,7 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class DeploymentStrategy(
   cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategy,
-) : Resource(cdkObject), IDeploymentStrategy {
+) : Resource(cdkObject),
+    IDeploymentStrategy {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

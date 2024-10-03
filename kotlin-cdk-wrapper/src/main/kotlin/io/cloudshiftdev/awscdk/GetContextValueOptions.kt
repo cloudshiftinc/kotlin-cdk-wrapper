@@ -24,6 +24,7 @@ import kotlin.collections.Map
  * .dummyValue(dummyValue)
  * .provider("provider")
  * // the properties below are optional
+ * .ignoreErrorOnMissingContext(false)
  * .includeEnvironment(false)
  * .props(Map.of(
  * "propsKey", props))
@@ -33,11 +34,15 @@ import kotlin.collections.Map
 public interface GetContextValueOptions : GetContextKeyOptions {
   /**
    * The value to return if the context value was not found and a missing context is reported.
-   *
-   * This should be a dummy value that should preferably
-   * fail during deployment since it represents an invalid state.
    */
   public fun dummyValue(): Any
+
+  /**
+   * When True, the context provider will not throw an error if missing context is reported.
+   *
+   * Default: false
+   */
+  public fun ignoreErrorOnMissingContext(): Boolean? = unwrap(this).getIgnoreErrorOnMissingContext()
 
   /**
    * A builder for [GetContextValueOptions]
@@ -47,10 +52,14 @@ public interface GetContextValueOptions : GetContextKeyOptions {
     /**
      * @param dummyValue The value to return if the context value was not found and a missing
      * context is reported. 
-     * This should be a dummy value that should preferably
-     * fail during deployment since it represents an invalid state.
      */
     public fun dummyValue(dummyValue: Any)
+
+    /**
+     * @param ignoreErrorOnMissingContext When True, the context provider will not throw an error if
+     * missing context is reported.
+     */
+    public fun ignoreErrorOnMissingContext(ignoreErrorOnMissingContext: Boolean)
 
     /**
      * @param includeEnvironment Whether to include the stack's account and region automatically.
@@ -75,11 +84,17 @@ public interface GetContextValueOptions : GetContextKeyOptions {
     /**
      * @param dummyValue The value to return if the context value was not found and a missing
      * context is reported. 
-     * This should be a dummy value that should preferably
-     * fail during deployment since it represents an invalid state.
      */
     override fun dummyValue(dummyValue: Any) {
       cdkBuilder.dummyValue(dummyValue)
+    }
+
+    /**
+     * @param ignoreErrorOnMissingContext When True, the context provider will not throw an error if
+     * missing context is reported.
+     */
+    override fun ignoreErrorOnMissingContext(ignoreErrorOnMissingContext: Boolean) {
+      cdkBuilder.ignoreErrorOnMissingContext(ignoreErrorOnMissingContext)
     }
 
     /**
@@ -108,14 +123,20 @@ public interface GetContextValueOptions : GetContextKeyOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.GetContextValueOptions,
-  ) : CdkObject(cdkObject), GetContextValueOptions {
+  ) : CdkObject(cdkObject),
+      GetContextValueOptions {
     /**
      * The value to return if the context value was not found and a missing context is reported.
-     *
-     * This should be a dummy value that should preferably
-     * fail during deployment since it represents an invalid state.
      */
     override fun dummyValue(): Any = unwrap(this).getDummyValue()
+
+    /**
+     * When True, the context provider will not throw an error if missing context is reported.
+     *
+     * Default: false
+     */
+    override fun ignoreErrorOnMissingContext(): Boolean? =
+        unwrap(this).getIgnoreErrorOnMissingContext()
 
     /**
      * Whether to include the stack's account and region automatically.

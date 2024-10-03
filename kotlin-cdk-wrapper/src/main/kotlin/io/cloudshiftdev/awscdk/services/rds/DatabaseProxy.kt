@@ -49,7 +49,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class DatabaseProxy(
   cdkObject: software.amazon.awscdk.services.rds.DatabaseProxy,
-) : Resource(cdkObject), IConnectable, ISecretAttachmentTarget, IDatabaseProxy {
+) : Resource(cdkObject),
+    IConnectable,
+    ISecretAttachmentTarget,
+    IDatabaseProxy {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

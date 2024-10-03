@@ -115,7 +115,8 @@ public interface CfnSnapshotProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.fsx.CfnSnapshotProps,
-  ) : CdkObject(cdkObject), CfnSnapshotProps {
+  ) : CdkObject(cdkObject),
+      CfnSnapshotProps {
     /**
      * The name of the snapshot.
      *

@@ -229,7 +229,8 @@ public interface CfnNetworkAnalyzerConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfigurationProps,
-  ) : CdkObject(cdkObject), CfnNetworkAnalyzerConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnNetworkAnalyzerConfigurationProps {
     /**
      * The description of the resource.
      *

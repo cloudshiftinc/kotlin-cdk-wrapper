@@ -145,7 +145,8 @@ public interface EcsTarget {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.EcsTarget,
-  ) : CdkObject(cdkObject), EcsTarget {
+  ) : CdkObject(cdkObject),
+      EcsTarget {
     /**
      * The name of the container.
      */

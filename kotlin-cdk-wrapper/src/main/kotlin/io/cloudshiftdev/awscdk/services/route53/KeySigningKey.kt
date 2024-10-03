@@ -29,7 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class KeySigningKey(
   cdkObject: software.amazon.awscdk.services.route53.KeySigningKey,
-) : Resource(cdkObject), IKeySigningKey {
+) : Resource(cdkObject),
+    IKeySigningKey {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -55,7 +55,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ParameterGroup(
   cdkObject: software.amazon.awscdk.services.rds.ParameterGroup,
-) : Resource(cdkObject), IParameterGroup {
+) : Resource(cdkObject),
+    IParameterGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

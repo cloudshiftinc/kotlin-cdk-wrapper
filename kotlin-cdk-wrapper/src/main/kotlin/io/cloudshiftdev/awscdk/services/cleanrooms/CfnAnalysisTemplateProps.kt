@@ -273,7 +273,8 @@ public interface CfnAnalysisTemplateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplateProps,
-  ) : CdkObject(cdkObject), CfnAnalysisTemplateProps {
+  ) : CdkObject(cdkObject),
+      CfnAnalysisTemplateProps {
     /**
      * The parameters of the analysis template.
      *

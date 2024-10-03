@@ -47,6 +47,13 @@ import kotlin.jvm.JvmName
  * .build())
  * .devEui("devEui")
  * .deviceProfileId("deviceProfileId")
+ * .fPorts(FPortsProperty.builder()
+ * .applications(List.of(ApplicationProperty.builder()
+ * .destinationName("destinationName")
+ * .fPort(123)
+ * .type("type")
+ * .build()))
+ * .build())
  * .otaaV10X(OtaaV10xProperty.builder()
  * .appEui("appEui")
  * .appKey("appKey")
@@ -323,7 +330,8 @@ public interface CfnWirelessDeviceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceProps,
-  ) : CdkObject(cdkObject), CfnWirelessDeviceProps {
+  ) : CdkObject(cdkObject),
+      CfnWirelessDeviceProps {
     /**
      * The description of the new resource.
      *

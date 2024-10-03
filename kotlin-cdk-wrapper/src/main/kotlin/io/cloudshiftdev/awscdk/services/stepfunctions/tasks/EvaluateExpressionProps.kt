@@ -59,7 +59,7 @@ public interface EvaluateExpressionProps : TaskStateBaseProps {
   /**
    * The runtime language to use to evaluate the expression.
    *
-   * Default: lambda.Runtime.NODEJS_18_X
+   * Default: - the latest Lambda node runtime available in your region.
    */
   public fun runtime(): Runtime? = unwrap(this).getRuntime()?.let(Runtime::wrap)
 
@@ -319,7 +319,8 @@ public interface EvaluateExpressionProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EvaluateExpressionProps,
-  ) : CdkObject(cdkObject), EvaluateExpressionProps {
+  ) : CdkObject(cdkObject),
+      EvaluateExpressionProps {
     /**
      * An optional description for this state.
      *
@@ -430,7 +431,7 @@ public interface EvaluateExpressionProps : TaskStateBaseProps {
     /**
      * The runtime language to use to evaluate the expression.
      *
-     * Default: lambda.Runtime.NODEJS_18_X
+     * Default: - the latest Lambda node runtime available in your region.
      */
     override fun runtime(): Runtime? = unwrap(this).getRuntime()?.let(Runtime::wrap)
 

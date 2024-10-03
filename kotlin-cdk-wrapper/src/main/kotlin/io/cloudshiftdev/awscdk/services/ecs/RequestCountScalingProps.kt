@@ -143,7 +143,8 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.RequestCountScalingProps,
-  ) : CdkObject(cdkObject), RequestCountScalingProps {
+  ) : CdkObject(cdkObject),
+      RequestCountScalingProps {
     /**
      * Indicates whether scale in by the target tracking policy is disabled.
      *

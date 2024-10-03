@@ -35,7 +35,8 @@ import software.amazon.awscdk.services.codepipeline.IPipeline as AmazonAwscdkSer
  */
 public open class CodePipeline(
   cdkObject: software.amazon.awscdk.services.events.targets.CodePipeline,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(pipeline: CloudshiftdevAwscdkServicesCodepipelineIPipeline) :
       this(software.amazon.awscdk.services.events.targets.CodePipeline(pipeline.let(CloudshiftdevAwscdkServicesCodepipelineIPipeline.Companion::unwrap))
   )

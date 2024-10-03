@@ -42,7 +42,7 @@ public interface CfnUserGroupProps {
   public fun engine(): String
 
   /**
-   * An array of key-value pairs to apply to this user.
+   * The list of tags.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-tags)
    */
@@ -75,12 +75,12 @@ public interface CfnUserGroupProps {
     public fun engine(engine: String)
 
     /**
-     * @param tags An array of key-value pairs to apply to this user.
+     * @param tags The list of tags.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags An array of key-value pairs to apply to this user.
+     * @param tags The list of tags.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -114,14 +114,14 @@ public interface CfnUserGroupProps {
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this user.
+     * @param tags The list of tags.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this user.
+     * @param tags The list of tags.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -152,7 +152,8 @@ public interface CfnUserGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticache.CfnUserGroupProps,
-  ) : CdkObject(cdkObject), CfnUserGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnUserGroupProps {
     /**
      * The current supported value is redis.
      *
@@ -161,7 +162,7 @@ public interface CfnUserGroupProps {
     override fun engine(): String = unwrap(this).getEngine()
 
     /**
-     * An array of key-value pairs to apply to this user.
+     * The list of tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-tags)
      */

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
+import kotlin.jvm.JvmName
 
 /**
  * Complete base deployment config properties that are required to be supplied by the implementation
@@ -17,14 +18,21 @@ import kotlin.Unit
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.codedeploy.*;
  * MinimumHealthyHosts minimumHealthyHosts;
+ * MinimumHealthyHostsPerZone minimumHealthyHostsPerZone;
  * TrafficRouting trafficRouting;
  * BaseDeploymentConfigProps baseDeploymentConfigProps = BaseDeploymentConfigProps.builder()
  * .computePlatform(ComputePlatform.SERVER)
  * .deploymentConfigName("deploymentConfigName")
  * .minimumHealthyHosts(minimumHealthyHosts)
  * .trafficRouting(trafficRouting)
+ * .zonalConfig(ZonalConfig.builder()
+ * .firstZoneMonitorDuration(Duration.minutes(30))
+ * .minimumHealthyHostsPerZone(minimumHealthyHostsPerZone)
+ * .monitorDuration(Duration.minutes(30))
+ * .build())
  * .build();
  * ```
  */
@@ -57,6 +65,16 @@ public interface BaseDeploymentConfigProps : BaseDeploymentConfigOptions {
       unwrap(this).getTrafficRouting()?.let(TrafficRouting::wrap)
 
   /**
+   * Configure CodeDeploy to deploy your application to one Availability Zone at a time within an
+   * AWS Region.
+   *
+   * Default: - deploy your application to a random selection of hosts across a Region
+   *
+   * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations-create.html#zonal-config)
+   */
+  public fun zonalConfig(): ZonalConfig? = unwrap(this).getZonalConfig()?.let(ZonalConfig::wrap)
+
+  /**
    * A builder for [BaseDeploymentConfigProps]
    */
   @CdkDslMarker
@@ -84,6 +102,20 @@ public interface BaseDeploymentConfigProps : BaseDeploymentConfigOptions {
      * deployments.
      */
     public fun trafficRouting(trafficRouting: TrafficRouting)
+
+    /**
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region.
+     */
+    public fun zonalConfig(zonalConfig: ZonalConfig)
+
+    /**
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eb7a849cfade0f91271990f34e884fc52ee6597fb27f4c8f449bcaa75fd211b7")
+    public fun zonalConfig(zonalConfig: ZonalConfig.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -123,13 +155,31 @@ public interface BaseDeploymentConfigProps : BaseDeploymentConfigOptions {
       cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting.Companion::unwrap))
     }
 
+    /**
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region.
+     */
+    override fun zonalConfig(zonalConfig: ZonalConfig) {
+      cdkBuilder.zonalConfig(zonalConfig.let(ZonalConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param zonalConfig Configure CodeDeploy to deploy your application to one Availability Zone
+     * at a time within an AWS Region.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eb7a849cfade0f91271990f34e884fc52ee6597fb27f4c8f449bcaa75fd211b7")
+    override fun zonalConfig(zonalConfig: ZonalConfig.Builder.() -> Unit): Unit =
+        zonalConfig(ZonalConfig(zonalConfig))
+
     public fun build(): software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigProps =
         cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigProps,
-  ) : CdkObject(cdkObject), BaseDeploymentConfigProps {
+  ) : CdkObject(cdkObject),
+      BaseDeploymentConfigProps {
     /**
      * The destination compute platform for the deployment.
      *
@@ -163,6 +213,16 @@ public interface BaseDeploymentConfigProps : BaseDeploymentConfigOptions {
      */
     override fun trafficRouting(): TrafficRouting? =
         unwrap(this).getTrafficRouting()?.let(TrafficRouting::wrap)
+
+    /**
+     * Configure CodeDeploy to deploy your application to one Availability Zone at a time within an
+     * AWS Region.
+     *
+     * Default: - deploy your application to a random selection of hosts across a Region
+     *
+     * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations-create.html#zonal-config)
+     */
+    override fun zonalConfig(): ZonalConfig? = unwrap(this).getZonalConfig()?.let(ZonalConfig::wrap)
   }
 
   public companion object {

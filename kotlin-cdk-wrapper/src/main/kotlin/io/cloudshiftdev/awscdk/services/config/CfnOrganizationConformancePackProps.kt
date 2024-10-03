@@ -259,7 +259,8 @@ public interface CfnOrganizationConformancePackProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConformancePackProps,
-  ) : CdkObject(cdkObject), CfnOrganizationConformancePackProps {
+  ) : CdkObject(cdkObject),
+      CfnOrganizationConformancePackProps {
     /**
      * A list of `ConformancePackInputParameter` objects.
      *

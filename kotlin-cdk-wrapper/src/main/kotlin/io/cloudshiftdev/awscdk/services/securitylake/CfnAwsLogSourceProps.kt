@@ -156,7 +156,8 @@ public interface CfnAwsLogSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.securitylake.CfnAwsLogSourceProps,
-  ) : CdkObject(cdkObject), CfnAwsLogSourceProps {
+  ) : CdkObject(cdkObject),
+      CfnAwsLogSourceProps {
     /**
      * Specify the AWS account information where you want to enable Security Lake.
      *

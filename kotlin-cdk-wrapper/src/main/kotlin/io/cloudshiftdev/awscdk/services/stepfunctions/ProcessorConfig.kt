@@ -30,7 +30,11 @@ public interface ProcessorConfig {
   /**
    * Specifies the execution type for the Map workflow.
    *
-   * You must provide this field if you specified `DISTRIBUTED` for the `mode` sub-field.
+   * If you use the `Map` class, you must provide this field if you specified `DISTRIBUTED` for the
+   * `mode` sub-field.
+   *
+   * If you use the `DistributedMap` class, this property is ignored.
+   * Use the `mapExecutionType` in the `DistributedMap` class instead.
    *
    * Default: - no execution type
    */
@@ -40,7 +44,8 @@ public interface ProcessorConfig {
   /**
    * Specifies the execution mode for the Map workflow.
    *
-   * Default: - ProcessorMode.INLINE
+   * Default: - ProcessorMode.INLINE if using the `Map` class, ProcessorMode.DISTRIBUTED if using
+   * the `DistributedMap` class
    */
   public fun mode(): ProcessorMode? = unwrap(this).getMode()?.let(ProcessorMode::wrap)
 
@@ -51,7 +56,11 @@ public interface ProcessorConfig {
   public interface Builder {
     /**
      * @param executionType Specifies the execution type for the Map workflow.
-     * You must provide this field if you specified `DISTRIBUTED` for the `mode` sub-field.
+     * If you use the `Map` class, you must provide this field if you specified `DISTRIBUTED` for
+     * the `mode` sub-field.
+     *
+     * If you use the `DistributedMap` class, this property is ignored.
+     * Use the `mapExecutionType` in the `DistributedMap` class instead.
      */
     public fun executionType(executionType: ProcessorType)
 
@@ -67,7 +76,11 @@ public interface ProcessorConfig {
 
     /**
      * @param executionType Specifies the execution type for the Map workflow.
-     * You must provide this field if you specified `DISTRIBUTED` for the `mode` sub-field.
+     * If you use the `Map` class, you must provide this field if you specified `DISTRIBUTED` for
+     * the `mode` sub-field.
+     *
+     * If you use the `DistributedMap` class, this property is ignored.
+     * Use the `mapExecutionType` in the `DistributedMap` class instead.
      */
     override fun executionType(executionType: ProcessorType) {
       cdkBuilder.executionType(executionType.let(ProcessorType.Companion::unwrap))
@@ -86,11 +99,16 @@ public interface ProcessorConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.ProcessorConfig,
-  ) : CdkObject(cdkObject), ProcessorConfig {
+  ) : CdkObject(cdkObject),
+      ProcessorConfig {
     /**
      * Specifies the execution type for the Map workflow.
      *
-     * You must provide this field if you specified `DISTRIBUTED` for the `mode` sub-field.
+     * If you use the `Map` class, you must provide this field if you specified `DISTRIBUTED` for
+     * the `mode` sub-field.
+     *
+     * If you use the `DistributedMap` class, this property is ignored.
+     * Use the `mapExecutionType` in the `DistributedMap` class instead.
      *
      * Default: - no execution type
      */
@@ -100,7 +118,8 @@ public interface ProcessorConfig {
     /**
      * Specifies the execution mode for the Map workflow.
      *
-     * Default: - ProcessorMode.INLINE
+     * Default: - ProcessorMode.INLINE if using the `Map` class, ProcessorMode.DISTRIBUTED if using
+     * the `DistributedMap` class
      */
     override fun mode(): ProcessorMode? = unwrap(this).getMode()?.let(ProcessorMode::wrap)
   }

@@ -68,7 +68,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Parallel(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Parallel,
-) : State(cdkObject), INextable {
+) : State(cdkObject),
+    INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.Parallel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

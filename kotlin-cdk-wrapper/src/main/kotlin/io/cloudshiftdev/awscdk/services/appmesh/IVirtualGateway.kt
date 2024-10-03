@@ -62,7 +62,8 @@ public interface IVirtualGateway : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.IVirtualGateway,
-  ) : CdkObject(cdkObject), IVirtualGateway {
+  ) : CdkObject(cdkObject),
+      IVirtualGateway {
     /**
      * Utility method to add a new GatewayRoute to the VirtualGateway.
      *

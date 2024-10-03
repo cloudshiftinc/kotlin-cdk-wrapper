@@ -870,7 +870,8 @@ public interface CfnNetworkInterfaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceProps,
-  ) : CdkObject(cdkObject), CfnNetworkInterfaceProps {
+  ) : CdkObject(cdkObject),
+      CfnNetworkInterfaceProps {
     /**
      * A connection tracking specification for the network interface.
      *

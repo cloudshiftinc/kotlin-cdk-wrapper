@@ -266,7 +266,8 @@ public interface CfnKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.paymentcryptography.CfnKeyProps,
-  ) : CdkObject(cdkObject), CfnKeyProps {
+  ) : CdkObject(cdkObject),
+      CfnKeyProps {
     /**
      * Specifies whether the key is enabled.
      *

@@ -37,7 +37,8 @@ public interface ISource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.ISource,
-  ) : CdkObject(cdkObject), ISource {
+  ) : CdkObject(cdkObject),
+      ISource {
     /**
      *
      */

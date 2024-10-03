@@ -49,7 +49,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSite(
   cdkObject: software.amazon.awscdk.services.networkmanager.CfnSite,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -477,7 +479,8 @@ public open class CfnSite(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnSite.LocationProperty,
-    ) : CdkObject(cdkObject), LocationProperty {
+    ) : CdkObject(cdkObject),
+        LocationProperty {
       /**
        * The physical address.
        *

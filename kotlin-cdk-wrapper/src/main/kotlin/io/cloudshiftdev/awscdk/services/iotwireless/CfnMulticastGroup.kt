@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMulticastGroup(
   cdkObject: software.amazon.awscdk.services.iotwireless.CfnMulticastGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -541,7 +543,8 @@ public open class CfnMulticastGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnMulticastGroup.LoRaWANProperty,
-    ) : CdkObject(cdkObject), LoRaWANProperty {
+    ) : CdkObject(cdkObject),
+        LoRaWANProperty {
       /**
        * DlClass for LoRaWAN.
        *

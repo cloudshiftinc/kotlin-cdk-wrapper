@@ -44,6 +44,8 @@ import kotlin.jvm.JvmName
  * .region("region")
  * .build())
  * .build())
+ * // the properties below are optional
+ * .databaseName("databaseName")
  * .build();
  * ```
  *
@@ -68,6 +70,13 @@ public interface CfnDatabaseProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databaseinput)
    */
   public fun databaseInput(): Any
+
+  /**
+   * The name of the catalog database.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databasename)
+   */
+  public fun databaseName(): String? = unwrap(this).getDatabaseName()
 
   /**
    * A builder for [CfnDatabaseProps]
@@ -98,6 +107,11 @@ public interface CfnDatabaseProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3dc75074e2c37451f80d699516d33a089a9ef326bf074b07ded67c1d13231f51")
     public fun databaseInput(databaseInput: CfnDatabase.DatabaseInputProperty.Builder.() -> Unit)
+
+    /**
+     * @param databaseName The name of the catalog database.
+     */
+    public fun databaseName(databaseName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -136,12 +150,20 @@ public interface CfnDatabaseProps {
     override fun databaseInput(databaseInput: CfnDatabase.DatabaseInputProperty.Builder.() -> Unit):
         Unit = databaseInput(CfnDatabase.DatabaseInputProperty(databaseInput))
 
+    /**
+     * @param databaseName The name of the catalog database.
+     */
+    override fun databaseName(databaseName: String) {
+      cdkBuilder.databaseName(databaseName)
+    }
+
     public fun build(): software.amazon.awscdk.services.glue.CfnDatabaseProps = cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnDatabaseProps,
-  ) : CdkObject(cdkObject), CfnDatabaseProps {
+  ) : CdkObject(cdkObject),
+      CfnDatabaseProps {
     /**
      * The AWS account ID for the account in which to create the catalog object.
      *
@@ -160,6 +182,13 @@ public interface CfnDatabaseProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databaseinput)
      */
     override fun databaseInput(): Any = unwrap(this).getDatabaseInput()
+
+    /**
+     * The name of the catalog database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databasename)
+     */
+    override fun databaseName(): String? = unwrap(this).getDatabaseName()
   }
 
   public companion object {

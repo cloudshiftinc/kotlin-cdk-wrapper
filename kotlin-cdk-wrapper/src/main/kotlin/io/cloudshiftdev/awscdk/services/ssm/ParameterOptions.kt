@@ -53,7 +53,12 @@ public interface ParameterOptions {
   public fun parameterName(): String? = unwrap(this).getParameterName()
 
   /**
-   * Indicates if the parameter name is a simple name (i.e. does not include "/" separators).
+   * Indicates whether the parameter name is a simple name.
+   *
+   * A parameter name
+   * without any "/" is considered a simple name. If the parameter name includes
+   * "/", setting simpleName to true might cause unintended issues such
+   * as duplicate "/" in the resulting ARN.
    *
    * This is required only if `parameterName` is a token, which means we
    * are unable to detect if the name is simple or "path-like" for the purpose
@@ -97,8 +102,12 @@ public interface ParameterOptions {
     public fun parameterName(parameterName: String)
 
     /**
-     * @param simpleName Indicates if the parameter name is a simple name (i.e. does not include "/"
-     * separators).
+     * @param simpleName Indicates whether the parameter name is a simple name.
+     * A parameter name
+     * without any "/" is considered a simple name. If the parameter name includes
+     * "/", setting simpleName to true might cause unintended issues such
+     * as duplicate "/" in the resulting ARN.
+     *
      * This is required only if `parameterName` is a token, which means we
      * are unable to detect if the name is simple or "path-like" for the purpose
      * of rendering SSM parameter ARNs.
@@ -143,8 +152,12 @@ public interface ParameterOptions {
     }
 
     /**
-     * @param simpleName Indicates if the parameter name is a simple name (i.e. does not include "/"
-     * separators).
+     * @param simpleName Indicates whether the parameter name is a simple name.
+     * A parameter name
+     * without any "/" is considered a simple name. If the parameter name includes
+     * "/", setting simpleName to true might cause unintended issues such
+     * as duplicate "/" in the resulting ARN.
+     *
      * This is required only if `parameterName` is a token, which means we
      * are unable to detect if the name is simple or "path-like" for the purpose
      * of rendering SSM parameter ARNs.
@@ -169,7 +182,8 @@ public interface ParameterOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ssm.ParameterOptions,
-  ) : CdkObject(cdkObject), ParameterOptions {
+  ) : CdkObject(cdkObject),
+      ParameterOptions {
     /**
      * A regular expression used to validate the parameter value.
      *
@@ -195,7 +209,12 @@ public interface ParameterOptions {
     override fun parameterName(): String? = unwrap(this).getParameterName()
 
     /**
-     * Indicates if the parameter name is a simple name (i.e. does not include "/" separators).
+     * Indicates whether the parameter name is a simple name.
+     *
+     * A parameter name
+     * without any "/" is considered a simple name. If the parameter name includes
+     * "/", setting simpleName to true might cause unintended issues such
+     * as duplicate "/" in the resulting ARN.
      *
      * This is required only if `parameterName` is a token, which means we
      * are unable to detect if the name is simple or "path-like" for the purpose

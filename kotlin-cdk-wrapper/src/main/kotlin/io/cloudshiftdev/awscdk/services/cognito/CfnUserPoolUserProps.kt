@@ -601,7 +601,8 @@ public interface CfnUserPoolUserProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUserProps,
-  ) : CdkObject(cdkObject), CfnUserPoolUserProps {
+  ) : CdkObject(cdkObject),
+      CfnUserPoolUserProps {
     /**
      * A map of custom key-value pairs that you can provide as input for any custom workflows that
      * this action triggers.

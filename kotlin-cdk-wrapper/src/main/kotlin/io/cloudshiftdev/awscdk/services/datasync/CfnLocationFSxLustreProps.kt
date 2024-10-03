@@ -191,7 +191,8 @@ public interface CfnLocationFSxLustreProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxLustreProps,
-  ) : CdkObject(cdkObject), CfnLocationFSxLustreProps {
+  ) : CdkObject(cdkObject),
+      CfnLocationFSxLustreProps {
     /**
      * The Amazon Resource Name (ARN) for the FSx for Lustre file system.
      *

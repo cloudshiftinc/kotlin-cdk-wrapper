@@ -117,7 +117,8 @@ public interface Environment {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.Environment,
-  ) : CdkObject(cdkObject), Environment {
+  ) : CdkObject(cdkObject),
+      Environment {
     /**
      * The AWS account ID for this environment.
      *

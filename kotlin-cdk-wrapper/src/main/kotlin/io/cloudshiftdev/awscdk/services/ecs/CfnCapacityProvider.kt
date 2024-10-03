@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCapacityProvider(
   cdkObject: software.amazon.awscdk.services.ecs.CfnCapacityProvider,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -585,7 +587,8 @@ public open class CfnCapacityProvider(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnCapacityProvider.AutoScalingGroupProviderProperty,
-    ) : CdkObject(cdkObject), AutoScalingGroupProviderProperty {
+    ) : CdkObject(cdkObject),
+        AutoScalingGroupProviderProperty {
       /**
        * The Amazon Resource Name (ARN) that identifies the Auto Scaling group, or the Auto Scaling
        * group name.
@@ -691,8 +694,7 @@ public open class CfnCapacityProvider(
     /**
      * The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time.
      *
-     * The scale in process is not affected by this parameter. If this parameter is omitted, the
-     * default value of `10000` is used.
+     * If this parameter is omitted, the default value of `10000` is used.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html#cfn-ecs-capacityprovider-managedscaling-maximumscalingstepsize)
      */
@@ -750,8 +752,7 @@ public open class CfnCapacityProvider(
       /**
        * @param maximumScalingStepSize The maximum number of Amazon EC2 instances that Amazon ECS
        * will scale out at one time.
-       * The scale in process is not affected by this parameter. If this parameter is omitted, the
-       * default value of `10000` is used.
+       * If this parameter is omitted, the default value of `10000` is used.
        */
       public fun maximumScalingStepSize(maximumScalingStepSize: Number)
 
@@ -804,8 +805,7 @@ public open class CfnCapacityProvider(
       /**
        * @param maximumScalingStepSize The maximum number of Amazon EC2 instances that Amazon ECS
        * will scale out at one time.
-       * The scale in process is not affected by this parameter. If this parameter is omitted, the
-       * default value of `10000` is used.
+       * If this parameter is omitted, the default value of `10000` is used.
        */
       override fun maximumScalingStepSize(maximumScalingStepSize: Number) {
         cdkBuilder.maximumScalingStepSize(maximumScalingStepSize)
@@ -855,7 +855,8 @@ public open class CfnCapacityProvider(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnCapacityProvider.ManagedScalingProperty,
-    ) : CdkObject(cdkObject), ManagedScalingProperty {
+    ) : CdkObject(cdkObject),
+        ManagedScalingProperty {
       /**
        * The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute
        * to CloudWatch metrics for Auto Scaling group.
@@ -869,8 +870,7 @@ public open class CfnCapacityProvider(
       /**
        * The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time.
        *
-       * The scale in process is not affected by this parameter. If this parameter is omitted, the
-       * default value of `10000` is used.
+       * If this parameter is omitted, the default value of `10000` is used.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html#cfn-ecs-capacityprovider-managedscaling-maximumscalingstepsize)
        */

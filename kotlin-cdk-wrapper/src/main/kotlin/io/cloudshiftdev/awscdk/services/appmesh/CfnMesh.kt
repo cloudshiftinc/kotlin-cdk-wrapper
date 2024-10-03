@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMesh(
   cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appmesh.CfnMesh(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -443,7 +445,8 @@ public open class CfnMesh(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty,
-    ) : CdkObject(cdkObject), EgressFilterProperty {
+    ) : CdkObject(cdkObject),
+        EgressFilterProperty {
       /**
        * The egress filter type.
        *
@@ -536,7 +539,8 @@ public open class CfnMesh(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty,
-    ) : CdkObject(cdkObject), MeshServiceDiscoveryProperty {
+    ) : CdkObject(cdkObject),
+        MeshServiceDiscoveryProperty {
       /**
        * The IP version to use to control traffic within the mesh.
        *
@@ -701,7 +705,8 @@ public open class CfnMesh(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty,
-    ) : CdkObject(cdkObject), MeshSpecProperty {
+    ) : CdkObject(cdkObject),
+        MeshSpecProperty {
       /**
        * The egress filter rules for the service mesh.
        *

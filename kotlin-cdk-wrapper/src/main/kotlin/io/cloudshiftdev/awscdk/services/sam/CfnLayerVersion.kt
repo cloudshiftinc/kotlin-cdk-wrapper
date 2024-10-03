@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLayerVersion(
   cdkObject: software.amazon.awscdk.services.sam.CfnLayerVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sam.CfnLayerVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -441,7 +442,8 @@ public open class CfnLayerVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sam.CfnLayerVersion.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-layerversion-s3location.html#cfn-serverless-layerversion-s3location-bucket)
        */

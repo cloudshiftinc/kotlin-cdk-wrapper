@@ -32,7 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Ec2TaskDefinition(
   cdkObject: software.amazon.awscdk.services.ecs.Ec2TaskDefinition,
-) : TaskDefinition(cdkObject), IEc2TaskDefinition {
+) : TaskDefinition(cdkObject),
+    IEc2TaskDefinition {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.Ec2TaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

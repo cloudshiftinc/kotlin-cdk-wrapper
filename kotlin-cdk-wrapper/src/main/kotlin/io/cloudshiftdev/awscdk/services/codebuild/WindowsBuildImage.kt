@@ -44,7 +44,8 @@ import kotlin.jvm.JvmName
  */
 public open class WindowsBuildImage(
   cdkObject: software.amazon.awscdk.services.codebuild.WindowsBuildImage,
-) : CdkObject(cdkObject), IBuildImage {
+) : CdkObject(cdkObject),
+    IBuildImage {
   /**
    * The default `ComputeType` to use with this image, if one was not specified in
    * `BuildEnvironment#computeType` explicitly.
@@ -115,6 +116,9 @@ public open class WindowsBuildImage(
 
     public val WIN_SERVER_CORE_2019_BASE_3_0: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.WindowsBuildImage.WIN_SERVER_CORE_2019_BASE_3_0)
+
+    public val WIN_SERVER_CORE_2022_BASE_3_0: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.WindowsBuildImage.WIN_SERVER_CORE_2022_BASE_3_0)
 
     public val WINDOWS_BASE_2_0: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.WindowsBuildImage.WINDOWS_BASE_2_0)

@@ -253,7 +253,8 @@ public interface CfnScriptProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.gamelift.CfnScriptProps,
-  ) : CdkObject(cdkObject), CfnScriptProps {
+  ) : CdkObject(cdkObject),
+      CfnScriptProps {
     /**
      * A descriptive label that is associated with a script.
      *

@@ -53,7 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUrl(
   cdkObject: software.amazon.awscdk.services.lambda.CfnUrl,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -257,8 +258,8 @@ public open class CfnUrl(
      *
      * **Name formats** - *Function name* - `my-function` .
      *
-     * * *Function ARN* - `arn:aws:lambda:us-west-2:123456789012:function:my-function` .
-     * * *Partial ARN* - `123456789012:function:my-function` .
+     * * *Function ARN* - `lambda:  :  :function:my-function` .
+     * * *Partial ARN* - `:function:my-function` .
      *
      * The length constraint applies only to the full ARN. If you specify only the function name, it
      * is limited to 64 characters in length.
@@ -367,8 +368,8 @@ public open class CfnUrl(
      *
      * **Name formats** - *Function name* - `my-function` .
      *
-     * * *Function ARN* - `arn:aws:lambda:us-west-2:123456789012:function:my-function` .
-     * * *Partial ARN* - `123456789012:function:my-function` .
+     * * *Function ARN* - `lambda:  :  :function:my-function` .
+     * * *Partial ARN* - `:function:my-function` .
      *
      * The length constraint applies only to the full ARN. If you specify only the function name, it
      * is limited to 64 characters in length.
@@ -680,7 +681,8 @@ public open class CfnUrl(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnUrl.CorsProperty,
-    ) : CdkObject(cdkObject), CorsProperty {
+    ) : CdkObject(cdkObject),
+        CorsProperty {
       /**
        * Whether you want to allow cookies or other credentials in requests to your function URL.
        *

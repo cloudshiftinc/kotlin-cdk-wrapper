@@ -314,7 +314,8 @@ public interface CfnCACertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnCACertificateProps,
-  ) : CdkObject(cdkObject), CfnCACertificateProps {
+  ) : CdkObject(cdkObject),
+      CfnCACertificateProps {
     /**
      * Whether the CA certificate is configured for auto registration of device certificates.
      *

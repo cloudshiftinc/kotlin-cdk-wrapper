@@ -128,7 +128,8 @@ public interface CfnOriginEndpointPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicyProps,
-  ) : CdkObject(cdkObject), CfnOriginEndpointPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnOriginEndpointPolicyProps {
     /**
      * The name of the channel group associated with the origin endpoint policy.
      *

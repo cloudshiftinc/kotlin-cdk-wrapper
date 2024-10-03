@@ -309,7 +309,8 @@ public interface CfnEventSubscriptionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dms.CfnEventSubscriptionProps,
-  ) : CdkObject(cdkObject), CfnEventSubscriptionProps {
+  ) : CdkObject(cdkObject),
+      CfnEventSubscriptionProps {
     /**
      * Indicates whether to activate the subscription.
      *

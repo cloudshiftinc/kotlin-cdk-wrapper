@@ -105,7 +105,8 @@ public interface ApiDefinitionConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinitionConfig,
-  ) : CdkObject(cdkObject), ApiDefinitionConfig {
+  ) : CdkObject(cdkObject),
+      ApiDefinitionConfig {
     /**
      * Inline specification (mutually exclusive with `s3Location`).
      *

@@ -88,7 +88,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMethod(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1471,7 +1472,8 @@ public open class CfnMethod(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationProperty,
-    ) : CdkObject(cdkObject), IntegrationProperty {
+    ) : CdkObject(cdkObject),
+        IntegrationProperty {
       /**
        * A list of request parameters whose values API Gateway caches.
        *
@@ -1925,7 +1927,8 @@ public open class CfnMethod(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty,
-    ) : CdkObject(cdkObject), IntegrationResponseProperty {
+    ) : CdkObject(cdkObject),
+        IntegrationResponseProperty {
       /**
        * Specifies how to handle response payload content type conversions.
        *
@@ -2197,7 +2200,8 @@ public open class CfnMethod(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty,
-    ) : CdkObject(cdkObject), MethodResponseProperty {
+    ) : CdkObject(cdkObject),
+        MethodResponseProperty {
       /**
        * Specifies the Model resources used for the response's content-type.
        *

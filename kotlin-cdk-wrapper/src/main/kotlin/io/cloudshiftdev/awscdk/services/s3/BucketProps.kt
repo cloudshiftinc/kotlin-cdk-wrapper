@@ -19,21 +19,18 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Bucket sourceBucket = Bucket.Builder.create(this, "MyBucket")
- * .versioned(true)
+ * import io.cloudshiftdev.awscdk.services.kms.*;
+ * Key myKmsKey = new Key(this, "myKMSKey");
+ * Bucket myBucket = Bucket.Builder.create(this, "mySSEKMSEncryptedBucket")
+ * .encryption(BucketEncryption.KMS)
+ * .encryptionKey(myKmsKey)
+ * .objectOwnership(ObjectOwnership.BUCKET_OWNER_ENFORCED)
  * .build();
- * Pipeline pipeline = new Pipeline(this, "MyPipeline");
- * Artifact sourceOutput = new Artifact();
- * S3SourceAction sourceAction = S3SourceAction.Builder.create()
- * .actionName("S3Source")
- * .bucket(sourceBucket)
- * .bucketKey("path/to/file.zip")
- * .output(sourceOutput)
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(S3BucketOrigin.withOriginAccessControl(myBucket))
+ * .build())
  * .build();
- * pipeline.addStage(StageOptions.builder()
- * .stageName("Source")
- * .actions(List.of(sourceAction))
- * .build());
  * ```
  */
 public interface BucketProps {
@@ -85,8 +82,7 @@ public interface BucketProps {
    * attendant cost implications of that).
    * * If enabled, S3 will use its own time-limited key instead.
    *
-   * Only relevant, when Encryption is set to `BucketEncryption.KMS` or
-   * `BucketEncryption.KMS_MANAGED`.
+   * Only relevant, when Encryption is not set to `BucketEncryption.UNENCRYPTED`.
    *
    * Default: - false
    */
@@ -208,6 +204,14 @@ public interface BucketProps {
       unwrap(this).getNotificationsHandlerRole()?.let(IRole::wrap)
 
   /**
+   * Skips notification validation of Amazon SQS, Amazon SNS, and Lambda destinations.
+   *
+   * Default: false
+   */
+  public fun notificationsSkipDestinationValidation(): Boolean? =
+      unwrap(this).getNotificationsSkipDestinationValidation()
+
+  /**
    * The default retention mode and rules for S3 Object Lock.
    *
    * Default retention can be configured after a bucket is created if the bucket already
@@ -235,7 +239,9 @@ public interface BucketProps {
   /**
    * The objectOwnership of the bucket.
    *
-   * Default: - No ObjectOwnership configuration, uploading account will own the object.
+   * Default: - No ObjectOwnership configuration. By default, Amazon S3 sets Object Ownership to
+   * `Bucket owner enforced`.
+   * This means ACLs are disabled and the bucket owner will own every object.
    *
    * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html)
    */
@@ -384,8 +390,7 @@ public interface BucketProps {
      * attendant cost implications of that).
      * * If enabled, S3 will use its own time-limited key instead.
      *
-     * Only relevant, when Encryption is set to `BucketEncryption.KMS` or
-     * `BucketEncryption.KMS_MANAGED`.
+     * Only relevant, when Encryption is not set to `BucketEncryption.UNENCRYPTED`.
      */
     public fun bucketKeyEnabled(bucketKeyEnabled: Boolean)
 
@@ -482,6 +487,13 @@ public interface BucketProps {
      * @param notificationsHandlerRole The role to be used by the notifications handler.
      */
     public fun notificationsHandlerRole(notificationsHandlerRole: IRole)
+
+    /**
+     * @param notificationsSkipDestinationValidation Skips notification validation of Amazon SQS,
+     * Amazon SNS, and Lambda destinations.
+     */
+    public
+        fun notificationsSkipDestinationValidation(notificationsSkipDestinationValidation: Boolean)
 
     /**
      * @param objectLockDefaultRetention The default retention mode and rules for S3 Object Lock.
@@ -638,8 +650,7 @@ public interface BucketProps {
      * attendant cost implications of that).
      * * If enabled, S3 will use its own time-limited key instead.
      *
-     * Only relevant, when Encryption is set to `BucketEncryption.KMS` or
-     * `BucketEncryption.KMS_MANAGED`.
+     * Only relevant, when Encryption is not set to `BucketEncryption.UNENCRYPTED`.
      */
     override fun bucketKeyEnabled(bucketKeyEnabled: Boolean) {
       cdkBuilder.bucketKeyEnabled(bucketKeyEnabled)
@@ -764,6 +775,15 @@ public interface BucketProps {
      */
     override fun notificationsHandlerRole(notificationsHandlerRole: IRole) {
       cdkBuilder.notificationsHandlerRole(notificationsHandlerRole.let(IRole.Companion::unwrap))
+    }
+
+    /**
+     * @param notificationsSkipDestinationValidation Skips notification validation of Amazon SQS,
+     * Amazon SNS, and Lambda destinations.
+     */
+    override
+        fun notificationsSkipDestinationValidation(notificationsSkipDestinationValidation: Boolean) {
+      cdkBuilder.notificationsSkipDestinationValidation(notificationsSkipDestinationValidation)
     }
 
     /**
@@ -901,7 +921,8 @@ public interface BucketProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.BucketProps,
-  ) : CdkObject(cdkObject), BucketProps {
+  ) : CdkObject(cdkObject),
+      BucketProps {
     /**
      * Specifies a canned ACL that grants predefined permissions to the bucket.
      *
@@ -950,8 +971,7 @@ public interface BucketProps {
      * attendant cost implications of that).
      * * If enabled, S3 will use its own time-limited key instead.
      *
-     * Only relevant, when Encryption is set to `BucketEncryption.KMS` or
-     * `BucketEncryption.KMS_MANAGED`.
+     * Only relevant, when Encryption is not set to `BucketEncryption.UNENCRYPTED`.
      *
      * Default: - false
      */
@@ -1074,6 +1094,14 @@ public interface BucketProps {
         unwrap(this).getNotificationsHandlerRole()?.let(IRole::wrap)
 
     /**
+     * Skips notification validation of Amazon SQS, Amazon SNS, and Lambda destinations.
+     *
+     * Default: false
+     */
+    override fun notificationsSkipDestinationValidation(): Boolean? =
+        unwrap(this).getNotificationsSkipDestinationValidation()
+
+    /**
      * The default retention mode and rules for S3 Object Lock.
      *
      * Default retention can be configured after a bucket is created if the bucket already
@@ -1101,7 +1129,9 @@ public interface BucketProps {
     /**
      * The objectOwnership of the bucket.
      *
-     * Default: - No ObjectOwnership configuration, uploading account will own the object.
+     * Default: - No ObjectOwnership configuration. By default, Amazon S3 sets Object Ownership to
+     * `Bucket owner enforced`.
+     * This means ACLs are disabled and the bucket owner will own every object.
      *
      * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html)
      */

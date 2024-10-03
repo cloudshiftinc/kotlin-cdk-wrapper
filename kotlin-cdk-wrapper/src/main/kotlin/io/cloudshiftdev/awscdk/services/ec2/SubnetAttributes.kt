@@ -113,7 +113,8 @@ public interface SubnetAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.SubnetAttributes,
-  ) : CdkObject(cdkObject), SubnetAttributes {
+  ) : CdkObject(cdkObject),
+      SubnetAttributes {
     /**
      * The Availability Zone the subnet is located in.
      *

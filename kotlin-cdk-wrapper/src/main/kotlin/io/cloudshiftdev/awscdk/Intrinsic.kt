@@ -33,7 +33,8 @@ import kotlin.collections.List
  */
 public open class Intrinsic(
   cdkObject: software.amazon.awscdk.Intrinsic,
-) : CdkObject(cdkObject), IResolvable {
+) : CdkObject(cdkObject),
+    IResolvable {
   public constructor(`value`: Any) : this(software.amazon.awscdk.Intrinsic(`value`)
   )
 

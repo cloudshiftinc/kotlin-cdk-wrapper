@@ -20,12 +20,23 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * Bucket myBucket = new Bucket(this, "myBucket");
- * Distribution.Builder.create(this, "myDist")
- * .defaultBehavior(BehaviorOptions.builder().origin(S3Origin.Builder.create(myBucket)
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+ * import io.cloudshiftdev.awscdk.services.cloudfront.origins.*;
+ * OriginAccessIdentity originAccessIdentity;
+ * S3OriginProps s3OriginProps = S3OriginProps.builder()
+ * .connectionAttempts(123)
+ * .connectionTimeout(Duration.minutes(30))
  * .customHeaders(Map.of(
- * "Foo", "bar"))
- * .build()).build())
+ * "customHeadersKey", "customHeaders"))
+ * .originAccessControlId("originAccessControlId")
+ * .originAccessIdentity(originAccessIdentity)
+ * .originId("originId")
+ * .originPath("originPath")
+ * .originShieldEnabled(false)
+ * .originShieldRegion("originShieldRegion")
  * .build();
  * ```
  */
@@ -63,6 +74,12 @@ public interface S3OriginProps : OriginProps {
      * it sends to the origin.
      */
     public fun customHeaders(customHeaders: Map<String, String>)
+
+    /**
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin.
+     */
+    public fun originAccessControlId(originAccessControlId: String)
 
     /**
      * @param originAccessIdentity An optional Origin Access Identity of the origin identity
@@ -127,6 +144,14 @@ public interface S3OriginProps : OriginProps {
     }
 
     /**
+     * @param originAccessControlId The unique identifier of an origin access control for this
+     * origin.
+     */
+    override fun originAccessControlId(originAccessControlId: String) {
+      cdkBuilder.originAccessControlId(originAccessControlId)
+    }
+
+    /**
      * @param originAccessIdentity An optional Origin Access Identity of the origin identity
      * cloudfront will use when calling your s3 bucket.
      */
@@ -173,7 +198,8 @@ public interface S3OriginProps : OriginProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.origins.S3OriginProps,
-  ) : CdkObject(cdkObject), S3OriginProps {
+  ) : CdkObject(cdkObject),
+      S3OriginProps {
     /**
      * The number of times that CloudFront attempts to connect to the origin;
      *
@@ -202,6 +228,13 @@ public interface S3OriginProps : OriginProps {
      */
     override fun customHeaders(): Map<String, String> = unwrap(this).getCustomHeaders() ?:
         emptyMap()
+
+    /**
+     * The unique identifier of an origin access control for this origin.
+     *
+     * Default: - no origin access control
+     */
+    override fun originAccessControlId(): String? = unwrap(this).getOriginAccessControlId()
 
     /**
      * An optional Origin Access Identity of the origin identity cloudfront will use when calling

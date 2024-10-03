@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBrowserSettings(
   cdkObject: software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

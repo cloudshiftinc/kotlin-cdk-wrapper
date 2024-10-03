@@ -16,7 +16,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class TargetGroupBase(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupBase,
-) : Construct(cdkObject), ITargetGroup {
+) : Construct(cdkObject),
+    ITargetGroup {
   /**
    * Set a non-standard attribute on the target group.
    *

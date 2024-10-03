@@ -206,7 +206,8 @@ public interface ApiKeyOptions : ResourceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.ApiKeyOptions,
-  ) : CdkObject(cdkObject), ApiKeyOptions {
+  ) : CdkObject(cdkObject),
+      ApiKeyOptions {
     /**
      * A name for the API key.
      *

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 
 /**
@@ -139,6 +140,25 @@ public abstract class Code(
     @JvmName("f942d49f88ca2fe998eddb89bc7e5353b2a9928f94e7daa6c5c5852e24b69c2d")
     public fun fromCfnParameters(props: CfnParametersCodeProps.Builder.() -> Unit):
         CfnParametersCode = fromCfnParameters(CfnParametersCodeProps(props))
+
+    public fun fromCustomCommand(output: String, command: List<String>): AssetCode =
+        software.amazon.awscdk.services.lambda.Code.fromCustomCommand(output,
+        command).let(AssetCode::wrap)
+
+    public fun fromCustomCommand(
+      output: String,
+      command: List<String>,
+      options: CustomCommandOptions,
+    ): AssetCode = software.amazon.awscdk.services.lambda.Code.fromCustomCommand(output, command,
+        options.let(CustomCommandOptions.Companion::unwrap)).let(AssetCode::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("39ac8f525c66132d5b8a65e2d8901aaac4de2cc56c22bd623d3d02f93e442c6f")
+    public fun fromCustomCommand(
+      output: String,
+      command: List<String>,
+      options: CustomCommandOptions.Builder.() -> Unit,
+    ): AssetCode = fromCustomCommand(output, command, CustomCommandOptions(options))
 
     public fun fromDockerBuild(path: String): AssetCode =
         software.amazon.awscdk.services.lambda.Code.fromDockerBuild(path).let(AssetCode::wrap)

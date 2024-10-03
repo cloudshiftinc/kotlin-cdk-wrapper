@@ -74,7 +74,8 @@ public interface IApplicationLoadBalancer : ILoadBalancerV2, IConnectable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer,
-  ) : CdkObject(cdkObject), IApplicationLoadBalancer {
+  ) : CdkObject(cdkObject),
+      IApplicationLoadBalancer {
     /**
      * Add a new listener to this load balancer.
      *

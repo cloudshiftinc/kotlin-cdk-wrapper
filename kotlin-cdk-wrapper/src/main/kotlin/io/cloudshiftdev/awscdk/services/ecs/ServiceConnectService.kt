@@ -241,7 +241,8 @@ public interface ServiceConnectService {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ServiceConnectService,
-  ) : CdkObject(cdkObject), ServiceConnectService {
+  ) : CdkObject(cdkObject),
+      ServiceConnectService {
     /**
      * Optionally specifies an intermediate dns name to register in the CloudMap namespace.
      *

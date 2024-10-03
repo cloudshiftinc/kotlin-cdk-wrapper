@@ -36,7 +36,8 @@ public interface IEcsLaunchTarget {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.IEcsLaunchTarget,
-  ) : CdkObject(cdkObject), IEcsLaunchTarget {
+  ) : CdkObject(cdkObject),
+      IEcsLaunchTarget {
     /**
      * called when the ECS launch target is configured on RunTask.
      *

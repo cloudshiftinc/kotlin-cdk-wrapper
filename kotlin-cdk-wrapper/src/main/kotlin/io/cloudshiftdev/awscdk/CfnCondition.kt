@@ -28,7 +28,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCondition(
   cdkObject: software.amazon.awscdk.CfnCondition,
-) : CfnElement(cdkObject), ICfnConditionExpression, IResolvable {
+) : CfnElement(cdkObject),
+    ICfnConditionExpression,
+    IResolvable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.CfnCondition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

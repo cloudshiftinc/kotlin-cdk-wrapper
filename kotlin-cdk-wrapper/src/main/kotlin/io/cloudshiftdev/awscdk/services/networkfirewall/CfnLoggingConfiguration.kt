@@ -62,7 +62,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLoggingConfiguration(
   cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -332,8 +333,10 @@ public open class CfnLoggingConfiguration(
      * chosen destination type.
      *
      * * For an Amazon S3 bucket, provide the name of the bucket, with key `bucketName` , and
-     * optionally provide a prefix, with key `prefix` . The following example specifies an Amazon S3
-     * bucket named `DOC-EXAMPLE-BUCKET` and the prefix `alerts` :
+     * optionally provide a prefix, with key `prefix` .
+     *
+     * The following example specifies an Amazon S3 bucket named `DOC-EXAMPLE-BUCKET` and the prefix
+     * `alerts` :
      *
      * `"LogDestination": { "bucketName": "DOC-EXAMPLE-BUCKET", "prefix": "alerts" }`
      *
@@ -363,10 +366,20 @@ public open class CfnLoggingConfiguration(
     public fun logDestinationType(): String
 
     /**
-     * The type of log to send.
+     * The type of log to record.
      *
-     * Alert logs report traffic that matches a stateful rule with an action setting that sends an
-     * alert log message. Flow logs are standard network traffic flow logs.
+     * You can record the following types of logs from your Network Firewall stateful engine.
+     *
+     * * `ALERT` - Logs for traffic that matches your stateful rules and that have an action that
+     * sends an alert. A stateful rule sends alerts for the rule actions DROP, ALERT, and REJECT. For
+     * more information, see the `StatefulRule` property.
+     * * `FLOW` - Standard network traffic flow logs. The stateful rules engine records flow logs
+     * for all network traffic that it receives. Each flow log record captures the network flow for a
+     * specific standard stateless rule group.
+     * * `TLS` - Logs for events that are related to TLS inspection. For more information, see
+     * [Inspecting SSL/TLS traffic with TLS inspection
+     * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-configurations.html)
+     * in the *Network Firewall Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-loggingconfiguration-logdestinationconfig.html#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logtype)
      */
@@ -381,8 +394,10 @@ public open class CfnLoggingConfiguration(
        * @param logDestination The named location for the logs, provided in a key:value mapping that
        * is specific to the chosen destination type. 
        * * For an Amazon S3 bucket, provide the name of the bucket, with key `bucketName` , and
-       * optionally provide a prefix, with key `prefix` . The following example specifies an Amazon S3
-       * bucket named `DOC-EXAMPLE-BUCKET` and the prefix `alerts` :
+       * optionally provide a prefix, with key `prefix` .
+       *
+       * The following example specifies an Amazon S3 bucket named `DOC-EXAMPLE-BUCKET` and the
+       * prefix `alerts` :
        *
        * `"LogDestination": { "bucketName": "DOC-EXAMPLE-BUCKET", "prefix": "alerts" }`
        *
@@ -403,8 +418,10 @@ public open class CfnLoggingConfiguration(
        * @param logDestination The named location for the logs, provided in a key:value mapping that
        * is specific to the chosen destination type. 
        * * For an Amazon S3 bucket, provide the name of the bucket, with key `bucketName` , and
-       * optionally provide a prefix, with key `prefix` . The following example specifies an Amazon S3
-       * bucket named `DOC-EXAMPLE-BUCKET` and the prefix `alerts` :
+       * optionally provide a prefix, with key `prefix` .
+       *
+       * The following example specifies an Amazon S3 bucket named `DOC-EXAMPLE-BUCKET` and the
+       * prefix `alerts` :
        *
        * `"LogDestination": { "bucketName": "DOC-EXAMPLE-BUCKET", "prefix": "alerts" }`
        *
@@ -429,9 +446,19 @@ public open class CfnLoggingConfiguration(
       public fun logDestinationType(logDestinationType: String)
 
       /**
-       * @param logType The type of log to send. 
-       * Alert logs report traffic that matches a stateful rule with an action setting that sends an
-       * alert log message. Flow logs are standard network traffic flow logs.
+       * @param logType The type of log to record. 
+       * You can record the following types of logs from your Network Firewall stateful engine.
+       *
+       * * `ALERT` - Logs for traffic that matches your stateful rules and that have an action that
+       * sends an alert. A stateful rule sends alerts for the rule actions DROP, ALERT, and REJECT. For
+       * more information, see the `StatefulRule` property.
+       * * `FLOW` - Standard network traffic flow logs. The stateful rules engine records flow logs
+       * for all network traffic that it receives. Each flow log record captures the network flow for a
+       * specific standard stateless rule group.
+       * * `TLS` - Logs for events that are related to TLS inspection. For more information, see
+       * [Inspecting SSL/TLS traffic with TLS inspection
+       * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-configurations.html)
+       * in the *Network Firewall Developer Guide* .
        */
       public fun logType(logType: String)
     }
@@ -446,8 +473,10 @@ public open class CfnLoggingConfiguration(
        * @param logDestination The named location for the logs, provided in a key:value mapping that
        * is specific to the chosen destination type. 
        * * For an Amazon S3 bucket, provide the name of the bucket, with key `bucketName` , and
-       * optionally provide a prefix, with key `prefix` . The following example specifies an Amazon S3
-       * bucket named `DOC-EXAMPLE-BUCKET` and the prefix `alerts` :
+       * optionally provide a prefix, with key `prefix` .
+       *
+       * The following example specifies an Amazon S3 bucket named `DOC-EXAMPLE-BUCKET` and the
+       * prefix `alerts` :
        *
        * `"LogDestination": { "bucketName": "DOC-EXAMPLE-BUCKET", "prefix": "alerts" }`
        *
@@ -470,8 +499,10 @@ public open class CfnLoggingConfiguration(
        * @param logDestination The named location for the logs, provided in a key:value mapping that
        * is specific to the chosen destination type. 
        * * For an Amazon S3 bucket, provide the name of the bucket, with key `bucketName` , and
-       * optionally provide a prefix, with key `prefix` . The following example specifies an Amazon S3
-       * bucket named `DOC-EXAMPLE-BUCKET` and the prefix `alerts` :
+       * optionally provide a prefix, with key `prefix` .
+       *
+       * The following example specifies an Amazon S3 bucket named `DOC-EXAMPLE-BUCKET` and the
+       * prefix `alerts` :
        *
        * `"LogDestination": { "bucketName": "DOC-EXAMPLE-BUCKET", "prefix": "alerts" }`
        *
@@ -500,9 +531,19 @@ public open class CfnLoggingConfiguration(
       }
 
       /**
-       * @param logType The type of log to send. 
-       * Alert logs report traffic that matches a stateful rule with an action setting that sends an
-       * alert log message. Flow logs are standard network traffic flow logs.
+       * @param logType The type of log to record. 
+       * You can record the following types of logs from your Network Firewall stateful engine.
+       *
+       * * `ALERT` - Logs for traffic that matches your stateful rules and that have an action that
+       * sends an alert. A stateful rule sends alerts for the rule actions DROP, ALERT, and REJECT. For
+       * more information, see the `StatefulRule` property.
+       * * `FLOW` - Standard network traffic flow logs. The stateful rules engine records flow logs
+       * for all network traffic that it receives. Each flow log record captures the network flow for a
+       * specific standard stateless rule group.
+       * * `TLS` - Logs for events that are related to TLS inspection. For more information, see
+       * [Inspecting SSL/TLS traffic with TLS inspection
+       * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-configurations.html)
+       * in the *Network Firewall Developer Guide* .
        */
       override fun logType(logType: String) {
         cdkBuilder.logType(logType)
@@ -515,14 +556,17 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LogDestinationConfigProperty,
-    ) : CdkObject(cdkObject), LogDestinationConfigProperty {
+    ) : CdkObject(cdkObject),
+        LogDestinationConfigProperty {
       /**
        * The named location for the logs, provided in a key:value mapping that is specific to the
        * chosen destination type.
        *
        * * For an Amazon S3 bucket, provide the name of the bucket, with key `bucketName` , and
-       * optionally provide a prefix, with key `prefix` . The following example specifies an Amazon S3
-       * bucket named `DOC-EXAMPLE-BUCKET` and the prefix `alerts` :
+       * optionally provide a prefix, with key `prefix` .
+       *
+       * The following example specifies an Amazon S3 bucket named `DOC-EXAMPLE-BUCKET` and the
+       * prefix `alerts` :
        *
        * `"LogDestination": { "bucketName": "DOC-EXAMPLE-BUCKET", "prefix": "alerts" }`
        *
@@ -552,10 +596,20 @@ public open class CfnLoggingConfiguration(
       override fun logDestinationType(): String = unwrap(this).getLogDestinationType()
 
       /**
-       * The type of log to send.
+       * The type of log to record.
        *
-       * Alert logs report traffic that matches a stateful rule with an action setting that sends an
-       * alert log message. Flow logs are standard network traffic flow logs.
+       * You can record the following types of logs from your Network Firewall stateful engine.
+       *
+       * * `ALERT` - Logs for traffic that matches your stateful rules and that have an action that
+       * sends an alert. A stateful rule sends alerts for the rule actions DROP, ALERT, and REJECT. For
+       * more information, see the `StatefulRule` property.
+       * * `FLOW` - Standard network traffic flow logs. The stateful rules engine records flow logs
+       * for all network traffic that it receives. Each flow log record captures the network flow for a
+       * specific standard stateless rule group.
+       * * `TLS` - Logs for events that are related to TLS inspection. For more information, see
+       * [Inspecting SSL/TLS traffic with TLS inspection
+       * configurations](https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection-configurations.html)
+       * in the *Network Firewall Developer Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-loggingconfiguration-logdestinationconfig.html#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logtype)
        */
@@ -672,7 +726,8 @@ public open class CfnLoggingConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LoggingConfigurationProperty,
-    ) : CdkObject(cdkObject), LoggingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LoggingConfigurationProperty {
       /**
        * Defines the logging destinations for the logs for a firewall.
        *

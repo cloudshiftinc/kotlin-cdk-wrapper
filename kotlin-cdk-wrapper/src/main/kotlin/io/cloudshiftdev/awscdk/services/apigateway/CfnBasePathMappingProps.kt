@@ -143,7 +143,8 @@ public interface CfnBasePathMappingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.CfnBasePathMappingProps,
-  ) : CdkObject(cdkObject), CfnBasePathMappingProps {
+  ) : CdkObject(cdkObject),
+      CfnBasePathMappingProps {
     /**
      * The base path name that callers of the API must provide as part of the URL after the domain
      * name.

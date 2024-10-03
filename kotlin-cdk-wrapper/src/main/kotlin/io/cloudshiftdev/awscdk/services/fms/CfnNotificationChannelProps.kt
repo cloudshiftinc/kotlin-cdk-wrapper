@@ -86,7 +86,8 @@ public interface CfnNotificationChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.fms.CfnNotificationChannelProps,
-  ) : CdkObject(cdkObject), CfnNotificationChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnNotificationChannelProps {
     /**
      * The Amazon Resource Name (ARN) of the IAM role that allows Amazon SNS to record AWS Firewall
      * Manager activity.

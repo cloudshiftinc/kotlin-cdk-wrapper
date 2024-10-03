@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.collections.Map
 import kotlin.jvm.JvmName
 
@@ -146,6 +147,13 @@ public interface StackProps {
   public fun env(): Environment? = unwrap(this).getEnv()?.let(Environment::wrap)
 
   /**
+   * SNS Topic ARNs that will receive stack events.
+   *
+   * Default: - no notfication arns.
+   */
+  public fun notificationArns(): List<String> = unwrap(this).getNotificationArns() ?: emptyList()
+
+  /**
    * Options for applying a permissions boundary to all IAM Roles and Users created within this
    * Stage.
    *
@@ -278,6 +286,16 @@ public interface StackProps {
     public fun env(env: Environment.Builder.() -> Unit)
 
     /**
+     * @param notificationArns SNS Topic ARNs that will receive stack events.
+     */
+    public fun notificationArns(notificationArns: List<String>)
+
+    /**
+     * @param notificationArns SNS Topic ARNs that will receive stack events.
+     */
+    public fun notificationArns(vararg notificationArns: String)
+
+    /**
      * @param permissionsBoundary Options for applying a permissions boundary to all IAM Roles and
      * Users created within this Stage.
      */
@@ -403,6 +421,19 @@ public interface StackProps {
     override fun env(env: Environment.Builder.() -> Unit): Unit = env(Environment(env))
 
     /**
+     * @param notificationArns SNS Topic ARNs that will receive stack events.
+     */
+    override fun notificationArns(notificationArns: List<String>) {
+      cdkBuilder.notificationArns(notificationArns)
+    }
+
+    /**
+     * @param notificationArns SNS Topic ARNs that will receive stack events.
+     */
+    override fun notificationArns(vararg notificationArns: String): Unit =
+        notificationArns(notificationArns.toList())
+
+    /**
      * @param permissionsBoundary Options for applying a permissions boundary to all IAM Roles and
      * Users created within this Stage.
      */
@@ -464,7 +495,8 @@ public interface StackProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.StackProps,
-  ) : CdkObject(cdkObject), StackProps {
+  ) : CdkObject(cdkObject),
+      StackProps {
     /**
      * Include runtime versioning information in this Stack.
      *
@@ -567,6 +599,14 @@ public interface StackProps {
      * ```
      */
     override fun env(): Environment? = unwrap(this).getEnv()?.let(Environment::wrap)
+
+    /**
+     * SNS Topic ARNs that will receive stack events.
+     *
+     * Default: - no notfication arns.
+     */
+    override fun notificationArns(): List<String> = unwrap(this).getNotificationArns() ?:
+        emptyList()
 
     /**
      * Options for applying a permissions boundary to all IAM Roles and Users created within this

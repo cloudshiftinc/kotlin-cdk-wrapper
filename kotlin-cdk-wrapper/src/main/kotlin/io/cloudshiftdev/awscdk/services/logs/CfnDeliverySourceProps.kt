@@ -142,7 +142,8 @@ public interface CfnDeliverySourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.CfnDeliverySourceProps,
-  ) : CdkObject(cdkObject), CfnDeliverySourceProps {
+  ) : CdkObject(cdkObject),
+      CfnDeliverySourceProps {
     /**
      * The type of log that the source is sending.
      *

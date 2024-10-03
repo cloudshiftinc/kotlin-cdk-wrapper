@@ -77,6 +77,8 @@ public enum class InstanceClass(
   R7IZ(software.amazon.awscdk.services.ec2.InstanceClass.R7IZ),
   MEMORY7_AMD(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY7_AMD),
   R7A(software.amazon.awscdk.services.ec2.InstanceClass.R7A),
+  MEMORY8_GRAVITON(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY8_GRAVITON),
+  R8G(software.amazon.awscdk.services.ec2.InstanceClass.R8G),
   COMPUTE3(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE3),
   C3(software.amazon.awscdk.services.ec2.InstanceClass.C3),
   COMPUTE4(software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE4),
@@ -175,6 +177,8 @@ public enum class InstanceClass(
   G5(software.amazon.awscdk.services.ec2.InstanceClass.G5),
   GRAPHICS5_GRAVITON2(software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS5_GRAVITON2),
   G5G(software.amazon.awscdk.services.ec2.InstanceClass.G5G),
+  GRAPHICS6(software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS6),
+  G6(software.amazon.awscdk.services.ec2.InstanceClass.G6),
   PARALLEL2(software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL2),
   P2(software.amazon.awscdk.services.ec2.InstanceClass.P2),
   PARALLEL3(software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL3),
@@ -227,6 +231,8 @@ public enum class InstanceClass(
   MAC2_M2(software.amazon.awscdk.services.ec2.InstanceClass.MAC2_M2),
   MACINTOSH2_M2_PRO(software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH2_M2_PRO),
   MAC2_M2PRO(software.amazon.awscdk.services.ec2.InstanceClass.MAC2_M2PRO),
+  MACINTOSH2_M1_ULTRA(software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH2_M1_ULTRA),
+  MAC2_M1ULTRA(software.amazon.awscdk.services.ec2.InstanceClass.MAC2_M1ULTRA),
   VIDEO_TRANSCODING1(software.amazon.awscdk.services.ec2.InstanceClass.VIDEO_TRANSCODING1),
   VT1(software.amazon.awscdk.services.ec2.InstanceClass.VT1),
   HIGH_PERFORMANCE_COMPUTING6_AMD(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_PERFORMANCE_COMPUTING6_AMD),
@@ -342,6 +348,9 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.R7IZ -> InstanceClass.R7IZ
       software.amazon.awscdk.services.ec2.InstanceClass.MEMORY7_AMD -> InstanceClass.MEMORY7_AMD
       software.amazon.awscdk.services.ec2.InstanceClass.R7A -> InstanceClass.R7A
+      software.amazon.awscdk.services.ec2.InstanceClass.MEMORY8_GRAVITON ->
+          InstanceClass.MEMORY8_GRAVITON
+      software.amazon.awscdk.services.ec2.InstanceClass.R8G -> InstanceClass.R8G
       software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE3 -> InstanceClass.COMPUTE3
       software.amazon.awscdk.services.ec2.InstanceClass.C3 -> InstanceClass.C3
       software.amazon.awscdk.services.ec2.InstanceClass.COMPUTE4 -> InstanceClass.COMPUTE4
@@ -474,6 +483,8 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS5_GRAVITON2 ->
           InstanceClass.GRAPHICS5_GRAVITON2
       software.amazon.awscdk.services.ec2.InstanceClass.G5G -> InstanceClass.G5G
+      software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS6 -> InstanceClass.GRAPHICS6
+      software.amazon.awscdk.services.ec2.InstanceClass.G6 -> InstanceClass.G6
       software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL2 -> InstanceClass.PARALLEL2
       software.amazon.awscdk.services.ec2.InstanceClass.P2 -> InstanceClass.P2
       software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL3 -> InstanceClass.PARALLEL3
@@ -541,6 +552,9 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH2_M2_PRO ->
           InstanceClass.MACINTOSH2_M2_PRO
       software.amazon.awscdk.services.ec2.InstanceClass.MAC2_M2PRO -> InstanceClass.MAC2_M2PRO
+      software.amazon.awscdk.services.ec2.InstanceClass.MACINTOSH2_M1_ULTRA ->
+          InstanceClass.MACINTOSH2_M1_ULTRA
+      software.amazon.awscdk.services.ec2.InstanceClass.MAC2_M1ULTRA -> InstanceClass.MAC2_M1ULTRA
       software.amazon.awscdk.services.ec2.InstanceClass.VIDEO_TRANSCODING1 ->
           InstanceClass.VIDEO_TRANSCODING1
       software.amazon.awscdk.services.ec2.InstanceClass.VT1 -> InstanceClass.VT1

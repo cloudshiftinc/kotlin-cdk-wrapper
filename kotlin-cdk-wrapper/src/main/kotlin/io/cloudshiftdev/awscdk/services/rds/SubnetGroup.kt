@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class SubnetGroup(
   cdkObject: software.amazon.awscdk.services.rds.SubnetGroup,
-) : Resource(cdkObject), ISubnetGroup {
+) : Resource(cdkObject),
+    ISubnetGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -183,7 +183,8 @@ public interface InterfaceVpcEndpointProps : InterfaceVpcEndpointOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpointProps,
-  ) : CdkObject(cdkObject), InterfaceVpcEndpointProps {
+  ) : CdkObject(cdkObject),
+      InterfaceVpcEndpointProps {
     /**
      * Limit to only those availability zones where the endpoint service can be created.
      *

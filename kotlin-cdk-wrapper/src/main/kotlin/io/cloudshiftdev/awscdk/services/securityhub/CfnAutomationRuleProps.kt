@@ -222,9 +222,10 @@ import kotlin.jvm.JvmName
  * .build()))
  * .build())
  * .description("description")
- * .isTerminal(false)
  * .ruleName("ruleName")
  * .ruleOrder(123)
+ * // the properties below are optional
+ * .isTerminal(false)
  * .ruleStatus("ruleStatus")
  * .tags(Map.of(
  * "tagsKey", "tags"))
@@ -240,7 +241,7 @@ public interface CfnAutomationRuleProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html#cfn-securityhub-automationrule-actions)
    */
-  public fun actions(): Any? = unwrap(this).getActions()
+  public fun actions(): Any
 
   /**
    * A set of [AWS Security Finding Format
@@ -251,14 +252,14 @@ public interface CfnAutomationRuleProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html#cfn-securityhub-automationrule-criteria)
    */
-  public fun criteria(): Any? = unwrap(this).getCriteria()
+  public fun criteria(): Any
 
   /**
    * A description of the rule.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html#cfn-securityhub-automationrule-description)
    */
-  public fun description(): String? = unwrap(this).getDescription()
+  public fun description(): String
 
   /**
    * Specifies whether a rule is the last to be applied with respect to a finding that matches the
@@ -278,7 +279,7 @@ public interface CfnAutomationRuleProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html#cfn-securityhub-automationrule-rulename)
    */
-  public fun ruleName(): String? = unwrap(this).getRuleName()
+  public fun ruleName(): String
 
   /**
    * An integer ranging from 1 to 1000 that represents the order in which the rule action is applied
@@ -288,7 +289,7 @@ public interface CfnAutomationRuleProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html#cfn-securityhub-automationrule-ruleorder)
    */
-  public fun ruleOrder(): Number? = unwrap(this).getRuleOrder()
+  public fun ruleOrder(): Number
 
   /**
    * Whether the rule is active after it is created.
@@ -314,19 +315,19 @@ public interface CfnAutomationRuleProps {
   public interface Builder {
     /**
      * @param actions One or more actions to update finding fields if a finding matches the
-     * conditions specified in `Criteria` .
+     * conditions specified in `Criteria` . 
      */
     public fun actions(actions: IResolvable)
 
     /**
      * @param actions One or more actions to update finding fields if a finding matches the
-     * conditions specified in `Criteria` .
+     * conditions specified in `Criteria` . 
      */
     public fun actions(actions: List<Any>)
 
     /**
      * @param actions One or more actions to update finding fields if a finding matches the
-     * conditions specified in `Criteria` .
+     * conditions specified in `Criteria` . 
      */
     public fun actions(vararg actions: Any)
 
@@ -335,7 +336,7 @@ public interface CfnAutomationRuleProps {
      * (ASFF)](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html)
      * finding field attributes and corresponding expected values that Security Hub uses to filter
      * findings. If a rule is enabled and a finding matches the criteria specified in this parameter,
-     * Security Hub applies the rule action to the finding.
+     * Security Hub applies the rule action to the finding. 
      */
     public fun criteria(criteria: IResolvable)
 
@@ -344,7 +345,7 @@ public interface CfnAutomationRuleProps {
      * (ASFF)](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html)
      * finding field attributes and corresponding expected values that Security Hub uses to filter
      * findings. If a rule is enabled and a finding matches the criteria specified in this parameter,
-     * Security Hub applies the rule action to the finding.
+     * Security Hub applies the rule action to the finding. 
      */
     public fun criteria(criteria: CfnAutomationRule.AutomationRulesFindingFiltersProperty)
 
@@ -353,7 +354,7 @@ public interface CfnAutomationRuleProps {
      * (ASFF)](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html)
      * finding field attributes and corresponding expected values that Security Hub uses to filter
      * findings. If a rule is enabled and a finding matches the criteria specified in this parameter,
-     * Security Hub applies the rule action to the finding.
+     * Security Hub applies the rule action to the finding. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4b9fe65b2e87ea5657062360d44aa3b6c19213761055e0c7f0e2bedd11f44552")
@@ -361,7 +362,7 @@ public interface CfnAutomationRuleProps {
         fun criteria(criteria: CfnAutomationRule.AutomationRulesFindingFiltersProperty.Builder.() -> Unit)
 
     /**
-     * @param description A description of the rule.
+     * @param description A description of the rule. 
      */
     public fun description(description: String)
 
@@ -386,13 +387,13 @@ public interface CfnAutomationRuleProps {
     public fun isTerminal(isTerminal: IResolvable)
 
     /**
-     * @param ruleName The name of the rule.
+     * @param ruleName The name of the rule. 
      */
     public fun ruleName(ruleName: String)
 
     /**
      * @param ruleOrder An integer ranging from 1 to 1000 that represents the order in which the
-     * rule action is applied to findings.
+     * rule action is applied to findings. 
      * Security Hub applies rules with lower values for this parameter first.
      */
     public fun ruleOrder(ruleOrder: Number)
@@ -417,7 +418,7 @@ public interface CfnAutomationRuleProps {
 
     /**
      * @param actions One or more actions to update finding fields if a finding matches the
-     * conditions specified in `Criteria` .
+     * conditions specified in `Criteria` . 
      */
     override fun actions(actions: IResolvable) {
       cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
@@ -425,7 +426,7 @@ public interface CfnAutomationRuleProps {
 
     /**
      * @param actions One or more actions to update finding fields if a finding matches the
-     * conditions specified in `Criteria` .
+     * conditions specified in `Criteria` . 
      */
     override fun actions(actions: List<Any>) {
       cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
@@ -433,7 +434,7 @@ public interface CfnAutomationRuleProps {
 
     /**
      * @param actions One or more actions to update finding fields if a finding matches the
-     * conditions specified in `Criteria` .
+     * conditions specified in `Criteria` . 
      */
     override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
@@ -442,7 +443,7 @@ public interface CfnAutomationRuleProps {
      * (ASFF)](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html)
      * finding field attributes and corresponding expected values that Security Hub uses to filter
      * findings. If a rule is enabled and a finding matches the criteria specified in this parameter,
-     * Security Hub applies the rule action to the finding.
+     * Security Hub applies the rule action to the finding. 
      */
     override fun criteria(criteria: IResolvable) {
       cdkBuilder.criteria(criteria.let(IResolvable.Companion::unwrap))
@@ -453,7 +454,7 @@ public interface CfnAutomationRuleProps {
      * (ASFF)](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html)
      * finding field attributes and corresponding expected values that Security Hub uses to filter
      * findings. If a rule is enabled and a finding matches the criteria specified in this parameter,
-     * Security Hub applies the rule action to the finding.
+     * Security Hub applies the rule action to the finding. 
      */
     override fun criteria(criteria: CfnAutomationRule.AutomationRulesFindingFiltersProperty) {
       cdkBuilder.criteria(criteria.let(CfnAutomationRule.AutomationRulesFindingFiltersProperty.Companion::unwrap))
@@ -464,7 +465,7 @@ public interface CfnAutomationRuleProps {
      * (ASFF)](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html)
      * finding field attributes and corresponding expected values that Security Hub uses to filter
      * findings. If a rule is enabled and a finding matches the criteria specified in this parameter,
-     * Security Hub applies the rule action to the finding.
+     * Security Hub applies the rule action to the finding. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4b9fe65b2e87ea5657062360d44aa3b6c19213761055e0c7f0e2bedd11f44552")
@@ -473,7 +474,7 @@ public interface CfnAutomationRuleProps {
         Unit = criteria(CfnAutomationRule.AutomationRulesFindingFiltersProperty(criteria))
 
     /**
-     * @param description A description of the rule.
+     * @param description A description of the rule. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -504,7 +505,7 @@ public interface CfnAutomationRuleProps {
     }
 
     /**
-     * @param ruleName The name of the rule.
+     * @param ruleName The name of the rule. 
      */
     override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)
@@ -512,7 +513,7 @@ public interface CfnAutomationRuleProps {
 
     /**
      * @param ruleOrder An integer ranging from 1 to 1000 that represents the order in which the
-     * rule action is applied to findings.
+     * rule action is applied to findings. 
      * Security Hub applies rules with lower values for this parameter first.
      */
     override fun ruleOrder(ruleOrder: Number) {
@@ -541,14 +542,15 @@ public interface CfnAutomationRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRuleProps,
-  ) : CdkObject(cdkObject), CfnAutomationRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnAutomationRuleProps {
     /**
      * One or more actions to update finding fields if a finding matches the conditions specified in
      * `Criteria` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html#cfn-securityhub-automationrule-actions)
      */
-    override fun actions(): Any? = unwrap(this).getActions()
+    override fun actions(): Any = unwrap(this).getActions()
 
     /**
      * A set of [AWS Security Finding Format
@@ -559,14 +561,14 @@ public interface CfnAutomationRuleProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html#cfn-securityhub-automationrule-criteria)
      */
-    override fun criteria(): Any? = unwrap(this).getCriteria()
+    override fun criteria(): Any = unwrap(this).getCriteria()
 
     /**
      * A description of the rule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html#cfn-securityhub-automationrule-description)
      */
-    override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String = unwrap(this).getDescription()
 
     /**
      * Specifies whether a rule is the last to be applied with respect to a finding that matches the
@@ -586,7 +588,7 @@ public interface CfnAutomationRuleProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html#cfn-securityhub-automationrule-rulename)
      */
-    override fun ruleName(): String? = unwrap(this).getRuleName()
+    override fun ruleName(): String = unwrap(this).getRuleName()
 
     /**
      * An integer ranging from 1 to 1000 that represents the order in which the rule action is
@@ -596,7 +598,7 @@ public interface CfnAutomationRuleProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-automationrule.html#cfn-securityhub-automationrule-ruleorder)
      */
-    override fun ruleOrder(): Number? = unwrap(this).getRuleOrder()
+    override fun ruleOrder(): Number = unwrap(this).getRuleOrder()
 
     /**
      * Whether the rule is active after it is created.

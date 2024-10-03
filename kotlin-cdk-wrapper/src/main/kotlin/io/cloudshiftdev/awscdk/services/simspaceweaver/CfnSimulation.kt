@@ -63,7 +63,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSimulation(
   cdkObject: software.amazon.awscdk.services.simspaceweaver.CfnSimulation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -553,7 +554,7 @@ public open class CfnSimulation(
     public fun bucketName(): String
 
     /**
-     * The key name of an object in Amazon S3 .
+     * The key name of an object in Amazon S3.
      *
      * For more information about Amazon S3 objects and object keys, see [Uploading, downloading,
      * and working with objects in Amazon
@@ -578,7 +579,7 @@ public open class CfnSimulation(
       public fun bucketName(bucketName: String)
 
       /**
-       * @param objectKey The key name of an object in Amazon S3 . 
+       * @param objectKey The key name of an object in Amazon S3. 
        * For more information about Amazon S3 objects and object keys, see [Uploading, downloading,
        * and working with objects in Amazon
        * S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/uploading-downloading-objects.html)
@@ -603,7 +604,7 @@ public open class CfnSimulation(
       }
 
       /**
-       * @param objectKey The key name of an object in Amazon S3 . 
+       * @param objectKey The key name of an object in Amazon S3. 
        * For more information about Amazon S3 objects and object keys, see [Uploading, downloading,
        * and working with objects in Amazon
        * S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/uploading-downloading-objects.html)
@@ -620,7 +621,8 @@ public open class CfnSimulation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.simspaceweaver.CfnSimulation.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * The name of an Amazon S3 bucket.
        *
@@ -633,7 +635,7 @@ public open class CfnSimulation(
       override fun bucketName(): String = unwrap(this).getBucketName()
 
       /**
-       * The key name of an object in Amazon S3 .
+       * The key name of an object in Amazon S3.
        *
        * For more information about Amazon S3 objects and object keys, see [Uploading, downloading,
        * and working with objects in Amazon

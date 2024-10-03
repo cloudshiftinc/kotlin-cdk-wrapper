@@ -177,7 +177,8 @@ public interface ServerlessClusterAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterAttributes,
-  ) : CdkObject(cdkObject), ServerlessClusterAttributes {
+  ) : CdkObject(cdkObject),
+      ServerlessClusterAttributes {
     /**
      * Cluster endpoint address.
      *

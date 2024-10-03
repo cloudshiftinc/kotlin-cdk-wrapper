@@ -300,7 +300,8 @@ public interface CfnCustomLineItemProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItemProps,
-  ) : CdkObject(cdkObject), CfnCustomLineItemProps {
+  ) : CdkObject(cdkObject),
+      CfnCustomLineItemProps {
     /**
      * The AWS account in which this custom line item will be applied to.
      *

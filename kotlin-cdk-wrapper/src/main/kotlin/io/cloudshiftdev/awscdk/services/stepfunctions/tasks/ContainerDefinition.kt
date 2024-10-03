@@ -28,7 +28,8 @@ import kotlin.Unit
  */
 public open class ContainerDefinition(
   cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinition,
-) : CdkObject(cdkObject), IContainerDefinition {
+) : CdkObject(cdkObject),
+    IContainerDefinition {
   public constructor(options: ContainerDefinitionOptions) :
       this(software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinition(options.let(ContainerDefinitionOptions.Companion::unwrap))
   )

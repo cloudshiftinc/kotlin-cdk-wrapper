@@ -54,7 +54,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCACertificate(
   cdkObject: software.amazon.awscdk.services.iot.CfnCACertificate,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -617,7 +619,8 @@ public open class CfnCACertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnCACertificate.RegistrationConfigProperty,
-    ) : CdkObject(cdkObject), RegistrationConfigProperty {
+    ) : CdkObject(cdkObject),
+        RegistrationConfigProperty {
       /**
        * The ARN of the role.
        *

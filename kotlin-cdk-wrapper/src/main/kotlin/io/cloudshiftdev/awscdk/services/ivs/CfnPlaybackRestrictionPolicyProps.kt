@@ -239,7 +239,8 @@ public interface CfnPlaybackRestrictionPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ivs.CfnPlaybackRestrictionPolicyProps,
-  ) : CdkObject(cdkObject), CfnPlaybackRestrictionPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnPlaybackRestrictionPolicyProps {
     /**
      * A list of country codes that control geoblocking restrictions.
      *

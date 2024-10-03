@@ -34,7 +34,8 @@ public interface ILambdaApplication : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaApplication,
-  ) : CdkObject(cdkObject), ILambdaApplication {
+  ) : CdkObject(cdkObject),
+      ILambdaApplication {
     /**
      *
      */

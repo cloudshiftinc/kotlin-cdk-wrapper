@@ -59,7 +59,8 @@ public interface ICommandHooks {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.nodejs.ICommandHooks,
-  ) : CdkObject(cdkObject), ICommandHooks {
+  ) : CdkObject(cdkObject),
+      ICommandHooks {
     /**
      * Returns commands to run after bundling.
      *

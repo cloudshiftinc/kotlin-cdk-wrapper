@@ -67,7 +67,8 @@ public interface MultipartUserDataOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.MultipartUserDataOptions,
-  ) : CdkObject(cdkObject), MultipartUserDataOptions {
+  ) : CdkObject(cdkObject),
+      MultipartUserDataOptions {
     /**
      * The string used to separate parts in multipart user data archive (it's like MIME boundary).
      *

@@ -57,7 +57,8 @@ public interface CfnConditionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnConditionProps,
-  ) : CdkObject(cdkObject), CfnConditionProps {
+  ) : CdkObject(cdkObject),
+      CfnConditionProps {
     /**
      * The expression that the condition will evaluate.
      *

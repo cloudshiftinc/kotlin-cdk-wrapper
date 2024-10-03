@@ -35,7 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnQueueEnvironment(
   cdkObject: software.amazon.awscdk.services.deadline.CfnQueueEnvironment,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -108,12 +109,12 @@ public open class CfnQueueEnvironment(
   }
 
   /**
-   * A JSON or YAML template the describes the processing environment for the queue.
+   * A JSON or YAML template that describes the processing environment for the queue.
    */
   public open fun template(): String = unwrap(this).getTemplate()
 
   /**
-   * A JSON or YAML template the describes the processing environment for the queue.
+   * A JSON or YAML template that describes the processing environment for the queue.
    */
   public open fun template(`value`: String) {
     unwrap(this).setTemplate(`value`)
@@ -161,10 +162,10 @@ public open class CfnQueueEnvironment(
     public fun queueId(queueId: String)
 
     /**
-     * A JSON or YAML template the describes the processing environment for the queue.
+     * A JSON or YAML template that describes the processing environment for the queue.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queueenvironment.html#cfn-deadline-queueenvironment-template)
-     * @param template A JSON or YAML template the describes the processing environment for the
+     * @param template A JSON or YAML template that describes the processing environment for the
      * queue. 
      */
     public fun template(template: String)
@@ -217,10 +218,10 @@ public open class CfnQueueEnvironment(
     }
 
     /**
-     * A JSON or YAML template the describes the processing environment for the queue.
+     * A JSON or YAML template that describes the processing environment for the queue.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queueenvironment.html#cfn-deadline-queueenvironment-template)
-     * @param template A JSON or YAML template the describes the processing environment for the
+     * @param template A JSON or YAML template that describes the processing environment for the
      * queue. 
      */
     override fun template(template: String) {

@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDBProxyEndpoint(
   cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyEndpoint,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -70,18 +72,19 @@ public open class CfnDBProxyEndpoint(
   )
 
   /**
-   * The Amazon Resource Name (ARN) representing the DB proxy endpoint.
+   * The Amazon Resource Name (ARN) for the DB proxy endpoint.
    */
   public open fun attrDbProxyEndpointArn(): String = unwrap(this).getAttrDbProxyEndpointArn()
 
   /**
-   * The custom endpoint for the RDS DB instance or Aurora DB cluster.
+   * The endpoint that you can use to connect to the DB proxy.
+   *
+   * You include the endpoint value in the connection string for a database client application.
    */
   public open fun attrEndpoint(): String = unwrap(this).getAttrEndpoint()
 
   /**
-   * A value that indicates whether this endpoint is the default endpoint for the associated DB
-   * proxy.
+   * Indicates whether this endpoint is the default endpoint for the associated DB proxy.
    *
    * Default DB proxy endpoints always have read/write capability. Other endpoints that you
    * associate with the DB proxy can be either read/write or read-only.
@@ -90,7 +93,7 @@ public open class CfnDBProxyEndpoint(
       unwrap(this).getAttrIsDefault().let(IResolvable::wrap)
 
   /**
-   * The VPC ID of the DB proxy endpoint.
+   * Provides the VPC ID of the DB proxy endpoint.
    */
   public open fun attrVpcId(): String = unwrap(this).getAttrVpcId()
 
@@ -247,8 +250,6 @@ public open class CfnDBProxyEndpoint(
      * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only
      * operations.
      *
-     * Valid Values: `READ_WRITE | READ_ONLY`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html#cfn-rds-dbproxyendpoint-targetrole)
      * @param targetRole A value that indicates whether the DB proxy endpoint can be used for
      * read/write or read-only operations. 
@@ -354,8 +355,6 @@ public open class CfnDBProxyEndpoint(
      * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only
      * operations.
      *
-     * Valid Values: `READ_WRITE | READ_ONLY`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html#cfn-rds-dbproxyendpoint-targetrole)
      * @param targetRole A value that indicates whether the DB proxy endpoint can be used for
      * read/write or read-only operations. 
@@ -439,7 +438,13 @@ public open class CfnDBProxyEndpoint(
   }
 
   /**
-   * Metadata assigned to a DB proxy endpoint consisting of a key-value pair.
+   * Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+   *
+   * For more information, see [Tagging Amazon RDS
+   * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+   * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+   * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in the
+   * *Amazon Aurora User Guide* .
    *
    * Example:
    *
@@ -457,18 +462,24 @@ public open class CfnDBProxyEndpoint(
    */
   public interface TagFormatProperty {
     /**
-     * A value is the optional value of the tag.
+     * A key is the required name of the tag.
      *
-     * The string value can be 1-256 Unicode characters in length and can't be prefixed with `aws:`
-     * . The string can contain only the set of Unicode letters, digits, white-space, '*', '.', '/',
-     * '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+     * The string value can be from 1 to 128 Unicode characters in length and can't be prefixed with
+     * `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+     * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+     * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxyendpoint-tagformat.html#cfn-rds-dbproxyendpoint-tagformat-key)
      */
     public fun key(): String? = unwrap(this).getKey()
 
     /**
-     * Metadata assigned to a DB instance consisting of a key-value pair.
+     * A value is the optional value of the tag.
+     *
+     * The string value can be from 1 to 256 Unicode characters in length and can't be prefixed with
+     * `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+     * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+     * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxyendpoint-tagformat.html#cfn-rds-dbproxyendpoint-tagformat-value)
      */
@@ -480,15 +491,20 @@ public open class CfnDBProxyEndpoint(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param key A value is the optional value of the tag.
-       * The string value can be 1-256 Unicode characters in length and can't be prefixed with
-       * `aws:` . The string can contain only the set of Unicode letters, digits, white-space, '*',
-       * '.', '/', '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+       * @param key A key is the required name of the tag.
+       * The string value can be from 1 to 128 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        */
       public fun key(key: String)
 
       /**
-       * @param value Metadata assigned to a DB instance consisting of a key-value pair.
+       * @param value A value is the optional value of the tag.
+       * The string value can be from 1 to 256 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        */
       public fun `value`(`value`: String)
     }
@@ -499,17 +515,22 @@ public open class CfnDBProxyEndpoint(
           software.amazon.awscdk.services.rds.CfnDBProxyEndpoint.TagFormatProperty.builder()
 
       /**
-       * @param key A value is the optional value of the tag.
-       * The string value can be 1-256 Unicode characters in length and can't be prefixed with
-       * `aws:` . The string can contain only the set of Unicode letters, digits, white-space, '*',
-       * '.', '/', '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+       * @param key A key is the required name of the tag.
+       * The string value can be from 1 to 128 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        */
       override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
       /**
-       * @param value Metadata assigned to a DB instance consisting of a key-value pair.
+       * @param value A value is the optional value of the tag.
+       * The string value can be from 1 to 256 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        */
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
@@ -521,20 +542,27 @@ public open class CfnDBProxyEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyEndpoint.TagFormatProperty,
-    ) : CdkObject(cdkObject), TagFormatProperty {
+    ) : CdkObject(cdkObject),
+        TagFormatProperty {
       /**
-       * A value is the optional value of the tag.
+       * A key is the required name of the tag.
        *
-       * The string value can be 1-256 Unicode characters in length and can't be prefixed with
-       * `aws:` . The string can contain only the set of Unicode letters, digits, white-space, '*',
-       * '.', '/', '=', '+', '-' (Java regex: "^([\p{L}\p{Z}\p{N}*.:/=+-]*)$").
+       * The string value can be from 1 to 128 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxyendpoint-tagformat.html#cfn-rds-dbproxyendpoint-tagformat-key)
        */
       override fun key(): String? = unwrap(this).getKey()
 
       /**
-       * Metadata assigned to a DB instance consisting of a key-value pair.
+       * A value is the optional value of the tag.
+       *
+       * The string value can be from 1 to 256 Unicode characters in length and can't be prefixed
+       * with `aws:` or `rds:` . The string can only contain only the set of Unicode letters, digits,
+       * white-space, '*', '.', ':', '/', '=', '+', '-', '&#64;' (Java regex:
+       * "^([\p{L}\p{Z}\p{N}*.:/=+-&#64;]*)$").
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxyendpoint-tagformat.html#cfn-rds-dbproxyendpoint-tagformat-value)
        */

@@ -10,6 +10,8 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -38,6 +40,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .addonVersion("addonVersion")
  * .configurationValues("configurationValues")
+ * .podIdentityAssociations(List.of(PodIdentityAssociationProperty.builder()
+ * .roleArn("roleArn")
+ * .serviceAccount("serviceAccount")
+ * .build()))
  * .preserveOnDelete(false)
  * .resolveConflicts("resolveConflicts")
  * .serviceAccountRoleArn("serviceAccountRoleArn")
@@ -52,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAddon(
   cdkObject: software.amazon.awscdk.services.eks.CfnAddon,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -131,6 +139,31 @@ public open class CfnAddon(
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
+
+  /**
+   * An array of Pod Identity Assocations owned by the Addon.
+   */
+  public open fun podIdentityAssociations(): Any? = unwrap(this).getPodIdentityAssociations()
+
+  /**
+   * An array of Pod Identity Assocations owned by the Addon.
+   */
+  public open fun podIdentityAssociations(`value`: IResolvable) {
+    unwrap(this).setPodIdentityAssociations(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * An array of Pod Identity Assocations owned by the Addon.
+   */
+  public open fun podIdentityAssociations(`value`: List<Any>) {
+    unwrap(this).setPodIdentityAssociations(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * An array of Pod Identity Assocations owned by the Addon.
+   */
+  public open fun podIdentityAssociations(vararg `value`: Any): Unit =
+      podIdentityAssociations(`value`.toList())
 
   /**
    * Specifying this option preserves the add-on software on your cluster but Amazon EKS stops
@@ -237,6 +270,51 @@ public open class CfnAddon(
      * @param configurationValues The configuration values that you provided. 
      */
     public fun configurationValues(configurationValues: String)
+
+    /**
+     * An array of Pod Identity Assocations owned by the Addon.
+     *
+     * Each EKS Pod Identity association maps a role to a service account in a namespace in the
+     * cluster.
+     *
+     * For more information, see [Attach an IAM Role to an Amazon EKS add-on using Pod
+     * Identity](https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html) in the EKS User
+     * Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-podidentityassociations)
+     * @param podIdentityAssociations An array of Pod Identity Assocations owned by the Addon. 
+     */
+    public fun podIdentityAssociations(podIdentityAssociations: IResolvable)
+
+    /**
+     * An array of Pod Identity Assocations owned by the Addon.
+     *
+     * Each EKS Pod Identity association maps a role to a service account in a namespace in the
+     * cluster.
+     *
+     * For more information, see [Attach an IAM Role to an Amazon EKS add-on using Pod
+     * Identity](https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html) in the EKS User
+     * Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-podidentityassociations)
+     * @param podIdentityAssociations An array of Pod Identity Assocations owned by the Addon. 
+     */
+    public fun podIdentityAssociations(podIdentityAssociations: List<Any>)
+
+    /**
+     * An array of Pod Identity Assocations owned by the Addon.
+     *
+     * Each EKS Pod Identity association maps a role to a service account in a namespace in the
+     * cluster.
+     *
+     * For more information, see [Attach an IAM Role to an Amazon EKS add-on using Pod
+     * Identity](https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html) in the EKS User
+     * Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-podidentityassociations)
+     * @param podIdentityAssociations An array of Pod Identity Assocations owned by the Addon. 
+     */
+    public fun podIdentityAssociations(vararg podIdentityAssociations: Any)
 
     /**
      * Specifying this option preserves the add-on software on your cluster but Amazon EKS stops
@@ -383,6 +461,56 @@ public open class CfnAddon(
     }
 
     /**
+     * An array of Pod Identity Assocations owned by the Addon.
+     *
+     * Each EKS Pod Identity association maps a role to a service account in a namespace in the
+     * cluster.
+     *
+     * For more information, see [Attach an IAM Role to an Amazon EKS add-on using Pod
+     * Identity](https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html) in the EKS User
+     * Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-podidentityassociations)
+     * @param podIdentityAssociations An array of Pod Identity Assocations owned by the Addon. 
+     */
+    override fun podIdentityAssociations(podIdentityAssociations: IResolvable) {
+      cdkBuilder.podIdentityAssociations(podIdentityAssociations.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * An array of Pod Identity Assocations owned by the Addon.
+     *
+     * Each EKS Pod Identity association maps a role to a service account in a namespace in the
+     * cluster.
+     *
+     * For more information, see [Attach an IAM Role to an Amazon EKS add-on using Pod
+     * Identity](https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html) in the EKS User
+     * Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-podidentityassociations)
+     * @param podIdentityAssociations An array of Pod Identity Assocations owned by the Addon. 
+     */
+    override fun podIdentityAssociations(podIdentityAssociations: List<Any>) {
+      cdkBuilder.podIdentityAssociations(podIdentityAssociations.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * An array of Pod Identity Assocations owned by the Addon.
+     *
+     * Each EKS Pod Identity association maps a role to a service account in a namespace in the
+     * cluster.
+     *
+     * For more information, see [Attach an IAM Role to an Amazon EKS add-on using Pod
+     * Identity](https://docs.aws.amazon.com/eks/latest/userguide/add-ons-iam.html) in the EKS User
+     * Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-podidentityassociations)
+     * @param podIdentityAssociations An array of Pod Identity Assocations owned by the Addon. 
+     */
+    override fun podIdentityAssociations(vararg podIdentityAssociations: Any): Unit =
+        podIdentityAssociations(podIdentityAssociations.toList())
+
+    /**
      * Specifying this option preserves the add-on software on your cluster but Amazon EKS stops
      * managing any settings for the add-on.
      *
@@ -509,5 +637,133 @@ public open class CfnAddon(
 
     internal fun unwrap(wrapped: CfnAddon): software.amazon.awscdk.services.eks.CfnAddon =
         wrapped.cdkObject as software.amazon.awscdk.services.eks.CfnAddon
+  }
+
+  /**
+   * Amazon EKS Pod Identity associations provide the ability to manage credentials for your
+   * applications, similar to the way that Amazon EC2 instance profiles provide credentials to Amazon
+   * EC2 instances.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * PodIdentityAssociationProperty podIdentityAssociationProperty =
+   * PodIdentityAssociationProperty.builder()
+   * .roleArn("roleArn")
+   * .serviceAccount("serviceAccount")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-addon-podidentityassociation.html)
+   */
+  public interface PodIdentityAssociationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role to associate with the service account.
+     *
+     * The EKS Pod Identity agent manages credentials to assume this role for applications in the
+     * containers in the pods that use this service account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-addon-podidentityassociation.html#cfn-eks-addon-podidentityassociation-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * The name of the Kubernetes service account inside the cluster to associate the IAM
+     * credentials with.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-addon-podidentityassociation.html#cfn-eks-addon-podidentityassociation-serviceaccount)
+     */
+    public fun serviceAccount(): String
+
+    /**
+     * A builder for [PodIdentityAssociationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role to associate with the service
+       * account. 
+       * The EKS Pod Identity agent manages credentials to assume this role for applications in the
+       * containers in the pods that use this service account.
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param serviceAccount The name of the Kubernetes service account inside the cluster to
+       * associate the IAM credentials with. 
+       */
+      public fun serviceAccount(serviceAccount: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnAddon.PodIdentityAssociationProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnAddon.PodIdentityAssociationProperty.builder()
+
+      /**
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role to associate with the service
+       * account. 
+       * The EKS Pod Identity agent manages credentials to assume this role for applications in the
+       * containers in the pods that use this service account.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param serviceAccount The name of the Kubernetes service account inside the cluster to
+       * associate the IAM credentials with. 
+       */
+      override fun serviceAccount(serviceAccount: String) {
+        cdkBuilder.serviceAccount(serviceAccount)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.eks.CfnAddon.PodIdentityAssociationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnAddon.PodIdentityAssociationProperty,
+    ) : CdkObject(cdkObject),
+        PodIdentityAssociationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the IAM role to associate with the service account.
+       *
+       * The EKS Pod Identity agent manages credentials to assume this role for applications in the
+       * containers in the pods that use this service account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-addon-podidentityassociation.html#cfn-eks-addon-podidentityassociation-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+
+      /**
+       * The name of the Kubernetes service account inside the cluster to associate the IAM
+       * credentials with.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-addon-podidentityassociation.html#cfn-eks-addon-podidentityassociation-serviceaccount)
+       */
+      override fun serviceAccount(): String = unwrap(this).getServiceAccount()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PodIdentityAssociationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnAddon.PodIdentityAssociationProperty):
+          PodIdentityAssociationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PodIdentityAssociationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PodIdentityAssociationProperty):
+          software.amazon.awscdk.services.eks.CfnAddon.PodIdentityAssociationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnAddon.PodIdentityAssociationProperty
+    }
   }
 }

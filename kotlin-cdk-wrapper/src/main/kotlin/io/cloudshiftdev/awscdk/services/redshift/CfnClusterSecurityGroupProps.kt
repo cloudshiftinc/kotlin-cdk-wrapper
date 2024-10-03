@@ -108,7 +108,8 @@ public interface CfnClusterSecurityGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupProps,
-  ) : CdkObject(cdkObject), CfnClusterSecurityGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnClusterSecurityGroupProps {
     /**
      * A description for the security group.
      *

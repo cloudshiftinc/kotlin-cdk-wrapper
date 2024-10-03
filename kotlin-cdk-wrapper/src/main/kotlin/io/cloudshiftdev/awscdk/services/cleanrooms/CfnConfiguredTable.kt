@@ -59,23 +59,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .scalarFunctions(List.of("scalarFunctions"))
  * // the properties below are optional
+ * .additionalAnalyses("additionalAnalyses")
  * .allowedJoinOperators(List.of("allowedJoinOperators"))
  * .joinRequired("joinRequired")
  * .build())
  * .custom(AnalysisRuleCustomProperty.builder()
  * .allowedAnalyses(List.of("allowedAnalyses"))
  * // the properties below are optional
+ * .additionalAnalyses("additionalAnalyses")
  * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
  * .differentialPrivacy(DifferentialPrivacyProperty.builder()
  * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
  * .name("name")
  * .build()))
  * .build())
+ * .disallowedOutputColumns(List.of("disallowedOutputColumns"))
  * .build())
  * .list(AnalysisRuleListProperty.builder()
  * .joinColumns(List.of("joinColumns"))
  * .listColumns(List.of("listColumns"))
  * // the properties below are optional
+ * .additionalAnalyses("additionalAnalyses")
  * .allowedJoinOperators(List.of("allowedJoinOperators"))
  * .build())
  * .build())
@@ -94,7 +98,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfiguredTable(
   cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -141,26 +147,26 @@ public open class CfnConfiguredTable(
   }
 
   /**
-   * The entire created analysis rule.
+   * The analysis rule that was created for the configured table.
    */
   public open fun analysisRules(): Any? = unwrap(this).getAnalysisRules()
 
   /**
-   * The entire created analysis rule.
+   * The analysis rule that was created for the configured table.
    */
   public open fun analysisRules(`value`: IResolvable) {
     unwrap(this).setAnalysisRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The entire created analysis rule.
+   * The analysis rule that was created for the configured table.
    */
   public open fun analysisRules(`value`: List<Any>) {
     unwrap(this).setAnalysisRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * The entire created analysis rule.
+   * The analysis rule that was created for the configured table.
    */
   public open fun analysisRules(vararg `value`: Any): Unit = analysisRules(`value`.toList())
 
@@ -297,26 +303,26 @@ public open class CfnConfiguredTable(
     public fun analysisMethod(analysisMethod: String)
 
     /**
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysisrules)
-     * @param analysisRules The entire created analysis rule. 
+     * @param analysisRules The analysis rule that was created for the configured table. 
      */
     public fun analysisRules(analysisRules: IResolvable)
 
     /**
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysisrules)
-     * @param analysisRules The entire created analysis rule. 
+     * @param analysisRules The analysis rule that was created for the configured table. 
      */
     public fun analysisRules(analysisRules: List<Any>)
 
     /**
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysisrules)
-     * @param analysisRules The entire created analysis rule. 
+     * @param analysisRules The analysis rule that was created for the configured table. 
      */
     public fun analysisRules(vararg analysisRules: Any)
 
@@ -428,30 +434,30 @@ public open class CfnConfiguredTable(
     }
 
     /**
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysisrules)
-     * @param analysisRules The entire created analysis rule. 
+     * @param analysisRules The analysis rule that was created for the configured table. 
      */
     override fun analysisRules(analysisRules: IResolvable) {
       cdkBuilder.analysisRules(analysisRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysisrules)
-     * @param analysisRules The entire created analysis rule. 
+     * @param analysisRules The analysis rule that was created for the configured table. 
      */
     override fun analysisRules(analysisRules: List<Any>) {
       cdkBuilder.analysisRules(analysisRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-analysisrules)
-     * @param analysisRules The entire created analysis rule. 
+     * @param analysisRules The analysis rule that was created for the configured table. 
      */
     override fun analysisRules(vararg analysisRules: Any): Unit =
         analysisRules(analysisRules.toList())
@@ -643,7 +649,8 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty,
-    ) : CdkObject(cdkObject), AggregateColumnProperty {
+    ) : CdkObject(cdkObject),
+        AggregateColumnProperty {
       /**
        * Column names in configured table of aggregate columns.
        *
@@ -790,7 +797,8 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregationConstraintProperty,
-    ) : CdkObject(cdkObject), AggregationConstraintProperty {
+    ) : CdkObject(cdkObject),
+        AggregationConstraintProperty {
       /**
        * Column in aggregation constraint for which there must be a minimum number of distinct
        * values in an output row for it to be in the query output.
@@ -862,6 +870,7 @@ public open class CfnConfiguredTable(
    * .build()))
    * .scalarFunctions(List.of("scalarFunctions"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedJoinOperators(List.of("allowedJoinOperators"))
    * .joinRequired("joinRequired")
    * .build();
@@ -870,6 +879,17 @@ public open class CfnConfiguredTable(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisruleaggregation.html)
    */
   public interface AnalysisRuleAggregationProperty {
+    /**
+     * An indicator as to whether additional analyses (such as AWS Clean Rooms ML) can be applied to
+     * the output of the direct query.
+     *
+     * The `additionalAnalyses` parameter is currently supported for the list analysis rule (
+     * `AnalysisRuleList` ) and the custom analysis rule ( `AnalysisRuleCustom` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisruleaggregation.html#cfn-cleanrooms-configuredtable-analysisruleaggregation-additionalanalyses)
+     */
+    public fun additionalAnalyses(): String? = unwrap(this).getAdditionalAnalyses()
+
     /**
      * The columns that query runners are allowed to use in aggregation queries.
      *
@@ -932,6 +952,14 @@ public open class CfnConfiguredTable(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param additionalAnalyses An indicator as to whether additional analyses (such as AWS Clean
+       * Rooms ML) can be applied to the output of the direct query.
+       * The `additionalAnalyses` parameter is currently supported for the list analysis rule (
+       * `AnalysisRuleList` ) and the custom analysis rule ( `AnalysisRuleCustom` ).
+       */
+      public fun additionalAnalyses(additionalAnalyses: String)
+
       /**
        * @param aggregateColumns The columns that query runners are allowed to use in aggregation
        * queries. 
@@ -1032,6 +1060,16 @@ public open class CfnConfiguredTable(
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleAggregationProperty.Builder
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleAggregationProperty.builder()
+
+      /**
+       * @param additionalAnalyses An indicator as to whether additional analyses (such as AWS Clean
+       * Rooms ML) can be applied to the output of the direct query.
+       * The `additionalAnalyses` parameter is currently supported for the list analysis rule (
+       * `AnalysisRuleList` ) and the custom analysis rule ( `AnalysisRuleCustom` ).
+       */
+      override fun additionalAnalyses(additionalAnalyses: String) {
+        cdkBuilder.additionalAnalyses(additionalAnalyses)
+      }
 
       /**
        * @param aggregateColumns The columns that query runners are allowed to use in aggregation
@@ -1157,7 +1195,19 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleAggregationProperty,
-    ) : CdkObject(cdkObject), AnalysisRuleAggregationProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisRuleAggregationProperty {
+      /**
+       * An indicator as to whether additional analyses (such as AWS Clean Rooms ML) can be applied
+       * to the output of the direct query.
+       *
+       * The `additionalAnalyses` parameter is currently supported for the list analysis rule (
+       * `AnalysisRuleList` ) and the custom analysis rule ( `AnalysisRuleCustom` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisruleaggregation.html#cfn-cleanrooms-configuredtable-analysisruleaggregation-additionalanalyses)
+       */
+      override fun additionalAnalyses(): String? = unwrap(this).getAdditionalAnalyses()
+
       /**
        * The columns that query runners are allowed to use in aggregation queries.
        *
@@ -1250,18 +1300,28 @@ public open class CfnConfiguredTable(
    * AnalysisRuleCustomProperty analysisRuleCustomProperty = AnalysisRuleCustomProperty.builder()
    * .allowedAnalyses(List.of("allowedAnalyses"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
    * .differentialPrivacy(DifferentialPrivacyProperty.builder()
    * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
    * .name("name")
    * .build()))
    * .build())
+   * .disallowedOutputColumns(List.of("disallowedOutputColumns"))
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html)
    */
   public interface AnalysisRuleCustomProperty {
+    /**
+     * An indicator as to whether additional analyses (such as AWS Clean Rooms ML) can be applied to
+     * the output of the direct query.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-additionalanalyses)
+     */
+    public fun additionalAnalyses(): String? = unwrap(this).getAdditionalAnalyses()
+
     /**
      * The ARN of the analysis templates that are allowed by the custom analysis rule.
      *
@@ -1287,10 +1347,24 @@ public open class CfnConfiguredTable(
     public fun differentialPrivacy(): Any? = unwrap(this).getDifferentialPrivacy()
 
     /**
+     * A list of columns that aren't allowed to be shown in the query output.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-disallowedoutputcolumns)
+     */
+    public fun disallowedOutputColumns(): List<String> = unwrap(this).getDisallowedOutputColumns()
+        ?: emptyList()
+
+    /**
      * A builder for [AnalysisRuleCustomProperty]
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param additionalAnalyses An indicator as to whether additional analyses (such as AWS Clean
+       * Rooms ML) can be applied to the output of the direct query.
+       */
+      public fun additionalAnalyses(additionalAnalyses: String)
+
       /**
        * @param allowedAnalyses The ARN of the analysis templates that are allowed by the custom
        * analysis rule. 
@@ -1334,6 +1408,18 @@ public open class CfnConfiguredTable(
       @JvmName("68525e7452b4a2f759a4506872d5696396f687bb0c04eda5fe6627d5d83f845c")
       public
           fun differentialPrivacy(differentialPrivacy: DifferentialPrivacyProperty.Builder.() -> Unit)
+
+      /**
+       * @param disallowedOutputColumns A list of columns that aren't allowed to be shown in the
+       * query output.
+       */
+      public fun disallowedOutputColumns(disallowedOutputColumns: List<String>)
+
+      /**
+       * @param disallowedOutputColumns A list of columns that aren't allowed to be shown in the
+       * query output.
+       */
+      public fun disallowedOutputColumns(vararg disallowedOutputColumns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1341,6 +1427,14 @@ public open class CfnConfiguredTable(
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty.Builder
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty.builder()
+
+      /**
+       * @param additionalAnalyses An indicator as to whether additional analyses (such as AWS Clean
+       * Rooms ML) can be applied to the output of the direct query.
+       */
+      override fun additionalAnalyses(additionalAnalyses: String) {
+        cdkBuilder.additionalAnalyses(additionalAnalyses)
+      }
 
       /**
        * @param allowedAnalyses The ARN of the analysis templates that are allowed by the custom
@@ -1397,6 +1491,21 @@ public open class CfnConfiguredTable(
           fun differentialPrivacy(differentialPrivacy: DifferentialPrivacyProperty.Builder.() -> Unit):
           Unit = differentialPrivacy(DifferentialPrivacyProperty(differentialPrivacy))
 
+      /**
+       * @param disallowedOutputColumns A list of columns that aren't allowed to be shown in the
+       * query output.
+       */
+      override fun disallowedOutputColumns(disallowedOutputColumns: List<String>) {
+        cdkBuilder.disallowedOutputColumns(disallowedOutputColumns)
+      }
+
+      /**
+       * @param disallowedOutputColumns A list of columns that aren't allowed to be shown in the
+       * query output.
+       */
+      override fun disallowedOutputColumns(vararg disallowedOutputColumns: String): Unit =
+          disallowedOutputColumns(disallowedOutputColumns.toList())
+
       public fun build():
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty =
           cdkBuilder.build()
@@ -1404,7 +1513,16 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty,
-    ) : CdkObject(cdkObject), AnalysisRuleCustomProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisRuleCustomProperty {
+      /**
+       * An indicator as to whether additional analyses (such as AWS Clean Rooms ML) can be applied
+       * to the output of the direct query.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-additionalanalyses)
+       */
+      override fun additionalAnalyses(): String? = unwrap(this).getAdditionalAnalyses()
+
       /**
        * The ARN of the analysis templates that are allowed by the custom analysis rule.
        *
@@ -1428,6 +1546,14 @@ public open class CfnConfiguredTable(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-differentialprivacy)
        */
       override fun differentialPrivacy(): Any? = unwrap(this).getDifferentialPrivacy()
+
+      /**
+       * A list of columns that aren't allowed to be shown in the query output.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-disallowedoutputcolumns)
+       */
+      override fun disallowedOutputColumns(): List<String> =
+          unwrap(this).getDisallowedOutputColumns() ?: emptyList()
     }
 
     public companion object {
@@ -1461,6 +1587,7 @@ public open class CfnConfiguredTable(
    * .joinColumns(List.of("joinColumns"))
    * .listColumns(List.of("listColumns"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedJoinOperators(List.of("allowedJoinOperators"))
    * .build();
    * ```
@@ -1468,6 +1595,14 @@ public open class CfnConfiguredTable(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulelist.html)
    */
   public interface AnalysisRuleListProperty {
+    /**
+     * An indicator as to whether additional analyses (such as AWS Clean Rooms ML) can be applied to
+     * the output of the direct query.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulelist.html#cfn-cleanrooms-configuredtable-analysisrulelist-additionalanalyses)
+     */
+    public fun additionalAnalyses(): String? = unwrap(this).getAdditionalAnalyses()
+
     /**
      * The logical operators (if any) that are to be used in an INNER JOIN match condition.
      *
@@ -1498,6 +1633,12 @@ public open class CfnConfiguredTable(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param additionalAnalyses An indicator as to whether additional analyses (such as AWS Clean
+       * Rooms ML) can be applied to the output of the direct query.
+       */
+      public fun additionalAnalyses(additionalAnalyses: String)
+
       /**
        * @param allowedJoinOperators The logical operators (if any) that are to be used in an INNER
        * JOIN match condition.
@@ -1540,6 +1681,14 @@ public open class CfnConfiguredTable(
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleListProperty.Builder
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleListProperty.builder()
+
+      /**
+       * @param additionalAnalyses An indicator as to whether additional analyses (such as AWS Clean
+       * Rooms ML) can be applied to the output of the direct query.
+       */
+      override fun additionalAnalyses(additionalAnalyses: String) {
+        cdkBuilder.additionalAnalyses(additionalAnalyses)
+      }
 
       /**
        * @param allowedJoinOperators The logical operators (if any) that are to be used in an INNER
@@ -1591,7 +1740,16 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleListProperty,
-    ) : CdkObject(cdkObject), AnalysisRuleListProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisRuleListProperty {
+      /**
+       * An indicator as to whether additional analyses (such as AWS Clean Rooms ML) can be applied
+       * to the output of the direct query.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulelist.html#cfn-cleanrooms-configuredtable-analysisrulelist-additionalanalyses)
+       */
+      override fun additionalAnalyses(): String? = unwrap(this).getAdditionalAnalyses()
+
       /**
        * The logical operators (if any) that are to be used in an INNER JOIN match condition.
        *
@@ -1662,23 +1820,27 @@ public open class CfnConfiguredTable(
    * .build()))
    * .scalarFunctions(List.of("scalarFunctions"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedJoinOperators(List.of("allowedJoinOperators"))
    * .joinRequired("joinRequired")
    * .build())
    * .custom(AnalysisRuleCustomProperty.builder()
    * .allowedAnalyses(List.of("allowedAnalyses"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
    * .differentialPrivacy(DifferentialPrivacyProperty.builder()
    * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
    * .name("name")
    * .build()))
    * .build())
+   * .disallowedOutputColumns(List.of("disallowedOutputColumns"))
    * .build())
    * .list(AnalysisRuleListProperty.builder()
    * .joinColumns(List.of("joinColumns"))
    * .listColumns(List.of("listColumns"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedJoinOperators(List.of("allowedJoinOperators"))
    * .build())
    * .build())
@@ -1774,7 +1936,8 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleProperty,
-    ) : CdkObject(cdkObject), AnalysisRuleProperty {
+    ) : CdkObject(cdkObject),
+        AnalysisRuleProperty {
       /**
        * A policy that describes the associated data usage limitations.
        *
@@ -1834,23 +1997,27 @@ public open class CfnConfiguredTable(
    * .build()))
    * .scalarFunctions(List.of("scalarFunctions"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedJoinOperators(List.of("allowedJoinOperators"))
    * .joinRequired("joinRequired")
    * .build())
    * .custom(AnalysisRuleCustomProperty.builder()
    * .allowedAnalyses(List.of("allowedAnalyses"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
    * .differentialPrivacy(DifferentialPrivacyProperty.builder()
    * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
    * .name("name")
    * .build()))
    * .build())
+   * .disallowedOutputColumns(List.of("disallowedOutputColumns"))
    * .build())
    * .list(AnalysisRuleListProperty.builder()
    * .joinColumns(List.of("joinColumns"))
    * .listColumns(List.of("listColumns"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedJoinOperators(List.of("allowedJoinOperators"))
    * .build())
    * .build())
@@ -1925,7 +2092,8 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty,
-    ) : CdkObject(cdkObject), ConfiguredTableAnalysisRulePolicyProperty {
+    ) : CdkObject(cdkObject),
+        ConfiguredTableAnalysisRulePolicyProperty {
       /**
        * Controls on the query specifications that can be run on a configured table.
        *
@@ -1978,23 +2146,27 @@ public open class CfnConfiguredTable(
    * .build()))
    * .scalarFunctions(List.of("scalarFunctions"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedJoinOperators(List.of("allowedJoinOperators"))
    * .joinRequired("joinRequired")
    * .build())
    * .custom(AnalysisRuleCustomProperty.builder()
    * .allowedAnalyses(List.of("allowedAnalyses"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
    * .differentialPrivacy(DifferentialPrivacyProperty.builder()
    * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
    * .name("name")
    * .build()))
    * .build())
+   * .disallowedOutputColumns(List.of("disallowedOutputColumns"))
    * .build())
    * .list(AnalysisRuleListProperty.builder()
    * .joinColumns(List.of("joinColumns"))
    * .listColumns(List.of("listColumns"))
    * // the properties below are optional
+   * .additionalAnalyses("additionalAnalyses")
    * .allowedJoinOperators(List.of("allowedJoinOperators"))
    * .build())
    * .build();
@@ -2166,7 +2338,8 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyV1Property,
-    ) : CdkObject(cdkObject), ConfiguredTableAnalysisRulePolicyV1Property {
+    ) : CdkObject(cdkObject),
+        ConfiguredTableAnalysisRulePolicyV1Property {
       /**
        * Analysis rule type that enables only aggregation queries on a configured table.
        *
@@ -2275,7 +2448,8 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyColumnProperty,
-    ) : CdkObject(cdkObject), DifferentialPrivacyColumnProperty {
+    ) : CdkObject(cdkObject),
+        DifferentialPrivacyColumnProperty {
       /**
        * The name of the column, such as user_id, that contains the unique identifier of your users,
        * whose privacy you want to protect.
@@ -2410,7 +2584,8 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyProperty,
-    ) : CdkObject(cdkObject), DifferentialPrivacyProperty {
+    ) : CdkObject(cdkObject),
+        DifferentialPrivacyProperty {
       /**
        * The name of the column, such as user_id, that contains the unique identifier of your users,
        * whose privacy you want to protect.
@@ -2516,7 +2691,8 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty,
-    ) : CdkObject(cdkObject), GlueTableReferenceProperty {
+    ) : CdkObject(cdkObject),
+        GlueTableReferenceProperty {
       /**
        * The name of the database the AWS Glue table belongs to.
        *
@@ -2643,7 +2819,8 @@ public open class CfnConfiguredTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty,
-    ) : CdkObject(cdkObject), TableReferenceProperty {
+    ) : CdkObject(cdkObject),
+        TableReferenceProperty {
       /**
        * If present, a reference to the AWS Glue table referred to by this table reference.
        *

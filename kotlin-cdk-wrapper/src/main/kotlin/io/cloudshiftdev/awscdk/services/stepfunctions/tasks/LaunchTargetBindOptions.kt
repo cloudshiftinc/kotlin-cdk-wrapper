@@ -84,7 +84,8 @@ public interface LaunchTargetBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.LaunchTargetBindOptions,
-  ) : CdkObject(cdkObject), LaunchTargetBindOptions {
+  ) : CdkObject(cdkObject),
+      LaunchTargetBindOptions {
     /**
      * A regional grouping of one or more container instances on which you can run tasks and
      * services.

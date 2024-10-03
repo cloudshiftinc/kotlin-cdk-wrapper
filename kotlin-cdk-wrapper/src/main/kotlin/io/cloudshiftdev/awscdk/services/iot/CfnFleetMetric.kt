@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFleetMetric(
   cdkObject: software.amazon.awscdk.services.iot.CfnFleetMetric,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -611,7 +613,8 @@ public open class CfnFleetMetric(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnFleetMetric.AggregationTypeProperty,
-    ) : CdkObject(cdkObject), AggregationTypeProperty {
+    ) : CdkObject(cdkObject),
+        AggregationTypeProperty {
       /**
        * The name of the aggregation type.
        *

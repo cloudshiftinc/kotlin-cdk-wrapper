@@ -22,7 +22,8 @@ public interface IVpcLink : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IVpcLink,
-  ) : CdkObject(cdkObject), IVpcLink {
+  ) : CdkObject(cdkObject),
+      IVpcLink {
     /**
      * Apply the given removal policy to this resource.
      *

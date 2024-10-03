@@ -125,7 +125,8 @@ public interface CfnAccessKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.CfnAccessKeyProps,
-  ) : CdkObject(cdkObject), CfnAccessKeyProps {
+  ) : CdkObject(cdkObject),
+      CfnAccessKeyProps {
     /**
      * This value is specific to CloudFormation and can only be *incremented* .
      *

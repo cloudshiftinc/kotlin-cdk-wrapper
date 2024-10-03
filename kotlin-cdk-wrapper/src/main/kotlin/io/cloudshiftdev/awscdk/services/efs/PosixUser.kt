@@ -132,7 +132,8 @@ public interface PosixUser {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.PosixUser,
-  ) : CdkObject(cdkObject), PosixUser {
+  ) : CdkObject(cdkObject),
+      PosixUser {
     /**
      * The POSIX group ID used for all file system operations using this access point.
      */

@@ -54,7 +54,8 @@ public interface GitHubSourceCredentialsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.GitHubSourceCredentialsProps,
-  ) : CdkObject(cdkObject), GitHubSourceCredentialsProps {
+  ) : CdkObject(cdkObject),
+      GitHubSourceCredentialsProps {
     /**
      * The personal access token to use when contacting the GitHub API.
      */

@@ -136,7 +136,8 @@ public interface CfnFleetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnFleetProps,
-  ) : CdkObject(cdkObject), CfnFleetProps {
+  ) : CdkObject(cdkObject),
+      CfnFleetProps {
     /**
      * (Optional) A brief description of the fleet.
      *

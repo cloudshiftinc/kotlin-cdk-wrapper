@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIndex(
   cdkObject: software.amazon.awscdk.services.qbusiness.CfnIndex,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -673,7 +675,8 @@ public open class CfnIndex(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnIndex.DocumentAttributeConfigurationProperty,
-    ) : CdkObject(cdkObject), DocumentAttributeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DocumentAttributeConfigurationProperty {
       /**
        * The name of the document attribute.
        *
@@ -772,7 +775,8 @@ public open class CfnIndex(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnIndex.IndexCapacityConfigurationProperty,
-    ) : CdkObject(cdkObject), IndexCapacityConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        IndexCapacityConfigurationProperty {
       /**
        * The number of storage units configured for an Amazon Q Business index.
        *
@@ -885,7 +889,8 @@ public open class CfnIndex(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnIndex.IndexStatisticsProperty,
-    ) : CdkObject(cdkObject), IndexStatisticsProperty {
+    ) : CdkObject(cdkObject),
+        IndexStatisticsProperty {
       /**
        * The number of documents indexed.
        *
@@ -988,7 +993,8 @@ public open class CfnIndex(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnIndex.TextDocumentStatisticsProperty,
-    ) : CdkObject(cdkObject), TextDocumentStatisticsProperty {
+    ) : CdkObject(cdkObject),
+        TextDocumentStatisticsProperty {
       /**
        * The total size, in bytes, of the indexed documents.
        *

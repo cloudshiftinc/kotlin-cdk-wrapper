@@ -93,7 +93,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSecurityGroup(
   cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -111,7 +113,7 @@ public open class CfnSecurityGroup(
   )
 
   /**
-   * The group ID of the specified security group, such as `sg-94b3a1f6` .
+   * The ID of the security group, such as `sg-94b3a1f6` .
    */
   public open fun attrGroupId(): String = unwrap(this).getAttrGroupId()
 
@@ -121,11 +123,7 @@ public open class CfnSecurityGroup(
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
-   * The physical ID of the VPC.
-   *
-   * You can obtain the physical ID by using a reference to an
-   * [AWS::EC2::VPC](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html)
-   * , such as: `{ "Ref" : "myVPC" }` .
+   * The ID of the VPC, such as `vpc-0669f8f9` .
    */
   public open fun attrVpcId(): String = unwrap(this).getAttrVpcId()
 
@@ -842,7 +840,8 @@ public open class CfnSecurityGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty,
-    ) : CdkObject(cdkObject), EgressProperty {
+    ) : CdkObject(cdkObject),
+        EgressProperty {
       /**
        * The IPv4 address range, in CIDR format.
        *
@@ -1342,7 +1341,8 @@ public open class CfnSecurityGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty,
-    ) : CdkObject(cdkObject), IngressProperty {
+    ) : CdkObject(cdkObject),
+        IngressProperty {
       /**
        * The IPv4 address range, in CIDR format.
        *

@@ -92,7 +92,8 @@ public interface DomainAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticsearch.DomainAttributes,
-  ) : CdkObject(cdkObject), DomainAttributes {
+  ) : CdkObject(cdkObject),
+      DomainAttributes {
     /**
      * (deprecated) The ARN of the Elasticsearch domain.
      *

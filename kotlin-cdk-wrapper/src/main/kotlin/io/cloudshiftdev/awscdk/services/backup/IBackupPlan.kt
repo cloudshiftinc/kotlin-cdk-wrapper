@@ -22,7 +22,8 @@ public interface IBackupPlan : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.backup.IBackupPlan,
-  ) : CdkObject(cdkObject), IBackupPlan {
+  ) : CdkObject(cdkObject),
+      IBackupPlan {
     /**
      * Apply the given removal policy to this resource.
      *

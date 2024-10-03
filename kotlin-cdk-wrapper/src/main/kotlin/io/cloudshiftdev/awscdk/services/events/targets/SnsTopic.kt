@@ -19,6 +19,9 @@ import software.amazon.awscdk.services.sns.ITopic as AmazonAwscdkServicesSnsITop
 /**
  * Use an SNS topic as a target for Amazon EventBridge rules.
  *
+ * If the topic is imported the required permissions to publish to that topic need to be set
+ * manually.
+ *
  * Example:
  *
  * ```
@@ -29,7 +32,8 @@ import software.amazon.awscdk.services.sns.ITopic as AmazonAwscdkServicesSnsITop
  */
 public open class SnsTopic(
   cdkObject: software.amazon.awscdk.services.events.targets.SnsTopic,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic) :
       this(software.amazon.awscdk.services.events.targets.SnsTopic(topic.let(CloudshiftdevAwscdkServicesSnsITopic.Companion::unwrap))
   )

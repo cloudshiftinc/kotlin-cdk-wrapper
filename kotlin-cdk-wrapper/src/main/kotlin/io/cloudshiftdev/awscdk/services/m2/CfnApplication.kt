@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplication(
   cdkObject: software.amazon.awscdk.services.m2.CfnApplication,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -521,7 +523,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.m2.CfnApplication.DefinitionProperty,
-    ) : CdkObject(cdkObject), DefinitionProperty {
+    ) : CdkObject(cdkObject),
+        DefinitionProperty {
       /**
        * The content of the application definition.
        *

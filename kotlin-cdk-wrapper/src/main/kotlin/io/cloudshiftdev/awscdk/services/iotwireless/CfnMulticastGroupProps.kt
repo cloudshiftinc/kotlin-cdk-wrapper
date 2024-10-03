@@ -223,7 +223,8 @@ public interface CfnMulticastGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotwireless.CfnMulticastGroupProps,
-  ) : CdkObject(cdkObject), CfnMulticastGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnMulticastGroupProps {
     /**
      * The ID of the wireless device to associate with a multicast group.
      *

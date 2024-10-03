@@ -398,7 +398,8 @@ public interface CfnDatastoreProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastoreProps,
-  ) : CdkObject(cdkObject), CfnDatastoreProps {
+  ) : CdkObject(cdkObject),
+      CfnDatastoreProps {
     /**
      * The name of the data store.
      *

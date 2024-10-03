@@ -62,7 +62,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMembership(
   cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -587,7 +589,8 @@ public open class CfnMembership(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipPaymentConfigurationProperty,
-    ) : CdkObject(cdkObject), MembershipPaymentConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        MembershipPaymentConfigurationProperty {
       /**
        * The payment responsibilities accepted by the collaboration member for query compute costs.
        *
@@ -640,7 +643,7 @@ public open class CfnMembership(
    */
   public interface MembershipProtectedQueryOutputConfigurationProperty {
     /**
-     * Required configuration for a protected query with an `S3` output type.
+     * Required configuration for a protected query with an `s3` output type.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedqueryoutputconfiguration.html#cfn-cleanrooms-membership-membershipprotectedqueryoutputconfiguration-s3)
      */
@@ -652,17 +655,17 @@ public open class CfnMembership(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
+       * @param s3 Required configuration for a protected query with an `s3` output type. 
        */
       public fun s3(s3: IResolvable)
 
       /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
+       * @param s3 Required configuration for a protected query with an `s3` output type. 
        */
       public fun s3(s3: ProtectedQueryS3OutputConfigurationProperty)
 
       /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
+       * @param s3 Required configuration for a protected query with an `s3` output type. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b2597a2165549dafd127ba9eee175ac3ddd48f847c4150eae23d54c4edf57e86")
@@ -676,21 +679,21 @@ public open class CfnMembership(
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty.builder()
 
       /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
+       * @param s3 Required configuration for a protected query with an `s3` output type. 
        */
       override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
+       * @param s3 Required configuration for a protected query with an `s3` output type. 
        */
       override fun s3(s3: ProtectedQueryS3OutputConfigurationProperty) {
         cdkBuilder.s3(s3.let(ProtectedQueryS3OutputConfigurationProperty.Companion::unwrap))
       }
 
       /**
-       * @param s3 Required configuration for a protected query with an `S3` output type. 
+       * @param s3 Required configuration for a protected query with an `s3` output type. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b2597a2165549dafd127ba9eee175ac3ddd48f847c4150eae23d54c4edf57e86")
@@ -704,9 +707,10 @@ public open class CfnMembership(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty,
-    ) : CdkObject(cdkObject), MembershipProtectedQueryOutputConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        MembershipProtectedQueryOutputConfigurationProperty {
       /**
-       * Required configuration for a protected query with an `S3` output type.
+       * Required configuration for a protected query with an `s3` output type.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipprotectedqueryoutputconfiguration.html#cfn-cleanrooms-membership-membershipprotectedqueryoutputconfiguration-s3)
        */
@@ -852,7 +856,8 @@ public open class CfnMembership(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryResultConfigurationProperty,
-    ) : CdkObject(cdkObject), MembershipProtectedQueryResultConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        MembershipProtectedQueryResultConfigurationProperty {
       /**
        * Configuration for protected query results.
        *
@@ -1006,7 +1011,8 @@ public open class CfnMembership(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty,
-    ) : CdkObject(cdkObject), MembershipQueryComputePaymentConfigProperty {
+    ) : CdkObject(cdkObject),
+        MembershipQueryComputePaymentConfigProperty {
       /**
        * Indicates whether the collaboration member has accepted to pay for query compute costs (
        * `TRUE` ) or has not accepted to pay for query compute costs ( `FALSE` ).
@@ -1141,7 +1147,8 @@ public open class CfnMembership(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty,
-    ) : CdkObject(cdkObject), ProtectedQueryS3OutputConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ProtectedQueryS3OutputConfigurationProperty {
       /**
        * The S3 bucket to unload the protected query results.
        *

@@ -126,7 +126,8 @@ public interface Share {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.Share,
-  ) : CdkObject(cdkObject), Share {
+  ) : CdkObject(cdkObject),
+      Share {
     /**
      * The identifier of this Share.
      *

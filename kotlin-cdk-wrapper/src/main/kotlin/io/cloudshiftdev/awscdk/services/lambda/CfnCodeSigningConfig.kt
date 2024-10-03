@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -37,6 +40,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .untrustedArtifactOnDeployment("untrustedArtifactOnDeployment")
  * .build())
  * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -44,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCodeSigningConfig(
   cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -99,6 +108,12 @@ public open class CfnCodeSigningConfig(
   public open fun attrCodeSigningConfigId(): String = unwrap(this).getAttrCodeSigningConfigId()
 
   /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  /**
    * The code signing policy controls the validation failure action for signature mismatch or
    * expiry.
    */
@@ -149,6 +164,23 @@ public open class CfnCodeSigningConfig(
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
+
+  /**
+   * A list of tags to apply to CodeSigningConfig resource.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * A list of tags to apply to CodeSigningConfig resource.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   * A list of tags to apply to CodeSigningConfig resource.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.lambda.CfnCodeSigningConfig].
@@ -221,6 +253,22 @@ public open class CfnCodeSigningConfig(
      * @param description Code signing configuration description. 
      */
     public fun description(description: String)
+
+    /**
+     * A list of tags to apply to CodeSigningConfig resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-tags)
+     * @param tags A list of tags to apply to CodeSigningConfig resource. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * A list of tags to apply to CodeSigningConfig resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-tags)
+     * @param tags A list of tags to apply to CodeSigningConfig resource. 
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -308,6 +356,24 @@ public open class CfnCodeSigningConfig(
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * A list of tags to apply to CodeSigningConfig resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-tags)
+     * @param tags A list of tags to apply to CodeSigningConfig resource. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * A list of tags to apply to CodeSigningConfig resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-tags)
+     * @param tags A list of tags to apply to CodeSigningConfig resource. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.lambda.CfnCodeSigningConfig =
         cdkBuilder.build()
@@ -410,7 +476,8 @@ public open class CfnCodeSigningConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.AllowedPublishersProperty,
-    ) : CdkObject(cdkObject), AllowedPublishersProperty {
+    ) : CdkObject(cdkObject),
+        AllowedPublishersProperty {
       /**
        * The Amazon Resource Name (ARN) for each of the signing profiles.
        *
@@ -517,7 +584,8 @@ public open class CfnCodeSigningConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.CodeSigningPoliciesProperty,
-    ) : CdkObject(cdkObject), CodeSigningPoliciesProperty {
+    ) : CdkObject(cdkObject),
+        CodeSigningPoliciesProperty {
       /**
        * Code signing configuration policy for deployment validation failure.
        *

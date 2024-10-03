@@ -79,7 +79,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRestApi(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnRestApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1158,7 +1160,8 @@ public open class CfnRestApi(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty,
-    ) : CdkObject(cdkObject), EndpointConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EndpointConfigurationProperty {
       /**
        * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
        *
@@ -1324,7 +1327,8 @@ public open class CfnRestApi(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * The name of the S3 bucket where the OpenAPI file is stored.
        *

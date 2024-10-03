@@ -127,7 +127,8 @@ public interface CpuUtilizationScalingProps : BaseTargetTrackingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.CpuUtilizationScalingProps,
-  ) : CdkObject(cdkObject), CpuUtilizationScalingProps {
+  ) : CdkObject(cdkObject),
+      CpuUtilizationScalingProps {
     /**
      * Indicates whether scale in by the target tracking policy is disabled.
      *

@@ -5,9 +5,11 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 
 /**
  * Configuration properties for DefaultStackSynthesizer.
@@ -54,6 +56,21 @@ public interface DefaultStackSynthesizerProps {
   public fun cloudFormationExecutionRole(): String? = unwrap(this).getCloudFormationExecutionRole()
 
   /**
+   * Additional options to pass to STS when assuming the deploy role.
+   *
+   * * `RoleArn` should not be used. Use the dedicated `deployRoleArn` property instead.
+   * * `ExternalId` should not be used. Use the dedicated `deployRoleExternalId` instead.
+   * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags are
+   * transitive by default.
+   *
+   * Default: - No additional options.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+   */
+  public fun deployRoleAdditionalOptions(): Map<String, Any> =
+      unwrap(this).getDeployRoleAdditionalOptions() ?: emptyMap()
+
+  /**
    * The role to assume to initiate a deployment in this environment.
    *
    * You must supply this if you have given a non-standard name to the publishing role.
@@ -90,6 +107,22 @@ public interface DefaultStackSynthesizerProps {
    */
   public fun fileAssetPublishingExternalId(): String? =
       unwrap(this).getFileAssetPublishingExternalId()
+
+  /**
+   * Additional options to pass to STS when assuming the file asset publishing.
+   *
+   * * `RoleArn` should not be used. Use the dedicated `fileAssetPublishingRoleArn` property
+   * instead.
+   * * `ExternalId` should not be used. Use the dedicated `fileAssetPublishingExternalId` instead.
+   * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags are
+   * transitive by default.
+   *
+   * Default: - No additional options.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+   */
+  public fun fileAssetPublishingRoleAdditionalOptions(): Map<String, Any> =
+      unwrap(this).getFileAssetPublishingRoleAdditionalOptions() ?: emptyMap()
 
   /**
    * The role to use to publish file assets to the S3 bucket in this environment.
@@ -137,6 +170,22 @@ public interface DefaultStackSynthesizerProps {
       unwrap(this).getImageAssetPublishingExternalId()
 
   /**
+   * Additional options to pass to STS when assuming the image asset publishing.
+   *
+   * * `RoleArn` should not be used. Use the dedicated `imageAssetPublishingRoleArn` property
+   * instead.
+   * * `ExternalId` should not be used. Use the dedicated `imageAssetPublishingExternalId` instead.
+   * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags are
+   * transitive by default.
+   *
+   * Default: - No additional options.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+   */
+  public fun imageAssetPublishingRoleAdditionalOptions(): Map<String, Any> =
+      unwrap(this).getImageAssetPublishingRoleAdditionalOptions() ?: emptyMap()
+
+  /**
    * The role to use to publish image assets to the ECR repository in this environment.
    *
    * You must supply this if you have given a non-standard name to the publishing role.
@@ -161,6 +210,21 @@ public interface DefaultStackSynthesizerProps {
    * Default: DefaultStackSynthesizer.DEFAULT_IMAGE_ASSETS_REPOSITORY_NAME
    */
   public fun imageAssetsRepositoryName(): String? = unwrap(this).getImageAssetsRepositoryName()
+
+  /**
+   * Additional options to pass to STS when assuming the lookup role.
+   *
+   * * `RoleArn` should not be used. Use the dedicated `lookupRoleArn` property instead.
+   * * `ExternalId` should not be used. Use the dedicated `lookupRoleExternalId` instead.
+   * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags are
+   * transitive by default.
+   *
+   * Default: - No additional options.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+   */
+  public fun lookupRoleAdditionalOptions(): Map<String, Any> =
+      unwrap(this).getLookupRoleAdditionalOptions() ?: emptyMap()
 
   /**
    * The role to use to look up values from the target AWS account during synthesis.
@@ -228,6 +292,16 @@ public interface DefaultStackSynthesizerProps {
     public fun cloudFormationExecutionRole(cloudFormationExecutionRole: String)
 
     /**
+     * @param deployRoleAdditionalOptions Additional options to pass to STS when assuming the deploy
+     * role.
+     * * `RoleArn` should not be used. Use the dedicated `deployRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `deployRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    public fun deployRoleAdditionalOptions(deployRoleAdditionalOptions: Map<String, Any>)
+
+    /**
      * @param deployRoleArn The role to assume to initiate a deployment in this environment.
      * You must supply this if you have given a non-standard name to the publishing role.
      *
@@ -255,6 +329,18 @@ public interface DefaultStackSynthesizerProps {
      * publishing.
      */
     public fun fileAssetPublishingExternalId(fileAssetPublishingExternalId: String)
+
+    /**
+     * @param fileAssetPublishingRoleAdditionalOptions Additional options to pass to STS when
+     * assuming the file asset publishing.
+     * * `RoleArn` should not be used. Use the dedicated `fileAssetPublishingRoleArn` property
+     * instead.
+     * * `ExternalId` should not be used. Use the dedicated `fileAssetPublishingExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    public
+        fun fileAssetPublishingRoleAdditionalOptions(fileAssetPublishingRoleAdditionalOptions: Map<String, Any>)
 
     /**
      * @param fileAssetPublishingRoleArn The role to use to publish file assets to the S3 bucket in
@@ -292,6 +378,19 @@ public interface DefaultStackSynthesizerProps {
     public fun imageAssetPublishingExternalId(imageAssetPublishingExternalId: String)
 
     /**
+     * @param imageAssetPublishingRoleAdditionalOptions Additional options to pass to STS when
+     * assuming the image asset publishing.
+     * * `RoleArn` should not be used. Use the dedicated `imageAssetPublishingRoleArn` property
+     * instead.
+     * * `ExternalId` should not be used. Use the dedicated `imageAssetPublishingExternalId`
+     * instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    public
+        fun imageAssetPublishingRoleAdditionalOptions(imageAssetPublishingRoleAdditionalOptions: Map<String, Any>)
+
+    /**
      * @param imageAssetPublishingRoleArn The role to use to publish image assets to the ECR
      * repository in this environment.
      * You must supply this if you have given a non-standard name to the publishing role.
@@ -311,6 +410,16 @@ public interface DefaultStackSynthesizerProps {
      * respectively.
      */
     public fun imageAssetsRepositoryName(imageAssetsRepositoryName: String)
+
+    /**
+     * @param lookupRoleAdditionalOptions Additional options to pass to STS when assuming the lookup
+     * role.
+     * * `RoleArn` should not be used. Use the dedicated `lookupRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `lookupRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    public fun lookupRoleAdditionalOptions(lookupRoleAdditionalOptions: Map<String, Any>)
 
     /**
      * @param lookupRoleArn The role to use to look up values from the target AWS account during
@@ -374,6 +483,18 @@ public interface DefaultStackSynthesizerProps {
     }
 
     /**
+     * @param deployRoleAdditionalOptions Additional options to pass to STS when assuming the deploy
+     * role.
+     * * `RoleArn` should not be used. Use the dedicated `deployRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `deployRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    override fun deployRoleAdditionalOptions(deployRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.deployRoleAdditionalOptions(deployRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
      * @param deployRoleArn The role to assume to initiate a deployment in this environment.
      * You must supply this if you have given a non-standard name to the publishing role.
      *
@@ -408,6 +529,20 @@ public interface DefaultStackSynthesizerProps {
      */
     override fun fileAssetPublishingExternalId(fileAssetPublishingExternalId: String) {
       cdkBuilder.fileAssetPublishingExternalId(fileAssetPublishingExternalId)
+    }
+
+    /**
+     * @param fileAssetPublishingRoleAdditionalOptions Additional options to pass to STS when
+     * assuming the file asset publishing.
+     * * `RoleArn` should not be used. Use the dedicated `fileAssetPublishingRoleArn` property
+     * instead.
+     * * `ExternalId` should not be used. Use the dedicated `fileAssetPublishingExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    override
+        fun fileAssetPublishingRoleAdditionalOptions(fileAssetPublishingRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.fileAssetPublishingRoleAdditionalOptions(fileAssetPublishingRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -454,6 +589,21 @@ public interface DefaultStackSynthesizerProps {
     }
 
     /**
+     * @param imageAssetPublishingRoleAdditionalOptions Additional options to pass to STS when
+     * assuming the image asset publishing.
+     * * `RoleArn` should not be used. Use the dedicated `imageAssetPublishingRoleArn` property
+     * instead.
+     * * `ExternalId` should not be used. Use the dedicated `imageAssetPublishingExternalId`
+     * instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    override
+        fun imageAssetPublishingRoleAdditionalOptions(imageAssetPublishingRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.imageAssetPublishingRoleAdditionalOptions(imageAssetPublishingRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
+
+    /**
      * @param imageAssetPublishingRoleArn The role to use to publish image assets to the ECR
      * repository in this environment.
      * You must supply this if you have given a non-standard name to the publishing role.
@@ -476,6 +626,18 @@ public interface DefaultStackSynthesizerProps {
      */
     override fun imageAssetsRepositoryName(imageAssetsRepositoryName: String) {
       cdkBuilder.imageAssetsRepositoryName(imageAssetsRepositoryName)
+    }
+
+    /**
+     * @param lookupRoleAdditionalOptions Additional options to pass to STS when assuming the lookup
+     * role.
+     * * `RoleArn` should not be used. Use the dedicated `lookupRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `lookupRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    override fun lookupRoleAdditionalOptions(lookupRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.lookupRoleAdditionalOptions(lookupRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -519,7 +681,8 @@ public interface DefaultStackSynthesizerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.DefaultStackSynthesizerProps,
-  ) : CdkObject(cdkObject), DefaultStackSynthesizerProps {
+  ) : CdkObject(cdkObject),
+      DefaultStackSynthesizerProps {
     /**
      * Bootstrap stack version SSM parameter.
      *
@@ -550,6 +713,21 @@ public interface DefaultStackSynthesizerProps {
      */
     override fun cloudFormationExecutionRole(): String? =
         unwrap(this).getCloudFormationExecutionRole()
+
+    /**
+     * Additional options to pass to STS when assuming the deploy role.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `deployRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `deployRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     */
+    override fun deployRoleAdditionalOptions(): Map<String, Any> =
+        unwrap(this).getDeployRoleAdditionalOptions() ?: emptyMap()
 
     /**
      * The role to assume to initiate a deployment in this environment.
@@ -588,6 +766,22 @@ public interface DefaultStackSynthesizerProps {
      */
     override fun fileAssetPublishingExternalId(): String? =
         unwrap(this).getFileAssetPublishingExternalId()
+
+    /**
+     * Additional options to pass to STS when assuming the file asset publishing.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `fileAssetPublishingRoleArn` property
+     * instead.
+     * * `ExternalId` should not be used. Use the dedicated `fileAssetPublishingExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     */
+    override fun fileAssetPublishingRoleAdditionalOptions(): Map<String, Any> =
+        unwrap(this).getFileAssetPublishingRoleAdditionalOptions() ?: emptyMap()
 
     /**
      * The role to use to publish file assets to the S3 bucket in this environment.
@@ -636,6 +830,23 @@ public interface DefaultStackSynthesizerProps {
         unwrap(this).getImageAssetPublishingExternalId()
 
     /**
+     * Additional options to pass to STS when assuming the image asset publishing.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `imageAssetPublishingRoleArn` property
+     * instead.
+     * * `ExternalId` should not be used. Use the dedicated `imageAssetPublishingExternalId`
+     * instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     */
+    override fun imageAssetPublishingRoleAdditionalOptions(): Map<String, Any> =
+        unwrap(this).getImageAssetPublishingRoleAdditionalOptions() ?: emptyMap()
+
+    /**
      * The role to use to publish image assets to the ECR repository in this environment.
      *
      * You must supply this if you have given a non-standard name to the publishing role.
@@ -661,6 +872,21 @@ public interface DefaultStackSynthesizerProps {
      * Default: DefaultStackSynthesizer.DEFAULT_IMAGE_ASSETS_REPOSITORY_NAME
      */
     override fun imageAssetsRepositoryName(): String? = unwrap(this).getImageAssetsRepositoryName()
+
+    /**
+     * Additional options to pass to STS when assuming the lookup role.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `lookupRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `lookupRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     */
+    override fun lookupRoleAdditionalOptions(): Map<String, Any> =
+        unwrap(this).getLookupRoleAdditionalOptions() ?: emptyMap()
 
     /**
      * The role to use to look up values from the target AWS account during synthesis.

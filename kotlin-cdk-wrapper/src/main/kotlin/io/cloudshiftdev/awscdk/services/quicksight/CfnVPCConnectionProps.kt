@@ -277,7 +277,8 @@ public interface CfnVPCConnectionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.quicksight.CfnVPCConnectionProps,
-  ) : CdkObject(cdkObject), CfnVPCConnectionProps {
+  ) : CdkObject(cdkObject),
+      CfnVPCConnectionProps {
     /**
      * The availability status of the VPC connection.
      *

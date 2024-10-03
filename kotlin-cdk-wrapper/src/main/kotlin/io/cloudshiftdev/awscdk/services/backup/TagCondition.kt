@@ -110,7 +110,8 @@ public interface TagCondition {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.backup.TagCondition,
-  ) : CdkObject(cdkObject), TagCondition {
+  ) : CdkObject(cdkObject),
+      TagCondition {
     /**
      * The key in a key-value pair.
      *

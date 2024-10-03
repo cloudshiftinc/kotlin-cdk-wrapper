@@ -96,7 +96,8 @@ public interface UntrustedCodeBoundaryPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps,
-  ) : CdkObject(cdkObject), UntrustedCodeBoundaryPolicyProps {
+  ) : CdkObject(cdkObject),
+      UntrustedCodeBoundaryPolicyProps {
     /**
      * Additional statements to add to the default set of statements.
      *

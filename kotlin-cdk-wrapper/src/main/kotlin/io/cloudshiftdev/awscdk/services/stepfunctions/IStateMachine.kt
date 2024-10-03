@@ -311,7 +311,8 @@ public interface IStateMachine : IResource, IGrantable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.IStateMachine,
-  ) : CdkObject(cdkObject), IStateMachine {
+  ) : CdkObject(cdkObject),
+      IStateMachine {
     /**
      * Apply the given removal policy to this resource.
      *

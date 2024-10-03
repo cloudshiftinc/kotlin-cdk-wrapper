@@ -57,7 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnScript(
   cdkObject: software.amazon.awscdk.services.gamelift.CfnScript,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -576,7 +578,8 @@ public open class CfnScript(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnScript.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * An Amazon S3 bucket identifier. Thename of the S3 bucket.
        *

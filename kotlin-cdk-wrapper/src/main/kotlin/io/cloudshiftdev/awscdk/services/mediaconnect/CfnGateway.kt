@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGateway(
   cdkObject: software.amazon.awscdk.services.mediaconnect.CfnGateway,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -392,7 +393,8 @@ public open class CfnGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnGateway.GatewayNetworkProperty,
-    ) : CdkObject(cdkObject), GatewayNetworkProperty {
+    ) : CdkObject(cdkObject),
+        GatewayNetworkProperty {
       /**
        * A unique IP address range to use for this network.
        *

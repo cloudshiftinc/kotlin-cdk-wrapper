@@ -59,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProject(
   cdkObject: software.amazon.awscdk.services.evidently.CfnProject,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -684,7 +686,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnProject.AppConfigResourceObjectProperty,
-    ) : CdkObject(cdkObject), AppConfigResourceObjectProperty {
+    ) : CdkObject(cdkObject),
+        AppConfigResourceObjectProperty {
       /**
        * The ID of the AWS AppConfig application to use for client-side evaluation.
        *
@@ -834,7 +837,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnProject.DataDeliveryObjectProperty,
-    ) : CdkObject(cdkObject), DataDeliveryObjectProperty {
+    ) : CdkObject(cdkObject),
+        DataDeliveryObjectProperty {
       /**
        * If the project stores evaluation events in CloudWatch Logs , this structure stores the log
        * group name.
@@ -945,7 +949,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnProject.S3DestinationProperty,
-    ) : CdkObject(cdkObject), S3DestinationProperty {
+    ) : CdkObject(cdkObject),
+        S3DestinationProperty {
       /**
        * The name of the bucket in which Evidently stores evaluation events.
        *

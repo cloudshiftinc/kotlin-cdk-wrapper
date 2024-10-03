@@ -33,6 +33,10 @@ import kotlin.collections.List
  * .events(List.of("codebuild-project-build-state-succeeded",
  * "codebuild-project-build-state-failed"))
  * .targets(List.of(topic))
+ * .notificationRuleName("MyNotificationRuleName")
+ * .enabled(true) // The default is true
+ * .detailType(DetailType.FULL) // The default is FULL
+ * .createdBy("Jone Doe")
  * .build();
  * rule.addTarget(slack);
  * ```
@@ -71,6 +75,12 @@ public interface NotificationRuleProps : NotificationRuleOptions {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param createdBy The name or email alias of the person who created the notification rule.
+     * If not specified, it means that the creator's alias is not provided.
+     */
+    public fun createdBy(createdBy: String)
+
     /**
      * @param detailType The level of detail to include in the notifications for this resource.
      * BASIC will include only the contents of the event as it would appear in AWS CloudWatch.
@@ -128,6 +138,14 @@ public interface NotificationRuleProps : NotificationRuleOptions {
     private val cdkBuilder:
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleProps.Builder =
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleProps.builder()
+
+    /**
+     * @param createdBy The name or email alias of the person who created the notification rule.
+     * If not specified, it means that the creator's alias is not provided.
+     */
+    override fun createdBy(createdBy: String) {
+      cdkBuilder.createdBy(createdBy)
+    }
 
     /**
      * @param detailType The level of detail to include in the notifications for this resource.
@@ -199,7 +217,17 @@ public interface NotificationRuleProps : NotificationRuleOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codestarnotifications.NotificationRuleProps,
-  ) : CdkObject(cdkObject), NotificationRuleProps {
+  ) : CdkObject(cdkObject),
+      NotificationRuleProps {
+    /**
+     * The name or email alias of the person who created the notification rule.
+     *
+     * If not specified, it means that the creator's alias is not provided.
+     *
+     * Default: - No alias provided
+     */
+    override fun createdBy(): String? = unwrap(this).getCreatedBy()
+
     /**
      * The level of detail to include in the notifications for this resource.
      *

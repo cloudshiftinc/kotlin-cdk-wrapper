@@ -77,7 +77,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResourceSet(
   cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -549,7 +551,8 @@ public open class CfnResourceSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty,
-    ) : CdkObject(cdkObject), DNSTargetResourceProperty {
+    ) : CdkObject(cdkObject),
+        DNSTargetResourceProperty {
       /**
        * The domain name that acts as an ingress point to a portion of the customer application.
        *
@@ -661,7 +664,8 @@ public open class CfnResourceSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.NLBResourceProperty,
-    ) : CdkObject(cdkObject), NLBResourceProperty {
+    ) : CdkObject(cdkObject),
+        NLBResourceProperty {
       /**
        * The Network Load Balancer resource Amazon Resource Name (ARN).
        *
@@ -763,7 +767,8 @@ public open class CfnResourceSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.R53ResourceRecordProperty,
-    ) : CdkObject(cdkObject), R53ResourceRecordProperty {
+    ) : CdkObject(cdkObject),
+        R53ResourceRecordProperty {
       /**
        * The DNS target domain name.
        *
@@ -1004,7 +1009,8 @@ public open class CfnResourceSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.ResourceProperty,
-    ) : CdkObject(cdkObject), ResourceProperty {
+    ) : CdkObject(cdkObject),
+        ResourceProperty {
       /**
        * The component identifier of the resource, generated when DNS target resource is used.
        *
@@ -1196,7 +1202,8 @@ public open class CfnResourceSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty,
-    ) : CdkObject(cdkObject), TargetResourceProperty {
+    ) : CdkObject(cdkObject),
+        TargetResourceProperty {
       /**
        * The Network Load Balancer resource that a DNS target resource points to.
        *

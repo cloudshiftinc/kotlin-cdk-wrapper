@@ -183,7 +183,8 @@ public interface CfnAccessorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.managedblockchain.CfnAccessorProps,
-  ) : CdkObject(cdkObject), CfnAccessorProps {
+  ) : CdkObject(cdkObject),
+      CfnAccessorProps {
     /**
      * The type of the accessor.
      *

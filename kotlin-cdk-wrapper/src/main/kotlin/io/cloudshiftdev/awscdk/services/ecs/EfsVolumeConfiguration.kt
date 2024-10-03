@@ -188,7 +188,8 @@ public interface EfsVolumeConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.EfsVolumeConfiguration,
-  ) : CdkObject(cdkObject), EfsVolumeConfiguration {
+  ) : CdkObject(cdkObject),
+      EfsVolumeConfiguration {
     /**
      * The authorization configuration details for the Amazon EFS file system.
      *

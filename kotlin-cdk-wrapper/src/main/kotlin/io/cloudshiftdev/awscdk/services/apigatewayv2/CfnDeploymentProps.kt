@@ -101,7 +101,8 @@ public interface CfnDeploymentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDeploymentProps,
-  ) : CdkObject(cdkObject), CfnDeploymentProps {
+  ) : CdkObject(cdkObject),
+      CfnDeploymentProps {
     /**
      * The API identifier.
      *

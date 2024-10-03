@@ -112,7 +112,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfig(
   cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -477,7 +479,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkConfigProperty,
-    ) : CdkObject(cdkObject), AntennaDownlinkConfigProperty {
+    ) : CdkObject(cdkObject),
+        AntennaDownlinkConfigProperty {
       /**
        * Defines the spectrum configuration.
        *
@@ -701,7 +704,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkDemodDecodeConfigProperty,
-    ) : CdkObject(cdkObject), AntennaDownlinkDemodDecodeConfigProperty {
+    ) : CdkObject(cdkObject),
+        AntennaDownlinkDemodDecodeConfigProperty {
       /**
        * Defines how the RF signal will be decoded.
        *
@@ -928,7 +932,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.AntennaUplinkConfigProperty,
-    ) : CdkObject(cdkObject), AntennaUplinkConfigProperty {
+    ) : CdkObject(cdkObject),
+        AntennaUplinkConfigProperty {
       /**
        * Defines the spectrum configuration.
        *
@@ -1520,7 +1525,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty,
-    ) : CdkObject(cdkObject), ConfigDataProperty {
+    ) : CdkObject(cdkObject),
+        ConfigDataProperty {
       /**
        * Provides information for an antenna downlink config object.
        *
@@ -1692,7 +1698,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.DataflowEndpointConfigProperty,
-    ) : CdkObject(cdkObject), DataflowEndpointConfigProperty {
+    ) : CdkObject(cdkObject),
+        DataflowEndpointConfigProperty {
       /**
        * The name of the dataflow endpoint to use during contacts.
        *
@@ -1746,6 +1753,9 @@ public open class CfnConfig(
    */
   public interface DecodeConfigProperty {
     /**
+     * The decoding settings are in JSON format and define a set of steps to perform to decode the
+     * data.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-decodeconfig.html#cfn-groundstation-config-decodeconfig-unvalidatedjson)
      */
     public fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
@@ -1756,7 +1766,8 @@ public open class CfnConfig(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param unvalidatedJson the value to be set.
+       * @param unvalidatedJson The decoding settings are in JSON format and define a set of steps
+       * to perform to decode the data.
        */
       public fun unvalidatedJson(unvalidatedJson: String)
     }
@@ -1767,7 +1778,8 @@ public open class CfnConfig(
           software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty.builder()
 
       /**
-       * @param unvalidatedJson the value to be set.
+       * @param unvalidatedJson The decoding settings are in JSON format and define a set of steps
+       * to perform to decode the data.
        */
       override fun unvalidatedJson(unvalidatedJson: String) {
         cdkBuilder.unvalidatedJson(unvalidatedJson)
@@ -1780,8 +1792,12 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty,
-    ) : CdkObject(cdkObject), DecodeConfigProperty {
+    ) : CdkObject(cdkObject),
+        DecodeConfigProperty {
       /**
+       * The decoding settings are in JSON format and define a set of steps to perform to decode the
+       * data.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-decodeconfig.html#cfn-groundstation-config-decodeconfig-unvalidatedjson)
        */
       override fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
@@ -1823,6 +1839,9 @@ public open class CfnConfig(
    */
   public interface DemodulationConfigProperty {
     /**
+     * The demodulation settings are in JSON format and define parameters for demodulation, for
+     * example which modulation scheme (e.g. PSK, QPSK, etc.) and matched filter to use.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-demodulationconfig.html#cfn-groundstation-config-demodulationconfig-unvalidatedjson)
      */
     public fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
@@ -1833,7 +1852,9 @@ public open class CfnConfig(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param unvalidatedJson the value to be set.
+       * @param unvalidatedJson The demodulation settings are in JSON format and define parameters
+       * for demodulation, for example which modulation scheme (e.g. PSK, QPSK, etc.) and matched
+       * filter to use.
        */
       public fun unvalidatedJson(unvalidatedJson: String)
     }
@@ -1845,7 +1866,9 @@ public open class CfnConfig(
           software.amazon.awscdk.services.groundstation.CfnConfig.DemodulationConfigProperty.builder()
 
       /**
-       * @param unvalidatedJson the value to be set.
+       * @param unvalidatedJson The demodulation settings are in JSON format and define parameters
+       * for demodulation, for example which modulation scheme (e.g. PSK, QPSK, etc.) and matched
+       * filter to use.
        */
       override fun unvalidatedJson(unvalidatedJson: String) {
         cdkBuilder.unvalidatedJson(unvalidatedJson)
@@ -1858,8 +1881,12 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.DemodulationConfigProperty,
-    ) : CdkObject(cdkObject), DemodulationConfigProperty {
+    ) : CdkObject(cdkObject),
+        DemodulationConfigProperty {
       /**
+       * The demodulation settings are in JSON format and define parameters for demodulation, for
+       * example which modulation scheme (e.g. PSK, QPSK, etc.) and matched filter to use.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-demodulationconfig.html#cfn-groundstation-config-demodulationconfig-unvalidatedjson)
        */
       override fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
@@ -1960,7 +1987,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.EirpProperty,
-    ) : CdkObject(cdkObject), EirpProperty {
+    ) : CdkObject(cdkObject),
+        EirpProperty {
       /**
        * The units of the EIRP.
        *
@@ -2083,7 +2111,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyBandwidthProperty,
-    ) : CdkObject(cdkObject), FrequencyBandwidthProperty {
+    ) : CdkObject(cdkObject),
+        FrequencyBandwidthProperty {
       /**
        * The units of the bandwidth.
        *
@@ -2202,7 +2231,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyProperty,
-    ) : CdkObject(cdkObject), FrequencyProperty {
+    ) : CdkObject(cdkObject),
+        FrequencyProperty {
       /**
        * The units of the frequency.
        *
@@ -2357,7 +2387,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.S3RecordingConfigProperty,
-    ) : CdkObject(cdkObject), S3RecordingConfigProperty {
+    ) : CdkObject(cdkObject),
+        S3RecordingConfigProperty {
       /**
        * S3 Bucket where the data is written.
        *
@@ -2612,7 +2643,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.SpectrumConfigProperty,
-    ) : CdkObject(cdkObject), SpectrumConfigProperty {
+    ) : CdkObject(cdkObject),
+        SpectrumConfigProperty {
       /**
        * The bandwidth of the spectrum. AWS Ground Station currently has the following bandwidth
        * limitations:.
@@ -2732,7 +2764,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.TrackingConfigProperty,
-    ) : CdkObject(cdkObject), TrackingConfigProperty {
+    ) : CdkObject(cdkObject),
+        TrackingConfigProperty {
       /**
        * Specifies whether or not to use autotrack.
        *
@@ -2853,7 +2886,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.UplinkEchoConfigProperty,
-    ) : CdkObject(cdkObject), UplinkEchoConfigProperty {
+    ) : CdkObject(cdkObject),
+        UplinkEchoConfigProperty {
       /**
        * Defines the ARN of the uplink config to echo back to a dataflow endpoint.
        *
@@ -3012,7 +3046,8 @@ public open class CfnConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.UplinkSpectrumConfigProperty,
-    ) : CdkObject(cdkObject), UplinkSpectrumConfigProperty {
+    ) : CdkObject(cdkObject),
+        UplinkSpectrumConfigProperty {
       /**
        * The center frequency of the spectrum.
        *

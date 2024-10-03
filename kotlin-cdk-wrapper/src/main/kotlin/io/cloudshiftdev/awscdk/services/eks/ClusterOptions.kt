@@ -54,6 +54,7 @@ import kotlin.jvm.JvmName
  * .policy(policy)
  * .repository("repository")
  * .build())
+ * .authenticationMode(AuthenticationMode.CONFIG_MAP)
  * .awscliLayer(layerVersion)
  * .clusterHandlerEnvironment(Map.of(
  * "clusterHandlerEnvironmentKey", "clusterHandlerEnvironment"))
@@ -100,6 +101,14 @@ public interface ClusterOptions : CommonClusterOptions {
    */
   public fun albController(): AlbControllerOptions? =
       unwrap(this).getAlbController()?.let(AlbControllerOptions::wrap)
+
+  /**
+   * The desired authentication mode for the cluster.
+   *
+   * Default: AuthenticationMode.CONFIG_MAP
+   */
+  public fun authenticationMode(): AuthenticationMode? =
+      unwrap(this).getAuthenticationMode()?.let(AuthenticationMode::wrap)
 
   /**
    * An AWS Lambda layer that contains the `aws` CLI.
@@ -305,6 +314,11 @@ public interface ClusterOptions : CommonClusterOptions {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7034d01a4cd6de485cd119ec0d7808acd3e9abdbff2eb3a14ac9c734cf630f02")
     public fun albController(albController: AlbControllerOptions.Builder.() -> Unit)
+
+    /**
+     * @param authenticationMode The desired authentication mode for the cluster.
+     */
+    public fun authenticationMode(authenticationMode: AuthenticationMode)
 
     /**
      * @param awscliLayer An AWS Lambda layer that contains the `aws` CLI.
@@ -518,6 +532,13 @@ public interface ClusterOptions : CommonClusterOptions {
     @JvmName("7034d01a4cd6de485cd119ec0d7808acd3e9abdbff2eb3a14ac9c734cf630f02")
     override fun albController(albController: AlbControllerOptions.Builder.() -> Unit): Unit =
         albController(AlbControllerOptions(albController))
+
+    /**
+     * @param authenticationMode The desired authentication mode for the cluster.
+     */
+    override fun authenticationMode(authenticationMode: AuthenticationMode) {
+      cdkBuilder.authenticationMode(authenticationMode.let(AuthenticationMode.Companion::unwrap))
+    }
 
     /**
      * @param awscliLayer An AWS Lambda layer that contains the `aws` CLI.
@@ -769,7 +790,8 @@ public interface ClusterOptions : CommonClusterOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.ClusterOptions,
-  ) : CdkObject(cdkObject), ClusterOptions {
+  ) : CdkObject(cdkObject),
+      ClusterOptions {
     /**
      * Install the AWS Load Balancer Controller onto the cluster.
      *
@@ -779,6 +801,14 @@ public interface ClusterOptions : CommonClusterOptions {
      */
     override fun albController(): AlbControllerOptions? =
         unwrap(this).getAlbController()?.let(AlbControllerOptions::wrap)
+
+    /**
+     * The desired authentication mode for the cluster.
+     *
+     * Default: AuthenticationMode.CONFIG_MAP
+     */
+    override fun authenticationMode(): AuthenticationMode? =
+        unwrap(this).getAuthenticationMode()?.let(AuthenticationMode::wrap)
 
     /**
      * An AWS Lambda layer that contains the `aws` CLI.

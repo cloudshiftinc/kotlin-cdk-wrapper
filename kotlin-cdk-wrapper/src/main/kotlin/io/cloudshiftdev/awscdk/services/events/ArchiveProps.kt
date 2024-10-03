@@ -141,7 +141,8 @@ public interface ArchiveProps : BaseArchiveProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.ArchiveProps,
-  ) : CdkObject(cdkObject), ArchiveProps {
+  ) : CdkObject(cdkObject),
+      ArchiveProps {
     /**
      * The name of the archive.
      *

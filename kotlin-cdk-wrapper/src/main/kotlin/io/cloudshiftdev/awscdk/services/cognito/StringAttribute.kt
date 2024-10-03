@@ -36,7 +36,8 @@ import kotlin.Unit
  */
 public open class StringAttribute(
   cdkObject: software.amazon.awscdk.services.cognito.StringAttribute,
-) : CdkObject(cdkObject), ICustomAttribute {
+) : CdkObject(cdkObject),
+    ICustomAttribute {
   public constructor() : this(software.amazon.awscdk.services.cognito.StringAttribute()
   )
 

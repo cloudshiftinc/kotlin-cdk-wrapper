@@ -949,7 +949,8 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateServiceProps,
-  ) : CdkObject(cdkObject), QueueProcessingFargateServiceProps {
+  ) : CdkObject(cdkObject),
+      QueueProcessingFargateServiceProps {
     /**
      * Specifies whether the task's elastic network interface receives a public IP address.
      *

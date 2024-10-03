@@ -1022,7 +1022,8 @@ public interface CfnRuleGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroupProps,
-  ) : CdkObject(cdkObject), CfnRuleGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnRuleGroupProps {
     /**
      * The labels that one or more rules in this rule group add to matching web requests.
      *

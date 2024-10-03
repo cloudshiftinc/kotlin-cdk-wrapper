@@ -57,7 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfigurationAggregator(
   cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.config.CfnConfigurationAggregator(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -531,7 +533,8 @@ public open class CfnConfigurationAggregator(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty,
-    ) : CdkObject(cdkObject), AccountAggregationSourceProperty {
+    ) : CdkObject(cdkObject),
+        AccountAggregationSourceProperty {
       /**
        * The 12-digit account ID of the account being aggregated.
        *
@@ -695,7 +698,8 @@ public open class CfnConfigurationAggregator(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty,
-    ) : CdkObject(cdkObject), OrganizationAggregationSourceProperty {
+    ) : CdkObject(cdkObject),
+        OrganizationAggregationSourceProperty {
       /**
        * If true, aggregate existing AWS Config regions and future regions.
        *

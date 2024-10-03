@@ -178,7 +178,8 @@ public interface CfnServiceNetworkServiceAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociationProps,
-  ) : CdkObject(cdkObject), CfnServiceNetworkServiceAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnServiceNetworkServiceAssociationProps {
     /**
      * The DNS information of the service.
      *

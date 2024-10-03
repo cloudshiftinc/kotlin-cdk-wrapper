@@ -100,7 +100,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStorageLensGroup(
   cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -635,7 +637,8 @@ public open class CfnStorageLensGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.AndProperty,
-    ) : CdkObject(cdkObject), AndProperty {
+    ) : CdkObject(cdkObject),
+        AndProperty {
       /**
        * This property contains a list of prefixes.
        *
@@ -1138,7 +1141,8 @@ public open class CfnStorageLensGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
+    ) : CdkObject(cdkObject),
+        FilterProperty {
       /**
        * This property contains the `And` logical operator, which allows multiple filter conditions
        * to be joined for more complex comparisons of Storage Lens group data.
@@ -1298,7 +1302,8 @@ public open class CfnStorageLensGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.MatchObjectAgeProperty,
-    ) : CdkObject(cdkObject), MatchObjectAgeProperty {
+    ) : CdkObject(cdkObject),
+        MatchObjectAgeProperty {
       /**
        * This property indicates the minimum object age in days.
        *
@@ -1416,7 +1421,8 @@ public open class CfnStorageLensGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.MatchObjectSizeProperty,
-    ) : CdkObject(cdkObject), MatchObjectSizeProperty {
+    ) : CdkObject(cdkObject),
+        MatchObjectSizeProperty {
       /**
        * This property specifies the minimum object size in bytes.
        *
@@ -1732,7 +1738,8 @@ public open class CfnStorageLensGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.OrProperty,
-    ) : CdkObject(cdkObject), OrProperty {
+    ) : CdkObject(cdkObject),
+        OrProperty {
       /**
        * This property contains a list of prefixes.
        *

@@ -28,7 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ProfilingGroup(
   cdkObject: software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup,
-) : Resource(cdkObject), IProfilingGroup {
+) : Resource(cdkObject),
+    IProfilingGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

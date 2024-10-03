@@ -154,7 +154,8 @@ public interface CfnPackageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.panorama.CfnPackageProps,
-  ) : CdkObject(cdkObject), CfnPackageProps {
+  ) : CdkObject(cdkObject),
+      CfnPackageProps {
     /**
      * A name for the package.
      *

@@ -217,7 +217,8 @@ public interface CfnIdentityProviderConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfigProps,
-  ) : CdkObject(cdkObject), CfnIdentityProviderConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnIdentityProviderConfigProps {
     /**
      * The name of your cluster.
      *

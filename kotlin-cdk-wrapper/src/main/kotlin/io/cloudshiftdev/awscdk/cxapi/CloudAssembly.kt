@@ -2,9 +2,9 @@
 
 package io.cloudshiftdev.awscdk.cxapi
 
-import io.cloudshiftdev.awscdk.cloudassembly.schema.AssemblyManifest
-import io.cloudshiftdev.awscdk.cloudassembly.schema.LoadManifestOptions
-import io.cloudshiftdev.awscdk.cloudassembly.schema.RuntimeInfo
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.AssemblyManifest
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.LoadManifestOptions
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.RuntimeInfo
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean

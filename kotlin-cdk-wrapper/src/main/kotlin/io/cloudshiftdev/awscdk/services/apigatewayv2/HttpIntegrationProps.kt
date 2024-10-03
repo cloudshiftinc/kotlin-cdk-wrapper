@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -16,6 +17,7 @@ import kotlin.Unit
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
  * HttpApi httpApi;
  * IntegrationCredentials integrationCredentials;
@@ -34,6 +36,7 @@ import kotlin.Unit
  * .parameterMapping(parameterMapping)
  * .payloadFormatVersion(payloadFormatVersion)
  * .secureServerName("secureServerName")
+ * .timeout(Duration.minutes(30))
  * .build();
  * ```
  */
@@ -131,6 +134,15 @@ public interface HttpIntegrationProps {
   public fun secureServerName(): String? = unwrap(this).getSecureServerName()
 
   /**
+   * The maximum amount of time an integration will run before it returns without a response.
+   *
+   * Must be between 50 milliseconds and 29 seconds.
+   *
+   * Default: Duration.seconds(29)
+   */
+  public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+  /**
    * A builder for [HttpIntegrationProps]
    */
   @CdkDslMarker
@@ -194,6 +206,13 @@ public interface HttpIntegrationProps {
      * @param secureServerName Specifies the TLS configuration for a private integration.
      */
     public fun secureServerName(secureServerName: String)
+
+    /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -283,13 +302,23 @@ public interface HttpIntegrationProps {
       cdkBuilder.secureServerName(secureServerName)
     }
 
+    /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.apigatewayv2.HttpIntegrationProps =
         cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpIntegrationProps,
-  ) : CdkObject(cdkObject), HttpIntegrationProps {
+  ) : CdkObject(cdkObject),
+      HttpIntegrationProps {
     /**
      * The ID of the VPC link for a private integration.
      *
@@ -382,6 +411,15 @@ public interface HttpIntegrationProps {
      * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-tlsconfig.html)
      */
     override fun secureServerName(): String? = unwrap(this).getSecureServerName()
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     */
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
   }
 
   public companion object {

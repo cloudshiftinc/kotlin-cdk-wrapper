@@ -81,7 +81,8 @@ public interface BuildEnvironmentCertificate {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentCertificate,
-  ) : CdkObject(cdkObject), BuildEnvironmentCertificate {
+  ) : CdkObject(cdkObject),
+      BuildEnvironmentCertificate {
     /**
      * The bucket where the certificate is.
      */

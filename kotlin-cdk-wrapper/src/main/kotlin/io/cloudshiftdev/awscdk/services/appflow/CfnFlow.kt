@@ -336,7 +336,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFlow(
   cdkObject: software.amazon.awscdk.services.appflow.CfnFlow,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1163,7 +1165,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty,
-    ) : CdkObject(cdkObject), AggregationConfigProperty {
+    ) : CdkObject(cdkObject),
+        AggregationConfigProperty {
       /**
        * Specifies whether Amazon AppFlow aggregates the flow records into a single file, or leave
        * them unaggregated.
@@ -1259,7 +1262,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.AmplitudeSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), AmplitudeSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        AmplitudeSourcePropertiesProperty {
       /**
        * The object specified in the Amplitude flow source.
        *
@@ -1664,7 +1668,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty,
-    ) : CdkObject(cdkObject), ConnectorOperatorProperty {
+    ) : CdkObject(cdkObject),
+        ConnectorOperatorProperty {
       /**
        * The operation to be performed on the provided Amplitude source fields.
        *
@@ -2019,7 +2024,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), CustomConnectorDestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        CustomConnectorDestinationPropertiesProperty {
       /**
        * The custom properties that are specific to the connector when it's used as a destination in
        * the flow.
@@ -2229,7 +2235,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), CustomConnectorSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        CustomConnectorSourcePropertiesProperty {
       /**
        * Custom properties that are required to use the custom connector as a source.
        *
@@ -2363,7 +2370,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DataTransferApiProperty,
-    ) : CdkObject(cdkObject), DataTransferApiProperty {
+    ) : CdkObject(cdkObject),
+        DataTransferApiProperty {
       /**
        * The name of the connector application API.
        *
@@ -2459,7 +2467,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), DatadogSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        DatadogSourcePropertiesProperty {
       /**
        * The object specified in the Datadog flow source.
        *
@@ -3165,7 +3174,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DestinationConnectorPropertiesProperty,
-    ) : CdkObject(cdkObject), DestinationConnectorPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        DestinationConnectorPropertiesProperty {
       /**
        * The properties that are required to query the custom Connector.
        *
@@ -3554,7 +3564,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty,
-    ) : CdkObject(cdkObject), DestinationFlowConfigProperty {
+    ) : CdkObject(cdkObject),
+        DestinationFlowConfigProperty {
       /**
        * The API version that the destination connector uses.
        *
@@ -3661,7 +3672,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), DynatraceSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        DynatraceSourcePropertiesProperty {
       /**
        * The object specified in the Dynatrace flow source.
        *
@@ -3805,7 +3817,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty,
-    ) : CdkObject(cdkObject), ErrorHandlingConfigProperty {
+    ) : CdkObject(cdkObject),
+        ErrorHandlingConfigProperty {
       /**
        * Specifies the name of the Amazon S3 bucket.
        *
@@ -3957,7 +3970,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), EventBridgeDestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        EventBridgeDestinationPropertiesProperty {
       /**
        * The object specified in the Amplitude flow source.
        *
@@ -4085,7 +4099,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty,
-    ) : CdkObject(cdkObject), GlueDataCatalogProperty {
+    ) : CdkObject(cdkObject),
+        GlueDataCatalogProperty {
       /**
        * A string containing the value for the tag.
        *
@@ -4182,7 +4197,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), GoogleAnalyticsSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        GoogleAnalyticsSourcePropertiesProperty {
       /**
        * The object specified in the Google Analytics flow source.
        *
@@ -4268,7 +4284,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty,
-    ) : CdkObject(cdkObject), IncrementalPullConfigProperty {
+    ) : CdkObject(cdkObject),
+        IncrementalPullConfigProperty {
       /**
        * A field that specifies the date time or timestamp field as the criteria to use when
        * importing incremental records from the source.
@@ -4352,7 +4369,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), InforNexusSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        InforNexusSourcePropertiesProperty {
       /**
        * The object specified in the Infor Nexus flow source.
        *
@@ -4436,7 +4454,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), LookoutMetricsDestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        LookoutMetricsDestinationPropertiesProperty {
       /**
        * The object specified in the Amazon Lookout for Metrics flow destination.
        *
@@ -4603,7 +4622,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), MarketoDestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        MarketoDestinationPropertiesProperty {
       /**
        * The settings that determine how Amazon AppFlow handles an error when placing data in the
        * destination.
@@ -4698,7 +4718,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), MarketoSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        MarketoSourcePropertiesProperty {
       /**
        * The object specified in the Marketo flow source.
        *
@@ -4820,7 +4841,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty,
-    ) : CdkObject(cdkObject), MetadataCatalogConfigProperty {
+    ) : CdkObject(cdkObject),
+        MetadataCatalogConfigProperty {
       /**
        * Specifies the configuration that Amazon AppFlow uses when it catalogs your data with the
        * AWS Glue Data Catalog .
@@ -4903,7 +4925,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), PardotSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        PardotSourcePropertiesProperty {
       /**
        * The object specified in the Salesforce Pardot flow source.
        *
@@ -5082,7 +5105,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty,
-    ) : CdkObject(cdkObject), PrefixConfigProperty {
+    ) : CdkObject(cdkObject),
+        PrefixConfigProperty {
       /**
        * Specifies whether the destination file path includes either or both of the following
        * elements:.
@@ -5317,7 +5341,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), RedshiftDestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        RedshiftDestinationPropertiesProperty {
       /**
        * The object key for the bucket in which Amazon AppFlow places the destination files.
        *
@@ -5519,7 +5544,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), S3DestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        S3DestinationPropertiesProperty {
       /**
        * The Amazon S3 bucket name in which Amazon AppFlow places the transferred data.
        *
@@ -5616,7 +5642,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty,
-    ) : CdkObject(cdkObject), S3InputFormatConfigProperty {
+    ) : CdkObject(cdkObject),
+        S3InputFormatConfigProperty {
       /**
        * The file type that Amazon AppFlow gets from your Amazon S3 bucket.
        *
@@ -5888,7 +5915,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty,
-    ) : CdkObject(cdkObject), S3OutputFormatConfigProperty {
+    ) : CdkObject(cdkObject),
+        S3OutputFormatConfigProperty {
       /**
        * The aggregation settings that you can use to customize the output format of your flow data.
        *
@@ -6080,7 +6108,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty,
-    ) : CdkObject(cdkObject), S3SourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        S3SourcePropertiesProperty {
       /**
        * The Amazon S3 bucket name where the source files are stored.
        *
@@ -6398,7 +6427,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), SAPODataDestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SAPODataDestinationPropertiesProperty {
       /**
        * The settings that determine how Amazon AppFlow handles an error when placing data in the
        * destination.
@@ -6519,7 +6549,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty,
-    ) : CdkObject(cdkObject), SAPODataPaginationConfigProperty {
+    ) : CdkObject(cdkObject),
+        SAPODataPaginationConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatapaginationconfig.html#cfn-appflow-flow-sapodatapaginationconfig-maxpagesize)
        */
@@ -6598,7 +6629,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty,
-    ) : CdkObject(cdkObject), SAPODataParallelismConfigProperty {
+    ) : CdkObject(cdkObject),
+        SAPODataParallelismConfigProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodataparallelismconfig.html#cfn-appflow-flow-sapodataparallelismconfig-maxparallelism)
        */
@@ -6782,7 +6814,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), SAPODataSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SAPODataSourcePropertiesProperty {
       /**
        * The object path specified in the SAPOData flow source.
        *
@@ -7129,7 +7162,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SalesforceDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), SalesforceDestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SalesforceDestinationPropertiesProperty {
       /**
        * Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to
        * Salesforce.
@@ -7457,7 +7491,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SalesforceSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), SalesforceSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SalesforceSourcePropertiesProperty {
       /**
        * Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data from
        * Salesforce.
@@ -7786,7 +7821,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty,
-    ) : CdkObject(cdkObject), ScheduledTriggerPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ScheduledTriggerPropertiesProperty {
       /**
        * Specifies whether a scheduled flow has an incremental data transfer or a complete data
        * transfer for each flow run.
@@ -7939,7 +7975,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), ServiceNowSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ServiceNowSourcePropertiesProperty {
       /**
        * The object specified in the ServiceNow flow source.
        *
@@ -8022,7 +8059,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), SingularSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SingularSourcePropertiesProperty {
       /**
        * The object specified in the Singular flow source.
        *
@@ -8104,7 +8142,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), SlackSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SlackSourcePropertiesProperty {
       /**
        * The object specified in the Slack flow source.
        *
@@ -8314,7 +8353,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), SnowflakeDestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SnowflakeDestinationPropertiesProperty {
       /**
        * The object key for the destination bucket in which Amazon AppFlow places the files.
        *
@@ -9281,7 +9321,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SourceConnectorPropertiesProperty,
-    ) : CdkObject(cdkObject), SourceConnectorPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SourceConnectorPropertiesProperty {
       /**
        * Specifies the information that is required for querying Amplitude.
        *
@@ -9729,7 +9770,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty,
-    ) : CdkObject(cdkObject), SourceFlowConfigProperty {
+    ) : CdkObject(cdkObject),
+        SourceFlowConfigProperty {
       /**
        * The API version of the connector when it's used as a source in the flow.
        *
@@ -9869,7 +9911,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty,
-    ) : CdkObject(cdkObject), SuccessResponseHandlingConfigProperty {
+    ) : CdkObject(cdkObject),
+        SuccessResponseHandlingConfigProperty {
       /**
        * The name of the Amazon S3 bucket.
        *
@@ -9981,7 +10024,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty,
-    ) : CdkObject(cdkObject), TaskPropertiesObjectProperty {
+    ) : CdkObject(cdkObject),
+        TaskPropertiesObjectProperty {
       /**
        * The task property key.
        *
@@ -10251,7 +10295,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty,
-    ) : CdkObject(cdkObject), TaskProperty {
+    ) : CdkObject(cdkObject),
+        TaskProperty {
       /**
        * The operation to be performed on the provided source fields.
        *
@@ -10365,7 +10410,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), TrendmicroSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        TrendmicroSourcePropertiesProperty {
       /**
        * The object specified in the Trend Micro flow source.
        *
@@ -10524,7 +10570,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty,
-    ) : CdkObject(cdkObject), TriggerConfigProperty {
+    ) : CdkObject(cdkObject),
+        TriggerConfigProperty {
       /**
        * Specifies the configuration details of a schedule-triggered flow as defined by the user.
        *
@@ -10713,7 +10760,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.UpsolverDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), UpsolverDestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        UpsolverDestinationPropertiesProperty {
       /**
        * The Upsolver Amazon S3 bucket name in which Amazon AppFlow places the transferred data.
        *
@@ -10932,7 +10980,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty,
-    ) : CdkObject(cdkObject), UpsolverS3OutputFormatConfigProperty {
+    ) : CdkObject(cdkObject),
+        UpsolverS3OutputFormatConfigProperty {
       /**
        * The aggregation settings that you can use to customize the output format of your flow data.
        *
@@ -11159,7 +11208,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), VeevaSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        VeevaSourcePropertiesProperty {
       /**
        * The document type specified in the Veeva document extract flow.
        *
@@ -11412,7 +11462,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ZendeskDestinationPropertiesProperty,
-    ) : CdkObject(cdkObject), ZendeskDestinationPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ZendeskDestinationPropertiesProperty {
       /**
        * The settings that determine how Amazon AppFlow handles an error when placing data in the
        * destination.
@@ -11523,7 +11574,8 @@ public open class CfnFlow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty,
-    ) : CdkObject(cdkObject), ZendeskSourcePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ZendeskSourcePropertiesProperty {
       /**
        * The object specified in the Zendesk flow source.
        *

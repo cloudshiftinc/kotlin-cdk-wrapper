@@ -86,7 +86,8 @@ public interface CfnResolverQueryLoggingConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigProps,
-  ) : CdkObject(cdkObject), CfnResolverQueryLoggingConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnResolverQueryLoggingConfigProps {
     /**
      * The ARN of the resource that you want Resolver to send query logs: an Amazon S3 bucket, a
      * CloudWatch Logs log group, or a Kinesis Data Firehose delivery stream.

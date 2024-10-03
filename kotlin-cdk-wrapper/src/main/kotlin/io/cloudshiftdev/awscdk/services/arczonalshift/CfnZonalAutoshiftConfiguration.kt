@@ -61,7 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnZonalAutoshiftConfiguration(
   cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -499,7 +500,8 @@ public open class CfnZonalAutoshiftConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty,
-    ) : CdkObject(cdkObject), ControlConditionProperty {
+    ) : CdkObject(cdkObject),
+        ControlConditionProperty {
       /**
        * The Amazon Resource Name (ARN) for an Amazon CloudWatch alarm that you specify as a control
        * condition for a practice run.
@@ -829,7 +831,8 @@ public open class CfnZonalAutoshiftConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty,
-    ) : CdkObject(cdkObject), PracticeRunConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PracticeRunConfigurationProperty {
       /**
        * An array of one or more dates that you can specify when AWS does not start practice runs
        * for a resource.

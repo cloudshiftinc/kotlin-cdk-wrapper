@@ -289,7 +289,8 @@ public interface CodeStarConnectionsSourceActionProps : CommonAwsActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceActionProps,
-  ) : CdkObject(cdkObject), CodeStarConnectionsSourceActionProps {
+  ) : CdkObject(cdkObject),
+      CodeStarConnectionsSourceActionProps {
     /**
      * The physical, human-readable name of the Action.
      *

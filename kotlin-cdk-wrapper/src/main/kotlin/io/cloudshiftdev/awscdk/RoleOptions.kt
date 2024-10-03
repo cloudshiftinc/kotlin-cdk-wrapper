@@ -5,8 +5,10 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.Map
 
 /**
  * Options for specifying a role.
@@ -17,14 +19,32 @@ import kotlin.Unit
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
+ * Object assumeRoleAdditionalOptions;
  * RoleOptions roleOptions = RoleOptions.builder()
  * .assumeRoleArn("assumeRoleArn")
  * // the properties below are optional
+ * .assumeRoleAdditionalOptions(Map.of(
+ * "assumeRoleAdditionalOptionsKey", assumeRoleAdditionalOptions))
  * .assumeRoleExternalId("assumeRoleExternalId")
  * .build();
  * ```
  */
 public interface RoleOptions {
+  /**
+   * Additional options to pass to STS when assuming the role for cloudformation deployments.
+   *
+   * * `RoleArn` should not be used. Use the dedicated `assumeRoleArn` property instead.
+   * * `ExternalId` should not be used. Use the dedicated `assumeRoleExternalId` instead.
+   * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags are
+   * transitive by default.
+   *
+   * Default: - No additional options.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+   */
+  public fun assumeRoleAdditionalOptions(): Map<String, Any> =
+      unwrap(this).getAssumeRoleAdditionalOptions() ?: emptyMap()
+
   /**
    * ARN of the role to assume.
    */
@@ -43,6 +63,16 @@ public interface RoleOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param assumeRoleAdditionalOptions Additional options to pass to STS when assuming the role
+     * for cloudformation deployments.
+     * * `RoleArn` should not be used. Use the dedicated `assumeRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `assumeRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    public fun assumeRoleAdditionalOptions(assumeRoleAdditionalOptions: Map<String, Any>)
+
+    /**
      * @param assumeRoleArn ARN of the role to assume. 
      */
     public fun assumeRoleArn(assumeRoleArn: String)
@@ -56,6 +86,18 @@ public interface RoleOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.RoleOptions.Builder =
         software.amazon.awscdk.RoleOptions.builder()
+
+    /**
+     * @param assumeRoleAdditionalOptions Additional options to pass to STS when assuming the role
+     * for cloudformation deployments.
+     * * `RoleArn` should not be used. Use the dedicated `assumeRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `assumeRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     */
+    override fun assumeRoleAdditionalOptions(assumeRoleAdditionalOptions: Map<String, Any>) {
+      cdkBuilder.assumeRoleAdditionalOptions(assumeRoleAdditionalOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
+    }
 
     /**
      * @param assumeRoleArn ARN of the role to assume. 
@@ -76,7 +118,23 @@ public interface RoleOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.RoleOptions,
-  ) : CdkObject(cdkObject), RoleOptions {
+  ) : CdkObject(cdkObject),
+      RoleOptions {
+    /**
+     * Additional options to pass to STS when assuming the role for cloudformation deployments.
+     *
+     * * `RoleArn` should not be used. Use the dedicated `assumeRoleArn` property instead.
+     * * `ExternalId` should not be used. Use the dedicated `assumeRoleExternalId` instead.
+     * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags
+     * are transitive by default.
+     *
+     * Default: - No additional options.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+     */
+    override fun assumeRoleAdditionalOptions(): Map<String, Any> =
+        unwrap(this).getAssumeRoleAdditionalOptions() ?: emptyMap()
+
     /**
      * ARN of the role to assume.
      */

@@ -83,7 +83,8 @@ public interface ThrottleSettings {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.ThrottleSettings,
-  ) : CdkObject(cdkObject), ThrottleSettings {
+  ) : CdkObject(cdkObject),
+      ThrottleSettings {
     /**
      * The maximum API request rate limit over a time ranging from one to a few seconds.
      *

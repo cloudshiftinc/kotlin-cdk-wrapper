@@ -79,7 +79,8 @@ public interface CodeConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codecommit.CodeConfig,
-  ) : CdkObject(cdkObject), CodeConfig {
+  ) : CdkObject(cdkObject),
+      CodeConfig {
     /**
      * represents the underlying code structure.
      */

@@ -255,7 +255,8 @@ public interface SystemErrorsForOperationsMetricOptions : MetricOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.SystemErrorsForOperationsMetricOptions,
-  ) : CdkObject(cdkObject), SystemErrorsForOperationsMetricOptions {
+  ) : CdkObject(cdkObject),
+      SystemErrorsForOperationsMetricOptions {
     /**
      * Account which this metric comes from.
      *

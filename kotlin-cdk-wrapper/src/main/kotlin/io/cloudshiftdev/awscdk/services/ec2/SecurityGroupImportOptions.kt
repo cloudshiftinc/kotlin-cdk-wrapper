@@ -125,7 +125,8 @@ public interface SecurityGroupImportOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.SecurityGroupImportOptions,
-  ) : CdkObject(cdkObject), SecurityGroupImportOptions {
+  ) : CdkObject(cdkObject),
+      SecurityGroupImportOptions {
     /**
      * Mark the SecurityGroup as having been created allowing all outbound ipv6 traffic.
      *

@@ -246,7 +246,8 @@ public interface CfnWorkflowProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflowProps,
-  ) : CdkObject(cdkObject), CfnWorkflowProps {
+  ) : CdkObject(cdkObject),
+      CfnWorkflowProps {
     /**
      * Specifies the text description for the workflow.
      *

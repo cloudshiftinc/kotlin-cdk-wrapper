@@ -129,7 +129,8 @@ public interface ServiceManagedVolumeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ServiceManagedVolumeProps,
-  ) : CdkObject(cdkObject), ServiceManagedVolumeProps {
+  ) : CdkObject(cdkObject),
+      ServiceManagedVolumeProps {
     /**
      * Configuration for an Amazon Elastic Block Store (EBS) volume managed by ECS.
      *

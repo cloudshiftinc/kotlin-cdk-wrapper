@@ -44,6 +44,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .framework("framework")
  * .frameworkVersion("frameworkVersion")
  * .imageDigest("imageDigest")
+ * .modelDataSource(ModelDataSourceProperty.builder()
+ * .s3DataSource(S3ModelDataSourceProperty.builder()
+ * .compressionType("compressionType")
+ * .s3DataType("s3DataType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .modelAccessConfig(ModelAccessConfigProperty.builder()
+ * .acceptEula(false)
+ * .build())
+ * .build())
+ * .build())
  * .modelDataUrl("modelDataUrl")
  * .modelInput(modelInput)
  * .nearestModelName("nearestModelName")
@@ -66,6 +77,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .framework("framework")
  * .frameworkVersion("frameworkVersion")
  * .imageDigest("imageDigest")
+ * .modelDataSource(ModelDataSourceProperty.builder()
+ * .s3DataSource(S3ModelDataSourceProperty.builder()
+ * .compressionType("compressionType")
+ * .s3DataType("s3DataType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .modelAccessConfig(ModelAccessConfigProperty.builder()
+ * .acceptEula(false)
+ * .build())
+ * .build())
+ * .build())
  * .modelDataUrl("modelDataUrl")
  * .modelInput(modelInput)
  * .nearestModelName("nearestModelName")
@@ -158,6 +180,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .framework("framework")
  * .frameworkVersion("frameworkVersion")
  * .imageDigest("imageDigest")
+ * .modelDataSource(ModelDataSourceProperty.builder()
+ * .s3DataSource(S3ModelDataSourceProperty.builder()
+ * .compressionType("compressionType")
+ * .s3DataType("s3DataType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .modelAccessConfig(ModelAccessConfigProperty.builder()
+ * .acceptEula(false)
+ * .build())
+ * .build())
+ * .build())
  * .modelDataUrl("modelDataUrl")
  * .modelInput(modelInput)
  * .nearestModelName("nearestModelName")
@@ -176,6 +209,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .repository("repository")
  * .build())
  * .modelApprovalStatus("modelApprovalStatus")
+ * .modelCard(ModelCardProperty.builder()
+ * .modelCardContent("modelCardContent")
+ * .modelCardStatus("modelCardStatus")
+ * .build())
  * .modelMetrics(ModelMetricsProperty.builder()
  * .bias(BiasProperty.builder()
  * .postTrainingReport(MetricsSourceProperty.builder()
@@ -247,6 +284,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .modelPackageVersion(123)
  * .samplePayloadUrl("samplePayloadUrl")
+ * .securityConfig(SecurityConfigProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .build())
  * .skipModelValidation("skipModelValidation")
  * .sourceAlgorithmSpecification(SourceAlgorithmSpecificationProperty.builder()
  * .sourceAlgorithms(List.of(SourceAlgorithmProperty.builder()
@@ -255,6 +295,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .modelDataUrl("modelDataUrl")
  * .build()))
  * .build())
+ * .sourceUri("sourceUri")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -306,7 +347,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnModelPackage(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sagemaker.CfnModelPackage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -599,6 +642,33 @@ public open class CfnModelPackage(
   }
 
   /**
+   * An Amazon SageMaker Model Card.
+   */
+  public open fun modelCard(): Any? = unwrap(this).getModelCard()
+
+  /**
+   * An Amazon SageMaker Model Card.
+   */
+  public open fun modelCard(`value`: IResolvable) {
+    unwrap(this).setModelCard(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * An Amazon SageMaker Model Card.
+   */
+  public open fun modelCard(`value`: ModelCardProperty) {
+    unwrap(this).setModelCard(`value`.let(ModelCardProperty.Companion::unwrap))
+  }
+
+  /**
+   * An Amazon SageMaker Model Card.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("c7792768bc5177e62cc986943655d5818b48ae3507fcb512826f70d463888a3a")
+  public open fun modelCard(`value`: ModelCardProperty.Builder.() -> Unit): Unit =
+      modelCard(ModelCardProperty(`value`))
+
+  /**
    * Metrics for the model.
    */
   public open fun modelMetrics(): Any? = unwrap(this).getModelMetrics()
@@ -714,6 +784,37 @@ public open class CfnModelPackage(
   }
 
   /**
+   * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+   * information for regulated workloads with highly sensitive data.
+   */
+  public open fun securityConfig(): Any? = unwrap(this).getSecurityConfig()
+
+  /**
+   * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+   * information for regulated workloads with highly sensitive data.
+   */
+  public open fun securityConfig(`value`: IResolvable) {
+    unwrap(this).setSecurityConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+   * information for regulated workloads with highly sensitive data.
+   */
+  public open fun securityConfig(`value`: SecurityConfigProperty) {
+    unwrap(this).setSecurityConfig(`value`.let(SecurityConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+   * information for regulated workloads with highly sensitive data.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("8cc9d0d3a4462ff292aca7beec625f3d1835b5ed5faaec7f43ac5844021a9e8b")
+  public open fun securityConfig(`value`: SecurityConfigProperty.Builder.() -> Unit): Unit =
+      securityConfig(SecurityConfigProperty(`value`))
+
+  /**
    * Indicates if you want to skip model validation.
    */
   public open fun skipModelValidation(): String? = unwrap(this).getSkipModelValidation()
@@ -753,6 +854,18 @@ public open class CfnModelPackage(
   public open
       fun sourceAlgorithmSpecification(`value`: SourceAlgorithmSpecificationProperty.Builder.() -> Unit):
       Unit = sourceAlgorithmSpecification(SourceAlgorithmSpecificationProperty(`value`))
+
+  /**
+   * The URI of the source for the model package.
+   */
+  public open fun sourceUri(): String? = unwrap(this).getSourceUri()
+
+  /**
+   * The URI of the source for the model package.
+   */
+  public open fun sourceUri(`value`: String) {
+    unwrap(this).setSourceUri(`value`)
+  }
 
   /**
    * Tag Manager which manages the tags for this resource.
@@ -1076,6 +1189,32 @@ public open class CfnModelPackage(
     public fun modelApprovalStatus(modelApprovalStatus: String)
 
     /**
+     * An Amazon SageMaker Model Card.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelcard)
+     * @param modelCard An Amazon SageMaker Model Card. 
+     */
+    public fun modelCard(modelCard: IResolvable)
+
+    /**
+     * An Amazon SageMaker Model Card.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelcard)
+     * @param modelCard An Amazon SageMaker Model Card. 
+     */
+    public fun modelCard(modelCard: ModelCardProperty)
+
+    /**
+     * An Amazon SageMaker Model Card.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelcard)
+     * @param modelCard An Amazon SageMaker Model Card. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8f3a07097c463ce96ceca5f0e2026da3fead0bcaeb969f55487825d8a2a5e85d")
+    public fun modelCard(modelCard: ModelCardProperty.Builder.() -> Unit)
+
+    /**
      * Metrics for the model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelmetrics)
@@ -1176,6 +1315,38 @@ public open class CfnModelPackage(
     public fun samplePayloadUrl(samplePayloadUrl: String)
 
     /**
+     * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+     * information for regulated workloads with highly sensitive data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-securityconfig)
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data. 
+     */
+    public fun securityConfig(securityConfig: IResolvable)
+
+    /**
+     * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+     * information for regulated workloads with highly sensitive data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-securityconfig)
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data. 
+     */
+    public fun securityConfig(securityConfig: SecurityConfigProperty)
+
+    /**
+     * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+     * information for regulated workloads with highly sensitive data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-securityconfig)
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c138c0687b499ad4a45510702b3934cfc915545ba87e5d416b900ad9744cecd9")
+    public fun securityConfig(securityConfig: SecurityConfigProperty.Builder.() -> Unit)
+
+    /**
      * Indicates if you want to skip model validation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-skipmodelvalidation)
@@ -1213,6 +1384,14 @@ public open class CfnModelPackage(
     @JvmName("e02988bd9476acbdfc852bc4bd36390a8ecae5ba99c2af7e4064054cc3cec056")
     public
         fun sourceAlgorithmSpecification(sourceAlgorithmSpecification: SourceAlgorithmSpecificationProperty.Builder.() -> Unit)
+
+    /**
+     * The URI of the source for the model package.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-sourceuri)
+     * @param sourceUri The URI of the source for the model package. 
+     */
+    public fun sourceUri(sourceUri: String)
 
     /**
      * A list of the tags associated with the model package.
@@ -1584,6 +1763,37 @@ public open class CfnModelPackage(
     }
 
     /**
+     * An Amazon SageMaker Model Card.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelcard)
+     * @param modelCard An Amazon SageMaker Model Card. 
+     */
+    override fun modelCard(modelCard: IResolvable) {
+      cdkBuilder.modelCard(modelCard.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * An Amazon SageMaker Model Card.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelcard)
+     * @param modelCard An Amazon SageMaker Model Card. 
+     */
+    override fun modelCard(modelCard: ModelCardProperty) {
+      cdkBuilder.modelCard(modelCard.let(ModelCardProperty.Companion::unwrap))
+    }
+
+    /**
+     * An Amazon SageMaker Model Card.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelcard)
+     * @param modelCard An Amazon SageMaker Model Card. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8f3a07097c463ce96ceca5f0e2026da3fead0bcaeb969f55487825d8a2a5e85d")
+    override fun modelCard(modelCard: ModelCardProperty.Builder.() -> Unit): Unit =
+        modelCard(ModelCardProperty(modelCard))
+
+    /**
      * Metrics for the model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-modelmetrics)
@@ -1705,6 +1915,43 @@ public open class CfnModelPackage(
     }
 
     /**
+     * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+     * information for regulated workloads with highly sensitive data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-securityconfig)
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data. 
+     */
+    override fun securityConfig(securityConfig: IResolvable) {
+      cdkBuilder.securityConfig(securityConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+     * information for regulated workloads with highly sensitive data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-securityconfig)
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data. 
+     */
+    override fun securityConfig(securityConfig: SecurityConfigProperty) {
+      cdkBuilder.securityConfig(securityConfig.let(SecurityConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+     * information for regulated workloads with highly sensitive data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-securityconfig)
+     * @param securityConfig An optional AWS Key Management Service key to encrypt, decrypt, and
+     * re-encrypt model package information for regulated workloads with highly sensitive data. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c138c0687b499ad4a45510702b3934cfc915545ba87e5d416b900ad9744cecd9")
+    override fun securityConfig(securityConfig: SecurityConfigProperty.Builder.() -> Unit): Unit =
+        securityConfig(SecurityConfigProperty(securityConfig))
+
+    /**
      * Indicates if you want to skip model validation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-skipmodelvalidation)
@@ -1750,6 +1997,16 @@ public open class CfnModelPackage(
         fun sourceAlgorithmSpecification(sourceAlgorithmSpecification: SourceAlgorithmSpecificationProperty.Builder.() -> Unit):
         Unit =
         sourceAlgorithmSpecification(SourceAlgorithmSpecificationProperty(sourceAlgorithmSpecification))
+
+    /**
+     * The URI of the source for the model package.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackage.html#cfn-sagemaker-modelpackage-sourceuri)
+     * @param sourceUri The URI of the source for the model package. 
+     */
+    override fun sourceUri(sourceUri: String) {
+      cdkBuilder.sourceUri(sourceUri)
+    }
 
     /**
      * A list of the tags associated with the model package.
@@ -1874,6 +2131,17 @@ public open class CfnModelPackage(
    * .framework("framework")
    * .frameworkVersion("frameworkVersion")
    * .imageDigest("imageDigest")
+   * .modelDataSource(ModelDataSourceProperty.builder()
+   * .s3DataSource(S3ModelDataSourceProperty.builder()
+   * .compressionType("compressionType")
+   * .s3DataType("s3DataType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .modelAccessConfig(ModelAccessConfigProperty.builder()
+   * .acceptEula(false)
+   * .build())
+   * .build())
+   * .build())
    * .modelDataUrl("modelDataUrl")
    * .modelInput(modelInput)
    * .nearestModelName("nearestModelName")
@@ -2139,7 +2407,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty,
-    ) : CdkObject(cdkObject), AdditionalInferenceSpecificationDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        AdditionalInferenceSpecificationDefinitionProperty {
       /**
        * The Amazon ECR registry path of the Docker image that contains the inference code.
        *
@@ -2406,7 +2675,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.BiasProperty,
-    ) : CdkObject(cdkObject), BiasProperty {
+    ) : CdkObject(cdkObject),
+        BiasProperty {
       /**
        * The post-training bias report for a model.
        *
@@ -2530,7 +2800,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty,
-    ) : CdkObject(cdkObject), DataSourceProperty {
+    ) : CdkObject(cdkObject),
+        DataSourceProperty {
       /**
        * The S3 location of the data source that is associated with a channel.
        *
@@ -2870,7 +3141,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBaselinesProperty,
-    ) : CdkObject(cdkObject), DriftCheckBaselinesProperty {
+    ) : CdkObject(cdkObject),
+        DriftCheckBaselinesProperty {
       /**
        * Represents the drift check bias baselines that can be used when the model monitor is set
        * using the model package.
@@ -3117,7 +3389,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty,
-    ) : CdkObject(cdkObject), DriftCheckBiasProperty {
+    ) : CdkObject(cdkObject),
+        DriftCheckBiasProperty {
       /**
        * The bias config file for a model.
        *
@@ -3299,7 +3572,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty,
-    ) : CdkObject(cdkObject), DriftCheckExplainabilityProperty {
+    ) : CdkObject(cdkObject),
+        DriftCheckExplainabilityProperty {
       /**
        * The explainability config file for the model.
        *
@@ -3474,7 +3748,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty,
-    ) : CdkObject(cdkObject), DriftCheckModelDataQualityProperty {
+    ) : CdkObject(cdkObject),
+        DriftCheckModelDataQualityProperty {
       /**
        * The drift check model data quality constraints.
        *
@@ -3650,7 +3925,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty,
-    ) : CdkObject(cdkObject), DriftCheckModelQualityProperty {
+    ) : CdkObject(cdkObject),
+        DriftCheckModelQualityProperty {
       /**
        * The drift check model quality constraints.
        *
@@ -3770,7 +4046,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty,
-    ) : CdkObject(cdkObject), ExplainabilityProperty {
+    ) : CdkObject(cdkObject),
+        ExplainabilityProperty {
       /**
        * The explainability report for a model.
        *
@@ -3892,7 +4169,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty,
-    ) : CdkObject(cdkObject), FileSourceProperty {
+    ) : CdkObject(cdkObject),
+        FileSourceProperty {
       /**
        * The digest of the file source.
        *
@@ -3954,6 +4232,17 @@ public open class CfnModelPackage(
    * .framework("framework")
    * .frameworkVersion("frameworkVersion")
    * .imageDigest("imageDigest")
+   * .modelDataSource(ModelDataSourceProperty.builder()
+   * .s3DataSource(S3ModelDataSourceProperty.builder()
+   * .compressionType("compressionType")
+   * .s3DataType("s3DataType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .modelAccessConfig(ModelAccessConfigProperty.builder()
+   * .acceptEula(false)
+   * .build())
+   * .build())
+   * .build())
    * .modelDataUrl("modelDataUrl")
    * .modelInput(modelInput)
    * .nearestModelName("nearestModelName")
@@ -4182,7 +4471,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.InferenceSpecificationProperty,
-    ) : CdkObject(cdkObject), InferenceSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        InferenceSpecificationProperty {
       /**
        * The Amazon ECR registry path of the Docker image that contains the inference code.
        *
@@ -4360,7 +4650,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty,
-    ) : CdkObject(cdkObject), MetadataPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        MetadataPropertiesProperty {
       /**
        * The commit ID.
        *
@@ -4503,7 +4794,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty,
-    ) : CdkObject(cdkObject), MetricsSourceProperty {
+    ) : CdkObject(cdkObject),
+        MetricsSourceProperty {
       /**
        * The hash key used for the metrics source.
        *
@@ -4541,6 +4833,277 @@ public open class CfnModelPackage(
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty
+    }
+  }
+
+  /**
+   * The access configuration file to control access to the ML model.
+   *
+   * You can explicitly accept the model end-user license agreement (EULA) within the
+   * `ModelAccessConfig` .
+   *
+   * * If you are a Jumpstart user, see the [End-user license
+   * agreements](https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-choose.html#jumpstart-foundation-models-choose-eula)
+   * section for more details on accepting the EULA.
+   * * If you are an AutoML user, see the *Optional Parameters* section of *Create an AutoML job to
+   * fine-tune text generation models using the API* for details on [How to set the EULA acceptance
+   * when fine-tuning a model using the AutoML
+   * API](https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-create-experiment-finetune-llms.html#autopilot-llms-finetuning-api-optional-params)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ModelAccessConfigProperty modelAccessConfigProperty = ModelAccessConfigProperty.builder()
+   * .acceptEula(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelaccessconfig.html)
+   */
+  public interface ModelAccessConfigProperty {
+    /**
+     * Specifies agreement to the model end-user license agreement (EULA).
+     *
+     * The `AcceptEula` value must be explicitly defined as `True` in order to accept the EULA that
+     * this model requires. You are responsible for reviewing and complying with any applicable license
+     * terms and making sure they are acceptable for your use case before downloading or using a model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelaccessconfig.html#cfn-sagemaker-modelpackage-modelaccessconfig-accepteula)
+     */
+    public fun acceptEula(): Any
+
+    /**
+     * A builder for [ModelAccessConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param acceptEula Specifies agreement to the model end-user license agreement (EULA). 
+       * The `AcceptEula` value must be explicitly defined as `True` in order to accept the EULA
+       * that this model requires. You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       */
+      public fun acceptEula(acceptEula: Boolean)
+
+      /**
+       * @param acceptEula Specifies agreement to the model end-user license agreement (EULA). 
+       * The `AcceptEula` value must be explicitly defined as `True` in order to accept the EULA
+       * that this model requires. You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       */
+      public fun acceptEula(acceptEula: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelAccessConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelAccessConfigProperty.builder()
+
+      /**
+       * @param acceptEula Specifies agreement to the model end-user license agreement (EULA). 
+       * The `AcceptEula` value must be explicitly defined as `True` in order to accept the EULA
+       * that this model requires. You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       */
+      override fun acceptEula(acceptEula: Boolean) {
+        cdkBuilder.acceptEula(acceptEula)
+      }
+
+      /**
+       * @param acceptEula Specifies agreement to the model end-user license agreement (EULA). 
+       * The `AcceptEula` value must be explicitly defined as `True` in order to accept the EULA
+       * that this model requires. You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       */
+      override fun acceptEula(acceptEula: IResolvable) {
+        cdkBuilder.acceptEula(acceptEula.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelAccessConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelAccessConfigProperty,
+    ) : CdkObject(cdkObject),
+        ModelAccessConfigProperty {
+      /**
+       * Specifies agreement to the model end-user license agreement (EULA).
+       *
+       * The `AcceptEula` value must be explicitly defined as `True` in order to accept the EULA
+       * that this model requires. You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelaccessconfig.html#cfn-sagemaker-modelpackage-modelaccessconfig-accepteula)
+       */
+      override fun acceptEula(): Any = unwrap(this).getAcceptEula()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ModelAccessConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelAccessConfigProperty):
+          ModelAccessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelAccessConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelAccessConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelAccessConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelAccessConfigProperty
+    }
+  }
+
+  /**
+   * An Amazon SageMaker Model Card.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ModelCardProperty modelCardProperty = ModelCardProperty.builder()
+   * .modelCardContent("modelCardContent")
+   * .modelCardStatus("modelCardStatus")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelcard.html)
+   */
+  public interface ModelCardProperty {
+    /**
+     * The content of the model card.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelcard.html#cfn-sagemaker-modelpackage-modelcard-modelcardcontent)
+     */
+    public fun modelCardContent(): String
+
+    /**
+     * The approval status of the model card within your organization.
+     *
+     * Different organizations might have different criteria for model card review and approval.
+     *
+     * * `Draft` : The model card is a work in progress.
+     * * `PendingReview` : The model card is pending review.
+     * * `Approved` : The model card is approved.
+     * * `Archived` : The model card is archived. No more updates should be made to the model card,
+     * but it can still be exported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelcard.html#cfn-sagemaker-modelpackage-modelcard-modelcardstatus)
+     */
+    public fun modelCardStatus(): String
+
+    /**
+     * A builder for [ModelCardProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param modelCardContent The content of the model card. 
+       */
+      public fun modelCardContent(modelCardContent: String)
+
+      /**
+       * @param modelCardStatus The approval status of the model card within your organization. 
+       * Different organizations might have different criteria for model card review and approval.
+       *
+       * * `Draft` : The model card is a work in progress.
+       * * `PendingReview` : The model card is pending review.
+       * * `Approved` : The model card is approved.
+       * * `Archived` : The model card is archived. No more updates should be made to the model
+       * card, but it can still be exported.
+       */
+      public fun modelCardStatus(modelCardStatus: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelCardProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelCardProperty.builder()
+
+      /**
+       * @param modelCardContent The content of the model card. 
+       */
+      override fun modelCardContent(modelCardContent: String) {
+        cdkBuilder.modelCardContent(modelCardContent)
+      }
+
+      /**
+       * @param modelCardStatus The approval status of the model card within your organization. 
+       * Different organizations might have different criteria for model card review and approval.
+       *
+       * * `Draft` : The model card is a work in progress.
+       * * `PendingReview` : The model card is pending review.
+       * * `Approved` : The model card is approved.
+       * * `Archived` : The model card is archived. No more updates should be made to the model
+       * card, but it can still be exported.
+       */
+      override fun modelCardStatus(modelCardStatus: String) {
+        cdkBuilder.modelCardStatus(modelCardStatus)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelCardProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelCardProperty,
+    ) : CdkObject(cdkObject),
+        ModelCardProperty {
+      /**
+       * The content of the model card.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelcard.html#cfn-sagemaker-modelpackage-modelcard-modelcardcontent)
+       */
+      override fun modelCardContent(): String = unwrap(this).getModelCardContent()
+
+      /**
+       * The approval status of the model card within your organization.
+       *
+       * Different organizations might have different criteria for model card review and approval.
+       *
+       * * `Draft` : The model card is a work in progress.
+       * * `PendingReview` : The model card is pending review.
+       * * `Approved` : The model card is approved.
+       * * `Archived` : The model card is archived. No more updates should be made to the model
+       * card, but it can still be exported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelcard.html#cfn-sagemaker-modelpackage-modelcard-modelcardstatus)
+       */
+      override fun modelCardStatus(): String = unwrap(this).getModelCardStatus()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ModelCardProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelCardProperty):
+          ModelCardProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelCardProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelCardProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelCardProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelCardProperty
     }
   }
 
@@ -4683,7 +5246,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty,
-    ) : CdkObject(cdkObject), ModelDataQualityProperty {
+    ) : CdkObject(cdkObject),
+        ModelDataQualityProperty {
       /**
        * Data quality constraints for a model.
        *
@@ -4714,6 +5278,126 @@ public open class CfnModelPackage(
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty
+    }
+  }
+
+  /**
+   * Specifies the location of ML model data to deploy.
+   *
+   * If specified, you must specify one and only one of the available data sources.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * ModelDataSourceProperty modelDataSourceProperty = ModelDataSourceProperty.builder()
+   * .s3DataSource(S3ModelDataSourceProperty.builder()
+   * .compressionType("compressionType")
+   * .s3DataType("s3DataType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .modelAccessConfig(ModelAccessConfigProperty.builder()
+   * .acceptEula(false)
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldatasource.html)
+   */
+  public interface ModelDataSourceProperty {
+    /**
+     * Specifies the S3 location of ML model data to deploy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldatasource.html#cfn-sagemaker-modelpackage-modeldatasource-s3datasource)
+     */
+    public fun s3DataSource(): Any? = unwrap(this).getS3DataSource()
+
+    /**
+     * A builder for [ModelDataSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy.
+       */
+      public fun s3DataSource(s3DataSource: IResolvable)
+
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy.
+       */
+      public fun s3DataSource(s3DataSource: S3ModelDataSourceProperty)
+
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e9a8bac1439e821c678c0a604f794c23f9d40b11f6c059b6d8dbc6a176fa8f6d")
+      public fun s3DataSource(s3DataSource: S3ModelDataSourceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataSourceProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataSourceProperty.builder()
+
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy.
+       */
+      override fun s3DataSource(s3DataSource: IResolvable) {
+        cdkBuilder.s3DataSource(s3DataSource.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy.
+       */
+      override fun s3DataSource(s3DataSource: S3ModelDataSourceProperty) {
+        cdkBuilder.s3DataSource(s3DataSource.let(S3ModelDataSourceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param s3DataSource Specifies the S3 location of ML model data to deploy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e9a8bac1439e821c678c0a604f794c23f9d40b11f6c059b6d8dbc6a176fa8f6d")
+      override fun s3DataSource(s3DataSource: S3ModelDataSourceProperty.Builder.() -> Unit): Unit =
+          s3DataSource(S3ModelDataSourceProperty(s3DataSource))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataSourceProperty,
+    ) : CdkObject(cdkObject),
+        ModelDataSourceProperty {
+      /**
+       * Specifies the S3 location of ML model data to deploy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modeldatasource.html#cfn-sagemaker-modelpackage-modeldatasource-s3datasource)
+       */
+      override fun s3DataSource(): Any? = unwrap(this).getS3DataSource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ModelDataSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataSourceProperty):
+          ModelDataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelDataSourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ModelDataSourceProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataSourceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataSourceProperty
     }
   }
 
@@ -4771,7 +5455,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty,
-    ) : CdkObject(cdkObject), ModelInputProperty {
+    ) : CdkObject(cdkObject),
+        ModelInputProperty {
       /**
        * The input configuration object for the model.
        *
@@ -5071,7 +5756,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty,
-    ) : CdkObject(cdkObject), ModelMetricsProperty {
+    ) : CdkObject(cdkObject),
+        ModelMetricsProperty {
       /**
        * Metrics that measure bias in a model.
        *
@@ -5139,6 +5825,17 @@ public open class CfnModelPackage(
    * .framework("framework")
    * .frameworkVersion("frameworkVersion")
    * .imageDigest("imageDigest")
+   * .modelDataSource(ModelDataSourceProperty.builder()
+   * .s3DataSource(S3ModelDataSourceProperty.builder()
+   * .compressionType("compressionType")
+   * .s3DataType("s3DataType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .modelAccessConfig(ModelAccessConfigProperty.builder()
+   * .acceptEula(false)
+   * .build())
+   * .build())
+   * .build())
    * .modelDataUrl("modelDataUrl")
    * .modelInput(modelInput)
    * .nearestModelName("nearestModelName")
@@ -5198,6 +5895,13 @@ public open class CfnModelPackage(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-imagedigest)
      */
     public fun imageDigest(): String? = unwrap(this).getImageDigest()
+
+    /**
+     * Specifies the location of ML model data to deploy during endpoint creation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modeldatasource)
+     */
+    public fun modelDataSource(): Any? = unwrap(this).getModelDataSource()
 
     /**
      * The Amazon S3 path where the model artifacts, which result from model training, are stored.
@@ -5279,6 +5983,26 @@ public open class CfnModelPackage(
        * used for training.
        */
       public fun imageDigest(imageDigest: String)
+
+      /**
+       * @param modelDataSource Specifies the location of ML model data to deploy during endpoint
+       * creation.
+       */
+      public fun modelDataSource(modelDataSource: IResolvable)
+
+      /**
+       * @param modelDataSource Specifies the location of ML model data to deploy during endpoint
+       * creation.
+       */
+      public fun modelDataSource(modelDataSource: ModelDataSourceProperty)
+
+      /**
+       * @param modelDataSource Specifies the location of ML model data to deploy during endpoint
+       * creation.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e954eb586b720211c99d4d6bbf40cbb758870e5ad831005ef5022ff7253faa92")
+      public fun modelDataSource(modelDataSource: ModelDataSourceProperty.Builder.() -> Unit)
 
       /**
        * @param modelDataUrl The Amazon S3 path where the model artifacts, which result from model
@@ -5371,6 +6095,31 @@ public open class CfnModelPackage(
       }
 
       /**
+       * @param modelDataSource Specifies the location of ML model data to deploy during endpoint
+       * creation.
+       */
+      override fun modelDataSource(modelDataSource: IResolvable) {
+        cdkBuilder.modelDataSource(modelDataSource.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param modelDataSource Specifies the location of ML model data to deploy during endpoint
+       * creation.
+       */
+      override fun modelDataSource(modelDataSource: ModelDataSourceProperty) {
+        cdkBuilder.modelDataSource(modelDataSource.let(ModelDataSourceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param modelDataSource Specifies the location of ML model data to deploy during endpoint
+       * creation.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e954eb586b720211c99d4d6bbf40cbb758870e5ad831005ef5022ff7253faa92")
+      override fun modelDataSource(modelDataSource: ModelDataSourceProperty.Builder.() -> Unit):
+          Unit = modelDataSource(ModelDataSourceProperty(modelDataSource))
+
+      /**
        * @param modelDataUrl The Amazon S3 path where the model artifacts, which result from model
        * training, are stored.
        * This path must point to a single `gzip` compressed tar archive ( `.tar.gz` suffix).
@@ -5406,7 +6155,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty,
-    ) : CdkObject(cdkObject), ModelPackageContainerDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        ModelPackageContainerDefinitionProperty {
       /**
        * The DNS host name for the Docker container.
        *
@@ -5457,6 +6207,13 @@ public open class CfnModelPackage(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-imagedigest)
        */
       override fun imageDigest(): String? = unwrap(this).getImageDigest()
+
+      /**
+       * Specifies the location of ML model data to deploy during endpoint creation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html#cfn-sagemaker-modelpackage-modelpackagecontainerdefinition-modeldatasource)
+       */
+      override fun modelDataSource(): Any? = unwrap(this).getModelDataSource()
 
       /**
        * The Amazon S3 path where the model artifacts, which result from model training, are stored.
@@ -5593,7 +6350,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusDetailsProperty,
-    ) : CdkObject(cdkObject), ModelPackageStatusDetailsProperty {
+    ) : CdkObject(cdkObject),
+        ModelPackageStatusDetailsProperty {
       /**
        * The validation status of the model package.
        *
@@ -5718,7 +6476,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty,
-    ) : CdkObject(cdkObject), ModelPackageStatusItemProperty {
+    ) : CdkObject(cdkObject),
+        ModelPackageStatusItemProperty {
       /**
        * if the overall status is `Failed` , the reason for the failure.
        *
@@ -5897,7 +6656,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty,
-    ) : CdkObject(cdkObject), ModelQualityProperty {
+    ) : CdkObject(cdkObject),
+        ModelQualityProperty {
       /**
        * Model quality constraints.
        *
@@ -6156,7 +6916,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty,
-    ) : CdkObject(cdkObject), S3DataSourceProperty {
+    ) : CdkObject(cdkObject),
+        S3DataSourceProperty {
       /**
        * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix.
        *
@@ -6238,6 +6999,495 @@ public open class CfnModelPackage(
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty
+    }
+  }
+
+  /**
+   * Specifies the S3 location of ML model data to deploy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * S3ModelDataSourceProperty s3ModelDataSourceProperty = S3ModelDataSourceProperty.builder()
+   * .compressionType("compressionType")
+   * .s3DataType("s3DataType")
+   * .s3Uri("s3Uri")
+   * // the properties below are optional
+   * .modelAccessConfig(ModelAccessConfigProperty.builder()
+   * .acceptEula(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3modeldatasource.html)
+   */
+  public interface S3ModelDataSourceProperty {
+    /**
+     * Specifies how the ML model data is prepared.
+     *
+     * If you choose `Gzip` and choose `S3Object` as the value of `S3DataType` , `S3Uri` identifies
+     * an object that is a gzip-compressed TAR archive. SageMaker will attempt to decompress and untar
+     * the object during model deployment.
+     *
+     * If you choose `None` and chooose `S3Object` as the value of `S3DataType` , `S3Uri` identifies
+     * an object that represents an uncompressed ML model to deploy.
+     *
+     * If you choose None and choose `S3Prefix` as the value of `S3DataType` , `S3Uri` identifies a
+     * key name prefix, under which all objects represents the uncompressed ML model to deploy.
+     *
+     * If you choose None, then SageMaker will follow rules below when creating model data files
+     * under /opt/ml/model directory for use by your inference code:
+     *
+     * * If you choose `S3Object` as the value of `S3DataType` , then SageMaker will split the key
+     * of the S3 object referenced by `S3Uri` by slash (/), and use the last part as the filename of
+     * the file holding the content of the S3 object.
+     * * If you choose `S3Prefix` as the value of `S3DataType` , then for each S3 object under the
+     * key name pefix referenced by `S3Uri` , SageMaker will trim its key by the prefix, and use the
+     * remainder as the path (relative to `/opt/ml/model` ) of the file holding the content of the S3
+     * object. SageMaker will split the remainder by slash (/), using intermediate parts as directory
+     * names and the last part as filename of the file holding the content of the S3 object.
+     * * Do not use any of the following as file names or directory names:
+     * * An empty or blank string
+     * * A string which contains null bytes
+     * * A string longer than 255 bytes
+     * * A single dot ( `.` )
+     * * A double dot ( `..` )
+     * * Ambiguous file names will result in model deployment failure. For example, if your
+     * uncompressed ML model consists of two S3 objects `s3://mybucket/model/weights` and
+     * `s3://mybucket/model/weights/part1` and you specify `s3://mybucket/model/` as the value of
+     * `S3Uri` and `S3Prefix` as the value of `S3DataType` , then it will result in name clash between
+     * `/opt/ml/model/weights` (a regular file) and `/opt/ml/model/weights/` (a directory).
+     * * Do not organize the model artifacts in [S3 console using
+     * folders](https://docs.aws.amazon.com//AmazonS3/latest/userguide/using-folders.html) . When you
+     * create a folder in S3 console, S3 creates a 0-byte object with a key set to the folder name you
+     * provide. They key of the 0-byte object ends with a slash (/) which violates SageMaker
+     * restrictions on model artifact file names, leading to model deployment failure.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3modeldatasource.html#cfn-sagemaker-modelpackage-s3modeldatasource-compressiontype)
+     */
+    public fun compressionType(): String
+
+    /**
+     * Specifies the access configuration file for the ML model.
+     *
+     * You can explicitly accept the model end-user license agreement (EULA) within the
+     * `ModelAccessConfig` . You are responsible for reviewing and complying with any applicable
+     * license terms and making sure they are acceptable for your use case before downloading or using
+     * a model.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3modeldatasource.html#cfn-sagemaker-modelpackage-s3modeldatasource-modelaccessconfig)
+     */
+    public fun modelAccessConfig(): Any? = unwrap(this).getModelAccessConfig()
+
+    /**
+     * Specifies the type of ML model data to deploy.
+     *
+     * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. SageMaker uses all objects
+     * that match the specified key name prefix as part of the ML model data to deploy. A valid key
+     * name prefix identified by `S3Uri` always ends with a forward slash (/).
+     *
+     * If you choose `S3Object` , `S3Uri` identifies an object that is the ML model data to deploy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3modeldatasource.html#cfn-sagemaker-modelpackage-s3modeldatasource-s3datatype)
+     */
+    public fun s3DataType(): String
+
+    /**
+     * Specifies the S3 path of ML model data to deploy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3modeldatasource.html#cfn-sagemaker-modelpackage-s3modeldatasource-s3uri)
+     */
+    public fun s3Uri(): String
+
+    /**
+     * A builder for [S3ModelDataSourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param compressionType Specifies how the ML model data is prepared. 
+       * If you choose `Gzip` and choose `S3Object` as the value of `S3DataType` , `S3Uri`
+       * identifies an object that is a gzip-compressed TAR archive. SageMaker will attempt to
+       * decompress and untar the object during model deployment.
+       *
+       * If you choose `None` and chooose `S3Object` as the value of `S3DataType` , `S3Uri`
+       * identifies an object that represents an uncompressed ML model to deploy.
+       *
+       * If you choose None and choose `S3Prefix` as the value of `S3DataType` , `S3Uri` identifies
+       * a key name prefix, under which all objects represents the uncompressed ML model to deploy.
+       *
+       * If you choose None, then SageMaker will follow rules below when creating model data files
+       * under /opt/ml/model directory for use by your inference code:
+       *
+       * * If you choose `S3Object` as the value of `S3DataType` , then SageMaker will split the key
+       * of the S3 object referenced by `S3Uri` by slash (/), and use the last part as the filename of
+       * the file holding the content of the S3 object.
+       * * If you choose `S3Prefix` as the value of `S3DataType` , then for each S3 object under the
+       * key name pefix referenced by `S3Uri` , SageMaker will trim its key by the prefix, and use the
+       * remainder as the path (relative to `/opt/ml/model` ) of the file holding the content of the S3
+       * object. SageMaker will split the remainder by slash (/), using intermediate parts as directory
+       * names and the last part as filename of the file holding the content of the S3 object.
+       * * Do not use any of the following as file names or directory names:
+       * * An empty or blank string
+       * * A string which contains null bytes
+       * * A string longer than 255 bytes
+       * * A single dot ( `.` )
+       * * A double dot ( `..` )
+       * * Ambiguous file names will result in model deployment failure. For example, if your
+       * uncompressed ML model consists of two S3 objects `s3://mybucket/model/weights` and
+       * `s3://mybucket/model/weights/part1` and you specify `s3://mybucket/model/` as the value of
+       * `S3Uri` and `S3Prefix` as the value of `S3DataType` , then it will result in name clash
+       * between `/opt/ml/model/weights` (a regular file) and `/opt/ml/model/weights/` (a directory).
+       * * Do not organize the model artifacts in [S3 console using
+       * folders](https://docs.aws.amazon.com//AmazonS3/latest/userguide/using-folders.html) . When you
+       * create a folder in S3 console, S3 creates a 0-byte object with a key set to the folder name
+       * you provide. They key of the 0-byte object ends with a slash (/) which violates SageMaker
+       * restrictions on model artifact file names, leading to model deployment failure.
+       */
+      public fun compressionType(compressionType: String)
+
+      /**
+       * @param modelAccessConfig Specifies the access configuration file for the ML model.
+       * You can explicitly accept the model end-user license agreement (EULA) within the
+       * `ModelAccessConfig` . You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       */
+      public fun modelAccessConfig(modelAccessConfig: IResolvable)
+
+      /**
+       * @param modelAccessConfig Specifies the access configuration file for the ML model.
+       * You can explicitly accept the model end-user license agreement (EULA) within the
+       * `ModelAccessConfig` . You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       */
+      public fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty)
+
+      /**
+       * @param modelAccessConfig Specifies the access configuration file for the ML model.
+       * You can explicitly accept the model end-user license agreement (EULA) within the
+       * `ModelAccessConfig` . You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6b57f4091800f0752e3941c39e92685e2a442c78707881a7a5233e5005142e8d")
+      public fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param s3DataType Specifies the type of ML model data to deploy. 
+       * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. SageMaker uses all objects
+       * that match the specified key name prefix as part of the ML model data to deploy. A valid key
+       * name prefix identified by `S3Uri` always ends with a forward slash (/).
+       *
+       * If you choose `S3Object` , `S3Uri` identifies an object that is the ML model data to
+       * deploy.
+       */
+      public fun s3DataType(s3DataType: String)
+
+      /**
+       * @param s3Uri Specifies the S3 path of ML model data to deploy. 
+       */
+      public fun s3Uri(s3Uri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3ModelDataSourceProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3ModelDataSourceProperty.builder()
+
+      /**
+       * @param compressionType Specifies how the ML model data is prepared. 
+       * If you choose `Gzip` and choose `S3Object` as the value of `S3DataType` , `S3Uri`
+       * identifies an object that is a gzip-compressed TAR archive. SageMaker will attempt to
+       * decompress and untar the object during model deployment.
+       *
+       * If you choose `None` and chooose `S3Object` as the value of `S3DataType` , `S3Uri`
+       * identifies an object that represents an uncompressed ML model to deploy.
+       *
+       * If you choose None and choose `S3Prefix` as the value of `S3DataType` , `S3Uri` identifies
+       * a key name prefix, under which all objects represents the uncompressed ML model to deploy.
+       *
+       * If you choose None, then SageMaker will follow rules below when creating model data files
+       * under /opt/ml/model directory for use by your inference code:
+       *
+       * * If you choose `S3Object` as the value of `S3DataType` , then SageMaker will split the key
+       * of the S3 object referenced by `S3Uri` by slash (/), and use the last part as the filename of
+       * the file holding the content of the S3 object.
+       * * If you choose `S3Prefix` as the value of `S3DataType` , then for each S3 object under the
+       * key name pefix referenced by `S3Uri` , SageMaker will trim its key by the prefix, and use the
+       * remainder as the path (relative to `/opt/ml/model` ) of the file holding the content of the S3
+       * object. SageMaker will split the remainder by slash (/), using intermediate parts as directory
+       * names and the last part as filename of the file holding the content of the S3 object.
+       * * Do not use any of the following as file names or directory names:
+       * * An empty or blank string
+       * * A string which contains null bytes
+       * * A string longer than 255 bytes
+       * * A single dot ( `.` )
+       * * A double dot ( `..` )
+       * * Ambiguous file names will result in model deployment failure. For example, if your
+       * uncompressed ML model consists of two S3 objects `s3://mybucket/model/weights` and
+       * `s3://mybucket/model/weights/part1` and you specify `s3://mybucket/model/` as the value of
+       * `S3Uri` and `S3Prefix` as the value of `S3DataType` , then it will result in name clash
+       * between `/opt/ml/model/weights` (a regular file) and `/opt/ml/model/weights/` (a directory).
+       * * Do not organize the model artifacts in [S3 console using
+       * folders](https://docs.aws.amazon.com//AmazonS3/latest/userguide/using-folders.html) . When you
+       * create a folder in S3 console, S3 creates a 0-byte object with a key set to the folder name
+       * you provide. They key of the 0-byte object ends with a slash (/) which violates SageMaker
+       * restrictions on model artifact file names, leading to model deployment failure.
+       */
+      override fun compressionType(compressionType: String) {
+        cdkBuilder.compressionType(compressionType)
+      }
+
+      /**
+       * @param modelAccessConfig Specifies the access configuration file for the ML model.
+       * You can explicitly accept the model end-user license agreement (EULA) within the
+       * `ModelAccessConfig` . You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       */
+      override fun modelAccessConfig(modelAccessConfig: IResolvable) {
+        cdkBuilder.modelAccessConfig(modelAccessConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param modelAccessConfig Specifies the access configuration file for the ML model.
+       * You can explicitly accept the model end-user license agreement (EULA) within the
+       * `ModelAccessConfig` . You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       */
+      override fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty) {
+        cdkBuilder.modelAccessConfig(modelAccessConfig.let(ModelAccessConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param modelAccessConfig Specifies the access configuration file for the ML model.
+       * You can explicitly accept the model end-user license agreement (EULA) within the
+       * `ModelAccessConfig` . You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6b57f4091800f0752e3941c39e92685e2a442c78707881a7a5233e5005142e8d")
+      override
+          fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty.Builder.() -> Unit):
+          Unit = modelAccessConfig(ModelAccessConfigProperty(modelAccessConfig))
+
+      /**
+       * @param s3DataType Specifies the type of ML model data to deploy. 
+       * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. SageMaker uses all objects
+       * that match the specified key name prefix as part of the ML model data to deploy. A valid key
+       * name prefix identified by `S3Uri` always ends with a forward slash (/).
+       *
+       * If you choose `S3Object` , `S3Uri` identifies an object that is the ML model data to
+       * deploy.
+       */
+      override fun s3DataType(s3DataType: String) {
+        cdkBuilder.s3DataType(s3DataType)
+      }
+
+      /**
+       * @param s3Uri Specifies the S3 path of ML model data to deploy. 
+       */
+      override fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3ModelDataSourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3ModelDataSourceProperty,
+    ) : CdkObject(cdkObject),
+        S3ModelDataSourceProperty {
+      /**
+       * Specifies how the ML model data is prepared.
+       *
+       * If you choose `Gzip` and choose `S3Object` as the value of `S3DataType` , `S3Uri`
+       * identifies an object that is a gzip-compressed TAR archive. SageMaker will attempt to
+       * decompress and untar the object during model deployment.
+       *
+       * If you choose `None` and chooose `S3Object` as the value of `S3DataType` , `S3Uri`
+       * identifies an object that represents an uncompressed ML model to deploy.
+       *
+       * If you choose None and choose `S3Prefix` as the value of `S3DataType` , `S3Uri` identifies
+       * a key name prefix, under which all objects represents the uncompressed ML model to deploy.
+       *
+       * If you choose None, then SageMaker will follow rules below when creating model data files
+       * under /opt/ml/model directory for use by your inference code:
+       *
+       * * If you choose `S3Object` as the value of `S3DataType` , then SageMaker will split the key
+       * of the S3 object referenced by `S3Uri` by slash (/), and use the last part as the filename of
+       * the file holding the content of the S3 object.
+       * * If you choose `S3Prefix` as the value of `S3DataType` , then for each S3 object under the
+       * key name pefix referenced by `S3Uri` , SageMaker will trim its key by the prefix, and use the
+       * remainder as the path (relative to `/opt/ml/model` ) of the file holding the content of the S3
+       * object. SageMaker will split the remainder by slash (/), using intermediate parts as directory
+       * names and the last part as filename of the file holding the content of the S3 object.
+       * * Do not use any of the following as file names or directory names:
+       * * An empty or blank string
+       * * A string which contains null bytes
+       * * A string longer than 255 bytes
+       * * A single dot ( `.` )
+       * * A double dot ( `..` )
+       * * Ambiguous file names will result in model deployment failure. For example, if your
+       * uncompressed ML model consists of two S3 objects `s3://mybucket/model/weights` and
+       * `s3://mybucket/model/weights/part1` and you specify `s3://mybucket/model/` as the value of
+       * `S3Uri` and `S3Prefix` as the value of `S3DataType` , then it will result in name clash
+       * between `/opt/ml/model/weights` (a regular file) and `/opt/ml/model/weights/` (a directory).
+       * * Do not organize the model artifacts in [S3 console using
+       * folders](https://docs.aws.amazon.com//AmazonS3/latest/userguide/using-folders.html) . When you
+       * create a folder in S3 console, S3 creates a 0-byte object with a key set to the folder name
+       * you provide. They key of the 0-byte object ends with a slash (/) which violates SageMaker
+       * restrictions on model artifact file names, leading to model deployment failure.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3modeldatasource.html#cfn-sagemaker-modelpackage-s3modeldatasource-compressiontype)
+       */
+      override fun compressionType(): String = unwrap(this).getCompressionType()
+
+      /**
+       * Specifies the access configuration file for the ML model.
+       *
+       * You can explicitly accept the model end-user license agreement (EULA) within the
+       * `ModelAccessConfig` . You are responsible for reviewing and complying with any applicable
+       * license terms and making sure they are acceptable for your use case before downloading or
+       * using a model.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3modeldatasource.html#cfn-sagemaker-modelpackage-s3modeldatasource-modelaccessconfig)
+       */
+      override fun modelAccessConfig(): Any? = unwrap(this).getModelAccessConfig()
+
+      /**
+       * Specifies the type of ML model data to deploy.
+       *
+       * If you choose `S3Prefix` , `S3Uri` identifies a key name prefix. SageMaker uses all objects
+       * that match the specified key name prefix as part of the ML model data to deploy. A valid key
+       * name prefix identified by `S3Uri` always ends with a forward slash (/).
+       *
+       * If you choose `S3Object` , `S3Uri` identifies an object that is the ML model data to
+       * deploy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3modeldatasource.html#cfn-sagemaker-modelpackage-s3modeldatasource-s3datatype)
+       */
+      override fun s3DataType(): String = unwrap(this).getS3DataType()
+
+      /**
+       * Specifies the S3 path of ML model data to deploy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3modeldatasource.html#cfn-sagemaker-modelpackage-s3modeldatasource-s3uri)
+       */
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): S3ModelDataSourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3ModelDataSourceProperty):
+          S3ModelDataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3ModelDataSourceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: S3ModelDataSourceProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3ModelDataSourceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3ModelDataSourceProperty
+    }
+  }
+
+  /**
+   * An optional AWS Key Management Service key to encrypt, decrypt, and re-encrypt model package
+   * information for regulated workloads with highly sensitive data.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * SecurityConfigProperty securityConfigProperty = SecurityConfigProperty.builder()
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-securityconfig.html)
+   */
+  public interface SecurityConfigProperty {
+    /**
+     * The AWS KMS Key ID (KMSKeyId) used for encryption of model package information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-securityconfig.html#cfn-sagemaker-modelpackage-securityconfig-kmskeyid)
+     */
+    public fun kmsKeyId(): String
+
+    /**
+     * A builder for [SecurityConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsKeyId The AWS KMS Key ID (KMSKeyId) used for encryption of model package
+       * information. 
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SecurityConfigProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SecurityConfigProperty.builder()
+
+      /**
+       * @param kmsKeyId The AWS KMS Key ID (KMSKeyId) used for encryption of model package
+       * information. 
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SecurityConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SecurityConfigProperty,
+    ) : CdkObject(cdkObject),
+        SecurityConfigProperty {
+      /**
+       * The AWS KMS Key ID (KMSKeyId) used for encryption of model package information.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-securityconfig.html#cfn-sagemaker-modelpackage-securityconfig-kmskeyid)
+       */
+      override fun kmsKeyId(): String = unwrap(this).getKmsKeyId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SecurityConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SecurityConfigProperty):
+          SecurityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SecurityConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SecurityConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SecurityConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModelPackage.SecurityConfigProperty
     }
   }
 
@@ -6345,7 +7595,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty,
-    ) : CdkObject(cdkObject), SourceAlgorithmProperty {
+    ) : CdkObject(cdkObject),
+        SourceAlgorithmProperty {
       /**
        * The name of an algorithm that was used to create the model package.
        *
@@ -6472,7 +7723,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty,
-    ) : CdkObject(cdkObject), SourceAlgorithmSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SourceAlgorithmSpecificationProperty {
       /**
        * A list of the algorithms that were used to create a model package.
        *
@@ -6756,7 +8008,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty,
-    ) : CdkObject(cdkObject), TransformInputProperty {
+    ) : CdkObject(cdkObject),
+        TransformInputProperty {
       /**
        * If your transform data is compressed, specify the compression type.
        *
@@ -7175,7 +8428,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformJobDefinitionProperty,
-    ) : CdkObject(cdkObject), TransformJobDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        TransformJobDefinitionProperty {
       /**
        * A string that determines the number of records included in a single mini-batch.
        *
@@ -7486,7 +8740,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformOutputProperty,
-    ) : CdkObject(cdkObject), TransformOutputProperty {
+    ) : CdkObject(cdkObject),
+        TransformOutputProperty {
       /**
        * The MIME type used to specify the output data.
        *
@@ -7750,7 +9005,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty,
-    ) : CdkObject(cdkObject), TransformResourcesProperty {
+    ) : CdkObject(cdkObject),
+        TransformResourcesProperty {
       /**
        * The number of ML compute instances to use in the transform job.
        *
@@ -7966,7 +9222,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty,
-    ) : CdkObject(cdkObject), ValidationProfileProperty {
+    ) : CdkObject(cdkObject),
+        ValidationProfileProperty {
       /**
        * The name of the profile for the model package.
        *
@@ -8142,7 +9399,8 @@ public open class CfnModelPackage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationSpecificationProperty,
-    ) : CdkObject(cdkObject), ValidationSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ValidationSpecificationProperty {
       /**
        * An array of `ModelPackageValidationProfile` objects, each of which specifies a batch
        * transform job that SageMaker runs to validate your model package.

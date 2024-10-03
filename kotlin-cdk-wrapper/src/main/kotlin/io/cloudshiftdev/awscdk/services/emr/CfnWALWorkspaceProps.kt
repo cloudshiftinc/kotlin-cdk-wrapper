@@ -32,19 +32,14 @@ import kotlin.collections.List
  */
 public interface CfnWALWorkspaceProps {
   /**
-   * You can add tags when you create a new workspace.
-   *
-   * You can add, remove, or list tags from an active workspace, but you can't update tags. Instead,
-   * remove the tag and add a new one. For more information, see see [Tag your Amazon EMR WAL
-   * workspaces](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-wal.html#emr-hbase-wal-tagging)
-   * .
+   * An array of key-value pairs to apply to this resource.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html#cfn-emr-walworkspace-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * The name of the WAL workspace.
+   * The name of the emrwal container.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html#cfn-emr-walworkspace-walworkspacename)
    */
@@ -56,27 +51,17 @@ public interface CfnWALWorkspaceProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param tags You can add tags when you create a new workspace.
-     * You can add, remove, or list tags from an active workspace, but you can't update tags.
-     * Instead, remove the tag and add a new one. For more information, see see [Tag your Amazon EMR
-     * WAL
-     * workspaces](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-wal.html#emr-hbase-wal-tagging)
-     * .
+     * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags You can add tags when you create a new workspace.
-     * You can add, remove, or list tags from an active workspace, but you can't update tags.
-     * Instead, remove the tag and add a new one. For more information, see see [Tag your Amazon EMR
-     * WAL
-     * workspaces](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-wal.html#emr-hbase-wal-tagging)
-     * .
+     * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param walWorkspaceName The name of the WAL workspace.
+     * @param walWorkspaceName The name of the emrwal container.
      */
     public fun walWorkspaceName(walWorkspaceName: String)
   }
@@ -86,29 +71,19 @@ public interface CfnWALWorkspaceProps {
         software.amazon.awscdk.services.emr.CfnWALWorkspaceProps.builder()
 
     /**
-     * @param tags You can add tags when you create a new workspace.
-     * You can add, remove, or list tags from an active workspace, but you can't update tags.
-     * Instead, remove the tag and add a new one. For more information, see see [Tag your Amazon EMR
-     * WAL
-     * workspaces](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-wal.html#emr-hbase-wal-tagging)
-     * .
+     * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags You can add tags when you create a new workspace.
-     * You can add, remove, or list tags from an active workspace, but you can't update tags.
-     * Instead, remove the tag and add a new one. For more information, see see [Tag your Amazon EMR
-     * WAL
-     * workspaces](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-wal.html#emr-hbase-wal-tagging)
-     * .
+     * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param walWorkspaceName The name of the WAL workspace.
+     * @param walWorkspaceName The name of the emrwal container.
      */
     override fun walWorkspaceName(walWorkspaceName: String) {
       cdkBuilder.walWorkspaceName(walWorkspaceName)
@@ -120,22 +95,17 @@ public interface CfnWALWorkspaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.emr.CfnWALWorkspaceProps,
-  ) : CdkObject(cdkObject), CfnWALWorkspaceProps {
+  ) : CdkObject(cdkObject),
+      CfnWALWorkspaceProps {
     /**
-     * You can add tags when you create a new workspace.
-     *
-     * You can add, remove, or list tags from an active workspace, but you can't update tags.
-     * Instead, remove the tag and add a new one. For more information, see see [Tag your Amazon EMR
-     * WAL
-     * workspaces](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hbase-wal.html#emr-hbase-wal-tagging)
-     * .
+     * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html#cfn-emr-walworkspace-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * The name of the WAL workspace.
+     * The name of the emrwal container.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-walworkspace.html#cfn-emr-walworkspace-walworkspacename)
      */

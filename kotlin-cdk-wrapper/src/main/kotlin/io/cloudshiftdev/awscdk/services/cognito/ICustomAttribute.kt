@@ -16,7 +16,8 @@ public interface ICustomAttribute {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.ICustomAttribute,
-  ) : CdkObject(cdkObject), ICustomAttribute {
+  ) : CdkObject(cdkObject),
+      ICustomAttribute {
     /**
      * Bind this custom attribute type to the values as expected by CloudFormation.
      */

@@ -207,7 +207,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAutoScalingGroup(
   cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -617,8 +619,8 @@ public open class CfnAutoScalingGroup(
    * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
    * `NotificationConfigurations` property of the
    * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-   * resource.  For an example template snippet, see [Auto scaling template
-   * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+   * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+   * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
    *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
    * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
    * *Amazon EC2 Auto Scaling User Guide*.
@@ -632,8 +634,8 @@ public open class CfnAutoScalingGroup(
    * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
    * `NotificationConfigurations` property of the
    * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-   * resource.  For an example template snippet, see [Auto scaling template
-   * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+   * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+   * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
    *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
    * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
    * *Amazon EC2 Auto Scaling User Guide*.
@@ -649,8 +651,8 @@ public open class CfnAutoScalingGroup(
    * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
    * `NotificationConfigurations` property of the
    * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-   * resource.  For an example template snippet, see [Auto scaling template
-   * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+   * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+   * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
    *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
    * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
    * *Amazon EC2 Auto Scaling User Guide*.
@@ -666,8 +668,8 @@ public open class CfnAutoScalingGroup(
    * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
    * `NotificationConfigurations` property of the
    * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-   * resource.  For an example template snippet, see [Auto scaling template
-   * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+   * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+   * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
    *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
    * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
    * *Amazon EC2 Auto Scaling User Guide*.
@@ -1011,8 +1013,8 @@ public open class CfnAutoScalingGroup(
     /**
      * A comma-separated value string of one or more health check types.
      *
-     * The valid values are `EC2` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health check
-     * and cannot be disabled. For more information, see [Health checks for instances in an Auto
+     * The valid values are `EC2` , `EBS` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health
+     * check and cannot be disabled. For more information, see [Health checks for instances in an Auto
      * Scaling
      * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
@@ -1361,8 +1363,8 @@ public open class CfnAutoScalingGroup(
      * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
      * `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -1372,8 +1374,8 @@ public open class CfnAutoScalingGroup(
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*. 
@@ -1385,8 +1387,8 @@ public open class CfnAutoScalingGroup(
      * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
      * `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -1396,8 +1398,8 @@ public open class CfnAutoScalingGroup(
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*. 
@@ -1410,8 +1412,8 @@ public open class CfnAutoScalingGroup(
      * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
      * `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -1421,8 +1423,8 @@ public open class CfnAutoScalingGroup(
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*. 
@@ -1872,8 +1874,8 @@ public open class CfnAutoScalingGroup(
     /**
      * A comma-separated value string of one or more health check types.
      *
-     * The valid values are `EC2` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health check
-     * and cannot be disabled. For more information, see [Health checks for instances in an Auto
+     * The valid values are `EC2` , `EBS` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health
+     * check and cannot be disabled. For more information, see [Health checks for instances in an Auto
      * Scaling
      * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
@@ -2267,8 +2269,8 @@ public open class CfnAutoScalingGroup(
      * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
      * `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -2278,8 +2280,8 @@ public open class CfnAutoScalingGroup(
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*. 
@@ -2293,8 +2295,8 @@ public open class CfnAutoScalingGroup(
      * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
      * `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -2304,8 +2306,8 @@ public open class CfnAutoScalingGroup(
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*. 
@@ -2320,8 +2322,8 @@ public open class CfnAutoScalingGroup(
      * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
      * `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -2331,8 +2333,8 @@ public open class CfnAutoScalingGroup(
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*. 
@@ -2689,7 +2691,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorCountRequestProperty,
-    ) : CdkObject(cdkObject), AcceleratorCountRequestProperty {
+    ) : CdkObject(cdkObject),
+        AcceleratorCountRequestProperty {
       /**
        * The maximum value.
        *
@@ -2803,7 +2806,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRequestProperty {
+    ) : CdkObject(cdkObject),
+        AcceleratorTotalMemoryMiBRequestProperty {
       /**
        * The memory maximum in MiB.
        *
@@ -2918,7 +2922,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty,
-    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsRequestProperty {
+    ) : CdkObject(cdkObject),
+        BaselineEbsBandwidthMbpsRequestProperty {
       /**
        * The maximum value in Mbps.
        *
@@ -3073,7 +3078,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty,
-    ) : CdkObject(cdkObject), InstanceMaintenancePolicyProperty {
+    ) : CdkObject(cdkObject),
+        InstanceMaintenancePolicyProperty {
       /**
        * Specifies the upper threshold as a percentage of the desired capacity of the Auto Scaling
        * group.
@@ -4788,7 +4794,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceRequirementsProperty,
-    ) : CdkObject(cdkObject), InstanceRequirementsProperty {
+    ) : CdkObject(cdkObject),
+        InstanceRequirementsProperty {
       /**
        * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) for
        * an instance type.
@@ -5585,7 +5592,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty,
-    ) : CdkObject(cdkObject), InstancesDistributionProperty {
+    ) : CdkObject(cdkObject),
+        InstancesDistributionProperty {
       /**
        * The allocation strategy to apply to your On-Demand Instances when they are launched.
        *
@@ -6211,7 +6219,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateOverridesProperty {
+    ) : CdkObject(cdkObject),
+        LaunchTemplateOverridesProperty {
       /**
        * The instance requirements.
        *
@@ -6519,7 +6528,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateProperty {
+    ) : CdkObject(cdkObject),
+        LaunchTemplateProperty {
       /**
        * The launch template.
        *
@@ -6714,7 +6724,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        LaunchTemplateSpecificationProperty {
       /**
        * The ID of the launch template.
        *
@@ -7027,7 +7038,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LifecycleHookSpecificationProperty,
-    ) : CdkObject(cdkObject), LifecycleHookSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        LifecycleHookSpecificationProperty {
       /**
        * The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an
        * unexpected failure occurs.
@@ -7202,7 +7214,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty,
-    ) : CdkObject(cdkObject), MemoryGiBPerVCpuRequestProperty {
+    ) : CdkObject(cdkObject),
+        MemoryGiBPerVCpuRequestProperty {
       /**
        * The memory maximum in GiB.
        *
@@ -7315,7 +7328,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty,
-    ) : CdkObject(cdkObject), MemoryMiBRequestProperty {
+    ) : CdkObject(cdkObject),
+        MemoryMiBRequestProperty {
       /**
        * The memory maximum in MiB.
        *
@@ -7591,7 +7605,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty,
-    ) : CdkObject(cdkObject), MetricsCollectionProperty {
+    ) : CdkObject(cdkObject),
+        MetricsCollectionProperty {
       /**
        * The frequency at which Amazon EC2 Auto Scaling sends aggregated data to CloudWatch.
        *
@@ -7898,7 +7913,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MixedInstancesPolicyProperty,
-    ) : CdkObject(cdkObject), MixedInstancesPolicyProperty {
+    ) : CdkObject(cdkObject),
+        MixedInstancesPolicyProperty {
       /**
        * The instances distribution.
        *
@@ -8022,7 +8038,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty,
-    ) : CdkObject(cdkObject), NetworkBandwidthGbpsRequestProperty {
+    ) : CdkObject(cdkObject),
+        NetworkBandwidthGbpsRequestProperty {
       /**
        * The maximum amount of network bandwidth, in gigabits per second (Gbps).
        *
@@ -8137,7 +8154,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceCountRequestProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInterfaceCountRequestProperty {
       /**
        * The maximum number of network interfaces.
        *
@@ -8313,7 +8331,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty,
-    ) : CdkObject(cdkObject), NotificationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NotificationConfigurationProperty {
       /**
        * A list of event types that send a notification. Event types can include any of the
        * following types.
@@ -8495,7 +8514,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty,
-    ) : CdkObject(cdkObject), TagPropertyProperty {
+    ) : CdkObject(cdkObject),
+        TagPropertyProperty {
       /**
        * The tag key.
        *
@@ -8620,7 +8640,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty,
-    ) : CdkObject(cdkObject), TotalLocalStorageGBRequestProperty {
+    ) : CdkObject(cdkObject),
+        TotalLocalStorageGBRequestProperty {
       /**
        * The storage maximum in GB.
        *
@@ -8733,7 +8754,8 @@ public open class CfnAutoScalingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty,
-    ) : CdkObject(cdkObject), VCpuCountRequestProperty {
+    ) : CdkObject(cdkObject),
+        VCpuCountRequestProperty {
       /**
        * The maximum number of vCPUs.
        *

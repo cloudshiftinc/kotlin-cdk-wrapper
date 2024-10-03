@@ -48,7 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class PublicHostedZone(
   cdkObject: software.amazon.awscdk.services.route53.PublicHostedZone,
-) : HostedZone(cdkObject), IPublicHostedZone {
+) : HostedZone(cdkObject),
+    IPublicHostedZone {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

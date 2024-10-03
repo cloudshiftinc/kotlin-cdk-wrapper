@@ -79,7 +79,8 @@ public interface NoneDataSourceProps : BaseDataSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.NoneDataSourceProps,
-  ) : CdkObject(cdkObject), NoneDataSourceProps {
+  ) : CdkObject(cdkObject),
+      NoneDataSourceProps {
     /**
      * The API to attach this data source to.
      */

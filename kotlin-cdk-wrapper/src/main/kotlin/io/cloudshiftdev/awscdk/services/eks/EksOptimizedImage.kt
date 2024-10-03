@@ -28,7 +28,8 @@ import kotlin.Unit
  */
 public open class EksOptimizedImage(
   cdkObject: software.amazon.awscdk.services.eks.EksOptimizedImage,
-) : CdkObject(cdkObject), IMachineImage {
+) : CdkObject(cdkObject),
+    IMachineImage {
   public constructor() : this(software.amazon.awscdk.services.eks.EksOptimizedImage()
   )
 

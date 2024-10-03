@@ -71,7 +71,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAccessGrant(
   cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -700,7 +702,8 @@ public open class CfnAccessGrant(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant.AccessGrantsLocationConfigurationProperty,
-    ) : CdkObject(cdkObject), AccessGrantsLocationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AccessGrantsLocationConfigurationProperty {
       /**
        * The `S3SubPrefix` is appended to the location scope creating the grant scope.
        *
@@ -855,7 +858,8 @@ public open class CfnAccessGrant(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant.GranteeProperty,
-    ) : CdkObject(cdkObject), GranteeProperty {
+    ) : CdkObject(cdkObject),
+        GranteeProperty {
       /**
        * The unique identifier of the `Grantee` .
        *

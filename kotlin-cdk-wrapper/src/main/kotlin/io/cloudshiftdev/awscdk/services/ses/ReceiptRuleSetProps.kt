@@ -16,30 +16,15 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.s3.*;
- * import io.cloudshiftdev.awscdk.services.ses.actions.*;
- * Bucket bucket = new Bucket(this, "Bucket");
- * Topic topic = new Topic(this, "Topic");
- * ReceiptRuleSet.Builder.create(this, "RuleSet")
- * .rules(List.of(ReceiptRuleOptions.builder()
- * .recipients(List.of("hello&#64;aws.com"))
- * .actions(List.of(
- * AddHeader.Builder.create()
- * .name("X-Special-Header")
- * .value("aws")
- * .build(),
- * S3.Builder.create()
- * .bucket(bucket)
- * .objectKeyPrefix("emails/")
- * .topic(topic)
- * .build()))
- * .build(), ReceiptRuleOptions.builder()
- * .recipients(List.of("aws.com"))
- * .actions(List.of(
- * Sns.Builder.create()
- * .topic(topic)
- * .build()))
- * .build()))
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.ses.*;
+ * import io.cloudshiftdev.awscdk.customresources.CustomResourceConfig;
+ * App app = new App();
+ * Stack stack = new Stack(app, "Stack");
+ * CustomResourceConfig.of(app).addLogRetentionLifetime(RetentionDays.TEN_YEARS);
+ * CustomResourceConfig.of(app).addRemovalPolicy(RemovalPolicy.DESTROY);
+ * ReceiptRuleSet.Builder.create(app, "RuleSet")
+ * .dropSpam(true)
  * .build();
  * ```
  */
@@ -140,7 +125,8 @@ public interface ReceiptRuleSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleSetProps,
-  ) : CdkObject(cdkObject), ReceiptRuleSetProps {
+  ) : CdkObject(cdkObject),
+      ReceiptRuleSetProps {
     /**
      * Whether to add a first rule to stop processing messages that have at least one spam
      * indicator.

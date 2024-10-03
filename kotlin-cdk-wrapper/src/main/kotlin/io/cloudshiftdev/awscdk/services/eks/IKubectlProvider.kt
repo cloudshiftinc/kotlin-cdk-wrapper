@@ -30,7 +30,8 @@ public interface IKubectlProvider : IConstruct {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.IKubectlProvider,
-  ) : CdkObject(cdkObject), IKubectlProvider {
+  ) : CdkObject(cdkObject),
+      IKubectlProvider {
     /**
      * The IAM execution role of the handler.
      */

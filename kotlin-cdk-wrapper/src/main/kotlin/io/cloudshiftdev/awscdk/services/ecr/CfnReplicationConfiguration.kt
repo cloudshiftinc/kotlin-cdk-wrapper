@@ -61,7 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnReplicationConfiguration(
   cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -313,7 +314,8 @@ public open class CfnReplicationConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), ReplicationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationConfigurationProperty {
       /**
        * An array of objects representing the replication destinations and repository filters for a
        * replication configuration.
@@ -424,7 +426,8 @@ public open class CfnReplicationConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty,
-    ) : CdkObject(cdkObject), ReplicationDestinationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationDestinationProperty {
       /**
        * The Region to replicate to.
        *
@@ -617,7 +620,8 @@ public open class CfnReplicationConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationRuleProperty,
-    ) : CdkObject(cdkObject), ReplicationRuleProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationRuleProperty {
       /**
        * An array of objects representing the destination for a replication rule.
        *
@@ -747,7 +751,8 @@ public open class CfnReplicationConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.RepositoryFilterProperty,
-    ) : CdkObject(cdkObject), RepositoryFilterProperty {
+    ) : CdkObject(cdkObject),
+        RepositoryFilterProperty {
       /**
        * The repository filter details.
        *

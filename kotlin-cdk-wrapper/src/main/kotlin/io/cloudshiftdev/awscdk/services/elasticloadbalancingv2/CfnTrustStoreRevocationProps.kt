@@ -115,7 +115,8 @@ public interface CfnTrustStoreRevocationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocationProps,
-  ) : CdkObject(cdkObject), CfnTrustStoreRevocationProps {
+  ) : CdkObject(cdkObject),
+      CfnTrustStoreRevocationProps {
     /**
      * The revocation file to add.
      *

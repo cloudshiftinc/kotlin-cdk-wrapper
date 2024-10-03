@@ -121,7 +121,8 @@ public interface S3DownloadOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.S3DownloadOptions,
-  ) : CdkObject(cdkObject), S3DownloadOptions {
+  ) : CdkObject(cdkObject),
+      S3DownloadOptions {
     /**
      * Name of the S3 bucket to download from.
      */

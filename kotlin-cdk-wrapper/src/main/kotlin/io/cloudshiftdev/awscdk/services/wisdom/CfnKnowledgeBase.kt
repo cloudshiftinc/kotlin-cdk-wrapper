@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnKnowledgeBase(
   cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -884,7 +886,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty,
-    ) : CdkObject(cdkObject), AppIntegrationsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AppIntegrationsConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the AppIntegrations DataIntegration to use for ingesting
        * content.
@@ -1061,7 +1064,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty,
-    ) : CdkObject(cdkObject), RenderingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RenderingConfigurationProperty {
       /**
        * A URI template containing exactly one variable in `${variableName}` format.
        *
@@ -1182,7 +1186,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), ServerSideEncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServerSideEncryptionConfigurationProperty {
       /**
        * The customer managed key used for encryption.
        *
@@ -1313,7 +1318,8 @@ public open class CfnKnowledgeBase(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty,
-    ) : CdkObject(cdkObject), SourceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SourceConfigurationProperty {
       /**
        * Configuration information for Amazon AppIntegrations to automatically ingest content.
        *

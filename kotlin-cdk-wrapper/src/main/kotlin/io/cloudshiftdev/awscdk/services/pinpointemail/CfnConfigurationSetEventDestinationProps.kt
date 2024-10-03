@@ -163,7 +163,8 @@ public interface CfnConfigurationSetEventDestinationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestinationProps,
-  ) : CdkObject(cdkObject), CfnConfigurationSetEventDestinationProps {
+  ) : CdkObject(cdkObject),
+      CfnConfigurationSetEventDestinationProps {
     /**
      * The name of the configuration set that contains the event destination that you want to
      * modify.

@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFaq(
   cdkObject: software.amazon.awscdk.services.kendra.CfnFaq,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -575,7 +577,8 @@ public open class CfnFaq(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kendra.CfnFaq.S3PathProperty,
-    ) : CdkObject(cdkObject), S3PathProperty {
+    ) : CdkObject(cdkObject),
+        S3PathProperty {
       /**
        * The name of the S3 bucket that contains the file.
        *

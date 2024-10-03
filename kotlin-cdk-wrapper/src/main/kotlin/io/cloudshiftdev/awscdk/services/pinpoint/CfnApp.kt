@@ -40,7 +40,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApp(
   cdkObject: software.amazon.awscdk.services.pinpoint.CfnApp,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

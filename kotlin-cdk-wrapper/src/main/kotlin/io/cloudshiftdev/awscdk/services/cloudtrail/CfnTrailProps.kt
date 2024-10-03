@@ -94,7 +94,14 @@ public interface CfnTrailProps {
    *
    * You must use a log group that exists in your account.
    *
-   * Not required unless you specify `CloudWatchLogsRoleArn` .
+   * To enable CloudWatch Logs delivery, you must provide values for `CloudWatchLogsLogGroupArn` and
+   * `CloudWatchLogsRoleArn` .
+   *
+   *
+   * If you previously enabled CloudWatch Logs delivery and want to disable CloudWatch Logs
+   * delivery, you must set the values of the `CloudWatchLogsRoleArn` and `CloudWatchLogsLogGroupArn`
+   * fields to `""` .
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn)
    */
@@ -104,6 +111,15 @@ public interface CfnTrailProps {
    * Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group.
    *
    * You must use a role that exists in your account.
+   *
+   * To enable CloudWatch Logs delivery, you must provide values for `CloudWatchLogsLogGroupArn` and
+   * `CloudWatchLogsRoleArn` .
+   *
+   *
+   * If you previously enabled CloudWatch Logs delivery and want to disable CloudWatch Logs
+   * delivery, you must set the values of the `CloudWatchLogsRoleArn` and `CloudWatchLogsLogGroupArn`
+   * fields to `""` .
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsrolearn)
    */
@@ -326,7 +342,13 @@ public interface CfnTrailProps {
      * (ARN), a unique identifier that represents the log group to which CloudTrail logs are delivered.
      * You must use a log group that exists in your account.
      *
-     * Not required unless you specify `CloudWatchLogsRoleArn` .
+     * To enable CloudWatch Logs delivery, you must provide values for `CloudWatchLogsLogGroupArn`
+     * and `CloudWatchLogsRoleArn` .
+     *
+     *
+     * If you previously enabled CloudWatch Logs delivery and want to disable CloudWatch Logs
+     * delivery, you must set the values of the `CloudWatchLogsRoleArn` and `CloudWatchLogsLogGroupArn`
+     * fields to `""` .
      */
     public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String)
 
@@ -334,6 +356,14 @@ public interface CfnTrailProps {
      * @param cloudWatchLogsRoleArn Specifies the role for the CloudWatch Logs endpoint to assume to
      * write to a user's log group.
      * You must use a role that exists in your account.
+     *
+     * To enable CloudWatch Logs delivery, you must provide values for `CloudWatchLogsLogGroupArn`
+     * and `CloudWatchLogsRoleArn` .
+     *
+     *
+     * If you previously enabled CloudWatch Logs delivery and want to disable CloudWatch Logs
+     * delivery, you must set the values of the `CloudWatchLogsRoleArn` and `CloudWatchLogsLogGroupArn`
+     * fields to `""` .
      */
     public fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String)
 
@@ -643,7 +673,13 @@ public interface CfnTrailProps {
      * (ARN), a unique identifier that represents the log group to which CloudTrail logs are delivered.
      * You must use a log group that exists in your account.
      *
-     * Not required unless you specify `CloudWatchLogsRoleArn` .
+     * To enable CloudWatch Logs delivery, you must provide values for `CloudWatchLogsLogGroupArn`
+     * and `CloudWatchLogsRoleArn` .
+     *
+     *
+     * If you previously enabled CloudWatch Logs delivery and want to disable CloudWatch Logs
+     * delivery, you must set the values of the `CloudWatchLogsRoleArn` and `CloudWatchLogsLogGroupArn`
+     * fields to `""` .
      */
     override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
       cdkBuilder.cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn)
@@ -653,6 +689,14 @@ public interface CfnTrailProps {
      * @param cloudWatchLogsRoleArn Specifies the role for the CloudWatch Logs endpoint to assume to
      * write to a user's log group.
      * You must use a role that exists in your account.
+     *
+     * To enable CloudWatch Logs delivery, you must provide values for `CloudWatchLogsLogGroupArn`
+     * and `CloudWatchLogsRoleArn` .
+     *
+     *
+     * If you previously enabled CloudWatch Logs delivery and want to disable CloudWatch Logs
+     * delivery, you must set the values of the `CloudWatchLogsRoleArn` and `CloudWatchLogsLogGroupArn`
+     * fields to `""` .
      */
     override fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String) {
       cdkBuilder.cloudWatchLogsRoleArn(cloudWatchLogsRoleArn)
@@ -961,7 +1005,8 @@ public interface CfnTrailProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrailProps,
-  ) : CdkObject(cdkObject), CfnTrailProps {
+  ) : CdkObject(cdkObject),
+      CfnTrailProps {
     /**
      * Specifies the settings for advanced event selectors.
      *
@@ -983,7 +1028,14 @@ public interface CfnTrailProps {
      *
      * You must use a log group that exists in your account.
      *
-     * Not required unless you specify `CloudWatchLogsRoleArn` .
+     * To enable CloudWatch Logs delivery, you must provide values for `CloudWatchLogsLogGroupArn`
+     * and `CloudWatchLogsRoleArn` .
+     *
+     *
+     * If you previously enabled CloudWatch Logs delivery and want to disable CloudWatch Logs
+     * delivery, you must set the values of the `CloudWatchLogsRoleArn` and `CloudWatchLogsLogGroupArn`
+     * fields to `""` .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn)
      */
@@ -993,6 +1045,15 @@ public interface CfnTrailProps {
      * Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group.
      *
      * You must use a role that exists in your account.
+     *
+     * To enable CloudWatch Logs delivery, you must provide values for `CloudWatchLogsLogGroupArn`
+     * and `CloudWatchLogsRoleArn` .
+     *
+     *
+     * If you previously enabled CloudWatch Logs delivery and want to disable CloudWatch Logs
+     * delivery, you must set the values of the `CloudWatchLogsRoleArn` and `CloudWatchLogsLogGroupArn`
+     * fields to `""` .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsrolearn)
      */

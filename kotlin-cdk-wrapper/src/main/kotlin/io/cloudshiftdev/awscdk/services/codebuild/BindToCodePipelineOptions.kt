@@ -61,7 +61,8 @@ public interface BindToCodePipelineOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions,
-  ) : CdkObject(cdkObject), BindToCodePipelineOptions {
+  ) : CdkObject(cdkObject),
+      BindToCodePipelineOptions {
     /**
      * The artifact bucket that will be used by the action that invokes this project.
      */

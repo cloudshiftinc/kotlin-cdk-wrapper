@@ -70,7 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnClassifier(
   cdkObject: software.amazon.awscdk.services.glue.CfnClassifier,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.glue.CfnClassifier(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -784,7 +785,8 @@ public open class CfnClassifier(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty,
-    ) : CdkObject(cdkObject), CsvClassifierProperty {
+    ) : CdkObject(cdkObject),
+        CsvClassifierProperty {
       /**
        * Enables the processing of files that contain only one column.
        *
@@ -1010,7 +1012,8 @@ public open class CfnClassifier(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty,
-    ) : CdkObject(cdkObject), GrokClassifierProperty {
+    ) : CdkObject(cdkObject),
+        GrokClassifierProperty {
       /**
        * An identifier of the data format that the classifier matches, such as Twitter, JSON,
        * Omniture logs, and so on.
@@ -1149,7 +1152,8 @@ public open class CfnClassifier(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty,
-    ) : CdkObject(cdkObject), JsonClassifierProperty {
+    ) : CdkObject(cdkObject),
+        JsonClassifierProperty {
       /**
        * A `JsonPath` string defining the JSON data for the classifier to classify.
        *
@@ -1297,7 +1301,8 @@ public open class CfnClassifier(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.XMLClassifierProperty,
-    ) : CdkObject(cdkObject), XMLClassifierProperty {
+    ) : CdkObject(cdkObject),
+        XMLClassifierProperty {
       /**
        * An identifier of the data format that the classifier matches.
        *

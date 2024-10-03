@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCluster(
   cdkObject: software.amazon.awscdk.services.dax.CfnCluster,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -882,7 +884,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dax.CfnCluster.SSESpecificationProperty,
-    ) : CdkObject(cdkObject), SSESpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SSESpecificationProperty {
       /**
        * Indicates whether server-side encryption is enabled (true) or disabled (false) on the
        * cluster.

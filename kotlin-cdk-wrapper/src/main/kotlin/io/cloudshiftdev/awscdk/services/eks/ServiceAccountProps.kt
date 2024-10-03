@@ -15,19 +15,12 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.eks.*;
  * Cluster cluster;
- * ServiceAccountProps serviceAccountProps = ServiceAccountProps.builder()
+ * ServiceAccount.Builder.create(this, "ServiceAccount")
  * .cluster(cluster)
- * // the properties below are optional
- * .annotations(Map.of(
- * "annotationsKey", "annotations"))
- * .labels(Map.of(
- * "labelsKey", "labels"))
- * .name("name")
- * .namespace("namespace")
+ * .name("test-sa")
+ * .namespace("default")
+ * .identityType(IdentityType.POD_IDENTITY)
  * .build();
  * ```
  */
@@ -51,6 +44,11 @@ public interface ServiceAccountProps : ServiceAccountOptions {
      * @param cluster The cluster to apply the patch to. 
      */
     public fun cluster(cluster: ICluster)
+
+    /**
+     * @param identityType The identity type to use for the service account.
+     */
+    public fun identityType(identityType: IdentityType)
 
     /**
      * @param labels Additional labels of the service account.
@@ -91,6 +89,13 @@ public interface ServiceAccountProps : ServiceAccountOptions {
     }
 
     /**
+     * @param identityType The identity type to use for the service account.
+     */
+    override fun identityType(identityType: IdentityType) {
+      cdkBuilder.identityType(identityType.let(IdentityType.Companion::unwrap))
+    }
+
+    /**
      * @param labels Additional labels of the service account.
      */
     override fun labels(labels: Map<String, String>) {
@@ -120,7 +125,8 @@ public interface ServiceAccountProps : ServiceAccountOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.ServiceAccountProps,
-  ) : CdkObject(cdkObject), ServiceAccountProps {
+  ) : CdkObject(cdkObject),
+      ServiceAccountProps {
     /**
      * Additional annotations of the service account.
      *
@@ -132,6 +138,14 @@ public interface ServiceAccountProps : ServiceAccountOptions {
      * The cluster to apply the patch to.
      */
     override fun cluster(): ICluster = unwrap(this).getCluster().let(ICluster::wrap)
+
+    /**
+     * The identity type to use for the service account.
+     *
+     * Default: IdentityType.IRSA
+     */
+    override fun identityType(): IdentityType? =
+        unwrap(this).getIdentityType()?.let(IdentityType::wrap)
 
     /**
      * Additional labels of the service account.

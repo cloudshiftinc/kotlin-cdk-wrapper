@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFuotaTask(
   cdkObject: software.amazon.awscdk.services.iotwireless.CfnFuotaTask,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -612,7 +614,8 @@ public open class CfnFuotaTask(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnFuotaTask.LoRaWANProperty,
-    ) : CdkObject(cdkObject), LoRaWANProperty {
+    ) : CdkObject(cdkObject),
+        LoRaWANProperty {
       /**
        * The frequency band (RFRegion) value.
        *

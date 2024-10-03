@@ -2,8 +2,8 @@
 
 package io.cloudshiftdev.awscdk.cxapi
 
-import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactManifest
-import io.cloudshiftdev.awscdk.cloudassembly.schema.MissingContext
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.ArtifactManifest
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.MissingContext
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
@@ -62,7 +62,7 @@ public open class CloudAssemblyBuilder(
    * @param manifest The artifact manifest. 
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("675b01db8d9bf2a391afcf443b03d940a509db958d216804c5778d90668c7b97")
+  @JvmName("378970138103824491091a5b67c2730d2438520ec175d693d3802b0eee86f4b3")
   public open fun addArtifact(id: String, manifest: ArtifactManifest.Builder.() -> Unit): Unit =
       addArtifact(id, ArtifactManifest(manifest))
 
@@ -81,7 +81,7 @@ public open class CloudAssemblyBuilder(
    * @param missing Missing context information. 
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("f747fa8aecc81d1edab6dea64b6458f0d9e4cdba1a866f78ef4f1afe4d8cda56")
+  @JvmName("39df1e8cb6348210f602ea2aaeb5b55b0ec4bbf53129bf65001a128cbbed4265")
   public open fun addMissing(missing: MissingContext.Builder.() -> Unit): Unit =
       addMissing(MissingContext(missing))
 

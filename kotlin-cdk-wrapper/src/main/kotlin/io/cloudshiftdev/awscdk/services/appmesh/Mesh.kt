@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Mesh(
   cdkObject: software.amazon.awscdk.services.appmesh.Mesh,
-) : Resource(cdkObject), IMesh {
+) : Resource(cdkObject),
+    IMesh {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.appmesh.Mesh(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

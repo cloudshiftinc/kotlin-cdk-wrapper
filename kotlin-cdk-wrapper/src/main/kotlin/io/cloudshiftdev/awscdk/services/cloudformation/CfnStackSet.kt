@@ -55,6 +55,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .executionRoleName("executionRoleName")
  * .managedExecution(managedExecution)
  * .operationPreferences(OperationPreferencesProperty.builder()
+ * .concurrencyMode("concurrencyMode")
  * .failureToleranceCount(123)
  * .failureTolerancePercentage(123)
  * .maxConcurrentCount(123)
@@ -93,7 +94,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStackSet(
   cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -670,11 +673,11 @@ public open class CfnStackSet(
     /**
      * Key-value pairs to associate with this stack.
      *
-     * AWS CloudFormation also propagates these tags to supported resources in the stack. You can
+     * CloudFormation also propagates these tags to supported resources in the stack. You can
      * specify a maximum number of 50 tags.
      *
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If
-     * you specify an empty value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you
+     * specify an empty value, CloudFormation removes all associated tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-tags)
      * @param tags Key-value pairs to associate with this stack. 
@@ -684,11 +687,11 @@ public open class CfnStackSet(
     /**
      * Key-value pairs to associate with this stack.
      *
-     * AWS CloudFormation also propagates these tags to supported resources in the stack. You can
+     * CloudFormation also propagates these tags to supported resources in the stack. You can
      * specify a maximum number of 50 tags.
      *
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If
-     * you specify an empty value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you
+     * specify an empty value, CloudFormation removes all associated tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-tags)
      * @param tags Key-value pairs to associate with this stack. 
@@ -1049,11 +1052,11 @@ public open class CfnStackSet(
     /**
      * Key-value pairs to associate with this stack.
      *
-     * AWS CloudFormation also propagates these tags to supported resources in the stack. You can
+     * CloudFormation also propagates these tags to supported resources in the stack. You can
      * specify a maximum number of 50 tags.
      *
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If
-     * you specify an empty value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you
+     * specify an empty value, CloudFormation removes all associated tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-tags)
      * @param tags Key-value pairs to associate with this stack. 
@@ -1065,11 +1068,11 @@ public open class CfnStackSet(
     /**
      * Key-value pairs to associate with this stack.
      *
-     * AWS CloudFormation also propagates these tags to supported resources in the stack. You can
+     * CloudFormation also propagates these tags to supported resources in the stack. You can
      * specify a maximum number of 50 tags.
      *
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If
-     * you specify an empty value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you
+     * specify an empty value, CloudFormation removes all associated tags.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-tags)
      * @param tags Key-value pairs to associate with this stack. 
@@ -1271,7 +1274,8 @@ public open class CfnStackSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.AutoDeploymentProperty,
-    ) : CdkObject(cdkObject), AutoDeploymentProperty {
+    ) : CdkObject(cdkObject),
+        AutoDeploymentProperty {
       /**
        * If set to `true` , StackSets automatically deploys additional stack instances to AWS
        * Organizations accounts that are added to a target organization or organizational unit (OU) in
@@ -1342,16 +1346,11 @@ public open class CfnStackSet(
      *
      * The following is a list of possible values for the `AccountFilterType` operation.
      *
-     * * `INTERSECTION` : StackSets deploys to the accounts specified in `Accounts` parameter.
-     * * `DIFFERENCE` : StackSets excludes the accounts specified in `Accounts` parameter. This
-     * enables user to avoid certain accounts within an OU such as suspended accounts.
-     * * `UNION` : StackSets includes additional accounts deployment targets.
-     *
-     * This is the default value if `AccountFilterType` is not provided. This enables user to update
-     * an entire OU and individual accounts from a different OU in one request, which used to be two
-     * separate requests.
-     *
-     * * `NONE` : Deploys to all the accounts in specified organizational units (OU).
+     * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` parameter.
+     * * `DIFFERENCE` : StackSet deploys to the OU, excluding the accounts specified in the
+     * `Accounts` parameter.
+     * * `UNION` StackSet deploys to the OU, and the accounts specified in the `Accounts` parameter.
+     * `UNION` is not supported for create operations when using StackSet as a resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-deploymenttargets.html#cfn-cloudformation-stackset-deploymenttargets-accountfiltertype)
      */
@@ -1393,16 +1392,11 @@ public open class CfnStackSet(
        * additional accounts with provided OUs.
        * The following is a list of possible values for the `AccountFilterType` operation.
        *
-       * * `INTERSECTION` : StackSets deploys to the accounts specified in `Accounts` parameter.
-       * * `DIFFERENCE` : StackSets excludes the accounts specified in `Accounts` parameter. This
-       * enables user to avoid certain accounts within an OU such as suspended accounts.
-       * * `UNION` : StackSets includes additional accounts deployment targets.
-       *
-       * This is the default value if `AccountFilterType` is not provided. This enables user to
-       * update an entire OU and individual accounts from a different OU in one request, which used to
-       * be two separate requests.
-       *
-       * * `NONE` : Deploys to all the accounts in specified organizational units (OU).
+       * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` parameter.
+       * * `DIFFERENCE` : StackSet deploys to the OU, excluding the accounts specified in the
+       * `Accounts` parameter.
+       * * `UNION` StackSet deploys to the OU, and the accounts specified in the `Accounts`
+       * parameter. `UNION` is not supported for create operations when using StackSet as a resource.
        */
       public fun accountFilterType(accountFilterType: String)
 
@@ -1451,16 +1445,11 @@ public open class CfnStackSet(
        * additional accounts with provided OUs.
        * The following is a list of possible values for the `AccountFilterType` operation.
        *
-       * * `INTERSECTION` : StackSets deploys to the accounts specified in `Accounts` parameter.
-       * * `DIFFERENCE` : StackSets excludes the accounts specified in `Accounts` parameter. This
-       * enables user to avoid certain accounts within an OU such as suspended accounts.
-       * * `UNION` : StackSets includes additional accounts deployment targets.
-       *
-       * This is the default value if `AccountFilterType` is not provided. This enables user to
-       * update an entire OU and individual accounts from a different OU in one request, which used to
-       * be two separate requests.
-       *
-       * * `NONE` : Deploys to all the accounts in specified organizational units (OU).
+       * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` parameter.
+       * * `DIFFERENCE` : StackSet deploys to the OU, excluding the accounts specified in the
+       * `Accounts` parameter.
+       * * `UNION` StackSet deploys to the OU, and the accounts specified in the `Accounts`
+       * parameter. `UNION` is not supported for create operations when using StackSet as a resource.
        */
       override fun accountFilterType(accountFilterType: String) {
         cdkBuilder.accountFilterType(accountFilterType)
@@ -1513,23 +1502,19 @@ public open class CfnStackSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.DeploymentTargetsProperty,
-    ) : CdkObject(cdkObject), DeploymentTargetsProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentTargetsProperty {
       /**
        * Limit deployment targets to individual accounts or include additional accounts with
        * provided OUs.
        *
        * The following is a list of possible values for the `AccountFilterType` operation.
        *
-       * * `INTERSECTION` : StackSets deploys to the accounts specified in `Accounts` parameter.
-       * * `DIFFERENCE` : StackSets excludes the accounts specified in `Accounts` parameter. This
-       * enables user to avoid certain accounts within an OU such as suspended accounts.
-       * * `UNION` : StackSets includes additional accounts deployment targets.
-       *
-       * This is the default value if `AccountFilterType` is not provided. This enables user to
-       * update an entire OU and individual accounts from a different OU in one request, which used to
-       * be two separate requests.
-       *
-       * * `NONE` : Deploys to all the accounts in specified organizational units (OU).
+       * * `INTERSECTION` : StackSet deploys to the accounts specified in the `Accounts` parameter.
+       * * `DIFFERENCE` : StackSet deploys to the OU, excluding the accounts specified in the
+       * `Accounts` parameter.
+       * * `UNION` StackSet deploys to the OU, and the accounts specified in the `Accounts`
+       * parameter. `UNION` is not supported for create operations when using StackSet as a resource.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-deploymenttargets.html#cfn-cloudformation-stackset-deploymenttargets-accountfiltertype)
        */
@@ -1709,7 +1694,8 @@ public open class CfnStackSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.ManagedExecutionProperty,
-    ) : CdkObject(cdkObject), ManagedExecutionProperty {
+    ) : CdkObject(cdkObject),
+        ManagedExecutionProperty {
       /**
        * When `true` , StackSets performs non-conflicting operations concurrently and queues
        * conflicting operations.
@@ -1765,6 +1751,7 @@ public open class CfnStackSet(
    * import io.cloudshiftdev.awscdk.services.cloudformation.*;
    * OperationPreferencesProperty operationPreferencesProperty =
    * OperationPreferencesProperty.builder()
+   * .concurrencyMode("concurrencyMode")
    * .failureToleranceCount(123)
    * .failureTolerancePercentage(123)
    * .maxConcurrentCount(123)
@@ -1777,6 +1764,26 @@ public open class CfnStackSet(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html)
    */
   public interface OperationPreferencesProperty {
+    /**
+     * Specifies how the concurrency level behaves during the operation execution.
+     *
+     * * `STRICT_FAILURE_TOLERANCE` : This option dynamically lowers the concurrency level to ensure
+     * the number of failed accounts never exceeds the value of `FailureToleranceCount` +1. The initial
+     * actual concurrency is set to the lower of either the value of the `MaxConcurrentCount` , or the
+     * value of `FailureToleranceCount` +1. The actual concurrency is then reduced proportionally by
+     * the number of failures. This is the default behavior.
+     *
+     * If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is
+     * similar.
+     *
+     * * `SOFT_FAILURE_TOLERANCE` : This option decouples `FailureToleranceCount` from the actual
+     * concurrency. This allows stack set operations to run at the concurrency level set by the
+     * `MaxConcurrentCount` value, or `MaxConcurrentPercentage` , regardless of the number of failures.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-concurrencymode)
+     */
+    public fun concurrencyMode(): String? = unwrap(this).getConcurrencyMode()
+
     /**
      * The number of accounts, per Region, for which this operation can fail before AWS
      * CloudFormation stops the operation in that Region.
@@ -1868,6 +1875,25 @@ public open class CfnStackSet(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param concurrencyMode Specifies how the concurrency level behaves during the operation
+       * execution.
+       * * `STRICT_FAILURE_TOLERANCE` : This option dynamically lowers the concurrency level to
+       * ensure the number of failed accounts never exceeds the value of `FailureToleranceCount` +1.
+       * The initial actual concurrency is set to the lower of either the value of the
+       * `MaxConcurrentCount` , or the value of `FailureToleranceCount` +1. The actual concurrency is
+       * then reduced proportionally by the number of failures. This is the default behavior.
+       *
+       * If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is
+       * similar.
+       *
+       * * `SOFT_FAILURE_TOLERANCE` : This option decouples `FailureToleranceCount` from the actual
+       * concurrency. This allows stack set operations to run at the concurrency level set by the
+       * `MaxConcurrentCount` value, or `MaxConcurrentPercentage` , regardless of the number of
+       * failures.
+       */
+      public fun concurrencyMode(concurrencyMode: String)
+
+      /**
        * @param failureToleranceCount The number of accounts, per Region, for which this operation
        * can fail before AWS CloudFormation stops the operation in that Region.
        * If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the operation
@@ -1950,6 +1976,27 @@ public open class CfnStackSet(
           software.amazon.awscdk.services.cloudformation.CfnStackSet.OperationPreferencesProperty.Builder
           =
           software.amazon.awscdk.services.cloudformation.CfnStackSet.OperationPreferencesProperty.builder()
+
+      /**
+       * @param concurrencyMode Specifies how the concurrency level behaves during the operation
+       * execution.
+       * * `STRICT_FAILURE_TOLERANCE` : This option dynamically lowers the concurrency level to
+       * ensure the number of failed accounts never exceeds the value of `FailureToleranceCount` +1.
+       * The initial actual concurrency is set to the lower of either the value of the
+       * `MaxConcurrentCount` , or the value of `FailureToleranceCount` +1. The actual concurrency is
+       * then reduced proportionally by the number of failures. This is the default behavior.
+       *
+       * If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is
+       * similar.
+       *
+       * * `SOFT_FAILURE_TOLERANCE` : This option decouples `FailureToleranceCount` from the actual
+       * concurrency. This allows stack set operations to run at the concurrency level set by the
+       * `MaxConcurrentCount` value, or `MaxConcurrentPercentage` , regardless of the number of
+       * failures.
+       */
+      override fun concurrencyMode(concurrencyMode: String) {
+        cdkBuilder.concurrencyMode(concurrencyMode)
+      }
 
       /**
        * @param failureToleranceCount The number of accounts, per Region, for which this operation
@@ -2047,7 +2094,29 @@ public open class CfnStackSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.OperationPreferencesProperty,
-    ) : CdkObject(cdkObject), OperationPreferencesProperty {
+    ) : CdkObject(cdkObject),
+        OperationPreferencesProperty {
+      /**
+       * Specifies how the concurrency level behaves during the operation execution.
+       *
+       * * `STRICT_FAILURE_TOLERANCE` : This option dynamically lowers the concurrency level to
+       * ensure the number of failed accounts never exceeds the value of `FailureToleranceCount` +1.
+       * The initial actual concurrency is set to the lower of either the value of the
+       * `MaxConcurrentCount` , or the value of `FailureToleranceCount` +1. The actual concurrency is
+       * then reduced proportionally by the number of failures. This is the default behavior.
+       *
+       * If failure tolerance or Maximum concurrent accounts are set to percentages, the behavior is
+       * similar.
+       *
+       * * `SOFT_FAILURE_TOLERANCE` : This option decouples `FailureToleranceCount` from the actual
+       * concurrency. This allows stack set operations to run at the concurrency level set by the
+       * `MaxConcurrentCount` value, or `MaxConcurrentPercentage` , regardless of the number of
+       * failures.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-concurrencymode)
+       */
+      override fun concurrencyMode(): String? = unwrap(this).getConcurrencyMode()
+
       /**
        * The number of accounts, per Region, for which this operation can fail before AWS
        * CloudFormation stops the operation in that Region.
@@ -2235,7 +2304,8 @@ public open class CfnStackSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.ParameterProperty,
-    ) : CdkObject(cdkObject), ParameterProperty {
+    ) : CdkObject(cdkObject),
+        ParameterProperty {
       /**
        * The key associated with the parameter.
        *
@@ -2456,7 +2526,8 @@ public open class CfnStackSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.StackInstancesProperty,
-    ) : CdkObject(cdkObject), StackInstancesProperty {
+    ) : CdkObject(cdkObject),
+        StackInstancesProperty {
       /**
        * The AWS `OrganizationalUnitIds` or `Accounts` for which to create stack instances in the
        * specified Regions.

@@ -295,7 +295,8 @@ public interface CfnEventSubscriptionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.CfnEventSubscriptionProps,
-  ) : CdkObject(cdkObject), CfnEventSubscriptionProps {
+  ) : CdkObject(cdkObject),
+      CfnEventSubscriptionProps {
     /**
      * A Boolean value;
      *

@@ -27,7 +27,8 @@ public interface ILogSubscriptionDestination {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.ILogSubscriptionDestination,
-  ) : CdkObject(cdkObject), ILogSubscriptionDestination {
+  ) : CdkObject(cdkObject),
+      ILogSubscriptionDestination {
     /**
      * Return the properties required to send subscription events to this destination.
      *

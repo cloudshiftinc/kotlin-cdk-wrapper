@@ -430,7 +430,8 @@ public interface MethodOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.MethodOptions,
-  ) : CdkObject(cdkObject), MethodOptions {
+  ) : CdkObject(cdkObject),
+      MethodOptions {
     /**
      * Indicates whether the method requires clients to submit a valid API key.
      *

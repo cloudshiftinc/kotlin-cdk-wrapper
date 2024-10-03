@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.globalaccelerator.IEndpoint
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -48,7 +49,8 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalanc
  */
 public open class NetworkLoadBalancerEndpoint(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpoint,
-) : CdkObject(cdkObject), IEndpoint {
+) : CdkObject(cdkObject),
+    IEndpoint {
   public
       constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer)
       :
@@ -88,6 +90,21 @@ public open class NetworkLoadBalancerEndpoint(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Forward the client IP address in an `X-Forwarded-For` header.
+     *
+     * GlobalAccelerator will create Network Interfaces in your VPC in order
+     * to preserve the client IP address.
+     *
+     * Client IP address preservation is supported only in specific AWS Regions.
+     * See the GlobalAccelerator Developer Guide for a list.
+     *
+     * Default: false
+     *
+     * @param preserveClientIp Forward the client IP address in an `X-Forwarded-For` header. 
+     */
+    public fun preserveClientIp(preserveClientIp: Boolean)
+
+    /**
      * Endpoint weight across all endpoints in the group.
      *
      * Must be a value between 0 and 255.
@@ -106,6 +123,23 @@ public open class NetworkLoadBalancerEndpoint(
         software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpoint.Builder
         =
         software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpoint.Builder.create(loadBalancer)
+
+    /**
+     * Forward the client IP address in an `X-Forwarded-For` header.
+     *
+     * GlobalAccelerator will create Network Interfaces in your VPC in order
+     * to preserve the client IP address.
+     *
+     * Client IP address preservation is supported only in specific AWS Regions.
+     * See the GlobalAccelerator Developer Guide for a list.
+     *
+     * Default: false
+     *
+     * @param preserveClientIp Forward the client IP address in an `X-Forwarded-For` header. 
+     */
+    override fun preserveClientIp(preserveClientIp: Boolean) {
+      cdkBuilder.preserveClientIp(preserveClientIp)
+    }
 
     /**
      * Endpoint weight across all endpoints in the group.

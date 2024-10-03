@@ -22,7 +22,8 @@ public interface IRoute : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IRoute,
-  ) : CdkObject(cdkObject), IRoute {
+  ) : CdkObject(cdkObject),
+      IRoute {
     /**
      * Apply the given removal policy to this resource.
      *

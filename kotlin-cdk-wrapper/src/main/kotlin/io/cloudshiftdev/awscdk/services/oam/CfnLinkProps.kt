@@ -265,7 +265,8 @@ public interface CfnLinkProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.oam.CfnLinkProps,
-  ) : CdkObject(cdkObject), CfnLinkProps {
+  ) : CdkObject(cdkObject),
+      CfnLinkProps {
     /**
      * Specify a friendly human-readable name to use to identify this source account when you are
      * viewing data from it in the monitoring account.

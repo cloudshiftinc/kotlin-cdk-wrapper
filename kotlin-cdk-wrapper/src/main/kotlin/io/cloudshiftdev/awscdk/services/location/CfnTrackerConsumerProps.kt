@@ -115,7 +115,8 @@ public interface CfnTrackerConsumerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.location.CfnTrackerConsumerProps,
-  ) : CdkObject(cdkObject), CfnTrackerConsumerProps {
+  ) : CdkObject(cdkObject),
+      CfnTrackerConsumerProps {
     /**
      * The Amazon Resource Name (ARN) for the geofence collection to be associated to tracker
      * resource.

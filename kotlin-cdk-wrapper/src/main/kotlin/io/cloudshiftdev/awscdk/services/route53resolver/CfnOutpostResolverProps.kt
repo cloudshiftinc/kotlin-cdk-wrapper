@@ -162,7 +162,8 @@ public interface CfnOutpostResolverProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53resolver.CfnOutpostResolverProps,
-  ) : CdkObject(cdkObject), CfnOutpostResolverProps {
+  ) : CdkObject(cdkObject),
+      CfnOutpostResolverProps {
     /**
      * Amazon EC2 instance count for the Resolver on the Outpost.
      *

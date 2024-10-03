@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRouteResponse(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -395,7 +396,8 @@ public open class CfnRouteResponse(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse.ParameterConstraintsProperty,
-    ) : CdkObject(cdkObject), ParameterConstraintsProperty {
+    ) : CdkObject(cdkObject),
+        ParameterConstraintsProperty {
       /**
        * Specifies whether the parameter is required.
        *

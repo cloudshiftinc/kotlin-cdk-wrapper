@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSchema(
   cdkObject: software.amazon.awscdk.services.glue.CfnSchema,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -617,7 +619,8 @@ public open class CfnSchema(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty,
-    ) : CdkObject(cdkObject), RegistryProperty {
+    ) : CdkObject(cdkObject),
+        RegistryProperty {
       /**
        * The Amazon Resource Name (ARN) of the registry.
        *
@@ -734,7 +737,8 @@ public open class CfnSchema(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty,
-    ) : CdkObject(cdkObject), SchemaVersionProperty {
+    ) : CdkObject(cdkObject),
+        SchemaVersionProperty {
       /**
        * Indicates if this version is the latest version of the schema.
        *

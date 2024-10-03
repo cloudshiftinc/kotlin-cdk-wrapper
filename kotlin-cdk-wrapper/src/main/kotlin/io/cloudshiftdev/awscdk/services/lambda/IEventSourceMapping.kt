@@ -30,7 +30,8 @@ public interface IEventSourceMapping : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.IEventSourceMapping,
-  ) : CdkObject(cdkObject), IEventSourceMapping {
+  ) : CdkObject(cdkObject),
+      IEventSourceMapping {
     /**
      * Apply the given removal policy to this resource.
      *

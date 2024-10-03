@@ -346,7 +346,8 @@ public interface CfnVerifiedAccessTrustProviderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProviderProps,
-  ) : CdkObject(cdkObject), CfnVerifiedAccessTrustProviderProps {
+  ) : CdkObject(cdkObject),
+      CfnVerifiedAccessTrustProviderProps {
     /**
      * A description for the AWS Verified Access trust provider.
      *

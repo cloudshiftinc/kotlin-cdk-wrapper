@@ -178,7 +178,8 @@ public interface CfnKeySigningKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.CfnKeySigningKeyProps,
-  ) : CdkObject(cdkObject), CfnKeySigningKeyProps {
+  ) : CdkObject(cdkObject),
+      CfnKeySigningKeyProps {
     /**
      * The unique string (ID) that is used to identify a hosted zone.
      *

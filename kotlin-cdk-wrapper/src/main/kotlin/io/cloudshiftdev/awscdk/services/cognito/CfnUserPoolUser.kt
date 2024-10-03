@@ -51,7 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUserPoolUser(
   cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUser,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -811,7 +812,13 @@ public open class CfnUserPoolUser(
   }
 
   /**
-   * Specifies whether the attribute is standard or custom.
+   * The name and value of a user attribute.
+   *
+   * This data type is a request parameter of
+   * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
+   * and
+   * [UpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserAttributes.html)
+   * .
    *
    * Example:
    *
@@ -884,7 +891,8 @@ public open class CfnUserPoolUser(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUser.AttributeTypeProperty,
-    ) : CdkObject(cdkObject), AttributeTypeProperty {
+    ) : CdkObject(cdkObject),
+        AttributeTypeProperty {
       /**
        * The name of the attribute.
        *

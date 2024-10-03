@@ -28,7 +28,8 @@ import io.cloudshiftdev.awscdk.services.ec2.Instance
  */
 public open class InstanceTarget(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget,
-) : CdkObject(cdkObject), ILoadBalancerTarget {
+) : CdkObject(cdkObject),
+    ILoadBalancerTarget {
   public constructor(instance: Instance) :
       this(software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget(instance.let(Instance.Companion::unwrap))
   )

@@ -126,7 +126,8 @@ public interface CfnSecurityPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicyProps,
-  ) : CdkObject(cdkObject), CfnSecurityPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnSecurityPolicyProps {
     /**
      * The description of the security policy.
      *

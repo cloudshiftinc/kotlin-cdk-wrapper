@@ -68,7 +68,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEnvironment(
   cdkObject: software.amazon.awscdk.services.appconfig.CfnEnvironment,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -449,7 +451,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorProperty,
-    ) : CdkObject(cdkObject), MonitorProperty {
+    ) : CdkObject(cdkObject),
+        MonitorProperty {
       /**
        * Amazon Resource Name (ARN) of the Amazon CloudWatch alarm.
        *
@@ -551,7 +554,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorsProperty,
-    ) : CdkObject(cdkObject), MonitorsProperty {
+    ) : CdkObject(cdkObject),
+        MonitorsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-monitors.html#cfn-appconfig-environment-monitors-alarmarn)
        */

@@ -56,7 +56,8 @@ public interface IDatabaseProxy : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.IDatabaseProxy,
-  ) : CdkObject(cdkObject), IDatabaseProxy {
+  ) : CdkObject(cdkObject),
+      IDatabaseProxy {
     /**
      * Apply the given removal policy to this resource.
      *

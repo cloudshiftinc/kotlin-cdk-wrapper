@@ -14,25 +14,26 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.ec2.*;
- * IGatewayVpcEndpointService gatewayVpcEndpointService;
- * Subnet subnet;
- * SubnetFilter subnetFilter;
- * Vpc vpc;
- * GatewayVpcEndpointProps gatewayVpcEndpointProps = GatewayVpcEndpointProps.builder()
- * .service(gatewayVpcEndpointService)
- * .vpc(vpc)
- * // the properties below are optional
- * .subnets(List.of(SubnetSelection.builder()
- * .availabilityZones(List.of("availabilityZones"))
- * .onePerAz(false)
- * .subnetFilters(List.of(subnetFilter))
- * .subnetGroupName("subnetGroupName")
+ * Stack stack = new Stack();
+ * VpcV2 myVpc = new VpcV2(this, "Vpc");
+ * RouteTable routeTable = RouteTable.Builder.create(this, "RouteTable")
+ * .vpc(myVpc)
+ * .build();
+ * SubnetV2 subnet = SubnetV2.Builder.create(this, "Subnet")
+ * .vpc(myVpc)
+ * .availabilityZone("eu-west-2a")
+ * .ipv4CidrBlock(new IpCidr("10.0.0.0/24"))
+ * .subnetType(SubnetType.PRIVATE)
+ * .build();
+ * GatewayVpcEndpoint dynamoEndpoint = GatewayVpcEndpoint.Builder.create(this, "DynamoEndpoint")
+ * .service(GatewayVpcEndpointAwsService.DYNAMODB)
+ * .vpc(myVpc)
  * .subnets(List.of(subnet))
- * .subnetType(SubnetType.PRIVATE_ISOLATED)
- * .build()))
+ * .build();
+ * Route.Builder.create(this, "DynamoDBRoute")
+ * .routeTable(routeTable)
+ * .destination("0.0.0.0/0")
+ * .target(Map.of("endpoint", dynamoEndpoint))
  * .build();
  * ```
  */
@@ -112,7 +113,8 @@ public interface GatewayVpcEndpointProps : GatewayVpcEndpointOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpointProps,
-  ) : CdkObject(cdkObject), GatewayVpcEndpointProps {
+  ) : CdkObject(cdkObject),
+      GatewayVpcEndpointProps {
     /**
      * The service to use for this gateway VPC endpoint.
      */

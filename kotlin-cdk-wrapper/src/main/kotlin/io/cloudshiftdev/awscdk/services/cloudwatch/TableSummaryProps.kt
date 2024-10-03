@@ -114,7 +114,8 @@ public interface TableSummaryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.TableSummaryProps,
-  ) : CdkObject(cdkObject), TableSummaryProps {
+  ) : CdkObject(cdkObject),
+      TableSummaryProps {
     /**
      * Summary columns.
      *

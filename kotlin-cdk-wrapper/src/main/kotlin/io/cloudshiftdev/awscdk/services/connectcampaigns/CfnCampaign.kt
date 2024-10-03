@@ -72,7 +72,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCampaign(
   cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -493,7 +495,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty,
-    ) : CdkObject(cdkObject), AgentlessDialerConfigProperty {
+    ) : CdkObject(cdkObject),
+        AgentlessDialerConfigProperty {
       /**
        * The allocation of dialing capacity between multiple active campaigns.
        *
@@ -621,7 +624,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AnswerMachineDetectionConfigProperty,
-    ) : CdkObject(cdkObject), AnswerMachineDetectionConfigProperty {
+    ) : CdkObject(cdkObject),
+        AnswerMachineDetectionConfigProperty {
       /**
        * Whether waiting for answer machine prompt is enabled.
        *
@@ -850,7 +854,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.DialerConfigProperty,
-    ) : CdkObject(cdkObject), DialerConfigProperty {
+    ) : CdkObject(cdkObject),
+        DialerConfigProperty {
       /**
        * The configuration of the agentless dialer.
        *
@@ -1047,7 +1052,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty,
-    ) : CdkObject(cdkObject), OutboundCallConfigProperty {
+    ) : CdkObject(cdkObject),
+        OutboundCallConfigProperty {
       /**
        * Whether answering machine detection has been enabled.
        *
@@ -1177,7 +1183,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.PredictiveDialerConfigProperty,
-    ) : CdkObject(cdkObject), PredictiveDialerConfigProperty {
+    ) : CdkObject(cdkObject),
+        PredictiveDialerConfigProperty {
       /**
        * Bandwidth allocation for the predictive dialer.
        *
@@ -1290,7 +1297,8 @@ public open class CfnCampaign(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.ProgressiveDialerConfigProperty,
-    ) : CdkObject(cdkObject), ProgressiveDialerConfigProperty {
+    ) : CdkObject(cdkObject),
+        ProgressiveDialerConfigProperty {
       /**
        * Bandwidth allocation for the progressive dialer.
        *

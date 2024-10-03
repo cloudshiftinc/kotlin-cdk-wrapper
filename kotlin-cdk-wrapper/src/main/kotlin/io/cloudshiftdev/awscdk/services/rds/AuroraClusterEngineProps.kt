@@ -58,7 +58,8 @@ public interface AuroraClusterEngineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.AuroraClusterEngineProps,
-  ) : CdkObject(cdkObject), AuroraClusterEngineProps {
+  ) : CdkObject(cdkObject),
+      AuroraClusterEngineProps {
     /**
      * The version of the Aurora cluster engine.
      */

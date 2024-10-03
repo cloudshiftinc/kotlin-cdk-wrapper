@@ -26,7 +26,8 @@ import kotlin.collections.List
  */
 public open class Spacer(
   cdkObject: software.amazon.awscdk.services.cloudwatch.Spacer,
-) : CdkObject(cdkObject), IWidget {
+) : CdkObject(cdkObject),
+    IWidget {
   public constructor() : this(software.amazon.awscdk.services.cloudwatch.Spacer()
   )
 

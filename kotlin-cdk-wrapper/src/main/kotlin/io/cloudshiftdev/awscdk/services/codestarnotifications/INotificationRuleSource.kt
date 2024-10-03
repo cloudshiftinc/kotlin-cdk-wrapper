@@ -20,7 +20,8 @@ public interface INotificationRuleSource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codestarnotifications.INotificationRuleSource,
-  ) : CdkObject(cdkObject), INotificationRuleSource {
+  ) : CdkObject(cdkObject),
+      INotificationRuleSource {
     /**
      * Returns a source configuration for notification rule.
      *

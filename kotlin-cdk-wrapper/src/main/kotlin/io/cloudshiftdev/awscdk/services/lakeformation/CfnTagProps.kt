@@ -203,7 +203,8 @@ public interface CfnTagProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagProps,
-  ) : CdkObject(cdkObject), CfnTagProps {
+  ) : CdkObject(cdkObject),
+      CfnTagProps {
     /**
      * Catalog id string, not less than 1 or more than 255 bytes long, matching the [single-line
      * string

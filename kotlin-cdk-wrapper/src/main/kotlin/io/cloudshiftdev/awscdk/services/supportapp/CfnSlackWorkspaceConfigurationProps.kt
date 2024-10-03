@@ -91,7 +91,8 @@ public interface CfnSlackWorkspaceConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfigurationProps,
-  ) : CdkObject(cdkObject), CfnSlackWorkspaceConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnSlackWorkspaceConfigurationProps {
     /**
      * The team ID in Slack.
      *

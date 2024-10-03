@@ -101,7 +101,8 @@ public interface ResourceEnvironment {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ResourceEnvironment,
-  ) : CdkObject(cdkObject), ResourceEnvironment {
+  ) : CdkObject(cdkObject),
+      ResourceEnvironment {
     /**
      * The AWS account ID that this resource belongs to.
      *

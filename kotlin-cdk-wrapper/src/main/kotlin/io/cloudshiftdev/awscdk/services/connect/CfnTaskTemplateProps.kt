@@ -346,7 +346,8 @@ public interface CfnTaskTemplateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplateProps,
-  ) : CdkObject(cdkObject), CfnTaskTemplateProps {
+  ) : CdkObject(cdkObject),
+      CfnTaskTemplateProps {
     /**
      * A unique, case-sensitive identifier that you provide to ensure the idempotency of the
      * request.

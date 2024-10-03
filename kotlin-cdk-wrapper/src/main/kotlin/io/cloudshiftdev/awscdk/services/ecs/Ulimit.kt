@@ -100,7 +100,8 @@ public interface Ulimit {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.Ulimit,
-  ) : CdkObject(cdkObject), Ulimit {
+  ) : CdkObject(cdkObject),
+      Ulimit {
     /**
      * The hard limit for the ulimit type.
      */

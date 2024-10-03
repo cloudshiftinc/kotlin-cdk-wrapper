@@ -84,7 +84,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUserPoolClient(
   cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -261,15 +262,11 @@ public open class CfnUserPoolClient(
 
   /**
    * The default redirect URI.
-   *
-   * Must be in the `CallbackURLs` list.
    */
   public open fun defaultRedirectUri(): String? = unwrap(this).getDefaultRedirectUri()
 
   /**
    * The default redirect URI.
-   *
-   * Must be in the `CallbackURLs` list.
    */
   public open fun defaultRedirectUri(`value`: String) {
     unwrap(this).setDefaultRedirectUri(`value`)
@@ -423,19 +420,19 @@ public open class CfnUserPoolClient(
   }
 
   /**
-   * The list of user attributes that you want your app client to have read-only access to.
+   * The list of user attributes that you want your app client to have read access to.
    */
   public open fun readAttributes(): List<String> = unwrap(this).getReadAttributes() ?: emptyList()
 
   /**
-   * The list of user attributes that you want your app client to have read-only access to.
+   * The list of user attributes that you want your app client to have read access to.
    */
   public open fun readAttributes(`value`: List<String>) {
     unwrap(this).setReadAttributes(`value`)
   }
 
   /**
-   * The list of user attributes that you want your app client to have read-only access to.
+   * The list of user attributes that you want your app client to have read access to.
    */
   public open fun readAttributes(vararg `value`: String): Unit = readAttributes(`value`.toList())
 
@@ -775,7 +772,10 @@ public open class CfnUserPoolClient(
     public fun clientName(clientName: String)
 
     /**
-     * The default redirect URI. Must be in the `CallbackURLs` list.
+     * The default redirect URI.
+     *
+     * In app clients with one assigned IdP, replaces `redirect_uri` in authentication requests.
+     * Must be in the `CallbackURLs` list.
      *
      * A redirect URI must:
      *
@@ -783,8 +783,9 @@ public open class CfnUserPoolClient(
      * * Be registered with the authorization server.
      * * Not include a fragment component.
      *
-     * See [OAuth 2.0 - Redirection
-     * Endpoint](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6749#section-3.1.2) .
+     * For more information, see [Default redirect
+     * URI](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about)
+     * .
      *
      * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes
      * only.
@@ -792,7 +793,7 @@ public open class CfnUserPoolClient(
      * App callback URLs such as myapp://example are also supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-defaultredirecturi)
-     * @param defaultRedirectUri The default redirect URI. Must be in the `CallbackURLs` list. 
+     * @param defaultRedirectUri The default redirect URI. 
      */
     public fun defaultRedirectUri(defaultRedirectUri: String)
 
@@ -1006,7 +1007,7 @@ public open class CfnUserPoolClient(
     public fun preventUserExistenceErrors(preventUserExistenceErrors: String)
 
     /**
-     * The list of user attributes that you want your app client to have read-only access to.
+     * The list of user attributes that you want your app client to have read access to.
      *
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
@@ -1016,18 +1017,18 @@ public open class CfnUserPoolClient(
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
-     * When your user pool has read access to these default attributes, `ReadAttributes` doesn't return
-     * any information. Amazon Cognito only populates `ReadAttributes` in the API response if you have
-     * specified your own custom set of read attributes.
+     * When your user pool app client has read access to these default attributes, `ReadAttributes`
+     * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API
+     * response if you have specified your own custom set of read attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-readattributes)
-     * @param readAttributes The list of user attributes that you want your app client to have
-     * read-only access to. 
+     * @param readAttributes The list of user attributes that you want your app client to have read
+     * access to. 
      */
     public fun readAttributes(readAttributes: List<String>)
 
     /**
-     * The list of user attributes that you want your app client to have read-only access to.
+     * The list of user attributes that you want your app client to have read access to.
      *
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
@@ -1037,13 +1038,13 @@ public open class CfnUserPoolClient(
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
-     * When your user pool has read access to these default attributes, `ReadAttributes` doesn't return
-     * any information. Amazon Cognito only populates `ReadAttributes` in the API response if you have
-     * specified your own custom set of read attributes.
+     * When your user pool app client has read access to these default attributes, `ReadAttributes`
+     * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API
+     * response if you have specified your own custom set of read attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-readattributes)
-     * @param readAttributes The list of user attributes that you want your app client to have
-     * read-only access to. 
+     * @param readAttributes The list of user attributes that you want your app client to have read
+     * access to. 
      */
     public fun readAttributes(vararg readAttributes: String)
 
@@ -1469,7 +1470,10 @@ public open class CfnUserPoolClient(
     }
 
     /**
-     * The default redirect URI. Must be in the `CallbackURLs` list.
+     * The default redirect URI.
+     *
+     * In app clients with one assigned IdP, replaces `redirect_uri` in authentication requests.
+     * Must be in the `CallbackURLs` list.
      *
      * A redirect URI must:
      *
@@ -1477,8 +1481,9 @@ public open class CfnUserPoolClient(
      * * Be registered with the authorization server.
      * * Not include a fragment component.
      *
-     * See [OAuth 2.0 - Redirection
-     * Endpoint](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc6749#section-3.1.2) .
+     * For more information, see [Default redirect
+     * URI](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-client-apps.html#cognito-user-pools-app-idp-settings-about)
+     * .
      *
      * Amazon Cognito requires HTTPS over HTTP except for http://localhost for testing purposes
      * only.
@@ -1486,7 +1491,7 @@ public open class CfnUserPoolClient(
      * App callback URLs such as myapp://example are also supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-defaultredirecturi)
-     * @param defaultRedirectUri The default redirect URI. Must be in the `CallbackURLs` list. 
+     * @param defaultRedirectUri The default redirect URI. 
      */
     override fun defaultRedirectUri(defaultRedirectUri: String) {
       cdkBuilder.defaultRedirectUri(defaultRedirectUri)
@@ -1723,7 +1728,7 @@ public open class CfnUserPoolClient(
     }
 
     /**
-     * The list of user attributes that you want your app client to have read-only access to.
+     * The list of user attributes that you want your app client to have read access to.
      *
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
@@ -1733,20 +1738,20 @@ public open class CfnUserPoolClient(
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
-     * When your user pool has read access to these default attributes, `ReadAttributes` doesn't return
-     * any information. Amazon Cognito only populates `ReadAttributes` in the API response if you have
-     * specified your own custom set of read attributes.
+     * When your user pool app client has read access to these default attributes, `ReadAttributes`
+     * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API
+     * response if you have specified your own custom set of read attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-readattributes)
-     * @param readAttributes The list of user attributes that you want your app client to have
-     * read-only access to. 
+     * @param readAttributes The list of user attributes that you want your app client to have read
+     * access to. 
      */
     override fun readAttributes(readAttributes: List<String>) {
       cdkBuilder.readAttributes(readAttributes)
     }
 
     /**
-     * The list of user attributes that you want your app client to have read-only access to.
+     * The list of user attributes that you want your app client to have read access to.
      *
      * After your user authenticates in your app, their access token authorizes them to read their
      * own attribute value for any attribute in this list. An example of this kind of activity is when
@@ -1756,13 +1761,13 @@ public open class CfnUserPoolClient(
      *
      * When you don't specify the `ReadAttributes` for your app client, your app can read the values
      * of `email_verified` , `phone_number_verified` , and the Standard attributes of your user pool.
-     * When your user pool has read access to these default attributes, `ReadAttributes` doesn't return
-     * any information. Amazon Cognito only populates `ReadAttributes` in the API response if you have
-     * specified your own custom set of read attributes.
+     * When your user pool app client has read access to these default attributes, `ReadAttributes`
+     * doesn't return any information. Amazon Cognito only populates `ReadAttributes` in the API
+     * response if you have specified your own custom set of read attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-readattributes)
-     * @param readAttributes The list of user attributes that you want your app client to have
-     * read-only access to. 
+     * @param readAttributes The list of user attributes that you want your app client to have read
+     * access to. 
      */
     override fun readAttributes(vararg readAttributes: String): Unit =
         readAttributes(readAttributes.toList())
@@ -1955,13 +1960,23 @@ public open class CfnUserPoolClient(
   }
 
   /**
-   * The Amazon Pinpoint analytics configuration necessary to collect metrics for a user pool.
+   * The settings for Amazon Pinpoint analytics configuration.
    *
+   * With an analytics configuration, your application can collect user-activity metrics for user
+   * notifications with a Amazon Pinpoint campaign.
    *
-   * In Regions where Amazon Pinpoint isn't available, user pools only support sending events to
-   * Amazon Pinpoint projects in us-east-1. In Regions where Amazon Pinpoint is available, user pools
-   * support sending events to Amazon Pinpoint projects within that same Region.
+   * Amazon Pinpoint isn't available in all AWS Regions. For a list of available Regions, see
+   * [Amazon Cognito and Amazon Pinpoint Region
+   * availability](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-pinpoint-integration.html#cognito-user-pools-find-region-mappings)
+   * .
    *
+   * This data type is a request parameter of
+   * [CreateUserPoolClient](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPoolClient.html)
+   * and
+   * [UpdateUserPoolClient](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPoolClient.html)
+   * , and a response parameter of
+   * [DescribeUserPoolClient](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPoolClient.html)
+   * .
    *
    * Example:
    *
@@ -1993,22 +2008,24 @@ public open class CfnUserPoolClient(
     public fun applicationArn(): String? = unwrap(this).getApplicationArn()
 
     /**
-     * The application ID for an Amazon Pinpoint application.
+     * Your Amazon Pinpoint project ID.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-applicationid)
      */
     public fun applicationId(): String? = unwrap(this).getApplicationId()
 
     /**
-     * The external ID.
+     * The [external
+     * ID](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html)
+     * of the role that Amazon Cognito assumes to send analytics data to Amazon Pinpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-externalid)
      */
     public fun externalId(): String? = unwrap(this).getExternalId()
 
     /**
-     * The ARN of an AWS Identity and Access Management role that authorizes Amazon Cognito to
-     * publish events to Amazon Pinpoint analytics.
+     * The ARN of an AWS Identity and Access Management role that has the permissions required for
+     * Amazon Cognito to publish events to Amazon Pinpoint analytics.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-rolearn)
      */
@@ -2035,18 +2052,20 @@ public open class CfnUserPoolClient(
       public fun applicationArn(applicationArn: String)
 
       /**
-       * @param applicationId The application ID for an Amazon Pinpoint application.
+       * @param applicationId Your Amazon Pinpoint project ID.
        */
       public fun applicationId(applicationId: String)
 
       /**
-       * @param externalId The external ID.
+       * @param externalId The [external
+       * ID](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html)
+       * of the role that Amazon Cognito assumes to send analytics data to Amazon Pinpoint.
        */
       public fun externalId(externalId: String)
 
       /**
-       * @param roleArn The ARN of an AWS Identity and Access Management role that authorizes Amazon
-       * Cognito to publish events to Amazon Pinpoint analytics.
+       * @param roleArn The ARN of an AWS Identity and Access Management role that has the
+       * permissions required for Amazon Cognito to publish events to Amazon Pinpoint analytics.
        */
       public fun roleArn(roleArn: String)
 
@@ -2079,22 +2098,24 @@ public open class CfnUserPoolClient(
       }
 
       /**
-       * @param applicationId The application ID for an Amazon Pinpoint application.
+       * @param applicationId Your Amazon Pinpoint project ID.
        */
       override fun applicationId(applicationId: String) {
         cdkBuilder.applicationId(applicationId)
       }
 
       /**
-       * @param externalId The external ID.
+       * @param externalId The [external
+       * ID](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html)
+       * of the role that Amazon Cognito assumes to send analytics data to Amazon Pinpoint.
        */
       override fun externalId(externalId: String) {
         cdkBuilder.externalId(externalId)
       }
 
       /**
-       * @param roleArn The ARN of an AWS Identity and Access Management role that authorizes Amazon
-       * Cognito to publish events to Amazon Pinpoint analytics.
+       * @param roleArn The ARN of an AWS Identity and Access Management role that has the
+       * permissions required for Amazon Cognito to publish events to Amazon Pinpoint analytics.
        */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
@@ -2123,7 +2144,8 @@ public open class CfnUserPoolClient(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty,
-    ) : CdkObject(cdkObject), AnalyticsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AnalyticsConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of an Amazon Pinpoint project.
        *
@@ -2135,22 +2157,24 @@ public open class CfnUserPoolClient(
       override fun applicationArn(): String? = unwrap(this).getApplicationArn()
 
       /**
-       * The application ID for an Amazon Pinpoint application.
+       * Your Amazon Pinpoint project ID.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-applicationid)
        */
       override fun applicationId(): String? = unwrap(this).getApplicationId()
 
       /**
-       * The external ID.
+       * The [external
+       * ID](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html)
+       * of the role that Amazon Cognito assumes to send analytics data to Amazon Pinpoint.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-externalid)
        */
       override fun externalId(): String? = unwrap(this).getExternalId()
 
       /**
-       * The ARN of an AWS Identity and Access Management role that authorizes Amazon Cognito to
-       * publish events to Amazon Pinpoint analytics.
+       * The ARN of an AWS Identity and Access Management role that has the permissions required for
+       * Amazon Cognito to publish events to Amazon Pinpoint analytics.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-rolearn)
        */
@@ -2205,10 +2229,9 @@ public open class CfnUserPoolClient(
    */
   public interface TokenValidityUnitsProperty {
     /**
-     * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in the
-     * `AccessTokenValidity` parameter.
+     * A time unit for the value that you set in the `AccessTokenValidity` parameter.
      *
-     * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
+     * The default `AccessTokenValidity` time unit is `hours` . `AccessTokenValidity` duration can
      * range from five minutes to one day.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-accesstoken)
@@ -2216,21 +2239,19 @@ public open class CfnUserPoolClient(
     public fun accessToken(): String? = unwrap(this).getAccessToken()
 
     /**
-     * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in the
-     * `IdTokenValidity` parameter.
+     * A time unit for the value that you set in the `IdTokenValidity` parameter.
      *
-     * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
-     * five minutes to one day.
+     * The default `IdTokenValidity` time unit is `hours` . `IdTokenValidity` duration can range
+     * from five minutes to one day.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-idtoken)
      */
     public fun idToken(): String? = unwrap(this).getIdToken()
 
     /**
-     * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in the
-     * `RefreshTokenValidity` parameter.
+     * A time unit for the value that you set in the `RefreshTokenValidity` parameter.
      *
-     * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
+     * The default `RefreshTokenValidity` time unit is `days` . `RefreshTokenValidity` duration can
      * range from 60 minutes to 10 years.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-refreshtoken)
@@ -2243,26 +2264,25 @@ public open class CfnUserPoolClient(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param accessToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
-       * that you set in the `AccessTokenValidity` parameter.
-       * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
+       * @param accessToken A time unit for the value that you set in the `AccessTokenValidity`
+       * parameter.
+       * The default `AccessTokenValidity` time unit is `hours` . `AccessTokenValidity` duration can
        * range from five minutes to one day.
        */
       public fun accessToken(accessToken: String)
 
       /**
-       * @param idToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
-       * that you set in the `IdTokenValidity` parameter.
-       * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
-       * five minutes to one day.
+       * @param idToken A time unit for the value that you set in the `IdTokenValidity` parameter.
+       * The default `IdTokenValidity` time unit is `hours` . `IdTokenValidity` duration can range
+       * from five minutes to one day.
        */
       public fun idToken(idToken: String)
 
       /**
-       * @param refreshToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the
-       * value that you set in the `RefreshTokenValidity` parameter.
-       * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
-       * range from 60 minutes to 10 years.
+       * @param refreshToken A time unit for the value that you set in the `RefreshTokenValidity`
+       * parameter.
+       * The default `RefreshTokenValidity` time unit is `days` . `RefreshTokenValidity` duration
+       * can range from 60 minutes to 10 years.
        */
       public fun refreshToken(refreshToken: String)
     }
@@ -2274,9 +2294,9 @@ public open class CfnUserPoolClient(
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty.builder()
 
       /**
-       * @param accessToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
-       * that you set in the `AccessTokenValidity` parameter.
-       * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
+       * @param accessToken A time unit for the value that you set in the `AccessTokenValidity`
+       * parameter.
+       * The default `AccessTokenValidity` time unit is `hours` . `AccessTokenValidity` duration can
        * range from five minutes to one day.
        */
       override fun accessToken(accessToken: String) {
@@ -2284,20 +2304,19 @@ public open class CfnUserPoolClient(
       }
 
       /**
-       * @param idToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the value
-       * that you set in the `IdTokenValidity` parameter.
-       * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
-       * five minutes to one day.
+       * @param idToken A time unit for the value that you set in the `IdTokenValidity` parameter.
+       * The default `IdTokenValidity` time unit is `hours` . `IdTokenValidity` duration can range
+       * from five minutes to one day.
        */
       override fun idToken(idToken: String) {
         cdkBuilder.idToken(idToken)
       }
 
       /**
-       * @param refreshToken A time unit of `seconds` , `minutes` , `hours` , or `days` for the
-       * value that you set in the `RefreshTokenValidity` parameter.
-       * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
-       * range from 60 minutes to 10 years.
+       * @param refreshToken A time unit for the value that you set in the `RefreshTokenValidity`
+       * parameter.
+       * The default `RefreshTokenValidity` time unit is `days` . `RefreshTokenValidity` duration
+       * can range from 60 minutes to 10 years.
        */
       override fun refreshToken(refreshToken: String) {
         cdkBuilder.refreshToken(refreshToken)
@@ -2310,12 +2329,12 @@ public open class CfnUserPoolClient(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty,
-    ) : CdkObject(cdkObject), TokenValidityUnitsProperty {
+    ) : CdkObject(cdkObject),
+        TokenValidityUnitsProperty {
       /**
-       * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in
-       * the `AccessTokenValidity` parameter.
+       * A time unit for the value that you set in the `AccessTokenValidity` parameter.
        *
-       * The default `AccessTokenValidity` time unit is hours. `AccessTokenValidity` duration can
+       * The default `AccessTokenValidity` time unit is `hours` . `AccessTokenValidity` duration can
        * range from five minutes to one day.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-accesstoken)
@@ -2323,22 +2342,20 @@ public open class CfnUserPoolClient(
       override fun accessToken(): String? = unwrap(this).getAccessToken()
 
       /**
-       * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in
-       * the `IdTokenValidity` parameter.
+       * A time unit for the value that you set in the `IdTokenValidity` parameter.
        *
-       * The default `IdTokenValidity` time unit is hours. `IdTokenValidity` duration can range from
-       * five minutes to one day.
+       * The default `IdTokenValidity` time unit is `hours` . `IdTokenValidity` duration can range
+       * from five minutes to one day.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-idtoken)
        */
       override fun idToken(): String? = unwrap(this).getIdToken()
 
       /**
-       * A time unit of `seconds` , `minutes` , `hours` , or `days` for the value that you set in
-       * the `RefreshTokenValidity` parameter.
+       * A time unit for the value that you set in the `RefreshTokenValidity` parameter.
        *
-       * The default `RefreshTokenValidity` time unit is days. `RefreshTokenValidity` duration can
-       * range from 60 minutes to 10 years.
+       * The default `RefreshTokenValidity` time unit is `days` . `RefreshTokenValidity` duration
+       * can range from 60 minutes to 10 years.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html#cfn-cognito-userpoolclient-tokenvalidityunits-refreshtoken)
        */

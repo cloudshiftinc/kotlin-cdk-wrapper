@@ -152,7 +152,8 @@ public interface CfnBillingGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroupProps,
-  ) : CdkObject(cdkObject), CfnBillingGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnBillingGroupProps {
     /**
      * The name of the billing group.
      *

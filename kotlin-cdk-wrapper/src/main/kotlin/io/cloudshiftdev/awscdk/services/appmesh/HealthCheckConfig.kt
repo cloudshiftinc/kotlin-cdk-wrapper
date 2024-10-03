@@ -137,7 +137,8 @@ public interface HealthCheckConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.HealthCheckConfig,
-  ) : CdkObject(cdkObject), HealthCheckConfig {
+  ) : CdkObject(cdkObject),
+      HealthCheckConfig {
     /**
      * VirtualGateway CFN configuration for Health Checks.
      *

@@ -326,7 +326,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEndpoint(
   cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -3212,7 +3214,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty,
-    ) : CdkObject(cdkObject), DocDbSettingsProperty {
+    ) : CdkObject(cdkObject),
+        DocDbSettingsProperty {
       /**
        * Indicates the number of documents to preview to determine the document organization.
        *
@@ -3360,7 +3363,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty,
-    ) : CdkObject(cdkObject), DynamoDbSettingsProperty {
+    ) : CdkObject(cdkObject),
+        DynamoDbSettingsProperty {
       /**
        * The Amazon Resource Name (ARN) used by the service to access the IAM role.
        *
@@ -3538,7 +3542,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty,
-    ) : CdkObject(cdkObject), ElasticsearchSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ElasticsearchSettingsProperty {
       /**
        * The endpoint for the OpenSearch cluster.
        *
@@ -4054,7 +4059,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty,
-    ) : CdkObject(cdkObject), GcpMySQLSettingsProperty {
+    ) : CdkObject(cdkObject),
+        GcpMySQLSettingsProperty {
       /**
        * Specifies a script to run immediately after AWS DMS connects to the endpoint.
        *
@@ -4548,7 +4554,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty,
-    ) : CdkObject(cdkObject), IbmDb2SettingsProperty {
+    ) : CdkObject(cdkObject),
+        IbmDb2SettingsProperty {
       /**
        * For ongoing replication (CDC), use CurrentLSN to specify a log sequence number (LSN) where
        * you want the replication to start.
@@ -5323,7 +5330,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty,
-    ) : CdkObject(cdkObject), KafkaSettingsProperty {
+    ) : CdkObject(cdkObject),
+        KafkaSettingsProperty {
       /**
        * A comma-separated list of one or more broker locations in your Kafka cluster that host your
        * Kafka instance.
@@ -5972,7 +5980,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty,
-    ) : CdkObject(cdkObject), KinesisSettingsProperty {
+    ) : CdkObject(cdkObject),
+        KinesisSettingsProperty {
       /**
        * Shows detailed control information for table definition, column definition, and table and
        * column changes in the Kinesis message output.
@@ -6738,7 +6747,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty,
-    ) : CdkObject(cdkObject), MicrosoftSqlServerSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MicrosoftSqlServerSettingsProperty {
       /**
        * The maximum size of the packets (in bytes) used to transfer data using BCP.
        *
@@ -7333,7 +7343,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty,
-    ) : CdkObject(cdkObject), MongoDbSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MongoDbSettingsProperty {
       /**
        * The authentication mechanism you use to access the MongoDB source endpoint.
        *
@@ -7863,7 +7874,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty,
-    ) : CdkObject(cdkObject), MySqlSettingsProperty {
+    ) : CdkObject(cdkObject),
+        MySqlSettingsProperty {
       /**
        * Specifies a script to run immediately after AWS DMS connects to the endpoint.
        *
@@ -8257,7 +8269,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty,
-    ) : CdkObject(cdkObject), NeptuneSettingsProperty {
+    ) : CdkObject(cdkObject),
+        NeptuneSettingsProperty {
       /**
        * The number of milliseconds for AWS DMS to wait to retry a bulk-load of migrated graph data
        * to the Neptune target database before raising an error.
@@ -8469,7 +8482,7 @@ public open class CfnEndpoint(
     public fun archivedLogDestId(): Number? = unwrap(this).getArchivedLogDestId()
 
     /**
-     * When this field is set to `Y` , AWS DMS only accesses the archived redo logs.
+     * When this field is set to `True` , AWS DMS only accesses the archived redo logs.
      *
      * If the archived redo logs are stored on Automatic Storage Management (ASM) only, the AWS DMS
      * user account needs to be granted ASM privileges.
@@ -8803,12 +8816,12 @@ public open class CfnEndpoint(
     public fun useAlternateFolderForOnline(): Any? = unwrap(this).getUseAlternateFolderForOnline()
 
     /**
-     * Set this attribute to Y to capture change data using the Binary Reader utility.
+     * Set this attribute to True to capture change data using the Binary Reader utility.
      *
-     * Set `UseLogminerReader` to N to set this attribute to Y. To use Binary Reader with Amazon RDS
-     * for Oracle as the source, you set additional attributes. For more information about using this
-     * setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner or AWS DMS
-     * Binary Reader for
+     * Set `UseLogminerReader` to False to set this attribute to True. To use Binary Reader with
+     * Amazon RDS for Oracle as the source, you set additional attributes. For more information about
+     * using this setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner or
+     * AWS DMS Binary Reader for
      * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
      * .
      *
@@ -8817,7 +8830,7 @@ public open class CfnEndpoint(
     public fun useBFile(): Any? = unwrap(this).getUseBFile()
 
     /**
-     * Set this attribute to Y to have AWS DMS use a direct path full load.
+     * Set this attribute to True to have AWS DMS use a direct path full load.
      *
      * Specify this value to use the direct path protocol in the Oracle Call Interface (OCI). By
      * using this OCI protocol, you can bulk-load Oracle target tables during a full load.
@@ -8827,12 +8840,12 @@ public open class CfnEndpoint(
     public fun useDirectPathFullLoad(): Any? = unwrap(this).getUseDirectPathFullLoad()
 
     /**
-     * Set this attribute to Y to capture change data using the Oracle LogMiner utility (the
+     * Set this attribute to True to capture change data using the Oracle LogMiner utility (the
      * default).
      *
-     * Set this attribute to N if you want to access the redo logs as a binary file. When you set
-     * `UseLogminerReader` to N, also set `UseBfile` to Y. For more information on this setting and
-     * using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
+     * Set this attribute to False if you want to access the redo logs as a binary file. When you
+     * set `UseLogminerReader` to False, also set `UseBfile` to True. For more information on this
+     * setting and using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
      * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
      * in the *AWS DMS User Guide* .
      *
@@ -8929,16 +8942,16 @@ public open class CfnEndpoint(
       public fun archivedLogDestId(archivedLogDestId: Number)
 
       /**
-       * @param archivedLogsOnly When this field is set to `Y` , AWS DMS only accesses the archived
-       * redo logs.
+       * @param archivedLogsOnly When this field is set to `True` , AWS DMS only accesses the
+       * archived redo logs.
        * If the archived redo logs are stored on Automatic Storage Management (ASM) only, the AWS
        * DMS user account needs to be granted ASM privileges.
        */
       public fun archivedLogsOnly(archivedLogsOnly: Boolean)
 
       /**
-       * @param archivedLogsOnly When this field is set to `Y` , AWS DMS only accesses the archived
-       * redo logs.
+       * @param archivedLogsOnly When this field is set to `True` , AWS DMS only accesses the
+       * archived redo logs.
        * If the archived redo logs are stored on Automatic Storage Management (ASM) only, the AWS
        * DMS user account needs to be granted ASM privileges.
        */
@@ -9313,62 +9326,62 @@ public open class CfnEndpoint(
       public fun useAlternateFolderForOnline(useAlternateFolderForOnline: IResolvable)
 
       /**
-       * @param useBFile Set this attribute to Y to capture change data using the Binary Reader
+       * @param useBFile Set this attribute to True to capture change data using the Binary Reader
        * utility.
-       * Set `UseLogminerReader` to N to set this attribute to Y. To use Binary Reader with Amazon
-       * RDS for Oracle as the source, you set additional attributes. For more information about using
-       * this setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner or AWS
-       * DMS Binary Reader for
+       * Set `UseLogminerReader` to False to set this attribute to True. To use Binary Reader with
+       * Amazon RDS for Oracle as the source, you set additional attributes. For more information about
+       * using this setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner
+       * or AWS DMS Binary Reader for
        * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
        * .
        */
       public fun useBFile(useBFile: Boolean)
 
       /**
-       * @param useBFile Set this attribute to Y to capture change data using the Binary Reader
+       * @param useBFile Set this attribute to True to capture change data using the Binary Reader
        * utility.
-       * Set `UseLogminerReader` to N to set this attribute to Y. To use Binary Reader with Amazon
-       * RDS for Oracle as the source, you set additional attributes. For more information about using
-       * this setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner or AWS
-       * DMS Binary Reader for
+       * Set `UseLogminerReader` to False to set this attribute to True. To use Binary Reader with
+       * Amazon RDS for Oracle as the source, you set additional attributes. For more information about
+       * using this setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner
+       * or AWS DMS Binary Reader for
        * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
        * .
        */
       public fun useBFile(useBFile: IResolvable)
 
       /**
-       * @param useDirectPathFullLoad Set this attribute to Y to have AWS DMS use a direct path full
-       * load.
+       * @param useDirectPathFullLoad Set this attribute to True to have AWS DMS use a direct path
+       * full load.
        * Specify this value to use the direct path protocol in the Oracle Call Interface (OCI). By
        * using this OCI protocol, you can bulk-load Oracle target tables during a full load.
        */
       public fun useDirectPathFullLoad(useDirectPathFullLoad: Boolean)
 
       /**
-       * @param useDirectPathFullLoad Set this attribute to Y to have AWS DMS use a direct path full
-       * load.
+       * @param useDirectPathFullLoad Set this attribute to True to have AWS DMS use a direct path
+       * full load.
        * Specify this value to use the direct path protocol in the Oracle Call Interface (OCI). By
        * using this OCI protocol, you can bulk-load Oracle target tables during a full load.
        */
       public fun useDirectPathFullLoad(useDirectPathFullLoad: IResolvable)
 
       /**
-       * @param useLogminerReader Set this attribute to Y to capture change data using the Oracle
+       * @param useLogminerReader Set this attribute to True to capture change data using the Oracle
        * LogMiner utility (the default).
-       * Set this attribute to N if you want to access the redo logs as a binary file. When you set
-       * `UseLogminerReader` to N, also set `UseBfile` to Y. For more information on this setting and
-       * using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
+       * Set this attribute to False if you want to access the redo logs as a binary file. When you
+       * set `UseLogminerReader` to False, also set `UseBfile` to True. For more information on this
+       * setting and using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
        * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
        * in the *AWS DMS User Guide* .
        */
       public fun useLogminerReader(useLogminerReader: Boolean)
 
       /**
-       * @param useLogminerReader Set this attribute to Y to capture change data using the Oracle
+       * @param useLogminerReader Set this attribute to True to capture change data using the Oracle
        * LogMiner utility (the default).
-       * Set this attribute to N if you want to access the redo logs as a binary file. When you set
-       * `UseLogminerReader` to N, also set `UseBfile` to Y. For more information on this setting and
-       * using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
+       * Set this attribute to False if you want to access the redo logs as a binary file. When you
+       * set `UseLogminerReader` to False, also set `UseBfile` to True. For more information on this
+       * setting and using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
        * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
        * in the *AWS DMS User Guide* .
        */
@@ -9477,8 +9490,8 @@ public open class CfnEndpoint(
       }
 
       /**
-       * @param archivedLogsOnly When this field is set to `Y` , AWS DMS only accesses the archived
-       * redo logs.
+       * @param archivedLogsOnly When this field is set to `True` , AWS DMS only accesses the
+       * archived redo logs.
        * If the archived redo logs are stored on Automatic Storage Management (ASM) only, the AWS
        * DMS user account needs to be granted ASM privileges.
        */
@@ -9487,8 +9500,8 @@ public open class CfnEndpoint(
       }
 
       /**
-       * @param archivedLogsOnly When this field is set to `Y` , AWS DMS only accesses the archived
-       * redo logs.
+       * @param archivedLogsOnly When this field is set to `True` , AWS DMS only accesses the
+       * archived redo logs.
        * If the archived redo logs are stored on Automatic Storage Management (ASM) only, the AWS
        * DMS user account needs to be granted ASM privileges.
        */
@@ -9933,12 +9946,12 @@ public open class CfnEndpoint(
       }
 
       /**
-       * @param useBFile Set this attribute to Y to capture change data using the Binary Reader
+       * @param useBFile Set this attribute to True to capture change data using the Binary Reader
        * utility.
-       * Set `UseLogminerReader` to N to set this attribute to Y. To use Binary Reader with Amazon
-       * RDS for Oracle as the source, you set additional attributes. For more information about using
-       * this setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner or AWS
-       * DMS Binary Reader for
+       * Set `UseLogminerReader` to False to set this attribute to True. To use Binary Reader with
+       * Amazon RDS for Oracle as the source, you set additional attributes. For more information about
+       * using this setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner
+       * or AWS DMS Binary Reader for
        * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
        * .
        */
@@ -9947,12 +9960,12 @@ public open class CfnEndpoint(
       }
 
       /**
-       * @param useBFile Set this attribute to Y to capture change data using the Binary Reader
+       * @param useBFile Set this attribute to True to capture change data using the Binary Reader
        * utility.
-       * Set `UseLogminerReader` to N to set this attribute to Y. To use Binary Reader with Amazon
-       * RDS for Oracle as the source, you set additional attributes. For more information about using
-       * this setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner or AWS
-       * DMS Binary Reader for
+       * Set `UseLogminerReader` to False to set this attribute to True. To use Binary Reader with
+       * Amazon RDS for Oracle as the source, you set additional attributes. For more information about
+       * using this setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner
+       * or AWS DMS Binary Reader for
        * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
        * .
        */
@@ -9961,8 +9974,8 @@ public open class CfnEndpoint(
       }
 
       /**
-       * @param useDirectPathFullLoad Set this attribute to Y to have AWS DMS use a direct path full
-       * load.
+       * @param useDirectPathFullLoad Set this attribute to True to have AWS DMS use a direct path
+       * full load.
        * Specify this value to use the direct path protocol in the Oracle Call Interface (OCI). By
        * using this OCI protocol, you can bulk-load Oracle target tables during a full load.
        */
@@ -9971,8 +9984,8 @@ public open class CfnEndpoint(
       }
 
       /**
-       * @param useDirectPathFullLoad Set this attribute to Y to have AWS DMS use a direct path full
-       * load.
+       * @param useDirectPathFullLoad Set this attribute to True to have AWS DMS use a direct path
+       * full load.
        * Specify this value to use the direct path protocol in the Oracle Call Interface (OCI). By
        * using this OCI protocol, you can bulk-load Oracle target tables during a full load.
        */
@@ -9981,11 +9994,11 @@ public open class CfnEndpoint(
       }
 
       /**
-       * @param useLogminerReader Set this attribute to Y to capture change data using the Oracle
+       * @param useLogminerReader Set this attribute to True to capture change data using the Oracle
        * LogMiner utility (the default).
-       * Set this attribute to N if you want to access the redo logs as a binary file. When you set
-       * `UseLogminerReader` to N, also set `UseBfile` to Y. For more information on this setting and
-       * using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
+       * Set this attribute to False if you want to access the redo logs as a binary file. When you
+       * set `UseLogminerReader` to False, also set `UseBfile` to True. For more information on this
+       * setting and using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
        * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
        * in the *AWS DMS User Guide* .
        */
@@ -9994,11 +10007,11 @@ public open class CfnEndpoint(
       }
 
       /**
-       * @param useLogminerReader Set this attribute to Y to capture change data using the Oracle
+       * @param useLogminerReader Set this attribute to True to capture change data using the Oracle
        * LogMiner utility (the default).
-       * Set this attribute to N if you want to access the redo logs as a binary file. When you set
-       * `UseLogminerReader` to N, also set `UseBfile` to Y. For more information on this setting and
-       * using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
+       * Set this attribute to False if you want to access the redo logs as a binary file. When you
+       * set `UseLogminerReader` to False, also set `UseBfile` to True. For more information on this
+       * setting and using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
        * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
        * in the *AWS DMS User Guide* .
        */
@@ -10022,7 +10035,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty,
-    ) : CdkObject(cdkObject), OracleSettingsProperty {
+    ) : CdkObject(cdkObject),
+        OracleSettingsProperty {
       /**
        * Set this attribute to `false` in order to use the Binary Reader to capture change data for
        * an Amazon RDS for Oracle as the source.
@@ -10085,7 +10099,7 @@ public open class CfnEndpoint(
       override fun archivedLogDestId(): Number? = unwrap(this).getArchivedLogDestId()
 
       /**
-       * When this field is set to `Y` , AWS DMS only accesses the archived redo logs.
+       * When this field is set to `True` , AWS DMS only accesses the archived redo logs.
        *
        * If the archived redo logs are stored on Automatic Storage Management (ASM) only, the AWS
        * DMS user account needs to be granted ASM privileges.
@@ -10420,12 +10434,12 @@ public open class CfnEndpoint(
           unwrap(this).getUseAlternateFolderForOnline()
 
       /**
-       * Set this attribute to Y to capture change data using the Binary Reader utility.
+       * Set this attribute to True to capture change data using the Binary Reader utility.
        *
-       * Set `UseLogminerReader` to N to set this attribute to Y. To use Binary Reader with Amazon
-       * RDS for Oracle as the source, you set additional attributes. For more information about using
-       * this setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner or AWS
-       * DMS Binary Reader for
+       * Set `UseLogminerReader` to False to set this attribute to True. To use Binary Reader with
+       * Amazon RDS for Oracle as the source, you set additional attributes. For more information about
+       * using this setting with Oracle Automatic Storage Management (ASM), see [Using Oracle LogMiner
+       * or AWS DMS Binary Reader for
        * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
        * .
        *
@@ -10434,7 +10448,7 @@ public open class CfnEndpoint(
       override fun useBFile(): Any? = unwrap(this).getUseBFile()
 
       /**
-       * Set this attribute to Y to have AWS DMS use a direct path full load.
+       * Set this attribute to True to have AWS DMS use a direct path full load.
        *
        * Specify this value to use the direct path protocol in the Oracle Call Interface (OCI). By
        * using this OCI protocol, you can bulk-load Oracle target tables during a full load.
@@ -10444,12 +10458,12 @@ public open class CfnEndpoint(
       override fun useDirectPathFullLoad(): Any? = unwrap(this).getUseDirectPathFullLoad()
 
       /**
-       * Set this attribute to Y to capture change data using the Oracle LogMiner utility (the
+       * Set this attribute to True to capture change data using the Oracle LogMiner utility (the
        * default).
        *
-       * Set this attribute to N if you want to access the redo logs as a binary file. When you set
-       * `UseLogminerReader` to N, also set `UseBfile` to Y. For more information on this setting and
-       * using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
+       * Set this attribute to False if you want to access the redo logs as a binary file. When you
+       * set `UseLogminerReader` to False, also set `UseBfile` to True. For more information on this
+       * setting and using Oracle ASM, see [Using Oracle LogMiner or AWS DMS Binary Reader for
        * CDC](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.CDC)
        * in the *AWS DMS User Guide* .
        *
@@ -11163,7 +11177,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty,
-    ) : CdkObject(cdkObject), PostgreSqlSettingsProperty {
+    ) : CdkObject(cdkObject),
+        PostgreSqlSettingsProperty {
       /**
        * For use with change data capture (CDC) only, this attribute has AWS DMS bypass foreign keys
        * and user triggers to reduce the time it takes to bulk load data.
@@ -11599,7 +11614,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty,
-    ) : CdkObject(cdkObject), RedisSettingsProperty {
+    ) : CdkObject(cdkObject),
+        RedisSettingsProperty {
       /**
        * The password provided with the `auth-role` and `auth-token` options of the `AuthType`
        * setting for a Redis target endpoint.
@@ -12720,7 +12736,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty,
-    ) : CdkObject(cdkObject), RedshiftSettingsProperty {
+    ) : CdkObject(cdkObject),
+        RedshiftSettingsProperty {
       /**
        * A value that indicates to allow any date format, including invalid formats such as 00/00/00
        * 00:00:00, to be loaded without generating an error.
@@ -15239,7 +15256,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.S3SettingsProperty,
-    ) : CdkObject(cdkObject), S3SettingsProperty {
+    ) : CdkObject(cdkObject),
+        S3SettingsProperty {
       /**
        * An optional parameter that, when set to `true` or `y` , you can use to add column name
        * information to the .csv output file.
@@ -16016,7 +16034,8 @@ public open class CfnEndpoint(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty,
-    ) : CdkObject(cdkObject), SybaseSettingsProperty {
+    ) : CdkObject(cdkObject),
+        SybaseSettingsProperty {
       /**
        * The full Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted
        * entity and grants the required permissions to access the value in `SecretsManagerSecret` .

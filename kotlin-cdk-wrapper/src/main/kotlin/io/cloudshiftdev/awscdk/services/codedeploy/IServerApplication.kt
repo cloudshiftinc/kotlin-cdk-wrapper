@@ -34,7 +34,8 @@ public interface IServerApplication : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.IServerApplication,
-  ) : CdkObject(cdkObject), IServerApplication {
+  ) : CdkObject(cdkObject),
+      IServerApplication {
     /**
      *
      */

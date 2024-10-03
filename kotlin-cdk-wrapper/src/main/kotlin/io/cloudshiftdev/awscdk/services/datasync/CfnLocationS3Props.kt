@@ -286,7 +286,8 @@ public interface CfnLocationS3Props {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datasync.CfnLocationS3Props,
-  ) : CdkObject(cdkObject), CfnLocationS3Props {
+  ) : CdkObject(cdkObject),
+      CfnLocationS3Props {
     /**
      * The ARN of the Amazon S3 bucket.
      *

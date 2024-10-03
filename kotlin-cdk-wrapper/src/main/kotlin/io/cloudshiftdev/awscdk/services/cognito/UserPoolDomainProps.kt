@@ -161,7 +161,8 @@ public interface UserPoolDomainProps : UserPoolDomainOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.UserPoolDomainProps,
-  ) : CdkObject(cdkObject), UserPoolDomainProps {
+  ) : CdkObject(cdkObject),
+      UserPoolDomainProps {
     /**
      * Associate a cognito prefix domain with your user pool Either `customDomain` or
      * `cognitoDomain` must be specified.

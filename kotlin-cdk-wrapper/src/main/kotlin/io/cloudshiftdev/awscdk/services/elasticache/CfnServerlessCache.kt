@@ -76,7 +76,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnServerlessCache(
   cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -451,7 +453,7 @@ public open class CfnServerlessCache(
      * The daily time that a cache snapshot will be created.
      *
      * Default is NULL, i.e. snapshots will not be created at a specific time on a daily basis.
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-dailysnapshottime)
      * @param dailySnapshotTime The daily time that a cache snapshot will be created. 
@@ -619,7 +621,7 @@ public open class CfnServerlessCache(
     /**
      * The current setting for the number of serverless cache snapshots the system will retain.
      *
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-snapshotretentionlimit)
      * @param snapshotRetentionLimit The current setting for the number of serverless cache
@@ -672,7 +674,7 @@ public open class CfnServerlessCache(
     /**
      * The identifier of the user group associated with the serverless cache.
      *
-     * Available for Redis only. Default is NULL.
+     * Available for Redis OSS only. Default is NULL.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-usergroupid)
      * @param userGroupId The identifier of the user group associated with the serverless cache. 
@@ -722,7 +724,7 @@ public open class CfnServerlessCache(
      * The daily time that a cache snapshot will be created.
      *
      * Default is NULL, i.e. snapshots will not be created at a specific time on a daily basis.
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-dailysnapshottime)
      * @param dailySnapshotTime The daily time that a cache snapshot will be created. 
@@ -920,7 +922,7 @@ public open class CfnServerlessCache(
     /**
      * The current setting for the number of serverless cache snapshots the system will retain.
      *
-     * Available for Redis only.
+     * Available for Redis OSS and Serverless Memcached only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-snapshotretentionlimit)
      * @param snapshotRetentionLimit The current setting for the number of serverless cache
@@ -979,7 +981,7 @@ public open class CfnServerlessCache(
     /**
      * The identifier of the user group associated with the serverless cache.
      *
-     * Available for Redis only. Default is NULL.
+     * Available for Redis OSS only. Default is NULL.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-usergroupid)
      * @param userGroupId The identifier of the user group associated with the serverless cache. 
@@ -1156,7 +1158,8 @@ public open class CfnServerlessCache(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.CacheUsageLimitsProperty,
-    ) : CdkObject(cdkObject), CacheUsageLimitsProperty {
+    ) : CdkObject(cdkObject),
+        CacheUsageLimitsProperty {
       /**
        * The maximum data storage limit in the cache, expressed in Gigabytes.
        *
@@ -1286,7 +1289,8 @@ public open class CfnServerlessCache(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty,
-    ) : CdkObject(cdkObject), DataStorageProperty {
+    ) : CdkObject(cdkObject),
+        DataStorageProperty {
       /**
        * The upper limit for data storage the cache is set to use.
        *
@@ -1408,7 +1412,8 @@ public open class CfnServerlessCache(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.ECPUPerSecondProperty,
-    ) : CdkObject(cdkObject), ECPUPerSecondProperty {
+    ) : CdkObject(cdkObject),
+        ECPUPerSecondProperty {
       /**
        * The configuration for the maximum number of ECPUs the cache can consume per second.
        *
@@ -1519,7 +1524,8 @@ public open class CfnServerlessCache(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.EndpointProperty,
-    ) : CdkObject(cdkObject), EndpointProperty {
+    ) : CdkObject(cdkObject),
+        EndpointProperty {
       /**
        * The DNS hostname of the cache node.
        *

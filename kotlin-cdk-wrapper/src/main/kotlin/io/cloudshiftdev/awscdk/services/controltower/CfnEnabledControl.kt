@@ -53,7 +53,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEnabledControl(
   cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledControl,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -417,7 +419,8 @@ public open class CfnEnabledControl(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledControl.EnabledControlParameterProperty,
-    ) : CdkObject(cdkObject), EnabledControlParameterProperty {
+    ) : CdkObject(cdkObject),
+        EnabledControlParameterProperty {
       /**
        * The key of a key/value pair.
        *

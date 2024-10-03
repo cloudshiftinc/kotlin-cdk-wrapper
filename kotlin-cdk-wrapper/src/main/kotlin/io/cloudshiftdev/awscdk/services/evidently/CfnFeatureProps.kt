@@ -411,7 +411,8 @@ public interface CfnFeatureProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.evidently.CfnFeatureProps,
-  ) : CdkObject(cdkObject), CfnFeatureProps {
+  ) : CdkObject(cdkObject),
+      CfnFeatureProps {
     /**
      * The name of the variation to use as the default variation.
      *

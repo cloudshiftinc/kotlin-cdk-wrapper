@@ -192,7 +192,8 @@ public interface BootstrapOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.BootstrapOptions,
-  ) : CdkObject(cdkObject), BootstrapOptions {
+  ) : CdkObject(cdkObject),
+      BootstrapOptions {
     /**
      * Additional command line arguments to pass to the `/etc/eks/bootstrap.sh` command.
      *

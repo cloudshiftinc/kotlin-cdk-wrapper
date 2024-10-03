@@ -487,7 +487,8 @@ public interface CfnBotProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lex.CfnBotProps,
-  ) : CdkObject(cdkObject), CfnBotProps {
+  ) : CdkObject(cdkObject),
+      CfnBotProps {
     /**
      * Indicates whether Amazon Lex V2 should automatically build the locales for the bot after a
      * change.

@@ -196,7 +196,8 @@ public interface CustomWidgetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.CustomWidgetProps,
-  ) : CdkObject(cdkObject), CustomWidgetProps {
+  ) : CdkObject(cdkObject),
+      CustomWidgetProps {
     /**
      * The Arn of the AWS Lambda function that returns HTML or JSON that will be displayed in the
      * widget.

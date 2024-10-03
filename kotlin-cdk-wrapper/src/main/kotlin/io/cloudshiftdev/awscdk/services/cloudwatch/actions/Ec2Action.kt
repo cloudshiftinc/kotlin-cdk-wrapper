@@ -23,7 +23,8 @@ import io.cloudshiftdev.constructs.Construct
  */
 public open class Ec2Action(
   cdkObject: software.amazon.awscdk.services.cloudwatch.actions.Ec2Action,
-) : CdkObject(cdkObject), IAlarmAction {
+) : CdkObject(cdkObject),
+    IAlarmAction {
   public constructor(instanceAction: Ec2InstanceAction) :
       this(software.amazon.awscdk.services.cloudwatch.actions.Ec2Action(instanceAction.let(Ec2InstanceAction.Companion::unwrap))
   )

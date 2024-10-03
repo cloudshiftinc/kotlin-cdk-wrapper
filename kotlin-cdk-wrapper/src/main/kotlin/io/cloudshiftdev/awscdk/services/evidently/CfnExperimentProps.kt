@@ -598,7 +598,8 @@ public interface CfnExperimentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.evidently.CfnExperimentProps,
-  ) : CdkObject(cdkObject), CfnExperimentProps {
+  ) : CdkObject(cdkObject),
+      CfnExperimentProps {
     /**
      * An optional description of the experiment.
      *

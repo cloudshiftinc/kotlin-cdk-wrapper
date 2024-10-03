@@ -247,7 +247,8 @@ public interface EksJobDefinitionProps : JobDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.EksJobDefinitionProps,
-  ) : CdkObject(cdkObject), EksJobDefinitionProps {
+  ) : CdkObject(cdkObject),
+      EksJobDefinitionProps {
     /**
      * The container this Job Definition will run.
      */

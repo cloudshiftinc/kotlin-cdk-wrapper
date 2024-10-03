@@ -114,7 +114,8 @@ public interface CfnOriginRequestPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicyProps,
-  ) : CdkObject(cdkObject), CfnOriginRequestPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnOriginRequestPolicyProps {
     /**
      * The origin request policy configuration.
      *

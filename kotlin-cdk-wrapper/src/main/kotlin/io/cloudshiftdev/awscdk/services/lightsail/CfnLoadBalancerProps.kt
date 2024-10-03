@@ -347,7 +347,8 @@ public interface CfnLoadBalancerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lightsail.CfnLoadBalancerProps,
-  ) : CdkObject(cdkObject), CfnLoadBalancerProps {
+  ) : CdkObject(cdkObject),
+      CfnLoadBalancerProps {
     /**
      * The Lightsail instances to attach to the load balancer.
      *

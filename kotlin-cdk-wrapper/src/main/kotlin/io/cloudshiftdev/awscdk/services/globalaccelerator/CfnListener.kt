@@ -47,7 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnListener(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnListener,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -416,7 +417,8 @@ public open class CfnListener(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnListener.PortRangeProperty,
-    ) : CdkObject(cdkObject), PortRangeProperty {
+    ) : CdkObject(cdkObject),
+        PortRangeProperty {
       /**
        * The first port in the range of ports, inclusive.
        *

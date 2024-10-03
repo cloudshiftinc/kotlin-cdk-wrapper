@@ -23,7 +23,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class VdmAttributes(
   cdkObject: software.amazon.awscdk.services.ses.VdmAttributes,
-) : Resource(cdkObject), IVdmAttributes {
+) : Resource(cdkObject),
+    IVdmAttributes {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.VdmAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

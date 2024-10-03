@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
 import kotlin.Number
@@ -27,11 +28,13 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+ * import io.cloudshiftdev.awscdk.services.iam.*;
  * import io.cloudshiftdev.awscdk.services.kms.*;
  * import io.cloudshiftdev.awscdk.services.s3.*;
  * Bucket bucket;
  * InputFormat inputFormat;
  * Key key;
+ * PolicyDocument policyDocument;
  * TableOptions tableOptions = TableOptions.builder()
  * .partitionKey(Attribute.builder()
  * .name("name")
@@ -51,11 +54,14 @@ import kotlin.jvm.JvmName
  * .compressionType(InputCompressionType.GZIP)
  * .keyPrefix("keyPrefix")
  * .build())
+ * .maxReadRequestUnits(123)
+ * .maxWriteRequestUnits(123)
  * .pointInTimeRecovery(false)
  * .readCapacity(123)
  * .removalPolicy(RemovalPolicy.DESTROY)
  * .replicationRegions(List.of("replicationRegions"))
  * .replicationTimeout(Duration.minutes(30))
+ * .resourcePolicy(policyDocument)
  * .sortKey(Attribute.builder()
  * .name("name")
  * .type(AttributeType.BINARY)
@@ -131,6 +137,30 @@ public interface TableOptions : SchemaOptions {
       unwrap(this).getImportSource()?.let(ImportSourceSpecification::wrap)
 
   /**
+   * The maximum read request units for the table.
+   *
+   * Careful if you add Global Secondary Indexes, as
+   * those will share the table's maximum on-demand throughput.
+   *
+   * Can only be provided if billingMode is PAY_PER_REQUEST.
+   *
+   * Default: - on-demand throughput is disabled
+   */
+  public fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
+
+  /**
+   * The write request units for the table.
+   *
+   * Careful if you add Global Secondary Indexes, as
+   * those will share the table's maximum on-demand throughput.
+   *
+   * Can only be provided if billingMode is PAY_PER_REQUEST.
+   *
+   * Default: - on-demand throughput is disabled
+   */
+  public fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
+
+  /**
    * Whether point-in-time recovery is enabled.
    *
    * Default: - point-in-time recovery is disabled
@@ -174,6 +204,16 @@ public interface TableOptions : SchemaOptions {
       unwrap(this).getReplicationTimeout()?.let(Duration::wrap)
 
   /**
+   * Resource policy to assign to table.
+   *
+   * Default: - No resource policy statement
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+   */
+  public fun resourcePolicy(): PolicyDocument? =
+      unwrap(this).getResourcePolicy()?.let(PolicyDocument::wrap)
+
+  /**
    * When an item in the table is modified, StreamViewType determines what information is written to
    * the stream for this table.
    *
@@ -196,7 +236,9 @@ public interface TableOptions : SchemaOptions {
   public fun timeToLiveAttribute(): String? = unwrap(this).getTimeToLiveAttribute()
 
   /**
-   * Indicates whether CloudFormation stack waits for replication to finish.
+   * [WARNING: Use this flag with caution, misusing this flag may cause deleting existing replicas,
+   * refer to the detailed documentation for more information] Indicates whether CloudFormation stack
+   * waits for replication to finish.
    *
    * If set to false, the CloudFormation resource will mark the resource as
    * created and replication will be completed asynchronously. This property is
@@ -289,6 +331,24 @@ public interface TableOptions : SchemaOptions {
     public fun importSource(importSource: ImportSourceSpecification.Builder.() -> Unit)
 
     /**
+     * @param maxReadRequestUnits The maximum read request units for the table.
+     * Careful if you add Global Secondary Indexes, as
+     * those will share the table's maximum on-demand throughput.
+     *
+     * Can only be provided if billingMode is PAY_PER_REQUEST.
+     */
+    public fun maxReadRequestUnits(maxReadRequestUnits: Number)
+
+    /**
+     * @param maxWriteRequestUnits The write request units for the table.
+     * Careful if you add Global Secondary Indexes, as
+     * those will share the table's maximum on-demand throughput.
+     *
+     * Can only be provided if billingMode is PAY_PER_REQUEST.
+     */
+    public fun maxWriteRequestUnits(maxWriteRequestUnits: Number)
+
+    /**
      * @param partitionKey Partition key attribute definition. 
      */
     public fun partitionKey(partitionKey: Attribute)
@@ -335,6 +395,18 @@ public interface TableOptions : SchemaOptions {
     public fun replicationTimeout(replicationTimeout: Duration)
 
     /**
+     * @param resourcePolicy Resource policy to assign to table.
+     */
+    public fun resourcePolicy(resourcePolicy: PolicyDocument)
+
+    /**
+     * @param resourcePolicy Resource policy to assign to table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8f8091b794a239a65d7d402d289204a9a1105f5a0d31d42b5ca329dd56bb756f")
+    public fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit)
+
+    /**
      * @param sortKey Sort key attribute definition.
      */
     public fun sortKey(sortKey: Attribute)
@@ -363,8 +435,9 @@ public interface TableOptions : SchemaOptions {
     public fun timeToLiveAttribute(timeToLiveAttribute: String)
 
     /**
-     * @param waitForReplicationToFinish Indicates whether CloudFormation stack waits for
-     * replication to finish.
+     * @param waitForReplicationToFinish [WARNING: Use this flag with caution, misusing this flag
+     * may cause deleting existing replicas, refer to the detailed documentation for more information]
+     * Indicates whether CloudFormation stack waits for replication to finish.
      * If set to false, the CloudFormation resource will mark the resource as
      * created and replication will be completed asynchronously. This property is
      * ignored if replicationRegions property is not set.
@@ -462,6 +535,28 @@ public interface TableOptions : SchemaOptions {
         importSource(ImportSourceSpecification(importSource))
 
     /**
+     * @param maxReadRequestUnits The maximum read request units for the table.
+     * Careful if you add Global Secondary Indexes, as
+     * those will share the table's maximum on-demand throughput.
+     *
+     * Can only be provided if billingMode is PAY_PER_REQUEST.
+     */
+    override fun maxReadRequestUnits(maxReadRequestUnits: Number) {
+      cdkBuilder.maxReadRequestUnits(maxReadRequestUnits)
+    }
+
+    /**
+     * @param maxWriteRequestUnits The write request units for the table.
+     * Careful if you add Global Secondary Indexes, as
+     * those will share the table's maximum on-demand throughput.
+     *
+     * Can only be provided if billingMode is PAY_PER_REQUEST.
+     */
+    override fun maxWriteRequestUnits(maxWriteRequestUnits: Number) {
+      cdkBuilder.maxWriteRequestUnits(maxWriteRequestUnits)
+    }
+
+    /**
      * @param partitionKey Partition key attribute definition. 
      */
     override fun partitionKey(partitionKey: Attribute) {
@@ -522,6 +617,21 @@ public interface TableOptions : SchemaOptions {
     }
 
     /**
+     * @param resourcePolicy Resource policy to assign to table.
+     */
+    override fun resourcePolicy(resourcePolicy: PolicyDocument) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(PolicyDocument.Companion::unwrap))
+    }
+
+    /**
+     * @param resourcePolicy Resource policy to assign to table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8f8091b794a239a65d7d402d289204a9a1105f5a0d31d42b5ca329dd56bb756f")
+    override fun resourcePolicy(resourcePolicy: PolicyDocument.Builder.() -> Unit): Unit =
+        resourcePolicy(PolicyDocument(resourcePolicy))
+
+    /**
      * @param sortKey Sort key attribute definition.
      */
     override fun sortKey(sortKey: Attribute) {
@@ -558,8 +668,9 @@ public interface TableOptions : SchemaOptions {
     }
 
     /**
-     * @param waitForReplicationToFinish Indicates whether CloudFormation stack waits for
-     * replication to finish.
+     * @param waitForReplicationToFinish [WARNING: Use this flag with caution, misusing this flag
+     * may cause deleting existing replicas, refer to the detailed documentation for more information]
+     * Indicates whether CloudFormation stack waits for replication to finish.
      * If set to false, the CloudFormation resource will mark the resource as
      * created and replication will be completed asynchronously. This property is
      * ignored if replicationRegions property is not set.
@@ -596,7 +707,8 @@ public interface TableOptions : SchemaOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.TableOptions,
-  ) : CdkObject(cdkObject), TableOptions {
+  ) : CdkObject(cdkObject),
+      TableOptions {
     /**
      * Specify how you are charged for read and write throughput and how you manage capacity.
      *
@@ -660,6 +772,30 @@ public interface TableOptions : SchemaOptions {
         unwrap(this).getImportSource()?.let(ImportSourceSpecification::wrap)
 
     /**
+     * The maximum read request units for the table.
+     *
+     * Careful if you add Global Secondary Indexes, as
+     * those will share the table's maximum on-demand throughput.
+     *
+     * Can only be provided if billingMode is PAY_PER_REQUEST.
+     *
+     * Default: - on-demand throughput is disabled
+     */
+    override fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
+
+    /**
+     * The write request units for the table.
+     *
+     * Careful if you add Global Secondary Indexes, as
+     * those will share the table's maximum on-demand throughput.
+     *
+     * Can only be provided if billingMode is PAY_PER_REQUEST.
+     *
+     * Default: - on-demand throughput is disabled
+     */
+    override fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
+
+    /**
      * Partition key attribute definition.
      */
     override fun partitionKey(): Attribute = unwrap(this).getPartitionKey().let(Attribute::wrap)
@@ -708,6 +844,16 @@ public interface TableOptions : SchemaOptions {
         unwrap(this).getReplicationTimeout()?.let(Duration::wrap)
 
     /**
+     * Resource policy to assign to table.
+     *
+     * Default: - No resource policy statement
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+     */
+    override fun resourcePolicy(): PolicyDocument? =
+        unwrap(this).getResourcePolicy()?.let(PolicyDocument::wrap)
+
+    /**
      * Sort key attribute definition.
      *
      * Default: no sort key
@@ -737,7 +883,9 @@ public interface TableOptions : SchemaOptions {
     override fun timeToLiveAttribute(): String? = unwrap(this).getTimeToLiveAttribute()
 
     /**
-     * Indicates whether CloudFormation stack waits for replication to finish.
+     * [WARNING: Use this flag with caution, misusing this flag may cause deleting existing
+     * replicas, refer to the detailed documentation for more information] Indicates whether
+     * CloudFormation stack waits for replication to finish.
      *
      * If set to false, the CloudFormation resource will mark the resource as
      * created and replication will be completed asynchronously. This property is

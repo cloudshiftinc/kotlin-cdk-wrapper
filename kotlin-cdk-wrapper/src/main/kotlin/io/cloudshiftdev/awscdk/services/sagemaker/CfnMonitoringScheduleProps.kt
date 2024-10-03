@@ -393,7 +393,8 @@ public interface CfnMonitoringScheduleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringScheduleProps,
-  ) : CdkObject(cdkObject), CfnMonitoringScheduleProps {
+  ) : CdkObject(cdkObject),
+      CfnMonitoringScheduleProps {
     /**
      * The name of the endpoint using the monitoring schedule.
      *

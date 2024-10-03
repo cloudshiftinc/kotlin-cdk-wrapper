@@ -136,7 +136,8 @@ public interface CfnLabelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.frauddetector.CfnLabelProps,
-  ) : CdkObject(cdkObject), CfnLabelProps {
+  ) : CdkObject(cdkObject),
+      CfnLabelProps {
     /**
      * The label description.
      *

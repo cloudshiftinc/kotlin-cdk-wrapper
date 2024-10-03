@@ -15,13 +15,29 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.s3.*;
- * Object policyDocument;
- * CfnBucketPolicyProps cfnBucketPolicyProps = CfnBucketPolicyProps.builder()
- * .bucket("bucket")
- * .policyDocument(policyDocument)
+ * String bucketName = "my-favorite-bucket-name";
+ * Bucket accessLogsBucket = Bucket.Builder.create(this, "AccessLogsBucket")
+ * .objectOwnership(ObjectOwnership.BUCKET_OWNER_ENFORCED)
+ * .bucketName(bucketName)
+ * .build();
+ * // Creating a bucket policy using L1
+ * CfnBucketPolicy bucketPolicy = CfnBucketPolicy.Builder.create(this, "BucketPolicy")
+ * .bucket(bucketName)
+ * .policyDocument(Map.of(
+ * "Statement", List.of(Map.of(
+ * "Action", "s3:*",
+ * "Effect", "Deny",
+ * "Principal", Map.of(
+ * "AWS", "*"),
+ * "Resource", List.of(accessLogsBucket.getBucketArn(), String.format("%s/ *",
+ * accessLogsBucket.getBucketArn())))),
+ * "Version", "2012-10-17"))
+ * .build();
+ * // 'serverAccessLogsBucket' will create a new L2 bucket policy
+ * // to allow log delivery and overwrite the L1 bucket policy.
+ * Bucket bucket = Bucket.Builder.create(this, "MyBucket")
+ * .serverAccessLogsBucket(accessLogsBucket)
+ * .serverAccessLogsPrefix("logs")
  * .build();
  * ```
  *
@@ -105,7 +121,8 @@ public interface CfnBucketPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.CfnBucketPolicyProps,
-  ) : CdkObject(cdkObject), CfnBucketPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnBucketPolicyProps {
     /**
      * The name of the Amazon S3 bucket to which the policy applies.
      *

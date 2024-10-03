@@ -17,7 +17,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class State(
   cdkObject: software.amazon.awscdk.services.stepfunctions.State,
-) : Construct(cdkObject), IChainable {
+) : Construct(cdkObject),
+    IChainable {
   /**
    * Add a prefix to the stateId of this state.
    *

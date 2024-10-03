@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPublicDnsNamespace(
   cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -461,7 +463,8 @@ public open class CfnPublicDnsNamespace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty,
-    ) : CdkObject(cdkObject), PropertiesProperty {
+    ) : CdkObject(cdkObject),
+        PropertiesProperty {
       /**
        * DNS properties for the public DNS namespace.
        *
@@ -578,7 +581,8 @@ public open class CfnPublicDnsNamespace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty,
-    ) : CdkObject(cdkObject), PublicDnsPropertiesMutableProperty {
+    ) : CdkObject(cdkObject),
+        PublicDnsPropertiesMutableProperty {
       /**
        * Start of Authority (SOA) record for the hosted zone for the public DNS namespace.
        *
@@ -661,7 +665,8 @@ public open class CfnPublicDnsNamespace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.SOAProperty,
-    ) : CdkObject(cdkObject), SOAProperty {
+    ) : CdkObject(cdkObject),
+        SOAProperty {
       /**
        * The time to live (TTL) for purposes of negative caching.
        *

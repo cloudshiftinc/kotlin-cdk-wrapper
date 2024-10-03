@@ -528,7 +528,8 @@ public interface CfnAuthorizerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnAuthorizerProps,
-  ) : CdkObject(cdkObject), CfnAuthorizerProps {
+  ) : CdkObject(cdkObject),
+      CfnAuthorizerProps {
     /**
      * The API identifier.
      *

@@ -27,22 +27,24 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Bucket destinationBucket;
- * IBucket sourceBucket = Bucket.fromBucketAttributes(this, "SourceBucket",
- * BucketAttributes.builder()
- * .bucketArn("arn:aws:s3:::my-source-bucket-name")
- * .encryptionKey(Key.fromKeyArn(this, "SourceBucketEncryptionKey",
- * "arn:aws:kms:us-east-1:123456789012:key/&lt;key-id&gt;"))
- * .build());
- * BucketDeployment deployment = BucketDeployment.Builder.create(this, "DeployFiles")
- * .sources(List.of(Source.bucket(sourceBucket, "source.zip")))
- * .destinationBucket(destinationBucket)
+ * import io.cloudshiftdev.awscdk.services.kms.*;
+ * Key myKmsKey = new Key(this, "myKMSKey");
+ * Bucket myBucket = Bucket.Builder.create(this, "mySSEKMSEncryptedBucket")
+ * .encryption(BucketEncryption.KMS)
+ * .encryptionKey(myKmsKey)
+ * .objectOwnership(ObjectOwnership.BUCKET_OWNER_ENFORCED)
+ * .build();
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(S3BucketOrigin.withOriginAccessControl(myBucket))
+ * .build())
  * .build();
  * ```
  */
 public open class Key(
   cdkObject: software.amazon.awscdk.services.kms.Key,
-) : Resource(cdkObject), IKey {
+) : Resource(cdkObject),
+    IKey {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.kms.Key(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -288,6 +290,25 @@ public open class Key(
     public fun keyUsage(keyUsage: KeyUsage)
 
     /**
+     * Creates a multi-Region primary key that you can replicate in other AWS Regions.
+     *
+     * You can't change the `multiRegion` value after the KMS key is created.
+     *
+     * IMPORTANT: If you change the value of the `multiRegion` property on an existing KMS key, the
+     * update request fails,
+     * regardless of the value of the UpdateReplacePolicy attribute.
+     * This prevents you from accidentally deleting a KMS key by changing an immutable property
+     * value.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html)
+     * @param multiRegion Creates a multi-Region primary key that you can replicate in other AWS
+     * Regions. 
+     */
+    public fun multiRegion(multiRegion: Boolean)
+
+    /**
      * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been
      * removed from a CloudFormation stack.
      *
@@ -486,6 +507,27 @@ public open class Key(
      */
     override fun keyUsage(keyUsage: KeyUsage) {
       cdkBuilder.keyUsage(keyUsage.let(KeyUsage.Companion::unwrap))
+    }
+
+    /**
+     * Creates a multi-Region primary key that you can replicate in other AWS Regions.
+     *
+     * You can't change the `multiRegion` value after the KMS key is created.
+     *
+     * IMPORTANT: If you change the value of the `multiRegion` property on an existing KMS key, the
+     * update request fails,
+     * regardless of the value of the UpdateReplacePolicy attribute.
+     * This prevents you from accidentally deleting a KMS key by changing an immutable property
+     * value.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html)
+     * @param multiRegion Creates a multi-Region primary key that you can replicate in other AWS
+     * Regions. 
+     */
+    override fun multiRegion(multiRegion: Boolean) {
+      cdkBuilder.multiRegion(multiRegion)
     }
 
     /**

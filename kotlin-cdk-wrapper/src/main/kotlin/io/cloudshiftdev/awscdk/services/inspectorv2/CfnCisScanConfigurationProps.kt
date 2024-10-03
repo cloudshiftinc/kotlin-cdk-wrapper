@@ -49,14 +49,15 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .securityLevel("securityLevel")
- * .tags(Map.of(
- * "tagsKey", "tags"))
  * .targets(CisTargetsProperty.builder()
  * .accountIds(List.of("accountIds"))
  * // the properties below are optional
  * .targetResourceTags(Map.of(
  * "targetResourceTagsKey", List.of("targetResourceTags")))
  * .build())
+ * // the properties below are optional
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
  * .build();
  * ```
  *
@@ -68,21 +69,21 @@ public interface CfnCisScanConfigurationProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html#cfn-inspectorv2-cisscanconfiguration-scanname)
    */
-  public fun scanName(): String? = unwrap(this).getScanName()
+  public fun scanName(): String
 
   /**
    * The CIS scan configuration's schedule.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html#cfn-inspectorv2-cisscanconfiguration-schedule)
    */
-  public fun schedule(): Any? = unwrap(this).getSchedule()
+  public fun schedule(): Any
 
   /**
    * The CIS scan configuration's CIS Benchmark level.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html#cfn-inspectorv2-cisscanconfiguration-securitylevel)
    */
-  public fun securityLevel(): String? = unwrap(this).getSecurityLevel()
+  public fun securityLevel(): String
 
   /**
    * The CIS scan configuration's tags.
@@ -96,7 +97,7 @@ public interface CfnCisScanConfigurationProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html#cfn-inspectorv2-cisscanconfiguration-targets)
    */
-  public fun targets(): Any? = unwrap(this).getTargets()
+  public fun targets(): Any
 
   /**
    * A builder for [CfnCisScanConfigurationProps]
@@ -104,29 +105,29 @@ public interface CfnCisScanConfigurationProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param scanName The name of the CIS scan configuration.
+     * @param scanName The name of the CIS scan configuration. 
      */
     public fun scanName(scanName: String)
 
     /**
-     * @param schedule The CIS scan configuration's schedule.
+     * @param schedule The CIS scan configuration's schedule. 
      */
     public fun schedule(schedule: IResolvable)
 
     /**
-     * @param schedule The CIS scan configuration's schedule.
+     * @param schedule The CIS scan configuration's schedule. 
      */
     public fun schedule(schedule: CfnCisScanConfiguration.ScheduleProperty)
 
     /**
-     * @param schedule The CIS scan configuration's schedule.
+     * @param schedule The CIS scan configuration's schedule. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9e5d89b1f14380c623267eb6d54a690ab5b9f2db13c45d7ac3539f5c5dac0052")
     public fun schedule(schedule: CfnCisScanConfiguration.ScheduleProperty.Builder.() -> Unit)
 
     /**
-     * @param securityLevel The CIS scan configuration's CIS Benchmark level.
+     * @param securityLevel The CIS scan configuration's CIS Benchmark level. 
      */
     public fun securityLevel(securityLevel: String)
 
@@ -136,17 +137,17 @@ public interface CfnCisScanConfigurationProps {
     public fun tags(tags: Map<String, String>)
 
     /**
-     * @param targets The CIS scan configuration's targets.
+     * @param targets The CIS scan configuration's targets. 
      */
     public fun targets(targets: IResolvable)
 
     /**
-     * @param targets The CIS scan configuration's targets.
+     * @param targets The CIS scan configuration's targets. 
      */
     public fun targets(targets: CfnCisScanConfiguration.CisTargetsProperty)
 
     /**
-     * @param targets The CIS scan configuration's targets.
+     * @param targets The CIS scan configuration's targets. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2d8ed6caf72d6da3ffd06074e11313246cd4fcd0567453d59b22ba1443286dff")
@@ -159,28 +160,28 @@ public interface CfnCisScanConfigurationProps {
         software.amazon.awscdk.services.inspectorv2.CfnCisScanConfigurationProps.builder()
 
     /**
-     * @param scanName The name of the CIS scan configuration.
+     * @param scanName The name of the CIS scan configuration. 
      */
     override fun scanName(scanName: String) {
       cdkBuilder.scanName(scanName)
     }
 
     /**
-     * @param schedule The CIS scan configuration's schedule.
+     * @param schedule The CIS scan configuration's schedule. 
      */
     override fun schedule(schedule: IResolvable) {
       cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param schedule The CIS scan configuration's schedule.
+     * @param schedule The CIS scan configuration's schedule. 
      */
     override fun schedule(schedule: CfnCisScanConfiguration.ScheduleProperty) {
       cdkBuilder.schedule(schedule.let(CfnCisScanConfiguration.ScheduleProperty.Companion::unwrap))
     }
 
     /**
-     * @param schedule The CIS scan configuration's schedule.
+     * @param schedule The CIS scan configuration's schedule. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9e5d89b1f14380c623267eb6d54a690ab5b9f2db13c45d7ac3539f5c5dac0052")
@@ -188,7 +189,7 @@ public interface CfnCisScanConfigurationProps {
         Unit = schedule(CfnCisScanConfiguration.ScheduleProperty(schedule))
 
     /**
-     * @param securityLevel The CIS scan configuration's CIS Benchmark level.
+     * @param securityLevel The CIS scan configuration's CIS Benchmark level. 
      */
     override fun securityLevel(securityLevel: String) {
       cdkBuilder.securityLevel(securityLevel)
@@ -202,21 +203,21 @@ public interface CfnCisScanConfigurationProps {
     }
 
     /**
-     * @param targets The CIS scan configuration's targets.
+     * @param targets The CIS scan configuration's targets. 
      */
     override fun targets(targets: IResolvable) {
       cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param targets The CIS scan configuration's targets.
+     * @param targets The CIS scan configuration's targets. 
      */
     override fun targets(targets: CfnCisScanConfiguration.CisTargetsProperty) {
       cdkBuilder.targets(targets.let(CfnCisScanConfiguration.CisTargetsProperty.Companion::unwrap))
     }
 
     /**
-     * @param targets The CIS scan configuration's targets.
+     * @param targets The CIS scan configuration's targets. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2d8ed6caf72d6da3ffd06074e11313246cd4fcd0567453d59b22ba1443286dff")
@@ -229,27 +230,28 @@ public interface CfnCisScanConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfigurationProps,
-  ) : CdkObject(cdkObject), CfnCisScanConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnCisScanConfigurationProps {
     /**
      * The name of the CIS scan configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html#cfn-inspectorv2-cisscanconfiguration-scanname)
      */
-    override fun scanName(): String? = unwrap(this).getScanName()
+    override fun scanName(): String = unwrap(this).getScanName()
 
     /**
      * The CIS scan configuration's schedule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html#cfn-inspectorv2-cisscanconfiguration-schedule)
      */
-    override fun schedule(): Any? = unwrap(this).getSchedule()
+    override fun schedule(): Any = unwrap(this).getSchedule()
 
     /**
      * The CIS scan configuration's CIS Benchmark level.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html#cfn-inspectorv2-cisscanconfiguration-securitylevel)
      */
-    override fun securityLevel(): String? = unwrap(this).getSecurityLevel()
+    override fun securityLevel(): String = unwrap(this).getSecurityLevel()
 
     /**
      * The CIS scan configuration's tags.
@@ -263,7 +265,7 @@ public interface CfnCisScanConfigurationProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-cisscanconfiguration.html#cfn-inspectorv2-cisscanconfiguration-targets)
      */
-    override fun targets(): Any? = unwrap(this).getTargets()
+    override fun targets(): Any = unwrap(this).getTargets()
   }
 
   public companion object {

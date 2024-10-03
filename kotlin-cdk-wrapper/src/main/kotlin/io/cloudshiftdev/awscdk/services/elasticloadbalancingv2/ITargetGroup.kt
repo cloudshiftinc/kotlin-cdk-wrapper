@@ -36,7 +36,8 @@ public interface ITargetGroup : IConstruct {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ITargetGroup,
-  ) : CdkObject(cdkObject), ITargetGroup {
+  ) : CdkObject(cdkObject),
+      ITargetGroup {
     /**
      * A token representing a list of ARNs of the load balancers that route traffic to this target
      * group.

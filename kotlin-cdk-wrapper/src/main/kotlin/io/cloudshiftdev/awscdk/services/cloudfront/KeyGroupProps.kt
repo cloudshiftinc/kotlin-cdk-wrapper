@@ -114,7 +114,8 @@ public interface KeyGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.KeyGroupProps,
-  ) : CdkObject(cdkObject), KeyGroupProps {
+  ) : CdkObject(cdkObject),
+      KeyGroupProps {
     /**
      * A comment to describe the key group.
      *

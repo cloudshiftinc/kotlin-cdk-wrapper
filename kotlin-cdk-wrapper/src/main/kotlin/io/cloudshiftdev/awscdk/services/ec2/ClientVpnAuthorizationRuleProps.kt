@@ -106,7 +106,8 @@ public interface ClientVpnAuthorizationRuleProps : ClientVpnAuthorizationRuleOpt
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleProps,
-  ) : CdkObject(cdkObject), ClientVpnAuthorizationRuleProps {
+  ) : CdkObject(cdkObject),
+      ClientVpnAuthorizationRuleProps {
     /**
      * The IPv4 address range, in CIDR notation, of the network for which access is being
      * authorized.

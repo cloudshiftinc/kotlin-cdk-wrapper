@@ -177,7 +177,8 @@ public interface CfnProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.b2bi.CfnProfileProps,
-  ) : CdkObject(cdkObject), CfnProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnProfileProps {
     /**
      * Returns the name for the business associated with this profile.
      *

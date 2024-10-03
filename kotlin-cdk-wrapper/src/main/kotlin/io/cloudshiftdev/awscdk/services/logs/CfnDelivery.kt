@@ -25,7 +25,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * [CreateDelivery](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateDelivery.html)
  * .
  *
- * You can't update an existing delivery. You can only create and delete deliveries.
+ * To update an existing delivery configuration, use
+ * [UpdateDeliveryConfiguration](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_UpdateDeliveryConfiguration.html)
+ * .
  *
  * Example:
  *
@@ -48,7 +50,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDelivery(
   cdkObject: software.amazon.awscdk.services.logs.CfnDelivery,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

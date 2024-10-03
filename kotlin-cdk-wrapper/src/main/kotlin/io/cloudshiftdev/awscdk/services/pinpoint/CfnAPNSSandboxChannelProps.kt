@@ -273,7 +273,8 @@ public interface CfnAPNSSandboxChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnAPNSSandboxChannelProps,
-  ) : CdkObject(cdkObject), CfnAPNSSandboxChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnAPNSSandboxChannelProps {
     /**
      * The unique identifier for the Amazon Pinpoint application that the APNs sandbox channel
      * applies to.

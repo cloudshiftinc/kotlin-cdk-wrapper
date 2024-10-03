@@ -235,7 +235,8 @@ public interface MetricFilterOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.MetricFilterOptions,
-  ) : CdkObject(cdkObject), MetricFilterOptions {
+  ) : CdkObject(cdkObject),
+      MetricFilterOptions {
     /**
      * The value to emit if the pattern does not match a particular event.
      *

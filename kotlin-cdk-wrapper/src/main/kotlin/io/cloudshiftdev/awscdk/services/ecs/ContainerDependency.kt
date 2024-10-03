@@ -88,7 +88,8 @@ public interface ContainerDependency {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ContainerDependency,
-  ) : CdkObject(cdkObject), ContainerDependency {
+  ) : CdkObject(cdkObject),
+      ContainerDependency {
     /**
      * The state the container needs to be in to satisfy the dependency and proceed with startup.
      *

@@ -61,7 +61,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataIntegration(
   cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -621,7 +623,8 @@ public open class CfnDataIntegration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty,
-    ) : CdkObject(cdkObject), FileConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FileConfigurationProperty {
       /**
        * Restrictions for what files should be pulled from the source.
        *
@@ -754,7 +757,8 @@ public open class CfnDataIntegration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty,
-    ) : CdkObject(cdkObject), ScheduleConfigProperty {
+    ) : CdkObject(cdkObject),
+        ScheduleConfigProperty {
       /**
        * The start date for objects to import in the first flow run as an Unix/epoch timestamp in
        * milliseconds or in ISO-8601 format.

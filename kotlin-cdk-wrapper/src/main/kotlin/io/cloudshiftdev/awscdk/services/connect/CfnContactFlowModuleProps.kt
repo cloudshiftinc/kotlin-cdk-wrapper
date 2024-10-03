@@ -193,7 +193,8 @@ public interface CfnContactFlowModuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnContactFlowModuleProps,
-  ) : CdkObject(cdkObject), CfnContactFlowModuleProps {
+  ) : CdkObject(cdkObject),
+      CfnContactFlowModuleProps {
     /**
      * The content of the flow module.
      *

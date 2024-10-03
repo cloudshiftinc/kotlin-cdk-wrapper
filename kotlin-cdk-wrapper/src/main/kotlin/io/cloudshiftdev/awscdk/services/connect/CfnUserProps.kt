@@ -391,7 +391,8 @@ public interface CfnUserProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnUserProps,
-  ) : CdkObject(cdkObject), CfnUserProps {
+  ) : CdkObject(cdkObject),
+      CfnUserProps {
     /**
      * The identifier of the user account in the directory used for identity management.
      *

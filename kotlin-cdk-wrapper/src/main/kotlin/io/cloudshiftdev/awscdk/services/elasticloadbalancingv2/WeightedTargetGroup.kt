@@ -83,7 +83,8 @@ public interface WeightedTargetGroup {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.WeightedTargetGroup,
-  ) : CdkObject(cdkObject), WeightedTargetGroup {
+  ) : CdkObject(cdkObject),
+      WeightedTargetGroup {
     /**
      * The target group.
      */

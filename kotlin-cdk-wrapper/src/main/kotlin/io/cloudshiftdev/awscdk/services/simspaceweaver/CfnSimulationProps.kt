@@ -339,7 +339,8 @@ public interface CfnSimulationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.simspaceweaver.CfnSimulationProps,
-  ) : CdkObject(cdkObject), CfnSimulationProps {
+  ) : CdkObject(cdkObject),
+      CfnSimulationProps {
     /**
      * The maximum running time of the simulation, specified as a number of minutes (m or M), hours
      * (h or H), or days (d or D).

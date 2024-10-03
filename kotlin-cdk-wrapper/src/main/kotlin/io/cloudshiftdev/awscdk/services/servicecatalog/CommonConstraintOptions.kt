@@ -86,7 +86,8 @@ public interface CommonConstraintOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CommonConstraintOptions,
-  ) : CdkObject(cdkObject), CommonConstraintOptions {
+  ) : CdkObject(cdkObject),
+      CommonConstraintOptions {
     /**
      * The description of the constraint.
      *

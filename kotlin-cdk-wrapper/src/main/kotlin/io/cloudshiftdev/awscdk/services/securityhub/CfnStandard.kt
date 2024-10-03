@@ -52,7 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStandard(
   cdkObject: software.amazon.awscdk.services.securityhub.CfnStandard,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -334,7 +335,8 @@ public open class CfnStandard(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnStandard.StandardsControlProperty,
-    ) : CdkObject(cdkObject), StandardsControlProperty {
+    ) : CdkObject(cdkObject),
+        StandardsControlProperty {
       /**
        * A user-defined reason for changing a control's enablement status in a specified standard.
        *

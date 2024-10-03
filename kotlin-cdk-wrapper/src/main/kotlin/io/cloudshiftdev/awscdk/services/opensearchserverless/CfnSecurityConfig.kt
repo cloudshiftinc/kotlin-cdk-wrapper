@@ -49,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSecurityConfig(
   cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -433,7 +434,8 @@ public open class CfnSecurityConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig.SamlConfigOptionsProperty,
-    ) : CdkObject(cdkObject), SamlConfigOptionsProperty {
+    ) : CdkObject(cdkObject),
+        SamlConfigOptionsProperty {
       /**
        * The group attribute for this SAML integration.
        *

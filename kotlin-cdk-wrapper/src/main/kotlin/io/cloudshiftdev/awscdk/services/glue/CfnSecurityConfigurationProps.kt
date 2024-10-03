@@ -136,7 +136,8 @@ public interface CfnSecurityConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfigurationProps,
-  ) : CdkObject(cdkObject), CfnSecurityConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnSecurityConfigurationProps {
     /**
      * The encryption configuration associated with this security configuration.
      *

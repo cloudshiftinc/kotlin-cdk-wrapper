@@ -64,7 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRule(
   cdkObject: software.amazon.awscdk.services.waf.regional.CfnRule,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -472,7 +473,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.waf.regional.CfnRule.PredicateProperty,
-    ) : CdkObject(cdkObject), PredicateProperty {
+    ) : CdkObject(cdkObject),
+        PredicateProperty {
       /**
        * A unique identifier for a predicate in a `Rule` , such as `ByteMatchSetId` or `IPSetId` .
        *

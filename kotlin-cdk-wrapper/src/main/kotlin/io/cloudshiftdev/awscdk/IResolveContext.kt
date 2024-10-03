@@ -66,7 +66,8 @@ public interface IResolveContext {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IResolveContext,
-  ) : CdkObject(cdkObject), IResolveContext {
+  ) : CdkObject(cdkObject),
+      IResolveContext {
     /**
      * Path in the JSON document that is being constructed.
      */

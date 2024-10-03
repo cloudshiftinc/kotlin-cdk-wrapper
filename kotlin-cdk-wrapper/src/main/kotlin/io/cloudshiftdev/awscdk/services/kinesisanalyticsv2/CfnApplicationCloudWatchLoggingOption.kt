@@ -43,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplicationCloudWatchLoggingOption(
   cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -309,7 +310,8 @@ public open class CfnApplicationCloudWatchLoggingOption(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty,
-    ) : CdkObject(cdkObject), CloudWatchLoggingOptionProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchLoggingOptionProperty {
       /**
        * The ARN of the CloudWatch log to receive application messages.
        *

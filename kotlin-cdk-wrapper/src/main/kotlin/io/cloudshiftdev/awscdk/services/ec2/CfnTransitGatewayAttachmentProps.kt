@@ -186,7 +186,8 @@ public interface CfnTransitGatewayAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachmentProps,
-  ) : CdkObject(cdkObject), CfnTransitGatewayAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnTransitGatewayAttachmentProps {
     /**
      * The VPC attachment options.
      *

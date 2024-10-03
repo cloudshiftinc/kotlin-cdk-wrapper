@@ -47,7 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLayerVersion(
   cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -562,7 +563,8 @@ public open class CfnLayerVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersion.ContentProperty,
-    ) : CdkObject(cdkObject), ContentProperty {
+    ) : CdkObject(cdkObject),
+        ContentProperty {
       /**
        * The Amazon S3 bucket of the layer archive.
        *

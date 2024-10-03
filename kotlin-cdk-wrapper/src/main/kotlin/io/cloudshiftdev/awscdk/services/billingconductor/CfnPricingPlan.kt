@@ -41,7 +41,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPricingPlan(
   cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingPlan,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

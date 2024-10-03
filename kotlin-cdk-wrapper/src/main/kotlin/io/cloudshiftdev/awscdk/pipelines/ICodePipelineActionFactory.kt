@@ -42,7 +42,8 @@ public interface ICodePipelineActionFactory {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.ICodePipelineActionFactory,
-  ) : CdkObject(cdkObject), ICodePipelineActionFactory {
+  ) : CdkObject(cdkObject),
+      ICodePipelineActionFactory {
     /**
      * Create the desired Action and add it to the pipeline.
      *

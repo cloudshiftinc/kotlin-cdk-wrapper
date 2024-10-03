@@ -57,6 +57,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .subnetIds(List.of("subnetIds"))
  * // the properties below are optional
  * .securityGroupIds(List.of("securityGroupIds"))
+ * .vpcAttachmentOptions(VpcAttachmentOptionsProperty.builder()
+ * .attachToVpc(false)
+ * .cidrBlock("cidrBlock")
+ * .build())
+ * .vpcEndpointManagement("vpcEndpointManagement")
  * .build())
  * .build();
  * ```
@@ -65,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPipeline(
   cdkObject: software.amazon.awscdk.services.osis.CfnPipeline,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -94,6 +101,11 @@ public open class CfnPipeline(
    * The Amazon Resource Name (ARN) of the pipeline.
    */
   public open fun attrPipelineArn(): String = unwrap(this).getAttrPipelineArn()
+
+  /**
+   * The VPC endpoint service name for the pipeline.
+   */
+  public open fun attrVpcEndpointService(): String = unwrap(this).getAttrVpcEndpointService()
 
   /**
    * The VPC interface endpoints that have access to the pipeline.
@@ -776,7 +788,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty,
-    ) : CdkObject(cdkObject), BufferOptionsProperty {
+    ) : CdkObject(cdkObject),
+        BufferOptionsProperty {
       /**
        * Whether persistent buffering should be enabled.
        *
@@ -866,7 +879,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchLogDestinationProperty {
       /**
        * The name of the CloudWatch Logs group to send pipeline logs to.
        *
@@ -955,7 +969,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty,
-    ) : CdkObject(cdkObject), EncryptionAtRestOptionsProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionAtRestOptionsProperty {
       /**
        * The ARN of the KMS key used to encrypt buffer data.
        *
@@ -1122,7 +1137,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.LogPublishingOptionsProperty,
-    ) : CdkObject(cdkObject), LogPublishingOptionsProperty {
+    ) : CdkObject(cdkObject),
+        LogPublishingOptionsProperty {
       /**
        * The destination for OpenSearch Ingestion logs sent to Amazon CloudWatch Logs.
        *
@@ -1159,6 +1175,132 @@ public open class CfnPipeline(
   }
 
   /**
+   * Options for attaching a VPC to pipeline.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.osis.*;
+   * VpcAttachmentOptionsProperty vpcAttachmentOptionsProperty =
+   * VpcAttachmentOptionsProperty.builder()
+   * .attachToVpc(false)
+   * .cidrBlock("cidrBlock")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcattachmentoptions.html)
+   */
+  public interface VpcAttachmentOptionsProperty {
+    /**
+     * Whether a VPC is attached to the pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcattachmentoptions.html#cfn-osis-pipeline-vpcattachmentoptions-attachtovpc)
+     */
+    public fun attachToVpc(): Any
+
+    /**
+     * The CIDR block to be reserved for OpenSearch Ingestion to create elastic network interfaces
+     * (ENIs).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcattachmentoptions.html#cfn-osis-pipeline-vpcattachmentoptions-cidrblock)
+     */
+    public fun cidrBlock(): String
+
+    /**
+     * A builder for [VpcAttachmentOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attachToVpc Whether a VPC is attached to the pipeline. 
+       */
+      public fun attachToVpc(attachToVpc: Boolean)
+
+      /**
+       * @param attachToVpc Whether a VPC is attached to the pipeline. 
+       */
+      public fun attachToVpc(attachToVpc: IResolvable)
+
+      /**
+       * @param cidrBlock The CIDR block to be reserved for OpenSearch Ingestion to create elastic
+       * network interfaces (ENIs). 
+       */
+      public fun cidrBlock(cidrBlock: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcAttachmentOptionsProperty.Builder =
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcAttachmentOptionsProperty.builder()
+
+      /**
+       * @param attachToVpc Whether a VPC is attached to the pipeline. 
+       */
+      override fun attachToVpc(attachToVpc: Boolean) {
+        cdkBuilder.attachToVpc(attachToVpc)
+      }
+
+      /**
+       * @param attachToVpc Whether a VPC is attached to the pipeline. 
+       */
+      override fun attachToVpc(attachToVpc: IResolvable) {
+        cdkBuilder.attachToVpc(attachToVpc.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cidrBlock The CIDR block to be reserved for OpenSearch Ingestion to create elastic
+       * network interfaces (ENIs). 
+       */
+      override fun cidrBlock(cidrBlock: String) {
+        cdkBuilder.cidrBlock(cidrBlock)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcAttachmentOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcAttachmentOptionsProperty,
+    ) : CdkObject(cdkObject),
+        VpcAttachmentOptionsProperty {
+      /**
+       * Whether a VPC is attached to the pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcattachmentoptions.html#cfn-osis-pipeline-vpcattachmentoptions-attachtovpc)
+       */
+      override fun attachToVpc(): Any = unwrap(this).getAttachToVpc()
+
+      /**
+       * The CIDR block to be reserved for OpenSearch Ingestion to create elastic network interfaces
+       * (ENIs).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcattachmentoptions.html#cfn-osis-pipeline-vpcattachmentoptions-cidrblock)
+       */
+      override fun cidrBlock(): String = unwrap(this).getCidrBlock()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcAttachmentOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcAttachmentOptionsProperty):
+          VpcAttachmentOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcAttachmentOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcAttachmentOptionsProperty):
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcAttachmentOptionsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.osis.CfnPipeline.VpcAttachmentOptionsProperty
+    }
+  }
+
+  /**
    * An OpenSearch Ingestion-managed VPC endpoint that will access one or more pipelines.
    *
    * Example:
@@ -1174,6 +1316,11 @@ public open class CfnPipeline(
    * .subnetIds(List.of("subnetIds"))
    * // the properties below are optional
    * .securityGroupIds(List.of("securityGroupIds"))
+   * .vpcAttachmentOptions(VpcAttachmentOptionsProperty.builder()
+   * .attachToVpc(false)
+   * .cidrBlock("cidrBlock")
+   * .build())
+   * .vpcEndpointManagement("vpcEndpointManagement")
    * .build())
    * .build();
    * ```
@@ -1292,7 +1439,8 @@ public open class CfnPipeline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty,
-    ) : CdkObject(cdkObject), VpcEndpointProperty {
+    ) : CdkObject(cdkObject),
+        VpcEndpointProperty {
       /**
        * The unique identifier of the endpoint.
        *
@@ -1348,6 +1496,11 @@ public open class CfnPipeline(
    * .subnetIds(List.of("subnetIds"))
    * // the properties below are optional
    * .securityGroupIds(List.of("securityGroupIds"))
+   * .vpcAttachmentOptions(VpcAttachmentOptionsProperty.builder()
+   * .attachToVpc(false)
+   * .cidrBlock("cidrBlock")
+   * .build())
+   * .vpcEndpointManagement("vpcEndpointManagement")
    * .build();
    * ```
    *
@@ -1367,6 +1520,21 @@ public open class CfnPipeline(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcoptions.html#cfn-osis-pipeline-vpcoptions-subnetids)
      */
     public fun subnetIds(): List<String>
+
+    /**
+     * Options for attaching a VPC to a pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcoptions.html#cfn-osis-pipeline-vpcoptions-vpcattachmentoptions)
+     */
+    public fun vpcAttachmentOptions(): Any? = unwrap(this).getVpcAttachmentOptions()
+
+    /**
+     * Defines whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint
+     * configured for the pipeline.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcoptions.html#cfn-osis-pipeline-vpcoptions-vpcendpointmanagement)
+     */
+    public fun vpcEndpointManagement(): String? = unwrap(this).getVpcEndpointManagement()
 
     /**
      * A builder for [VpcOptionsProperty]
@@ -1392,6 +1560,30 @@ public open class CfnPipeline(
        * @param subnetIds A list of subnet IDs associated with the VPC endpoint. 
        */
       public fun subnetIds(vararg subnetIds: String)
+
+      /**
+       * @param vpcAttachmentOptions Options for attaching a VPC to a pipeline.
+       */
+      public fun vpcAttachmentOptions(vpcAttachmentOptions: IResolvable)
+
+      /**
+       * @param vpcAttachmentOptions Options for attaching a VPC to a pipeline.
+       */
+      public fun vpcAttachmentOptions(vpcAttachmentOptions: VpcAttachmentOptionsProperty)
+
+      /**
+       * @param vpcAttachmentOptions Options for attaching a VPC to a pipeline.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0bbbc81b19d82271f8df0f0680572ec91e430c4f70c263ab7bffd9d8a774ebd6")
+      public
+          fun vpcAttachmentOptions(vpcAttachmentOptions: VpcAttachmentOptionsProperty.Builder.() -> Unit)
+
+      /**
+       * @param vpcEndpointManagement Defines whether you or Amazon OpenSearch Ingestion service
+       * create and manage the VPC endpoint configured for the pipeline.
+       */
+      public fun vpcEndpointManagement(vpcEndpointManagement: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1424,13 +1616,45 @@ public open class CfnPipeline(
        */
       override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
+      /**
+       * @param vpcAttachmentOptions Options for attaching a VPC to a pipeline.
+       */
+      override fun vpcAttachmentOptions(vpcAttachmentOptions: IResolvable) {
+        cdkBuilder.vpcAttachmentOptions(vpcAttachmentOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param vpcAttachmentOptions Options for attaching a VPC to a pipeline.
+       */
+      override fun vpcAttachmentOptions(vpcAttachmentOptions: VpcAttachmentOptionsProperty) {
+        cdkBuilder.vpcAttachmentOptions(vpcAttachmentOptions.let(VpcAttachmentOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param vpcAttachmentOptions Options for attaching a VPC to a pipeline.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0bbbc81b19d82271f8df0f0680572ec91e430c4f70c263ab7bffd9d8a774ebd6")
+      override
+          fun vpcAttachmentOptions(vpcAttachmentOptions: VpcAttachmentOptionsProperty.Builder.() -> Unit):
+          Unit = vpcAttachmentOptions(VpcAttachmentOptionsProperty(vpcAttachmentOptions))
+
+      /**
+       * @param vpcEndpointManagement Defines whether you or Amazon OpenSearch Ingestion service
+       * create and manage the VPC endpoint configured for the pipeline.
+       */
+      override fun vpcEndpointManagement(vpcEndpointManagement: String) {
+        cdkBuilder.vpcEndpointManagement(vpcEndpointManagement)
+      }
+
       public fun build(): software.amazon.awscdk.services.osis.CfnPipeline.VpcOptionsProperty =
           cdkBuilder.build()
     }
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcOptionsProperty,
-    ) : CdkObject(cdkObject), VpcOptionsProperty {
+    ) : CdkObject(cdkObject),
+        VpcOptionsProperty {
       /**
        * A list of security groups associated with the VPC endpoint.
        *
@@ -1445,6 +1669,21 @@ public open class CfnPipeline(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcoptions.html#cfn-osis-pipeline-vpcoptions-subnetids)
        */
       override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
+
+      /**
+       * Options for attaching a VPC to a pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcoptions.html#cfn-osis-pipeline-vpcoptions-vpcattachmentoptions)
+       */
+      override fun vpcAttachmentOptions(): Any? = unwrap(this).getVpcAttachmentOptions()
+
+      /**
+       * Defines whether you or Amazon OpenSearch Ingestion service create and manage the VPC
+       * endpoint configured for the pipeline.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-osis-pipeline-vpcoptions.html#cfn-osis-pipeline-vpcoptions-vpcendpointmanagement)
+       */
+      override fun vpcEndpointManagement(): String? = unwrap(this).getVpcEndpointManagement()
     }
 
     public companion object {

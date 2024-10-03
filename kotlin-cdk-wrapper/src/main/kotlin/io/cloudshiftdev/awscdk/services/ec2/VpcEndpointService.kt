@@ -30,7 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class VpcEndpointService(
   cdkObject: software.amazon.awscdk.services.ec2.VpcEndpointService,
-) : Resource(cdkObject), IVpcEndpointService {
+) : Resource(cdkObject),
+    IVpcEndpointService {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -240,6 +241,9 @@ public open class VpcEndpointService(
   }
 
   public companion object {
+    public val DEFAULT_PREFIX: String =
+        software.amazon.awscdk.services.ec2.VpcEndpointService.DEFAULT_PREFIX
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

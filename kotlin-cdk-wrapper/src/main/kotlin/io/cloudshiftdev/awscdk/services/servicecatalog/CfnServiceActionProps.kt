@@ -184,7 +184,8 @@ public interface CfnServiceActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceActionProps,
-  ) : CdkObject(cdkObject), CfnServiceActionProps {
+  ) : CdkObject(cdkObject),
+      CfnServiceActionProps {
     /**
      * The language code.
      *

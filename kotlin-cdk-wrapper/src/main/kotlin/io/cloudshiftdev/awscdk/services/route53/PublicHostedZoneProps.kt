@@ -239,7 +239,8 @@ public interface PublicHostedZoneProps : CommonHostedZoneProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.PublicHostedZoneProps,
-  ) : CdkObject(cdkObject), PublicHostedZoneProps {
+  ) : CdkObject(cdkObject),
+      PublicHostedZoneProps {
     /**
      * Whether to add a trailing dot to the zone name.
      *

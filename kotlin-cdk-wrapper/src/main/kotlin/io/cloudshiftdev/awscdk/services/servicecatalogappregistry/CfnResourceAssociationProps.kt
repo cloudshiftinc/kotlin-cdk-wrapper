@@ -103,7 +103,8 @@ public interface CfnResourceAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnResourceAssociationProps,
-  ) : CdkObject(cdkObject), CfnResourceAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnResourceAssociationProps {
     /**
      * The name or ID of the application.
      *

@@ -42,7 +42,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Vpc vpc;
  * Cluster.Builder.create(this, "MyCluster")
  * .kubectlMemory(Size.gibibytes(4))
- * .version(KubernetesVersion.V1_29)
+ * .version(KubernetesVersion.V1_30)
  * .build();
  * Cluster.fromClusterAttributes(this, "MyCluster", ClusterAttributes.builder()
  * .kubectlMemory(Size.gibibytes(4))
@@ -53,7 +53,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Cluster(
   cdkObject: software.amazon.awscdk.services.eks.Cluster,
-) : Resource(cdkObject), ICluster {
+) : Resource(cdkObject),
+    ICluster {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -315,6 +316,17 @@ public open class Cluster(
       unwrap(this).getAlbController()?.let(AlbController::wrap)
 
   /**
+   * The authentication mode for the Amazon EKS cluster.
+   *
+   * The authentication mode determines how users and applications authenticate to the Kubernetes
+   * API server.
+   *
+   * Default: CONFIG_MAP.
+   */
+  public override fun authenticationMode(): AuthenticationMode? =
+      unwrap(this).getAuthenticationMode()?.let(AuthenticationMode::wrap)
+
+  /**
    * Lazily creates the AwsAuth resource, which manages AWS authentication mapping.
    */
   public open fun awsAuth(): AwsAuth = unwrap(this).getAwsAuth().let(AwsAuth::wrap)
@@ -482,6 +494,40 @@ public open class Cluster(
    */
   public open fun defaultNodegroup(): Nodegroup? =
       unwrap(this).getDefaultNodegroup()?.let(Nodegroup::wrap)
+
+  /**
+   * Retrieves the EKS Pod Identity Agent addon for the EKS cluster.
+   *
+   * The EKS Pod Identity Agent is responsible for managing the temporary credentials
+   * used by pods in the cluster to access AWS resources. It runs as a DaemonSet on
+   * each node and provides the necessary credentials to the pods based on their
+   * associated service account.
+   */
+  public override fun eksPodIdentityAgent(): IAddon? =
+      unwrap(this).getEksPodIdentityAgent()?.let(IAddon::wrap)
+
+  /**
+   * Grants the specified IAM principal access to the EKS cluster based on the provided access
+   * policies.
+   *
+   * This method creates an `AccessEntry` construct that grants the specified IAM principal the
+   * access permissions
+   * defined by the provided `IAccessPolicy` array. This allows the IAM principal to perform the
+   * actions permitted
+   * by the access policies within the EKS cluster.
+   *
+   * @param id * The ID of the `AccessEntry` construct to be created. 
+   * @param principal * The IAM principal (role or user) to be granted access to the EKS cluster. 
+   * @param accessPolicies * An array of `IAccessPolicy` objects that define the access permissions
+   * to be granted to the IAM principal. 
+   */
+  public open fun grantAccess(
+    id: String,
+    principal: String,
+    accessPolicies: List<IAccessPolicy>,
+  ) {
+    unwrap(this).grantAccess(id, principal, accessPolicies.map(IAccessPolicy.Companion::unwrap))
+  }
 
   /**
    * Fetch the load balancer address of an ingress backed by a load balancer.
@@ -674,6 +720,15 @@ public open class Cluster(
     public fun albController(albController: AlbControllerOptions.Builder.() -> Unit)
 
     /**
+     * The desired authentication mode for the cluster.
+     *
+     * Default: AuthenticationMode.CONFIG_MAP
+     *
+     * @param authenticationMode The desired authentication mode for the cluster. 
+     */
+    public fun authenticationMode(authenticationMode: AuthenticationMode)
+
+    /**
      * An AWS Lambda layer that contains the `aws` CLI.
      *
      * The handler expects the layer to include the following executables:
@@ -687,6 +742,21 @@ public open class Cluster(
      * @param awscliLayer An AWS Lambda layer that contains the `aws` CLI. 
      */
     public fun awscliLayer(awscliLayer: ILayerVersion)
+
+    /**
+     * Whether or not IAM principal of the cluster creator was set as a cluster admin access entry
+     * during cluster creation time.
+     *
+     * Changing this value after the cluster has been created will result in the cluster being
+     * replaced.
+     *
+     * Default: true
+     *
+     * @param bootstrapClusterCreatorAdminPermissions Whether or not IAM principal of the cluster
+     * creator was set as a cluster admin access entry during cluster creation time. 
+     */
+    public
+        fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: Boolean)
 
     /**
      * Custom environment variables when interacting with the EKS endpoint to manage the cluster
@@ -1085,6 +1155,17 @@ public open class Cluster(
         albController(AlbControllerOptions(albController))
 
     /**
+     * The desired authentication mode for the cluster.
+     *
+     * Default: AuthenticationMode.CONFIG_MAP
+     *
+     * @param authenticationMode The desired authentication mode for the cluster. 
+     */
+    override fun authenticationMode(authenticationMode: AuthenticationMode) {
+      cdkBuilder.authenticationMode(authenticationMode.let(AuthenticationMode.Companion::unwrap))
+    }
+
+    /**
      * An AWS Lambda layer that contains the `aws` CLI.
      *
      * The handler expects the layer to include the following executables:
@@ -1099,6 +1180,23 @@ public open class Cluster(
      */
     override fun awscliLayer(awscliLayer: ILayerVersion) {
       cdkBuilder.awscliLayer(awscliLayer.let(ILayerVersion.Companion::unwrap))
+    }
+
+    /**
+     * Whether or not IAM principal of the cluster creator was set as a cluster admin access entry
+     * during cluster creation time.
+     *
+     * Changing this value after the cluster has been created will result in the cluster being
+     * replaced.
+     *
+     * Default: true
+     *
+     * @param bootstrapClusterCreatorAdminPermissions Whether or not IAM principal of the cluster
+     * creator was set as a cluster admin access entry during cluster creation time. 
+     */
+    override
+        fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: Boolean) {
+      cdkBuilder.bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions)
     }
 
     /**

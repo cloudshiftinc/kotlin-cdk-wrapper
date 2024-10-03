@@ -65,7 +65,8 @@ public interface ICluster : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ICluster,
-  ) : CdkObject(cdkObject), ICluster {
+  ) : CdkObject(cdkObject),
+      ICluster {
     /**
      * Apply the given removal policy to this resource.
      *

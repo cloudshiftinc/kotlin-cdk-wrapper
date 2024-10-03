@@ -150,7 +150,8 @@ public interface EventBridgePutEventsEntry {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry,
-  ) : CdkObject(cdkObject), EventBridgePutEventsEntry {
+  ) : CdkObject(cdkObject),
+      EventBridgePutEventsEntry {
     /**
      * The event body.
      *

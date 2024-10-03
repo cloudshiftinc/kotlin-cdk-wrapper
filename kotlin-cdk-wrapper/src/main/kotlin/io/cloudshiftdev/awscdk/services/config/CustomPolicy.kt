@@ -37,7 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CustomPolicy(
   cdkObject: software.amazon.awscdk.services.config.CustomPolicy,
-) : Resource(cdkObject), IRule {
+) : Resource(cdkObject),
+    IRule {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -205,6 +206,17 @@ public open class CustomPolicy(
     public fun enableDebugLog(enableDebugLog: Boolean)
 
     /**
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects.
+     *
+     * Default: - Detective evaluation mode only
+     *
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in. 
+     */
+    public fun evaluationModes(evaluationModes: EvaluationMode)
+
+    /**
      * Input parameter values that are passed to the AWS Config rule.
      *
      * Default: - No input parameters
@@ -281,6 +293,19 @@ public open class CustomPolicy(
      */
     override fun enableDebugLog(enableDebugLog: Boolean) {
       cdkBuilder.enableDebugLog(enableDebugLog)
+    }
+
+    /**
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects.
+     *
+     * Default: - Detective evaluation mode only
+     *
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in. 
+     */
+    override fun evaluationModes(evaluationModes: EvaluationMode) {
+      cdkBuilder.evaluationModes(evaluationModes.let(EvaluationMode.Companion::unwrap))
     }
 
     /**

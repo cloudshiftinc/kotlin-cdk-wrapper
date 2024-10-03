@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.regioninfo
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.collections.List
 import kotlin.collections.Map
@@ -17,8 +18,7 @@ import kotlin.collections.Map
  * // Get the information for "eu-west-1":
  * RegionInfo region = RegionInfo.get("eu-west-1");
  * // Access attributes:
- * region.getS3StaticWebsiteEndpoint(); // s3-website-eu-west-1.amazonaws.com
- * region.servicePrincipal("logs.amazonaws.com");
+ * region.getS3StaticWebsiteEndpoint();
  * ```
  */
 public open class RegionInfo(
@@ -158,10 +158,12 @@ public open class RegionInfo(
   public open fun samlSignOnUrl(): String? = unwrap(this).getSamlSignOnUrl()
 
   /**
-   * The name of the service principal for a given service in this region.
+   * (deprecated) The name of the service principal for a given service in this region.
    *
+   * * Use `iam.ServicePrincipal.servicePrincipalName()` instead.
    * @param service the service name (e.g: s3.amazonaws.com). 
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun servicePrincipal(service: String): String? =
       unwrap(this).servicePrincipal(service)
 

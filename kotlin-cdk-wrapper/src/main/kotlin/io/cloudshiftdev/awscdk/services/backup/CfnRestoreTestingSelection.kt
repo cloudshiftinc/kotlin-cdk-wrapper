@@ -74,7 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRestoreTestingSelection(
   cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -670,7 +671,8 @@ public open class CfnRestoreTestingSelection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty,
-    ) : CdkObject(cdkObject), KeyValueProperty {
+    ) : CdkObject(cdkObject),
+        KeyValueProperty {
       /**
        * The tag key.
        *
@@ -706,9 +708,6 @@ public open class CfnRestoreTestingSelection(
 
   /**
    * The conditions that you define for resources in your restore testing plan using tags.
-   *
-   * For example, `"StringEquals": { "Key": "aws:ResourceTag/CreatedByCryo", "Value": "true" },` .
-   * Condition operators are case sensitive.
    *
    * Example:
    *
@@ -865,7 +864,8 @@ public open class CfnRestoreTestingSelection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty,
-    ) : CdkObject(cdkObject), ProtectedResourceConditionsProperty {
+    ) : CdkObject(cdkObject),
+        ProtectedResourceConditionsProperty {
       /**
        * Filters the values of your tagged resources for only those resources that you tagged with
        * the same value.

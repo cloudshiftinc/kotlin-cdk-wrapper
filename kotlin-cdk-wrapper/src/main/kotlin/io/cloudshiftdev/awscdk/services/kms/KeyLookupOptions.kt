@@ -60,7 +60,8 @@ public interface KeyLookupOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kms.KeyLookupOptions,
-  ) : CdkObject(cdkObject), KeyLookupOptions {
+  ) : CdkObject(cdkObject),
+      KeyLookupOptions {
     /**
      * The alias name of the Key.
      *

@@ -18,7 +18,8 @@ public interface ITopicSubscription {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.ITopicSubscription,
-  ) : CdkObject(cdkObject), ITopicSubscription {
+  ) : CdkObject(cdkObject),
+      ITopicSubscription {
     /**
      * Returns a configuration used to subscribe to an SNS topic.
      *

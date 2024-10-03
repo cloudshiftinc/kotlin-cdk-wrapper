@@ -18,6 +18,7 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
+ * Object assumeRoleAdditionalOptions;
  * AssetManifestFileDestination assetManifestFileDestination =
  * AssetManifestFileDestination.builder()
  * .bucketName("bucketName")
@@ -26,6 +27,8 @@ import kotlin.jvm.JvmName
  * .role(RoleOptions.builder()
  * .assumeRoleArn("assumeRoleArn")
  * // the properties below are optional
+ * .assumeRoleAdditionalOptions(Map.of(
+ * "assumeRoleAdditionalOptionsKey", assumeRoleAdditionalOptions))
  * .assumeRoleExternalId("assumeRoleExternalId")
  * .build())
  * .build();
@@ -116,7 +119,8 @@ public interface AssetManifestFileDestination {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.AssetManifestFileDestination,
-  ) : CdkObject(cdkObject), AssetManifestFileDestination {
+  ) : CdkObject(cdkObject),
+      AssetManifestFileDestination {
     /**
      * Bucket name where the file asset should be written.
      */

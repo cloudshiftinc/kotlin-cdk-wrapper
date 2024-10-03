@@ -28,7 +28,8 @@ import kotlin.collections.List
  */
 public open class EventField(
   cdkObject: software.amazon.awscdk.services.events.EventField,
-) : CdkObject(cdkObject), IResolvable {
+) : CdkObject(cdkObject),
+    IResolvable {
   /**
    * The creation stack of this resolvable which will be appended to errors thrown during
    * resolution.

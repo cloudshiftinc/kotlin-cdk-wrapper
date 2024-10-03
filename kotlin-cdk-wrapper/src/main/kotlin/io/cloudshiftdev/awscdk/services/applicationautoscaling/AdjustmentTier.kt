@@ -128,7 +128,8 @@ public interface AdjustmentTier {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.applicationautoscaling.AdjustmentTier,
-  ) : CdkObject(cdkObject), AdjustmentTier {
+  ) : CdkObject(cdkObject),
+      AdjustmentTier {
     /**
      * What number to adjust the capacity with.
      *

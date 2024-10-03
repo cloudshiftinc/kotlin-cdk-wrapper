@@ -124,7 +124,8 @@ public interface CfnCustomerGatewayAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociationProps,
-  ) : CdkObject(cdkObject), CfnCustomerGatewayAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnCustomerGatewayAssociationProps {
     /**
      * The Amazon Resource Name (ARN) of the customer gateway.
      *

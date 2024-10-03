@@ -67,7 +67,8 @@ public interface RouteSpecOptionsBase {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.RouteSpecOptionsBase,
-  ) : CdkObject(cdkObject), RouteSpecOptionsBase {
+  ) : CdkObject(cdkObject),
+      RouteSpecOptionsBase {
     /**
      * The priority for the route.
      *

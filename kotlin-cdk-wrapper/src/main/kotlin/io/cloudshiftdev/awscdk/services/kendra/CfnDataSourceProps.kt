@@ -801,7 +801,8 @@ public interface CfnDataSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kendra.CfnDataSourceProps,
-  ) : CdkObject(cdkObject), CfnDataSourceProps {
+  ) : CdkObject(cdkObject),
+      CfnDataSourceProps {
     /**
      * Configuration information for altering document metadata and content during the document
      * ingestion process.

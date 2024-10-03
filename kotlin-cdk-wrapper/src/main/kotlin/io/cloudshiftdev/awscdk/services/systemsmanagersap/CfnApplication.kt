@@ -37,6 +37,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .databaseName("databaseName")
  * .secretId("secretId")
  * .build()))
+ * .databaseArn("databaseArn")
  * .instances(List.of("instances"))
  * .sapInstanceNumber("sapInstanceNumber")
  * .sid("sid")
@@ -51,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplication(
   cdkObject: software.amazon.awscdk.services.systemsmanagersap.CfnApplication,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -120,6 +123,18 @@ public open class CfnApplication(
    * The credentials of the SAP application.
    */
   public open fun credentials(vararg `value`: Any): Unit = credentials(`value`.toList())
+
+  /**
+   * The Amazon Resource Name (ARN) of the database.
+   */
+  public open fun databaseArn(): String? = unwrap(this).getDatabaseArn()
+
+  /**
+   * The Amazon Resource Name (ARN) of the database.
+   */
+  public open fun databaseArn(`value`: String) {
+    unwrap(this).setDatabaseArn(`value`)
+  }
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -240,6 +255,14 @@ public open class CfnApplication(
     public fun credentials(vararg credentials: Any)
 
     /**
+     * The Amazon Resource Name (ARN) of the database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-databasearn)
+     * @param databaseArn The Amazon Resource Name (ARN) of the database. 
+     */
+    public fun databaseArn(databaseArn: String)
+
+    /**
      * The Amazon EC2 instances on which your SAP application is running.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-instances)
@@ -342,6 +365,16 @@ public open class CfnApplication(
      * @param credentials The credentials of the SAP application. 
      */
     override fun credentials(vararg credentials: Any): Unit = credentials(credentials.toList())
+
+    /**
+     * The Amazon Resource Name (ARN) of the database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html#cfn-systemsmanagersap-application-databasearn)
+     * @param databaseArn The Amazon Resource Name (ARN) of the database. 
+     */
+    override fun databaseArn(databaseArn: String) {
+      cdkBuilder.databaseArn(databaseArn)
+    }
 
     /**
      * The Amazon EC2 instances on which your SAP application is running.
@@ -521,7 +554,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.systemsmanagersap.CfnApplication.CredentialProperty,
-    ) : CdkObject(cdkObject), CredentialProperty {
+    ) : CdkObject(cdkObject),
+        CredentialProperty {
       /**
        * The type of the application credentials.
        *

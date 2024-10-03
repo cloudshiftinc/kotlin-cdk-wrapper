@@ -19,7 +19,8 @@ public interface IAspect {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IAspect,
-  ) : CdkObject(cdkObject), IAspect {
+  ) : CdkObject(cdkObject),
+      IAspect {
     /**
      * All aspects can visit an IConstruct.
      *

@@ -270,7 +270,8 @@ public interface CfnFargateProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfileProps,
-  ) : CdkObject(cdkObject), CfnFargateProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnFargateProfileProps {
     /**
      * The name of your cluster.
      *

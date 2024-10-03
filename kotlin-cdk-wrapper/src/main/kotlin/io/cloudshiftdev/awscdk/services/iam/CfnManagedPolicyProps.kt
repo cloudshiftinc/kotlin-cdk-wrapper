@@ -510,7 +510,8 @@ public interface CfnManagedPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.CfnManagedPolicyProps,
-  ) : CdkObject(cdkObject), CfnManagedPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnManagedPolicyProps {
     /**
      * A friendly description of the policy.
      *

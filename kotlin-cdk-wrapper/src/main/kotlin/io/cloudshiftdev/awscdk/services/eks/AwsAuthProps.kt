@@ -59,7 +59,8 @@ public interface AwsAuthProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.AwsAuthProps,
-  ) : CdkObject(cdkObject), AwsAuthProps {
+  ) : CdkObject(cdkObject),
+      AwsAuthProps {
     /**
      * The EKS cluster to apply this configuration to.
      *

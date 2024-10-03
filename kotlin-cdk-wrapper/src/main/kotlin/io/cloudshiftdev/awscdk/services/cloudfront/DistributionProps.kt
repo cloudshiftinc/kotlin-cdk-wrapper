@@ -83,7 +83,12 @@ public interface DistributionProps {
    * domain name,
    * you can add an alternate domain name to your distribution. If you attach a certificate to the
    * distribution,
-   * you must add (at least one of) the domain names of the certificate to this list.
+   * you should add (at least one of) the domain names of the certificate to this list.
+   *
+   * When you want to move a domain name between distributions, you can associate a certificate
+   * without specifying any domain names.
+   * For more information, see the *Moving an alternate domain name to a different distribution*
+   * section in the README.
    *
    * Default: - The distribution will only support the default generated name (e.g.,
    * d111111abcdef8.cloudfront.net)
@@ -290,7 +295,12 @@ public interface DistributionProps {
      * cloudfront.net domain name,
      * you can add an alternate domain name to your distribution. If you attach a certificate to the
      * distribution,
-     * you must add (at least one of) the domain names of the certificate to this list.
+     * you should add (at least one of) the domain names of the certificate to this list.
+     *
+     * When you want to move a domain name between distributions, you can associate a certificate
+     * without specifying any domain names.
+     * For more information, see the *Moving an alternate domain name to a different distribution*
+     * section in the README.
      */
     public fun domainNames(domainNames: List<String>)
 
@@ -300,7 +310,12 @@ public interface DistributionProps {
      * cloudfront.net domain name,
      * you can add an alternate domain name to your distribution. If you attach a certificate to the
      * distribution,
-     * you must add (at least one of) the domain names of the certificate to this list.
+     * you should add (at least one of) the domain names of the certificate to this list.
+     *
+     * When you want to move a domain name between distributions, you can associate a certificate
+     * without specifying any domain names.
+     * For more information, see the *Moving an alternate domain name to a different distribution*
+     * section in the README.
      */
     public fun domainNames(vararg domainNames: String)
 
@@ -483,7 +498,12 @@ public interface DistributionProps {
      * cloudfront.net domain name,
      * you can add an alternate domain name to your distribution. If you attach a certificate to the
      * distribution,
-     * you must add (at least one of) the domain names of the certificate to this list.
+     * you should add (at least one of) the domain names of the certificate to this list.
+     *
+     * When you want to move a domain name between distributions, you can associate a certificate
+     * without specifying any domain names.
+     * For more information, see the *Moving an alternate domain name to a different distribution*
+     * section in the README.
      */
     override fun domainNames(domainNames: List<String>) {
       cdkBuilder.domainNames(domainNames)
@@ -495,7 +515,12 @@ public interface DistributionProps {
      * cloudfront.net domain name,
      * you can add an alternate domain name to your distribution. If you attach a certificate to the
      * distribution,
-     * you must add (at least one of) the domain names of the certificate to this list.
+     * you should add (at least one of) the domain names of the certificate to this list.
+     *
+     * When you want to move a domain name between distributions, you can associate a certificate
+     * without specifying any domain names.
+     * For more information, see the *Moving an alternate domain name to a different distribution*
+     * section in the README.
      */
     override fun domainNames(vararg domainNames: String): Unit = domainNames(domainNames.toList())
 
@@ -655,7 +680,8 @@ public interface DistributionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.DistributionProps,
-  ) : CdkObject(cdkObject), DistributionProps {
+  ) : CdkObject(cdkObject),
+      DistributionProps {
     /**
      * Additional behaviors for the distribution, mapped by the pathPattern that specifies which
      * requests to apply the behavior to.
@@ -705,7 +731,12 @@ public interface DistributionProps {
      * cloudfront.net domain name,
      * you can add an alternate domain name to your distribution. If you attach a certificate to the
      * distribution,
-     * you must add (at least one of) the domain names of the certificate to this list.
+     * you should add (at least one of) the domain names of the certificate to this list.
+     *
+     * When you want to move a domain name between distributions, you can associate a certificate
+     * without specifying any domain names.
+     * For more information, see the *Moving an alternate domain name to a different distribution*
+     * section in the README.
      *
      * Default: - The distribution will only support the default generated name (e.g.,
      * d111111abcdef8.cloudfront.net)

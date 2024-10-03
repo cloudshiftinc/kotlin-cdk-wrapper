@@ -260,7 +260,8 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerProps,
-  ) : CdkObject(cdkObject), NetworkLoadBalancerProps {
+  ) : CdkObject(cdkObject),
+      NetworkLoadBalancerProps {
     /**
      * The AZ affinity routing policy.
      *
@@ -277,8 +278,7 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
      * Default: - false for Network Load Balancers and true for Application Load Balancers.
      * This can not be `false` for Application Load Balancers.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
      */
     override fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
 

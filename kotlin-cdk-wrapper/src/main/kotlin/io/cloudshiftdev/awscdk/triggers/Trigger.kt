@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Trigger(
   cdkObject: software.amazon.awscdk.triggers.Trigger,
-) : CloudshiftdevConstructsConstruct(cdkObject), ITrigger {
+) : CloudshiftdevConstructsConstruct(cdkObject),
+    ITrigger {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

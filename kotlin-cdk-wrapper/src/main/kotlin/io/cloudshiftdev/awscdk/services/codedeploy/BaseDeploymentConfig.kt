@@ -13,7 +13,8 @@ import kotlin.String
  */
 public abstract class BaseDeploymentConfig(
   cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfig,
-) : Resource(cdkObject), IBaseDeploymentConfig {
+) : Resource(cdkObject),
+    IBaseDeploymentConfig {
   /**
    * The arn of the deployment config.
    */

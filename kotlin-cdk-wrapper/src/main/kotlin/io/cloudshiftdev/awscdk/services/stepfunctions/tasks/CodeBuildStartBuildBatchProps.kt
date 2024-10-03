@@ -322,7 +322,8 @@ public interface CodeBuildStartBuildBatchProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatchProps,
-  ) : CdkObject(cdkObject), CodeBuildStartBuildBatchProps {
+  ) : CdkObject(cdkObject),
+      CodeBuildStartBuildBatchProps {
     /**
      * An optional description for this state.
      *

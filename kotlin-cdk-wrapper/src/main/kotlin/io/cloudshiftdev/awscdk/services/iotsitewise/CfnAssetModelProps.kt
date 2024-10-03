@@ -227,7 +227,7 @@ public interface CfnAssetModelProps {
   public fun assetModelHierarchies(): Any? = unwrap(this).getAssetModelHierarchies()
 
   /**
-   * A unique, friendly name for the asset model.
+   * A unique name for the asset model.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodelname)
    */
@@ -377,7 +377,7 @@ public interface CfnAssetModelProps {
     public fun assetModelHierarchies(vararg assetModelHierarchies: Any)
 
     /**
-     * @param assetModelName A unique, friendly name for the asset model. 
+     * @param assetModelName A unique name for the asset model. 
      */
     public fun assetModelName(assetModelName: String)
 
@@ -562,7 +562,7 @@ public interface CfnAssetModelProps {
         assetModelHierarchies(assetModelHierarchies.toList())
 
     /**
-     * @param assetModelName A unique, friendly name for the asset model. 
+     * @param assetModelName A unique name for the asset model. 
      */
     override fun assetModelName(assetModelName: String) {
       cdkBuilder.assetModelName(assetModelName)
@@ -644,7 +644,8 @@ public interface CfnAssetModelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModelProps,
-  ) : CdkObject(cdkObject), CfnAssetModelProps {
+  ) : CdkObject(cdkObject),
+      CfnAssetModelProps {
     /**
      * The composite models that are part of this asset model.
      *
@@ -700,7 +701,7 @@ public interface CfnAssetModelProps {
     override fun assetModelHierarchies(): Any? = unwrap(this).getAssetModelHierarchies()
 
     /**
-     * A unique, friendly name for the asset model.
+     * A unique name for the asset model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodelname)
      */

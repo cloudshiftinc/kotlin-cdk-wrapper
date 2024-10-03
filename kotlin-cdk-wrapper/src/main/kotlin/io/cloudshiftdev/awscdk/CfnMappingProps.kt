@@ -94,7 +94,8 @@ public interface CfnMappingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnMappingProps,
-  ) : CdkObject(cdkObject), CfnMappingProps {
+  ) : CdkObject(cdkObject),
+      CfnMappingProps {
     /**
      *
      */

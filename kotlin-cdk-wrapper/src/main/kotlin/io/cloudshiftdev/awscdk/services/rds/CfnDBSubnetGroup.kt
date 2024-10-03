@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDBSubnetGroup(
   cdkObject: software.amazon.awscdk.services.rds.CfnDBSubnetGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -124,20 +126,20 @@ public open class CfnDBSubnetGroup(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * An optional array of key-value pairs to apply to this DB subnet group.
+   * Tags to assign to the DB subnet group.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * An optional array of key-value pairs to apply to this DB subnet group.
+   * Tags to assign to the DB subnet group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * An optional array of key-value pairs to apply to this DB subnet group.
+   * Tags to assign to the DB subnet group.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -157,10 +159,13 @@ public open class CfnDBSubnetGroup(
     /**
      * The name for the DB subnet group. This value is stored as a lowercase string.
      *
-     * Constraints: Must contain no more than 255 lowercase alphanumeric characters or hyphens. Must
-     * not be "Default".
+     * Constraints:
      *
-     * Example: `mysubnetgroup`
+     * * Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     * * Must not be default.
+     * * First character must be a letter.
+     *
+     * Example: `mydbsubnetgroup`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnetgroup.html#cfn-rds-dbsubnetgroup-dbsubnetgroupname)
      * @param dbSubnetGroupName The name for the DB subnet group. This value is stored as a
@@ -185,18 +190,18 @@ public open class CfnDBSubnetGroup(
     public fun subnetIds(vararg subnetIds: String)
 
     /**
-     * An optional array of key-value pairs to apply to this DB subnet group.
+     * Tags to assign to the DB subnet group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnetgroup.html#cfn-rds-dbsubnetgroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB subnet group. 
+     * @param tags Tags to assign to the DB subnet group. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * An optional array of key-value pairs to apply to this DB subnet group.
+     * Tags to assign to the DB subnet group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnetgroup.html#cfn-rds-dbsubnetgroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB subnet group. 
+     * @param tags Tags to assign to the DB subnet group. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -221,10 +226,13 @@ public open class CfnDBSubnetGroup(
     /**
      * The name for the DB subnet group. This value is stored as a lowercase string.
      *
-     * Constraints: Must contain no more than 255 lowercase alphanumeric characters or hyphens. Must
-     * not be "Default".
+     * Constraints:
      *
-     * Example: `mysubnetgroup`
+     * * Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens.
+     * * Must not be default.
+     * * First character must be a letter.
+     *
+     * Example: `mydbsubnetgroup`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnetgroup.html#cfn-rds-dbsubnetgroup-dbsubnetgroupname)
      * @param dbSubnetGroupName The name for the DB subnet group. This value is stored as a
@@ -253,20 +261,20 @@ public open class CfnDBSubnetGroup(
     override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
     /**
-     * An optional array of key-value pairs to apply to this DB subnet group.
+     * Tags to assign to the DB subnet group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnetgroup.html#cfn-rds-dbsubnetgroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB subnet group. 
+     * @param tags Tags to assign to the DB subnet group. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * An optional array of key-value pairs to apply to this DB subnet group.
+     * Tags to assign to the DB subnet group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnetgroup.html#cfn-rds-dbsubnetgroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB subnet group. 
+     * @param tags Tags to assign to the DB subnet group. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

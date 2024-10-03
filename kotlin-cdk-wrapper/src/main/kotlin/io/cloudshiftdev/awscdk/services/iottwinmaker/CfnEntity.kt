@@ -115,7 +115,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEntity(
   cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -821,7 +823,8 @@ public open class CfnEntity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.ComponentProperty,
-    ) : CdkObject(cdkObject), ComponentProperty {
+    ) : CdkObject(cdkObject),
+        ComponentProperty {
       /**
        * The name of the component.
        *
@@ -1154,7 +1157,8 @@ public open class CfnEntity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.CompositeComponentProperty,
-    ) : CdkObject(cdkObject), CompositeComponentProperty {
+    ) : CdkObject(cdkObject),
+        CompositeComponentProperty {
       /**
        * The name of the component.
        *
@@ -1452,7 +1456,8 @@ public open class CfnEntity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.DataTypeProperty,
-    ) : CdkObject(cdkObject), DataTypeProperty {
+    ) : CdkObject(cdkObject),
+        DataTypeProperty {
       /**
        * The allowed values.
        *
@@ -1769,7 +1774,8 @@ public open class CfnEntity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.DataValueProperty,
-    ) : CdkObject(cdkObject), DataValueProperty {
+    ) : CdkObject(cdkObject),
+        DataValueProperty {
       /**
        * A boolean value.
        *
@@ -2270,7 +2276,8 @@ public open class CfnEntity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.DefinitionProperty,
-    ) : CdkObject(cdkObject), DefinitionProperty {
+    ) : CdkObject(cdkObject),
+        DefinitionProperty {
       /**
        * The configuration.
        *
@@ -2433,7 +2440,8 @@ public open class CfnEntity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.ErrorProperty,
-    ) : CdkObject(cdkObject), ErrorProperty {
+    ) : CdkObject(cdkObject),
+        ErrorProperty {
       /**
        * The entity error code.
        *
@@ -2551,7 +2559,8 @@ public open class CfnEntity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.PropertyGroupProperty,
-    ) : CdkObject(cdkObject), PropertyGroupProperty {
+    ) : CdkObject(cdkObject),
+        PropertyGroupProperty {
       /**
        * The group type.
        *
@@ -2699,7 +2708,8 @@ public open class CfnEntity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.PropertyProperty,
-    ) : CdkObject(cdkObject), PropertyProperty {
+    ) : CdkObject(cdkObject),
+        PropertyProperty {
       /**
        * An object that specifies information about a property.
        *
@@ -2807,7 +2817,8 @@ public open class CfnEntity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.RelationshipProperty,
-    ) : CdkObject(cdkObject), RelationshipProperty {
+    ) : CdkObject(cdkObject),
+        RelationshipProperty {
       /**
        * The relationship type.
        *
@@ -2915,7 +2926,8 @@ public open class CfnEntity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.RelationshipValueProperty,
-    ) : CdkObject(cdkObject), RelationshipValueProperty {
+    ) : CdkObject(cdkObject),
+        RelationshipValueProperty {
       /**
        * The target component name.
        *
@@ -3027,7 +3039,8 @@ public open class CfnEntity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.StatusProperty,
-    ) : CdkObject(cdkObject), StatusProperty {
+    ) : CdkObject(cdkObject),
+        StatusProperty {
       /**
        * The error message.
        *

@@ -466,7 +466,8 @@ public interface CfnDomainConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfigurationProps,
-  ) : CdkObject(cdkObject), CfnDomainConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnDomainConfigurationProps {
     /**
      * An object that specifies the authorization service for a domain.
      *

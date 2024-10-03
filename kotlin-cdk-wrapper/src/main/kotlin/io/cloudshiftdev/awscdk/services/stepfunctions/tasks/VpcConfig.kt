@@ -105,7 +105,8 @@ public interface VpcConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig,
-  ) : CdkObject(cdkObject), VpcConfig {
+  ) : CdkObject(cdkObject),
+      VpcConfig {
     /**
      * VPC subnets.
      *

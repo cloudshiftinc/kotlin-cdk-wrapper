@@ -65,7 +65,8 @@ public interface NetworkForwardOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions,
-  ) : CdkObject(cdkObject), NetworkForwardOptions {
+  ) : CdkObject(cdkObject),
+      NetworkForwardOptions {
     /**
      * For how long clients should be directed to the same target group.
      *

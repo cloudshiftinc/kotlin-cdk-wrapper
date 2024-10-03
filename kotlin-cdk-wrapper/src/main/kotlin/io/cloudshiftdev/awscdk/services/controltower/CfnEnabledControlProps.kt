@@ -182,7 +182,8 @@ public interface CfnEnabledControlProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledControlProps,
-  ) : CdkObject(cdkObject), CfnEnabledControlProps {
+  ) : CdkObject(cdkObject),
+      CfnEnabledControlProps {
     /**
      * The ARN of the control.
      *

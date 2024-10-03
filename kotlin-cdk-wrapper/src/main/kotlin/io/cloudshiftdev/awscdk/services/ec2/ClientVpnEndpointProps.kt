@@ -396,7 +396,8 @@ public interface ClientVpnEndpointProps : ClientVpnEndpointOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpointProps,
-  ) : CdkObject(cdkObject), ClientVpnEndpointProps {
+  ) : CdkObject(cdkObject),
+      ClientVpnEndpointProps {
     /**
      * Whether to authorize all users to the VPC CIDR.
      *

@@ -136,7 +136,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSchedule(
   cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -878,7 +879,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.AwsVpcConfigurationProperty,
-    ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AwsVpcConfigurationProperty {
       /**
        * Specifies whether the task's elastic network interface receives a public IP address.
        *
@@ -1047,7 +1049,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty,
-    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
+    ) : CdkObject(cdkObject),
+        CapacityProviderStrategyItemProperty {
       /**
        * The base value designates how many tasks, at a minimum, to run on the specified capacity
        * provider.
@@ -1162,7 +1165,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty,
-    ) : CdkObject(cdkObject), DeadLetterConfigProperty {
+    ) : CdkObject(cdkObject),
+        DeadLetterConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the SQS queue specified as the destination for the
        * dead-letter queue.
@@ -1760,7 +1764,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.EcsParametersProperty,
-    ) : CdkObject(cdkObject), EcsParametersProperty {
+    ) : CdkObject(cdkObject),
+        EcsParametersProperty {
       /**
        * The capacity provider strategy to use for the task.
        *
@@ -1991,7 +1996,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty,
-    ) : CdkObject(cdkObject), EventBridgeParametersProperty {
+    ) : CdkObject(cdkObject),
+        EventBridgeParametersProperty {
       /**
        * A free-form string, with a maximum of 128 characters, used to decide what fields to expect
        * in the event detail.
@@ -2123,7 +2129,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty,
-    ) : CdkObject(cdkObject), FlexibleTimeWindowProperty {
+    ) : CdkObject(cdkObject),
+        FlexibleTimeWindowProperty {
       /**
        * The maximum time window during which a schedule can be invoked.
        *
@@ -2231,7 +2238,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty,
-    ) : CdkObject(cdkObject), KinesisParametersProperty {
+    ) : CdkObject(cdkObject),
+        KinesisParametersProperty {
       /**
        * Specifies the shard to which EventBridge Scheduler sends the event.
        *
@@ -2367,7 +2375,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NetworkConfigurationProperty {
       /**
        * Specifies the Amazon VPC subnets and security groups for the task, and whether a public IP
        * address is to be used.
@@ -2495,7 +2504,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty,
-    ) : CdkObject(cdkObject), PlacementConstraintProperty {
+    ) : CdkObject(cdkObject),
+        PlacementConstraintProperty {
       /**
        * A cluster query language expression to apply to the constraint.
        *
@@ -2646,7 +2656,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty,
-    ) : CdkObject(cdkObject), PlacementStrategyProperty {
+    ) : CdkObject(cdkObject),
+        PlacementStrategyProperty {
       /**
        * The field to apply the placement strategy against.
        *
@@ -2779,7 +2790,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty,
-    ) : CdkObject(cdkObject), RetryPolicyProperty {
+    ) : CdkObject(cdkObject),
+        RetryPolicyProperty {
       /**
        * The maximum amount of time, in seconds, to continue to make retry attempts.
        *
@@ -2893,7 +2905,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParameterProperty,
-    ) : CdkObject(cdkObject), SageMakerPipelineParameterProperty {
+    ) : CdkObject(cdkObject),
+        SageMakerPipelineParameterProperty {
       /**
        * Name of parameter to start execution of a SageMaker Model Building Pipeline.
        *
@@ -3019,7 +3032,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty,
-    ) : CdkObject(cdkObject), SageMakerPipelineParametersProperty {
+    ) : CdkObject(cdkObject),
+        SageMakerPipelineParametersProperty {
       /**
        * List of parameter names and values to use when executing the SageMaker Model Building
        * Pipeline.
@@ -3108,7 +3122,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty,
-    ) : CdkObject(cdkObject), SqsParametersProperty {
+    ) : CdkObject(cdkObject),
+        SqsParametersProperty {
       /**
        * The FIFO message group ID to use as the target.
        *
@@ -3772,7 +3787,8 @@ public open class CfnSchedule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.TargetProperty,
-    ) : CdkObject(cdkObject), TargetProperty {
+    ) : CdkObject(cdkObject),
+        TargetProperty {
       /**
        * The Amazon Resource Name (ARN) of the target.
        *

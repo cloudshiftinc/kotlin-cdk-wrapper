@@ -147,7 +147,8 @@ public interface IApplicationListener : IListener, IConnectable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener,
-  ) : CdkObject(cdkObject), IApplicationListener {
+  ) : CdkObject(cdkObject),
+      IApplicationListener {
     /**
      * Perform the given action on incoming requests.
      *

@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEnvironment(
   cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -674,7 +676,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty,
-    ) : CdkObject(cdkObject), AttributeMapItemsProperty {
+    ) : CdkObject(cdkObject),
+        AttributeMapItemsProperty {
       /**
        * The key name of the tag.
        *
@@ -936,7 +939,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.FederationParametersProperty,
-    ) : CdkObject(cdkObject), FederationParametersProperty {
+    ) : CdkObject(cdkObject),
+        FederationParametersProperty {
       /**
        * The redirect or sign-in URL that should be entered into the SAML 2.0 compliant identity
        * provider configuration (IdP).
@@ -1101,7 +1105,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.SuperuserParametersProperty,
-    ) : CdkObject(cdkObject), SuperuserParametersProperty {
+    ) : CdkObject(cdkObject),
+        SuperuserParametersProperty {
       /**
        * The email address of the superuser.
        *

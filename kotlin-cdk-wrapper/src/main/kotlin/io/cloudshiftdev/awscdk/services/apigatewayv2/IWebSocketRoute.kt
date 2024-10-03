@@ -26,7 +26,8 @@ public interface IWebSocketRoute : IRoute {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketRoute,
-  ) : CdkObject(cdkObject), IWebSocketRoute {
+  ) : CdkObject(cdkObject),
+      IWebSocketRoute {
     /**
      * Apply the given removal policy to this resource.
      *

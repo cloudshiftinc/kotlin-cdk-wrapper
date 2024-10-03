@@ -60,7 +60,8 @@ public interface IExtension : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.IExtension,
-  ) : CdkObject(cdkObject), IExtension {
+  ) : CdkObject(cdkObject),
+      IExtension {
     /**
      * The actions for the extension.
      */

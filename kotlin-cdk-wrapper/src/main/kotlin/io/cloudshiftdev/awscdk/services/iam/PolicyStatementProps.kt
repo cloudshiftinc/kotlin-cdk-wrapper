@@ -17,17 +17,19 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * Bucket destinationBucket;
- * BucketDeployment deployment = BucketDeployment.Builder.create(this, "DeployFiles")
- * .sources(List.of(Source.asset(join(__dirname, "source-files"))))
- * .destinationBucket(destinationBucket)
+ * Bucket accessLogsBucket = Bucket.Builder.create(this, "AccessLogsBucket")
+ * .objectOwnership(ObjectOwnership.BUCKET_OWNER_ENFORCED)
  * .build();
- * deployment.handlerRole.addToPolicy(
+ * accessLogsBucket.addToResourcePolicy(
  * PolicyStatement.Builder.create()
- * .actions(List.of("kms:Decrypt", "kms:DescribeKey"))
- * .effect(Effect.ALLOW)
- * .resources(List.of("&lt;encryption key ARN&gt;"))
+ * .actions(List.of("s3:*"))
+ * .resources(List.of(accessLogsBucket.getBucketArn(), accessLogsBucket.arnForObjects("*")))
+ * .principals(List.of(new AnyPrincipal()))
  * .build());
+ * Bucket bucket = Bucket.Builder.create(this, "MyBucket")
+ * .serverAccessLogsBucket(accessLogsBucket)
+ * .serverAccessLogsPrefix("logs")
+ * .build();
  * ```
  */
 public interface PolicyStatementProps {
@@ -297,7 +299,8 @@ public interface PolicyStatementProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.PolicyStatementProps,
-  ) : CdkObject(cdkObject), PolicyStatementProps {
+  ) : CdkObject(cdkObject),
+      PolicyStatementProps {
     /**
      * List of actions to add to the statement.
      *

@@ -143,7 +143,8 @@ public interface CommonGrantOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.CommonGrantOptions,
-  ) : CdkObject(cdkObject), CommonGrantOptions {
+  ) : CdkObject(cdkObject),
+      CommonGrantOptions {
     /**
      * The actions to grant.
      */

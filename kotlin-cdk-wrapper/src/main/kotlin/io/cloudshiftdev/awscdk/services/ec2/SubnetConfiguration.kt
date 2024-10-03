@@ -218,7 +218,8 @@ public interface SubnetConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.SubnetConfiguration,
-  ) : CdkObject(cdkObject), SubnetConfiguration {
+  ) : CdkObject(cdkObject),
+      SubnetConfiguration {
     /**
      * The number of leading 1 bits in the routing mask.
      *

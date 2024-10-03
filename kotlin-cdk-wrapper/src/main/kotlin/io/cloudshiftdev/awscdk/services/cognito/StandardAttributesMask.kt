@@ -411,7 +411,8 @@ public interface StandardAttributesMask {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.StandardAttributesMask,
-  ) : CdkObject(cdkObject), StandardAttributesMask {
+  ) : CdkObject(cdkObject),
+      StandardAttributesMask {
     /**
      * The user's postal address.
      *

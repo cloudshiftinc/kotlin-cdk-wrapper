@@ -152,7 +152,8 @@ public interface ResourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.ResourceProps,
-  ) : CdkObject(cdkObject), ResourceProps {
+  ) : CdkObject(cdkObject),
+      ResourceProps {
     /**
      * The AWS account ID this resource belongs to.
      *

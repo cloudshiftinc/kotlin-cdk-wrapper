@@ -22,7 +22,7 @@ import kotlin.jvm.JvmName
  * ```
  * Vpc vpc;
  * IInstanceEngine engine =
- * DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15_2).build());
+ * DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_16_3).build());
  * Key myKey = new Key(this, "MyKey");
  * DatabaseInstanceFromSnapshot.Builder.create(this, "InstanceFromSnapshotWithCustomizedSecret")
  * .engine(engine)

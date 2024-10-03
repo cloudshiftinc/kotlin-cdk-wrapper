@@ -256,7 +256,8 @@ public interface ClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ClusterProps,
-  ) : CdkObject(cdkObject), ClusterProps {
+  ) : CdkObject(cdkObject),
+      ClusterProps {
     /**
      * The ec2 capacity to add to the cluster.
      *

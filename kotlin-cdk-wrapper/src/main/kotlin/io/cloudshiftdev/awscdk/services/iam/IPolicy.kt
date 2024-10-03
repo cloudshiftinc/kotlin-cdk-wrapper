@@ -24,7 +24,8 @@ public interface IPolicy : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IPolicy,
-  ) : CdkObject(cdkObject), IPolicy {
+  ) : CdkObject(cdkObject),
+      IPolicy {
     /**
      * Apply the given removal policy to this resource.
      *

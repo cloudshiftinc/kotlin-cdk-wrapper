@@ -34,7 +34,8 @@ import kotlin.jvm.JvmName
  */
 public open class NatInstanceProviderV2(
   cdkObject: software.amazon.awscdk.services.ec2.NatInstanceProviderV2,
-) : NatProvider(cdkObject), IConnectable {
+) : NatProvider(cdkObject),
+    IConnectable {
   public constructor(props: NatInstanceProps) :
       this(software.amazon.awscdk.services.ec2.NatInstanceProviderV2(props.let(NatInstanceProps.Companion::unwrap))
   )

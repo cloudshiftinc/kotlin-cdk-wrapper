@@ -51,7 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGeoMatchSet(
   cdkObject: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -339,7 +340,8 @@ public open class CfnGeoMatchSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet.GeoMatchConstraintProperty,
-    ) : CdkObject(cdkObject), GeoMatchConstraintProperty {
+    ) : CdkObject(cdkObject),
+        GeoMatchConstraintProperty {
       /**
        * The type of geographical area you want AWS WAF to search for.
        *

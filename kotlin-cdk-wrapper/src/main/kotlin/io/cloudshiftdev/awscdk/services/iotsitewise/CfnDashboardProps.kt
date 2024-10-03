@@ -182,7 +182,8 @@ public interface CfnDashboardProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotsitewise.CfnDashboardProps,
-  ) : CdkObject(cdkObject), CfnDashboardProps {
+  ) : CdkObject(cdkObject),
+      CfnDashboardProps {
     /**
      * The dashboard definition specified in a JSON literal.
      *

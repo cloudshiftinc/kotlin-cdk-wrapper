@@ -278,7 +278,8 @@ public interface AthenaStopQueryExecutionProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AthenaStopQueryExecutionProps,
-  ) : CdkObject(cdkObject), AthenaStopQueryExecutionProps {
+  ) : CdkObject(cdkObject),
+      AthenaStopQueryExecutionProps {
     /**
      * An optional description for this state.
      *

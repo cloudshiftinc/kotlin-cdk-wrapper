@@ -172,7 +172,8 @@ public interface CfnAssistantAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantAssociationProps,
-  ) : CdkObject(cdkObject), CfnAssistantAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnAssistantAssociationProps {
     /**
      * The identifier of the Wisdom assistant.
      *

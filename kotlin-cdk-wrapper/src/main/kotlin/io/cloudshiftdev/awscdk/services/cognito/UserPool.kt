@@ -41,7 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class UserPool(
   cdkObject: software.amazon.awscdk.services.cognito.UserPool,
-) : Resource(cdkObject), IUserPool {
+) : Resource(cdkObject),
+    IUserPool {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cognito.UserPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -204,7 +205,7 @@ public open class UserPool(
   /**
    * User pool provider name.
    */
-  public open fun userPoolProviderName(): String = unwrap(this).getUserPoolProviderName()
+  public override fun userPoolProviderName(): String = unwrap(this).getUserPoolProviderName()
 
   /**
    * User pool provider URL.

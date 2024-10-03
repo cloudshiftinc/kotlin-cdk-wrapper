@@ -30,7 +30,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class StringParameter(
   cdkObject: software.amazon.awscdk.services.ssm.StringParameter,
-) : Resource(cdkObject), IStringParameter, IParameter {
+) : Resource(cdkObject),
+    IStringParameter,
+    IParameter {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -138,7 +140,12 @@ public open class StringParameter(
     public fun parameterName(parameterName: String)
 
     /**
-     * Indicates if the parameter name is a simple name (i.e. does not include "/" separators).
+     * Indicates whether the parameter name is a simple name.
+     *
+     * A parameter name
+     * without any "/" is considered a simple name. If the parameter name includes
+     * "/", setting simpleName to true might cause unintended issues such
+     * as duplicate "/" in the resulting ARN.
      *
      * This is required only if `parameterName` is a token, which means we
      * are unable to detect if the name is simple or "path-like" for the purpose
@@ -150,8 +157,7 @@ public open class StringParameter(
      *
      * Default: - auto-detect based on `parameterName`
      *
-     * @param simpleName Indicates if the parameter name is a simple name (i.e. does not include "/"
-     * separators). 
+     * @param simpleName Indicates whether the parameter name is a simple name. 
      */
     public fun simpleName(simpleName: Boolean)
 
@@ -240,7 +246,12 @@ public open class StringParameter(
     }
 
     /**
-     * Indicates if the parameter name is a simple name (i.e. does not include "/" separators).
+     * Indicates whether the parameter name is a simple name.
+     *
+     * A parameter name
+     * without any "/" is considered a simple name. If the parameter name includes
+     * "/", setting simpleName to true might cause unintended issues such
+     * as duplicate "/" in the resulting ARN.
      *
      * This is required only if `parameterName` is a token, which means we
      * are unable to detect if the name is simple or "path-like" for the purpose
@@ -252,8 +263,7 @@ public open class StringParameter(
      *
      * Default: - auto-detect based on `parameterName`
      *
-     * @param simpleName Indicates if the parameter name is a simple name (i.e. does not include "/"
-     * separators). 
+     * @param simpleName Indicates whether the parameter name is a simple name. 
      */
     override fun simpleName(simpleName: Boolean) {
       cdkBuilder.simpleName(simpleName)
@@ -315,6 +325,14 @@ public open class StringParameter(
       attrs: SecureStringParameterAttributes.Builder.() -> Unit,
     ): IStringParameter = fromSecureStringParameterAttributes(scope, id,
         SecureStringParameterAttributes(attrs))
+
+    public fun fromStringParameterArn(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      stringParameterArn: String,
+    ): IStringParameter =
+        software.amazon.awscdk.services.ssm.StringParameter.fromStringParameterArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, stringParameterArn).let(IStringParameter::wrap)
 
     public fun fromStringParameterAttributes(
       scope: CloudshiftdevConstructsConstruct,
@@ -413,6 +431,14 @@ public open class StringParameter(
         String =
         software.amazon.awscdk.services.ssm.StringParameter.valueFromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         parameterName)
+
+    public fun valueFromLookup(
+      scope: CloudshiftdevConstructsConstruct,
+      parameterName: String,
+      defaultValue: String,
+    ): String =
+        software.amazon.awscdk.services.ssm.StringParameter.valueFromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        parameterName, defaultValue)
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

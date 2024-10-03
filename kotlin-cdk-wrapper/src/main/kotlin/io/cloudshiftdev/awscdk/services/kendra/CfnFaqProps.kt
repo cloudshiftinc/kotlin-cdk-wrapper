@@ -314,7 +314,8 @@ public interface CfnFaqProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kendra.CfnFaqProps,
-  ) : CdkObject(cdkObject), CfnFaqProps {
+  ) : CdkObject(cdkObject),
+      CfnFaqProps {
     /**
      * A description for the FAQ.
      *

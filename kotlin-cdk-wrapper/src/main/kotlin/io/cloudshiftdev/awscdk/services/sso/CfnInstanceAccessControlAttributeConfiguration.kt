@@ -65,7 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInstanceAccessControlAttributeConfiguration(
   cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -535,7 +536,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeProperty,
-    ) : CdkObject(cdkObject), AccessControlAttributeProperty {
+    ) : CdkObject(cdkObject),
+        AccessControlAttributeProperty {
       /**
        * The name of the attribute associated with your identities in your identity source.
        *
@@ -642,7 +644,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty,
-    ) : CdkObject(cdkObject), AccessControlAttributeValueProperty {
+    ) : CdkObject(cdkObject),
+        AccessControlAttributeValueProperty {
       /**
        * The identity source to use when mapping a specified attribute to IAM Identity Center .
        *
@@ -756,7 +759,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty,
-    ) : CdkObject(cdkObject), InstanceAccessControlAttributeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InstanceAccessControlAttributeConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration.html#cfn-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration-accesscontrolattributes)
        */

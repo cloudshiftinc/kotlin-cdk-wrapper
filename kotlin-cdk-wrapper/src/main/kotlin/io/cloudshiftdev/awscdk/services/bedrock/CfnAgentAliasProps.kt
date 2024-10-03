@@ -187,7 +187,8 @@ public interface CfnAgentAliasProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.bedrock.CfnAgentAliasProps,
-  ) : CdkObject(cdkObject), CfnAgentAliasProps {
+  ) : CdkObject(cdkObject),
+      CfnAgentAliasProps {
     /**
      * The name of the alias of the agent.
      *

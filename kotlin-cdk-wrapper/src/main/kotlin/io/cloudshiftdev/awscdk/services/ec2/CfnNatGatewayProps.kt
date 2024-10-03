@@ -357,7 +357,8 @@ public interface CfnNatGatewayProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnNatGatewayProps,
-  ) : CdkObject(cdkObject), CfnNatGatewayProps {
+  ) : CdkObject(cdkObject),
+      CfnNatGatewayProps {
     /**
      * [Public NAT gateway only] The allocation ID of the Elastic IP address that's associated with
      * the NAT gateway.

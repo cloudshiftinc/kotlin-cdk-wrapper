@@ -21,7 +21,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class Action(
   cdkObject: software.amazon.awscdk.services.codepipeline.Action,
-) : CdkObject(cdkObject), IAction {
+) : CdkObject(cdkObject),
+    IAction {
   /**
    * The simple properties of the Action, like its Owner, name, etc.
    *

@@ -177,7 +177,8 @@ public interface UserVerificationConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.UserVerificationConfig,
-  ) : CdkObject(cdkObject), UserVerificationConfig {
+  ) : CdkObject(cdkObject),
+      UserVerificationConfig {
     /**
      * The email body template for the verification email sent to the user upon sign up.
      *

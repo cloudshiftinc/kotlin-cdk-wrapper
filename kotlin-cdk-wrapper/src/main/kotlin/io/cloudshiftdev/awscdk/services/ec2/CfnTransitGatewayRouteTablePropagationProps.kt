@@ -83,7 +83,8 @@ public interface CfnTransitGatewayRouteTablePropagationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagationProps,
-  ) : CdkObject(cdkObject), CfnTransitGatewayRouteTablePropagationProps {
+  ) : CdkObject(cdkObject),
+      CfnTransitGatewayRouteTablePropagationProps {
     /**
      * The ID of the attachment.
      *

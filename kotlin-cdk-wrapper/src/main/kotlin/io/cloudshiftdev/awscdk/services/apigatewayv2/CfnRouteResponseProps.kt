@@ -185,7 +185,8 @@ public interface CfnRouteResponseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRouteResponseProps,
-  ) : CdkObject(cdkObject), CfnRouteResponseProps {
+  ) : CdkObject(cdkObject),
+      CfnRouteResponseProps {
     /**
      * The API identifier.
      *

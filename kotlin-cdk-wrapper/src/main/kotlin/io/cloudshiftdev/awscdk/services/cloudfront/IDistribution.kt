@@ -44,7 +44,8 @@ public interface IDistribution : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.IDistribution,
-  ) : CdkObject(cdkObject), IDistribution {
+  ) : CdkObject(cdkObject),
+      IDistribution {
     /**
      * Apply the given removal policy to this resource.
      *

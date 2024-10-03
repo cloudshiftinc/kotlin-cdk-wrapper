@@ -52,7 +52,7 @@ public interface CfnPrefixListProps {
   public fun addressFamily(): String
 
   /**
-   * One or more entries for the prefix list.
+   * The entries for the prefix list.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html#cfn-ec2-prefixlist-entries)
    */
@@ -60,6 +60,8 @@ public interface CfnPrefixListProps {
 
   /**
    * The maximum number of entries for the prefix list.
+   *
+   * This property is required when you create a prefix list.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html#cfn-ec2-prefixlist-maxentries)
    */
@@ -93,22 +95,23 @@ public interface CfnPrefixListProps {
     public fun addressFamily(addressFamily: String)
 
     /**
-     * @param entries One or more entries for the prefix list.
+     * @param entries The entries for the prefix list.
      */
     public fun entries(entries: IResolvable)
 
     /**
-     * @param entries One or more entries for the prefix list.
+     * @param entries The entries for the prefix list.
      */
     public fun entries(entries: List<Any>)
 
     /**
-     * @param entries One or more entries for the prefix list.
+     * @param entries The entries for the prefix list.
      */
     public fun entries(vararg entries: Any)
 
     /**
      * @param maxEntries The maximum number of entries for the prefix list.
+     * This property is required when you create a prefix list.
      */
     public fun maxEntries(maxEntries: Number)
 
@@ -142,26 +145,27 @@ public interface CfnPrefixListProps {
     }
 
     /**
-     * @param entries One or more entries for the prefix list.
+     * @param entries The entries for the prefix list.
      */
     override fun entries(entries: IResolvable) {
       cdkBuilder.entries(entries.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param entries One or more entries for the prefix list.
+     * @param entries The entries for the prefix list.
      */
     override fun entries(entries: List<Any>) {
       cdkBuilder.entries(entries.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param entries One or more entries for the prefix list.
+     * @param entries The entries for the prefix list.
      */
     override fun entries(vararg entries: Any): Unit = entries(entries.toList())
 
     /**
      * @param maxEntries The maximum number of entries for the prefix list.
+     * This property is required when you create a prefix list.
      */
     override fun maxEntries(maxEntries: Number) {
       cdkBuilder.maxEntries(maxEntries)
@@ -192,7 +196,8 @@ public interface CfnPrefixListProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnPrefixListProps,
-  ) : CdkObject(cdkObject), CfnPrefixListProps {
+  ) : CdkObject(cdkObject),
+      CfnPrefixListProps {
     /**
      * The IP address type.
      *
@@ -203,7 +208,7 @@ public interface CfnPrefixListProps {
     override fun addressFamily(): String = unwrap(this).getAddressFamily()
 
     /**
-     * One or more entries for the prefix list.
+     * The entries for the prefix list.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html#cfn-ec2-prefixlist-entries)
      */
@@ -211,6 +216,8 @@ public interface CfnPrefixListProps {
 
     /**
      * The maximum number of entries for the prefix list.
+     *
+     * This property is required when you create a prefix list.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html#cfn-ec2-prefixlist-maxentries)
      */

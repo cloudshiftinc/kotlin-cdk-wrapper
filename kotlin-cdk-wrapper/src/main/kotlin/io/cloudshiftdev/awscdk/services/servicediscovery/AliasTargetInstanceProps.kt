@@ -103,7 +103,8 @@ public interface AliasTargetInstanceProps : BaseInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.AliasTargetInstanceProps,
-  ) : CdkObject(cdkObject), AliasTargetInstanceProps {
+  ) : CdkObject(cdkObject),
+      AliasTargetInstanceProps {
     /**
      * Custom attributes of the instance.
      *

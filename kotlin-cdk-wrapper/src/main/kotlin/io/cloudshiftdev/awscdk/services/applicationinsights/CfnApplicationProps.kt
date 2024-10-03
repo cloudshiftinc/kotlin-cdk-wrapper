@@ -67,6 +67,22 @@ import kotlin.collections.List
  * .logPath("logPath")
  * .patternSet("patternSet")
  * .build()))
+ * .netWeaverPrometheusExporter(NetWeaverPrometheusExporterProperty.builder()
+ * .instanceNumbers(List.of("instanceNumbers"))
+ * .sapsid("sapsid")
+ * // the properties below are optional
+ * .prometheusPort("prometheusPort")
+ * .build())
+ * .processes(List.of(ProcessProperty.builder()
+ * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+ * .alarmMetricName("alarmMetricName")
+ * .build()))
+ * .processName("processName")
+ * .build()))
+ * .sqlServerPrometheusExporter(SQLServerPrometheusExporterProperty.builder()
+ * .prometheusPort("prometheusPort")
+ * .sqlSecretName("sqlSecretName")
+ * .build())
  * .windowsEvents(List.of(WindowsEventProperty.builder()
  * .eventLevels(List.of("eventLevels"))
  * .eventName("eventName")
@@ -87,6 +103,12 @@ import kotlin.collections.List
  * .logGroupName("logGroupName")
  * .logPath("logPath")
  * .patternSet("patternSet")
+ * .build()))
+ * .processes(List.of(ProcessProperty.builder()
+ * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+ * .alarmMetricName("alarmMetricName")
+ * .build()))
+ * .processName("processName")
  * .build()))
  * .windowsEvents(List.of(WindowsEventProperty.builder()
  * .eventLevels(List.of("eventLevels"))
@@ -133,6 +155,22 @@ import kotlin.collections.List
  * .logPath("logPath")
  * .patternSet("patternSet")
  * .build()))
+ * .netWeaverPrometheusExporter(NetWeaverPrometheusExporterProperty.builder()
+ * .instanceNumbers(List.of("instanceNumbers"))
+ * .sapsid("sapsid")
+ * // the properties below are optional
+ * .prometheusPort("prometheusPort")
+ * .build())
+ * .processes(List.of(ProcessProperty.builder()
+ * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+ * .alarmMetricName("alarmMetricName")
+ * .build()))
+ * .processName("processName")
+ * .build()))
+ * .sqlServerPrometheusExporter(SQLServerPrometheusExporterProperty.builder()
+ * .prometheusPort("prometheusPort")
+ * .sqlSecretName("sqlSecretName")
+ * .build())
  * .windowsEvents(List.of(WindowsEventProperty.builder()
  * .eventLevels(List.of("eventLevels"))
  * .eventName("eventName")
@@ -153,6 +191,12 @@ import kotlin.collections.List
  * .logGroupName("logGroupName")
  * .logPath("logPath")
  * .patternSet("patternSet")
+ * .build()))
+ * .processes(List.of(ProcessProperty.builder()
+ * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+ * .alarmMetricName("alarmMetricName")
+ * .build()))
+ * .processName("processName")
  * .build()))
  * .windowsEvents(List.of(WindowsEventProperty.builder()
  * .eventLevels(List.of("eventLevels"))
@@ -210,6 +254,9 @@ public interface CfnApplicationProps {
 
   /**
    * The monitoring settings of the components.
+   *
+   * Not required to set up default monitoring for all components. To set up default monitoring for
+   * all components, set `AutoConfigurationEnabled` to `true` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-componentmonitoringsettings)
    */
@@ -308,16 +355,22 @@ public interface CfnApplicationProps {
 
     /**
      * @param componentMonitoringSettings The monitoring settings of the components.
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
      */
     public fun componentMonitoringSettings(componentMonitoringSettings: IResolvable)
 
     /**
      * @param componentMonitoringSettings The monitoring settings of the components.
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
      */
     public fun componentMonitoringSettings(componentMonitoringSettings: List<Any>)
 
     /**
      * @param componentMonitoringSettings The monitoring settings of the components.
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
      */
     public fun componentMonitoringSettings(vararg componentMonitoringSettings: Any)
 
@@ -449,6 +502,8 @@ public interface CfnApplicationProps {
 
     /**
      * @param componentMonitoringSettings The monitoring settings of the components.
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
      */
     override fun componentMonitoringSettings(componentMonitoringSettings: IResolvable) {
       cdkBuilder.componentMonitoringSettings(componentMonitoringSettings.let(IResolvable.Companion::unwrap))
@@ -456,6 +511,8 @@ public interface CfnApplicationProps {
 
     /**
      * @param componentMonitoringSettings The monitoring settings of the components.
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
      */
     override fun componentMonitoringSettings(componentMonitoringSettings: List<Any>) {
       cdkBuilder.componentMonitoringSettings(componentMonitoringSettings.map{CdkObjectWrappers.unwrap(it)})
@@ -463,6 +520,8 @@ public interface CfnApplicationProps {
 
     /**
      * @param componentMonitoringSettings The monitoring settings of the components.
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
      */
     override fun componentMonitoringSettings(vararg componentMonitoringSettings: Any): Unit =
         componentMonitoringSettings(componentMonitoringSettings.toList())
@@ -587,7 +646,8 @@ public interface CfnApplicationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplicationProps,
-  ) : CdkObject(cdkObject), CfnApplicationProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationProps {
     /**
      * If set to true, the managed policies for SSM and CW will be attached to the instance roles if
      * they are missing.
@@ -606,6 +666,9 @@ public interface CfnApplicationProps {
 
     /**
      * The monitoring settings of the components.
+     *
+     * Not required to set up default monitoring for all components. To set up default monitoring
+     * for all components, set `AutoConfigurationEnabled` to `true` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-componentmonitoringsettings)
      */

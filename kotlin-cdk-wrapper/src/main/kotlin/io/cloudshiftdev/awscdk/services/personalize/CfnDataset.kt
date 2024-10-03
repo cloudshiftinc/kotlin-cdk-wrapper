@@ -77,7 +77,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataset(
   cdkObject: software.amazon.awscdk.services.personalize.CfnDataset,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -399,7 +400,8 @@ public open class CfnDataset(
   }
 
   /**
-   * Describes the data source that contains the data to upload to a dataset.
+   * Describes the data source that contains the data to upload to a dataset, or the list of records
+   * to delete from Amazon Personalize.
    *
    * Example:
    *
@@ -416,10 +418,20 @@ public open class CfnDataset(
    */
   public interface DataSourceProperty {
     /**
-     * The path to the Amazon S3 bucket where the data that you want to upload to your dataset is
-     * stored.
+     * For dataset import jobs, the path to the Amazon S3 bucket where the data that you want to
+     * upload to your dataset is stored.
+     *
+     * For data deletion jobs, the path to the Amazon S3 bucket that stores the list of records to
+     * delete.
      *
      * For example:
+     *
+     * `s3://bucket-name/folder-name/fileName.csv`
+     *
+     * If your CSV files are in a folder in your Amazon S3 bucket and you want your import job or
+     * data deletion job to consider multiple files, you can specify the path to the folder. With a
+     * data deletion job, Amazon Personalize uses all files in the folder and any sub folder. Use the
+     * following syntax with a `/` after the folder name:
      *
      * `s3://bucket-name/folder-name/`
      *
@@ -433,9 +445,19 @@ public open class CfnDataset(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dataLocation The path to the Amazon S3 bucket where the data that you want to upload
-       * to your dataset is stored.
+       * @param dataLocation For dataset import jobs, the path to the Amazon S3 bucket where the
+       * data that you want to upload to your dataset is stored.
+       * For data deletion jobs, the path to the Amazon S3 bucket that stores the list of records to
+       * delete.
+       *
        * For example:
+       *
+       * `s3://bucket-name/folder-name/fileName.csv`
+       *
+       * If your CSV files are in a folder in your Amazon S3 bucket and you want your import job or
+       * data deletion job to consider multiple files, you can specify the path to the folder. With a
+       * data deletion job, Amazon Personalize uses all files in the folder and any sub folder. Use the
+       * following syntax with a `/` after the folder name:
        *
        * `s3://bucket-name/folder-name/`
        */
@@ -448,9 +470,19 @@ public open class CfnDataset(
           software.amazon.awscdk.services.personalize.CfnDataset.DataSourceProperty.builder()
 
       /**
-       * @param dataLocation The path to the Amazon S3 bucket where the data that you want to upload
-       * to your dataset is stored.
+       * @param dataLocation For dataset import jobs, the path to the Amazon S3 bucket where the
+       * data that you want to upload to your dataset is stored.
+       * For data deletion jobs, the path to the Amazon S3 bucket that stores the list of records to
+       * delete.
+       *
        * For example:
+       *
+       * `s3://bucket-name/folder-name/fileName.csv`
+       *
+       * If your CSV files are in a folder in your Amazon S3 bucket and you want your import job or
+       * data deletion job to consider multiple files, you can specify the path to the folder. With a
+       * data deletion job, Amazon Personalize uses all files in the folder and any sub folder. Use the
+       * following syntax with a `/` after the folder name:
        *
        * `s3://bucket-name/folder-name/`
        */
@@ -464,12 +496,23 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.personalize.CfnDataset.DataSourceProperty,
-    ) : CdkObject(cdkObject), DataSourceProperty {
+    ) : CdkObject(cdkObject),
+        DataSourceProperty {
       /**
-       * The path to the Amazon S3 bucket where the data that you want to upload to your dataset is
-       * stored.
+       * For dataset import jobs, the path to the Amazon S3 bucket where the data that you want to
+       * upload to your dataset is stored.
+       *
+       * For data deletion jobs, the path to the Amazon S3 bucket that stores the list of records to
+       * delete.
        *
        * For example:
+       *
+       * `s3://bucket-name/folder-name/fileName.csv`
+       *
+       * If your CSV files are in a folder in your Amazon S3 bucket and you want your import job or
+       * data deletion job to consider multiple files, you can specify the path to the folder. With a
+       * data deletion job, Amazon Personalize uses all files in the folder and any sub folder. Use the
+       * following syntax with a `/` after the folder name:
        *
        * `s3://bucket-name/folder-name/`
        *
@@ -643,7 +686,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.personalize.CfnDataset.DatasetImportJobProperty,
-    ) : CdkObject(cdkObject), DatasetImportJobProperty {
+    ) : CdkObject(cdkObject),
+        DatasetImportJobProperty {
       /**
        * The Amazon S3 bucket that contains the training data to import.
        *

@@ -31,7 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class LogStream(
   cdkObject: software.amazon.awscdk.services.logs.LogStream,
-) : Resource(cdkObject), ILogStream {
+) : Resource(cdkObject),
+    ILogStream {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

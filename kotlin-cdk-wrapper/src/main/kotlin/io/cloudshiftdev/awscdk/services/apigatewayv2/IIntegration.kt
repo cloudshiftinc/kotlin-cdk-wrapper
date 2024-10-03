@@ -22,7 +22,8 @@ public interface IIntegration : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IIntegration,
-  ) : CdkObject(cdkObject), IIntegration {
+  ) : CdkObject(cdkObject),
+      IIntegration {
     /**
      * Apply the given removal policy to this resource.
      *

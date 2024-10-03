@@ -167,7 +167,8 @@ public interface KubernetesObjectValueProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.KubernetesObjectValueProps,
-  ) : CdkObject(cdkObject), KubernetesObjectValueProps {
+  ) : CdkObject(cdkObject),
+      KubernetesObjectValueProps {
     /**
      * The EKS cluster to fetch attributes from.
      *

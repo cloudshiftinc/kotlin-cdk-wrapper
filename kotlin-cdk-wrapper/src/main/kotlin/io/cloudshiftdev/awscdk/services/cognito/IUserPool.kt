@@ -123,9 +123,15 @@ public interface IUserPool : IResource {
    */
   public fun userPoolId(): String
 
+  /**
+   * The provider name of this user pool resource.
+   */
+  public fun userPoolProviderName(): String
+
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.IUserPool,
-  ) : CdkObject(cdkObject), IUserPool {
+  ) : CdkObject(cdkObject),
+      IUserPool {
     /**
      * Add a new app client to this user pool.
      *
@@ -276,6 +282,11 @@ public interface IUserPool : IResource {
      * The physical ID of this user pool resource.
      */
     override fun userPoolId(): String = unwrap(this).getUserPoolId()
+
+    /**
+     * The provider name of this user pool resource.
+     */
+    override fun userPoolProviderName(): String = unwrap(this).getUserPoolProviderName()
   }
 
   public companion object {

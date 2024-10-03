@@ -30,6 +30,15 @@ import kotlin.jvm.JvmName
  * .build())
  * .transportAttachmentId("transportAttachmentId")
  * // the properties below are optional
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
  * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
  * .attachmentPolicyRuleNumber(123)
  * .segmentName("segmentName")
@@ -63,11 +72,26 @@ public interface CfnConnectAttachmentProps {
   public fun edgeLocation(): String
 
   /**
+   * The name of the network function group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-networkfunctiongroupname)
+   */
+  public fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+  /**
    * Options for connecting an attachment.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-options)
    */
   public fun options(): Any
+
+  /**
+   * Describes proposed changes to a network function group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-proposednetworkfunctiongroupchange)
+   */
+  public fun proposedNetworkFunctionGroupChange(): Any? =
+      unwrap(this).getProposedNetworkFunctionGroupChange()
 
   /**
    * Describes a proposed segment change.
@@ -79,7 +103,7 @@ public interface CfnConnectAttachmentProps {
   public fun proposedSegmentChange(): Any? = unwrap(this).getProposedSegmentChange()
 
   /**
-   * Tags for the attachment.
+   * The tags associated with the Connect attachment.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-tags)
    */
@@ -108,6 +132,11 @@ public interface CfnConnectAttachmentProps {
     public fun edgeLocation(edgeLocation: String)
 
     /**
+     * @param networkFunctionGroupName The name of the network function group.
+     */
+    public fun networkFunctionGroupName(networkFunctionGroupName: String)
+
+    /**
      * @param options Options for connecting an attachment. 
      */
     public fun options(options: IResolvable)
@@ -124,6 +153,28 @@ public interface CfnConnectAttachmentProps {
     @JvmName("58873062cc15cf12a1d7297d6a74a7b80bc16778bed23edbe0ebfdf908937744")
     public
         fun options(options: CfnConnectAttachment.ConnectAttachmentOptionsProperty.Builder.() -> Unit)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    public fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnConnectAttachment.ProposedNetworkFunctionGroupChangeProperty)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d13ec306597e76467d44b35f856c04acf0631000e29f0be89500a95155cd0373")
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnConnectAttachment.ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit)
 
     /**
      * @param proposedSegmentChange Describes a proposed segment change.
@@ -148,12 +199,12 @@ public interface CfnConnectAttachmentProps {
         fun proposedSegmentChange(proposedSegmentChange: CfnConnectAttachment.ProposedSegmentChangeProperty.Builder.() -> Unit)
 
     /**
-     * @param tags Tags for the attachment.
+     * @param tags The tags associated with the Connect attachment.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags Tags for the attachment.
+     * @param tags The tags associated with the Connect attachment.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -183,6 +234,13 @@ public interface CfnConnectAttachmentProps {
     }
 
     /**
+     * @param networkFunctionGroupName The name of the network function group.
+     */
+    override fun networkFunctionGroupName(networkFunctionGroupName: String) {
+      cdkBuilder.networkFunctionGroupName(networkFunctionGroupName)
+    }
+
+    /**
      * @param options Options for connecting an attachment. 
      */
     override fun options(options: IResolvable) {
@@ -204,6 +262,35 @@ public interface CfnConnectAttachmentProps {
     override
         fun options(options: CfnConnectAttachment.ConnectAttachmentOptionsProperty.Builder.() -> Unit):
         Unit = options(CfnConnectAttachment.ConnectAttachmentOptionsProperty(options))
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnConnectAttachment.ProposedNetworkFunctionGroupChangeProperty) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(CfnConnectAttachment.ProposedNetworkFunctionGroupChangeProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d13ec306597e76467d44b35f856c04acf0631000e29f0be89500a95155cd0373")
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnConnectAttachment.ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit):
+        Unit =
+        proposedNetworkFunctionGroupChange(CfnConnectAttachment.ProposedNetworkFunctionGroupChangeProperty(proposedNetworkFunctionGroupChange))
 
     /**
      * @param proposedSegmentChange Describes a proposed segment change.
@@ -234,14 +321,14 @@ public interface CfnConnectAttachmentProps {
         proposedSegmentChange(CfnConnectAttachment.ProposedSegmentChangeProperty(proposedSegmentChange))
 
     /**
-     * @param tags Tags for the attachment.
+     * @param tags The tags associated with the Connect attachment.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags Tags for the attachment.
+     * @param tags The tags associated with the Connect attachment.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -258,7 +345,8 @@ public interface CfnConnectAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectAttachmentProps,
-  ) : CdkObject(cdkObject), CfnConnectAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnConnectAttachmentProps {
     /**
      * The ID of the core network where the Connect attachment is located.
      *
@@ -274,11 +362,26 @@ public interface CfnConnectAttachmentProps {
     override fun edgeLocation(): String = unwrap(this).getEdgeLocation()
 
     /**
+     * The name of the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-networkfunctiongroupname)
+     */
+    override fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+    /**
      * Options for connecting an attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-options)
      */
     override fun options(): Any = unwrap(this).getOptions()
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-proposednetworkfunctiongroupchange)
+     */
+    override fun proposedNetworkFunctionGroupChange(): Any? =
+        unwrap(this).getProposedNetworkFunctionGroupChange()
 
     /**
      * Describes a proposed segment change.
@@ -290,7 +393,7 @@ public interface CfnConnectAttachmentProps {
     override fun proposedSegmentChange(): Any? = unwrap(this).getProposedSegmentChange()
 
     /**
-     * Tags for the attachment.
+     * The tags associated with the Connect attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-tags)
      */

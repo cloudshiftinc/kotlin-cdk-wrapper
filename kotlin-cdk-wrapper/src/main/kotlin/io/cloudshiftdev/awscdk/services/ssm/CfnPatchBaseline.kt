@@ -86,7 +86,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPatchBaseline(
   cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -411,7 +413,7 @@ public open class CfnPatchBaseline(
      * A list of explicitly approved patches for the baseline.
      *
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      *
@@ -424,7 +426,7 @@ public open class CfnPatchBaseline(
      * A list of explicitly approved patches for the baseline.
      *
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      *
@@ -572,7 +574,7 @@ public open class CfnPatchBaseline(
      * A list of explicitly rejected patches for the baseline.
      *
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      *
@@ -585,7 +587,7 @@ public open class CfnPatchBaseline(
      * A list of explicitly rejected patches for the baseline.
      *
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      *
@@ -597,14 +599,21 @@ public open class CfnPatchBaseline(
     /**
      * The action for Patch Manager to take on patches included in the `RejectedPackages` list.
      *
-     * * *`ALLOW_AS_DEPENDENCY`* : A package in the `Rejected` patches list is installed only if it
-     * is a dependency of another package. It is considered compliant with the patch baseline, and its
-     * status is reported as `InstalledOther` . This is the default action if no option is specified.
-     * * *BLOCK* : Packages in the *Rejected patches* list, and packages that include them as
-     * dependencies, aren't installed by Patch Manager under any circumstances. If a package was
-     * installed before it was added to the *Rejected patches* list, or is installed outside of Patch
+     * * **ALLOW_AS_DEPENDENCY** - *Linux and macOS* : A package in the rejected patches list is
+     * installed only if it is a dependency of another package. It is considered compliant with the
+     * patch baseline, and its status is reported as `INSTALLED_OTHER` . This is the default action if
+     * no option is specified.
+     *
+     * *Windows Server* : Windows Server doesn't support the concept of package dependencies. If a
+     * package in the rejected patches list and already installed on the node, its status is reported
+     * as `INSTALLED_OTHER` . Any package not already installed on the node is skipped. This is the
+     * default action if no option is specified.
+     *
+     * * **BLOCK** - *All OSs* : Packages in the rejected patches list, and packages that include
+     * them as dependencies, aren't installed by Patch Manager under any circumstances. If a package
+     * was installed before it was added to the rejected patches list, or is installed outside of Patch
      * Manager afterward, it's considered noncompliant with the patch baseline and its status is
-     * reported as *InstalledRejected* .
+     * reported as `INSTALLED_REJECTED` .
      *
      * Default: - "ALLOW_AS_DEPENDENCY"
      *
@@ -717,7 +726,7 @@ public open class CfnPatchBaseline(
      * A list of explicitly approved patches for the baseline.
      *
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      *
@@ -732,7 +741,7 @@ public open class CfnPatchBaseline(
      * A list of explicitly approved patches for the baseline.
      *
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      *
@@ -904,7 +913,7 @@ public open class CfnPatchBaseline(
      * A list of explicitly rejected patches for the baseline.
      *
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      *
@@ -919,7 +928,7 @@ public open class CfnPatchBaseline(
      * A list of explicitly rejected patches for the baseline.
      *
      * For information about accepted formats for lists of approved patches and rejected patches,
-     * see [About package name formats for approved and rejected patch
+     * see [Package name formats for approved and rejected patch
      * lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html)
      * in the *AWS Systems Manager User Guide* .
      *
@@ -932,14 +941,21 @@ public open class CfnPatchBaseline(
     /**
      * The action for Patch Manager to take on patches included in the `RejectedPackages` list.
      *
-     * * *`ALLOW_AS_DEPENDENCY`* : A package in the `Rejected` patches list is installed only if it
-     * is a dependency of another package. It is considered compliant with the patch baseline, and its
-     * status is reported as `InstalledOther` . This is the default action if no option is specified.
-     * * *BLOCK* : Packages in the *Rejected patches* list, and packages that include them as
-     * dependencies, aren't installed by Patch Manager under any circumstances. If a package was
-     * installed before it was added to the *Rejected patches* list, or is installed outside of Patch
+     * * **ALLOW_AS_DEPENDENCY** - *Linux and macOS* : A package in the rejected patches list is
+     * installed only if it is a dependency of another package. It is considered compliant with the
+     * patch baseline, and its status is reported as `INSTALLED_OTHER` . This is the default action if
+     * no option is specified.
+     *
+     * *Windows Server* : Windows Server doesn't support the concept of package dependencies. If a
+     * package in the rejected patches list and already installed on the node, its status is reported
+     * as `INSTALLED_OTHER` . Any package not already installed on the node is skipped. This is the
+     * default action if no option is specified.
+     *
+     * * **BLOCK** - *All OSs* : Packages in the rejected patches list, and packages that include
+     * them as dependencies, aren't installed by Patch Manager under any circumstances. If a package
+     * was installed before it was added to the rejected patches list, or is installed outside of Patch
      * Manager afterward, it's considered noncompliant with the patch baseline and its status is
-     * reported as *InstalledRejected* .
+     * reported as `INSTALLED_REJECTED` .
      *
      * Default: - "ALLOW_AS_DEPENDENCY"
      *
@@ -1128,7 +1144,8 @@ public open class CfnPatchBaseline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty,
-    ) : CdkObject(cdkObject), PatchFilterGroupProperty {
+    ) : CdkObject(cdkObject),
+        PatchFilterGroupProperty {
       /**
        * The set of patch filters that make up the group.
        *
@@ -1274,7 +1291,8 @@ public open class CfnPatchBaseline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty,
-    ) : CdkObject(cdkObject), PatchFilterProperty {
+    ) : CdkObject(cdkObject),
+        PatchFilterProperty {
       /**
        * The key for the filter.
        *
@@ -1482,7 +1500,8 @@ public open class CfnPatchBaseline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty,
-    ) : CdkObject(cdkObject), PatchSourceProperty {
+    ) : CdkObject(cdkObject),
+        PatchSourceProperty {
       /**
        * The value of the yum repo configuration. For example:.
        *
@@ -1632,7 +1651,8 @@ public open class CfnPatchBaseline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty,
-    ) : CdkObject(cdkObject), RuleGroupProperty {
+    ) : CdkObject(cdkObject),
+        RuleGroupProperty {
       /**
        * The rules that make up the rule group.
        *
@@ -1696,9 +1716,19 @@ public open class CfnPatchBaseline(
      * For example, a value of `7` means that patches are approved seven days after they are
      * released.
      *
-     * You must specify a value for `ApproveAfterDays` .
+     * This parameter is marked as `Required: No` , but your request must include a value for either
+     * `ApproveAfterDays` or `ApproveUntilDate` .
      *
-     * Exception: Not supported on Debian Server or Ubuntu Server.
+     * Not supported for Debian Server or Ubuntu Server.
+     *
+     *
+     * Use caution when setting this value for Windows Server patch baselines. Because patch updates
+     * that are replaced by later updates are removed, setting too broad a value for this parameter can
+     * result in crucial patches not being installed. For more information, see the *Windows Server*
+     * tab in the topic [How security patches are
+     * selected](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-selecting-patches.html)
+     * in the *AWS Systems Manager User Guide* .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-approveafterdays)
      */
@@ -1707,10 +1737,23 @@ public open class CfnPatchBaseline(
     /**
      * The cutoff date for auto approval of released patches.
      *
-     * Any patches released on or before this date are installed automatically. Not supported on
-     * Debian Server or Ubuntu Server.
+     * Any patches released on or before this date are installed automatically.
      *
-     * Enter dates in the format `YYYY-MM-DD` . For example, `2021-12-31` .
+     * Enter dates in the format `YYYY-MM-DD` . For example, `2024-12-31` .
+     *
+     * This parameter is marked as `Required: No` , but your request must include a value for either
+     * `ApproveUntilDate` or `ApproveAfterDays` .
+     *
+     * Not supported for Debian Server or Ubuntu Server.
+     *
+     *
+     * Use caution when setting this value for Windows Server patch baselines. Because patch updates
+     * that are replaced by later updates are removed, setting too broad a value for this parameter can
+     * result in crucial patches not being installed. For more information, see the *Windows Server*
+     * tab in the topic [How security patches are
+     * selected](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-selecting-patches.html)
+     * in the *AWS Systems Manager User Guide* .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-approveuntildate)
      */
@@ -1756,18 +1799,39 @@ public open class CfnPatchBaseline(
        * For example, a value of `7` means that patches are approved seven days after they are
        * released.
        *
-       * You must specify a value for `ApproveAfterDays` .
+       * This parameter is marked as `Required: No` , but your request must include a value for
+       * either `ApproveAfterDays` or `ApproveUntilDate` .
        *
-       * Exception: Not supported on Debian Server or Ubuntu Server.
+       * Not supported for Debian Server or Ubuntu Server.
+       *
+       *
+       * Use caution when setting this value for Windows Server patch baselines. Because patch
+       * updates that are replaced by later updates are removed, setting too broad a value for this
+       * parameter can result in crucial patches not being installed. For more information, see the
+       * *Windows Server* tab in the topic [How security patches are
+       * selected](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-selecting-patches.html)
+       * in the *AWS Systems Manager User Guide* .
        */
       public fun approveAfterDays(approveAfterDays: Number)
 
       /**
        * @param approveUntilDate The cutoff date for auto approval of released patches.
-       * Any patches released on or before this date are installed automatically. Not supported on
-       * Debian Server or Ubuntu Server.
+       * Any patches released on or before this date are installed automatically.
        *
-       * Enter dates in the format `YYYY-MM-DD` . For example, `2021-12-31` .
+       * Enter dates in the format `YYYY-MM-DD` . For example, `2024-12-31` .
+       *
+       * This parameter is marked as `Required: No` , but your request must include a value for
+       * either `ApproveUntilDate` or `ApproveAfterDays` .
+       *
+       * Not supported for Debian Server or Ubuntu Server.
+       *
+       *
+       * Use caution when setting this value for Windows Server patch baselines. Because patch
+       * updates that are replaced by later updates are removed, setting too broad a value for this
+       * parameter can result in crucial patches not being installed. For more information, see the
+       * *Windows Server* tab in the topic [How security patches are
+       * selected](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-selecting-patches.html)
+       * in the *AWS Systems Manager User Guide* .
        */
       public fun approveUntilDate(approveUntilDate: String)
 
@@ -1822,9 +1886,18 @@ public open class CfnPatchBaseline(
        * For example, a value of `7` means that patches are approved seven days after they are
        * released.
        *
-       * You must specify a value for `ApproveAfterDays` .
+       * This parameter is marked as `Required: No` , but your request must include a value for
+       * either `ApproveAfterDays` or `ApproveUntilDate` .
        *
-       * Exception: Not supported on Debian Server or Ubuntu Server.
+       * Not supported for Debian Server or Ubuntu Server.
+       *
+       *
+       * Use caution when setting this value for Windows Server patch baselines. Because patch
+       * updates that are replaced by later updates are removed, setting too broad a value for this
+       * parameter can result in crucial patches not being installed. For more information, see the
+       * *Windows Server* tab in the topic [How security patches are
+       * selected](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-selecting-patches.html)
+       * in the *AWS Systems Manager User Guide* .
        */
       override fun approveAfterDays(approveAfterDays: Number) {
         cdkBuilder.approveAfterDays(approveAfterDays)
@@ -1832,10 +1905,22 @@ public open class CfnPatchBaseline(
 
       /**
        * @param approveUntilDate The cutoff date for auto approval of released patches.
-       * Any patches released on or before this date are installed automatically. Not supported on
-       * Debian Server or Ubuntu Server.
+       * Any patches released on or before this date are installed automatically.
        *
-       * Enter dates in the format `YYYY-MM-DD` . For example, `2021-12-31` .
+       * Enter dates in the format `YYYY-MM-DD` . For example, `2024-12-31` .
+       *
+       * This parameter is marked as `Required: No` , but your request must include a value for
+       * either `ApproveUntilDate` or `ApproveAfterDays` .
+       *
+       * Not supported for Debian Server or Ubuntu Server.
+       *
+       *
+       * Use caution when setting this value for Windows Server patch baselines. Because patch
+       * updates that are replaced by later updates are removed, setting too broad a value for this
+       * parameter can result in crucial patches not being installed. For more information, see the
+       * *Windows Server* tab in the topic [How security patches are
+       * selected](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-selecting-patches.html)
+       * in the *AWS Systems Manager User Guide* .
        */
       override fun approveUntilDate(approveUntilDate: String) {
         cdkBuilder.approveUntilDate(approveUntilDate)
@@ -1897,7 +1982,8 @@ public open class CfnPatchBaseline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty,
-    ) : CdkObject(cdkObject), RuleProperty {
+    ) : CdkObject(cdkObject),
+        RuleProperty {
       /**
        * The number of days after the release date of each patch matched by the rule that the patch
        * is marked as approved in the patch baseline.
@@ -1905,9 +1991,19 @@ public open class CfnPatchBaseline(
        * For example, a value of `7` means that patches are approved seven days after they are
        * released.
        *
-       * You must specify a value for `ApproveAfterDays` .
+       * This parameter is marked as `Required: No` , but your request must include a value for
+       * either `ApproveAfterDays` or `ApproveUntilDate` .
        *
-       * Exception: Not supported on Debian Server or Ubuntu Server.
+       * Not supported for Debian Server or Ubuntu Server.
+       *
+       *
+       * Use caution when setting this value for Windows Server patch baselines. Because patch
+       * updates that are replaced by later updates are removed, setting too broad a value for this
+       * parameter can result in crucial patches not being installed. For more information, see the
+       * *Windows Server* tab in the topic [How security patches are
+       * selected](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-selecting-patches.html)
+       * in the *AWS Systems Manager User Guide* .
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-approveafterdays)
        */
@@ -1916,10 +2012,23 @@ public open class CfnPatchBaseline(
       /**
        * The cutoff date for auto approval of released patches.
        *
-       * Any patches released on or before this date are installed automatically. Not supported on
-       * Debian Server or Ubuntu Server.
+       * Any patches released on or before this date are installed automatically.
        *
-       * Enter dates in the format `YYYY-MM-DD` . For example, `2021-12-31` .
+       * Enter dates in the format `YYYY-MM-DD` . For example, `2024-12-31` .
+       *
+       * This parameter is marked as `Required: No` , but your request must include a value for
+       * either `ApproveUntilDate` or `ApproveAfterDays` .
+       *
+       * Not supported for Debian Server or Ubuntu Server.
+       *
+       *
+       * Use caution when setting this value for Windows Server patch baselines. Because patch
+       * updates that are replaced by later updates are removed, setting too broad a value for this
+       * parameter can result in crucial patches not being installed. For more information, see the
+       * *Windows Server* tab in the topic [How security patches are
+       * selected](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-selecting-patches.html)
+       * in the *AWS Systems Manager User Guide* .
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-approveuntildate)
        */

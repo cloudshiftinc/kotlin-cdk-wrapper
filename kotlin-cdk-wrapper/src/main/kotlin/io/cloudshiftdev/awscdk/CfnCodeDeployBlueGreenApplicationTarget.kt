@@ -79,7 +79,8 @@ public interface CfnCodeDeployBlueGreenApplicationTarget {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenApplicationTarget,
-  ) : CdkObject(cdkObject), CfnCodeDeployBlueGreenApplicationTarget {
+  ) : CdkObject(cdkObject),
+      CfnCodeDeployBlueGreenApplicationTarget {
     /**
      * The logical id of the target resource.
      */

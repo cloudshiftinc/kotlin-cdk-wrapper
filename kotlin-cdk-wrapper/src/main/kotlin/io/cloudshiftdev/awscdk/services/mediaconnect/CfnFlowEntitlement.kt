@@ -60,7 +60,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFlowEntitlement(
   cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -745,7 +746,8 @@ public open class CfnFlowEntitlement(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement.EncryptionProperty,
-    ) : CdkObject(cdkObject), EncryptionProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionProperty {
       /**
        * The type of algorithm that is used for static key encryption (such as aes128, aes192, or
        * aes256).

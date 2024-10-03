@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTransitGatewayMulticastGroupSource(
   cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSource,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -69,7 +70,7 @@ public open class CfnTransitGatewayMulticastGroupSource(
       unwrap(this).getAttrGroupSource().let(IResolvable::wrap)
 
   /**
-   * The type of group member, for example static.
+   *
    */
   public open fun attrMemberType(): String = unwrap(this).getAttrMemberType()
 

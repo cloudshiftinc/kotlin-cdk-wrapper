@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResolverQueryLoggingConfig(
   cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

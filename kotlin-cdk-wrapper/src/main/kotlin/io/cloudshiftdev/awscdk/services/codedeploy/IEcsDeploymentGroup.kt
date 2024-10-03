@@ -37,7 +37,8 @@ public interface IEcsDeploymentGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.IEcsDeploymentGroup,
-  ) : CdkObject(cdkObject), IEcsDeploymentGroup {
+  ) : CdkObject(cdkObject),
+      IEcsDeploymentGroup {
     /**
      * The reference to the CodeDeploy ECS Application that this Deployment Group belongs to.
      */

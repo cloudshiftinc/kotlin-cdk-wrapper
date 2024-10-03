@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class KubectlProvider(
   cdkObject: software.amazon.awscdk.services.eks.KubectlProvider,
-) : NestedStack(cdkObject), IKubectlProvider {
+) : NestedStack(cdkObject),
+    IKubectlProvider {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

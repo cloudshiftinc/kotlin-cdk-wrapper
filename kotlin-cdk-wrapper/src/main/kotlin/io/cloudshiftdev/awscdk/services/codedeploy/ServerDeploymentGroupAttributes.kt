@@ -103,7 +103,8 @@ public interface ServerDeploymentGroupAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupAttributes,
-  ) : CdkObject(cdkObject), ServerDeploymentGroupAttributes {
+  ) : CdkObject(cdkObject),
+      ServerDeploymentGroupAttributes {
     /**
      * The reference to the CodeDeploy EC2/on-premise Application that this Deployment Group belongs
      * to.

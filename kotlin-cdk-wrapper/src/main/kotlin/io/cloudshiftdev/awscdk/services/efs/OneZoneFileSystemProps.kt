@@ -102,7 +102,8 @@ public interface OneZoneFileSystemProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.OneZoneFileSystemProps,
-  ) : CdkObject(cdkObject), OneZoneFileSystemProps {
+  ) : CdkObject(cdkObject),
+      OneZoneFileSystemProps {
     /**
      * The availability zone name of the destination file system.
      *

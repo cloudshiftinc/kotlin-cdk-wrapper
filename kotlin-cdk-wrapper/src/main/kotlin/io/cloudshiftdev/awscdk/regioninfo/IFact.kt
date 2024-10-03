@@ -29,7 +29,8 @@ public interface IFact {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.regioninfo.IFact,
-  ) : CdkObject(cdkObject), IFact {
+  ) : CdkObject(cdkObject),
+      IFact {
     /**
      * The name of this fact.
      *

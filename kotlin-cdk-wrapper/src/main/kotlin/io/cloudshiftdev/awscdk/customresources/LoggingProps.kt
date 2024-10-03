@@ -57,7 +57,8 @@ public interface LoggingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.customresources.LoggingProps,
-  ) : CdkObject(cdkObject), LoggingProps {
+  ) : CdkObject(cdkObject),
+      LoggingProps {
     /**
      * Whether or not to log data associated with the API call response.
      *

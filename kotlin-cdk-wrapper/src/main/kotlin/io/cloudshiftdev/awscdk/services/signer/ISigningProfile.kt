@@ -37,7 +37,8 @@ public interface ISigningProfile : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.signer.ISigningProfile,
-  ) : CdkObject(cdkObject), ISigningProfile {
+  ) : CdkObject(cdkObject),
+      ISigningProfile {
     /**
      * Apply the given removal policy to this resource.
      *

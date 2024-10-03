@@ -35,7 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Route(
   cdkObject: software.amazon.awscdk.services.appmesh.Route,
-) : Resource(cdkObject), IRoute {
+) : Resource(cdkObject),
+    IRoute {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

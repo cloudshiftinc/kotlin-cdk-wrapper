@@ -29,7 +29,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CachePolicy(
   cdkObject: software.amazon.awscdk.services.cloudfront.CachePolicy,
-) : Resource(cdkObject), ICachePolicy {
+) : Resource(cdkObject),
+    ICachePolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudfront.CachePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -74,6 +75,8 @@ public open class CachePolicy(
 
     /**
      * A comment to describe the cache policy.
+     *
+     * The comment cannot be longer than 128 characters.
      *
      * Default: - no comment
      *
@@ -191,6 +194,8 @@ public open class CachePolicy(
 
     /**
      * A comment to describe the cache policy.
+     *
+     * The comment cannot be longer than 128 characters.
      *
      * Default: - no comment
      *
@@ -321,6 +326,12 @@ public open class CachePolicy(
 
     public val ELEMENTAL_MEDIA_PACKAGE: ICachePolicy =
         ICachePolicy.wrap(software.amazon.awscdk.services.cloudfront.CachePolicy.ELEMENTAL_MEDIA_PACKAGE)
+
+    public val USE_ORIGIN_CACHE_CONTROL_HEADERS: ICachePolicy =
+        ICachePolicy.wrap(software.amazon.awscdk.services.cloudfront.CachePolicy.USE_ORIGIN_CACHE_CONTROL_HEADERS)
+
+    public val USE_ORIGIN_CACHE_CONTROL_HEADERS_QUERY_STRINGS: ICachePolicy =
+        ICachePolicy.wrap(software.amazon.awscdk.services.cloudfront.CachePolicy.USE_ORIGIN_CACHE_CONTROL_HEADERS_QUERY_STRINGS)
 
     public fun fromCachePolicyId(
       scope: CloudshiftdevConstructsConstruct,

@@ -141,7 +141,8 @@ public interface CfnEventStreamProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStreamProps,
-  ) : CdkObject(cdkObject), CfnEventStreamProps {
+  ) : CdkObject(cdkObject),
+      CfnEventStreamProps {
     /**
      * The unique name of the domain.
      *

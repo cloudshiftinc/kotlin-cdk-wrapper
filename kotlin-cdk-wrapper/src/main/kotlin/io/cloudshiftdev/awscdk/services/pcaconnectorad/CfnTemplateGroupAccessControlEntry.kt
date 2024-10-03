@@ -45,7 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTemplateGroupAccessControlEntry(
   cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -413,7 +414,8 @@ public open class CfnTemplateGroupAccessControlEntry(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry.AccessRightsProperty,
-    ) : CdkObject(cdkObject), AccessRightsProperty {
+    ) : CdkObject(cdkObject),
+        AccessRightsProperty {
       /**
        * Allow or deny an Active Directory group from autoenrolling certificates issued against a
        * template.

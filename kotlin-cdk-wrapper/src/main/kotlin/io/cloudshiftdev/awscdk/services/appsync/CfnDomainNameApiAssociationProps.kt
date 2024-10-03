@@ -82,7 +82,8 @@ public interface CfnDomainNameApiAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociationProps,
-  ) : CdkObject(cdkObject), CfnDomainNameApiAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnDomainNameApiAssociationProps {
     /**
      * The API ID.
      *

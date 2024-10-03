@@ -97,7 +97,8 @@ public interface AllocateCidrRequest {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.AllocateCidrRequest,
-  ) : CdkObject(cdkObject), AllocateCidrRequest {
+  ) : CdkObject(cdkObject),
+      AllocateCidrRequest {
     /**
      * The Subnets to be allocated.
      */

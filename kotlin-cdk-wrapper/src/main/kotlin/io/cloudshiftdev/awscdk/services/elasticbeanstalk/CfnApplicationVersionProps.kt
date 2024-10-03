@@ -161,7 +161,8 @@ public interface CfnApplicationVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersionProps,
-  ) : CdkObject(cdkObject), CfnApplicationVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationVersionProps {
     /**
      * The name of the Elastic Beanstalk application that is associated with this application
      * version.

@@ -130,7 +130,8 @@ public interface CfnTransitGatewayMulticastDomainProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainProps,
-  ) : CdkObject(cdkObject), CfnTransitGatewayMulticastDomainProps {
+  ) : CdkObject(cdkObject),
+      CfnTransitGatewayMulticastDomainProps {
     /**
      * The options for the transit gateway multicast domain.
      *

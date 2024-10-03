@@ -106,7 +106,8 @@ public interface CfnSecurityKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnSecurityKeyProps,
-  ) : CdkObject(cdkObject), CfnSecurityKeyProps {
+  ) : CdkObject(cdkObject),
+      CfnSecurityKeyProps {
     /**
      * The Amazon Resource Name (ARN) of the instance.
      *

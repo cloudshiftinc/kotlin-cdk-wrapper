@@ -239,7 +239,8 @@ public interface SubscriptionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.SubscriptionOptions,
-  ) : CdkObject(cdkObject), SubscriptionOptions {
+  ) : CdkObject(cdkObject),
+      SubscriptionOptions {
     /**
      * Queue to be used as dead letter queue.
      *

@@ -28,7 +28,8 @@ import kotlin.String
  */
 public open class CloudFrontTarget(
   cdkObject: software.amazon.awscdk.services.route53.targets.CloudFrontTarget,
-) : CdkObject(cdkObject), IAliasRecordTarget {
+) : CdkObject(cdkObject),
+    IAliasRecordTarget {
   public constructor(distribution: IDistribution) :
       this(software.amazon.awscdk.services.route53.targets.CloudFrontTarget(distribution.let(IDistribution.Companion::unwrap))
   )

@@ -32,7 +32,8 @@ import kotlin.jvm.JvmName
  */
 public open class SqsDestination(
   cdkObject: software.amazon.awscdk.services.lambda.destinations.SqsDestination,
-) : CdkObject(cdkObject), IDestination {
+) : CdkObject(cdkObject),
+    IDestination {
   public constructor(queue: IQueue) :
       this(software.amazon.awscdk.services.lambda.destinations.SqsDestination(queue.let(IQueue.Companion::unwrap))
   )

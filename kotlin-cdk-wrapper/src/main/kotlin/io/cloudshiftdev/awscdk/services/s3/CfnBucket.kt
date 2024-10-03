@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBucket(
   cdkObject: software.amazon.awscdk.services.s3.CfnBucket,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.s3.CfnBucket(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1292,6 +1294,13 @@ public open class CfnBucket(
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
      *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-versioningconfiguration)
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket. 
      */
@@ -1303,6 +1312,13 @@ public open class CfnBucket(
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
      *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-versioningconfiguration)
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket. 
      */
@@ -1313,6 +1329,13 @@ public open class CfnBucket(
      *
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
+     *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-versioningconfiguration)
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket. 
@@ -2099,6 +2122,13 @@ public open class CfnBucket(
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
      *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-versioningconfiguration)
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket. 
      */
@@ -2112,6 +2142,13 @@ public open class CfnBucket(
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
      *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-versioningconfiguration)
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket. 
      */
@@ -2124,6 +2161,13 @@ public open class CfnBucket(
      *
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
+     *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-versioningconfiguration)
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket. 
@@ -2261,7 +2305,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AbortIncompleteMultipartUploadProperty,
-    ) : CdkObject(cdkObject), AbortIncompleteMultipartUploadProperty {
+    ) : CdkObject(cdkObject),
+        AbortIncompleteMultipartUploadProperty {
       /**
        * Specifies the number of days after which Amazon S3 stops an incomplete multipart upload.
        *
@@ -2348,7 +2393,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AccelerateConfigurationProperty,
-    ) : CdkObject(cdkObject), AccelerateConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AccelerateConfigurationProperty {
       /**
        * Specifies the transfer acceleration status of the bucket.
        *
@@ -2445,7 +2491,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AccessControlTranslationProperty,
-    ) : CdkObject(cdkObject), AccessControlTranslationProperty {
+    ) : CdkObject(cdkObject),
+        AccessControlTranslationProperty {
       /**
        * Specifies the replica ownership.
        *
@@ -2679,7 +2726,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AnalyticsConfigurationProperty,
-    ) : CdkObject(cdkObject), AnalyticsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AnalyticsConfigurationProperty {
       /**
        * The ID that identifies the analytics configuration.
        *
@@ -2827,7 +2875,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.BucketEncryptionProperty,
-    ) : CdkObject(cdkObject), BucketEncryptionProperty {
+    ) : CdkObject(cdkObject),
+        BucketEncryptionProperty {
       /**
        * Specifies the default server-side-encryption configuration.
        *
@@ -2956,7 +3005,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.CorsConfigurationProperty,
-    ) : CdkObject(cdkObject), CorsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CorsConfigurationProperty {
       /**
        * A set of origins and methods (cross-origin access that you want to allow).
        *
@@ -3223,7 +3273,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.CorsRuleProperty,
-    ) : CdkObject(cdkObject), CorsRuleProperty {
+    ) : CdkObject(cdkObject),
+        CorsRuleProperty {
       /**
        * Headers that are specified in the `Access-Control-Request-Headers` header.
        *
@@ -3403,7 +3454,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DataExportProperty,
-    ) : CdkObject(cdkObject), DataExportProperty {
+    ) : CdkObject(cdkObject),
+        DataExportProperty {
       /**
        * The place to store the data for an analysis.
        *
@@ -3438,8 +3490,8 @@ public open class CfnBucket(
   }
 
   /**
-   * The container element for specifying the default Object Lock retention settings for new objects
-   * placed in the specified bucket.
+   * The container element for optionally specifying the default Object Lock retention settings for
+   * new objects placed in the specified bucket.
    *
    *
    * * The `DefaultRetention` settings require both a mode and a period.
@@ -3552,7 +3604,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DefaultRetentionProperty,
-    ) : CdkObject(cdkObject), DefaultRetentionProperty {
+    ) : CdkObject(cdkObject),
+        DefaultRetentionProperty {
       /**
        * The number of days that you want to specify for the default retention period.
        *
@@ -3676,7 +3729,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DeleteMarkerReplicationProperty,
-    ) : CdkObject(cdkObject), DeleteMarkerReplicationProperty {
+    ) : CdkObject(cdkObject),
+        DeleteMarkerReplicationProperty {
       /**
        * Indicates whether to replicate delete markers.
        *
@@ -3845,7 +3899,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DestinationProperty,
-    ) : CdkObject(cdkObject), DestinationProperty {
+    ) : CdkObject(cdkObject),
+        DestinationProperty {
       /**
        * The account ID that owns the destination S3 bucket.
        *
@@ -3906,6 +3961,13 @@ public open class CfnBucket(
   /**
    * Specifies encryption-related information for an Amazon S3 bucket that is a destination for
    * replicated objects.
+   *
+   *
+   * If you're specifying a customer managed KMS key, we recommend using a fully qualified KMS key
+   * ARN. If you use a KMS key alias instead, then AWS KMS resolves the key within the requester’s
+   * account. This behavior can result in data that's encrypted with a KMS key that belongs to the
+   * requester, and not the bucket owner.
+   *
    *
    * Example:
    *
@@ -3975,7 +4037,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.EncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionConfigurationProperty {
       /**
        * Specifies the ID (Key ARN or Alias ARN) of the customer managed AWS KMS key stored in AWS
        * Key Management Service (KMS) for the destination bucket.
@@ -4083,7 +4146,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.EventBridgeConfigurationProperty,
-    ) : CdkObject(cdkObject), EventBridgeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EventBridgeConfigurationProperty {
       /**
        * Enables delivery of events to Amazon EventBridge.
        *
@@ -4207,7 +4271,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.FilterRuleProperty,
-    ) : CdkObject(cdkObject), FilterRuleProperty {
+    ) : CdkObject(cdkObject),
+        FilterRuleProperty {
       /**
        * The object key name prefix or suffix identifying one or more objects to which the filtering
        * rule applies.
@@ -4496,7 +4561,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.IntelligentTieringConfigurationProperty,
-    ) : CdkObject(cdkObject), IntelligentTieringConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        IntelligentTieringConfigurationProperty {
       /**
        * The ID used to identify the S3 Intelligent-Tiering configuration.
        *
@@ -4822,7 +4888,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.InventoryConfigurationProperty,
-    ) : CdkObject(cdkObject), InventoryConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InventoryConfigurationProperty {
       /**
        * Contains information about where to publish the inventory results.
        *
@@ -5060,7 +5127,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.LambdaConfigurationProperty,
-    ) : CdkObject(cdkObject), LambdaConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LambdaConfigurationProperty {
       /**
        * The Amazon S3 bucket event for which to invoke the AWS Lambda function.
        *
@@ -5237,7 +5305,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.LifecycleConfigurationProperty,
-    ) : CdkObject(cdkObject), LifecycleConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LifecycleConfigurationProperty {
       /**
        * A lifecycle rule for individual objects in an Amazon S3 bucket.
        *
@@ -5427,7 +5496,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.LoggingConfigurationProperty,
-    ) : CdkObject(cdkObject), LoggingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LoggingConfigurationProperty {
       /**
        * The name of the bucket where Amazon S3 should store server access log files.
        *
@@ -5643,7 +5713,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetricsConfigurationProperty,
-    ) : CdkObject(cdkObject), MetricsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        MetricsConfigurationProperty {
       /**
        * The access point that was used while performing operations on the object.
        *
@@ -5807,7 +5878,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetricsProperty,
-    ) : CdkObject(cdkObject), MetricsProperty {
+    ) : CdkObject(cdkObject),
+        MetricsProperty {
       /**
        * A container specifying the time threshold for emitting the
        * `s3:Replication:OperationMissedThreshold` event.
@@ -5954,7 +6026,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NoncurrentVersionExpirationProperty,
-    ) : CdkObject(cdkObject), NoncurrentVersionExpirationProperty {
+    ) : CdkObject(cdkObject),
+        NoncurrentVersionExpirationProperty {
       /**
        * Specifies how many noncurrent versions Amazon S3 will retain.
        *
@@ -6135,7 +6208,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NoncurrentVersionTransitionProperty,
-    ) : CdkObject(cdkObject), NoncurrentVersionTransitionProperty {
+    ) : CdkObject(cdkObject),
+        NoncurrentVersionTransitionProperty {
       /**
        * Specifies how many noncurrent versions Amazon S3 will retain.
        *
@@ -6482,7 +6556,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NotificationConfigurationProperty,
-    ) : CdkObject(cdkObject), NotificationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NotificationConfigurationProperty {
       /**
        * Enables delivery of events to Amazon EventBridge.
        *
@@ -6623,7 +6698,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NotificationFilterProperty,
-    ) : CdkObject(cdkObject), NotificationFilterProperty {
+    ) : CdkObject(cdkObject),
+        NotificationFilterProperty {
       /**
        * A container for object key name prefix and suffix filtering rules.
        *
@@ -6818,7 +6894,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ObjectLockConfigurationProperty,
-    ) : CdkObject(cdkObject), ObjectLockConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ObjectLockConfigurationProperty {
       /**
        * Indicates whether this bucket has an Object Lock configuration enabled.
        *
@@ -6991,7 +7068,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ObjectLockRuleProperty,
-    ) : CdkObject(cdkObject), ObjectLockRuleProperty {
+    ) : CdkObject(cdkObject),
+        ObjectLockRuleProperty {
       /**
        * The default Object Lock retention mode and period that you want to apply to new objects
        * placed in the specified bucket.
@@ -7109,7 +7187,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.OwnershipControlsProperty,
-    ) : CdkObject(cdkObject), OwnershipControlsProperty {
+    ) : CdkObject(cdkObject),
+        OwnershipControlsProperty {
       /**
        * Specifies the container element for Object Ownership rules.
        *
@@ -7197,7 +7276,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.OwnershipControlsRuleProperty,
-    ) : CdkObject(cdkObject), OwnershipControlsRuleProperty {
+    ) : CdkObject(cdkObject),
+        OwnershipControlsRuleProperty {
       /**
        * Specifies an object ownership rule.
        *
@@ -7246,9 +7326,15 @@ public open class CfnBucket(
    */
   public interface PartitionedPrefixProperty {
     /**
-     * Specifies the partition date source for the partitioned prefix.
+     * Specifies the partition date source for the partitioned prefix. `PartitionDateSource` can be
+     * `EventTime` or `DeliveryTime` .
      *
-     * PartitionDateSource can be EventTime or DeliveryTime.
+     * For `DeliveryTime` , the time in the log file names corresponds to the delivery time for the
+     * log files.
+     *
+     * For `EventTime` , The logs delivered are for a specific day only. The year, month, and day
+     * correspond to the day on which the event occurred, and the hour, minutes and seconds are set to
+     * 00 in the key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-partitionedprefix.html#cfn-s3-bucket-partitionedprefix-partitiondatesource)
      */
@@ -7261,7 +7347,13 @@ public open class CfnBucket(
     public interface Builder {
       /**
        * @param partitionDateSource Specifies the partition date source for the partitioned prefix.
-       * PartitionDateSource can be EventTime or DeliveryTime.
+       * `PartitionDateSource` can be `EventTime` or `DeliveryTime` .
+       * For `DeliveryTime` , the time in the log file names corresponds to the delivery time for
+       * the log files.
+       *
+       * For `EventTime` , The logs delivered are for a specific day only. The year, month, and day
+       * correspond to the day on which the event occurred, and the hour, minutes and seconds are set
+       * to 00 in the key.
        */
       public fun partitionDateSource(partitionDateSource: String)
     }
@@ -7273,7 +7365,13 @@ public open class CfnBucket(
 
       /**
        * @param partitionDateSource Specifies the partition date source for the partitioned prefix.
-       * PartitionDateSource can be EventTime or DeliveryTime.
+       * `PartitionDateSource` can be `EventTime` or `DeliveryTime` .
+       * For `DeliveryTime` , the time in the log file names corresponds to the delivery time for
+       * the log files.
+       *
+       * For `EventTime` , The logs delivered are for a specific day only. The year, month, and day
+       * correspond to the day on which the event occurred, and the hour, minutes and seconds are set
+       * to 00 in the key.
        */
       override fun partitionDateSource(partitionDateSource: String) {
         cdkBuilder.partitionDateSource(partitionDateSource)
@@ -7285,11 +7383,18 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.PartitionedPrefixProperty,
-    ) : CdkObject(cdkObject), PartitionedPrefixProperty {
+    ) : CdkObject(cdkObject),
+        PartitionedPrefixProperty {
       /**
-       * Specifies the partition date source for the partitioned prefix.
+       * Specifies the partition date source for the partitioned prefix. `PartitionDateSource` can
+       * be `EventTime` or `DeliveryTime` .
        *
-       * PartitionDateSource can be EventTime or DeliveryTime.
+       * For `DeliveryTime` , the time in the log file names corresponds to the delivery time for
+       * the log files.
+       *
+       * For `EventTime` , The logs delivered are for a specific day only. The year, month, and day
+       * correspond to the day on which the event occurred, and the hour, minutes and seconds are set
+       * to 00 in the key.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-partitionedprefix.html#cfn-s3-bucket-partitionedprefix-partitiondatesource)
        */
@@ -7615,7 +7720,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.PublicAccessBlockConfigurationProperty,
-    ) : CdkObject(cdkObject), PublicAccessBlockConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PublicAccessBlockConfigurationProperty {
       /**
        * Specifies whether Amazon S3 should block public access control lists (ACLs) for this bucket
        * and objects in this bucket.
@@ -7878,7 +7984,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.QueueConfigurationProperty,
-    ) : CdkObject(cdkObject), QueueConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        QueueConfigurationProperty {
       /**
        * The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
        *
@@ -8012,7 +8119,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RedirectAllRequestsToProperty,
-    ) : CdkObject(cdkObject), RedirectAllRequestsToProperty {
+    ) : CdkObject(cdkObject),
+        RedirectAllRequestsToProperty {
       /**
        * Name of the host where requests are redirected.
        *
@@ -8249,7 +8357,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RedirectRuleProperty,
-    ) : CdkObject(cdkObject), RedirectRuleProperty {
+    ) : CdkObject(cdkObject),
+        RedirectRuleProperty {
       /**
        * The host name to use in the redirect request.
        *
@@ -8387,7 +8496,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicaModificationsProperty,
-    ) : CdkObject(cdkObject), ReplicaModificationsProperty {
+    ) : CdkObject(cdkObject),
+        ReplicaModificationsProperty {
       /**
        * Specifies whether Amazon S3 replicates modifications on replicas.
        *
@@ -8603,7 +8713,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationConfigurationProperty,
-    ) : CdkObject(cdkObject), ReplicationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that
        * Amazon S3 assumes when replicating objects.
@@ -9058,7 +9169,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationDestinationProperty,
-    ) : CdkObject(cdkObject), ReplicationDestinationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationDestinationProperty {
       /**
        * Specify this only in a cross-account scenario (where source and destination bucket owners
        * are not the same), and you want to change replica ownership to the AWS account that owns the
@@ -9263,7 +9375,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleAndOperatorProperty,
-    ) : CdkObject(cdkObject), ReplicationRuleAndOperatorProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationRuleAndOperatorProperty {
       /**
        * An object key name prefix that identifies the subset of objects to which the rule applies.
        *
@@ -9527,7 +9640,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleFilterProperty,
-    ) : CdkObject(cdkObject), ReplicationRuleFilterProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationRuleFilterProperty {
       /**
        * A container for specifying rule filters.
        *
@@ -10198,7 +10312,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleProperty,
-    ) : CdkObject(cdkObject), ReplicationRuleProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationRuleProperty {
       /**
        * Specifies whether Amazon S3 replicates delete markers.
        *
@@ -10443,7 +10558,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationTimeProperty,
-    ) : CdkObject(cdkObject), ReplicationTimeProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationTimeProperty {
       /**
        * Specifies whether the replication time is enabled.
        *
@@ -10537,7 +10653,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationTimeValueProperty,
-    ) : CdkObject(cdkObject), ReplicationTimeValueProperty {
+    ) : CdkObject(cdkObject),
+        ReplicationTimeValueProperty {
       /**
        * Contains an integer specifying time in minutes.
        *
@@ -10683,7 +10800,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RoutingRuleConditionProperty,
-    ) : CdkObject(cdkObject), RoutingRuleConditionProperty {
+    ) : CdkObject(cdkObject),
+        RoutingRuleConditionProperty {
       /**
        * The HTTP error code when the redirect is applied.
        *
@@ -10918,7 +11036,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RoutingRuleProperty,
-    ) : CdkObject(cdkObject), RoutingRuleProperty {
+    ) : CdkObject(cdkObject),
+        RoutingRuleProperty {
       /**
        * Container for redirect information.
        *
@@ -11834,7 +11953,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RuleProperty,
-    ) : CdkObject(cdkObject), RuleProperty {
+    ) : CdkObject(cdkObject),
+        RuleProperty {
       /**
        * Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3 bucket.
        *
@@ -12120,7 +12240,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.S3KeyFilterProperty,
-    ) : CdkObject(cdkObject), S3KeyFilterProperty {
+    ) : CdkObject(cdkObject),
+        S3KeyFilterProperty {
       /**
        * A list of containers for the key-value pair that defines the criteria for the filter rule.
        *
@@ -12156,6 +12277,13 @@ public open class CfnBucket(
    * information, see [PUT Bucket
    * encryption](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTencryption.html) in the
    * *Amazon S3 API Reference* .
+   *
+   *
+   * If you're specifying a customer managed KMS key, we recommend using a fully qualified KMS key
+   * ARN. If you use a KMS key alias instead, then AWS KMS resolves the key within the requester’s
+   * account. This behavior can result in data that's encrypted with a KMS key that belongs to the
+   * requester, and not the bucket owner.
+   *
    *
    * Example:
    *
@@ -12301,7 +12429,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ServerSideEncryptionByDefaultProperty,
-    ) : CdkObject(cdkObject), ServerSideEncryptionByDefaultProperty {
+    ) : CdkObject(cdkObject),
+        ServerSideEncryptionByDefaultProperty {
       /**
        * AWS Key Management Service (KMS) customer AWS KMS key ID to use for the default encryption.
        *
@@ -12362,6 +12491,13 @@ public open class CfnBucket(
 
   /**
    * Specifies the default server-side encryption configuration.
+   *
+   *
+   * If you're specifying a customer managed KMS key, we recommend using a fully qualified KMS key
+   * ARN. If you use a KMS key alias instead, then AWS KMS resolves the key within the requester’s
+   * account. This behavior can result in data that's encrypted with a KMS key that belongs to the
+   * requester, and not the bucket owner.
+   *
    *
    * Example:
    *
@@ -12541,7 +12677,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ServerSideEncryptionRuleProperty,
-    ) : CdkObject(cdkObject), ServerSideEncryptionRuleProperty {
+    ) : CdkObject(cdkObject),
+        ServerSideEncryptionRuleProperty {
       /**
        * Specifies whether Amazon S3 should use an S3 Bucket Key with server-side encryption using
        * KMS (SSE-KMS) for new objects in the bucket.
@@ -12740,7 +12877,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.SourceSelectionCriteriaProperty,
-    ) : CdkObject(cdkObject), SourceSelectionCriteriaProperty {
+    ) : CdkObject(cdkObject),
+        SourceSelectionCriteriaProperty {
       /**
        * A filter that you can specify for selection for modifications on replicas.
        *
@@ -12833,7 +12971,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.SseKmsEncryptedObjectsProperty,
-    ) : CdkObject(cdkObject), SseKmsEncryptedObjectsProperty {
+    ) : CdkObject(cdkObject),
+        SseKmsEncryptedObjectsProperty {
       /**
        * Specifies whether Amazon S3 replicates objects created with server-side encryption using an
        * AWS KMS key stored in AWS Key Management Service.
@@ -12959,7 +13098,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.StorageClassAnalysisProperty,
-    ) : CdkObject(cdkObject), StorageClassAnalysisProperty {
+    ) : CdkObject(cdkObject),
+        StorageClassAnalysisProperty {
       /**
        * Specifies how data related to the storage class analysis for an Amazon S3 bucket should be
        * exported.
@@ -13059,7 +13199,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TagFilterProperty,
-    ) : CdkObject(cdkObject), TagFilterProperty {
+    ) : CdkObject(cdkObject),
+        TagFilterProperty {
       /**
        * The tag key.
        *
@@ -13202,7 +13343,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TargetObjectKeyFormatProperty,
-    ) : CdkObject(cdkObject), TargetObjectKeyFormatProperty {
+    ) : CdkObject(cdkObject),
+        TargetObjectKeyFormatProperty {
       /**
        * Partitioned S3 key for log objects.
        *
@@ -13334,7 +13476,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TieringProperty,
-    ) : CdkObject(cdkObject), TieringProperty {
+    ) : CdkObject(cdkObject),
+        TieringProperty {
       /**
        * S3 Intelligent-Tiering access tier.
        *
@@ -13532,7 +13675,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TopicConfigurationProperty,
-    ) : CdkObject(cdkObject), TopicConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        TopicConfigurationProperty {
       /**
        * The Amazon S3 bucket event about which to send notifications.
        *
@@ -13709,7 +13853,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TransitionProperty,
-    ) : CdkObject(cdkObject), TransitionProperty {
+    ) : CdkObject(cdkObject),
+        TransitionProperty {
       /**
        * The storage class to which you want the object to transition.
        *
@@ -13759,6 +13904,12 @@ public open class CfnBucket(
    * For more information, see [PUT Bucket
    * versioning](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTVersioningStatus.html) in
    * the *Amazon S3 API Reference* .
+   *
+   *
+   * When you enable versioning on a bucket for the first time, it might take a short amount of time
+   * for the change to be fully propagated. We recommend that you wait for 15 minutes after enabling
+   * versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the bucket.
+   *
    *
    * Example:
    *
@@ -13814,7 +13965,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.VersioningConfigurationProperty,
-    ) : CdkObject(cdkObject), VersioningConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        VersioningConfigurationProperty {
       /**
        * The versioning state of the bucket.
        *
@@ -14048,7 +14200,8 @@ public open class CfnBucket(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.s3.CfnBucket.WebsiteConfigurationProperty,
-    ) : CdkObject(cdkObject), WebsiteConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        WebsiteConfigurationProperty {
       /**
        * The name of the error document for the website.
        *

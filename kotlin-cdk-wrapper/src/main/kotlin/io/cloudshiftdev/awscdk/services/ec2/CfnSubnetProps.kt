@@ -36,7 +36,6 @@ import kotlin.collections.List
  * .ipv4IpamPoolId("ipv4IpamPoolId")
  * .ipv4NetmaskLength(123)
  * .ipv6CidrBlock("ipv6CidrBlock")
- * .ipv6CidrBlocks(List.of("ipv6CidrBlocks"))
  * .ipv6IpamPoolId("ipv6IpamPoolId")
  * .ipv6Native(false)
  * .ipv6NetmaskLength(123)
@@ -92,9 +91,13 @@ public interface CfnSubnetProps {
    * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should
    * return synthetic IPv6 addresses for IPv4-only destinations.
    *
-   * For more information, see [DNS64 and
-   * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-nat64-dns64)
+   *
+   * You must first configure a NAT gateway in a public subnet (separate from the subnet containing
+   * the IPv6-only workloads). For example, the subnet containing the NAT gateway should have a
+   * `0.0.0.0/0` route pointing to the internet gateway. For more information, see [Configure DNS64 and
+   * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-nat64-dns64.html#nat-gateway-nat64-dns64-walkthrough)
    * in the *Amazon Virtual Private Cloud User Guide* .
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enabledns64)
    */
@@ -132,13 +135,6 @@ public interface CfnSubnetProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblock)
    */
   public fun ipv6CidrBlock(): String? = unwrap(this).getIpv6CidrBlock()
-
-  /**
-   * The IPv6 network ranges for the subnet, in CIDR notation.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblocks)
-   */
-  public fun ipv6CidrBlocks(): List<String> = unwrap(this).getIpv6CidrBlocks() ?: emptyList()
 
   /**
    * An IPv6 IPAM pool ID for the subnet.
@@ -257,8 +253,12 @@ public interface CfnSubnetProps {
     /**
      * @param enableDns64 Indicates whether DNS queries made to the Amazon-provided DNS Resolver in
      * this subnet should return synthetic IPv6 addresses for IPv4-only destinations.
-     * For more information, see [DNS64 and
-     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-nat64-dns64)
+     *
+     * You must first configure a NAT gateway in a public subnet (separate from the subnet
+     * containing the IPv6-only workloads). For example, the subnet containing the NAT gateway should
+     * have a `0.0.0.0/0` route pointing to the internet gateway. For more information, see [Configure
+     * DNS64 and
+     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-nat64-dns64.html#nat-gateway-nat64-dns64-walkthrough)
      * in the *Amazon Virtual Private Cloud User Guide* .
      */
     public fun enableDns64(enableDns64: Boolean)
@@ -266,8 +266,12 @@ public interface CfnSubnetProps {
     /**
      * @param enableDns64 Indicates whether DNS queries made to the Amazon-provided DNS Resolver in
      * this subnet should return synthetic IPv6 addresses for IPv4-only destinations.
-     * For more information, see [DNS64 and
-     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-nat64-dns64)
+     *
+     * You must first configure a NAT gateway in a public subnet (separate from the subnet
+     * containing the IPv6-only workloads). For example, the subnet containing the NAT gateway should
+     * have a `0.0.0.0/0` route pointing to the internet gateway. For more information, see [Configure
+     * DNS64 and
+     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-nat64-dns64.html#nat-gateway-nat64-dns64-walkthrough)
      * in the *Amazon Virtual Private Cloud User Guide* .
      */
     public fun enableDns64(enableDns64: IResolvable)
@@ -295,16 +299,6 @@ public interface CfnSubnetProps {
      * If you specify `AssignIpv6AddressOnCreation` , you must also specify an IPv6 CIDR block.
      */
     public fun ipv6CidrBlock(ipv6CidrBlock: String)
-
-    /**
-     * @param ipv6CidrBlocks The IPv6 network ranges for the subnet, in CIDR notation.
-     */
-    public fun ipv6CidrBlocks(ipv6CidrBlocks: List<String>)
-
-    /**
-     * @param ipv6CidrBlocks The IPv6 network ranges for the subnet, in CIDR notation.
-     */
-    public fun ipv6CidrBlocks(vararg ipv6CidrBlocks: String)
 
     /**
      * @param ipv6IpamPoolId An IPv6 IPAM pool ID for the subnet.
@@ -435,8 +429,12 @@ public interface CfnSubnetProps {
     /**
      * @param enableDns64 Indicates whether DNS queries made to the Amazon-provided DNS Resolver in
      * this subnet should return synthetic IPv6 addresses for IPv4-only destinations.
-     * For more information, see [DNS64 and
-     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-nat64-dns64)
+     *
+     * You must first configure a NAT gateway in a public subnet (separate from the subnet
+     * containing the IPv6-only workloads). For example, the subnet containing the NAT gateway should
+     * have a `0.0.0.0/0` route pointing to the internet gateway. For more information, see [Configure
+     * DNS64 and
+     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-nat64-dns64.html#nat-gateway-nat64-dns64-walkthrough)
      * in the *Amazon Virtual Private Cloud User Guide* .
      */
     override fun enableDns64(enableDns64: Boolean) {
@@ -446,8 +444,12 @@ public interface CfnSubnetProps {
     /**
      * @param enableDns64 Indicates whether DNS queries made to the Amazon-provided DNS Resolver in
      * this subnet should return synthetic IPv6 addresses for IPv4-only destinations.
-     * For more information, see [DNS64 and
-     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-nat64-dns64)
+     *
+     * You must first configure a NAT gateway in a public subnet (separate from the subnet
+     * containing the IPv6-only workloads). For example, the subnet containing the NAT gateway should
+     * have a `0.0.0.0/0` route pointing to the internet gateway. For more information, see [Configure
+     * DNS64 and
+     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-nat64-dns64.html#nat-gateway-nat64-dns64-walkthrough)
      * in the *Amazon Virtual Private Cloud User Guide* .
      */
     override fun enableDns64(enableDns64: IResolvable) {
@@ -485,19 +487,6 @@ public interface CfnSubnetProps {
     override fun ipv6CidrBlock(ipv6CidrBlock: String) {
       cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
-
-    /**
-     * @param ipv6CidrBlocks The IPv6 network ranges for the subnet, in CIDR notation.
-     */
-    override fun ipv6CidrBlocks(ipv6CidrBlocks: List<String>) {
-      cdkBuilder.ipv6CidrBlocks(ipv6CidrBlocks)
-    }
-
-    /**
-     * @param ipv6CidrBlocks The IPv6 network ranges for the subnet, in CIDR notation.
-     */
-    override fun ipv6CidrBlocks(vararg ipv6CidrBlocks: String): Unit =
-        ipv6CidrBlocks(ipv6CidrBlocks.toList())
 
     /**
      * @param ipv6IpamPoolId An IPv6 IPAM pool ID for the subnet.
@@ -604,7 +593,8 @@ public interface CfnSubnetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetProps,
-  ) : CdkObject(cdkObject), CfnSubnetProps {
+  ) : CdkObject(cdkObject),
+      CfnSubnetProps {
     /**
      * Indicates whether a network interface created in this subnet receives an IPv6 address. The
      * default value is `false` .
@@ -644,9 +634,14 @@ public interface CfnSubnetProps {
      * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should
      * return synthetic IPv6 addresses for IPv4-only destinations.
      *
-     * For more information, see [DNS64 and
-     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-nat64-dns64)
+     *
+     * You must first configure a NAT gateway in a public subnet (separate from the subnet
+     * containing the IPv6-only workloads). For example, the subnet containing the NAT gateway should
+     * have a `0.0.0.0/0` route pointing to the internet gateway. For more information, see [Configure
+     * DNS64 and
+     * NAT64](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-nat64-dns64.html#nat-gateway-nat64-dns64-walkthrough)
      * in the *Amazon Virtual Private Cloud User Guide* .
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enabledns64)
      */
@@ -684,13 +679,6 @@ public interface CfnSubnetProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblock)
      */
     override fun ipv6CidrBlock(): String? = unwrap(this).getIpv6CidrBlock()
-
-    /**
-     * The IPv6 network ranges for the subnet, in CIDR notation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv6cidrblocks)
-     */
-    override fun ipv6CidrBlocks(): List<String> = unwrap(this).getIpv6CidrBlocks() ?: emptyList()
 
     /**
      * An IPv6 IPAM pool ID for the subnet.

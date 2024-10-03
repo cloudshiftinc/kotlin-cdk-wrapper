@@ -28,7 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Function(
   cdkObject: software.amazon.awscdk.services.cloudfront.Function,
-) : Resource(cdkObject), IFunction {
+) : Resource(cdkObject),
+    IFunction {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

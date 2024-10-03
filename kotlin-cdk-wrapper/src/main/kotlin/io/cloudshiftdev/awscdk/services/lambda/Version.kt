@@ -57,7 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Version(
   cdkObject: software.amazon.awscdk.services.lambda.Version,
-) : QualifiedFunctionBase(cdkObject), IVersion {
+) : QualifiedFunctionBase(cdkObject),
+    IVersion {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -67,7 +67,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnImageBuilder(
   cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -958,7 +960,8 @@ public open class CfnImageBuilder(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty,
-    ) : CdkObject(cdkObject), AccessEndpointProperty {
+    ) : CdkObject(cdkObject),
+        AccessEndpointProperty {
       /**
        * The type of interface endpoint.
        *
@@ -1073,7 +1076,8 @@ public open class CfnImageBuilder(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty,
-    ) : CdkObject(cdkObject), DomainJoinInfoProperty {
+    ) : CdkObject(cdkObject),
+        DomainJoinInfoProperty {
       /**
        * The fully qualified name of the directory (for example, corp.example.com).
        *
@@ -1214,7 +1218,8 @@ public open class CfnImageBuilder(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
       /**
        * The identifiers of the security groups for the image builder.
        *

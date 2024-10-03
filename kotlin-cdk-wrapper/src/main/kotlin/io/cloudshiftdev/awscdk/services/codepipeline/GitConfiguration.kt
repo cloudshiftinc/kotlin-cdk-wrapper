@@ -184,7 +184,8 @@ public interface GitConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.GitConfiguration,
-  ) : CdkObject(cdkObject), GitConfiguration {
+  ) : CdkObject(cdkObject),
+      GitConfiguration {
     /**
      * The field where the repository event that will start the pipeline is specified as pull
      * requests.

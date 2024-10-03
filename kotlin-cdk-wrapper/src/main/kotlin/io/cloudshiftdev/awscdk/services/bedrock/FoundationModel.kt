@@ -13,15 +13,21 @@ import kotlin.String
  *
  * ```
  * import io.cloudshiftdev.awscdk.services.bedrock.*;
- * FoundationModel.fromFoundationModelId(this, "Model",
- * FoundationModelIdentifier.ANTHROPIC_CLAUDE_V2);
+ * FoundationModel model = FoundationModel.fromFoundationModelId(this, "Model",
+ * FoundationModelIdentifier.AMAZON_TITAN_TEXT_G1_EXPRESS_V1);
+ * BedrockInvokeModel task = BedrockInvokeModel.Builder.create(this, "Prompt Model")
+ * .model(model)
+ * .input(BedrockInvokeModelInputProps.builder().s3InputUri(JsonPath.stringAt("$.prompt")).build())
+ * .output(BedrockInvokeModelOutputProps.builder().s3OutputUri(JsonPath.stringAt("$.prompt")).build())
+ * .build();
  * ```
  *
  * [Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html)
  */
 public open class FoundationModel(
   cdkObject: software.amazon.awscdk.services.bedrock.FoundationModel,
-) : CdkObject(cdkObject), IModel {
+) : CdkObject(cdkObject),
+    IModel {
   /**
    * The foundation model ARN.
    */

@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNetworkAnalyzerConfiguration(
   cdkObject: software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -497,7 +499,8 @@ public open class CfnNetworkAnalyzerConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration.TraceContentProperty,
-    ) : CdkObject(cdkObject), TraceContentProperty {
+    ) : CdkObject(cdkObject),
+        TraceContentProperty {
       /**
        * The log level for a log message.
        *

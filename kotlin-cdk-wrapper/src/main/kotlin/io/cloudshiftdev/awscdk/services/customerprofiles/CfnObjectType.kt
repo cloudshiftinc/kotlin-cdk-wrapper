@@ -67,7 +67,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnObjectType(
   cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -770,7 +772,8 @@ public open class CfnObjectType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty,
-    ) : CdkObject(cdkObject), FieldMapProperty {
+    ) : CdkObject(cdkObject),
+        FieldMapProperty {
       /**
        * Name of the field.
        *
@@ -904,7 +907,8 @@ public open class CfnObjectType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty,
-    ) : CdkObject(cdkObject), KeyMapProperty {
+    ) : CdkObject(cdkObject),
+        KeyMapProperty {
       /**
        * Name of the key.
        *
@@ -1048,7 +1052,8 @@ public open class CfnObjectType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty,
-    ) : CdkObject(cdkObject), ObjectTypeFieldProperty {
+    ) : CdkObject(cdkObject),
+        ObjectTypeFieldProperty {
       /**
        * The content type of the field.
        *
@@ -1231,7 +1236,8 @@ public open class CfnObjectType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeKeyProperty,
-    ) : CdkObject(cdkObject), ObjectTypeKeyProperty {
+    ) : CdkObject(cdkObject),
+        ObjectTypeKeyProperty {
       /**
        * The reference for the key name of the fields map.
        *

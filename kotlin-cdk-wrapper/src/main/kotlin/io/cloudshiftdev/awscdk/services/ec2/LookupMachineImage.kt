@@ -43,7 +43,8 @@ import kotlin.collections.Map
  */
 public open class LookupMachineImage(
   cdkObject: software.amazon.awscdk.services.ec2.LookupMachineImage,
-) : CdkObject(cdkObject), IMachineImage {
+) : CdkObject(cdkObject),
+    IMachineImage {
   public constructor(props: LookupMachineImageProps) :
       this(software.amazon.awscdk.services.ec2.LookupMachineImage(props.let(LookupMachineImageProps.Companion::unwrap))
   )

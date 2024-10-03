@@ -451,7 +451,8 @@ public interface LambdaInvokeProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvokeProps,
-  ) : CdkObject(cdkObject), LambdaInvokeProps {
+  ) : CdkObject(cdkObject),
+      LambdaInvokeProps {
     /**
      * Up to 3583 bytes of base64-encoded data about the invoking client to pass to the function.
      *

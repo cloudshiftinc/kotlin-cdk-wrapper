@@ -73,7 +73,8 @@ public interface RuntimeConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.RuntimeConfig,
-  ) : CdkObject(cdkObject), RuntimeConfig {
+  ) : CdkObject(cdkObject),
+      RuntimeConfig {
     /**
      * The name of the runtime.
      */

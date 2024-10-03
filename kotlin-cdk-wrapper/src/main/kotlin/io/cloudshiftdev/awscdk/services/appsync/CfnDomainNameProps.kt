@@ -105,7 +105,8 @@ public interface CfnDomainNameProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.CfnDomainNameProps,
-  ) : CdkObject(cdkObject), CfnDomainNameProps {
+  ) : CdkObject(cdkObject),
+      CfnDomainNameProps {
     /**
      * The Amazon Resource Name (ARN) of the certificate.
      *

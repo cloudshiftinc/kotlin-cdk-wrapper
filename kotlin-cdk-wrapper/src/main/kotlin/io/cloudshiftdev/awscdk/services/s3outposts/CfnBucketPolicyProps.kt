@@ -106,7 +106,8 @@ public interface CfnBucketPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucketPolicyProps,
-  ) : CdkObject(cdkObject), CfnBucketPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnBucketPolicyProps {
     /**
      * The name of the Amazon S3 Outposts bucket to which the policy applies.
      *

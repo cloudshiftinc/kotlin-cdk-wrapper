@@ -312,7 +312,8 @@ public interface RepositoryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecr.RepositoryProps,
-  ) : CdkObject(cdkObject), RepositoryProps {
+  ) : CdkObject(cdkObject),
+      RepositoryProps {
     /**
      * (deprecated) Whether all images should be automatically deleted when the repository is
      * removed from the stack or when the stack is deleted.

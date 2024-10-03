@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnUserPoolDomain(
   cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolDomain,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -307,8 +308,13 @@ public open class CfnUserPoolDomain(
   }
 
   /**
-   * The configuration for a custom domain that hosts the sign-up and sign-in webpages for your
-   * application.
+   * The configuration for a hosted UI custom domain.
+   *
+   * This data type is a request parameter of
+   * [CreateUserPoolDomain](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPoolDomain.html)
+   * and
+   * [UpdateUserPoolDomain](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPoolDomain.html)
+   * .
    *
    * Example:
    *
@@ -369,7 +375,8 @@ public open class CfnUserPoolDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolDomain.CustomDomainConfigTypeProperty,
-    ) : CdkObject(cdkObject), CustomDomainConfigTypeProperty {
+    ) : CdkObject(cdkObject),
+        CustomDomainConfigTypeProperty {
       /**
        * The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL certificate.
        *

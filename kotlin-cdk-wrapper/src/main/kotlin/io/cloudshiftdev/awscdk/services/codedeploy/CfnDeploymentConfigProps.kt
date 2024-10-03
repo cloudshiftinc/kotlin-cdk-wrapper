@@ -475,7 +475,8 @@ public interface CfnDeploymentConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfigProps,
-  ) : CdkObject(cdkObject), CfnDeploymentConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnDeploymentConfigProps {
     /**
      * The destination platform type for the deployment ( `Lambda` , `Server` , or `ECS` ).
      *

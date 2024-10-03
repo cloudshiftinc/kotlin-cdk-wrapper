@@ -29,7 +29,8 @@ import kotlin.Unit
  */
 public open class Stop(
   cdkObject: software.amazon.awscdk.services.ses.actions.Stop,
-) : CdkObject(cdkObject), IReceiptRuleAction {
+) : CdkObject(cdkObject),
+    IReceiptRuleAction {
   public constructor() : this(software.amazon.awscdk.services.ses.actions.Stop()
   )
 

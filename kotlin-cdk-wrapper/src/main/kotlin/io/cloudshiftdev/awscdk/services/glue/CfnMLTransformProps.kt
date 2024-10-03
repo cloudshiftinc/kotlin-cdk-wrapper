@@ -643,7 +643,8 @@ public interface CfnMLTransformProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnMLTransformProps,
-  ) : CdkObject(cdkObject), CfnMLTransformProps {
+  ) : CdkObject(cdkObject),
+      CfnMLTransformProps {
     /**
      * A user-defined, long-form description text for the machine learning transform.
      *

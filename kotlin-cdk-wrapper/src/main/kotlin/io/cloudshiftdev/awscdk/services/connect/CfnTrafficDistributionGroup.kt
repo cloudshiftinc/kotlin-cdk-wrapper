@@ -42,7 +42,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTrafficDistributionGroup(
   cdkObject: software.amazon.awscdk.services.connect.CfnTrafficDistributionGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

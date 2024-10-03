@@ -276,7 +276,8 @@ public interface CfnStorageVirtualMachineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachineProps,
-  ) : CdkObject(cdkObject), CfnStorageVirtualMachineProps {
+  ) : CdkObject(cdkObject),
+      CfnStorageVirtualMachineProps {
     /**
      * Describes the Microsoft Active Directory configuration to which the SVM is joined, if
      * applicable.

@@ -45,7 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class DatabaseInstance(
   cdkObject: software.amazon.awscdk.services.docdb.DatabaseInstance,
-) : Resource(cdkObject), IDatabaseInstance {
+) : Resource(cdkObject),
+    IDatabaseInstance {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

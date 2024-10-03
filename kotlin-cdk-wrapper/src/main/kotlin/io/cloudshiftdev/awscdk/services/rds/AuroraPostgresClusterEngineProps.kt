@@ -93,7 +93,8 @@ public interface AuroraPostgresClusterEngineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.AuroraPostgresClusterEngineProps,
-  ) : CdkObject(cdkObject), AuroraPostgresClusterEngineProps {
+  ) : CdkObject(cdkObject),
+      AuroraPostgresClusterEngineProps {
     /**
      * The version of the Aurora PostgreSQL cluster engine.
      */

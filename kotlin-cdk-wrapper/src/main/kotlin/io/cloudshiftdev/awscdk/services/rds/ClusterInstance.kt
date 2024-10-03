@@ -34,7 +34,8 @@ import kotlin.jvm.JvmName
  */
 public open class ClusterInstance(
   cdkObject: software.amazon.awscdk.services.rds.ClusterInstance,
-) : CdkObject(cdkObject), IClusterInstance {
+) : CdkObject(cdkObject),
+    IClusterInstance {
   /**
    * Add the ClusterInstance to the cluster.
    *

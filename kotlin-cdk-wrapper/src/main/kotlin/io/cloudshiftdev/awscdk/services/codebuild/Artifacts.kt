@@ -31,7 +31,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class Artifacts(
   cdkObject: software.amazon.awscdk.services.codebuild.Artifacts,
-) : CdkObject(cdkObject), IArtifacts {
+) : CdkObject(cdkObject),
+    IArtifacts {
   /**
    * Callback when an Artifacts class is used in a CodeBuild Project.
    *

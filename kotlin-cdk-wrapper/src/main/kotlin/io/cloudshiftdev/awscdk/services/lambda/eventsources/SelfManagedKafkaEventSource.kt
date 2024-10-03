@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
@@ -153,6 +154,16 @@ public open class SelfManagedKafkaEventSource(
      * @param enabled If the stream event source mapping should be enabled. 
      */
     public fun enabled(enabled: Boolean)
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria. 
+     */
+    public fun filterEncryption(filterEncryption: IKey)
 
     /**
      * Add filter criteria to Event Source.
@@ -374,6 +385,18 @@ public open class SelfManagedKafkaEventSource(
      */
     override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
+    }
+
+    /**
+     * Add Customer managed KMS key to encrypt Filter Criteria.
+     *
+     * Default: - none
+     *
+     * [Documentation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)
+     * @param filterEncryption Add Customer managed KMS key to encrypt Filter Criteria. 
+     */
+    override fun filterEncryption(filterEncryption: IKey) {
+      cdkBuilder.filterEncryption(filterEncryption.let(IKey.Companion::unwrap))
     }
 
     /**

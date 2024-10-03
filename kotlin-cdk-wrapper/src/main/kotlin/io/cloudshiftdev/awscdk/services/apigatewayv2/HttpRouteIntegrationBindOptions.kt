@@ -86,7 +86,8 @@ public interface HttpRouteIntegrationBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationBindOptions,
-  ) : CdkObject(cdkObject), HttpRouteIntegrationBindOptions {
+  ) : CdkObject(cdkObject),
+      HttpRouteIntegrationBindOptions {
     /**
      * The route to which this is being bound.
      */

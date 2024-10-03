@@ -287,7 +287,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTemplate(
   cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -757,7 +759,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty,
-    ) : CdkObject(cdkObject), ApplicationPoliciesProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationPoliciesProperty {
       /**
        * Marks the application policy extension as critical.
        *
@@ -866,7 +869,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty,
-    ) : CdkObject(cdkObject), ApplicationPolicyProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationPolicyProperty {
       /**
        * The object identifier (OID) of an application policy.
        *
@@ -1105,7 +1109,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty,
-    ) : CdkObject(cdkObject), CertificateValidityProperty {
+    ) : CdkObject(cdkObject),
+        CertificateValidityProperty {
       /**
        * Renewal period is the period of time before certificate expiration when a new certificate
        * will be requested.
@@ -1377,7 +1382,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property,
-    ) : CdkObject(cdkObject), EnrollmentFlagsV2Property {
+    ) : CdkObject(cdkObject),
+        EnrollmentFlagsV2Property {
       /**
        * Allow renewal using the same key.
        *
@@ -1667,7 +1673,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property,
-    ) : CdkObject(cdkObject), EnrollmentFlagsV3Property {
+    ) : CdkObject(cdkObject),
+        EnrollmentFlagsV3Property {
       /**
        * Allow renewal using the same key.
        *
@@ -1957,7 +1964,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property,
-    ) : CdkObject(cdkObject), EnrollmentFlagsV4Property {
+    ) : CdkObject(cdkObject),
+        EnrollmentFlagsV4Property {
       /**
        * Allow renewal using the same key.
        *
@@ -2179,7 +2187,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property,
-    ) : CdkObject(cdkObject), ExtensionsV2Property {
+    ) : CdkObject(cdkObject),
+        ExtensionsV2Property {
       /**
        * Application policies specify what the certificate is used for and its purpose.
        *
@@ -2375,7 +2384,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV3Property,
-    ) : CdkObject(cdkObject), ExtensionsV3Property {
+    ) : CdkObject(cdkObject),
+        ExtensionsV3Property {
       /**
        * Application policies specify what the certificate is used for and its purpose.
        *
@@ -2571,7 +2581,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property,
-    ) : CdkObject(cdkObject), ExtensionsV4Property {
+    ) : CdkObject(cdkObject),
+        ExtensionsV4Property {
       /**
        * Application policies specify what the certificate is used for and its purpose.
        *
@@ -2718,7 +2729,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property,
-    ) : CdkObject(cdkObject), GeneralFlagsV2Property {
+    ) : CdkObject(cdkObject),
+        GeneralFlagsV2Property {
       /**
        * Allows certificate issuance using autoenrollment.
        *
@@ -2868,7 +2880,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property,
-    ) : CdkObject(cdkObject), GeneralFlagsV3Property {
+    ) : CdkObject(cdkObject),
+        GeneralFlagsV3Property {
       /**
        * Allows certificate issuance using autoenrollment.
        *
@@ -3018,7 +3031,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property,
-    ) : CdkObject(cdkObject), GeneralFlagsV4Property {
+    ) : CdkObject(cdkObject),
+        GeneralFlagsV4Property {
       /**
        * Allows certificate issuance using autoenrollment.
        *
@@ -3274,7 +3288,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageFlagsProperty,
-    ) : CdkObject(cdkObject), KeyUsageFlagsProperty {
+    ) : CdkObject(cdkObject),
+        KeyUsageFlagsProperty {
       /**
        * DataEncipherment is asserted when the subject public key is used for directly enciphering
        * raw user data without the use of an intermediate symmetric cipher.
@@ -3461,7 +3476,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty,
-    ) : CdkObject(cdkObject), KeyUsageProperty {
+    ) : CdkObject(cdkObject),
+        KeyUsageProperty {
       /**
        * Sets the key usage extension to critical.
        *
@@ -3628,7 +3644,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty,
-    ) : CdkObject(cdkObject), KeyUsagePropertyFlagsProperty {
+    ) : CdkObject(cdkObject),
+        KeyUsagePropertyFlagsProperty {
       /**
        * Allows key for encryption and decryption.
        *
@@ -3795,7 +3812,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty,
-    ) : CdkObject(cdkObject), KeyUsagePropertyProperty {
+    ) : CdkObject(cdkObject),
+        KeyUsagePropertyProperty {
       /**
        * You can specify key usage for encryption, key agreement, and signature.
        *
@@ -3949,7 +3967,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property,
-    ) : CdkObject(cdkObject), PrivateKeyAttributesV2Property {
+    ) : CdkObject(cdkObject),
+        PrivateKeyAttributesV2Property {
       /**
        * Defines the cryptographic providers used to generate the private key.
        *
@@ -4197,7 +4216,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property,
-    ) : CdkObject(cdkObject), PrivateKeyAttributesV3Property {
+    ) : CdkObject(cdkObject),
+        PrivateKeyAttributesV3Property {
       /**
        * Defines the algorithm used to generate the private key.
        *
@@ -4461,7 +4481,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property,
-    ) : CdkObject(cdkObject), PrivateKeyAttributesV4Property {
+    ) : CdkObject(cdkObject),
+        PrivateKeyAttributesV4Property {
       /**
        * Defines the algorithm used to generate the private key.
        *
@@ -4646,7 +4667,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property,
-    ) : CdkObject(cdkObject), PrivateKeyFlagsV2Property {
+    ) : CdkObject(cdkObject),
+        PrivateKeyFlagsV2Property {
       /**
        * Defines the minimum client compatibility.
        *
@@ -4857,7 +4879,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property,
-    ) : CdkObject(cdkObject), PrivateKeyFlagsV3Property {
+    ) : CdkObject(cdkObject),
+        PrivateKeyFlagsV3Property {
       /**
        * Defines the minimum client compatibility.
        *
@@ -5156,7 +5179,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property,
-    ) : CdkObject(cdkObject), PrivateKeyFlagsV4Property {
+    ) : CdkObject(cdkObject),
+        PrivateKeyFlagsV4Property {
       /**
        * Defines the minimum client compatibility.
        *
@@ -5594,7 +5618,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property,
-    ) : CdkObject(cdkObject), SubjectNameFlagsV2Property {
+    ) : CdkObject(cdkObject),
+        SubjectNameFlagsV2Property {
       /**
        * Include the common name in the subject name.
        *
@@ -6054,7 +6079,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property,
-    ) : CdkObject(cdkObject), SubjectNameFlagsV3Property {
+    ) : CdkObject(cdkObject),
+        SubjectNameFlagsV3Property {
       /**
        * Include the common name in the subject name.
        *
@@ -6514,7 +6540,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property,
-    ) : CdkObject(cdkObject), SubjectNameFlagsV4Property {
+    ) : CdkObject(cdkObject),
+        SubjectNameFlagsV4Property {
       /**
        * Include the common name in the subject name.
        *
@@ -7080,7 +7107,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty,
-    ) : CdkObject(cdkObject), TemplateDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        TemplateDefinitionProperty {
       /**
        * Template configuration to define the information included in certificates.
        *
@@ -7656,7 +7684,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV2Property,
-    ) : CdkObject(cdkObject), TemplateV2Property {
+    ) : CdkObject(cdkObject),
+        TemplateV2Property {
       /**
        * Certificate validity describes the validity and renewal periods of a certificate.
        *
@@ -8303,7 +8332,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV3Property,
-    ) : CdkObject(cdkObject), TemplateV3Property {
+    ) : CdkObject(cdkObject),
+        TemplateV3Property {
       /**
        * Certificate validity describes the validity and renewal periods of a certificate.
        *
@@ -8977,7 +9007,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV4Property,
-    ) : CdkObject(cdkObject), TemplateV4Property {
+    ) : CdkObject(cdkObject),
+        TemplateV4Property {
       /**
        * Certificate validity describes the validity and renewal periods of a certificate.
        *
@@ -9158,7 +9189,8 @@ public open class CfnTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ValidityPeriodProperty,
-    ) : CdkObject(cdkObject), ValidityPeriodProperty {
+    ) : CdkObject(cdkObject),
+        ValidityPeriodProperty {
       /**
        * The numeric value for the validity period.
        *

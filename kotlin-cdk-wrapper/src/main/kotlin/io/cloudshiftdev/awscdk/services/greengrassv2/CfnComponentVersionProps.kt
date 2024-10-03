@@ -246,7 +246,8 @@ public interface CfnComponentVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersionProps,
-  ) : CdkObject(cdkObject), CfnComponentVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnComponentVersionProps {
     /**
      * The recipe to use to create the component.
      *

@@ -352,7 +352,8 @@ public interface CfnDomainNameProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainNameProps,
-  ) : CdkObject(cdkObject), CfnDomainNameProps {
+  ) : CdkObject(cdkObject),
+      CfnDomainNameProps {
     /**
      * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint for
      * this domain name.

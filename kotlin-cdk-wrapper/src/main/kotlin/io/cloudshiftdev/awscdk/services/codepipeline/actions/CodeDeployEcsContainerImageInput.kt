@@ -113,7 +113,8 @@ public interface CodeDeployEcsContainerImageInput {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsContainerImageInput,
-  ) : CdkObject(cdkObject), CodeDeployEcsContainerImageInput {
+  ) : CdkObject(cdkObject),
+      CodeDeployEcsContainerImageInput {
     /**
      * The artifact that contains an `imageDetails.json` file with the image URI.
      *

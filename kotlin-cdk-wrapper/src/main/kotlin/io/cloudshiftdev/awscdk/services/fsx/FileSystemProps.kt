@@ -189,7 +189,8 @@ public interface FileSystemProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.fsx.FileSystemProps,
-  ) : CdkObject(cdkObject), FileSystemProps {
+  ) : CdkObject(cdkObject),
+      FileSystemProps {
     /**
      * The ID of the backup.
      *

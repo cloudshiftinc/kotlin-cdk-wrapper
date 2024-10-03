@@ -27,7 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class OriginRequestPolicy(
   cdkObject: software.amazon.awscdk.services.cloudfront.OriginRequestPolicy,
-) : Resource(cdkObject), IOriginRequestPolicy {
+) : Resource(cdkObject),
+    IOriginRequestPolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

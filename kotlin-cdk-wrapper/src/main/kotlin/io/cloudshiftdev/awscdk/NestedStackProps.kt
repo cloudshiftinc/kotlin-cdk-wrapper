@@ -344,7 +344,8 @@ public interface NestedStackProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.NestedStackProps,
-  ) : CdkObject(cdkObject), NestedStackProps {
+  ) : CdkObject(cdkObject),
+      NestedStackProps {
     /**
      * A description of the stack.
      *

@@ -5,6 +5,8 @@ package io.cloudshiftdev.awscdk.services.budgets
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -65,6 +67,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * // the properties below are optional
  * .approvalModel("approvalModel")
+ * .resourceTags(List.of(ResourceTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -72,7 +78,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBudgetsAction(
   cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -158,6 +166,12 @@ public open class CfnBudgetsAction(
   }
 
   /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  /**
    * Specifies all of the type-specific parameters.
    */
   public open fun definition(): Any = unwrap(this).getDefinition()
@@ -216,6 +230,25 @@ public open class CfnBudgetsAction(
   public open fun notificationType(`value`: String) {
     unwrap(this).setNotificationType(`value`)
   }
+
+  /**
+   * An optional list of tags to associate with the specified budget action.
+   */
+  public open fun resourceTags(): List<ResourceTagProperty> =
+      unwrap(this).getResourceTags()?.map(ResourceTagProperty::wrap) ?: emptyList()
+
+  /**
+   * An optional list of tags to associate with the specified budget action.
+   */
+  public open fun resourceTags(`value`: List<ResourceTagProperty>) {
+    unwrap(this).setResourceTags(`value`.map(ResourceTagProperty.Companion::unwrap))
+  }
+
+  /**
+   * An optional list of tags to associate with the specified budget action.
+   */
+  public open fun resourceTags(vararg `value`: ResourceTagProperty): Unit =
+      resourceTags(`value`.toList())
 
   /**
    * A list of subscribers.
@@ -344,6 +377,26 @@ public open class CfnBudgetsAction(
      * @param notificationType The type of a notification. 
      */
     public fun notificationType(notificationType: String)
+
+    /**
+     * An optional list of tags to associate with the specified budget action.
+     *
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-resourcetags)
+     * @param resourceTags An optional list of tags to associate with the specified budget action. 
+     */
+    public fun resourceTags(resourceTags: List<ResourceTagProperty>)
+
+    /**
+     * An optional list of tags to associate with the specified budget action.
+     *
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-resourcetags)
+     * @param resourceTags An optional list of tags to associate with the specified budget action. 
+     */
+    public fun resourceTags(vararg resourceTags: ResourceTagProperty)
 
     /**
      * A list of subscribers.
@@ -497,6 +550,29 @@ public open class CfnBudgetsAction(
     }
 
     /**
+     * An optional list of tags to associate with the specified budget action.
+     *
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-resourcetags)
+     * @param resourceTags An optional list of tags to associate with the specified budget action. 
+     */
+    override fun resourceTags(resourceTags: List<ResourceTagProperty>) {
+      cdkBuilder.resourceTags(resourceTags.map(ResourceTagProperty.Companion::unwrap))
+    }
+
+    /**
+     * An optional list of tags to associate with the specified budget action.
+     *
+     * Each tag consists of a key and a value, and each key must be unique for the resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-resourcetags)
+     * @param resourceTags An optional list of tags to associate with the specified budget action. 
+     */
+    override fun resourceTags(vararg resourceTags: ResourceTagProperty): Unit =
+        resourceTags(resourceTags.toList())
+
+    /**
      * A list of subscribers.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-subscribers)
@@ -623,7 +699,8 @@ public open class CfnBudgetsAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.ActionThresholdProperty,
-    ) : CdkObject(cdkObject), ActionThresholdProperty {
+    ) : CdkObject(cdkObject),
+        ActionThresholdProperty {
       /**
        * The type of threshold for a notification.
        *
@@ -863,7 +940,8 @@ public open class CfnBudgetsAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.DefinitionProperty,
-    ) : CdkObject(cdkObject), DefinitionProperty {
+    ) : CdkObject(cdkObject),
+        DefinitionProperty {
       /**
        * The AWS Identity and Access Management ( IAM ) action definition details.
        *
@@ -1068,7 +1146,8 @@ public open class CfnBudgetsAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.IamActionDefinitionProperty,
-    ) : CdkObject(cdkObject), IamActionDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        IamActionDefinitionProperty {
       /**
        * A list of groups to be attached.
        *
@@ -1119,6 +1198,115 @@ public open class CfnBudgetsAction(
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.IamActionDefinitionProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.IamActionDefinitionProperty
+    }
+  }
+
+  /**
+   * The tag structure that contains a tag key and value.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.budgets.*;
+   * ResourceTagProperty resourceTagProperty = ResourceTagProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-resourcetag.html)
+   */
+  public interface ResourceTagProperty {
+    /**
+     * The key that's associated with the tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-resourcetag.html#cfn-budgets-budgetsaction-resourcetag-key)
+     */
+    public fun key(): String
+
+    /**
+     * The value that's associated with the tag.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-resourcetag.html#cfn-budgets-budgetsaction-resourcetag-value)
+     */
+    public fun `value`(): String
+
+    /**
+     * A builder for [ResourceTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param key The key that's associated with the tag. 
+       */
+      public fun key(key: String)
+
+      /**
+       * @param value The value that's associated with the tag. 
+       */
+      public fun `value`(`value`: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.ResourceTagProperty.Builder =
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.ResourceTagProperty.builder()
+
+      /**
+       * @param key The key that's associated with the tag. 
+       */
+      override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      /**
+       * @param value The value that's associated with the tag. 
+       */
+      override fun `value`(`value`: String) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.ResourceTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.ResourceTagProperty,
+    ) : CdkObject(cdkObject),
+        ResourceTagProperty {
+      /**
+       * The key that's associated with the tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-resourcetag.html#cfn-budgets-budgetsaction-resourcetag-key)
+       */
+      override fun key(): String = unwrap(this).getKey()
+
+      /**
+       * The value that's associated with the tag.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-resourcetag.html#cfn-budgets-budgetsaction-resourcetag-value)
+       */
+      override fun `value`(): String = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.ResourceTagProperty):
+          ResourceTagProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceTagProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourceTagProperty):
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.ResourceTagProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.budgets.CfnBudgetsAction.ResourceTagProperty
     }
   }
 
@@ -1207,7 +1395,8 @@ public open class CfnBudgetsAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.ScpActionDefinitionProperty,
-    ) : CdkObject(cdkObject), ScpActionDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        ScpActionDefinitionProperty {
       /**
        * The policy ID attached.
        *
@@ -1346,7 +1535,8 @@ public open class CfnBudgetsAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty,
-    ) : CdkObject(cdkObject), SsmActionDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        SsmActionDefinitionProperty {
       /**
        * The EC2 and RDS instance IDs.
        *
@@ -1475,7 +1665,8 @@ public open class CfnBudgetsAction(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty,
-    ) : CdkObject(cdkObject), SubscriberProperty {
+    ) : CdkObject(cdkObject),
+        SubscriberProperty {
       /**
        * The address that AWS sends budget notifications to, either an SNS topic or an email.
        *

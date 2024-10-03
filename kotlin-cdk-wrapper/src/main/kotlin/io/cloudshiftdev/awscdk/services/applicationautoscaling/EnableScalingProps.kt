@@ -92,7 +92,8 @@ public interface EnableScalingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.applicationautoscaling.EnableScalingProps,
-  ) : CdkObject(cdkObject), EnableScalingProps {
+  ) : CdkObject(cdkObject),
+      EnableScalingProps {
     /**
      * Maximum capacity to scale to.
      */

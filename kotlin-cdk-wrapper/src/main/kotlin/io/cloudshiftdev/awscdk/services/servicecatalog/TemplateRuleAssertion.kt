@@ -81,7 +81,8 @@ public interface TemplateRuleAssertion {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.TemplateRuleAssertion,
-  ) : CdkObject(cdkObject), TemplateRuleAssertion {
+  ) : CdkObject(cdkObject),
+      TemplateRuleAssertion {
     /**
      * The assertion condition.
      */

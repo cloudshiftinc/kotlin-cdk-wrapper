@@ -21,12 +21,12 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * After you create a solution, you can’t change its configuration.
+ * By default, all new solutions use automatic training.
  *
- * By default, all new solutions use automatic training. With automatic training, you incur training
- * costs while your solution is active. You can't stop automatic training for a solution. To avoid
- * unnecessary costs, make sure to delete the solution when you are finished. For information about
- * training costs, see [Amazon Personalize
+ * With automatic training, you incur training costs while your solution is active. To avoid
+ * unnecessary costs, when you are finished you can [update the
+ * solution](https://docs.aws.amazon.com/personalize/latest/dg/API_UpdateSolution.html) to turn off
+ * automatic training. For information about training costs, see [Amazon Personalize
  * pricing](https://docs.aws.amazon.com/https://aws.amazon.com/personalize/pricing/) .
  *
  * An object that provides information about a solution. A solution includes the custom recipe,
@@ -69,7 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSolution(
   cdkObject: software.amazon.awscdk.services.personalize.CfnSolution,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -703,7 +704,8 @@ public open class CfnSolution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.AlgorithmHyperParameterRangesProperty,
-    ) : CdkObject(cdkObject), AlgorithmHyperParameterRangesProperty {
+    ) : CdkObject(cdkObject),
+        AlgorithmHyperParameterRangesProperty {
       /**
        * Provides the name and range of a categorical hyperparameter.
        *
@@ -835,7 +837,8 @@ public open class CfnSolution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty,
-    ) : CdkObject(cdkObject), AutoMLConfigProperty {
+    ) : CdkObject(cdkObject),
+        AutoMLConfigProperty {
       /**
        * The metric to optimize.
        *
@@ -955,7 +958,8 @@ public open class CfnSolution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.CategoricalHyperParameterRangeProperty,
-    ) : CdkObject(cdkObject), CategoricalHyperParameterRangeProperty {
+    ) : CdkObject(cdkObject),
+        CategoricalHyperParameterRangeProperty {
       /**
        * The name of the hyperparameter.
        *
@@ -1086,7 +1090,8 @@ public open class CfnSolution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.ContinuousHyperParameterRangeProperty,
-    ) : CdkObject(cdkObject), ContinuousHyperParameterRangeProperty {
+    ) : CdkObject(cdkObject),
+        ContinuousHyperParameterRangeProperty {
       /**
        * The maximum allowable value for the hyperparameter.
        *
@@ -1347,7 +1352,8 @@ public open class CfnSolution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.HpoConfigProperty,
-    ) : CdkObject(cdkObject), HpoConfigProperty {
+    ) : CdkObject(cdkObject),
+        HpoConfigProperty {
       /**
        * The hyperparameters and their allowable ranges.
        *
@@ -1495,7 +1501,8 @@ public open class CfnSolution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.HpoObjectiveProperty,
-    ) : CdkObject(cdkObject), HpoObjectiveProperty {
+    ) : CdkObject(cdkObject),
+        HpoObjectiveProperty {
       /**
        * The name of the metric.
        *
@@ -1625,7 +1632,8 @@ public open class CfnSolution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty,
-    ) : CdkObject(cdkObject), HpoResourceConfigProperty {
+    ) : CdkObject(cdkObject),
+        HpoResourceConfigProperty {
       /**
        * The maximum number of training jobs when you create a solution version.
        *
@@ -1759,7 +1767,8 @@ public open class CfnSolution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty,
-    ) : CdkObject(cdkObject), IntegerHyperParameterRangeProperty {
+    ) : CdkObject(cdkObject),
+        IntegerHyperParameterRangeProperty {
       /**
        * The maximum allowable value for the hyperparameter.
        *
@@ -1974,7 +1983,8 @@ public open class CfnSolution(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty,
-    ) : CdkObject(cdkObject), SolutionConfigProperty {
+    ) : CdkObject(cdkObject),
+        SolutionConfigProperty {
       /**
        * Lists the algorithm hyperparameters and their values.
        *

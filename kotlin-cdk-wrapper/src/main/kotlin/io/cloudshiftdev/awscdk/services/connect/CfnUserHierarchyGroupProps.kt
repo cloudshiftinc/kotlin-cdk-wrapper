@@ -137,7 +137,8 @@ public interface CfnUserHierarchyGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnUserHierarchyGroupProps,
-  ) : CdkObject(cdkObject), CfnUserHierarchyGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnUserHierarchyGroupProps {
     /**
      * The Amazon Resource Name (ARN) of the user hierarchy group.
      *

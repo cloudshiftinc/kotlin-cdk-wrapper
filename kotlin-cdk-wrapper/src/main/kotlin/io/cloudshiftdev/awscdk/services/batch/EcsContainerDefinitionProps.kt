@@ -388,7 +388,8 @@ public interface EcsContainerDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.EcsContainerDefinitionProps,
-  ) : CdkObject(cdkObject), EcsContainerDefinitionProps {
+  ) : CdkObject(cdkObject),
+      EcsContainerDefinitionProps {
     /**
      * The command that's passed to the container.
      *

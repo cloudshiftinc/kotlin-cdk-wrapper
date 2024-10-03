@@ -183,7 +183,8 @@ public interface EbsOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opensearchservice.EbsOptions,
-  ) : CdkObject(cdkObject), EbsOptions {
+  ) : CdkObject(cdkObject),
+      EbsOptions {
     /**
      * Specifies whether Amazon EBS volumes are attached to data nodes in the Amazon OpenSearch
      * Service domain.

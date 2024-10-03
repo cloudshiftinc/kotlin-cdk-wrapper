@@ -73,7 +73,8 @@ public interface Host {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.Host,
-  ) : CdkObject(cdkObject), Host {
+  ) : CdkObject(cdkObject),
+      Host {
     /**
      * Specifies the path on the host container instance that is presented to the container.
      *

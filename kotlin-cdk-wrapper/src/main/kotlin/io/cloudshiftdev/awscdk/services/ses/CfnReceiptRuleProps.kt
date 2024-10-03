@@ -44,6 +44,7 @@ import kotlin.jvm.JvmName
  * .s3Action(S3ActionProperty.builder()
  * .bucketName("bucketName")
  * // the properties below are optional
+ * .iamRoleArn("iamRoleArn")
  * .kmsKeyArn("kmsKeyArn")
  * .objectKeyPrefix("objectKeyPrefix")
  * .topicArn("topicArn")
@@ -188,7 +189,8 @@ public interface CfnReceiptRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleProps,
-  ) : CdkObject(cdkObject), CfnReceiptRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnReceiptRuleProps {
     /**
      * The name of an existing rule after which the new rule is placed.
      *

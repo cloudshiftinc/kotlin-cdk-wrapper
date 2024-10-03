@@ -215,7 +215,8 @@ public interface CfnPermissionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ram.CfnPermissionProps,
-  ) : CdkObject(cdkObject), CfnPermissionProps {
+  ) : CdkObject(cdkObject),
+      CfnPermissionProps {
     /**
      * Specifies the name of the customer managed permission.
      *

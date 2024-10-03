@@ -56,6 +56,10 @@ import kotlin.collections.Map
  * .stoppedDeployment(true) // default: false
  * .deploymentInAlarm(true)
  * .build())
+ * // whether the deployment group was configured to have CodeDeploy install a termination hook into
+ * an Auto Scaling group
+ * // default: false
+ * .terminationHook(true)
  * .build();
  * ```
  */

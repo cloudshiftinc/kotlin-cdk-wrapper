@@ -21,8 +21,7 @@ import kotlin.jvm.JvmName
  * .handler("index.handler")
  * .build()))
  * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
- * .environmentVariables(Map.of(
- * "stage", "prod"))
+ * .activeTracing(true)
  * .build();
  * ```
  */

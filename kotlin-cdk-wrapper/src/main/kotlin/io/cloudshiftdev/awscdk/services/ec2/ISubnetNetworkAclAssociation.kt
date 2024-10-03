@@ -22,7 +22,8 @@ public interface ISubnetNetworkAclAssociation : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.ISubnetNetworkAclAssociation,
-  ) : CdkObject(cdkObject), ISubnetNetworkAclAssociation {
+  ) : CdkObject(cdkObject),
+      ISubnetNetworkAclAssociation {
     /**
      * Apply the given removal policy to this resource.
      *

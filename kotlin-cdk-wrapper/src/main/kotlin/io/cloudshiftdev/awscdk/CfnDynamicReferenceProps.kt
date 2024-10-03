@@ -73,7 +73,8 @@ public interface CfnDynamicReferenceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnDynamicReferenceProps,
-  ) : CdkObject(cdkObject), CfnDynamicReferenceProps {
+  ) : CdkObject(cdkObject),
+      CfnDynamicReferenceProps {
     /**
      * The reference key of the dynamic reference.
      */

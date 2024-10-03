@@ -277,7 +277,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGlobalTable(
   cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -562,20 +563,20 @@ public open class CfnGlobalTable(
       = timeToLiveSpecification(TimeToLiveSpecificationProperty(`value`))
 
   /**
-   *
+   * Sets the write request settings for a global table or a global secondary index.
    */
   public open fun writeOnDemandThroughputSettings(): Any? =
       unwrap(this).getWriteOnDemandThroughputSettings()
 
   /**
-   *
+   * Sets the write request settings for a global table or a global secondary index.
    */
   public open fun writeOnDemandThroughputSettings(`value`: IResolvable) {
     unwrap(this).setWriteOnDemandThroughputSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * Sets the write request settings for a global table or a global secondary index.
    */
   public open
       fun writeOnDemandThroughputSettings(`value`: WriteOnDemandThroughputSettingsProperty) {
@@ -583,7 +584,7 @@ public open class CfnGlobalTable(
   }
 
   /**
-   *
+   * Sets the write request settings for a global table or a global secondary index.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("299f4a5f85f8ece9cfd1c5c9ece7c37bb829428bb1f6dfb96dee1ea4794527ed")
@@ -992,21 +993,36 @@ public open class CfnGlobalTable(
         fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty.Builder.() -> Unit)
 
     /**
+     * Sets the write request settings for a global table or a global secondary index.
+     *
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
-     * @param writeOnDemandThroughputSettings 
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index. 
      */
     public fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable)
 
     /**
+     * Sets the write request settings for a global table or a global secondary index.
+     *
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
-     * @param writeOnDemandThroughputSettings 
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index. 
      */
     public
         fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: WriteOnDemandThroughputSettingsProperty)
 
     /**
+     * Sets the write request settings for a global table or a global secondary index.
+     *
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
-     * @param writeOnDemandThroughputSettings 
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8d369adffc4c078a8c2cc57564c544e31adfc18de47eb2a84db3a1dfb26a5ba7")
@@ -1469,16 +1485,26 @@ public open class CfnGlobalTable(
         Unit = timeToLiveSpecification(TimeToLiveSpecificationProperty(timeToLiveSpecification))
 
     /**
+     * Sets the write request settings for a global table or a global secondary index.
+     *
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
-     * @param writeOnDemandThroughputSettings 
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index. 
      */
     override fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable) {
       cdkBuilder.writeOnDemandThroughputSettings(writeOnDemandThroughputSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * Sets the write request settings for a global table or a global secondary index.
+     *
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
-     * @param writeOnDemandThroughputSettings 
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index. 
      */
     override
         fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: WriteOnDemandThroughputSettingsProperty) {
@@ -1486,8 +1512,13 @@ public open class CfnGlobalTable(
     }
 
     /**
+     * Sets the write request settings for a global table or a global secondary index.
+     *
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
-     * @param writeOnDemandThroughputSettings 
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8d369adffc4c078a8c2cc57564c544e31adfc18de47eb2a84db3a1dfb26a5ba7")
@@ -1652,7 +1683,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty,
-    ) : CdkObject(cdkObject), AttributeDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        AttributeDefinitionProperty {
       /**
        * A name for the attribute.
        *
@@ -1909,7 +1941,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.CapacityAutoScalingSettingsProperty,
-    ) : CdkObject(cdkObject), CapacityAutoScalingSettingsProperty {
+    ) : CdkObject(cdkObject),
+        CapacityAutoScalingSettingsProperty {
       /**
        * The maximum provisioned capacity units for the global table.
        *
@@ -2053,7 +2086,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty,
-    ) : CdkObject(cdkObject), ContributorInsightsSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ContributorInsightsSpecificationProperty {
       /**
        * Indicates whether CloudWatch Contributor Insights are to be enabled (true) or disabled
        * (false).
@@ -2168,6 +2202,10 @@ public open class CfnGlobalTable(
     public fun projection(): Any
 
     /**
+     * Sets the write request settings for a global table or a global secondary index.
+     *
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-writeondemandthroughputsettings)
      */
     public fun writeOnDemandThroughputSettings(): Any? =
@@ -2264,18 +2302,24 @@ public open class CfnGlobalTable(
       public fun projection(projection: ProjectionProperty.Builder.() -> Unit)
 
       /**
-       * @param writeOnDemandThroughputSettings the value to be set.
+       * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
+       * or a global secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       public fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable)
 
       /**
-       * @param writeOnDemandThroughputSettings the value to be set.
+       * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
+       * or a global secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       public
           fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: WriteOnDemandThroughputSettingsProperty)
 
       /**
-       * @param writeOnDemandThroughputSettings the value to be set.
+       * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
+       * or a global secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("75bc700c6e6d1f0b234f7f279ab9bdd40651f966af3b0ae481f86f62bf711096")
@@ -2403,14 +2447,18 @@ public open class CfnGlobalTable(
           projection(ProjectionProperty(projection))
 
       /**
-       * @param writeOnDemandThroughputSettings the value to be set.
+       * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
+       * or a global secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       override fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable) {
         cdkBuilder.writeOnDemandThroughputSettings(writeOnDemandThroughputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param writeOnDemandThroughputSettings the value to be set.
+       * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
+       * or a global secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       override
           fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: WriteOnDemandThroughputSettingsProperty) {
@@ -2418,7 +2466,9 @@ public open class CfnGlobalTable(
       }
 
       /**
-       * @param writeOnDemandThroughputSettings the value to be set.
+       * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
+       * or a global secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("75bc700c6e6d1f0b234f7f279ab9bdd40651f966af3b0ae481f86f62bf711096")
@@ -2469,7 +2519,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty,
-    ) : CdkObject(cdkObject), GlobalSecondaryIndexProperty {
+    ) : CdkObject(cdkObject),
+        GlobalSecondaryIndexProperty {
       /**
        * The name of the global secondary index.
        *
@@ -2509,6 +2560,10 @@ public open class CfnGlobalTable(
       override fun projection(): Any = unwrap(this).getProjection()
 
       /**
+       * Sets the write request settings for a global table or a global secondary index.
+       *
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-writeondemandthroughputsettings)
        */
       override fun writeOnDemandThroughputSettings(): Any? =
@@ -2664,7 +2719,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty,
-    ) : CdkObject(cdkObject), KeySchemaProperty {
+    ) : CdkObject(cdkObject),
+        KeySchemaProperty {
       /**
        * The name of a key attribute.
        *
@@ -2792,7 +2848,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty,
-    ) : CdkObject(cdkObject), KinesisStreamSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        KinesisStreamSpecificationProperty {
       /**
        * The precision for the time and date that the stream was created.
        *
@@ -3071,7 +3128,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty,
-    ) : CdkObject(cdkObject), LocalSecondaryIndexProperty {
+    ) : CdkObject(cdkObject),
+        LocalSecondaryIndexProperty {
       /**
        * The name of the local secondary index.
        *
@@ -3201,7 +3259,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty,
-    ) : CdkObject(cdkObject), PointInTimeRecoverySpecificationProperty {
+    ) : CdkObject(cdkObject),
+        PointInTimeRecoverySpecificationProperty {
       /**
        * Indicates whether point in time recovery is enabled (true) or disabled (false) on the
        * table.
@@ -3356,7 +3415,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty,
-    ) : CdkObject(cdkObject), ProjectionProperty {
+    ) : CdkObject(cdkObject),
+        ProjectionProperty {
       /**
        * Represents the non-key attribute names which will be projected into the index.
        *
@@ -3403,6 +3463,10 @@ public open class CfnGlobalTable(
   }
 
   /**
+   * Sets the read request settings for a replica table or a replica global secondary index.
+   *
+   * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+   *
    * Example:
    *
    * ```
@@ -3419,6 +3483,8 @@ public open class CfnGlobalTable(
    */
   public interface ReadOnDemandThroughputSettingsProperty {
     /**
+     * Maximum number of read request units for the specified replica of a global table.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readondemandthroughputsettings.html#cfn-dynamodb-globaltable-readondemandthroughputsettings-maxreadrequestunits)
      */
     public fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
@@ -3429,7 +3495,8 @@ public open class CfnGlobalTable(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxReadRequestUnits the value to be set.
+       * @param maxReadRequestUnits Maximum number of read request units for the specified replica
+       * of a global table.
        */
       public fun maxReadRequestUnits(maxReadRequestUnits: Number)
     }
@@ -3441,7 +3508,8 @@ public open class CfnGlobalTable(
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadOnDemandThroughputSettingsProperty.builder()
 
       /**
-       * @param maxReadRequestUnits the value to be set.
+       * @param maxReadRequestUnits Maximum number of read request units for the specified replica
+       * of a global table.
        */
       override fun maxReadRequestUnits(maxReadRequestUnits: Number) {
         cdkBuilder.maxReadRequestUnits(maxReadRequestUnits)
@@ -3454,8 +3522,11 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadOnDemandThroughputSettingsProperty,
-    ) : CdkObject(cdkObject), ReadOnDemandThroughputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ReadOnDemandThroughputSettingsProperty {
       /**
+       * Maximum number of read request units for the specified replica of a global table.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-readondemandthroughputsettings.html#cfn-dynamodb-globaltable-readondemandthroughputsettings-maxreadrequestunits)
        */
       override fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
@@ -3613,7 +3684,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty,
-    ) : CdkObject(cdkObject), ReadProvisionedThroughputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ReadProvisionedThroughputSettingsProperty {
       /**
        * Specifies auto scaling settings for the replica table or global secondary index.
        *
@@ -3715,6 +3787,10 @@ public open class CfnGlobalTable(
     public fun indexName(): String
 
     /**
+     * Sets the read request settings for a replica global secondary index.
+     *
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-readondemandthroughputsettings)
      */
     public fun readOnDemandThroughputSettings(): Any? =
@@ -3778,18 +3854,24 @@ public open class CfnGlobalTable(
       public fun indexName(indexName: String)
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
+       * secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       public fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: IResolvable)
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
+       * secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       public
           fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: ReadOnDemandThroughputSettingsProperty)
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
+       * secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("afdf16d2798041a0b92d4ce57cbf89143ebabde09bf9c47543cd5c7117d71e89")
@@ -3877,14 +3959,18 @@ public open class CfnGlobalTable(
       }
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
+       * secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       override fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: IResolvable) {
         cdkBuilder.readOnDemandThroughputSettings(readOnDemandThroughputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
+       * secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       override
           fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: ReadOnDemandThroughputSettingsProperty) {
@@ -3892,7 +3978,9 @@ public open class CfnGlobalTable(
       }
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
+       * secondary index.
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("afdf16d2798041a0b92d4ce57cbf89143ebabde09bf9c47543cd5c7117d71e89")
@@ -3937,7 +4025,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty,
-    ) : CdkObject(cdkObject), ReplicaGlobalSecondaryIndexSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicaGlobalSecondaryIndexSpecificationProperty {
       /**
        * Updates the status for contributor insights for a specific table or index.
        *
@@ -3962,6 +4051,10 @@ public open class CfnGlobalTable(
       override fun indexName(): String = unwrap(this).getIndexName()
 
       /**
+       * Sets the read request settings for a replica global secondary index.
+       *
+       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-readondemandthroughputsettings)
        */
       override fun readOnDemandThroughputSettings(): Any? =
@@ -4065,7 +4158,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty,
-    ) : CdkObject(cdkObject), ReplicaSSESpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicaSSESpecificationProperty {
       /**
        * The AWS KMS key that should be used for the AWS KMS encryption.
        *
@@ -4237,6 +4331,8 @@ public open class CfnGlobalTable(
         unwrap(this).getPointInTimeRecoverySpecification()
 
     /**
+     * Sets read request settings for the replica table.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-readondemandthroughputsettings)
      */
     public fun readOnDemandThroughputSettings(): Any? =
@@ -4423,18 +4519,18 @@ public open class CfnGlobalTable(
           fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecificationProperty.Builder.() -> Unit)
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets read request settings for the replica table.
        */
       public fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: IResolvable)
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets read request settings for the replica table.
        */
       public
           fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: ReadOnDemandThroughputSettingsProperty)
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets read request settings for the replica table.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f7144966396cf4947837c85cdfeef9ac25a567337ea06f0ef3dc016f448d57d2")
@@ -4726,14 +4822,14 @@ public open class CfnGlobalTable(
           pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty(pointInTimeRecoverySpecification))
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets read request settings for the replica table.
        */
       override fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: IResolvable) {
         cdkBuilder.readOnDemandThroughputSettings(readOnDemandThroughputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets read request settings for the replica table.
        */
       override
           fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: ReadOnDemandThroughputSettingsProperty) {
@@ -4741,7 +4837,7 @@ public open class CfnGlobalTable(
       }
 
       /**
-       * @param readOnDemandThroughputSettings the value to be set.
+       * @param readOnDemandThroughputSettings Sets read request settings for the replica table.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f7144966396cf4947837c85cdfeef9ac25a567337ea06f0ef3dc016f448d57d2")
@@ -4931,7 +5027,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSpecificationProperty,
-    ) : CdkObject(cdkObject), ReplicaSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicaSpecificationProperty {
       /**
        * The settings used to enable or disable CloudWatch Contributor Insights for the specified
        * replica.
@@ -4980,6 +5077,8 @@ public open class CfnGlobalTable(
           unwrap(this).getPointInTimeRecoverySpecification()
 
       /**
+       * Sets read request settings for the replica table.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-readondemandthroughputsettings)
        */
       override fun readOnDemandThroughputSettings(): Any? =
@@ -5273,7 +5372,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaStreamSpecificationProperty,
-    ) : CdkObject(cdkObject), ReplicaStreamSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ReplicaStreamSpecificationProperty {
       /**
        * A resource-based policy document that contains the permissions for the specified stream of
        * a DynamoDB global table replica.
@@ -5441,7 +5541,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ResourcePolicyProperty,
-    ) : CdkObject(cdkObject), ResourcePolicyProperty {
+    ) : CdkObject(cdkObject),
+        ResourcePolicyProperty {
       /**
        * A resource-based policy document that contains permissions to add to the specified DynamoDB
        * table, its indexes, and stream.
@@ -5602,7 +5703,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.SSESpecificationProperty,
-    ) : CdkObject(cdkObject), SSESpecificationProperty {
+    ) : CdkObject(cdkObject),
+        SSESpecificationProperty {
       /**
        * Indicates whether server-side encryption is performed using an AWS managed key or an AWS
        * owned key.
@@ -5736,7 +5838,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty,
-    ) : CdkObject(cdkObject), StreamSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        StreamSpecificationProperty {
       /**
        * When an item in the table is modified, `StreamViewType` determines what information is
        * written to the stream for this table.
@@ -5920,7 +6023,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty,
-    ) : CdkObject(cdkObject), TargetTrackingScalingPolicyConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        TargetTrackingScalingPolicyConfigurationProperty {
       /**
        * Indicates whether scale in by the target tracking scaling policy is disabled.
        *
@@ -6083,7 +6187,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty,
-    ) : CdkObject(cdkObject), TimeToLiveSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        TimeToLiveSpecificationProperty {
       /**
        * The name of the attribute used to store the expiration time for items in the table.
        *
@@ -6123,6 +6228,10 @@ public open class CfnGlobalTable(
   }
 
   /**
+   * Sets the write request settings for a global table or a global secondary index.
+   *
+   * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+   *
    * Example:
    *
    * ```
@@ -6139,6 +6248,8 @@ public open class CfnGlobalTable(
    */
   public interface WriteOnDemandThroughputSettingsProperty {
     /**
+     * Maximum number of write request settings for the specified replica of a global table.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-writeondemandthroughputsettings.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings-maxwriterequestunits)
      */
     public fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
@@ -6149,7 +6260,8 @@ public open class CfnGlobalTable(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxWriteRequestUnits the value to be set.
+       * @param maxWriteRequestUnits Maximum number of write request settings for the specified
+       * replica of a global table.
        */
       public fun maxWriteRequestUnits(maxWriteRequestUnits: Number)
     }
@@ -6161,7 +6273,8 @@ public open class CfnGlobalTable(
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WriteOnDemandThroughputSettingsProperty.builder()
 
       /**
-       * @param maxWriteRequestUnits the value to be set.
+       * @param maxWriteRequestUnits Maximum number of write request settings for the specified
+       * replica of a global table.
        */
       override fun maxWriteRequestUnits(maxWriteRequestUnits: Number) {
         cdkBuilder.maxWriteRequestUnits(maxWriteRequestUnits)
@@ -6174,8 +6287,11 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WriteOnDemandThroughputSettingsProperty,
-    ) : CdkObject(cdkObject), WriteOnDemandThroughputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        WriteOnDemandThroughputSettingsProperty {
       /**
+       * Maximum number of write request settings for the specified replica of a global table.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-writeondemandthroughputsettings.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings-maxwriterequestunits)
        */
       override fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
@@ -6310,7 +6426,8 @@ public open class CfnGlobalTable(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WriteProvisionedThroughputSettingsProperty,
-    ) : CdkObject(cdkObject), WriteProvisionedThroughputSettingsProperty {
+    ) : CdkObject(cdkObject),
+        WriteProvisionedThroughputSettingsProperty {
       /**
        * Specifies auto scaling settings for the replica table or global secondary index.
        *

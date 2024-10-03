@@ -170,7 +170,8 @@ public interface SubnetGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.SubnetGroupProps,
-  ) : CdkObject(cdkObject), SubnetGroupProps {
+  ) : CdkObject(cdkObject),
+      SubnetGroupProps {
     /**
      * Description of the subnet group.
      */

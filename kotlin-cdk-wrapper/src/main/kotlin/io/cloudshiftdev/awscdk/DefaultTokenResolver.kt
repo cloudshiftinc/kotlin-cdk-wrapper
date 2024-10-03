@@ -22,7 +22,8 @@ import kotlin.collections.List
  */
 public open class DefaultTokenResolver(
   cdkObject: software.amazon.awscdk.DefaultTokenResolver,
-) : CdkObject(cdkObject), ITokenResolver {
+) : CdkObject(cdkObject),
+    ITokenResolver {
   public constructor(concat: IFragmentConcatenator) :
       this(software.amazon.awscdk.DefaultTokenResolver(concat.let(IFragmentConcatenator.Companion::unwrap))
   )

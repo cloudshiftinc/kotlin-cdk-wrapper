@@ -261,7 +261,8 @@ public interface SubnetSelection {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.SubnetSelection,
-  ) : CdkObject(cdkObject), SubnetSelection {
+  ) : CdkObject(cdkObject),
+      SubnetSelection {
     /**
      * Select subnets only in the given AZs.
      *

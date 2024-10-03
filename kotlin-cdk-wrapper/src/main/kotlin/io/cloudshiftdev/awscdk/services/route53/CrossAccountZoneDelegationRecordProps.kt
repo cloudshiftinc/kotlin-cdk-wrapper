@@ -187,7 +187,8 @@ public interface CrossAccountZoneDelegationRecordProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecordProps,
-  ) : CdkObject(cdkObject), CrossAccountZoneDelegationRecordProps {
+  ) : CdkObject(cdkObject),
+      CrossAccountZoneDelegationRecordProps {
     /**
      * Region from which to obtain temporary credentials.
      *

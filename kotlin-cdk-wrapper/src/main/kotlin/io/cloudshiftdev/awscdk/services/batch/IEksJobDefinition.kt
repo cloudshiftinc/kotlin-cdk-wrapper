@@ -61,7 +61,8 @@ public interface IEksJobDefinition : IJobDefinition {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IEksJobDefinition,
-  ) : CdkObject(cdkObject), IEksJobDefinition {
+  ) : CdkObject(cdkObject),
+      IEksJobDefinition {
     /**
      * Add a RetryStrategy to this JobDefinition.
      *

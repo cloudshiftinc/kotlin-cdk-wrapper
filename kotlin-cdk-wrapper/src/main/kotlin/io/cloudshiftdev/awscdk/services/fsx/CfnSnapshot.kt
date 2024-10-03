@@ -39,7 +39,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSnapshot(
   cdkObject: software.amazon.awscdk.services.fsx.CfnSnapshot,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

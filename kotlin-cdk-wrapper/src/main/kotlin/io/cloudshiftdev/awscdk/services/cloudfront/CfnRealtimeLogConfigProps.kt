@@ -208,7 +208,8 @@ public interface CfnRealtimeLogConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfigProps,
-  ) : CdkObject(cdkObject), CfnRealtimeLogConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnRealtimeLogConfigProps {
     /**
      * Contains information about the Amazon Kinesis data stream where you are sending real-time log
      * data for this real-time log configuration.

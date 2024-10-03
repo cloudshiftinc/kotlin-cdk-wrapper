@@ -60,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTrustAnchor(
   cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -448,7 +450,7 @@ public open class CfnTrustAnchor(
    * Customizable notification settings that will be applied to notification events.
    *
    * IAM Roles Anywhere consumes these settings while notifying across multiple channels -
-   * CloudWatch metrics, EventBridge , and AWS Health Dashboard .
+   * CloudWatch metrics, EventBridge, and AWS Health Dashboard .
    *
    * Example:
    *
@@ -471,7 +473,7 @@ public open class CfnTrustAnchor(
     /**
      * The specified channel of notification.
      *
-     * IAM Roles Anywhere uses CloudWatch metrics, EventBridge , and AWS Health Dashboard to notify
+     * IAM Roles Anywhere uses CloudWatch metrics, EventBridge, and AWS Health Dashboard to notify
      * for an event.
      *
      *
@@ -513,8 +515,8 @@ public open class CfnTrustAnchor(
     public interface Builder {
       /**
        * @param channel The specified channel of notification.
-       * IAM Roles Anywhere uses CloudWatch metrics, EventBridge , and AWS Health Dashboard to
-       * notify for an event.
+       * IAM Roles Anywhere uses CloudWatch metrics, EventBridge, and AWS Health Dashboard to notify
+       * for an event.
        *
        *
        * In the absence of a specific channel, IAM Roles Anywhere applies this setting to 'ALL'
@@ -552,8 +554,8 @@ public open class CfnTrustAnchor(
 
       /**
        * @param channel The specified channel of notification.
-       * IAM Roles Anywhere uses CloudWatch metrics, EventBridge , and AWS Health Dashboard to
-       * notify for an event.
+       * IAM Roles Anywhere uses CloudWatch metrics, EventBridge, and AWS Health Dashboard to notify
+       * for an event.
        *
        *
        * In the absence of a specific channel, IAM Roles Anywhere applies this setting to 'ALL'
@@ -599,12 +601,13 @@ public open class CfnTrustAnchor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.NotificationSettingProperty,
-    ) : CdkObject(cdkObject), NotificationSettingProperty {
+    ) : CdkObject(cdkObject),
+        NotificationSettingProperty {
       /**
        * The specified channel of notification.
        *
-       * IAM Roles Anywhere uses CloudWatch metrics, EventBridge , and AWS Health Dashboard to
-       * notify for an event.
+       * IAM Roles Anywhere uses CloudWatch metrics, EventBridge, and AWS Health Dashboard to notify
+       * for an event.
        *
        *
        * In the absence of a specific channel, IAM Roles Anywhere applies this setting to 'ALL'
@@ -752,7 +755,8 @@ public open class CfnTrustAnchor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty,
-    ) : CdkObject(cdkObject), SourceDataProperty {
+    ) : CdkObject(cdkObject),
+        SourceDataProperty {
       /**
        * The root certificate of the AWS Private Certificate Authority specified by this ARN is used
        * in trust validation for temporary credential requests.
@@ -905,7 +909,8 @@ public open class CfnTrustAnchor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceProperty,
-    ) : CdkObject(cdkObject), SourceProperty {
+    ) : CdkObject(cdkObject),
+        SourceProperty {
       /**
        * A union object representing the data field of the TrustAnchor depending on its type.
        *

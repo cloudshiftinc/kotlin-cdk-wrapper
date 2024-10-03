@@ -17,7 +17,8 @@ public interface IOriginRequestPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.IOriginRequestPolicy,
-  ) : CdkObject(cdkObject), IOriginRequestPolicy {
+  ) : CdkObject(cdkObject),
+      IOriginRequestPolicy {
     /**
      * The ID of the origin request policy.
      */

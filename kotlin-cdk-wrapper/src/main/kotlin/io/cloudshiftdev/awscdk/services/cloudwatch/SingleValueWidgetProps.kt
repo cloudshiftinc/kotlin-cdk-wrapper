@@ -284,7 +284,8 @@ public interface SingleValueWidgetProps : MetricWidgetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.SingleValueWidgetProps,
-  ) : CdkObject(cdkObject), SingleValueWidgetProps {
+  ) : CdkObject(cdkObject),
+      SingleValueWidgetProps {
     /**
      * The end of the time range to use for each widget independently from those of the dashboard.
      *

@@ -21,6 +21,7 @@ import kotlin.Unit
  * EbsDeviceOptionsBase ebsDeviceOptionsBase = EbsDeviceOptionsBase.builder()
  * .deleteOnTermination(false)
  * .iops(123)
+ * .throughput(123)
  * .volumeType(EbsDeviceVolumeType.STANDARD)
  * .build();
  * ```
@@ -46,6 +47,21 @@ public interface EbsDeviceOptionsBase {
    * [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html)
    */
   public fun iops(): Number? = unwrap(this).getIops()
+
+  /**
+   * The throughput to provision for a `gp3` volume.
+   *
+   * Valid Range: Minimum value of 125. Maximum value of 1000.
+   *
+   * `gp3` volumes deliver a consistent baseline throughput performance of 125 MiB/s.
+   * You can provision additional throughput for an additional cost at a ratio of 0.25 MiB/s per
+   * provisioned IOPS.
+   *
+   * Default: - 125 MiB/s.
+   *
+   * [Documentation](https://docs.aws.amazon.com/ebs/latest/userguide/general-purpose.html#gp3-performance)
+   */
+  public fun throughput(): Number? = unwrap(this).getThroughput()
 
   /**
    * The EBS volume type.
@@ -80,6 +96,16 @@ public interface EbsDeviceOptionsBase {
     public fun iops(iops: Number)
 
     /**
+     * @param throughput The throughput to provision for a `gp3` volume.
+     * Valid Range: Minimum value of 125. Maximum value of 1000.
+     *
+     * `gp3` volumes deliver a consistent baseline throughput performance of 125 MiB/s.
+     * You can provision additional throughput for an additional cost at a ratio of 0.25 MiB/s per
+     * provisioned IOPS.
+     */
+    public fun throughput(throughput: Number)
+
+    /**
      * @param volumeType The EBS volume type.
      */
     public fun volumeType(volumeType: EbsDeviceVolumeType)
@@ -109,6 +135,18 @@ public interface EbsDeviceOptionsBase {
     }
 
     /**
+     * @param throughput The throughput to provision for a `gp3` volume.
+     * Valid Range: Minimum value of 125. Maximum value of 1000.
+     *
+     * `gp3` volumes deliver a consistent baseline throughput performance of 125 MiB/s.
+     * You can provision additional throughput for an additional cost at a ratio of 0.25 MiB/s per
+     * provisioned IOPS.
+     */
+    override fun throughput(throughput: Number) {
+      cdkBuilder.throughput(throughput)
+    }
+
+    /**
      * @param volumeType The EBS volume type.
      */
     override fun volumeType(volumeType: EbsDeviceVolumeType) {
@@ -121,7 +159,8 @@ public interface EbsDeviceOptionsBase {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.EbsDeviceOptionsBase,
-  ) : CdkObject(cdkObject), EbsDeviceOptionsBase {
+  ) : CdkObject(cdkObject),
+      EbsDeviceOptionsBase {
     /**
      * Indicates whether to delete the volume when the instance is terminated.
      *
@@ -142,6 +181,21 @@ public interface EbsDeviceOptionsBase {
      * [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html)
      */
     override fun iops(): Number? = unwrap(this).getIops()
+
+    /**
+     * The throughput to provision for a `gp3` volume.
+     *
+     * Valid Range: Minimum value of 125. Maximum value of 1000.
+     *
+     * `gp3` volumes deliver a consistent baseline throughput performance of 125 MiB/s.
+     * You can provision additional throughput for an additional cost at a ratio of 0.25 MiB/s per
+     * provisioned IOPS.
+     *
+     * Default: - 125 MiB/s.
+     *
+     * [Documentation](https://docs.aws.amazon.com/ebs/latest/userguide/general-purpose.html#gp3-performance)
+     */
+    override fun throughput(): Number? = unwrap(this).getThroughput()
 
     /**
      * The EBS volume type.

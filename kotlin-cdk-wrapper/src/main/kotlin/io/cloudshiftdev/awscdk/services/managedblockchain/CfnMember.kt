@@ -69,7 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMember(
   cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -521,7 +522,8 @@ public open class CfnMember(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.ApprovalThresholdPolicyProperty,
-    ) : CdkObject(cdkObject), ApprovalThresholdPolicyProperty {
+    ) : CdkObject(cdkObject),
+        ApprovalThresholdPolicyProperty {
       /**
        * The duration from the time that a proposal is created until it expires.
        *
@@ -713,7 +715,8 @@ public open class CfnMember(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberConfigurationProperty,
-    ) : CdkObject(cdkObject), MemberConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        MemberConfigurationProperty {
       /**
        * An optional description of the member.
        *
@@ -845,7 +848,8 @@ public open class CfnMember(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty,
-    ) : CdkObject(cdkObject), MemberFabricConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        MemberFabricConfigurationProperty {
       /**
        * The password for the member's initial administrative user.
        *
@@ -977,7 +981,8 @@ public open class CfnMember(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty,
-    ) : CdkObject(cdkObject), MemberFrameworkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        MemberFrameworkConfigurationProperty {
       /**
        * Configuration properties for Hyperledger Fabric.
        *
@@ -1245,7 +1250,8 @@ public open class CfnMember(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NetworkConfigurationProperty {
       /**
        * Attributes of the blockchain framework for the network.
        *
@@ -1372,7 +1378,8 @@ public open class CfnMember(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFabricConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkFabricConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NetworkFabricConfigurationProperty {
       /**
        * The edition of Amazon Managed Blockchain that the network uses.
        *
@@ -1501,7 +1508,8 @@ public open class CfnMember(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkFrameworkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NetworkFrameworkConfigurationProperty {
       /**
        * Configuration properties for Hyperledger Fabric for a member in a Managed Blockchain
        * network that is using the Hyperledger Fabric framework.
@@ -1641,7 +1649,8 @@ public open class CfnMember(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.VotingPolicyProperty,
-    ) : CdkObject(cdkObject), VotingPolicyProperty {
+    ) : CdkObject(cdkObject),
+        VotingPolicyProperty {
       /**
        * Defines the rules for the network for voting on proposals, such as the percentage of `YES`
        * votes required for the proposal to be approved and the duration of the proposal.

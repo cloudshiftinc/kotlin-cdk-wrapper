@@ -22,7 +22,8 @@ public interface IRequestValidator : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IRequestValidator,
-  ) : CdkObject(cdkObject), IRequestValidator {
+  ) : CdkObject(cdkObject),
+      IRequestValidator {
     /**
      * Apply the given removal policy to this resource.
      *

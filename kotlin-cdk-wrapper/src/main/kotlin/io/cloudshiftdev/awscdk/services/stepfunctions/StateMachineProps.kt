@@ -68,6 +68,14 @@ public interface StateMachineProps {
       unwrap(this).getDefinitionSubstitutions() ?: emptyMap()
 
   /**
+   * Configures server-side encryption of the state machine definition and execution history.
+   *
+   * Default: - data is transparently encrypted using an AWS owned key
+   */
+  public fun encryptionConfiguration(): EncryptionConfiguration? =
+      unwrap(this).getEncryptionConfiguration()?.let(EncryptionConfiguration::wrap)
+
+  /**
    * Defines what execution history events are logged and where they are logged.
    *
    * Default: No logging
@@ -144,6 +152,12 @@ public interface StateMachineProps {
      * @param definitionSubstitutions substitutions for the definition body as a key-value map.
      */
     public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
+
+    /**
+     * @param encryptionConfiguration Configures server-side encryption of the state machine
+     * definition and execution history.
+     */
+    public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration)
 
     /**
      * @param logs Defines what execution history events are logged and where they are logged.
@@ -224,6 +238,14 @@ public interface StateMachineProps {
     }
 
     /**
+     * @param encryptionConfiguration Configures server-side encryption of the state machine
+     * definition and execution history.
+     */
+    override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration) {
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfiguration.Companion::unwrap))
+    }
+
+    /**
      * @param logs Defines what execution history events are logged and where they are logged.
      */
     override fun logs(logs: LogOptions) {
@@ -286,7 +308,8 @@ public interface StateMachineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineProps,
-  ) : CdkObject(cdkObject), StateMachineProps {
+  ) : CdkObject(cdkObject),
+      StateMachineProps {
     /**
      * Comment that describes this state machine.
      *
@@ -313,6 +336,14 @@ public interface StateMachineProps {
      */
     override fun definitionSubstitutions(): Map<String, String> =
         unwrap(this).getDefinitionSubstitutions() ?: emptyMap()
+
+    /**
+     * Configures server-side encryption of the state machine definition and execution history.
+     *
+     * Default: - data is transparently encrypted using an AWS owned key
+     */
+    override fun encryptionConfiguration(): EncryptionConfiguration? =
+        unwrap(this).getEncryptionConfiguration()?.let(EncryptionConfiguration::wrap)
 
     /**
      * Defines what execution history events are logged and where they are logged.

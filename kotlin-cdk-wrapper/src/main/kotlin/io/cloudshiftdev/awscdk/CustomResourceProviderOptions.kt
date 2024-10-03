@@ -221,7 +221,8 @@ public interface CustomResourceProviderOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CustomResourceProviderOptions,
-  ) : CdkObject(cdkObject), CustomResourceProviderOptions {
+  ) : CdkObject(cdkObject),
+      CustomResourceProviderOptions {
     /**
      * A description of the function.
      *

@@ -407,7 +407,8 @@ public interface CodeBuildOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.CodeBuildOptions,
-  ) : CdkObject(cdkObject), CodeBuildOptions {
+  ) : CdkObject(cdkObject),
+      CodeBuildOptions {
     /**
      * Partial build environment, will be combined with other build environments that apply.
      *

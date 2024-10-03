@@ -43,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMonitoringSubscription(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -334,7 +335,8 @@ public open class CfnMonitoringSubscription(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty,
-    ) : CdkObject(cdkObject), MonitoringSubscriptionProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringSubscriptionProperty {
       /**
        * A subscription configuration for additional CloudWatch metrics.
        *
@@ -421,7 +423,8 @@ public open class CfnMonitoringSubscription(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty,
-    ) : CdkObject(cdkObject), RealtimeMetricsSubscriptionConfigProperty {
+    ) : CdkObject(cdkObject),
+        RealtimeMetricsSubscriptionConfigProperty {
       /**
        * A flag that indicates whether additional CloudWatch metrics are enabled for a given
        * CloudFront distribution.

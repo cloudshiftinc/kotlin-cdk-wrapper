@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class UserPoolDomain(
   cdkObject: software.amazon.awscdk.services.cognito.UserPoolDomain,
-) : Resource(cdkObject), IUserPoolDomain {
+) : Resource(cdkObject),
+    IUserPoolDomain {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

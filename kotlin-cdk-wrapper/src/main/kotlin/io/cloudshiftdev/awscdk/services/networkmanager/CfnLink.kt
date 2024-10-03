@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLink(
   cdkObject: software.amazon.awscdk.services.networkmanager.CfnLink,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -516,7 +518,8 @@ public open class CfnLink(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnLink.BandwidthProperty,
-    ) : CdkObject(cdkObject), BandwidthProperty {
+    ) : CdkObject(cdkObject),
+        BandwidthProperty {
       /**
        * Download speed in Mbps.
        *

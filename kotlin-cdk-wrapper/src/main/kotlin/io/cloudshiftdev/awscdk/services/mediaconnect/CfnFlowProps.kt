@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 
 /**
@@ -48,6 +49,18 @@ import kotlin.jvm.JvmName
  * .ingestPort(123)
  * .maxBitrate(123)
  * .maxLatency(123)
+ * .maxSyncBuffer(123)
+ * .mediaStreamSourceConfigurations(List.of(MediaStreamSourceConfigurationProperty.builder()
+ * .encodingName("encodingName")
+ * .mediaStreamName("mediaStreamName")
+ * // the properties below are optional
+ * .inputConfigurations(List.of(InputConfigurationProperty.builder()
+ * .inputPort(123)
+ * .interface(InterfaceProperty.builder()
+ * .name("name")
+ * .build())
+ * .build()))
+ * .build()))
  * .minLatency(123)
  * .name("name")
  * .protocol("protocol")
@@ -63,6 +76,32 @@ import kotlin.jvm.JvmName
  * .build())
  * // the properties below are optional
  * .availabilityZone("availabilityZone")
+ * .maintenance(MaintenanceProperty.builder()
+ * .maintenanceDay("maintenanceDay")
+ * .maintenanceStartHour("maintenanceStartHour")
+ * .build())
+ * .mediaStreams(List.of(MediaStreamProperty.builder()
+ * .mediaStreamId(123)
+ * .mediaStreamName("mediaStreamName")
+ * .mediaStreamType("mediaStreamType")
+ * // the properties below are optional
+ * .attributes(MediaStreamAttributesProperty.builder()
+ * .fmtp(FmtpProperty.builder()
+ * .channelOrder("channelOrder")
+ * .colorimetry("colorimetry")
+ * .exactFramerate("exactFramerate")
+ * .par("par")
+ * .range("range")
+ * .scanMode("scanMode")
+ * .tcs("tcs")
+ * .build())
+ * .lang("lang")
+ * .build())
+ * .clockRate(123)
+ * .description("description")
+ * .fmt(123)
+ * .videoFormat("videoFormat")
+ * .build()))
  * .sourceFailoverConfig(FailoverConfigProperty.builder()
  * .failoverMode("failoverMode")
  * .recoveryWindow(123)
@@ -71,6 +110,18 @@ import kotlin.jvm.JvmName
  * .build())
  * .state("state")
  * .build())
+ * .sourceMonitoringConfig(SourceMonitoringConfigProperty.builder()
+ * .thumbnailState("thumbnailState")
+ * .build())
+ * .vpcInterfaces(List.of(VpcInterfaceProperty.builder()
+ * .name("name")
+ * .roleArn("roleArn")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .networkInterfaceIds(List.of("networkInterfaceIds"))
+ * .networkInterfaceType("networkInterfaceType")
+ * .build()))
  * .build();
  * ```
  *
@@ -85,6 +136,22 @@ public interface CfnFlowProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-availabilityzone)
    */
   public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+  /**
+   * The maintenance settings you want to use for the flow.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-maintenance)
+   */
+  public fun maintenance(): Any? = unwrap(this).getMaintenance()
+
+  /**
+   * The media streams associated with the flow.
+   *
+   * You can associate any of these media streams with sources and outputs on the flow.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-mediastreams)
+   */
+  public fun mediaStreams(): Any? = unwrap(this).getMediaStreams()
 
   /**
    * The name of the flow.
@@ -108,6 +175,20 @@ public interface CfnFlowProps {
   public fun sourceFailoverConfig(): Any? = unwrap(this).getSourceFailoverConfig()
 
   /**
+   * The settings for source monitoring.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-sourcemonitoringconfig)
+   */
+  public fun sourceMonitoringConfig(): Any? = unwrap(this).getSourceMonitoringConfig()
+
+  /**
+   * The VPC interfaces that you added to this flow.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-vpcinterfaces)
+   */
+  public fun vpcInterfaces(): Any? = unwrap(this).getVpcInterfaces()
+
+  /**
    * A builder for [CfnFlowProps]
    */
   @CdkDslMarker
@@ -117,6 +198,41 @@ public interface CfnFlowProps {
      * These options are limited to the Availability Zones within the current AWS Region.
      */
     public fun availabilityZone(availabilityZone: String)
+
+    /**
+     * @param maintenance The maintenance settings you want to use for the flow.
+     */
+    public fun maintenance(maintenance: IResolvable)
+
+    /**
+     * @param maintenance The maintenance settings you want to use for the flow.
+     */
+    public fun maintenance(maintenance: CfnFlow.MaintenanceProperty)
+
+    /**
+     * @param maintenance The maintenance settings you want to use for the flow.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4e4bbeafe30f52752ffd112960ef751f1e82f13becb5a37f52d03e2ac614f06a")
+    public fun maintenance(maintenance: CfnFlow.MaintenanceProperty.Builder.() -> Unit)
+
+    /**
+     * @param mediaStreams The media streams associated with the flow.
+     * You can associate any of these media streams with sources and outputs on the flow.
+     */
+    public fun mediaStreams(mediaStreams: IResolvable)
+
+    /**
+     * @param mediaStreams The media streams associated with the flow.
+     * You can associate any of these media streams with sources and outputs on the flow.
+     */
+    public fun mediaStreams(mediaStreams: List<Any>)
+
+    /**
+     * @param mediaStreams The media streams associated with the flow.
+     * You can associate any of these media streams with sources and outputs on the flow.
+     */
+    public fun mediaStreams(vararg mediaStreams: Any)
 
     /**
      * @param name The name of the flow. 
@@ -157,6 +273,40 @@ public interface CfnFlowProps {
     @JvmName("605e84d7038f36749ef82bb5d123ad174c0f22bf4883a1719e210e853f3c3adf")
     public
         fun sourceFailoverConfig(sourceFailoverConfig: CfnFlow.FailoverConfigProperty.Builder.() -> Unit)
+
+    /**
+     * @param sourceMonitoringConfig The settings for source monitoring.
+     */
+    public fun sourceMonitoringConfig(sourceMonitoringConfig: IResolvable)
+
+    /**
+     * @param sourceMonitoringConfig The settings for source monitoring.
+     */
+    public
+        fun sourceMonitoringConfig(sourceMonitoringConfig: CfnFlow.SourceMonitoringConfigProperty)
+
+    /**
+     * @param sourceMonitoringConfig The settings for source monitoring.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("68c4c1296e7f91814a8f598a234fb495d88be1ab9ff823b5e596c2fd2721052a")
+    public
+        fun sourceMonitoringConfig(sourceMonitoringConfig: CfnFlow.SourceMonitoringConfigProperty.Builder.() -> Unit)
+
+    /**
+     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     */
+    public fun vpcInterfaces(vpcInterfaces: IResolvable)
+
+    /**
+     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     */
+    public fun vpcInterfaces(vpcInterfaces: List<Any>)
+
+    /**
+     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     */
+    public fun vpcInterfaces(vararg vpcInterfaces: Any)
   }
 
   private class BuilderImpl : Builder {
@@ -170,6 +320,50 @@ public interface CfnFlowProps {
     override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
+
+    /**
+     * @param maintenance The maintenance settings you want to use for the flow.
+     */
+    override fun maintenance(maintenance: IResolvable) {
+      cdkBuilder.maintenance(maintenance.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param maintenance The maintenance settings you want to use for the flow.
+     */
+    override fun maintenance(maintenance: CfnFlow.MaintenanceProperty) {
+      cdkBuilder.maintenance(maintenance.let(CfnFlow.MaintenanceProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param maintenance The maintenance settings you want to use for the flow.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4e4bbeafe30f52752ffd112960ef751f1e82f13becb5a37f52d03e2ac614f06a")
+    override fun maintenance(maintenance: CfnFlow.MaintenanceProperty.Builder.() -> Unit): Unit =
+        maintenance(CfnFlow.MaintenanceProperty(maintenance))
+
+    /**
+     * @param mediaStreams The media streams associated with the flow.
+     * You can associate any of these media streams with sources and outputs on the flow.
+     */
+    override fun mediaStreams(mediaStreams: IResolvable) {
+      cdkBuilder.mediaStreams(mediaStreams.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param mediaStreams The media streams associated with the flow.
+     * You can associate any of these media streams with sources and outputs on the flow.
+     */
+    override fun mediaStreams(mediaStreams: List<Any>) {
+      cdkBuilder.mediaStreams(mediaStreams.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param mediaStreams The media streams associated with the flow.
+     * You can associate any of these media streams with sources and outputs on the flow.
+     */
+    override fun mediaStreams(vararg mediaStreams: Any): Unit = mediaStreams(mediaStreams.toList())
 
     /**
      * @param name The name of the flow. 
@@ -223,13 +417,59 @@ public interface CfnFlowProps {
         fun sourceFailoverConfig(sourceFailoverConfig: CfnFlow.FailoverConfigProperty.Builder.() -> Unit):
         Unit = sourceFailoverConfig(CfnFlow.FailoverConfigProperty(sourceFailoverConfig))
 
+    /**
+     * @param sourceMonitoringConfig The settings for source monitoring.
+     */
+    override fun sourceMonitoringConfig(sourceMonitoringConfig: IResolvable) {
+      cdkBuilder.sourceMonitoringConfig(sourceMonitoringConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param sourceMonitoringConfig The settings for source monitoring.
+     */
+    override
+        fun sourceMonitoringConfig(sourceMonitoringConfig: CfnFlow.SourceMonitoringConfigProperty) {
+      cdkBuilder.sourceMonitoringConfig(sourceMonitoringConfig.let(CfnFlow.SourceMonitoringConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param sourceMonitoringConfig The settings for source monitoring.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("68c4c1296e7f91814a8f598a234fb495d88be1ab9ff823b5e596c2fd2721052a")
+    override
+        fun sourceMonitoringConfig(sourceMonitoringConfig: CfnFlow.SourceMonitoringConfigProperty.Builder.() -> Unit):
+        Unit =
+        sourceMonitoringConfig(CfnFlow.SourceMonitoringConfigProperty(sourceMonitoringConfig))
+
+    /**
+     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     */
+    override fun vpcInterfaces(vpcInterfaces: IResolvable) {
+      cdkBuilder.vpcInterfaces(vpcInterfaces.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     */
+    override fun vpcInterfaces(vpcInterfaces: List<Any>) {
+      cdkBuilder.vpcInterfaces(vpcInterfaces.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param vpcInterfaces The VPC interfaces that you added to this flow.
+     */
+    override fun vpcInterfaces(vararg vpcInterfaces: Any): Unit =
+        vpcInterfaces(vpcInterfaces.toList())
+
     public fun build(): software.amazon.awscdk.services.mediaconnect.CfnFlowProps =
         cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowProps,
-  ) : CdkObject(cdkObject), CfnFlowProps {
+  ) : CdkObject(cdkObject),
+      CfnFlowProps {
     /**
      * The Availability Zone that you want to create the flow in.
      *
@@ -238,6 +478,22 @@ public interface CfnFlowProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-availabilityzone)
      */
     override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+    /**
+     * The maintenance settings you want to use for the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-maintenance)
+     */
+    override fun maintenance(): Any? = unwrap(this).getMaintenance()
+
+    /**
+     * The media streams associated with the flow.
+     *
+     * You can associate any of these media streams with sources and outputs on the flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-mediastreams)
+     */
+    override fun mediaStreams(): Any? = unwrap(this).getMediaStreams()
 
     /**
      * The name of the flow.
@@ -259,6 +515,20 @@ public interface CfnFlowProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-sourcefailoverconfig)
      */
     override fun sourceFailoverConfig(): Any? = unwrap(this).getSourceFailoverConfig()
+
+    /**
+     * The settings for source monitoring.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-sourcemonitoringconfig)
+     */
+    override fun sourceMonitoringConfig(): Any? = unwrap(this).getSourceMonitoringConfig()
+
+    /**
+     * The VPC interfaces that you added to this flow.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-vpcinterfaces)
+     */
+    override fun vpcInterfaces(): Any? = unwrap(this).getVpcInterfaces()
   }
 
   public companion object {

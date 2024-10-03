@@ -69,7 +69,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStage(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -758,7 +760,8 @@ public open class CfnStage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty,
-    ) : CdkObject(cdkObject), AccessLogSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AccessLogSettingsProperty {
       /**
        * The ARN of the CloudWatch Logs log group to receive access logs.
        *
@@ -980,7 +983,8 @@ public open class CfnStage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty,
-    ) : CdkObject(cdkObject), RouteSettingsProperty {
+    ) : CdkObject(cdkObject),
+        RouteSettingsProperty {
       /**
        * Specifies whether ( `true` ) or not ( `false` ) data trace logging is enabled for this
        * route.

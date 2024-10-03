@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDevicePool(
   cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePool,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -693,7 +695,8 @@ public open class CfnDevicePool(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePool.RuleProperty,
-    ) : CdkObject(cdkObject), RuleProperty {
+    ) : CdkObject(cdkObject),
+        RuleProperty {
       /**
        * The rule's stringified attribute. For example, specify the value as `"\"abc\""` .
        *

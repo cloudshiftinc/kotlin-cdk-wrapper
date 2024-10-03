@@ -111,7 +111,8 @@ public interface SdkCallsPolicyOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.customresources.SdkCallsPolicyOptions,
-  ) : CdkObject(cdkObject), SdkCallsPolicyOptions {
+  ) : CdkObject(cdkObject),
+      SdkCallsPolicyOptions {
     /**
      * The resources that the calls will have access to.
      *

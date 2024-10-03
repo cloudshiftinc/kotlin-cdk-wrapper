@@ -136,7 +136,8 @@ public interface CfnAttributeGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupProps,
-  ) : CdkObject(cdkObject), CfnAttributeGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnAttributeGroupProps {
     /**
      * A nested object in a JSON or YAML template that supports arbitrary definitions.
      *

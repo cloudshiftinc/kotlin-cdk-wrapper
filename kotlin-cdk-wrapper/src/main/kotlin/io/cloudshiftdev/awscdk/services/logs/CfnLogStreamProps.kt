@@ -84,7 +84,8 @@ public interface CfnLogStreamProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.CfnLogStreamProps,
-  ) : CdkObject(cdkObject), CfnLogStreamProps {
+  ) : CdkObject(cdkObject),
+      CfnLogStreamProps {
     /**
      * The name of the log group where the log stream is created.
      *

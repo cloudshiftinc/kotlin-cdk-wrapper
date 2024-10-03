@@ -65,7 +65,8 @@ public interface CfnResolverDNSSECConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfigProps,
-  ) : CdkObject(cdkObject), CfnResolverDNSSECConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnResolverDNSSECConfigProps {
     /**
      * The ID of the virtual private cloud (VPC) that you're configuring the DNSSEC validation
      * status for.

@@ -220,7 +220,8 @@ public interface DataProtectionPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.DataProtectionPolicyProps,
-  ) : CdkObject(cdkObject), DataProtectionPolicyProps {
+  ) : CdkObject(cdkObject),
+      DataProtectionPolicyProps {
     /**
      * Amazon Kinesis Data Firehose delivery stream to send audit findings to.
      *

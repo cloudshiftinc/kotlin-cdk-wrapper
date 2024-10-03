@@ -87,7 +87,8 @@ public interface ClientVpnEndpointAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpointAttributes,
-  ) : CdkObject(cdkObject), ClientVpnEndpointAttributes {
+  ) : CdkObject(cdkObject),
+      ClientVpnEndpointAttributes {
     /**
      * The endpoint ID.
      */

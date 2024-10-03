@@ -56,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBillingGroup(
   cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -614,7 +616,8 @@ public open class CfnBillingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroup.AccountGroupingProperty,
-    ) : CdkObject(cdkObject), AccountGroupingProperty {
+    ) : CdkObject(cdkObject),
+        AccountGroupingProperty {
       /**
        * Specifies if this billing group will automatically associate newly added AWS accounts that
        * join your consolidated billing family.
@@ -711,7 +714,8 @@ public open class CfnBillingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroup.ComputationPreferenceProperty,
-    ) : CdkObject(cdkObject), ComputationPreferenceProperty {
+    ) : CdkObject(cdkObject),
+        ComputationPreferenceProperty {
       /**
        * The Amazon Resource Name (ARN) of the pricing plan used to compute the AWS charges for a
        * billing group.

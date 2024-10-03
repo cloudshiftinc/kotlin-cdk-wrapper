@@ -148,7 +148,8 @@ public interface CfnApplicationOutputProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutputProps,
-  ) : CdkObject(cdkObject), CfnApplicationOutputProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationOutputProps {
     /**
      * The name of the application.
      *

@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CodeSigningConfig(
   cdkObject: software.amazon.awscdk.services.lambda.CodeSigningConfig,
-) : Resource(cdkObject), ICodeSigningConfig {
+) : Resource(cdkObject),
+    ICodeSigningConfig {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -54,7 +54,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnLocationHDFSProps {
   /**
-   * The Amazon Resource Names (ARNs) of the agents that are used to connect to the HDFS cluster.
+   * The Amazon Resource Names (ARNs) of the DataSync agents that can connect to your HDFS cluster.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-agentarns)
    */
@@ -184,14 +184,14 @@ public interface CfnLocationHDFSProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param agentArns The Amazon Resource Names (ARNs) of the agents that are used to connect to
-     * the HDFS cluster. 
+     * @param agentArns The Amazon Resource Names (ARNs) of the DataSync agents that can connect to
+     * your HDFS cluster. 
      */
     public fun agentArns(agentArns: List<String>)
 
     /**
-     * @param agentArns The Amazon Resource Names (ARNs) of the agents that are used to connect to
-     * the HDFS cluster. 
+     * @param agentArns The Amazon Resource Names (ARNs) of the DataSync agents that can connect to
+     * your HDFS cluster. 
      */
     public fun agentArns(vararg agentArns: String)
 
@@ -332,16 +332,16 @@ public interface CfnLocationHDFSProps {
         software.amazon.awscdk.services.datasync.CfnLocationHDFSProps.builder()
 
     /**
-     * @param agentArns The Amazon Resource Names (ARNs) of the agents that are used to connect to
-     * the HDFS cluster. 
+     * @param agentArns The Amazon Resource Names (ARNs) of the DataSync agents that can connect to
+     * your HDFS cluster. 
      */
     override fun agentArns(agentArns: List<String>) {
       cdkBuilder.agentArns(agentArns)
     }
 
     /**
-     * @param agentArns The Amazon Resource Names (ARNs) of the agents that are used to connect to
-     * the HDFS cluster. 
+     * @param agentArns The Amazon Resource Names (ARNs) of the DataSync agents that can connect to
+     * your HDFS cluster. 
      */
     override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
 
@@ -511,9 +511,11 @@ public interface CfnLocationHDFSProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFSProps,
-  ) : CdkObject(cdkObject), CfnLocationHDFSProps {
+  ) : CdkObject(cdkObject),
+      CfnLocationHDFSProps {
     /**
-     * The Amazon Resource Names (ARNs) of the agents that are used to connect to the HDFS cluster.
+     * The Amazon Resource Names (ARNs) of the DataSync agents that can connect to your HDFS
+     * cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-agentarns)
      */

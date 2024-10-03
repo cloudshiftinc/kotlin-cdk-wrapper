@@ -30,6 +30,25 @@ import kotlin.jvm.JvmName
  * .groupEntityType("groupEntityType")
  * .build())
  * .build())
+ * .openIdConnectConfiguration(OpenIdConnectConfigurationProperty.builder()
+ * .issuer("issuer")
+ * .tokenSelection(OpenIdConnectTokenSelectionProperty.builder()
+ * .accessTokenOnly(OpenIdConnectAccessTokenConfigurationProperty.builder()
+ * .audiences(List.of("audiences"))
+ * .principalIdClaim("principalIdClaim")
+ * .build())
+ * .identityTokenOnly(OpenIdConnectIdentityTokenConfigurationProperty.builder()
+ * .clientIds(List.of("clientIds"))
+ * .principalIdClaim("principalIdClaim")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .entityIdPrefix("entityIdPrefix")
+ * .groupConfiguration(OpenIdConnectGroupConfigurationProperty.builder()
+ * .groupClaim("groupClaim")
+ * .groupEntityType("groupEntityType")
+ * .build())
+ * .build())
  * .build())
  * .policyStoreId("policyStoreId")
  * // the properties below are optional
@@ -41,7 +60,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnIdentitySourceProps {
   /**
-   * Contains configuration information about an identity source.
+   * Contains configuration information used when creating a new identity source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
    */
@@ -71,17 +90,20 @@ public interface CfnIdentitySourceProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     public fun configuration(configuration: IResolvable)
 
     /**
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     public fun configuration(configuration: CfnIdentitySource.IdentitySourceConfigurationProperty)
 
     /**
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b629a9e57b120a7a975fd1c6bbec319e646a4f38b1564a226380c164c79c8c2f")
@@ -109,14 +131,16 @@ public interface CfnIdentitySourceProps {
         software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySourceProps.builder()
 
     /**
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     override
         fun configuration(configuration: CfnIdentitySource.IdentitySourceConfigurationProperty) {
@@ -124,7 +148,8 @@ public interface CfnIdentitySourceProps {
     }
 
     /**
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b629a9e57b120a7a975fd1c6bbec319e646a4f38b1564a226380c164c79c8c2f")
@@ -156,9 +181,10 @@ public interface CfnIdentitySourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySourceProps,
-  ) : CdkObject(cdkObject), CfnIdentitySourceProps {
+  ) : CdkObject(cdkObject),
+      CfnIdentitySourceProps {
     /**
-     * Contains configuration information about an identity source.
+     * Contains configuration information used when creating a new identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
      */

@@ -101,7 +101,8 @@ public interface DomainOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.DomainOptions,
-  ) : CdkObject(cdkObject), DomainOptions {
+  ) : CdkObject(cdkObject),
+      DomainOptions {
     /**
      * The certificate to use with the domain name.
      */

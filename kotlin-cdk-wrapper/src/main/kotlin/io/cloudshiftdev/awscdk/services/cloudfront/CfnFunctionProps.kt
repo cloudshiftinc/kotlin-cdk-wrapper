@@ -247,7 +247,8 @@ public interface CfnFunctionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunctionProps,
-  ) : CdkObject(cdkObject), CfnFunctionProps {
+  ) : CdkObject(cdkObject),
+      CfnFunctionProps {
     /**
      * A flag that determines whether to automatically publish the function to the `LIVE` stage when
      * it’s created.

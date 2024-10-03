@@ -71,7 +71,8 @@ public interface WithoutPolicyUpdatesOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions,
-  ) : CdkObject(cdkObject), WithoutPolicyUpdatesOptions {
+  ) : CdkObject(cdkObject),
+      WithoutPolicyUpdatesOptions {
     /**
      * Add grants to resources instead of dropping them.
      *

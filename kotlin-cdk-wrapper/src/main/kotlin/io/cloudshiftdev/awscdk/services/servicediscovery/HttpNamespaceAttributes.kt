@@ -91,7 +91,8 @@ public interface HttpNamespaceAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.HttpNamespaceAttributes,
-  ) : CdkObject(cdkObject), HttpNamespaceAttributes {
+  ) : CdkObject(cdkObject),
+      HttpNamespaceAttributes {
     /**
      * Namespace ARN for the Namespace.
      */

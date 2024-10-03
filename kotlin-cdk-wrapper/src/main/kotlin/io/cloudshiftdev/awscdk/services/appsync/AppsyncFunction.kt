@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -31,7 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class AppsyncFunction(
   cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunction,
-) : Resource(cdkObject), IAppsyncFunction {
+) : Resource(cdkObject),
+    IAppsyncFunction {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -105,6 +107,19 @@ public open class AppsyncFunction(
      * @param description the description for this AppSync Function. 
      */
     public fun description(description: String)
+
+    /**
+     * The maximum number of resolver request inputs that will be sent to a single AWS Lambda
+     * function in a BatchInvoke operation.
+     *
+     * Can only be set when using LambdaDataSource.
+     *
+     * Default: - No max batch size
+     *
+     * @param maxBatchSize The maximum number of resolver request inputs that will be sent to a
+     * single AWS Lambda function in a BatchInvoke operation. 
+     */
+    public fun maxBatchSize(maxBatchSize: Number)
 
     /**
      * the name of the AppSync Function.
@@ -186,6 +201,21 @@ public open class AppsyncFunction(
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * The maximum number of resolver request inputs that will be sent to a single AWS Lambda
+     * function in a BatchInvoke operation.
+     *
+     * Can only be set when using LambdaDataSource.
+     *
+     * Default: - No max batch size
+     *
+     * @param maxBatchSize The maximum number of resolver request inputs that will be sent to a
+     * single AWS Lambda function in a BatchInvoke operation. 
+     */
+    override fun maxBatchSize(maxBatchSize: Number) {
+      cdkBuilder.maxBatchSize(maxBatchSize)
     }
 
     /**

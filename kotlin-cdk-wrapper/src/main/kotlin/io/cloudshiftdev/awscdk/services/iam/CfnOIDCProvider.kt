@@ -56,13 +56,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.iam.*;
  * CfnOIDCProvider cfnOIDCProvider = CfnOIDCProvider.Builder.create(this, "MyCfnOIDCProvider")
- * .thumbprintList(List.of("thumbprintList"))
- * // the properties below are optional
  * .clientIdList(List.of("clientIdList"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .thumbprintList(List.of("thumbprintList"))
  * .url("url")
  * .build();
  * ```
@@ -71,7 +70,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnOIDCProvider(
   cdkObject: software.amazon.awscdk.services.iam.CfnOIDCProvider,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iam.CfnOIDCProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id)
+  )
+
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -149,7 +155,7 @@ public open class CfnOIDCProvider(
    * A list of certificate thumbprints that are associated with the specified IAM OIDC provider
    * resource object.
    */
-  public open fun thumbprintList(): List<String> = unwrap(this).getThumbprintList()
+  public open fun thumbprintList(): List<String> = unwrap(this).getThumbprintList() ?: emptyList()
 
   /**
    * A list of certificate thumbprints that are associated with the specified IAM OIDC provider
@@ -242,6 +248,10 @@ public open class CfnOIDCProvider(
      * [CreateOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html)
      * .
      *
+     * This property is optional. If it is not included, IAM will retrieve and use the top
+     * intermediate certificate authority (CA) thumbprint of the OpenID Connect identity provider
+     * server certificate.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-thumbprintlist)
      * @param thumbprintList A list of certificate thumbprints that are associated with the
      * specified IAM OIDC provider resource object. 
@@ -255,6 +265,10 @@ public open class CfnOIDCProvider(
      * For more information, see
      * [CreateOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html)
      * .
+     *
+     * This property is optional. If it is not included, IAM will retrieve and use the top
+     * intermediate certificate authority (CA) thumbprint of the OpenID Connect identity provider
+     * server certificate.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-thumbprintlist)
      * @param thumbprintList A list of certificate thumbprints that are associated with the
@@ -347,6 +361,10 @@ public open class CfnOIDCProvider(
      * [CreateOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html)
      * .
      *
+     * This property is optional. If it is not included, IAM will retrieve and use the top
+     * intermediate certificate authority (CA) thumbprint of the OpenID Connect identity provider
+     * server certificate.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-thumbprintlist)
      * @param thumbprintList A list of certificate thumbprints that are associated with the
      * specified IAM OIDC provider resource object. 
@@ -362,6 +380,10 @@ public open class CfnOIDCProvider(
      * For more information, see
      * [CreateOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html)
      * .
+     *
+     * This property is optional. If it is not included, IAM will retrieve and use the top
+     * intermediate certificate authority (CA) thumbprint of the OpenID Connect identity provider
+     * server certificate.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-thumbprintlist)
      * @param thumbprintList A list of certificate thumbprints that are associated with the

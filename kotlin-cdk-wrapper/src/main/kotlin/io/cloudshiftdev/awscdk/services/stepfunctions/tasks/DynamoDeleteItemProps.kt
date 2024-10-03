@@ -467,7 +467,8 @@ public interface DynamoDeleteItemProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoDeleteItemProps,
-  ) : CdkObject(cdkObject), DynamoDeleteItemProps {
+  ) : CdkObject(cdkObject),
+      DynamoDeleteItemProps {
     /**
      * An optional description for this state.
      *

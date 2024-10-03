@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class NetworkAclEntry(
   cdkObject: software.amazon.awscdk.services.ec2.NetworkAclEntry,
-) : Resource(cdkObject), INetworkAclEntry {
+) : Resource(cdkObject),
+    INetworkAclEntry {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -53,7 +53,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Domain(
   cdkObject: software.amazon.awscdk.services.elasticsearch.Domain,
-) : Resource(cdkObject), IDomain, IConnectable {
+) : Resource(cdkObject),
+    IDomain,
+    IConnectable {
   @Deprecated(message = "deprecated in CDK")
   public constructor(
     scope: CloudshiftdevConstructsConstruct,

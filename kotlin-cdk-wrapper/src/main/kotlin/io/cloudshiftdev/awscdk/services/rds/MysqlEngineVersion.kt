@@ -119,6 +119,15 @@ public open class MysqlEngineVersion(
     public val VER_5_7_44: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_5_7_44)
 
+    public val VER_5_7_44_RDS_20240408: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_5_7_44_RDS_20240408)
+
+    public val VER_5_7_44_RDS_20240529: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_5_7_44_RDS_20240529)
+
+    public val VER_5_7_44_RDS_20240808: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_5_7_44_RDS_20240808)
+
     public val VER_8_0: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0)
 
@@ -184,6 +193,12 @@ public open class MysqlEngineVersion(
 
     public val VER_8_0_36: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_36)
+
+    public val VER_8_0_37: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_37)
+
+    public val VER_8_0_39: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_39)
 
     public fun of(mysqlFullVersion: String, mysqlMajorVersion: String): MysqlEngineVersion =
         software.amazon.awscdk.services.rds.MysqlEngineVersion.of(mysqlFullVersion,

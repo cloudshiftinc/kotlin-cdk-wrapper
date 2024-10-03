@@ -40,7 +40,8 @@ public interface ICustomEventRule {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.ICustomEventRule,
-  ) : CdkObject(cdkObject), ICustomEventRule {
+  ) : CdkObject(cdkObject),
+      ICustomEventRule {
     /**
      * Description.
      */

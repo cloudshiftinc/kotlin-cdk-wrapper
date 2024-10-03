@@ -247,7 +247,8 @@ public interface AwsIntegrationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.AwsIntegrationProps,
-  ) : CdkObject(cdkObject), AwsIntegrationProps {
+  ) : CdkObject(cdkObject),
+      AwsIntegrationProps {
     /**
      * The AWS action to perform in the integration.
      *

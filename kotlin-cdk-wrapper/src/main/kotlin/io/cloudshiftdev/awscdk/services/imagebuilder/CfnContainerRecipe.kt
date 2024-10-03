@@ -85,7 +85,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnContainerRecipe(
   cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -977,7 +979,8 @@ public open class CfnContainerRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty,
-    ) : CdkObject(cdkObject), ComponentConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ComponentConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the component.
        *
@@ -1097,7 +1100,8 @@ public open class CfnContainerRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentParameterProperty,
-    ) : CdkObject(cdkObject), ComponentParameterProperty {
+    ) : CdkObject(cdkObject),
+        ComponentParameterProperty {
       /**
        * The name of the component parameter to set.
        *
@@ -1353,7 +1357,8 @@ public open class CfnContainerRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.EbsInstanceBlockDeviceSpecificationProperty,
-    ) : CdkObject(cdkObject), EbsInstanceBlockDeviceSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        EbsInstanceBlockDeviceSpecificationProperty {
       /**
        * Use to configure delete on termination of the associated device.
        *
@@ -1582,7 +1587,8 @@ public open class CfnContainerRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceBlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), InstanceBlockDeviceMappingProperty {
+    ) : CdkObject(cdkObject),
+        InstanceBlockDeviceMappingProperty {
       /**
        * The device to which these mappings apply.
        *
@@ -1755,7 +1761,8 @@ public open class CfnContainerRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceConfigurationProperty,
-    ) : CdkObject(cdkObject), InstanceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InstanceConfigurationProperty {
       /**
        * Defines the block devices to attach for building an instance from this Image Builder AMI.
        *
@@ -1873,7 +1880,8 @@ public open class CfnContainerRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty,
-    ) : CdkObject(cdkObject), TargetContainerRepositoryProperty {
+    ) : CdkObject(cdkObject),
+        TargetContainerRepositoryProperty {
       /**
        * The name of the container repository where the output container image is stored.
        *

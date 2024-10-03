@@ -310,7 +310,8 @@ public interface NetworkTargetGroupProps : BaseTargetGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroupProps,
-  ) : CdkObject(cdkObject), NetworkTargetGroupProps {
+  ) : CdkObject(cdkObject),
+      NetworkTargetGroupProps {
     /**
      * Indicates whether the load balancer terminates connections at the end of the deregistration
      * timeout.

@@ -235,9 +235,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .build())
  * .description("description")
- * .isTerminal(false)
  * .ruleName("ruleName")
  * .ruleOrder(123)
+ * // the properties below are optional
+ * .isTerminal(false)
  * .ruleStatus("ruleStatus")
  * .tags(Map.of(
  * "tagsKey", "tags"))
@@ -248,12 +249,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAutomationRule(
   cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
-  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.securityhub.CfnAutomationRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
-      id)
-  )
-
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -274,7 +272,7 @@ public open class CfnAutomationRule(
    * One or more actions to update finding fields if a finding matches the conditions specified in
    * `Criteria` .
    */
-  public open fun actions(): Any? = unwrap(this).getActions()
+  public open fun actions(): Any = unwrap(this).getActions()
 
   /**
    * One or more actions to update finding fields if a finding matches the conditions specified in
@@ -345,7 +343,7 @@ public open class CfnAutomationRule(
    * findings. If a rule is enabled and a finding matches the criteria specified in this parameter,
    * Security Hub applies the rule action to the finding.
    */
-  public open fun criteria(): Any? = unwrap(this).getCriteria()
+  public open fun criteria(): Any = unwrap(this).getCriteria()
 
   /**
    * A set of [AWS Security Finding Format
@@ -384,7 +382,7 @@ public open class CfnAutomationRule(
   /**
    * A description of the rule.
    */
-  public open fun description(): String? = unwrap(this).getDescription()
+  public open fun description(): String = unwrap(this).getDescription()
 
   /**
    * A description of the rule.
@@ -427,7 +425,7 @@ public open class CfnAutomationRule(
   /**
    * The name of the rule.
    */
-  public open fun ruleName(): String? = unwrap(this).getRuleName()
+  public open fun ruleName(): String = unwrap(this).getRuleName()
 
   /**
    * The name of the rule.
@@ -440,7 +438,7 @@ public open class CfnAutomationRule(
    * An integer ranging from 1 to 1000 that represents the order in which the rule action is applied
    * to findings.
    */
-  public open fun ruleOrder(): Number? = unwrap(this).getRuleOrder()
+  public open fun ruleOrder(): Number = unwrap(this).getRuleOrder()
 
   /**
    * An integer ranging from 1 to 1000 that represents the order in which the rule action is applied
@@ -850,8 +848,8 @@ public open class CfnAutomationRule(
   }
 
   /**
-   * One or more actions to update finding fields if a finding matches the defined criteria of the
-   * rule.
+   * One or more actions that AWS Security Hub takes when a finding matches the defined criteria of
+   * a rule.
    *
    * Example:
    *
@@ -902,12 +900,8 @@ public open class CfnAutomationRule(
     public fun findingFieldsUpdate(): Any
 
     /**
-     * Specifies that the rule action should update the `Types` finding field.
-     *
-     * The `Types` finding field classifies findings in the format of namespace/category/classifier.
-     * For more information, see [Types taxonomy for
-     * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
-     * in the *AWS Security Hub User Guide* .
+     * Specifies the type of action that Security Hub takes when a finding matches the defined
+     * criteria of a rule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html#cfn-securityhub-automationrule-automationrulesaction-type)
      */
@@ -941,11 +935,8 @@ public open class CfnAutomationRule(
           fun findingFieldsUpdate(findingFieldsUpdate: AutomationRulesFindingFieldsUpdateProperty.Builder.() -> Unit)
 
       /**
-       * @param type Specifies that the rule action should update the `Types` finding field. 
-       * The `Types` finding field classifies findings in the format of
-       * namespace/category/classifier. For more information, see [Types taxonomy for
-       * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
-       * in the *AWS Security Hub User Guide* .
+       * @param type Specifies the type of action that Security Hub takes when a finding matches the
+       * defined criteria of a rule. 
        */
       public fun type(type: String)
     }
@@ -985,11 +976,8 @@ public open class CfnAutomationRule(
           findingFieldsUpdate(AutomationRulesFindingFieldsUpdateProperty(findingFieldsUpdate))
 
       /**
-       * @param type Specifies that the rule action should update the `Types` finding field. 
-       * The `Types` finding field classifies findings in the format of
-       * namespace/category/classifier. For more information, see [Types taxonomy for
-       * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
-       * in the *AWS Security Hub User Guide* .
+       * @param type Specifies the type of action that Security Hub takes when a finding matches the
+       * defined criteria of a rule. 
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -1002,7 +990,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty,
-    ) : CdkObject(cdkObject), AutomationRulesActionProperty {
+    ) : CdkObject(cdkObject),
+        AutomationRulesActionProperty {
       /**
        * Specifies that the automation rule action is an update to a finding field.
        *
@@ -1011,12 +1000,8 @@ public open class CfnAutomationRule(
       override fun findingFieldsUpdate(): Any = unwrap(this).getFindingFieldsUpdate()
 
       /**
-       * Specifies that the rule action should update the `Types` finding field.
-       *
-       * The `Types` finding field classifies findings in the format of
-       * namespace/category/classifier. For more information, see [Types taxonomy for
-       * ASFF](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format-type-taxonomy.html)
-       * in the *AWS Security Hub User Guide* .
+       * Specifies the type of action that Security Hub takes when a finding matches the defined
+       * criteria of a rule.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html#cfn-securityhub-automationrule-automationrulesaction-type)
        */
@@ -1411,7 +1396,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty,
-    ) : CdkObject(cdkObject), AutomationRulesFindingFieldsUpdateProperty {
+    ) : CdkObject(cdkObject),
+        AutomationRulesFindingFieldsUpdateProperty {
       /**
        * The rule action updates the `Confidence` field of a finding.
        *
@@ -4149,7 +4135,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFiltersProperty,
-    ) : CdkObject(cdkObject), AutomationRulesFindingFiltersProperty {
+    ) : CdkObject(cdkObject),
+        AutomationRulesFindingFiltersProperty {
       /**
        * The AWS account ID in which a finding was generated.
        *
@@ -4766,7 +4753,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateFilterProperty,
-    ) : CdkObject(cdkObject), DateFilterProperty {
+    ) : CdkObject(cdkObject),
+        DateFilterProperty {
       /**
        * A date range for the date filter.
        *
@@ -4903,7 +4891,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty,
-    ) : CdkObject(cdkObject), DateRangeProperty {
+    ) : CdkObject(cdkObject),
+        DateRangeProperty {
       /**
        * A date range unit for the date filter.
        *
@@ -5181,7 +5170,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty,
-    ) : CdkObject(cdkObject), MapFilterProperty {
+    ) : CdkObject(cdkObject),
+        MapFilterProperty {
       /**
        * The condition to apply to the key value when filtering Security Hub findings with a map
        * filter.
@@ -5348,7 +5338,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.NoteUpdateProperty,
-    ) : CdkObject(cdkObject), NoteUpdateProperty {
+    ) : CdkObject(cdkObject),
+        NoteUpdateProperty {
       /**
        * The updated note text.
        *
@@ -5483,7 +5474,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.NumberFilterProperty,
-    ) : CdkObject(cdkObject), NumberFilterProperty {
+    ) : CdkObject(cdkObject),
+        NumberFilterProperty {
       /**
        * The equal-to condition to be applied to a single field when querying for findings.
        *
@@ -5607,7 +5599,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty,
-    ) : CdkObject(cdkObject), RelatedFindingProperty {
+    ) : CdkObject(cdkObject),
+        RelatedFindingProperty {
       /**
        * The product-generated identifier for a related finding.
        *
@@ -5785,7 +5778,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty,
-    ) : CdkObject(cdkObject), SeverityUpdateProperty {
+    ) : CdkObject(cdkObject),
+        SeverityUpdateProperty {
       /**
        * The severity value of the finding. The allowed values are the following.
        *
@@ -6111,7 +6105,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.StringFilterProperty,
-    ) : CdkObject(cdkObject), StringFilterProperty {
+    ) : CdkObject(cdkObject),
+        StringFilterProperty {
       /**
        * The condition to apply to a string value when filtering Security Hub findings.
        *
@@ -6326,7 +6321,8 @@ public open class CfnAutomationRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty,
-    ) : CdkObject(cdkObject), WorkflowUpdateProperty {
+    ) : CdkObject(cdkObject),
+        WorkflowUpdateProperty {
       /**
        * The status of the investigation into the finding.
        *

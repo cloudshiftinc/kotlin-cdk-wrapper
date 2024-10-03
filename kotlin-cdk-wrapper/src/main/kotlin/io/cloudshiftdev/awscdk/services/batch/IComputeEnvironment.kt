@@ -54,7 +54,8 @@ public interface IComputeEnvironment : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IComputeEnvironment,
-  ) : CdkObject(cdkObject), IComputeEnvironment {
+  ) : CdkObject(cdkObject),
+      IComputeEnvironment {
     /**
      * Apply the given removal policy to this resource.
      *

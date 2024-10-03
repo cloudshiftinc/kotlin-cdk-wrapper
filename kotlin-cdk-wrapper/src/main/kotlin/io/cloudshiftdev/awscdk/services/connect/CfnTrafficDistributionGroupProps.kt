@@ -144,7 +144,8 @@ public interface CfnTrafficDistributionGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnTrafficDistributionGroupProps,
-  ) : CdkObject(cdkObject), CfnTrafficDistributionGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnTrafficDistributionGroupProps {
     /**
      * The description of the traffic distribution group.
      *

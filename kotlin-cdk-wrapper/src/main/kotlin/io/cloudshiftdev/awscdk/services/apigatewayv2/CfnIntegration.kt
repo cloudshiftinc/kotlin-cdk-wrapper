@@ -59,7 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIntegration(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -92,6 +93,11 @@ public open class CfnIntegration(
    * The identifier.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
+
+  /**
+   * The integration ID.
+   */
+  public open fun attrIntegrationId(): String = unwrap(this).getAttrIntegrationId()
 
   /**
    * The ID of the VPC link for a private integration.
@@ -1079,7 +1085,8 @@ public open class CfnIntegration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterListProperty,
-    ) : CdkObject(cdkObject), ResponseParameterListProperty {
+    ) : CdkObject(cdkObject),
+        ResponseParameterListProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameterlist.html#cfn-apigatewayv2-integration-responseparameterlist-responseparameters)
        */
@@ -1105,6 +1112,118 @@ public open class CfnIntegration(
   }
 
   /**
+   * map of response parameter lists.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+   * ResponseParameterMapProperty responseParameterMapProperty =
+   * ResponseParameterMapProperty.builder()
+   * .responseParameters(List.of(ResponseParameterProperty.builder()
+   * .destination("destination")
+   * .source("source")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparametermap.html)
+   */
+  public interface ResponseParameterMapProperty {
+    /**
+     * list of response parameters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparametermap.html#cfn-apigatewayv2-integration-responseparametermap-responseparameters)
+     */
+    public fun responseParameters(): Any? = unwrap(this).getResponseParameters()
+
+    /**
+     * A builder for [ResponseParameterMapProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param responseParameters list of response parameters.
+       */
+      public fun responseParameters(responseParameters: IResolvable)
+
+      /**
+       * @param responseParameters list of response parameters.
+       */
+      public fun responseParameters(responseParameters: List<Any>)
+
+      /**
+       * @param responseParameters list of response parameters.
+       */
+      public fun responseParameters(vararg responseParameters: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterMapProperty.Builder
+          =
+          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterMapProperty.builder()
+
+      /**
+       * @param responseParameters list of response parameters.
+       */
+      override fun responseParameters(responseParameters: IResolvable) {
+        cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param responseParameters list of response parameters.
+       */
+      override fun responseParameters(responseParameters: List<Any>) {
+        cdkBuilder.responseParameters(responseParameters.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param responseParameters list of response parameters.
+       */
+      override fun responseParameters(vararg responseParameters: Any): Unit =
+          responseParameters(responseParameters.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterMapProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterMapProperty,
+    ) : CdkObject(cdkObject),
+        ResponseParameterMapProperty {
+      /**
+       * list of response parameters.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparametermap.html#cfn-apigatewayv2-integration-responseparametermap-responseparameters)
+       */
+      override fun responseParameters(): Any? = unwrap(this).getResponseParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResponseParameterMapProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterMapProperty):
+          ResponseParameterMapProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResponseParameterMapProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResponseParameterMapProperty):
+          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterMapProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterMapProperty
+    }
+  }
+
+  /**
+   * response parameter.
+   *
    * Example:
    *
    * ```
@@ -1123,12 +1242,12 @@ public open class CfnIntegration(
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameter.html#cfn-apigatewayv2-integration-responseparameter-destination)
      */
-    public fun destination(): String
+    public fun destination(): String? = unwrap(this).getDestination()
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameter.html#cfn-apigatewayv2-integration-responseparameter-source)
      */
-    public fun source(): String
+    public fun source(): String? = unwrap(this).getSource()
 
     /**
      * A builder for [ResponseParameterProperty]
@@ -1136,12 +1255,12 @@ public open class CfnIntegration(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param destination the value to be set. 
+       * @param destination the value to be set.
        */
       public fun destination(destination: String)
 
       /**
-       * @param source the value to be set. 
+       * @param source the value to be set.
        */
       public fun source(source: String)
     }
@@ -1153,14 +1272,14 @@ public open class CfnIntegration(
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterProperty.builder()
 
       /**
-       * @param destination the value to be set. 
+       * @param destination the value to be set.
        */
       override fun destination(destination: String) {
         cdkBuilder.destination(destination)
       }
 
       /**
-       * @param source the value to be set. 
+       * @param source the value to be set.
        */
       override fun source(source: String) {
         cdkBuilder.source(source)
@@ -1173,16 +1292,17 @@ public open class CfnIntegration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterProperty,
-    ) : CdkObject(cdkObject), ResponseParameterProperty {
+    ) : CdkObject(cdkObject),
+        ResponseParameterProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameter.html#cfn-apigatewayv2-integration-responseparameter-destination)
        */
-      override fun destination(): String = unwrap(this).getDestination()
+      override fun destination(): String? = unwrap(this).getDestination()
 
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameter.html#cfn-apigatewayv2-integration-responseparameter-source)
        */
-      override fun source(): String = unwrap(this).getSource()
+      override fun source(): String? = unwrap(this).getSource()
     }
 
     public companion object {
@@ -1270,7 +1390,8 @@ public open class CfnIntegration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty,
-    ) : CdkObject(cdkObject), TlsConfigProperty {
+    ) : CdkObject(cdkObject),
+        TlsConfigProperty {
       /**
        * If you specify a server name, API Gateway uses it to verify the hostname on the
        * integration's certificate.

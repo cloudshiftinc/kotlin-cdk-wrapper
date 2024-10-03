@@ -28,7 +28,8 @@ import kotlin.jvm.JvmName
  */
 public open class ExtensibleBase(
   cdkObject: software.amazon.awscdk.services.appconfig.ExtensibleBase,
-) : CdkObject(cdkObject), IExtensible {
+) : CdkObject(cdkObject),
+    IExtensible {
   public constructor(scope: Construct, resourceArn: String) :
       this(software.amazon.awscdk.services.appconfig.ExtensibleBase(scope.let(Construct.Companion::unwrap),
       resourceArn)

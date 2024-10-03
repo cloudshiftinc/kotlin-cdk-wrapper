@@ -11,14 +11,19 @@ import kotlin.String
  * Example:
  *
  * ```
- * // https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html
- * // https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html
- * ManagedRule.Builder.create(this, "AccessKeysRotated")
- * .identifier(ManagedRuleIdentifiers.ACCESS_KEYS_ROTATED)
- * .inputParameters(Map.of(
- * "maxAccessKeyAge", 60))
- * // default is 24 hours
- * .maximumExecutionFrequency(MaximumExecutionFrequency.TWELVE_HOURS)
+ * Function fn;
+ * String samplePolicyText;
+ * ManagedRule.Builder.create(this, "ManagedRule")
+ * .identifier(ManagedRuleIdentifiers.API_GW_XRAY_ENABLED)
+ * .evaluationModes(EvaluationMode.DETECTIVE_AND_PROACTIVE)
+ * .build();
+ * CustomRule.Builder.create(this, "CustomRule")
+ * .lambdaFunction(fn)
+ * .evaluationModes(EvaluationMode.PROACTIVE)
+ * .build();
+ * CustomPolicy.Builder.create(this, "CustomPolicy")
+ * .policyText(samplePolicyText)
+ * .evaluationModes(EvaluationMode.DETECTIVE)
  * .build();
  * ```
  *

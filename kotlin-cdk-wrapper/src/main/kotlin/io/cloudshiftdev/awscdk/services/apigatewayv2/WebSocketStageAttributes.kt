@@ -71,7 +71,8 @@ public interface WebSocketStageAttributes : StageAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStageAttributes,
-  ) : CdkObject(cdkObject), WebSocketStageAttributes {
+  ) : CdkObject(cdkObject),
+      WebSocketStageAttributes {
     /**
      * The API to which this stage is associated.
      */

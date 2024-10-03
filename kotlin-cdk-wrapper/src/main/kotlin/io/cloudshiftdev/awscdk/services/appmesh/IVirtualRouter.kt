@@ -52,7 +52,8 @@ public interface IVirtualRouter : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.IVirtualRouter,
-  ) : CdkObject(cdkObject), IVirtualRouter {
+  ) : CdkObject(cdkObject),
+      IVirtualRouter {
     /**
      * Add a single route to the router.
      *

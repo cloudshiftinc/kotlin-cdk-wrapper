@@ -12,7 +12,8 @@ import kotlin.String
  */
 public abstract class BaseListener(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener,
-) : Resource(cdkObject), IListener {
+) : Resource(cdkObject),
+    IListener {
   /**
    * ARN of the listener.
    */

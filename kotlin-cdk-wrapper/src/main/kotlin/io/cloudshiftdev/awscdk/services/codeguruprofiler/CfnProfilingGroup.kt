@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProfilingGroup(
   cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -465,7 +467,8 @@ public open class CfnProfilingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty,
-    ) : CdkObject(cdkObject), AgentPermissionsProperty {
+    ) : CdkObject(cdkObject),
+        AgentPermissionsProperty {
       /**
        * The principals for the agent permissions.
        *
@@ -570,7 +573,8 @@ public open class CfnProfilingGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty,
-    ) : CdkObject(cdkObject), ChannelProperty {
+    ) : CdkObject(cdkObject),
+        ChannelProperty {
       /**
        * The channel ID.
        *

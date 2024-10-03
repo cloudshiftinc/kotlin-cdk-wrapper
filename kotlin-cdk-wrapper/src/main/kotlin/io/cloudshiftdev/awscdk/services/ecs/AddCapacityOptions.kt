@@ -882,7 +882,8 @@ public interface AddCapacityOptions : AddAutoScalingGroupCapacityOptions,
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.AddCapacityOptions,
-  ) : CdkObject(cdkObject), AddCapacityOptions {
+  ) : CdkObject(cdkObject),
+      AddCapacityOptions {
     /**
      * Whether the instances can initiate connections to anywhere by default.
      *

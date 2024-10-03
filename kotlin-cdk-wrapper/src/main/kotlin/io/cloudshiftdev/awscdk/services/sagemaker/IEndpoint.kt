@@ -36,7 +36,8 @@ public interface IEndpoint : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.IEndpoint,
-  ) : CdkObject(cdkObject), IEndpoint {
+  ) : CdkObject(cdkObject),
+      IEndpoint {
     /**
      * Apply the given removal policy to this resource.
      *

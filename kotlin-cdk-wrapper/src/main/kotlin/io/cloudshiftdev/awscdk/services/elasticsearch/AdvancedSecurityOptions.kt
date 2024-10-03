@@ -148,7 +148,8 @@ public interface AdvancedSecurityOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticsearch.AdvancedSecurityOptions,
-  ) : CdkObject(cdkObject), AdvancedSecurityOptions {
+  ) : CdkObject(cdkObject),
+      AdvancedSecurityOptions {
     /**
      * (deprecated) ARN for the master user.
      *

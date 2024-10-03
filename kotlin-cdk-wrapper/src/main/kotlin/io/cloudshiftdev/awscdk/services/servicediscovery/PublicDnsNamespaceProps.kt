@@ -78,7 +78,8 @@ public interface PublicDnsNamespaceProps : BaseNamespaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.PublicDnsNamespaceProps,
-  ) : CdkObject(cdkObject), PublicDnsNamespaceProps {
+  ) : CdkObject(cdkObject),
+      PublicDnsNamespaceProps {
     /**
      * A description of the Namespace.
      *

@@ -341,7 +341,8 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.IDatabaseInstance,
-  ) : CdkObject(cdkObject), IDatabaseInstance {
+  ) : CdkObject(cdkObject),
+      IDatabaseInstance {
     /**
      * Add a new db proxy to this instance.
      *

@@ -182,7 +182,8 @@ public interface CfnModelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.CfnModelProps,
-  ) : CdkObject(cdkObject), CfnModelProps {
+  ) : CdkObject(cdkObject),
+      CfnModelProps {
     /**
      * The content-type for the model.
      *

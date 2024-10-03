@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class UsagePlan(
   cdkObject: software.amazon.awscdk.services.apigateway.UsagePlan,
-) : Resource(cdkObject), IUsagePlan {
+) : Resource(cdkObject),
+    IUsagePlan {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.UsagePlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

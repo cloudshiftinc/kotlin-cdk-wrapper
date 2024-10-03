@@ -12,7 +12,8 @@ import io.cloudshiftdev.awscdk.services.lambda.IFunction
  */
 public abstract class StreamEventSource(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.StreamEventSource,
-) : CdkObject(cdkObject), IEventSource {
+) : CdkObject(cdkObject),
+    IEventSource {
   /**
    * Called by `lambda.addEventSource` to allow the event source to bind to this function.
    *

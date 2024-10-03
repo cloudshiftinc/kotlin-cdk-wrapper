@@ -88,8 +88,6 @@ public interface CfnDBProxyProps {
    * databases, specify `MYSQL` . For Aurora PostgreSQL and RDS for PostgreSQL databases, specify
    * `POSTGRESQL` . For RDS for Microsoft SQL Server, specify `SQLSERVER` .
    *
-   * *Valid Values* : `MYSQL` | `POSTGRESQL` | `SQLSERVER`
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-enginefamily)
    */
   public fun engineFamily(): String
@@ -204,8 +202,6 @@ public interface CfnDBProxyProps {
      * network traffic to and from the database. For Aurora MySQL, RDS for MariaDB, and RDS for MySQL
      * databases, specify `MYSQL` . For Aurora PostgreSQL and RDS for PostgreSQL databases, specify
      * `POSTGRESQL` . For RDS for Microsoft SQL Server, specify `SQLSERVER` .
-     *
-     * *Valid Values* : `MYSQL` | `POSTGRESQL` | `SQLSERVER`
      */
     public fun engineFamily(engineFamily: String)
 
@@ -339,8 +335,6 @@ public interface CfnDBProxyProps {
      * network traffic to and from the database. For Aurora MySQL, RDS for MariaDB, and RDS for MySQL
      * databases, specify `MYSQL` . For Aurora PostgreSQL and RDS for PostgreSQL databases, specify
      * `POSTGRESQL` . For RDS for Microsoft SQL Server, specify `SQLSERVER` .
-     *
-     * *Valid Values* : `MYSQL` | `POSTGRESQL` | `SQLSERVER`
      */
     override fun engineFamily(engineFamily: String) {
       cdkBuilder.engineFamily(engineFamily)
@@ -431,7 +425,8 @@ public interface CfnDBProxyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyProps,
-  ) : CdkObject(cdkObject), CfnDBProxyProps {
+  ) : CdkObject(cdkObject),
+      CfnDBProxyProps {
     /**
      * The authorization mechanism that the proxy uses.
      *
@@ -470,8 +465,6 @@ public interface CfnDBProxyProps {
      * network traffic to and from the database. For Aurora MySQL, RDS for MariaDB, and RDS for MySQL
      * databases, specify `MYSQL` . For Aurora PostgreSQL and RDS for PostgreSQL databases, specify
      * `POSTGRESQL` . For RDS for Microsoft SQL Server, specify `SQLSERVER` .
-     *
-     * *Valid Values* : `MYSQL` | `POSTGRESQL` | `SQLSERVER`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-enginefamily)
      */

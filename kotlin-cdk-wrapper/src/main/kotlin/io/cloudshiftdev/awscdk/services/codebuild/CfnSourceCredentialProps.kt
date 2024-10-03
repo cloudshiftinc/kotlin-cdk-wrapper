@@ -32,7 +32,8 @@ public interface CfnSourceCredentialProps {
   /**
    * The type of authentication used by the credentials.
    *
-   * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, or CODECONNECTIONS.
+   * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, CODECONNECTIONS, or
+   * SECRETS_MANAGER.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html#cfn-codebuild-sourcecredential-authtype)
    */
@@ -50,7 +51,9 @@ public interface CfnSourceCredentialProps {
   /**
    * For GitHub or GitHub Enterprise, this is the personal access token.
    *
-   * For Bitbucket, this is either the access token or the app password.
+   * For Bitbucket, this is either the access token or the app password. For the `authType`
+   * CODECONNECTIONS, this is the `connectionArn` . For the `authType` SECRETS_MANAGER, this is the
+   * `secretArn` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html#cfn-codebuild-sourcecredential-token)
    */
@@ -72,7 +75,8 @@ public interface CfnSourceCredentialProps {
   public interface Builder {
     /**
      * @param authType The type of authentication used by the credentials. 
-     * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, or CODECONNECTIONS.
+     * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, CODECONNECTIONS, or
+     * SECRETS_MANAGER.
      */
     public fun authType(authType: String)
 
@@ -84,7 +88,9 @@ public interface CfnSourceCredentialProps {
 
     /**
      * @param token For GitHub or GitHub Enterprise, this is the personal access token. 
-     * For Bitbucket, this is either the access token or the app password.
+     * For Bitbucket, this is either the access token or the app password. For the `authType`
+     * CODECONNECTIONS, this is the `connectionArn` . For the `authType` SECRETS_MANAGER, this is the
+     * `secretArn` .
      */
     public fun token(token: String)
 
@@ -102,7 +108,8 @@ public interface CfnSourceCredentialProps {
 
     /**
      * @param authType The type of authentication used by the credentials. 
-     * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, or CODECONNECTIONS.
+     * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, CODECONNECTIONS, or
+     * SECRETS_MANAGER.
      */
     override fun authType(authType: String) {
       cdkBuilder.authType(authType)
@@ -118,7 +125,9 @@ public interface CfnSourceCredentialProps {
 
     /**
      * @param token For GitHub or GitHub Enterprise, this is the personal access token. 
-     * For Bitbucket, this is either the access token or the app password.
+     * For Bitbucket, this is either the access token or the app password. For the `authType`
+     * CODECONNECTIONS, this is the `connectionArn` . For the `authType` SECRETS_MANAGER, this is the
+     * `secretArn` .
      */
     override fun token(token: String) {
       cdkBuilder.token(token)
@@ -138,11 +147,13 @@ public interface CfnSourceCredentialProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.CfnSourceCredentialProps,
-  ) : CdkObject(cdkObject), CfnSourceCredentialProps {
+  ) : CdkObject(cdkObject),
+      CfnSourceCredentialProps {
     /**
      * The type of authentication used by the credentials.
      *
-     * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, or CODECONNECTIONS.
+     * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, CODECONNECTIONS, or
+     * SECRETS_MANAGER.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html#cfn-codebuild-sourcecredential-authtype)
      */
@@ -160,7 +171,9 @@ public interface CfnSourceCredentialProps {
     /**
      * For GitHub or GitHub Enterprise, this is the personal access token.
      *
-     * For Bitbucket, this is either the access token or the app password.
+     * For Bitbucket, this is either the access token or the app password. For the `authType`
+     * CODECONNECTIONS, this is the `connectionArn` . For the `authType` SECRETS_MANAGER, this is the
+     * `secretArn` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html#cfn-codebuild-sourcecredential-token)
      */

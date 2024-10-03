@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnParameterGroup(
   cdkObject: software.amazon.awscdk.services.elasticache.CfnParameterGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -65,9 +67,10 @@ public open class CfnParameterGroup(
   )
 
   /**
-   *
+   * A user-specified name for the cache parameter group.
    */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+  public open fun attrCacheParameterGroupName(): String =
+      unwrap(this).getAttrCacheParameterGroupName()
 
   /**
    * The name of the cache parameter group family that this cache parameter group is compatible

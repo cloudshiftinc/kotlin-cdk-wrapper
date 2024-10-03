@@ -30,7 +30,8 @@ public interface IHttpRouteAuthorizer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpRouteAuthorizer,
-  ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
+  ) : CdkObject(cdkObject),
+      IHttpRouteAuthorizer {
     /**
      * Bind this authorizer to a specified Http route.
      *

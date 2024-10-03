@@ -56,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIpAccessSettings(
   cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -185,19 +187,19 @@ public open class CfnIpAccessSettings(
   public open fun ipRules(vararg `value`: Any): Unit = ipRules(`value`.toList())
 
   /**
-   * The tags to add to the browser settings resource.
+   * The tags to add to the IP access settings resource.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * The tags to add to the browser settings resource.
+   * The tags to add to the IP access settings resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * The tags to add to the browser settings resource.
+   * The tags to add to the IP access settings resource.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -273,22 +275,22 @@ public open class CfnIpAccessSettings(
     public fun ipRules(vararg ipRules: Any)
 
     /**
-     * The tags to add to the browser settings resource.
+     * The tags to add to the IP access settings resource.
      *
      * A tag is a key-value pair.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-ipaccesssettings.html#cfn-workspacesweb-ipaccesssettings-tags)
-     * @param tags The tags to add to the browser settings resource. 
+     * @param tags The tags to add to the IP access settings resource. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * The tags to add to the browser settings resource.
+     * The tags to add to the IP access settings resource.
      *
      * A tag is a key-value pair.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-ipaccesssettings.html#cfn-workspacesweb-ipaccesssettings-tags)
-     * @param tags The tags to add to the browser settings resource. 
+     * @param tags The tags to add to the IP access settings resource. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -382,24 +384,24 @@ public open class CfnIpAccessSettings(
     override fun ipRules(vararg ipRules: Any): Unit = ipRules(ipRules.toList())
 
     /**
-     * The tags to add to the browser settings resource.
+     * The tags to add to the IP access settings resource.
      *
      * A tag is a key-value pair.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-ipaccesssettings.html#cfn-workspacesweb-ipaccesssettings-tags)
-     * @param tags The tags to add to the browser settings resource. 
+     * @param tags The tags to add to the IP access settings resource. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * The tags to add to the browser settings resource.
+     * The tags to add to the IP access settings resource.
      *
      * A tag is a key-value pair.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-ipaccesssettings.html#cfn-workspacesweb-ipaccesssettings-tags)
-     * @param tags The tags to add to the browser settings resource. 
+     * @param tags The tags to add to the IP access settings resource. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -507,7 +509,8 @@ public open class CfnIpAccessSettings(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings.IpRuleProperty,
-    ) : CdkObject(cdkObject), IpRuleProperty {
+    ) : CdkObject(cdkObject),
+        IpRuleProperty {
       /**
        * The description of the IP rule.
        *

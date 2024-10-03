@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTrustStoreRevocation(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -355,7 +356,8 @@ public open class CfnTrustStoreRevocation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.RevocationContentProperty,
-    ) : CdkObject(cdkObject), RevocationContentProperty {
+    ) : CdkObject(cdkObject),
+        RevocationContentProperty {
       /**
        * The type of revocation file.
        *
@@ -519,7 +521,8 @@ public open class CfnTrustStoreRevocation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.TrustStoreRevocationProperty,
-    ) : CdkObject(cdkObject), TrustStoreRevocationProperty {
+    ) : CdkObject(cdkObject),
+        TrustStoreRevocationProperty {
       /**
        * The number of revoked certificates.
        *

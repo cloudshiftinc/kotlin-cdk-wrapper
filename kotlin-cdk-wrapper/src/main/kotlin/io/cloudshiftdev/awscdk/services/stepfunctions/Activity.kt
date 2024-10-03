@@ -30,7 +30,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Activity(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Activity,
-) : Resource(cdkObject), IActivity {
+) : Resource(cdkObject),
+    IActivity {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.stepfunctions.Activity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -61,6 +62,12 @@ public open class Activity(
    * The name of the activity.
    */
   public override fun activityName(): String = unwrap(this).getActivityName()
+
+  /**
+   * The encryptionConfiguration object used for server-side encryption of the activity inputs.
+   */
+  public override fun encryptionConfiguration(): EncryptionConfiguration? =
+      unwrap(this).getEncryptionConfiguration()?.let(EncryptionConfiguration::wrap)
 
   /**
    * Grant the given identity permissions on this Activity.
@@ -403,6 +410,16 @@ public open class Activity(
      * @param activityName The name for this activity. 
      */
     public fun activityName(activityName: String)
+
+    /**
+     * The encryptionConfiguration object used for server-side encryption of the activity inputs.
+     *
+     * Default: - data is transparently encrypted using an AWS owned key
+     *
+     * @param encryptionConfiguration The encryptionConfiguration object used for server-side
+     * encryption of the activity inputs. 
+     */
+    public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration)
   }
 
   private class BuilderImpl(
@@ -421,6 +438,18 @@ public open class Activity(
      */
     override fun activityName(activityName: String) {
       cdkBuilder.activityName(activityName)
+    }
+
+    /**
+     * The encryptionConfiguration object used for server-side encryption of the activity inputs.
+     *
+     * Default: - data is transparently encrypted using an AWS owned key
+     *
+     * @param encryptionConfiguration The encryptionConfiguration object used for server-side
+     * encryption of the activity inputs. 
+     */
+    override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration) {
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfiguration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.Activity = cdkBuilder.build()

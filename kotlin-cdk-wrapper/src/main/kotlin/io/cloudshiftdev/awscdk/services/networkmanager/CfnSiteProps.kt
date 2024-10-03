@@ -217,7 +217,8 @@ public interface CfnSiteProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteProps,
-  ) : CdkObject(cdkObject), CfnSiteProps {
+  ) : CdkObject(cdkObject),
+      CfnSiteProps {
     /**
      * A description of your site.
      *

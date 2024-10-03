@@ -16,7 +16,8 @@ import kotlin.String
 public interface IExternalService : IService {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.IExternalService,
-  ) : CdkObject(cdkObject), IExternalService {
+  ) : CdkObject(cdkObject),
+      IExternalService {
     /**
      * Apply the given removal policy to this resource.
      *

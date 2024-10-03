@@ -85,7 +85,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBackupPlan(
   cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -421,7 +423,8 @@ public open class CfnBackupPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.AdvancedBackupSettingResourceTypeProperty,
-    ) : CdkObject(cdkObject), AdvancedBackupSettingResourceTypeProperty {
+    ) : CdkObject(cdkObject),
+        AdvancedBackupSettingResourceTypeProperty {
       /**
        * The backup option for the resource.
        *
@@ -652,7 +655,8 @@ public open class CfnBackupPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.BackupPlanResourceTypeProperty,
-    ) : CdkObject(cdkObject), BackupPlanResourceTypeProperty {
+    ) : CdkObject(cdkObject),
+        BackupPlanResourceTypeProperty {
       /**
        * A list of backup options for each resource type.
        *
@@ -1071,7 +1075,8 @@ public open class CfnBackupPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.BackupRuleResourceTypeProperty,
-    ) : CdkObject(cdkObject), BackupRuleResourceTypeProperty {
+    ) : CdkObject(cdkObject),
+        BackupRuleResourceTypeProperty {
       /**
        * A value in minutes after a backup job is successfully started before it must be completed
        * or it is canceled by AWS Backup .
@@ -1338,7 +1343,8 @@ public open class CfnBackupPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty,
-    ) : CdkObject(cdkObject), CopyActionResourceTypeProperty {
+    ) : CdkObject(cdkObject),
+        CopyActionResourceTypeProperty {
       /**
        * An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the
        * copied backup.
@@ -1512,7 +1518,8 @@ public open class CfnBackupPlan(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.LifecycleResourceTypeProperty,
-    ) : CdkObject(cdkObject), LifecycleResourceTypeProperty {
+    ) : CdkObject(cdkObject),
+        LifecycleResourceTypeProperty {
       /**
        * Specifies the number of days after creation that a recovery point is deleted.
        *

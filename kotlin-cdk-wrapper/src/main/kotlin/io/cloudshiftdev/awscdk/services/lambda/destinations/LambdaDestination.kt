@@ -35,7 +35,8 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
  */
 public open class LambdaDestination(
   cdkObject: software.amazon.awscdk.services.lambda.destinations.LambdaDestination,
-) : CdkObject(cdkObject), IDestination {
+) : CdkObject(cdkObject),
+    IDestination {
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.services.lambda.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )

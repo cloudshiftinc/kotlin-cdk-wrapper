@@ -62,7 +62,8 @@ public interface TcpTimeout {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.TcpTimeout,
-  ) : CdkObject(cdkObject), TcpTimeout {
+  ) : CdkObject(cdkObject),
+      TcpTimeout {
     /**
      * Represents an idle timeout.
      *

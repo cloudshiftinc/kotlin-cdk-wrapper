@@ -103,6 +103,10 @@ public interface CfnTrackerProps {
   public fun pricingPlan(): String? = unwrap(this).getPricingPlan()
 
   /**
+   * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+   *
+   * No longer allowed.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-pricingplandatasource)
    * @deprecated this property has been deprecated
    */
@@ -198,7 +202,8 @@ public interface CfnTrackerProps {
     public fun pricingPlan(pricingPlan: String)
 
     /**
-     * @param pricingPlanDataSource the value to be set.
+     * @param pricingPlanDataSource This shape is deprecated since 2022-02-01: Deprecated.
+     * No longer allowed.
      * @deprecated this property has been deprecated
      */
     @Deprecated(message = "deprecated in CDK")
@@ -309,7 +314,8 @@ public interface CfnTrackerProps {
     }
 
     /**
-     * @param pricingPlanDataSource the value to be set.
+     * @param pricingPlanDataSource This shape is deprecated since 2022-02-01: Deprecated.
+     * No longer allowed.
      * @deprecated this property has been deprecated
      */
     @Deprecated(message = "deprecated in CDK")
@@ -348,7 +354,8 @@ public interface CfnTrackerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.location.CfnTrackerProps,
-  ) : CdkObject(cdkObject), CfnTrackerProps {
+  ) : CdkObject(cdkObject),
+      CfnTrackerProps {
     /**
      * An optional description for the tracker resource.
      *
@@ -410,6 +417,10 @@ public interface CfnTrackerProps {
     override fun pricingPlan(): String? = unwrap(this).getPricingPlan()
 
     /**
+     * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+     *
+     * No longer allowed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-pricingplandatasource)
      * @deprecated this property has been deprecated
      */

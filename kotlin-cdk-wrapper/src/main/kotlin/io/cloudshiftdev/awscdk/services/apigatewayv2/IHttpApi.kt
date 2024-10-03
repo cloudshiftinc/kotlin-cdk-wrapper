@@ -314,7 +314,8 @@ public interface IHttpApi : IApi {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpApi,
-  ) : CdkObject(cdkObject), IHttpApi {
+  ) : CdkObject(cdkObject),
+      IHttpApi {
     /**
      * Add a new VpcLink.
      *

@@ -58,7 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNotificationChannel(
   cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -471,7 +472,8 @@ public open class CfnNotificationChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationChannelConfigProperty,
-    ) : CdkObject(cdkObject), NotificationChannelConfigProperty {
+    ) : CdkObject(cdkObject),
+        NotificationChannelConfigProperty {
       /**
        * The filter configurations for the Amazon SNS notification topic you use with DevOps Guru.
        *
@@ -654,7 +656,8 @@ public open class CfnNotificationChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty,
-    ) : CdkObject(cdkObject), NotificationFilterConfigProperty {
+    ) : CdkObject(cdkObject),
+        NotificationFilterConfigProperty {
       /**
        * The events that you want to receive notifications for.
        *
@@ -764,7 +767,8 @@ public open class CfnNotificationChannel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.SnsChannelConfigProperty,
-    ) : CdkObject(cdkObject), SnsChannelConfigProperty {
+    ) : CdkObject(cdkObject),
+        SnsChannelConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of an Amazon Simple Notification Service topic.
        *

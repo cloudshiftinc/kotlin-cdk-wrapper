@@ -87,7 +87,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTLSInspectionConfiguration(
   cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -574,7 +576,8 @@ public open class CfnTLSInspectionConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.AddressProperty,
-    ) : CdkObject(cdkObject), AddressProperty {
+    ) : CdkObject(cdkObject),
+        AddressProperty {
       /**
        * Specify an IP address or a block of IP addresses in Classless Inter-Domain Routing (CIDR)
        * notation.
@@ -762,7 +765,8 @@ public open class CfnTLSInspectionConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.CheckCertificateRevocationStatusProperty,
-    ) : CdkObject(cdkObject), CheckCertificateRevocationStatusProperty {
+    ) : CdkObject(cdkObject),
+        CheckCertificateRevocationStatusProperty {
       /**
        * Configures how Network Firewall processes traffic when it determines that the certificate
        * presented by the server in the SSL/TLS connection has a revoked status.
@@ -904,7 +908,8 @@ public open class CfnTLSInspectionConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty,
-    ) : CdkObject(cdkObject), PortRangeProperty {
+    ) : CdkObject(cdkObject),
+        PortRangeProperty {
       /**
        * The lower limit of the port range.
        *
@@ -1267,7 +1272,8 @@ public open class CfnTLSInspectionConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty,
-    ) : CdkObject(cdkObject), ServerCertificateConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServerCertificateConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the imported certificate authority (CA) certificate
        * within AWS Certificate Manager (ACM) to use for outbound SSL/TLS inspection.
@@ -1410,7 +1416,8 @@ public open class CfnTLSInspectionConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty,
-    ) : CdkObject(cdkObject), ServerCertificateProperty {
+    ) : CdkObject(cdkObject),
+        ServerCertificateProperty {
       /**
        * The Amazon Resource Name (ARN) of the AWS Certificate Manager SSL/TLS server certificate
        * that's used for inbound SSL/TLS inspection.
@@ -1825,7 +1832,8 @@ public open class CfnTLSInspectionConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateScopeProperty,
-    ) : CdkObject(cdkObject), ServerCertificateScopeProperty {
+    ) : CdkObject(cdkObject),
+        ServerCertificateScopeProperty {
       /**
        * The destination ports to decrypt for inspection, in Transmission Control Protocol (TCP)
        * format.
@@ -2026,7 +2034,8 @@ public open class CfnTLSInspectionConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty,
-    ) : CdkObject(cdkObject), TLSInspectionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        TLSInspectionConfigurationProperty {
       /**
        * Lists the server certificate configurations that are associated with the TLS configuration.
        *

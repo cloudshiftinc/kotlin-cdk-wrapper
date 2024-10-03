@@ -907,7 +907,8 @@ public interface IStream : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kinesis.IStream,
-  ) : CdkObject(cdkObject), IStream {
+  ) : CdkObject(cdkObject),
+      IStream {
     /**
      * Apply the given removal policy to this resource.
      *

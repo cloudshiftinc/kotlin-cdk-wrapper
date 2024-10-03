@@ -596,7 +596,8 @@ public interface CfnAnalysisProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.quicksight.CfnAnalysisProps,
-  ) : CdkObject(cdkObject), CfnAnalysisProps {
+  ) : CdkObject(cdkObject),
+      CfnAnalysisProps {
     /**
      * The ID for the analysis that you're creating.
      *

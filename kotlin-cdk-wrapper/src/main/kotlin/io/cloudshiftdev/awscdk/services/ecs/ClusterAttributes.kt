@@ -261,7 +261,8 @@ public interface ClusterAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ClusterAttributes,
-  ) : CdkObject(cdkObject), ClusterAttributes {
+  ) : CdkObject(cdkObject),
+      ClusterAttributes {
     /**
      * Autoscaling group added to the cluster if capacity is added.
      *

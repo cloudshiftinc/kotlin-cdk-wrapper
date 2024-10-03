@@ -30,7 +30,8 @@ import kotlin.collections.List
  */
 public open class Tag(
   cdkObject: software.amazon.awscdk.Tag,
-) : CdkObject(cdkObject), IAspect {
+) : CdkObject(cdkObject),
+    IAspect {
   public constructor(key: String, `value`: String) : this(software.amazon.awscdk.Tag(key, `value`)
   )
 

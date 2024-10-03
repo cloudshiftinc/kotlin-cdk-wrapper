@@ -28,7 +28,8 @@ public interface IClientVpnEndpoint : IResource, IConnectable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IClientVpnEndpoint,
-  ) : CdkObject(cdkObject), IClientVpnEndpoint {
+  ) : CdkObject(cdkObject),
+      IClientVpnEndpoint {
     /**
      * Apply the given removal policy to this resource.
      *

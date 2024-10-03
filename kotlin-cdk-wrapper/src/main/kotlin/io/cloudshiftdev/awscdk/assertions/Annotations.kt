@@ -31,7 +31,8 @@ public open class Annotations(
   /**
    * Get the set of matching errors of a given construct path and message.
    *
-   * @param constructPath the construct path to the error. 
+   * @param constructPath the construct path to the error, provide `'*'` to match all errors in the
+   * template. 
    * @param message the error message as should be expected. 
    */
   public open fun findError(constructPath: String, message: Any): List<SynthesisMessage> =
@@ -40,7 +41,8 @@ public open class Annotations(
   /**
    * Get the set of matching infos of a given construct path and message.
    *
-   * @param constructPath the construct path to the info. 
+   * @param constructPath the construct path to the info, provide `'*'` to match all infos in the
+   * template. 
    * @param message the info message as should be expected. 
    */
   public open fun findInfo(constructPath: String, message: Any): List<SynthesisMessage> =
@@ -49,7 +51,8 @@ public open class Annotations(
   /**
    * Get the set of matching warning of a given construct path and message.
    *
-   * @param constructPath the construct path to the warning. 
+   * @param constructPath the construct path to the warning, provide `'*'` to match all warnings in
+   * the template. 
    * @param message the warning message as should be expected. 
    */
   public open fun findWarning(constructPath: String, message: Any): List<SynthesisMessage> =
@@ -58,7 +61,8 @@ public open class Annotations(
   /**
    * Assert that an error with the given message exists in the synthesized CDK `Stack`.
    *
-   * @param constructPath the construct path to the error. 
+   * @param constructPath the construct path to the error, provide `'*'` to match all errors in the
+   * template. 
    * @param message the error message as should be expected. 
    */
   public open fun hasError(constructPath: String, message: Any) {
@@ -68,7 +72,8 @@ public open class Annotations(
   /**
    * Assert that an info with the given message exists in the synthesized CDK `Stack`.
    *
-   * @param constructPath the construct path to the info. 
+   * @param constructPath the construct path to the info, provide `'*'` to match all info in the
+   * template. 
    * @param message the info message as should be expected. 
    */
   public open fun hasInfo(constructPath: String, message: Any) {
@@ -78,7 +83,8 @@ public open class Annotations(
   /**
    * Assert that an error with the given message does not exist in the synthesized CDK `Stack`.
    *
-   * @param constructPath the construct path to the error. 
+   * @param constructPath the construct path to the error, provide `'*'` to match all errors in the
+   * template. 
    * @param message the error message as should be expected. 
    */
   public open fun hasNoError(constructPath: String, message: Any) {
@@ -88,7 +94,8 @@ public open class Annotations(
   /**
    * Assert that an info with the given message does not exist in the synthesized CDK `Stack`.
    *
-   * @param constructPath the construct path to the info. 
+   * @param constructPath the construct path to the info, provide `'*'` to match all info in the
+   * template. 
    * @param message the info message as should be expected. 
    */
   public open fun hasNoInfo(constructPath: String, message: Any) {
@@ -98,7 +105,8 @@ public open class Annotations(
   /**
    * Assert that an warning with the given message does not exist in the synthesized CDK `Stack`.
    *
-   * @param constructPath the construct path to the warning. 
+   * @param constructPath the construct path to the warning, provide `'*'` to match all warnings in
+   * the template. 
    * @param message the warning message as should be expected. 
    */
   public open fun hasNoWarning(constructPath: String, message: Any) {
@@ -108,7 +116,8 @@ public open class Annotations(
   /**
    * Assert that an warning with the given message exists in the synthesized CDK `Stack`.
    *
-   * @param constructPath the construct path to the warning. 
+   * @param constructPath the construct path to the warning, provide `'*'` to match all warnings in
+   * the template. 
    * @param message the warning message as should be expected. 
    */
   public open fun hasWarning(constructPath: String, message: Any) {

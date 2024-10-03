@@ -12,6 +12,7 @@ import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBase
 import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
@@ -89,7 +90,7 @@ public open class BedrockInvokeModel(
      *
      * You must specify either the `body` or the `input` field, but not both.
      *
-     * Default: Input data is retrieved from the location specified in the `input` field
+     * Default: - Input data is retrieved from the location specified in the `input` field
      *
      * [Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html)
      * @param body The input data for the Bedrock model invocation. 
@@ -106,13 +107,16 @@ public open class BedrockInvokeModel(
     public fun comment(comment: String)
 
     /**
-     * The MIME type of the input data in the request.
+     * (deprecated) The MIME type of the input data in the request.
      *
      * Default: 'application/json'
      *
      * [Documentation](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html)
+     * @deprecated This property does not require configuration because the only acceptable value is
+     * 'application/json'.
      * @param contentType The MIME type of the input data in the request. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun contentType(contentType: String)
 
     /**
@@ -144,6 +148,15 @@ public open class BedrockInvokeModel(
     public fun credentials(credentials: Credentials.Builder.() -> Unit)
 
     /**
+     * The guardrail is applied to the invocation.
+     *
+     * Default: - No guardrail is applied to the invocation.
+     *
+     * @param guardrail The guardrail is applied to the invocation. 
+     */
+    public fun guardrail(guardrail: Guardrail)
+
+    /**
      * (deprecated) Timeout for the heartbeat.
      *
      * Default: - None
@@ -169,7 +182,7 @@ public open class BedrockInvokeModel(
     /**
      * The source location to retrieve the input data from.
      *
-     * Default: Input data is retrieved from the `body` field
+     * Default: - Input data is retrieved from the `body` field
      *
      * @param input The source location to retrieve the input data from. 
      */
@@ -178,7 +191,7 @@ public open class BedrockInvokeModel(
     /**
      * The source location to retrieve the input data from.
      *
-     * Default: Input data is retrieved from the `body` field
+     * Default: - Input data is retrieved from the `body` field
      *
      * @param input The source location to retrieve the input data from. 
      */
@@ -231,7 +244,7 @@ public open class BedrockInvokeModel(
      * If you specify this field, the API response body is replaced with a reference to the
      * output location.
      *
-     * Default: The API response body is returned in the result.
+     * Default: - The API response body is returned in the result.
      *
      * @param output The destination location where the API response is written. 
      */
@@ -243,7 +256,7 @@ public open class BedrockInvokeModel(
      * If you specify this field, the API response body is replaced with a reference to the
      * output location.
      *
-     * Default: The API response body is returned in the result.
+     * Default: - The API response body is returned in the result.
      *
      * @param output The destination location where the API response is written. 
      */
@@ -323,6 +336,15 @@ public open class BedrockInvokeModel(
      */
     @Deprecated(message = "deprecated in CDK")
     public fun timeout(timeout: Duration)
+
+    /**
+     * Specifies whether to enable or disable the Bedrock trace.
+     *
+     * Default: - Trace is not enabled for the invocation.
+     *
+     * @param traceEnabled Specifies whether to enable or disable the Bedrock trace. 
+     */
+    public fun traceEnabled(traceEnabled: Boolean)
   }
 
   private class BuilderImpl(
@@ -360,7 +382,7 @@ public open class BedrockInvokeModel(
      *
      * You must specify either the `body` or the `input` field, but not both.
      *
-     * Default: Input data is retrieved from the location specified in the `input` field
+     * Default: - Input data is retrieved from the location specified in the `input` field
      *
      * [Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html)
      * @param body The input data for the Bedrock model invocation. 
@@ -381,13 +403,16 @@ public open class BedrockInvokeModel(
     }
 
     /**
-     * The MIME type of the input data in the request.
+     * (deprecated) The MIME type of the input data in the request.
      *
      * Default: 'application/json'
      *
      * [Documentation](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html)
+     * @deprecated This property does not require configuration because the only acceptable value is
+     * 'application/json'.
      * @param contentType The MIME type of the input data in the request. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun contentType(contentType: String) {
       cdkBuilder.contentType(contentType)
     }
@@ -424,6 +449,17 @@ public open class BedrockInvokeModel(
         credentials(Credentials(credentials))
 
     /**
+     * The guardrail is applied to the invocation.
+     *
+     * Default: - No guardrail is applied to the invocation.
+     *
+     * @param guardrail The guardrail is applied to the invocation. 
+     */
+    override fun guardrail(guardrail: Guardrail) {
+      cdkBuilder.guardrail(guardrail.let(Guardrail.Companion::unwrap))
+    }
+
+    /**
      * (deprecated) Timeout for the heartbeat.
      *
      * Default: - None
@@ -453,7 +489,7 @@ public open class BedrockInvokeModel(
     /**
      * The source location to retrieve the input data from.
      *
-     * Default: Input data is retrieved from the `body` field
+     * Default: - Input data is retrieved from the `body` field
      *
      * @param input The source location to retrieve the input data from. 
      */
@@ -464,7 +500,7 @@ public open class BedrockInvokeModel(
     /**
      * The source location to retrieve the input data from.
      *
-     * Default: Input data is retrieved from the `body` field
+     * Default: - Input data is retrieved from the `body` field
      *
      * @param input The source location to retrieve the input data from. 
      */
@@ -524,7 +560,7 @@ public open class BedrockInvokeModel(
      * If you specify this field, the API response body is replaced with a reference to the
      * output location.
      *
-     * Default: The API response body is returned in the result.
+     * Default: - The API response body is returned in the result.
      *
      * @param output The destination location where the API response is written. 
      */
@@ -538,7 +574,7 @@ public open class BedrockInvokeModel(
      * If you specify this field, the API response body is replaced with a reference to the
      * output location.
      *
-     * Default: The API response body is returned in the result.
+     * Default: - The API response body is returned in the result.
      *
      * @param output The destination location where the API response is written. 
      */
@@ -630,6 +666,17 @@ public open class BedrockInvokeModel(
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * Specifies whether to enable or disable the Bedrock trace.
+     *
+     * Default: - Trace is not enabled for the invocation.
+     *
+     * @param traceEnabled Specifies whether to enable or disable the Bedrock trace. 
+     */
+    override fun traceEnabled(traceEnabled: Boolean) {
+      cdkBuilder.traceEnabled(traceEnabled)
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModel =

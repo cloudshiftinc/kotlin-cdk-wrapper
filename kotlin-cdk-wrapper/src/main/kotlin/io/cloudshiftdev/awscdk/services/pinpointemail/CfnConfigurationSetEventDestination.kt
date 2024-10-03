@@ -69,7 +69,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfigurationSetEventDestination(
   cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -384,7 +385,8 @@ public open class CfnConfigurationSetEventDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty,
-    ) : CdkObject(cdkObject), CloudWatchDestinationProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchDestinationProperty {
       /**
        * An array of objects that define the dimensions to use when you send email events to Amazon
        * CloudWatch.
@@ -568,7 +570,8 @@ public open class CfnConfigurationSetEventDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.DimensionConfigurationProperty,
-    ) : CdkObject(cdkObject), DimensionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DimensionConfigurationProperty {
       /**
        * The default value of the dimension that is published to Amazon CloudWatch if you don't
        * provide the value of the dimension when you send an email.
@@ -1050,7 +1053,8 @@ public open class CfnConfigurationSetEventDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.EventDestinationProperty,
-    ) : CdkObject(cdkObject), EventDestinationProperty {
+    ) : CdkObject(cdkObject),
+        EventDestinationProperty {
       /**
        * An object that defines an Amazon CloudWatch destination for email events.
        *
@@ -1216,7 +1220,8 @@ public open class CfnConfigurationSetEventDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseDestinationProperty {
+    ) : CdkObject(cdkObject),
+        KinesisFirehoseDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon Kinesis Data Firehose stream that Amazon
        * Pinpoint sends email events to.
@@ -1314,7 +1319,8 @@ public open class CfnConfigurationSetEventDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty,
-    ) : CdkObject(cdkObject), PinpointDestinationProperty {
+    ) : CdkObject(cdkObject),
+        PinpointDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon Pinpoint project that you want to send email
        * events to.
@@ -1409,7 +1415,8 @@ public open class CfnConfigurationSetEventDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.SnsDestinationProperty,
-    ) : CdkObject(cdkObject), SnsDestinationProperty {
+    ) : CdkObject(cdkObject),
+        SnsDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of the Amazon SNS topic that you want to publish email
        * events to.

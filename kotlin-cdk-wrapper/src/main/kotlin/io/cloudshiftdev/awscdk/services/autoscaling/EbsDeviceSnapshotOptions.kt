@@ -128,7 +128,8 @@ public interface EbsDeviceSnapshotOptions : EbsDeviceOptionsBase {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.EbsDeviceSnapshotOptions,
-  ) : CdkObject(cdkObject), EbsDeviceSnapshotOptions {
+  ) : CdkObject(cdkObject),
+      EbsDeviceSnapshotOptions {
     /**
      * Indicates whether to delete the volume when the instance is terminated.
      *

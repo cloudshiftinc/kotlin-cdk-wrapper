@@ -115,7 +115,8 @@ public interface IKey : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kms.IKey,
-  ) : CdkObject(cdkObject), IKey {
+  ) : CdkObject(cdkObject),
+      IKey {
     /**
      * Defines a new alias for the key.
      *

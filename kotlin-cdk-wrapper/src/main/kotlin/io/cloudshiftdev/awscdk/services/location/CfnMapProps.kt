@@ -295,7 +295,8 @@ public interface CfnMapProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.location.CfnMapProps,
-  ) : CdkObject(cdkObject), CfnMapProps {
+  ) : CdkObject(cdkObject),
+      CfnMapProps {
     /**
      * Specifies the `MapConfiguration` , including the map style, for the map resource that you
      * create.

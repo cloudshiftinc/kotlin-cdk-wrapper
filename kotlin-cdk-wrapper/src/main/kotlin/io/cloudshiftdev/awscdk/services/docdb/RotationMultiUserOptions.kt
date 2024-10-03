@@ -132,7 +132,8 @@ public interface RotationMultiUserOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.RotationMultiUserOptions,
-  ) : CdkObject(cdkObject), RotationMultiUserOptions {
+  ) : CdkObject(cdkObject),
+      RotationMultiUserOptions {
     /**
      * Specifies the number of days after the previous rotation before Secrets Manager triggers the
      * next automatic rotation.

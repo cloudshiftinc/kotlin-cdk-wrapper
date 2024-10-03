@@ -59,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDomainName(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -705,7 +707,8 @@ public open class CfnDomainName(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty,
-    ) : CdkObject(cdkObject), EndpointConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EndpointConfigurationProperty {
       /**
        * A list of endpoint types of an API (RestApi) or its custom domain name (DomainName).
        *
@@ -835,7 +838,8 @@ public open class CfnDomainName(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.MutualTlsAuthenticationProperty,
-    ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
+    ) : CdkObject(cdkObject),
+        MutualTlsAuthenticationProperty {
       /**
        * An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example
        * `s3://bucket-name/key-name` .

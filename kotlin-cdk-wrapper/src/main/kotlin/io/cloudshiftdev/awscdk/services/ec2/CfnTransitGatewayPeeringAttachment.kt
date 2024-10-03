@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTransitGatewayPeeringAttachment(
   cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -404,7 +406,8 @@ public open class CfnTransitGatewayPeeringAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty,
-    ) : CdkObject(cdkObject), PeeringAttachmentStatusProperty {
+    ) : CdkObject(cdkObject),
+        PeeringAttachmentStatusProperty {
       /**
        * The status code.
        *

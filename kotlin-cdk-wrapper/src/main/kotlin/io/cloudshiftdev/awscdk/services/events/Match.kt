@@ -34,7 +34,8 @@ import kotlin.collections.List
  */
 public open class Match(
   cdkObject: software.amazon.awscdk.services.events.Match,
-) : CdkObject(cdkObject), IResolvable {
+) : CdkObject(cdkObject),
+    IResolvable {
   /**
    * A representation of this matcher as a list of strings.
    */

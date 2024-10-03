@@ -805,7 +805,8 @@ public interface CfnMonitorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitorProps,
-  ) : CdkObject(cdkObject), CfnMonitorProps {
+  ) : CdkObject(cdkObject),
+      CfnMonitorProps {
     /**
      * A complex type with the configuration information that determines the threshold and other
      * conditions for when Internet Monitor creates a health event for an overall performance or

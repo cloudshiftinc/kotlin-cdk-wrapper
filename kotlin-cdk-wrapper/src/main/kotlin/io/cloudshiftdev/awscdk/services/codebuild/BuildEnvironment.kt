@@ -73,6 +73,20 @@ public interface BuildEnvironment {
       emptyMap()
 
   /**
+   * Fleet resource for a reserved capacity CodeBuild project.
+   *
+   * Fleets allow for process builds or tests to run immediately and reduces build durations,
+   * by reserving compute resources for your projects.
+   *
+   * You will be charged for the resources in the fleet, even if they are idle.
+   *
+   * Default: - No fleet will be attached to the project, which will remain on-demand.
+   *
+   * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/fleets.html)
+   */
+  public fun fleet(): IFleet? = unwrap(this).getFleet()?.let(IFleet::wrap)
+
+  /**
    * Indicates how the project builds Docker images.
    *
    * Specify true to enable
@@ -118,6 +132,15 @@ public interface BuildEnvironment {
      * @param environmentVariables The environment variables that your builds can use.
      */
     public fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>)
+
+    /**
+     * @param fleet Fleet resource for a reserved capacity CodeBuild project.
+     * Fleets allow for process builds or tests to run immediately and reduces build durations,
+     * by reserving compute resources for your projects.
+     *
+     * You will be charged for the resources in the fleet, even if they are idle.
+     */
+    public fun fleet(fleet: IFleet)
 
     /**
      * @param privileged Indicates how the project builds Docker images.
@@ -173,6 +196,17 @@ public interface BuildEnvironment {
     }
 
     /**
+     * @param fleet Fleet resource for a reserved capacity CodeBuild project.
+     * Fleets allow for process builds or tests to run immediately and reduces build durations,
+     * by reserving compute resources for your projects.
+     *
+     * You will be charged for the resources in the fleet, even if they are idle.
+     */
+    override fun fleet(fleet: IFleet) {
+      cdkBuilder.fleet(fleet.let(IFleet.Companion::unwrap))
+    }
+
+    /**
      * @param privileged Indicates how the project builds Docker images.
      * Specify true to enable
      * running the Docker daemon inside a Docker container. This value must be
@@ -191,7 +225,8 @@ public interface BuildEnvironment {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironment,
-  ) : CdkObject(cdkObject), BuildEnvironment {
+  ) : CdkObject(cdkObject),
+      BuildEnvironment {
     /**
      * The image used for the builds.
      *
@@ -222,6 +257,20 @@ public interface BuildEnvironment {
     override fun environmentVariables(): Map<String, BuildEnvironmentVariable> =
         unwrap(this).getEnvironmentVariables()?.mapValues{BuildEnvironmentVariable.wrap(it.value)}
         ?: emptyMap()
+
+    /**
+     * Fleet resource for a reserved capacity CodeBuild project.
+     *
+     * Fleets allow for process builds or tests to run immediately and reduces build durations,
+     * by reserving compute resources for your projects.
+     *
+     * You will be charged for the resources in the fleet, even if they are idle.
+     *
+     * Default: - No fleet will be attached to the project, which will remain on-demand.
+     *
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/fleets.html)
+     */
+    override fun fleet(): IFleet? = unwrap(this).getFleet()?.let(IFleet::wrap)
 
     /**
      * Indicates how the project builds Docker images.

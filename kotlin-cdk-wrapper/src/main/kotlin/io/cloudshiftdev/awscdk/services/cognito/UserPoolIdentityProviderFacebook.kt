@@ -56,7 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class UserPoolIdentityProviderFacebook(
   cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderFacebook,
-) : Resource(cdkObject), IUserPoolIdentityProvider {
+) : Resource(cdkObject),
+    IUserPoolIdentityProvider {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

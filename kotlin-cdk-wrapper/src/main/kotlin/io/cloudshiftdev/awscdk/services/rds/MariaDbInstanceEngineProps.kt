@@ -58,7 +58,8 @@ public interface MariaDbInstanceEngineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps,
-  ) : CdkObject(cdkObject), MariaDbInstanceEngineProps {
+  ) : CdkObject(cdkObject),
+      MariaDbInstanceEngineProps {
     /**
      * The exact version of the engine to use.
      */

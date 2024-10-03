@@ -75,12 +75,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .kmsKeyId("kmsKeyId")
  * .loggingProperties(LoggingPropertiesProperty.builder()
  * .bucketName("bucketName")
+ * .logDestinationType("logDestinationType")
+ * .logExports(List.of("logExports"))
  * .s3KeyPrefix("s3KeyPrefix")
  * .build())
  * .maintenanceTrackName("maintenanceTrackName")
  * .manageMasterPassword(false)
  * .manualSnapshotRetentionPeriod(123)
- * .masterPasswordSecretKmsKeyId("masterPasswordSecretKmsKeyId")
  * .masterUserPassword("masterUserPassword")
  * .multiAz(false)
  * .namespaceResourcePolicy(namespaceResourcePolicy)
@@ -109,7 +110,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCluster(
   cdkObject: software.amazon.awscdk.services.redshift.CfnCluster,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -665,21 +668,6 @@ public open class CfnCluster(
    */
   public open fun manualSnapshotRetentionPeriod(`value`: Number) {
     unwrap(this).setManualSnapshotRetentionPeriod(`value`)
-  }
-
-  /**
-   * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
-   * admin credentials secret.
-   */
-  public open fun masterPasswordSecretKmsKeyId(): String? =
-      unwrap(this).getMasterPasswordSecretKmsKeyId()
-
-  /**
-   * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
-   * admin credentials secret.
-   */
-  public open fun masterPasswordSecretKmsKeyId(`value`: String) {
-    unwrap(this).setMasterPasswordSecretKmsKeyId(`value`)
   }
 
   /**
@@ -1546,18 +1534,6 @@ public open class CfnCluster(
     public fun manualSnapshotRetentionPeriod(manualSnapshotRetentionPeriod: Number)
 
     /**
-     * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
-     * admin credentials secret.
-     *
-     * You can only use this parameter if `ManageMasterPassword` is true.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-masterpasswordsecretkmskeyid)
-     * @param masterPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used
-     * to encrypt and store the cluster's admin credentials secret. 
-     */
-    public fun masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId: String)
-
-    /**
      * The password associated with the admin user account for the cluster that is being created.
      *
      * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -1636,8 +1612,7 @@ public open class CfnCluster(
      * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
      * in the *Amazon Redshift Cluster Management Guide* .
      *
-     * Valid Values: `ds2.xlarge` | `ds2.8xlarge` | `dc1.large` | `dc1.8xlarge` | `dc2.large` |
-     * `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-nodetype)
      * @param nodeType The node type to be provisioned for the cluster. 
@@ -1688,7 +1663,7 @@ public open class CfnCluster(
      * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
      * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
      * these ranges.)
-     * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
+     * * For clusters with dc2 nodes - Select a port within the range `1150-65535` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-port)
      * @param port The port number on which the cluster accepts incoming connections. 
@@ -2538,20 +2513,6 @@ public open class CfnCluster(
     }
 
     /**
-     * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
-     * admin credentials secret.
-     *
-     * You can only use this parameter if `ManageMasterPassword` is true.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-masterpasswordsecretkmskeyid)
-     * @param masterPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used
-     * to encrypt and store the cluster's admin credentials secret. 
-     */
-    override fun masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId: String) {
-      cdkBuilder.masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId)
-    }
-
-    /**
      * The password associated with the admin user account for the cluster that is being created.
      *
      * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -2640,8 +2601,7 @@ public open class CfnCluster(
      * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
      * in the *Amazon Redshift Cluster Management Guide* .
      *
-     * Valid Values: `ds2.xlarge` | `ds2.8xlarge` | `dc1.large` | `dc1.8xlarge` | `dc2.large` |
-     * `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-nodetype)
      * @param nodeType The node type to be provisioned for the cluster. 
@@ -2698,7 +2658,7 @@ public open class CfnCluster(
      * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
      * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
      * these ranges.)
-     * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
+     * * For clusters with dc2 nodes - Select a port within the range `1150-65535` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-port)
      * @param port The port number on which the cluster accepts incoming connections. 
@@ -3031,7 +2991,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshift.CfnCluster.EndpointProperty,
-    ) : CdkObject(cdkObject), EndpointProperty {
+    ) : CdkObject(cdkObject),
+        EndpointProperty {
       /**
        * The DNS address of the cluster.
        *
@@ -3081,6 +3042,8 @@ public open class CfnCluster(
    * import io.cloudshiftdev.awscdk.services.redshift.*;
    * LoggingPropertiesProperty loggingPropertiesProperty = LoggingPropertiesProperty.builder()
    * .bucketName("bucketName")
+   * .logDestinationType("logDestinationType")
+   * .logExports(List.of("logExports"))
    * .s3KeyPrefix("s3KeyPrefix")
    * .build();
    * ```
@@ -3099,6 +3062,24 @@ public open class CfnCluster(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-bucketname)
      */
     public fun bucketName(): String? = unwrap(this).getBucketName()
+
+    /**
+     * The log destination type.
+     *
+     * An enum with possible values of `s3` and `cloudwatch` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-logdestinationtype)
+     */
+    public fun logDestinationType(): String? = unwrap(this).getLogDestinationType()
+
+    /**
+     * The collection of exported log types.
+     *
+     * Possible values are `connectionlog` , `useractivitylog` , and `userlog` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-logexports)
+     */
+    public fun logExports(): List<String> = unwrap(this).getLogExports() ?: emptyList()
 
     /**
      * The prefix applied to the log file names.
@@ -3133,6 +3114,24 @@ public open class CfnCluster(
       public fun bucketName(bucketName: String)
 
       /**
+       * @param logDestinationType The log destination type.
+       * An enum with possible values of `s3` and `cloudwatch` .
+       */
+      public fun logDestinationType(logDestinationType: String)
+
+      /**
+       * @param logExports The collection of exported log types.
+       * Possible values are `connectionlog` , `useractivitylog` , and `userlog` .
+       */
+      public fun logExports(logExports: List<String>)
+
+      /**
+       * @param logExports The collection of exported log types.
+       * Possible values are `connectionlog` , `useractivitylog` , and `userlog` .
+       */
+      public fun logExports(vararg logExports: String)
+
+      /**
        * @param s3KeyPrefix The prefix applied to the log file names.
        * Constraints:
        *
@@ -3165,6 +3164,28 @@ public open class CfnCluster(
       }
 
       /**
+       * @param logDestinationType The log destination type.
+       * An enum with possible values of `s3` and `cloudwatch` .
+       */
+      override fun logDestinationType(logDestinationType: String) {
+        cdkBuilder.logDestinationType(logDestinationType)
+      }
+
+      /**
+       * @param logExports The collection of exported log types.
+       * Possible values are `connectionlog` , `useractivitylog` , and `userlog` .
+       */
+      override fun logExports(logExports: List<String>) {
+        cdkBuilder.logExports(logExports)
+      }
+
+      /**
+       * @param logExports The collection of exported log types.
+       * Possible values are `connectionlog` , `useractivitylog` , and `userlog` .
+       */
+      override fun logExports(vararg logExports: String): Unit = logExports(logExports.toList())
+
+      /**
        * @param s3KeyPrefix The prefix applied to the log file names.
        * Constraints:
        *
@@ -3188,7 +3209,8 @@ public open class CfnCluster(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.redshift.CfnCluster.LoggingPropertiesProperty,
-    ) : CdkObject(cdkObject), LoggingPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        LoggingPropertiesProperty {
       /**
        * The name of an existing S3 bucket where the log files are to be stored.
        *
@@ -3200,6 +3222,24 @@ public open class CfnCluster(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-bucketname)
        */
       override fun bucketName(): String? = unwrap(this).getBucketName()
+
+      /**
+       * The log destination type.
+       *
+       * An enum with possible values of `s3` and `cloudwatch` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-logdestinationtype)
+       */
+      override fun logDestinationType(): String? = unwrap(this).getLogDestinationType()
+
+      /**
+       * The collection of exported log types.
+       *
+       * Possible values are `connectionlog` , `useractivitylog` , and `userlog` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-logexports)
+       */
+      override fun logExports(): List<String> = unwrap(this).getLogExports() ?: emptyList()
 
       /**
        * The prefix applied to the log file names.

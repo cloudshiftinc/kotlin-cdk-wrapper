@@ -129,7 +129,8 @@ public interface CfnDestinationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.CfnDestinationProps,
-  ) : CdkObject(cdkObject), CfnDestinationProps {
+  ) : CdkObject(cdkObject),
+      CfnDestinationProps {
     /**
      * The name of the destination.
      *

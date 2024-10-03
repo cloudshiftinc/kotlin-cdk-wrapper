@@ -29,7 +29,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * If you apply a parameter group to a DB cluster, then its DB instances might need to reboot. This
  * can result in an outage while the DB instances are rebooting.
  *
- * If you apply a change to parameter group associated with a stopped DB cluster, then the update
+ * If you apply a change to parameter group associated with a stopped DB cluster, then the updated
  * stack waits until the DB cluster is started.
  *
  *
@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDBClusterParameterGroup(
   cdkObject: software.amazon.awscdk.services.rds.CfnDBClusterParameterGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -89,12 +91,12 @@ public open class CfnDBClusterParameterGroup(
   }
 
   /**
-   * A friendly description for this DB cluster parameter group.
+   * The description for the DB cluster parameter group.
    */
   public open fun description(): String = unwrap(this).getDescription()
 
   /**
-   * A friendly description for this DB cluster parameter group.
+   * The description for the DB cluster parameter group.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
@@ -139,20 +141,20 @@ public open class CfnDBClusterParameterGroup(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * An optional array of key-value pairs to apply to this DB cluster parameter group.
+   * Tags to assign to the DB cluster parameter group.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * An optional array of key-value pairs to apply to this DB cluster parameter group.
+   * Tags to assign to the DB cluster parameter group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * An optional array of key-value pairs to apply to this DB cluster parameter group.
+   * Tags to assign to the DB cluster parameter group.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -168,9 +170,6 @@ public open class CfnDBClusterParameterGroup(
      *
      * * Must not match the name of an existing DB cluster parameter group.
      *
-     * If you don't specify a value for `DBClusterParameterGroupName` property, a name is
-     * automatically created for the DB cluster parameter group.
-     *
      *
      * This value is stored as a lowercase string.
      *
@@ -181,10 +180,10 @@ public open class CfnDBClusterParameterGroup(
     public fun dbClusterParameterGroupName(dbClusterParameterGroupName: String)
 
     /**
-     * A friendly description for this DB cluster parameter group.
+     * The description for the DB cluster parameter group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-description)
-     * @param description A friendly description for this DB cluster parameter group. 
+     * @param description The description for the DB cluster parameter group. 
      */
     public fun description(description: String)
 
@@ -192,23 +191,47 @@ public open class CfnDBClusterParameterGroup(
      * The DB cluster parameter group family name.
      *
      * A DB cluster parameter group can be associated with one and only one DB cluster parameter
-     * group family, and can be applied only to a DB cluster running a DB engine and engine version
-     * compatible with that DB cluster parameter group family.
+     * group family, and can be applied only to a DB cluster running a database engine and engine
+     * version compatible with that DB cluster parameter group family.
      *
+     * *Aurora MySQL*
      *
-     * The DB cluster parameter group family can't be changed when updating a DB cluster parameter
-     * group.
+     * Example: `aurora-mysql5.7` , `aurora-mysql8.0`
      *
+     * *Aurora PostgreSQL*
      *
-     * To list all of the available parameter group families, use the following command:
+     * Example: `aurora-postgresql14`
      *
-     * `aws rds describe-db-engine-versions --query "DBEngineVersions[].DBParameterGroupFamily"`
+     * *RDS for MySQL*
+     *
+     * Example: `mysql8.0`
+     *
+     * *RDS for PostgreSQL*
+     *
+     * Example: `postgres13`
+     *
+     * To list all of the available parameter group families for a DB engine, use the following
+     * command:
+     *
+     * `aws rds describe-db-engine-versions --query
+     * "DBEngineVersions[].DBParameterGroupFamily" --engine &lt;engine&gt;`
+     *
+     * For example, to list all of the available parameter group families for the Aurora PostgreSQL
+     * DB engine, use the following command:
+     *
+     * `aws rds describe-db-engine-versions --query
+     * "DBEngineVersions[].DBParameterGroupFamily" --engine aurora-postgresql`
+     *
      *
      * The output contains duplicates.
      *
-     * For more information, see
-     * `[CreateDBClusterParameterGroup](https://docs.aws.amazon.com//AmazonRDS/latest/APIReference/API_CreateDBClusterParameterGroup.html)`
-     * .
+     *
+     * The following are the valid DB engine values:
+     *
+     * * `aurora-mysql`
+     * * `aurora-postgresql`
+     * * `mysql`
+     * * `postgres`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-family)
      * @param family The DB cluster parameter group family name. 
@@ -224,20 +247,18 @@ public open class CfnDBClusterParameterGroup(
     public fun parameters(parameters: Any)
 
     /**
-     * An optional array of key-value pairs to apply to this DB cluster parameter group.
+     * Tags to assign to the DB cluster parameter group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB cluster parameter group.
-     * 
+     * @param tags Tags to assign to the DB cluster parameter group. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * An optional array of key-value pairs to apply to this DB cluster parameter group.
+     * Tags to assign to the DB cluster parameter group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB cluster parameter group.
-     * 
+     * @param tags Tags to assign to the DB cluster parameter group. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -256,9 +277,6 @@ public open class CfnDBClusterParameterGroup(
      *
      * * Must not match the name of an existing DB cluster parameter group.
      *
-     * If you don't specify a value for `DBClusterParameterGroupName` property, a name is
-     * automatically created for the DB cluster parameter group.
-     *
      *
      * This value is stored as a lowercase string.
      *
@@ -271,10 +289,10 @@ public open class CfnDBClusterParameterGroup(
     }
 
     /**
-     * A friendly description for this DB cluster parameter group.
+     * The description for the DB cluster parameter group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-description)
-     * @param description A friendly description for this DB cluster parameter group. 
+     * @param description The description for the DB cluster parameter group. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -284,23 +302,47 @@ public open class CfnDBClusterParameterGroup(
      * The DB cluster parameter group family name.
      *
      * A DB cluster parameter group can be associated with one and only one DB cluster parameter
-     * group family, and can be applied only to a DB cluster running a DB engine and engine version
-     * compatible with that DB cluster parameter group family.
+     * group family, and can be applied only to a DB cluster running a database engine and engine
+     * version compatible with that DB cluster parameter group family.
      *
+     * *Aurora MySQL*
      *
-     * The DB cluster parameter group family can't be changed when updating a DB cluster parameter
-     * group.
+     * Example: `aurora-mysql5.7` , `aurora-mysql8.0`
      *
+     * *Aurora PostgreSQL*
      *
-     * To list all of the available parameter group families, use the following command:
+     * Example: `aurora-postgresql14`
      *
-     * `aws rds describe-db-engine-versions --query "DBEngineVersions[].DBParameterGroupFamily"`
+     * *RDS for MySQL*
+     *
+     * Example: `mysql8.0`
+     *
+     * *RDS for PostgreSQL*
+     *
+     * Example: `postgres13`
+     *
+     * To list all of the available parameter group families for a DB engine, use the following
+     * command:
+     *
+     * `aws rds describe-db-engine-versions --query
+     * "DBEngineVersions[].DBParameterGroupFamily" --engine &lt;engine&gt;`
+     *
+     * For example, to list all of the available parameter group families for the Aurora PostgreSQL
+     * DB engine, use the following command:
+     *
+     * `aws rds describe-db-engine-versions --query
+     * "DBEngineVersions[].DBParameterGroupFamily" --engine aurora-postgresql`
+     *
      *
      * The output contains duplicates.
      *
-     * For more information, see
-     * `[CreateDBClusterParameterGroup](https://docs.aws.amazon.com//AmazonRDS/latest/APIReference/API_CreateDBClusterParameterGroup.html)`
-     * .
+     *
+     * The following are the valid DB engine values:
+     *
+     * * `aurora-mysql`
+     * * `aurora-postgresql`
+     * * `mysql`
+     * * `postgres`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-family)
      * @param family The DB cluster parameter group family name. 
@@ -320,22 +362,20 @@ public open class CfnDBClusterParameterGroup(
     }
 
     /**
-     * An optional array of key-value pairs to apply to this DB cluster parameter group.
+     * Tags to assign to the DB cluster parameter group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB cluster parameter group.
-     * 
+     * @param tags Tags to assign to the DB cluster parameter group. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * An optional array of key-value pairs to apply to this DB cluster parameter group.
+     * Tags to assign to the DB cluster parameter group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB cluster parameter group.
-     * 
+     * @param tags Tags to assign to the DB cluster parameter group. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

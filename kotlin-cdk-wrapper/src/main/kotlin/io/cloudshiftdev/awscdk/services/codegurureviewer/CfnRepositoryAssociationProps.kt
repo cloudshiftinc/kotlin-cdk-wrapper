@@ -279,7 +279,8 @@ public interface CfnRepositoryAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociationProps,
-  ) : CdkObject(cdkObject), CfnRepositoryAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnRepositoryAssociationProps {
     /**
      * The name of the bucket.
      *

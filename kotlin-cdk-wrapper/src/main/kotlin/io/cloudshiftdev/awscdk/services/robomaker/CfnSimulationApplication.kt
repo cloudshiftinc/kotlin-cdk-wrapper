@@ -64,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSimulationApplication(
   cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -680,7 +682,8 @@ public open class CfnSimulationApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty,
-    ) : CdkObject(cdkObject), RenderingEngineProperty {
+    ) : CdkObject(cdkObject),
+        RenderingEngineProperty {
       /**
        * The name of the rendering engine.
        *
@@ -798,7 +801,8 @@ public open class CfnSimulationApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty,
-    ) : CdkObject(cdkObject), RobotSoftwareSuiteProperty {
+    ) : CdkObject(cdkObject),
+        RobotSoftwareSuiteProperty {
       /**
        * The name of the robot software suite.
        *
@@ -921,7 +925,8 @@ public open class CfnSimulationApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SimulationSoftwareSuiteProperty,
-    ) : CdkObject(cdkObject), SimulationSoftwareSuiteProperty {
+    ) : CdkObject(cdkObject),
+        SimulationSoftwareSuiteProperty {
       /**
        * The name of the simulation software suite.
        *
@@ -1054,7 +1059,8 @@ public open class CfnSimulationApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SourceConfigProperty,
-    ) : CdkObject(cdkObject), SourceConfigProperty {
+    ) : CdkObject(cdkObject),
+        SourceConfigProperty {
       /**
        * The target processor architecture for the application.
        *

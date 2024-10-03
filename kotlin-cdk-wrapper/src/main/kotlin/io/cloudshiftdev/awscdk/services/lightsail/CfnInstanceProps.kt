@@ -636,7 +636,8 @@ public interface CfnInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lightsail.CfnInstanceProps,
-  ) : CdkObject(cdkObject), CfnInstanceProps {
+  ) : CdkObject(cdkObject),
+      CfnInstanceProps {
     /**
      * An array of add-ons for the instance.
      *

@@ -254,9 +254,9 @@ public interface CfnQueueProps {
    *
    * * `deadLetterTargetArn` : The Amazon Resource Name (ARN) of the dead-letter queue to which
    * Amazon SQS moves messages after the value of `maxReceiveCount` is exceeded.
-   * * `maxReceiveCount` : The number of times a message is delivered to the source queue before
-   * being moved to the dead-letter queue. When the `ReceiveCount` for a message exceeds the
-   * `maxReceiveCount` for a queue, Amazon SQS moves the message to the dead-letter-queue.
+   * * `maxReceiveCount` : The number of times a message is received by a consumer of the source
+   * queue before being moved to the dead-letter queue. When the `ReceiveCount` for a message exceeds
+   * the `maxReceiveCount` for a queue, Amazon SQS moves the message to the dead-letter-queue.
    *
    *
    * The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter
@@ -511,9 +511,9 @@ public interface CfnQueueProps {
      *
      * * `deadLetterTargetArn` : The Amazon Resource Name (ARN) of the dead-letter queue to which
      * Amazon SQS moves messages after the value of `maxReceiveCount` is exceeded.
-     * * `maxReceiveCount` : The number of times a message is delivered to the source queue before
-     * being moved to the dead-letter queue. When the `ReceiveCount` for a message exceeds the
-     * `maxReceiveCount` for a queue, Amazon SQS moves the message to the dead-letter-queue.
+     * * `maxReceiveCount` : The number of times a message is received by a consumer of the source
+     * queue before being moved to the dead-letter queue. When the `ReceiveCount` for a message exceeds
+     * the `maxReceiveCount` for a queue, Amazon SQS moves the message to the dead-letter-queue.
      *
      *
      * The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter
@@ -805,9 +805,9 @@ public interface CfnQueueProps {
      *
      * * `deadLetterTargetArn` : The Amazon Resource Name (ARN) of the dead-letter queue to which
      * Amazon SQS moves messages after the value of `maxReceiveCount` is exceeded.
-     * * `maxReceiveCount` : The number of times a message is delivered to the source queue before
-     * being moved to the dead-letter queue. When the `ReceiveCount` for a message exceeds the
-     * `maxReceiveCount` for a queue, Amazon SQS moves the message to the dead-letter-queue.
+     * * `maxReceiveCount` : The number of times a message is received by a consumer of the source
+     * queue before being moved to the dead-letter queue. When the `ReceiveCount` for a message exceeds
+     * the `maxReceiveCount` for a queue, Amazon SQS moves the message to the dead-letter-queue.
      *
      *
      * The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter
@@ -894,7 +894,8 @@ public interface CfnQueueProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sqs.CfnQueueProps,
-  ) : CdkObject(cdkObject), CfnQueueProps {
+  ) : CdkObject(cdkObject),
+      CfnQueueProps {
     /**
      * For first-in-first-out (FIFO) queues, specifies whether to enable content-based
      * deduplication.
@@ -1099,9 +1100,9 @@ public interface CfnQueueProps {
      *
      * * `deadLetterTargetArn` : The Amazon Resource Name (ARN) of the dead-letter queue to which
      * Amazon SQS moves messages after the value of `maxReceiveCount` is exceeded.
-     * * `maxReceiveCount` : The number of times a message is delivered to the source queue before
-     * being moved to the dead-letter queue. When the `ReceiveCount` for a message exceeds the
-     * `maxReceiveCount` for a queue, Amazon SQS moves the message to the dead-letter-queue.
+     * * `maxReceiveCount` : The number of times a message is received by a consumer of the source
+     * queue before being moved to the dead-letter queue. When the `ReceiveCount` for a message exceeds
+     * the `maxReceiveCount` for a queue, Amazon SQS moves the message to the dead-letter-queue.
      *
      *
      * The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter

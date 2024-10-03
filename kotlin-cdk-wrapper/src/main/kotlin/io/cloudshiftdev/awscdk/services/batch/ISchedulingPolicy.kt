@@ -30,7 +30,8 @@ public interface ISchedulingPolicy : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.ISchedulingPolicy,
-  ) : CdkObject(cdkObject), ISchedulingPolicy {
+  ) : CdkObject(cdkObject),
+      ISchedulingPolicy {
     /**
      * Apply the given removal policy to this resource.
      *

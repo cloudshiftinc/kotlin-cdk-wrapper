@@ -55,6 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .s3DataType("s3DataType")
  * .s3Uri("s3Uri")
  * // the properties below are optional
+ * .hubAccessConfig(HubAccessConfigProperty.builder()
+ * .hubContentArn("hubContentArn")
+ * .build())
  * .modelAccessConfig(ModelAccessConfigProperty.builder()
  * .acceptEula(false)
  * .build())
@@ -91,6 +94,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .s3DataType("s3DataType")
  * .s3Uri("s3Uri")
  * // the properties below are optional
+ * .hubAccessConfig(HubAccessConfigProperty.builder()
+ * .hubContentArn("hubContentArn")
+ * .build())
  * .modelAccessConfig(ModelAccessConfigProperty.builder()
  * .acceptEula(false)
  * .build())
@@ -117,7 +123,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnModel(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sagemaker.CfnModel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -913,6 +921,9 @@ public open class CfnModel(
    * .s3DataType("s3DataType")
    * .s3Uri("s3Uri")
    * // the properties below are optional
+   * .hubAccessConfig(HubAccessConfigProperty.builder()
+   * .hubContentArn("hubContentArn")
+   * .build())
    * .modelAccessConfig(ModelAccessConfigProperty.builder()
    * .acceptEula(false)
    * .build())
@@ -947,7 +958,8 @@ public open class CfnModel(
     public fun containerHostname(): String? = unwrap(this).getContainerHostname()
 
     /**
-     * The environment variables to set in the Docker container.
+     * The environment variables to set in the Docker container. Don't include any sensitive data in
+     * your environment variables.
      *
      * The maximum length of each key and value in the `Environment` map is 1024 bytes. The maximum
      * length of all keys and values in the map, combined, is 32 KB. If you pass multiple containers to
@@ -1088,7 +1100,8 @@ public open class CfnModel(
       public fun containerHostname(containerHostname: String)
 
       /**
-       * @param environment The environment variables to set in the Docker container.
+       * @param environment The environment variables to set in the Docker container. Don't include
+       * any sensitive data in your environment variables.
        * The maximum length of each key and value in the `Environment` map is 1024 bytes. The
        * maximum length of all keys and values in the map, combined, is 32 KB. If you pass multiple
        * containers to a `CreateModel` request, then the maximum length of all of their maps, combined,
@@ -1272,7 +1285,8 @@ public open class CfnModel(
       }
 
       /**
-       * @param environment The environment variables to set in the Docker container.
+       * @param environment The environment variables to set in the Docker container. Don't include
+       * any sensitive data in your environment variables.
        * The maximum length of each key and value in the `Environment` map is 1024 bytes. The
        * maximum length of all keys and values in the map, combined, is 32 KB. If you pass multiple
        * containers to a `CreateModel` request, then the maximum length of all of their maps, combined,
@@ -1466,7 +1480,8 @@ public open class CfnModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ContainerDefinitionProperty,
-    ) : CdkObject(cdkObject), ContainerDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        ContainerDefinitionProperty {
       /**
        * This parameter is ignored for models that contain only a `PrimaryContainer` .
        *
@@ -1485,7 +1500,8 @@ public open class CfnModel(
       override fun containerHostname(): String? = unwrap(this).getContainerHostname()
 
       /**
-       * The environment variables to set in the Docker container.
+       * The environment variables to set in the Docker container. Don't include any sensitive data
+       * in your environment variables.
        *
        * The maximum length of each key and value in the `Environment` map is 1024 bytes. The
        * maximum length of all keys and values in the map, combined, is 32 KB. If you pass multiple
@@ -1624,6 +1640,81 @@ public open class CfnModel(
           software.amazon.awscdk.services.sagemaker.CfnModel.ContainerDefinitionProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.sagemaker.CfnModel.ContainerDefinitionProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * HubAccessConfigProperty hubAccessConfigProperty = HubAccessConfigProperty.builder()
+   * .hubContentArn("hubContentArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-hubaccessconfig.html)
+   */
+  public interface HubAccessConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-hubaccessconfig.html#cfn-sagemaker-model-hubaccessconfig-hubcontentarn)
+     */
+    public fun hubContentArn(): String
+
+    /**
+     * A builder for [HubAccessConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param hubContentArn the value to be set. 
+       */
+      public fun hubContentArn(hubContentArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnModel.HubAccessConfigProperty.Builder =
+          software.amazon.awscdk.services.sagemaker.CfnModel.HubAccessConfigProperty.builder()
+
+      /**
+       * @param hubContentArn the value to be set. 
+       */
+      override fun hubContentArn(hubContentArn: String) {
+        cdkBuilder.hubContentArn(hubContentArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.sagemaker.CfnModel.HubAccessConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.HubAccessConfigProperty,
+    ) : CdkObject(cdkObject),
+        HubAccessConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-hubaccessconfig.html#cfn-sagemaker-model-hubaccessconfig-hubcontentarn)
+       */
+      override fun hubContentArn(): String = unwrap(this).getHubContentArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HubAccessConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.HubAccessConfigProperty):
+          HubAccessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HubAccessConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HubAccessConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnModel.HubAccessConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnModel.HubAccessConfigProperty
     }
   }
 
@@ -1769,7 +1860,8 @@ public open class CfnModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ImageConfigProperty,
-    ) : CdkObject(cdkObject), ImageConfigProperty {
+    ) : CdkObject(cdkObject),
+        ImageConfigProperty {
       /**
        * Set this to one of the following values:.
        *
@@ -1874,7 +1966,8 @@ public open class CfnModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.InferenceExecutionConfigProperty,
-    ) : CdkObject(cdkObject), InferenceExecutionConfigProperty {
+    ) : CdkObject(cdkObject),
+        InferenceExecutionConfigProperty {
       /**
        * How containers in a multi-container are run. The following values are valid.
        *
@@ -2002,7 +2095,8 @@ public open class CfnModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ModelAccessConfigProperty,
-    ) : CdkObject(cdkObject), ModelAccessConfigProperty {
+    ) : CdkObject(cdkObject),
+        ModelAccessConfigProperty {
       /**
        * Specifies agreement to the model end-user license agreement (EULA).
        *
@@ -2051,6 +2145,9 @@ public open class CfnModel(
    * .s3DataType("s3DataType")
    * .s3Uri("s3Uri")
    * // the properties below are optional
+   * .hubAccessConfig(HubAccessConfigProperty.builder()
+   * .hubContentArn("hubContentArn")
+   * .build())
    * .modelAccessConfig(ModelAccessConfigProperty.builder()
    * .acceptEula(false)
    * .build())
@@ -2124,7 +2221,8 @@ public open class CfnModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty,
-    ) : CdkObject(cdkObject), ModelDataSourceProperty {
+    ) : CdkObject(cdkObject),
+        ModelDataSourceProperty {
       /**
        * Specifies the S3 location of ML model data to deploy.
        *
@@ -2221,7 +2319,8 @@ public open class CfnModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty,
-    ) : CdkObject(cdkObject), MultiModelConfigProperty {
+    ) : CdkObject(cdkObject),
+        MultiModelConfigProperty {
       /**
        * Whether to cache models for a multi-model endpoint.
        *
@@ -2333,7 +2432,8 @@ public open class CfnModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty,
-    ) : CdkObject(cdkObject), RepositoryAuthConfigProperty {
+    ) : CdkObject(cdkObject),
+        RepositoryAuthConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of an AWS Lambda function that provides credentials to
        * authenticate to the private Docker registry where your model image is hosted.
@@ -2383,6 +2483,9 @@ public open class CfnModel(
    * .s3DataType("s3DataType")
    * .s3Uri("s3Uri")
    * // the properties below are optional
+   * .hubAccessConfig(HubAccessConfigProperty.builder()
+   * .hubContentArn("hubContentArn")
+   * .build())
    * .modelAccessConfig(ModelAccessConfigProperty.builder()
    * .acceptEula(false)
    * .build())
@@ -2396,6 +2499,11 @@ public open class CfnModel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-compressiontype)
      */
     public fun compressionType(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-hubaccessconfig)
+     */
+    public fun hubAccessConfig(): Any? = unwrap(this).getHubAccessConfig()
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-modelaccessconfig)
@@ -2476,6 +2584,23 @@ public open class CfnModel(
        * @param compressionType the value to be set. 
        */
       public fun compressionType(compressionType: String)
+
+      /**
+       * @param hubAccessConfig the value to be set.
+       */
+      public fun hubAccessConfig(hubAccessConfig: IResolvable)
+
+      /**
+       * @param hubAccessConfig the value to be set.
+       */
+      public fun hubAccessConfig(hubAccessConfig: HubAccessConfigProperty)
+
+      /**
+       * @param hubAccessConfig the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d659e84329a57ed448e1bfd976f49ddb856b4cb452027a419144fbfad60eb1f1")
+      public fun hubAccessConfig(hubAccessConfig: HubAccessConfigProperty.Builder.() -> Unit)
 
       /**
        * @param modelAccessConfig the value to be set.
@@ -2565,6 +2690,28 @@ public open class CfnModel(
       override fun compressionType(compressionType: String) {
         cdkBuilder.compressionType(compressionType)
       }
+
+      /**
+       * @param hubAccessConfig the value to be set.
+       */
+      override fun hubAccessConfig(hubAccessConfig: IResolvable) {
+        cdkBuilder.hubAccessConfig(hubAccessConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param hubAccessConfig the value to be set.
+       */
+      override fun hubAccessConfig(hubAccessConfig: HubAccessConfigProperty) {
+        cdkBuilder.hubAccessConfig(hubAccessConfig.let(HubAccessConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param hubAccessConfig the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d659e84329a57ed448e1bfd976f49ddb856b4cb452027a419144fbfad60eb1f1")
+      override fun hubAccessConfig(hubAccessConfig: HubAccessConfigProperty.Builder.() -> Unit):
+          Unit = hubAccessConfig(HubAccessConfigProperty(hubAccessConfig))
 
       /**
        * @param modelAccessConfig the value to be set.
@@ -2658,11 +2805,17 @@ public open class CfnModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty,
-    ) : CdkObject(cdkObject), S3DataSourceProperty {
+    ) : CdkObject(cdkObject),
+        S3DataSourceProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-compressiontype)
        */
       override fun compressionType(): String = unwrap(this).getCompressionType()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-hubaccessconfig)
+       */
+      override fun hubAccessConfig(): Any? = unwrap(this).getHubAccessConfig()
 
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-s3datasource.html#cfn-sagemaker-model-s3datasource-modelaccessconfig)
@@ -2878,7 +3031,8 @@ public open class CfnModel(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
       /**
        * The VPC security group IDs, in the form `sg-xxxxxxxx` .
        *

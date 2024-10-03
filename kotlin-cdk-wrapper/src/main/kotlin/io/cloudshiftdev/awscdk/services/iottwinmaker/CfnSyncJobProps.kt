@@ -138,7 +138,8 @@ public interface CfnSyncJobProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSyncJobProps,
-  ) : CdkObject(cdkObject), CfnSyncJobProps {
+  ) : CdkObject(cdkObject),
+      CfnSyncJobProps {
     /**
      * The SyncJob IAM role.
      *

@@ -44,6 +44,9 @@ import kotlin.jvm.JvmName
  * .s3DataType("s3DataType")
  * .s3Uri("s3Uri")
  * // the properties below are optional
+ * .hubAccessConfig(HubAccessConfigProperty.builder()
+ * .hubContentArn("hubContentArn")
+ * .build())
  * .modelAccessConfig(ModelAccessConfigProperty.builder()
  * .acceptEula(false)
  * .build())
@@ -80,6 +83,9 @@ import kotlin.jvm.JvmName
  * .s3DataType("s3DataType")
  * .s3Uri("s3Uri")
  * // the properties below are optional
+ * .hubAccessConfig(HubAccessConfigProperty.builder()
+ * .hubContentArn("hubContentArn")
+ * .build())
  * .modelAccessConfig(ModelAccessConfigProperty.builder()
  * .acceptEula(false)
  * .build())
@@ -528,7 +534,8 @@ public interface CfnModelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelProps,
-  ) : CdkObject(cdkObject), CfnModelProps {
+  ) : CdkObject(cdkObject),
+      CfnModelProps {
     /**
      * Specifies the containers in the inference pipeline.
      *

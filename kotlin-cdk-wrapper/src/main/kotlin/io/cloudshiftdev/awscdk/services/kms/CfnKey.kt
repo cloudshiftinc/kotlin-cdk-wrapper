@@ -78,16 +78,47 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * CfnInclude cfnTemplate;
- * CfnKey cfnKey = (CfnKey)cfnTemplate.getResource("Key");
- * IKey key = Key.fromCfnKey(cfnKey);
+ * import io.cloudshiftdev.awscdk.services.kms.*;
+ * Key kmsKey = new Key(this, "myKMSKey");
+ * Bucket myBucket = Bucket.Builder.create(this, "mySSEKMSEncryptedBucket")
+ * .encryption(BucketEncryption.KMS)
+ * .encryptionKey(kmsKey)
+ * .objectOwnership(ObjectOwnership.BUCKET_OWNER_ENFORCED)
+ * .build();
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(S3BucketOrigin.withOriginAccessControl(myBucket))
+ * .build())
+ * .build();
+ * // Add the following to scope down the key policy
+ * Map&lt;String, Object&gt; scopedDownKeyPolicy = Map.of(
+ * "Version", "2012-10-17",
+ * "Statement", List.of(Map.of(
+ * "Effect", "Allow",
+ * "Principal", Map.of(
+ * "AWS", "arn:aws:iam::111122223333:root"),
+ * "Action", "kms:*",
+ * "Resource", "*"), Map.of(
+ * "Effect", "Allow",
+ * "Principal", Map.of(
+ * "Service", "cloudfront.amazonaws.com"),
+ * "Action", List.of("kms:Decrypt", "kms:Encrypt", "kms:GenerateDataKey*"),
+ * "Resource", "*",
+ * "Condition", Map.of(
+ * "StringEquals", Map.of(
+ * "AWS:SourceArn", "arn:aws:cloudfront::111122223333:distribution/&lt;CloudFront distribution
+ * ID&gt;")))));
+ * CfnKey cfnKey = ((CfnKey)kmsKey.getNode().getDefaultChild());
+ * cfnKey.getKeyPolicy() = scopedDownKeyPolicy;
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html)
  */
 public open class CfnKey(
   cdkObject: software.amazon.awscdk.services.kms.CfnKey,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.kms.CfnKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -591,18 +622,20 @@ public open class CfnKey(
      * * `HMAC_256`
      * * `HMAC_384`
      * * `HMAC_512`
-     * * Asymmetric RSA key pairs
+     * * Asymmetric RSA key pairs (encryption and decryption *or* signing and verification)
      * * `RSA_2048`
      * * `RSA_3072`
      * * `RSA_4096`
-     * * Asymmetric NIST-recommended elliptic curve key pairs
+     * * Asymmetric NIST-recommended elliptic curve key pairs (signing and verification *or*
+     * deriving shared secrets)
      * * `ECC_NIST_P256` (secp256r1)
      * * `ECC_NIST_P384` (secp384r1)
      * * `ECC_NIST_P521` (secp521r1)
-     * * Other asymmetric elliptic curve key pairs
+     * * Other asymmetric elliptic curve key pairs (signing and verification)
      * * `ECC_SECG_P256K1` (secp256k1), commonly used for cryptocurrencies.
-     * * SM2 key pairs (China Regions only)
-     * * `SM2`
+     * * SM2 key pairs (encryption and decryption *or* signing and verification *or* deriving shared
+     * secrets)
+     * * `SM2` (China Regions only)
      *
      * Default: - "SYMMETRIC_DEFAULT"
      *
@@ -628,12 +661,14 @@ public open class CfnKey(
      *
      * Select only one valid value.
      *
-     * * For symmetric encryption KMS keys, omit the property or specify `ENCRYPT_DECRYPT` .
-     * * For asymmetric KMS keys with RSA key material, specify `ENCRYPT_DECRYPT` or `SIGN_VERIFY` .
-     * * For asymmetric KMS keys with ECC key material, specify `SIGN_VERIFY` .
-     * * For asymmetric KMS keys with SM2 (China Regions only) key material, specify
-     * `ENCRYPT_DECRYPT` or `SIGN_VERIFY` .
-     * * For HMAC KMS keys, specify `GENERATE_VERIFY_MAC` .
+     * * For symmetric encryption KMS keys, omit the parameter or specify `ENCRYPT_DECRYPT` .
+     * * For HMAC KMS keys (symmetric), specify `GENERATE_VERIFY_MAC` .
+     * * For asymmetric KMS keys with RSA key pairs, specify `ENCRYPT_DECRYPT` or `SIGN_VERIFY` .
+     * * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify
+     * `SIGN_VERIFY` or `KEY_AGREEMENT` .
+     * * For asymmetric KMS keys with `ECC_SECG_P256K1` key pairs specify `SIGN_VERIFY` .
+     * * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify `ENCRYPT_DECRYPT`
+     * , `SIGN_VERIFY` , or `KEY_AGREEMENT` .
      *
      * Default: - "ENCRYPT_DECRYPT"
      *
@@ -1144,18 +1179,20 @@ public open class CfnKey(
      * * `HMAC_256`
      * * `HMAC_384`
      * * `HMAC_512`
-     * * Asymmetric RSA key pairs
+     * * Asymmetric RSA key pairs (encryption and decryption *or* signing and verification)
      * * `RSA_2048`
      * * `RSA_3072`
      * * `RSA_4096`
-     * * Asymmetric NIST-recommended elliptic curve key pairs
+     * * Asymmetric NIST-recommended elliptic curve key pairs (signing and verification *or*
+     * deriving shared secrets)
      * * `ECC_NIST_P256` (secp256r1)
      * * `ECC_NIST_P384` (secp384r1)
      * * `ECC_NIST_P521` (secp521r1)
-     * * Other asymmetric elliptic curve key pairs
+     * * Other asymmetric elliptic curve key pairs (signing and verification)
      * * `ECC_SECG_P256K1` (secp256k1), commonly used for cryptocurrencies.
-     * * SM2 key pairs (China Regions only)
-     * * `SM2`
+     * * SM2 key pairs (encryption and decryption *or* signing and verification *or* deriving shared
+     * secrets)
+     * * `SM2` (China Regions only)
      *
      * Default: - "SYMMETRIC_DEFAULT"
      *
@@ -1183,12 +1220,14 @@ public open class CfnKey(
      *
      * Select only one valid value.
      *
-     * * For symmetric encryption KMS keys, omit the property or specify `ENCRYPT_DECRYPT` .
-     * * For asymmetric KMS keys with RSA key material, specify `ENCRYPT_DECRYPT` or `SIGN_VERIFY` .
-     * * For asymmetric KMS keys with ECC key material, specify `SIGN_VERIFY` .
-     * * For asymmetric KMS keys with SM2 (China Regions only) key material, specify
-     * `ENCRYPT_DECRYPT` or `SIGN_VERIFY` .
-     * * For HMAC KMS keys, specify `GENERATE_VERIFY_MAC` .
+     * * For symmetric encryption KMS keys, omit the parameter or specify `ENCRYPT_DECRYPT` .
+     * * For HMAC KMS keys (symmetric), specify `GENERATE_VERIFY_MAC` .
+     * * For asymmetric KMS keys with RSA key pairs, specify `ENCRYPT_DECRYPT` or `SIGN_VERIFY` .
+     * * For asymmetric KMS keys with NIST-recommended elliptic curve key pairs, specify
+     * `SIGN_VERIFY` or `KEY_AGREEMENT` .
+     * * For asymmetric KMS keys with `ECC_SECG_P256K1` key pairs specify `SIGN_VERIFY` .
+     * * For asymmetric KMS keys with SM2 key pairs (China Regions only), specify `ENCRYPT_DECRYPT`
+     * , `SIGN_VERIFY` , or `KEY_AGREEMENT` .
      *
      * Default: - "ENCRYPT_DECRYPT"
      *

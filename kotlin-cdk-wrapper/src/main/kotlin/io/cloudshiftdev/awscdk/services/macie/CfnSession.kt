@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSession(
   cdkObject: software.amazon.awscdk.services.macie.CfnSession,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.macie.CfnSession(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

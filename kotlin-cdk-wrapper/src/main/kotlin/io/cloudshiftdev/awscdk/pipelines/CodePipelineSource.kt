@@ -36,7 +36,8 @@ import io.cloudshiftdev.awscdk.services.ecr.IRepository as EcrIRepository
  */
 public abstract class CodePipelineSource(
   cdkObject: software.amazon.awscdk.pipelines.CodePipelineSource,
-) : Step(cdkObject), ICodePipelineActionFactory {
+) : Step(cdkObject),
+    ICodePipelineActionFactory {
   /**
    * Whether or not this is a Source step.
    *

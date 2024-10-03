@@ -55,7 +55,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRoom(
   cdkObject: software.amazon.awscdk.services.ivschat.CfnRoom,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ivschat.CfnRoom(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -568,7 +570,8 @@ public open class CfnRoom(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ivschat.CfnRoom.MessageReviewHandlerProperty,
-    ) : CdkObject(cdkObject), MessageReviewHandlerProperty {
+    ) : CdkObject(cdkObject),
+        MessageReviewHandlerProperty {
       /**
        * Specifies the fallback behavior (whether the message is allowed or denied) if the handler
        * does not return a valid response, encounters an error, or times out.

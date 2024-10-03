@@ -28,7 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class InstanceProfile(
   cdkObject: software.amazon.awscdk.services.iam.InstanceProfile,
-) : Resource(cdkObject), IInstanceProfile {
+) : Resource(cdkObject),
+    IInstanceProfile {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.InstanceProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

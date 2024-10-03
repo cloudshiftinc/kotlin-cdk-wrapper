@@ -160,7 +160,8 @@ public interface CfnVdmAttributesProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributesProps,
-  ) : CdkObject(cdkObject), CfnVdmAttributesProps {
+  ) : CdkObject(cdkObject),
+      CfnVdmAttributesProps {
     /**
      * Specifies additional settings for your VDM configuration as applicable to the Dashboard.
      *

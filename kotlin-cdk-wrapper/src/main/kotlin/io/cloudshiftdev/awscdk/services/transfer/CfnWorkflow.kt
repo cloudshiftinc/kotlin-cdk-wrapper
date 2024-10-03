@@ -100,7 +100,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWorkflow(
   cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -718,7 +720,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty,
-    ) : CdkObject(cdkObject), CopyStepDetailsProperty {
+    ) : CdkObject(cdkObject),
+        CopyStepDetailsProperty {
       /**
        * Specifies the location for the file being copied.
        *
@@ -930,7 +933,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty,
-    ) : CdkObject(cdkObject), CustomStepDetailsProperty {
+    ) : CdkObject(cdkObject),
+        CustomStepDetailsProperty {
       /**
        * The name of the step, used as an identifier.
        *
@@ -1299,7 +1303,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty,
-    ) : CdkObject(cdkObject), DecryptStepDetailsProperty {
+    ) : CdkObject(cdkObject),
+        DecryptStepDetailsProperty {
       /**
        * Specifies the location for the file being decrypted.
        *
@@ -1478,7 +1483,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty,
-    ) : CdkObject(cdkObject), DeleteStepDetailsProperty {
+    ) : CdkObject(cdkObject),
+        DeleteStepDetailsProperty {
       /**
        * The name of the step, used as an identifier.
        *
@@ -1595,7 +1601,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty,
-    ) : CdkObject(cdkObject), EfsInputFileLocationProperty {
+    ) : CdkObject(cdkObject),
+        EfsInputFileLocationProperty {
       /**
        * The identifier of the file system, assigned by Amazon EFS.
        *
@@ -1777,7 +1784,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty,
-    ) : CdkObject(cdkObject), InputFileLocationProperty {
+    ) : CdkObject(cdkObject),
+        InputFileLocationProperty {
       /**
        * Specifies the details for the Amazon Elastic File System (Amazon EFS) file that's being
        * decrypted.
@@ -1910,7 +1918,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty,
-    ) : CdkObject(cdkObject), S3FileLocationProperty {
+    ) : CdkObject(cdkObject),
+        S3FileLocationProperty {
       /**
        * Specifies the details for the file location for the file that's being used in the workflow.
        *
@@ -2017,7 +2026,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty,
-    ) : CdkObject(cdkObject), S3InputFileLocationProperty {
+    ) : CdkObject(cdkObject),
+        S3InputFileLocationProperty {
       /**
        * Specifies the S3 bucket for the customer input file.
        *
@@ -2127,7 +2137,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty,
-    ) : CdkObject(cdkObject), S3TagProperty {
+    ) : CdkObject(cdkObject),
+        S3TagProperty {
       /**
        * The name assigned to the tag that you create.
        *
@@ -2288,7 +2299,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty,
-    ) : CdkObject(cdkObject), TagStepDetailsProperty {
+    ) : CdkObject(cdkObject),
+        TagStepDetailsProperty {
       /**
        * The name of the step, used as an identifier.
        *
@@ -2646,7 +2658,8 @@ public open class CfnWorkflow(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty,
-    ) : CdkObject(cdkObject), WorkflowStepProperty {
+    ) : CdkObject(cdkObject),
+        WorkflowStepProperty {
       /**
        * Details for a step that performs a file copy.
        *

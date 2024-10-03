@@ -53,7 +53,8 @@ public interface IInstance : IResource, IConnectable, IGrantable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IInstance,
-  ) : CdkObject(cdkObject), IInstance {
+  ) : CdkObject(cdkObject),
+      IInstance {
     /**
      * Apply the given removal policy to this resource.
      *

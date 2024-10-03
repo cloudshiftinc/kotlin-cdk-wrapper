@@ -19,6 +19,7 @@ import kotlin.Unit
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.codestarnotifications.*;
  * NotificationRuleOptions notificationRuleOptions = NotificationRuleOptions.builder()
+ * .createdBy("createdBy")
  * .detailType(DetailType.BASIC)
  * .enabled(false)
  * .notificationRuleName("notificationRuleName")
@@ -26,6 +27,15 @@ import kotlin.Unit
  * ```
  */
 public interface NotificationRuleOptions {
+  /**
+   * The name or email alias of the person who created the notification rule.
+   *
+   * If not specified, it means that the creator's alias is not provided.
+   *
+   * Default: - No alias provided
+   */
+  public fun createdBy(): String? = unwrap(this).getCreatedBy()
+
   /**
    * The level of detail to include in the notifications for this resource.
    *
@@ -61,6 +71,12 @@ public interface NotificationRuleOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param createdBy The name or email alias of the person who created the notification rule.
+     * If not specified, it means that the creator's alias is not provided.
+     */
+    public fun createdBy(createdBy: String)
+
+    /**
      * @param detailType The level of detail to include in the notifications for this resource.
      * BASIC will include only the contents of the event as it would appear in AWS CloudWatch.
      * FULL will include any supplemental information provided by AWS CodeStar Notifications and/or
@@ -85,6 +101,14 @@ public interface NotificationRuleOptions {
     private val cdkBuilder:
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleOptions.Builder =
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleOptions.builder()
+
+    /**
+     * @param createdBy The name or email alias of the person who created the notification rule.
+     * If not specified, it means that the creator's alias is not provided.
+     */
+    override fun createdBy(createdBy: String) {
+      cdkBuilder.createdBy(createdBy)
+    }
 
     /**
      * @param detailType The level of detail to include in the notifications for this resource.
@@ -119,7 +143,17 @@ public interface NotificationRuleOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codestarnotifications.NotificationRuleOptions,
-  ) : CdkObject(cdkObject), NotificationRuleOptions {
+  ) : CdkObject(cdkObject),
+      NotificationRuleOptions {
+    /**
+     * The name or email alias of the person who created the notification rule.
+     *
+     * If not specified, it means that the creator's alias is not provided.
+     *
+     * Default: - No alias provided
+     */
+    override fun createdBy(): String? = unwrap(this).getCreatedBy()
+
     /**
      * The level of detail to include in the notifications for this resource.
      *

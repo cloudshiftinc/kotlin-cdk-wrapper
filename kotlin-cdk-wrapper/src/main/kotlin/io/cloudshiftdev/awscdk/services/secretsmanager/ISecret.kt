@@ -151,7 +151,8 @@ public interface ISecret : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.ISecret,
-  ) : CdkObject(cdkObject), ISecret {
+  ) : CdkObject(cdkObject),
+      ISecret {
     /**
      * Adds a rotation schedule to the secret.
      *

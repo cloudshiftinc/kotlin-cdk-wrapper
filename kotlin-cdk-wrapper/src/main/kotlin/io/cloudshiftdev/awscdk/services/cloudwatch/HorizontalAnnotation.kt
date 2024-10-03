@@ -142,7 +142,8 @@ public interface HorizontalAnnotation {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.HorizontalAnnotation,
-  ) : CdkObject(cdkObject), HorizontalAnnotation {
+  ) : CdkObject(cdkObject),
+      HorizontalAnnotation {
     /**
      * The hex color code, prefixed with '#' (e.g. '#00ff00'), to be used for the annotation. The
      * `Color` class has a set of standard colors that can be used here.

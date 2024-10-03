@@ -98,7 +98,8 @@ public interface FirelensConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.FirelensConfig,
-  ) : CdkObject(cdkObject), FirelensConfig {
+  ) : CdkObject(cdkObject),
+      FirelensConfig {
     /**
      * Firelens options.
      *

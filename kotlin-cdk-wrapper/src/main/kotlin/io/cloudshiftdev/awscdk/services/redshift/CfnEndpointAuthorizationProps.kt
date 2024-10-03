@@ -164,7 +164,8 @@ public interface CfnEndpointAuthorizationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAuthorizationProps,
-  ) : CdkObject(cdkObject), CfnEndpointAuthorizationProps {
+  ) : CdkObject(cdkObject),
+      CfnEndpointAuthorizationProps {
     /**
      * The AWS account ID of either the cluster owner (grantor) or grantee.
      *

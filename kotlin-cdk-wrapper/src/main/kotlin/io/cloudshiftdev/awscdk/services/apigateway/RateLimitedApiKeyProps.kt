@@ -378,7 +378,8 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.RateLimitedApiKeyProps,
-  ) : CdkObject(cdkObject), RateLimitedApiKeyProps {
+  ) : CdkObject(cdkObject),
+      RateLimitedApiKeyProps {
     /**
      * A name for the API key.
      *

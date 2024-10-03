@@ -344,7 +344,8 @@ public interface CfnTransitGatewayProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayProps,
-  ) : CdkObject(cdkObject), CfnTransitGatewayProps {
+  ) : CdkObject(cdkObject),
+      CfnTransitGatewayProps {
     /**
      * A private Autonomous System Number (ASN) for the Amazon side of a BGP session.
      *

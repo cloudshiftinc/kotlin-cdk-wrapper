@@ -95,7 +95,8 @@ public interface CfnAliasProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.paymentcryptography.CfnAliasProps,
-  ) : CdkObject(cdkObject), CfnAliasProps {
+  ) : CdkObject(cdkObject),
+      CfnAliasProps {
     /**
      * A friendly name that you can use to refer to a key. The value must begin with `alias/` .
      *

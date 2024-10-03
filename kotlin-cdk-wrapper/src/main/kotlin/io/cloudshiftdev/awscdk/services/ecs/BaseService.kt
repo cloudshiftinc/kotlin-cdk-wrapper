@@ -49,7 +49,10 @@ import kotlin.jvm.JvmName
  */
 public abstract class BaseService(
   cdkObject: software.amazon.awscdk.services.ecs.BaseService,
-) : Resource(cdkObject), IBaseService, IApplicationLoadBalancerTarget, INetworkLoadBalancerTarget,
+) : Resource(cdkObject),
+    IBaseService,
+    IApplicationLoadBalancerTarget,
+    INetworkLoadBalancerTarget,
     ILoadBalancerTarget {
   /**
    * Adds a volume to the Service.

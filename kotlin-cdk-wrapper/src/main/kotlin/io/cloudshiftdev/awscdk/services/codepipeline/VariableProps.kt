@@ -122,7 +122,8 @@ public interface VariableProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.VariableProps,
-  ) : CdkObject(cdkObject), VariableProps {
+  ) : CdkObject(cdkObject),
+      VariableProps {
     /**
      * The default value of a pipeline-level variable.
      *

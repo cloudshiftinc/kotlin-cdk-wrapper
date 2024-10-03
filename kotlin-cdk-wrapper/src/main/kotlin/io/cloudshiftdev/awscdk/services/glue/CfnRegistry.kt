@@ -40,7 +40,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRegistry(
   cdkObject: software.amazon.awscdk.services.glue.CfnRegistry,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

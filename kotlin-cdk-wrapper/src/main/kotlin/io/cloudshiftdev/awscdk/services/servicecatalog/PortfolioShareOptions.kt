@@ -84,7 +84,8 @@ public interface PortfolioShareOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.PortfolioShareOptions,
-  ) : CdkObject(cdkObject), PortfolioShareOptions {
+  ) : CdkObject(cdkObject),
+      PortfolioShareOptions {
     /**
      * The message language of the share.
      *

@@ -67,7 +67,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCertificateAuthority(
   cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -164,70 +166,30 @@ public open class CfnCertificateAuthority(
   }
 
   /**
-   * Certificate revocation information used by the
-   * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-   * and
-   * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-   * actions. Your private certificate authority (CA) can configure Online Certificate Status Protocol
-   * (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns validation
-   * information about certificates as requested by clients, and a CRL contains an updated list of
-   * certificates revoked by your CA. For more information, see
-   * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-   * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-   * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the *AWS
-   * Private CA User Guide* .
+   * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate
+   * revocation list (CRL) created and maintained by your private CA.
    */
   public open fun revocationConfiguration(): Any? = unwrap(this).getRevocationConfiguration()
 
   /**
-   * Certificate revocation information used by the
-   * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-   * and
-   * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-   * actions. Your private certificate authority (CA) can configure Online Certificate Status Protocol
-   * (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns validation
-   * information about certificates as requested by clients, and a CRL contains an updated list of
-   * certificates revoked by your CA. For more information, see
-   * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-   * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-   * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the *AWS
-   * Private CA User Guide* .
+   * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate
+   * revocation list (CRL) created and maintained by your private CA.
    */
   public open fun revocationConfiguration(`value`: IResolvable) {
     unwrap(this).setRevocationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Certificate revocation information used by the
-   * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-   * and
-   * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-   * actions. Your private certificate authority (CA) can configure Online Certificate Status Protocol
-   * (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns validation
-   * information about certificates as requested by clients, and a CRL contains an updated list of
-   * certificates revoked by your CA. For more information, see
-   * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-   * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-   * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the *AWS
-   * Private CA User Guide* .
+   * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate
+   * revocation list (CRL) created and maintained by your private CA.
    */
   public open fun revocationConfiguration(`value`: RevocationConfigurationProperty) {
     unwrap(this).setRevocationConfiguration(`value`.let(RevocationConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   * Certificate revocation information used by the
-   * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-   * and
-   * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-   * actions. Your private certificate authority (CA) can configure Online Certificate Status Protocol
-   * (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns validation
-   * information about certificates as requested by clients, and a CRL contains an updated list of
-   * certificates revoked by your CA. For more information, see
-   * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-   * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-   * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the *AWS
-   * Private CA User Guide* .
+   * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate
+   * revocation list (CRL) created and maintained by your private CA.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("872c32b575520dea0d4be4d42390262794c9658a7cb0ff2a4cf08e81a1dbdebf")
@@ -398,134 +360,35 @@ public open class CfnCertificateAuthority(
     public fun keyStorageSecurityStandard(keyStorageSecurityStandard: String)
 
     /**
-     * Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* .
-     *
-     *
-     * The following requirements apply to revocation configurations.
-     *
-     * * A configuration disabling CRLs or OCSP must contain only the `Enabled=False` parameter, and
-     * will fail if other parameters such as `CustomCname` or `ExpirationInDays` are included.
-     * * In a CRL configuration, the `S3BucketName` parameter must conform to the [Amazon S3 bucket
-     * naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
-     * * A configuration containing a custom Canonical Name (CNAME) parameter for CRLs or OCSP must
-     * conform to [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt)
-     * restrictions on the use of special characters in a CNAME.
-     * * In a CRL or OCSP configuration, the value of a CNAME parameter must not include a protocol
-     * prefix such as "http://" or "https://".
-     *
+     * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate
+     * revocation list (CRL) created and maintained by your private CA.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-revocationconfiguration)
-     * @param revocationConfiguration Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* . 
+     * @param revocationConfiguration Information about the Online Certificate Status Protocol
+     * (OCSP) configuration or certificate revocation list (CRL) created and maintained by your private
+     * CA. 
      */
     public fun revocationConfiguration(revocationConfiguration: IResolvable)
 
     /**
-     * Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* .
-     *
-     *
-     * The following requirements apply to revocation configurations.
-     *
-     * * A configuration disabling CRLs or OCSP must contain only the `Enabled=False` parameter, and
-     * will fail if other parameters such as `CustomCname` or `ExpirationInDays` are included.
-     * * In a CRL configuration, the `S3BucketName` parameter must conform to the [Amazon S3 bucket
-     * naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
-     * * A configuration containing a custom Canonical Name (CNAME) parameter for CRLs or OCSP must
-     * conform to [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt)
-     * restrictions on the use of special characters in a CNAME.
-     * * In a CRL or OCSP configuration, the value of a CNAME parameter must not include a protocol
-     * prefix such as "http://" or "https://".
-     *
+     * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate
+     * revocation list (CRL) created and maintained by your private CA.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-revocationconfiguration)
-     * @param revocationConfiguration Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* . 
+     * @param revocationConfiguration Information about the Online Certificate Status Protocol
+     * (OCSP) configuration or certificate revocation list (CRL) created and maintained by your private
+     * CA. 
      */
     public fun revocationConfiguration(revocationConfiguration: RevocationConfigurationProperty)
 
     /**
-     * Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* .
-     *
-     *
-     * The following requirements apply to revocation configurations.
-     *
-     * * A configuration disabling CRLs or OCSP must contain only the `Enabled=False` parameter, and
-     * will fail if other parameters such as `CustomCname` or `ExpirationInDays` are included.
-     * * In a CRL configuration, the `S3BucketName` parameter must conform to the [Amazon S3 bucket
-     * naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
-     * * A configuration containing a custom Canonical Name (CNAME) parameter for CRLs or OCSP must
-     * conform to [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt)
-     * restrictions on the use of special characters in a CNAME.
-     * * In a CRL or OCSP configuration, the value of a CNAME parameter must not include a protocol
-     * prefix such as "http://" or "https://".
-     *
+     * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate
+     * revocation list (CRL) created and maintained by your private CA.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-revocationconfiguration)
-     * @param revocationConfiguration Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* . 
+     * @param revocationConfiguration Information about the Online Certificate Status Protocol
+     * (OCSP) configuration or certificate revocation list (CRL) created and maintained by your private
+     * CA. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b3e444ce362ba61faaa26b8350cddfed08d805dca8f5b73a4b307724c9fed74")
@@ -706,138 +569,39 @@ public open class CfnCertificateAuthority(
     }
 
     /**
-     * Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* .
-     *
-     *
-     * The following requirements apply to revocation configurations.
-     *
-     * * A configuration disabling CRLs or OCSP must contain only the `Enabled=False` parameter, and
-     * will fail if other parameters such as `CustomCname` or `ExpirationInDays` are included.
-     * * In a CRL configuration, the `S3BucketName` parameter must conform to the [Amazon S3 bucket
-     * naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
-     * * A configuration containing a custom Canonical Name (CNAME) parameter for CRLs or OCSP must
-     * conform to [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt)
-     * restrictions on the use of special characters in a CNAME.
-     * * In a CRL or OCSP configuration, the value of a CNAME parameter must not include a protocol
-     * prefix such as "http://" or "https://".
-     *
+     * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate
+     * revocation list (CRL) created and maintained by your private CA.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-revocationconfiguration)
-     * @param revocationConfiguration Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* . 
+     * @param revocationConfiguration Information about the Online Certificate Status Protocol
+     * (OCSP) configuration or certificate revocation list (CRL) created and maintained by your private
+     * CA. 
      */
     override fun revocationConfiguration(revocationConfiguration: IResolvable) {
       cdkBuilder.revocationConfiguration(revocationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* .
-     *
-     *
-     * The following requirements apply to revocation configurations.
-     *
-     * * A configuration disabling CRLs or OCSP must contain only the `Enabled=False` parameter, and
-     * will fail if other parameters such as `CustomCname` or `ExpirationInDays` are included.
-     * * In a CRL configuration, the `S3BucketName` parameter must conform to the [Amazon S3 bucket
-     * naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
-     * * A configuration containing a custom Canonical Name (CNAME) parameter for CRLs or OCSP must
-     * conform to [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt)
-     * restrictions on the use of special characters in a CNAME.
-     * * In a CRL or OCSP configuration, the value of a CNAME parameter must not include a protocol
-     * prefix such as "http://" or "https://".
-     *
+     * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate
+     * revocation list (CRL) created and maintained by your private CA.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-revocationconfiguration)
-     * @param revocationConfiguration Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* . 
+     * @param revocationConfiguration Information about the Online Certificate Status Protocol
+     * (OCSP) configuration or certificate revocation list (CRL) created and maintained by your private
+     * CA. 
      */
     override fun revocationConfiguration(revocationConfiguration: RevocationConfigurationProperty) {
       cdkBuilder.revocationConfiguration(revocationConfiguration.let(RevocationConfigurationProperty.Companion::unwrap))
     }
 
     /**
-     * Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* .
-     *
-     *
-     * The following requirements apply to revocation configurations.
-     *
-     * * A configuration disabling CRLs or OCSP must contain only the `Enabled=False` parameter, and
-     * will fail if other parameters such as `CustomCname` or `ExpirationInDays` are included.
-     * * In a CRL configuration, the `S3BucketName` parameter must conform to the [Amazon S3 bucket
-     * naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
-     * * A configuration containing a custom Canonical Name (CNAME) parameter for CRLs or OCSP must
-     * conform to [RFC2396](https://docs.aws.amazon.com/https://www.ietf.org/rfc/rfc2396.txt)
-     * restrictions on the use of special characters in a CNAME.
-     * * In a CRL or OCSP configuration, the value of a CNAME parameter must not include a protocol
-     * prefix such as "http://" or "https://".
-     *
+     * Information about the Online Certificate Status Protocol (OCSP) configuration or certificate
+     * revocation list (CRL) created and maintained by your private CA.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html#cfn-acmpca-certificateauthority-revocationconfiguration)
-     * @param revocationConfiguration Certificate revocation information used by the
-     * [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html)
-     * and
-     * [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html)
-     * actions. Your private certificate authority (CA) can configure Online Certificate Status
-     * Protocol (OCSP) support and/or maintain a certificate revocation list (CRL). OCSP returns
-     * validation information about certificates as requested by clients, and a CRL contains an updated
-     * list of certificates revoked by your CA. For more information, see
-     * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
-     * in the *AWS Private CA API Reference* and [Setting up a certificate revocation
-     * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the
-     * *AWS Private CA User Guide* . 
+     * @param revocationConfiguration Information about the Online Certificate Status Protocol
+     * (OCSP) configuration or certificate revocation list (CRL) created and maintained by your private
+     * CA. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b3e444ce362ba61faaa26b8350cddfed08d805dca8f5b73a4b307724c9fed74")
@@ -1141,7 +905,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessDescriptionProperty,
-    ) : CdkObject(cdkObject), AccessDescriptionProperty {
+    ) : CdkObject(cdkObject),
+        AccessDescriptionProperty {
       /**
        * The location of `AccessDescription` information.
        *
@@ -1263,7 +1028,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty,
-    ) : CdkObject(cdkObject), AccessMethodProperty {
+    ) : CdkObject(cdkObject),
+        AccessMethodProperty {
       /**
        * Specifies the `AccessMethod` .
        *
@@ -1707,7 +1473,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty,
-    ) : CdkObject(cdkObject), CrlConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CrlConfigurationProperty {
       /**
        * Configures the default behavior of the CRL Distribution Point extension for certificates
        * issued by your CA.
@@ -1938,7 +1705,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty,
-    ) : CdkObject(cdkObject), CrlDistributionPointExtensionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CrlDistributionPointExtensionConfigurationProperty {
       /**
        * Configures whether the CRL Distribution Point extension should be populated with the
        * default URL to the CRL.
@@ -2188,7 +1956,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty,
-    ) : CdkObject(cdkObject), CsrExtensionsProperty {
+    ) : CdkObject(cdkObject),
+        CsrExtensionsProperty {
       /**
        * Indicates the purpose of the certificate and of the key contained in the certificate.
        *
@@ -2305,7 +2074,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty,
-    ) : CdkObject(cdkObject), CustomAttributeProperty {
+    ) : CdkObject(cdkObject),
+        CustomAttributeProperty {
       /**
        * Specifies the object identifier (OID) of the attribute type of the relative distinguished
        * name (RDN).
@@ -2418,7 +2188,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty,
-    ) : CdkObject(cdkObject), EdiPartyNameProperty {
+    ) : CdkObject(cdkObject),
+        EdiPartyNameProperty {
       /**
        * Specifies the name assigner.
        *
@@ -2810,7 +2581,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty,
-    ) : CdkObject(cdkObject), GeneralNameProperty {
+    ) : CdkObject(cdkObject),
+        GeneralNameProperty {
       /**
        * Contains information about the certificate subject.
        *
@@ -3238,7 +3010,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.KeyUsageProperty,
-    ) : CdkObject(cdkObject), KeyUsageProperty {
+    ) : CdkObject(cdkObject),
+        KeyUsageProperty {
       /**
        * Key can be used to sign CRLs.
        *
@@ -3462,7 +3235,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty,
-    ) : CdkObject(cdkObject), OcspConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        OcspConfigurationProperty {
       /**
        * Flag enabling use of the Online Certificate Status Protocol (OCSP) for validating
        * certificate revocation status.
@@ -3585,7 +3359,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty,
-    ) : CdkObject(cdkObject), OtherNameProperty {
+    ) : CdkObject(cdkObject),
+        OtherNameProperty {
       /**
        * Specifies an OID.
        *
@@ -3633,8 +3408,7 @@ public open class CfnCertificateAuthority(
    * method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the *AWS
    * Private CA User Guide* .
    *
-   *
-   * The following requirements apply to revocation configurations.
+   * The following requirements and constraints apply to revocation configurations.
    *
    * * A configuration disabling CRLs or OCSP must contain only the `Enabled=False` parameter, and
    * will fail if other parameters such as `CustomCname` or `ExpirationInDays` are included.
@@ -3645,7 +3419,9 @@ public open class CfnCertificateAuthority(
    * restrictions on the use of special characters in a CNAME.
    * * In a CRL or OCSP configuration, the value of a CNAME parameter must not include a protocol
    * prefix such as "http://" or "https://".
-   *
+   * * To revoke a certificate, delete the resource from your template, and call the AWS Private CA
+   * [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html)
+   * API and specify the resource's certificate authority ARN.
    *
    * Example:
    *
@@ -3803,7 +3579,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.RevocationConfigurationProperty,
-    ) : CdkObject(cdkObject), RevocationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RevocationConfigurationProperty {
       /**
        * Configuration of the certificate revocation list (CRL), if any, maintained by your private
        * CA.
@@ -4261,7 +4038,8 @@ public open class CfnCertificateAuthority(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.SubjectProperty,
-    ) : CdkObject(cdkObject), SubjectProperty {
+    ) : CdkObject(cdkObject),
+        SubjectProperty {
       /**
        * Fully qualified domain name (FQDN) associated with the certificate subject.
        *

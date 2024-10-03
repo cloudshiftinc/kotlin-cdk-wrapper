@@ -285,7 +285,8 @@ public interface CfnTLSInspectionConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfigurationProps,
-  ) : CdkObject(cdkObject), CfnTLSInspectionConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnTLSInspectionConfigurationProps {
     /**
      * A description of the TLS inspection configuration.
      *

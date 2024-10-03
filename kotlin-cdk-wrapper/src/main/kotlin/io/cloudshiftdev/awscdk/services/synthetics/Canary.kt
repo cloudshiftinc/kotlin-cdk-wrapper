@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.synthetics
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Resource
+import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
@@ -30,6 +31,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.*;
  * Canary canary = Canary.Builder.create(this, "MyCanary")
  * .schedule(Schedule.rate(Duration.minutes(5)))
  * .test(Test.custom(CustomTestOptions.builder()
@@ -37,14 +39,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .handler("index.handler")
  * .build()))
  * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
- * .environmentVariables(Map.of(
- * "stage", "prod"))
+ * .memory(Size.mebibytes(1024))
  * .build();
  * ```
  */
 public open class Canary(
   cdkObject: software.amazon.awscdk.services.synthetics.Canary,
-) : Resource(cdkObject), IConnectable {
+) : Resource(cdkObject),
+    IConnectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -196,6 +198,25 @@ public open class Canary(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Specifies whether this canary is to use active AWS X-Ray tracing when it runs.
+     *
+     * Active tracing enables this canary run to be displayed in the ServiceLens and X-Ray service
+     * maps even if the
+     * canary does not hit an endpoint that has X-Ray tracing enabled. Using X-Ray tracing incurs
+     * charges.
+     *
+     * You can enable active tracing only for canaries that use version `syn-nodejs-2.0` or later
+     * for their canary runtime.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_tracing.html)
+     * @param activeTracing Specifies whether this canary is to use active AWS X-Ray tracing when it
+     * runs. 
+     */
+    public fun activeTracing(activeTracing: Boolean)
+
+    /**
      * Lifecycle rules for the generated canary artifact bucket.
      *
      * Has no effect
@@ -296,6 +317,18 @@ public open class Canary(
      * @param failureRetentionPeriod How many days should failed runs be retained. 
      */
     public fun failureRetentionPeriod(failureRetentionPeriod: Duration)
+
+    /**
+     * The maximum amount of memory that the canary can use while running.
+     *
+     * This value must be a multiple of 64 Mib.
+     * The range is 960 MiB to 3008 MiB.
+     *
+     * Default: Size.mebibytes(1024)
+     *
+     * @param memory The maximum amount of memory that the canary can use while running. 
+     */
+    public fun memory(memory: Size)
 
     /**
      * Canary execution role.
@@ -404,6 +437,20 @@ public open class Canary(
     public fun timeToLive(timeToLive: Duration)
 
     /**
+     * How long the canary is allowed to run before it must stop.
+     *
+     * You can't set this time to be longer than the frequency of the runs of this canary.
+     *
+     * The minimum allowed value is 3 seconds.
+     * The maximum allowed value is 840 seconds (14 minutes).
+     *
+     * Default: - the frequency of the canary is used as this value, up to a maximum of 900 seconds.
+     *
+     * @param timeout How long the canary is allowed to run before it must stop. 
+     */
+    public fun timeout(timeout: Duration)
+
+    /**
      * The VPC where this canary is run.
      *
      * Specify this if the canary needs to access resources in a VPC.
@@ -445,6 +492,27 @@ public open class Canary(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.synthetics.Canary.Builder =
         software.amazon.awscdk.services.synthetics.Canary.Builder.create(scope, id)
+
+    /**
+     * Specifies whether this canary is to use active AWS X-Ray tracing when it runs.
+     *
+     * Active tracing enables this canary run to be displayed in the ServiceLens and X-Ray service
+     * maps even if the
+     * canary does not hit an endpoint that has X-Ray tracing enabled. Using X-Ray tracing incurs
+     * charges.
+     *
+     * You can enable active tracing only for canaries that use version `syn-nodejs-2.0` or later
+     * for their canary runtime.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_tracing.html)
+     * @param activeTracing Specifies whether this canary is to use active AWS X-Ray tracing when it
+     * runs. 
+     */
+    override fun activeTracing(activeTracing: Boolean) {
+      cdkBuilder.activeTracing(activeTracing)
+    }
 
     /**
      * Lifecycle rules for the generated canary artifact bucket.
@@ -560,6 +628,20 @@ public open class Canary(
      */
     override fun failureRetentionPeriod(failureRetentionPeriod: Duration) {
       cdkBuilder.failureRetentionPeriod(failureRetentionPeriod.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * The maximum amount of memory that the canary can use while running.
+     *
+     * This value must be a multiple of 64 Mib.
+     * The range is 960 MiB to 3008 MiB.
+     *
+     * Default: Size.mebibytes(1024)
+     *
+     * @param memory The maximum amount of memory that the canary can use while running. 
+     */
+    override fun memory(memory: Size) {
+      cdkBuilder.memory(memory.let(Size.Companion::unwrap))
     }
 
     /**
@@ -683,6 +765,22 @@ public open class Canary(
      */
     override fun timeToLive(timeToLive: Duration) {
       cdkBuilder.timeToLive(timeToLive.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * How long the canary is allowed to run before it must stop.
+     *
+     * You can't set this time to be longer than the frequency of the runs of this canary.
+     *
+     * The minimum allowed value is 3 seconds.
+     * The maximum allowed value is 840 seconds (14 minutes).
+     *
+     * Default: - the frequency of the canary is used as this value, up to a maximum of 900 seconds.
+     *
+     * @param timeout How long the canary is allowed to run before it must stop. 
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

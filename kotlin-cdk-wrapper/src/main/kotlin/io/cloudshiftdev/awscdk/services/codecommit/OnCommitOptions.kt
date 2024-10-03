@@ -166,7 +166,8 @@ public interface OnCommitOptions : OnEventOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codecommit.OnCommitOptions,
-  ) : CdkObject(cdkObject), OnCommitOptions {
+  ) : CdkObject(cdkObject),
+      OnCommitOptions {
     /**
      * The branch to monitor.
      *

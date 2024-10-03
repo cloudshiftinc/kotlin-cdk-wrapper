@@ -82,7 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfigurationSet(
   cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.CfnConfigurationSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -105,30 +106,30 @@ public open class CfnConfigurationSet(
   )
 
   /**
-   * Specifies whether messages that use the configuration set are required to use Transport Layer
-   * Security (TLS).
+   * Specifies the name of the dedicated IP pool to associate with the configuration set and whether
+   * messages that use the configuration set are required to use Transport Layer Security (TLS).
    */
   public open fun deliveryOptions(): Any? = unwrap(this).getDeliveryOptions()
 
   /**
-   * Specifies whether messages that use the configuration set are required to use Transport Layer
-   * Security (TLS).
+   * Specifies the name of the dedicated IP pool to associate with the configuration set and whether
+   * messages that use the configuration set are required to use Transport Layer Security (TLS).
    */
   public open fun deliveryOptions(`value`: IResolvable) {
     unwrap(this).setDeliveryOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specifies whether messages that use the configuration set are required to use Transport Layer
-   * Security (TLS).
+   * Specifies the name of the dedicated IP pool to associate with the configuration set and whether
+   * messages that use the configuration set are required to use Transport Layer Security (TLS).
    */
   public open fun deliveryOptions(`value`: DeliveryOptionsProperty) {
     unwrap(this).setDeliveryOptions(`value`.let(DeliveryOptionsProperty.Companion::unwrap))
   }
 
   /**
-   * Specifies whether messages that use the configuration set are required to use Transport Layer
-   * Security (TLS).
+   * Specifies the name of the dedicated IP pool to associate with the configuration set and whether
+   * messages that use the configuration set are required to use Transport Layer Security (TLS).
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("b48406aebe495571c3988281305bd27e18418f1ed8d88a707fb40bb854bd97b1")
@@ -161,26 +162,30 @@ public open class CfnConfigurationSet(
   }
 
   /**
-   * An object that represents the reputation settings for the configuration set.
+   * An object that defines whether or not Amazon SES collects reputation metrics for the emails
+   * that you send that use the configuration set.
    */
   public open fun reputationOptions(): Any? = unwrap(this).getReputationOptions()
 
   /**
-   * An object that represents the reputation settings for the configuration set.
+   * An object that defines whether or not Amazon SES collects reputation metrics for the emails
+   * that you send that use the configuration set.
    */
   public open fun reputationOptions(`value`: IResolvable) {
     unwrap(this).setReputationOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * An object that represents the reputation settings for the configuration set.
+   * An object that defines whether or not Amazon SES collects reputation metrics for the emails
+   * that you send that use the configuration set.
    */
   public open fun reputationOptions(`value`: ReputationOptionsProperty) {
     unwrap(this).setReputationOptions(`value`.let(ReputationOptionsProperty.Companion::unwrap))
   }
 
   /**
-   * An object that represents the reputation settings for the configuration set.
+   * An object that defines whether or not Amazon SES collects reputation metrics for the emails
+   * that you send that use the configuration set.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("227804c3f3b263a655a52d0e1bea02051bfe38dd33043fb95ebe45c23c13ffd3")
@@ -246,26 +251,30 @@ public open class CfnConfigurationSet(
       suppressionOptions(SuppressionOptionsProperty(`value`))
 
   /**
-   * The name of the custom open and click tracking domain associated with the configuration set.
+   * An object that defines the open and click tracking options for emails that you send using the
+   * configuration set.
    */
   public open fun trackingOptions(): Any? = unwrap(this).getTrackingOptions()
 
   /**
-   * The name of the custom open and click tracking domain associated with the configuration set.
+   * An object that defines the open and click tracking options for emails that you send using the
+   * configuration set.
    */
   public open fun trackingOptions(`value`: IResolvable) {
     unwrap(this).setTrackingOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The name of the custom open and click tracking domain associated with the configuration set.
+   * An object that defines the open and click tracking options for emails that you send using the
+   * configuration set.
    */
   public open fun trackingOptions(`value`: TrackingOptionsProperty) {
     unwrap(this).setTrackingOptions(`value`.let(TrackingOptionsProperty.Companion::unwrap))
   }
 
   /**
-   * The name of the custom open and click tracking domain associated with the configuration set.
+   * An object that defines the open and click tracking options for emails that you send using the
+   * configuration set.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("64178774d79abefec51ad3f5d3e00d4ac1826e8e00ae6ce9fa1a2aee536102f8")
@@ -305,32 +314,38 @@ public open class CfnConfigurationSet(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Specifies whether messages that use the configuration set are required to use Transport Layer
-     * Security (TLS).
+     * Specifies the name of the dedicated IP pool to associate with the configuration set and
+     * whether messages that use the configuration set are required to use Transport Layer Security
+     * (TLS).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-deliveryoptions)
-     * @param deliveryOptions Specifies whether messages that use the configuration set are required
-     * to use Transport Layer Security (TLS). 
+     * @param deliveryOptions Specifies the name of the dedicated IP pool to associate with the
+     * configuration set and whether messages that use the configuration set are required to use
+     * Transport Layer Security (TLS). 
      */
     public fun deliveryOptions(deliveryOptions: IResolvable)
 
     /**
-     * Specifies whether messages that use the configuration set are required to use Transport Layer
-     * Security (TLS).
+     * Specifies the name of the dedicated IP pool to associate with the configuration set and
+     * whether messages that use the configuration set are required to use Transport Layer Security
+     * (TLS).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-deliveryoptions)
-     * @param deliveryOptions Specifies whether messages that use the configuration set are required
-     * to use Transport Layer Security (TLS). 
+     * @param deliveryOptions Specifies the name of the dedicated IP pool to associate with the
+     * configuration set and whether messages that use the configuration set are required to use
+     * Transport Layer Security (TLS). 
      */
     public fun deliveryOptions(deliveryOptions: DeliveryOptionsProperty)
 
     /**
-     * Specifies whether messages that use the configuration set are required to use Transport Layer
-     * Security (TLS).
+     * Specifies the name of the dedicated IP pool to associate with the configuration set and
+     * whether messages that use the configuration set are required to use Transport Layer Security
+     * (TLS).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-deliveryoptions)
-     * @param deliveryOptions Specifies whether messages that use the configuration set are required
-     * to use Transport Layer Security (TLS). 
+     * @param deliveryOptions Specifies the name of the dedicated IP pool to associate with the
+     * configuration set and whether messages that use the configuration set are required to use
+     * Transport Layer Security (TLS). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bea76d4086f6acc6c515602f5efc12d6f5d2dcd3e9dc35e7920f14a83af7c1e7")
@@ -349,29 +364,32 @@ public open class CfnConfigurationSet(
     public fun name(name: String)
 
     /**
-     * An object that represents the reputation settings for the configuration set.
+     * An object that defines whether or not Amazon SES collects reputation metrics for the emails
+     * that you send that use the configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-reputationoptions)
-     * @param reputationOptions An object that represents the reputation settings for the
-     * configuration set. 
+     * @param reputationOptions An object that defines whether or not Amazon SES collects reputation
+     * metrics for the emails that you send that use the configuration set. 
      */
     public fun reputationOptions(reputationOptions: IResolvable)
 
     /**
-     * An object that represents the reputation settings for the configuration set.
+     * An object that defines whether or not Amazon SES collects reputation metrics for the emails
+     * that you send that use the configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-reputationoptions)
-     * @param reputationOptions An object that represents the reputation settings for the
-     * configuration set. 
+     * @param reputationOptions An object that defines whether or not Amazon SES collects reputation
+     * metrics for the emails that you send that use the configuration set. 
      */
     public fun reputationOptions(reputationOptions: ReputationOptionsProperty)
 
     /**
-     * An object that represents the reputation settings for the configuration set.
+     * An object that defines whether or not Amazon SES collects reputation metrics for the emails
+     * that you send that use the configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-reputationoptions)
-     * @param reputationOptions An object that represents the reputation settings for the
-     * configuration set. 
+     * @param reputationOptions An object that defines whether or not Amazon SES collects reputation
+     * metrics for the emails that you send that use the configuration set. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1c733d8e8b31cc6e04a50d62a5a57004f2628da598b37f0ba686bba934b96d4a")
@@ -439,29 +457,32 @@ public open class CfnConfigurationSet(
     public fun suppressionOptions(suppressionOptions: SuppressionOptionsProperty.Builder.() -> Unit)
 
     /**
-     * The name of the custom open and click tracking domain associated with the configuration set.
+     * An object that defines the open and click tracking options for emails that you send using the
+     * configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-trackingoptions)
-     * @param trackingOptions The name of the custom open and click tracking domain associated with
-     * the configuration set. 
+     * @param trackingOptions An object that defines the open and click tracking options for emails
+     * that you send using the configuration set. 
      */
     public fun trackingOptions(trackingOptions: IResolvable)
 
     /**
-     * The name of the custom open and click tracking domain associated with the configuration set.
+     * An object that defines the open and click tracking options for emails that you send using the
+     * configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-trackingoptions)
-     * @param trackingOptions The name of the custom open and click tracking domain associated with
-     * the configuration set. 
+     * @param trackingOptions An object that defines the open and click tracking options for emails
+     * that you send using the configuration set. 
      */
     public fun trackingOptions(trackingOptions: TrackingOptionsProperty)
 
     /**
-     * The name of the custom open and click tracking domain associated with the configuration set.
+     * An object that defines the open and click tracking options for emails that you send using the
+     * configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-trackingoptions)
-     * @param trackingOptions The name of the custom open and click tracking domain associated with
-     * the configuration set. 
+     * @param trackingOptions An object that defines the open and click tracking options for emails
+     * that you send using the configuration set. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb098918d914c45ab533668f71503aab74c3c4da79158f851169d8676c5dceaa")
@@ -505,36 +526,42 @@ public open class CfnConfigurationSet(
         software.amazon.awscdk.services.ses.CfnConfigurationSet.Builder.create(scope, id)
 
     /**
-     * Specifies whether messages that use the configuration set are required to use Transport Layer
-     * Security (TLS).
+     * Specifies the name of the dedicated IP pool to associate with the configuration set and
+     * whether messages that use the configuration set are required to use Transport Layer Security
+     * (TLS).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-deliveryoptions)
-     * @param deliveryOptions Specifies whether messages that use the configuration set are required
-     * to use Transport Layer Security (TLS). 
+     * @param deliveryOptions Specifies the name of the dedicated IP pool to associate with the
+     * configuration set and whether messages that use the configuration set are required to use
+     * Transport Layer Security (TLS). 
      */
     override fun deliveryOptions(deliveryOptions: IResolvable) {
       cdkBuilder.deliveryOptions(deliveryOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Specifies whether messages that use the configuration set are required to use Transport Layer
-     * Security (TLS).
+     * Specifies the name of the dedicated IP pool to associate with the configuration set and
+     * whether messages that use the configuration set are required to use Transport Layer Security
+     * (TLS).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-deliveryoptions)
-     * @param deliveryOptions Specifies whether messages that use the configuration set are required
-     * to use Transport Layer Security (TLS). 
+     * @param deliveryOptions Specifies the name of the dedicated IP pool to associate with the
+     * configuration set and whether messages that use the configuration set are required to use
+     * Transport Layer Security (TLS). 
      */
     override fun deliveryOptions(deliveryOptions: DeliveryOptionsProperty) {
       cdkBuilder.deliveryOptions(deliveryOptions.let(DeliveryOptionsProperty.Companion::unwrap))
     }
 
     /**
-     * Specifies whether messages that use the configuration set are required to use Transport Layer
-     * Security (TLS).
+     * Specifies the name of the dedicated IP pool to associate with the configuration set and
+     * whether messages that use the configuration set are required to use Transport Layer Security
+     * (TLS).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-deliveryoptions)
-     * @param deliveryOptions Specifies whether messages that use the configuration set are required
-     * to use Transport Layer Security (TLS). 
+     * @param deliveryOptions Specifies the name of the dedicated IP pool to associate with the
+     * configuration set and whether messages that use the configuration set are required to use
+     * Transport Layer Security (TLS). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bea76d4086f6acc6c515602f5efc12d6f5d2dcd3e9dc35e7920f14a83af7c1e7")
@@ -556,33 +583,36 @@ public open class CfnConfigurationSet(
     }
 
     /**
-     * An object that represents the reputation settings for the configuration set.
+     * An object that defines whether or not Amazon SES collects reputation metrics for the emails
+     * that you send that use the configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-reputationoptions)
-     * @param reputationOptions An object that represents the reputation settings for the
-     * configuration set. 
+     * @param reputationOptions An object that defines whether or not Amazon SES collects reputation
+     * metrics for the emails that you send that use the configuration set. 
      */
     override fun reputationOptions(reputationOptions: IResolvable) {
       cdkBuilder.reputationOptions(reputationOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * An object that represents the reputation settings for the configuration set.
+     * An object that defines whether or not Amazon SES collects reputation metrics for the emails
+     * that you send that use the configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-reputationoptions)
-     * @param reputationOptions An object that represents the reputation settings for the
-     * configuration set. 
+     * @param reputationOptions An object that defines whether or not Amazon SES collects reputation
+     * metrics for the emails that you send that use the configuration set. 
      */
     override fun reputationOptions(reputationOptions: ReputationOptionsProperty) {
       cdkBuilder.reputationOptions(reputationOptions.let(ReputationOptionsProperty.Companion::unwrap))
     }
 
     /**
-     * An object that represents the reputation settings for the configuration set.
+     * An object that defines whether or not Amazon SES collects reputation metrics for the emails
+     * that you send that use the configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-reputationoptions)
-     * @param reputationOptions An object that represents the reputation settings for the
-     * configuration set. 
+     * @param reputationOptions An object that defines whether or not Amazon SES collects reputation
+     * metrics for the emails that you send that use the configuration set. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1c733d8e8b31cc6e04a50d62a5a57004f2628da598b37f0ba686bba934b96d4a")
@@ -662,33 +692,36 @@ public open class CfnConfigurationSet(
         Unit = suppressionOptions(SuppressionOptionsProperty(suppressionOptions))
 
     /**
-     * The name of the custom open and click tracking domain associated with the configuration set.
+     * An object that defines the open and click tracking options for emails that you send using the
+     * configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-trackingoptions)
-     * @param trackingOptions The name of the custom open and click tracking domain associated with
-     * the configuration set. 
+     * @param trackingOptions An object that defines the open and click tracking options for emails
+     * that you send using the configuration set. 
      */
     override fun trackingOptions(trackingOptions: IResolvable) {
       cdkBuilder.trackingOptions(trackingOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The name of the custom open and click tracking domain associated with the configuration set.
+     * An object that defines the open and click tracking options for emails that you send using the
+     * configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-trackingoptions)
-     * @param trackingOptions The name of the custom open and click tracking domain associated with
-     * the configuration set. 
+     * @param trackingOptions An object that defines the open and click tracking options for emails
+     * that you send using the configuration set. 
      */
     override fun trackingOptions(trackingOptions: TrackingOptionsProperty) {
       cdkBuilder.trackingOptions(trackingOptions.let(TrackingOptionsProperty.Companion::unwrap))
     }
 
     /**
-     * The name of the custom open and click tracking domain associated with the configuration set.
+     * An object that defines the open and click tracking options for emails that you send using the
+     * configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-trackingoptions)
-     * @param trackingOptions The name of the custom open and click tracking domain associated with
-     * the configuration set. 
+     * @param trackingOptions An object that defines the open and click tracking options for emails
+     * that you send using the configuration set. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb098918d914c45ab533668f71503aab74c3c4da79158f851169d8676c5dceaa")
@@ -754,7 +787,8 @@ public open class CfnConfigurationSet(
   }
 
   /**
-   * Settings for your VDM configuration as applicable to the Dashboard.
+   * An object containing additional settings for your VDM configuration as applicable to the
+   * Dashboard.
    *
    * Example:
    *
@@ -816,7 +850,8 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty,
-    ) : CdkObject(cdkObject), DashboardOptionsProperty {
+    ) : CdkObject(cdkObject),
+        DashboardOptionsProperty {
       /**
        * Specifies the status of your VDM engagement metrics collection. Can be one of the
        * following:.
@@ -848,8 +883,8 @@ public open class CfnConfigurationSet(
   }
 
   /**
-   * Specifies whether messages that use the configuration set are required to use Transport Layer
-   * Security (TLS).
+   * Specifies the name of the dedicated IP pool to associate with the configuration set and whether
+   * messages that use the configuration set are required to use Transport Layer Security (TLS).
    *
    * Example:
    *
@@ -943,7 +978,8 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DeliveryOptionsProperty,
-    ) : CdkObject(cdkObject), DeliveryOptionsProperty {
+    ) : CdkObject(cdkObject),
+        DeliveryOptionsProperty {
       /**
        * The name of the dedicated IP pool to associate with the configuration set.
        *
@@ -985,7 +1021,8 @@ public open class CfnConfigurationSet(
   }
 
   /**
-   * Settings for your VDM configuration as applicable to the Guardian.
+   * An object containing additional settings for your VDM configuration as applicable to the
+   * Guardian.
    *
    * Example:
    *
@@ -1047,7 +1084,8 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.GuardianOptionsProperty,
-    ) : CdkObject(cdkObject), GuardianOptionsProperty {
+    ) : CdkObject(cdkObject),
+        GuardianOptionsProperty {
       /**
        * Specifies the status of your VDM optimized shared delivery. Can be one of the following:.
        *
@@ -1078,7 +1116,8 @@ public open class CfnConfigurationSet(
   }
 
   /**
-   * Contains information about the reputation settings for a configuration set.
+   * Enable or disable collection of reputation metrics for emails that you send using this
+   * configuration set in the current AWS Region.
    *
    * Example:
    *
@@ -1095,11 +1134,9 @@ public open class CfnConfigurationSet(
    */
   public interface ReputationOptionsProperty {
     /**
-     * Describes whether or not Amazon SES publishes reputation metrics for the configuration set,
-     * such as bounce and complaint rates, to Amazon CloudWatch.
+     * If `true` , tracking of reputation metrics is enabled for the configuration set.
      *
-     * If the value is `true` , reputation metrics are published. If the value is `false` ,
-     * reputation metrics are not published. The default value is `false` .
+     * If `false` , tracking of reputation metrics is disabled for the configuration set.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html#cfn-ses-configurationset-reputationoptions-reputationmetricsenabled)
      */
@@ -1111,18 +1148,16 @@ public open class CfnConfigurationSet(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
+       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
+       * the configuration set.
+       * If `false` , tracking of reputation metrics is disabled for the configuration set.
        */
       public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean)
 
       /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
+       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
+       * the configuration set.
+       * If `false` , tracking of reputation metrics is disabled for the configuration set.
        */
       public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable)
     }
@@ -1134,20 +1169,18 @@ public open class CfnConfigurationSet(
           software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty.builder()
 
       /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
+       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
+       * the configuration set.
+       * If `false` , tracking of reputation metrics is disabled for the configuration set.
        */
       override fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
         cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
       }
 
       /**
-       * @param reputationMetricsEnabled Describes whether or not Amazon SES publishes reputation
-       * metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
+       * @param reputationMetricsEnabled If `true` , tracking of reputation metrics is enabled for
+       * the configuration set.
+       * If `false` , tracking of reputation metrics is disabled for the configuration set.
        */
       override fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
         cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled.let(IResolvable.Companion::unwrap))
@@ -1160,13 +1193,12 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty,
-    ) : CdkObject(cdkObject), ReputationOptionsProperty {
+    ) : CdkObject(cdkObject),
+        ReputationOptionsProperty {
       /**
-       * Describes whether or not Amazon SES publishes reputation metrics for the configuration set,
-       * such as bounce and complaint rates, to Amazon CloudWatch.
+       * If `true` , tracking of reputation metrics is enabled for the configuration set.
        *
-       * If the value is `true` , reputation metrics are published. If the value is `false` ,
-       * reputation metrics are not published. The default value is `false` .
+       * If `false` , tracking of reputation metrics is disabled for the configuration set.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-reputationoptions.html#cfn-ses-configurationset-reputationoptions-reputationmetricsenabled)
        */
@@ -1264,7 +1296,8 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty,
-    ) : CdkObject(cdkObject), SendingOptionsProperty {
+    ) : CdkObject(cdkObject),
+        SendingOptionsProperty {
       /**
        * If `true` , email sending is enabled for the configuration set.
        *
@@ -1396,7 +1429,8 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty,
-    ) : CdkObject(cdkObject), SuppressionOptionsProperty {
+    ) : CdkObject(cdkObject),
+        SuppressionOptionsProperty {
       /**
        * A list that contains the reasons that email addresses are automatically added to the
        * suppression list for your account.
@@ -1433,9 +1467,15 @@ public open class CfnConfigurationSet(
   }
 
   /**
-   * A domain that is used to redirect email recipients to an Amazon SES-operated domain.
+   * An object that defines the tracking options for a configuration set.
    *
-   * This domain captures open and click events generated by Amazon SES emails.
+   * When you use the Amazon SES API v2 to send an email, it contains an invisible image that's used
+   * to track when recipients open your email. If your email contains links, those links are changed
+   * slightly in order to track when recipients click them.
+   *
+   * You can optionally configure a custom subdomain that is used to redirect email recipients to an
+   * Amazon SES-operated domain. This domain captures open and click events generated by Amazon SES
+   * emails.
    *
    * For more information, see [Configuring Custom Domains to Handle Open and Click
    * Tracking](https://docs.aws.amazon.com/ses/latest/dg/configure-custom-open-click-domains.html) in
@@ -1495,7 +1535,8 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty,
-    ) : CdkObject(cdkObject), TrackingOptionsProperty {
+    ) : CdkObject(cdkObject),
+        TrackingOptionsProperty {
       /**
        * The custom subdomain that is used to redirect email recipients to the Amazon SES event
        * tracking domain.
@@ -1546,14 +1587,14 @@ public open class CfnConfigurationSet(
    */
   public interface VdmOptionsProperty {
     /**
-     * Settings for your VDM configuration as applicable to the Dashboard.
+     * Specifies additional settings for your VDM configuration as applicable to the Dashboard.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-dashboardoptions)
      */
     public fun dashboardOptions(): Any? = unwrap(this).getDashboardOptions()
 
     /**
-     * Settings for your VDM configuration as applicable to the Guardian.
+     * Specifies additional settings for your VDM configuration as applicable to the Guardian.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-guardianoptions)
      */
@@ -1565,34 +1606,40 @@ public open class CfnConfigurationSet(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       * @param dashboardOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Dashboard.
        */
       public fun dashboardOptions(dashboardOptions: IResolvable)
 
       /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       * @param dashboardOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Dashboard.
        */
       public fun dashboardOptions(dashboardOptions: DashboardOptionsProperty)
 
       /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       * @param dashboardOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Dashboard.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9ae1370c8118b3db5fccd7c5d77a47a0c9fc5c5ae23baf050aa25ce11aa094cd")
       public fun dashboardOptions(dashboardOptions: DashboardOptionsProperty.Builder.() -> Unit)
 
       /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       * @param guardianOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Guardian.
        */
       public fun guardianOptions(guardianOptions: IResolvable)
 
       /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       * @param guardianOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Guardian.
        */
       public fun guardianOptions(guardianOptions: GuardianOptionsProperty)
 
       /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       * @param guardianOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Guardian.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9632d1b5dcfc878d2221fd033755a8f3e6b6e1ed1099d509a3393553918608b9")
@@ -1605,21 +1652,24 @@ public open class CfnConfigurationSet(
           software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty.builder()
 
       /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       * @param dashboardOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Dashboard.
        */
       override fun dashboardOptions(dashboardOptions: IResolvable) {
         cdkBuilder.dashboardOptions(dashboardOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       * @param dashboardOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Dashboard.
        */
       override fun dashboardOptions(dashboardOptions: DashboardOptionsProperty) {
         cdkBuilder.dashboardOptions(dashboardOptions.let(DashboardOptionsProperty.Companion::unwrap))
       }
 
       /**
-       * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
+       * @param dashboardOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Dashboard.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9ae1370c8118b3db5fccd7c5d77a47a0c9fc5c5ae23baf050aa25ce11aa094cd")
@@ -1627,21 +1677,24 @@ public open class CfnConfigurationSet(
           Unit = dashboardOptions(DashboardOptionsProperty(dashboardOptions))
 
       /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       * @param guardianOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Guardian.
        */
       override fun guardianOptions(guardianOptions: IResolvable) {
         cdkBuilder.guardianOptions(guardianOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       * @param guardianOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Guardian.
        */
       override fun guardianOptions(guardianOptions: GuardianOptionsProperty) {
         cdkBuilder.guardianOptions(guardianOptions.let(GuardianOptionsProperty.Companion::unwrap))
       }
 
       /**
-       * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
+       * @param guardianOptions Specifies additional settings for your VDM configuration as
+       * applicable to the Guardian.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9632d1b5dcfc878d2221fd033755a8f3e6b6e1ed1099d509a3393553918608b9")
@@ -1654,16 +1707,17 @@ public open class CfnConfigurationSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty,
-    ) : CdkObject(cdkObject), VdmOptionsProperty {
+    ) : CdkObject(cdkObject),
+        VdmOptionsProperty {
       /**
-       * Settings for your VDM configuration as applicable to the Dashboard.
+       * Specifies additional settings for your VDM configuration as applicable to the Dashboard.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-dashboardoptions)
        */
       override fun dashboardOptions(): Any? = unwrap(this).getDashboardOptions()
 
       /**
-       * Settings for your VDM configuration as applicable to the Guardian.
+       * Specifies additional settings for your VDM configuration as applicable to the Guardian.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html#cfn-ses-configurationset-vdmoptions-guardianoptions)
        */

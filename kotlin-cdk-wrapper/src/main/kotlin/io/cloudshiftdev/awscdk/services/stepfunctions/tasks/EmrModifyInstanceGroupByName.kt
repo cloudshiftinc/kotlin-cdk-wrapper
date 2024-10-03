@@ -703,7 +703,8 @@ public open class EmrModifyInstanceGroupByName(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty,
-    ) : CdkObject(cdkObject), InstanceGroupModifyConfigProperty {
+    ) : CdkObject(cdkObject),
+        InstanceGroupModifyConfigProperty {
       /**
        * A list of new or modified configurations to apply for an instance group.
        *
@@ -894,7 +895,8 @@ public open class EmrModifyInstanceGroupByName(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty,
-    ) : CdkObject(cdkObject), InstanceResizePolicyProperty {
+    ) : CdkObject(cdkObject),
+        InstanceResizePolicyProperty {
       /**
        * Decommissioning timeout override for the specific list of instances to be terminated.
        *
@@ -1048,7 +1050,8 @@ public open class EmrModifyInstanceGroupByName(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty,
-    ) : CdkObject(cdkObject), ShrinkPolicyProperty {
+    ) : CdkObject(cdkObject),
+        ShrinkPolicyProperty {
       /**
        * The desired timeout for decommissioning an instance.
        *

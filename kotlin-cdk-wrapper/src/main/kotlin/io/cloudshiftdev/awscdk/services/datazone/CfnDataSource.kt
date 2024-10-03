@@ -100,7 +100,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataSource(
   cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1017,7 +1018,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.DataSourceConfigurationInputProperty,
-    ) : CdkObject(cdkObject), DataSourceConfigurationInputProperty {
+    ) : CdkObject(cdkObject),
+        DataSourceConfigurationInputProperty {
       /**
        * The configuration of the AWS Glue data source.
        *
@@ -1126,7 +1128,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty,
-    ) : CdkObject(cdkObject), FilterExpressionProperty {
+    ) : CdkObject(cdkObject),
+        FilterExpressionProperty {
       /**
        * The search filter expression.
        *
@@ -1274,7 +1277,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty,
-    ) : CdkObject(cdkObject), FormInputProperty {
+    ) : CdkObject(cdkObject),
+        FormInputProperty {
       /**
        * The content of the metadata form.
        *
@@ -1476,7 +1480,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty,
-    ) : CdkObject(cdkObject), GlueRunConfigurationInputProperty {
+    ) : CdkObject(cdkObject),
+        GlueRunConfigurationInputProperty {
       /**
        * Specifies whether to automatically import data quality metrics as part of the data source
        * run.
@@ -1595,7 +1600,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty,
-    ) : CdkObject(cdkObject), RecommendationConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RecommendationConfigurationProperty {
       /**
        * Specifies whether automatic business name generation is to be enabled or not as part of the
        * recommendation configuration.
@@ -1681,7 +1687,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftClusterStorageProperty,
-    ) : CdkObject(cdkObject), RedshiftClusterStorageProperty {
+    ) : CdkObject(cdkObject),
+        RedshiftClusterStorageProperty {
       /**
        * The name of an Amazon Redshift cluster.
        *
@@ -1764,7 +1771,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftCredentialConfigurationProperty,
-    ) : CdkObject(cdkObject), RedshiftCredentialConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RedshiftCredentialConfigurationProperty {
       /**
        * The ARN of a secret manager for an Amazon Redshift cluster.
        *
@@ -2032,7 +2040,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftRunConfigurationInputProperty,
-    ) : CdkObject(cdkObject), RedshiftRunConfigurationInputProperty {
+    ) : CdkObject(cdkObject),
+        RedshiftRunConfigurationInputProperty {
       /**
        * The data access role included in the configuration details of the Amazon Redshift data
        * source.
@@ -2142,7 +2151,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty,
-    ) : CdkObject(cdkObject), RedshiftServerlessStorageProperty {
+    ) : CdkObject(cdkObject),
+        RedshiftServerlessStorageProperty {
       /**
        * The name of the Amazon Redshift Serverless workgroup.
        *
@@ -2316,7 +2326,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty,
-    ) : CdkObject(cdkObject), RedshiftStorageProperty {
+    ) : CdkObject(cdkObject),
+        RedshiftStorageProperty {
       /**
        * The details of the Amazon Redshift cluster source.
        *
@@ -2483,7 +2494,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty,
-    ) : CdkObject(cdkObject), RelationalFilterConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RelationalFilterConfigurationProperty {
       /**
        * The database name specified in the relational filter configuration for the data source.
        *
@@ -2602,7 +2614,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty,
-    ) : CdkObject(cdkObject), ScheduleConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ScheduleConfigurationProperty {
       /**
        * The schedule of the data source runs.
        *

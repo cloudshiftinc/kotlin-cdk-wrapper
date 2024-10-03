@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -55,6 +56,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .devEui("devEui")
  * .deviceProfileId("deviceProfileId")
+ * .fPorts(FPortsProperty.builder()
+ * .applications(List.of(ApplicationProperty.builder()
+ * .destinationName("destinationName")
+ * .fPort(123)
+ * .type("type")
+ * .build()))
+ * .build())
  * .otaaV10X(OtaaV10xProperty.builder()
  * .appEui("appEui")
  * .appKey("appKey")
@@ -80,7 +88,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWirelessDevice(
   cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -648,7 +658,8 @@ public open class CfnWirelessDevice(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty,
-    ) : CdkObject(cdkObject), AbpV10xProperty {
+    ) : CdkObject(cdkObject),
+        AbpV10xProperty {
       /**
        * The DevAddr value.
        *
@@ -788,7 +799,8 @@ public open class CfnWirelessDevice(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property,
-    ) : CdkObject(cdkObject), AbpV11Property {
+    ) : CdkObject(cdkObject),
+        AbpV11Property {
       /**
        * The DevAddr value.
        *
@@ -823,6 +835,266 @@ public open class CfnWirelessDevice(
   }
 
   /**
+   * A list of optional LoRaWAN application information, which can be used for geolocation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
+   * ApplicationProperty applicationProperty = ApplicationProperty.builder()
+   * .destinationName("destinationName")
+   * .fPort(123)
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-application.html)
+   */
+  public interface ApplicationProperty {
+    /**
+     * The name of the position data destination that describes the IoT rule that processes the
+     * device's position data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-application.html#cfn-iotwireless-wirelessdevice-application-destinationname)
+     */
+    public fun destinationName(): String? = unwrap(this).getDestinationName()
+
+    /**
+     * The name of the new destination for the device.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-application.html#cfn-iotwireless-wirelessdevice-application-fport)
+     */
+    public fun fPort(): Number? = unwrap(this).getFPort()
+
+    /**
+     * Application type, which can be specified to obtain real-time position information of your
+     * LoRaWAN device.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-application.html#cfn-iotwireless-wirelessdevice-application-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [ApplicationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destinationName The name of the position data destination that describes the IoT
+       * rule that processes the device's position data.
+       */
+      public fun destinationName(destinationName: String)
+
+      /**
+       * @param fPort The name of the new destination for the device.
+       */
+      public fun fPort(fPort: Number)
+
+      /**
+       * @param type Application type, which can be specified to obtain real-time position
+       * information of your LoRaWAN device.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.ApplicationProperty.Builder
+          =
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.ApplicationProperty.builder()
+
+      /**
+       * @param destinationName The name of the position data destination that describes the IoT
+       * rule that processes the device's position data.
+       */
+      override fun destinationName(destinationName: String) {
+        cdkBuilder.destinationName(destinationName)
+      }
+
+      /**
+       * @param fPort The name of the new destination for the device.
+       */
+      override fun fPort(fPort: Number) {
+        cdkBuilder.fPort(fPort)
+      }
+
+      /**
+       * @param type Application type, which can be specified to obtain real-time position
+       * information of your LoRaWAN device.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.ApplicationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.ApplicationProperty,
+    ) : CdkObject(cdkObject),
+        ApplicationProperty {
+      /**
+       * The name of the position data destination that describes the IoT rule that processes the
+       * device's position data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-application.html#cfn-iotwireless-wirelessdevice-application-destinationname)
+       */
+      override fun destinationName(): String? = unwrap(this).getDestinationName()
+
+      /**
+       * The name of the new destination for the device.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-application.html#cfn-iotwireless-wirelessdevice-application-fport)
+       */
+      override fun fPort(): Number? = unwrap(this).getFPort()
+
+      /**
+       * Application type, which can be specified to obtain real-time position information of your
+       * LoRaWAN device.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-application.html#cfn-iotwireless-wirelessdevice-application-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ApplicationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.ApplicationProperty):
+          ApplicationProperty = CdkObjectWrappers.wrap(cdkObject) as? ApplicationProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ApplicationProperty):
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.ApplicationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.ApplicationProperty
+    }
+  }
+
+  /**
+   * List of FPorts assigned for different LoRaWAN application packages to use.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotwireless.*;
+   * FPortsProperty fPortsProperty = FPortsProperty.builder()
+   * .applications(List.of(ApplicationProperty.builder()
+   * .destinationName("destinationName")
+   * .fPort(123)
+   * .type("type")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-fports.html)
+   */
+  public interface FPortsProperty {
+    /**
+     * LoRaWAN application configuration, which can be used to perform geolocation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-fports.html#cfn-iotwireless-wirelessdevice-fports-applications)
+     */
+    public fun applications(): Any? = unwrap(this).getApplications()
+
+    /**
+     * A builder for [FPortsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param applications LoRaWAN application configuration, which can be used to perform
+       * geolocation.
+       */
+      public fun applications(applications: IResolvable)
+
+      /**
+       * @param applications LoRaWAN application configuration, which can be used to perform
+       * geolocation.
+       */
+      public fun applications(applications: List<Any>)
+
+      /**
+       * @param applications LoRaWAN application configuration, which can be used to perform
+       * geolocation.
+       */
+      public fun applications(vararg applications: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.FPortsProperty.Builder =
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.FPortsProperty.builder()
+
+      /**
+       * @param applications LoRaWAN application configuration, which can be used to perform
+       * geolocation.
+       */
+      override fun applications(applications: IResolvable) {
+        cdkBuilder.applications(applications.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param applications LoRaWAN application configuration, which can be used to perform
+       * geolocation.
+       */
+      override fun applications(applications: List<Any>) {
+        cdkBuilder.applications(applications.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param applications LoRaWAN application configuration, which can be used to perform
+       * geolocation.
+       */
+      override fun applications(vararg applications: Any): Unit =
+          applications(applications.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.FPortsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.FPortsProperty,
+    ) : CdkObject(cdkObject),
+        FPortsProperty {
+      /**
+       * LoRaWAN application configuration, which can be used to perform geolocation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-fports.html#cfn-iotwireless-wirelessdevice-fports-applications)
+       */
+      override fun applications(): Any? = unwrap(this).getApplications()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FPortsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.FPortsProperty):
+          FPortsProperty = CdkObjectWrappers.wrap(cdkObject) as? FPortsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FPortsProperty):
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.FPortsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.FPortsProperty
+    }
+  }
+
+  /**
    * LoRaWAN object for create functions.
    *
    * Example:
@@ -850,6 +1122,13 @@ public open class CfnWirelessDevice(
    * .build())
    * .devEui("devEui")
    * .deviceProfileId("deviceProfileId")
+   * .fPorts(FPortsProperty.builder()
+   * .applications(List.of(ApplicationProperty.builder()
+   * .destinationName("destinationName")
+   * .fPort(123)
+   * .type("type")
+   * .build()))
+   * .build())
    * .otaaV10X(OtaaV10xProperty.builder()
    * .appEui("appEui")
    * .appKey("appKey")
@@ -893,6 +1172,13 @@ public open class CfnWirelessDevice(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-deviceprofileid)
      */
     public fun deviceProfileId(): String? = unwrap(this).getDeviceProfileId()
+
+    /**
+     * List of FPort assigned for different LoRaWAN application packages to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-fports)
+     */
+    public fun fPorts(): Any? = unwrap(this).getFPorts()
 
     /**
      * OTAA device object for create APIs for v1.0.x.
@@ -963,6 +1249,23 @@ public open class CfnWirelessDevice(
        * @param deviceProfileId The ID of the device profile for the new wireless device.
        */
       public fun deviceProfileId(deviceProfileId: String)
+
+      /**
+       * @param fPorts List of FPort assigned for different LoRaWAN application packages to use.
+       */
+      public fun fPorts(fPorts: IResolvable)
+
+      /**
+       * @param fPorts List of FPort assigned for different LoRaWAN application packages to use.
+       */
+      public fun fPorts(fPorts: FPortsProperty)
+
+      /**
+       * @param fPorts List of FPort assigned for different LoRaWAN application packages to use.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5d76cbc275f943cd5fa942f95b23102db9ba95b7c91288e504adbd040ef8ad97")
+      public fun fPorts(fPorts: FPortsProperty.Builder.() -> Unit)
 
       /**
        * @param otaaV10X OTAA device object for create APIs for v1.0.x.
@@ -1069,6 +1372,28 @@ public open class CfnWirelessDevice(
       }
 
       /**
+       * @param fPorts List of FPort assigned for different LoRaWAN application packages to use.
+       */
+      override fun fPorts(fPorts: IResolvable) {
+        cdkBuilder.fPorts(fPorts.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fPorts List of FPort assigned for different LoRaWAN application packages to use.
+       */
+      override fun fPorts(fPorts: FPortsProperty) {
+        cdkBuilder.fPorts(fPorts.let(FPortsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param fPorts List of FPort assigned for different LoRaWAN application packages to use.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5d76cbc275f943cd5fa942f95b23102db9ba95b7c91288e504adbd040ef8ad97")
+      override fun fPorts(fPorts: FPortsProperty.Builder.() -> Unit): Unit =
+          fPorts(FPortsProperty(fPorts))
+
+      /**
        * @param otaaV10X OTAA device object for create APIs for v1.0.x.
        */
       override fun otaaV10X(otaaV10X: IResolvable) {
@@ -1126,7 +1451,8 @@ public open class CfnWirelessDevice(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty,
-    ) : CdkObject(cdkObject), LoRaWANDeviceProperty {
+    ) : CdkObject(cdkObject),
+        LoRaWANDeviceProperty {
       /**
        * ABP device object for LoRaWAN specification v1.0.x.
        *
@@ -1154,6 +1480,13 @@ public open class CfnWirelessDevice(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-deviceprofileid)
        */
       override fun deviceProfileId(): String? = unwrap(this).getDeviceProfileId()
+
+      /**
+       * List of FPort assigned for different LoRaWAN application packages to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-fports)
+       */
+      override fun fPorts(): Any? = unwrap(this).getFPorts()
 
       /**
        * OTAA device object for create APIs for v1.0.x.
@@ -1271,7 +1604,8 @@ public open class CfnWirelessDevice(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty,
-    ) : CdkObject(cdkObject), OtaaV10xProperty {
+    ) : CdkObject(cdkObject),
+        OtaaV10xProperty {
       /**
        * The AppEUI value.
        *
@@ -1427,7 +1761,8 @@ public open class CfnWirelessDevice(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property,
-    ) : CdkObject(cdkObject), OtaaV11Property {
+    ) : CdkObject(cdkObject),
+        OtaaV11Property {
       /**
        * The AppKey is a secret key, which you should handle in a similar way as you would an
        * application password.
@@ -1553,7 +1888,8 @@ public open class CfnWirelessDevice(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty,
-    ) : CdkObject(cdkObject), SessionKeysAbpV10xProperty {
+    ) : CdkObject(cdkObject),
+        SessionKeysAbpV10xProperty {
       /**
        * The AppSKey value.
        *
@@ -1754,7 +2090,8 @@ public open class CfnWirelessDevice(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property,
-    ) : CdkObject(cdkObject), SessionKeysAbpV11Property {
+    ) : CdkObject(cdkObject),
+        SessionKeysAbpV11Property {
       /**
        * The AppSKey is a secret key, which you should handle in a similar way as you would an
        * application password.

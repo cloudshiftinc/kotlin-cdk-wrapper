@@ -270,7 +270,8 @@ public interface CfnAccessPointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.CfnAccessPointProps,
-  ) : CdkObject(cdkObject), CfnAccessPointProps {
+  ) : CdkObject(cdkObject),
+      CfnAccessPointProps {
     /**
      * An array of key-value pairs to apply to this resource.
      *

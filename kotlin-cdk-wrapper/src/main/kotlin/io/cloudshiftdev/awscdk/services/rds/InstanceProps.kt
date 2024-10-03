@@ -393,7 +393,8 @@ public interface InstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.InstanceProps,
-  ) : CdkObject(cdkObject), InstanceProps {
+  ) : CdkObject(cdkObject),
+      InstanceProps {
     /**
      * Whether to allow upgrade of major version for the DB instance.
      *

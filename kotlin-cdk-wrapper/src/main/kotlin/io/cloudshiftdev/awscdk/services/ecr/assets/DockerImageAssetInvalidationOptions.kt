@@ -234,7 +234,8 @@ public interface DockerImageAssetInvalidationOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAssetInvalidationOptions,
-  ) : CdkObject(cdkObject), DockerImageAssetInvalidationOptions {
+  ) : CdkObject(cdkObject),
+      DockerImageAssetInvalidationOptions {
     /**
      * Use `buildArgs` while calculating the asset hash.
      *

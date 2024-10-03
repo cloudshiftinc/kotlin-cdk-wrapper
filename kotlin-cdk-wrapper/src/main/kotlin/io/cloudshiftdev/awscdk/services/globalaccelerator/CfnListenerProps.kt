@@ -216,7 +216,8 @@ public interface CfnListenerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnListenerProps,
-  ) : CdkObject(cdkObject), CfnListenerProps {
+  ) : CdkObject(cdkObject),
+      CfnListenerProps {
     /**
      * The Amazon Resource Name (ARN) of your accelerator.
      *

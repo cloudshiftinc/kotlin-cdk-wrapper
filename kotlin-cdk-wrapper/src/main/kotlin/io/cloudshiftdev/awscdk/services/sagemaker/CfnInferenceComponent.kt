@@ -87,7 +87,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInferenceComponent(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -658,7 +660,8 @@ public open class CfnInferenceComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty,
-    ) : CdkObject(cdkObject), DeployedImageProperty {
+    ) : CdkObject(cdkObject),
+        DeployedImageProperty {
       /**
        * The date and time when the image path for the model resolved to the `ResolvedImage`.
        *
@@ -835,7 +838,8 @@ public open class CfnInferenceComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty,
-    ) : CdkObject(cdkObject), InferenceComponentComputeResourceRequirementsProperty {
+    ) : CdkObject(cdkObject),
+        InferenceComponentComputeResourceRequirementsProperty {
       /**
        * The maximum MB of memory to allocate to run a model that you assign to an inference
        * component.
@@ -1071,7 +1075,8 @@ public open class CfnInferenceComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentContainerSpecificationProperty,
-    ) : CdkObject(cdkObject), InferenceComponentContainerSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        InferenceComponentContainerSpecificationProperty {
       /**
        * The Amazon S3 path where the model artifacts, which result from model training, are stored.
        *
@@ -1231,7 +1236,8 @@ public open class CfnInferenceComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRuntimeConfigProperty,
-    ) : CdkObject(cdkObject), InferenceComponentRuntimeConfigProperty {
+    ) : CdkObject(cdkObject),
+        InferenceComponentRuntimeConfigProperty {
       /**
        * The number of runtime copies of the model container to deploy with the inference component.
        *
@@ -1519,7 +1525,8 @@ public open class CfnInferenceComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentSpecificationProperty,
-    ) : CdkObject(cdkObject), InferenceComponentSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        InferenceComponentSpecificationProperty {
       /**
        * The compute resources allocated to run the model assigned to the inference component.
        *
@@ -1672,7 +1679,8 @@ public open class CfnInferenceComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty,
-    ) : CdkObject(cdkObject), InferenceComponentStartupParametersProperty {
+    ) : CdkObject(cdkObject),
+        InferenceComponentStartupParametersProperty {
       /**
        * The timeout value, in seconds, for your inference container to pass health check by Amazon
        * S3 Hosting.

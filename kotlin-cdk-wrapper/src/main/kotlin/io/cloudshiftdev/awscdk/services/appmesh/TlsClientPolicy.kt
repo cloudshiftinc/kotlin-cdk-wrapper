@@ -173,7 +173,8 @@ public interface TlsClientPolicy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.TlsClientPolicy,
-  ) : CdkObject(cdkObject), TlsClientPolicy {
+  ) : CdkObject(cdkObject),
+      TlsClientPolicy {
     /**
      * Whether the policy is enforced.
      *

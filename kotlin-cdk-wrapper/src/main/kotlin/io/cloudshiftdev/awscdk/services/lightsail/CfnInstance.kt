@@ -98,7 +98,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInstance(
   cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -154,6 +156,11 @@ public open class CfnInstance(
    * `arn:aws:lightsail:us-east-2:123456789101:Instance/244ad76f-8aad-4741-809f-12345EXAMPLE` ).
    */
   public open fun attrInstanceArn(): String = unwrap(this).getAttrInstanceArn()
+
+  /**
+   * The IPv6 addresses of the instance.
+   */
+  public open fun attrIpv6Addresses(): List<String> = unwrap(this).getAttrIpv6Addresses()
 
   /**
    * A Boolean value indicating whether the instance has a static IP assigned to it.
@@ -1232,7 +1239,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty,
-    ) : CdkObject(cdkObject), AddOnProperty {
+    ) : CdkObject(cdkObject),
+        AddOnProperty {
       /**
        * The add-on type (for example, `AutoSnapshot` ).
        *
@@ -1354,7 +1362,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty,
-    ) : CdkObject(cdkObject), AutoSnapshotAddOnProperty {
+    ) : CdkObject(cdkObject),
+        AutoSnapshotAddOnProperty {
       /**
        * The daily time when an automatic snapshot will be created.
        *
@@ -1595,7 +1604,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty,
-    ) : CdkObject(cdkObject), DiskProperty {
+    ) : CdkObject(cdkObject),
+        DiskProperty {
       /**
        * The resources to which the disk is attached.
        *
@@ -1833,7 +1843,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty,
-    ) : CdkObject(cdkObject), HardwareProperty {
+    ) : CdkObject(cdkObject),
+        HardwareProperty {
       /**
        * The number of vCPUs the instance has.
        *
@@ -1962,7 +1973,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.LocationProperty,
-    ) : CdkObject(cdkObject), LocationProperty {
+    ) : CdkObject(cdkObject),
+        LocationProperty {
       /**
        * The Availability Zone for the instance.
        *
@@ -2054,7 +2066,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty,
-    ) : CdkObject(cdkObject), MonthlyTransferProperty {
+    ) : CdkObject(cdkObject),
+        MonthlyTransferProperty {
       /**
        * The amount of allocated monthly data transfer (in GB) for an instance.
        *
@@ -2226,7 +2239,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty,
-    ) : CdkObject(cdkObject), NetworkingProperty {
+    ) : CdkObject(cdkObject),
+        NetworkingProperty {
       /**
        * The monthly amount of data transfer, in GB, allocated for the instance.
        *
@@ -2737,7 +2751,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.PortProperty,
-    ) : CdkObject(cdkObject), PortProperty {
+    ) : CdkObject(cdkObject),
+        PortProperty {
       /**
        * The access direction ( `inbound` or `outbound` ).
        *
@@ -2965,7 +2980,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty,
-    ) : CdkObject(cdkObject), StateProperty {
+    ) : CdkObject(cdkObject),
+        StateProperty {
       /**
        * The status code of the instance.
        *

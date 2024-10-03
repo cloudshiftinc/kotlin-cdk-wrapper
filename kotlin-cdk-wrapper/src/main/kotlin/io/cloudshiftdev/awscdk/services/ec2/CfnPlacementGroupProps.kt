@@ -147,7 +147,8 @@ public interface CfnPlacementGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnPlacementGroupProps,
-  ) : CdkObject(cdkObject), CfnPlacementGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnPlacementGroupProps {
     /**
      * The number of partitions.
      *

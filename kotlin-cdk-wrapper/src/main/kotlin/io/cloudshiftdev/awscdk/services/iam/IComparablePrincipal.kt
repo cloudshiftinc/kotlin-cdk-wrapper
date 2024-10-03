@@ -23,7 +23,8 @@ public interface IComparablePrincipal : IPrincipal {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IComparablePrincipal,
-  ) : CdkObject(cdkObject), IComparablePrincipal {
+  ) : CdkObject(cdkObject),
+      IComparablePrincipal {
     /**
      * Add to the policy of this principal.
      *

@@ -27,19 +27,19 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * When you verify an email address, SES sends an email to the address. Your email address is
  * verified as soon as you follow the link in the verification email. When you verify a domain without
- * specifying the DkimSigningAttributes properties, OR only the NextSigningKeyLength property of
- * DkimSigningAttributes, this resource provides a set of CNAME token names and values
- * (DkimDNSTokenName1, DkimDNSTokenValue1, DkimDNSTokenName2, DkimDNSTokenValue2, DkimDNSTokenName3,
- * DkimDNSTokenValue3) as outputs. You can then add these to the DNS configuration for your domain.
- * Your domain is verified when Amazon SES detects these records in the DNS configuration for your
- * domain. This verification method is known as Easy DKIM.
+ * specifying the `DkimSigningAttributes` properties, OR only the `NextSigningKeyLength` property of
+ * `DkimSigningAttributes` , this resource provides a set of CNAME token names and values (
+ * *DkimDNSTokenName1* , *DkimDNSTokenValue1* , *DkimDNSTokenName2* , *DkimDNSTokenValue2* ,
+ * *DkimDNSTokenName3* , *DkimDNSTokenValue3* ) as outputs. You can then add these to the DNS
+ * configuration for your domain. Your domain is verified when Amazon SES detects these records in the
+ * DNS configuration for your domain. This verification method is known as Easy DKIM.
  *
  * Alternatively, you can perform the verification process by providing your own public-private key
  * pair. This verification method is known as Bring Your Own DKIM (BYODKIM). To use BYODKIM, your
- * resource must include DkimSigningAttributes properties DomainSigningSelector and
- * DomainSigningPrivateKey. When you specify this object, you provide a selector
- * (DomainSigningSelector) (a component of the DNS record name that identifies the public key to use
- * for DKIM authentication) and a private key (DomainSigningPrivateKey).
+ * resource must include `DkimSigningAttributes` properties `DomainSigningSelector` and
+ * `DomainSigningPrivateKey` . When you specify this object, you provide a selector (
+ * `DomainSigningSelector` ) (a component of the DNS record name that identifies the public key to use
+ * for DKIM authentication) and a private key ( `DomainSigningPrivateKey` ).
  *
  * Additionally, you can associate an existing configuration set with the email identity that you're
  * verifying.
@@ -78,7 +78,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEmailIdentity(
   cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -189,14 +190,14 @@ public open class CfnEmailIdentity(
   /**
    * If your request includes this object, Amazon SES configures the identity to use Bring Your Own
    * DKIM (BYODKIM) for DKIM authentication purposes, or, configures the key length to be used for
-   * [Easy DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
+   * [Easy DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) .
    */
   public open fun dkimSigningAttributes(): Any? = unwrap(this).getDkimSigningAttributes()
 
   /**
    * If your request includes this object, Amazon SES configures the identity to use Bring Your Own
    * DKIM (BYODKIM) for DKIM authentication purposes, or, configures the key length to be used for
-   * [Easy DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
+   * [Easy DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) .
    */
   public open fun dkimSigningAttributes(`value`: IResolvable) {
     unwrap(this).setDkimSigningAttributes(`value`.let(IResolvable.Companion::unwrap))
@@ -205,7 +206,7 @@ public open class CfnEmailIdentity(
   /**
    * If your request includes this object, Amazon SES configures the identity to use Bring Your Own
    * DKIM (BYODKIM) for DKIM authentication purposes, or, configures the key length to be used for
-   * [Easy DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
+   * [Easy DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) .
    */
   public open fun dkimSigningAttributes(`value`: DkimSigningAttributesProperty) {
     unwrap(this).setDkimSigningAttributes(`value`.let(DkimSigningAttributesProperty.Companion::unwrap))
@@ -214,7 +215,7 @@ public open class CfnEmailIdentity(
   /**
    * If your request includes this object, Amazon SES configures the identity to use Bring Your Own
    * DKIM (BYODKIM) for DKIM authentication purposes, or, configures the key length to be used for
-   * [Easy DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
+   * [Easy DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) .
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("1539c2c47cc40bc571dfa6bf2e15cb17fa45e57196e954e1a4fe1a550e4fa1e9")
@@ -364,42 +365,45 @@ public open class CfnEmailIdentity(
     /**
      * If your request includes this object, Amazon SES configures the identity to use Bring Your
      * Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures the key length to be used
-     * for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
+     * for [Easy DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) .
+     *
+     * You can only specify this object if the email identity is a domain, as opposed to an address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-emailidentity.html#cfn-ses-emailidentity-dkimsigningattributes)
      * @param dkimSigningAttributes If your request includes this object, Amazon SES configures the
      * identity to use Bring Your Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures
      * the key length to be used for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) . 
+     * DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) . 
      */
     public fun dkimSigningAttributes(dkimSigningAttributes: IResolvable)
 
     /**
      * If your request includes this object, Amazon SES configures the identity to use Bring Your
      * Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures the key length to be used
-     * for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
+     * for [Easy DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) .
+     *
+     * You can only specify this object if the email identity is a domain, as opposed to an address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-emailidentity.html#cfn-ses-emailidentity-dkimsigningattributes)
      * @param dkimSigningAttributes If your request includes this object, Amazon SES configures the
      * identity to use Bring Your Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures
      * the key length to be used for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) . 
+     * DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) . 
      */
     public fun dkimSigningAttributes(dkimSigningAttributes: DkimSigningAttributesProperty)
 
     /**
      * If your request includes this object, Amazon SES configures the identity to use Bring Your
      * Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures the key length to be used
-     * for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
+     * for [Easy DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) .
+     *
+     * You can only specify this object if the email identity is a domain, as opposed to an address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-emailidentity.html#cfn-ses-emailidentity-dkimsigningattributes)
      * @param dkimSigningAttributes If your request includes this object, Amazon SES configures the
      * identity to use Bring Your Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures
      * the key length to be used for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) . 
+     * DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) . 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0dc9de9a7cd51baeddf84a283c353afab9d9b5c688a3693de80758c6c6834fee")
@@ -551,14 +555,15 @@ public open class CfnEmailIdentity(
     /**
      * If your request includes this object, Amazon SES configures the identity to use Bring Your
      * Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures the key length to be used
-     * for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
+     * for [Easy DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) .
+     *
+     * You can only specify this object if the email identity is a domain, as opposed to an address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-emailidentity.html#cfn-ses-emailidentity-dkimsigningattributes)
      * @param dkimSigningAttributes If your request includes this object, Amazon SES configures the
      * identity to use Bring Your Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures
      * the key length to be used for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) . 
+     * DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) . 
      */
     override fun dkimSigningAttributes(dkimSigningAttributes: IResolvable) {
       cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(IResolvable.Companion::unwrap))
@@ -567,14 +572,15 @@ public open class CfnEmailIdentity(
     /**
      * If your request includes this object, Amazon SES configures the identity to use Bring Your
      * Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures the key length to be used
-     * for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
+     * for [Easy DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) .
+     *
+     * You can only specify this object if the email identity is a domain, as opposed to an address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-emailidentity.html#cfn-ses-emailidentity-dkimsigningattributes)
      * @param dkimSigningAttributes If your request includes this object, Amazon SES configures the
      * identity to use Bring Your Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures
      * the key length to be used for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) . 
+     * DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) . 
      */
     override fun dkimSigningAttributes(dkimSigningAttributes: DkimSigningAttributesProperty) {
       cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(DkimSigningAttributesProperty.Companion::unwrap))
@@ -583,14 +589,15 @@ public open class CfnEmailIdentity(
     /**
      * If your request includes this object, Amazon SES configures the identity to use Bring Your
      * Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures the key length to be used
-     * for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
+     * for [Easy DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) .
+     *
+     * You can only specify this object if the email identity is a domain, as opposed to an address.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-emailidentity.html#cfn-ses-emailidentity-dkimsigningattributes)
      * @param dkimSigningAttributes If your request includes this object, Amazon SES configures the
      * identity to use Bring Your Own DKIM (BYODKIM) for DKIM authentication purposes, or, configures
      * the key length to be used for [Easy
-     * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) . 
+     * DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim.html) . 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0dc9de9a7cd51baeddf84a283c353afab9d9b5c688a3693de80758c6c6834fee")
@@ -755,7 +762,8 @@ public open class CfnEmailIdentity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty,
-    ) : CdkObject(cdkObject), ConfigurationSetAttributesProperty {
+    ) : CdkObject(cdkObject),
+        ConfigurationSetAttributesProperty {
       /**
        * The configuration set to associate with an email identity.
        *
@@ -864,7 +872,8 @@ public open class CfnEmailIdentity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty,
-    ) : CdkObject(cdkObject), DkimAttributesProperty {
+    ) : CdkObject(cdkObject),
+        DkimAttributesProperty {
       /**
        * Sets the DKIM signing configuration for the identity.
        *
@@ -1055,7 +1064,8 @@ public open class CfnEmailIdentity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty,
-    ) : CdkObject(cdkObject), DkimSigningAttributesProperty {
+    ) : CdkObject(cdkObject),
+        DkimSigningAttributesProperty {
       /**
        * [Bring Your Own DKIM] A private key that's used to generate a DKIM signature.
        *
@@ -1225,7 +1235,8 @@ public open class CfnEmailIdentity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty,
-    ) : CdkObject(cdkObject), FeedbackAttributesProperty {
+    ) : CdkObject(cdkObject),
+        FeedbackAttributesProperty {
       /**
        * Sets the feedback forwarding configuration for the identity.
        *
@@ -1383,7 +1394,8 @@ public open class CfnEmailIdentity(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty,
-    ) : CdkObject(cdkObject), MailFromAttributesProperty {
+    ) : CdkObject(cdkObject),
+        MailFromAttributesProperty {
       /**
        * The action to take if the required MX record isn't found when you send an email.
        *

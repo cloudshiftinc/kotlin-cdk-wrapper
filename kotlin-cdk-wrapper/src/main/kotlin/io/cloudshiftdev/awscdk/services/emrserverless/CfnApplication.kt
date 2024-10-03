@@ -61,10 +61,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .memory("memory")
  * // the properties below are optional
  * .disk("disk")
+ * .diskType("diskType")
  * .build())
  * .workerCount(123)
  * .build())
  * .build()))
+ * .interactiveConfiguration(InteractiveConfigurationProperty.builder()
+ * .livyEndpointEnabled(false)
+ * .studioEnabled(false)
+ * .build())
  * .maximumCapacity(MaximumAllowedResourcesProperty.builder()
  * .cpu("cpu")
  * .memory("memory")
@@ -120,7 +125,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplication(
   cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -277,6 +284,34 @@ public open class CfnApplication(
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
+
+  /**
+   * The interactive configuration object that enables the interactive use cases for an application.
+   */
+  public open fun interactiveConfiguration(): Any? = unwrap(this).getInteractiveConfiguration()
+
+  /**
+   * The interactive configuration object that enables the interactive use cases for an application.
+   */
+  public open fun interactiveConfiguration(`value`: IResolvable) {
+    unwrap(this).setInteractiveConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The interactive configuration object that enables the interactive use cases for an application.
+   */
+  public open fun interactiveConfiguration(`value`: InteractiveConfigurationProperty) {
+    unwrap(this).setInteractiveConfiguration(`value`.let(InteractiveConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The interactive configuration object that enables the interactive use cases for an application.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("b4f77aaa497655a8265cb4687346667f8d9fabe0552393e935a522d0720e3ece")
+  public open
+      fun interactiveConfiguration(`value`: InteractiveConfigurationProperty.Builder.() -> Unit):
+      Unit = interactiveConfiguration(InteractiveConfigurationProperty(`value`))
 
   /**
    * The maximum capacity of the application.
@@ -613,6 +648,39 @@ public open class CfnApplication(
      * @param initialCapacity The initial capacity of the application. 
      */
     public fun initialCapacity(vararg initialCapacity: Any)
+
+    /**
+     * The interactive configuration object that enables the interactive use cases for an
+     * application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-interactiveconfiguration)
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application. 
+     */
+    public fun interactiveConfiguration(interactiveConfiguration: IResolvable)
+
+    /**
+     * The interactive configuration object that enables the interactive use cases for an
+     * application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-interactiveconfiguration)
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application. 
+     */
+    public fun interactiveConfiguration(interactiveConfiguration: InteractiveConfigurationProperty)
+
+    /**
+     * The interactive configuration object that enables the interactive use cases for an
+     * application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-interactiveconfiguration)
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c7353079fffd4f769f5419fa2b1e648f564465ea6d87460c246848a9eefd7611")
+    public
+        fun interactiveConfiguration(interactiveConfiguration: InteractiveConfigurationProperty.Builder.() -> Unit)
 
     /**
      * The maximum capacity of the application.
@@ -993,6 +1061,45 @@ public open class CfnApplication(
         initialCapacity(initialCapacity.toList())
 
     /**
+     * The interactive configuration object that enables the interactive use cases for an
+     * application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-interactiveconfiguration)
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application. 
+     */
+    override fun interactiveConfiguration(interactiveConfiguration: IResolvable) {
+      cdkBuilder.interactiveConfiguration(interactiveConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The interactive configuration object that enables the interactive use cases for an
+     * application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-interactiveconfiguration)
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application. 
+     */
+    override
+        fun interactiveConfiguration(interactiveConfiguration: InteractiveConfigurationProperty) {
+      cdkBuilder.interactiveConfiguration(interactiveConfiguration.let(InteractiveConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The interactive configuration object that enables the interactive use cases for an
+     * application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-interactiveconfiguration)
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c7353079fffd4f769f5419fa2b1e648f564465ea6d87460c246848a9eefd7611")
+    override
+        fun interactiveConfiguration(interactiveConfiguration: InteractiveConfigurationProperty.Builder.() -> Unit):
+        Unit = interactiveConfiguration(InteractiveConfigurationProperty(interactiveConfiguration))
+
+    /**
      * The maximum capacity of the application.
      *
      * This is cumulative across all workers at any given point in time during the lifespan of the
@@ -1352,7 +1459,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty,
-    ) : CdkObject(cdkObject), AutoStartConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AutoStartConfigurationProperty {
       /**
        * If set to true, the Application will automatically start.
        *
@@ -1485,7 +1593,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStopConfigurationProperty,
-    ) : CdkObject(cdkObject), AutoStopConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AutoStopConfigurationProperty {
       /**
        * If set to true, the Application will automatically stop after being idle.
        *
@@ -1528,7 +1637,7 @@ public open class CfnApplication(
   /**
    * The Amazon CloudWatch configuration for monitoring logs.
    *
-   * You can configure your jobs to send log information to CloudWatch .
+   * You can configure your jobs to send log information to CloudWatch.
    *
    * Example:
    *
@@ -1563,7 +1672,7 @@ public open class CfnApplication(
 
     /**
      * The AWS Key Management Service (KMS) key ARN to encrypt the logs that you store in CloudWatch
-     * Logs .
+     * Logs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-cloudwatchloggingconfiguration.html#cfn-emrserverless-application-cloudwatchloggingconfiguration-encryptionkeyarn)
      */
@@ -1607,7 +1716,7 @@ public open class CfnApplication(
 
       /**
        * @param encryptionKeyArn The AWS Key Management Service (KMS) key ARN to encrypt the logs
-       * that you store in CloudWatch Logs .
+       * that you store in CloudWatch Logs.
        */
       public fun encryptionKeyArn(encryptionKeyArn: String)
 
@@ -1660,7 +1769,7 @@ public open class CfnApplication(
 
       /**
        * @param encryptionKeyArn The AWS Key Management Service (KMS) key ARN to encrypt the logs
-       * that you store in CloudWatch Logs .
+       * that you store in CloudWatch Logs.
        */
       override fun encryptionKeyArn(encryptionKeyArn: String) {
         cdkBuilder.encryptionKeyArn(encryptionKeyArn)
@@ -1707,7 +1816,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.CloudWatchLoggingConfigurationProperty,
-    ) : CdkObject(cdkObject), CloudWatchLoggingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchLoggingConfigurationProperty {
       /**
        * Enables CloudWatch logging.
        *
@@ -1719,7 +1829,7 @@ public open class CfnApplication(
 
       /**
        * The AWS Key Management Service (KMS) key ARN to encrypt the logs that you store in
-       * CloudWatch Logs .
+       * CloudWatch Logs.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-cloudwatchloggingconfiguration.html#cfn-emrserverless-application-cloudwatchloggingconfiguration-encryptionkeyarn)
        */
@@ -1893,7 +2003,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty,
-    ) : CdkObject(cdkObject), ConfigurationObjectProperty {
+    ) : CdkObject(cdkObject),
+        ConfigurationObjectProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-configurationobject.html#cfn-emrserverless-application-configurationobject-classification)
        */
@@ -1991,7 +2102,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.ImageConfigurationInputProperty,
-    ) : CdkObject(cdkObject), ImageConfigurationInputProperty {
+    ) : CdkObject(cdkObject),
+        ImageConfigurationInputProperty {
       /**
        * The URI of an image in the Amazon ECR registry.
        *
@@ -2037,6 +2149,7 @@ public open class CfnApplication(
    * .memory("memory")
    * // the properties below are optional
    * .disk("disk")
+   * .diskType("diskType")
    * .build())
    * .workerCount(123)
    * .build())
@@ -2128,7 +2241,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigKeyValuePairProperty,
-    ) : CdkObject(cdkObject), InitialCapacityConfigKeyValuePairProperty {
+    ) : CdkObject(cdkObject),
+        InitialCapacityConfigKeyValuePairProperty {
       /**
        * Worker type for an analytics framework.
        *
@@ -2177,6 +2291,7 @@ public open class CfnApplication(
    * .memory("memory")
    * // the properties below are optional
    * .disk("disk")
+   * .diskType("diskType")
    * .build())
    * .workerCount(123)
    * .build();
@@ -2277,7 +2392,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigProperty,
-    ) : CdkObject(cdkObject), InitialCapacityConfigProperty {
+    ) : CdkObject(cdkObject),
+        InitialCapacityConfigProperty {
       /**
        * The resource configuration of the initial capacity configuration.
        *
@@ -2308,6 +2424,160 @@ public open class CfnApplication(
           software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigProperty
+    }
+  }
+
+  /**
+   * The configuration to use to enable the different types of interactive use cases in an
+   * application.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emrserverless.*;
+   * InteractiveConfigurationProperty interactiveConfigurationProperty =
+   * InteractiveConfigurationProperty.builder()
+   * .livyEndpointEnabled(false)
+   * .studioEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-interactiveconfiguration.html)
+   */
+  public interface InteractiveConfigurationProperty {
+    /**
+     * Enables an Apache Livy endpoint that you can connect to and run interactive jobs.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-interactiveconfiguration.html#cfn-emrserverless-application-interactiveconfiguration-livyendpointenabled)
+     */
+    public fun livyEndpointEnabled(): Any? = unwrap(this).getLivyEndpointEnabled()
+
+    /**
+     * Enables you to connect an application to Amazon EMR Studio to run interactive workloads in a
+     * notebook.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-interactiveconfiguration.html#cfn-emrserverless-application-interactiveconfiguration-studioenabled)
+     */
+    public fun studioEnabled(): Any? = unwrap(this).getStudioEnabled()
+
+    /**
+     * A builder for [InteractiveConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param livyEndpointEnabled Enables an Apache Livy endpoint that you can connect to and run
+       * interactive jobs.
+       */
+      public fun livyEndpointEnabled(livyEndpointEnabled: Boolean)
+
+      /**
+       * @param livyEndpointEnabled Enables an Apache Livy endpoint that you can connect to and run
+       * interactive jobs.
+       */
+      public fun livyEndpointEnabled(livyEndpointEnabled: IResolvable)
+
+      /**
+       * @param studioEnabled Enables you to connect an application to Amazon EMR Studio to run
+       * interactive workloads in a notebook.
+       */
+      public fun studioEnabled(studioEnabled: Boolean)
+
+      /**
+       * @param studioEnabled Enables you to connect an application to Amazon EMR Studio to run
+       * interactive workloads in a notebook.
+       */
+      public fun studioEnabled(studioEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emrserverless.CfnApplication.InteractiveConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.emrserverless.CfnApplication.InteractiveConfigurationProperty.builder()
+
+      /**
+       * @param livyEndpointEnabled Enables an Apache Livy endpoint that you can connect to and run
+       * interactive jobs.
+       */
+      override fun livyEndpointEnabled(livyEndpointEnabled: Boolean) {
+        cdkBuilder.livyEndpointEnabled(livyEndpointEnabled)
+      }
+
+      /**
+       * @param livyEndpointEnabled Enables an Apache Livy endpoint that you can connect to and run
+       * interactive jobs.
+       */
+      override fun livyEndpointEnabled(livyEndpointEnabled: IResolvable) {
+        cdkBuilder.livyEndpointEnabled(livyEndpointEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param studioEnabled Enables you to connect an application to Amazon EMR Studio to run
+       * interactive workloads in a notebook.
+       */
+      override fun studioEnabled(studioEnabled: Boolean) {
+        cdkBuilder.studioEnabled(studioEnabled)
+      }
+
+      /**
+       * @param studioEnabled Enables you to connect an application to Amazon EMR Studio to run
+       * interactive workloads in a notebook.
+       */
+      override fun studioEnabled(studioEnabled: IResolvable) {
+        cdkBuilder.studioEnabled(studioEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emrserverless.CfnApplication.InteractiveConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.InteractiveConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        InteractiveConfigurationProperty {
+      /**
+       * Enables an Apache Livy endpoint that you can connect to and run interactive jobs.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-interactiveconfiguration.html#cfn-emrserverless-application-interactiveconfiguration-livyendpointenabled)
+       */
+      override fun livyEndpointEnabled(): Any? = unwrap(this).getLivyEndpointEnabled()
+
+      /**
+       * Enables you to connect an application to Amazon EMR Studio to run interactive workloads in
+       * a notebook.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-interactiveconfiguration.html#cfn-emrserverless-application-interactiveconfiguration-studioenabled)
+       */
+      override fun studioEnabled(): Any? = unwrap(this).getStudioEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InteractiveConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.InteractiveConfigurationProperty):
+          InteractiveConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InteractiveConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InteractiveConfigurationProperty):
+          software.amazon.awscdk.services.emrserverless.CfnApplication.InteractiveConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emrserverless.CfnApplication.InteractiveConfigurationProperty
     }
   }
 
@@ -2393,7 +2663,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty,
-    ) : CdkObject(cdkObject), LogTypeMapKeyValuePairProperty {
+    ) : CdkObject(cdkObject),
+        LogTypeMapKeyValuePairProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-logtypemapkeyvaluepair.html#cfn-emrserverless-application-logtypemapkeyvaluepair-key)
        */
@@ -2524,7 +2795,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.ManagedPersistenceMonitoringConfigurationProperty,
-    ) : CdkObject(cdkObject), ManagedPersistenceMonitoringConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ManagedPersistenceMonitoringConfigurationProperty {
       /**
        * Enables managed logging and defaults to true.
        *
@@ -2662,7 +2934,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty,
-    ) : CdkObject(cdkObject), MaximumAllowedResourcesProperty {
+    ) : CdkObject(cdkObject),
+        MaximumAllowedResourcesProperty {
       /**
        * The maximum allowed CPU for an application.
        *
@@ -2741,7 +3014,7 @@ public open class CfnApplication(
     /**
      * The Amazon CloudWatch configuration for monitoring logs.
      *
-     * You can configure your jobs to send log information to CloudWatch .
+     * You can configure your jobs to send log information to CloudWatch.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-cloudwatchloggingconfiguration)
      */
@@ -2771,14 +3044,14 @@ public open class CfnApplication(
       /**
        * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
        * logs.
-       * You can configure your jobs to send log information to CloudWatch .
+       * You can configure your jobs to send log information to CloudWatch.
        */
       public fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: IResolvable)
 
       /**
        * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
        * logs.
-       * You can configure your jobs to send log information to CloudWatch .
+       * You can configure your jobs to send log information to CloudWatch.
        */
       public
           fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty)
@@ -2786,7 +3059,7 @@ public open class CfnApplication(
       /**
        * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
        * logs.
-       * You can configure your jobs to send log information to CloudWatch .
+       * You can configure your jobs to send log information to CloudWatch.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ad1153ab61aa5057aecd5d7cafa7e097b24d047ba2769ca788886319ec68472f")
@@ -2845,7 +3118,7 @@ public open class CfnApplication(
       /**
        * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
        * logs.
-       * You can configure your jobs to send log information to CloudWatch .
+       * You can configure your jobs to send log information to CloudWatch.
        */
       override fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: IResolvable) {
         cdkBuilder.cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration.let(IResolvable.Companion::unwrap))
@@ -2854,7 +3127,7 @@ public open class CfnApplication(
       /**
        * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
        * logs.
-       * You can configure your jobs to send log information to CloudWatch .
+       * You can configure your jobs to send log information to CloudWatch.
        */
       override
           fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty) {
@@ -2864,7 +3137,7 @@ public open class CfnApplication(
       /**
        * @param cloudWatchLoggingConfiguration The Amazon CloudWatch configuration for monitoring
        * logs.
-       * You can configure your jobs to send log information to CloudWatch .
+       * You can configure your jobs to send log information to CloudWatch.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ad1153ab61aa5057aecd5d7cafa7e097b24d047ba2769ca788886319ec68472f")
@@ -2934,11 +3207,12 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty,
-    ) : CdkObject(cdkObject), MonitoringConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringConfigurationProperty {
       /**
        * The Amazon CloudWatch configuration for monitoring logs.
        *
-       * You can configure your jobs to send log information to CloudWatch .
+       * You can configure your jobs to send log information to CloudWatch.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-cloudwatchloggingconfiguration)
        */
@@ -3076,7 +3350,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NetworkConfigurationProperty {
       /**
        * The array of security group Ids for customer VPC connectivity.
        *
@@ -3191,7 +3466,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty,
-    ) : CdkObject(cdkObject), S3MonitoringConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        S3MonitoringConfigurationProperty {
       /**
        * The KMS key ARN to encrypt the logs published to the given Amazon S3 destination.
        *
@@ -3238,6 +3514,7 @@ public open class CfnApplication(
    * .memory("memory")
    * // the properties below are optional
    * .disk("disk")
+   * .diskType("diskType")
    * .build();
    * ```
    *
@@ -3261,6 +3538,15 @@ public open class CfnApplication(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disk)
      */
     public fun disk(): String? = unwrap(this).getDisk()
+
+    /**
+     * Per worker DiskType resource.
+     *
+     * Shuffle optimized and Standard are only supported types and specifying diskType is optional
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disktype)
+     */
+    public fun diskType(): String? = unwrap(this).getDiskType()
 
     /**
      * Per worker memory resource.
@@ -3287,6 +3573,12 @@ public open class CfnApplication(
        * GB is the only supported unit and specifying GB is optional
        */
       public fun disk(disk: String)
+
+      /**
+       * @param diskType Per worker DiskType resource.
+       * Shuffle optimized and Standard are only supported types and specifying diskType is optional
+       */
+      public fun diskType(diskType: String)
 
       /**
        * @param memory Per worker memory resource. 
@@ -3318,6 +3610,14 @@ public open class CfnApplication(
       }
 
       /**
+       * @param diskType Per worker DiskType resource.
+       * Shuffle optimized and Standard are only supported types and specifying diskType is optional
+       */
+      override fun diskType(diskType: String) {
+        cdkBuilder.diskType(diskType)
+      }
+
+      /**
        * @param memory Per worker memory resource. 
        * GB is the only supported unit and specifying GB is optional.
        */
@@ -3332,7 +3632,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty,
-    ) : CdkObject(cdkObject), WorkerConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        WorkerConfigurationProperty {
       /**
        * Per worker CPU resource.
        *
@@ -3350,6 +3651,15 @@ public open class CfnApplication(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disk)
        */
       override fun disk(): String? = unwrap(this).getDisk()
+
+      /**
+       * Per worker DiskType resource.
+       *
+       * Shuffle optimized and Standard are only supported types and specifying diskType is optional
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disktype)
+       */
+      override fun diskType(): String? = unwrap(this).getDiskType()
 
       /**
        * Per worker memory resource.
@@ -3466,7 +3776,8 @@ public open class CfnApplication(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty,
-    ) : CdkObject(cdkObject), WorkerTypeSpecificationInputProperty {
+    ) : CdkObject(cdkObject),
+        WorkerTypeSpecificationInputProperty {
       /**
        * The image configuration for a worker type.
        *

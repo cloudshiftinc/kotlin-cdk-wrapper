@@ -19,10 +19,12 @@ import kotlin.jvm.JvmName
  * ```
  * CodePipeline pipeline;
  * Wave europeWave = pipeline.addWave("Europe");
- * europeWave.addStage(MyApplicationStage.Builder.create(this, "Ireland")
+ * europeWave.addStage(
+ * MyApplicationStage.Builder.create(this, "Ireland")
  * .env(Environment.builder().region("eu-west-1").build())
  * .build());
- * europeWave.addStage(MyApplicationStage.Builder.create(this, "Germany")
+ * europeWave.addStage(
+ * MyApplicationStage.Builder.create(this, "Germany")
  * .env(Environment.builder().region("eu-central-1").build())
  * .build());
  * ```

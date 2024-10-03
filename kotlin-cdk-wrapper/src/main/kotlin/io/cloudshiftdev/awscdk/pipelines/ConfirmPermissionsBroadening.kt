@@ -21,14 +21,14 @@ import kotlin.jvm.JvmName
  * CodePipeline pipeline;
  * MyApplicationStage stage = new MyApplicationStage(this, "MyApplication");
  * pipeline.addStage(stage, AddStageOpts.builder()
- * .pre(List.of(
- * ConfirmPermissionsBroadening.Builder.create("Check").stage(stage).build()))
+ * .pre(List.of(ConfirmPermissionsBroadening.Builder.create("Check").stage(stage).build()))
  * .build());
  * ```
  */
 public open class ConfirmPermissionsBroadening(
   cdkObject: software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening,
-) : Step(cdkObject), ICodePipelineActionFactory {
+) : Step(cdkObject),
+    ICodePipelineActionFactory {
   public constructor(id: String, props: PermissionsBroadeningCheckProps) :
       this(software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening(id,
       props.let(PermissionsBroadeningCheckProps.Companion::unwrap))

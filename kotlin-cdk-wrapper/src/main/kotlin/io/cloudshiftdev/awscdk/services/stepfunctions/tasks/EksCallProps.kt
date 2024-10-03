@@ -360,7 +360,8 @@ public interface EksCallProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EksCallProps,
-  ) : CdkObject(cdkObject), EksCallProps {
+  ) : CdkObject(cdkObject),
+      EksCallProps {
     /**
      * The EKS cluster.
      */

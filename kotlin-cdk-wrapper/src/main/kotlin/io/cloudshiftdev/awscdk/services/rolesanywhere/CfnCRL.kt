@@ -44,7 +44,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCRL(
   cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnCRL,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -62,36 +64,36 @@ public open class CfnCRL(
   )
 
   /**
-   *
+   * The unique primary identifier of the Crl.
    */
   public open fun attrCrlId(): String = unwrap(this).getAttrCrlId()
 
   /**
-   *
+   * The x509 v3 specified certificate revocation list (CRL).
    */
   public open fun crlData(): String = unwrap(this).getCrlData()
 
   /**
-   *
+   * The x509 v3 specified certificate revocation list (CRL).
    */
   public open fun crlData(`value`: String) {
     unwrap(this).setCrlData(`value`)
   }
 
   /**
-   *
+   * Specifies whether the certificate revocation list (CRL) is enabled.
    */
   public open fun enabled(): Any? = unwrap(this).getEnabled()
 
   /**
-   *
+   * Specifies whether the certificate revocation list (CRL) is enabled.
    */
   public open fun enabled(`value`: Boolean) {
     unwrap(this).setEnabled(`value`)
   }
 
   /**
-   *
+   * Specifies whether the certificate revocation list (CRL) is enabled.
    */
   public open fun enabled(`value`: IResolvable) {
     unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
@@ -107,12 +109,12 @@ public open class CfnCRL(
   }
 
   /**
-   *
+   * The name of the certificate revocation list (CRL).
    */
   public open fun name(): String = unwrap(this).getName()
 
   /**
-   *
+   * The name of the certificate revocation list (CRL).
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
@@ -124,20 +126,20 @@ public open class CfnCRL(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   *
+   * A list of tags to attach to the certificate revocation list (CRL).
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   *
+   * A list of tags to attach to the certificate revocation list (CRL).
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   *
+   * A list of tags to attach to the certificate revocation list (CRL).
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -159,38 +161,50 @@ public open class CfnCRL(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The x509 v3 specified certificate revocation list (CRL).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-crldata)
-     * @param crlData 
+     * @param crlData The x509 v3 specified certificate revocation list (CRL). 
      */
     public fun crlData(crlData: String)
 
     /**
+     * Specifies whether the certificate revocation list (CRL) is enabled.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-enabled)
-     * @param enabled 
+     * @param enabled Specifies whether the certificate revocation list (CRL) is enabled. 
      */
     public fun enabled(enabled: Boolean)
 
     /**
+     * Specifies whether the certificate revocation list (CRL) is enabled.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-enabled)
-     * @param enabled 
+     * @param enabled Specifies whether the certificate revocation list (CRL) is enabled. 
      */
     public fun enabled(enabled: IResolvable)
 
     /**
+     * The name of the certificate revocation list (CRL).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-name)
-     * @param name 
+     * @param name The name of the certificate revocation list (CRL). 
      */
     public fun name(name: String)
 
     /**
+     * A list of tags to attach to the certificate revocation list (CRL).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-tags)
-     * @param tags 
+     * @param tags A list of tags to attach to the certificate revocation list (CRL). 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
+     * A list of tags to attach to the certificate revocation list (CRL).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-tags)
-     * @param tags 
+     * @param tags A list of tags to attach to the certificate revocation list (CRL). 
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -212,48 +226,60 @@ public open class CfnCRL(
         software.amazon.awscdk.services.rolesanywhere.CfnCRL.Builder.create(scope, id)
 
     /**
+     * The x509 v3 specified certificate revocation list (CRL).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-crldata)
-     * @param crlData 
+     * @param crlData The x509 v3 specified certificate revocation list (CRL). 
      */
     override fun crlData(crlData: String) {
       cdkBuilder.crlData(crlData)
     }
 
     /**
+     * Specifies whether the certificate revocation list (CRL) is enabled.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-enabled)
-     * @param enabled 
+     * @param enabled Specifies whether the certificate revocation list (CRL) is enabled. 
      */
     override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
     /**
+     * Specifies whether the certificate revocation list (CRL) is enabled.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-enabled)
-     * @param enabled 
+     * @param enabled Specifies whether the certificate revocation list (CRL) is enabled. 
      */
     override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * The name of the certificate revocation list (CRL).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-name)
-     * @param name 
+     * @param name The name of the certificate revocation list (CRL). 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
+     * A list of tags to attach to the certificate revocation list (CRL).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-tags)
-     * @param tags 
+     * @param tags A list of tags to attach to the certificate revocation list (CRL). 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
+     * A list of tags to attach to the certificate revocation list (CRL).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html#cfn-rolesanywhere-crl-tags)
-     * @param tags 
+     * @param tags A list of tags to attach to the certificate revocation list (CRL). 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

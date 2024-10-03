@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.deadline
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -23,11 +24,11 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.deadline.*;
  * CfnQueueProps cfnQueueProps = CfnQueueProps.builder()
  * .displayName("displayName")
+ * .farmId("farmId")
  * // the properties below are optional
  * .allowedStorageProfileIds(List.of("allowedStorageProfileIds"))
  * .defaultBudgetAction("defaultBudgetAction")
  * .description("description")
- * .farmId("farmId")
  * .jobAttachmentSettings(JobAttachmentSettingsProperty.builder()
  * .rootPrefix("rootPrefix")
  * .s3BucketName("s3BucketName")
@@ -46,6 +47,10 @@ import kotlin.jvm.JvmName
  * .build())
  * .requiredFileSystemLocationNames(List.of("requiredFileSystemLocationNames"))
  * .roleArn("roleArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -82,6 +87,11 @@ public interface CfnQueueProps {
   /**
    * The display name of the queue summary to update.
    *
+   *
+   * This field can store any content. Escape or encode this content before displaying it on a
+   * webpage or any other system that might interpret the content of this field.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-displayname)
    */
   public fun displayName(): String
@@ -91,7 +101,7 @@ public interface CfnQueueProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-farmid)
    */
-  public fun farmId(): String? = unwrap(this).getFarmId()
+  public fun farmId(): String
 
   /**
    * The job attachment settings.
@@ -126,6 +136,16 @@ public interface CfnQueueProps {
   public fun roleArn(): String? = unwrap(this).getRoleArn()
 
   /**
+   * The tags to add to your queue.
+   *
+   * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but tag
+   * values can be empty strings.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
    * A builder for [CfnQueueProps]
    */
   @CdkDslMarker
@@ -155,11 +175,14 @@ public interface CfnQueueProps {
 
     /**
      * @param displayName The display name of the queue summary to update. 
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
      */
     public fun displayName(displayName: String)
 
     /**
-     * @param farmId The farm ID.
+     * @param farmId The farm ID. 
      */
     public fun farmId(farmId: String)
 
@@ -216,6 +239,20 @@ public interface CfnQueueProps {
      * jobs in this queue.
      */
     public fun roleArn(roleArn: String)
+
+    /**
+     * @param tags The tags to add to your queue.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags The tags to add to your queue.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl : Builder {
@@ -254,13 +291,16 @@ public interface CfnQueueProps {
 
     /**
      * @param displayName The display name of the queue summary to update. 
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
      */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
     /**
-     * @param farmId The farm ID.
+     * @param farmId The farm ID. 
      */
     override fun farmId(farmId: String) {
       cdkBuilder.farmId(farmId)
@@ -336,12 +376,29 @@ public interface CfnQueueProps {
       cdkBuilder.roleArn(roleArn)
     }
 
+    /**
+     * @param tags The tags to add to your queue.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags The tags to add to your queue.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.deadline.CfnQueueProps = cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.deadline.CfnQueueProps,
-  ) : CdkObject(cdkObject), CfnQueueProps {
+  ) : CdkObject(cdkObject),
+      CfnQueueProps {
     /**
      * The identifiers of the storage profiles that this queue can use to share assets between
      * workers using different operating systems.
@@ -372,6 +429,11 @@ public interface CfnQueueProps {
     /**
      * The display name of the queue summary to update.
      *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-displayname)
      */
     override fun displayName(): String = unwrap(this).getDisplayName()
@@ -381,7 +443,7 @@ public interface CfnQueueProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-farmid)
      */
-    override fun farmId(): String? = unwrap(this).getFarmId()
+    override fun farmId(): String = unwrap(this).getFarmId()
 
     /**
      * The job attachment settings.
@@ -414,6 +476,16 @@ public interface CfnQueueProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-rolearn)
      */
     override fun roleArn(): String? = unwrap(this).getRoleArn()
+
+    /**
+     * The tags to add to your queue.
+     *
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-queue.html#cfn-deadline-queue-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 
   public companion object {

@@ -36,7 +36,8 @@ import kotlin.Unit
  */
 public open class NumberAttribute(
   cdkObject: software.amazon.awscdk.services.cognito.NumberAttribute,
-) : CdkObject(cdkObject), ICustomAttribute {
+) : CdkObject(cdkObject),
+    ICustomAttribute {
   public constructor() : this(software.amazon.awscdk.services.cognito.NumberAttribute()
   )
 

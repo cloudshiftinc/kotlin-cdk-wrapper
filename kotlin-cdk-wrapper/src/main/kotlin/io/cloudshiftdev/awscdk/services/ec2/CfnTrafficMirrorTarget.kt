@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTrafficMirrorTarget(
   cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorTarget,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnTrafficMirrorTarget(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

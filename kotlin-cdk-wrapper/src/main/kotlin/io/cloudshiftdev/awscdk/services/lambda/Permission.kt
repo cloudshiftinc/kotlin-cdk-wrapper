@@ -310,7 +310,8 @@ public interface Permission {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.Permission,
-  ) : CdkObject(cdkObject), Permission {
+  ) : CdkObject(cdkObject),
+      Permission {
     /**
      * The Lambda actions that you want to allow in this statement.
      *

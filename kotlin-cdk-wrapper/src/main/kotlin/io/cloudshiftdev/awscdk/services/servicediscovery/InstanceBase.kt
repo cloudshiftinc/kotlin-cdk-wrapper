@@ -12,7 +12,8 @@ import kotlin.String
  */
 public abstract class InstanceBase(
   cdkObject: software.amazon.awscdk.services.servicediscovery.InstanceBase,
-) : Resource(cdkObject), IInstance {
+) : Resource(cdkObject),
+    IInstance {
   /**
    * The Id of the instance.
    */

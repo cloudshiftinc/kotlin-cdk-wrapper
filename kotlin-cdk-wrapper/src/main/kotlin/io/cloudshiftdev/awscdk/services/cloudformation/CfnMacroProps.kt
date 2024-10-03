@@ -154,7 +154,8 @@ public interface CfnMacroProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudformation.CfnMacroProps,
-  ) : CdkObject(cdkObject), CfnMacroProps {
+  ) : CdkObject(cdkObject),
+      CfnMacroProps {
     /**
      * A description of the macro.
      *

@@ -28,7 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ConfigurationSet(
   cdkObject: software.amazon.awscdk.services.ses.ConfigurationSet,
-) : Resource(cdkObject), IConfigurationSet {
+) : Resource(cdkObject),
+    IConfigurationSet {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.ConfigurationSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -116,7 +117,7 @@ public open class ConfigurationSet(
      * Whether to publish reputation metrics for the configuration set, such as bounce and complaint
      * rates, to Amazon CloudWatch.
      *
-     * Default: false
+     * Default: true
      *
      * @param reputationMetrics Whether to publish reputation metrics for the configuration set,
      * such as bounce and complaint rates, to Amazon CloudWatch. 
@@ -153,6 +154,32 @@ public open class ConfigurationSet(
      * use Transport Layer Security (TLS). 
      */
     public fun tlsPolicy(tlsPolicy: ConfigurationSetTlsPolicy)
+
+    /**
+     * The Virtual Deliverability Manager (VDM) options that apply to the configuration set.
+     *
+     * Default: - VDM options not configured at the configuration set level. In this case, use
+     * account level settings. (To set the account level settings using CDK, use the `VdmAttributes`
+     * Construct.)
+     *
+     * @param vdmOptions The Virtual Deliverability Manager (VDM) options that apply to the
+     * configuration set. 
+     */
+    public fun vdmOptions(vdmOptions: VdmOptions)
+
+    /**
+     * The Virtual Deliverability Manager (VDM) options that apply to the configuration set.
+     *
+     * Default: - VDM options not configured at the configuration set level. In this case, use
+     * account level settings. (To set the account level settings using CDK, use the `VdmAttributes`
+     * Construct.)
+     *
+     * @param vdmOptions The Virtual Deliverability Manager (VDM) options that apply to the
+     * configuration set. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1e22393d09df982d6f0a448d030df788bf607ae094ec905346ac34cd152af619")
+    public fun vdmOptions(vdmOptions: VdmOptions.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -201,7 +228,7 @@ public open class ConfigurationSet(
      * Whether to publish reputation metrics for the configuration set, such as bounce and complaint
      * rates, to Amazon CloudWatch.
      *
-     * Default: false
+     * Default: true
      *
      * @param reputationMetrics Whether to publish reputation metrics for the configuration set,
      * such as bounce and complaint rates, to Amazon CloudWatch. 
@@ -246,6 +273,35 @@ public open class ConfigurationSet(
     override fun tlsPolicy(tlsPolicy: ConfigurationSetTlsPolicy) {
       cdkBuilder.tlsPolicy(tlsPolicy.let(ConfigurationSetTlsPolicy.Companion::unwrap))
     }
+
+    /**
+     * The Virtual Deliverability Manager (VDM) options that apply to the configuration set.
+     *
+     * Default: - VDM options not configured at the configuration set level. In this case, use
+     * account level settings. (To set the account level settings using CDK, use the `VdmAttributes`
+     * Construct.)
+     *
+     * @param vdmOptions The Virtual Deliverability Manager (VDM) options that apply to the
+     * configuration set. 
+     */
+    override fun vdmOptions(vdmOptions: VdmOptions) {
+      cdkBuilder.vdmOptions(vdmOptions.let(VdmOptions.Companion::unwrap))
+    }
+
+    /**
+     * The Virtual Deliverability Manager (VDM) options that apply to the configuration set.
+     *
+     * Default: - VDM options not configured at the configuration set level. In this case, use
+     * account level settings. (To set the account level settings using CDK, use the `VdmAttributes`
+     * Construct.)
+     *
+     * @param vdmOptions The Virtual Deliverability Manager (VDM) options that apply to the
+     * configuration set. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1e22393d09df982d6f0a448d030df788bf607ae094ec905346ac34cd152af619")
+    override fun vdmOptions(vdmOptions: VdmOptions.Builder.() -> Unit): Unit =
+        vdmOptions(VdmOptions(vdmOptions))
 
     public fun build(): software.amazon.awscdk.services.ses.ConfigurationSet = cdkBuilder.build()
   }

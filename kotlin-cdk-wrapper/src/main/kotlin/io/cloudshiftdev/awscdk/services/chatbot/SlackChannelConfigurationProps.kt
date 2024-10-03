@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.logs.LogRetentionRetryOptions
 import io.cloudshiftdev.awscdk.services.logs.RetentionDays
 import io.cloudshiftdev.awscdk.services.sns.ITopic
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -124,6 +125,13 @@ public interface SlackChannelConfigurationProps {
   public fun slackWorkspaceId(): String
 
   /**
+   * Enables use of a user role requirement in your chat configuration.
+   *
+   * Default: false
+   */
+  public fun userRoleRequired(): Boolean? = unwrap(this).getUserRoleRequired()
+
+  /**
    * A builder for [SlackChannelConfigurationProps]
    */
   @CdkDslMarker
@@ -214,6 +222,11 @@ public interface SlackChannelConfigurationProps {
      * Guide.
      */
     public fun slackWorkspaceId(slackWorkspaceId: String)
+
+    /**
+     * @param userRoleRequired Enables use of a user role requirement in your chat configuration.
+     */
+    public fun userRoleRequired(userRoleRequired: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -331,13 +344,21 @@ public interface SlackChannelConfigurationProps {
       cdkBuilder.slackWorkspaceId(slackWorkspaceId)
     }
 
+    /**
+     * @param userRoleRequired Enables use of a user role requirement in your chat configuration.
+     */
+    override fun userRoleRequired(userRoleRequired: Boolean) {
+      cdkBuilder.userRoleRequired(userRoleRequired)
+    }
+
     public fun build(): software.amazon.awscdk.services.chatbot.SlackChannelConfigurationProps =
         cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.chatbot.SlackChannelConfigurationProps,
-  ) : CdkObject(cdkObject), SlackChannelConfigurationProps {
+  ) : CdkObject(cdkObject),
+      SlackChannelConfigurationProps {
     /**
      * A list of IAM managed policies that are applied as channel guardrails.
      *
@@ -430,6 +451,13 @@ public interface SlackChannelConfigurationProps {
      * [Documentation](https://docs.aws.amazon.com/chatbot/latest/adminguide/setting-up.html#Setup_intro)
      */
     override fun slackWorkspaceId(): String = unwrap(this).getSlackWorkspaceId()
+
+    /**
+     * Enables use of a user role requirement in your chat configuration.
+     *
+     * Default: false
+     */
+    override fun userRoleRequired(): Boolean? = unwrap(this).getUserRoleRequired()
   }
 
   public companion object {

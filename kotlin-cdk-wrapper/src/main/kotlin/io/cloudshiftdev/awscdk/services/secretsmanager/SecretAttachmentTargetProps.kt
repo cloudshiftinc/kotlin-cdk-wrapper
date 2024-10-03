@@ -75,7 +75,8 @@ public interface SecretAttachmentTargetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.SecretAttachmentTargetProps,
-  ) : CdkObject(cdkObject), SecretAttachmentTargetProps {
+  ) : CdkObject(cdkObject),
+      SecretAttachmentTargetProps {
     /**
      * The id of the target to attach the secret to.
      */

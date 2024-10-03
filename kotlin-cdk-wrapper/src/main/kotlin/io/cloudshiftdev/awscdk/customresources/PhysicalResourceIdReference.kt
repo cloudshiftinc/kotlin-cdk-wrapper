@@ -38,7 +38,8 @@ import kotlin.collections.List
  */
 public open class PhysicalResourceIdReference(
   cdkObject: software.amazon.awscdk.customresources.PhysicalResourceIdReference,
-) : CdkObject(cdkObject), IResolvable {
+) : CdkObject(cdkObject),
+    IResolvable {
   public constructor() : this(software.amazon.awscdk.customresources.PhysicalResourceIdReference()
   )
 

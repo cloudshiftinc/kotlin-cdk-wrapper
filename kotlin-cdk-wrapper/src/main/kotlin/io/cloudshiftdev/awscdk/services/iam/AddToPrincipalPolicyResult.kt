@@ -81,7 +81,8 @@ public interface AddToPrincipalPolicyResult {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.AddToPrincipalPolicyResult,
-  ) : CdkObject(cdkObject), AddToPrincipalPolicyResult {
+  ) : CdkObject(cdkObject),
+      AddToPrincipalPolicyResult {
     /**
      * Dependable which allows depending on the policy change being applied.
      *

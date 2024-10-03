@@ -279,7 +279,8 @@ public interface EmrContainersDeleteVirtualClusterProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualClusterProps,
-  ) : CdkObject(cdkObject), EmrContainersDeleteVirtualClusterProps {
+  ) : CdkObject(cdkObject),
+      EmrContainersDeleteVirtualClusterProps {
     /**
      * An optional description for this state.
      *

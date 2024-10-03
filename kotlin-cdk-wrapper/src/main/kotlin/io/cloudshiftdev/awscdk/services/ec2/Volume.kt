@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class Volume(
   cdkObject: software.amazon.awscdk.services.ec2.Volume,
-) : Resource(cdkObject), IVolume {
+) : Resource(cdkObject),
+    IVolume {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

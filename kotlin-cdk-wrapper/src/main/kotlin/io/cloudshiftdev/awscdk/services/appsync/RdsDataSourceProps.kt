@@ -159,7 +159,8 @@ public interface RdsDataSourceProps : BackedDataSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.RdsDataSourceProps,
-  ) : CdkObject(cdkObject), RdsDataSourceProps {
+  ) : CdkObject(cdkObject),
+      RdsDataSourceProps {
     /**
      * The API to attach this data source to.
      */

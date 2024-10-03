@@ -51,7 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnOrganizationConformancePack(
   cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConformancePack,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -516,7 +517,8 @@ public open class CfnOrganizationConformancePack(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConformancePack.ConformancePackInputParameterProperty,
-    ) : CdkObject(cdkObject), ConformancePackInputParameterProperty {
+    ) : CdkObject(cdkObject),
+        ConformancePackInputParameterProperty {
       /**
        * One part of a key-value pair.
        *

@@ -158,7 +158,8 @@ public interface LoadBalancerContextResponse {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cxapi.LoadBalancerContextResponse,
-  ) : CdkObject(cdkObject), LoadBalancerContextResponse {
+  ) : CdkObject(cdkObject),
+      LoadBalancerContextResponse {
     /**
      * Type of IP address.
      */

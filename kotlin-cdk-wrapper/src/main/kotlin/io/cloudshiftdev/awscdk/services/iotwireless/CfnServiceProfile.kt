@@ -66,7 +66,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnServiceProfile(
   cdkObject: software.amazon.awscdk.services.iotwireless.CfnServiceProfile,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iotwireless.CfnServiceProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -1037,7 +1039,8 @@ public open class CfnServiceProfile(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnServiceProfile.LoRaWANServiceProfileProperty,
-    ) : CdkObject(cdkObject), LoRaWANServiceProfileProperty {
+    ) : CdkObject(cdkObject),
+        LoRaWANServiceProfileProperty {
       /**
        * The AddGWMetaData value.
        *

@@ -304,7 +304,8 @@ public interface CfnRoutingProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfileProps,
-  ) : CdkObject(cdkObject), CfnRoutingProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnRoutingProfileProps {
     /**
      * Whether agents with this routing profile will have their routing order calculated based on
      * *time since their last inbound contact* or *longest idle time* .

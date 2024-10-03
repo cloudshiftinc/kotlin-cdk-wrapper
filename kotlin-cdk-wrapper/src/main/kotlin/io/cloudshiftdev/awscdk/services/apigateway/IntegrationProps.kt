@@ -164,7 +164,8 @@ public interface IntegrationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IntegrationProps,
-  ) : CdkObject(cdkObject), IntegrationProps {
+  ) : CdkObject(cdkObject),
+      IntegrationProps {
     /**
      * The integration's HTTP method type.
      *

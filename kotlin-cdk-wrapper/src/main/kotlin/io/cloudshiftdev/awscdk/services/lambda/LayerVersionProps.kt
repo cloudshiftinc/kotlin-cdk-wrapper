@@ -171,7 +171,8 @@ public interface LayerVersionProps : LayerVersionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.LayerVersionProps,
-  ) : CdkObject(cdkObject), LayerVersionProps {
+  ) : CdkObject(cdkObject),
+      LayerVersionProps {
     /**
      * The content of this Layer.
      *

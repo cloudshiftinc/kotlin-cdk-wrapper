@@ -22,7 +22,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * You can create either a static policy or a policy linked to a policy template.
  *
  * You can directly update only static policies. To update a template-linked policy, you must update
- * it's linked policy template instead.
+ * its linked policy template instead.
  *
  * * To create a static policy, in the `Definition` include a `Static` element that includes the
  * Cedar policy text in the `Statement` element.
@@ -82,7 +82,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPolicy(
   cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -376,7 +377,8 @@ public open class CfnPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.EntityIdentifierProperty,
-    ) : CdkObject(cdkObject), EntityIdentifierProperty {
+    ) : CdkObject(cdkObject),
+        EntityIdentifierProperty {
       /**
        * The identifier of an entity.
        *
@@ -610,7 +612,8 @@ public open class CfnPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.PolicyDefinitionProperty,
-    ) : CdkObject(cdkObject), PolicyDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        PolicyDefinitionProperty {
       /**
        * A structure that describes a static policy.
        *
@@ -730,7 +733,8 @@ public open class CfnPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.StaticPolicyDefinitionProperty,
-    ) : CdkObject(cdkObject), StaticPolicyDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        StaticPolicyDefinitionProperty {
       /**
        * The description of the static policy.
        *
@@ -958,7 +962,8 @@ public open class CfnPolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty,
-    ) : CdkObject(cdkObject), TemplateLinkedPolicyDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        TemplateLinkedPolicyDefinitionProperty {
       /**
        * The unique identifier of the policy template used to create this policy.
        *

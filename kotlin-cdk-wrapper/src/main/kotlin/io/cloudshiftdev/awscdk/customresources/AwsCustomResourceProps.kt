@@ -528,7 +528,8 @@ public interface AwsCustomResourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.customresources.AwsCustomResourceProps,
-  ) : CdkObject(cdkObject), AwsCustomResourceProps {
+  ) : CdkObject(cdkObject),
+      AwsCustomResourceProps {
     /**
      * A name for the singleton Lambda function implementing this custom resource.
      *

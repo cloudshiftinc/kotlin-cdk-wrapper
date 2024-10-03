@@ -94,7 +94,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInferenceExperiment(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1086,7 +1088,8 @@ public open class CfnInferenceExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty,
-    ) : CdkObject(cdkObject), CaptureContentTypeHeaderProperty {
+    ) : CdkObject(cdkObject),
+        CaptureContentTypeHeaderProperty {
       /**
        * The list of all content type headers that Amazon SageMaker will treat as CSV and capture
        * accordingly.
@@ -1272,7 +1275,8 @@ public open class CfnInferenceExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.DataStorageConfigProperty,
-    ) : CdkObject(cdkObject), DataStorageConfigProperty {
+    ) : CdkObject(cdkObject),
+        DataStorageConfigProperty {
       /**
        * Configuration specifying how to treat different headers.
        *
@@ -1423,7 +1427,8 @@ public open class CfnInferenceExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty,
-    ) : CdkObject(cdkObject), EndpointMetadataProperty {
+    ) : CdkObject(cdkObject),
+        EndpointMetadataProperty {
       /**
        * The name of the endpoint configuration.
        *
@@ -1546,7 +1551,8 @@ public open class CfnInferenceExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty,
-    ) : CdkObject(cdkObject), InferenceExperimentScheduleProperty {
+    ) : CdkObject(cdkObject),
+        InferenceExperimentScheduleProperty {
       /**
        * The timestamp at which the inference experiment ended or will end.
        *
@@ -1702,7 +1708,8 @@ public open class CfnInferenceExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelInfrastructureConfigProperty,
-    ) : CdkObject(cdkObject), ModelInfrastructureConfigProperty {
+    ) : CdkObject(cdkObject),
+        ModelInfrastructureConfigProperty {
       /**
        * The inference option to which to deploy your model. Possible values are the following:.
        *
@@ -1875,7 +1882,8 @@ public open class CfnInferenceExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelVariantConfigProperty,
-    ) : CdkObject(cdkObject), ModelVariantConfigProperty {
+    ) : CdkObject(cdkObject),
+        ModelVariantConfigProperty {
       /**
        * The configuration for the infrastructure that the model will be deployed to.
        *
@@ -1992,7 +2000,8 @@ public open class CfnInferenceExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty,
-    ) : CdkObject(cdkObject), RealTimeInferenceConfigProperty {
+    ) : CdkObject(cdkObject),
+        RealTimeInferenceConfigProperty {
       /**
        * The number of instances of the type specified by `InstanceType` .
        *
@@ -2134,7 +2143,8 @@ public open class CfnInferenceExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty,
-    ) : CdkObject(cdkObject), ShadowModeConfigProperty {
+    ) : CdkObject(cdkObject),
+        ShadowModeConfigProperty {
       /**
        * List of shadow variant configurations.
        *
@@ -2247,7 +2257,8 @@ public open class CfnInferenceExperiment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty,
-    ) : CdkObject(cdkObject), ShadowModelVariantConfigProperty {
+    ) : CdkObject(cdkObject),
+        ShadowModelVariantConfigProperty {
       /**
        * The percentage of inference requests that Amazon SageMaker replicates from the production
        * variant to the shadow variant.

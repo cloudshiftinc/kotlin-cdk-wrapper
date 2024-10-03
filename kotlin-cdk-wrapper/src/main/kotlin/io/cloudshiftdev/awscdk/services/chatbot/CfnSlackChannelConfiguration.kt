@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.chatbot
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
@@ -42,6 +45,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .guardrailPolicies(List.of("guardrailPolicies"))
  * .loggingLevel("loggingLevel")
  * .snsTopicArns(List.of("snsTopicArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .userRoleRequired(false)
  * .build();
  * ```
@@ -50,7 +57,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSlackChannelConfiguration(
   cdkObject: software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -71,6 +80,12 @@ public open class CfnSlackChannelConfiguration(
    * Amazon Resource Name (ARN) of the configuration.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The name of the configuration.
@@ -182,6 +197,23 @@ public open class CfnSlackChannelConfiguration(
   public open fun snsTopicArns(vararg `value`: String): Unit = snsTopicArns(`value`.toList())
 
   /**
+   * The tags to add to the configuration.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * The tags to add to the configuration.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   * The tags to add to the configuration.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
+  /**
    * Enables use of a user role requirement in your chat configuration.
    */
   public open fun userRoleRequired(): Any? = unwrap(this).getUserRoleRequired()
@@ -263,7 +295,7 @@ public open class CfnSlackChannelConfiguration(
      * The ID of the Slack channel.
      *
      * To get the ID, open Slack, right click on the channel name in the left pane, then choose Copy
-     * Link. The channel ID is the 9-character string at the end of the URL. For example, `ABCBBLZZZ` .
+     * Link. The channel ID is the character string at the end of the URL. For example, `ABCBBLZZZ` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackchannelid)
      * @param slackChannelId The ID of the Slack channel. 
@@ -275,9 +307,9 @@ public open class CfnSlackChannelConfiguration(
      *
      * To get the workspace ID, you must perform the initial authorization flow with Slack in the
      * AWS Chatbot console. Then you can copy and paste the workspace ID from the console. For more
-     * details, see steps 1-4 in [Setting Up AWS Chatbot with
-     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/setting-up.html#Setup_intro) in the
-     * *AWS Chatbot User Guide* .
+     * details, see steps 1-3 in [Tutorial: Get started with
+     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html) in the *AWS
+     * Chatbot User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackworkspaceid)
      * @param slackWorkspaceId The ID of the Slack workspace authorized with AWS Chatbot . 
@@ -299,6 +331,22 @@ public open class CfnSlackChannelConfiguration(
      * @param snsTopicArns The ARNs of the SNS topics that deliver notifications to AWS Chatbot . 
      */
     public fun snsTopicArns(vararg snsTopicArns: String)
+
+    /**
+     * The tags to add to the configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-tags)
+     * @param tags The tags to add to the configuration. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * The tags to add to the configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-tags)
+     * @param tags The tags to add to the configuration. 
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * Enables use of a user role requirement in your chat configuration.
@@ -397,7 +445,7 @@ public open class CfnSlackChannelConfiguration(
      * The ID of the Slack channel.
      *
      * To get the ID, open Slack, right click on the channel name in the left pane, then choose Copy
-     * Link. The channel ID is the 9-character string at the end of the URL. For example, `ABCBBLZZZ` .
+     * Link. The channel ID is the character string at the end of the URL. For example, `ABCBBLZZZ` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackchannelid)
      * @param slackChannelId The ID of the Slack channel. 
@@ -411,9 +459,9 @@ public open class CfnSlackChannelConfiguration(
      *
      * To get the workspace ID, you must perform the initial authorization flow with Slack in the
      * AWS Chatbot console. Then you can copy and paste the workspace ID from the console. For more
-     * details, see steps 1-4 in [Setting Up AWS Chatbot with
-     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/setting-up.html#Setup_intro) in the
-     * *AWS Chatbot User Guide* .
+     * details, see steps 1-3 in [Tutorial: Get started with
+     * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html) in the *AWS
+     * Chatbot User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackworkspaceid)
      * @param slackWorkspaceId The ID of the Slack workspace authorized with AWS Chatbot . 
@@ -440,6 +488,24 @@ public open class CfnSlackChannelConfiguration(
      */
     override fun snsTopicArns(vararg snsTopicArns: String): Unit =
         snsTopicArns(snsTopicArns.toList())
+
+    /**
+     * The tags to add to the configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-tags)
+     * @param tags The tags to add to the configuration. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * The tags to add to the configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-tags)
+     * @param tags The tags to add to the configuration. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
      * Enables use of a user role requirement in your chat configuration.

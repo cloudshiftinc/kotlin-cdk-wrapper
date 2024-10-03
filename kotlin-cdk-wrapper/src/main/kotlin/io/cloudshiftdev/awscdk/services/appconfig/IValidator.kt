@@ -22,7 +22,8 @@ public interface IValidator {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.IValidator,
-  ) : CdkObject(cdkObject), IValidator {
+  ) : CdkObject(cdkObject),
+      IValidator {
     /**
      * The content of the validator.
      */

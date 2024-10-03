@@ -66,7 +66,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCalculatedAttributeDefinition(
   cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -647,7 +649,8 @@ public open class CfnCalculatedAttributeDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeDetailsProperty,
-    ) : CdkObject(cdkObject), AttributeDetailsProperty {
+    ) : CdkObject(cdkObject),
+        AttributeDetailsProperty {
       /**
        * Mathematical expression and a list of attribute items specified in that expression.
        *
@@ -740,7 +743,8 @@ public open class CfnCalculatedAttributeDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty,
-    ) : CdkObject(cdkObject), AttributeItemProperty {
+    ) : CdkObject(cdkObject),
+        AttributeItemProperty {
       /**
        * The unique name of the calculated attribute.
        *
@@ -922,7 +926,8 @@ public open class CfnCalculatedAttributeDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ConditionsProperty,
-    ) : CdkObject(cdkObject), ConditionsProperty {
+    ) : CdkObject(cdkObject),
+        ConditionsProperty {
       /**
        * The number of profile objects used for the calculated attribute.
        *
@@ -1038,7 +1043,8 @@ public open class CfnCalculatedAttributeDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty,
-    ) : CdkObject(cdkObject), RangeProperty {
+    ) : CdkObject(cdkObject),
+        RangeProperty {
       /**
        * The unit of time.
        *
@@ -1146,7 +1152,8 @@ public open class CfnCalculatedAttributeDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty,
-    ) : CdkObject(cdkObject), ThresholdProperty {
+    ) : CdkObject(cdkObject),
+        ThresholdProperty {
       /**
        * The operator of the threshold.
        *

@@ -61,7 +61,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCapacityReservation(
   cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -880,7 +881,8 @@ public open class CfnCapacityReservation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservation.TagSpecificationProperty,
-    ) : CdkObject(cdkObject), TagSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        TagSpecificationProperty {
       /**
        * The type of resource to tag.
        *

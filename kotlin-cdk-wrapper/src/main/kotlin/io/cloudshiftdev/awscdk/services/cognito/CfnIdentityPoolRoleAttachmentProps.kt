@@ -191,7 +191,8 @@ public interface CfnIdentityPoolRoleAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachmentProps,
-  ) : CdkObject(cdkObject), CfnIdentityPoolRoleAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnIdentityPoolRoleAttachmentProps {
     /**
      * An identity pool ID in the format `REGION:GUID` .
      *

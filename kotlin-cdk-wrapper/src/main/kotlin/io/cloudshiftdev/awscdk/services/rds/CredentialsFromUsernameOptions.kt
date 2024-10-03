@@ -137,7 +137,8 @@ public interface CredentialsFromUsernameOptions : CredentialsBaseOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions,
-  ) : CdkObject(cdkObject), CredentialsFromUsernameOptions {
+  ) : CdkObject(cdkObject),
+      CredentialsFromUsernameOptions {
     /**
      * KMS encryption key to encrypt the generated secret.
      *

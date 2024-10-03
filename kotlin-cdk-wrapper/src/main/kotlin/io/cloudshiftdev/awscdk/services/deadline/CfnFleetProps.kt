@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.deadline
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -10,6 +11,7 @@ import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 
 /**
@@ -103,12 +105,16 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .displayName("displayName")
+ * .farmId("farmId")
  * .maxWorkerCount(123)
  * .roleArn("roleArn")
  * // the properties below are optional
  * .description("description")
- * .farmId("farmId")
  * .minWorkerCount(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -134,6 +140,11 @@ public interface CfnFleetProps {
   /**
    * The display name of the fleet summary to update.
    *
+   *
+   * This field can store any content. Escape or encode this content before displaying it on a
+   * webpage or any other system that might interpret the content of this field.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-displayname)
    */
   public fun displayName(): String
@@ -143,7 +154,7 @@ public interface CfnFleetProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-farmid)
    */
-  public fun farmId(): String? = unwrap(this).getFarmId()
+  public fun farmId(): String
 
   /**
    * The maximum number of workers specified in the fleet.
@@ -167,6 +178,16 @@ public interface CfnFleetProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-rolearn)
    */
   public fun roleArn(): String
+
+  /**
+   * The tags to add to your fleet.
+   *
+   * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but tag
+   * values can be empty strings.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * A builder for [CfnFleetProps]
@@ -197,11 +218,14 @@ public interface CfnFleetProps {
 
     /**
      * @param displayName The display name of the fleet summary to update. 
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
      */
     public fun displayName(displayName: String)
 
     /**
-     * @param farmId The farm ID.
+     * @param farmId The farm ID. 
      */
     public fun farmId(farmId: String)
 
@@ -219,6 +243,20 @@ public interface CfnFleetProps {
      * @param roleArn The IAM role that workers in the fleet use when processing jobs. 
      */
     public fun roleArn(roleArn: String)
+
+    /**
+     * @param tags The tags to add to your fleet.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags The tags to add to your fleet.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl : Builder {
@@ -257,13 +295,16 @@ public interface CfnFleetProps {
 
     /**
      * @param displayName The display name of the fleet summary to update. 
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
      */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
     /**
-     * @param farmId The farm ID.
+     * @param farmId The farm ID. 
      */
     override fun farmId(farmId: String) {
       cdkBuilder.farmId(farmId)
@@ -290,12 +331,29 @@ public interface CfnFleetProps {
       cdkBuilder.roleArn(roleArn)
     }
 
+    /**
+     * @param tags The tags to add to your fleet.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags The tags to add to your fleet.
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.deadline.CfnFleetProps = cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.deadline.CfnFleetProps,
-  ) : CdkObject(cdkObject), CfnFleetProps {
+  ) : CdkObject(cdkObject),
+      CfnFleetProps {
     /**
      * The configuration details for the fleet.
      *
@@ -315,6 +373,11 @@ public interface CfnFleetProps {
     /**
      * The display name of the fleet summary to update.
      *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-displayname)
      */
     override fun displayName(): String = unwrap(this).getDisplayName()
@@ -324,7 +387,7 @@ public interface CfnFleetProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-farmid)
      */
-    override fun farmId(): String? = unwrap(this).getFarmId()
+    override fun farmId(): String = unwrap(this).getFarmId()
 
     /**
      * The maximum number of workers specified in the fleet.
@@ -348,6 +411,16 @@ public interface CfnFleetProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-rolearn)
      */
     override fun roleArn(): String = unwrap(this).getRoleArn()
+
+    /**
+     * The tags to add to your fleet.
+     *
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 
   public companion object {

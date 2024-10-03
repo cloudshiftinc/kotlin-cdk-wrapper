@@ -106,7 +106,8 @@ public interface Transition {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.Transition,
-  ) : CdkObject(cdkObject), Transition {
+  ) : CdkObject(cdkObject),
+      Transition {
     /**
      * The storage class to which you want the object to transition.
      */

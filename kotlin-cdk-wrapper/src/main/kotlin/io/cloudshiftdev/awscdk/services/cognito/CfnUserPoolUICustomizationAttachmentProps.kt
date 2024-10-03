@@ -111,7 +111,8 @@ public interface CfnUserPoolUICustomizationAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachmentProps,
-  ) : CdkObject(cdkObject), CfnUserPoolUICustomizationAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnUserPoolUICustomizationAttachmentProps {
     /**
      * The client ID for the client app.
      *

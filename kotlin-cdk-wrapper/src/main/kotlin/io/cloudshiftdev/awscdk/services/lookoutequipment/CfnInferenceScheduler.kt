@@ -68,7 +68,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInferenceScheduler(
   cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -690,7 +692,8 @@ public open class CfnInferenceScheduler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataInputConfigurationProperty,
-    ) : CdkObject(cdkObject), DataInputConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DataInputConfigurationProperty {
       /**
        * Specifies configuration information for the input data for the inference, including
        * timestamp format and delimiter.
@@ -852,7 +855,8 @@ public open class CfnInferenceScheduler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty,
-    ) : CdkObject(cdkObject), DataOutputConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DataOutputConfigurationProperty {
       /**
        * The ID number for the AWS KMS key used to encrypt the inference output.
        *
@@ -969,7 +973,8 @@ public open class CfnInferenceScheduler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty,
-    ) : CdkObject(cdkObject), InputNameConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        InputNameConfigurationProperty {
       /**
        * Indicates the delimiter character used between items in the data.
        *
@@ -1078,7 +1083,8 @@ public open class CfnInferenceScheduler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty,
-    ) : CdkObject(cdkObject), S3InputConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        S3InputConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3inputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3inputconfiguration-bucket)
        */
@@ -1182,7 +1188,8 @@ public open class CfnInferenceScheduler(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3OutputConfigurationProperty,
-    ) : CdkObject(cdkObject), S3OutputConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        S3OutputConfigurationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3outputconfiguration.html#cfn-lookoutequipment-inferencescheduler-s3outputconfiguration-bucket)
        */

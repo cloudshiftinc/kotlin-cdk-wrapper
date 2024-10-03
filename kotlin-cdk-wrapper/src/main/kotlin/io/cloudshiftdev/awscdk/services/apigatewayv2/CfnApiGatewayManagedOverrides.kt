@@ -78,7 +78,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApiGatewayManagedOverrides(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -524,7 +525,8 @@ public open class CfnApiGatewayManagedOverrides(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty,
-    ) : CdkObject(cdkObject), AccessLogSettingsProperty {
+    ) : CdkObject(cdkObject),
+        AccessLogSettingsProperty {
       /**
        * The ARN of the CloudWatch Logs log group to receive access logs.
        *
@@ -710,7 +712,8 @@ public open class CfnApiGatewayManagedOverrides(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty,
-    ) : CdkObject(cdkObject), IntegrationOverridesProperty {
+    ) : CdkObject(cdkObject),
+        IntegrationOverridesProperty {
       /**
        * The description of the integration.
        *
@@ -943,7 +946,8 @@ public open class CfnApiGatewayManagedOverrides(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteOverridesProperty,
-    ) : CdkObject(cdkObject), RouteOverridesProperty {
+    ) : CdkObject(cdkObject),
+        RouteOverridesProperty {
       /**
        * The authorization scopes supported by this route.
        *
@@ -1191,7 +1195,8 @@ public open class CfnApiGatewayManagedOverrides(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteSettingsProperty,
-    ) : CdkObject(cdkObject), RouteSettingsProperty {
+    ) : CdkObject(cdkObject),
+        RouteSettingsProperty {
       /**
        * Specifies whether ( `true` ) or not ( `false` ) data trace logging is enabled for this
        * route.
@@ -1508,7 +1513,8 @@ public open class CfnApiGatewayManagedOverrides(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.StageOverridesProperty,
-    ) : CdkObject(cdkObject), StageOverridesProperty {
+    ) : CdkObject(cdkObject),
+        StageOverridesProperty {
       /**
        * Settings for logging access in a stage.
        *

@@ -185,7 +185,8 @@ public interface CfnLiveSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediatailor.CfnLiveSourceProps,
-  ) : CdkObject(cdkObject), CfnLiveSourceProps {
+  ) : CdkObject(cdkObject),
+      CfnLiveSourceProps {
     /**
      * The HTTP package configurations for the live source.
      *

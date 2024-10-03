@@ -51,8 +51,8 @@ public interface CfnLocationObjectStorageProps {
   public fun accessKey(): String? = unwrap(this).getAccessKey()
 
   /**
-   * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect
-   * with your location.
+   * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect with your
+   * object storage system.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-agentarns)
    */
@@ -156,13 +156,13 @@ public interface CfnLocationObjectStorageProps {
 
     /**
      * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * securely connect with your location. 
+     * connect with your object storage system. 
      */
     public fun agentArns(agentArns: List<String>)
 
     /**
      * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * securely connect with your location. 
+     * connect with your object storage system. 
      */
     public fun agentArns(vararg agentArns: String)
 
@@ -257,7 +257,7 @@ public interface CfnLocationObjectStorageProps {
 
     /**
      * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * securely connect with your location. 
+     * connect with your object storage system. 
      */
     override fun agentArns(agentArns: List<String>) {
       cdkBuilder.agentArns(agentArns)
@@ -265,7 +265,7 @@ public interface CfnLocationObjectStorageProps {
 
     /**
      * @param agentArns Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can
-     * securely connect with your location. 
+     * connect with your object storage system. 
      */
     override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
 
@@ -366,7 +366,8 @@ public interface CfnLocationObjectStorageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datasync.CfnLocationObjectStorageProps,
-  ) : CdkObject(cdkObject), CfnLocationObjectStorageProps {
+  ) : CdkObject(cdkObject),
+      CfnLocationObjectStorageProps {
     /**
      * Specifies the access key (for example, a user name) if credentials are required to
      * authenticate with the object storage server.
@@ -376,8 +377,8 @@ public interface CfnLocationObjectStorageProps {
     override fun accessKey(): String? = unwrap(this).getAccessKey()
 
     /**
-     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can securely connect
-     * with your location.
+     * Specifies the Amazon Resource Names (ARNs) of the DataSync agents that can connect with your
+     * object storage system.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-agentarns)
      */

@@ -75,7 +75,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAssociation(
   cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1237,7 +1238,8 @@ public open class CfnAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty,
-    ) : CdkObject(cdkObject), InstanceAssociationOutputLocationProperty {
+    ) : CdkObject(cdkObject),
+        InstanceAssociationOutputLocationProperty {
       /**
        * `S3OutputLocation` is a property of the
        * [InstanceAssociationOutputLocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html)
@@ -1365,7 +1367,8 @@ public open class CfnAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty,
-    ) : CdkObject(cdkObject), S3OutputLocationProperty {
+    ) : CdkObject(cdkObject),
+        S3OutputLocationProperty {
       /**
        * The name of the S3 bucket.
        *
@@ -1522,7 +1525,8 @@ public open class CfnAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty,
-    ) : CdkObject(cdkObject), TargetProperty {
+    ) : CdkObject(cdkObject),
+        TargetProperty {
       /**
        * User-defined criteria for sending commands that target managed nodes that meet the
        * criteria.

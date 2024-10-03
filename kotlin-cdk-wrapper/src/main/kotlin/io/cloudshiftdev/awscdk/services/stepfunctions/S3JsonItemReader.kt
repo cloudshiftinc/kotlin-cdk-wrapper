@@ -36,7 +36,8 @@ import kotlin.collections.List
  */
 public open class S3JsonItemReader(
   cdkObject: software.amazon.awscdk.services.stepfunctions.S3JsonItemReader,
-) : CdkObject(cdkObject), IItemReader {
+) : CdkObject(cdkObject),
+    IItemReader {
   public constructor(props: S3FileItemReaderProps) :
       this(software.amazon.awscdk.services.stepfunctions.S3JsonItemReader(props.let(S3FileItemReaderProps.Companion::unwrap))
   )

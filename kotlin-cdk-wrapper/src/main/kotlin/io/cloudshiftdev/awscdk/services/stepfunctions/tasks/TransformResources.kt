@@ -115,7 +115,8 @@ public interface TransformResources {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformResources,
-  ) : CdkObject(cdkObject), TransformResources {
+  ) : CdkObject(cdkObject),
+      TransformResources {
     /**
      * Number of ML compute instances to use in the transform job.
      */

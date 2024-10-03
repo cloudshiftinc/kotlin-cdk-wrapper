@@ -85,7 +85,8 @@ public interface GatewayRouteProps : GatewayRouteBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteProps,
-  ) : CdkObject(cdkObject), GatewayRouteProps {
+  ) : CdkObject(cdkObject),
+      GatewayRouteProps {
     /**
      * The name of the GatewayRoute.
      *

@@ -64,7 +64,8 @@ public interface CfnDelegatedAdminProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.securityhub.CfnDelegatedAdminProps,
-  ) : CdkObject(cdkObject), CfnDelegatedAdminProps {
+  ) : CdkObject(cdkObject),
+      CfnDelegatedAdminProps {
     /**
      * The AWS account identifier of the account to designate as the Security Hub administrator
      * account.

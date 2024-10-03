@@ -241,7 +241,8 @@ public interface CfnTrustAnchorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchorProps,
-  ) : CdkObject(cdkObject), CfnTrustAnchorProps {
+  ) : CdkObject(cdkObject),
+      CfnTrustAnchorProps {
     /**
      * Indicates whether the trust anchor is enabled.
      *

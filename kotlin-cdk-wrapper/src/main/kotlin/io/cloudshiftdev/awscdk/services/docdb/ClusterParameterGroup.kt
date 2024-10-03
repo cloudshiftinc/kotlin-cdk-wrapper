@@ -32,7 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ClusterParameterGroup(
   cdkObject: software.amazon.awscdk.services.docdb.ClusterParameterGroup,
-) : Resource(cdkObject), IClusterParameterGroup {
+) : Resource(cdkObject),
+    IClusterParameterGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

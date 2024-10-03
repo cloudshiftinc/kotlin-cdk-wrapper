@@ -101,7 +101,8 @@ public interface CfnDedicatedIpPoolProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPoolProps,
-  ) : CdkObject(cdkObject), CfnDedicatedIpPoolProps {
+  ) : CdkObject(cdkObject),
+      CfnDedicatedIpPoolProps {
     /**
      * The name of the dedicated IP pool.
      *

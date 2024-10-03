@@ -557,7 +557,8 @@ public interface CfnMethodProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.CfnMethodProps,
-  ) : CdkObject(cdkObject), CfnMethodProps {
+  ) : CdkObject(cdkObject),
+      CfnMethodProps {
     /**
      * A boolean flag specifying whether a valid ApiKey is required to invoke this method.
      *

@@ -60,7 +60,8 @@ public interface TimeConversionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.TimeConversionOptions,
-  ) : CdkObject(cdkObject), TimeConversionOptions {
+  ) : CdkObject(cdkObject),
+      TimeConversionOptions {
     /**
      * If `true`, conversions into a larger time unit (e.g. `Seconds` to `Minutes`) will fail if the
      * result is not an integer.

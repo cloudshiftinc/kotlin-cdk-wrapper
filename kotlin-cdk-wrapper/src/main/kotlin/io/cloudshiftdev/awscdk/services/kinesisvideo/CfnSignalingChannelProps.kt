@@ -168,7 +168,8 @@ public interface CfnSignalingChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannelProps,
-  ) : CdkObject(cdkObject), CfnSignalingChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnSignalingChannelProps {
     /**
      * The period of time (in seconds) a signaling channel retains undelivered messages before they
      * are discarded.

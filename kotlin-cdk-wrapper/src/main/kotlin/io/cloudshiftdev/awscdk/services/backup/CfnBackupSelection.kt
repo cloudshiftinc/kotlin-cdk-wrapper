@@ -54,7 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBackupSelection(
   cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -622,7 +623,8 @@ public open class CfnBackupSelection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.BackupSelectionResourceTypeProperty,
-    ) : CdkObject(cdkObject), BackupSelectionResourceTypeProperty {
+    ) : CdkObject(cdkObject),
+        BackupSelectionResourceTypeProperty {
       /**
        * A list of conditions that you define to assign resources to your backup plans using tags.
        *
@@ -801,7 +803,8 @@ public open class CfnBackupSelection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty,
-    ) : CdkObject(cdkObject), ConditionParameterProperty {
+    ) : CdkObject(cdkObject),
+        ConditionParameterProperty {
       /**
        * The key in a key-value pair.
        *
@@ -949,7 +952,8 @@ public open class CfnBackupSelection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionResourceTypeProperty,
-    ) : CdkObject(cdkObject), ConditionResourceTypeProperty {
+    ) : CdkObject(cdkObject),
+        ConditionResourceTypeProperty {
       /**
        * The key in a key-value pair.
        *
@@ -1267,7 +1271,8 @@ public open class CfnBackupSelection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionsProperty,
-    ) : CdkObject(cdkObject), ConditionsProperty {
+    ) : CdkObject(cdkObject),
+        ConditionsProperty {
       /**
        * Filters the values of your tagged resources for only those resources that you tagged with
        * the same value.

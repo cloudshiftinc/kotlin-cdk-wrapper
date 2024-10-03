@@ -142,7 +142,8 @@ public interface CfnVPCEndpointConnectionNotificationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotificationProps,
-  ) : CdkObject(cdkObject), CfnVPCEndpointConnectionNotificationProps {
+  ) : CdkObject(cdkObject),
+      CfnVPCEndpointConnectionNotificationProps {
     /**
      * The endpoint events for which to receive notifications.
      *

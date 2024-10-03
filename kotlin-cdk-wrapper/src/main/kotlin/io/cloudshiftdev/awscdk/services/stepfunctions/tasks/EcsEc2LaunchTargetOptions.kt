@@ -125,7 +125,8 @@ public interface EcsEc2LaunchTargetOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTargetOptions,
-  ) : CdkObject(cdkObject), EcsEc2LaunchTargetOptions {
+  ) : CdkObject(cdkObject),
+      EcsEc2LaunchTargetOptions {
     /**
      * Placement constraints.
      *

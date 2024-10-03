@@ -35,7 +35,8 @@ public interface ITrigger : IConstruct {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.triggers.ITrigger,
-  ) : CdkObject(cdkObject), ITrigger {
+  ) : CdkObject(cdkObject),
+      ITrigger {
     /**
      * Adds trigger dependencies.
      *

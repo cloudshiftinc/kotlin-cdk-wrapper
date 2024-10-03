@@ -17,7 +17,8 @@ import kotlin.jvm.JvmName
  */
 public abstract class StackSynthesizer(
   cdkObject: software.amazon.awscdk.StackSynthesizer,
-) : CdkObject(cdkObject), IStackSynthesizer {
+) : CdkObject(cdkObject),
+    IStackSynthesizer {
   /**
    * Register a Docker Image Asset.
    *

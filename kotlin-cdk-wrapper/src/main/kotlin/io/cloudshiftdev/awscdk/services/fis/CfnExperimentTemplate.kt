@@ -100,7 +100,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnExperimentTemplate(
   cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -683,7 +685,8 @@ public open class CfnExperimentTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchLogsConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.
        *
@@ -892,7 +895,8 @@ public open class CfnExperimentTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty,
-    ) : CdkObject(cdkObject), ExperimentTemplateActionProperty {
+    ) : CdkObject(cdkObject),
+        ExperimentTemplateActionProperty {
       /**
        * The ID of the action.
        *
@@ -1025,7 +1029,8 @@ public open class CfnExperimentTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty,
-    ) : CdkObject(cdkObject), ExperimentTemplateExperimentOptionsProperty {
+    ) : CdkObject(cdkObject),
+        ExperimentTemplateExperimentOptionsProperty {
       /**
        * The account targeting setting for an experiment template.
        *
@@ -1166,7 +1171,8 @@ public open class CfnExperimentTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty,
-    ) : CdkObject(cdkObject), ExperimentTemplateLogConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ExperimentTemplateLogConfigurationProperty {
       /**
        * The configuration for experiment logging to CloudWatch Logs .
        *
@@ -1290,7 +1296,8 @@ public open class CfnExperimentTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty,
-    ) : CdkObject(cdkObject), ExperimentTemplateStopConditionProperty {
+    ) : CdkObject(cdkObject),
+        ExperimentTemplateStopConditionProperty {
       /**
        * The source for the stop condition.
        *
@@ -1415,7 +1422,8 @@ public open class CfnExperimentTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty,
-    ) : CdkObject(cdkObject), ExperimentTemplateTargetFilterProperty {
+    ) : CdkObject(cdkObject),
+        ExperimentTemplateTargetFilterProperty {
       /**
        * The attribute path for the filter.
        *
@@ -1676,7 +1684,8 @@ public open class CfnExperimentTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetProperty,
-    ) : CdkObject(cdkObject), ExperimentTemplateTargetProperty {
+    ) : CdkObject(cdkObject),
+        ExperimentTemplateTargetProperty {
       /**
        * The filters to apply to identify target resources using specific attributes.
        *
@@ -1814,7 +1823,8 @@ public open class CfnExperimentTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.S3ConfigurationProperty,
-    ) : CdkObject(cdkObject), S3ConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        S3ConfigurationProperty {
       /**
        * The name of the destination bucket.
        *

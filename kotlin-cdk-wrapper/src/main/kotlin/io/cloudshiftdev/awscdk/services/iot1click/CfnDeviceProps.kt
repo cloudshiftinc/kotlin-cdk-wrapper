@@ -99,7 +99,8 @@ public interface CfnDeviceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot1click.CfnDeviceProps,
-  ) : CdkObject(cdkObject), CfnDeviceProps {
+  ) : CdkObject(cdkObject),
+      CfnDeviceProps {
     /**
      * The ID of the device, such as `G030PX0312744DWM` .
      *

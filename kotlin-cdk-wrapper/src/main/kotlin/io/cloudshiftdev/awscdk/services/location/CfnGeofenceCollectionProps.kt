@@ -282,7 +282,8 @@ public interface CfnGeofenceCollectionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.location.CfnGeofenceCollectionProps,
-  ) : CdkObject(cdkObject), CfnGeofenceCollectionProps {
+  ) : CdkObject(cdkObject),
+      CfnGeofenceCollectionProps {
     /**
      * A custom name for the geofence collection.
      *

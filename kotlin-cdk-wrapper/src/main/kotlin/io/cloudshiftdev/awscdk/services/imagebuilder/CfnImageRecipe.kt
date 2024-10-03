@@ -80,7 +80,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnImageRecipe(
   cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -825,7 +827,8 @@ public open class CfnImageRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.AdditionalInstanceConfigurationProperty,
-    ) : CdkObject(cdkObject), AdditionalInstanceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AdditionalInstanceConfigurationProperty {
       /**
        * Contains settings for the Systems Manager agent on your build instance.
        *
@@ -985,7 +988,8 @@ public open class CfnImageRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentConfigurationProperty,
-    ) : CdkObject(cdkObject), ComponentConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ComponentConfigurationProperty {
       /**
        * The Amazon Resource Name (ARN) of the component.
        *
@@ -1105,7 +1109,8 @@ public open class CfnImageRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty,
-    ) : CdkObject(cdkObject), ComponentParameterProperty {
+    ) : CdkObject(cdkObject),
+        ComponentParameterProperty {
       /**
        * The name of the component parameter to set.
        *
@@ -1362,7 +1367,8 @@ public open class CfnImageRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty,
-    ) : CdkObject(cdkObject), EbsInstanceBlockDeviceSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        EbsInstanceBlockDeviceSpecificationProperty {
       /**
        * Configures delete on termination of the associated device.
        *
@@ -1601,7 +1607,8 @@ public open class CfnImageRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), InstanceBlockDeviceMappingProperty {
+    ) : CdkObject(cdkObject),
+        InstanceBlockDeviceMappingProperty {
       /**
        * The device to which these mappings apply.
        *
@@ -1741,7 +1748,8 @@ public open class CfnImageRecipe(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty,
-    ) : CdkObject(cdkObject), SystemsManagerAgentProperty {
+    ) : CdkObject(cdkObject),
+        SystemsManagerAgentProperty {
       /**
        * Controls whether the Systems Manager agent is removed from your final build image, prior to
        * creating the new AMI.

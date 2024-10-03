@@ -59,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class DnsValidatedCertificate(
   cdkObject: software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificate,
-) : Resource(cdkObject), ICertificate, ITaggable {
+) : Resource(cdkObject),
+    ICertificate,
+    ITaggable {
   @Deprecated(message = "deprecated in CDK")
   public constructor(
     scope: CloudshiftdevConstructsConstruct,

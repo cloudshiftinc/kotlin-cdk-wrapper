@@ -50,7 +50,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEnabledBaseline(
   cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledBaseline,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -433,7 +435,8 @@ public open class CfnEnabledBaseline(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledBaseline.ParameterProperty,
-    ) : CdkObject(cdkObject), ParameterProperty {
+    ) : CdkObject(cdkObject),
+        ParameterProperty {
       /**
        * A string denoting the parameter key.
        *

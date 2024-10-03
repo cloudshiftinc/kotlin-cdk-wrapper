@@ -1850,7 +1850,8 @@ public interface CfnRecordSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetProps,
-  ) : CdkObject(cdkObject), CfnRecordSetProps {
+  ) : CdkObject(cdkObject),
+      CfnRecordSetProps {
     /**
      * *Alias resource record sets only:* Information about the AWS resource, such as a CloudFront
      * distribution or an Amazon S3 bucket, that you want to route traffic to.

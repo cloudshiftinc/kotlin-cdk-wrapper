@@ -108,7 +108,8 @@ public interface CfnPrimaryTaskSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.CfnPrimaryTaskSetProps,
-  ) : CdkObject(cdkObject), CfnPrimaryTaskSetProps {
+  ) : CdkObject(cdkObject),
+      CfnPrimaryTaskSetProps {
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service that
      * the task set exists in.

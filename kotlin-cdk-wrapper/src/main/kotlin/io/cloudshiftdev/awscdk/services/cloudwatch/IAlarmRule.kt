@@ -17,7 +17,8 @@ public interface IAlarmRule {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmRule,
-  ) : CdkObject(cdkObject), IAlarmRule {
+  ) : CdkObject(cdkObject),
+      IAlarmRule {
     /**
      * serialized representation of Alarm Rule to be used when building the Composite Alarm
      * resource.

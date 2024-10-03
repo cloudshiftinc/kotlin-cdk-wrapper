@@ -80,7 +80,8 @@ public interface CfnHookProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnHookProps,
-  ) : CdkObject(cdkObject), CfnHookProps {
+  ) : CdkObject(cdkObject),
+      CfnHookProps {
     /**
      * The properties of the hook.
      *

@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class WebSocketIntegration(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration,
-) : Resource(cdkObject), IWebSocketIntegration {
+) : Resource(cdkObject),
+    IWebSocketIntegration {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

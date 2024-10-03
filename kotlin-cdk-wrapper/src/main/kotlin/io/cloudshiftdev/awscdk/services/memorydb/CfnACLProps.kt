@@ -141,7 +141,8 @@ public interface CfnACLProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.memorydb.CfnACLProps,
-  ) : CdkObject(cdkObject), CfnACLProps {
+  ) : CdkObject(cdkObject),
+      CfnACLProps {
     /**
      * The name of the Access Control List.
      *

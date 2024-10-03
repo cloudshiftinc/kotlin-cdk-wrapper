@@ -78,7 +78,7 @@ public interface CfnOptionGroupProps {
   public fun majorEngineVersion(): String
 
   /**
-   * A list of options and the settings for each option.
+   * A list of all available options for an option group.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
    */
@@ -114,7 +114,7 @@ public interface CfnOptionGroupProps {
   public fun optionGroupName(): String? = unwrap(this).getOptionGroupName()
 
   /**
-   * An optional array of key-value pairs to apply to this option group.
+   * Tags to assign to the option group.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-tags)
    */
@@ -151,17 +151,17 @@ public interface CfnOptionGroupProps {
     public fun majorEngineVersion(majorEngineVersion: String)
 
     /**
-     * @param optionConfigurations A list of options and the settings for each option.
+     * @param optionConfigurations A list of all available options for an option group.
      */
     public fun optionConfigurations(optionConfigurations: IResolvable)
 
     /**
-     * @param optionConfigurations A list of options and the settings for each option.
+     * @param optionConfigurations A list of all available options for an option group.
      */
     public fun optionConfigurations(optionConfigurations: List<Any>)
 
     /**
-     * @param optionConfigurations A list of options and the settings for each option.
+     * @param optionConfigurations A list of all available options for an option group.
      */
     public fun optionConfigurations(vararg optionConfigurations: Any)
 
@@ -189,12 +189,12 @@ public interface CfnOptionGroupProps {
     public fun optionGroupName(optionGroupName: String)
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this option group.
+     * @param tags Tags to assign to the option group.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this option group.
+     * @param tags Tags to assign to the option group.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -233,21 +233,21 @@ public interface CfnOptionGroupProps {
     }
 
     /**
-     * @param optionConfigurations A list of options and the settings for each option.
+     * @param optionConfigurations A list of all available options for an option group.
      */
     override fun optionConfigurations(optionConfigurations: IResolvable) {
       cdkBuilder.optionConfigurations(optionConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param optionConfigurations A list of options and the settings for each option.
+     * @param optionConfigurations A list of all available options for an option group.
      */
     override fun optionConfigurations(optionConfigurations: List<Any>) {
       cdkBuilder.optionConfigurations(optionConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param optionConfigurations A list of options and the settings for each option.
+     * @param optionConfigurations A list of all available options for an option group.
      */
     override fun optionConfigurations(vararg optionConfigurations: Any): Unit =
         optionConfigurations(optionConfigurations.toList())
@@ -280,14 +280,14 @@ public interface CfnOptionGroupProps {
     }
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this option group.
+     * @param tags Tags to assign to the option group.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags An optional array of key-value pairs to apply to this option group.
+     * @param tags Tags to assign to the option group.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -296,7 +296,8 @@ public interface CfnOptionGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroupProps,
-  ) : CdkObject(cdkObject), CfnOptionGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnOptionGroupProps {
     /**
      * Specifies the name of the engine that this option group should be associated with.
      *
@@ -326,7 +327,7 @@ public interface CfnOptionGroupProps {
     override fun majorEngineVersion(): String = unwrap(this).getMajorEngineVersion()
 
     /**
-     * A list of options and the settings for each option.
+     * A list of all available options for an option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations)
      */
@@ -362,7 +363,7 @@ public interface CfnOptionGroupProps {
     override fun optionGroupName(): String? = unwrap(this).getOptionGroupName()
 
     /**
-     * An optional array of key-value pairs to apply to this option group.
+     * Tags to assign to the option group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-tags)
      */

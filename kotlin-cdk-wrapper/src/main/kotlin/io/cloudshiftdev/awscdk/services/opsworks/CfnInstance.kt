@@ -85,7 +85,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInstance(
   cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1475,7 +1476,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
+    ) : CdkObject(cdkObject),
+        BlockDeviceMappingProperty {
       /**
        * The device name that is exposed to the instance, such as `/dev/sdh` .
        *
@@ -1721,7 +1723,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty,
-    ) : CdkObject(cdkObject), EbsBlockDeviceProperty {
+    ) : CdkObject(cdkObject),
+        EbsBlockDeviceProperty {
       /**
        * Whether the volume is deleted on instance termination.
        *
@@ -2058,7 +2061,8 @@ public open class CfnInstance(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.TimeBasedAutoScalingProperty,
-    ) : CdkObject(cdkObject), TimeBasedAutoScalingProperty {
+    ) : CdkObject(cdkObject),
+        TimeBasedAutoScalingProperty {
       /**
        * The schedule for Friday.
        *

@@ -113,7 +113,8 @@ public interface CfnQueueInlinePolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sqs.CfnQueueInlinePolicyProps,
-  ) : CdkObject(cdkObject), CfnQueueInlinePolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnQueueInlinePolicyProps {
     /**
      * A policy document that contains the permissions for the specified Amazon SQS queues.
      *

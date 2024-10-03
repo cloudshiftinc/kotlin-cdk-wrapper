@@ -348,7 +348,8 @@ public interface CfnSimulationApplicationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplicationProps,
-  ) : CdkObject(cdkObject), CfnSimulationApplicationProps {
+  ) : CdkObject(cdkObject),
+      CfnSimulationApplicationProps {
     /**
      * The current revision id.
      *

@@ -234,7 +234,8 @@ public interface CfnPermissionsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissionsProps,
-  ) : CdkObject(cdkObject), CfnPermissionsProps {
+  ) : CdkObject(cdkObject),
+      CfnPermissionsProps {
     /**
      * The AWS Lake Formation principal.
      *

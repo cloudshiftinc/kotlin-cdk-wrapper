@@ -24,7 +24,8 @@ import kotlin.String
  */
 public open class GlobalAcceleratorDomainTarget(
   cdkObject: software.amazon.awscdk.services.route53.targets.GlobalAcceleratorDomainTarget,
-) : CdkObject(cdkObject), IAliasRecordTarget {
+) : CdkObject(cdkObject),
+    IAliasRecordTarget {
   public constructor(acceleratorDomainName: String) :
       this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorDomainTarget(acceleratorDomainName)
   )

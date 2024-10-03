@@ -22,13 +22,103 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.bedrock.*;
  * CfnDataSourceProps cfnDataSourceProps = CfnDataSourceProps.builder()
  * .dataSourceConfiguration(DataSourceConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .confluenceConfiguration(ConfluenceDataSourceConfigurationProperty.builder()
+ * .sourceConfiguration(ConfluenceSourceConfigurationProperty.builder()
+ * .authType("authType")
+ * .credentialsSecretArn("credentialsSecretArn")
+ * .hostType("hostType")
+ * .hostUrl("hostUrl")
+ * .build())
+ * // the properties below are optional
+ * .crawlerConfiguration(ConfluenceCrawlerConfigurationProperty.builder()
+ * .filterConfiguration(CrawlFilterConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .patternObjectFilter(PatternObjectFilterConfigurationProperty.builder()
+ * .filters(List.of(PatternObjectFilterProperty.builder()
+ * .objectType("objectType")
+ * // the properties below are optional
+ * .exclusionFilters(List.of("exclusionFilters"))
+ * .inclusionFilters(List.of("inclusionFilters"))
+ * .build()))
+ * .build())
+ * .build())
+ * .build())
+ * .build())
  * .s3Configuration(S3DataSourceConfigurationProperty.builder()
  * .bucketArn("bucketArn")
  * // the properties below are optional
  * .bucketOwnerAccountId("bucketOwnerAccountId")
  * .inclusionPrefixes(List.of("inclusionPrefixes"))
  * .build())
+ * .salesforceConfiguration(SalesforceDataSourceConfigurationProperty.builder()
+ * .sourceConfiguration(SalesforceSourceConfigurationProperty.builder()
+ * .authType("authType")
+ * .credentialsSecretArn("credentialsSecretArn")
+ * .hostUrl("hostUrl")
+ * .build())
+ * // the properties below are optional
+ * .crawlerConfiguration(SalesforceCrawlerConfigurationProperty.builder()
+ * .filterConfiguration(CrawlFilterConfigurationProperty.builder()
  * .type("type")
+ * // the properties below are optional
+ * .patternObjectFilter(PatternObjectFilterConfigurationProperty.builder()
+ * .filters(List.of(PatternObjectFilterProperty.builder()
+ * .objectType("objectType")
+ * // the properties below are optional
+ * .exclusionFilters(List.of("exclusionFilters"))
+ * .inclusionFilters(List.of("inclusionFilters"))
+ * .build()))
+ * .build())
+ * .build())
+ * .build())
+ * .build())
+ * .sharePointConfiguration(SharePointDataSourceConfigurationProperty.builder()
+ * .sourceConfiguration(SharePointSourceConfigurationProperty.builder()
+ * .authType("authType")
+ * .credentialsSecretArn("credentialsSecretArn")
+ * .domain("domain")
+ * .hostType("hostType")
+ * .siteUrls(List.of("siteUrls"))
+ * // the properties below are optional
+ * .tenantId("tenantId")
+ * .build())
+ * // the properties below are optional
+ * .crawlerConfiguration(SharePointCrawlerConfigurationProperty.builder()
+ * .filterConfiguration(CrawlFilterConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .patternObjectFilter(PatternObjectFilterConfigurationProperty.builder()
+ * .filters(List.of(PatternObjectFilterProperty.builder()
+ * .objectType("objectType")
+ * // the properties below are optional
+ * .exclusionFilters(List.of("exclusionFilters"))
+ * .inclusionFilters(List.of("inclusionFilters"))
+ * .build()))
+ * .build())
+ * .build())
+ * .build())
+ * .build())
+ * .webConfiguration(WebDataSourceConfigurationProperty.builder()
+ * .sourceConfiguration(WebSourceConfigurationProperty.builder()
+ * .urlConfiguration(UrlConfigurationProperty.builder()
+ * .seedUrls(List.of(SeedUrlProperty.builder()
+ * .url("url")
+ * .build()))
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .crawlerConfiguration(WebCrawlerConfigurationProperty.builder()
+ * .crawlerLimits(WebCrawlerLimitsProperty.builder()
+ * .rateLimit(123)
+ * .build())
+ * .exclusionFilters(List.of("exclusionFilters"))
+ * .inclusionFilters(List.of("inclusionFilters"))
+ * .scope("scope")
+ * .build())
+ * .build())
  * .build())
  * .knowledgeBaseId("knowledgeBaseId")
  * .name("name")
@@ -46,6 +136,43 @@ import kotlin.jvm.JvmName
  * .maxTokens(123)
  * .overlapPercentage(123)
  * .build())
+ * .hierarchicalChunkingConfiguration(HierarchicalChunkingConfigurationProperty.builder()
+ * .levelConfigurations(List.of(HierarchicalChunkingLevelConfigurationProperty.builder()
+ * .maxTokens(123)
+ * .build()))
+ * .overlapTokens(123)
+ * .build())
+ * .semanticChunkingConfiguration(SemanticChunkingConfigurationProperty.builder()
+ * .breakpointPercentileThreshold(123)
+ * .bufferSize(123)
+ * .maxTokens(123)
+ * .build())
+ * .build())
+ * .customTransformationConfiguration(CustomTransformationConfigurationProperty.builder()
+ * .intermediateStorage(IntermediateStorageProperty.builder()
+ * .s3Location(S3LocationProperty.builder()
+ * .uri("uri")
+ * .build())
+ * .build())
+ * .transformations(List.of(TransformationProperty.builder()
+ * .stepToApply("stepToApply")
+ * .transformationFunction(TransformationFunctionProperty.builder()
+ * .transformationLambdaConfiguration(TransformationLambdaConfigurationProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .build())
+ * .build())
+ * .build()))
+ * .build())
+ * .parsingConfiguration(ParsingConfigurationProperty.builder()
+ * .parsingStrategy("parsingStrategy")
+ * // the properties below are optional
+ * .bedrockFoundationModelConfiguration(BedrockFoundationModelConfigurationProperty.builder()
+ * .modelArn("modelArn")
+ * // the properties below are optional
+ * .parsingPrompt(ParsingPromptProperty.builder()
+ * .parsingPromptText("parsingPromptText")
+ * .build())
+ * .build())
  * .build())
  * .build())
  * .build();
@@ -55,14 +182,14 @@ import kotlin.jvm.JvmName
  */
 public interface CfnDataSourceProps {
   /**
-   * The data deletion policy for a data source.
+   * The data deletion policy for the data source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-datasource.html#cfn-bedrock-datasource-datadeletionpolicy)
    */
   public fun dataDeletionPolicy(): String? = unwrap(this).getDataDeletionPolicy()
 
   /**
-   * Contains details about how the data source is stored.
+   * The connection configuration for the data source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-datasource.html#cfn-bedrock-datasource-datasourceconfiguration)
    */
@@ -110,23 +237,23 @@ public interface CfnDataSourceProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param dataDeletionPolicy The data deletion policy for a data source.
+     * @param dataDeletionPolicy The data deletion policy for the data source.
      */
     public fun dataDeletionPolicy(dataDeletionPolicy: String)
 
     /**
-     * @param dataSourceConfiguration Contains details about how the data source is stored. 
+     * @param dataSourceConfiguration The connection configuration for the data source. 
      */
     public fun dataSourceConfiguration(dataSourceConfiguration: IResolvable)
 
     /**
-     * @param dataSourceConfiguration Contains details about how the data source is stored. 
+     * @param dataSourceConfiguration The connection configuration for the data source. 
      */
     public
         fun dataSourceConfiguration(dataSourceConfiguration: CfnDataSource.DataSourceConfigurationProperty)
 
     /**
-     * @param dataSourceConfiguration Contains details about how the data source is stored. 
+     * @param dataSourceConfiguration The connection configuration for the data source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9a4c1c768982411da1bad8b5e946ce39b5959c643170f2361795c4a5af2844e4")
@@ -199,21 +326,21 @@ public interface CfnDataSourceProps {
         software.amazon.awscdk.services.bedrock.CfnDataSourceProps.builder()
 
     /**
-     * @param dataDeletionPolicy The data deletion policy for a data source.
+     * @param dataDeletionPolicy The data deletion policy for the data source.
      */
     override fun dataDeletionPolicy(dataDeletionPolicy: String) {
       cdkBuilder.dataDeletionPolicy(dataDeletionPolicy)
     }
 
     /**
-     * @param dataSourceConfiguration Contains details about how the data source is stored. 
+     * @param dataSourceConfiguration The connection configuration for the data source. 
      */
     override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
       cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param dataSourceConfiguration Contains details about how the data source is stored. 
+     * @param dataSourceConfiguration The connection configuration for the data source. 
      */
     override
         fun dataSourceConfiguration(dataSourceConfiguration: CfnDataSource.DataSourceConfigurationProperty) {
@@ -221,7 +348,7 @@ public interface CfnDataSourceProps {
     }
 
     /**
-     * @param dataSourceConfiguration Contains details about how the data source is stored. 
+     * @param dataSourceConfiguration The connection configuration for the data source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9a4c1c768982411da1bad8b5e946ce39b5959c643170f2361795c4a5af2844e4")
@@ -314,16 +441,17 @@ public interface CfnDataSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.bedrock.CfnDataSourceProps,
-  ) : CdkObject(cdkObject), CfnDataSourceProps {
+  ) : CdkObject(cdkObject),
+      CfnDataSourceProps {
     /**
-     * The data deletion policy for a data source.
+     * The data deletion policy for the data source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-datasource.html#cfn-bedrock-datasource-datadeletionpolicy)
      */
     override fun dataDeletionPolicy(): String? = unwrap(this).getDataDeletionPolicy()
 
     /**
-     * Contains details about how the data source is stored.
+     * The connection configuration for the data source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-datasource.html#cfn-bedrock-datasource-datasourceconfiguration)
      */

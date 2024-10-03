@@ -27,6 +27,15 @@ import kotlin.jvm.JvmName
  * .coreNetworkId("coreNetworkId")
  * .vpnConnectionArn("vpnConnectionArn")
  * // the properties below are optional
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
  * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
  * .attachmentPolicyRuleNumber(123)
  * .segmentName("segmentName")
@@ -53,6 +62,21 @@ public interface CfnSiteToSiteVpnAttachmentProps {
   public fun coreNetworkId(): String
 
   /**
+   * The name of the network function group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-networkfunctiongroupname)
+   */
+  public fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+  /**
+   * Describes proposed changes to a network function group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange)
+   */
+  public fun proposedNetworkFunctionGroupChange(): Any? =
+      unwrap(this).getProposedNetworkFunctionGroupChange()
+
+  /**
    * Describes a proposed segment change.
    *
    * In some cases, the segment change must first be evaluated and accepted.
@@ -62,7 +86,7 @@ public interface CfnSiteToSiteVpnAttachmentProps {
   public fun proposedSegmentChange(): Any? = unwrap(this).getProposedSegmentChange()
 
   /**
-   * Tags for the attachment.
+   * The tags associated with the Site-to-Site VPN attachment.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-tags)
    */
@@ -87,6 +111,33 @@ public interface CfnSiteToSiteVpnAttachmentProps {
     public fun coreNetworkId(coreNetworkId: String)
 
     /**
+     * @param networkFunctionGroupName The name of the network function group.
+     */
+    public fun networkFunctionGroupName(networkFunctionGroupName: String)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    public fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty)
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("fba964619265a75ba81bc3ce36b7cb03793468be066789304a2a05d55d8f25ab")
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit)
+
+    /**
      * @param proposedSegmentChange Describes a proposed segment change.
      * In some cases, the segment change must first be evaluated and accepted.
      */
@@ -109,12 +160,12 @@ public interface CfnSiteToSiteVpnAttachmentProps {
         fun proposedSegmentChange(proposedSegmentChange: CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty.Builder.() -> Unit)
 
     /**
-     * @param tags Tags for the attachment.
+     * @param tags The tags associated with the Site-to-Site VPN attachment.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags Tags for the attachment.
+     * @param tags The tags associated with the Site-to-Site VPN attachment.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -136,6 +187,42 @@ public interface CfnSiteToSiteVpnAttachmentProps {
     override fun coreNetworkId(coreNetworkId: String) {
       cdkBuilder.coreNetworkId(coreNetworkId)
     }
+
+    /**
+     * @param networkFunctionGroupName The name of the network function group.
+     */
+    override fun networkFunctionGroupName(networkFunctionGroupName: String) {
+      cdkBuilder.networkFunctionGroupName(networkFunctionGroupName)
+    }
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("fba964619265a75ba81bc3ce36b7cb03793468be066789304a2a05d55d8f25ab")
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit):
+        Unit =
+        proposedNetworkFunctionGroupChange(CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty(proposedNetworkFunctionGroupChange))
 
     /**
      * @param proposedSegmentChange Describes a proposed segment change.
@@ -166,14 +253,14 @@ public interface CfnSiteToSiteVpnAttachmentProps {
         proposedSegmentChange(CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty(proposedSegmentChange))
 
     /**
-     * @param tags Tags for the attachment.
+     * @param tags The tags associated with the Site-to-Site VPN attachment.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags Tags for the attachment.
+     * @param tags The tags associated with the Site-to-Site VPN attachment.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -191,13 +278,29 @@ public interface CfnSiteToSiteVpnAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachmentProps,
-  ) : CdkObject(cdkObject), CfnSiteToSiteVpnAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnSiteToSiteVpnAttachmentProps {
     /**
      * The ID of a core network where you're creating a site-to-site VPN attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-corenetworkid)
      */
     override fun coreNetworkId(): String = unwrap(this).getCoreNetworkId()
+
+    /**
+     * The name of the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-networkfunctiongroupname)
+     */
+    override fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange)
+     */
+    override fun proposedNetworkFunctionGroupChange(): Any? =
+        unwrap(this).getProposedNetworkFunctionGroupChange()
 
     /**
      * Describes a proposed segment change.
@@ -209,7 +312,7 @@ public interface CfnSiteToSiteVpnAttachmentProps {
     override fun proposedSegmentChange(): Any? = unwrap(this).getProposedSegmentChange()
 
     /**
-     * Tags for the attachment.
+     * The tags associated with the Site-to-Site VPN attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-tags)
      */

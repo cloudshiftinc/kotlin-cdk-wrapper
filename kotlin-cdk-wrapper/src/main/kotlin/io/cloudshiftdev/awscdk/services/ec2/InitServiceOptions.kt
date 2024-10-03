@@ -158,7 +158,8 @@ public interface InitServiceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.InitServiceOptions,
-  ) : CdkObject(cdkObject), InitServiceOptions {
+  ) : CdkObject(cdkObject),
+      InitServiceOptions {
     /**
      * Enable or disable this service.
      *

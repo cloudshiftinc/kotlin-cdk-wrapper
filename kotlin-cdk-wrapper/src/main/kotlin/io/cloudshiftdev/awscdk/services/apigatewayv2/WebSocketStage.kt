@@ -22,27 +22,23 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * ```
  * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration;
- * Function connectHandler;
- * Function disconnectHandler;
- * Function defaultHandler;
- * WebSocketApi webSocketApi = WebSocketApi.Builder.create(this, "mywsapi")
- * .connectRouteOptions(WebSocketRouteOptions.builder().integration(new
- * WebSocketLambdaIntegration("ConnectIntegration", connectHandler)).build())
- * .disconnectRouteOptions(WebSocketRouteOptions.builder().integration(new
- * WebSocketLambdaIntegration("DisconnectIntegration", disconnectHandler)).build())
- * .defaultRouteOptions(WebSocketRouteOptions.builder().integration(new
- * WebSocketLambdaIntegration("DefaultIntegration", defaultHandler)).build())
- * .build();
+ * Function messageHandler;
+ * WebSocketApi webSocketApi = new WebSocketApi(this, "mywsapi");
  * WebSocketStage.Builder.create(this, "mystage")
  * .webSocketApi(webSocketApi)
  * .stageName("dev")
  * .autoDeploy(true)
  * .build();
+ * webSocketApi.addRoute("sendMessage", WebSocketRouteOptions.builder()
+ * .integration(new WebSocketLambdaIntegration("SendMessageIntegration", messageHandler))
+ * .build());
  * ```
  */
 public open class WebSocketStage(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStage,
-) : Resource(cdkObject), IWebSocketStage, IStage {
+) : Resource(cdkObject),
+    IWebSocketStage,
+    IStage {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -134,6 +130,15 @@ public open class WebSocketStage(
     public fun autoDeploy(autoDeploy: Boolean)
 
     /**
+     * The description for the API stage.
+     *
+     * Default: - no description
+     *
+     * @param description The description for the API stage. 
+     */
+    public fun description(description: String)
+
+    /**
      * The options for custom domain and api mapping.
      *
      * Default: - no custom domain and api mapping configuration
@@ -204,6 +209,17 @@ public open class WebSocketStage(
      */
     override fun autoDeploy(autoDeploy: Boolean) {
       cdkBuilder.autoDeploy(autoDeploy)
+    }
+
+    /**
+     * The description for the API stage.
+     *
+     * Default: - no description
+     *
+     * @param description The description for the API stage. 
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
     }
 
     /**

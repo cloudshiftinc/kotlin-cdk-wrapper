@@ -23,7 +23,8 @@ import kotlin.jvm.JvmName
  */
 public open class HostedRotation(
   cdkObject: software.amazon.awscdk.services.secretsmanager.HostedRotation,
-) : CdkObject(cdkObject), IConnectable {
+) : CdkObject(cdkObject),
+    IConnectable {
   /**
    * Binds this hosted rotation to a secret.
    *

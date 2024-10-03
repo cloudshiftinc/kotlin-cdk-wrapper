@@ -334,7 +334,8 @@ public interface CfnStreamProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kinesis.CfnStreamProps,
-  ) : CdkObject(cdkObject), CfnStreamProps {
+  ) : CdkObject(cdkObject),
+      CfnStreamProps {
     /**
      * The name of the Kinesis stream.
      *

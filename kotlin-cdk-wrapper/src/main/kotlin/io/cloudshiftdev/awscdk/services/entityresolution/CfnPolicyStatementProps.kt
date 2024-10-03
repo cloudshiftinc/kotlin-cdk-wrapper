@@ -210,7 +210,8 @@ public interface CfnPolicyStatementProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.entityresolution.CfnPolicyStatementProps,
-  ) : CdkObject(cdkObject), CfnPolicyStatementProps {
+  ) : CdkObject(cdkObject),
+      CfnPolicyStatementProps {
     /**
      * The action that the principal can use on the resource.
      *

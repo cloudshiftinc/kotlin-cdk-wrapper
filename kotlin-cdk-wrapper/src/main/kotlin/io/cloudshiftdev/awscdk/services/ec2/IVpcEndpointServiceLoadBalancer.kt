@@ -17,7 +17,8 @@ public interface IVpcEndpointServiceLoadBalancer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IVpcEndpointServiceLoadBalancer,
-  ) : CdkObject(cdkObject), IVpcEndpointServiceLoadBalancer {
+  ) : CdkObject(cdkObject),
+      IVpcEndpointServiceLoadBalancer {
     /**
      * The ARN of the load balancer that hosts the VPC Endpoint Service.
      */

@@ -76,7 +76,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFlowSource(
   cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -483,8 +484,6 @@ public open class CfnFlowSource(
      *
      * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
      *
-     * Default: - 2000
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxlatency)
      * @param maxLatency The maximum latency in milliseconds. 
      */
@@ -497,8 +496,6 @@ public open class CfnFlowSource(
      * output represents the minimal potential latency of that connection. The latency of the stream is
      * set to the highest number between the sender’s minimum latency and the receiver’s minimum
      * latency.
-     *
-     * Default: - 2000
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-minlatency)
      * @param minLatency The minimum latency in milliseconds for SRT-based streams. 
@@ -735,8 +732,6 @@ public open class CfnFlowSource(
      *
      * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
      *
-     * Default: - 2000
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxlatency)
      * @param maxLatency The maximum latency in milliseconds. 
      */
@@ -751,8 +746,6 @@ public open class CfnFlowSource(
      * output represents the minimal potential latency of that connection. The latency of the stream is
      * set to the highest number between the sender’s minimum latency and the receiver’s minimum
      * latency.
-     *
-     * Default: - 2000
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-minlatency)
      * @param minLatency The minimum latency in milliseconds for SRT-based streams. 
@@ -1162,7 +1155,8 @@ public open class CfnFlowSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource.EncryptionProperty,
-    ) : CdkObject(cdkObject), EncryptionProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionProperty {
       /**
        * The type of algorithm that is used for static key encryption (such as aes128, aes192, or
        * aes256).
@@ -1382,7 +1376,8 @@ public open class CfnFlowSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource.GatewayBridgeSourceProperty,
-    ) : CdkObject(cdkObject), GatewayBridgeSourceProperty {
+    ) : CdkObject(cdkObject),
+        GatewayBridgeSourceProperty {
       /**
        * The ARN of the bridge feeding this flow.
        *
@@ -1472,7 +1467,8 @@ public open class CfnFlowSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty,
-    ) : CdkObject(cdkObject), VpcInterfaceAttachmentProperty {
+    ) : CdkObject(cdkObject),
+        VpcInterfaceAttachmentProperty {
       /**
        * The name of the VPC interface that you want to send your output to.
        *

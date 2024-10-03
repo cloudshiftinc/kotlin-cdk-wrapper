@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.lambda
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -9,6 +10,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 
 /**
@@ -29,6 +31,10 @@ import kotlin.jvm.JvmName
  * .untrustedArtifactOnDeployment("untrustedArtifactOnDeployment")
  * .build())
  * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -56,6 +62,13 @@ public interface CfnCodeSigningConfigProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * A list of tags to apply to CodeSigningConfig resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * A builder for [CfnCodeSigningConfigProps]
@@ -106,6 +119,16 @@ public interface CfnCodeSigningConfigProps {
      * @param description Code signing configuration description.
      */
     public fun description(description: String)
+
+    /**
+     * @param tags A list of tags to apply to CodeSigningConfig resource.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags A list of tags to apply to CodeSigningConfig resource.
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl : Builder {
@@ -171,13 +194,26 @@ public interface CfnCodeSigningConfigProps {
       cdkBuilder.description(description)
     }
 
+    /**
+     * @param tags A list of tags to apply to CodeSigningConfig resource.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags A list of tags to apply to CodeSigningConfig resource.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.lambda.CfnCodeSigningConfigProps =
         cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfigProps,
-  ) : CdkObject(cdkObject), CfnCodeSigningConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnCodeSigningConfigProps {
     /**
      * List of allowed publishers.
      *
@@ -199,6 +235,13 @@ public interface CfnCodeSigningConfigProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * A list of tags to apply to CodeSigningConfig resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 
   public companion object {

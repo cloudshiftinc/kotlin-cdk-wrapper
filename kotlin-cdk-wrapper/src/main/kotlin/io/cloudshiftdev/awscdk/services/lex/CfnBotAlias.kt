@@ -87,7 +87,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnBotAlias(
   cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -721,7 +722,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty,
-    ) : CdkObject(cdkObject), AudioLogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        AudioLogDestinationProperty {
       /**
        * The S3 bucket location where audio logs are stored.
        *
@@ -875,7 +877,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogSettingProperty,
-    ) : CdkObject(cdkObject), AudioLogSettingProperty {
+    ) : CdkObject(cdkObject),
+        AudioLogSettingProperty {
       /**
        * The location of audio log files collected when conversation logging is enabled for a bot.
        *
@@ -1025,7 +1028,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty,
-    ) : CdkObject(cdkObject), BotAliasLocaleSettingsItemProperty {
+    ) : CdkObject(cdkObject),
+        BotAliasLocaleSettingsItemProperty {
       /**
        * Specifies settings that are unique to a locale.
        *
@@ -1196,7 +1200,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsProperty,
-    ) : CdkObject(cdkObject), BotAliasLocaleSettingsProperty {
+    ) : CdkObject(cdkObject),
+        BotAliasLocaleSettingsProperty {
       /**
        * Specifies the Lambda function that should be used in the locale.
        *
@@ -1314,7 +1319,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogGroupLogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchLogGroupLogDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of the log group where text and metadata logs are delivered.
        *
@@ -1441,7 +1447,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.CodeHookSpecificationProperty,
-    ) : CdkObject(cdkObject), CodeHookSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        CodeHookSpecificationProperty {
       /**
        * Specifies a Lambda function that verifies requests to a bot or fulfills the user's request
        * to a bot.
@@ -1609,7 +1616,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty,
-    ) : CdkObject(cdkObject), ConversationLogSettingsProperty {
+    ) : CdkObject(cdkObject),
+        ConversationLogSettingsProperty {
       /**
        * The Amazon S3 settings for logging audio to an S3 bucket.
        *
@@ -1720,7 +1728,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.LambdaCodeHookProperty,
-    ) : CdkObject(cdkObject), LambdaCodeHookProperty {
+    ) : CdkObject(cdkObject),
+        LambdaCodeHookProperty {
       /**
        * The version of the request-response that you want Amazon Lex to use to invoke your Lambda
        * function.
@@ -1856,7 +1865,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.S3BucketLogDestinationProperty,
-    ) : CdkObject(cdkObject), S3BucketLogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        S3BucketLogDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key for encrypting
        * audio log files stored in an Amazon S3 bucket.
@@ -1971,7 +1981,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty,
-    ) : CdkObject(cdkObject), SentimentAnalysisSettingsProperty {
+    ) : CdkObject(cdkObject),
+        SentimentAnalysisSettingsProperty {
       /**
        * Sets whether Amazon Lex uses Amazon Comprehend to detect the sentiment of user utterances.
        *
@@ -2089,7 +2100,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.TextLogDestinationProperty,
-    ) : CdkObject(cdkObject), TextLogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        TextLogDestinationProperty {
       /**
        * Defines the Amazon CloudWatch Logs log group where text and metadata logs are delivered.
        *
@@ -2239,7 +2251,8 @@ public open class CfnBotAlias(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.TextLogSettingProperty,
-    ) : CdkObject(cdkObject), TextLogSettingProperty {
+    ) : CdkObject(cdkObject),
+        TextLogSettingProperty {
       /**
        * Defines the Amazon CloudWatch Logs destination log group for conversation text logs.
        *

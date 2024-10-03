@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class VpcLink(
   cdkObject: software.amazon.awscdk.services.apigateway.VpcLink,
-) : Resource(cdkObject), IVpcLink {
+) : Resource(cdkObject),
+    IVpcLink {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.apigateway.VpcLink(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

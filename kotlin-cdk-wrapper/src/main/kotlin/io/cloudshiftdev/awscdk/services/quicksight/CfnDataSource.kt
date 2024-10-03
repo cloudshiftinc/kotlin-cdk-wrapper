@@ -32,6 +32,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.quicksight.*;
  * CfnDataSource cfnDataSource = CfnDataSource.Builder.create(this, "MyCfnDataSource")
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
  * .alternateDataSourceParameters(List.of(DataSourceParametersProperty.builder()
  * .amazonElasticsearchParameters(AmazonElasticsearchParametersProperty.builder()
  * .domain("domain")
@@ -92,6 +95,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .clusterId("clusterId")
  * .host("host")
+ * .iamParameters(RedshiftIAMParametersProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .autoCreateDatabaseUser(false)
+ * .databaseGroups(List.of("databaseGroups"))
+ * .databaseUser("databaseUser")
+ * .build())
+ * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+ * .enableIdentityPropagation(false)
+ * .build())
  * .port(123)
  * .build())
  * .s3Parameters(S3ParametersProperty.builder()
@@ -201,6 +214,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .clusterId("clusterId")
  * .host("host")
+ * .iamParameters(RedshiftIAMParametersProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .autoCreateDatabaseUser(false)
+ * .databaseGroups(List.of("databaseGroups"))
+ * .databaseUser("databaseUser")
+ * .build())
+ * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+ * .enableIdentityPropagation(false)
+ * .build())
  * .port(123)
  * .build())
  * .s3Parameters(S3ParametersProperty.builder()
@@ -307,6 +330,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .clusterId("clusterId")
  * .host("host")
+ * .iamParameters(RedshiftIAMParametersProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .autoCreateDatabaseUser(false)
+ * .databaseGroups(List.of("databaseGroups"))
+ * .databaseUser("databaseUser")
+ * .build())
+ * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+ * .enableIdentityPropagation(false)
+ * .build())
  * .port(123)
  * .build())
  * .s3Parameters(S3ParametersProperty.builder()
@@ -353,10 +386,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .message("message")
  * .type("type")
  * .build())
- * .name("name")
  * .permissions(List.of(ResourcePermissionProperty.builder()
  * .actions(List.of("actions"))
  * .principal("principal")
+ * // the properties below are optional
+ * .resource("resource")
  * .build()))
  * .sslProperties(SslPropertiesProperty.builder()
  * .disableSsl(false)
@@ -365,7 +399,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .key("key")
  * .value("value")
  * .build()))
- * .type("type")
  * .vpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
  * .vpcConnectionArn("vpcConnectionArn")
  * .build())
@@ -376,12 +409,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataSource(
   cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
-  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.quicksight.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
-      id)
-  )
-
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -565,7 +595,7 @@ public open class CfnDataSource(
   /**
    * A display name for the data source.
    */
-  public open fun name(): String? = unwrap(this).getName()
+  public open fun name(): String = unwrap(this).getName()
 
   /**
    * A display name for the data source.
@@ -657,7 +687,7 @@ public open class CfnDataSource(
    *
    * To return a list of all data sources, use `ListDataSources` .
    */
-  public open fun type(): String? = unwrap(this).getType()
+  public open fun type(): String = unwrap(this).getType()
 
   /**
    * The type of the data source.
@@ -1420,7 +1450,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty,
-    ) : CdkObject(cdkObject), AmazonElasticsearchParametersProperty {
+    ) : CdkObject(cdkObject),
+        AmazonElasticsearchParametersProperty {
       /**
        * The OpenSearch domain.
        *
@@ -1504,7 +1535,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty,
-    ) : CdkObject(cdkObject), AmazonOpenSearchParametersProperty {
+    ) : CdkObject(cdkObject),
+        AmazonOpenSearchParametersProperty {
       /**
        * The OpenSearch domain.
        *
@@ -1623,7 +1655,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty,
-    ) : CdkObject(cdkObject), AthenaParametersProperty {
+    ) : CdkObject(cdkObject),
+        AthenaParametersProperty {
       /**
        * Use the `RoleArn` structure to override an account-wide role for a specific Athena data
        * source.
@@ -1699,6 +1732,8 @@ public open class CfnDataSource(
     /**
      * Port.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-auroraparameters.html#cfn-quicksight-datasource-auroraparameters-port)
      */
     public fun port(): Number
@@ -1758,7 +1793,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraParametersProperty,
-    ) : CdkObject(cdkObject), AuroraParametersProperty {
+    ) : CdkObject(cdkObject),
+        AuroraParametersProperty {
       /**
        * Database.
        *
@@ -1775,6 +1811,8 @@ public open class CfnDataSource(
 
       /**
        * Port.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-auroraparameters.html#cfn-quicksight-datasource-auroraparameters-port)
        */
@@ -1836,6 +1874,8 @@ public open class CfnDataSource(
     /**
      * The port that Amazon Aurora PostgreSQL is listening on.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-aurorapostgresqlparameters.html#cfn-quicksight-datasource-aurorapostgresqlparameters-port)
      */
     public fun port(): Number
@@ -1895,7 +1935,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraPostgreSqlParametersProperty,
-    ) : CdkObject(cdkObject), AuroraPostgreSqlParametersProperty {
+    ) : CdkObject(cdkObject),
+        AuroraPostgreSqlParametersProperty {
       /**
        * The Amazon Aurora PostgreSQL database to connect to.
        *
@@ -1912,6 +1953,8 @@ public open class CfnDataSource(
 
       /**
        * The port that Amazon Aurora PostgreSQL is listening on.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-aurorapostgresqlparameters.html#cfn-quicksight-datasource-aurorapostgresqlparameters-port)
        */
@@ -2010,6 +2053,16 @@ public open class CfnDataSource(
    * // the properties below are optional
    * .clusterId("clusterId")
    * .host("host")
+   * .iamParameters(RedshiftIAMParametersProperty.builder()
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .autoCreateDatabaseUser(false)
+   * .databaseGroups(List.of("databaseGroups"))
+   * .databaseUser("databaseUser")
+   * .build())
+   * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+   * .enableIdentityPropagation(false)
+   * .build())
    * .port(123)
    * .build())
    * .s3Parameters(S3ParametersProperty.builder()
@@ -2213,7 +2266,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.CredentialPairProperty,
-    ) : CdkObject(cdkObject), CredentialPairProperty {
+    ) : CdkObject(cdkObject),
+        CredentialPairProperty {
       /**
        * A set of alternate data source parameters that you want to share for these credentials.
        *
@@ -2342,6 +2396,16 @@ public open class CfnDataSource(
    * // the properties below are optional
    * .clusterId("clusterId")
    * .host("host")
+   * .iamParameters(RedshiftIAMParametersProperty.builder()
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .autoCreateDatabaseUser(false)
+   * .databaseGroups(List.of("databaseGroups"))
+   * .databaseUser("databaseUser")
+   * .build())
+   * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+   * .enableIdentityPropagation(false)
+   * .build())
    * .port(123)
    * .build())
    * .s3Parameters(S3ParametersProperty.builder()
@@ -2530,7 +2594,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty,
-    ) : CdkObject(cdkObject), DataSourceCredentialsProperty {
+    ) : CdkObject(cdkObject),
+        DataSourceCredentialsProperty {
       /**
        * The Amazon Resource Name (ARN) of a data source that has the credential pair that you want
        * to use.
@@ -2655,7 +2720,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty,
-    ) : CdkObject(cdkObject), DataSourceErrorInfoProperty {
+    ) : CdkObject(cdkObject),
+        DataSourceErrorInfoProperty {
       /**
        * Error message.
        *
@@ -2762,6 +2828,16 @@ public open class CfnDataSource(
    * // the properties below are optional
    * .clusterId("clusterId")
    * .host("host")
+   * .iamParameters(RedshiftIAMParametersProperty.builder()
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .autoCreateDatabaseUser(false)
+   * .databaseGroups(List.of("databaseGroups"))
+   * .databaseUser("databaseUser")
+   * .build())
+   * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+   * .enableIdentityPropagation(false)
+   * .build())
    * .port(123)
    * .build())
    * .s3Parameters(S3ParametersProperty.builder()
@@ -3791,7 +3867,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceParametersProperty,
-    ) : CdkObject(cdkObject), DataSourceParametersProperty {
+    ) : CdkObject(cdkObject),
+        DataSourceParametersProperty {
       /**
        * The parameters for OpenSearch.
        *
@@ -3982,6 +4059,8 @@ public open class CfnDataSource(
     /**
      * The port for the Databricks data source.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-port)
      */
     public fun port(): Number
@@ -4048,7 +4127,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty,
-    ) : CdkObject(cdkObject), DatabricksParametersProperty {
+    ) : CdkObject(cdkObject),
+        DatabricksParametersProperty {
       /**
        * The host name of the Databricks data source.
        *
@@ -4058,6 +4138,8 @@ public open class CfnDataSource(
 
       /**
        * The port for the Databricks data source.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html#cfn-quicksight-datasource-databricksparameters-port)
        */
@@ -4086,6 +4168,107 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty
+    }
+  }
+
+  /**
+   * The parameters for an IAM Identity Center configuration.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * IdentityCenterConfigurationProperty identityCenterConfigurationProperty =
+   * IdentityCenterConfigurationProperty.builder()
+   * .enableIdentityPropagation(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-identitycenterconfiguration.html)
+   */
+  public interface IdentityCenterConfigurationProperty {
+    /**
+     * A Boolean option that controls whether Trusted Identity Propagation should be used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-identitycenterconfiguration.html#cfn-quicksight-datasource-identitycenterconfiguration-enableidentitypropagation)
+     */
+    public fun enableIdentityPropagation(): Any? = unwrap(this).getEnableIdentityPropagation()
+
+    /**
+     * A builder for [IdentityCenterConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enableIdentityPropagation A Boolean option that controls whether Trusted Identity
+       * Propagation should be used.
+       */
+      public fun enableIdentityPropagation(enableIdentityPropagation: Boolean)
+
+      /**
+       * @param enableIdentityPropagation A Boolean option that controls whether Trusted Identity
+       * Propagation should be used.
+       */
+      public fun enableIdentityPropagation(enableIdentityPropagation: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.IdentityCenterConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.IdentityCenterConfigurationProperty.builder()
+
+      /**
+       * @param enableIdentityPropagation A Boolean option that controls whether Trusted Identity
+       * Propagation should be used.
+       */
+      override fun enableIdentityPropagation(enableIdentityPropagation: Boolean) {
+        cdkBuilder.enableIdentityPropagation(enableIdentityPropagation)
+      }
+
+      /**
+       * @param enableIdentityPropagation A Boolean option that controls whether Trusted Identity
+       * Propagation should be used.
+       */
+      override fun enableIdentityPropagation(enableIdentityPropagation: IResolvable) {
+        cdkBuilder.enableIdentityPropagation(enableIdentityPropagation.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.IdentityCenterConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.IdentityCenterConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        IdentityCenterConfigurationProperty {
+      /**
+       * A Boolean option that controls whether Trusted Identity Propagation should be used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-identitycenterconfiguration.html#cfn-quicksight-datasource-identitycenterconfiguration-enableidentitypropagation)
+       */
+      override fun enableIdentityPropagation(): Any? = unwrap(this).getEnableIdentityPropagation()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          IdentityCenterConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.IdentityCenterConfigurationProperty):
+          IdentityCenterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdentityCenterConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IdentityCenterConfigurationProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.IdentityCenterConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.IdentityCenterConfigurationProperty
     }
   }
 
@@ -4165,7 +4348,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty,
-    ) : CdkObject(cdkObject), ManifestFileLocationProperty {
+    ) : CdkObject(cdkObject),
+        ManifestFileLocationProperty {
       /**
        * Amazon S3 bucket.
        *
@@ -4235,6 +4419,8 @@ public open class CfnDataSource(
     /**
      * Port.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-port)
      */
     public fun port(): Number
@@ -4294,7 +4480,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty,
-    ) : CdkObject(cdkObject), MariaDbParametersProperty {
+    ) : CdkObject(cdkObject),
+        MariaDbParametersProperty {
       /**
        * Database.
        *
@@ -4311,6 +4498,8 @@ public open class CfnDataSource(
 
       /**
        * Port.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mariadbparameters.html#cfn-quicksight-datasource-mariadbparameters-port)
        */
@@ -4371,6 +4560,8 @@ public open class CfnDataSource(
     /**
      * Port.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-port)
      */
     public fun port(): Number
@@ -4429,7 +4620,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty,
-    ) : CdkObject(cdkObject), MySqlParametersProperty {
+    ) : CdkObject(cdkObject),
+        MySqlParametersProperty {
       /**
        * Database.
        *
@@ -4446,6 +4638,8 @@ public open class CfnDataSource(
 
       /**
        * Port.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-mysqlparameters.html#cfn-quicksight-datasource-mysqlparameters-port)
        */
@@ -4506,6 +4700,8 @@ public open class CfnDataSource(
     /**
      * Port.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-port)
      */
     public fun port(): Number
@@ -4565,7 +4761,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty,
-    ) : CdkObject(cdkObject), OracleParametersProperty {
+    ) : CdkObject(cdkObject),
+        OracleParametersProperty {
       /**
        * Database.
        *
@@ -4582,6 +4779,8 @@ public open class CfnDataSource(
 
       /**
        * Port.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html#cfn-quicksight-datasource-oracleparameters-port)
        */
@@ -4643,6 +4842,8 @@ public open class CfnDataSource(
     /**
      * Port.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-port)
      */
     public fun port(): Number
@@ -4702,7 +4903,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty,
-    ) : CdkObject(cdkObject), PostgreSqlParametersProperty {
+    ) : CdkObject(cdkObject),
+        PostgreSqlParametersProperty {
       /**
        * Database.
        *
@@ -4719,6 +4921,8 @@ public open class CfnDataSource(
 
       /**
        * Port.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html#cfn-quicksight-datasource-postgresqlparameters-port)
        */
@@ -4779,6 +4983,8 @@ public open class CfnDataSource(
     /**
      * Port.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-port)
      */
     public fun port(): Number
@@ -4838,7 +5044,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty,
-    ) : CdkObject(cdkObject), PrestoParametersProperty {
+    ) : CdkObject(cdkObject),
+        PrestoParametersProperty {
       /**
        * Catalog.
        *
@@ -4855,6 +5062,8 @@ public open class CfnDataSource(
 
       /**
        * Port.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html#cfn-quicksight-datasource-prestoparameters-port)
        */
@@ -4953,7 +5162,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty,
-    ) : CdkObject(cdkObject), RdsParametersProperty {
+    ) : CdkObject(cdkObject),
+        RdsParametersProperty {
       /**
        * Database.
        *
@@ -4988,6 +5198,291 @@ public open class CfnDataSource(
   }
 
   /**
+   * A structure that grants Amazon QuickSight access to your cluster and make a call to the
+   * `redshift:GetClusterCredentials` API.
+   *
+   * For more information on the `redshift:GetClusterCredentials` API, see
+   * [`GetClusterCredentials`](https://docs.aws.amazon.com/redshift/latest/APIReference/API_GetClusterCredentials.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * RedshiftIAMParametersProperty redshiftIAMParametersProperty =
+   * RedshiftIAMParametersProperty.builder()
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .autoCreateDatabaseUser(false)
+   * .databaseGroups(List.of("databaseGroups"))
+   * .databaseUser("databaseUser")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftiamparameters.html)
+   */
+  public interface RedshiftIAMParametersProperty {
+    /**
+     * Automatically creates a database user.
+     *
+     * If your database doesn't have a `DatabaseUser` , set this parameter to `True` . If there is
+     * no `DatabaseUser` , Amazon QuickSight can't connect to your cluster. The `RoleArn` that you use
+     * for this operation must grant access to `redshift:CreateClusterUser` to successfully create the
+     * user.
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftiamparameters.html#cfn-quicksight-datasource-redshiftiamparameters-autocreatedatabaseuser)
+     */
+    public fun autoCreateDatabaseUser(): Any? = unwrap(this).getAutoCreateDatabaseUser()
+
+    /**
+     * A list of groups whose permissions will be granted to Amazon QuickSight to access the
+     * cluster.
+     *
+     * These permissions are combined with the permissions granted to Amazon QuickSight by the
+     * `DatabaseUser` . If you choose to include this parameter, the `RoleArn` must grant access to
+     * `redshift:JoinGroup` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftiamparameters.html#cfn-quicksight-datasource-redshiftiamparameters-databasegroups)
+     */
+    public fun databaseGroups(): List<String> = unwrap(this).getDatabaseGroups() ?: emptyList()
+
+    /**
+     * The user whose permissions and group memberships will be used by Amazon QuickSight to access
+     * the cluster.
+     *
+     * If this user already exists in your database, Amazon QuickSight is granted the same
+     * permissions that the user has. If the user doesn't exist, set the value of
+     * `AutoCreateDatabaseUser` to `True` to create a new user with PUBLIC permissions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftiamparameters.html#cfn-quicksight-datasource-redshiftiamparameters-databaseuser)
+     */
+    public fun databaseUser(): String? = unwrap(this).getDatabaseUser()
+
+    /**
+     * Use the `RoleArn` structure to allow Amazon QuickSight to call
+     * `redshift:GetClusterCredentials` on your cluster.
+     *
+     * The calling principal must have `iam:PassRole` access to pass the role to Amazon QuickSight.
+     * The role's trust policy must allow the Amazon QuickSight service principal to assume the role.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftiamparameters.html#cfn-quicksight-datasource-redshiftiamparameters-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * A builder for [RedshiftIAMParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param autoCreateDatabaseUser Automatically creates a database user.
+       * If your database doesn't have a `DatabaseUser` , set this parameter to `True` . If there is
+       * no `DatabaseUser` , Amazon QuickSight can't connect to your cluster. The `RoleArn` that you
+       * use for this operation must grant access to `redshift:CreateClusterUser` to successfully
+       * create the user.
+       */
+      public fun autoCreateDatabaseUser(autoCreateDatabaseUser: Boolean)
+
+      /**
+       * @param autoCreateDatabaseUser Automatically creates a database user.
+       * If your database doesn't have a `DatabaseUser` , set this parameter to `True` . If there is
+       * no `DatabaseUser` , Amazon QuickSight can't connect to your cluster. The `RoleArn` that you
+       * use for this operation must grant access to `redshift:CreateClusterUser` to successfully
+       * create the user.
+       */
+      public fun autoCreateDatabaseUser(autoCreateDatabaseUser: IResolvable)
+
+      /**
+       * @param databaseGroups A list of groups whose permissions will be granted to Amazon
+       * QuickSight to access the cluster.
+       * These permissions are combined with the permissions granted to Amazon QuickSight by the
+       * `DatabaseUser` . If you choose to include this parameter, the `RoleArn` must grant access to
+       * `redshift:JoinGroup` .
+       */
+      public fun databaseGroups(databaseGroups: List<String>)
+
+      /**
+       * @param databaseGroups A list of groups whose permissions will be granted to Amazon
+       * QuickSight to access the cluster.
+       * These permissions are combined with the permissions granted to Amazon QuickSight by the
+       * `DatabaseUser` . If you choose to include this parameter, the `RoleArn` must grant access to
+       * `redshift:JoinGroup` .
+       */
+      public fun databaseGroups(vararg databaseGroups: String)
+
+      /**
+       * @param databaseUser The user whose permissions and group memberships will be used by Amazon
+       * QuickSight to access the cluster.
+       * If this user already exists in your database, Amazon QuickSight is granted the same
+       * permissions that the user has. If the user doesn't exist, set the value of
+       * `AutoCreateDatabaseUser` to `True` to create a new user with PUBLIC permissions.
+       */
+      public fun databaseUser(databaseUser: String)
+
+      /**
+       * @param roleArn Use the `RoleArn` structure to allow Amazon QuickSight to call
+       * `redshift:GetClusterCredentials` on your cluster. 
+       * The calling principal must have `iam:PassRole` access to pass the role to Amazon
+       * QuickSight. The role's trust policy must allow the Amazon QuickSight service principal to
+       * assume the role.
+       */
+      public fun roleArn(roleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftIAMParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftIAMParametersProperty.builder()
+
+      /**
+       * @param autoCreateDatabaseUser Automatically creates a database user.
+       * If your database doesn't have a `DatabaseUser` , set this parameter to `True` . If there is
+       * no `DatabaseUser` , Amazon QuickSight can't connect to your cluster. The `RoleArn` that you
+       * use for this operation must grant access to `redshift:CreateClusterUser` to successfully
+       * create the user.
+       */
+      override fun autoCreateDatabaseUser(autoCreateDatabaseUser: Boolean) {
+        cdkBuilder.autoCreateDatabaseUser(autoCreateDatabaseUser)
+      }
+
+      /**
+       * @param autoCreateDatabaseUser Automatically creates a database user.
+       * If your database doesn't have a `DatabaseUser` , set this parameter to `True` . If there is
+       * no `DatabaseUser` , Amazon QuickSight can't connect to your cluster. The `RoleArn` that you
+       * use for this operation must grant access to `redshift:CreateClusterUser` to successfully
+       * create the user.
+       */
+      override fun autoCreateDatabaseUser(autoCreateDatabaseUser: IResolvable) {
+        cdkBuilder.autoCreateDatabaseUser(autoCreateDatabaseUser.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param databaseGroups A list of groups whose permissions will be granted to Amazon
+       * QuickSight to access the cluster.
+       * These permissions are combined with the permissions granted to Amazon QuickSight by the
+       * `DatabaseUser` . If you choose to include this parameter, the `RoleArn` must grant access to
+       * `redshift:JoinGroup` .
+       */
+      override fun databaseGroups(databaseGroups: List<String>) {
+        cdkBuilder.databaseGroups(databaseGroups)
+      }
+
+      /**
+       * @param databaseGroups A list of groups whose permissions will be granted to Amazon
+       * QuickSight to access the cluster.
+       * These permissions are combined with the permissions granted to Amazon QuickSight by the
+       * `DatabaseUser` . If you choose to include this parameter, the `RoleArn` must grant access to
+       * `redshift:JoinGroup` .
+       */
+      override fun databaseGroups(vararg databaseGroups: String): Unit =
+          databaseGroups(databaseGroups.toList())
+
+      /**
+       * @param databaseUser The user whose permissions and group memberships will be used by Amazon
+       * QuickSight to access the cluster.
+       * If this user already exists in your database, Amazon QuickSight is granted the same
+       * permissions that the user has. If the user doesn't exist, set the value of
+       * `AutoCreateDatabaseUser` to `True` to create a new user with PUBLIC permissions.
+       */
+      override fun databaseUser(databaseUser: String) {
+        cdkBuilder.databaseUser(databaseUser)
+      }
+
+      /**
+       * @param roleArn Use the `RoleArn` structure to allow Amazon QuickSight to call
+       * `redshift:GetClusterCredentials` on your cluster. 
+       * The calling principal must have `iam:PassRole` access to pass the role to Amazon
+       * QuickSight. The role's trust policy must allow the Amazon QuickSight service principal to
+       * assume the role.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftIAMParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftIAMParametersProperty,
+    ) : CdkObject(cdkObject),
+        RedshiftIAMParametersProperty {
+      /**
+       * Automatically creates a database user.
+       *
+       * If your database doesn't have a `DatabaseUser` , set this parameter to `True` . If there is
+       * no `DatabaseUser` , Amazon QuickSight can't connect to your cluster. The `RoleArn` that you
+       * use for this operation must grant access to `redshift:CreateClusterUser` to successfully
+       * create the user.
+       *
+       * Default: - false
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftiamparameters.html#cfn-quicksight-datasource-redshiftiamparameters-autocreatedatabaseuser)
+       */
+      override fun autoCreateDatabaseUser(): Any? = unwrap(this).getAutoCreateDatabaseUser()
+
+      /**
+       * A list of groups whose permissions will be granted to Amazon QuickSight to access the
+       * cluster.
+       *
+       * These permissions are combined with the permissions granted to Amazon QuickSight by the
+       * `DatabaseUser` . If you choose to include this parameter, the `RoleArn` must grant access to
+       * `redshift:JoinGroup` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftiamparameters.html#cfn-quicksight-datasource-redshiftiamparameters-databasegroups)
+       */
+      override fun databaseGroups(): List<String> = unwrap(this).getDatabaseGroups() ?: emptyList()
+
+      /**
+       * The user whose permissions and group memberships will be used by Amazon QuickSight to
+       * access the cluster.
+       *
+       * If this user already exists in your database, Amazon QuickSight is granted the same
+       * permissions that the user has. If the user doesn't exist, set the value of
+       * `AutoCreateDatabaseUser` to `True` to create a new user with PUBLIC permissions.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftiamparameters.html#cfn-quicksight-datasource-redshiftiamparameters-databaseuser)
+       */
+      override fun databaseUser(): String? = unwrap(this).getDatabaseUser()
+
+      /**
+       * Use the `RoleArn` structure to allow Amazon QuickSight to call
+       * `redshift:GetClusterCredentials` on your cluster.
+       *
+       * The calling principal must have `iam:PassRole` access to pass the role to Amazon
+       * QuickSight. The role's trust policy must allow the Amazon QuickSight service principal to
+       * assume the role.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftiamparameters.html#cfn-quicksight-datasource-redshiftiamparameters-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RedshiftIAMParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftIAMParametersProperty):
+          RedshiftIAMParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftIAMParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RedshiftIAMParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftIAMParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftIAMParametersProperty
+    }
+  }
+
+  /**
    * The parameters for Amazon Redshift.
    *
    * The `ClusterId` field can be blank if `Host` and `Port` are both set. The `Host` and `Port`
@@ -5004,6 +5499,16 @@ public open class CfnDataSource(
    * // the properties below are optional
    * .clusterId("clusterId")
    * .host("host")
+   * .iamParameters(RedshiftIAMParametersProperty.builder()
+   * .roleArn("roleArn")
+   * // the properties below are optional
+   * .autoCreateDatabaseUser(false)
+   * .databaseGroups(List.of("databaseGroups"))
+   * .databaseUser("databaseUser")
+   * .build())
+   * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+   * .enableIdentityPropagation(false)
+   * .build())
    * .port(123)
    * .build();
    * ```
@@ -5037,9 +5542,34 @@ public open class CfnDataSource(
     public fun host(): String? = unwrap(this).getHost()
 
     /**
+     * An optional parameter that uses IAM authentication to grant Amazon QuickSight access to your
+     * cluster.
+     *
+     * This parameter can be used instead of
+     * [DataSourceCredentials](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DataSourceCredentials.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-iamparameters)
+     */
+    public fun iamParameters(): Any? = unwrap(this).getIamParameters()
+
+    /**
+     * An optional parameter that configures IAM Identity Center authentication to grant Amazon
+     * QuickSight access to your cluster.
+     *
+     * This parameter can only be specified if your Amazon QuickSight account is configured with IAM
+     * Identity Center.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-identitycenterconfiguration)
+     */
+    public fun identityCenterConfiguration(): Any? = unwrap(this).getIdentityCenterConfiguration()
+
+    /**
      * Port.
      *
      * This field can be blank if the `ClusterId` is provided.
+     *
+     * Default: - 0
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-port)
      */
@@ -5066,6 +5596,63 @@ public open class CfnDataSource(
        * This field can be blank if `ClusterId` is provided.
        */
       public fun host(host: String)
+
+      /**
+       * @param iamParameters An optional parameter that uses IAM authentication to grant Amazon
+       * QuickSight access to your cluster.
+       * This parameter can be used instead of
+       * [DataSourceCredentials](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DataSourceCredentials.html)
+       * .
+       */
+      public fun iamParameters(iamParameters: IResolvable)
+
+      /**
+       * @param iamParameters An optional parameter that uses IAM authentication to grant Amazon
+       * QuickSight access to your cluster.
+       * This parameter can be used instead of
+       * [DataSourceCredentials](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DataSourceCredentials.html)
+       * .
+       */
+      public fun iamParameters(iamParameters: RedshiftIAMParametersProperty)
+
+      /**
+       * @param iamParameters An optional parameter that uses IAM authentication to grant Amazon
+       * QuickSight access to your cluster.
+       * This parameter can be used instead of
+       * [DataSourceCredentials](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DataSourceCredentials.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a6a84ef3a43bd410c2693e156092f9ab0557a2c94286ba1f88108224cd86e787")
+      public fun iamParameters(iamParameters: RedshiftIAMParametersProperty.Builder.() -> Unit)
+
+      /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your cluster.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      public fun identityCenterConfiguration(identityCenterConfiguration: IResolvable)
+
+      /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your cluster.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      public
+          fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty)
+
+      /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your cluster.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a1e4977817c6bfc222d9805acacab6877847eb2b72e2849d1df07778dbde4765")
+      public
+          fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param port Port.
@@ -5104,6 +5691,74 @@ public open class CfnDataSource(
       }
 
       /**
+       * @param iamParameters An optional parameter that uses IAM authentication to grant Amazon
+       * QuickSight access to your cluster.
+       * This parameter can be used instead of
+       * [DataSourceCredentials](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DataSourceCredentials.html)
+       * .
+       */
+      override fun iamParameters(iamParameters: IResolvable) {
+        cdkBuilder.iamParameters(iamParameters.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param iamParameters An optional parameter that uses IAM authentication to grant Amazon
+       * QuickSight access to your cluster.
+       * This parameter can be used instead of
+       * [DataSourceCredentials](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DataSourceCredentials.html)
+       * .
+       */
+      override fun iamParameters(iamParameters: RedshiftIAMParametersProperty) {
+        cdkBuilder.iamParameters(iamParameters.let(RedshiftIAMParametersProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param iamParameters An optional parameter that uses IAM authentication to grant Amazon
+       * QuickSight access to your cluster.
+       * This parameter can be used instead of
+       * [DataSourceCredentials](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DataSourceCredentials.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a6a84ef3a43bd410c2693e156092f9ab0557a2c94286ba1f88108224cd86e787")
+      override fun iamParameters(iamParameters: RedshiftIAMParametersProperty.Builder.() -> Unit):
+          Unit = iamParameters(RedshiftIAMParametersProperty(iamParameters))
+
+      /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your cluster.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      override fun identityCenterConfiguration(identityCenterConfiguration: IResolvable) {
+        cdkBuilder.identityCenterConfiguration(identityCenterConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your cluster.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      override
+          fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty) {
+        cdkBuilder.identityCenterConfiguration(identityCenterConfiguration.let(IdentityCenterConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param identityCenterConfiguration An optional parameter that configures IAM Identity
+       * Center authentication to grant Amazon QuickSight access to your cluster.
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a1e4977817c6bfc222d9805acacab6877847eb2b72e2849d1df07778dbde4765")
+      override
+          fun identityCenterConfiguration(identityCenterConfiguration: IdentityCenterConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          identityCenterConfiguration(IdentityCenterConfigurationProperty(identityCenterConfiguration))
+
+      /**
        * @param port Port.
        * This field can be blank if the `ClusterId` is provided.
        */
@@ -5118,7 +5773,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty,
-    ) : CdkObject(cdkObject), RedshiftParametersProperty {
+    ) : CdkObject(cdkObject),
+        RedshiftParametersProperty {
       /**
        * Cluster ID.
        *
@@ -5145,9 +5801,35 @@ public open class CfnDataSource(
       override fun host(): String? = unwrap(this).getHost()
 
       /**
+       * An optional parameter that uses IAM authentication to grant Amazon QuickSight access to
+       * your cluster.
+       *
+       * This parameter can be used instead of
+       * [DataSourceCredentials](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DataSourceCredentials.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-iamparameters)
+       */
+      override fun iamParameters(): Any? = unwrap(this).getIamParameters()
+
+      /**
+       * An optional parameter that configures IAM Identity Center authentication to grant Amazon
+       * QuickSight access to your cluster.
+       *
+       * This parameter can only be specified if your Amazon QuickSight account is configured with
+       * IAM Identity Center.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-identitycenterconfiguration)
+       */
+      override fun identityCenterConfiguration(): Any? =
+          unwrap(this).getIdentityCenterConfiguration()
+
+      /**
        * Port.
        *
        * This field can be blank if the `ClusterId` is provided.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html#cfn-quicksight-datasource-redshiftparameters-port)
        */
@@ -5184,6 +5866,8 @@ public open class CfnDataSource(
    * ResourcePermissionProperty resourcePermissionProperty = ResourcePermissionProperty.builder()
    * .actions(List.of("actions"))
    * .principal("principal")
+   * // the properties below are optional
+   * .resource("resource")
    * .build();
    * ```
    *
@@ -5212,6 +5896,11 @@ public open class CfnDataSource(
     public fun principal(): String
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-resource)
+     */
+    public fun resource(): String? = unwrap(this).getResource()
+
+    /**
      * A builder for [ResourcePermissionProperty]
      */
     @CdkDslMarker
@@ -5238,6 +5927,11 @@ public open class CfnDataSource(
        * common.)
        */
       public fun principal(principal: String)
+
+      /**
+       * @param resource the value to be set.
+       */
+      public fun resource(resource: String)
     }
 
     private class BuilderImpl : Builder {
@@ -5273,6 +5967,13 @@ public open class CfnDataSource(
         cdkBuilder.principal(principal)
       }
 
+      /**
+       * @param resource the value to be set.
+       */
+      override fun resource(resource: String) {
+        cdkBuilder.resource(resource)
+      }
+
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty =
           cdkBuilder.build()
@@ -5280,7 +5981,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty,
-    ) : CdkObject(cdkObject), ResourcePermissionProperty {
+    ) : CdkObject(cdkObject),
+        ResourcePermissionProperty {
       /**
        * The IAM action to grant or revoke permissions on.
        *
@@ -5302,6 +6004,11 @@ public open class CfnDataSource(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-principal)
        */
       override fun principal(): String = unwrap(this).getPrincipal()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-resourcepermission.html#cfn-quicksight-datasource-resourcepermission-resource)
+       */
+      override fun resource(): String? = unwrap(this).getResource()
     }
 
     public companion object {
@@ -5452,7 +6159,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty,
-    ) : CdkObject(cdkObject), S3ParametersProperty {
+    ) : CdkObject(cdkObject),
+        S3ParametersProperty {
       /**
        * Location of the Amazon S3 manifest file.
        *
@@ -5588,7 +6296,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SnowflakeParametersProperty,
-    ) : CdkObject(cdkObject), SnowflakeParametersProperty {
+    ) : CdkObject(cdkObject),
+        SnowflakeParametersProperty {
       /**
        * Database.
        *
@@ -5657,6 +6366,8 @@ public open class CfnDataSource(
     /**
      * Port.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sparkparameters.html#cfn-quicksight-datasource-sparkparameters-port)
      */
     public fun port(): Number
@@ -5703,7 +6414,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SparkParametersProperty,
-    ) : CdkObject(cdkObject), SparkParametersProperty {
+    ) : CdkObject(cdkObject),
+        SparkParametersProperty {
       /**
        * Host.
        *
@@ -5713,6 +6425,8 @@ public open class CfnDataSource(
 
       /**
        * Port.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sparkparameters.html#cfn-quicksight-datasource-sparkparameters-port)
        */
@@ -5773,6 +6487,8 @@ public open class CfnDataSource(
     /**
      * Port.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-port)
      */
     public fun port(): Number
@@ -5832,7 +6548,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty,
-    ) : CdkObject(cdkObject), SqlServerParametersProperty {
+    ) : CdkObject(cdkObject),
+        SqlServerParametersProperty {
       /**
        * Database.
        *
@@ -5849,6 +6566,8 @@ public open class CfnDataSource(
 
       /**
        * Port.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sqlserverparameters.html#cfn-quicksight-datasource-sqlserverparameters-port)
        */
@@ -5893,6 +6612,8 @@ public open class CfnDataSource(
   public interface SslPropertiesProperty {
     /**
      * A Boolean option to control whether SSL should be disabled.
+     *
+     * Default: - false
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sslproperties.html#cfn-quicksight-datasource-sslproperties-disablessl)
      */
@@ -5940,9 +6661,12 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty,
-    ) : CdkObject(cdkObject), SslPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        SslPropertiesProperty {
       /**
        * A Boolean option to control whether SSL should be disabled.
+       *
+       * Default: - false
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sslproperties.html#cfn-quicksight-datasource-sslproperties-disablessl)
        */
@@ -6004,6 +6728,8 @@ public open class CfnDataSource(
 
     /**
      * The port for the Starburst data source.
+     *
+     * Default: - 0
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-port)
      */
@@ -6083,7 +6809,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.StarburstParametersProperty,
-    ) : CdkObject(cdkObject), StarburstParametersProperty {
+    ) : CdkObject(cdkObject),
+        StarburstParametersProperty {
       /**
        * The catalog name for the Starburst data source.
        *
@@ -6100,6 +6827,8 @@ public open class CfnDataSource(
 
       /**
        * The port for the Starburst data source.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-port)
        */
@@ -6167,6 +6896,8 @@ public open class CfnDataSource(
     /**
      * Port.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-port)
      */
     public fun port(): Number
@@ -6226,7 +6957,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty,
-    ) : CdkObject(cdkObject), TeradataParametersProperty {
+    ) : CdkObject(cdkObject),
+        TeradataParametersProperty {
       /**
        * Database.
        *
@@ -6243,6 +6975,8 @@ public open class CfnDataSource(
 
       /**
        * Port.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-teradataparameters.html#cfn-quicksight-datasource-teradataparameters-port)
        */
@@ -6303,6 +7037,8 @@ public open class CfnDataSource(
     /**
      * The port for the Trino data source.
      *
+     * Default: - 0
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-port)
      */
     public fun port(): Number
@@ -6361,7 +7097,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty,
-    ) : CdkObject(cdkObject), TrinoParametersProperty {
+    ) : CdkObject(cdkObject),
+        TrinoParametersProperty {
       /**
        * The catalog name for the Trino data source.
        *
@@ -6378,6 +7115,8 @@ public open class CfnDataSource(
 
       /**
        * The port for the Trino data source.
+       *
+       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-trinoparameters.html#cfn-quicksight-datasource-trinoparameters-port)
        */
@@ -6458,7 +7197,8 @@ public open class CfnDataSource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty,
-    ) : CdkObject(cdkObject), VpcConnectionPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        VpcConnectionPropertiesProperty {
       /**
        * The Amazon Resource Name (ARN) for the VPC connection.
        *

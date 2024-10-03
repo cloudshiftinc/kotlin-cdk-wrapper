@@ -311,7 +311,8 @@ public interface CfnCalculatedAttributeDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinitionProps,
-  ) : CdkObject(cdkObject), CfnCalculatedAttributeDefinitionProps {
+  ) : CdkObject(cdkObject),
+      CfnCalculatedAttributeDefinitionProps {
     /**
      * Mathematical expression and a list of attribute items specified in that expression.
      *

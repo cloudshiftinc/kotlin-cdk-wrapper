@@ -16,14 +16,19 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * // https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html
- * // https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html
- * ManagedRule.Builder.create(this, "AccessKeysRotated")
- * .identifier(ManagedRuleIdentifiers.ACCESS_KEYS_ROTATED)
- * .inputParameters(Map.of(
- * "maxAccessKeyAge", 60))
- * // default is 24 hours
- * .maximumExecutionFrequency(MaximumExecutionFrequency.TWELVE_HOURS)
+ * Function fn;
+ * String samplePolicyText;
+ * ManagedRule.Builder.create(this, "ManagedRule")
+ * .identifier(ManagedRuleIdentifiers.API_GW_XRAY_ENABLED)
+ * .evaluationModes(EvaluationMode.DETECTIVE_AND_PROACTIVE)
+ * .build();
+ * CustomRule.Builder.create(this, "CustomRule")
+ * .lambdaFunction(fn)
+ * .evaluationModes(EvaluationMode.PROACTIVE)
+ * .build();
+ * CustomPolicy.Builder.create(this, "CustomPolicy")
+ * .policyText(samplePolicyText)
+ * .evaluationModes(EvaluationMode.DETECTIVE)
  * .build();
  * ```
  */
@@ -49,6 +54,12 @@ public interface ManagedRuleProps : RuleProps {
      * @param description A description about this AWS Config rule.
      */
     public fun description(description: String)
+
+    /**
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in.
+     * The valid values are distinct objects.
+     */
+    public fun evaluationModes(evaluationModes: EvaluationMode)
 
     /**
      * @param identifier The identifier of the AWS managed rule. 
@@ -91,6 +102,14 @@ public interface ManagedRuleProps : RuleProps {
     }
 
     /**
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in.
+     * The valid values are distinct objects.
+     */
+    override fun evaluationModes(evaluationModes: EvaluationMode) {
+      cdkBuilder.evaluationModes(evaluationModes.let(EvaluationMode.Companion::unwrap))
+    }
+
+    /**
      * @param identifier The identifier of the AWS managed rule. 
      */
     override fun identifier(identifier: String) {
@@ -124,7 +143,8 @@ public interface ManagedRuleProps : RuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.config.ManagedRuleProps,
-  ) : CdkObject(cdkObject), ManagedRuleProps {
+  ) : CdkObject(cdkObject),
+      ManagedRuleProps {
     /**
      * A name for the AWS Config rule.
      *
@@ -138,6 +158,16 @@ public interface ManagedRuleProps : RuleProps {
      * Default: - No description
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects.
+     *
+     * Default: - Detective evaluation mode only
+     */
+    override fun evaluationModes(): EvaluationMode? =
+        unwrap(this).getEvaluationModes()?.let(EvaluationMode::wrap)
 
     /**
      * The identifier of the AWS managed rule.

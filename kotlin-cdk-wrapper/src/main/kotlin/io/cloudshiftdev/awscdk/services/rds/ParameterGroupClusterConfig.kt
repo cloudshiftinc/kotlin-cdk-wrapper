@@ -56,7 +56,8 @@ public interface ParameterGroupClusterConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ParameterGroupClusterConfig,
-  ) : CdkObject(cdkObject), ParameterGroupClusterConfig {
+  ) : CdkObject(cdkObject),
+      ParameterGroupClusterConfig {
     /**
      * The name of this parameter group.
      */

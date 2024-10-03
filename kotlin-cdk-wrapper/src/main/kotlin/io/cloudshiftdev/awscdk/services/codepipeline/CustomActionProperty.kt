@@ -189,7 +189,8 @@ public interface CustomActionProperty {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.CustomActionProperty,
-  ) : CdkObject(cdkObject), CustomActionProperty {
+  ) : CdkObject(cdkObject),
+      CustomActionProperty {
     /**
      * The description of the property.
      *

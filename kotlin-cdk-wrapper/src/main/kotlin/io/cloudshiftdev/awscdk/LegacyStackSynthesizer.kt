@@ -37,7 +37,9 @@ import kotlin.jvm.JvmName
  */
 public open class LegacyStackSynthesizer(
   cdkObject: software.amazon.awscdk.LegacyStackSynthesizer,
-) : StackSynthesizer(cdkObject), IReusableStackSynthesizer, IBoundStackSynthesizer {
+) : StackSynthesizer(cdkObject),
+    IReusableStackSynthesizer,
+    IBoundStackSynthesizer {
   public constructor() : this(software.amazon.awscdk.LegacyStackSynthesizer()
   )
 

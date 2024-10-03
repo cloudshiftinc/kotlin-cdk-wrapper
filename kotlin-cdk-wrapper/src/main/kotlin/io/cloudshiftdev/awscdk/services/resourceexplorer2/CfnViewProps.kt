@@ -341,7 +341,8 @@ public interface CfnViewProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnViewProps,
-  ) : CdkObject(cdkObject), CfnViewProps {
+  ) : CdkObject(cdkObject),
+      CfnViewProps {
     /**
      * An array of strings that include search keywords, prefixes, and operators that filter the
      * results that are returned for queries made using this view.

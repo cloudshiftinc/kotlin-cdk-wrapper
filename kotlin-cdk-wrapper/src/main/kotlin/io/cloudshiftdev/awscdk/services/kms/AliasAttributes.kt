@@ -78,7 +78,8 @@ public interface AliasAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kms.AliasAttributes,
-  ) : CdkObject(cdkObject), AliasAttributes {
+  ) : CdkObject(cdkObject),
+      AliasAttributes {
     /**
      * Specifies the alias name.
      *

@@ -95,7 +95,8 @@ public interface CfnKeyGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyGroupProps,
-  ) : CdkObject(cdkObject), CfnKeyGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnKeyGroupProps {
     /**
      * The key group configuration.
      *

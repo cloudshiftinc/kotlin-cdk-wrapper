@@ -56,6 +56,9 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .subject("subject")
  * .build()))
+ * .submitAutoEvaluationActions(List.of(SubmitAutoEvaluationActionProperty.builder()
+ * .evaluationFormArn("evaluationFormArn")
+ * .build()))
  * .taskActions(List.of(TaskActionProperty.builder()
  * .contactFlowArn("contactFlowArn")
  * .name("name")
@@ -323,7 +326,8 @@ public interface CfnRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.connect.CfnRuleProps,
-  ) : CdkObject(cdkObject), CfnRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnRuleProps {
     /**
      * A list of actions to be run when the rule is triggered.
      *

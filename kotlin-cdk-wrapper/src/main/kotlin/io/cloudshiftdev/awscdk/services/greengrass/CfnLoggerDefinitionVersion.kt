@@ -59,7 +59,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLoggerDefinitionVersion(
   cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -427,7 +428,8 @@ public open class CfnLoggerDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion.LoggerProperty,
-    ) : CdkObject(cdkObject), LoggerProperty {
+    ) : CdkObject(cdkObject),
+        LoggerProperty {
       /**
        * The source of the log event.
        *

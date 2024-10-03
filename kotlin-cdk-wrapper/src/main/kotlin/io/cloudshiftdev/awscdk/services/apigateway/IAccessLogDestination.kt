@@ -18,7 +18,8 @@ public interface IAccessLogDestination {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IAccessLogDestination,
-  ) : CdkObject(cdkObject), IAccessLogDestination {
+  ) : CdkObject(cdkObject),
+      IAccessLogDestination {
     /**
      * Binds this destination to the RestApi Stage.
      *

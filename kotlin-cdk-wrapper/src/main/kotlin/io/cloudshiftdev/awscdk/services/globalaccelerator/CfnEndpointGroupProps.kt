@@ -403,7 +403,8 @@ public interface CfnEndpointGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroupProps,
-  ) : CdkObject(cdkObject), CfnEndpointGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnEndpointGroupProps {
     /**
      * The list of endpoint objects.
      *

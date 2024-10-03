@@ -25,6 +25,7 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.guardduty.*;
  * Object criterion;
  * CfnFilterProps cfnFilterProps = CfnFilterProps.builder()
+ * .detectorId("detectorId")
  * .findingCriteria(FindingCriteriaProperty.builder()
  * .criterion(criterion)
  * .itemType(ConditionProperty.builder()
@@ -42,11 +43,10 @@ import kotlin.jvm.JvmName
  * .notEquals(List.of("notEquals"))
  * .build())
  * .build())
+ * .name("name")
  * // the properties below are optional
  * .action("action")
  * .description("description")
- * .detectorId("detectorId")
- * .name("name")
  * .rank(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -77,11 +77,16 @@ public interface CfnFilterProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The ID of the detector belonging to the GuardDuty account that you want to create a filter for.
+   * The detector ID associated with the GuardDuty account for which you want to create a filter.
+   *
+   * To find the `detectorId` in the current Region, see the
+   * Settings page in the GuardDuty console, or run the
+   * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+   * API.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html#cfn-guardduty-filter-detectorid)
    */
-  public fun detectorId(): String? = unwrap(this).getDetectorId()
+  public fun detectorId(): String
 
   /**
    * Represents the criteria to be used in the filter for querying findings.
@@ -98,7 +103,7 @@ public interface CfnFilterProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html#cfn-guardduty-filter-name)
    */
-  public fun name(): String? = unwrap(this).getName()
+  public fun name(): String
 
   /**
    * Specifies the position of the filter in the list of current filters.
@@ -148,8 +153,12 @@ public interface CfnFilterProps {
     public fun description(description: String)
 
     /**
-     * @param detectorId The ID of the detector belonging to the GuardDuty account that you want to
-     * create a filter for.
+     * @param detectorId The detector ID associated with the GuardDuty account for which you want to
+     * create a filter. 
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
      */
     public fun detectorId(detectorId: String)
 
@@ -175,7 +184,7 @@ public interface CfnFilterProps {
         fun findingCriteria(findingCriteria: CfnFilter.FindingCriteriaProperty.Builder.() -> Unit)
 
     /**
-     * @param name The name of the filter.
+     * @param name The name of the filter. 
      * Valid characters include period (.), underscore (_), dash (-), and alphanumeric characters. A
      * whitespace is considered to be an invalid character.
      */
@@ -237,8 +246,12 @@ public interface CfnFilterProps {
     }
 
     /**
-     * @param detectorId The ID of the detector belonging to the GuardDuty account that you want to
-     * create a filter for.
+     * @param detectorId The detector ID associated with the GuardDuty account for which you want to
+     * create a filter. 
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
      */
     override fun detectorId(detectorId: String) {
       cdkBuilder.detectorId(detectorId)
@@ -271,7 +284,7 @@ public interface CfnFilterProps {
         Unit = findingCriteria(CfnFilter.FindingCriteriaProperty(findingCriteria))
 
     /**
-     * @param name The name of the filter.
+     * @param name The name of the filter. 
      * Valid characters include period (.), underscore (_), dash (-), and alphanumeric characters. A
      * whitespace is considered to be an invalid character.
      */
@@ -321,7 +334,8 @@ public interface CfnFilterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.guardduty.CfnFilterProps,
-  ) : CdkObject(cdkObject), CfnFilterProps {
+  ) : CdkObject(cdkObject),
+      CfnFilterProps {
     /**
      * Specifies the action that is to be applied to the findings that match the filter.
      *
@@ -341,12 +355,16 @@ public interface CfnFilterProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The ID of the detector belonging to the GuardDuty account that you want to create a filter
-     * for.
+     * The detector ID associated with the GuardDuty account for which you want to create a filter.
+     *
+     * To find the `detectorId` in the current Region, see the
+     * Settings page in the GuardDuty console, or run the
+     * [ListDetectors](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListDetectors.html)
+     * API.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html#cfn-guardduty-filter-detectorid)
      */
-    override fun detectorId(): String? = unwrap(this).getDetectorId()
+    override fun detectorId(): String = unwrap(this).getDetectorId()
 
     /**
      * Represents the criteria to be used in the filter for querying findings.
@@ -363,7 +381,7 @@ public interface CfnFilterProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html#cfn-guardduty-filter-name)
      */
-    override fun name(): String? = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
     /**
      * Specifies the position of the filter in the list of current filters.

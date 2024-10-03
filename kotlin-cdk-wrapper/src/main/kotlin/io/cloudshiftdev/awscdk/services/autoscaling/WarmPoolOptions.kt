@@ -137,7 +137,8 @@ public interface WarmPoolOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.WarmPoolOptions,
-  ) : CdkObject(cdkObject), WarmPoolOptions {
+  ) : CdkObject(cdkObject),
+      WarmPoolOptions {
     /**
      * The maximum number of instances that are allowed to be in the warm pool or in any state
      * except Terminated for the Auto Scaling group.

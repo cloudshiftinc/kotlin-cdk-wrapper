@@ -97,7 +97,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPrincipalPermissions(
   cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -567,7 +568,8 @@ public open class CfnPrincipalPermissions(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty,
-    ) : CdkObject(cdkObject), ColumnWildcardProperty {
+    ) : CdkObject(cdkObject),
+        ColumnWildcardProperty {
       /**
        * Excludes column names.
        *
@@ -713,7 +715,8 @@ public open class CfnPrincipalPermissions(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty,
-    ) : CdkObject(cdkObject), DataCellsFilterResourceProperty {
+    ) : CdkObject(cdkObject),
+        DataCellsFilterResourceProperty {
       /**
        * A database in the Data Catalog .
        *
@@ -817,7 +820,8 @@ public open class CfnPrincipalPermissions(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty,
-    ) : CdkObject(cdkObject), DataLakePrincipalProperty {
+    ) : CdkObject(cdkObject),
+        DataLakePrincipalProperty {
       /**
        * An identifier for the AWS Lake Formation principal.
        *
@@ -926,7 +930,8 @@ public open class CfnPrincipalPermissions(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty,
-    ) : CdkObject(cdkObject), DataLocationResourceProperty {
+    ) : CdkObject(cdkObject),
+        DataLocationResourceProperty {
       /**
        * The identifier for the Data Catalog where the location is registered with AWS Lake
        * Formation .
@@ -1044,7 +1049,8 @@ public open class CfnPrincipalPermissions(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty,
-    ) : CdkObject(cdkObject), DatabaseResourceProperty {
+    ) : CdkObject(cdkObject),
+        DatabaseResourceProperty {
       /**
        * The identifier for the Data Catalog.
        *
@@ -1193,7 +1199,8 @@ public open class CfnPrincipalPermissions(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty,
-    ) : CdkObject(cdkObject), LFTagKeyResourceProperty {
+    ) : CdkObject(cdkObject),
+        LFTagKeyResourceProperty {
       /**
        * The identifier for the Data Catalog where the location is registered with Data Catalog .
        *
@@ -1365,7 +1372,8 @@ public open class CfnPrincipalPermissions(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty,
-    ) : CdkObject(cdkObject), LFTagPolicyResourceProperty {
+    ) : CdkObject(cdkObject),
+        LFTagPolicyResourceProperty {
       /**
        * The identifier for the Data Catalog .
        *
@@ -1498,7 +1506,8 @@ public open class CfnPrincipalPermissions(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty,
-    ) : CdkObject(cdkObject), LFTagProperty {
+    ) : CdkObject(cdkObject),
+        LFTagProperty {
       /**
        * The key-name for the LF-tag.
        *
@@ -2019,7 +2028,8 @@ public open class CfnPrincipalPermissions(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ResourceProperty,
-    ) : CdkObject(cdkObject), ResourceProperty {
+    ) : CdkObject(cdkObject),
+        ResourceProperty {
       /**
        * The identifier for the Data Catalog.
        *
@@ -2243,7 +2253,8 @@ public open class CfnPrincipalPermissions(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty,
-    ) : CdkObject(cdkObject), TableResourceProperty {
+    ) : CdkObject(cdkObject),
+        TableResourceProperty {
       /**
        * The identifier for the Data Catalog.
        *
@@ -2509,7 +2520,8 @@ public open class CfnPrincipalPermissions(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableWithColumnsResourceProperty,
-    ) : CdkObject(cdkObject), TableWithColumnsResourceProperty {
+    ) : CdkObject(cdkObject),
+        TableWithColumnsResourceProperty {
       /**
        * The identifier for the Data Catalog where the location is registered with AWS Lake
        * Formation .

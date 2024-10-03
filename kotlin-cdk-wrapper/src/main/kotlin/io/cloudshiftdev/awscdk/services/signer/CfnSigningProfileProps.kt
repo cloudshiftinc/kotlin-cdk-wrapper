@@ -25,6 +25,7 @@ import kotlin.jvm.JvmName
  * CfnSigningProfileProps cfnSigningProfileProps = CfnSigningProfileProps.builder()
  * .platformId("platformId")
  * // the properties below are optional
+ * .profileName("profileName")
  * .signatureValidityPeriod(SignatureValidityPeriodProperty.builder()
  * .type("type")
  * .value(123)
@@ -45,6 +46,13 @@ public interface CfnSigningProfileProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-platformid)
    */
   public fun platformId(): String
+
+  /**
+   * The name of the signing profile.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-profilename)
+   */
+  public fun profileName(): String? = unwrap(this).getProfileName()
 
   /**
    * The validity period override for any signature generated using this signing profile.
@@ -71,6 +79,11 @@ public interface CfnSigningProfileProps {
      * @param platformId The ID of a platform that is available for use by a signing profile. 
      */
     public fun platformId(platformId: String)
+
+    /**
+     * @param profileName The name of the signing profile.
+     */
+    public fun profileName(profileName: String)
 
     /**
      * @param signatureValidityPeriod The validity period override for any signature generated using
@@ -117,6 +130,13 @@ public interface CfnSigningProfileProps {
      */
     override fun platformId(platformId: String) {
       cdkBuilder.platformId(platformId)
+    }
+
+    /**
+     * @param profileName The name of the signing profile.
+     */
+    override fun profileName(profileName: String) {
+      cdkBuilder.profileName(profileName)
     }
 
     /**
@@ -168,13 +188,21 @@ public interface CfnSigningProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.signer.CfnSigningProfileProps,
-  ) : CdkObject(cdkObject), CfnSigningProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnSigningProfileProps {
     /**
      * The ID of a platform that is available for use by a signing profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-platformid)
      */
     override fun platformId(): String = unwrap(this).getPlatformId()
+
+    /**
+     * The name of the signing profile.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html#cfn-signer-signingprofile-profilename)
+     */
+    override fun profileName(): String? = unwrap(this).getProfileName()
 
     /**
      * The validity period override for any signature generated using this signing profile.

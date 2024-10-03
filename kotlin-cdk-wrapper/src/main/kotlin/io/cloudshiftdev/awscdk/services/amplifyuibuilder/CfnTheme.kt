@@ -60,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTheme(
   cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.amplifyuibuilder.CfnTheme(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -523,7 +525,8 @@ public open class CfnTheme(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty,
-    ) : CdkObject(cdkObject), ThemeValueProperty {
+    ) : CdkObject(cdkObject),
+        ThemeValueProperty {
       /**
        * A list of key-value pairs that define the theme's properties.
        *
@@ -662,7 +665,8 @@ public open class CfnTheme(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty,
-    ) : CdkObject(cdkObject), ThemeValuesProperty {
+    ) : CdkObject(cdkObject),
+        ThemeValuesProperty {
       /**
        * The name of the property.
        *

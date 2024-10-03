@@ -49,7 +49,8 @@ public interface IScalableTableAttribute {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.IScalableTableAttribute,
-  ) : CdkObject(cdkObject), IScalableTableAttribute {
+  ) : CdkObject(cdkObject),
+      IScalableTableAttribute {
     /**
      * Add scheduled scaling for this scaling attribute.
      *

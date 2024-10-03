@@ -31,7 +31,7 @@ public interface LustreMaintenanceTimeProps {
   public fun day(): Weekday
 
   /**
-   * The hour of the day (from 0-24) for maintenance to be performed.
+   * The hour of the day (from 0-23) for maintenance to be performed.
    */
   public fun hour(): Number
 
@@ -51,7 +51,7 @@ public interface LustreMaintenanceTimeProps {
     public fun day(day: Weekday)
 
     /**
-     * @param hour The hour of the day (from 0-24) for maintenance to be performed. 
+     * @param hour The hour of the day (from 0-23) for maintenance to be performed. 
      */
     public fun hour(hour: Number)
 
@@ -73,7 +73,7 @@ public interface LustreMaintenanceTimeProps {
     }
 
     /**
-     * @param hour The hour of the day (from 0-24) for maintenance to be performed. 
+     * @param hour The hour of the day (from 0-23) for maintenance to be performed. 
      */
     override fun hour(hour: Number) {
       cdkBuilder.hour(hour)
@@ -92,14 +92,15 @@ public interface LustreMaintenanceTimeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.fsx.LustreMaintenanceTimeProps,
-  ) : CdkObject(cdkObject), LustreMaintenanceTimeProps {
+  ) : CdkObject(cdkObject),
+      LustreMaintenanceTimeProps {
     /**
      * The day of the week for maintenance to be performed.
      */
     override fun day(): Weekday = unwrap(this).getDay().let(Weekday::wrap)
 
     /**
-     * The hour of the day (from 0-24) for maintenance to be performed.
+     * The hour of the day (from 0-23) for maintenance to be performed.
      */
     override fun hour(): Number = unwrap(this).getHour()
 

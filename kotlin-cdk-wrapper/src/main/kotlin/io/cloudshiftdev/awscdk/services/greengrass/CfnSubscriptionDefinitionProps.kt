@@ -254,7 +254,8 @@ public interface CfnSubscriptionDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionProps,
-  ) : CdkObject(cdkObject), CfnSubscriptionDefinitionProps {
+  ) : CdkObject(cdkObject),
+      CfnSubscriptionDefinitionProps {
     /**
      * The subscription definition version to include when the subscription definition is created.
      *

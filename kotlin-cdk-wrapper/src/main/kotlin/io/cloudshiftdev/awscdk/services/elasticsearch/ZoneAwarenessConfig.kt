@@ -141,7 +141,8 @@ public interface ZoneAwarenessConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig,
-  ) : CdkObject(cdkObject), ZoneAwarenessConfig {
+  ) : CdkObject(cdkObject),
+      ZoneAwarenessConfig {
     /**
      * (deprecated) If you enabled multiple Availability Zones (AZs), the number of AZs that you
      * want the domain to use.

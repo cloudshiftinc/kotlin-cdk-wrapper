@@ -102,7 +102,8 @@ public interface LayerVersionPermission {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.LayerVersionPermission,
-  ) : CdkObject(cdkObject), LayerVersionPermission {
+  ) : CdkObject(cdkObject),
+      LayerVersionPermission {
     /**
      * The AWS Account id of the account that is authorized to use a Lambda Layer Version.
      *

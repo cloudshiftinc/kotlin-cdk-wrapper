@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDevice(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnDevice,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -398,7 +400,8 @@ public open class CfnDevice(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnDevice.DeviceProperty,
-    ) : CdkObject(cdkObject), DeviceProperty {
+    ) : CdkObject(cdkObject),
+        DeviceProperty {
       /**
        * Description of the device.
        *

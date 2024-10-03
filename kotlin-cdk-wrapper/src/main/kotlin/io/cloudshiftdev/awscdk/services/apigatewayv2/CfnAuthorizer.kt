@@ -58,7 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAuthorizer(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -850,7 +851,8 @@ public open class CfnAuthorizer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer.JWTConfigurationProperty,
-    ) : CdkObject(cdkObject), JWTConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        JWTConfigurationProperty {
       /**
        * A list of the intended recipients of the JWT.
        *

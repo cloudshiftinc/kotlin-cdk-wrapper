@@ -23,23 +23,26 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // Lambda function containing logic that evaluates compliance with the rule.
- * Function evalComplianceFn = Function.Builder.create(this, "CustomFunction")
- * .code(AssetCode.fromInline("exports.handler = (event) =&gt; console.log(event);"))
- * .handler("index.handler")
- * .runtime(Runtime.NODEJS_18_X)
+ * Function fn;
+ * String samplePolicyText;
+ * ManagedRule.Builder.create(this, "ManagedRule")
+ * .identifier(ManagedRuleIdentifiers.API_GW_XRAY_ENABLED)
+ * .evaluationModes(EvaluationMode.DETECTIVE_AND_PROACTIVE)
  * .build();
- * // A custom rule that runs on configuration changes of EC2 instances
- * CustomRule customRule = CustomRule.Builder.create(this, "Custom")
- * .configurationChanges(true)
- * .lambdaFunction(evalComplianceFn)
- * .ruleScope(RuleScope.fromResource(ResourceType.EC2_INSTANCE))
+ * CustomRule.Builder.create(this, "CustomRule")
+ * .lambdaFunction(fn)
+ * .evaluationModes(EvaluationMode.PROACTIVE)
+ * .build();
+ * CustomPolicy.Builder.create(this, "CustomPolicy")
+ * .policyText(samplePolicyText)
+ * .evaluationModes(EvaluationMode.DETECTIVE)
  * .build();
  * ```
  */
 public open class CustomRule(
   cdkObject: software.amazon.awscdk.services.config.CustomRule,
-) : Resource(cdkObject), IRule {
+) : Resource(cdkObject),
+    IRule {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -206,6 +209,17 @@ public open class CustomRule(
     public fun description(description: String)
 
     /**
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects.
+     *
+     * Default: - Detective evaluation mode only
+     *
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in. 
+     */
+    public fun evaluationModes(evaluationModes: EvaluationMode)
+
+    /**
      * Input parameter values that are passed to the AWS Config rule.
      *
      * Default: - No input parameters
@@ -289,6 +303,19 @@ public open class CustomRule(
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects.
+     *
+     * Default: - Detective evaluation mode only
+     *
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in. 
+     */
+    override fun evaluationModes(evaluationModes: EvaluationMode) {
+      cdkBuilder.evaluationModes(evaluationModes.let(EvaluationMode.Companion::unwrap))
     }
 
     /**

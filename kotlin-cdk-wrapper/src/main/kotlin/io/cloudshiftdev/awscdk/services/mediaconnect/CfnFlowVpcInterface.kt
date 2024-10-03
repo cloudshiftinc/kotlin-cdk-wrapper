@@ -30,6 +30,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * After CloudFormation has created the flow and the VPC interface, update the source to point to
  * the VPC interface that you created.
  *
+ *
+ * The previous steps must be undone before the CloudFormation stack can be deleted. Because the
+ * source is manually updated in step 3, CloudFormation is not aware of this change. The source must be
+ * returned to a standard source before CloudFormation stack deletion.
+ *
+ *
  * Example:
  *
  * ```
@@ -50,7 +56,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFlowVpcInterface(
   cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

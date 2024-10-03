@@ -21,7 +21,8 @@ public interface IModel {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.bedrock.IModel,
-  ) : CdkObject(cdkObject), IModel {
+  ) : CdkObject(cdkObject),
+      IModel {
     /**
      * The ARN of the model.
      *

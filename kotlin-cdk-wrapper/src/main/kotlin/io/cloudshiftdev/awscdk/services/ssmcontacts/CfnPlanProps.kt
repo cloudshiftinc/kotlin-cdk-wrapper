@@ -160,7 +160,8 @@ public interface CfnPlanProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlanProps,
-  ) : CdkObject(cdkObject), CfnPlanProps {
+  ) : CdkObject(cdkObject),
+      CfnPlanProps {
     /**
      * The Amazon Resource Name (ARN) of the contact.
      *

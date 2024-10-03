@@ -65,7 +65,8 @@ public interface ApplicationLoadBalancerLookupOptions : BaseLoadBalancerLookupOp
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerLookupOptions,
-  ) : CdkObject(cdkObject), ApplicationLoadBalancerLookupOptions {
+  ) : CdkObject(cdkObject),
+      ApplicationLoadBalancerLookupOptions {
     /**
      * Find by load balancer's ARN.
      *

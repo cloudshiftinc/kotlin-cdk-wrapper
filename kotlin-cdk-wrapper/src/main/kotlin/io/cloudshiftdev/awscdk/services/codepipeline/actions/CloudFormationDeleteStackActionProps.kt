@@ -617,7 +617,8 @@ public interface CloudFormationDeleteStackActionProps : CommonAwsActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackActionProps,
-  ) : CdkObject(cdkObject), CloudFormationDeleteStackActionProps {
+  ) : CdkObject(cdkObject),
+      CloudFormationDeleteStackActionProps {
     /**
      * The AWS account this Action is supposed to operate in.
      *

@@ -15,15 +15,15 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * Role lambdaRole = Role.Builder.create(this, "Role")
+ * IChainable definition;
+ * Role role = Role.Builder.create(this, "Role")
  * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
- * .description("Example role...")
  * .build();
- * Stream stream = Stream.Builder.create(this, "MyEncryptedStream")
- * .encryption(StreamEncryption.KMS)
+ * StateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
+ * .definitionBody(DefinitionBody.fromChainable(definition))
  * .build();
- * // give lambda permissions to read stream
- * stream.grantRead(lambdaRole);
+ * // Give role permission to get execution history of ALL executions for the state machine
+ * stateMachine.grantExecution(role, "states:GetExecutionHistory");
  * ```
  */
 public open class ServicePrincipal(

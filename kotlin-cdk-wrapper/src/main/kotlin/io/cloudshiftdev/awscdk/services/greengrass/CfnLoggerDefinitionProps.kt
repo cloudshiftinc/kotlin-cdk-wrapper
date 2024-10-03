@@ -246,7 +246,8 @@ public interface CfnLoggerDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionProps,
-  ) : CdkObject(cdkObject), CfnLoggerDefinitionProps {
+  ) : CdkObject(cdkObject),
+      CfnLoggerDefinitionProps {
     /**
      * The logger definition version to include when the logger definition is created.
      *

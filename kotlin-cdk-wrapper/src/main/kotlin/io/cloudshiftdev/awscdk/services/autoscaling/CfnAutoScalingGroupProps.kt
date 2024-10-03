@@ -321,8 +321,9 @@ public interface CfnAutoScalingGroupProps {
   /**
    * A comma-separated value string of one or more health check types.
    *
-   * The valid values are `EC2` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health check and
-   * cannot be disabled. For more information, see [Health checks for instances in an Auto Scaling
+   * The valid values are `EC2` , `EBS` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health
+   * check and cannot be disabled. For more information, see [Health checks for instances in an Auto
+   * Scaling
    * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
    * in the *Amazon EC2 Auto Scaling User Guide* .
    *
@@ -480,8 +481,8 @@ public interface CfnAutoScalingGroupProps {
    * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
    * `NotificationConfigurations` property of the
    * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-   * resource.  For an example template snippet, see [Auto scaling template
-   * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+   * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+   * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
    *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
    * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
    * *Amazon EC2 Auto Scaling User Guide*.
@@ -750,8 +751,8 @@ public interface CfnAutoScalingGroupProps {
 
     /**
      * @param healthCheckType A comma-separated value string of one or more health check types.
-     * The valid values are `EC2` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health check
-     * and cannot be disabled. For more information, see [Health checks for instances in an Auto
+     * The valid values are `EC2` , `EBS` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health
+     * check and cannot be disabled. For more information, see [Health checks for instances in an Auto
      * Scaling
      * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
@@ -1004,8 +1005,8 @@ public interface CfnAutoScalingGroupProps {
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -1018,8 +1019,8 @@ public interface CfnAutoScalingGroupProps {
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -1033,8 +1034,8 @@ public interface CfnAutoScalingGroupProps {
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -1379,8 +1380,8 @@ public interface CfnAutoScalingGroupProps {
 
     /**
      * @param healthCheckType A comma-separated value string of one or more health check types.
-     * The valid values are `EC2` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health check
-     * and cannot be disabled. For more information, see [Health checks for instances in an Auto
+     * The valid values are `EC2` , `EBS` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health
+     * check and cannot be disabled. For more information, see [Health checks for instances in an Auto
      * Scaling
      * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
@@ -1680,8 +1681,8 @@ public interface CfnAutoScalingGroupProps {
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -1696,8 +1697,8 @@ public interface CfnAutoScalingGroupProps {
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -1713,8 +1714,8 @@ public interface CfnAutoScalingGroupProps {
      * @param notificationConfiguration A structure that specifies an Amazon SNS notification
      * configuration for the `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.
@@ -1920,7 +1921,8 @@ public interface CfnAutoScalingGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroupProps,
-  ) : CdkObject(cdkObject), CfnAutoScalingGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnAutoScalingGroupProps {
     /**
      * The name of the Auto Scaling group. This name must be unique per Region per account.
      *
@@ -2066,8 +2068,8 @@ public interface CfnAutoScalingGroupProps {
     /**
      * A comma-separated value string of one or more health check types.
      *
-     * The valid values are `EC2` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health check
-     * and cannot be disabled. For more information, see [Health checks for instances in an Auto
+     * The valid values are `EC2` , `EBS` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health
+     * check and cannot be disabled. For more information, see [Health checks for instances in an Auto
      * Scaling
      * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
@@ -2227,8 +2229,8 @@ public interface CfnAutoScalingGroupProps {
      * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
      * `NotificationConfigurations` property of the
      * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
-     * resource.  For an example template snippet, see [Auto scaling template
-     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     * resource.  For an example template snippet, see [Configure Amazon EC2 Auto Scaling
+     * resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2-auto-scaling.html).
      *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
      * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
      * the *Amazon EC2 Auto Scaling User Guide*.

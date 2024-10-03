@@ -89,7 +89,8 @@ public interface SchemaProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.SchemaProps,
-  ) : CdkObject(cdkObject), SchemaProps {
+  ) : CdkObject(cdkObject),
+      SchemaProps {
     /**
      * The file path for the schema.
      *

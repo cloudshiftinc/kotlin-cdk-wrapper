@@ -61,12 +61,13 @@ import kotlin.jvm.JvmName
  * .kmsKeyId("kmsKeyId")
  * .loggingProperties(LoggingPropertiesProperty.builder()
  * .bucketName("bucketName")
+ * .logDestinationType("logDestinationType")
+ * .logExports(List.of("logExports"))
  * .s3KeyPrefix("s3KeyPrefix")
  * .build())
  * .maintenanceTrackName("maintenanceTrackName")
  * .manageMasterPassword(false)
  * .manualSnapshotRetentionPeriod(123)
- * .masterPasswordSecretKmsKeyId("masterPasswordSecretKmsKeyId")
  * .masterUserPassword("masterUserPassword")
  * .multiAz(false)
  * .namespaceResourcePolicy(namespaceResourcePolicy)
@@ -451,17 +452,6 @@ public interface CfnClusterProps {
       unwrap(this).getManualSnapshotRetentionPeriod()
 
   /**
-   * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
-   * admin credentials secret.
-   *
-   * You can only use this parameter if `ManageMasterPassword` is true.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-masterpasswordsecretkmskeyid)
-   */
-  public fun masterPasswordSecretKmsKeyId(): String? =
-      unwrap(this).getMasterPasswordSecretKmsKeyId()
-
-  /**
    * The password associated with the admin user account for the cluster that is being created.
    *
    * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -521,8 +511,7 @@ public interface CfnClusterProps {
    * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
    * in the *Amazon Redshift Cluster Management Guide* .
    *
-   * Valid Values: `ds2.xlarge` | `ds2.8xlarge` | `dc1.large` | `dc1.8xlarge` | `dc2.large` |
-   * `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+   * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-nodetype)
    */
@@ -570,7 +559,7 @@ public interface CfnClusterProps {
    * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
    * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
    * these ranges.)
-   * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
+   * * For clusters with dc2 nodes - Select a port within the range `1150-65535` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-port)
    */
@@ -1098,13 +1087,6 @@ public interface CfnClusterProps {
     public fun manualSnapshotRetentionPeriod(manualSnapshotRetentionPeriod: Number)
 
     /**
-     * @param masterPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used
-     * to encrypt and store the cluster's admin credentials secret.
-     * You can only use this parameter if `ManageMasterPassword` is true.
-     */
-    public fun masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId: String)
-
-    /**
      * @param masterUserPassword The password associated with the admin user account for the cluster
      * that is being created.
      * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -1161,8 +1143,7 @@ public interface CfnClusterProps {
      * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
      * in the *Amazon Redshift Cluster Management Guide* .
      *
-     * Valid Values: `ds2.xlarge` | `ds2.8xlarge` | `dc1.large` | `dc1.8xlarge` | `dc2.large` |
-     * `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
      */
     public fun nodeType(nodeType: String)
 
@@ -1201,7 +1182,7 @@ public interface CfnClusterProps {
      * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
      * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
      * these ranges.)
-     * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
+     * * For clusters with dc2 nodes - Select a port within the range `1150-65535` .
      */
     public fun port(port: Number)
 
@@ -1811,15 +1792,6 @@ public interface CfnClusterProps {
     }
 
     /**
-     * @param masterPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used
-     * to encrypt and store the cluster's admin credentials secret.
-     * You can only use this parameter if `ManageMasterPassword` is true.
-     */
-    override fun masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId: String) {
-      cdkBuilder.masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId)
-    }
-
-    /**
      * @param masterUserPassword The password associated with the admin user account for the cluster
      * that is being created.
      * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -1886,8 +1858,7 @@ public interface CfnClusterProps {
      * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
      * in the *Amazon Redshift Cluster Management Guide* .
      *
-     * Valid Values: `ds2.xlarge` | `ds2.8xlarge` | `dc1.large` | `dc1.8xlarge` | `dc2.large` |
-     * `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
      */
     override fun nodeType(nodeType: String) {
       cdkBuilder.nodeType(nodeType)
@@ -1932,7 +1903,7 @@ public interface CfnClusterProps {
      * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
      * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
      * these ranges.)
-     * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
+     * * For clusters with dc2 nodes - Select a port within the range `1150-65535` .
      */
     override fun port(port: Number) {
       cdkBuilder.port(port)
@@ -2103,7 +2074,8 @@ public interface CfnClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.redshift.CfnClusterProps,
-  ) : CdkObject(cdkObject), CfnClusterProps {
+  ) : CdkObject(cdkObject),
+      CfnClusterProps {
     /**
      * If `true` , major version upgrades can be applied during the maintenance window to the Amazon
      * Redshift engine that is running on the cluster.
@@ -2465,17 +2437,6 @@ public interface CfnClusterProps {
         unwrap(this).getManualSnapshotRetentionPeriod()
 
     /**
-     * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
-     * admin credentials secret.
-     *
-     * You can only use this parameter if `ManageMasterPassword` is true.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-masterpasswordsecretkmskeyid)
-     */
-    override fun masterPasswordSecretKmsKeyId(): String? =
-        unwrap(this).getMasterPasswordSecretKmsKeyId()
-
-    /**
      * The password associated with the admin user account for the cluster that is being created.
      *
      * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -2535,8 +2496,7 @@ public interface CfnClusterProps {
      * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
      * in the *Amazon Redshift Cluster Management Guide* .
      *
-     * Valid Values: `ds2.xlarge` | `ds2.8xlarge` | `dc1.large` | `dc1.8xlarge` | `dc2.large` |
-     * `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-nodetype)
      */
@@ -2584,7 +2544,7 @@ public interface CfnClusterProps {
      * * For clusters with ra3 nodes - Select a port within the ranges `5431-5455` or `8191-8215` .
      * (If you have an existing cluster with ra3 nodes, it isn't required that you change the port to
      * these ranges.)
-     * * For clusters with ds2 or dc2 nodes - Select a port within the range `1150-65535` .
+     * * For clusters with dc2 nodes - Select a port within the range `1150-65535` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-port)
      */

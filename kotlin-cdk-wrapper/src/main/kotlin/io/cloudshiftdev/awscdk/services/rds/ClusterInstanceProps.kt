@@ -303,7 +303,8 @@ public interface ClusterInstanceProps : ClusterInstanceOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceProps,
-  ) : CdkObject(cdkObject), ClusterInstanceProps {
+  ) : CdkObject(cdkObject),
+      ClusterInstanceProps {
     /**
      * Whether to allow upgrade of major version for the DB instance.
      *

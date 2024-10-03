@@ -201,7 +201,8 @@ public interface AmazonLinux2ImageSsmParameterProps : AmazonLinuxImageSsmParamet
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameterProps,
-  ) : CdkObject(cdkObject), AmazonLinux2ImageSsmParameterProps {
+  ) : CdkObject(cdkObject),
+      AmazonLinux2ImageSsmParameterProps {
     /**
      * Whether the AMI ID is cached to be stable between deployments.
      *

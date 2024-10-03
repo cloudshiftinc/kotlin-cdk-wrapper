@@ -269,7 +269,8 @@ public interface CfnMembershipProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembershipProps,
-  ) : CdkObject(cdkObject), CfnMembershipProps {
+  ) : CdkObject(cdkObject),
+      CfnMembershipProps {
     /**
      * The unique ID for the associated collaboration.
      *

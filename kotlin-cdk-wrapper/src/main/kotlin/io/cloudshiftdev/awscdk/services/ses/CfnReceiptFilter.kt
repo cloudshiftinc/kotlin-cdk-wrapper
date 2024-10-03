@@ -43,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnReceiptFilter(
   cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -334,7 +335,8 @@ public open class CfnReceiptFilter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty,
-    ) : CdkObject(cdkObject), FilterProperty {
+    ) : CdkObject(cdkObject),
+        FilterProperty {
       /**
        * A structure that provides the IP addresses to block or allow, and whether to block or allow
        * incoming mail from them.
@@ -466,7 +468,8 @@ public open class CfnReceiptFilter(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty,
-    ) : CdkObject(cdkObject), IpFilterProperty {
+    ) : CdkObject(cdkObject),
+        IpFilterProperty {
       /**
        * A single IP address or a range of IP addresses to block or allow, specified in Classless
        * Inter-Domain Routing (CIDR) notation.

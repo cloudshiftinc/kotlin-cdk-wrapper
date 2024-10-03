@@ -77,7 +77,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCachePolicy(
   cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -561,7 +562,8 @@ public open class CfnCachePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty,
-    ) : CdkObject(cdkObject), CachePolicyConfigProperty {
+    ) : CdkObject(cdkObject),
+        CachePolicyConfigProperty {
       /**
        * A comment to describe the cache policy.
        *
@@ -783,7 +785,8 @@ public open class CfnCachePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty,
-    ) : CdkObject(cdkObject), CookiesConfigProperty {
+    ) : CdkObject(cdkObject),
+        CookiesConfigProperty {
       /**
        * Determines whether any cookies in viewer requests are included in the cache key and in
        * requests that CloudFront sends to the origin.
@@ -942,7 +945,8 @@ public open class CfnCachePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty,
-    ) : CdkObject(cdkObject), HeadersConfigProperty {
+    ) : CdkObject(cdkObject),
+        HeadersConfigProperty {
       /**
        * Determines whether any HTTP headers are included in the cache key and in requests that
        * CloudFront sends to the origin.
@@ -1514,7 +1518,8 @@ public open class CfnCachePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty,
-    ) : CdkObject(cdkObject), ParametersInCacheKeyAndForwardedToOriginProperty {
+    ) : CdkObject(cdkObject),
+        ParametersInCacheKeyAndForwardedToOriginProperty {
       /**
        * An object that determines whether any cookies in viewer requests (and if so, which cookies)
        * are included in the cache key and in requests that CloudFront sends to the origin.
@@ -1751,7 +1756,8 @@ public open class CfnCachePolicy(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty,
-    ) : CdkObject(cdkObject), QueryStringsConfigProperty {
+    ) : CdkObject(cdkObject),
+        QueryStringsConfigProperty {
       /**
        * Determines whether any URL query strings in viewer requests are included in the cache key
        * and in requests that CloudFront sends to the origin.

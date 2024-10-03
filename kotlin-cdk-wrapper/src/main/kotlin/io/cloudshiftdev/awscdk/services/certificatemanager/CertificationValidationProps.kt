@@ -129,7 +129,8 @@ public interface CertificationValidationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.certificatemanager.CertificationValidationProps,
-  ) : CdkObject(cdkObject), CertificationValidationProps {
+  ) : CdkObject(cdkObject),
+      CertificationValidationProps {
     /**
      * Hosted zone to use for DNS validation.
      *

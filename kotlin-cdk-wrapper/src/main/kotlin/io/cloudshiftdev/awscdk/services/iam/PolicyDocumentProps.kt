@@ -148,7 +148,8 @@ public interface PolicyDocumentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.PolicyDocumentProps,
-  ) : CdkObject(cdkObject), PolicyDocumentProps {
+  ) : CdkObject(cdkObject),
+      PolicyDocumentProps {
     /**
      * Automatically assign Statement Ids to all statements.
      *

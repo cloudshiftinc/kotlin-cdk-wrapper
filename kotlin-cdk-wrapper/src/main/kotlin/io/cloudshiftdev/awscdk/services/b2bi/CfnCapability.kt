@@ -70,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCapability(
   cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -591,7 +593,8 @@ public open class CfnCapability(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.CapabilityConfigurationProperty,
-    ) : CdkObject(cdkObject), CapabilityConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CapabilityConfigurationProperty {
       /**
        * An EDI (electronic data interchange) configuration object.
        *
@@ -846,7 +849,8 @@ public open class CfnCapability(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty,
-    ) : CdkObject(cdkObject), EdiConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EdiConfigurationProperty {
       /**
        * Contains the Amazon S3 bucket and prefix for the location of the input file, which is
        * contained in an `S3Location` object.
@@ -1005,7 +1009,8 @@ public open class CfnCapability(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty,
-    ) : CdkObject(cdkObject), EdiTypeProperty {
+    ) : CdkObject(cdkObject),
+        EdiTypeProperty {
       /**
        * Returns the details for the EDI standard that is being used for the transformer.
        *
@@ -1110,7 +1115,8 @@ public open class CfnCapability(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * Specifies the name of the Amazon S3 bucket.
        *
@@ -1221,7 +1227,8 @@ public open class CfnCapability(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty,
-    ) : CdkObject(cdkObject), X12DetailsProperty {
+    ) : CdkObject(cdkObject),
+        X12DetailsProperty {
       /**
        * Returns an enumerated type where each value identifies an X12 transaction set.
        *

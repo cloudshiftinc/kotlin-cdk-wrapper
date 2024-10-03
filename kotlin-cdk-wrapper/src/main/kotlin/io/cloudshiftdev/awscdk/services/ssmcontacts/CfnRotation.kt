@@ -24,6 +24,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Specifies a rotation in an on-call schedule.
  *
+ *
+ * *Template example* : We recommend creating all Incident Manager `Contacts` resources using a
+ * single AWS CloudFormation template. For a demonstration, see the examples for
+ * [AWS::SSMContacts::Contacts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html)
+ * .
+ *
+ *
  * Example:
  *
  * ```
@@ -68,7 +75,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRotation(
   cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -564,7 +573,8 @@ public open class CfnRotation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.CoverageTimeProperty,
-    ) : CdkObject(cdkObject), CoverageTimeProperty {
+    ) : CdkObject(cdkObject),
+        CoverageTimeProperty {
       /**
        * Information about when an on-call rotation shift ends.
        *
@@ -672,7 +682,8 @@ public open class CfnRotation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty,
-    ) : CdkObject(cdkObject), MonthlySettingProperty {
+    ) : CdkObject(cdkObject),
+        MonthlySettingProperty {
       /**
        * The day of the month when monthly recurring on-call rotations begin.
        *
@@ -970,7 +981,8 @@ public open class CfnRotation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.RecurrenceSettingsProperty,
-    ) : CdkObject(cdkObject), RecurrenceSettingsProperty {
+    ) : CdkObject(cdkObject),
+        RecurrenceSettingsProperty {
       /**
        * Information about on-call rotations that recur daily.
        *
@@ -1136,7 +1148,8 @@ public open class CfnRotation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.ShiftCoverageProperty,
-    ) : CdkObject(cdkObject), ShiftCoverageProperty {
+    ) : CdkObject(cdkObject),
+        ShiftCoverageProperty {
       /**
        * The start and end times of the shift.
        *
@@ -1244,7 +1257,8 @@ public open class CfnRotation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty,
-    ) : CdkObject(cdkObject), WeeklySettingProperty {
+    ) : CdkObject(cdkObject),
+        WeeklySettingProperty {
       /**
        * The day of the week when weekly recurring on-call shift rotations begins.
        *

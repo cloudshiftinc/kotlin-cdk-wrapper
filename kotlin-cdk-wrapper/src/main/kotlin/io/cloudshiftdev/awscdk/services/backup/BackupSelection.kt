@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class BackupSelection(
   cdkObject: software.amazon.awscdk.services.backup.BackupSelection,
-) : Resource(cdkObject), IGrantable {
+) : Resource(cdkObject),
+    IGrantable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

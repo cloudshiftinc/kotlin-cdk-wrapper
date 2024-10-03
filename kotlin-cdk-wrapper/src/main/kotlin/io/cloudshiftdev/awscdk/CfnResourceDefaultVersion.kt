@@ -31,7 +31,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResourceDefaultVersion(
   cdkObject: software.amazon.awscdk.CfnResourceDefaultVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.CfnResourceDefaultVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

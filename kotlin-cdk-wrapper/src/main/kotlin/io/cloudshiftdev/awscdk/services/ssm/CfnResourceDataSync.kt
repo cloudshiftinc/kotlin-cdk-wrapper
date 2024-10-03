@@ -94,7 +94,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnResourceDataSync(
   cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -213,12 +214,12 @@ public open class CfnResourceDataSync(
   }
 
   /**
-   *
+   * A name for the resource data sync.
    */
   public open fun syncName(): String = unwrap(this).getSyncName()
 
   /**
-   *
+   * A name for the resource data sync.
    */
   public open fun syncName(`value`: String) {
     unwrap(this).setSyncName(`value`)
@@ -341,8 +342,10 @@ public open class CfnResourceDataSync(
     public fun syncFormat(syncFormat: String)
 
     /**
+     * A name for the resource data sync.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-syncname)
-     * @param syncName 
+     * @param syncName A name for the resource data sync. 
      */
     public fun syncName(syncName: String)
 
@@ -480,8 +483,10 @@ public open class CfnResourceDataSync(
     }
 
     /**
+     * A name for the resource data sync.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-syncname)
-     * @param syncName 
+     * @param syncName A name for the resource data sync. 
      */
     override fun syncName(syncName: String) {
       cdkBuilder.syncName(syncName)
@@ -658,7 +663,8 @@ public open class CfnResourceDataSync(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.AwsOrganizationsSourceProperty,
-    ) : CdkObject(cdkObject), AwsOrganizationsSourceProperty {
+    ) : CdkObject(cdkObject),
+        AwsOrganizationsSourceProperty {
       /**
        * If an AWS organization is present, this is either `OrganizationalUnits` or
        * `EntireOrganization` .
@@ -840,7 +846,8 @@ public open class CfnResourceDataSync(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.S3DestinationProperty,
-    ) : CdkObject(cdkObject), S3DestinationProperty {
+    ) : CdkObject(cdkObject),
+        S3DestinationProperty {
       /**
        * The name of the S3 bucket where the aggregated data is stored.
        *
@@ -1095,7 +1102,8 @@ public open class CfnResourceDataSync(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.SyncSourceProperty,
-    ) : CdkObject(cdkObject), SyncSourceProperty {
+    ) : CdkObject(cdkObject),
+        SyncSourceProperty {
       /**
        * Information about the AwsOrganizationsSource resource data sync source.
        *

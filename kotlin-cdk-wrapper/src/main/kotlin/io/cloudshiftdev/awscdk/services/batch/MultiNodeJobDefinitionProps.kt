@@ -258,7 +258,8 @@ public interface MultiNodeJobDefinitionProps : JobDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.MultiNodeJobDefinitionProps,
-  ) : CdkObject(cdkObject), MultiNodeJobDefinitionProps {
+  ) : CdkObject(cdkObject),
+      MultiNodeJobDefinitionProps {
     /**
      * The containers that this multinode job will run.
      *

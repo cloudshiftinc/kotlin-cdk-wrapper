@@ -127,7 +127,8 @@ public interface CfnMonitoringSubscriptionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscriptionProps,
-  ) : CdkObject(cdkObject), CfnMonitoringSubscriptionProps {
+  ) : CdkObject(cdkObject),
+      CfnMonitoringSubscriptionProps {
     /**
      * The ID of the distribution that you are enabling metrics for.
      *

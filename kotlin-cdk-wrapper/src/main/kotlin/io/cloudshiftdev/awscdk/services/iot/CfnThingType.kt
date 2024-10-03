@@ -48,7 +48,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnThingType(
   cdkObject: software.amazon.awscdk.services.iot.CfnThingType,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iot.CfnThingType(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -490,7 +492,8 @@ public open class CfnThingType(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iot.CfnThingType.ThingTypePropertiesProperty,
-    ) : CdkObject(cdkObject), ThingTypePropertiesProperty {
+    ) : CdkObject(cdkObject),
+        ThingTypePropertiesProperty {
       /**
        * A list of searchable thing attribute names.
        *

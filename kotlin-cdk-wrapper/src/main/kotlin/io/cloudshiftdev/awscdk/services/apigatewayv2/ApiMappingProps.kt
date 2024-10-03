@@ -125,7 +125,8 @@ public interface ApiMappingProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMappingProps,
-  ) : CdkObject(cdkObject), ApiMappingProps {
+  ) : CdkObject(cdkObject),
+      ApiMappingProps {
     /**
      * The Api to which this mapping is applied.
      */

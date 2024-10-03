@@ -43,6 +43,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .greengrassV2(GreengrassV2Property.builder()
  * .coreDeviceThingName("coreDeviceThingName")
  * .build())
+ * .siemensIe(SiemensIEProperty.builder()
+ * .iotCoreThingName("iotCoreThingName")
+ * .build())
  * .build())
  * // the properties below are optional
  * .gatewayCapabilitySummaries(List.of(GatewayCapabilitySummaryProperty.builder()
@@ -61,7 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGateway(
   cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -109,12 +114,12 @@ public open class CfnGateway(
       gatewayCapabilitySummaries(`value`.toList())
 
   /**
-   * A unique, friendly name for the gateway.
+   * A unique name for the gateway.
    */
   public open fun gatewayName(): String = unwrap(this).getGatewayName()
 
   /**
-   * A unique, friendly name for the gateway.
+   * A unique name for the gateway.
    */
   public open fun gatewayName(`value`: String) {
     unwrap(this).setGatewayName(`value`)
@@ -227,10 +232,10 @@ public open class CfnGateway(
     public fun gatewayCapabilitySummaries(vararg gatewayCapabilitySummaries: Any)
 
     /**
-     * A unique, friendly name for the gateway.
+     * A unique name for the gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayname)
-     * @param gatewayName A unique, friendly name for the gateway. 
+     * @param gatewayName A unique name for the gateway. 
      */
     public fun gatewayName(gatewayName: String)
 
@@ -346,10 +351,10 @@ public open class CfnGateway(
         gatewayCapabilitySummaries(gatewayCapabilitySummaries.toList())
 
     /**
-     * A unique, friendly name for the gateway.
+     * A unique name for the gateway.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html#cfn-iotsitewise-gateway-gatewayname)
-     * @param gatewayName A unique, friendly name for the gateway. 
+     * @param gatewayName A unique name for the gateway. 
      */
     override fun gatewayName(gatewayName: String) {
       cdkBuilder.gatewayName(gatewayName)
@@ -540,7 +545,8 @@ public open class CfnGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty,
-    ) : CdkObject(cdkObject), GatewayCapabilitySummaryProperty {
+    ) : CdkObject(cdkObject),
+        GatewayCapabilitySummaryProperty {
       /**
        * The JSON document that defines the configuration for the gateway capability.
        *
@@ -598,6 +604,9 @@ public open class CfnGateway(
    * .greengrassV2(GreengrassV2Property.builder()
    * .coreDeviceThingName("coreDeviceThingName")
    * .build())
+   * .siemensIe(SiemensIEProperty.builder()
+   * .iotCoreThingName("iotCoreThingName")
+   * .build())
    * .build();
    * ```
    *
@@ -617,6 +626,13 @@ public open class CfnGateway(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewayplatform.html#cfn-iotsitewise-gateway-gatewayplatform-greengrassv2)
      */
     public fun greengrassV2(): Any? = unwrap(this).getGreengrassV2()
+
+    /**
+     * A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewayplatform.html#cfn-iotsitewise-gateway-gatewayplatform-siemensie)
+     */
+    public fun siemensIe(): Any? = unwrap(this).getSiemensIe()
 
     /**
      * A builder for [GatewayPlatformProperty]
@@ -656,6 +672,26 @@ public open class CfnGateway(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ca43a8bd608afed1919b0aedc0623e92dc59ed76e4674f3fb5a2b3b3450fd463")
       public fun greengrassV2(greengrassV2: GreengrassV2Property.Builder.() -> Unit)
+
+      /**
+       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * Device.
+       */
+      public fun siemensIe(siemensIe: IResolvable)
+
+      /**
+       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * Device.
+       */
+      public fun siemensIe(siemensIe: SiemensIEProperty)
+
+      /**
+       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * Device.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8948bccacc1ab404edea7b7da29e3465a2acaf512fe64c4c08ffe92dff751198")
+      public fun siemensIe(siemensIe: SiemensIEProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -707,6 +743,31 @@ public open class CfnGateway(
       override fun greengrassV2(greengrassV2: GreengrassV2Property.Builder.() -> Unit): Unit =
           greengrassV2(GreengrassV2Property(greengrassV2))
 
+      /**
+       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * Device.
+       */
+      override fun siemensIe(siemensIe: IResolvable) {
+        cdkBuilder.siemensIe(siemensIe.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * Device.
+       */
+      override fun siemensIe(siemensIe: SiemensIEProperty) {
+        cdkBuilder.siemensIe(siemensIe.let(SiemensIEProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param siemensIe A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+       * Device.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8948bccacc1ab404edea7b7da29e3465a2acaf512fe64c4c08ffe92dff751198")
+      override fun siemensIe(siemensIe: SiemensIEProperty.Builder.() -> Unit): Unit =
+          siemensIe(SiemensIEProperty(siemensIe))
+
       public fun build():
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayPlatformProperty =
           cdkBuilder.build()
@@ -714,7 +775,8 @@ public open class CfnGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayPlatformProperty,
-    ) : CdkObject(cdkObject), GatewayPlatformProperty {
+    ) : CdkObject(cdkObject),
+        GatewayPlatformProperty {
       /**
        * A gateway that runs on AWS IoT Greengrass .
        *
@@ -728,6 +790,13 @@ public open class CfnGateway(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewayplatform.html#cfn-iotsitewise-gateway-gatewayplatform-greengrassv2)
        */
       override fun greengrassV2(): Any? = unwrap(this).getGreengrassV2()
+
+      /**
+       * A AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewayplatform.html#cfn-iotsitewise-gateway-gatewayplatform-siemensie)
+       */
+      override fun siemensIe(): Any? = unwrap(this).getSiemensIe()
     }
 
     public companion object {
@@ -821,7 +890,8 @@ public open class CfnGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty,
-    ) : CdkObject(cdkObject), GreengrassProperty {
+    ) : CdkObject(cdkObject),
+        GreengrassProperty {
       /**
        * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of
        * the Greengrass group. For more information about how to find a group's ARN, see
@@ -915,7 +985,8 @@ public open class CfnGateway(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property,
-    ) : CdkObject(cdkObject), GreengrassV2Property {
+    ) : CdkObject(cdkObject),
+        GreengrassV2Property {
       /**
        * The name of the AWS IoT thing for your AWS IoT Greengrass V2 core device.
        *
@@ -939,6 +1010,90 @@ public open class CfnGateway(
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property
+    }
+  }
+
+  /**
+   * Contains details for a AWS IoT SiteWise Edge gateway that runs on a Siemens Industrial Edge
+   * Device.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotsitewise.*;
+   * SiemensIEProperty siemensIEProperty = SiemensIEProperty.builder()
+   * .iotCoreThingName("iotCoreThingName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-siemensie.html)
+   */
+  public interface SiemensIEProperty {
+    /**
+     * The name of the AWS IoT Thing for your AWS IoT SiteWise Edge gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-siemensie.html#cfn-iotsitewise-gateway-siemensie-iotcorethingname)
+     */
+    public fun iotCoreThingName(): String
+
+    /**
+     * A builder for [SiemensIEProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param iotCoreThingName The name of the AWS IoT Thing for your AWS IoT SiteWise Edge
+       * gateway. 
+       */
+      public fun iotCoreThingName(iotCoreThingName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.SiemensIEProperty.Builder =
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.SiemensIEProperty.builder()
+
+      /**
+       * @param iotCoreThingName The name of the AWS IoT Thing for your AWS IoT SiteWise Edge
+       * gateway. 
+       */
+      override fun iotCoreThingName(iotCoreThingName: String) {
+        cdkBuilder.iotCoreThingName(iotCoreThingName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iotsitewise.CfnGateway.SiemensIEProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.SiemensIEProperty,
+    ) : CdkObject(cdkObject),
+        SiemensIEProperty {
+      /**
+       * The name of the AWS IoT Thing for your AWS IoT SiteWise Edge gateway.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-siemensie.html#cfn-iotsitewise-gateway-siemensie-iotcorethingname)
+       */
+      override fun iotCoreThingName(): String = unwrap(this).getIotCoreThingName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SiemensIEProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.SiemensIEProperty):
+          SiemensIEProperty = CdkObjectWrappers.wrap(cdkObject) as? SiemensIEProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SiemensIEProperty):
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.SiemensIEProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotsitewise.CfnGateway.SiemensIEProperty
     }
   }
 }

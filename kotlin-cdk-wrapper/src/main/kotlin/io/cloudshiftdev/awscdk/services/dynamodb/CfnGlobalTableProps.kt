@@ -321,6 +321,10 @@ public interface CfnGlobalTableProps {
   public fun timeToLiveSpecification(): Any? = unwrap(this).getTimeToLiveSpecification()
 
   /**
+   * Sets the write request settings for a global table or a global secondary index.
+   *
+   * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
    */
   public fun writeOnDemandThroughputSettings(): Any? =
@@ -607,18 +611,24 @@ public interface CfnGlobalTableProps {
         fun timeToLiveSpecification(timeToLiveSpecification: CfnGlobalTable.TimeToLiveSpecificationProperty.Builder.() -> Unit)
 
     /**
-     * @param writeOnDemandThroughputSettings the value to be set.
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index.
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
      */
     public fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable)
 
     /**
-     * @param writeOnDemandThroughputSettings the value to be set.
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index.
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
      */
     public
         fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: CfnGlobalTable.WriteOnDemandThroughputSettingsProperty)
 
     /**
-     * @param writeOnDemandThroughputSettings the value to be set.
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index.
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("03ff940b187afcc4d415dbd175d3418a96cc698bd2755a5821b65ea8f65b9834")
@@ -967,14 +977,18 @@ public interface CfnGlobalTableProps {
         timeToLiveSpecification(CfnGlobalTable.TimeToLiveSpecificationProperty(timeToLiveSpecification))
 
     /**
-     * @param writeOnDemandThroughputSettings the value to be set.
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index.
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
      */
     override fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable) {
       cdkBuilder.writeOnDemandThroughputSettings(writeOnDemandThroughputSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param writeOnDemandThroughputSettings the value to be set.
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index.
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
      */
     override
         fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: CfnGlobalTable.WriteOnDemandThroughputSettingsProperty) {
@@ -982,7 +996,9 @@ public interface CfnGlobalTableProps {
     }
 
     /**
-     * @param writeOnDemandThroughputSettings the value to be set.
+     * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
+     * a global secondary index.
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("03ff940b187afcc4d415dbd175d3418a96cc698bd2755a5821b65ea8f65b9834")
@@ -1032,7 +1048,8 @@ public interface CfnGlobalTableProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTableProps,
-  ) : CdkObject(cdkObject), CfnGlobalTableProps {
+  ) : CdkObject(cdkObject),
+      CfnGlobalTableProps {
     /**
      * A list of attributes that describe the key schema for the global table and indexes.
      *
@@ -1165,6 +1182,10 @@ public interface CfnGlobalTableProps {
     override fun timeToLiveSpecification(): Any? = unwrap(this).getTimeToLiveSpecification()
 
     /**
+     * Sets the write request settings for a global table or a global secondary index.
+     *
+     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
      */
     override fun writeOnDemandThroughputSettings(): Any? =

@@ -125,7 +125,8 @@ public interface InitUserOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.InitUserOptions,
-  ) : CdkObject(cdkObject), InitUserOptions {
+  ) : CdkObject(cdkObject),
+      InitUserOptions {
     /**
      * A list of group names.
      *

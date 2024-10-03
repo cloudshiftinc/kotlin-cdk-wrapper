@@ -89,7 +89,8 @@ public interface StagePlacement {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.StagePlacement,
-  ) : CdkObject(cdkObject), StagePlacement {
+  ) : CdkObject(cdkObject),
+      StagePlacement {
     /**
      * Inserts the new Stage as a child of the given Stage (changing its current child Stage, if it
      * had one).

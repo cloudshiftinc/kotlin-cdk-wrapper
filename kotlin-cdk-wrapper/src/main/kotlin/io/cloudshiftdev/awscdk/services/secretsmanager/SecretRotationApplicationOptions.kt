@@ -61,7 +61,8 @@ public interface SecretRotationApplicationOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.SecretRotationApplicationOptions,
-  ) : CdkObject(cdkObject), SecretRotationApplicationOptions {
+  ) : CdkObject(cdkObject),
+      SecretRotationApplicationOptions {
     /**
      * Whether the rotation application uses the mutli user scheme.
      *

@@ -17,7 +17,8 @@ public interface IModel {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.IModel,
-  ) : CdkObject(cdkObject), IModel {
+  ) : CdkObject(cdkObject),
+      IModel {
     /**
      * Returns the model name, such as 'myModel'.
      */

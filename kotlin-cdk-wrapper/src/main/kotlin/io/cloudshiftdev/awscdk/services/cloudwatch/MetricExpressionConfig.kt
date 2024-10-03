@@ -138,7 +138,8 @@ public interface MetricExpressionConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.MetricExpressionConfig,
-  ) : CdkObject(cdkObject), MetricExpressionConfig {
+  ) : CdkObject(cdkObject),
+      MetricExpressionConfig {
     /**
      * Math expression for the metric.
      */

@@ -322,7 +322,8 @@ public interface CfnIndexProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.qbusiness.CfnIndexProps,
-  ) : CdkObject(cdkObject), CfnIndexProps {
+  ) : CdkObject(cdkObject),
+      CfnIndexProps {
     /**
      * The identifier of the Amazon Q Business application using the index.
      *

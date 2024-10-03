@@ -31,7 +31,8 @@ public interface ILoadBalancerV2 : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2,
-  ) : CdkObject(cdkObject), ILoadBalancerV2 {
+  ) : CdkObject(cdkObject),
+      ILoadBalancerV2 {
     /**
      * Apply the given removal policy to this resource.
      *

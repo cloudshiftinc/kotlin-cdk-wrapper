@@ -115,7 +115,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWorkGroup(
   cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -763,7 +765,8 @@ public open class CfnWorkGroup(
 
   /**
    * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query
-   * results.
+   * results, including data files inserted by Athena as the result of statements like CTAS or INSERT
+   * INTO.
    *
    * When Athena stores query results in Amazon S3, the canned ACL is set with the `x-amz-acl`
    * request header. For more information about S3 Object Ownership, see [Object Ownership
@@ -785,7 +788,8 @@ public open class CfnWorkGroup(
    */
   public interface AclConfigurationProperty {
     /**
-     * The Amazon S3 canned ACL that Athena should specify when storing query results.
+     * The Amazon S3 canned ACL that Athena should specify when storing query results, including
+     * data files inserted by Athena as the result of statements like CTAS or INSERT INTO.
      *
      * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in a
      * workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
@@ -805,7 +809,8 @@ public open class CfnWorkGroup(
     public interface Builder {
       /**
        * @param s3AclOption The Amazon S3 canned ACL that Athena should specify when storing query
-       * results. 
+       * results, including data files inserted by Athena as the result of statements like CTAS or
+       * INSERT INTO. 
        * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in
        * a workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
        * specified in the workgroup's settings is used for all queries that run in the workgroup. For
@@ -823,7 +828,8 @@ public open class CfnWorkGroup(
 
       /**
        * @param s3AclOption The Amazon S3 canned ACL that Athena should specify when storing query
-       * results. 
+       * results, including data files inserted by Athena as the result of statements like CTAS or
+       * INSERT INTO. 
        * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in
        * a workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
        * specified in the workgroup's settings is used for all queries that run in the workgroup. For
@@ -842,9 +848,11 @@ public open class CfnWorkGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty,
-    ) : CdkObject(cdkObject), AclConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AclConfigurationProperty {
       /**
-       * The Amazon S3 canned ACL that Athena should specify when storing query results.
+       * The Amazon S3 canned ACL that Athena should specify when storing query results, including
+       * data files inserted by Athena as the result of statements like CTAS or INSERT INTO.
        *
        * Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL` . If a query runs in
        * a workgroup and the workgroup overrides client-side settings, then the Amazon S3 canned ACL
@@ -938,7 +946,8 @@ public open class CfnWorkGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), CustomerContentEncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CustomerContentEncryptionConfigurationProperty {
       /**
        * The customer managed KMS key that is used to encrypt the user's data stores in Athena.
        *
@@ -1060,7 +1069,8 @@ public open class CfnWorkGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionConfigurationProperty {
       /**
        * Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys ( `SSE_S3`
        * ), server-side encryption with KMS-managed keys ( `SSE_KMS` ), or client-side encryption with
@@ -1197,7 +1207,8 @@ public open class CfnWorkGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.EngineVersionProperty,
-    ) : CdkObject(cdkObject), EngineVersionProperty {
+    ) : CdkObject(cdkObject),
+        EngineVersionProperty {
       /**
        * Read only.
        *
@@ -1290,8 +1301,8 @@ public open class CfnWorkGroup(
      * This is a client-side setting. If workgroup settings override client-side settings, then the
      * query uses the encryption configuration that is specified for the workgroup, and also uses the
      * location for storing query results specified in the workgroup. See
-     * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-     * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+     * `EnforceWorkGroupConfiguration` and [Override client-side
+     * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration)
      */
@@ -1321,9 +1332,8 @@ public open class CfnWorkGroup(
      * To run a query, you must specify the query results location using either a client-side
      * setting for individual queries or a location specified by the workgroup. If workgroup settings
      * override client-side settings, then the query uses the location specified for the workgroup. If
-     * no query location is set, Athena issues an error. For more information, see [Working with Query
-     * Results, Output Files, and Query
-     * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
+     * no query location is set, Athena issues an error. For more information, see [Work with query
+     * results and recent queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
      * `EnforceWorkGroupConfiguration` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-outputlocation)
@@ -1373,8 +1383,8 @@ public open class CfnWorkGroup(
        * This is a client-side setting. If workgroup settings override client-side settings, then
        * the query uses the encryption configuration that is specified for the workgroup, and also uses
        * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * `EnforceWorkGroupConfiguration` and [Override client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
 
@@ -1384,8 +1394,8 @@ public open class CfnWorkGroup(
        * This is a client-side setting. If workgroup settings override client-side settings, then
        * the query uses the encryption configuration that is specified for the workgroup, and also uses
        * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * `EnforceWorkGroupConfiguration` and [Override client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty)
 
@@ -1395,8 +1405,8 @@ public open class CfnWorkGroup(
        * This is a client-side setting. If workgroup settings override client-side settings, then
        * the query uses the encryption configuration that is specified for the workgroup, and also uses
        * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * `EnforceWorkGroupConfiguration` and [Override client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5203c5f393dec1aa3e91088a082705ed6f73eac66b6b62ee8a887ec08dd6f120")
@@ -1423,10 +1433,9 @@ public open class CfnWorkGroup(
        * To run a query, you must specify the query results location using either a client-side
        * setting for individual queries or a location specified by the workgroup. If workgroup settings
        * override client-side settings, then the query uses the location specified for the workgroup.
-       * If no query location is set, Athena issues an error. For more information, see [Working with
-       * Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
-       * `EnforceWorkGroupConfiguration` .
+       * If no query location is set, Athena issues an error. For more information, see [Work with
+       * query results and recent queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html)
+       * and `EnforceWorkGroupConfiguration` .
        */
       public fun outputLocation(outputLocation: String)
     }
@@ -1479,8 +1488,8 @@ public open class CfnWorkGroup(
        * This is a client-side setting. If workgroup settings override client-side settings, then
        * the query uses the encryption configuration that is specified for the workgroup, and also uses
        * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * `EnforceWorkGroupConfiguration` and [Override client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
         cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
@@ -1492,8 +1501,8 @@ public open class CfnWorkGroup(
        * This is a client-side setting. If workgroup settings override client-side settings, then
        * the query uses the encryption configuration that is specified for the workgroup, and also uses
        * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * `EnforceWorkGroupConfiguration` and [Override client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
@@ -1506,8 +1515,8 @@ public open class CfnWorkGroup(
        * This is a client-side setting. If workgroup settings override client-side settings, then
        * the query uses the encryption configuration that is specified for the workgroup, and also uses
        * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * `EnforceWorkGroupConfiguration` and [Override client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5203c5f393dec1aa3e91088a082705ed6f73eac66b6b62ee8a887ec08dd6f120")
@@ -1537,10 +1546,9 @@ public open class CfnWorkGroup(
        * To run a query, you must specify the query results location using either a client-side
        * setting for individual queries or a location specified by the workgroup. If workgroup settings
        * override client-side settings, then the query uses the location specified for the workgroup.
-       * If no query location is set, Athena issues an error. For more information, see [Working with
-       * Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
-       * `EnforceWorkGroupConfiguration` .
+       * If no query location is set, Athena issues an error. For more information, see [Work with
+       * query results and recent queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html)
+       * and `EnforceWorkGroupConfiguration` .
        */
       override fun outputLocation(outputLocation: String) {
         cdkBuilder.outputLocation(outputLocation)
@@ -1553,7 +1561,8 @@ public open class CfnWorkGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty,
-    ) : CdkObject(cdkObject), ResultConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ResultConfigurationProperty {
       /**
        * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query
        * results.
@@ -1574,8 +1583,8 @@ public open class CfnWorkGroup(
        * This is a client-side setting. If workgroup settings override client-side settings, then
        * the query uses the encryption configuration that is specified for the workgroup, and also uses
        * the location for storing query results specified in the workgroup. See
-       * `EnforceWorkGroupConfiguration` and [Workgroup Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * `EnforceWorkGroupConfiguration` and [Override client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration)
        */
@@ -1605,10 +1614,9 @@ public open class CfnWorkGroup(
        * To run a query, you must specify the query results location using either a client-side
        * setting for individual queries or a location specified by the workgroup. If workgroup settings
        * override client-side settings, then the query uses the location specified for the workgroup.
-       * If no query location is set, Athena issues an error. For more information, see [Working with
-       * Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and
-       * `EnforceWorkGroupConfiguration` .
+       * If no query location is set, Athena issues an error. For more information, see [Work with
+       * query results and recent queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html)
+       * and `EnforceWorkGroupConfiguration` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html#cfn-athena-workgroup-resultconfiguration-outputlocation)
        */
@@ -1735,7 +1743,7 @@ public open class CfnWorkGroup(
      * If set to "false" or not set, and a value is present in the EncryptionConfiguration in
      * ResultConfigurationUpdates (the client-side setting), the EncryptionConfiguration in the
      * workgroup's ResultConfiguration will be updated with the new value. For more information, see
-     * [Workgroup Settings Override Client-Side
+     * [Override Client-Side
      * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfigurationupdates.html#cfn-athena-workgroup-resultconfigurationupdates-removeencryptionconfiguration)
@@ -1763,8 +1771,8 @@ public open class CfnWorkGroup(
      *
      * If set to "false" or not set, and a value is present in the OutputLocation in
      * ResultConfigurationUpdates (the client-side setting), the OutputLocation in the workgroup's
-     * ResultConfiguration will be updated with the new value. For more information, see [Workgroup
-     * Settings Override Client-Side
+     * ResultConfiguration will be updated with the new value. For more information, see [Override
+     * Client-Side
      * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfigurationupdates.html#cfn-athena-workgroup-resultconfigurationupdates-removeoutputlocation)
@@ -1868,7 +1876,7 @@ public open class CfnWorkGroup(
        * If set to "false" or not set, and a value is present in the EncryptionConfiguration in
        * ResultConfigurationUpdates (the client-side setting), the EncryptionConfiguration in the
        * workgroup's ResultConfiguration will be updated with the new value. For more information, see
-       * [Workgroup Settings Override Client-Side
+       * [Override Client-Side
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       public fun removeEncryptionConfiguration(removeEncryptionConfiguration: Boolean)
@@ -1880,7 +1888,7 @@ public open class CfnWorkGroup(
        * If set to "false" or not set, and a value is present in the EncryptionConfiguration in
        * ResultConfigurationUpdates (the client-side setting), the EncryptionConfiguration in the
        * workgroup's ResultConfiguration will be updated with the new value. For more information, see
-       * [Workgroup Settings Override Client-Side
+       * [Override Client-Side
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       public fun removeEncryptionConfiguration(removeEncryptionConfiguration: IResolvable)
@@ -1913,8 +1921,8 @@ public open class CfnWorkGroup(
        * ignored and set to null.
        * If set to "false" or not set, and a value is present in the OutputLocation in
        * ResultConfigurationUpdates (the client-side setting), the OutputLocation in the workgroup's
-       * ResultConfiguration will be updated with the new value. For more information, see [Workgroup
-       * Settings Override Client-Side
+       * ResultConfiguration will be updated with the new value. For more information, see [Override
+       * Client-Side
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       public fun removeOutputLocation(removeOutputLocation: Boolean)
@@ -1925,8 +1933,8 @@ public open class CfnWorkGroup(
        * ignored and set to null.
        * If set to "false" or not set, and a value is present in the OutputLocation in
        * ResultConfigurationUpdates (the client-side setting), the OutputLocation in the workgroup's
-       * ResultConfiguration will be updated with the new value. For more information, see [Workgroup
-       * Settings Override Client-Side
+       * ResultConfiguration will be updated with the new value. For more information, see [Override
+       * Client-Side
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       public fun removeOutputLocation(removeOutputLocation: IResolvable)
@@ -2049,7 +2057,7 @@ public open class CfnWorkGroup(
        * If set to "false" or not set, and a value is present in the EncryptionConfiguration in
        * ResultConfigurationUpdates (the client-side setting), the EncryptionConfiguration in the
        * workgroup's ResultConfiguration will be updated with the new value. For more information, see
-       * [Workgroup Settings Override Client-Side
+       * [Override Client-Side
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun removeEncryptionConfiguration(removeEncryptionConfiguration: Boolean) {
@@ -2063,7 +2071,7 @@ public open class CfnWorkGroup(
        * If set to "false" or not set, and a value is present in the EncryptionConfiguration in
        * ResultConfigurationUpdates (the client-side setting), the EncryptionConfiguration in the
        * workgroup's ResultConfiguration will be updated with the new value. For more information, see
-       * [Workgroup Settings Override Client-Side
+       * [Override Client-Side
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun removeEncryptionConfiguration(removeEncryptionConfiguration: IResolvable) {
@@ -2102,8 +2110,8 @@ public open class CfnWorkGroup(
        * ignored and set to null.
        * If set to "false" or not set, and a value is present in the OutputLocation in
        * ResultConfigurationUpdates (the client-side setting), the OutputLocation in the workgroup's
-       * ResultConfiguration will be updated with the new value. For more information, see [Workgroup
-       * Settings Override Client-Side
+       * ResultConfiguration will be updated with the new value. For more information, see [Override
+       * Client-Side
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun removeOutputLocation(removeOutputLocation: Boolean) {
@@ -2116,8 +2124,8 @@ public open class CfnWorkGroup(
        * ignored and set to null.
        * If set to "false" or not set, and a value is present in the OutputLocation in
        * ResultConfigurationUpdates (the client-side setting), the OutputLocation in the workgroup's
-       * ResultConfiguration will be updated with the new value. For more information, see [Workgroup
-       * Settings Override Client-Side
+       * ResultConfiguration will be updated with the new value. For more information, see [Override
+       * Client-Side
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun removeOutputLocation(removeOutputLocation: IResolvable) {
@@ -2131,7 +2139,8 @@ public open class CfnWorkGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationUpdatesProperty,
-    ) : CdkObject(cdkObject), ResultConfigurationUpdatesProperty {
+    ) : CdkObject(cdkObject),
+        ResultConfigurationUpdatesProperty {
       /**
        * The ACL configuration for the query results.
        *
@@ -2202,7 +2211,7 @@ public open class CfnWorkGroup(
        * If set to "false" or not set, and a value is present in the EncryptionConfiguration in
        * ResultConfigurationUpdates (the client-side setting), the EncryptionConfiguration in the
        * workgroup's ResultConfiguration will be updated with the new value. For more information, see
-       * [Workgroup Settings Override Client-Side
+       * [Override Client-Side
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfigurationupdates.html#cfn-athena-workgroup-resultconfigurationupdates-removeencryptionconfiguration)
@@ -2231,8 +2240,8 @@ public open class CfnWorkGroup(
        *
        * If set to "false" or not set, and a value is present in the OutputLocation in
        * ResultConfigurationUpdates (the client-side setting), the OutputLocation in the workgroup's
-       * ResultConfiguration will be updated with the new value. For more information, see [Workgroup
-       * Settings Override Client-Side
+       * ResultConfiguration will be updated with the new value. For more information, see [Override
+       * Client-Side
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfigurationupdates.html#cfn-athena-workgroup-resultconfigurationupdates-removeoutputlocation)
@@ -2341,9 +2350,9 @@ public open class CfnWorkGroup(
     /**
      * If set to "true", the settings for the workgroup override client-side settings.
      *
-     * If set to "false", client-side settings are used. For more information, see [Workgroup
-     * Settings Override Client-Side
-     * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+     * If set to "false", client-side settings are used. For more information, see [Override
+     * client-side
+     * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration)
      */
@@ -2392,8 +2401,8 @@ public open class CfnWorkGroup(
      * Specifies the location in Amazon S3 where query results are stored and the encryption option,
      * if any, used for query results.
      *
-     * For more information, see [Working with Query Results, Output Files, and Query
-     * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+     * For more information, see [Work with query results and recent
+     * queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration)
      */
@@ -2449,18 +2458,18 @@ public open class CfnWorkGroup(
       /**
        * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
        * override client-side settings.
-       * If set to "false", client-side settings are used. For more information, see [Workgroup
-       * Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * If set to "false", client-side settings are used. For more information, see [Override
+       * client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       public fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: Boolean)
 
       /**
        * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
        * override client-side settings.
-       * If set to "false", client-side settings are used. For more information, see [Workgroup
-       * Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * If set to "false", client-side settings are used. For more information, see [Override
+       * client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       public fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: IResolvable)
 
@@ -2525,24 +2534,24 @@ public open class CfnWorkGroup(
       /**
        * @param resultConfiguration Specifies the location in Amazon S3 where query results are
        * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       * For more information, see [Work with query results and recent
+       * queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
        */
       public fun resultConfiguration(resultConfiguration: IResolvable)
 
       /**
        * @param resultConfiguration Specifies the location in Amazon S3 where query results are
        * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       * For more information, see [Work with query results and recent
+       * queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
        */
       public fun resultConfiguration(resultConfiguration: ResultConfigurationProperty)
 
       /**
        * @param resultConfiguration Specifies the location in Amazon S3 where query results are
        * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       * For more information, see [Work with query results and recent
+       * queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("004561fbbfbe6dec63a390996bb2a4f0182fb92a2a15d27e6386401a651aca7d")
@@ -2611,9 +2620,9 @@ public open class CfnWorkGroup(
       /**
        * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
        * override client-side settings.
-       * If set to "false", client-side settings are used. For more information, see [Workgroup
-       * Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * If set to "false", client-side settings are used. For more information, see [Override
+       * client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: Boolean) {
         cdkBuilder.enforceWorkGroupConfiguration(enforceWorkGroupConfiguration)
@@ -2622,9 +2631,9 @@ public open class CfnWorkGroup(
       /**
        * @param enforceWorkGroupConfiguration If set to "true", the settings for the workgroup
        * override client-side settings.
-       * If set to "false", client-side settings are used. For more information, see [Workgroup
-       * Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * If set to "false", client-side settings are used. For more information, see [Override
+       * client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: IResolvable) {
         cdkBuilder.enforceWorkGroupConfiguration(enforceWorkGroupConfiguration.let(IResolvable.Companion::unwrap))
@@ -2706,8 +2715,8 @@ public open class CfnWorkGroup(
       /**
        * @param resultConfiguration Specifies the location in Amazon S3 where query results are
        * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       * For more information, see [Work with query results and recent
+       * queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
        */
       override fun resultConfiguration(resultConfiguration: IResolvable) {
         cdkBuilder.resultConfiguration(resultConfiguration.let(IResolvable.Companion::unwrap))
@@ -2716,8 +2725,8 @@ public open class CfnWorkGroup(
       /**
        * @param resultConfiguration Specifies the location in Amazon S3 where query results are
        * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       * For more information, see [Work with query results and recent
+       * queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
        */
       override fun resultConfiguration(resultConfiguration: ResultConfigurationProperty) {
         cdkBuilder.resultConfiguration(resultConfiguration.let(ResultConfigurationProperty.Companion::unwrap))
@@ -2726,8 +2735,8 @@ public open class CfnWorkGroup(
       /**
        * @param resultConfiguration Specifies the location in Amazon S3 where query results are
        * stored and the encryption option, if any, used for query results.
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       * For more information, see [Work with query results and recent
+       * queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("004561fbbfbe6dec63a390996bb2a4f0182fb92a2a15d27e6386401a651aca7d")
@@ -2742,7 +2751,8 @@ public open class CfnWorkGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty,
-    ) : CdkObject(cdkObject), WorkGroupConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        WorkGroupConfigurationProperty {
       /**
        * Specifies a user defined JSON string that is passed to the session engine.
        *
@@ -2778,9 +2788,9 @@ public open class CfnWorkGroup(
       /**
        * If set to "true", the settings for the workgroup override client-side settings.
        *
-       * If set to "false", client-side settings are used. For more information, see [Workgroup
-       * Settings Override Client-Side
-       * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
+       * If set to "false", client-side settings are used. For more information, see [Override
+       * client-side
+       * settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration)
        */
@@ -2829,8 +2839,8 @@ public open class CfnWorkGroup(
        * Specifies the location in Amazon S3 where query results are stored and the encryption
        * option, if any, used for query results.
        *
-       * For more information, see [Working with Query Results, Output Files, and Query
-       * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
+       * For more information, see [Work with query results and recent
+       * queries](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration)
        */
@@ -3356,7 +3366,8 @@ public open class CfnWorkGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationUpdatesProperty,
-    ) : CdkObject(cdkObject), WorkGroupConfigurationUpdatesProperty {
+    ) : CdkObject(cdkObject),
+        WorkGroupConfigurationUpdatesProperty {
       /**
        * Additional Configuration that are passed to Athena Spark Calculations running in this
        * workgroup.

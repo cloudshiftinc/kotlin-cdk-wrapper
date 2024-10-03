@@ -45,7 +45,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStreamingImage(
   cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImage,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -208,7 +210,7 @@ public open class CfnStreamingImage(
     /**
      * The unique identifier for a studio resource.
      *
-     * In Nimble Studio , all other resources are contained in a studio resource.
+     * In Nimble Studio, all other resources are contained in a studio resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-studioid)
      * @param studioId The unique identifier for a studio resource. 
@@ -268,7 +270,7 @@ public open class CfnStreamingImage(
     /**
      * The unique identifier for a studio resource.
      *
-     * In Nimble Studio , all other resources are contained in a studio resource.
+     * In Nimble Studio, all other resources are contained in a studio resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html#cfn-nimblestudio-streamingimage-studioid)
      * @param studioId The unique identifier for a studio resource. 
@@ -393,7 +395,8 @@ public open class CfnStreamingImage(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImage.StreamingImageEncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), StreamingImageEncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        StreamingImageEncryptionConfigurationProperty {
       /**
        * The ARN for a KMS key that is used to encrypt studio data.
        *

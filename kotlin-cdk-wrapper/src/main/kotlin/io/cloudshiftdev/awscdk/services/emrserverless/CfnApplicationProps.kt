@@ -47,10 +47,15 @@ import kotlin.jvm.JvmName
  * .memory("memory")
  * // the properties below are optional
  * .disk("disk")
+ * .diskType("diskType")
  * .build())
  * .workerCount(123)
  * .build())
  * .build()))
+ * .interactiveConfiguration(InteractiveConfigurationProperty.builder()
+ * .livyEndpointEnabled(false)
+ * .studioEnabled(false)
+ * .build())
  * .maximumCapacity(MaximumAllowedResourcesProperty.builder()
  * .cpu("cpu")
  * .memory("memory")
@@ -140,6 +145,13 @@ public interface CfnApplicationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-initialcapacity)
    */
   public fun initialCapacity(): Any? = unwrap(this).getInitialCapacity()
+
+  /**
+   * The interactive configuration object that enables the interactive use cases for an application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-interactiveconfiguration)
+   */
+  public fun interactiveConfiguration(): Any? = unwrap(this).getInteractiveConfiguration()
 
   /**
    * The maximum capacity of the application.
@@ -305,6 +317,28 @@ public interface CfnApplicationProps {
      * @param initialCapacity The initial capacity of the application.
      */
     public fun initialCapacity(vararg initialCapacity: Any)
+
+    /**
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application.
+     */
+    public fun interactiveConfiguration(interactiveConfiguration: IResolvable)
+
+    /**
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application.
+     */
+    public
+        fun interactiveConfiguration(interactiveConfiguration: CfnApplication.InteractiveConfigurationProperty)
+
+    /**
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e3de5df1f3fca8debaa4faee6ea31cc226b7b64a9a5a083c67fcdf8fc460e256")
+    public
+        fun interactiveConfiguration(interactiveConfiguration: CfnApplication.InteractiveConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param maximumCapacity The maximum capacity of the application.
@@ -569,6 +603,34 @@ public interface CfnApplicationProps {
         initialCapacity(initialCapacity.toList())
 
     /**
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application.
+     */
+    override fun interactiveConfiguration(interactiveConfiguration: IResolvable) {
+      cdkBuilder.interactiveConfiguration(interactiveConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application.
+     */
+    override
+        fun interactiveConfiguration(interactiveConfiguration: CfnApplication.InteractiveConfigurationProperty) {
+      cdkBuilder.interactiveConfiguration(interactiveConfiguration.let(CfnApplication.InteractiveConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param interactiveConfiguration The interactive configuration object that enables the
+     * interactive use cases for an application.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e3de5df1f3fca8debaa4faee6ea31cc226b7b64a9a5a083c67fcdf8fc460e256")
+    override
+        fun interactiveConfiguration(interactiveConfiguration: CfnApplication.InteractiveConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        interactiveConfiguration(CfnApplication.InteractiveConfigurationProperty(interactiveConfiguration))
+
+    /**
      * @param maximumCapacity The maximum capacity of the application.
      * This is cumulative across all workers at any given point in time during the lifespan of the
      * application is created. No new resources will be created once any one of the defined limits is
@@ -756,7 +818,8 @@ public interface CfnApplicationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplicationProps,
-  ) : CdkObject(cdkObject), CfnApplicationProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationProps {
     /**
      * The CPU architecture of an application.
      *
@@ -792,6 +855,14 @@ public interface CfnApplicationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-initialcapacity)
      */
     override fun initialCapacity(): Any? = unwrap(this).getInitialCapacity()
+
+    /**
+     * The interactive configuration object that enables the interactive use cases for an
+     * application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-interactiveconfiguration)
+     */
+    override fun interactiveConfiguration(): Any? = unwrap(this).getInteractiveConfiguration()
 
     /**
      * The maximum capacity of the application.

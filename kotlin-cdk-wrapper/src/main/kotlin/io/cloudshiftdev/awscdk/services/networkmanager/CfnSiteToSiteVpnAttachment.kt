@@ -35,6 +35,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .coreNetworkId("coreNetworkId")
  * .vpnConnectionArn("vpnConnectionArn")
  * // the properties below are optional
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .networkFunctionGroupName("networkFunctionGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
  * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
  * .attachmentPolicyRuleNumber(123)
  * .segmentName("segmentName")
@@ -54,7 +63,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSiteToSiteVpnAttachment(
   cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -154,6 +165,48 @@ public open class CfnSiteToSiteVpnAttachment(
   }
 
   /**
+   * The name of the network function group.
+   */
+  public open fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+  /**
+   * The name of the network function group.
+   */
+  public open fun networkFunctionGroupName(`value`: String) {
+    unwrap(this).setNetworkFunctionGroupName(`value`)
+  }
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  public open fun proposedNetworkFunctionGroupChange(): Any? =
+      unwrap(this).getProposedNetworkFunctionGroupChange()
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  public open fun proposedNetworkFunctionGroupChange(`value`: IResolvable) {
+    unwrap(this).setProposedNetworkFunctionGroupChange(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  public open
+      fun proposedNetworkFunctionGroupChange(`value`: ProposedNetworkFunctionGroupChangeProperty) {
+    unwrap(this).setProposedNetworkFunctionGroupChange(`value`.let(ProposedNetworkFunctionGroupChangeProperty.Companion::unwrap))
+  }
+
+  /**
+   * Describes proposed changes to a network function group.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("9384e425d8f9b92c5bcf5d24a2f47b73cdabe3b79ce68a5d1323eed719999bfc")
+  public open
+      fun proposedNetworkFunctionGroupChange(`value`: ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit):
+      Unit = proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty(`value`))
+
+  /**
    * Describes a proposed segment change.
    */
   public open fun proposedSegmentChange(): Any? = unwrap(this).getProposedSegmentChange()
@@ -186,20 +239,20 @@ public open class CfnSiteToSiteVpnAttachment(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * Tags for the attachment.
+   * The tags associated with the Site-to-Site VPN attachment.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * Tags for the attachment.
+   * The tags associated with the Site-to-Site VPN attachment.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * Tags for the attachment.
+   * The tags associated with the Site-to-Site VPN attachment.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -229,6 +282,45 @@ public open class CfnSiteToSiteVpnAttachment(
      * attachment. 
      */
     public fun coreNetworkId(coreNetworkId: String)
+
+    /**
+     * The name of the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-networkfunctiongroupname)
+     * @param networkFunctionGroupName The name of the network function group. 
+     */
+    public fun networkFunctionGroupName(networkFunctionGroupName: String)
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    public fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable)
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty)
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("689e603bbabcae40c3396f1f6c2b1fcf049251bf8a9b158944543ca4c16432f4")
+    public
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit)
 
     /**
      * Describes a proposed segment change.
@@ -264,18 +356,18 @@ public open class CfnSiteToSiteVpnAttachment(
         fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty.Builder.() -> Unit)
 
     /**
-     * Tags for the attachment.
+     * The tags associated with the Site-to-Site VPN attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-tags)
-     * @param tags Tags for the attachment. 
+     * @param tags The tags associated with the Site-to-Site VPN attachment. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * Tags for the attachment.
+     * The tags associated with the Site-to-Site VPN attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-tags)
-     * @param tags Tags for the attachment. 
+     * @param tags The tags associated with the Site-to-Site VPN attachment. 
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -307,6 +399,54 @@ public open class CfnSiteToSiteVpnAttachment(
     override fun coreNetworkId(coreNetworkId: String) {
       cdkBuilder.coreNetworkId(coreNetworkId)
     }
+
+    /**
+     * The name of the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-networkfunctiongroupname)
+     * @param networkFunctionGroupName The name of the network function group. 
+     */
+    override fun networkFunctionGroupName(networkFunctionGroupName: String) {
+      cdkBuilder.networkFunctionGroupName(networkFunctionGroupName)
+    }
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: IResolvable) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty) {
+      cdkBuilder.proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange.let(ProposedNetworkFunctionGroupChangeProperty.Companion::unwrap))
+    }
+
+    /**
+     * Describes proposed changes to a network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange)
+     * @param proposedNetworkFunctionGroupChange Describes proposed changes to a network function
+     * group. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("689e603bbabcae40c3396f1f6c2b1fcf049251bf8a9b158944543ca4c16432f4")
+    override
+        fun proposedNetworkFunctionGroupChange(proposedNetworkFunctionGroupChange: ProposedNetworkFunctionGroupChangeProperty.Builder.() -> Unit):
+        Unit =
+        proposedNetworkFunctionGroupChange(ProposedNetworkFunctionGroupChangeProperty(proposedNetworkFunctionGroupChange))
 
     /**
      * Describes a proposed segment change.
@@ -347,20 +487,20 @@ public open class CfnSiteToSiteVpnAttachment(
         Unit = proposedSegmentChange(ProposedSegmentChangeProperty(proposedSegmentChange))
 
     /**
-     * Tags for the attachment.
+     * The tags associated with the Site-to-Site VPN attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-tags)
-     * @param tags Tags for the attachment. 
+     * @param tags The tags associated with the Site-to-Site VPN attachment. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * Tags for the attachment.
+     * The tags associated with the Site-to-Site VPN attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-tags)
-     * @param tags Tags for the attachment. 
+     * @param tags The tags associated with the Site-to-Site VPN attachment. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -399,6 +539,169 @@ public open class CfnSiteToSiteVpnAttachment(
         software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment =
         wrapped.cdkObject as
         software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment
+  }
+
+  /**
+   * Describes proposed changes to a network function group.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkmanager.*;
+   * ProposedNetworkFunctionGroupChangeProperty proposedNetworkFunctionGroupChangeProperty =
+   * ProposedNetworkFunctionGroupChangeProperty.builder()
+   * .attachmentPolicyRuleNumber(123)
+   * .networkFunctionGroupName("networkFunctionGroupName")
+   * .tags(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange.html)
+   */
+  public interface ProposedNetworkFunctionGroupChangeProperty {
+    /**
+     * The proposed new attachment policy rule number for the network function group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange-attachmentpolicyrulenumber)
+     */
+    public fun attachmentPolicyRuleNumber(): Number? = unwrap(this).getAttachmentPolicyRuleNumber()
+
+    /**
+     * The proposed name change for the network function group name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange-networkfunctiongroupname)
+     */
+    public fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+    /**
+     * The list of proposed changes to the key-value tags associated with the network function
+     * group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange-tags)
+     */
+    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * A builder for [ProposedNetworkFunctionGroupChangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attachmentPolicyRuleNumber The proposed new attachment policy rule number for the
+       * network function group.
+       */
+      public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number)
+
+      /**
+       * @param networkFunctionGroupName The proposed name change for the network function group
+       * name.
+       */
+      public fun networkFunctionGroupName(networkFunctionGroupName: String)
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      public fun tags(tags: List<CfnTag>)
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      public fun tags(vararg tags: CfnTag)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty.Builder
+          =
+          software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty.builder()
+
+      /**
+       * @param attachmentPolicyRuleNumber The proposed new attachment policy rule number for the
+       * network function group.
+       */
+      override fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
+        cdkBuilder.attachmentPolicyRuleNumber(attachmentPolicyRuleNumber)
+      }
+
+      /**
+       * @param networkFunctionGroupName The proposed name change for the network function group
+       * name.
+       */
+      override fun networkFunctionGroupName(networkFunctionGroupName: String) {
+        cdkBuilder.networkFunctionGroupName(networkFunctionGroupName)
+      }
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      override fun tags(tags: List<CfnTag>) {
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+      }
+
+      /**
+       * @param tags The list of proposed changes to the key-value tags associated with the network
+       * function group.
+       */
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty,
+    ) : CdkObject(cdkObject),
+        ProposedNetworkFunctionGroupChangeProperty {
+      /**
+       * The proposed new attachment policy rule number for the network function group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange-attachmentpolicyrulenumber)
+       */
+      override fun attachmentPolicyRuleNumber(): Number? =
+          unwrap(this).getAttachmentPolicyRuleNumber()
+
+      /**
+       * The proposed name change for the network function group name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange-networkfunctiongroupname)
+       */
+      override fun networkFunctionGroupName(): String? = unwrap(this).getNetworkFunctionGroupName()
+
+      /**
+       * The list of proposed changes to the key-value tags associated with the network function
+       * group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange-tags)
+       */
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ProposedNetworkFunctionGroupChangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty):
+          ProposedNetworkFunctionGroupChangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProposedNetworkFunctionGroupChangeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProposedNetworkFunctionGroupChangeProperty):
+          software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedNetworkFunctionGroupChangeProperty
+    }
   }
 
   /**
@@ -514,7 +817,8 @@ public open class CfnSiteToSiteVpnAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty,
-    ) : CdkObject(cdkObject), ProposedSegmentChangeProperty {
+    ) : CdkObject(cdkObject),
+        ProposedSegmentChangeProperty {
       /**
        * The rule number in the policy document that applies to this change.
        *

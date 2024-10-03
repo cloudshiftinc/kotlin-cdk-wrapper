@@ -209,7 +209,8 @@ public interface ApplicationTargetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationTargetProps,
-  ) : CdkObject(cdkObject), ApplicationTargetProps {
+  ) : CdkObject(cdkObject),
+      ApplicationTargetProps {
     /**
      * The port number of the container.
      *

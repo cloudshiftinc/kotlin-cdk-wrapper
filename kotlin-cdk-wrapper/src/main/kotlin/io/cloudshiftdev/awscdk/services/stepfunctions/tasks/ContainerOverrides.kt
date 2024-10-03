@@ -213,7 +213,8 @@ public interface ContainerOverrides {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ContainerOverrides,
-  ) : CdkObject(cdkObject), ContainerOverrides {
+  ) : CdkObject(cdkObject),
+      ContainerOverrides {
     /**
      * The command to send to the container that overrides the default command from the Docker image
      * or the job definition.

@@ -315,7 +315,8 @@ public interface CfnPartnerAccountProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccountProps,
-  ) : CdkObject(cdkObject), CfnPartnerAccountProps {
+  ) : CdkObject(cdkObject),
+      CfnPartnerAccountProps {
     /**
      * Whether the partner account is linked to the AWS account.
      *

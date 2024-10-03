@@ -117,7 +117,8 @@ public interface CfnListenerCertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificateProps,
-  ) : CdkObject(cdkObject), CfnListenerCertificateProps {
+  ) : CdkObject(cdkObject),
+      CfnListenerCertificateProps {
     /**
      * The certificate.
      *

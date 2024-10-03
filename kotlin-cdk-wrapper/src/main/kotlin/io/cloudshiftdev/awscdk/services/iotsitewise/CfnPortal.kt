@@ -58,7 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPortal(
   cdkObject: software.amazon.awscdk.services.iotsitewise.CfnPortal,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -612,7 +614,8 @@ public open class CfnPortal(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotsitewise.CfnPortal.AlarmsProperty,
-    ) : CdkObject(cdkObject), AlarmsProperty {
+    ) : CdkObject(cdkObject),
+        AlarmsProperty {
       /**
        * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of
        * the IAM role that allows the alarm to perform actions and access AWS resources and services,

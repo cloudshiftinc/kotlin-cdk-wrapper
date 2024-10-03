@@ -92,7 +92,8 @@ public interface CompleteScalingInterval {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.common.CompleteScalingInterval,
-  ) : CdkObject(cdkObject), CompleteScalingInterval {
+  ) : CdkObject(cdkObject),
+      CompleteScalingInterval {
     /**
      *
      */

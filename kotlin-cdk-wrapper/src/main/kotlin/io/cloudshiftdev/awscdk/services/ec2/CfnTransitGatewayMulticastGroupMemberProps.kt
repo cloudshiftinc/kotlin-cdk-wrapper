@@ -105,7 +105,8 @@ public interface CfnTransitGatewayMulticastGroupMemberProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupMemberProps,
-  ) : CdkObject(cdkObject), CfnTransitGatewayMulticastGroupMemberProps {
+  ) : CdkObject(cdkObject),
+      CfnTransitGatewayMulticastGroupMemberProps {
     /**
      * The IP address assigned to the transit gateway multicast group.
      *

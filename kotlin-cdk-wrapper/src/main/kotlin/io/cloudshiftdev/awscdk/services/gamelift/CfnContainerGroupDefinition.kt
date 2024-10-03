@@ -96,7 +96,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnContainerGroupDefinition(
   cdkObject: software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinition,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -292,6 +294,15 @@ public open class CfnContainerGroupDefinition(
     /**
      * The platform required for all containers in the container group definition.
      *
+     *
+     * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+     * GameLift server SDK version
+     * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-operatingsystem)
      * @param operatingSystem The platform required for all containers in the container group
      * definition. 
@@ -421,6 +432,15 @@ public open class CfnContainerGroupDefinition(
 
     /**
      * The platform required for all containers in the container group definition.
+     *
+     *
+     * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+     * GameLift server SDK version
+     * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-operatingsystem)
      * @param operatingSystem The platform required for all containers in the container group
@@ -1247,7 +1267,8 @@ public open class CfnContainerGroupDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinition.ContainerDefinitionProperty,
-    ) : CdkObject(cdkObject), ContainerDefinitionProperty {
+    ) : CdkObject(cdkObject),
+        ContainerDefinitionProperty {
       /**
        * A command that's passed to the container on startup.
        *
@@ -1528,7 +1549,8 @@ public open class CfnContainerGroupDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinition.ContainerDependencyProperty,
-    ) : CdkObject(cdkObject), ContainerDependencyProperty {
+    ) : CdkObject(cdkObject),
+        ContainerDependencyProperty {
       /**
        * The condition that the dependency container must reach before the dependent container can
        * start. Valid conditions include:.
@@ -1654,7 +1676,8 @@ public open class CfnContainerGroupDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinition.ContainerEnvironmentProperty,
-    ) : CdkObject(cdkObject), ContainerEnvironmentProperty {
+    ) : CdkObject(cdkObject),
+        ContainerEnvironmentProperty {
       /**
        * The environment variable name.
        *
@@ -1868,7 +1891,8 @@ public open class CfnContainerGroupDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinition.ContainerHealthCheckProperty,
-    ) : CdkObject(cdkObject), ContainerHealthCheckProperty {
+    ) : CdkObject(cdkObject),
+        ContainerHealthCheckProperty {
       /**
        * A string array that specifies the command that the container runs to determine if it's
        * healthy.
@@ -2033,7 +2057,8 @@ public open class CfnContainerGroupDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinition.ContainerPortRangeProperty,
-    ) : CdkObject(cdkObject), ContainerPortRangeProperty {
+    ) : CdkObject(cdkObject),
+        ContainerPortRangeProperty {
       /**
        * A starting value for the range of allowed port numbers.
        *
@@ -2151,7 +2176,8 @@ public open class CfnContainerGroupDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinition.MemoryLimitsProperty,
-    ) : CdkObject(cdkObject), MemoryLimitsProperty {
+    ) : CdkObject(cdkObject),
+        MemoryLimitsProperty {
       /**
        * The hard limit of memory to reserve for the container.
        *
@@ -2267,7 +2293,8 @@ public open class CfnContainerGroupDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinition.PortConfigurationProperty,
-    ) : CdkObject(cdkObject), PortConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PortConfigurationProperty {
       /**
        * Specifies one or more ranges of ports on a container.
        *

@@ -313,7 +313,8 @@ public interface DnsValidatedCertificateProps : CertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificateProps,
-  ) : CdkObject(cdkObject), DnsValidatedCertificateProps {
+  ) : CdkObject(cdkObject),
+      DnsValidatedCertificateProps {
     /**
      * The Certificate name.
      *

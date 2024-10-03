@@ -23,6 +23,9 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.quicksight.*;
  * CfnDataSourceProps cfnDataSourceProps = CfnDataSourceProps.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
  * .alternateDataSourceParameters(List.of(DataSourceParametersProperty.builder()
  * .amazonElasticsearchParameters(AmazonElasticsearchParametersProperty.builder()
  * .domain("domain")
@@ -83,6 +86,16 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .clusterId("clusterId")
  * .host("host")
+ * .iamParameters(RedshiftIAMParametersProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .autoCreateDatabaseUser(false)
+ * .databaseGroups(List.of("databaseGroups"))
+ * .databaseUser("databaseUser")
+ * .build())
+ * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+ * .enableIdentityPropagation(false)
+ * .build())
  * .port(123)
  * .build())
  * .s3Parameters(S3ParametersProperty.builder()
@@ -192,6 +205,16 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .clusterId("clusterId")
  * .host("host")
+ * .iamParameters(RedshiftIAMParametersProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .autoCreateDatabaseUser(false)
+ * .databaseGroups(List.of("databaseGroups"))
+ * .databaseUser("databaseUser")
+ * .build())
+ * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+ * .enableIdentityPropagation(false)
+ * .build())
  * .port(123)
  * .build())
  * .s3Parameters(S3ParametersProperty.builder()
@@ -298,6 +321,16 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .clusterId("clusterId")
  * .host("host")
+ * .iamParameters(RedshiftIAMParametersProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .autoCreateDatabaseUser(false)
+ * .databaseGroups(List.of("databaseGroups"))
+ * .databaseUser("databaseUser")
+ * .build())
+ * .identityCenterConfiguration(IdentityCenterConfigurationProperty.builder()
+ * .enableIdentityPropagation(false)
+ * .build())
  * .port(123)
  * .build())
  * .s3Parameters(S3ParametersProperty.builder()
@@ -344,10 +377,11 @@ import kotlin.jvm.JvmName
  * .message("message")
  * .type("type")
  * .build())
- * .name("name")
  * .permissions(List.of(ResourcePermissionProperty.builder()
  * .actions(List.of("actions"))
  * .principal("principal")
+ * // the properties below are optional
+ * .resource("resource")
  * .build()))
  * .sslProperties(SslPropertiesProperty.builder()
  * .disableSsl(false)
@@ -356,7 +390,6 @@ import kotlin.jvm.JvmName
  * .key("key")
  * .value("value")
  * .build()))
- * .type("type")
  * .vpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
  * .vpcConnectionArn("vpcConnectionArn")
  * .build())
@@ -425,7 +458,7 @@ public interface CfnDataSourceProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-name)
    */
-  public fun name(): String? = unwrap(this).getName()
+  public fun name(): String
 
   /**
    * A list of resource permissions on the data source.
@@ -456,7 +489,7 @@ public interface CfnDataSourceProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-type)
    */
-  public fun type(): String? = unwrap(this).getType()
+  public fun type(): String
 
   /**
    * Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting
@@ -585,7 +618,7 @@ public interface CfnDataSourceProps {
     public fun errorInfo(errorInfo: CfnDataSource.DataSourceErrorInfoProperty.Builder.() -> Unit)
 
     /**
-     * @param name A display name for the data source.
+     * @param name A display name for the data source. 
      */
     public fun name(name: String)
 
@@ -638,7 +671,7 @@ public interface CfnDataSourceProps {
 
     /**
      * @param type The type of the data source. To return a list of all data sources, use
-     * `ListDataSources` .
+     * `ListDataSources` . 
      * Use `AMAZON_ELASTICSEARCH` for Amazon OpenSearch Service.
      */
     public fun type(type: String)
@@ -809,7 +842,7 @@ public interface CfnDataSourceProps {
         Unit = errorInfo(CfnDataSource.DataSourceErrorInfoProperty(errorInfo))
 
     /**
-     * @param name A display name for the data source.
+     * @param name A display name for the data source. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -876,7 +909,7 @@ public interface CfnDataSourceProps {
 
     /**
      * @param type The type of the data source. To return a list of all data sources, use
-     * `ListDataSources` .
+     * `ListDataSources` . 
      * Use `AMAZON_ELASTICSEARCH` for Amazon OpenSearch Service.
      */
     override fun type(type: String) {
@@ -917,7 +950,8 @@ public interface CfnDataSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSourceProps,
-  ) : CdkObject(cdkObject), CfnDataSourceProps {
+  ) : CdkObject(cdkObject),
+      CfnDataSourceProps {
     /**
      * A set of alternate data source parameters that you want to share for the credentials stored
      * with this data source.
@@ -979,7 +1013,7 @@ public interface CfnDataSourceProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-name)
      */
-    override fun name(): String? = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
     /**
      * A list of resource permissions on the data source.
@@ -1011,7 +1045,7 @@ public interface CfnDataSourceProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-type)
      */
-    override fun type(): String? = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
 
     /**
      * Use this parameter only when you want Amazon QuickSight to use a VPC connection when

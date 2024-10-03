@@ -805,7 +805,8 @@ public interface IBucket : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.IBucket,
-  ) : CdkObject(cdkObject), IBucket {
+  ) : CdkObject(cdkObject),
+      IBucket {
     /**
      * Adds a bucket notification event destination.
      *

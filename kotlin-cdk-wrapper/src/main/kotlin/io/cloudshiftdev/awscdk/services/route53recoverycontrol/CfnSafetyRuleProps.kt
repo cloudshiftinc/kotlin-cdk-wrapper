@@ -395,7 +395,8 @@ public interface CfnSafetyRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRuleProps,
-  ) : CdkObject(cdkObject), CfnSafetyRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnSafetyRuleProps {
     /**
      * An assertion rule enforces that, when you change a routing control state, that the criteria
      * that you set in the rule configuration is met.

@@ -32,7 +32,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class TokenAuthorizer(
   cdkObject: software.amazon.awscdk.services.apigateway.TokenAuthorizer,
-) : Authorizer(cdkObject), IAuthorizer {
+) : Authorizer(cdkObject),
+    IAuthorizer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

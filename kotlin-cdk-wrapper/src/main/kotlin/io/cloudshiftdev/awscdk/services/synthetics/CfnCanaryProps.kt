@@ -814,7 +814,8 @@ public interface CfnCanaryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.synthetics.CfnCanaryProps,
-  ) : CdkObject(cdkObject), CfnCanaryProps {
+  ) : CdkObject(cdkObject),
+      CfnCanaryProps {
     /**
      * A structure that contains the configuration for canary artifacts, including the
      * encryption-at-rest settings for artifacts that the canary uploads to Amazon S3.

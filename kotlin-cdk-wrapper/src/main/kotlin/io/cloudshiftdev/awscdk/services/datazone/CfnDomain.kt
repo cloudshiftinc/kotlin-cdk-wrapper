@@ -52,7 +52,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDomain(
   cdkObject: software.amazon.awscdk.services.datazone.CfnDomain,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -497,7 +499,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty,
-    ) : CdkObject(cdkObject), SingleSignOnProperty {
+    ) : CdkObject(cdkObject),
+        SingleSignOnProperty {
       /**
        * The type of single sign-on in Amazon DataZone.
        *

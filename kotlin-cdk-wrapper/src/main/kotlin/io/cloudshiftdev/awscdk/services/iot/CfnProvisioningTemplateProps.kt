@@ -274,7 +274,8 @@ public interface CfnProvisioningTemplateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnProvisioningTemplateProps,
-  ) : CdkObject(cdkObject), CfnProvisioningTemplateProps {
+  ) : CdkObject(cdkObject),
+      CfnProvisioningTemplateProps {
     /**
      * The description of the fleet provisioning template.
      *

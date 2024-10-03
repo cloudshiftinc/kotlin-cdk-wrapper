@@ -24,7 +24,8 @@ public interface ITaskDefinitionExtension {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ITaskDefinitionExtension,
-  ) : CdkObject(cdkObject), ITaskDefinitionExtension {
+  ) : CdkObject(cdkObject),
+      ITaskDefinitionExtension {
     /**
      * Apply the extension to the given TaskDefinition.
      *

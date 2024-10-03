@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGrant(
   cdkObject: software.amazon.awscdk.services.licensemanager.CfnGrant,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.licensemanager.CfnGrant(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

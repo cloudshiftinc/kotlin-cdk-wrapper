@@ -50,6 +50,9 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .excludeMatchedPattern(false)
  * .build())))
+ * .scopeConfiguration(ScopeConfigurationProperty.builder()
+ * .name("name")
+ * .build())
  * .webhook(false)
  * .build())
  * .sourceVersion("sourceVersion")
@@ -159,7 +162,8 @@ public interface SourceConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.SourceConfig,
-  ) : CdkObject(cdkObject), SourceConfig {
+  ) : CdkObject(cdkObject),
+      SourceConfig {
     /**
      *
      */

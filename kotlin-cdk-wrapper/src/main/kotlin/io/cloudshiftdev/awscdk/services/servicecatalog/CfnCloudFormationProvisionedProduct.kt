@@ -74,7 +74,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCloudFormationProvisionedProduct(
   cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -918,7 +920,8 @@ public open class CfnCloudFormationProvisionedProduct(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningParameterProperty,
-    ) : CdkObject(cdkObject), ProvisioningParameterProperty {
+    ) : CdkObject(cdkObject),
+        ProvisioningParameterProperty {
       /**
        * The parameter key.
        *
@@ -1431,7 +1434,8 @@ public open class CfnCloudFormationProvisionedProduct(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty,
-    ) : CdkObject(cdkObject), ProvisioningPreferencesProperty {
+    ) : CdkObject(cdkObject),
+        ProvisioningPreferencesProperty {
       /**
        * One or more AWS accounts where the provisioned product will be available.
        *

@@ -278,7 +278,8 @@ public interface CfnSlackChannelConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.supportapp.CfnSlackChannelConfigurationProps,
-  ) : CdkObject(cdkObject), CfnSlackChannelConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnSlackChannelConfigurationProps {
     /**
      * The channel ID in Slack.
      *

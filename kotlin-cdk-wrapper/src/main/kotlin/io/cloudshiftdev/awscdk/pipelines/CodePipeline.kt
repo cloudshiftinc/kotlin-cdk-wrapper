@@ -26,22 +26,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // Modern API
- * CodePipeline modernPipeline = CodePipeline.Builder.create(this, "Pipeline")
- * .selfMutation(false)
+ * Pipeline codePipeline;
+ * Artifact sourceArtifact = new Artifact("MySourceArtifact");
+ * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
+ * .codePipeline(codePipeline)
  * .synth(ShellStep.Builder.create("Synth")
- * .input(CodePipelineSource.connection("my-org/my-app", "main", ConnectionSourceOptions.builder()
- * .connectionArn("arn:aws:codestar-connections:us-east-1:222222222222:connection/7d2469ff-514a-4e4f-9003-5ca4a43cdc41")
- * .build()))
+ * .input(CodePipelineFileSet.fromArtifact(sourceArtifact))
  * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
  * .build())
  * .build();
- * // Original API
- * Artifact cloudAssemblyArtifact = new Artifact();
- * CdkPipeline originalPipeline = new CdkPipeline(this, "Pipeline", new CdkPipelineProps()
- * .selfMutating(false)
- * .cloudAssemblyArtifact(cloudAssemblyArtifact)
- * );
  * ```
  */
 public open class CodePipeline(

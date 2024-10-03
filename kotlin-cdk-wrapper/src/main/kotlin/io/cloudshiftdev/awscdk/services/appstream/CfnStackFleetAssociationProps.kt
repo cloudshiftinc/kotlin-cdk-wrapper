@@ -108,7 +108,8 @@ public interface CfnStackFleetAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appstream.CfnStackFleetAssociationProps,
-  ) : CdkObject(cdkObject), CfnStackFleetAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnStackFleetAssociationProps {
     /**
      * The name of the fleet.
      *

@@ -111,7 +111,8 @@ public interface CfnSessionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.macie.CfnSessionProps,
-  ) : CdkObject(cdkObject), CfnSessionProps {
+  ) : CdkObject(cdkObject),
+      CfnSessionProps {
     /**
      * Specifies how often Amazon Macie publishes updates to policy findings for the account.
      *

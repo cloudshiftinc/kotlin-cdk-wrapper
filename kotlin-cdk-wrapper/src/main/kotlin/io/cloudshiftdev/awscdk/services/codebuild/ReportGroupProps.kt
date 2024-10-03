@@ -36,6 +36,15 @@ import kotlin.Unit
  */
 public interface ReportGroupProps {
   /**
+   * If true, deleting the report group force deletes the contents of the report group.
+   *
+   * If false, the report group must be empty before attempting to delete it.
+   *
+   * Default: false
+   */
+  public fun deleteReports(): Boolean? = unwrap(this).getDeleteReports()
+
+  /**
    * An optional S3 bucket to export the reports to.
    *
    * Default: - the reports will not be exported
@@ -86,6 +95,13 @@ public interface ReportGroupProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param deleteReports If true, deleting the report group force deletes the contents of the
+     * report group.
+     * If false, the report group must be empty before attempting to delete it.
+     */
+    public fun deleteReports(deleteReports: Boolean)
+
+    /**
      * @param exportBucket An optional S3 bucket to export the reports to.
      */
     public fun exportBucket(exportBucket: IBucket)
@@ -120,6 +136,15 @@ public interface ReportGroupProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.ReportGroupProps.Builder =
         software.amazon.awscdk.services.codebuild.ReportGroupProps.builder()
+
+    /**
+     * @param deleteReports If true, deleting the report group force deletes the contents of the
+     * report group.
+     * If false, the report group must be empty before attempting to delete it.
+     */
+    override fun deleteReports(deleteReports: Boolean) {
+      cdkBuilder.deleteReports(deleteReports)
+    }
 
     /**
      * @param exportBucket An optional S3 bucket to export the reports to.
@@ -168,7 +193,17 @@ public interface ReportGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.ReportGroupProps,
-  ) : CdkObject(cdkObject), ReportGroupProps {
+  ) : CdkObject(cdkObject),
+      ReportGroupProps {
+    /**
+     * If true, deleting the report group force deletes the contents of the report group.
+     *
+     * If false, the report group must be empty before attempting to delete it.
+     *
+     * Default: false
+     */
+    override fun deleteReports(): Boolean? = unwrap(this).getDeleteReports()
+
     /**
      * An optional S3 bucket to export the reports to.
      *

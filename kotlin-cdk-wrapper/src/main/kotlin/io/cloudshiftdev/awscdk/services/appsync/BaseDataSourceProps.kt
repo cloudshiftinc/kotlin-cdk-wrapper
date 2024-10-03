@@ -98,7 +98,8 @@ public interface BaseDataSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.BaseDataSourceProps,
-  ) : CdkObject(cdkObject), BaseDataSourceProps {
+  ) : CdkObject(cdkObject),
+      BaseDataSourceProps {
     /**
      * The API to attach this data source to.
      */

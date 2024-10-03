@@ -34,7 +34,8 @@ import kotlin.Unit
  */
 public open class RawEndpoint(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.RawEndpoint,
-) : CdkObject(cdkObject), IEndpoint {
+) : CdkObject(cdkObject),
+    IEndpoint {
   public constructor(props: RawEndpointProps) :
       this(software.amazon.awscdk.services.globalaccelerator.RawEndpoint(props.let(RawEndpointProps.Companion::unwrap))
   )

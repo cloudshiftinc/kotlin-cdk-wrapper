@@ -100,7 +100,8 @@ public interface HttpConnectionPool {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.HttpConnectionPool,
-  ) : CdkObject(cdkObject), HttpConnectionPool {
+  ) : CdkObject(cdkObject),
+      HttpConnectionPool {
     /**
      * The maximum connections in the pool.
      *

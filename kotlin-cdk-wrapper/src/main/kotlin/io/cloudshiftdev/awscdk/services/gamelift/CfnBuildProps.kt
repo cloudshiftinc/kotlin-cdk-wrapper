@@ -56,9 +56,12 @@ public interface CfnBuildProps {
    * build's operating system later.
    *
    *
-   * If you have active fleets using the Windows Server 2012 operating system, you can continue to
-   * create new builds using this OS until October 10, 2023, when Microsoft ends its support. All
-   * others must use Windows Server 2016 when creating new Windows-based builds.
+   * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+   * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For game
+   * servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the game
+   * server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+   * GameLift server SDK version
+   * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-operatingsystem)
@@ -119,9 +122,12 @@ public interface CfnBuildProps {
      * build's operating system later.
      *
      *
-     * If you have active fleets using the Windows Server 2012 operating system, you can continue to
-     * create new builds using this OS until October 10, 2023, when Microsoft ends its support. All
-     * others must use Windows Server 2016 when creating new Windows-based builds.
+     * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+     * GameLift server SDK version
+     * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
      */
     public fun operatingSystem(operatingSystem: String)
 
@@ -199,9 +205,12 @@ public interface CfnBuildProps {
      * build's operating system later.
      *
      *
-     * If you have active fleets using the Windows Server 2012 operating system, you can continue to
-     * create new builds using this OS until October 10, 2023, when Microsoft ends its support. All
-     * others must use Windows Server 2016 when creating new Windows-based builds.
+     * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+     * GameLift server SDK version
+     * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
      */
     override fun operatingSystem(operatingSystem: String) {
       cdkBuilder.operatingSystem(operatingSystem)
@@ -275,7 +284,8 @@ public interface CfnBuildProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.gamelift.CfnBuildProps,
-  ) : CdkObject(cdkObject), CfnBuildProps {
+  ) : CdkObject(cdkObject),
+      CfnBuildProps {
     /**
      * A descriptive label that is associated with a build.
      *
@@ -294,9 +304,12 @@ public interface CfnBuildProps {
      * build's operating system later.
      *
      *
-     * If you have active fleets using the Windows Server 2012 operating system, you can continue to
-     * create new builds using this OS until October 10, 2023, when Microsoft ends its support. All
-     * others must use Windows Server 2016 when creating new Windows-based builds.
+     * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+     * GameLift server SDK version
+     * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-operatingsystem)

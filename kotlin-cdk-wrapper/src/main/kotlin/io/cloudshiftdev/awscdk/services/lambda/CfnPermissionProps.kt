@@ -273,7 +273,8 @@ public interface CfnPermissionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.CfnPermissionProps,
-  ) : CdkObject(cdkObject), CfnPermissionProps {
+  ) : CdkObject(cdkObject),
+      CfnPermissionProps {
     /**
      * The action that the principal can use on the function.
      *

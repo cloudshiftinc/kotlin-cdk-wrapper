@@ -144,7 +144,8 @@ public interface PolicyValidationPluginReportBeta1 {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.PolicyValidationPluginReportBeta1,
-  ) : CdkObject(cdkObject), PolicyValidationPluginReportBeta1 {
+  ) : CdkObject(cdkObject),
+      PolicyValidationPluginReportBeta1 {
     /**
      * Arbitrary information about the report.
      *

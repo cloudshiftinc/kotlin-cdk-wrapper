@@ -125,6 +125,11 @@ import kotlin.jvm.JvmName
  * .type("type")
  * .value("value")
  * .build()))
+ * .restartPolicy(RestartPolicyProperty.builder()
+ * .enabled(false)
+ * .ignoredExitCodes(List.of(123))
+ * .restartAttemptPeriod(123)
+ * .build())
  * .secrets(List.of(SecretProperty.builder()
  * .name("name")
  * .valueFrom("valueFrom")
@@ -246,6 +251,9 @@ public interface CfnTaskDefinitionProps {
    * Fargate launch type, this field is required. You must use one of the following values. The value
    * that you choose determines your range of valid values for the `memory` parameter.
    *
+   * If you use the EC2 launch type, this field is optional. Supported values are between `128` CPU
+   * units ( `0.125` vCPUs) and `10240` CPU units ( `10` vCPUs).
+   *
    * The CPU units cannot be less than 1 vCPU when you use Windows containers on Fargate.
    *
    * * 256 (.25 vCPU) - Available `memory` values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB)
@@ -279,10 +287,9 @@ public interface CfnTaskDefinitionProps {
    * The Amazon Resource Name (ARN) of the task execution role that grants the Amazon ECS container
    * agent permission to make AWS API calls on your behalf.
    *
-   * The task execution IAM role is required depending on the requirements of your task. For more
-   * information, see [Amazon ECS task execution IAM
-   * role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html) in
-   * the *Amazon Elastic Container Service Developer Guide* .
+   * For informationabout the required IAM roles for Amazon ECS, see [IAM roles for Amazon
+   * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security-ecs-iam-role-overview.html)
+   * in the *Amazon Elastic Container Service Developer Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-executionrolearn)
    */
@@ -322,13 +329,10 @@ public interface CfnTaskDefinitionProps {
    * specified task share the same IPC resources. If `none` is specified, then IPC resources within the
    * containers of a task are private and not shared with other containers in a task or on the
    * container instance. If no value is specified, then the IPC resource namespace sharing depends on
-   * the Docker daemon setting on the container instance. For more information, see [IPC
-   * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
-   * in the *Docker run reference* .
+   * the Docker daemon setting on the container instance.
    *
    * If the `host` IPC mode is used, be aware that there is a heightened risk of undesired IPC
-   * namespace expose. For more information, see [Docker
-   * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+   * namespace expose.
    *
    * If you are setting namespaced kernel parameters using `systemControls` for the containers in
    * the task, the following will apply to your IPC resource namespace. For more information, see
@@ -406,17 +410,15 @@ public interface CfnTaskDefinitionProps {
    *
    *
    * If the network mode is `awsvpc` , the task is allocated an elastic network interface, and you
-   * must specify a `NetworkConfiguration` value when you create a service or run a task with the task
-   * definition. For more information, see [Task
+   * must specify a
+   * [NetworkConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_NetworkConfiguration.html)
+   * value when you create a service or run a task with the task definition. For more information, see
+   * [Task
    * Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html) in
    * the *Amazon Elastic Container Service Developer Guide* .
    *
    * If the network mode is `host` , you cannot run multiple instantiations of the same task on a
    * single container instance when port mappings are used.
-   *
-   * For more information, see [Network
-   * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#network-settings)
-   * in the *Docker run reference* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-networkmode)
    */
@@ -435,14 +437,10 @@ public interface CfnTaskDefinitionProps {
    * If `task` is specified, all containers within the specified task share the same process
    * namespace.
    *
-   * If no value is specified, the default is a private namespace for each container. For more
-   * information, see [PID
-   * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
-   * in the *Docker run reference* .
+   * If no value is specified, the default is a private namespace for each container.
    *
    * If the `host` PID mode is used, there's a heightened risk of undesired process namespace
-   * exposure. For more information, see [Docker
-   * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+   * exposure.
    *
    *
    * This parameter is not supported for Windows containers. &gt; This parameter is only supported
@@ -534,6 +532,11 @@ public interface CfnTaskDefinitionProps {
    * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html) in
    * the *Amazon Elastic Container Service Developer Guide* .
    *
+   *
+   * String validation is done on the ECS side. If an invalid string value is given for
+   * `TaskRoleArn` , it may cause the Cloudformation job to hang.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-taskrolearn)
    */
   public fun taskRoleArn(): String? = unwrap(this).getTaskRoleArn()
@@ -591,6 +594,9 @@ public interface CfnTaskDefinitionProps {
      * Fargate launch type, this field is required. You must use one of the following values. The value
      * that you choose determines your range of valid values for the `memory` parameter.
      *
+     * If you use the EC2 launch type, this field is optional. Supported values are between `128`
+     * CPU units ( `0.125` vCPUs) and `10240` CPU units ( `10` vCPUs).
+     *
      * The CPU units cannot be less than 1 vCPU when you use Windows containers on Fargate.
      *
      * * 256 (.25 vCPU) - Available `memory` values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB)
@@ -636,9 +642,8 @@ public interface CfnTaskDefinitionProps {
     /**
      * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that grants
      * the Amazon ECS container agent permission to make AWS API calls on your behalf.
-     * The task execution IAM role is required depending on the requirements of your task. For more
-     * information, see [Amazon ECS task execution IAM
-     * role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html)
+     * For informationabout the required IAM roles for Amazon ECS, see [IAM roles for Amazon
+     * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security-ecs-iam-role-overview.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      */
     public fun executionRoleArn(executionRoleArn: String)
@@ -684,14 +689,10 @@ public interface CfnTaskDefinitionProps {
      * containers within the specified task share the same IPC resources. If `none` is specified, then
      * IPC resources within the containers of a task are private and not shared with other containers
      * in a task or on the container instance. If no value is specified, then the IPC resource
-     * namespace sharing depends on the Docker daemon setting on the container instance. For more
-     * information, see [IPC
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
-     * in the *Docker run reference* .
+     * namespace sharing depends on the Docker daemon setting on the container instance.
      *
      * If the `host` IPC mode is used, be aware that there is a heightened risk of undesired IPC
-     * namespace expose. For more information, see [Docker
-     * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+     * namespace expose.
      *
      * If you are setting namespaced kernel parameters using `systemControls` for the containers in
      * the task, the following will apply to your IPC resource namespace. For more information, see
@@ -763,17 +764,15 @@ public interface CfnTaskDefinitionProps {
      *
      *
      * If the network mode is `awsvpc` , the task is allocated an elastic network interface, and you
-     * must specify a `NetworkConfiguration` value when you create a service or run a task with the
-     * task definition. For more information, see [Task
+     * must specify a
+     * [NetworkConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_NetworkConfiguration.html)
+     * value when you create a service or run a task with the task definition. For more information,
+     * see [Task
      * Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
      * If the network mode is `host` , you cannot run multiple instantiations of the same task on a
      * single container instance when port mappings are used.
-     *
-     * For more information, see [Network
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#network-settings)
-     * in the *Docker run reference* .
      */
     public fun networkMode(networkMode: String)
 
@@ -789,14 +788,10 @@ public interface CfnTaskDefinitionProps {
      * If `task` is specified, all containers within the specified task share the same process
      * namespace.
      *
-     * If no value is specified, the default is a private namespace for each container. For more
-     * information, see [PID
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
-     * in the *Docker run reference* .
+     * If no value is specified, the default is a private namespace for each container.
      *
      * If the `host` PID mode is used, there's a heightened risk of undesired process namespace
-     * exposure. For more information, see [Docker
-     * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+     * exposure.
      *
      *
      * This parameter is not supported for Windows containers. &gt; This parameter is only supported
@@ -951,6 +946,10 @@ public interface CfnTaskDefinitionProps {
      * code to use the feature. For more information, see [Windows IAM roles for
      * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * String validation is done on the ECS side. If an invalid string value is given for
+     * `TaskRoleArn` , it may cause the Cloudformation job to hang.
      */
     public fun taskRoleArn(taskRoleArn: String)
 
@@ -1030,6 +1029,9 @@ public interface CfnTaskDefinitionProps {
      * Fargate launch type, this field is required. You must use one of the following values. The value
      * that you choose determines your range of valid values for the `memory` parameter.
      *
+     * If you use the EC2 launch type, this field is optional. Supported values are between `128`
+     * CPU units ( `0.125` vCPUs) and `10240` CPU units ( `10` vCPUs).
+     *
      * The CPU units cannot be less than 1 vCPU when you use Windows containers on Fargate.
      *
      * * 256 (.25 vCPU) - Available `memory` values: 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB)
@@ -1082,9 +1084,8 @@ public interface CfnTaskDefinitionProps {
     /**
      * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that grants
      * the Amazon ECS container agent permission to make AWS API calls on your behalf.
-     * The task execution IAM role is required depending on the requirements of your task. For more
-     * information, see [Amazon ECS task execution IAM
-     * role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html)
+     * For informationabout the required IAM roles for Amazon ECS, see [IAM roles for Amazon
+     * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security-ecs-iam-role-overview.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      */
     override fun executionRoleArn(executionRoleArn: String) {
@@ -1139,14 +1140,10 @@ public interface CfnTaskDefinitionProps {
      * containers within the specified task share the same IPC resources. If `none` is specified, then
      * IPC resources within the containers of a task are private and not shared with other containers
      * in a task or on the container instance. If no value is specified, then the IPC resource
-     * namespace sharing depends on the Docker daemon setting on the container instance. For more
-     * information, see [IPC
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
-     * in the *Docker run reference* .
+     * namespace sharing depends on the Docker daemon setting on the container instance.
      *
      * If the `host` IPC mode is used, be aware that there is a heightened risk of undesired IPC
-     * namespace expose. For more information, see [Docker
-     * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+     * namespace expose.
      *
      * If you are setting namespaced kernel parameters using `systemControls` for the containers in
      * the task, the following will apply to your IPC resource namespace. For more information, see
@@ -1222,17 +1219,15 @@ public interface CfnTaskDefinitionProps {
      *
      *
      * If the network mode is `awsvpc` , the task is allocated an elastic network interface, and you
-     * must specify a `NetworkConfiguration` value when you create a service or run a task with the
-     * task definition. For more information, see [Task
+     * must specify a
+     * [NetworkConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_NetworkConfiguration.html)
+     * value when you create a service or run a task with the task definition. For more information,
+     * see [Task
      * Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
      * If the network mode is `host` , you cannot run multiple instantiations of the same task on a
      * single container instance when port mappings are used.
-     *
-     * For more information, see [Network
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#network-settings)
-     * in the *Docker run reference* .
      */
     override fun networkMode(networkMode: String) {
       cdkBuilder.networkMode(networkMode)
@@ -1250,14 +1245,10 @@ public interface CfnTaskDefinitionProps {
      * If `task` is specified, all containers within the specified task share the same process
      * namespace.
      *
-     * If no value is specified, the default is a private namespace for each container. For more
-     * information, see [PID
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
-     * in the *Docker run reference* .
+     * If no value is specified, the default is a private namespace for each container.
      *
      * If the `host` PID mode is used, there's a heightened risk of undesired process namespace
-     * exposure. For more information, see [Docker
-     * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+     * exposure.
      *
      *
      * This parameter is not supported for Windows containers. &gt; This parameter is only supported
@@ -1435,6 +1426,10 @@ public interface CfnTaskDefinitionProps {
      * code to use the feature. For more information, see [Windows IAM roles for
      * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * String validation is done on the ECS side. If an invalid string value is given for
+     * `TaskRoleArn` , it may cause the Cloudformation job to hang.
      */
     override fun taskRoleArn(taskRoleArn: String) {
       cdkBuilder.taskRoleArn(taskRoleArn)
@@ -1483,7 +1478,8 @@ public interface CfnTaskDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinitionProps,
-  ) : CdkObject(cdkObject), CfnTaskDefinitionProps {
+  ) : CdkObject(cdkObject),
+      CfnTaskDefinitionProps {
     /**
      * A list of container definitions in JSON format that describe the different containers that
      * make up your task.
@@ -1502,6 +1498,9 @@ public interface CfnTaskDefinitionProps {
      * If you use the EC2 launch type, this field is optional. Any value can be used. If you use the
      * Fargate launch type, this field is required. You must use one of the following values. The value
      * that you choose determines your range of valid values for the `memory` parameter.
+     *
+     * If you use the EC2 launch type, this field is optional. Supported values are between `128`
+     * CPU units ( `0.125` vCPUs) and `10240` CPU units ( `10` vCPUs).
      *
      * The CPU units cannot be less than 1 vCPU when you use Windows containers on Fargate.
      *
@@ -1537,9 +1536,8 @@ public interface CfnTaskDefinitionProps {
      * The Amazon Resource Name (ARN) of the task execution role that grants the Amazon ECS
      * container agent permission to make AWS API calls on your behalf.
      *
-     * The task execution IAM role is required depending on the requirements of your task. For more
-     * information, see [Amazon ECS task execution IAM
-     * role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html)
+     * For informationabout the required IAM roles for Amazon ECS, see [IAM roles for Amazon
+     * ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security-ecs-iam-role-overview.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-executionrolearn)
@@ -1581,14 +1579,10 @@ public interface CfnTaskDefinitionProps {
      * containers within the specified task share the same IPC resources. If `none` is specified, then
      * IPC resources within the containers of a task are private and not shared with other containers
      * in a task or on the container instance. If no value is specified, then the IPC resource
-     * namespace sharing depends on the Docker daemon setting on the container instance. For more
-     * information, see [IPC
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
-     * in the *Docker run reference* .
+     * namespace sharing depends on the Docker daemon setting on the container instance.
      *
      * If the `host` IPC mode is used, be aware that there is a heightened risk of undesired IPC
-     * namespace expose. For more information, see [Docker
-     * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+     * namespace expose.
      *
      * If you are setting namespaced kernel parameters using `systemControls` for the containers in
      * the task, the following will apply to your IPC resource namespace. For more information, see
@@ -1667,17 +1661,15 @@ public interface CfnTaskDefinitionProps {
      *
      *
      * If the network mode is `awsvpc` , the task is allocated an elastic network interface, and you
-     * must specify a `NetworkConfiguration` value when you create a service or run a task with the
-     * task definition. For more information, see [Task
+     * must specify a
+     * [NetworkConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_NetworkConfiguration.html)
+     * value when you create a service or run a task with the task definition. For more information,
+     * see [Task
      * Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html) in
      * the *Amazon Elastic Container Service Developer Guide* .
      *
      * If the network mode is `host` , you cannot run multiple instantiations of the same task on a
      * single container instance when port mappings are used.
-     *
-     * For more information, see [Network
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#network-settings)
-     * in the *Docker run reference* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-networkmode)
      */
@@ -1696,14 +1688,10 @@ public interface CfnTaskDefinitionProps {
      * If `task` is specified, all containers within the specified task share the same process
      * namespace.
      *
-     * If no value is specified, the default is a private namespace for each container. For more
-     * information, see [PID
-     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
-     * in the *Docker run reference* .
+     * If no value is specified, the default is a private namespace for each container.
      *
      * If the `host` PID mode is used, there's a heightened risk of undesired process namespace
-     * exposure. For more information, see [Docker
-     * security](https://docs.aws.amazon.com/https://docs.docker.com/engine/security/security/) .
+     * exposure.
      *
      *
      * This parameter is not supported for Windows containers. &gt; This parameter is only supported
@@ -1794,6 +1782,11 @@ public interface CfnTaskDefinitionProps {
      * code to use the feature. For more information, see [Windows IAM roles for
      * tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html)
      * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
+     * String validation is done on the ECS side. If an invalid string value is given for
+     * `TaskRoleArn` , it may cause the Cloudformation job to hang.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-taskrolearn)
      */

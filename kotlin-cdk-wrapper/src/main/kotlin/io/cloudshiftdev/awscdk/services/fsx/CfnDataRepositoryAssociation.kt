@@ -69,7 +69,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataRepositoryAssociation(
   cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -272,7 +274,7 @@ public open class CfnDataRepositoryAssociation(
     /**
      * The path to the Amazon S3 data repository that will be linked to the file system.
      *
-     * The path can be an S3 bucket or prefix in the format `s3://myBucket/myPrefix/` . This path
+     * The path can be an S3 bucket or prefix in the format `s3://bucket-name/prefix/` . This path
      * specifies where in the S3 data repository files will be imported from or exported to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-datarepositoryassociation.html#cfn-fsx-datarepositoryassociation-datarepositorypath)
@@ -432,7 +434,7 @@ public open class CfnDataRepositoryAssociation(
     /**
      * The path to the Amazon S3 data repository that will be linked to the file system.
      *
-     * The path can be an S3 bucket or prefix in the format `s3://myBucket/myPrefix/` . This path
+     * The path can be an S3 bucket or prefix in the format `s3://bucket-name/prefix/` . This path
      * specifies where in the S3 data repository files will be imported from or exported to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-datarepositoryassociation.html#cfn-fsx-datarepositoryassociation-datarepositorypath)
@@ -706,7 +708,8 @@ public open class CfnDataRepositoryAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty,
-    ) : CdkObject(cdkObject), AutoExportPolicyProperty {
+    ) : CdkObject(cdkObject),
+        AutoExportPolicyProperty {
       /**
        * The `AutoExportPolicy` can have the following event values:.
        *
@@ -855,7 +858,8 @@ public open class CfnDataRepositoryAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty,
-    ) : CdkObject(cdkObject), AutoImportPolicyProperty {
+    ) : CdkObject(cdkObject),
+        AutoImportPolicyProperty {
       /**
        * The `AutoImportPolicy` can have the following event values:.
        *
@@ -1127,7 +1131,8 @@ public open class CfnDataRepositoryAssociation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property,
-    ) : CdkObject(cdkObject), S3Property {
+    ) : CdkObject(cdkObject),
+        S3Property {
       /**
        * Describes a data repository association's automatic export policy.
        *

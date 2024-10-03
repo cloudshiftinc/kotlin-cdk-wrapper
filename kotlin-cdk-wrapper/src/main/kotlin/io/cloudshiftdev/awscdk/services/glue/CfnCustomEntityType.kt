@@ -42,7 +42,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCustomEntityType(
   cdkObject: software.amazon.awscdk.services.glue.CfnCustomEntityType,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.glue.CfnCustomEntityType(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

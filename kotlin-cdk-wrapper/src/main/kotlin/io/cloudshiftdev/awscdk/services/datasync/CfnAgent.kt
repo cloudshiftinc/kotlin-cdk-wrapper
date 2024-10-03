@@ -53,7 +53,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAgent(
   cdkObject: software.amazon.awscdk.services.datasync.CfnAgent,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.datasync.CfnAgent(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -145,22 +147,19 @@ public open class CfnAgent(
       securityGroupArns(`value`.toList())
 
   /**
-   * Specifies the ARN of the subnet where you want to run your DataSync task when using a VPC
-   * endpoint.
+   * Specifies the ARN of the subnet where your VPC service endpoint is located.
    */
   public open fun subnetArns(): List<String> = unwrap(this).getSubnetArns() ?: emptyList()
 
   /**
-   * Specifies the ARN of the subnet where you want to run your DataSync task when using a VPC
-   * endpoint.
+   * Specifies the ARN of the subnet where your VPC service endpoint is located.
    */
   public open fun subnetArns(`value`: List<String>) {
     unwrap(this).setSubnetArns(`value`)
   }
 
   /**
-   * Specifies the ARN of the subnet where you want to run your DataSync task when using a VPC
-   * endpoint.
+   * Specifies the ARN of the subnet where your VPC service endpoint is located.
    */
   public open fun subnetArns(vararg `value`: String): Unit = subnetArns(`value`.toList())
 
@@ -207,7 +206,7 @@ public open class CfnAgent(
     /**
      * Specifies your DataSync agent's activation key.
      *
-     * If you don't have an activation key, see [Activate your
+     * If you don't have an activation key, see [Activating your
      * agent](https://docs.aws.amazon.com/datasync/latest/userguide/activate-agent.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-activationkey)
@@ -218,7 +217,7 @@ public open class CfnAgent(
     /**
      * Specifies a name for your agent.
      *
-     * You can see this name in the DataSync console.
+     * We recommend specifying a name that you can remember.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-agentname)
      * @param agentName Specifies a name for your agent. 
@@ -260,30 +259,24 @@ public open class CfnAgent(
     public fun securityGroupArns(vararg securityGroupArns: String)
 
     /**
-     * Specifies the ARN of the subnet where you want to run your DataSync task when using a VPC
-     * endpoint.
+     * Specifies the ARN of the subnet where your VPC service endpoint is located.
      *
-     * This is the subnet where DataSync creates and manages the [network
-     * interfaces](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html#required-network-interfaces)
-     * for your transfer. You can only specify one ARN.
+     * You can only specify one ARN.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-subnetarns)
-     * @param subnetArns Specifies the ARN of the subnet where you want to run your DataSync task
-     * when using a VPC endpoint. 
+     * @param subnetArns Specifies the ARN of the subnet where your VPC service endpoint is located.
+     * 
      */
     public fun subnetArns(subnetArns: List<String>)
 
     /**
-     * Specifies the ARN of the subnet where you want to run your DataSync task when using a VPC
-     * endpoint.
+     * Specifies the ARN of the subnet where your VPC service endpoint is located.
      *
-     * This is the subnet where DataSync creates and manages the [network
-     * interfaces](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html#required-network-interfaces)
-     * for your transfer. You can only specify one ARN.
+     * You can only specify one ARN.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-subnetarns)
-     * @param subnetArns Specifies the ARN of the subnet where you want to run your DataSync task
-     * when using a VPC endpoint. 
+     * @param subnetArns Specifies the ARN of the subnet where your VPC service endpoint is located.
+     * 
      */
     public fun subnetArns(vararg subnetArns: String)
 
@@ -341,7 +334,7 @@ public open class CfnAgent(
     /**
      * Specifies your DataSync agent's activation key.
      *
-     * If you don't have an activation key, see [Activate your
+     * If you don't have an activation key, see [Activating your
      * agent](https://docs.aws.amazon.com/datasync/latest/userguide/activate-agent.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-activationkey)
@@ -354,7 +347,7 @@ public open class CfnAgent(
     /**
      * Specifies a name for your agent.
      *
-     * You can see this name in the DataSync console.
+     * We recommend specifying a name that you can remember.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-agentname)
      * @param agentName Specifies a name for your agent. 
@@ -401,32 +394,26 @@ public open class CfnAgent(
         securityGroupArns(securityGroupArns.toList())
 
     /**
-     * Specifies the ARN of the subnet where you want to run your DataSync task when using a VPC
-     * endpoint.
+     * Specifies the ARN of the subnet where your VPC service endpoint is located.
      *
-     * This is the subnet where DataSync creates and manages the [network
-     * interfaces](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html#required-network-interfaces)
-     * for your transfer. You can only specify one ARN.
+     * You can only specify one ARN.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-subnetarns)
-     * @param subnetArns Specifies the ARN of the subnet where you want to run your DataSync task
-     * when using a VPC endpoint. 
+     * @param subnetArns Specifies the ARN of the subnet where your VPC service endpoint is located.
+     * 
      */
     override fun subnetArns(subnetArns: List<String>) {
       cdkBuilder.subnetArns(subnetArns)
     }
 
     /**
-     * Specifies the ARN of the subnet where you want to run your DataSync task when using a VPC
-     * endpoint.
+     * Specifies the ARN of the subnet where your VPC service endpoint is located.
      *
-     * This is the subnet where DataSync creates and manages the [network
-     * interfaces](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html#required-network-interfaces)
-     * for your transfer. You can only specify one ARN.
+     * You can only specify one ARN.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-subnetarns)
-     * @param subnetArns Specifies the ARN of the subnet where you want to run your DataSync task
-     * when using a VPC endpoint. 
+     * @param subnetArns Specifies the ARN of the subnet where your VPC service endpoint is located.
+     * 
      */
     override fun subnetArns(vararg subnetArns: String): Unit = subnetArns(subnetArns.toList())
 

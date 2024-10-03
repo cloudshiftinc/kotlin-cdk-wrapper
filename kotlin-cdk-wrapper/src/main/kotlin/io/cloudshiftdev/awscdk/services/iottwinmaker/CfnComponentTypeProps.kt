@@ -460,7 +460,8 @@ public interface CfnComponentTypeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentTypeProps,
-  ) : CdkObject(cdkObject), CfnComponentTypeProps {
+  ) : CdkObject(cdkObject),
+      CfnComponentTypeProps {
     /**
      * The ID of the component type.
      *

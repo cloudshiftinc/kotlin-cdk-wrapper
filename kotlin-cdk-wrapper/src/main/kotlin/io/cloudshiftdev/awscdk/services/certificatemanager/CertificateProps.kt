@@ -217,7 +217,8 @@ public interface CertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.certificatemanager.CertificateProps,
-  ) : CdkObject(cdkObject), CertificateProps {
+  ) : CdkObject(cdkObject),
+      CertificateProps {
     /**
      * The Certificate name.
      *

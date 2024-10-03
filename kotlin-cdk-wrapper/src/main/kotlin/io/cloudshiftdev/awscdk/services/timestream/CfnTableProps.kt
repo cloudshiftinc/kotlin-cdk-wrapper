@@ -422,7 +422,8 @@ public interface CfnTableProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.timestream.CfnTableProps,
-  ) : CdkObject(cdkObject), CfnTableProps {
+  ) : CdkObject(cdkObject),
+      CfnTableProps {
     /**
      * The name of the Timestream database that contains this table.
      *

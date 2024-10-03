@@ -22,7 +22,8 @@ public interface IClusterParameterGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.IClusterParameterGroup,
-  ) : CdkObject(cdkObject), IClusterParameterGroup {
+  ) : CdkObject(cdkObject),
+      IClusterParameterGroup {
     /**
      * Apply the given removal policy to this resource.
      *

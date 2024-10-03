@@ -17,6 +17,7 @@ import io.cloudshiftdev.awscdk.services.ecs.PlacementConstraint
 import io.cloudshiftdev.awscdk.services.ecs.PlacementStrategy
 import io.cloudshiftdev.awscdk.services.ecs.PropagatedTagSource
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IpAddressType
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.Boolean
 import kotlin.Number
@@ -258,6 +259,13 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * started.
      */
     public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration)
+
+    /**
+     * @param ipAddressType The type of IP addresses to use.
+     * If you want to add a UDP or TCP_UDP listener to the load balancer,
+     * you must choose IPv4.
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
     /**
      * @param listenerPort Listener port of the network load balancer that will serve traffic to the
@@ -554,6 +562,15 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
     }
 
     /**
+     * @param ipAddressType The type of IP addresses to use.
+     * If you want to add a UDP or TCP_UDP listener to the load balancer,
+     * you must choose IPv4.
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
+    }
+
+    /**
      * @param listenerPort Listener port of the network load balancer that will serve traffic to the
      * service.
      */
@@ -727,7 +744,8 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2ServiceProps,
-  ) : CdkObject(cdkObject), NetworkLoadBalancedEc2ServiceProps {
+  ) : CdkObject(cdkObject),
+      NetworkLoadBalancedEc2ServiceProps {
     /**
      * A list of Capacity Provider strategies used to place a service.
      *
@@ -852,6 +870,19 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      */
     override fun healthCheckGracePeriod(): Duration? =
         unwrap(this).getHealthCheckGracePeriod()?.let(Duration::wrap)
+
+    /**
+     * The type of IP addresses to use.
+     *
+     * If you want to add a UDP or TCP_UDP listener to the load balancer,
+     * you must choose IPv4.
+     *
+     * Default: IpAddressType.IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-ip-address-type.html)
+     */
+    override fun ipAddressType(): IpAddressType? =
+        unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
     /**
      * Listener port of the network load balancer that will serve traffic to the service.

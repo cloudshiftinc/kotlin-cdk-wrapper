@@ -81,7 +81,8 @@ public interface InstanceProfileAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.InstanceProfileAttributes,
-  ) : CdkObject(cdkObject), InstanceProfileAttributes {
+  ) : CdkObject(cdkObject),
+      InstanceProfileAttributes {
     /**
      * The ARN of the InstanceProfile.
      *

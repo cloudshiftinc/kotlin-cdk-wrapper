@@ -185,7 +185,8 @@ public interface CfnDistributionConfigurationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfigurationProps,
-  ) : CdkObject(cdkObject), CfnDistributionConfigurationProps {
+  ) : CdkObject(cdkObject),
+      CfnDistributionConfigurationProps {
     /**
      * The description of this distribution configuration.
      *

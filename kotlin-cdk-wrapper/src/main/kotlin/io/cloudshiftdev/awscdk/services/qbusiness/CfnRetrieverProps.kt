@@ -238,7 +238,8 @@ public interface CfnRetrieverProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.qbusiness.CfnRetrieverProps,
-  ) : CdkObject(cdkObject), CfnRetrieverProps {
+  ) : CdkObject(cdkObject),
+      CfnRetrieverProps {
     /**
      * The identifier of the Amazon Q Business application using the retriever.
      *

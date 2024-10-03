@@ -60,7 +60,7 @@ public interface CfnCapacityReservationFleetProps {
    * Currently, only the `prioritized` allocation strategy is supported. For more information, see
    * [Allocation
    * strategy](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy)
-   * in the Amazon EC2 User Guide.
+   * in the *Amazon EC2 User Guide* .
    *
    * Valid values: `prioritized`
    *
@@ -155,7 +155,7 @@ public interface CfnCapacityReservationFleetProps {
    * by the Fleet determine the number of instances for which the Fleet reserves capacity. Both values
    * are based on units that make sense for your workload. For more information, see [Total target
    * capacity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity)
-   * in the Amazon EC2 User Guide.
+   * in the *Amazon EC2 User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-totaltargetcapacity)
    */
@@ -172,7 +172,7 @@ public interface CfnCapacityReservationFleetProps {
      * Currently, only the `prioritized` allocation strategy is supported. For more information, see
      * [Allocation
      * strategy](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy)
-     * in the Amazon EC2 User Guide.
+     * in the *Amazon EC2 User Guide* .
      *
      * Valid values: `prioritized`
      */
@@ -289,7 +289,7 @@ public interface CfnCapacityReservationFleetProps {
      * values are based on units that make sense for your workload. For more information, see [Total
      * target
      * capacity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity)
-     * in the Amazon EC2 User Guide.
+     * in the *Amazon EC2 User Guide* .
      */
     public fun totalTargetCapacity(totalTargetCapacity: Number)
   }
@@ -305,7 +305,7 @@ public interface CfnCapacityReservationFleetProps {
      * Currently, only the `prioritized` allocation strategy is supported. For more information, see
      * [Allocation
      * strategy](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy)
-     * in the Amazon EC2 User Guide.
+     * in the *Amazon EC2 User Guide* .
      *
      * Valid values: `prioritized`
      */
@@ -448,7 +448,7 @@ public interface CfnCapacityReservationFleetProps {
      * values are based on units that make sense for your workload. For more information, see [Total
      * target
      * capacity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity)
-     * in the Amazon EC2 User Guide.
+     * in the *Amazon EC2 User Guide* .
      */
     override fun totalTargetCapacity(totalTargetCapacity: Number) {
       cdkBuilder.totalTargetCapacity(totalTargetCapacity)
@@ -460,7 +460,8 @@ public interface CfnCapacityReservationFleetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleetProps,
-  ) : CdkObject(cdkObject), CfnCapacityReservationFleetProps {
+  ) : CdkObject(cdkObject),
+      CfnCapacityReservationFleetProps {
     /**
      * The strategy used by the Capacity Reservation Fleet to determine which of the specified
      * instance types to use.
@@ -468,7 +469,7 @@ public interface CfnCapacityReservationFleetProps {
      * Currently, only the `prioritized` allocation strategy is supported. For more information, see
      * [Allocation
      * strategy](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#allocation-strategy)
-     * in the Amazon EC2 User Guide.
+     * in the *Amazon EC2 User Guide* .
      *
      * Valid values: `prioritized`
      *
@@ -564,7 +565,7 @@ public interface CfnCapacityReservationFleetProps {
      * values are based on units that make sense for your workload. For more information, see [Total
      * target
      * capacity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity)
-     * in the Amazon EC2 User Guide.
+     * in the *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html#cfn-ec2-capacityreservationfleet-totaltargetcapacity)
      */

@@ -100,7 +100,8 @@ public interface AuthorizationConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.AuthorizationConfig,
-  ) : CdkObject(cdkObject), AuthorizationConfig {
+  ) : CdkObject(cdkObject),
+      AuthorizationConfig {
     /**
      * The access point ID to use.
      *

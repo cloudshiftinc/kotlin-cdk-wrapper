@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -20,20 +21,28 @@ import kotlin.jvm.JvmName
  *
  * ```
  * Vpc vpc;
+ * // Target group with slow start mode enabled
  * ApplicationTargetGroup tg = ApplicationTargetGroup.Builder.create(this, "TG")
- * .targetType(TargetType.IP)
- * .port(50051)
- * .protocol(ApplicationProtocol.HTTP)
- * .protocolVersion(ApplicationProtocolVersion.GRPC)
- * .healthCheck(HealthCheck.builder()
- * .enabled(true)
- * .healthyGrpcCodes("0-99")
- * .build())
+ * .targetType(TargetType.INSTANCE)
+ * .slowStart(Duration.seconds(60))
+ * .port(80)
  * .vpc(vpc)
  * .build();
  * ```
  */
 public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
+  /**
+   * Indicates whether anomaly mitigation is enabled.
+   *
+   * Only available when `loadBalancingAlgorithmType` is
+   * `TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM`
+   *
+   * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#automatic-target-weights)
+   */
+  public fun enableAnomalyMitigation(): Boolean? = unwrap(this).getEnableAnomalyMitigation()
+
   /**
    * The load balancing algorithm to select targets for routing requests.
    *
@@ -132,6 +141,13 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
      * The range is 0-3600 seconds.
      */
     public fun deregistrationDelay(deregistrationDelay: Duration)
+
+    /**
+     * @param enableAnomalyMitigation Indicates whether anomaly mitigation is enabled.
+     * Only available when `loadBalancingAlgorithmType` is
+     * `TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM`
+     */
+    public fun enableAnomalyMitigation(enableAnomalyMitigation: Boolean)
 
     /**
      * @param healthCheck Health check configuration.
@@ -247,6 +263,15 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
      */
     override fun deregistrationDelay(deregistrationDelay: Duration) {
       cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * @param enableAnomalyMitigation Indicates whether anomaly mitigation is enabled.
+     * Only available when `loadBalancingAlgorithmType` is
+     * `TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM`
+     */
+    override fun enableAnomalyMitigation(enableAnomalyMitigation: Boolean) {
+      cdkBuilder.enableAnomalyMitigation(enableAnomalyMitigation)
     }
 
     /**
@@ -383,7 +408,8 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroupProps,
-  ) : CdkObject(cdkObject), ApplicationTargetGroupProps {
+  ) : CdkObject(cdkObject),
+      ApplicationTargetGroupProps {
     /**
      * The amount of time for Elastic Load Balancing to wait before deregistering a target.
      *
@@ -393,6 +419,18 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
      */
     override fun deregistrationDelay(): Duration? =
         unwrap(this).getDeregistrationDelay()?.let(Duration::wrap)
+
+    /**
+     * Indicates whether anomaly mitigation is enabled.
+     *
+     * Only available when `loadBalancingAlgorithmType` is
+     * `TargetGroupLoadBalancingAlgorithmType.WEIGHTED_RANDOM`
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#automatic-target-weights)
+     */
+    override fun enableAnomalyMitigation(): Boolean? = unwrap(this).getEnableAnomalyMitigation()
 
     /**
      * Health check configuration.

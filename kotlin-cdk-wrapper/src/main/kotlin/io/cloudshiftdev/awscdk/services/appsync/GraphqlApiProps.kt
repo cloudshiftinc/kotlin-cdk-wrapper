@@ -396,7 +396,8 @@ public interface GraphqlApiProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiProps,
-  ) : CdkObject(cdkObject), GraphqlApiProps {
+  ) : CdkObject(cdkObject),
+      GraphqlApiProps {
     /**
      * Optional authorization configuration.
      *

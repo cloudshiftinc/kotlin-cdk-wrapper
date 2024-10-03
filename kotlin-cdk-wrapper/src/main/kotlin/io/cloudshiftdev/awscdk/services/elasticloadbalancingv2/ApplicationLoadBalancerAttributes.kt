@@ -172,7 +172,8 @@ public interface ApplicationLoadBalancerAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerAttributes,
-  ) : CdkObject(cdkObject), ApplicationLoadBalancerAttributes {
+  ) : CdkObject(cdkObject),
+      ApplicationLoadBalancerAttributes {
     /**
      * ARN of the load balancer.
      */

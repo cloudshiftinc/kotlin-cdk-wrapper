@@ -97,7 +97,8 @@ public interface LogGroupTargetInputOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInputOptions,
-  ) : CdkObject(cdkObject), LogGroupTargetInputOptions {
+  ) : CdkObject(cdkObject),
+      LogGroupTargetInputOptions {
     /**
      * The value provided here will be used in the Log "message" field.
      *

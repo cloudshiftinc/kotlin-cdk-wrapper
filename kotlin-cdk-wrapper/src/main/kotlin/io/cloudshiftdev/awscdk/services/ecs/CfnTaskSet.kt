@@ -35,7 +35,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * latest revision of a task definition.
  *
  *
- * For information about the maximum number of task sets and otther quotas, see [Amazon ECS service
+ * For information about the maximum number of task sets and other quotas, see [Amazon ECS service
  * quotas](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-quotas.html) in the
  * *Amazon Elastic Container Service Developer Guide* .
  *
@@ -87,7 +87,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTaskSet(
   cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -871,7 +873,8 @@ public open class CfnTaskSet(
   /**
    * An object representing the networking details for a task or service.
    *
-   * For example `awsvpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
+   * For example `awsVpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
+   * .
    *
    * Example:
    *
@@ -903,7 +906,7 @@ public open class CfnTaskSet(
      * The IDs of the security groups associated with the task or service.
      *
      * If you don't specify a security group, the default security group for the VPC is used.
-     * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+     * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
      *
      *
      * All specified security groups must be from the same VPC.
@@ -916,7 +919,7 @@ public open class CfnTaskSet(
     /**
      * The IDs of the subnets associated with the task or service.
      *
-     * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+     * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
      *
      *
      * All specified subnets must be from the same VPC.
@@ -941,7 +944,7 @@ public open class CfnTaskSet(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified security groups must be from the same VPC.
@@ -951,7 +954,7 @@ public open class CfnTaskSet(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified security groups must be from the same VPC.
@@ -960,7 +963,7 @@ public open class CfnTaskSet(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified subnets must be from the same VPC.
@@ -969,7 +972,7 @@ public open class CfnTaskSet(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified subnets must be from the same VPC.
@@ -994,7 +997,7 @@ public open class CfnTaskSet(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified security groups must be from the same VPC.
@@ -1006,7 +1009,7 @@ public open class CfnTaskSet(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified security groups must be from the same VPC.
@@ -1016,7 +1019,7 @@ public open class CfnTaskSet(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified subnets must be from the same VPC.
@@ -1027,7 +1030,7 @@ public open class CfnTaskSet(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service. 
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified subnets must be from the same VPC.
@@ -1040,7 +1043,8 @@ public open class CfnTaskSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty,
-    ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AwsVpcConfigurationProperty {
       /**
        * Whether the task's elastic network interface receives a public IP address.
        *
@@ -1054,7 +1058,7 @@ public open class CfnTaskSet(
        * The IDs of the security groups associated with the task or service.
        *
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified security groups must be from the same VPC.
@@ -1067,7 +1071,7 @@ public open class CfnTaskSet(
       /**
        * The IDs of the subnets associated with the task or service.
        *
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified subnets must be from the same VPC.
@@ -1280,7 +1284,8 @@ public open class CfnTaskSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.LoadBalancerProperty,
-    ) : CdkObject(cdkObject), LoadBalancerProperty {
+    ) : CdkObject(cdkObject),
+        LoadBalancerProperty {
       /**
        * The name of the container (as it appears in a container definition) to associate with the
        * load balancer.
@@ -1461,7 +1466,8 @@ public open class CfnTaskSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NetworkConfigurationProperty {
       /**
        * The VPC subnets and security groups that are associated with a task.
        *
@@ -1572,7 +1578,8 @@ public open class CfnTaskSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty,
-    ) : CdkObject(cdkObject), ScaleProperty {
+    ) : CdkObject(cdkObject),
+        ScaleProperty {
       /**
        * The unit of measure for the scale value.
        *
@@ -1777,7 +1784,8 @@ public open class CfnTaskSet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ServiceRegistryProperty,
-    ) : CdkObject(cdkObject), ServiceRegistryProperty {
+    ) : CdkObject(cdkObject),
+        ServiceRegistryProperty {
       /**
        * The container name value to be used for your service discovery service.
        *

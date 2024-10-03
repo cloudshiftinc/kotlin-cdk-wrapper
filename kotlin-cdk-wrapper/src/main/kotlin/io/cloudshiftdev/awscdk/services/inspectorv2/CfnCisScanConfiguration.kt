@@ -57,14 +57,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .securityLevel("securityLevel")
- * .tags(Map.of(
- * "tagsKey", "tags"))
  * .targets(CisTargetsProperty.builder()
  * .accountIds(List.of("accountIds"))
  * // the properties below are optional
  * .targetResourceTags(Map.of(
  * "targetResourceTagsKey", List.of("targetResourceTags")))
  * .build())
+ * // the properties below are optional
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
  * .build();
  * ```
  *
@@ -72,12 +73,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCisScanConfiguration(
   cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
-  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
-      id)
-  )
-
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -117,7 +115,7 @@ public open class CfnCisScanConfiguration(
   /**
    * The name of the CIS scan configuration.
    */
-  public open fun scanName(): String? = unwrap(this).getScanName()
+  public open fun scanName(): String = unwrap(this).getScanName()
 
   /**
    * The name of the CIS scan configuration.
@@ -129,7 +127,7 @@ public open class CfnCisScanConfiguration(
   /**
    * The CIS scan configuration's schedule.
    */
-  public open fun schedule(): Any? = unwrap(this).getSchedule()
+  public open fun schedule(): Any = unwrap(this).getSchedule()
 
   /**
    * The CIS scan configuration's schedule.
@@ -156,7 +154,7 @@ public open class CfnCisScanConfiguration(
   /**
    * The CIS scan configuration's CIS Benchmark level.
    */
-  public open fun securityLevel(): String? = unwrap(this).getSecurityLevel()
+  public open fun securityLevel(): String = unwrap(this).getSecurityLevel()
 
   /**
    * The CIS scan configuration's CIS Benchmark level.
@@ -180,7 +178,7 @@ public open class CfnCisScanConfiguration(
   /**
    * The CIS scan configuration's targets.
    */
-  public open fun targets(): Any? = unwrap(this).getTargets()
+  public open fun targets(): Any = unwrap(this).getTargets()
 
   /**
    * The CIS scan configuration's targets.
@@ -512,7 +510,8 @@ public open class CfnCisScanConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty,
-    ) : CdkObject(cdkObject), CisTargetsProperty {
+    ) : CdkObject(cdkObject),
+        CisTargetsProperty {
       /**
        * The CIS target account ids.
        *
@@ -631,7 +630,8 @@ public open class CfnCisScanConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty,
-    ) : CdkObject(cdkObject), DailyScheduleProperty {
+    ) : CdkObject(cdkObject),
+        DailyScheduleProperty {
       /**
        * The schedule start time.
        *
@@ -763,7 +763,8 @@ public open class CfnCisScanConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.MonthlyScheduleProperty,
-    ) : CdkObject(cdkObject), MonthlyScheduleProperty {
+    ) : CdkObject(cdkObject),
+        MonthlyScheduleProperty {
       /**
        * The monthly schedule's day.
        *
@@ -1013,7 +1014,8 @@ public open class CfnCisScanConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.ScheduleProperty,
-    ) : CdkObject(cdkObject), ScheduleProperty {
+    ) : CdkObject(cdkObject),
+        ScheduleProperty {
       /**
        * A daily schedule.
        *
@@ -1135,7 +1137,8 @@ public open class CfnCisScanConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty,
-    ) : CdkObject(cdkObject), TimeProperty {
+    ) : CdkObject(cdkObject),
+        TimeProperty {
       /**
        * The time of day in 24-hour format (00:00).
        *
@@ -1283,7 +1286,8 @@ public open class CfnCisScanConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.WeeklyScheduleProperty,
-    ) : CdkObject(cdkObject), WeeklyScheduleProperty {
+    ) : CdkObject(cdkObject),
+        WeeklyScheduleProperty {
       /**
        * The weekly schedule's days.
        *

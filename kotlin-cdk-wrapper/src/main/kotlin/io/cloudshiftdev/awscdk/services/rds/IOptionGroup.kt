@@ -47,7 +47,8 @@ public interface IOptionGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.IOptionGroup,
-  ) : CdkObject(cdkObject), IOptionGroup {
+  ) : CdkObject(cdkObject),
+      IOptionGroup {
     /**
      * Adds a configuration to this OptionGroup.
      *

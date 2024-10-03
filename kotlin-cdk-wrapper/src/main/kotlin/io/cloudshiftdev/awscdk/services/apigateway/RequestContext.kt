@@ -531,7 +531,8 @@ public interface RequestContext {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.RequestContext,
-  ) : CdkObject(cdkObject), RequestContext {
+  ) : CdkObject(cdkObject),
+      RequestContext {
     /**
      * Represents the information of $context.identity.accountId.
      *

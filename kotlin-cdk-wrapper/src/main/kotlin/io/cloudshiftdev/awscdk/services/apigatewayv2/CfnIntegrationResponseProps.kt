@@ -261,7 +261,8 @@ public interface CfnIntegrationResponseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponseProps,
-  ) : CdkObject(cdkObject), CfnIntegrationResponseProps {
+  ) : CdkObject(cdkObject),
+      CfnIntegrationResponseProps {
     /**
      * The API identifier.
      *

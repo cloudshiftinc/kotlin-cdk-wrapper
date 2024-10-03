@@ -65,7 +65,7 @@ public interface CfnPrivacyBudgetTemplateProps {
   public fun membershipIdentifier(): String
 
   /**
-   * Specifies the epislon and noise parameters for the privacy budget template.
+   * Specifies the epsilon and noise parameters for the privacy budget template.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-privacybudgettemplate.html#cfn-cleanrooms-privacybudgettemplate-parameters)
    */
@@ -107,19 +107,19 @@ public interface CfnPrivacyBudgetTemplateProps {
     public fun membershipIdentifier(membershipIdentifier: String)
 
     /**
-     * @param parameters Specifies the epislon and noise parameters for the privacy budget template.
+     * @param parameters Specifies the epsilon and noise parameters for the privacy budget template.
      * 
      */
     public fun parameters(parameters: IResolvable)
 
     /**
-     * @param parameters Specifies the epislon and noise parameters for the privacy budget template.
+     * @param parameters Specifies the epsilon and noise parameters for the privacy budget template.
      * 
      */
     public fun parameters(parameters: CfnPrivacyBudgetTemplate.ParametersProperty)
 
     /**
-     * @param parameters Specifies the epislon and noise parameters for the privacy budget template.
+     * @param parameters Specifies the epsilon and noise parameters for the privacy budget template.
      * 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -171,7 +171,7 @@ public interface CfnPrivacyBudgetTemplateProps {
     }
 
     /**
-     * @param parameters Specifies the epislon and noise parameters for the privacy budget template.
+     * @param parameters Specifies the epsilon and noise parameters for the privacy budget template.
      * 
      */
     override fun parameters(parameters: IResolvable) {
@@ -179,7 +179,7 @@ public interface CfnPrivacyBudgetTemplateProps {
     }
 
     /**
-     * @param parameters Specifies the epislon and noise parameters for the privacy budget template.
+     * @param parameters Specifies the epsilon and noise parameters for the privacy budget template.
      * 
      */
     override fun parameters(parameters: CfnPrivacyBudgetTemplate.ParametersProperty) {
@@ -187,7 +187,7 @@ public interface CfnPrivacyBudgetTemplateProps {
     }
 
     /**
-     * @param parameters Specifies the epislon and noise parameters for the privacy budget template.
+     * @param parameters Specifies the epsilon and noise parameters for the privacy budget template.
      * 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -223,7 +223,8 @@ public interface CfnPrivacyBudgetTemplateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cleanrooms.CfnPrivacyBudgetTemplateProps,
-  ) : CdkObject(cdkObject), CfnPrivacyBudgetTemplateProps {
+  ) : CdkObject(cdkObject),
+      CfnPrivacyBudgetTemplateProps {
     /**
      * How often the privacy budget refreshes.
      *
@@ -247,7 +248,7 @@ public interface CfnPrivacyBudgetTemplateProps {
     override fun membershipIdentifier(): String = unwrap(this).getMembershipIdentifier()
 
     /**
-     * Specifies the epislon and noise parameters for the privacy budget template.
+     * Specifies the epsilon and noise parameters for the privacy budget template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-privacybudgettemplate.html#cfn-cleanrooms-privacybudgettemplate-parameters)
      */

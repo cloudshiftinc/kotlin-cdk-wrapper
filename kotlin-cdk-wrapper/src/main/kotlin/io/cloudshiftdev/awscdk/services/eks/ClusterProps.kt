@@ -31,7 +31,7 @@ import kotlin.jvm.JvmName
  * Vpc vpc;
  * Cluster.Builder.create(this, "MyCluster")
  * .kubectlMemory(Size.gibibytes(4))
- * .version(KubernetesVersion.V1_29)
+ * .version(KubernetesVersion.V1_30)
  * .build();
  * Cluster.fromClusterAttributes(this, "MyCluster", ClusterAttributes.builder()
  * .kubectlMemory(Size.gibibytes(4))
@@ -41,6 +41,18 @@ import kotlin.jvm.JvmName
  * ```
  */
 public interface ClusterProps : ClusterOptions {
+  /**
+   * Whether or not IAM principal of the cluster creator was set as a cluster admin access entry
+   * during cluster creation time.
+   *
+   * Changing this value after the cluster has been created will result in the cluster being
+   * replaced.
+   *
+   * Default: true
+   */
+  public fun bootstrapClusterCreatorAdminPermissions(): Boolean? =
+      unwrap(this).getBootstrapClusterCreatorAdminPermissions()
+
   /**
    * Number of instances to allocate as an initial capacity for this cluster.
    *
@@ -105,6 +117,11 @@ public interface ClusterProps : ClusterOptions {
     public fun albController(albController: AlbControllerOptions.Builder.() -> Unit)
 
     /**
+     * @param authenticationMode The desired authentication mode for the cluster.
+     */
+    public fun authenticationMode(authenticationMode: AuthenticationMode)
+
+    /**
      * @param awscliLayer An AWS Lambda layer that contains the `aws` CLI.
      * The handler expects the layer to include the following executables:
      *
@@ -113,6 +130,15 @@ public interface ClusterProps : ClusterOptions {
      * ```
      */
     public fun awscliLayer(awscliLayer: ILayerVersion)
+
+    /**
+     * @param bootstrapClusterCreatorAdminPermissions Whether or not IAM principal of the cluster
+     * creator was set as a cluster admin access entry during cluster creation time.
+     * Changing this value after the cluster has been created will result in the cluster being
+     * replaced.
+     */
+    public
+        fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: Boolean)
 
     /**
      * @param clusterHandlerEnvironment Custom environment variables when interacting with the EKS
@@ -351,6 +377,13 @@ public interface ClusterProps : ClusterOptions {
         albController(AlbControllerOptions(albController))
 
     /**
+     * @param authenticationMode The desired authentication mode for the cluster.
+     */
+    override fun authenticationMode(authenticationMode: AuthenticationMode) {
+      cdkBuilder.authenticationMode(authenticationMode.let(AuthenticationMode.Companion::unwrap))
+    }
+
+    /**
      * @param awscliLayer An AWS Lambda layer that contains the `aws` CLI.
      * The handler expects the layer to include the following executables:
      *
@@ -360,6 +393,17 @@ public interface ClusterProps : ClusterOptions {
      */
     override fun awscliLayer(awscliLayer: ILayerVersion) {
       cdkBuilder.awscliLayer(awscliLayer.let(ILayerVersion.Companion::unwrap))
+    }
+
+    /**
+     * @param bootstrapClusterCreatorAdminPermissions Whether or not IAM principal of the cluster
+     * creator was set as a cluster admin access entry during cluster creation time.
+     * Changing this value after the cluster has been created will result in the cluster being
+     * replaced.
+     */
+    override
+        fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: Boolean) {
+      cdkBuilder.bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions)
     }
 
     /**
@@ -643,7 +687,8 @@ public interface ClusterProps : ClusterOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.ClusterProps,
-  ) : CdkObject(cdkObject), ClusterProps {
+  ) : CdkObject(cdkObject),
+      ClusterProps {
     /**
      * Install the AWS Load Balancer Controller onto the cluster.
      *
@@ -653,6 +698,14 @@ public interface ClusterProps : ClusterOptions {
      */
     override fun albController(): AlbControllerOptions? =
         unwrap(this).getAlbController()?.let(AlbControllerOptions::wrap)
+
+    /**
+     * The desired authentication mode for the cluster.
+     *
+     * Default: AuthenticationMode.CONFIG_MAP
+     */
+    override fun authenticationMode(): AuthenticationMode? =
+        unwrap(this).getAuthenticationMode()?.let(AuthenticationMode::wrap)
 
     /**
      * An AWS Lambda layer that contains the `aws` CLI.
@@ -667,6 +720,18 @@ public interface ClusterProps : ClusterOptions {
      */
     override fun awscliLayer(): ILayerVersion? =
         unwrap(this).getAwscliLayer()?.let(ILayerVersion::wrap)
+
+    /**
+     * Whether or not IAM principal of the cluster creator was set as a cluster admin access entry
+     * during cluster creation time.
+     *
+     * Changing this value after the cluster has been created will result in the cluster being
+     * replaced.
+     *
+     * Default: true
+     */
+    override fun bootstrapClusterCreatorAdminPermissions(): Boolean? =
+        unwrap(this).getBootstrapClusterCreatorAdminPermissions()
 
     /**
      * Custom environment variables when interacting with the EKS endpoint to manage the cluster

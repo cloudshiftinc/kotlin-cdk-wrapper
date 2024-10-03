@@ -27,7 +27,8 @@ import kotlin.jvm.JvmName
  */
 public open class LinuxLambdaBuildImage(
   cdkObject: software.amazon.awscdk.services.codebuild.LinuxLambdaBuildImage,
-) : CdkObject(cdkObject), IBuildImage {
+) : CdkObject(cdkObject),
+    IBuildImage {
   /**
    * The default `ComputeType` to use with this image, if one was not specified in
    * `BuildEnvironment#computeType` explicitly.
@@ -95,6 +96,9 @@ public open class LinuxLambdaBuildImage(
 
     public val AMAZON_LINUX_2023_CORRETTO_21: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxLambdaBuildImage.AMAZON_LINUX_2023_CORRETTO_21)
+
+    public val AMAZON_LINUX_2023_DOTNET_8: IBuildImage =
+        IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxLambdaBuildImage.AMAZON_LINUX_2023_DOTNET_8)
 
     public val AMAZON_LINUX_2023_NODE_20: IBuildImage =
         IBuildImage.wrap(software.amazon.awscdk.services.codebuild.LinuxLambdaBuildImage.AMAZON_LINUX_2023_NODE_20)

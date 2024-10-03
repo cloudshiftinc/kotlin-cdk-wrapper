@@ -119,7 +119,8 @@ public interface OpenSearchDataSourceProps : BackedDataSourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.OpenSearchDataSourceProps,
-  ) : CdkObject(cdkObject), OpenSearchDataSourceProps {
+  ) : CdkObject(cdkObject),
+      OpenSearchDataSourceProps {
     /**
      * The API to attach this data source to.
      */

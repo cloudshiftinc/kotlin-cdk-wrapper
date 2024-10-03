@@ -22,7 +22,8 @@ public interface IVpnGateway : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IVpnGateway,
-  ) : CdkObject(cdkObject), IVpnGateway {
+  ) : CdkObject(cdkObject),
+      IVpnGateway {
     /**
      * Apply the given removal policy to this resource.
      *

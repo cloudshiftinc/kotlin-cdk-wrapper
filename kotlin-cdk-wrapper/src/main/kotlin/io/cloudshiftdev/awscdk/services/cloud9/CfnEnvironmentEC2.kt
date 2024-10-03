@@ -60,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEnvironmentEC2(
   cdkObject: software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -702,7 +704,8 @@ public open class CfnEnvironmentEC2(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.RepositoryProperty,
-    ) : CdkObject(cdkObject), RepositoryProperty {
+    ) : CdkObject(cdkObject),
+        RepositoryProperty {
       /**
        * The path within the development environment's default file system location to clone the AWS
        * CodeCommit repository into.

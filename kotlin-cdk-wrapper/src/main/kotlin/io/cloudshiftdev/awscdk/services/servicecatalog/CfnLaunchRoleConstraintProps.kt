@@ -195,7 +195,8 @@ public interface CfnLaunchRoleConstraintProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraintProps,
-  ) : CdkObject(cdkObject), CfnLaunchRoleConstraintProps {
+  ) : CdkObject(cdkObject),
+      CfnLaunchRoleConstraintProps {
     /**
      * The language code.
      *

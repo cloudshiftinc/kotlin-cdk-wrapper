@@ -434,7 +434,8 @@ public interface DynamoGetItemProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItemProps,
-  ) : CdkObject(cdkObject), DynamoGetItemProps {
+  ) : CdkObject(cdkObject),
+      DynamoGetItemProps {
     /**
      * An optional description for this state.
      *

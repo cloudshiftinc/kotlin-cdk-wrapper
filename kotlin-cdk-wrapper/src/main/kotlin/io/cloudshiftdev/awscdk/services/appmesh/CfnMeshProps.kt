@@ -172,7 +172,8 @@ public interface CfnMeshProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.CfnMeshProps,
-  ) : CdkObject(cdkObject), CfnMeshProps {
+  ) : CdkObject(cdkObject),
+      CfnMeshProps {
     /**
      * The name to use for the service mesh.
      *

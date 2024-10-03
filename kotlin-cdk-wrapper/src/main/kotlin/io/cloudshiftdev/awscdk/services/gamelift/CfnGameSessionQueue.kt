@@ -68,7 +68,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGameSessionQueue(
   cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -869,7 +871,8 @@ public open class CfnGameSessionQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty,
-    ) : CdkObject(cdkObject), DestinationProperty {
+    ) : CdkObject(cdkObject),
+        DestinationProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-destination.html#cfn-gamelift-gamesessionqueue-destination-destinationarn)
        */
@@ -969,7 +972,8 @@ public open class CfnGameSessionQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty,
-    ) : CdkObject(cdkObject), FilterConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FilterConfigurationProperty {
       /**
        * A list of locations to allow game session placement in, in the form of AWS Region codes
        * such as `us-west-2` .
@@ -1066,7 +1070,8 @@ public open class CfnGameSessionQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty,
-    ) : CdkObject(cdkObject), GameSessionQueueDestinationProperty {
+    ) : CdkObject(cdkObject),
+        GameSessionQueueDestinationProperty {
       /**
        * The Amazon Resource Name (ARN) that is assigned to fleet or fleet alias.
        *
@@ -1192,7 +1197,8 @@ public open class CfnGameSessionQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty,
-    ) : CdkObject(cdkObject), PlayerLatencyPolicyProperty {
+    ) : CdkObject(cdkObject),
+        PlayerLatencyPolicyProperty {
       /**
        * The maximum latency value that is allowed for any player, in milliseconds.
        *
@@ -1423,7 +1429,8 @@ public open class CfnGameSessionQueue(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty,
-    ) : CdkObject(cdkObject), PriorityConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        PriorityConfigurationProperty {
       /**
        * The prioritization order to use for fleet locations, when the `PriorityOrder` property
        * includes `LOCATION` .

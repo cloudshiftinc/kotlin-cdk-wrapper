@@ -89,7 +89,8 @@ public interface DeviceTracking {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.DeviceTracking,
-  ) : CdkObject(cdkObject), DeviceTracking {
+  ) : CdkObject(cdkObject),
+      DeviceTracking {
     /**
      * Indicates whether a challenge is required on a new device.
      *

@@ -50,7 +50,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDomain(
   cdkObject: software.amazon.awscdk.services.voiceid.CfnDomain,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -403,7 +405,8 @@ public open class CfnDomain(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.voiceid.CfnDomain.ServerSideEncryptionConfigurationProperty,
-    ) : CdkObject(cdkObject), ServerSideEncryptionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServerSideEncryptionConfigurationProperty {
       /**
        * The identifier of the KMS key to use to encrypt data stored by Voice ID.
        *

@@ -81,7 +81,8 @@ public interface CfnStaticIpProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lightsail.CfnStaticIpProps,
-  ) : CdkObject(cdkObject), CfnStaticIpProps {
+  ) : CdkObject(cdkObject),
+      CfnStaticIpProps {
     /**
      * The instance that the static IP is attached to.
      *

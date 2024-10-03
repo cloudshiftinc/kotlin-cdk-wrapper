@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class WebSocketAuthorizer(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer,
-) : Resource(cdkObject), IWebSocketAuthorizer {
+) : Resource(cdkObject),
+    IWebSocketAuthorizer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

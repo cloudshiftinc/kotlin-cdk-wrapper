@@ -45,7 +45,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGroup(
   cdkObject: software.amazon.awscdk.services.iam.CfnGroup,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.iam.CfnGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -582,7 +583,8 @@ public open class CfnGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iam.CfnGroup.PolicyProperty,
-    ) : CdkObject(cdkObject), PolicyProperty {
+    ) : CdkObject(cdkObject),
+        PolicyProperty {
       /**
        * The policy document.
        *

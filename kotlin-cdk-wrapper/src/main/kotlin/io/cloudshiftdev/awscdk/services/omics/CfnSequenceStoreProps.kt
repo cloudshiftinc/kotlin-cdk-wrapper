@@ -179,7 +179,8 @@ public interface CfnSequenceStoreProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.omics.CfnSequenceStoreProps,
-  ) : CdkObject(cdkObject), CfnSequenceStoreProps {
+  ) : CdkObject(cdkObject),
+      CfnSequenceStoreProps {
     /**
      * A description for the store.
      *

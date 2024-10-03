@@ -36,6 +36,7 @@ import kotlin.jvm.JvmName
  * .scheduleExpression("scheduleExpression")
  * // the properties below are optional
  * .scheduleExpressionTimezone("scheduleExpressionTimezone")
+ * .scheduleStatus("scheduleStatus")
  * .startWindowHours(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -81,6 +82,11 @@ public interface CfnRestoreTestingPlanProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-scheduleexpressiontimezone)
    */
   public fun scheduleExpressionTimezone(): String? = unwrap(this).getScheduleExpressionTimezone()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-schedulestatus)
+   */
+  public fun scheduleStatus(): String? = unwrap(this).getScheduleStatus()
 
   /**
    * Defaults to 24 hours.
@@ -150,6 +156,11 @@ public interface CfnRestoreTestingPlanProps {
      * are in UTC. You can modify this to a specified timezone.
      */
     public fun scheduleExpressionTimezone(scheduleExpressionTimezone: String)
+
+    /**
+     * @param scheduleStatus the value to be set.
+     */
+    public fun scheduleStatus(scheduleStatus: String)
 
     /**
      * @param startWindowHours Defaults to 24 hours.
@@ -237,6 +248,13 @@ public interface CfnRestoreTestingPlanProps {
     }
 
     /**
+     * @param scheduleStatus the value to be set.
+     */
+    override fun scheduleStatus(scheduleStatus: String) {
+      cdkBuilder.scheduleStatus(scheduleStatus)
+    }
+
+    /**
      * @param startWindowHours Defaults to 24 hours.
      * A value in hours after a restore test is scheduled before a job will be canceled if it
      * doesn't start successfully. This value is optional. If this value is included, this parameter
@@ -270,7 +288,8 @@ public interface CfnRestoreTestingPlanProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingPlanProps,
-  ) : CdkObject(cdkObject), CfnRestoreTestingPlanProps {
+  ) : CdkObject(cdkObject),
+      CfnRestoreTestingPlanProps {
     /**
      * The specified criteria to assign a set of resources, such as recovery point types or backup
      * vaults.
@@ -306,6 +325,11 @@ public interface CfnRestoreTestingPlanProps {
      */
     override fun scheduleExpressionTimezone(): String? =
         unwrap(this).getScheduleExpressionTimezone()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-schedulestatus)
+     */
+    override fun scheduleStatus(): String? = unwrap(this).getScheduleStatus()
 
     /**
      * Defaults to 24 hours.

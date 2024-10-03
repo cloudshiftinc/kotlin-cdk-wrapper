@@ -290,7 +290,8 @@ public interface FluentdLogDriverProps : BaseLogDriverProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.FluentdLogDriverProps,
-  ) : CdkObject(cdkObject), FluentdLogDriverProps {
+  ) : CdkObject(cdkObject),
+      FluentdLogDriverProps {
     /**
      * By default, the logging driver connects to localhost:24224.
      *

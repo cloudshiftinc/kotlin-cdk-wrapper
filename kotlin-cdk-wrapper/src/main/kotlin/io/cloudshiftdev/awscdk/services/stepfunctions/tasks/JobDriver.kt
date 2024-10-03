@@ -86,7 +86,8 @@ public interface JobDriver {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.JobDriver,
-  ) : CdkObject(cdkObject), JobDriver {
+  ) : CdkObject(cdkObject),
+      JobDriver {
     /**
      * The job driver parameters specified for spark submit.
      *

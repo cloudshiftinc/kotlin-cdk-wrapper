@@ -102,6 +102,8 @@ public interface CfnResourceDataSyncProps {
   public fun syncFormat(): String? = unwrap(this).getSyncFormat()
 
   /**
+   * A name for the resource data sync.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-syncname)
    */
   public fun syncName(): String
@@ -177,7 +179,7 @@ public interface CfnResourceDataSyncProps {
     public fun syncFormat(syncFormat: String)
 
     /**
-     * @param syncName the value to be set. 
+     * @param syncName A name for the resource data sync. 
      */
     public fun syncName(syncName: String)
 
@@ -274,7 +276,7 @@ public interface CfnResourceDataSyncProps {
     }
 
     /**
-     * @param syncName the value to be set. 
+     * @param syncName A name for the resource data sync. 
      */
     override fun syncName(syncName: String) {
       cdkBuilder.syncName(syncName)
@@ -318,7 +320,8 @@ public interface CfnResourceDataSyncProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSyncProps,
-  ) : CdkObject(cdkObject), CfnResourceDataSyncProps {
+  ) : CdkObject(cdkObject),
+      CfnResourceDataSyncProps {
     /**
      * The name of the S3 bucket where the aggregated data is stored.
      *
@@ -367,6 +370,8 @@ public interface CfnResourceDataSyncProps {
     override fun syncFormat(): String? = unwrap(this).getSyncFormat()
 
     /**
+     * A name for the resource data sync.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-syncname)
      */
     override fun syncName(): String = unwrap(this).getSyncName()

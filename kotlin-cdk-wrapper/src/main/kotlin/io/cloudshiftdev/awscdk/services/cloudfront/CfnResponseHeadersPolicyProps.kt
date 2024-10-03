@@ -166,7 +166,8 @@ public interface CfnResponseHeadersPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicyProps,
-  ) : CdkObject(cdkObject), CfnResponseHeadersPolicyProps {
+  ) : CdkObject(cdkObject),
+      CfnResponseHeadersPolicyProps {
     /**
      * A response headers policy configuration.
      *

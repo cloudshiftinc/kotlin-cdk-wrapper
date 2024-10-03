@@ -188,7 +188,8 @@ public interface OnCloudTrailBucketEventOptions : OnEventOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.OnCloudTrailBucketEventOptions,
-  ) : CdkObject(cdkObject), OnCloudTrailBucketEventOptions {
+  ) : CdkObject(cdkObject),
+      OnCloudTrailBucketEventOptions {
     /**
      * The scope to use if the source of the rule and its target are in different Stacks (but in the
      * same account &amp; region).

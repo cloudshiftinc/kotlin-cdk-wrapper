@@ -42,7 +42,8 @@ public interface IIpAddresses {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IIpAddresses,
-  ) : CdkObject(cdkObject), IIpAddresses {
+  ) : CdkObject(cdkObject),
+      IIpAddresses {
     /**
      * Called by the VPC to retrieve Subnet options from the Ipam.
      *

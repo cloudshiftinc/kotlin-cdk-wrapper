@@ -34,6 +34,9 @@ public interface TopicProps {
   /**
    * A developer-defined string that can be used to identify this SNS topic.
    *
+   * The display name must be maximum 100 characters long, including hyphens (-),
+   * underscores (_), spaces, and tabs.
+   *
    * Default: None
    */
   public fun displayName(): String? = unwrap(this).getDisplayName()
@@ -127,6 +130,8 @@ public interface TopicProps {
 
     /**
      * @param displayName A developer-defined string that can be used to identify this SNS topic.
+     * The display name must be maximum 100 characters long, including hyphens (-),
+     * underscores (_), spaces, and tabs.
      */
     public fun displayName(displayName: String)
 
@@ -196,6 +201,8 @@ public interface TopicProps {
 
     /**
      * @param displayName A developer-defined string that can be used to identify this SNS topic.
+     * The display name must be maximum 100 characters long, including hyphens (-),
+     * underscores (_), spaces, and tabs.
      */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
@@ -275,7 +282,8 @@ public interface TopicProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sns.TopicProps,
-  ) : CdkObject(cdkObject), TopicProps {
+  ) : CdkObject(cdkObject),
+      TopicProps {
     /**
      * Enables content-based deduplication for FIFO topics.
      *
@@ -285,6 +293,9 @@ public interface TopicProps {
 
     /**
      * A developer-defined string that can be used to identify this SNS topic.
+     *
+     * The display name must be maximum 100 characters long, including hyphens (-),
+     * underscores (_), spaces, and tabs.
      *
      * Default: None
      */

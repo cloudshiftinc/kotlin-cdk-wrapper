@@ -175,7 +175,8 @@ public interface DatabaseInstanceAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceAttributes,
-  ) : CdkObject(cdkObject), DatabaseInstanceAttributes {
+  ) : CdkObject(cdkObject),
+      DatabaseInstanceAttributes {
     /**
      * The engine of the existing database Instance.
      *

@@ -35,7 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class GatewayResponse(
   cdkObject: software.amazon.awscdk.services.apigateway.GatewayResponse,
-) : Resource(cdkObject), IGatewayResponse {
+) : Resource(cdkObject),
+    IGatewayResponse {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

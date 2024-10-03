@@ -240,7 +240,8 @@ public interface HelmChartProps : HelmChartOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.HelmChartProps,
-  ) : CdkObject(cdkObject), HelmChartProps {
+  ) : CdkObject(cdkObject),
+      HelmChartProps {
     /**
      * Whether or not Helm should treat this operation as atomic;
      *

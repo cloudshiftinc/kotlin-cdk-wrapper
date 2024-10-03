@@ -255,7 +255,8 @@ public interface LoadBalancerListener {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerListener,
-  ) : CdkObject(cdkObject), LoadBalancerListener {
+  ) : CdkObject(cdkObject),
+      LoadBalancerListener {
     /**
      * Allow connections to the load balancer from the given set of connection peers.
      *

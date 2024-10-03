@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class LifecycleHook(
   cdkObject: software.amazon.awscdk.services.autoscaling.LifecycleHook,
-) : Resource(cdkObject), ILifecycleHook {
+) : Resource(cdkObject),
+    ILifecycleHook {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

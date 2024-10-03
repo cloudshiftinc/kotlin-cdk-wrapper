@@ -94,7 +94,8 @@ public interface VirtualServiceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProps,
-  ) : CdkObject(cdkObject), VirtualServiceProps {
+  ) : CdkObject(cdkObject),
+      VirtualServiceProps {
     /**
      * The name of the VirtualService.
      *

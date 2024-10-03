@@ -9,7 +9,8 @@ import kotlin.String
 
 public open class Construct(
   cdkObject: software.constructs.Construct,
-) : CdkObject(cdkObject), IConstruct {
+) : CdkObject(cdkObject),
+    IConstruct {
   public constructor(scope: Construct, id: String) :
       this(software.constructs.Construct(scope.let(Construct.Companion::unwrap), id)
   )

@@ -136,7 +136,8 @@ public interface CfnTransitGatewayRouteProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteProps,
-  ) : CdkObject(cdkObject), CfnTransitGatewayRouteProps {
+  ) : CdkObject(cdkObject),
+      CfnTransitGatewayRouteProps {
     /**
      * Indicates whether to drop traffic that matches this route.
      *

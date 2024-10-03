@@ -19,7 +19,9 @@ import kotlin.collections.List
  * ISecret dockerHubSecret = Secret.fromSecretCompleteArn(this, "DHSecret", "arn:aws:...");
  * // Only the image asset publishing actions will be granted read access to the secret.
  * DockerCredential creds = DockerCredential.dockerHub(dockerHubSecret,
- * ExternalDockerCredentialOptions.builder().usages(List.of(DockerCredentialUsage.ASSET_PUBLISHING)).build());
+ * ExternalDockerCredentialOptions.builder()
+ * .usages(List.of(DockerCredentialUsage.ASSET_PUBLISHING))
+ * .build());
  * ```
  */
 public interface ExternalDockerCredentialOptions {
@@ -134,7 +136,8 @@ public interface ExternalDockerCredentialOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions,
-  ) : CdkObject(cdkObject), ExternalDockerCredentialOptions {
+  ) : CdkObject(cdkObject),
+      ExternalDockerCredentialOptions {
     /**
      * An IAM role to assume prior to accessing the secret.
      *

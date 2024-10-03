@@ -136,7 +136,8 @@ public interface PortfolioProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.PortfolioProps,
-  ) : CdkObject(cdkObject), PortfolioProps {
+  ) : CdkObject(cdkObject),
+      PortfolioProps {
     /**
      * Description for portfolio.
      *

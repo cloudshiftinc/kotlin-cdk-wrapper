@@ -82,7 +82,8 @@ public interface ReplicaRegion {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.ReplicaRegion,
-  ) : CdkObject(cdkObject), ReplicaRegion {
+  ) : CdkObject(cdkObject),
+      ReplicaRegion {
     /**
      * The customer-managed encryption key to use for encrypting the secret value.
      *

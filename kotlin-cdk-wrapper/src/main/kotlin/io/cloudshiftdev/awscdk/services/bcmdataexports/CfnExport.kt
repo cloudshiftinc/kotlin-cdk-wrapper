@@ -90,7 +90,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnExport(
   cdkObject: software.amazon.awscdk.services.bcmdataexports.CfnExport,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -381,7 +383,8 @@ public open class CfnExport(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bcmdataexports.CfnExport.DataQueryProperty,
-    ) : CdkObject(cdkObject), DataQueryProperty {
+    ) : CdkObject(cdkObject),
+        DataQueryProperty {
       /**
        * The query statement.
        *
@@ -508,7 +511,8 @@ public open class CfnExport(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bcmdataexports.CfnExport.DestinationConfigurationsProperty,
-    ) : CdkObject(cdkObject), DestinationConfigurationsProperty {
+    ) : CdkObject(cdkObject),
+        DestinationConfigurationsProperty {
       /**
        * An object that describes the destination of the data exports file.
        *
@@ -802,7 +806,8 @@ public open class CfnExport(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bcmdataexports.CfnExport.ExportProperty,
-    ) : CdkObject(cdkObject), ExportProperty {
+    ) : CdkObject(cdkObject),
+        ExportProperty {
       /**
        * The data query for this specific data export.
        *
@@ -922,7 +927,8 @@ public open class CfnExport(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bcmdataexports.CfnExport.RefreshCadenceProperty,
-    ) : CdkObject(cdkObject), RefreshCadenceProperty {
+    ) : CdkObject(cdkObject),
+        RefreshCadenceProperty {
       /**
        * The frequency that data exports are updated.
        *
@@ -1025,7 +1031,8 @@ public open class CfnExport(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bcmdataexports.CfnExport.ResourceTagProperty,
-    ) : CdkObject(cdkObject), ResourceTagProperty {
+    ) : CdkObject(cdkObject),
+        ResourceTagProperty {
       /**
        * The key that's associated with the tag.
        *
@@ -1210,7 +1217,8 @@ public open class CfnExport(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bcmdataexports.CfnExport.S3DestinationProperty,
-    ) : CdkObject(cdkObject), S3DestinationProperty {
+    ) : CdkObject(cdkObject),
+        S3DestinationProperty {
       /**
        * The name of the Amazon S3 bucket used as the destination of a data export file.
        *
@@ -1384,7 +1392,8 @@ public open class CfnExport(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.bcmdataexports.CfnExport.S3OutputConfigurationsProperty,
-    ) : CdkObject(cdkObject), S3OutputConfigurationsProperty {
+    ) : CdkObject(cdkObject),
+        S3OutputConfigurationsProperty {
       /**
        * The compression type for the data export.
        *

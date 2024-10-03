@@ -36,7 +36,8 @@ public interface IIdentity : IPrincipal, IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IIdentity,
-  ) : CdkObject(cdkObject), IIdentity {
+  ) : CdkObject(cdkObject),
+      IIdentity {
     /**
      * Attaches a managed policy to this principal.
      *

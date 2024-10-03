@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -16,6 +17,7 @@ import kotlin.Unit
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
  * IntegrationCredentials integrationCredentials;
  * ParameterMapping parameterMapping;
@@ -31,6 +33,7 @@ import kotlin.Unit
  * .parameterMapping(parameterMapping)
  * .secureServerName("secureServerName")
  * .subtype(HttpIntegrationSubtype.EVENTBRIDGE_PUT_EVENTS)
+ * .timeout(Duration.minutes(30))
  * .uri("uri")
  * .build();
  * ```
@@ -107,6 +110,15 @@ public interface HttpRouteIntegrationConfig {
       unwrap(this).getSubtype()?.let(HttpIntegrationSubtype::wrap)
 
   /**
+   * The maximum amount of time an integration will run before it returns without a response.
+   *
+   * Must be between 50 milliseconds and 29 seconds.
+   *
+   * Default: Duration.seconds(29)
+   */
+  public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+  /**
    * Integration type.
    */
   public fun type(): HttpIntegrationType
@@ -166,6 +178,13 @@ public interface HttpRouteIntegrationConfig {
      * @param subtype Integration subtype.
      */
     public fun subtype(subtype: HttpIntegrationSubtype)
+
+    /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    public fun timeout(timeout: Duration)
 
     /**
      * @param type Integration type. 
@@ -244,6 +263,15 @@ public interface HttpRouteIntegrationConfig {
     }
 
     /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
      * @param type Integration type. 
      */
     override fun type(type: HttpIntegrationType) {
@@ -263,7 +291,8 @@ public interface HttpRouteIntegrationConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationConfig,
-  ) : CdkObject(cdkObject), HttpRouteIntegrationConfig {
+  ) : CdkObject(cdkObject),
+      HttpRouteIntegrationConfig {
     /**
      * The ID of the VPC link for a private integration.
      *
@@ -334,6 +363,15 @@ public interface HttpRouteIntegrationConfig {
      */
     override fun subtype(): HttpIntegrationSubtype? =
         unwrap(this).getSubtype()?.let(HttpIntegrationSubtype::wrap)
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     */
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
     /**
      * Integration type.

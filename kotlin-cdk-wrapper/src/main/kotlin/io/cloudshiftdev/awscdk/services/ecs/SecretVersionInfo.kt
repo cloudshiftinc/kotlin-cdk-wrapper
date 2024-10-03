@@ -97,7 +97,8 @@ public interface SecretVersionInfo {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.SecretVersionInfo,
-  ) : CdkObject(cdkObject), SecretVersionInfo {
+  ) : CdkObject(cdkObject),
+      SecretVersionInfo {
     /**
      * version id of the secret.
      *

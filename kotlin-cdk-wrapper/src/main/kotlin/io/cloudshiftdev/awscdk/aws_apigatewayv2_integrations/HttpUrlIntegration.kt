@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.apigatewayv2.HttpMethod
 import io.cloudshiftdev.awscdk.services.apigatewayv2.HttpRouteIntegration
@@ -100,6 +101,18 @@ public open class HttpUrlIntegration(
      * backend. 
      */
     public fun parameterMapping(parameterMapping: ParameterMapping)
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     *
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response. 
+     */
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -133,6 +146,20 @@ public open class HttpUrlIntegration(
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
       cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
+    }
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     *
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response. 
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration =

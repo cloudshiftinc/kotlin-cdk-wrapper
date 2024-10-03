@@ -165,7 +165,8 @@ public interface AclTrafficConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.AclTrafficConfig,
-  ) : CdkObject(cdkObject), AclTrafficConfig {
+  ) : CdkObject(cdkObject),
+      AclTrafficConfig {
     /**
      * The Internet Control Message Protocol (ICMP) code and type.
      *

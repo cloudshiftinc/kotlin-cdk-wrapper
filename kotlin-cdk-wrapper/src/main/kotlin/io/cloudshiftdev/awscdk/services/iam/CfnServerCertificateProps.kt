@@ -285,7 +285,8 @@ public interface CfnServerCertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.CfnServerCertificateProps,
-  ) : CdkObject(cdkObject), CfnServerCertificateProps {
+  ) : CdkObject(cdkObject),
+      CfnServerCertificateProps {
     /**
      * The contents of the public key certificate.
      *

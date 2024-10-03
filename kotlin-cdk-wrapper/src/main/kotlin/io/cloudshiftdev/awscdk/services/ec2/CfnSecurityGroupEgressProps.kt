@@ -338,7 +338,8 @@ public interface CfnSecurityGroupEgressProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupEgressProps,
-  ) : CdkObject(cdkObject), CfnSecurityGroupEgressProps {
+  ) : CdkObject(cdkObject),
+      CfnSecurityGroupEgressProps {
     /**
      * The IPv4 address range, in CIDR format.
      *

@@ -203,7 +203,8 @@ public interface CfnPipelineProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipelineProps,
-  ) : CdkObject(cdkObject), CfnPipelineProps {
+  ) : CdkObject(cdkObject),
+      CfnPipelineProps {
     /**
      * The parallelism configuration applied to the pipeline.
      *

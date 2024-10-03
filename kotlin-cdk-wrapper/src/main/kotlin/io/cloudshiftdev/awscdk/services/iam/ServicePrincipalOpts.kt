@@ -145,7 +145,8 @@ public interface ServicePrincipalOpts {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.ServicePrincipalOpts,
-  ) : CdkObject(cdkObject), ServicePrincipalOpts {
+  ) : CdkObject(cdkObject),
+      ServicePrincipalOpts {
     /**
      * Additional conditions to add to the Service Principal.
      *

@@ -203,7 +203,8 @@ public interface CfnDataQualityRulesetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRulesetProps,
-  ) : CdkObject(cdkObject), CfnDataQualityRulesetProps {
+  ) : CdkObject(cdkObject),
+      CfnDataQualityRulesetProps {
     /**
      * Used for idempotency and is recommended to be set to a random ID (such as a UUID) to avoid
      * creating or starting multiple instances of the same resource.

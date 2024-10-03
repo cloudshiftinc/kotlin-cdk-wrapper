@@ -266,7 +266,8 @@ public interface NsRecordProps : RecordSetOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.NsRecordProps,
-  ) : CdkObject(cdkObject), NsRecordProps {
+  ) : CdkObject(cdkObject),
+      NsRecordProps {
     /**
      * A comment to add on the record.
      *

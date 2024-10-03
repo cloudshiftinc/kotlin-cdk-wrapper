@@ -209,7 +209,8 @@ public interface ResolverProps : ExtendedResolverProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.ResolverProps,
-  ) : CdkObject(cdkObject), ResolverProps {
+  ) : CdkObject(cdkObject),
+      ResolverProps {
     /**
      * The API this resolver is attached to.
      */

@@ -66,6 +66,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .subject("subject")
  * .build()))
+ * .submitAutoEvaluationActions(List.of(SubmitAutoEvaluationActionProperty.builder()
+ * .evaluationFormArn("evaluationFormArn")
+ * .build()))
  * .taskActions(List.of(TaskActionProperty.builder()
  * .contactFlowArn("contactFlowArn")
  * .name("name")
@@ -110,7 +113,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRule(
   cdkObject: software.amazon.awscdk.services.connect.CfnRule,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -578,6 +583,9 @@ public open class CfnRule(
    * // the properties below are optional
    * .subject("subject")
    * .build()))
+   * .submitAutoEvaluationActions(List.of(SubmitAutoEvaluationActionProperty.builder()
+   * .evaluationFormArn("evaluationFormArn")
+   * .build()))
    * .taskActions(List.of(TaskActionProperty.builder()
    * .contactFlowArn("contactFlowArn")
    * .name("name")
@@ -642,6 +650,13 @@ public open class CfnRule(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-actions.html#cfn-connect-rule-actions-sendnotificationactions)
      */
     public fun sendNotificationActions(): Any? = unwrap(this).getSendNotificationActions()
+
+    /**
+     * This action will submit an auto contact evaluation when a rule is triggered.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-actions.html#cfn-connect-rule-actions-submitautoevaluationactions)
+     */
+    public fun submitAutoEvaluationActions(): Any? = unwrap(this).getSubmitAutoEvaluationActions()
 
     /**
      * Information about the task action.
@@ -745,6 +760,24 @@ public open class CfnRule(
        * @param sendNotificationActions Information about the send notification action.
        */
       public fun sendNotificationActions(vararg sendNotificationActions: Any)
+
+      /**
+       * @param submitAutoEvaluationActions This action will submit an auto contact evaluation when
+       * a rule is triggered.
+       */
+      public fun submitAutoEvaluationActions(submitAutoEvaluationActions: IResolvable)
+
+      /**
+       * @param submitAutoEvaluationActions This action will submit an auto contact evaluation when
+       * a rule is triggered.
+       */
+      public fun submitAutoEvaluationActions(submitAutoEvaluationActions: List<Any>)
+
+      /**
+       * @param submitAutoEvaluationActions This action will submit an auto contact evaluation when
+       * a rule is triggered.
+       */
+      public fun submitAutoEvaluationActions(vararg submitAutoEvaluationActions: Any)
 
       /**
        * @param taskActions Information about the task action.
@@ -895,6 +928,29 @@ public open class CfnRule(
           sendNotificationActions(sendNotificationActions.toList())
 
       /**
+       * @param submitAutoEvaluationActions This action will submit an auto contact evaluation when
+       * a rule is triggered.
+       */
+      override fun submitAutoEvaluationActions(submitAutoEvaluationActions: IResolvable) {
+        cdkBuilder.submitAutoEvaluationActions(submitAutoEvaluationActions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param submitAutoEvaluationActions This action will submit an auto contact evaluation when
+       * a rule is triggered.
+       */
+      override fun submitAutoEvaluationActions(submitAutoEvaluationActions: List<Any>) {
+        cdkBuilder.submitAutoEvaluationActions(submitAutoEvaluationActions.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param submitAutoEvaluationActions This action will submit an auto contact evaluation when
+       * a rule is triggered.
+       */
+      override fun submitAutoEvaluationActions(vararg submitAutoEvaluationActions: Any): Unit =
+          submitAutoEvaluationActions(submitAutoEvaluationActions.toList())
+
+      /**
        * @param taskActions Information about the task action.
        * This field is required if `TriggerEventSource` is one of the following values:
        * `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` | `OnSalesforceCaseCreate`
@@ -945,7 +1001,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRule.ActionsProperty,
-    ) : CdkObject(cdkObject), ActionsProperty {
+    ) : CdkObject(cdkObject),
+        ActionsProperty {
       /**
        * Information about the contact category action.
        *
@@ -983,6 +1040,14 @@ public open class CfnRule(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-actions.html#cfn-connect-rule-actions-sendnotificationactions)
        */
       override fun sendNotificationActions(): Any? = unwrap(this).getSendNotificationActions()
+
+      /**
+       * This action will submit an auto contact evaluation when a rule is triggered.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-actions.html#cfn-connect-rule-actions-submitautoevaluationactions)
+       */
+      override fun submitAutoEvaluationActions(): Any? =
+          unwrap(this).getSubmitAutoEvaluationActions()
 
       /**
        * Information about the task action.
@@ -1122,7 +1187,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRule.CreateCaseActionProperty,
-    ) : CdkObject(cdkObject), CreateCaseActionProperty {
+    ) : CdkObject(cdkObject),
+        CreateCaseActionProperty {
       /**
        * An array of case fields.
        *
@@ -1209,7 +1275,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRule.EventBridgeActionProperty,
-    ) : CdkObject(cdkObject), EventBridgeActionProperty {
+    ) : CdkObject(cdkObject),
+        EventBridgeActionProperty {
       /**
        * The name.
        *
@@ -1341,7 +1408,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldProperty,
-    ) : CdkObject(cdkObject), FieldProperty {
+    ) : CdkObject(cdkObject),
+        FieldProperty {
       /**
        * The Id of the field.
        *
@@ -1490,7 +1558,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldValueProperty,
-    ) : CdkObject(cdkObject), FieldValueProperty {
+    ) : CdkObject(cdkObject),
+        FieldValueProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-fieldvalue.html#cfn-connect-rule-fieldvalue-booleanvalue)
        */
@@ -1639,7 +1708,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRule.NotificationRecipientTypeProperty,
-    ) : CdkObject(cdkObject), NotificationRecipientTypeProperty {
+    ) : CdkObject(cdkObject),
+        NotificationRecipientTypeProperty {
       /**
        * The Amazon Resource Name (ARN) of the user account.
        *
@@ -1763,7 +1833,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRule.ReferenceProperty,
-    ) : CdkObject(cdkObject), ReferenceProperty {
+    ) : CdkObject(cdkObject),
+        ReferenceProperty {
       /**
        * The type of the reference. `DATE` must be of type Epoch timestamp.
        *
@@ -1886,7 +1957,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRule.RuleTriggerEventSourceProperty,
-    ) : CdkObject(cdkObject), RuleTriggerEventSourceProperty {
+    ) : CdkObject(cdkObject),
+        RuleTriggerEventSourceProperty {
       /**
        * The name of the event source.
        *
@@ -2119,7 +2191,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty,
-    ) : CdkObject(cdkObject), SendNotificationActionProperty {
+    ) : CdkObject(cdkObject),
+        SendNotificationActionProperty {
       /**
        * Notification content.
        *
@@ -2183,6 +2256,91 @@ public open class CfnRule(
           software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty
+    }
+  }
+
+  /**
+   * The definition of submit auto evaluation action.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * SubmitAutoEvaluationActionProperty submitAutoEvaluationActionProperty =
+   * SubmitAutoEvaluationActionProperty.builder()
+   * .evaluationFormArn("evaluationFormArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-submitautoevaluationaction.html)
+   */
+  public interface SubmitAutoEvaluationActionProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the evaluation form.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-submitautoevaluationaction.html#cfn-connect-rule-submitautoevaluationaction-evaluationformarn)
+     */
+    public fun evaluationFormArn(): String
+
+    /**
+     * A builder for [SubmitAutoEvaluationActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param evaluationFormArn The Amazon Resource Name (ARN) of the evaluation form. 
+       */
+      public fun evaluationFormArn(evaluationFormArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnRule.SubmitAutoEvaluationActionProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnRule.SubmitAutoEvaluationActionProperty.builder()
+
+      /**
+       * @param evaluationFormArn The Amazon Resource Name (ARN) of the evaluation form. 
+       */
+      override fun evaluationFormArn(evaluationFormArn: String) {
+        cdkBuilder.evaluationFormArn(evaluationFormArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnRule.SubmitAutoEvaluationActionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.connect.CfnRule.SubmitAutoEvaluationActionProperty,
+    ) : CdkObject(cdkObject),
+        SubmitAutoEvaluationActionProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the evaluation form.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-submitautoevaluationaction.html#cfn-connect-rule-submitautoevaluationaction-evaluationformarn)
+       */
+      override fun evaluationFormArn(): String = unwrap(this).getEvaluationFormArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SubmitAutoEvaluationActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.SubmitAutoEvaluationActionProperty):
+          SubmitAutoEvaluationActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubmitAutoEvaluationActionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SubmitAutoEvaluationActionProperty):
+          software.amazon.awscdk.services.connect.CfnRule.SubmitAutoEvaluationActionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnRule.SubmitAutoEvaluationActionProperty
     }
   }
 
@@ -2350,7 +2508,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRule.TaskActionProperty,
-    ) : CdkObject(cdkObject), TaskActionProperty {
+    ) : CdkObject(cdkObject),
+        TaskActionProperty {
       /**
        * The Amazon Resource Name (ARN) of the flow.
        *
@@ -2492,7 +2651,8 @@ public open class CfnRule(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnRule.UpdateCaseActionProperty,
-    ) : CdkObject(cdkObject), UpdateCaseActionProperty {
+    ) : CdkObject(cdkObject),
+        UpdateCaseActionProperty {
       /**
        * An array of case fields.
        *

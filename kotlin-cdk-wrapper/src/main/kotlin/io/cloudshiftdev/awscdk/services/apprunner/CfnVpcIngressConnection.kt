@@ -56,7 +56,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVpcIngressConnection(
   cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -463,7 +465,8 @@ public open class CfnVpcIngressConnection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection.IngressVpcConfigurationProperty,
-    ) : CdkObject(cdkObject), IngressVpcConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        IngressVpcConfigurationProperty {
       /**
        * The ID of the VPC endpoint that your App Runner service connects to.
        *

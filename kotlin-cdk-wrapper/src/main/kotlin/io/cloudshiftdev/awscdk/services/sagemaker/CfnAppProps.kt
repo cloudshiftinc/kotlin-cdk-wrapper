@@ -30,6 +30,7 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .resourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
  * .sageMakerImageArn("sageMakerImageArn")
  * .sageMakerImageVersionArn("sageMakerImageVersionArn")
  * .build())
@@ -232,7 +233,8 @@ public interface CfnAppProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppProps,
-  ) : CdkObject(cdkObject), CfnAppProps {
+  ) : CdkObject(cdkObject),
+      CfnAppProps {
     /**
      * The name of the app.
      *

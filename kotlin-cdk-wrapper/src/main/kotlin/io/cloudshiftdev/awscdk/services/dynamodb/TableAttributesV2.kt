@@ -264,7 +264,8 @@ public interface TableAttributesV2 {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.TableAttributesV2,
-  ) : CdkObject(cdkObject), TableAttributesV2 {
+  ) : CdkObject(cdkObject),
+      TableAttributesV2 {
     /**
      * KMS encryption key for the table.
      *

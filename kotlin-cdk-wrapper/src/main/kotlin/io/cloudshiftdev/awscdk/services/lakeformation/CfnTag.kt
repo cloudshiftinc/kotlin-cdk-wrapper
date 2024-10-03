@@ -91,7 +91,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTag(
   cdkObject: software.amazon.awscdk.services.lakeformation.CfnTag,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

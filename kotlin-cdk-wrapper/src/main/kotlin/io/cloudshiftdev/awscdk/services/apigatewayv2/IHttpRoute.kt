@@ -70,7 +70,8 @@ public interface IHttpRoute : IRoute {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpRoute,
-  ) : CdkObject(cdkObject), IHttpRoute {
+  ) : CdkObject(cdkObject),
+      IHttpRoute {
     /**
      * Apply the given removal policy to this resource.
      *

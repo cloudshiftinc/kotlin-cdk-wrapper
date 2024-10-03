@@ -26,7 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ReceiptRuleSet(
   cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleSet,
-) : Resource(cdkObject), IReceiptRuleSet {
+) : Resource(cdkObject),
+    IReceiptRuleSet {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ses.ReceiptRuleSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

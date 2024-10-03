@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBaseProps
 import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
@@ -64,25 +65,35 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
    *
    * You must specify either the `body` or the `input` field, but not both.
    *
-   * Default: Input data is retrieved from the location specified in the `input` field
+   * Default: - Input data is retrieved from the location specified in the `input` field
    *
    * [Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html)
    */
   public fun body(): TaskInput? = unwrap(this).getBody()?.let(TaskInput::wrap)
 
   /**
-   * The MIME type of the input data in the request.
+   * (deprecated) The MIME type of the input data in the request.
    *
    * Default: 'application/json'
    *
    * [Documentation](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html)
+   * @deprecated This property does not require configuration because the only acceptable value is
+   * 'application/json'.
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun contentType(): String? = unwrap(this).getContentType()
+
+  /**
+   * The guardrail is applied to the invocation.
+   *
+   * Default: - No guardrail is applied to the invocation.
+   */
+  public fun guardrail(): Guardrail? = unwrap(this).getGuardrail()?.let(Guardrail::wrap)
 
   /**
    * The source location to retrieve the input data from.
    *
-   * Default: Input data is retrieved from the `body` field
+   * Default: - Input data is retrieved from the `body` field
    */
   public fun input(): BedrockInvokeModelInputProps? =
       unwrap(this).getInput()?.let(BedrockInvokeModelInputProps::wrap)
@@ -100,10 +111,17 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
    * If you specify this field, the API response body is replaced with a reference to the
    * output location.
    *
-   * Default: The API response body is returned in the result.
+   * Default: - The API response body is returned in the result.
    */
   public fun output(): BedrockInvokeModelOutputProps? =
       unwrap(this).getOutput()?.let(BedrockInvokeModelOutputProps::wrap)
+
+  /**
+   * Specifies whether to enable or disable the Bedrock trace.
+   *
+   * Default: - Trace is not enabled for the invocation.
+   */
+  public fun traceEnabled(): Boolean? = unwrap(this).getTraceEnabled()
 
   /**
    * A builder for [BedrockInvokeModelProps]
@@ -137,7 +155,10 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
 
     /**
      * @param contentType The MIME type of the input data in the request.
+     * @deprecated This property does not require configuration because the only acceptable value is
+     * 'application/json'.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun contentType(contentType: String)
 
     /**
@@ -155,6 +176,11 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("325a554503021599a7241386fb143c9e545442362ed53bcd75e5b5cce3585a73")
     public fun credentials(credentials: Credentials.Builder.() -> Unit)
+
+    /**
+     * @param guardrail The guardrail is applied to the invocation.
+     */
+    public fun guardrail(guardrail: Guardrail)
 
     /**
      * @param heartbeat Timeout for the heartbeat.
@@ -261,6 +287,11 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     public fun timeout(timeout: Duration)
+
+    /**
+     * @param traceEnabled Specifies whether to enable or disable the Bedrock trace.
+     */
+    public fun traceEnabled(traceEnabled: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -301,7 +332,10 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
 
     /**
      * @param contentType The MIME type of the input data in the request.
+     * @deprecated This property does not require configuration because the only acceptable value is
+     * 'application/json'.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun contentType(contentType: String) {
       cdkBuilder.contentType(contentType)
     }
@@ -324,6 +358,13 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
     @JvmName("325a554503021599a7241386fb143c9e545442362ed53bcd75e5b5cce3585a73")
     override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
         credentials(Credentials(credentials))
+
+    /**
+     * @param guardrail The guardrail is applied to the invocation.
+     */
+    override fun guardrail(guardrail: Guardrail) {
+      cdkBuilder.guardrail(guardrail.let(Guardrail.Companion::unwrap))
+    }
 
     /**
      * @param heartbeat Timeout for the heartbeat.
@@ -459,13 +500,21 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
       cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
+    /**
+     * @param traceEnabled Specifies whether to enable or disable the Bedrock trace.
+     */
+    override fun traceEnabled(traceEnabled: Boolean) {
+      cdkBuilder.traceEnabled(traceEnabled)
+    }
+
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelProps
         = cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelProps,
-  ) : CdkObject(cdkObject), BedrockInvokeModelProps {
+  ) : CdkObject(cdkObject),
+      BedrockInvokeModelProps {
     /**
      * The desired MIME type of the inference body in the response.
      *
@@ -489,7 +538,7 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      *
      * You must specify either the `body` or the `input` field, but not both.
      *
-     * Default: Input data is retrieved from the location specified in the `input` field
+     * Default: - Input data is retrieved from the location specified in the `input` field
      *
      * [Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html)
      */
@@ -503,12 +552,15 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
     override fun comment(): String? = unwrap(this).getComment()
 
     /**
-     * The MIME type of the input data in the request.
+     * (deprecated) The MIME type of the input data in the request.
      *
      * Default: 'application/json'
      *
      * [Documentation](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html)
+     * @deprecated This property does not require configuration because the only acceptable value is
+     * 'application/json'.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun contentType(): String? = unwrap(this).getContentType()
 
     /**
@@ -521,6 +573,13 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-access-cross-acct-resources.html)
      */
     override fun credentials(): Credentials? = unwrap(this).getCredentials()?.let(Credentials::wrap)
+
+    /**
+     * The guardrail is applied to the invocation.
+     *
+     * Default: - No guardrail is applied to the invocation.
+     */
+    override fun guardrail(): Guardrail? = unwrap(this).getGuardrail()?.let(Guardrail::wrap)
 
     /**
      * (deprecated) Timeout for the heartbeat.
@@ -546,7 +605,7 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
     /**
      * The source location to retrieve the input data from.
      *
-     * Default: Input data is retrieved from the `body` field
+     * Default: - Input data is retrieved from the `body` field
      */
     override fun input(): BedrockInvokeModelInputProps? =
         unwrap(this).getInput()?.let(BedrockInvokeModelInputProps::wrap)
@@ -591,7 +650,7 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      * If you specify this field, the API response body is replaced with a reference to the
      * output location.
      *
-     * Default: The API response body is returned in the result.
+     * Default: - The API response body is returned in the result.
      */
     override fun output(): BedrockInvokeModelOutputProps? =
         unwrap(this).getOutput()?.let(BedrockInvokeModelOutputProps::wrap)
@@ -656,6 +715,13 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+    /**
+     * Specifies whether to enable or disable the Bedrock trace.
+     *
+     * Default: - Trace is not enabled for the invocation.
+     */
+    override fun traceEnabled(): Boolean? = unwrap(this).getTraceEnabled()
   }
 
   public companion object {

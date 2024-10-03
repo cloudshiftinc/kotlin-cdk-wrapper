@@ -71,7 +71,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnWebACLAssociation(
   cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACLAssociation,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

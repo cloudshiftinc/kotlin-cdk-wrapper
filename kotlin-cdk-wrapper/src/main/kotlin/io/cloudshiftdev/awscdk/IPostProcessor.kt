@@ -20,7 +20,8 @@ public interface IPostProcessor {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IPostProcessor,
-  ) : CdkObject(cdkObject), IPostProcessor {
+  ) : CdkObject(cdkObject),
+      IPostProcessor {
     /**
      * Process the completely resolved value, after full recursion/resolution has happened.
      *

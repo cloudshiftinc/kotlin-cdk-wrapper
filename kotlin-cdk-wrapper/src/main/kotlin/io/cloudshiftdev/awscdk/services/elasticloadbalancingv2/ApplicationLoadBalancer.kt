@@ -54,7 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ApplicationLoadBalancer(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer,
-) : BaseLoadBalancer(cdkObject), IApplicationLoadBalancer {
+) : BaseLoadBalancer(cdkObject),
+    IApplicationLoadBalancer {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -174,6 +175,36 @@ public open class ApplicationLoadBalancer(
    */
   public override fun logAccessLogs(bucket: IBucket, prefix: String) {
     unwrap(this).logAccessLogs(bucket.let(IBucket.Companion::unwrap), prefix)
+  }
+
+  /**
+   * Enable connection logging for this load balancer.
+   *
+   * A region must be specified on the stack containing the load balancer; you cannot enable logging
+   * on
+   * environment-agnostic stacks.
+   *
+   * [Documentation](https://docs.aws.amazon.com/cdk/latest/guide/environments.html)
+   * @param bucket 
+   * @param prefix
+   */
+  public open fun logConnectionLogs(bucket: IBucket) {
+    unwrap(this).logConnectionLogs(bucket.let(IBucket.Companion::unwrap))
+  }
+
+  /**
+   * Enable connection logging for this load balancer.
+   *
+   * A region must be specified on the stack containing the load balancer; you cannot enable logging
+   * on
+   * environment-agnostic stacks.
+   *
+   * [Documentation](https://docs.aws.amazon.com/cdk/latest/guide/environments.html)
+   * @param bucket 
+   * @param prefix
+   */
+  public open fun logConnectionLogs(bucket: IBucket, prefix: String) {
+    unwrap(this).logConnectionLogs(bucket.let(IBucket.Companion::unwrap), prefix)
   }
 
   /**
@@ -1189,8 +1220,7 @@ public open class ApplicationLoadBalancer(
      * Default: - false for Network Load Balancers and true for Application Load Balancers.
      * This can not be `false` for Application Load Balancers.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
      * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled. 
      */
     public fun crossZoneEnabled(crossZoneEnabled: Boolean)
@@ -1411,8 +1441,7 @@ public open class ApplicationLoadBalancer(
      * Default: - false for Network Load Balancers and true for Application Load Balancers.
      * This can not be `false` for Application Load Balancers.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
      * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled. 
      */
     override fun crossZoneEnabled(crossZoneEnabled: Boolean) {

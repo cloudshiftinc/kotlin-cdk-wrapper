@@ -147,7 +147,8 @@ public interface CfnAccessGrantsLocationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsLocationProps,
-  ) : CdkObject(cdkObject), CfnAccessGrantsLocationProps {
+  ) : CdkObject(cdkObject),
+      CfnAccessGrantsLocationProps {
     /**
      * The Amazon Resource Name (ARN) of the IAM role for the registered location.
      *

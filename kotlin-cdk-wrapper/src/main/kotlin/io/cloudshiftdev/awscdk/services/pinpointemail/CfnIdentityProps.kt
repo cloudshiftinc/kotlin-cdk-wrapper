@@ -320,7 +320,8 @@ public interface CfnIdentityProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentityProps,
-  ) : CdkObject(cdkObject), CfnIdentityProps {
+  ) : CdkObject(cdkObject),
+      CfnIdentityProps {
     /**
      * For domain identities, this attribute is used to enable or disable DomainKeys Identified Mail
      * (DKIM) signing for the domain.

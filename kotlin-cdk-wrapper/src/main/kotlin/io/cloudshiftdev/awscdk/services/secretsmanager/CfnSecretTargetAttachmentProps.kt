@@ -55,8 +55,10 @@ public interface CfnSecretTargetAttachmentProps {
    * * AWS::RDS::DBInstance
    * * AWS::RDS::DBCluster
    * * AWS::Redshift::Cluster
+   * * AWS::RedshiftServerless::Namespace
    * * AWS::DocDB::DBInstance
    * * AWS::DocDB::DBCluster
+   * * AWS::DocDBElastic::Cluster
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-targettype)
    */
@@ -89,8 +91,10 @@ public interface CfnSecretTargetAttachmentProps {
      * * AWS::RDS::DBInstance
      * * AWS::RDS::DBCluster
      * * AWS::Redshift::Cluster
+     * * AWS::RedshiftServerless::Namespace
      * * AWS::DocDB::DBInstance
      * * AWS::DocDB::DBCluster
+     * * AWS::DocDBElastic::Cluster
      */
     public fun targetType(targetType: String)
   }
@@ -126,8 +130,10 @@ public interface CfnSecretTargetAttachmentProps {
      * * AWS::RDS::DBInstance
      * * AWS::RDS::DBCluster
      * * AWS::Redshift::Cluster
+     * * AWS::RedshiftServerless::Namespace
      * * AWS::DocDB::DBInstance
      * * AWS::DocDB::DBCluster
+     * * AWS::DocDBElastic::Cluster
      */
     override fun targetType(targetType: String) {
       cdkBuilder.targetType(targetType)
@@ -140,7 +146,8 @@ public interface CfnSecretTargetAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachmentProps,
-  ) : CdkObject(cdkObject), CfnSecretTargetAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnSecretTargetAttachmentProps {
     /**
      * The ARN or name of the secret.
      *
@@ -168,8 +175,10 @@ public interface CfnSecretTargetAttachmentProps {
      * * AWS::RDS::DBInstance
      * * AWS::RDS::DBCluster
      * * AWS::Redshift::Cluster
+     * * AWS::RedshiftServerless::Namespace
      * * AWS::DocDB::DBInstance
      * * AWS::DocDB::DBCluster
+     * * AWS::DocDBElastic::Cluster
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-targettype)
      */

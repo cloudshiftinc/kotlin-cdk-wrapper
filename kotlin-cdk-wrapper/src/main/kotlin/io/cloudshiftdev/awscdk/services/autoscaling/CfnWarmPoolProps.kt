@@ -258,7 +258,8 @@ public interface CfnWarmPoolProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.CfnWarmPoolProps,
-  ) : CdkObject(cdkObject), CfnWarmPoolProps {
+  ) : CdkObject(cdkObject),
+      CfnWarmPoolProps {
     /**
      * The name of the Auto Scaling group.
      *

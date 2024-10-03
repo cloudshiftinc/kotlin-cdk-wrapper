@@ -22,7 +22,8 @@ public interface ISubnetGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ISubnetGroup,
-  ) : CdkObject(cdkObject), ISubnetGroup {
+  ) : CdkObject(cdkObject),
+      ISubnetGroup {
     /**
      * Apply the given removal policy to this resource.
      *

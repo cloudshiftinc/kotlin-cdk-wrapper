@@ -95,7 +95,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStudioComponent(
   cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -464,7 +466,7 @@ public open class CfnStudioComponent(
     /**
      * The unique identifier for a studio resource.
      *
-     * In Nimble Studio , all other resources are contained in a studio resource.
+     * In Nimble Studio, all other resources are contained in a studio resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-studioid)
      * @param studioId The unique identifier for a studio resource. 
@@ -666,7 +668,7 @@ public open class CfnStudioComponent(
     /**
      * The unique identifier for a studio resource.
      *
-     * In Nimble Studio , all other resources are contained in a studio resource.
+     * In Nimble Studio, all other resources are contained in a studio resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-studioid)
      * @param studioId The unique identifier for a studio resource. 
@@ -810,7 +812,8 @@ public open class CfnStudioComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty,
-    ) : CdkObject(cdkObject), ActiveDirectoryComputerAttributeProperty {
+    ) : CdkObject(cdkObject),
+        ActiveDirectoryComputerAttributeProperty {
       /**
        * The name for the LDAP attribute.
        *
@@ -980,7 +983,8 @@ public open class CfnStudioComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty,
-    ) : CdkObject(cdkObject), ActiveDirectoryConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ActiveDirectoryConfigurationProperty {
       /**
        * A collection of custom attributes for an Active Directory computer.
        *
@@ -1104,7 +1108,8 @@ public open class CfnStudioComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty,
-    ) : CdkObject(cdkObject), ComputeFarmConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ComputeFarmConfigurationProperty {
       /**
        * The name of an Active Directory user that is used on ComputeFarm worker instances.
        *
@@ -1196,7 +1201,8 @@ public open class CfnStudioComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty,
-    ) : CdkObject(cdkObject), LicenseServiceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LicenseServiceConfigurationProperty {
       /**
        * The endpoint of the license service that is accessed by the studio component resource.
        *
@@ -1300,7 +1306,8 @@ public open class CfnStudioComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty,
-    ) : CdkObject(cdkObject), ScriptParameterKeyValueProperty {
+    ) : CdkObject(cdkObject),
+        ScriptParameterKeyValueProperty {
       /**
        * A script parameter key.
        *
@@ -1476,7 +1483,8 @@ public open class CfnStudioComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.SharedFileSystemConfigurationProperty,
-    ) : CdkObject(cdkObject), SharedFileSystemConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SharedFileSystemConfigurationProperty {
       /**
        * The endpoint of the shared file system that is accessed by the studio component resource.
        *
@@ -1819,7 +1827,8 @@ public open class CfnStudioComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentConfigurationProperty,
-    ) : CdkObject(cdkObject), StudioComponentConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        StudioComponentConfigurationProperty {
       /**
        * The configuration for a AWS Directory Service for Microsoft Active Directory studio
        * resource.
@@ -1996,7 +2005,8 @@ public open class CfnStudioComponent(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty,
-    ) : CdkObject(cdkObject), StudioComponentInitializationScriptProperty {
+    ) : CdkObject(cdkObject),
+        StudioComponentInitializationScriptProperty {
       /**
        * The version number of the protocol that is used by the launch profile.
        *

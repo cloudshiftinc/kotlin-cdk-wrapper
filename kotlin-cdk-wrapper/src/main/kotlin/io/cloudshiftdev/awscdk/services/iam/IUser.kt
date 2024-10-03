@@ -37,7 +37,8 @@ public interface IUser : IIdentity {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IUser,
-  ) : CdkObject(cdkObject), IUser {
+  ) : CdkObject(cdkObject),
+      IUser {
     /**
      * Attaches a managed policy to this principal.
      *

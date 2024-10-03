@@ -27,7 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class FlowLog(
   cdkObject: software.amazon.awscdk.services.ec2.FlowLog,
-) : Resource(cdkObject), IFlowLog {
+) : Resource(cdkObject),
+    IFlowLog {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -26,7 +26,7 @@ import kotlin.jvm.JvmName
  *
  * ```
  * FargateCluster cluster = FargateCluster.Builder.create(this, "MyCluster")
- * .version(KubernetesVersion.V1_29)
+ * .version(KubernetesVersion.V1_30)
  * .build();
  * ```
  */
@@ -56,6 +56,11 @@ public interface FargateClusterProps : ClusterOptions {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e58739095a95218c766391be15067aab40d0198310a87115e063eea5d8b14dff")
     public fun albController(albController: AlbControllerOptions.Builder.() -> Unit)
+
+    /**
+     * @param authenticationMode The desired authentication mode for the cluster.
+     */
+    public fun authenticationMode(authenticationMode: AuthenticationMode)
 
     /**
      * @param awscliLayer An AWS Lambda layer that contains the `aws` CLI.
@@ -281,6 +286,13 @@ public interface FargateClusterProps : ClusterOptions {
     @JvmName("e58739095a95218c766391be15067aab40d0198310a87115e063eea5d8b14dff")
     override fun albController(albController: AlbControllerOptions.Builder.() -> Unit): Unit =
         albController(AlbControllerOptions(albController))
+
+    /**
+     * @param authenticationMode The desired authentication mode for the cluster.
+     */
+    override fun authenticationMode(authenticationMode: AuthenticationMode) {
+      cdkBuilder.authenticationMode(authenticationMode.let(AuthenticationMode.Companion::unwrap))
+    }
 
     /**
      * @param awscliLayer An AWS Lambda layer that contains the `aws` CLI.
@@ -547,7 +559,8 @@ public interface FargateClusterProps : ClusterOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.FargateClusterProps,
-  ) : CdkObject(cdkObject), FargateClusterProps {
+  ) : CdkObject(cdkObject),
+      FargateClusterProps {
     /**
      * Install the AWS Load Balancer Controller onto the cluster.
      *
@@ -557,6 +570,14 @@ public interface FargateClusterProps : ClusterOptions {
      */
     override fun albController(): AlbControllerOptions? =
         unwrap(this).getAlbController()?.let(AlbControllerOptions::wrap)
+
+    /**
+     * The desired authentication mode for the cluster.
+     *
+     * Default: AuthenticationMode.CONFIG_MAP
+     */
+    override fun authenticationMode(): AuthenticationMode? =
+        unwrap(this).getAuthenticationMode()?.let(AuthenticationMode::wrap)
 
     /**
      * An AWS Lambda layer that contains the `aws` CLI.

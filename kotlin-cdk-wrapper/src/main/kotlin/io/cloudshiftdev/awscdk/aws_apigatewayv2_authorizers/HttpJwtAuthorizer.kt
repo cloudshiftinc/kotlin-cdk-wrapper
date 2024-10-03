@@ -35,7 +35,8 @@ import kotlin.jvm.JvmName
  */
 public open class HttpJwtAuthorizer(
   cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizer,
-) : CdkObject(cdkObject), IHttpRouteAuthorizer {
+) : CdkObject(cdkObject),
+    IHttpRouteAuthorizer {
   public constructor(
     id: String,
     jwtIssuer: String,

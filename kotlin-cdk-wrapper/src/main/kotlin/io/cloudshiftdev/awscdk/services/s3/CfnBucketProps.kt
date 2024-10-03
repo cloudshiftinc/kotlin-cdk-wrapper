@@ -255,6 +255,12 @@ public interface CfnBucketProps {
    * You might enable versioning to prevent objects from being deleted or overwritten by mistake or
    * to archive objects so that you can retrieve previous versions of them.
    *
+   *
+   * When you enable versioning on a bucket for the first time, it might take a short amount of time
+   * for the change to be fully propagated. We recommend that you wait for 15 minutes after enabling
+   * versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the bucket.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-versioningconfiguration)
    */
   public fun versioningConfiguration(): Any? = unwrap(this).getVersioningConfiguration()
@@ -740,6 +746,12 @@ public interface CfnBucketProps {
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket.
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
+     *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
      */
     public fun versioningConfiguration(versioningConfiguration: IResolvable)
 
@@ -747,6 +759,12 @@ public interface CfnBucketProps {
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket.
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
+     *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
      */
     public
         fun versioningConfiguration(versioningConfiguration: CfnBucket.VersioningConfigurationProperty)
@@ -755,6 +773,12 @@ public interface CfnBucketProps {
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket.
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
+     *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3cfae8b56cb451301bf46541164cbe333641bf3807ee6df146c708f3aca7007")
@@ -1343,6 +1367,12 @@ public interface CfnBucketProps {
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket.
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
+     *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
      */
     override fun versioningConfiguration(versioningConfiguration: IResolvable) {
       cdkBuilder.versioningConfiguration(versioningConfiguration.let(IResolvable.Companion::unwrap))
@@ -1352,6 +1382,12 @@ public interface CfnBucketProps {
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket.
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
+     *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
      */
     override
         fun versioningConfiguration(versioningConfiguration: CfnBucket.VersioningConfigurationProperty) {
@@ -1362,6 +1398,12 @@ public interface CfnBucketProps {
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket.
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
+     *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3cfae8b56cb451301bf46541164cbe333641bf3807ee6df146c708f3aca7007")
@@ -1405,7 +1447,8 @@ public interface CfnBucketProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.CfnBucketProps,
-  ) : CdkObject(cdkObject), CfnBucketProps {
+  ) : CdkObject(cdkObject),
+      CfnBucketProps {
     /**
      * Configures the transfer acceleration state for an Amazon S3 bucket.
      *
@@ -1629,6 +1672,13 @@ public interface CfnBucketProps {
      *
      * You might enable versioning to prevent objects from being deleted or overwritten by mistake
      * or to archive objects so that you can retrieve previous versions of them.
+     *
+     *
+     * When you enable versioning on a bucket for the first time, it might take a short amount of
+     * time for the change to be fully propagated. We recommend that you wait for 15 minutes after
+     * enabling versioning before issuing write operations ( `PUT` or `DELETE` ) on objects in the
+     * bucket.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-versioningconfiguration)
      */

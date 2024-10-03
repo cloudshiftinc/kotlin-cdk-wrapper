@@ -21,7 +21,8 @@ public interface IAsset {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IAsset,
-  ) : CdkObject(cdkObject), IAsset {
+  ) : CdkObject(cdkObject),
+      IAsset {
     /**
      * A hash of this asset, which is available at construction time.
      *

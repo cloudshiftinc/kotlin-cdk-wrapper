@@ -49,6 +49,7 @@ import kotlin.jvm.JvmName
  * .build()))
  * .build())
  * .customerManagedKey("customerManagedKey")
+ * .deepLinkAllowed("deepLinkAllowed")
  * .disconnectTimeoutInMinutes(123)
  * .idleDisconnectTimeoutInMinutes(123)
  * .tags(List.of(CfnTag.builder()
@@ -90,6 +91,14 @@ public interface CfnUserSettingsProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-customermanagedkey)
    */
   public fun customerManagedKey(): String? = unwrap(this).getCustomerManagedKey()
+
+  /**
+   * Specifies whether the user can use deep links that open automatically when connecting to a
+   * session.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-deeplinkallowed)
+   */
+  public fun deepLinkAllowed(): String? = unwrap(this).getDeepLinkAllowed()
 
   /**
    * The amount of time that a streaming session remains active after users disconnect.
@@ -192,6 +201,12 @@ public interface CfnUserSettingsProps {
      * the user settings.
      */
     public fun customerManagedKey(customerManagedKey: String)
+
+    /**
+     * @param deepLinkAllowed Specifies whether the user can use deep links that open automatically
+     * when connecting to a session.
+     */
+    public fun deepLinkAllowed(deepLinkAllowed: String)
 
     /**
      * @param disconnectTimeoutInMinutes The amount of time that a streaming session remains active
@@ -307,6 +322,14 @@ public interface CfnUserSettingsProps {
     }
 
     /**
+     * @param deepLinkAllowed Specifies whether the user can use deep links that open automatically
+     * when connecting to a session.
+     */
+    override fun deepLinkAllowed(deepLinkAllowed: String) {
+      cdkBuilder.deepLinkAllowed(deepLinkAllowed)
+    }
+
+    /**
      * @param disconnectTimeoutInMinutes The amount of time that a streaming session remains active
      * after users disconnect.
      */
@@ -374,7 +397,8 @@ public interface CfnUserSettingsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettingsProps,
-  ) : CdkObject(cdkObject), CfnUserSettingsProps {
+  ) : CdkObject(cdkObject),
+      CfnUserSettingsProps {
     /**
      * The additional encryption context of the user settings.
      *
@@ -404,6 +428,14 @@ public interface CfnUserSettingsProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-customermanagedkey)
      */
     override fun customerManagedKey(): String? = unwrap(this).getCustomerManagedKey()
+
+    /**
+     * Specifies whether the user can use deep links that open automatically when connecting to a
+     * session.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-deeplinkallowed)
+     */
+    override fun deepLinkAllowed(): String? = unwrap(this).getDeepLinkAllowed()
 
     /**
      * The amount of time that a streaming session remains active after users disconnect.

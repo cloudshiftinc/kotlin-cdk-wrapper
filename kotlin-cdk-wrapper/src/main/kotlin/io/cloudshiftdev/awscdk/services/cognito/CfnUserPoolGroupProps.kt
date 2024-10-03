@@ -183,7 +183,8 @@ public interface CfnUserPoolGroupProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolGroupProps,
-  ) : CdkObject(cdkObject), CfnUserPoolGroupProps {
+  ) : CdkObject(cdkObject),
+      CfnUserPoolGroupProps {
     /**
      * A string containing the description of the group.
      *

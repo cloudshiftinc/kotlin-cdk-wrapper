@@ -170,7 +170,8 @@ public interface AwsApiProps : AwsApiInput {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.targets.AwsApiProps,
-  ) : CdkObject(cdkObject), AwsApiProps {
+  ) : CdkObject(cdkObject),
+      AwsApiProps {
     /**
      * The service action to call.
      *

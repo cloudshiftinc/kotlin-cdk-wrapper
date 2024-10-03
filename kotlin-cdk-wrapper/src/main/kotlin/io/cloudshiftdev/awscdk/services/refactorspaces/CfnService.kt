@@ -66,7 +66,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnService(
   cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -600,7 +602,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty,
-    ) : CdkObject(cdkObject), LambdaEndpointInputProperty {
+    ) : CdkObject(cdkObject),
+        LambdaEndpointInputProperty {
       /**
        * The Amazon Resource Name (ARN) of the Lambda function or alias.
        *
@@ -729,7 +732,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty,
-    ) : CdkObject(cdkObject), UrlEndpointInputProperty {
+    ) : CdkObject(cdkObject),
+        UrlEndpointInputProperty {
       /**
        * The health check URL of the URL endpoint type.
        *

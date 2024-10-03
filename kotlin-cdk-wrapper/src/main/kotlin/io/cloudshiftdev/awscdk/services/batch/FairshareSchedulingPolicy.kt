@@ -46,7 +46,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class FairshareSchedulingPolicy(
   cdkObject: software.amazon.awscdk.services.batch.FairshareSchedulingPolicy,
-) : Resource(cdkObject), IFairshareSchedulingPolicy, ISchedulingPolicy {
+) : Resource(cdkObject),
+    IFairshareSchedulingPolicy,
+    ISchedulingPolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.FairshareSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

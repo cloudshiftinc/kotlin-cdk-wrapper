@@ -72,7 +72,7 @@ public interface CfnPublicTypeVersionProps {
    * If you don't specify a version number, CloudFormation increments the version number by one
    * minor version release.
    *
-   * You cannot specify a version number the first time you publish a type. AWS CloudFormation
+   * You cannot specify a version number the first time you publish a type. CloudFormation
    * automatically sets the first version number to be `1.0.0` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-publicversionnumber)
@@ -139,7 +139,7 @@ public interface CfnPublicTypeVersionProps {
      * If you don't specify a version number, CloudFormation increments the version number by one
      * minor version release.
      *
-     * You cannot specify a version number the first time you publish a type. AWS CloudFormation
+     * You cannot specify a version number the first time you publish a type. CloudFormation
      * automatically sets the first version number to be `1.0.0` .
      */
     public fun publicVersionNumber(publicVersionNumber: String)
@@ -203,7 +203,7 @@ public interface CfnPublicTypeVersionProps {
      * If you don't specify a version number, CloudFormation increments the version number by one
      * minor version release.
      *
-     * You cannot specify a version number the first time you publish a type. AWS CloudFormation
+     * You cannot specify a version number the first time you publish a type. CloudFormation
      * automatically sets the first version number to be `1.0.0` .
      */
     override fun publicVersionNumber(publicVersionNumber: String) {
@@ -232,7 +232,8 @@ public interface CfnPublicTypeVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudformation.CfnPublicTypeVersionProps,
-  ) : CdkObject(cdkObject), CfnPublicTypeVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnPublicTypeVersionProps {
     /**
      * The Amazon Resource Number (ARN) of the extension.
      *
@@ -276,7 +277,7 @@ public interface CfnPublicTypeVersionProps {
      * If you don't specify a version number, CloudFormation increments the version number by one
      * minor version release.
      *
-     * You cannot specify a version number the first time you publish a type. AWS CloudFormation
+     * You cannot specify a version number the first time you publish a type. CloudFormation
      * automatically sets the first version number to be `1.0.0` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-publicversionnumber)

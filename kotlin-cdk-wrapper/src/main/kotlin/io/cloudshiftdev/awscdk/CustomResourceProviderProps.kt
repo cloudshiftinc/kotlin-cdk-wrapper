@@ -191,7 +191,8 @@ public interface CustomResourceProviderProps : CustomResourceProviderOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CustomResourceProviderProps,
-  ) : CdkObject(cdkObject), CustomResourceProviderProps {
+  ) : CdkObject(cdkObject),
+      CustomResourceProviderProps {
     /**
      * A local file system directory with the provider's code.
      *

@@ -71,7 +71,8 @@ public interface CfnAutoScalingScheduledAction {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnAutoScalingScheduledAction,
-  ) : CdkObject(cdkObject), CfnAutoScalingScheduledAction {
+  ) : CdkObject(cdkObject),
+      CfnAutoScalingScheduledAction {
     /**
      *
      */

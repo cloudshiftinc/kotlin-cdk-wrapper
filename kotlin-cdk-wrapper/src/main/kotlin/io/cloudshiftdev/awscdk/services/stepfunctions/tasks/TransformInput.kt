@@ -148,7 +148,8 @@ public interface TransformInput {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformInput,
-  ) : CdkObject(cdkObject), TransformInput {
+  ) : CdkObject(cdkObject),
+      TransformInput {
     /**
      * The compression type of the transform data.
      *

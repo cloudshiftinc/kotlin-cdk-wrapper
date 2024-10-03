@@ -282,7 +282,8 @@ public interface CfnAnomalyDetectorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetectorProps,
-  ) : CdkObject(cdkObject), CfnAnomalyDetectorProps {
+  ) : CdkObject(cdkObject),
+      CfnAnomalyDetectorProps {
     /**
      * Contains information about the configuration of the anomaly detector.
      *

@@ -44,7 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class RecordSet(
   cdkObject: software.amazon.awscdk.services.route53.RecordSet,
-) : Resource(cdkObject), IRecordSet {
+) : Resource(cdkObject),
+    IRecordSet {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

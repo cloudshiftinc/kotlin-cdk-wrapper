@@ -37,7 +37,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSyncJob(
   cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSyncJob,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -154,7 +154,8 @@ public interface CfnRoleAliasProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnRoleAliasProps,
-  ) : CdkObject(cdkObject), CfnRoleAliasProps {
+  ) : CdkObject(cdkObject),
+      CfnRoleAliasProps {
     /**
      * The number of seconds for which the credential is valid.
      *

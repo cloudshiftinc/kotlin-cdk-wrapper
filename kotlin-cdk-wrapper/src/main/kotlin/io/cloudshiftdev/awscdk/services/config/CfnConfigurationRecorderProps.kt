@@ -498,7 +498,8 @@ public interface CfnConfigurationRecorderProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorderProps,
-  ) : CdkObject(cdkObject), CfnConfigurationRecorderProps {
+  ) : CdkObject(cdkObject),
+      CfnConfigurationRecorderProps {
     /**
      * The name of the configuration recorder. AWS Config automatically assigns the name of
      * "default" when creating the configuration recorder.

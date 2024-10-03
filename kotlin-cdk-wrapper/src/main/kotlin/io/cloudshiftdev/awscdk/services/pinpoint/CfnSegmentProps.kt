@@ -354,7 +354,8 @@ public interface CfnSegmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegmentProps,
-  ) : CdkObject(cdkObject), CfnSegmentProps {
+  ) : CdkObject(cdkObject),
+      CfnSegmentProps {
     /**
      * The unique identifier for the Amazon Pinpoint application that the segment is associated
      * with.

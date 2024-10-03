@@ -120,7 +120,8 @@ public interface YAxisProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.YAxisProps,
-  ) : CdkObject(cdkObject), YAxisProps {
+  ) : CdkObject(cdkObject),
+      YAxisProps {
     /**
      * The label.
      *

@@ -101,7 +101,8 @@ public interface CfnTemplateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.CfnTemplateProps,
-  ) : CdkObject(cdkObject), CfnTemplateProps {
+  ) : CdkObject(cdkObject),
+      CfnTemplateProps {
     /**
      * The content of the email, composed of a subject line and either an HTML part or a text-only
      * part.

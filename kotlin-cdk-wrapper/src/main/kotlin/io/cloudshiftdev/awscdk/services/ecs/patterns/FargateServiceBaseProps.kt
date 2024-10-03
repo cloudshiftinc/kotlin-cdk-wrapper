@@ -347,7 +347,8 @@ public interface FargateServiceBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.FargateServiceBaseProps,
-  ) : CdkObject(cdkObject), FargateServiceBaseProps {
+  ) : CdkObject(cdkObject),
+      FargateServiceBaseProps {
     /**
      * The number of cpu units used by the task.
      *

@@ -52,7 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApplicationVersion(
   cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -390,7 +391,8 @@ public open class CfnApplicationVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion.SourceBundleProperty,
-    ) : CdkObject(cdkObject), SourceBundleProperty {
+    ) : CdkObject(cdkObject),
+        SourceBundleProperty {
       /**
        * The Amazon S3 bucket where the data is located.
        *

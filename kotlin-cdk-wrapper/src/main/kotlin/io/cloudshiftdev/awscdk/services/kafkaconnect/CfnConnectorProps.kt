@@ -634,7 +634,8 @@ public interface CfnConnectorProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnectorProps,
-  ) : CdkObject(cdkObject), CfnConnectorProps {
+  ) : CdkObject(cdkObject),
+      CfnConnectorProps {
     /**
      * The connector's compute capacity settings.
      *

@@ -121,7 +121,8 @@ public interface CapacityProviderStrategy {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.CapacityProviderStrategy,
-  ) : CdkObject(cdkObject), CapacityProviderStrategy {
+  ) : CdkObject(cdkObject),
+      CapacityProviderStrategy {
     /**
      * The base value designates how many tasks, at a minimum, to run on the specified capacity
      * provider.

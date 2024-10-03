@@ -2,14 +2,14 @@
 
 package io.cloudshiftdev.awscdk.cxapi
 
-import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactManifest
-import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactType
-import io.cloudshiftdev.awscdk.cloudassembly.schema.AssetManifestProperties
-import io.cloudshiftdev.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties
-import io.cloudshiftdev.awscdk.cloudassembly.schema.BootstrapRole
-import io.cloudshiftdev.awscdk.cloudassembly.schema.MetadataEntry
-import io.cloudshiftdev.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties
-import io.cloudshiftdev.awscdk.cloudassembly.schema.TreeArtifactProperties
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.ArtifactManifest
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.ArtifactType
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.AssetManifestProperties
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.AwsCloudFormationStackProperties
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.BootstrapRole
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.MetadataEntry
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.NestedCloudAssemblyProperties
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.TreeArtifactProperties
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Boolean
@@ -26,8 +26,9 @@ import kotlin.jvm.JvmName
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.cloudassembly.schema.*;
+ * import io.cloudshiftdev.awscdk.cloud_assembly_schema.*;
  * import io.cloudshiftdev.awscdk.cxapi.*;
+ * Object assumeRoleAdditionalOptions;
  * CloudAssembly cloudAssembly;
  * CloudFormationStackArtifact cloudFormationStackArtifact =
  * CloudFormationStackArtifact.Builder.create(cloudAssembly, "artifactId")
@@ -46,6 +47,8 @@ import kotlin.jvm.JvmName
  * .properties(AwsCloudFormationStackProperties.builder()
  * .templateFile("templateFile")
  * // the properties below are optional
+ * .assumeRoleAdditionalOptions(Map.of(
+ * "assumeRoleAdditionalOptionsKey", assumeRoleAdditionalOptions))
  * .assumeRoleArn("assumeRoleArn")
  * .assumeRoleExternalId("assumeRoleExternalId")
  * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
@@ -53,10 +56,13 @@ import kotlin.jvm.JvmName
  * .lookupRole(BootstrapRole.builder()
  * .arn("arn")
  * // the properties below are optional
+ * .assumeRoleAdditionalOptions(Map.of(
+ * "assumeRoleAdditionalOptionsKey", assumeRoleAdditionalOptions))
  * .assumeRoleExternalId("assumeRoleExternalId")
  * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
  * .requiresBootstrapStackVersion(123)
  * .build())
+ * .notificationArns(List.of("notificationArns"))
  * .parameters(Map.of(
  * "parametersKey", "parameters"))
  * .requiresBootstrapStackVersion(123)
@@ -93,6 +99,21 @@ public open class CloudFormationStackArtifact(
    * Any assets associated with this stack.
    */
   public open fun assets(): List<Any> = unwrap(this).getAssets()
+
+  /**
+   * Additional options to pass to STS when assuming the role for cloudformation deployments.
+   *
+   * * `RoleArn` should not be used. Use the dedicated `assumeRoleArn` property instead.
+   * * `ExternalId` should not be used. Use the dedicated `assumeRoleExternalId` instead.
+   * * `TransitiveTagKeys` defaults to use all keys (if any) specified in `Tags`. E.g, all tags are
+   * transitive by default.
+   *
+   * Default: - No additional options.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/STS.html#assumeRole-property)
+   */
+  public open fun assumeRoleAdditionalOptions(): Map<String, Any> =
+      unwrap(this).getAssumeRoleAdditionalOptions() ?: emptyMap()
 
   /**
    * The role that needs to be assumed to deploy the stack.
@@ -146,6 +167,11 @@ public open class CloudFormationStackArtifact(
    */
   public open fun lookupRole(): BootstrapRole? =
       unwrap(this).getLookupRole()?.let(BootstrapRole::wrap)
+
+  /**
+   * SNS Topics that will receive stack events.
+   */
+  public open fun notificationArns(): List<String> = unwrap(this).getNotificationArns()
 
   /**
    * The original name as defined in the CDK app.
@@ -279,7 +305,7 @@ public open class CloudFormationStackArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("92c205a9470ccdebd826cf4b31ac7003bef204a014ac9f284ba9ba1b499921e7")
+    @JvmName("45668b78dd17d0d02d89a60d7900618194636c10ae8549db1ef35cfd1387bef1")
     public fun properties(properties: AwsCloudFormationStackProperties.Builder.() -> Unit)
 
     /**
@@ -299,7 +325,7 @@ public open class CloudFormationStackArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("3dd6900b1f22ad585674a846e06f59419a9c370083cc0665c9791f83cad33009")
+    @JvmName("16df0c1131af55e38f3d796a61ddea4c3d2a04e6d0f360eab76de7f6fc168e28")
     public fun properties(properties: AssetManifestProperties.Builder.() -> Unit)
 
     /**
@@ -319,7 +345,7 @@ public open class CloudFormationStackArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("9c66db8a93c609f04a50a253bb6a43f9131a9bb64ae18a714133ee19623bf2d9")
+    @JvmName("c00aab7d9166672337d0759741b6805f50a4f8de3a7b9d189ec90917d0787514")
     public fun properties(properties: TreeArtifactProperties.Builder.() -> Unit)
 
     /**
@@ -339,7 +365,7 @@ public open class CloudFormationStackArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("89ceb4e9acb0af4e90262523f7c7c05de15be68a16458b25e519add9141b9d88")
+    @JvmName("17690bc98599dbd5f614c995d01a5abb6ff3c5baee413feb04295d604dcf684c")
     public fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit)
 
     /**
@@ -433,7 +459,7 @@ public open class CloudFormationStackArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("92c205a9470ccdebd826cf4b31ac7003bef204a014ac9f284ba9ba1b499921e7")
+    @JvmName("45668b78dd17d0d02d89a60d7900618194636c10ae8549db1ef35cfd1387bef1")
     override fun properties(properties: AwsCloudFormationStackProperties.Builder.() -> Unit): Unit =
         properties(AwsCloudFormationStackProperties(properties))
 
@@ -456,7 +482,7 @@ public open class CloudFormationStackArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("3dd6900b1f22ad585674a846e06f59419a9c370083cc0665c9791f83cad33009")
+    @JvmName("16df0c1131af55e38f3d796a61ddea4c3d2a04e6d0f360eab76de7f6fc168e28")
     override fun properties(properties: AssetManifestProperties.Builder.() -> Unit): Unit =
         properties(AssetManifestProperties(properties))
 
@@ -479,7 +505,7 @@ public open class CloudFormationStackArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("9c66db8a93c609f04a50a253bb6a43f9131a9bb64ae18a714133ee19623bf2d9")
+    @JvmName("c00aab7d9166672337d0759741b6805f50a4f8de3a7b9d189ec90917d0787514")
     override fun properties(properties: TreeArtifactProperties.Builder.() -> Unit): Unit =
         properties(TreeArtifactProperties(properties))
 
@@ -502,7 +528,7 @@ public open class CloudFormationStackArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("89ceb4e9acb0af4e90262523f7c7c05de15be68a16458b25e519add9141b9d88")
+    @JvmName("17690bc98599dbd5f614c995d01a5abb6ff3c5baee413feb04295d604dcf684c")
     override fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit): Unit =
         properties(NestedCloudAssemblyProperties(properties))
 

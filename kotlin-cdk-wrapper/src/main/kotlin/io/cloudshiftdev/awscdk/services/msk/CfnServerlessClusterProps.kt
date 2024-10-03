@@ -46,8 +46,6 @@ import kotlin.jvm.JvmName
  */
 public interface CfnServerlessClusterProps {
   /**
-   * Includes all client authentication information.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
    */
   public fun clientAuthentication(): Any
@@ -75,18 +73,18 @@ public interface CfnServerlessClusterProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication the value to be set. 
      */
     public fun clientAuthentication(clientAuthentication: IResolvable)
 
     /**
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication the value to be set. 
      */
     public
         fun clientAuthentication(clientAuthentication: CfnServerlessCluster.ClientAuthenticationProperty)
 
     /**
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication the value to be set. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e82de3d16091b92d09d367f5e6706fe07c07c4e8f35d5be42249cd82ee85e3a6")
@@ -124,14 +122,14 @@ public interface CfnServerlessClusterProps {
         software.amazon.awscdk.services.msk.CfnServerlessClusterProps.builder()
 
     /**
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication the value to be set. 
      */
     override fun clientAuthentication(clientAuthentication: IResolvable) {
       cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication the value to be set. 
      */
     override
         fun clientAuthentication(clientAuthentication: CfnServerlessCluster.ClientAuthenticationProperty) {
@@ -139,7 +137,7 @@ public interface CfnServerlessClusterProps {
     }
 
     /**
-     * @param clientAuthentication Includes all client authentication information. 
+     * @param clientAuthentication the value to be set. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e82de3d16091b92d09d367f5e6706fe07c07c4e8f35d5be42249cd82ee85e3a6")
@@ -187,10 +185,9 @@ public interface CfnServerlessClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.msk.CfnServerlessClusterProps,
-  ) : CdkObject(cdkObject), CfnServerlessClusterProps {
+  ) : CdkObject(cdkObject),
+      CfnServerlessClusterProps {
     /**
-     * Includes all client authentication information.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html#cfn-msk-serverlesscluster-clientauthentication)
      */
     override fun clientAuthentication(): Any = unwrap(this).getClientAuthentication()

@@ -32,7 +32,8 @@ public interface IVirtualService : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.IVirtualService,
-  ) : CdkObject(cdkObject), IVirtualService {
+  ) : CdkObject(cdkObject),
+      IVirtualService {
     /**
      * Apply the given removal policy to this resource.
      *

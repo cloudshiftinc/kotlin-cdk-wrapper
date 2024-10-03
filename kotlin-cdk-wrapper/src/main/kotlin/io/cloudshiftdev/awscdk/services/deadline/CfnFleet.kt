@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.deadline
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -112,12 +115,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .displayName("displayName")
+ * .farmId("farmId")
  * .maxWorkerCount(123)
  * .roleArn("roleArn")
  * // the properties below are optional
  * .description("description")
- * .farmId("farmId")
  * .minWorkerCount(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -125,7 +132,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnFleet(
   cdkObject: software.amazon.awscdk.services.deadline.CfnFleet,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -167,6 +176,12 @@ public open class CfnFleet(
    * The number of workers in the fleet summary.
    */
   public open fun attrWorkerCount(): Number = unwrap(this).getAttrWorkerCount()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The configuration details for the fleet.
@@ -222,7 +237,7 @@ public open class CfnFleet(
   /**
    * The farm ID.
    */
-  public open fun farmId(): String? = unwrap(this).getFarmId()
+  public open fun farmId(): String = unwrap(this).getFarmId()
 
   /**
    * The farm ID.
@@ -277,6 +292,23 @@ public open class CfnFleet(
   }
 
   /**
+   * The tags to add to your fleet.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * The tags to add to your fleet.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   * The tags to add to your fleet.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.deadline.CfnFleet].
    */
   @CdkDslMarker
@@ -320,6 +352,11 @@ public open class CfnFleet(
     /**
      * The display name of the fleet summary to update.
      *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-displayname)
      * @param displayName The display name of the fleet summary to update. 
      */
@@ -358,6 +395,28 @@ public open class CfnFleet(
      * @param roleArn The IAM role that workers in the fleet use when processing jobs. 
      */
     public fun roleArn(roleArn: String)
+
+    /**
+     * The tags to add to your fleet.
+     *
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-tags)
+     * @param tags The tags to add to your fleet. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * The tags to add to your fleet.
+     *
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-tags)
+     * @param tags The tags to add to your fleet. 
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -413,6 +472,11 @@ public open class CfnFleet(
     /**
      * The display name of the fleet summary to update.
      *
+     *
+     * This field can store any content. Escape or encode this content before displaying it on a
+     * webpage or any other system that might interpret the content of this field.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-displayname)
      * @param displayName The display name of the fleet summary to update. 
      */
@@ -461,6 +525,30 @@ public open class CfnFleet(
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
+
+    /**
+     * The tags to add to your fleet.
+     *
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-tags)
+     * @param tags The tags to add to your fleet. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * The tags to add to your fleet.
+     *
+     * Each tag consists of a tag key and a tag value. Tag keys and values are both required, but
+     * tag values can be empty strings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-deadline-fleet.html#cfn-deadline-fleet-tags)
+     * @param tags The tags to add to your fleet. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.deadline.CfnFleet = cdkBuilder.build()
   }
@@ -561,7 +649,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorCountRangeProperty,
-    ) : CdkObject(cdkObject), AcceleratorCountRangeProperty {
+    ) : CdkObject(cdkObject),
+        AcceleratorCountRangeProperty {
       /**
        * The maximum GPU for the accelerator.
        *
@@ -672,7 +761,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorTotalMemoryMiBRangeProperty,
-    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBRangeProperty {
+    ) : CdkObject(cdkObject),
+        AcceleratorTotalMemoryMiBRangeProperty {
       /**
        * The maximum amount of memory to use for the accelerator, measured in MiB.
        *
@@ -875,7 +965,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.CustomerManagedFleetConfigurationProperty,
-    ) : CdkObject(cdkObject), CustomerManagedFleetConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CustomerManagedFleetConfigurationProperty {
       /**
        * The AWS Auto Scaling mode for the customer managed fleet configuration.
        *
@@ -1338,7 +1429,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.CustomerManagedWorkerCapabilitiesProperty,
-    ) : CdkObject(cdkObject), CustomerManagedWorkerCapabilitiesProperty {
+    ) : CdkObject(cdkObject),
+        CustomerManagedWorkerCapabilitiesProperty {
       /**
        * The range of the accelerator.
        *
@@ -1522,7 +1614,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.Ec2EbsVolumeProperty,
-    ) : CdkObject(cdkObject), Ec2EbsVolumeProperty {
+    ) : CdkObject(cdkObject),
+        Ec2EbsVolumeProperty {
       /**
        * The IOPS per volume.
        *
@@ -1665,7 +1758,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.FleetAmountCapabilityProperty,
-    ) : CdkObject(cdkObject), FleetAmountCapabilityProperty {
+    ) : CdkObject(cdkObject),
+        FleetAmountCapabilityProperty {
       /**
        * The maximum amount of the fleet worker capability.
        *
@@ -1792,7 +1886,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.FleetAttributeCapabilityProperty,
-    ) : CdkObject(cdkObject), FleetAttributeCapabilityProperty {
+    ) : CdkObject(cdkObject),
+        FleetAttributeCapabilityProperty {
       /**
        * The name of the fleet attribute capability for the worker.
        *
@@ -1952,7 +2047,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.FleetCapabilitiesProperty,
-    ) : CdkObject(cdkObject), FleetCapabilitiesProperty {
+    ) : CdkObject(cdkObject),
+        FleetCapabilitiesProperty {
       /**
        * Amount capabilities of the fleet.
        *
@@ -2201,7 +2297,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.FleetConfigurationProperty,
-    ) : CdkObject(cdkObject), FleetConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        FleetConfigurationProperty {
       /**
        * The customer managed fleets within a fleet configuration.
        *
@@ -2309,7 +2406,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.MemoryMiBRangeProperty,
-    ) : CdkObject(cdkObject), MemoryMiBRangeProperty {
+    ) : CdkObject(cdkObject),
+        MemoryMiBRangeProperty {
       /**
        * The maximum amount of memory (in MiB).
        *
@@ -2516,7 +2614,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.ServiceManagedEc2FleetConfigurationProperty,
-    ) : CdkObject(cdkObject), ServiceManagedEc2FleetConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServiceManagedEc2FleetConfigurationProperty {
       /**
        * The Amazon EC2 instance capabilities.
        *
@@ -2945,7 +3044,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.ServiceManagedEc2InstanceCapabilitiesProperty,
-    ) : CdkObject(cdkObject), ServiceManagedEc2InstanceCapabilitiesProperty {
+    ) : CdkObject(cdkObject),
+        ServiceManagedEc2InstanceCapabilitiesProperty {
       /**
        * The allowable Amazon EC2 instance types.
        *
@@ -3087,7 +3187,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.ServiceManagedEc2InstanceMarketOptionsProperty,
-    ) : CdkObject(cdkObject), ServiceManagedEc2InstanceMarketOptionsProperty {
+    ) : CdkObject(cdkObject),
+        ServiceManagedEc2InstanceMarketOptionsProperty {
       /**
        * The Amazon EC2 instance type.
        *
@@ -3189,7 +3290,8 @@ public open class CfnFleet(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.VCpuCountRangeProperty,
-    ) : CdkObject(cdkObject), VCpuCountRangeProperty {
+    ) : CdkObject(cdkObject),
+        VCpuCountRangeProperty {
       /**
        * The maximum amount of vCPU.
        *

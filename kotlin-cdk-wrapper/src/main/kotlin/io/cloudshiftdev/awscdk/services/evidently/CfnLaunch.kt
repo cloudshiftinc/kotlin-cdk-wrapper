@@ -91,7 +91,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLaunch(
   cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -899,7 +901,8 @@ public open class CfnLaunch(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.ExecutionStatusObjectProperty,
-    ) : CdkObject(cdkObject), ExecutionStatusObjectProperty {
+    ) : CdkObject(cdkObject),
+        ExecutionStatusObjectProperty {
       /**
        * If you are using AWS CloudFormation to stop this launch, specify either `COMPLETED` or
        * `CANCELLED` here to indicate how to classify this experiment.
@@ -1030,7 +1033,8 @@ public open class CfnLaunch(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty,
-    ) : CdkObject(cdkObject), GroupToWeightProperty {
+    ) : CdkObject(cdkObject),
+        GroupToWeightProperty {
       /**
        * The name of the launch group.
        *
@@ -1190,7 +1194,8 @@ public open class CfnLaunch(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty,
-    ) : CdkObject(cdkObject), LaunchGroupObjectProperty {
+    ) : CdkObject(cdkObject),
+        LaunchGroupObjectProperty {
       /**
        * A description of the launch group.
        *
@@ -1396,7 +1401,8 @@ public open class CfnLaunch(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.MetricDefinitionObjectProperty,
-    ) : CdkObject(cdkObject), MetricDefinitionObjectProperty {
+    ) : CdkObject(cdkObject),
+        MetricDefinitionObjectProperty {
       /**
        * The entity, such as a user or session, that does an action that causes a metric value to be
        * recorded.
@@ -1624,7 +1630,8 @@ public open class CfnLaunch(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.SegmentOverrideProperty,
-    ) : CdkObject(cdkObject), SegmentOverrideProperty {
+    ) : CdkObject(cdkObject),
+        SegmentOverrideProperty {
       /**
        * A number indicating the order to use to evaluate segment overrides, if there are more than
        * one.
@@ -1891,7 +1898,8 @@ public open class CfnLaunch(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.StepConfigProperty,
-    ) : CdkObject(cdkObject), StepConfigProperty {
+    ) : CdkObject(cdkObject),
+        StepConfigProperty {
       /**
        * An array of structures that define how much launch traffic to allocate to each launch group
        * during this step of the launch.

@@ -60,7 +60,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnPlaceIndex(
   cdkObject: software.amazon.awscdk.services.location.CfnPlaceIndex,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -588,7 +590,8 @@ public open class CfnPlaceIndex(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.location.CfnPlaceIndex.DataSourceConfigurationProperty,
-    ) : CdkObject(cdkObject), DataSourceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DataSourceConfigurationProperty {
       /**
        * Specifies how the results of an operation will be stored by the caller.
        *

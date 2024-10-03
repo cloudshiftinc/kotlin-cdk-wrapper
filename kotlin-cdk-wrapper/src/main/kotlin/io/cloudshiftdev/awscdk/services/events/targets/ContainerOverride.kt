@@ -180,7 +180,8 @@ public interface ContainerOverride {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.targets.ContainerOverride,
-  ) : CdkObject(cdkObject), ContainerOverride {
+  ) : CdkObject(cdkObject),
+      ContainerOverride {
     /**
      * Command to run inside the container.
      *

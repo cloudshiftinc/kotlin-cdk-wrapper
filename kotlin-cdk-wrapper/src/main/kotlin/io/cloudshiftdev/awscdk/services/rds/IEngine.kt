@@ -60,7 +60,8 @@ public interface IEngine {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.IEngine,
-  ) : CdkObject(cdkObject), IEngine {
+  ) : CdkObject(cdkObject),
+      IEngine {
     /**
      * The default name of the master database user if one was not provided explicitly.
      *

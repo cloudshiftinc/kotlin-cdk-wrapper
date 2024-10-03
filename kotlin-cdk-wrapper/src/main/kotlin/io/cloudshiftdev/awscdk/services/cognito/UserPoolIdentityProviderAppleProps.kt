@@ -2,9 +2,11 @@
 
 package io.cloudshiftdev.awscdk.services.cognito
 
+import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -18,14 +20,15 @@ import kotlin.jvm.JvmName
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.cognito.*;
  * ProviderAttribute providerAttribute;
+ * SecretValue secretValue;
  * UserPool userPool;
  * UserPoolIdentityProviderAppleProps userPoolIdentityProviderAppleProps =
  * UserPoolIdentityProviderAppleProps.builder()
  * .clientId("clientId")
  * .keyId("keyId")
- * .privateKey("privateKey")
  * .teamId("teamId")
  * .userPool(userPool)
  * // the properties below are optional
@@ -50,6 +53,8 @@ import kotlin.jvm.JvmName
  * .timezone(providerAttribute)
  * .website(providerAttribute)
  * .build())
+ * .privateKey("privateKey")
+ * .privateKeyValue(secretValue)
  * .scopes(List.of("scopes"))
  * .build();
  * ```
@@ -69,9 +74,22 @@ public interface UserPoolIdentityProviderAppleProps : UserPoolIdentityProviderPr
   public fun keyId(): String
 
   /**
-   * The privateKey content for Apple APIs to authenticate the client.
+   * (deprecated) The privateKey content for Apple APIs to authenticate the client.
+   *
+   * Default: none
+   *
+   * @deprecated use privateKeyValue
    */
-  public fun privateKey(): String
+  @Deprecated(message = "deprecated in CDK")
+  public fun privateKey(): String? = unwrap(this).getPrivateKey()
+
+  /**
+   * The privateKey content for Apple APIs to authenticate the client.
+   *
+   * Default: none
+   */
+  public fun privateKeyValue(): SecretValue? =
+      unwrap(this).getPrivateKeyValue()?.let(SecretValue::wrap)
 
   /**
    * The list of apple permissions to obtain for getting access to the apple profile.
@@ -118,9 +136,16 @@ public interface UserPoolIdentityProviderAppleProps : UserPoolIdentityProviderPr
     public fun keyId(keyId: String)
 
     /**
-     * @param privateKey The privateKey content for Apple APIs to authenticate the client. 
+     * @param privateKey The privateKey content for Apple APIs to authenticate the client.
+     * @deprecated use privateKeyValue
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun privateKey(privateKey: String)
+
+    /**
+     * @param privateKeyValue The privateKey content for Apple APIs to authenticate the client.
+     */
+    public fun privateKeyValue(privateKeyValue: SecretValue)
 
     /**
      * @param scopes The list of apple permissions to obtain for getting access to the apple
@@ -183,10 +208,19 @@ public interface UserPoolIdentityProviderAppleProps : UserPoolIdentityProviderPr
     }
 
     /**
-     * @param privateKey The privateKey content for Apple APIs to authenticate the client. 
+     * @param privateKey The privateKey content for Apple APIs to authenticate the client.
+     * @deprecated use privateKeyValue
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun privateKey(privateKey: String) {
       cdkBuilder.privateKey(privateKey)
+    }
+
+    /**
+     * @param privateKeyValue The privateKey content for Apple APIs to authenticate the client.
+     */
+    override fun privateKeyValue(privateKeyValue: SecretValue) {
+      cdkBuilder.privateKeyValue(privateKeyValue.let(SecretValue.Companion::unwrap))
     }
 
     /**
@@ -223,7 +257,8 @@ public interface UserPoolIdentityProviderAppleProps : UserPoolIdentityProviderPr
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderAppleProps,
-  ) : CdkObject(cdkObject), UserPoolIdentityProviderAppleProps {
+  ) : CdkObject(cdkObject),
+      UserPoolIdentityProviderAppleProps {
     /**
      * Mapping attributes from the identity provider to standard and custom attributes of the user
      * pool.
@@ -247,9 +282,22 @@ public interface UserPoolIdentityProviderAppleProps : UserPoolIdentityProviderPr
     override fun keyId(): String = unwrap(this).getKeyId()
 
     /**
-     * The privateKey content for Apple APIs to authenticate the client.
+     * (deprecated) The privateKey content for Apple APIs to authenticate the client.
+     *
+     * Default: none
+     *
+     * @deprecated use privateKeyValue
      */
-    override fun privateKey(): String = unwrap(this).getPrivateKey()
+    @Deprecated(message = "deprecated in CDK")
+    override fun privateKey(): String? = unwrap(this).getPrivateKey()
+
+    /**
+     * The privateKey content for Apple APIs to authenticate the client.
+     *
+     * Default: none
+     */
+    override fun privateKeyValue(): SecretValue? =
+        unwrap(this).getPrivateKeyValue()?.let(SecretValue::wrap)
 
     /**
      * The list of apple permissions to obtain for getting access to the apple profile.

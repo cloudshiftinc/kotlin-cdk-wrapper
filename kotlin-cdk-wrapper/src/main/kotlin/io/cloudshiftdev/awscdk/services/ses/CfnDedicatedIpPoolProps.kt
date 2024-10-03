@@ -115,7 +115,8 @@ public interface CfnDedicatedIpPoolProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.CfnDedicatedIpPoolProps,
-  ) : CdkObject(cdkObject), CfnDedicatedIpPoolProps {
+  ) : CdkObject(cdkObject),
+      CfnDedicatedIpPoolProps {
     /**
      * The name of the dedicated IP pool that the IP address is associated with.
      *

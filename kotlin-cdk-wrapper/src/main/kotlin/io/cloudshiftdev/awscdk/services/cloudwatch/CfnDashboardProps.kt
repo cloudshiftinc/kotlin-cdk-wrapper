@@ -107,7 +107,8 @@ public interface CfnDashboardProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.CfnDashboardProps,
-  ) : CdkObject(cdkObject), CfnDashboardProps {
+  ) : CdkObject(cdkObject),
+      CfnDashboardProps {
     /**
      * The detailed information about the dashboard in JSON format, including the widgets to include
      * and their location on the dashboard.

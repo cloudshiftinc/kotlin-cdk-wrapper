@@ -325,7 +325,8 @@ public interface CfnOrganizationConfigRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRuleProps,
-  ) : CdkObject(cdkObject), CfnOrganizationConfigRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnOrganizationConfigRuleProps {
     /**
      * A comma-separated list of accounts excluded from organization AWS Config rule.
      *

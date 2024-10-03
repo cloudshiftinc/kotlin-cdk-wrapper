@@ -81,7 +81,8 @@ public interface DestinationOptions : S3DestinationOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.DestinationOptions,
-  ) : CdkObject(cdkObject), DestinationOptions {
+  ) : CdkObject(cdkObject),
+      DestinationOptions {
     /**
      * The format for the flow log.
      *

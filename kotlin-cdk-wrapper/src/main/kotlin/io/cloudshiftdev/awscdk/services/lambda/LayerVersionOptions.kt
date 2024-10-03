@@ -124,7 +124,8 @@ public interface LayerVersionOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.LayerVersionOptions,
-  ) : CdkObject(cdkObject), LayerVersionOptions {
+  ) : CdkObject(cdkObject),
+      LayerVersionOptions {
     /**
      * The description the this Lambda Layer.
      *

@@ -214,7 +214,8 @@ public interface CfnTopicRuleDestinationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestinationProps,
-  ) : CdkObject(cdkObject), CfnTopicRuleDestinationProps {
+  ) : CdkObject(cdkObject),
+      CfnTopicRuleDestinationProps {
     /**
      * Properties of the HTTP URL.
      *

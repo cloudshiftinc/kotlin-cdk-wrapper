@@ -296,6 +296,11 @@ public interface PipelineProjectProps : CommonProjectProps {
     public fun timeout(timeout: Duration)
 
     /**
+     * @param visibility Specifies the visibility of the project's builds.
+     */
+    public fun visibility(visibility: ProjectVisibility)
+
+    /**
      * @param vpc VPC network to place codebuild network interfaces.
      * Specify this if the codebuild project needs to access resources in a VPC.
      */
@@ -572,6 +577,13 @@ public interface PipelineProjectProps : CommonProjectProps {
     }
 
     /**
+     * @param visibility Specifies the visibility of the project's builds.
+     */
+    override fun visibility(visibility: ProjectVisibility) {
+      cdkBuilder.visibility(visibility.let(ProjectVisibility.Companion::unwrap))
+    }
+
+    /**
      * @param vpc VPC network to place codebuild network interfaces.
      * Specify this if the codebuild project needs to access resources in a VPC.
      */
@@ -585,7 +597,8 @@ public interface PipelineProjectProps : CommonProjectProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.PipelineProjectProps,
-  ) : CdkObject(cdkObject), PipelineProjectProps {
+  ) : CdkObject(cdkObject),
+      PipelineProjectProps {
     /**
      * Whether to allow the CodeBuild to send all network traffic.
      *
@@ -798,8 +811,7 @@ public interface PipelineProjectProps : CommonProjectProps {
      *
      * Default: - private subnets if available else public subnets
      *
-     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html for
-     * more details.)
+     * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html)
      */
     override fun subnetSelection(): SubnetSelection? =
         unwrap(this).getSubnetSelection()?.let(SubnetSelection::wrap)
@@ -813,6 +825,14 @@ public interface PipelineProjectProps : CommonProjectProps {
      * Default: Duration.hours(1)
      */
     override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+    /**
+     * Specifies the visibility of the project's builds.
+     *
+     * Default: - no visibility is set
+     */
+    override fun visibility(): ProjectVisibility? =
+        unwrap(this).getVisibility()?.let(ProjectVisibility::wrap)
 
     /**
      * VPC network to place codebuild network interfaces.

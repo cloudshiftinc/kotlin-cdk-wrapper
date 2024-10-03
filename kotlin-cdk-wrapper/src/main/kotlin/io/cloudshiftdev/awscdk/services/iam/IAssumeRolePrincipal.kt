@@ -43,7 +43,8 @@ public interface IAssumeRolePrincipal : IPrincipal {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IAssumeRolePrincipal,
-  ) : CdkObject(cdkObject), IAssumeRolePrincipal {
+  ) : CdkObject(cdkObject),
+      IAssumeRolePrincipal {
     /**
      * Add the principal to the AssumeRolePolicyDocument.
      *

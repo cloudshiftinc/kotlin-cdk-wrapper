@@ -145,7 +145,8 @@ public interface CfnMountTargetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.efs.CfnMountTargetProps,
-  ) : CdkObject(cdkObject), CfnMountTargetProps {
+  ) : CdkObject(cdkObject),
+      CfnMountTargetProps {
     /**
      * The ID of the file system for which to create the mount target.
      *

@@ -49,7 +49,12 @@ public interface CfnHostedConfigurationVersionProps {
   public fun configurationProfileId(): String
 
   /**
-   * The content of the configuration or the configuration data.
+   * The configuration data, as bytes.
+   *
+   *
+   * AWS AppConfig accepts any type of data, including text formats like JSON or TOML, or binary
+   * formats like protocol buffers or compressed data.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-content)
    */
@@ -107,7 +112,10 @@ public interface CfnHostedConfigurationVersionProps {
     public fun configurationProfileId(configurationProfileId: String)
 
     /**
-     * @param content The content of the configuration or the configuration data. 
+     * @param content The configuration data, as bytes. 
+     *
+     * AWS AppConfig accepts any type of data, including text formats like JSON or TOML, or binary
+     * formats like protocol buffers or compressed data.
      */
     public fun content(content: String)
 
@@ -158,7 +166,10 @@ public interface CfnHostedConfigurationVersionProps {
     }
 
     /**
-     * @param content The content of the configuration or the configuration data. 
+     * @param content The configuration data, as bytes. 
+     *
+     * AWS AppConfig accepts any type of data, including text formats like JSON or TOML, or binary
+     * formats like protocol buffers or compressed data.
      */
     override fun content(content: String) {
       cdkBuilder.content(content)
@@ -204,7 +215,8 @@ public interface CfnHostedConfigurationVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersionProps,
-  ) : CdkObject(cdkObject), CfnHostedConfigurationVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnHostedConfigurationVersionProps {
     /**
      * The application ID.
      *
@@ -220,7 +232,12 @@ public interface CfnHostedConfigurationVersionProps {
     override fun configurationProfileId(): String = unwrap(this).getConfigurationProfileId()
 
     /**
-     * The content of the configuration or the configuration data.
+     * The configuration data, as bytes.
+     *
+     *
+     * AWS AppConfig accepts any type of data, including text formats like JSON or TOML, or binary
+     * formats like protocol buffers or compressed data.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html#cfn-appconfig-hostedconfigurationversion-content)
      */

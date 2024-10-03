@@ -34,7 +34,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnParameterGroup(
   cdkObject: software.amazon.awscdk.services.dax.CfnParameterGroup,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.dax.CfnParameterGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

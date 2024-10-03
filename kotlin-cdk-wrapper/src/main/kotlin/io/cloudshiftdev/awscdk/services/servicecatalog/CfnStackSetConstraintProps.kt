@@ -294,7 +294,8 @@ public interface CfnStackSetConstraintProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraintProps,
-  ) : CdkObject(cdkObject), CfnStackSetConstraintProps {
+  ) : CdkObject(cdkObject),
+      CfnStackSetConstraintProps {
     /**
      * The language code.
      *

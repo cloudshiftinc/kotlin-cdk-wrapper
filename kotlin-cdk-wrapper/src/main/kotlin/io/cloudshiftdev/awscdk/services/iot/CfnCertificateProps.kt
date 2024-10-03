@@ -198,7 +198,8 @@ public interface CfnCertificateProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnCertificateProps,
-  ) : CdkObject(cdkObject), CfnCertificateProps {
+  ) : CdkObject(cdkObject),
+      CfnCertificateProps {
     /**
      * The CA certificate used to sign the device certificate being registered, not available when
      * CertificateMode is SNI_ONLY.

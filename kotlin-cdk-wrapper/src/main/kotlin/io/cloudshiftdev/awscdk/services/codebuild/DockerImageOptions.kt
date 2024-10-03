@@ -10,7 +10,8 @@ import kotlin.Unit
 
 /**
  * The options when creating a CodeBuild Docker build image using
- * `LinuxBuildImage.fromDockerRegistry` or `WindowsBuildImage.fromDockerRegistry`.
+ * `LinuxBuildImage.fromDockerRegistry`, `WindowsBuildImage.fromDockerRegistry`, or
+ * `MacBuildImage.fromDockerRegistry`.
  *
  * Example:
  *
@@ -64,7 +65,8 @@ public interface DockerImageOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.DockerImageOptions,
-  ) : CdkObject(cdkObject), DockerImageOptions {
+  ) : CdkObject(cdkObject),
+      DockerImageOptions {
     /**
      * The credentials, stored in Secrets Manager, used for accessing the repository holding the
      * image, if the repository is private.

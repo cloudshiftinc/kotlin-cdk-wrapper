@@ -224,7 +224,8 @@ public interface CfnConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.groundstation.CfnConfigProps,
-  ) : CdkObject(cdkObject), CfnConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnConfigProps {
     /**
      * Object containing the parameters of a config.
      *

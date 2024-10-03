@@ -195,6 +195,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .excludeMatchedPattern(false)
  * .build())))
+ * .scopeConfiguration(ScopeConfigurationProperty.builder()
+ * .name("name")
+ * .build())
  * .webhook(false)
  * .build())
  * .visibility("visibility")
@@ -210,7 +213,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProject(
   cdkObject: software.amazon.awscdk.services.codebuild.CfnProject,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -672,14 +677,14 @@ public open class CfnProject(
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   /**
-   * How long, in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait before timing out any
-   * related build that did not get marked as completed.
+   * How long, in minutes, from 5 to 2160 (36 hours), for AWS CodeBuild to wait before timing out
+   * any related build that did not get marked as completed.
    */
   public open fun timeoutInMinutes(): Number? = unwrap(this).getTimeoutInMinutes()
 
   /**
-   * How long, in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait before timing out any
-   * related build that did not get marked as completed.
+   * How long, in minutes, from 5 to 2160 (36 hours), for AWS CodeBuild to wait before timing out
+   * any related build that did not get marked as completed.
    */
   public open fun timeoutInMinutes(`value`: Number) {
     unwrap(this).setTimeoutInMinutes(`value`)
@@ -1209,6 +1214,7 @@ public open class CfnProject(
      * the version of the source code you want to build. If a pull request ID is specified, it must use
      * the format `pr/pull-request-ID` (for example `pr/25` ). If a branch name is specified, the
      * branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is used.
+     * * For GitLab: the commit ID, branch, or Git tag to use.
      * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
      * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID is
      * used. If not specified, the default branch's HEAD commit ID is used.
@@ -1250,13 +1256,13 @@ public open class CfnProject(
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * How long, in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait before timing out
+     * How long, in minutes, from 5 to 2160 (36 hours), for AWS CodeBuild to wait before timing out
      * any related build that did not get marked as completed.
      *
      * The default is 60 minutes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-timeoutinminutes)
-     * @param timeoutInMinutes How long, in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to
+     * @param timeoutInMinutes How long, in minutes, from 5 to 2160 (36 hours), for AWS CodeBuild to
      * wait before timing out any related build that did not get marked as completed. 
      */
     public fun timeoutInMinutes(timeoutInMinutes: Number)
@@ -1871,6 +1877,7 @@ public open class CfnProject(
      * the version of the source code you want to build. If a pull request ID is specified, it must use
      * the format `pr/pull-request-ID` (for example `pr/25` ). If a branch name is specified, the
      * branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is used.
+     * * For GitLab: the commit ID, branch, or Git tag to use.
      * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
      * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID is
      * used. If not specified, the default branch's HEAD commit ID is used.
@@ -1916,13 +1923,13 @@ public open class CfnProject(
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * How long, in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait before timing out
+     * How long, in minutes, from 5 to 2160 (36 hours), for AWS CodeBuild to wait before timing out
      * any related build that did not get marked as completed.
      *
      * The default is 60 minutes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-timeoutinminutes)
-     * @param timeoutInMinutes How long, in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to
+     * @param timeoutInMinutes How long, in minutes, from 5 to 2160 (36 hours), for AWS CodeBuild to
      * wait before timing out any related build that did not get marked as completed. 
      */
     override fun timeoutInMinutes(timeoutInMinutes: Number) {
@@ -2544,7 +2551,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ArtifactsProperty,
-    ) : CdkObject(cdkObject), ArtifactsProperty {
+    ) : CdkObject(cdkObject),
+        ArtifactsProperty {
       /**
        * An identifier for this artifact definition.
        *
@@ -2816,7 +2824,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty,
-    ) : CdkObject(cdkObject), BatchRestrictionsProperty {
+    ) : CdkObject(cdkObject),
+        BatchRestrictionsProperty {
       /**
        * An array of strings that specify the compute types that are allowed for the batch build.
        *
@@ -2996,7 +3005,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.BuildStatusConfigProperty,
-    ) : CdkObject(cdkObject), BuildStatusConfigProperty {
+    ) : CdkObject(cdkObject),
+        BuildStatusConfigProperty {
       /**
        * Specifies the context of the build status CodeBuild sends to the source provider.
        *
@@ -3180,7 +3190,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsConfigProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchLogsConfigProperty {
       /**
        * The group name of the logs in CloudWatch Logs.
        *
@@ -3930,7 +3941,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentProperty,
-    ) : CdkObject(cdkObject), EnvironmentProperty {
+    ) : CdkObject(cdkObject),
+        EnvironmentProperty {
       /**
        * The ARN of the Amazon S3 bucket, path prefix, and object key that contains the PEM-encoded
        * certificate for the build project.
@@ -4281,7 +4293,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentVariableProperty,
-    ) : CdkObject(cdkObject), EnvironmentVariableProperty {
+    ) : CdkObject(cdkObject),
+        EnvironmentVariableProperty {
       /**
        * The name or key of the environment variable.
        *
@@ -4418,7 +4431,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty,
-    ) : CdkObject(cdkObject), GitSubmodulesConfigProperty {
+    ) : CdkObject(cdkObject),
+        GitSubmodulesConfigProperty {
       /**
        * Set to true to fetch Git submodules for your AWS CodeBuild build project.
        *
@@ -4601,7 +4615,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.LogsConfigProperty,
-    ) : CdkObject(cdkObject), LogsConfigProperty {
+    ) : CdkObject(cdkObject),
+        LogsConfigProperty {
       /**
        * Information about CloudWatch Logs for a build project.
        *
@@ -4854,7 +4869,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty,
-    ) : CdkObject(cdkObject), ProjectBuildBatchConfigProperty {
+    ) : CdkObject(cdkObject),
+        ProjectBuildBatchConfigProperty {
       /**
        * Specifies how build status reports are sent to the source provider for the batch build.
        *
@@ -5191,7 +5207,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty,
-    ) : CdkObject(cdkObject), ProjectCacheProperty {
+    ) : CdkObject(cdkObject),
+        ProjectCacheProperty {
       /**
        * Information about the cache location:.
        *
@@ -5475,7 +5492,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectFileSystemLocationProperty,
-    ) : CdkObject(cdkObject), ProjectFileSystemLocationProperty {
+    ) : CdkObject(cdkObject),
+        ProjectFileSystemLocationProperty {
       /**
        * The name used to access a file system created by Amazon EFS.
        *
@@ -5611,7 +5629,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty,
-    ) : CdkObject(cdkObject), ProjectFleetProperty {
+    ) : CdkObject(cdkObject),
+        ProjectFleetProperty {
       /**
        * Specifies the compute fleet ARN for the build project.
        *
@@ -5672,11 +5691,11 @@ public open class CfnProject(
      * The source version for the corresponding source identifier. If specified, must be one of:.
      *
      * * For CodeCommit: the commit ID, branch, or Git tag to use.
-     * * For GitHub or GitLab: the commit ID, pull request ID, branch name, or tag name that
-     * corresponds to the version of the source code you want to build. If a pull request ID is
-     * specified, it must use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch name
-     * is specified, the branch's HEAD commit ID is used. If not specified, the default branch's HEAD
-     * commit ID is used.
+     * * For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to
+     * the version of the source code you want to build. If a pull request ID is specified, it must use
+     * the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch name is specified, the
+     * branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is used.
+     * * For GitLab: the commit ID, branch, or Git tag to use.
      * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
      * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID is
      * used. If not specified, the default branch's HEAD commit ID is used.
@@ -5707,11 +5726,12 @@ public open class CfnProject(
        * @param sourceVersion The source version for the corresponding source identifier. If
        * specified, must be one of:.
        * * For CodeCommit: the commit ID, branch, or Git tag to use.
-       * * For GitHub or GitLab: the commit ID, pull request ID, branch name, or tag name that
-       * corresponds to the version of the source code you want to build. If a pull request ID is
-       * specified, it must use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch
-       * name is specified, the branch's HEAD commit ID is used. If not specified, the default branch's
-       * HEAD commit ID is used.
+       * * For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to
+       * the version of the source code you want to build. If a pull request ID is specified, it must
+       * use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch name is specified,
+       * the branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is
+       * used.
+       * * For GitLab: the commit ID, branch, or Git tag to use.
        * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
        * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID
        * is used. If not specified, the default branch's HEAD commit ID is used.
@@ -5744,11 +5764,12 @@ public open class CfnProject(
        * @param sourceVersion The source version for the corresponding source identifier. If
        * specified, must be one of:.
        * * For CodeCommit: the commit ID, branch, or Git tag to use.
-       * * For GitHub or GitLab: the commit ID, pull request ID, branch name, or tag name that
-       * corresponds to the version of the source code you want to build. If a pull request ID is
-       * specified, it must use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch
-       * name is specified, the branch's HEAD commit ID is used. If not specified, the default branch's
-       * HEAD commit ID is used.
+       * * For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to
+       * the version of the source code you want to build. If a pull request ID is specified, it must
+       * use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch name is specified,
+       * the branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is
+       * used.
+       * * For GitLab: the commit ID, branch, or Git tag to use.
        * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
        * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID
        * is used. If not specified, the default branch's HEAD commit ID is used.
@@ -5770,7 +5791,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectSourceVersionProperty,
-    ) : CdkObject(cdkObject), ProjectSourceVersionProperty {
+    ) : CdkObject(cdkObject),
+        ProjectSourceVersionProperty {
       /**
        * An identifier for a source in the build project.
        *
@@ -5785,11 +5807,12 @@ public open class CfnProject(
        * The source version for the corresponding source identifier. If specified, must be one of:.
        *
        * * For CodeCommit: the commit ID, branch, or Git tag to use.
-       * * For GitHub or GitLab: the commit ID, pull request ID, branch name, or tag name that
-       * corresponds to the version of the source code you want to build. If a pull request ID is
-       * specified, it must use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch
-       * name is specified, the branch's HEAD commit ID is used. If not specified, the default branch's
-       * HEAD commit ID is used.
+       * * For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to
+       * the version of the source code you want to build. If a pull request ID is specified, it must
+       * use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch name is specified,
+       * the branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is
+       * used.
+       * * For GitLab: the commit ID, branch, or Git tag to use.
        * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
        * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID
        * is used. If not specified, the default branch's HEAD commit ID is used.
@@ -5847,6 +5870,9 @@ public open class CfnProject(
    * // the properties below are optional
    * .excludeMatchedPattern(false)
    * .build())))
+   * .scopeConfiguration(ScopeConfigurationProperty.builder()
+   * .name("name")
+   * .build())
    * .webhook(false)
    * .build();
    * ```
@@ -5873,6 +5899,13 @@ public open class CfnProject(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-filtergroups)
      */
     public fun filterGroups(): Any? = unwrap(this).getFilterGroups()
+
+    /**
+     * Contains configuration information about the scope for a webhook.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-scopeconfiguration)
+     */
+    public fun scopeConfiguration(): Any? = unwrap(this).getScopeConfiguration()
 
     /**
      * Specifies whether or not to begin automatically rebuilding the source code every time a code
@@ -5915,6 +5948,24 @@ public open class CfnProject(
        * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
        */
       public fun filterGroups(vararg filterGroups: Any)
+
+      /**
+       * @param scopeConfiguration Contains configuration information about the scope for a webhook.
+       */
+      public fun scopeConfiguration(scopeConfiguration: IResolvable)
+
+      /**
+       * @param scopeConfiguration Contains configuration information about the scope for a webhook.
+       */
+      public fun scopeConfiguration(scopeConfiguration: ScopeConfigurationProperty)
+
+      /**
+       * @param scopeConfiguration Contains configuration information about the scope for a webhook.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b9016f025fff80034a3af9bcc8dadd66e2320a23cfe753073954f773c6b5b689")
+      public
+          fun scopeConfiguration(scopeConfiguration: ScopeConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param webhook Specifies whether or not to begin automatically rebuilding the source code
@@ -5971,6 +6022,29 @@ public open class CfnProject(
           filterGroups(filterGroups.toList())
 
       /**
+       * @param scopeConfiguration Contains configuration information about the scope for a webhook.
+       */
+      override fun scopeConfiguration(scopeConfiguration: IResolvable) {
+        cdkBuilder.scopeConfiguration(scopeConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param scopeConfiguration Contains configuration information about the scope for a webhook.
+       */
+      override fun scopeConfiguration(scopeConfiguration: ScopeConfigurationProperty) {
+        cdkBuilder.scopeConfiguration(scopeConfiguration.let(ScopeConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param scopeConfiguration Contains configuration information about the scope for a webhook.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b9016f025fff80034a3af9bcc8dadd66e2320a23cfe753073954f773c6b5b689")
+      override
+          fun scopeConfiguration(scopeConfiguration: ScopeConfigurationProperty.Builder.() -> Unit):
+          Unit = scopeConfiguration(ScopeConfigurationProperty(scopeConfiguration))
+
+      /**
        * @param webhook Specifies whether or not to begin automatically rebuilding the source code
        * every time a code change is pushed to the repository.
        */
@@ -5993,7 +6067,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty,
-    ) : CdkObject(cdkObject), ProjectTriggersProperty {
+    ) : CdkObject(cdkObject),
+        ProjectTriggersProperty {
       /**
        * Specifies the type of build this webhook will trigger. Allowed values are:.
        *
@@ -6013,6 +6088,13 @@ public open class CfnProject(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-filtergroups)
        */
       override fun filterGroups(): Any? = unwrap(this).getFilterGroups()
+
+      /**
+       * Contains configuration information about the scope for a webhook.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-scopeconfiguration)
+       */
+      override fun scopeConfiguration(): Any? = unwrap(this).getScopeConfiguration()
 
       /**
        * Specifies whether or not to begin automatically rebuilding the source code every time a
@@ -6143,7 +6225,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty,
-    ) : CdkObject(cdkObject), RegistryCredentialProperty {
+    ) : CdkObject(cdkObject),
+        RegistryCredentialProperty {
       /**
        * The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager .
        *
@@ -6317,7 +6400,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty,
-    ) : CdkObject(cdkObject), S3LogsConfigProperty {
+    ) : CdkObject(cdkObject),
+        S3LogsConfigProperty {
       /**
        * Set to true if you do not want your S3 build log output encrypted.
        *
@@ -6367,12 +6451,96 @@ public open class CfnProject(
   }
 
   /**
+   * Contains configuration information about the scope for a webhook.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * ScopeConfigurationProperty scopeConfigurationProperty = ScopeConfigurationProperty.builder()
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-scopeconfiguration.html)
+   */
+  public interface ScopeConfigurationProperty {
+    /**
+     * The name of either the enterprise or organization that will send webhook events to CodeBuild
+     * , depending on if the webhook is a global or organization webhook respectively.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-scopeconfiguration.html#cfn-codebuild-project-scopeconfiguration-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [ScopeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of either the enterprise or organization that will send webhook events
+       * to CodeBuild , depending on if the webhook is a global or organization webhook respectively. 
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnProject.ScopeConfigurationProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnProject.ScopeConfigurationProperty.builder()
+
+      /**
+       * @param name The name of either the enterprise or organization that will send webhook events
+       * to CodeBuild , depending on if the webhook is a global or organization webhook respectively. 
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codebuild.CfnProject.ScopeConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ScopeConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ScopeConfigurationProperty {
+      /**
+       * The name of either the enterprise or organization that will send webhook events to
+       * CodeBuild , depending on if the webhook is a global or organization webhook respectively.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-scopeconfiguration.html#cfn-codebuild-project-scopeconfiguration-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ScopeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ScopeConfigurationProperty):
+          ScopeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScopeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScopeConfigurationProperty):
+          software.amazon.awscdk.services.codebuild.CfnProject.ScopeConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnProject.ScopeConfigurationProperty
+    }
+  }
+
+  /**
    * `SourceAuth` is a property of the [AWS CodeBuild Project
    * Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
    * property type that specifies authorization settings for AWS CodeBuild to access the source code to
    * be built.
-   *
-   * `SourceAuth` is for use by the CodeBuild console only. Do not get or set it directly.
    *
    * Example:
    *
@@ -6393,21 +6561,14 @@ public open class CfnProject(
     /**
      * The resource value that applies to the specified authorization type.
      *
-     *
-     * This data type is used by the AWS CodeBuild console only.
-     *
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-resource)
      */
     public fun resource(): String? = unwrap(this).getResource()
 
     /**
-     * The authorization type to use. The only valid value is `OAUTH` , which represents the OAuth
-     * authorization type.
+     * The authorization type to use.
      *
-     *
-     * This data type is used by the AWS CodeBuild console only.
-     *
+     * Valid options are OAUTH, CODECONNECTIONS, or SECRETS_MANAGER.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-type)
      */
@@ -6420,16 +6581,12 @@ public open class CfnProject(
     public interface Builder {
       /**
        * @param resource The resource value that applies to the specified authorization type.
-       *
-       * This data type is used by the AWS CodeBuild console only.
        */
       public fun resource(resource: String)
 
       /**
-       * @param type The authorization type to use. The only valid value is `OAUTH` , which
-       * represents the OAuth authorization type. 
-       *
-       * This data type is used by the AWS CodeBuild console only.
+       * @param type The authorization type to use. 
+       * Valid options are OAUTH, CODECONNECTIONS, or SECRETS_MANAGER.
        */
       public fun type(type: String)
     }
@@ -6441,18 +6598,14 @@ public open class CfnProject(
 
       /**
        * @param resource The resource value that applies to the specified authorization type.
-       *
-       * This data type is used by the AWS CodeBuild console only.
        */
       override fun resource(resource: String) {
         cdkBuilder.resource(resource)
       }
 
       /**
-       * @param type The authorization type to use. The only valid value is `OAUTH` , which
-       * represents the OAuth authorization type. 
-       *
-       * This data type is used by the AWS CodeBuild console only.
+       * @param type The authorization type to use. 
+       * Valid options are OAUTH, CODECONNECTIONS, or SECRETS_MANAGER.
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -6464,25 +6617,19 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty,
-    ) : CdkObject(cdkObject), SourceAuthProperty {
+    ) : CdkObject(cdkObject),
+        SourceAuthProperty {
       /**
        * The resource value that applies to the specified authorization type.
-       *
-       *
-       * This data type is used by the AWS CodeBuild console only.
-       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-resource)
        */
       override fun resource(): String? = unwrap(this).getResource()
 
       /**
-       * The authorization type to use. The only valid value is `OAUTH` , which represents the OAuth
-       * authorization type.
+       * The authorization type to use.
        *
-       *
-       * This data type is used by the AWS CodeBuild console only.
-       *
+       * Valid options are OAUTH, CODECONNECTIONS, or SECRETS_MANAGER.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html#cfn-codebuild-project-sourceauth-type)
        */
@@ -6549,9 +6696,6 @@ public open class CfnProject(
     /**
      * Information about the authorization settings for AWS CodeBuild to access the source code to
      * be built.
-     *
-     * This information is for the AWS CodeBuild console's use only. Your code should not get or set
-     * `Auth` directly.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-auth)
      */
@@ -6709,24 +6853,18 @@ public open class CfnProject(
       /**
        * @param auth Information about the authorization settings for AWS CodeBuild to access the
        * source code to be built.
-       * This information is for the AWS CodeBuild console's use only. Your code should not get or
-       * set `Auth` directly.
        */
       public fun auth(auth: IResolvable)
 
       /**
        * @param auth Information about the authorization settings for AWS CodeBuild to access the
        * source code to be built.
-       * This information is for the AWS CodeBuild console's use only. Your code should not get or
-       * set `Auth` directly.
        */
       public fun auth(auth: SourceAuthProperty)
 
       /**
        * @param auth Information about the authorization settings for AWS CodeBuild to access the
        * source code to be built.
-       * This information is for the AWS CodeBuild console's use only. Your code should not get or
-       * set `Auth` directly.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e01b1a50446487485d9436e692397d44744f4240c10d85d6e14283a7bc9a2de4")
@@ -6913,8 +7051,6 @@ public open class CfnProject(
       /**
        * @param auth Information about the authorization settings for AWS CodeBuild to access the
        * source code to be built.
-       * This information is for the AWS CodeBuild console's use only. Your code should not get or
-       * set `Auth` directly.
        */
       override fun auth(auth: IResolvable) {
         cdkBuilder.auth(auth.let(IResolvable.Companion::unwrap))
@@ -6923,8 +7059,6 @@ public open class CfnProject(
       /**
        * @param auth Information about the authorization settings for AWS CodeBuild to access the
        * source code to be built.
-       * This information is for the AWS CodeBuild console's use only. Your code should not get or
-       * set `Auth` directly.
        */
       override fun auth(auth: SourceAuthProperty) {
         cdkBuilder.auth(auth.let(SourceAuthProperty.Companion::unwrap))
@@ -6933,8 +7067,6 @@ public open class CfnProject(
       /**
        * @param auth Information about the authorization settings for AWS CodeBuild to access the
        * source code to be built.
-       * This information is for the AWS CodeBuild console's use only. Your code should not get or
-       * set `Auth` directly.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e01b1a50446487485d9436e692397d44744f4240c10d85d6e14283a7bc9a2de4")
@@ -7148,13 +7280,11 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.SourceProperty,
-    ) : CdkObject(cdkObject), SourceProperty {
+    ) : CdkObject(cdkObject),
+        SourceProperty {
       /**
        * Information about the authorization settings for AWS CodeBuild to access the source code to
        * be built.
-       *
-       * This information is for the AWS CodeBuild console's use only. Your code should not get or
-       * set `Auth` directly.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-auth)
        */
@@ -7454,7 +7584,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty,
-    ) : CdkObject(cdkObject), VpcConfigProperty {
+    ) : CdkObject(cdkObject),
+        VpcConfigProperty {
       /**
        * A list of one or more security groups IDs in your Amazon VPC.
        *
@@ -7568,8 +7699,8 @@ public open class CfnProject(
      * created, and pull request updated events.
      *
      *
-     * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only. The `RELEASED` ,
-     * `PRERELEASED` , and `WORKFLOW_JOB_QUEUED` work with GitHub only.
+     * Types `PULL_REQUEST_REOPENED` and `WORKFLOW_JOB_QUEUED` work with GitHub and GitHub
+     * Enterprise only. Types `RELEASED` and `PRERELEASED` work with GitHub only.
      *
      *
      * * ACTOR_ACCOUNT_ID
@@ -7623,6 +7754,13 @@ public open class CfnProject(
      *
      *
      * Works with `RELEASED` and `PRERELEASED` events only.
+     *
+     *
+     * * REPOSITORY_NAME
+     * * A webhook triggers a build when the repository name matches the regular expression pattern.
+     *
+     *
+     * Works with GitHub global or organization webhooks only.
      *
      *
      * * WORKFLOW_NAME
@@ -7685,8 +7823,8 @@ public open class CfnProject(
        * created, and pull request updated events.
        *
        *
-       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only. The `RELEASED` ,
-       * `PRERELEASED` , and `WORKFLOW_JOB_QUEUED` work with GitHub only.
+       * Types `PULL_REQUEST_REOPENED` and `WORKFLOW_JOB_QUEUED` work with GitHub and GitHub
+       * Enterprise only. Types `RELEASED` and `PRERELEASED` work with GitHub only.
        *
        *
        * * ACTOR_ACCOUNT_ID
@@ -7741,6 +7879,14 @@ public open class CfnProject(
        *
        *
        * Works with `RELEASED` and `PRERELEASED` events only.
+       *
+       *
+       * * REPOSITORY_NAME
+       * * A webhook triggers a build when the repository name matches the regular expression
+       * pattern.
+       *
+       *
+       * Works with GitHub global or organization webhooks only.
        *
        *
        * * WORKFLOW_NAME
@@ -7807,8 +7953,8 @@ public open class CfnProject(
        * created, and pull request updated events.
        *
        *
-       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only. The `RELEASED` ,
-       * `PRERELEASED` , and `WORKFLOW_JOB_QUEUED` work with GitHub only.
+       * Types `PULL_REQUEST_REOPENED` and `WORKFLOW_JOB_QUEUED` work with GitHub and GitHub
+       * Enterprise only. Types `RELEASED` and `PRERELEASED` work with GitHub only.
        *
        *
        * * ACTOR_ACCOUNT_ID
@@ -7865,6 +8011,14 @@ public open class CfnProject(
        * Works with `RELEASED` and `PRERELEASED` events only.
        *
        *
+       * * REPOSITORY_NAME
+       * * A webhook triggers a build when the repository name matches the regular expression
+       * pattern.
+       *
+       *
+       * Works with GitHub global or organization webhooks only.
+       *
+       *
        * * WORKFLOW_NAME
        * * A webhook triggers a build when the workflow name matches the regular expression
        * `pattern` .
@@ -7882,7 +8036,8 @@ public open class CfnProject(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty,
-    ) : CdkObject(cdkObject), WebhookFilterProperty {
+    ) : CdkObject(cdkObject),
+        WebhookFilterProperty {
       /**
        * Used to indicate that the `pattern` determines which webhook events do not trigger a build.
        *
@@ -7924,8 +8079,8 @@ public open class CfnProject(
        * created, and pull request updated events.
        *
        *
-       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only. The `RELEASED` ,
-       * `PRERELEASED` , and `WORKFLOW_JOB_QUEUED` work with GitHub only.
+       * Types `PULL_REQUEST_REOPENED` and `WORKFLOW_JOB_QUEUED` work with GitHub and GitHub
+       * Enterprise only. Types `RELEASED` and `PRERELEASED` work with GitHub only.
        *
        *
        * * ACTOR_ACCOUNT_ID
@@ -7980,6 +8135,14 @@ public open class CfnProject(
        *
        *
        * Works with `RELEASED` and `PRERELEASED` events only.
+       *
+       *
+       * * REPOSITORY_NAME
+       * * A webhook triggers a build when the repository name matches the regular expression
+       * pattern.
+       *
+       *
+       * Works with GitHub global or organization webhooks only.
        *
        *
        * * WORKFLOW_NAME

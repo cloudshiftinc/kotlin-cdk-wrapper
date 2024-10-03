@@ -54,7 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEventInvokeConfig(
   cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -521,7 +522,8 @@ public open class CfnEventInvokeConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.DestinationConfigProperty,
-    ) : CdkObject(cdkObject), DestinationConfigProperty {
+    ) : CdkObject(cdkObject),
+        DestinationConfigProperty {
       /**
        * The destination configuration for failed invocations.
        *
@@ -655,7 +657,8 @@ public open class CfnEventInvokeConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty,
-    ) : CdkObject(cdkObject), OnFailureProperty {
+    ) : CdkObject(cdkObject),
+        OnFailureProperty {
       /**
        * The Amazon Resource Name (ARN) of the destination resource.
        *
@@ -752,7 +755,8 @@ public open class CfnEventInvokeConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnSuccessProperty,
-    ) : CdkObject(cdkObject), OnSuccessProperty {
+    ) : CdkObject(cdkObject),
+        OnSuccessProperty {
       /**
        * The Amazon Resource Name (ARN) of the destination resource.
        *

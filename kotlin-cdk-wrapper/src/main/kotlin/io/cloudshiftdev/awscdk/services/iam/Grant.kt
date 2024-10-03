@@ -33,7 +33,8 @@ import software.constructs.IConstruct as SoftwareConstructsIConstruct
  */
 public open class Grant(
   cdkObject: software.amazon.awscdk.services.iam.Grant,
-) : CdkObject(cdkObject), IDependable {
+) : CdkObject(cdkObject),
+    IDependable {
   /**
    * Make sure this grant is applied before the given constructs are deployed.
    *

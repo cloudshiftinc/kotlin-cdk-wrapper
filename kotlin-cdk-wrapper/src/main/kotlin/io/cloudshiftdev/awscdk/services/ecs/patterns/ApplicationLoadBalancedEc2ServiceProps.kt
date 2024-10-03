@@ -20,6 +20,7 @@ import io.cloudshiftdev.awscdk.services.ecs.PropagatedTagSource
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationProtocol
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationProtocolVersion
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IpAddressType
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.SslPolicy
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.Boolean
@@ -276,6 +277,11 @@ public interface ApplicationLoadBalancedEc2ServiceProps : ApplicationLoadBalance
      * Can be between 1 and 4000 seconds
      */
     public fun idleTimeout(idleTimeout: Duration)
+
+    /**
+     * @param ipAddressType The type of IP address to use.
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
     /**
      * @param listenerPort Listener port of the application load balancer that will serve traffic to
@@ -633,6 +639,13 @@ public interface ApplicationLoadBalancedEc2ServiceProps : ApplicationLoadBalance
     }
 
     /**
+     * @param ipAddressType The type of IP address to use.
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
+    }
+
+    /**
      * @param listenerPort Listener port of the application load balancer that will serve traffic to
      * the service.
      */
@@ -864,7 +877,8 @@ public interface ApplicationLoadBalancedEc2ServiceProps : ApplicationLoadBalance
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedEc2ServiceProps,
-  ) : CdkObject(cdkObject), ApplicationLoadBalancedEc2ServiceProps {
+  ) : CdkObject(cdkObject),
+      ApplicationLoadBalancedEc2ServiceProps {
     /**
      * A list of Capacity Provider strategies used to place a service.
      *
@@ -1011,6 +1025,14 @@ public interface ApplicationLoadBalancedEc2ServiceProps : ApplicationLoadBalance
      * Default: - CloudFormation sets idle timeout to 60 seconds
      */
     override fun idleTimeout(): Duration? = unwrap(this).getIdleTimeout()?.let(Duration::wrap)
+
+    /**
+     * The type of IP address to use.
+     *
+     * Default: - IpAddressType.IPV4
+     */
+    override fun ipAddressType(): IpAddressType? =
+        unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
     /**
      * Listener port of the application load balancer that will serve traffic to the service.

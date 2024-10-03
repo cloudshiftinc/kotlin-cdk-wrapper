@@ -73,7 +73,8 @@ public interface VersionAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.VersionAttributes,
-  ) : CdkObject(cdkObject), VersionAttributes {
+  ) : CdkObject(cdkObject),
+      VersionAttributes {
     /**
      * The lambda function.
      */

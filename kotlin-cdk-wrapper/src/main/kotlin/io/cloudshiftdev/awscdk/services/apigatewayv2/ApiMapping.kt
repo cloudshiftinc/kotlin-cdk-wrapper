@@ -33,7 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ApiMapping(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMapping,
-) : Resource(cdkObject), IApiMapping {
+) : Resource(cdkObject),
+    IApiMapping {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

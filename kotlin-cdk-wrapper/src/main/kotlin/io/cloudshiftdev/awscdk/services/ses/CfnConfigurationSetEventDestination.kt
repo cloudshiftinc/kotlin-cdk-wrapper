@@ -21,10 +21,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Specifies a configuration set event destination.
  *
- * An event destination is an AWS service that Amazon SES publishes email sending events to. When
- * you specify an event destination, you provide one, and only one, destination. You can send event
- * data to Amazon CloudWatch, Amazon Kinesis Data Firehose, or Amazon Simple Notification Service
- * (Amazon SNS).
+ * *Events* include message sends, deliveries, opens, clicks, bounces, and complaints. *Event
+ * destinations* are places that you can send information about these events to. For example, you can
+ * send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or
+ * you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.
+ *
+ * A single configuration set can include more than one event destination.
  *
  * Example:
  *
@@ -46,6 +48,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .build())
  * .enabled(false)
+ * .eventBridgeDestination(EventBridgeDestinationProperty.builder()
+ * .eventBusArn("eventBusArn")
+ * .build())
  * .kinesisFirehoseDestination(KinesisFirehoseDestinationProperty.builder()
  * .deliveryStreamArn("deliveryStreamArn")
  * .iamRoleArn("iamRoleArn")
@@ -62,7 +67,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConfigurationSetEventDestination(
   cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -97,26 +103,26 @@ public open class CfnConfigurationSetEventDestination(
   }
 
   /**
-   * The event destination object.
+   * An object that defines the event destination.
    */
   public open fun eventDestination(): Any = unwrap(this).getEventDestination()
 
   /**
-   * The event destination object.
+   * An object that defines the event destination.
    */
   public open fun eventDestination(`value`: IResolvable) {
     unwrap(this).setEventDestination(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The event destination object.
+   * An object that defines the event destination.
    */
   public open fun eventDestination(`value`: EventDestinationProperty) {
     unwrap(this).setEventDestination(`value`.let(EventDestinationProperty.Companion::unwrap))
   }
 
   /**
-   * The event destination object.
+   * An object that defines the event destination.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("161eb83cbe5a17d079b5c9c3a492fa1c5cf750bd79c194bbc0ceaa3fc021e04d")
@@ -148,26 +154,26 @@ public open class CfnConfigurationSetEventDestination(
     public fun configurationSetName(configurationSetName: String)
 
     /**
-     * The event destination object.
+     * An object that defines the event destination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     public fun eventDestination(eventDestination: IResolvable)
 
     /**
-     * The event destination object.
+     * An object that defines the event destination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     public fun eventDestination(eventDestination: EventDestinationProperty)
 
     /**
-     * The event destination object.
+     * An object that defines the event destination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f2f4d87013c9c0fe207561ee83bdde5e8d51ca236fe5b45cb88067774bcccb78")
@@ -195,30 +201,30 @@ public open class CfnConfigurationSetEventDestination(
     }
 
     /**
-     * The event destination object.
+     * An object that defines the event destination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     override fun eventDestination(eventDestination: IResolvable) {
       cdkBuilder.eventDestination(eventDestination.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The event destination object.
+     * An object that defines the event destination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     override fun eventDestination(eventDestination: EventDestinationProperty) {
       cdkBuilder.eventDestination(eventDestination.let(EventDestinationProperty.Companion::unwrap))
     }
 
     /**
-     * The event destination object.
+     * An object that defines the event destination.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination)
-     * @param eventDestination The event destination object. 
+     * @param eventDestination An object that defines the event destination. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f2f4d87013c9c0fe207561ee83bdde5e8d51ca236fe5b45cb88067774bcccb78")
@@ -252,13 +258,9 @@ public open class CfnConfigurationSetEventDestination(
   }
 
   /**
-   * Contains information associated with an Amazon CloudWatch event destination to which email
-   * sending events are published.
+   * An object that defines an Amazon CloudWatch destination for email events.
    *
-   * Event destinations, such as Amazon CloudWatch, are associated with configuration sets, which
-   * enable you to publish email sending events. For information about using configuration sets, see
-   * the [Amazon SES Developer
-   * Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html) .
+   * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
    *
    * Example:
    *
@@ -280,8 +282,8 @@ public open class CfnConfigurationSetEventDestination(
    */
   public interface CloudWatchDestinationProperty {
     /**
-     * A list of dimensions upon which to categorize your emails when you publish email sending
-     * events to Amazon CloudWatch.
+     * An array of objects that define the dimensions to use when you send email events to Amazon
+     * CloudWatch.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-cloudwatchdestination.html#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)
      */
@@ -293,20 +295,20 @@ public open class CfnConfigurationSetEventDestination(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
        */
       public fun dimensionConfigurations(dimensionConfigurations: IResolvable)
 
       /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
        */
       public fun dimensionConfigurations(dimensionConfigurations: List<Any>)
 
       /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
        */
       public fun dimensionConfigurations(vararg dimensionConfigurations: Any)
     }
@@ -318,24 +320,24 @@ public open class CfnConfigurationSetEventDestination(
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.builder()
 
       /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
        */
       override fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
         cdkBuilder.dimensionConfigurations(dimensionConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
        */
       override fun dimensionConfigurations(dimensionConfigurations: List<Any>) {
         cdkBuilder.dimensionConfigurations(dimensionConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param dimensionConfigurations A list of dimensions upon which to categorize your emails
-       * when you publish email sending events to Amazon CloudWatch.
+       * @param dimensionConfigurations An array of objects that define the dimensions to use when
+       * you send email events to Amazon CloudWatch.
        */
       override fun dimensionConfigurations(vararg dimensionConfigurations: Any): Unit =
           dimensionConfigurations(dimensionConfigurations.toList())
@@ -347,10 +349,11 @@ public open class CfnConfigurationSetEventDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty,
-    ) : CdkObject(cdkObject), CloudWatchDestinationProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchDestinationProperty {
       /**
-       * A list of dimensions upon which to categorize your emails when you publish email sending
-       * events to Amazon CloudWatch.
+       * An array of objects that define the dimensions to use when you send email events to Amazon
+       * CloudWatch.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-cloudwatchdestination.html#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)
        */
@@ -376,11 +379,8 @@ public open class CfnConfigurationSetEventDestination(
   }
 
   /**
-   * Contains the dimension configuration to use when you publish email sending events to Amazon
+   * An object that defines the dimension configuration to use when you send email events to Amazon
    * CloudWatch.
-   *
-   * For information about publishing email sending events to Amazon CloudWatch, see the [Amazon SES
-   * Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html) .
    *
    * Example:
    *
@@ -400,14 +400,14 @@ public open class CfnConfigurationSetEventDestination(
    */
   public interface DimensionConfigurationProperty {
     /**
-     * The default value of the dimension that is published to Amazon CloudWatch if you do not
+     * The default value of the dimension that is published to Amazon CloudWatch if you don't
      * provide the value of the dimension when you send an email.
      *
-     * The default value must meet the following requirements:
+     * This value has to meet the following criteria:
      *
-     * * Contain only ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), dashes (-), at signs
-     * (&#64;), or periods (.).
-     * * Contain 256 characters or fewer.
+     * * Can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-),
+     * at signs (&#64;), and periods (.).
+     * * It can contain no more than 256 characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-defaultdimensionvalue)
      */
@@ -416,23 +416,23 @@ public open class CfnConfigurationSetEventDestination(
     /**
      * The name of an Amazon CloudWatch dimension associated with an email sending metric.
      *
-     * The name must meet the following requirements:
+     * The name has to meet the following criteria:
      *
-     * * Contain only ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), dashes (-), or
-     * colons (:).
-     * * Contain 256 characters or fewer.
+     * * It can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes
+     * (-).
+     * * It can contain no more than 256 characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionname)
      */
     public fun dimensionName(): String
 
     /**
-     * The place where Amazon SES finds the value of a dimension to publish to Amazon CloudWatch.
+     * The location where the Amazon SES API v2 finds the value of a dimension to publish to Amazon
+     * CloudWatch.
      *
      * To use the message tags that you specify using an `X-SES-MESSAGE-TAGS` header or a parameter
-     * to the `SendEmail` / `SendRawEmail` API, specify `messageTag` . To use your own email headers,
-     * specify `emailHeader` . To put a custom tag on any link included in your email, specify
-     * `linkTag` .
+     * to the `SendEmail` or `SendRawEmail` API, choose `messageTag` . To use your own email headers,
+     * choose `emailHeader` . To use link tags, choose `linkTag` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionvaluesource)
      */
@@ -445,33 +445,32 @@ public open class CfnConfigurationSetEventDestination(
     public interface Builder {
       /**
        * @param defaultDimensionValue The default value of the dimension that is published to Amazon
-       * CloudWatch if you do not provide the value of the dimension when you send an email. 
-       * The default value must meet the following requirements:
+       * CloudWatch if you don't provide the value of the dimension when you send an email. 
+       * This value has to meet the following criteria:
        *
-       * * Contain only ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), dashes (-), at
-       * signs (&#64;), or periods (.).
-       * * Contain 256 characters or fewer.
+       * * Can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-),
+       * at signs (&#64;), and periods (.).
+       * * It can contain no more than 256 characters.
        */
       public fun defaultDimensionValue(defaultDimensionValue: String)
 
       /**
        * @param dimensionName The name of an Amazon CloudWatch dimension associated with an email
        * sending metric. 
-       * The name must meet the following requirements:
+       * The name has to meet the following criteria:
        *
-       * * Contain only ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), dashes (-), or
-       * colons (:).
-       * * Contain 256 characters or fewer.
+       * * It can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes
+       * (-).
+       * * It can contain no more than 256 characters.
        */
       public fun dimensionName(dimensionName: String)
 
       /**
-       * @param dimensionValueSource The place where Amazon SES finds the value of a dimension to
-       * publish to Amazon CloudWatch. 
+       * @param dimensionValueSource The location where the Amazon SES API v2 finds the value of a
+       * dimension to publish to Amazon CloudWatch. 
        * To use the message tags that you specify using an `X-SES-MESSAGE-TAGS` header or a
-       * parameter to the `SendEmail` / `SendRawEmail` API, specify `messageTag` . To use your own
-       * email headers, specify `emailHeader` . To put a custom tag on any link included in your email,
-       * specify `linkTag` .
+       * parameter to the `SendEmail` or `SendRawEmail` API, choose `messageTag` . To use your own
+       * email headers, choose `emailHeader` . To use link tags, choose `linkTag` .
        */
       public fun dimensionValueSource(dimensionValueSource: String)
     }
@@ -484,12 +483,12 @@ public open class CfnConfigurationSetEventDestination(
 
       /**
        * @param defaultDimensionValue The default value of the dimension that is published to Amazon
-       * CloudWatch if you do not provide the value of the dimension when you send an email. 
-       * The default value must meet the following requirements:
+       * CloudWatch if you don't provide the value of the dimension when you send an email. 
+       * This value has to meet the following criteria:
        *
-       * * Contain only ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), dashes (-), at
-       * signs (&#64;), or periods (.).
-       * * Contain 256 characters or fewer.
+       * * Can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-),
+       * at signs (&#64;), and periods (.).
+       * * It can contain no more than 256 characters.
        */
       override fun defaultDimensionValue(defaultDimensionValue: String) {
         cdkBuilder.defaultDimensionValue(defaultDimensionValue)
@@ -498,23 +497,22 @@ public open class CfnConfigurationSetEventDestination(
       /**
        * @param dimensionName The name of an Amazon CloudWatch dimension associated with an email
        * sending metric. 
-       * The name must meet the following requirements:
+       * The name has to meet the following criteria:
        *
-       * * Contain only ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), dashes (-), or
-       * colons (:).
-       * * Contain 256 characters or fewer.
+       * * It can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes
+       * (-).
+       * * It can contain no more than 256 characters.
        */
       override fun dimensionName(dimensionName: String) {
         cdkBuilder.dimensionName(dimensionName)
       }
 
       /**
-       * @param dimensionValueSource The place where Amazon SES finds the value of a dimension to
-       * publish to Amazon CloudWatch. 
+       * @param dimensionValueSource The location where the Amazon SES API v2 finds the value of a
+       * dimension to publish to Amazon CloudWatch. 
        * To use the message tags that you specify using an `X-SES-MESSAGE-TAGS` header or a
-       * parameter to the `SendEmail` / `SendRawEmail` API, specify `messageTag` . To use your own
-       * email headers, specify `emailHeader` . To put a custom tag on any link included in your email,
-       * specify `linkTag` .
+       * parameter to the `SendEmail` or `SendRawEmail` API, choose `messageTag` . To use your own
+       * email headers, choose `emailHeader` . To use link tags, choose `linkTag` .
        */
       override fun dimensionValueSource(dimensionValueSource: String) {
         cdkBuilder.dimensionValueSource(dimensionValueSource)
@@ -527,16 +525,17 @@ public open class CfnConfigurationSetEventDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.DimensionConfigurationProperty,
-    ) : CdkObject(cdkObject), DimensionConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DimensionConfigurationProperty {
       /**
-       * The default value of the dimension that is published to Amazon CloudWatch if you do not
+       * The default value of the dimension that is published to Amazon CloudWatch if you don't
        * provide the value of the dimension when you send an email.
        *
-       * The default value must meet the following requirements:
+       * This value has to meet the following criteria:
        *
-       * * Contain only ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), dashes (-), at
-       * signs (&#64;), or periods (.).
-       * * Contain 256 characters or fewer.
+       * * Can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes (-),
+       * at signs (&#64;), and periods (.).
+       * * It can contain no more than 256 characters.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-defaultdimensionvalue)
        */
@@ -545,23 +544,23 @@ public open class CfnConfigurationSetEventDestination(
       /**
        * The name of an Amazon CloudWatch dimension associated with an email sending metric.
        *
-       * The name must meet the following requirements:
+       * The name has to meet the following criteria:
        *
-       * * Contain only ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), dashes (-), or
-       * colons (:).
-       * * Contain 256 characters or fewer.
+       * * It can only contain ASCII letters (a–z, A–Z), numbers (0–9), underscores (_), or dashes
+       * (-).
+       * * It can contain no more than 256 characters.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionname)
        */
       override fun dimensionName(): String = unwrap(this).getDimensionName()
 
       /**
-       * The place where Amazon SES finds the value of a dimension to publish to Amazon CloudWatch.
+       * The location where the Amazon SES API v2 finds the value of a dimension to publish to
+       * Amazon CloudWatch.
        *
        * To use the message tags that you specify using an `X-SES-MESSAGE-TAGS` header or a
-       * parameter to the `SendEmail` / `SendRawEmail` API, specify `messageTag` . To use your own
-       * email headers, specify `emailHeader` . To put a custom tag on any link included in your email,
-       * specify `linkTag` .
+       * parameter to the `SendEmail` or `SendRawEmail` API, choose `messageTag` . To use your own
+       * email headers, choose `emailHeader` . To use link tags, choose `linkTag` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html#cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionvaluesource)
        */
@@ -587,18 +586,107 @@ public open class CfnConfigurationSetEventDestination(
   }
 
   /**
-   * Contains information about an event destination.
+   * An object that defines an Amazon EventBridge destination for email events.
    *
+   * You can use Amazon EventBridge to send notifications when certain email events occur.
    *
-   * When you create or update an event destination, you must provide one, and only one,
-   * destination. The destination can be Amazon CloudWatch, Amazon Kinesis Firehose or Amazon Simple
-   * Notification Service (Amazon SNS).
+   * Example:
    *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * EventBridgeDestinationProperty eventBridgeDestinationProperty =
+   * EventBridgeDestinationProperty.builder()
+   * .eventBusArn("eventBusArn")
+   * .build();
+   * ```
    *
-   * Event destinations are associated with configuration sets, which enable you to publish email
-   * sending events to Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification
-   * Service (Amazon SNS). For information about using configuration sets, see the [Amazon SES
-   * Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html) .
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-eventbridgedestination.html)
+   */
+  public interface EventBridgeDestinationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish email events to.
+     *
+     * Only the default bus is supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-eventbridgedestination.html#cfn-ses-configurationseteventdestination-eventbridgedestination-eventbusarn)
+     */
+    public fun eventBusArn(): String
+
+    /**
+     * A builder for [EventBridgeDestinationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param eventBusArn The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish
+       * email events to. 
+       * Only the default bus is supported.
+       */
+      public fun eventBusArn(eventBusArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventBridgeDestinationProperty.Builder
+          =
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventBridgeDestinationProperty.builder()
+
+      /**
+       * @param eventBusArn The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish
+       * email events to. 
+       * Only the default bus is supported.
+       */
+      override fun eventBusArn(eventBusArn: String) {
+        cdkBuilder.eventBusArn(eventBusArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventBridgeDestinationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventBridgeDestinationProperty,
+    ) : CdkObject(cdkObject),
+        EventBridgeDestinationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the Amazon EventBridge bus to publish email events to.
+       *
+       * Only the default bus is supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-eventbridgedestination.html#cfn-ses-configurationseteventdestination-eventbridgedestination-eventbusarn)
+       */
+      override fun eventBusArn(): String = unwrap(this).getEventBusArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EventBridgeDestinationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventBridgeDestinationProperty):
+          EventBridgeDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBridgeDestinationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EventBridgeDestinationProperty):
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventBridgeDestinationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventBridgeDestinationProperty
+    }
+  }
+
+  /**
+   * In the Amazon SES API v2, *events* include message sends, deliveries, opens, clicks, bounces,
+   * complaints and delivery delays.
+   *
+   * *Event destinations* are places that you can send information about these events to. For
+   * example, you can send event data to Amazon SNS to receive notifications when you receive bounces
+   * or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for
+   * long-term storage.
    *
    * Example:
    *
@@ -617,6 +705,9 @@ public open class CfnConfigurationSetEventDestination(
    * .build()))
    * .build())
    * .enabled(false)
+   * .eventBridgeDestination(EventBridgeDestinationProperty.builder()
+   * .eventBusArn("eventBusArn")
+   * .build())
    * .kinesisFirehoseDestination(KinesisFirehoseDestinationProperty.builder()
    * .deliveryStreamArn("deliveryStreamArn")
    * .iamRoleArn("iamRoleArn")
@@ -632,23 +723,35 @@ public open class CfnConfigurationSetEventDestination(
    */
   public interface EventDestinationProperty {
     /**
-     * An object that contains the names, default values, and sources of the dimensions associated
-     * with an Amazon CloudWatch event destination.
+     * An object that defines an Amazon CloudWatch destination for email events.
+     *
+     * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-eventdestination.html#cfn-ses-configurationseteventdestination-eventdestination-cloudwatchdestination)
      */
     public fun cloudWatchDestination(): Any? = unwrap(this).getCloudWatchDestination()
 
     /**
-     * Sets whether Amazon SES publishes events to this destination when you send an email with the
-     * associated configuration set.
+     * If `true` , the event destination is enabled.
      *
-     * Set to `true` to enable publishing to this destination; set to `false` to prevent publishing
-     * to this destination. The default value is `false` .
+     * When the event destination is enabled, the specified event types are sent to the destinations
+     * in this `EventDestinationDefinition` .
+     *
+     * If `false` , the event destination is disabled. When the event destination is disabled,
+     * events aren't sent to the specified destinations.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-eventdestination.html#cfn-ses-configurationseteventdestination-eventdestination-enabled)
      */
     public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * An object that defines an Amazon EventBridge destination for email events.
+     *
+     * You can use Amazon EventBridge to send notifications when certain email events occur.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-eventdestination.html#cfn-ses-configurationseteventdestination-eventdestination-eventbridgedestination)
+     */
+    public fun eventBridgeDestination(): Any? = unwrap(this).getEventBridgeDestination()
 
     /**
      * An object that contains the delivery stream ARN and the IAM role ARN associated with an
@@ -659,32 +762,32 @@ public open class CfnConfigurationSetEventDestination(
     public fun kinesisFirehoseDestination(): Any? = unwrap(this).getKinesisFirehoseDestination()
 
     /**
-     * The type of email sending events to publish to the event destination.
+     * The types of events that Amazon SES sends to the specified event destinations.
      *
-     * * `send` - The send request was successful and SES will attempt to deliver the message to the
+     * * `SEND` - The send request was successful and SES will attempt to deliver the message to the
      * recipient’s mail server. (If account-level or global suppression is being used, SES will still
      * count it as a send, but delivery is suppressed.)
-     * * `reject` - SES accepted the email, but determined that it contained a virus and didn’t
+     * * `REJECT` - SES accepted the email, but determined that it contained a virus and didn’t
      * attempt to deliver it to the recipient’s mail server.
-     * * `bounce` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email. (
+     * * `BOUNCE` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email. (
      * *Soft bounces* are only included when SES fails to deliver the email after retrying for a period
      * of time.)
-     * * `complaint` - The email was successfully delivered to the recipient’s mail server, but the
+     * * `COMPLAINT` - The email was successfully delivered to the recipient’s mail server, but the
      * recipient marked it as spam.
-     * * `delivery` - SES successfully delivered the email to the recipient's mail server.
-     * * `open` - The recipient received the message and opened it in their email client.
-     * * `click` - The recipient clicked one or more links in the email.
-     * * `renderingFailure` - The email wasn't sent because of a template rendering issue. This
+     * * `DELIVERY` - SES successfully delivered the email to the recipient's mail server.
+     * * `OPEN` - The recipient received the message and opened it in their email client.
+     * * `CLICK` - The recipient clicked one or more links in the email.
+     * * `RENDERING_FAILURE` - The email wasn't sent because of a template rendering issue. This
      * event type can occur when template data is missing, or when there is a mismatch between template
      * parameters and data. (This event type only occurs when you send email using the
      * [`SendTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendTemplatedEmail.html)
      * or
      * [`SendBulkTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendBulkTemplatedEmail.html)
      * API operations.)
-     * * `deliveryDelay` - The email couldn't be delivered to the recipient’s mail server because a
+     * * `DELIVERY_DELAY` - The email couldn't be delivered to the recipient’s mail server because a
      * temporary issue occurred. Delivery delays can occur, for example, when the recipient's inbox is
      * full, or when the receiving email server experiences a transient issue.
-     * * `subscription` - The email was successfully delivered, but the recipient updated their
+     * * `SUBSCRIPTION` - The email was successfully delivered, but the recipient updated their
      * subscription preferences by clicking on an *unsubscribe* link as part of your [subscription
      * management](https://docs.aws.amazon.com/ses/latest/dg/sending-email-subscription-management.html)
      * .
@@ -717,20 +820,23 @@ public open class CfnConfigurationSetEventDestination(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param cloudWatchDestination An object that contains the names, default values, and sources
-       * of the dimensions associated with an Amazon CloudWatch event destination.
+       * @param cloudWatchDestination An object that defines an Amazon CloudWatch destination for
+       * email events.
+       * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
        */
       public fun cloudWatchDestination(cloudWatchDestination: IResolvable)
 
       /**
-       * @param cloudWatchDestination An object that contains the names, default values, and sources
-       * of the dimensions associated with an Amazon CloudWatch event destination.
+       * @param cloudWatchDestination An object that defines an Amazon CloudWatch destination for
+       * email events.
+       * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
        */
       public fun cloudWatchDestination(cloudWatchDestination: CloudWatchDestinationProperty)
 
       /**
-       * @param cloudWatchDestination An object that contains the names, default values, and sources
-       * of the dimensions associated with an Amazon CloudWatch event destination.
+       * @param cloudWatchDestination An object that defines an Amazon CloudWatch destination for
+       * email events.
+       * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("278e4dff254572ecbe9e82bc4744a7e10e6ac6eda054f05dc7ebf5e76de16c9c")
@@ -738,20 +844,48 @@ public open class CfnConfigurationSetEventDestination(
           fun cloudWatchDestination(cloudWatchDestination: CloudWatchDestinationProperty.Builder.() -> Unit)
 
       /**
-       * @param enabled Sets whether Amazon SES publishes events to this destination when you send
-       * an email with the associated configuration set.
-       * Set to `true` to enable publishing to this destination; set to `false` to prevent
-       * publishing to this destination. The default value is `false` .
+       * @param enabled If `true` , the event destination is enabled.
+       * When the event destination is enabled, the specified event types are sent to the
+       * destinations in this `EventDestinationDefinition` .
+       *
+       * If `false` , the event destination is disabled. When the event destination is disabled,
+       * events aren't sent to the specified destinations.
        */
       public fun enabled(enabled: Boolean)
 
       /**
-       * @param enabled Sets whether Amazon SES publishes events to this destination when you send
-       * an email with the associated configuration set.
-       * Set to `true` to enable publishing to this destination; set to `false` to prevent
-       * publishing to this destination. The default value is `false` .
+       * @param enabled If `true` , the event destination is enabled.
+       * When the event destination is enabled, the specified event types are sent to the
+       * destinations in this `EventDestinationDefinition` .
+       *
+       * If `false` , the event destination is disabled. When the event destination is disabled,
+       * events aren't sent to the specified destinations.
        */
       public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param eventBridgeDestination An object that defines an Amazon EventBridge destination for
+       * email events.
+       * You can use Amazon EventBridge to send notifications when certain email events occur.
+       */
+      public fun eventBridgeDestination(eventBridgeDestination: IResolvable)
+
+      /**
+       * @param eventBridgeDestination An object that defines an Amazon EventBridge destination for
+       * email events.
+       * You can use Amazon EventBridge to send notifications when certain email events occur.
+       */
+      public fun eventBridgeDestination(eventBridgeDestination: EventBridgeDestinationProperty)
+
+      /**
+       * @param eventBridgeDestination An object that defines an Amazon EventBridge destination for
+       * email events.
+       * You can use Amazon EventBridge to send notifications when certain email events occur.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2a97feab7510459f54d182edd3696e832ee9920cfe9957c61720a2f782b4e0d9")
+      public
+          fun eventBridgeDestination(eventBridgeDestination: EventBridgeDestinationProperty.Builder.() -> Unit)
 
       /**
        * @param kinesisFirehoseDestination An object that contains the delivery stream ARN and the
@@ -776,32 +910,32 @@ public open class CfnConfigurationSetEventDestination(
           fun kinesisFirehoseDestination(kinesisFirehoseDestination: KinesisFirehoseDestinationProperty.Builder.() -> Unit)
 
       /**
-       * @param matchingEventTypes The type of email sending events to publish to the event
-       * destination. 
-       * * `send` - The send request was successful and SES will attempt to deliver the message to
+       * @param matchingEventTypes The types of events that Amazon SES sends to the specified event
+       * destinations. 
+       * * `SEND` - The send request was successful and SES will attempt to deliver the message to
        * the recipient’s mail server. (If account-level or global suppression is being used, SES will
        * still count it as a send, but delivery is suppressed.)
-       * * `reject` - SES accepted the email, but determined that it contained a virus and didn’t
+       * * `REJECT` - SES accepted the email, but determined that it contained a virus and didn’t
        * attempt to deliver it to the recipient’s mail server.
-       * * `bounce` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email.
+       * * `BOUNCE` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email.
        * ( *Soft bounces* are only included when SES fails to deliver the email after retrying for a
        * period of time.)
-       * * `complaint` - The email was successfully delivered to the recipient’s mail server, but
+       * * `COMPLAINT` - The email was successfully delivered to the recipient’s mail server, but
        * the recipient marked it as spam.
-       * * `delivery` - SES successfully delivered the email to the recipient's mail server.
-       * * `open` - The recipient received the message and opened it in their email client.
-       * * `click` - The recipient clicked one or more links in the email.
-       * * `renderingFailure` - The email wasn't sent because of a template rendering issue. This
+       * * `DELIVERY` - SES successfully delivered the email to the recipient's mail server.
+       * * `OPEN` - The recipient received the message and opened it in their email client.
+       * * `CLICK` - The recipient clicked one or more links in the email.
+       * * `RENDERING_FAILURE` - The email wasn't sent because of a template rendering issue. This
        * event type can occur when template data is missing, or when there is a mismatch between
        * template parameters and data. (This event type only occurs when you send email using the
        * [`SendTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendTemplatedEmail.html)
        * or
        * [`SendBulkTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendBulkTemplatedEmail.html)
        * API operations.)
-       * * `deliveryDelay` - The email couldn't be delivered to the recipient’s mail server because
+       * * `DELIVERY_DELAY` - The email couldn't be delivered to the recipient’s mail server because
        * a temporary issue occurred. Delivery delays can occur, for example, when the recipient's inbox
        * is full, or when the receiving email server experiences a transient issue.
-       * * `subscription` - The email was successfully delivered, but the recipient updated their
+       * * `SUBSCRIPTION` - The email was successfully delivered, but the recipient updated their
        * subscription preferences by clicking on an *unsubscribe* link as part of your [subscription
        * management](https://docs.aws.amazon.com/ses/latest/dg/sending-email-subscription-management.html)
        * .
@@ -809,32 +943,32 @@ public open class CfnConfigurationSetEventDestination(
       public fun matchingEventTypes(matchingEventTypes: List<String>)
 
       /**
-       * @param matchingEventTypes The type of email sending events to publish to the event
-       * destination. 
-       * * `send` - The send request was successful and SES will attempt to deliver the message to
+       * @param matchingEventTypes The types of events that Amazon SES sends to the specified event
+       * destinations. 
+       * * `SEND` - The send request was successful and SES will attempt to deliver the message to
        * the recipient’s mail server. (If account-level or global suppression is being used, SES will
        * still count it as a send, but delivery is suppressed.)
-       * * `reject` - SES accepted the email, but determined that it contained a virus and didn’t
+       * * `REJECT` - SES accepted the email, but determined that it contained a virus and didn’t
        * attempt to deliver it to the recipient’s mail server.
-       * * `bounce` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email.
+       * * `BOUNCE` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email.
        * ( *Soft bounces* are only included when SES fails to deliver the email after retrying for a
        * period of time.)
-       * * `complaint` - The email was successfully delivered to the recipient’s mail server, but
+       * * `COMPLAINT` - The email was successfully delivered to the recipient’s mail server, but
        * the recipient marked it as spam.
-       * * `delivery` - SES successfully delivered the email to the recipient's mail server.
-       * * `open` - The recipient received the message and opened it in their email client.
-       * * `click` - The recipient clicked one or more links in the email.
-       * * `renderingFailure` - The email wasn't sent because of a template rendering issue. This
+       * * `DELIVERY` - SES successfully delivered the email to the recipient's mail server.
+       * * `OPEN` - The recipient received the message and opened it in their email client.
+       * * `CLICK` - The recipient clicked one or more links in the email.
+       * * `RENDERING_FAILURE` - The email wasn't sent because of a template rendering issue. This
        * event type can occur when template data is missing, or when there is a mismatch between
        * template parameters and data. (This event type only occurs when you send email using the
        * [`SendTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendTemplatedEmail.html)
        * or
        * [`SendBulkTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendBulkTemplatedEmail.html)
        * API operations.)
-       * * `deliveryDelay` - The email couldn't be delivered to the recipient’s mail server because
+       * * `DELIVERY_DELAY` - The email couldn't be delivered to the recipient’s mail server because
        * a temporary issue occurred. Delivery delays can occur, for example, when the recipient's inbox
        * is full, or when the receiving email server experiences a transient issue.
-       * * `subscription` - The email was successfully delivered, but the recipient updated their
+       * * `SUBSCRIPTION` - The email was successfully delivered, but the recipient updated their
        * subscription preferences by clicking on an *unsubscribe* link as part of your [subscription
        * management](https://docs.aws.amazon.com/ses/latest/dg/sending-email-subscription-management.html)
        * .
@@ -877,24 +1011,27 @@ public open class CfnConfigurationSetEventDestination(
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventDestinationProperty.builder()
 
       /**
-       * @param cloudWatchDestination An object that contains the names, default values, and sources
-       * of the dimensions associated with an Amazon CloudWatch event destination.
+       * @param cloudWatchDestination An object that defines an Amazon CloudWatch destination for
+       * email events.
+       * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
        */
       override fun cloudWatchDestination(cloudWatchDestination: IResolvable) {
         cdkBuilder.cloudWatchDestination(cloudWatchDestination.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param cloudWatchDestination An object that contains the names, default values, and sources
-       * of the dimensions associated with an Amazon CloudWatch event destination.
+       * @param cloudWatchDestination An object that defines an Amazon CloudWatch destination for
+       * email events.
+       * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
        */
       override fun cloudWatchDestination(cloudWatchDestination: CloudWatchDestinationProperty) {
         cdkBuilder.cloudWatchDestination(cloudWatchDestination.let(CloudWatchDestinationProperty.Companion::unwrap))
       }
 
       /**
-       * @param cloudWatchDestination An object that contains the names, default values, and sources
-       * of the dimensions associated with an Amazon CloudWatch event destination.
+       * @param cloudWatchDestination An object that defines an Amazon CloudWatch destination for
+       * email events.
+       * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("278e4dff254572ecbe9e82bc4744a7e10e6ac6eda054f05dc7ebf5e76de16c9c")
@@ -903,24 +1040,57 @@ public open class CfnConfigurationSetEventDestination(
           Unit = cloudWatchDestination(CloudWatchDestinationProperty(cloudWatchDestination))
 
       /**
-       * @param enabled Sets whether Amazon SES publishes events to this destination when you send
-       * an email with the associated configuration set.
-       * Set to `true` to enable publishing to this destination; set to `false` to prevent
-       * publishing to this destination. The default value is `false` .
+       * @param enabled If `true` , the event destination is enabled.
+       * When the event destination is enabled, the specified event types are sent to the
+       * destinations in this `EventDestinationDefinition` .
+       *
+       * If `false` , the event destination is disabled. When the event destination is disabled,
+       * events aren't sent to the specified destinations.
        */
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param enabled Sets whether Amazon SES publishes events to this destination when you send
-       * an email with the associated configuration set.
-       * Set to `true` to enable publishing to this destination; set to `false` to prevent
-       * publishing to this destination. The default value is `false` .
+       * @param enabled If `true` , the event destination is enabled.
+       * When the event destination is enabled, the specified event types are sent to the
+       * destinations in this `EventDestinationDefinition` .
+       *
+       * If `false` , the event destination is disabled. When the event destination is disabled,
+       * events aren't sent to the specified destinations.
        */
       override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
+
+      /**
+       * @param eventBridgeDestination An object that defines an Amazon EventBridge destination for
+       * email events.
+       * You can use Amazon EventBridge to send notifications when certain email events occur.
+       */
+      override fun eventBridgeDestination(eventBridgeDestination: IResolvable) {
+        cdkBuilder.eventBridgeDestination(eventBridgeDestination.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param eventBridgeDestination An object that defines an Amazon EventBridge destination for
+       * email events.
+       * You can use Amazon EventBridge to send notifications when certain email events occur.
+       */
+      override fun eventBridgeDestination(eventBridgeDestination: EventBridgeDestinationProperty) {
+        cdkBuilder.eventBridgeDestination(eventBridgeDestination.let(EventBridgeDestinationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param eventBridgeDestination An object that defines an Amazon EventBridge destination for
+       * email events.
+       * You can use Amazon EventBridge to send notifications when certain email events occur.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2a97feab7510459f54d182edd3696e832ee9920cfe9957c61720a2f782b4e0d9")
+      override
+          fun eventBridgeDestination(eventBridgeDestination: EventBridgeDestinationProperty.Builder.() -> Unit):
+          Unit = eventBridgeDestination(EventBridgeDestinationProperty(eventBridgeDestination))
 
       /**
        * @param kinesisFirehoseDestination An object that contains the delivery stream ARN and the
@@ -951,32 +1121,32 @@ public open class CfnConfigurationSetEventDestination(
           kinesisFirehoseDestination(KinesisFirehoseDestinationProperty(kinesisFirehoseDestination))
 
       /**
-       * @param matchingEventTypes The type of email sending events to publish to the event
-       * destination. 
-       * * `send` - The send request was successful and SES will attempt to deliver the message to
+       * @param matchingEventTypes The types of events that Amazon SES sends to the specified event
+       * destinations. 
+       * * `SEND` - The send request was successful and SES will attempt to deliver the message to
        * the recipient’s mail server. (If account-level or global suppression is being used, SES will
        * still count it as a send, but delivery is suppressed.)
-       * * `reject` - SES accepted the email, but determined that it contained a virus and didn’t
+       * * `REJECT` - SES accepted the email, but determined that it contained a virus and didn’t
        * attempt to deliver it to the recipient’s mail server.
-       * * `bounce` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email.
+       * * `BOUNCE` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email.
        * ( *Soft bounces* are only included when SES fails to deliver the email after retrying for a
        * period of time.)
-       * * `complaint` - The email was successfully delivered to the recipient’s mail server, but
+       * * `COMPLAINT` - The email was successfully delivered to the recipient’s mail server, but
        * the recipient marked it as spam.
-       * * `delivery` - SES successfully delivered the email to the recipient's mail server.
-       * * `open` - The recipient received the message and opened it in their email client.
-       * * `click` - The recipient clicked one or more links in the email.
-       * * `renderingFailure` - The email wasn't sent because of a template rendering issue. This
+       * * `DELIVERY` - SES successfully delivered the email to the recipient's mail server.
+       * * `OPEN` - The recipient received the message and opened it in their email client.
+       * * `CLICK` - The recipient clicked one or more links in the email.
+       * * `RENDERING_FAILURE` - The email wasn't sent because of a template rendering issue. This
        * event type can occur when template data is missing, or when there is a mismatch between
        * template parameters and data. (This event type only occurs when you send email using the
        * [`SendTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendTemplatedEmail.html)
        * or
        * [`SendBulkTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendBulkTemplatedEmail.html)
        * API operations.)
-       * * `deliveryDelay` - The email couldn't be delivered to the recipient’s mail server because
+       * * `DELIVERY_DELAY` - The email couldn't be delivered to the recipient’s mail server because
        * a temporary issue occurred. Delivery delays can occur, for example, when the recipient's inbox
        * is full, or when the receiving email server experiences a transient issue.
-       * * `subscription` - The email was successfully delivered, but the recipient updated their
+       * * `SUBSCRIPTION` - The email was successfully delivered, but the recipient updated their
        * subscription preferences by clicking on an *unsubscribe* link as part of your [subscription
        * management](https://docs.aws.amazon.com/ses/latest/dg/sending-email-subscription-management.html)
        * .
@@ -986,32 +1156,32 @@ public open class CfnConfigurationSetEventDestination(
       }
 
       /**
-       * @param matchingEventTypes The type of email sending events to publish to the event
-       * destination. 
-       * * `send` - The send request was successful and SES will attempt to deliver the message to
+       * @param matchingEventTypes The types of events that Amazon SES sends to the specified event
+       * destinations. 
+       * * `SEND` - The send request was successful and SES will attempt to deliver the message to
        * the recipient’s mail server. (If account-level or global suppression is being used, SES will
        * still count it as a send, but delivery is suppressed.)
-       * * `reject` - SES accepted the email, but determined that it contained a virus and didn’t
+       * * `REJECT` - SES accepted the email, but determined that it contained a virus and didn’t
        * attempt to deliver it to the recipient’s mail server.
-       * * `bounce` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email.
+       * * `BOUNCE` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email.
        * ( *Soft bounces* are only included when SES fails to deliver the email after retrying for a
        * period of time.)
-       * * `complaint` - The email was successfully delivered to the recipient’s mail server, but
+       * * `COMPLAINT` - The email was successfully delivered to the recipient’s mail server, but
        * the recipient marked it as spam.
-       * * `delivery` - SES successfully delivered the email to the recipient's mail server.
-       * * `open` - The recipient received the message and opened it in their email client.
-       * * `click` - The recipient clicked one or more links in the email.
-       * * `renderingFailure` - The email wasn't sent because of a template rendering issue. This
+       * * `DELIVERY` - SES successfully delivered the email to the recipient's mail server.
+       * * `OPEN` - The recipient received the message and opened it in their email client.
+       * * `CLICK` - The recipient clicked one or more links in the email.
+       * * `RENDERING_FAILURE` - The email wasn't sent because of a template rendering issue. This
        * event type can occur when template data is missing, or when there is a mismatch between
        * template parameters and data. (This event type only occurs when you send email using the
        * [`SendTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendTemplatedEmail.html)
        * or
        * [`SendBulkTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendBulkTemplatedEmail.html)
        * API operations.)
-       * * `deliveryDelay` - The email couldn't be delivered to the recipient’s mail server because
+       * * `DELIVERY_DELAY` - The email couldn't be delivered to the recipient’s mail server because
        * a temporary issue occurred. Delivery delays can occur, for example, when the recipient's inbox
        * is full, or when the receiving email server experiences a transient issue.
-       * * `subscription` - The email was successfully delivered, but the recipient updated their
+       * * `SUBSCRIPTION` - The email was successfully delivered, but the recipient updated their
        * subscription preferences by clicking on an *unsubscribe* link as part of your [subscription
        * management](https://docs.aws.amazon.com/ses/latest/dg/sending-email-subscription-management.html)
        * .
@@ -1061,25 +1231,38 @@ public open class CfnConfigurationSetEventDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventDestinationProperty,
-    ) : CdkObject(cdkObject), EventDestinationProperty {
+    ) : CdkObject(cdkObject),
+        EventDestinationProperty {
       /**
-       * An object that contains the names, default values, and sources of the dimensions associated
-       * with an Amazon CloudWatch event destination.
+       * An object that defines an Amazon CloudWatch destination for email events.
+       *
+       * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-eventdestination.html#cfn-ses-configurationseteventdestination-eventdestination-cloudwatchdestination)
        */
       override fun cloudWatchDestination(): Any? = unwrap(this).getCloudWatchDestination()
 
       /**
-       * Sets whether Amazon SES publishes events to this destination when you send an email with
-       * the associated configuration set.
+       * If `true` , the event destination is enabled.
        *
-       * Set to `true` to enable publishing to this destination; set to `false` to prevent
-       * publishing to this destination. The default value is `false` .
+       * When the event destination is enabled, the specified event types are sent to the
+       * destinations in this `EventDestinationDefinition` .
+       *
+       * If `false` , the event destination is disabled. When the event destination is disabled,
+       * events aren't sent to the specified destinations.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-eventdestination.html#cfn-ses-configurationseteventdestination-eventdestination-enabled)
        */
       override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * An object that defines an Amazon EventBridge destination for email events.
+       *
+       * You can use Amazon EventBridge to send notifications when certain email events occur.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-eventdestination.html#cfn-ses-configurationseteventdestination-eventdestination-eventbridgedestination)
+       */
+      override fun eventBridgeDestination(): Any? = unwrap(this).getEventBridgeDestination()
 
       /**
        * An object that contains the delivery stream ARN and the IAM role ARN associated with an
@@ -1090,32 +1273,32 @@ public open class CfnConfigurationSetEventDestination(
       override fun kinesisFirehoseDestination(): Any? = unwrap(this).getKinesisFirehoseDestination()
 
       /**
-       * The type of email sending events to publish to the event destination.
+       * The types of events that Amazon SES sends to the specified event destinations.
        *
-       * * `send` - The send request was successful and SES will attempt to deliver the message to
+       * * `SEND` - The send request was successful and SES will attempt to deliver the message to
        * the recipient’s mail server. (If account-level or global suppression is being used, SES will
        * still count it as a send, but delivery is suppressed.)
-       * * `reject` - SES accepted the email, but determined that it contained a virus and didn’t
+       * * `REJECT` - SES accepted the email, but determined that it contained a virus and didn’t
        * attempt to deliver it to the recipient’s mail server.
-       * * `bounce` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email.
+       * * `BOUNCE` - ( *Hard bounce* ) The recipient's mail server permanently rejected the email.
        * ( *Soft bounces* are only included when SES fails to deliver the email after retrying for a
        * period of time.)
-       * * `complaint` - The email was successfully delivered to the recipient’s mail server, but
+       * * `COMPLAINT` - The email was successfully delivered to the recipient’s mail server, but
        * the recipient marked it as spam.
-       * * `delivery` - SES successfully delivered the email to the recipient's mail server.
-       * * `open` - The recipient received the message and opened it in their email client.
-       * * `click` - The recipient clicked one or more links in the email.
-       * * `renderingFailure` - The email wasn't sent because of a template rendering issue. This
+       * * `DELIVERY` - SES successfully delivered the email to the recipient's mail server.
+       * * `OPEN` - The recipient received the message and opened it in their email client.
+       * * `CLICK` - The recipient clicked one or more links in the email.
+       * * `RENDERING_FAILURE` - The email wasn't sent because of a template rendering issue. This
        * event type can occur when template data is missing, or when there is a mismatch between
        * template parameters and data. (This event type only occurs when you send email using the
        * [`SendTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendTemplatedEmail.html)
        * or
        * [`SendBulkTemplatedEmail`](https://docs.aws.amazon.com/ses/latest/APIReference/API_SendBulkTemplatedEmail.html)
        * API operations.)
-       * * `deliveryDelay` - The email couldn't be delivered to the recipient’s mail server because
+       * * `DELIVERY_DELAY` - The email couldn't be delivered to the recipient’s mail server because
        * a temporary issue occurred. Delivery delays can occur, for example, when the recipient's inbox
        * is full, or when the receiving email server experiences a transient issue.
-       * * `subscription` - The email was successfully delivered, but the recipient updated their
+       * * `SUBSCRIPTION` - The email was successfully delivered, but the recipient updated their
        * subscription preferences by clicking on an *unsubscribe* link as part of your [subscription
        * management](https://docs.aws.amazon.com/ses/latest/dg/sending-email-subscription-management.html)
        * .
@@ -1162,13 +1345,10 @@ public open class CfnConfigurationSetEventDestination(
   }
 
   /**
-   * Contains the delivery stream ARN and the IAM role ARN associated with an Amazon Kinesis
-   * Firehose event destination.
+   * An object that defines an Amazon Kinesis Data Firehose destination for email events.
    *
-   * Event destinations, such as Amazon Kinesis Firehose, are associated with configuration sets,
-   * which enable you to publish email sending events. For information about using configuration sets,
-   * see the [Amazon SES Developer
-   * Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html) .
+   * You can use Amazon Kinesis Data Firehose to stream data to other services, such as Amazon S3
+   * and Amazon Redshift.
    *
    * Example:
    *
@@ -1195,8 +1375,8 @@ public open class CfnConfigurationSetEventDestination(
     public fun deliveryStreamArn(): String
 
     /**
-     * The ARN of the IAM role under which Amazon SES publishes email sending events to the Amazon
-     * Kinesis Firehose stream.
+     * The Amazon Resource Name (ARN) of the IAM role that the Amazon SES API v2 uses to send email
+     * events to the Amazon Kinesis Data Firehose stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn)
      */
@@ -1214,8 +1394,8 @@ public open class CfnConfigurationSetEventDestination(
       public fun deliveryStreamArn(deliveryStreamArn: String)
 
       /**
-       * @param iamRoleArn The ARN of the IAM role under which Amazon SES publishes email sending
-       * events to the Amazon Kinesis Firehose stream. 
+       * @param iamRoleArn The Amazon Resource Name (ARN) of the IAM role that the Amazon SES API v2
+       * uses to send email events to the Amazon Kinesis Data Firehose stream. 
        */
       public fun iamRoleArn(iamRoleArn: String)
     }
@@ -1235,8 +1415,8 @@ public open class CfnConfigurationSetEventDestination(
       }
 
       /**
-       * @param iamRoleArn The ARN of the IAM role under which Amazon SES publishes email sending
-       * events to the Amazon Kinesis Firehose stream. 
+       * @param iamRoleArn The Amazon Resource Name (ARN) of the IAM role that the Amazon SES API v2
+       * uses to send email events to the Amazon Kinesis Data Firehose stream. 
        */
       override fun iamRoleArn(iamRoleArn: String) {
         cdkBuilder.iamRoleArn(iamRoleArn)
@@ -1249,7 +1429,8 @@ public open class CfnConfigurationSetEventDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty,
-    ) : CdkObject(cdkObject), KinesisFirehoseDestinationProperty {
+    ) : CdkObject(cdkObject),
+        KinesisFirehoseDestinationProperty {
       /**
        * The ARN of the Amazon Kinesis Firehose stream that email sending events should be published
        * to.
@@ -1259,8 +1440,8 @@ public open class CfnConfigurationSetEventDestination(
       override fun deliveryStreamArn(): String = unwrap(this).getDeliveryStreamArn()
 
       /**
-       * The ARN of the IAM role under which Amazon SES publishes email sending events to the Amazon
-       * Kinesis Firehose stream.
+       * The Amazon Resource Name (ARN) of the IAM role that the Amazon SES API v2 uses to send
+       * email events to the Amazon Kinesis Data Firehose stream.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn)
        */
@@ -1366,7 +1547,8 @@ public open class CfnConfigurationSetEventDestination(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.SnsDestinationProperty,
-    ) : CdkObject(cdkObject), SnsDestinationProperty {
+    ) : CdkObject(cdkObject),
+        SnsDestinationProperty {
       /**
        * The ARN of the Amazon SNS topic for email sending events.
        *

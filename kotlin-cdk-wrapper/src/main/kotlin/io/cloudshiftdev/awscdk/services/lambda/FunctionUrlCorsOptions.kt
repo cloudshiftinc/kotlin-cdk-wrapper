@@ -222,7 +222,8 @@ public interface FunctionUrlCorsOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.FunctionUrlCorsOptions,
-  ) : CdkObject(cdkObject), FunctionUrlCorsOptions {
+  ) : CdkObject(cdkObject),
+      FunctionUrlCorsOptions {
     /**
      * Whether to allow cookies or other credentials in requests to your function URL.
      *

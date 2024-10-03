@@ -141,7 +141,8 @@ public interface ErrorResponse {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.ErrorResponse,
-  ) : CdkObject(cdkObject), ErrorResponse {
+  ) : CdkObject(cdkObject),
+      ErrorResponse {
     /**
      * The HTTP status code for which you want to specify a custom error page and/or a caching
      * duration.

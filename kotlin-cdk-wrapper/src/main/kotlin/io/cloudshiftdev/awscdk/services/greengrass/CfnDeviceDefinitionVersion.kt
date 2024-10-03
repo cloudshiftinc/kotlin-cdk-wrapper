@@ -58,7 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDeviceDefinitionVersion(
   cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -397,7 +398,8 @@ public open class CfnDeviceDefinitionVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion.DeviceProperty,
-    ) : CdkObject(cdkObject), DeviceProperty {
+    ) : CdkObject(cdkObject),
+        DeviceProperty {
       /**
        * The ARN of the device certificate for the device.
        *

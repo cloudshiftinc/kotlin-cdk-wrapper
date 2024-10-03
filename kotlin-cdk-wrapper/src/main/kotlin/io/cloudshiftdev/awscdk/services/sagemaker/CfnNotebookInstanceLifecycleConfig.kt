@@ -46,7 +46,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnNotebookInstanceLifecycleConfig(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -415,7 +416,8 @@ public open class CfnNotebookInstanceLifecycleConfig(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty,
-    ) : CdkObject(cdkObject), NotebookInstanceLifecycleHookProperty {
+    ) : CdkObject(cdkObject),
+        NotebookInstanceLifecycleHookProperty {
       /**
        * A base64-encoded string that contains a shell script for a notebook instance lifecycle
        * configuration.

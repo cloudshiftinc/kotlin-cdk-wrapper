@@ -66,7 +66,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnSourceLocation(
   cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -766,7 +768,8 @@ public open class CfnSourceLocation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.AccessConfigurationProperty,
-    ) : CdkObject(cdkObject), AccessConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AccessConfigurationProperty {
       /**
        * The type of authentication used to access content from `HttpConfiguration::BaseUrl` on your
        * source location. Accepted value: `S3_SIGV4` .
@@ -886,7 +889,8 @@ public open class CfnSourceLocation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty,
-    ) : CdkObject(cdkObject), DefaultSegmentDeliveryConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DefaultSegmentDeliveryConfigurationProperty {
       /**
        * The hostname of the server that will be used to serve segments.
        *
@@ -975,7 +979,8 @@ public open class CfnSourceLocation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty,
-    ) : CdkObject(cdkObject), HttpConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        HttpConfigurationProperty {
       /**
        * The base URL for the source location host server.
        *
@@ -1120,7 +1125,8 @@ public open class CfnSourceLocation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty,
-    ) : CdkObject(cdkObject), SecretsManagerAccessTokenConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SecretsManagerAccessTokenConfigurationProperty {
       /**
        * The name of the HTTP header used to supply the access token in requests to the source
        * location.
@@ -1259,7 +1265,8 @@ public open class CfnSourceLocation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty,
-    ) : CdkObject(cdkObject), SegmentDeliveryConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SegmentDeliveryConfigurationProperty {
       /**
        * The base URL of the host or path of the segment delivery server that you're using to serve
        * segments.

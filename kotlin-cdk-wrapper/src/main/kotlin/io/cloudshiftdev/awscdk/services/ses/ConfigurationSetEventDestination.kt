@@ -35,7 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class ConfigurationSetEventDestination(
   cdkObject: software.amazon.awscdk.services.ses.ConfigurationSetEventDestination,
-) : Resource(cdkObject), IConfigurationSetEventDestination {
+) : Resource(cdkObject),
+    IConfigurationSetEventDestination {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

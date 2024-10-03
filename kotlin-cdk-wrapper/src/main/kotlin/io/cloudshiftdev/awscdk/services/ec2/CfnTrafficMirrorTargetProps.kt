@@ -158,7 +158,8 @@ public interface CfnTrafficMirrorTargetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorTargetProps,
-  ) : CdkObject(cdkObject), CfnTrafficMirrorTargetProps {
+  ) : CdkObject(cdkObject),
+      CfnTrafficMirrorTargetProps {
     /**
      * The description of the Traffic Mirror target.
      *

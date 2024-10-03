@@ -669,7 +669,8 @@ public interface CfnTaskProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datasync.CfnTaskProps,
-  ) : CdkObject(cdkObject), CfnTaskProps {
+  ) : CdkObject(cdkObject),
+      CfnTaskProps {
     /**
      * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring
      * your task.

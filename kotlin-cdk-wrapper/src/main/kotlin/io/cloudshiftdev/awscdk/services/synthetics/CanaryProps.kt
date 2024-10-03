@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.synthetics
 
 import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -24,6 +25,7 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.*;
  * Canary canary = Canary.Builder.create(this, "MyCanary")
  * .schedule(Schedule.rate(Duration.minutes(5)))
  * .test(Test.custom(CustomTestOptions.builder()
@@ -31,12 +33,28 @@ import kotlin.jvm.JvmName
  * .handler("index.handler")
  * .build()))
  * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
- * .environmentVariables(Map.of(
- * "stage", "prod"))
+ * .memory(Size.mebibytes(1024))
  * .build();
  * ```
  */
 public interface CanaryProps {
+  /**
+   * Specifies whether this canary is to use active AWS X-Ray tracing when it runs.
+   *
+   * Active tracing enables this canary run to be displayed in the ServiceLens and X-Ray service
+   * maps even if the
+   * canary does not hit an endpoint that has X-Ray tracing enabled. Using X-Ray tracing incurs
+   * charges.
+   *
+   * You can enable active tracing only for canaries that use version `syn-nodejs-2.0` or later for
+   * their canary runtime.
+   *
+   * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_tracing.html)
+   */
+  public fun activeTracing(): Boolean? = unwrap(this).getActiveTracing()
+
   /**
    * Lifecycle rules for the generated canary artifact bucket.
    *
@@ -102,6 +120,16 @@ public interface CanaryProps {
    */
   public fun failureRetentionPeriod(): Duration? =
       unwrap(this).getFailureRetentionPeriod()?.let(Duration::wrap)
+
+  /**
+   * The maximum amount of memory that the canary can use while running.
+   *
+   * This value must be a multiple of 64 Mib.
+   * The range is 960 MiB to 3008 MiB.
+   *
+   * Default: Size.mebibytes(1024)
+   */
+  public fun memory(): Size? = unwrap(this).getMemory()?.let(Size::wrap)
 
   /**
    * Canary execution role.
@@ -184,6 +212,18 @@ public interface CanaryProps {
   public fun timeToLive(): Duration? = unwrap(this).getTimeToLive()?.let(Duration::wrap)
 
   /**
+   * How long the canary is allowed to run before it must stop.
+   *
+   * You can't set this time to be longer than the frequency of the runs of this canary.
+   *
+   * The minimum allowed value is 3 seconds.
+   * The maximum allowed value is 840 seconds (14 minutes).
+   *
+   * Default: - the frequency of the canary is used as this value, up to a maximum of 900 seconds.
+   */
+  public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+  /**
    * The VPC where this canary is run.
    *
    * Specify this if the canary needs to access resources in a VPC.
@@ -207,6 +247,19 @@ public interface CanaryProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param activeTracing Specifies whether this canary is to use active AWS X-Ray tracing when it
+     * runs.
+     * Active tracing enables this canary run to be displayed in the ServiceLens and X-Ray service
+     * maps even if the
+     * canary does not hit an endpoint that has X-Ray tracing enabled. Using X-Ray tracing incurs
+     * charges.
+     *
+     * You can enable active tracing only for canaries that use version `syn-nodejs-2.0` or later
+     * for their canary runtime.
+     */
+    public fun activeTracing(activeTracing: Boolean)
+
     /**
      * @param artifactsBucketLifecycleRules Lifecycle rules for the generated canary artifact
      * bucket.
@@ -272,6 +325,13 @@ public interface CanaryProps {
     public fun failureRetentionPeriod(failureRetentionPeriod: Duration)
 
     /**
+     * @param memory The maximum amount of memory that the canary can use while running.
+     * This value must be a multiple of 64 Mib.
+     * The range is 960 MiB to 3008 MiB.
+     */
+    public fun memory(memory: Size)
+
+    /**
      * @param role Canary execution role.
      * This is the role that will be assumed by the canary upon execution.
      * It controls the permissions that the canary will have. The role must
@@ -334,6 +394,15 @@ public interface CanaryProps {
     public fun timeToLive(timeToLive: Duration)
 
     /**
+     * @param timeout How long the canary is allowed to run before it must stop.
+     * You can't set this time to be longer than the frequency of the runs of this canary.
+     *
+     * The minimum allowed value is 3 seconds.
+     * The maximum allowed value is 840 seconds (14 minutes).
+     */
+    public fun timeout(timeout: Duration)
+
+    /**
      * @param vpc The VPC where this canary is run.
      * Specify this if the canary needs to access resources in a VPC.
      */
@@ -357,6 +426,21 @@ public interface CanaryProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.synthetics.CanaryProps.Builder =
         software.amazon.awscdk.services.synthetics.CanaryProps.builder()
+
+    /**
+     * @param activeTracing Specifies whether this canary is to use active AWS X-Ray tracing when it
+     * runs.
+     * Active tracing enables this canary run to be displayed in the ServiceLens and X-Ray service
+     * maps even if the
+     * canary does not hit an endpoint that has X-Ray tracing enabled. Using X-Ray tracing incurs
+     * charges.
+     *
+     * You can enable active tracing only for canaries that use version `syn-nodejs-2.0` or later
+     * for their canary runtime.
+     */
+    override fun activeTracing(activeTracing: Boolean) {
+      cdkBuilder.activeTracing(activeTracing)
+    }
 
     /**
      * @param artifactsBucketLifecycleRules Lifecycle rules for the generated canary artifact
@@ -434,6 +518,15 @@ public interface CanaryProps {
      */
     override fun failureRetentionPeriod(failureRetentionPeriod: Duration) {
       cdkBuilder.failureRetentionPeriod(failureRetentionPeriod.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * @param memory The maximum amount of memory that the canary can use while running.
+     * This value must be a multiple of 64 Mib.
+     * The range is 960 MiB to 3008 MiB.
+     */
+    override fun memory(memory: Size) {
+      cdkBuilder.memory(memory.let(Size.Companion::unwrap))
     }
 
     /**
@@ -516,6 +609,17 @@ public interface CanaryProps {
     }
 
     /**
+     * @param timeout How long the canary is allowed to run before it must stop.
+     * You can't set this time to be longer than the frequency of the runs of this canary.
+     *
+     * The minimum allowed value is 3 seconds.
+     * The maximum allowed value is 840 seconds (14 minutes).
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
      * @param vpc The VPC where this canary is run.
      * Specify this if the canary needs to access resources in a VPC.
      */
@@ -545,7 +649,25 @@ public interface CanaryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.synthetics.CanaryProps,
-  ) : CdkObject(cdkObject), CanaryProps {
+  ) : CdkObject(cdkObject),
+      CanaryProps {
+    /**
+     * Specifies whether this canary is to use active AWS X-Ray tracing when it runs.
+     *
+     * Active tracing enables this canary run to be displayed in the ServiceLens and X-Ray service
+     * maps even if the
+     * canary does not hit an endpoint that has X-Ray tracing enabled. Using X-Ray tracing incurs
+     * charges.
+     *
+     * You can enable active tracing only for canaries that use version `syn-nodejs-2.0` or later
+     * for their canary runtime.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_tracing.html)
+     */
+    override fun activeTracing(): Boolean? = unwrap(this).getActiveTracing()
+
     /**
      * Lifecycle rules for the generated canary artifact bucket.
      *
@@ -611,6 +733,16 @@ public interface CanaryProps {
      */
     override fun failureRetentionPeriod(): Duration? =
         unwrap(this).getFailureRetentionPeriod()?.let(Duration::wrap)
+
+    /**
+     * The maximum amount of memory that the canary can use while running.
+     *
+     * This value must be a multiple of 64 Mib.
+     * The range is 960 MiB to 3008 MiB.
+     *
+     * Default: Size.mebibytes(1024)
+     */
+    override fun memory(): Size? = unwrap(this).getMemory()?.let(Size::wrap)
 
     /**
      * Canary execution role.
@@ -691,6 +823,18 @@ public interface CanaryProps {
      * Default: - no limit
      */
     override fun timeToLive(): Duration? = unwrap(this).getTimeToLive()?.let(Duration::wrap)
+
+    /**
+     * How long the canary is allowed to run before it must stop.
+     *
+     * You can't set this time to be longer than the frequency of the runs of this canary.
+     *
+     * The minimum allowed value is 3 seconds.
+     * The maximum allowed value is 840 seconds (14 minutes).
+     *
+     * Default: - the frequency of the canary is used as this value, up to a maximum of 900 seconds.
+     */
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
     /**
      * The VPC where this canary is run.

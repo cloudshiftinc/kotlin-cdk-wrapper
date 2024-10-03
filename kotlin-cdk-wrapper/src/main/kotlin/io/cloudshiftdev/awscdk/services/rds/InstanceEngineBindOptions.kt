@@ -142,7 +142,8 @@ public interface InstanceEngineBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.InstanceEngineBindOptions,
-  ) : CdkObject(cdkObject), InstanceEngineBindOptions {
+  ) : CdkObject(cdkObject),
+      InstanceEngineBindOptions {
     /**
      * The Active Directory directory ID to create the DB instance in.
      *

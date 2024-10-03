@@ -48,7 +48,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTransitGatewayVpcAttachment(
   cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayVpcAttachment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -536,7 +538,8 @@ public open class CfnTransitGatewayVpcAttachment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayVpcAttachment.OptionsProperty,
-    ) : CdkObject(cdkObject), OptionsProperty {
+    ) : CdkObject(cdkObject),
+        OptionsProperty {
       /**
        * Enable or disable appliance mode support.
        *

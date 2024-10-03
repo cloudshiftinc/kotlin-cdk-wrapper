@@ -857,7 +857,8 @@ public interface VpcProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.VpcProps,
-  ) : CdkObject(cdkObject), VpcProps {
+  ) : CdkObject(cdkObject),
+      VpcProps {
     /**
      * Availability zones this VPC spans.
      *

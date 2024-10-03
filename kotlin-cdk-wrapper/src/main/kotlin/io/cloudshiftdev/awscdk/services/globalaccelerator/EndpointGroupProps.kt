@@ -236,7 +236,8 @@ public interface EndpointGroupProps : EndpointGroupOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.EndpointGroupProps,
-  ) : CdkObject(cdkObject), EndpointGroupProps {
+  ) : CdkObject(cdkObject),
+      EndpointGroupProps {
     /**
      * Name of the endpoint group.
      *

@@ -141,7 +141,8 @@ public interface UnmanagedComputeEnvironmentProps : ComputeEnvironmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.UnmanagedComputeEnvironmentProps,
-  ) : CdkObject(cdkObject), UnmanagedComputeEnvironmentProps {
+  ) : CdkObject(cdkObject),
+      UnmanagedComputeEnvironmentProps {
     /**
      * The name of the ComputeEnvironment.
      *

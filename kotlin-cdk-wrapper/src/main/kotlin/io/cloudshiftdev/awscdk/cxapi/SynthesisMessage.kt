@@ -2,7 +2,7 @@
 
 package io.cloudshiftdev.awscdk.cxapi
 
-import io.cloudshiftdev.awscdk.cloudassembly.schema.MetadataEntry
+import io.cloudshiftdev.awscdk.cloud_assembly_schema.MetadataEntry
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -59,7 +59,7 @@ public interface SynthesisMessage {
      * @param entry the value to be set. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("9632d9a77fd16530e6e62a4bc87651a80c1d90b0739b16bdf07edfbaf8de3dc8")
+    @JvmName("3fb9897f1e8739f691d0e543a4253ce4eef9ea3a25f2c523ef7aff5489fd5375")
     public fun entry(entry: MetadataEntry.Builder.() -> Unit)
 
     /**
@@ -88,7 +88,7 @@ public interface SynthesisMessage {
      * @param entry the value to be set. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("9632d9a77fd16530e6e62a4bc87651a80c1d90b0739b16bdf07edfbaf8de3dc8")
+    @JvmName("3fb9897f1e8739f691d0e543a4253ce4eef9ea3a25f2c523ef7aff5489fd5375")
     override fun entry(entry: MetadataEntry.Builder.() -> Unit): Unit = entry(MetadataEntry(entry))
 
     /**
@@ -110,7 +110,8 @@ public interface SynthesisMessage {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cxapi.SynthesisMessage,
-  ) : CdkObject(cdkObject), SynthesisMessage {
+  ) : CdkObject(cdkObject),
+      SynthesisMessage {
     /**
      *
      */

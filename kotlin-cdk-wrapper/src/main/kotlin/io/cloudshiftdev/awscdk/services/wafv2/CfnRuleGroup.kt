@@ -501,7 +501,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnRuleGroup(
   cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1432,7 +1434,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.AllowProperty,
-    ) : CdkObject(cdkObject), AllowProperty {
+    ) : CdkObject(cdkObject),
+        AllowProperty {
       /**
        * Custom request handling.
        *
@@ -1930,7 +1933,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.AndStatementProperty,
-    ) : CdkObject(cdkObject), AndStatementProperty {
+    ) : CdkObject(cdkObject),
+        AndStatementProperty {
       /**
        * The statements to combine with AND logic.
        *
@@ -2047,7 +2051,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.BlockProperty,
-    ) : CdkObject(cdkObject), BlockProperty {
+    ) : CdkObject(cdkObject),
+        BlockProperty {
       /**
        * Custom response.
        *
@@ -2197,7 +2202,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.BodyProperty,
-    ) : CdkObject(cdkObject), BodyProperty {
+    ) : CdkObject(cdkObject),
+        BodyProperty {
       /**
        * What AWS WAF should do if the body is larger than AWS WAF can inspect.
        *
@@ -2669,7 +2675,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.ByteMatchStatementProperty,
-    ) : CdkObject(cdkObject), ByteMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        ByteMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.
        *
@@ -2876,7 +2883,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaConfigProperty,
-    ) : CdkObject(cdkObject), CaptchaConfigProperty {
+    ) : CdkObject(cdkObject),
+        CaptchaConfigProperty {
       /**
        * Determines how long a `CAPTCHA` timestamp in the token remains valid after the client
        * successfully solves a `CAPTCHA` puzzle.
@@ -2991,7 +2999,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaProperty,
-    ) : CdkObject(cdkObject), CaptchaProperty {
+    ) : CdkObject(cdkObject),
+        CaptchaProperty {
       /**
        * Custom request handling.
        *
@@ -3110,7 +3119,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeConfigProperty,
-    ) : CdkObject(cdkObject), ChallengeConfigProperty {
+    ) : CdkObject(cdkObject),
+        ChallengeConfigProperty {
       /**
        * Determines how long a challenge timestamp in the token remains valid after the client
        * successfully responds to a challenge.
@@ -3226,7 +3236,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeProperty,
-    ) : CdkObject(cdkObject), ChallengeProperty {
+    ) : CdkObject(cdkObject),
+        ChallengeProperty {
       /**
        * Custom request handling.
        *
@@ -3382,7 +3393,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookieMatchPatternProperty,
-    ) : CdkObject(cdkObject), CookieMatchPatternProperty {
+    ) : CdkObject(cdkObject),
+        CookieMatchPatternProperty {
       /**
        * Inspect all cookies.
        *
@@ -3650,7 +3662,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookiesProperty,
-    ) : CdkObject(cdkObject), CookiesProperty {
+    ) : CdkObject(cdkObject),
+        CookiesProperty {
       /**
        * The filter to use to identify the subset of cookies to inspect in a web request.
        *
@@ -3802,7 +3815,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CountProperty,
-    ) : CdkObject(cdkObject), CountProperty {
+    ) : CdkObject(cdkObject),
+        CountProperty {
       /**
        * Custom request handling.
        *
@@ -3916,7 +3930,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomHTTPHeaderProperty,
-    ) : CdkObject(cdkObject), CustomHTTPHeaderProperty {
+    ) : CdkObject(cdkObject),
+        CustomHTTPHeaderProperty {
       /**
        * The name of the custom header.
        *
@@ -4078,7 +4093,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomRequestHandlingProperty,
-    ) : CdkObject(cdkObject), CustomRequestHandlingProperty {
+    ) : CdkObject(cdkObject),
+        CustomRequestHandlingProperty {
       /**
        * The HTTP headers to insert into the request. Duplicate header names are not allowed.
        *
@@ -4209,7 +4225,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseBodyProperty,
-    ) : CdkObject(cdkObject), CustomResponseBodyProperty {
+    ) : CdkObject(cdkObject),
+        CustomResponseBodyProperty {
       /**
        * The payload of the custom response.
        *
@@ -4460,7 +4477,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseProperty,
-    ) : CdkObject(cdkObject), CustomResponseProperty {
+    ) : CdkObject(cdkObject),
+        CustomResponseProperty {
       /**
        * References the response body that you want AWS WAF to return to the web request client.
        *
@@ -4671,12 +4689,13 @@ public open class CfnRuleGroup(
     public fun headers(): Any? = unwrap(this).getHeaders()
 
     /**
-     * Match against the request's JA3 fingerprint.
+     * Available for use with Amazon CloudFront distributions and Application Load Balancers.
      *
-     * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-     * request. This fingerprint serves as a unique identifier for the client's TLS configuration. AWS
-     * WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-     * information for the calculation. Almost all web requests include this information.
+     * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+     * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+     * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint for
+     * each request that has enough TLS Client Hello information for the calculation. Almost all web
+     * requests include this information.
      *
      *
      * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -4927,11 +4946,13 @@ public open class CfnRuleGroup(
       public fun headers(headers: HeadersProperty.Builder.() -> Unit)
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -4950,11 +4971,13 @@ public open class CfnRuleGroup(
       public fun ja3Fingerprint(ja3Fingerprint: IResolvable)
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -4973,11 +4996,13 @@ public open class CfnRuleGroup(
       public fun ja3Fingerprint(ja3Fingerprint: JA3FingerprintProperty)
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -5272,11 +5297,13 @@ public open class CfnRuleGroup(
           headers(HeadersProperty(headers))
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -5297,11 +5324,13 @@ public open class CfnRuleGroup(
       }
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -5322,11 +5351,13 @@ public open class CfnRuleGroup(
       }
 
       /**
-       * @param ja3Fingerprint Match against the request's JA3 fingerprint.
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * @param ja3Fingerprint Available for use with Amazon CloudFront distributions and
+       * Application Load Balancers.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -5474,7 +5505,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.FieldToMatchProperty,
-    ) : CdkObject(cdkObject), FieldToMatchProperty {
+    ) : CdkObject(cdkObject),
+        FieldToMatchProperty {
       /**
        * Inspect all query arguments.
        *
@@ -5537,12 +5569,13 @@ public open class CfnRuleGroup(
       override fun headers(): Any? = unwrap(this).getHeaders()
 
       /**
-       * Match against the request's JA3 fingerprint.
+       * Available for use with Amazon CloudFront distributions and Application Load Balancers.
        *
-       * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-       * request. This fingerprint serves as a unique identifier for the client's TLS configuration.
-       * AWS WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-       * information for the calculation. Almost all web requests include this information.
+       * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash
+       * derived from the TLS Client Hello of an incoming request. This fingerprint serves as a unique
+       * identifier for the client's TLS configuration. AWS WAF calculates and logs this fingerprint
+       * for each request that has enough TLS Client Hello information for the calculation. Almost all
+       * web requests include this information.
        *
        *
        * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -5801,7 +5834,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.ForwardedIPConfigurationProperty,
-    ) : CdkObject(cdkObject), ForwardedIPConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ForwardedIPConfigurationProperty {
       /**
        * The match status to assign to the web request if the request doesn't have a valid IP
        * address in the specified position.
@@ -6077,7 +6111,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.GeoMatchStatementProperty,
-    ) : CdkObject(cdkObject), GeoMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        GeoMatchStatementProperty {
       /**
        * An array of two-character country codes that you want to match against, for example, `[
        * "US", "CN" ]` , from the alpha-2 country ISO codes of the ISO 3166 international standard.
@@ -6255,7 +6290,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeaderMatchPatternProperty,
-    ) : CdkObject(cdkObject), HeaderMatchPatternProperty {
+    ) : CdkObject(cdkObject),
+        HeaderMatchPatternProperty {
       /**
        * Inspect all headers.
        *
@@ -6526,7 +6562,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeadersProperty,
-    ) : CdkObject(cdkObject), HeadersProperty {
+    ) : CdkObject(cdkObject),
+        HeadersProperty {
       /**
        * The filter to use to identify the subset of headers to inspect in a web request.
        *
@@ -6783,7 +6820,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.IPSetForwardedIPConfigurationProperty,
-    ) : CdkObject(cdkObject), IPSetForwardedIPConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        IPSetForwardedIPConfigurationProperty {
       /**
        * The match status to assign to the web request if the request doesn't have a valid IP
        * address in the specified position.
@@ -7025,7 +7063,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.IPSetReferenceStatementProperty,
-    ) : CdkObject(cdkObject), IPSetReferenceStatementProperty {
+    ) : CdkObject(cdkObject),
+        IPSetReferenceStatementProperty {
       /**
        * The Amazon Resource Name (ARN) of the `IPSet` that this statement references.
        *
@@ -7138,7 +7177,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.ImmunityTimePropertyProperty,
-    ) : CdkObject(cdkObject), ImmunityTimePropertyProperty {
+    ) : CdkObject(cdkObject),
+        ImmunityTimePropertyProperty {
       /**
        * The amount of time, in seconds, that a `CAPTCHA` or challenge timestamp is considered valid
        * by AWS WAF .
@@ -7171,12 +7211,13 @@ public open class CfnRuleGroup(
   }
 
   /**
-   * Match against the request's JA3 fingerprint.
+   * Available for use with Amazon CloudFront distributions and Application Load Balancers.
    *
-   * The JA3 fingerprint is a 32-character hash derived from the TLS Client Hello of an incoming
-   * request. This fingerprint serves as a unique identifier for the client's TLS configuration. AWS
-   * WAF calculates and logs this fingerprint for each request that has enough TLS Client Hello
-   * information for the calculation. Almost all web requests include this information.
+   * Match against the request's JA3 fingerprint. The JA3 fingerprint is a 32-character hash derived
+   * from the TLS Client Hello of an incoming request. This fingerprint serves as a unique identifier
+   * for the client's TLS configuration. AWS WAF calculates and logs this fingerprint for each request
+   * that has enough TLS Client Hello information for the calculation. Almost all web requests include
+   * this information.
    *
    *
    * You can use this choice only with a string match `ByteMatchStatement` with the
@@ -7260,7 +7301,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.JA3FingerprintProperty,
-    ) : CdkObject(cdkObject), JA3FingerprintProperty {
+    ) : CdkObject(cdkObject),
+        JA3FingerprintProperty {
       /**
        * The match status to assign to the web request if the request doesn't have a JA3
        * fingerprint.
@@ -7306,6 +7348,10 @@ public open class CfnRuleGroup(
    *
    * Example JSON: `"JsonBody": { "MatchPattern": { "All": {} }, "MatchScope": "ALL" }`
    *
+   * For additional information about this request component option, see [JSON
+   * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+   * in the *AWS WAF Developer Guide* .
+   *
    * Example:
    *
    * ```
@@ -7342,15 +7388,13 @@ public open class CfnRuleGroup(
      * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
      * first parsing failure that it encounters.
      *
-     * AWS WAF does its best to parse the entire JSON body, but might be forced to stop for reasons
-     * such as invalid characters, duplicate keys, truncation, and any content whose root node isn't an
-     * object or an array.
      *
-     * AWS WAF parses the JSON in the following examples as two valid key, value pairs:
+     * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even for
+     * invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+     * information, see [JSON
+     * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+     * in the *AWS WAF Developer Guide* .
      *
-     * * Missing comma: `{"key1":"value1""key2":"value2"}`
-     * * Missing colon: `{"key1":"value1","key2""value2"}`
-     * * Extra colons: `{"key1"::"value1","key2""value2"}`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-jsonbody.html#cfn-wafv2-rulegroup-jsonbody-invalidfallbackbehavior)
      */
@@ -7427,15 +7471,12 @@ public open class CfnRuleGroup(
        * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
        * first parsing failure that it encounters.
        *
-       * AWS WAF does its best to parse the entire JSON body, but might be forced to stop for
-       * reasons such as invalid characters, duplicate keys, truncation, and any content whose root
-       * node isn't an object or an array.
        *
-       * AWS WAF parses the JSON in the following examples as two valid key, value pairs:
-       *
-       * * Missing comma: `{"key1":"value1""key2":"value2"}`
-       * * Missing colon: `{"key1":"value1","key2""value2"}`
-       * * Extra colons: `{"key1"::"value1","key2""value2"}`
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
        */
       public fun invalidFallbackBehavior(invalidFallbackBehavior: String)
 
@@ -7517,15 +7558,12 @@ public open class CfnRuleGroup(
        * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
        * first parsing failure that it encounters.
        *
-       * AWS WAF does its best to parse the entire JSON body, but might be forced to stop for
-       * reasons such as invalid characters, duplicate keys, truncation, and any content whose root
-       * node isn't an object or an array.
        *
-       * AWS WAF parses the JSON in the following examples as two valid key, value pairs:
-       *
-       * * Missing comma: `{"key1":"value1""key2":"value2"}`
-       * * Missing colon: `{"key1":"value1","key2""value2"}`
-       * * Extra colons: `{"key1"::"value1","key2""value2"}`
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
        */
       override fun invalidFallbackBehavior(invalidFallbackBehavior: String) {
         cdkBuilder.invalidFallbackBehavior(invalidFallbackBehavior)
@@ -7605,7 +7643,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonBodyProperty,
-    ) : CdkObject(cdkObject), JsonBodyProperty {
+    ) : CdkObject(cdkObject),
+        JsonBodyProperty {
       /**
        * What AWS WAF should do if it fails to completely parse the JSON body. The options are the
        * following:.
@@ -7620,15 +7659,13 @@ public open class CfnRuleGroup(
        * If you don't provide this setting, AWS WAF parses and evaluates the content only up to the
        * first parsing failure that it encounters.
        *
-       * AWS WAF does its best to parse the entire JSON body, but might be forced to stop for
-       * reasons such as invalid characters, duplicate keys, truncation, and any content whose root
-       * node isn't an object or an array.
        *
-       * AWS WAF parses the JSON in the following examples as two valid key, value pairs:
+       * AWS WAF parsing doesn't fully validate the input JSON string, so parsing can succeed even
+       * for invalid JSON. When parsing succeeds, AWS WAF doesn't apply the fallback behavior. For more
+       * information, see [JSON
+       * body](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statement-fields-list.html#waf-rule-statement-request-component-json-body)
+       * in the *AWS WAF Developer Guide* .
        *
-       * * Missing comma: `{"key1":"value1""key2":"value2"}`
-       * * Missing colon: `{"key1":"value1","key2""value2"}`
-       * * Extra colons: `{"key1"::"value1","key2""value2"}`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-jsonbody.html#cfn-wafv2-rulegroup-jsonbody-invalidfallbackbehavior)
        */
@@ -7854,7 +7891,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonMatchPatternProperty,
-    ) : CdkObject(cdkObject), JsonMatchPatternProperty {
+    ) : CdkObject(cdkObject),
+        JsonMatchPatternProperty {
       /**
        * Match all of the elements. See also `MatchScope` in the `JsonBody` `FieldToMatch`
        * specification.
@@ -8016,7 +8054,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelMatchStatementProperty,
-    ) : CdkObject(cdkObject), LabelMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        LabelMatchStatementProperty {
       /**
        * The string to match against. The setting you provide for this depends on the match
        * statement's `Scope` setting:.
@@ -8116,7 +8155,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelProperty,
-    ) : CdkObject(cdkObject), LabelProperty {
+    ) : CdkObject(cdkObject),
+        LabelProperty {
       /**
        * The label string.
        *
@@ -8201,7 +8241,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelSummaryProperty,
-    ) : CdkObject(cdkObject), LabelSummaryProperty {
+    ) : CdkObject(cdkObject),
+        LabelSummaryProperty {
       /**
        * An individual label specification.
        *
@@ -8706,7 +8747,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.NotStatementProperty,
-    ) : CdkObject(cdkObject), NotStatementProperty {
+    ) : CdkObject(cdkObject),
+        NotStatementProperty {
       /**
        * The statement to negate.
        *
@@ -9208,7 +9250,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.OrStatementProperty,
-    ) : CdkObject(cdkObject), OrStatementProperty {
+    ) : CdkObject(cdkObject),
+        OrStatementProperty {
       /**
        * The statements to combine with OR logic.
        *
@@ -9852,7 +9895,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementCustomKeyProperty,
-    ) : CdkObject(cdkObject), RateBasedStatementCustomKeyProperty {
+    ) : CdkObject(cdkObject),
+        RateBasedStatementCustomKeyProperty {
       /**
        * Use the value of a cookie in the request as an aggregate key.
        *
@@ -10924,7 +10968,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementProperty,
-    ) : CdkObject(cdkObject), RateBasedStatementProperty {
+    ) : CdkObject(cdkObject),
+        RateBasedStatementProperty {
       /**
        * Setting that indicates how to aggregate the request counts.
        *
@@ -11207,7 +11252,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitCookieProperty,
-    ) : CdkObject(cdkObject), RateLimitCookieProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitCookieProperty {
       /**
        * The name of the cookie to use.
        *
@@ -11400,7 +11446,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitHeaderProperty,
-    ) : CdkObject(cdkObject), RateLimitHeaderProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitHeaderProperty {
       /**
        * The name of the header to use.
        *
@@ -11509,7 +11556,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitLabelNamespaceProperty,
-    ) : CdkObject(cdkObject), RateLimitLabelNamespaceProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitLabelNamespaceProperty {
       /**
        * The namespace to use for aggregation.
        *
@@ -11691,7 +11739,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryArgumentProperty,
-    ) : CdkObject(cdkObject), RateLimitQueryArgumentProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitQueryArgumentProperty {
       /**
        * The name of the query argument to use.
        *
@@ -11866,7 +11915,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryStringProperty,
-    ) : CdkObject(cdkObject), RateLimitQueryStringProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitQueryStringProperty {
       /**
        * Text transformations eliminate some of the unusual formatting that attackers use in web
        * requests in an effort to bypass detection.
@@ -12033,7 +12083,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitUriPathProperty,
-    ) : CdkObject(cdkObject), RateLimitUriPathProperty {
+    ) : CdkObject(cdkObject),
+        RateLimitUriPathProperty {
       /**
        * Text transformations eliminate some of the unusual formatting that attackers use in web
        * requests in an effort to bypass detection.
@@ -12293,7 +12344,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexMatchStatementProperty,
-    ) : CdkObject(cdkObject), RegexMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        RegexMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.
        *
@@ -12575,7 +12627,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexPatternSetReferenceStatementProperty,
-    ) : CdkObject(cdkObject), RegexPatternSetReferenceStatementProperty {
+    ) : CdkObject(cdkObject),
+        RegexPatternSetReferenceStatementProperty {
       /**
        * The Amazon Resource Name (ARN) of the `RegexPatternSet` that this statement references.
        *
@@ -12816,7 +12869,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleActionProperty,
-    ) : CdkObject(cdkObject), RuleActionProperty {
+    ) : CdkObject(cdkObject),
+        RuleActionProperty {
       /**
        * Instructs AWS WAF to allow the web request.
        *
@@ -13878,7 +13932,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleProperty,
-    ) : CdkObject(cdkObject), RuleProperty {
+    ) : CdkObject(cdkObject),
+        RuleProperty {
       /**
        * The action that AWS WAF should take on a web request when it matches the rule statement.
        *
@@ -14053,7 +14108,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleHeaderProperty,
-    ) : CdkObject(cdkObject), SingleHeaderProperty {
+    ) : CdkObject(cdkObject),
+        SingleHeaderProperty {
       /**
        * The name of the query header to inspect.
        *
@@ -14142,7 +14198,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleQueryArgumentProperty,
-    ) : CdkObject(cdkObject), SingleQueryArgumentProperty {
+    ) : CdkObject(cdkObject),
+        SingleQueryArgumentProperty {
       /**
        * The name of the query argument to inspect.
        *
@@ -14430,7 +14487,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.SizeConstraintStatementProperty,
-    ) : CdkObject(cdkObject), SizeConstraintStatementProperty {
+    ) : CdkObject(cdkObject),
+        SizeConstraintStatementProperty {
       /**
        * The operator to use to compare the request part to the size setting.
        *
@@ -14744,7 +14802,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.SqliMatchStatementProperty,
-    ) : CdkObject(cdkObject), SqliMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        SqliMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.
        *
@@ -16948,7 +17007,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.StatementProperty,
-    ) : CdkObject(cdkObject), StatementProperty {
+    ) : CdkObject(cdkObject),
+        StatementProperty {
       /**
        * A logical rule statement used to combine other rule statements with AND logic.
        *
@@ -17314,7 +17374,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.TextTransformationProperty,
-    ) : CdkObject(cdkObject), TextTransformationProperty {
+    ) : CdkObject(cdkObject),
+        TextTransformationProperty {
       /**
        * Sets the relative processing order for multiple transformations.
        *
@@ -17573,7 +17634,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.VisibilityConfigProperty,
-    ) : CdkObject(cdkObject), VisibilityConfigProperty {
+    ) : CdkObject(cdkObject),
+        VisibilityConfigProperty {
       /**
        * Indicates whether the associated resource sends metrics to Amazon CloudWatch.
        *
@@ -17844,7 +17906,8 @@ public open class CfnRuleGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.XssMatchStatementProperty,
-    ) : CdkObject(cdkObject), XssMatchStatementProperty {
+    ) : CdkObject(cdkObject),
+        XssMatchStatementProperty {
       /**
        * The part of the web request that you want AWS WAF to inspect.
        *

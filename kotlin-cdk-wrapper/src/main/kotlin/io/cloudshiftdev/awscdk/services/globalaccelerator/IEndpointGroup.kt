@@ -22,7 +22,8 @@ public interface IEndpointGroup : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpointGroup,
-  ) : CdkObject(cdkObject), IEndpointGroup {
+  ) : CdkObject(cdkObject),
+      IEndpointGroup {
     /**
      * Apply the given removal policy to this resource.
      *

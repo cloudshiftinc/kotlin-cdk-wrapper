@@ -158,7 +158,8 @@ public interface CfnResourceDefinitionVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersionProps,
-  ) : CdkObject(cdkObject), CfnResourceDefinitionVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnResourceDefinitionVersionProps {
     /**
      * The ID of the resource definition associated with this version.
      *

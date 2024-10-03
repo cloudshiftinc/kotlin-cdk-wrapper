@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -43,7 +46,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIdentityPool(
   cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -108,6 +113,12 @@ public open class CfnIdentityPool(
    * The name of the Amazon Cognito identity pool, returned as a string.
    */
   public open fun attrName(): String = unwrap(this).getAttrName()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The events to configure.
@@ -196,6 +207,25 @@ public open class CfnIdentityPool(
   public open fun identityPoolName(`value`: String) {
     unwrap(this).setIdentityPoolName(`value`)
   }
+
+  /**
+   * Tags to assign to the identity pool.
+   */
+  public open fun identityPoolTags(): List<CfnTag> =
+      unwrap(this).getIdentityPoolTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * Tags to assign to the identity pool.
+   */
+  public open fun identityPoolTags(`value`: List<CfnTag>) {
+    unwrap(this).setIdentityPoolTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   * Tags to assign to the identity pool.
+   */
+  public open fun identityPoolTags(vararg `value`: CfnTag): Unit =
+      identityPoolTags(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -409,6 +439,28 @@ public open class CfnIdentityPool(
      * @param identityPoolName The name of your Amazon Cognito identity pool. 
      */
     public fun identityPoolName(identityPoolName: String)
+
+    /**
+     * Tags to assign to the identity pool.
+     *
+     * A tag is a label that you can apply to identity pools to categorize and manage them in
+     * different ways, such as by purpose, owner, environment, or other criteria.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypooltags)
+     * @param identityPoolTags Tags to assign to the identity pool. 
+     */
+    public fun identityPoolTags(identityPoolTags: List<CfnTag>)
+
+    /**
+     * Tags to assign to the identity pool.
+     *
+     * A tag is a label that you can apply to identity pools to categorize and manage them in
+     * different ways, such as by purpose, owner, environment, or other criteria.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypooltags)
+     * @param identityPoolTags Tags to assign to the identity pool. 
+     */
+    public fun identityPoolTags(vararg identityPoolTags: CfnTag)
 
     /**
      * The Amazon Resource Names (ARNs) of the OpenID connect providers.
@@ -633,6 +685,31 @@ public open class CfnIdentityPool(
     override fun identityPoolName(identityPoolName: String) {
       cdkBuilder.identityPoolName(identityPoolName)
     }
+
+    /**
+     * Tags to assign to the identity pool.
+     *
+     * A tag is a label that you can apply to identity pools to categorize and manage them in
+     * different ways, such as by purpose, owner, environment, or other criteria.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypooltags)
+     * @param identityPoolTags Tags to assign to the identity pool. 
+     */
+    override fun identityPoolTags(identityPoolTags: List<CfnTag>) {
+      cdkBuilder.identityPoolTags(identityPoolTags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * Tags to assign to the identity pool.
+     *
+     * A tag is a label that you can apply to identity pools to categorize and manage them in
+     * different ways, such as by purpose, owner, environment, or other criteria.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypooltags)
+     * @param identityPoolTags Tags to assign to the identity pool. 
+     */
+    override fun identityPoolTags(vararg identityPoolTags: CfnTag): Unit =
+        identityPoolTags(identityPoolTags.toList())
 
     /**
      * The Amazon Resource Names (ARNs) of the OpenID connect providers.
@@ -886,7 +963,8 @@ public open class CfnIdentityPool(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoIdentityProviderProperty,
-    ) : CdkObject(cdkObject), CognitoIdentityProviderProperty {
+    ) : CdkObject(cdkObject),
+        CognitoIdentityProviderProperty {
       /**
        * The client ID for the Amazon Cognito user pool.
        *
@@ -1049,7 +1127,8 @@ public open class CfnIdentityPool(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoStreamsProperty,
-    ) : CdkObject(cdkObject), CognitoStreamsProperty {
+    ) : CdkObject(cdkObject),
+        CognitoStreamsProperty {
       /**
        * The Amazon Resource Name (ARN) of the role Amazon Cognito can assume to publish to the
        * stream.
@@ -1190,7 +1269,8 @@ public open class CfnIdentityPool(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool.PushSyncProperty,
-    ) : CdkObject(cdkObject), PushSyncProperty {
+    ) : CdkObject(cdkObject),
+        PushSyncProperty {
       /**
        * The ARNs of the Amazon SNS platform applications that could be used by clients.
        *

@@ -98,7 +98,8 @@ public interface EksOptimizedImageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.EksOptimizedImageProps,
-  ) : CdkObject(cdkObject), EksOptimizedImageProps {
+  ) : CdkObject(cdkObject),
+      EksOptimizedImageProps {
     /**
      * What cpu architecture to retrieve the image for (arm64 or x86_64).
      *

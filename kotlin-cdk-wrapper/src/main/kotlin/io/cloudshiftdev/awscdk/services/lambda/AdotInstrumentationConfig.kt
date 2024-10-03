@@ -81,7 +81,8 @@ public interface AdotInstrumentationConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.AdotInstrumentationConfig,
-  ) : CdkObject(cdkObject), AdotInstrumentationConfig {
+  ) : CdkObject(cdkObject),
+      AdotInstrumentationConfig {
     /**
      * The startup script to run, see ADOT documentation to pick the right script for your use case:
      * https://aws-otel.github.io/docs/getting-started/lambda.

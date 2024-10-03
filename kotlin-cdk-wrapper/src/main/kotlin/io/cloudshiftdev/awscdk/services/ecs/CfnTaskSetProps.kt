@@ -550,7 +550,8 @@ public interface CfnTaskSetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSetProps,
-  ) : CdkObject(cdkObject), CfnTaskSetProps {
+  ) : CdkObject(cdkObject),
+      CfnTaskSetProps {
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to
      * create the task set in.

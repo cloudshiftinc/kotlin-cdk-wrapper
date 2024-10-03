@@ -23,7 +23,8 @@ import kotlin.String
  */
 public open class AlbArnTarget(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget,
-) : CdkObject(cdkObject), INetworkLoadBalancerTarget {
+) : CdkObject(cdkObject),
+    INetworkLoadBalancerTarget {
   public constructor(albArn: String, port: Number) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget(albArn, port)
   )

@@ -627,7 +627,8 @@ public interface CfnReplicationInstanceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dms.CfnReplicationInstanceProps,
-  ) : CdkObject(cdkObject), CfnReplicationInstanceProps {
+  ) : CdkObject(cdkObject),
+      CfnReplicationInstanceProps {
     /**
      * The amount of storage (in gigabytes) to be initially allocated for the replication instance.
      *

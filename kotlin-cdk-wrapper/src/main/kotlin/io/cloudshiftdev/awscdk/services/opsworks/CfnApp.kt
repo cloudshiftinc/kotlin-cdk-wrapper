@@ -70,7 +70,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnApp(
   cdkObject: software.amazon.awscdk.services.opsworks.CfnApp,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -990,7 +991,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty,
-    ) : CdkObject(cdkObject), DataSourceProperty {
+    ) : CdkObject(cdkObject),
+        DataSourceProperty {
       /**
        * The data source's ARN.
        *
@@ -1165,7 +1167,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty,
-    ) : CdkObject(cdkObject), EnvironmentVariableProperty {
+    ) : CdkObject(cdkObject),
+        EnvironmentVariableProperty {
       /**
        * (Required) The environment variable's name, which can consist of up to 64 characters and
        * must be specified.
@@ -1418,7 +1421,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SourceProperty,
-    ) : CdkObject(cdkObject), SourceProperty {
+    ) : CdkObject(cdkObject),
+        SourceProperty {
       /**
        * When included in a request, the parameter depends on the repository type.
        *
@@ -1598,7 +1602,8 @@ public open class CfnApp(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty,
-    ) : CdkObject(cdkObject), SslConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        SslConfigurationProperty {
       /**
        * The contents of the certificate's domain.crt file.
        *

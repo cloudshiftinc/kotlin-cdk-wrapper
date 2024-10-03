@@ -48,7 +48,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIntegration(
   cdkObject: software.amazon.awscdk.services.rds.CfnIntegration,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -176,19 +178,19 @@ public open class CfnIntegration(
   }
 
   /**
-   * A list of tags.
+   * An optional array of key-value pairs to apply to this integration.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * A list of tags.
+   * An optional array of key-value pairs to apply to this integration.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * A list of tags.
+   * An optional array of key-value pairs to apply to this integration.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -290,26 +292,18 @@ public open class CfnIntegration(
     public fun sourceArn(sourceArn: String)
 
     /**
-     * A list of tags.
-     *
-     * For more information, see [Tagging Amazon RDS
-     * Resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
-     * *Amazon RDS User Guide.* .
+     * An optional array of key-value pairs to apply to this integration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-tags)
-     * @param tags A list of tags. 
+     * @param tags An optional array of key-value pairs to apply to this integration. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * A list of tags.
-     *
-     * For more information, see [Tagging Amazon RDS
-     * Resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
-     * *Amazon RDS User Guide.* .
+     * An optional array of key-value pairs to apply to this integration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-tags)
-     * @param tags A list of tags. 
+     * @param tags An optional array of key-value pairs to apply to this integration. 
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -425,28 +419,20 @@ public open class CfnIntegration(
     }
 
     /**
-     * A list of tags.
-     *
-     * For more information, see [Tagging Amazon RDS
-     * Resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
-     * *Amazon RDS User Guide.* .
+     * An optional array of key-value pairs to apply to this integration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-tags)
-     * @param tags A list of tags. 
+     * @param tags An optional array of key-value pairs to apply to this integration. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * A list of tags.
-     *
-     * For more information, see [Tagging Amazon RDS
-     * Resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
-     * *Amazon RDS User Guide.* .
+     * An optional array of key-value pairs to apply to this integration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-tags)
-     * @param tags A list of tags. 
+     * @param tags An optional array of key-value pairs to apply to this integration. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

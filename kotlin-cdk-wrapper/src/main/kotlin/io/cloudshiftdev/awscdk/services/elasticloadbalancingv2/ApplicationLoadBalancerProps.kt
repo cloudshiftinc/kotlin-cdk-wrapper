@@ -450,7 +450,8 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerProps,
-  ) : CdkObject(cdkObject), ApplicationLoadBalancerProps {
+  ) : CdkObject(cdkObject),
+      ApplicationLoadBalancerProps {
     /**
      * The client keep alive duration.
      *
@@ -467,8 +468,7 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
      * Default: - false for Network Load Balancers and true for Application Load Balancers.
      * This can not be `false` for Application Load Balancers.
      *
-     * [Documentation]( -
-     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
      */
     override fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
 

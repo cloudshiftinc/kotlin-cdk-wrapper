@@ -65,7 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDBParameterGroup(
   cdkObject: software.amazon.awscdk.services.rds.CfnDBParameterGroup,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -150,20 +152,20 @@ public open class CfnDBParameterGroup(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * An optional array of key-value pairs to apply to this DB parameter group.
+   * Tags to assign to the DB parameter group.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * An optional array of key-value pairs to apply to this DB parameter group.
+   * Tags to assign to the DB parameter group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * An optional array of key-value pairs to apply to this DB parameter group.
+   * Tags to assign to the DB parameter group.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -205,22 +207,41 @@ public open class CfnDBParameterGroup(
      * The DB parameter group family name.
      *
      * A DB parameter group can be associated with one and only one DB parameter group family, and
-     * can be applied only to a DB instance running a DB engine and engine version compatible with that
-     * DB parameter group family.
+     * can be applied only to a DB instance running a database engine and engine version compatible
+     * with that DB parameter group family.
      *
+     * To list all of the available parameter group families for a DB engine, use the following
+     * command:
      *
-     * The DB parameter group family can't be changed when updating a DB parameter group.
+     * `aws rds describe-db-engine-versions --query
+     * "DBEngineVersions[].DBParameterGroupFamily" --engine &lt;engine&gt;`
      *
+     * For example, to list all of the available parameter group families for the MySQL DB engine,
+     * use the following command:
      *
-     * To list all of the available parameter group families, use the following command:
+     * `aws rds describe-db-engine-versions --query
+     * "DBEngineVersions[].DBParameterGroupFamily" --engine mysql`
      *
-     * `aws rds describe-db-engine-versions --query "DBEngineVersions[].DBParameterGroupFamily"`
      *
      * The output contains duplicates.
      *
-     * For more information, see
-     * `[CreateDBParameterGroup](https://docs.aws.amazon.com//AmazonRDS/latest/APIReference/API_CreateDBParameterGroup.html)`
-     * .
+     *
+     * The following are the valid DB engine values:
+     *
+     * * `aurora-mysql`
+     * * `aurora-postgresql`
+     * * `db2-ae`
+     * * `db2-se`
+     * * `mysql`
+     * * `oracle-ee`
+     * * `oracle-ee-cdb`
+     * * `oracle-se2`
+     * * `oracle-se2-cdb`
+     * * `postgres`
+     * * `sqlserver-ee`
+     * * `sqlserver-se`
+     * * `sqlserver-ex`
+     * * `sqlserver-web`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbparametergroup.html#cfn-rds-dbparametergroup-family)
      * @param family The DB parameter group family name. 
@@ -230,19 +251,12 @@ public open class CfnDBParameterGroup(
     /**
      * An array of parameter names and values for the parameter update.
      *
-     * At least one parameter name and value must be supplied. Subsequent arguments are optional.
+     * You must specify at least one parameter name and value.
      *
-     * RDS for Db2 requires you to bring your own Db2 license. You must enter your IBM customer ID (
-     * `rds.ibm_customer_id` ) and site number ( `rds.ibm_site_id` ) before starting a Db2 instance.
-     *
-     * For more information about DB parameters and DB parameter groups for Amazon RDS DB engines,
-     * see [Working with DB Parameter
-     * Groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html)
-     * in the *Amazon RDS User Guide* .
-     *
-     * For more information about DB cluster and DB instance parameters and parameter groups for
-     * Amazon Aurora DB engines, see [Working with DB Parameter Groups and DB Cluster Parameter
-     * Groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html)
+     * For more information about parameter groups, see [Working with parameter
+     * groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html)
+     * in the *Amazon RDS User Guide* , or [Working with parameter
+     * groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html)
      * in the *Amazon Aurora User Guide* .
      *
      *
@@ -256,26 +270,18 @@ public open class CfnDBParameterGroup(
     public fun parameters(parameters: Any)
 
     /**
-     * An optional array of key-value pairs to apply to this DB parameter group.
-     *
-     *
-     * Currently, this is the only property that supports drift detection.
-     *
+     * Tags to assign to the DB parameter group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbparametergroup.html#cfn-rds-dbparametergroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB parameter group. 
+     * @param tags Tags to assign to the DB parameter group. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * An optional array of key-value pairs to apply to this DB parameter group.
-     *
-     *
-     * Currently, this is the only property that supports drift detection.
-     *
+     * Tags to assign to the DB parameter group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbparametergroup.html#cfn-rds-dbparametergroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB parameter group. 
+     * @param tags Tags to assign to the DB parameter group. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -324,22 +330,41 @@ public open class CfnDBParameterGroup(
      * The DB parameter group family name.
      *
      * A DB parameter group can be associated with one and only one DB parameter group family, and
-     * can be applied only to a DB instance running a DB engine and engine version compatible with that
-     * DB parameter group family.
+     * can be applied only to a DB instance running a database engine and engine version compatible
+     * with that DB parameter group family.
      *
+     * To list all of the available parameter group families for a DB engine, use the following
+     * command:
      *
-     * The DB parameter group family can't be changed when updating a DB parameter group.
+     * `aws rds describe-db-engine-versions --query
+     * "DBEngineVersions[].DBParameterGroupFamily" --engine &lt;engine&gt;`
      *
+     * For example, to list all of the available parameter group families for the MySQL DB engine,
+     * use the following command:
      *
-     * To list all of the available parameter group families, use the following command:
+     * `aws rds describe-db-engine-versions --query
+     * "DBEngineVersions[].DBParameterGroupFamily" --engine mysql`
      *
-     * `aws rds describe-db-engine-versions --query "DBEngineVersions[].DBParameterGroupFamily"`
      *
      * The output contains duplicates.
      *
-     * For more information, see
-     * `[CreateDBParameterGroup](https://docs.aws.amazon.com//AmazonRDS/latest/APIReference/API_CreateDBParameterGroup.html)`
-     * .
+     *
+     * The following are the valid DB engine values:
+     *
+     * * `aurora-mysql`
+     * * `aurora-postgresql`
+     * * `db2-ae`
+     * * `db2-se`
+     * * `mysql`
+     * * `oracle-ee`
+     * * `oracle-ee-cdb`
+     * * `oracle-se2`
+     * * `oracle-se2-cdb`
+     * * `postgres`
+     * * `sqlserver-ee`
+     * * `sqlserver-se`
+     * * `sqlserver-ex`
+     * * `sqlserver-web`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbparametergroup.html#cfn-rds-dbparametergroup-family)
      * @param family The DB parameter group family name. 
@@ -351,19 +376,12 @@ public open class CfnDBParameterGroup(
     /**
      * An array of parameter names and values for the parameter update.
      *
-     * At least one parameter name and value must be supplied. Subsequent arguments are optional.
+     * You must specify at least one parameter name and value.
      *
-     * RDS for Db2 requires you to bring your own Db2 license. You must enter your IBM customer ID (
-     * `rds.ibm_customer_id` ) and site number ( `rds.ibm_site_id` ) before starting a Db2 instance.
-     *
-     * For more information about DB parameters and DB parameter groups for Amazon RDS DB engines,
-     * see [Working with DB Parameter
-     * Groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html)
-     * in the *Amazon RDS User Guide* .
-     *
-     * For more information about DB cluster and DB instance parameters and parameter groups for
-     * Amazon Aurora DB engines, see [Working with DB Parameter Groups and DB Cluster Parameter
-     * Groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html)
+     * For more information about parameter groups, see [Working with parameter
+     * groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html)
+     * in the *Amazon RDS User Guide* , or [Working with parameter
+     * groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html)
      * in the *Amazon Aurora User Guide* .
      *
      *
@@ -379,28 +397,20 @@ public open class CfnDBParameterGroup(
     }
 
     /**
-     * An optional array of key-value pairs to apply to this DB parameter group.
-     *
-     *
-     * Currently, this is the only property that supports drift detection.
-     *
+     * Tags to assign to the DB parameter group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbparametergroup.html#cfn-rds-dbparametergroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB parameter group. 
+     * @param tags Tags to assign to the DB parameter group. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * An optional array of key-value pairs to apply to this DB parameter group.
-     *
-     *
-     * Currently, this is the only property that supports drift detection.
-     *
+     * Tags to assign to the DB parameter group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbparametergroup.html#cfn-rds-dbparametergroup-tags)
-     * @param tags An optional array of key-value pairs to apply to this DB parameter group. 
+     * @param tags Tags to assign to the DB parameter group. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

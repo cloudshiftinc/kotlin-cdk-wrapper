@@ -180,7 +180,8 @@ public interface DomainNameProps : EndpointOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainNameProps,
-  ) : CdkObject(cdkObject), DomainNameProps {
+  ) : CdkObject(cdkObject),
+      DomainNameProps {
     /**
      * The ACM certificate for this domain name.
      *

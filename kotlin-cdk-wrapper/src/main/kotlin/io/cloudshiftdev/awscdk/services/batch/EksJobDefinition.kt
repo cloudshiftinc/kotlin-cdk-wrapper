@@ -38,7 +38,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EksJobDefinition(
   cdkObject: software.amazon.awscdk.services.batch.EksJobDefinition,
-) : Resource(cdkObject), IEksJobDefinition, IJobDefinition {
+) : Resource(cdkObject),
+    IEksJobDefinition,
+    IJobDefinition {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -36,7 +36,8 @@ public interface BuildImageBindOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.BuildImageBindOptions,
-  ) : CdkObject(cdkObject), BuildImageBindOptions
+  ) : CdkObject(cdkObject),
+      BuildImageBindOptions
 
   public companion object {
     public operator fun invoke(block: Builder.() -> Unit = {}): BuildImageBindOptions {

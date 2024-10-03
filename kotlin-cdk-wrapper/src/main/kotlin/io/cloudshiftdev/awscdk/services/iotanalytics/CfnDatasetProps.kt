@@ -551,7 +551,8 @@ public interface CfnDatasetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatasetProps,
-  ) : CdkObject(cdkObject), CfnDatasetProps {
+  ) : CdkObject(cdkObject),
+      CfnDatasetProps {
     /**
      * The `DatasetAction` objects that automatically create the dataset contents.
      *

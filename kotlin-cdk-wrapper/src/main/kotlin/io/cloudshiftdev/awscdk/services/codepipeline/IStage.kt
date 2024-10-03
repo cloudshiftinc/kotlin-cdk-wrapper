@@ -76,7 +76,8 @@ public interface IStage {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.IStage,
-  ) : CdkObject(cdkObject), IStage {
+  ) : CdkObject(cdkObject),
+      IStage {
     /**
      * The actions belonging to this stage.
      */

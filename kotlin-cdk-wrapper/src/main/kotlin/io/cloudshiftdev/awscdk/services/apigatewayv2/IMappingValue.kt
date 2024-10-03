@@ -17,7 +17,8 @@ public interface IMappingValue {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.IMappingValue,
-  ) : CdkObject(cdkObject), IMappingValue {
+  ) : CdkObject(cdkObject),
+      IMappingValue {
     /**
      * Represents a Mapping Value.
      */

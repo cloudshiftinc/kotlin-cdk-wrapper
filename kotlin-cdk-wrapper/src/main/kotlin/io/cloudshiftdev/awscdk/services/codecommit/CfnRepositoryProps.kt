@@ -356,7 +356,8 @@ public interface CfnRepositoryProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codecommit.CfnRepositoryProps,
-  ) : CdkObject(cdkObject), CfnRepositoryProps {
+  ) : CdkObject(cdkObject),
+      CfnRepositoryProps {
     /**
      * Information about code to be committed to a repository after it is created in an AWS
      * CloudFormation stack.

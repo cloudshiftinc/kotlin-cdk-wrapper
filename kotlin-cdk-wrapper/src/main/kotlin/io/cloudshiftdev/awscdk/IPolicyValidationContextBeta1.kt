@@ -18,7 +18,8 @@ public interface IPolicyValidationContextBeta1 {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.IPolicyValidationContextBeta1,
-  ) : CdkObject(cdkObject), IPolicyValidationContextBeta1 {
+  ) : CdkObject(cdkObject),
+      IPolicyValidationContextBeta1 {
     /**
      * The absolute path of all templates to be processed.
      */

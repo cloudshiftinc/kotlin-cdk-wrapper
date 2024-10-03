@@ -94,7 +94,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnProtection(
   cdkObject: software.amazon.awscdk.services.shield.CfnProtection,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -676,7 +678,8 @@ public open class CfnProtection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ActionProperty,
-    ) : CdkObject(cdkObject), ActionProperty {
+    ) : CdkObject(cdkObject),
+        ActionProperty {
       /**
        * Specifies that Shield Advanced should configure its AWS WAF rules with the AWS WAF `Block`
        * action.
@@ -878,7 +881,8 @@ public open class CfnProtection(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty,
-    ) : CdkObject(cdkObject), ApplicationLayerAutomaticResponseConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ApplicationLayerAutomaticResponseConfigurationProperty {
       /**
        * Specifies the action setting that Shield Advanced should use in the AWS WAF rules that it
        * creates on behalf of the protected resource in response to DDoS attacks.

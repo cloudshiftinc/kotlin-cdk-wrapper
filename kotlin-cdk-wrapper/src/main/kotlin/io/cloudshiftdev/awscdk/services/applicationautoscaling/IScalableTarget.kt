@@ -22,7 +22,8 @@ public interface IScalableTarget : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.applicationautoscaling.IScalableTarget,
-  ) : CdkObject(cdkObject), IScalableTarget {
+  ) : CdkObject(cdkObject),
+      IScalableTarget {
     /**
      * Apply the given removal policy to this resource.
      *

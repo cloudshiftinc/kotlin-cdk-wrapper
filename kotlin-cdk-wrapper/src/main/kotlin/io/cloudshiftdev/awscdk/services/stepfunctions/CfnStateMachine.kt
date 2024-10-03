@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -48,6 +49,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .definitionString("definitionString")
  * .definitionSubstitutions(Map.of(
  * "definitionSubstitutionsKey", "definitionSubstitutions"))
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .kmsDataKeyReusePeriodSeconds(123)
+ * .kmsKeyId("kmsKeyId")
+ * .build())
  * .loggingConfiguration(LoggingConfigurationProperty.builder()
  * .destinations(List.of(LogDestinationProperty.builder()
  * .cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty.builder()
@@ -73,7 +80,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnStateMachine(
   cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -193,6 +202,34 @@ public open class CfnStateMachine(
   public open fun definitionSubstitutions(`value`: Map<String, String>) {
     unwrap(this).setDefinitionSubstitutions(`value`)
   }
+
+  /**
+   * Encryption configuration for the state machine.
+   */
+  public open fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
+
+  /**
+   * Encryption configuration for the state machine.
+   */
+  public open fun encryptionConfiguration(`value`: IResolvable) {
+    unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Encryption configuration for the state machine.
+   */
+  public open fun encryptionConfiguration(`value`: EncryptionConfigurationProperty) {
+    unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * Encryption configuration for the state machine.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("5169a1625947636a4fec8899783677ef5ee51d62c988a661c5b0c9dcf3c2b65a")
+  public open
+      fun encryptionConfiguration(`value`: EncryptionConfigurationProperty.Builder.() -> Unit): Unit
+      = encryptionConfiguration(EncryptionConfigurationProperty(`value`))
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -412,6 +449,33 @@ public open class CfnStateMachine(
      * placeholder variables in the state machine definition. 
      */
     public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
+
+    /**
+     * Encryption configuration for the state machine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-encryptionconfiguration)
+     * @param encryptionConfiguration Encryption configuration for the state machine. 
+     */
+    public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
+
+    /**
+     * Encryption configuration for the state machine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-encryptionconfiguration)
+     * @param encryptionConfiguration Encryption configuration for the state machine. 
+     */
+    public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty)
+
+    /**
+     * Encryption configuration for the state machine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-encryptionconfiguration)
+     * @param encryptionConfiguration Encryption configuration for the state machine. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8cdadaffffd87c49a26ffbdbab4f96f406dc412beccb338f018e6789e6a9b1ae")
+    public
+        fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit)
 
     /**
      * Defines what execution history events are logged and where they are logged.
@@ -670,6 +734,38 @@ public open class CfnStateMachine(
     }
 
     /**
+     * Encryption configuration for the state machine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-encryptionconfiguration)
+     * @param encryptionConfiguration Encryption configuration for the state machine. 
+     */
+    override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Encryption configuration for the state machine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-encryptionconfiguration)
+     * @param encryptionConfiguration Encryption configuration for the state machine. 
+     */
+    override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * Encryption configuration for the state machine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-encryptionconfiguration)
+     * @param encryptionConfiguration Encryption configuration for the state machine. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8cdadaffffd87c49a26ffbdbab4f96f406dc412beccb338f018e6789e6a9b1ae")
+    override
+        fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit):
+        Unit = encryptionConfiguration(EncryptionConfigurationProperty(encryptionConfiguration))
+
+    /**
      * Defines what execution history events are logged and where they are logged.
      *
      *
@@ -923,7 +1019,8 @@ public open class CfnStateMachine(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty,
-    ) : CdkObject(cdkObject), CloudWatchLogsLogGroupProperty {
+    ) : CdkObject(cdkObject),
+        CloudWatchLogsLogGroupProperty {
       /**
        * The ARN of the the CloudWatch log group to which you want your logs emitted to.
        *
@@ -949,6 +1046,172 @@ public open class CfnStateMachine(
           software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty
+    }
+  }
+
+  /**
+   * Settings to configure server-side encryption for a state machine.
+   *
+   * By default, Step Functions provides transparent server-side encryption. With this
+   * configuration, you can specify a customer managed AWS KMS key for encryption.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+   * EncryptionConfigurationProperty encryptionConfigurationProperty =
+   * EncryptionConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .kmsDataKeyReusePeriodSeconds(123)
+   * .kmsKeyId("kmsKeyId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-encryptionconfiguration.html)
+   */
+  public interface EncryptionConfigurationProperty {
+    /**
+     * Maximum duration that Step Functions will reuse data keys.
+     *
+     * When the period expires, Step Functions will call `GenerateDataKey` . Only applies to
+     * customer managed keys.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-encryptionconfiguration.html#cfn-stepfunctions-statemachine-encryptionconfiguration-kmsdatakeyreuseperiodseconds)
+     */
+    public fun kmsDataKeyReusePeriodSeconds(): Number? =
+        unwrap(this).getKmsDataKeyReusePeriodSeconds()
+
+    /**
+     * An alias, alias ARN, key ID, or key ARN of a symmetric encryption AWS KMS key to encrypt
+     * data.
+     *
+     * To specify a AWS KMS key in a different AWS account, you must use the key ARN or alias ARN.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-encryptionconfiguration.html#cfn-stepfunctions-statemachine-encryptionconfiguration-kmskeyid)
+     */
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * Encryption option for a state machine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-encryptionconfiguration.html#cfn-stepfunctions-statemachine-encryptionconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [EncryptionConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param kmsDataKeyReusePeriodSeconds Maximum duration that Step Functions will reuse data
+       * keys.
+       * When the period expires, Step Functions will call `GenerateDataKey` . Only applies to
+       * customer managed keys.
+       */
+      public fun kmsDataKeyReusePeriodSeconds(kmsDataKeyReusePeriodSeconds: Number)
+
+      /**
+       * @param kmsKeyId An alias, alias ARN, key ID, or key ARN of a symmetric encryption AWS KMS
+       * key to encrypt data.
+       * To specify a AWS KMS key in a different AWS account, you must use the key ARN or alias ARN.
+       */
+      public fun kmsKeyId(kmsKeyId: String)
+
+      /**
+       * @param type Encryption option for a state machine. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.EncryptionConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.EncryptionConfigurationProperty.builder()
+
+      /**
+       * @param kmsDataKeyReusePeriodSeconds Maximum duration that Step Functions will reuse data
+       * keys.
+       * When the period expires, Step Functions will call `GenerateDataKey` . Only applies to
+       * customer managed keys.
+       */
+      override fun kmsDataKeyReusePeriodSeconds(kmsDataKeyReusePeriodSeconds: Number) {
+        cdkBuilder.kmsDataKeyReusePeriodSeconds(kmsDataKeyReusePeriodSeconds)
+      }
+
+      /**
+       * @param kmsKeyId An alias, alias ARN, key ID, or key ARN of a symmetric encryption AWS KMS
+       * key to encrypt data.
+       * To specify a AWS KMS key in a different AWS account, you must use the key ARN or alias ARN.
+       */
+      override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      /**
+       * @param type Encryption option for a state machine. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.EncryptionConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.EncryptionConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        EncryptionConfigurationProperty {
+      /**
+       * Maximum duration that Step Functions will reuse data keys.
+       *
+       * When the period expires, Step Functions will call `GenerateDataKey` . Only applies to
+       * customer managed keys.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-encryptionconfiguration.html#cfn-stepfunctions-statemachine-encryptionconfiguration-kmsdatakeyreuseperiodseconds)
+       */
+      override fun kmsDataKeyReusePeriodSeconds(): Number? =
+          unwrap(this).getKmsDataKeyReusePeriodSeconds()
+
+      /**
+       * An alias, alias ARN, key ID, or key ARN of a symmetric encryption AWS KMS key to encrypt
+       * data.
+       *
+       * To specify a AWS KMS key in a different AWS account, you must use the key ARN or alias ARN.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-encryptionconfiguration.html#cfn-stepfunctions-statemachine-encryptionconfiguration-kmskeyid)
+       */
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      /**
+       * Encryption option for a state machine.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-encryptionconfiguration.html#cfn-stepfunctions-statemachine-encryptionconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.EncryptionConfigurationProperty):
+          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EncryptionConfigurationProperty):
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.EncryptionConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.stepfunctions.CfnStateMachine.EncryptionConfigurationProperty
     }
   }
 
@@ -1065,7 +1328,8 @@ public open class CfnStateMachine(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty,
-    ) : CdkObject(cdkObject), LogDestinationProperty {
+    ) : CdkObject(cdkObject),
+        LogDestinationProperty {
       /**
        * An object describing a CloudWatch log group.
        *
@@ -1260,7 +1524,8 @@ public open class CfnStateMachine(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LoggingConfigurationProperty,
-    ) : CdkObject(cdkObject), LoggingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LoggingConfigurationProperty {
       /**
        * An array of objects that describes where your execution history events will be logged.
        *
@@ -1406,7 +1671,8 @@ public open class CfnStateMachine(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.S3LocationProperty,
-    ) : CdkObject(cdkObject), S3LocationProperty {
+    ) : CdkObject(cdkObject),
+        S3LocationProperty {
       /**
        * The name of the S3 bucket where the state machine definition JSON or YAML file is stored.
        *
@@ -1521,7 +1787,8 @@ public open class CfnStateMachine(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TagsEntryProperty,
-    ) : CdkObject(cdkObject), TagsEntryProperty {
+    ) : CdkObject(cdkObject),
+        TagsEntryProperty {
       /**
        * The `key` for a key-value pair in a tag entry.
        *
@@ -1625,7 +1892,8 @@ public open class CfnStateMachine(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TracingConfigurationProperty,
-    ) : CdkObject(cdkObject), TracingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        TracingConfigurationProperty {
       /**
        * When set to `true` , X-Ray tracing is enabled.
        *

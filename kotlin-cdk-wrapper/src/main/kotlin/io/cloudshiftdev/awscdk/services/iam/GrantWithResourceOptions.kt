@@ -182,7 +182,8 @@ public interface GrantWithResourceOptions : CommonGrantOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.GrantWithResourceOptions,
-  ) : CdkObject(cdkObject), GrantWithResourceOptions {
+  ) : CdkObject(cdkObject),
+      GrantWithResourceOptions {
     /**
      * The actions to grant.
      */

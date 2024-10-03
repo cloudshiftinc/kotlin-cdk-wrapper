@@ -52,7 +52,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class MultiNodeJobDefinition(
   cdkObject: software.amazon.awscdk.services.batch.MultiNodeJobDefinition,
-) : Resource(cdkObject), IJobDefinition {
+) : Resource(cdkObject),
+    IJobDefinition {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.batch.MultiNodeJobDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)

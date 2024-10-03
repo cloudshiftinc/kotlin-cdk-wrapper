@@ -78,7 +78,8 @@ public interface ApplicationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.ApplicationProps,
-  ) : CdkObject(cdkObject), ApplicationProps {
+  ) : CdkObject(cdkObject),
+      ApplicationProps {
     /**
      * The name of the application.
      *

@@ -65,7 +65,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnLaunchTemplate(
   cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -229,9 +230,8 @@ public open class CfnLaunchTemplate(
      *
      * To tag the launch template, the resource type must be `launch-template` .
      *
-     * To specify the tags for the resources that are created when an instance is launched, you must
-     * use
-     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
+     * To specify the tags for resources that are created during instance launch, use
+     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
@@ -244,9 +244,8 @@ public open class CfnLaunchTemplate(
      *
      * To tag the launch template, the resource type must be `launch-template` .
      *
-     * To specify the tags for the resources that are created when an instance is launched, you must
-     * use
-     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
+     * To specify the tags for resources that are created during instance launch, use
+     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
@@ -259,9 +258,8 @@ public open class CfnLaunchTemplate(
      *
      * To tag the launch template, the resource type must be `launch-template` .
      *
-     * To specify the tags for the resources that are created when an instance is launched, you must
-     * use
-     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
+     * To specify the tags for resources that are created during instance launch, use
+     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
@@ -332,9 +330,8 @@ public open class CfnLaunchTemplate(
      *
      * To tag the launch template, the resource type must be `launch-template` .
      *
-     * To specify the tags for the resources that are created when an instance is launched, you must
-     * use
-     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
+     * To specify the tags for resources that are created during instance launch, use
+     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
@@ -349,9 +346,8 @@ public open class CfnLaunchTemplate(
      *
      * To tag the launch template, the resource type must be `launch-template` .
      *
-     * To specify the tags for the resources that are created when an instance is launched, you must
-     * use
-     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
+     * To specify the tags for resources that are created during instance launch, use
+     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
@@ -366,9 +362,8 @@ public open class CfnLaunchTemplate(
      *
      * To tag the launch template, the resource type must be `launch-template` .
      *
-     * To specify the tags for the resources that are created when an instance is launched, you must
-     * use
-     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
+     * To specify the tags for resources that are created during instance launch, use
+     * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
@@ -497,7 +492,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty,
-    ) : CdkObject(cdkObject), AcceleratorCountProperty {
+    ) : CdkObject(cdkObject),
+        AcceleratorCountProperty {
       /**
        * The maximum number of accelerators.
        *
@@ -620,7 +616,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty,
-    ) : CdkObject(cdkObject), AcceleratorTotalMemoryMiBProperty {
+    ) : CdkObject(cdkObject),
+        AcceleratorTotalMemoryMiBProperty {
       /**
        * The maximum amount of accelerator memory, in MiB.
        *
@@ -747,7 +744,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty,
-    ) : CdkObject(cdkObject), BaselineEbsBandwidthMbpsProperty {
+    ) : CdkObject(cdkObject),
+        BaselineEbsBandwidthMbpsProperty {
       /**
        * The maximum baseline bandwidth, in Mbps.
        *
@@ -960,7 +958,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty,
-    ) : CdkObject(cdkObject), BlockDeviceMappingProperty {
+    ) : CdkObject(cdkObject),
+        BlockDeviceMappingProperty {
       /**
        * The device name (for example, /dev/sdh or xvdh).
        *
@@ -1151,7 +1150,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty,
-    ) : CdkObject(cdkObject), CapacityReservationSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        CapacityReservationSpecificationProperty {
       /**
        * Indicates the instance's Capacity Reservation preferences. Possible preferences include:.
        *
@@ -1278,7 +1278,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty,
-    ) : CdkObject(cdkObject), CapacityReservationTargetProperty {
+    ) : CdkObject(cdkObject),
+        CapacityReservationTargetProperty {
       /**
        * The ID of the Capacity Reservation in which to run the instance.
        *
@@ -1320,7 +1321,7 @@ public open class CfnLaunchTemplate(
    *
    * For more information, see [Connection tracking
    * timeouts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts)
-   * in the *Amazon Elastic Compute Cloud User Guide* .
+   * in the *Amazon EC2 User Guide* .
    *
    * Example:
    *
@@ -1438,7 +1439,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty,
-    ) : CdkObject(cdkObject), ConnectionTrackingSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ConnectionTrackingSpecificationProperty {
       /**
        * Timeout (in seconds) for idle TCP connections in an established state.
        *
@@ -1604,7 +1606,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty,
-    ) : CdkObject(cdkObject), CpuOptionsProperty {
+    ) : CdkObject(cdkObject),
+        CpuOptionsProperty {
       /**
        * Indicates whether to enable the instance for AMD SEV-SNP.
        *
@@ -1714,7 +1717,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty,
-    ) : CdkObject(cdkObject), CreditSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        CreditSpecificationProperty {
       /**
        * The credit option for CPU usage of a T instance.
        *
@@ -2068,7 +2072,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty,
-    ) : CdkObject(cdkObject), EbsProperty {
+    ) : CdkObject(cdkObject),
+        EbsProperty {
       /**
        * Indicates whether the EBS volume is deleted on instance termination.
        *
@@ -2206,11 +2211,6 @@ public open class CfnLaunchTemplate(
     /**
      * The type of Elastic Graphics accelerator.
      *
-     * For more information about the values to specify for `Type` , see [Elastic Graphics
-     * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-     * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-     * User Guide for Windows Instances* .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-elasticgpuspecification.html#cfn-ec2-launchtemplate-elasticgpuspecification-type)
      */
     public fun type(): String? = unwrap(this).getType()
@@ -2222,10 +2222,6 @@ public open class CfnLaunchTemplate(
     public interface Builder {
       /**
        * @param type The type of Elastic Graphics accelerator.
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
        */
       public fun type(type: String)
     }
@@ -2238,10 +2234,6 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param type The type of Elastic Graphics accelerator.
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -2254,14 +2246,10 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty,
-    ) : CdkObject(cdkObject), ElasticGpuSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        ElasticGpuSpecificationProperty {
       /**
        * The type of Elastic Graphics accelerator.
-       *
-       * For more information about the values to specify for `Type` , see [Elastic Graphics
-       * Basics](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html#elastic-graphics-basics)
-       * , specifically the Elastic Graphics accelerator column, in the *Amazon Elastic Compute Cloud
-       * User Guide for Windows Instances* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-elasticgpuspecification.html#cfn-ec2-launchtemplate-elasticgpuspecification-type)
        */
@@ -2414,7 +2402,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty,
-    ) : CdkObject(cdkObject), EnaSrdSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        EnaSrdSpecificationProperty {
       /**
        * Indicates whether ENA Express is enabled for the network interface.
        *
@@ -2531,7 +2520,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty,
-    ) : CdkObject(cdkObject), EnaSrdUdpSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        EnaSrdUdpSpecificationProperty {
       /**
        * Indicates whether UDP traffic to and from the instance uses ENA Express.
        *
@@ -2636,7 +2626,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnclaveOptionsProperty,
-    ) : CdkObject(cdkObject), EnclaveOptionsProperty {
+    ) : CdkObject(cdkObject),
+        EnclaveOptionsProperty {
       /**
        * If this parameter is set to `true` , the instance is enabled for AWS Nitro Enclaves;
        *
@@ -2751,7 +2742,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty,
-    ) : CdkObject(cdkObject), HibernationOptionsProperty {
+    ) : CdkObject(cdkObject),
+        HibernationOptionsProperty {
       /**
        * If you set this parameter to `true` , the instance is enabled for hibernation.
        *
@@ -2863,7 +2855,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty,
-    ) : CdkObject(cdkObject), IamInstanceProfileProperty {
+    ) : CdkObject(cdkObject),
+        IamInstanceProfileProperty {
       /**
        * The Amazon Resource Name (ARN) of the instance profile.
        *
@@ -3010,7 +3003,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty,
-    ) : CdkObject(cdkObject), InstanceMarketOptionsProperty {
+    ) : CdkObject(cdkObject),
+        InstanceMarketOptionsProperty {
       /**
        * The market type.
        *
@@ -3396,8 +3390,8 @@ public open class CfnLaunchTemplate(
      *
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *
-     * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-     * is based on the per vCPU or per memory price instead of the per instance price.
+     * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+     * threshold is based on the per vCPU or per memory price instead of the per instance price.
      *
      *
      * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -3940,8 +3934,8 @@ public open class CfnLaunchTemplate(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -4604,8 +4598,8 @@ public open class CfnLaunchTemplate(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -4872,7 +4866,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty,
-    ) : CdkObject(cdkObject), InstanceRequirementsProperty {
+    ) : CdkObject(cdkObject),
+        InstanceRequirementsProperty {
       /**
        * The minimum and maximum number of accelerators (GPUs, FPGAs, or AWS Inferentia chips) on an
        * instance.
@@ -5122,8 +5117,8 @@ public open class CfnLaunchTemplate(
        *
        * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
        *
-       * If you set `DesiredCapacityType` to `vcpu` or `memory-mib` , the price protection threshold
-       * is based on the per vCPU or per memory price instead of the per instance price.
+       * If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib` , the price protection
+       * threshold is based on the per vCPU or per memory price instead of the per instance price.
        *
        *
        * Only one of `SpotMaxPricePercentageOverLowestPrice` or
@@ -5317,9 +5312,9 @@ public open class CfnLaunchTemplate(
     /**
      * The IPv4 prefix.
      *
-     * For information, see [Assigning prefixes to Amazon EC2 network
+     * For information, see [Assigning prefixes to network
      * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-     * *Amazon Elastic Compute Cloud User Guide* .
+     * *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv4prefixspecification.html#cfn-ec2-launchtemplate-ipv4prefixspecification-ipv4prefix)
      */
@@ -5332,9 +5327,9 @@ public open class CfnLaunchTemplate(
     public interface Builder {
       /**
        * @param ipv4Prefix The IPv4 prefix.
-       * For information, see [Assigning prefixes to Amazon EC2 network
+       * For information, see [Assigning prefixes to network
        * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       public fun ipv4Prefix(ipv4Prefix: String)
     }
@@ -5347,9 +5342,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param ipv4Prefix The IPv4 prefix.
-       * For information, see [Assigning prefixes to Amazon EC2 network
+       * For information, see [Assigning prefixes to network
        * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       override fun ipv4Prefix(ipv4Prefix: String) {
         cdkBuilder.ipv4Prefix(ipv4Prefix)
@@ -5362,13 +5357,14 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty,
-    ) : CdkObject(cdkObject), Ipv4PrefixSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        Ipv4PrefixSpecificationProperty {
       /**
        * The IPv4 prefix.
        *
-       * For information, see [Assigning prefixes to Amazon EC2 network
+       * For information, see [Assigning prefixes to network
        * interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ipv4prefixspecification.html#cfn-ec2-launchtemplate-ipv4prefixspecification-ipv4prefix)
        */
@@ -5456,7 +5452,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty,
-    ) : CdkObject(cdkObject), Ipv6AddProperty {
+    ) : CdkObject(cdkObject),
+        Ipv6AddProperty {
       /**
        * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet.
        *
@@ -5545,7 +5542,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty,
-    ) : CdkObject(cdkObject), Ipv6PrefixSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        Ipv6PrefixSpecificationProperty {
       /**
        * The IPv6 prefix.
        *
@@ -5817,9 +5815,9 @@ public open class CfnLaunchTemplate(
     /**
      * The CPU options for the instance.
      *
-     * For more information, see [Optimizing CPU
-     * Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the
-     * *Amazon Elastic Compute Cloud User Guide* .
+     * For more information, see [Optimize CPU
+     * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the
+     * *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions)
      */
@@ -5837,9 +5835,9 @@ public open class CfnLaunchTemplate(
     /**
      * Indicates whether to enable the instance for stop protection.
      *
-     * For more information, see [Stop
-     * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection)
-     * in the *Amazon Elastic Compute Cloud User Guide* .
+     * For more information, see [Enable stop protection for your
+     * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
+     * *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-disableapistop)
      */
@@ -5920,9 +5918,9 @@ public open class CfnLaunchTemplate(
      *
      * This parameter is valid only if the instance meets the [hibernation
      * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-     * . For more information, see [Hibernate your
-     * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon
-     * Elastic Compute Cloud User Guide* .
+     * . For more information, see [Hibernate your Amazon EC2
+     * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
+     * User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions)
      */
@@ -5943,7 +5941,7 @@ public open class CfnLaunchTemplate(
      *
      * Valid formats:
      *
-     * * `ami-17characters00000`
+     * * `ami-0ac394d6a3example`
      * * `resolve:ssm:parameter-name`
      * * `resolve:ssm:parameter-name:version-number`
      * * `resolve:ssm:parameter-name:label`
@@ -6022,9 +6020,9 @@ public open class CfnLaunchTemplate(
     public fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
 
     /**
-     * The instance type. For more information, see [Instance
+     * The instance type. For more information, see [Amazon EC2 instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-     * Elastic Compute Cloud User Guide* .
+     * EC2 User Guide* .
      *
      * If you specify `InstanceType` , you can't specify `InstanceRequirements` .
      *
@@ -6078,7 +6076,7 @@ public open class CfnLaunchTemplate(
      *
      * For more information, see [Instance metadata and user
      * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-     * *Amazon Elastic Compute Cloud User Guide* .
+     * *Amazon EC2 User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions)
      */
@@ -6124,7 +6122,7 @@ public open class CfnLaunchTemplate(
      * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information, see
      * [User provided
      * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the
-     * *Amazon Elastic Compute Cloud User Guide* .
+     * *Amazon EC2 User Guide* .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-ramdiskid)
@@ -6156,10 +6154,7 @@ public open class CfnLaunchTemplate(
     public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
     /**
-     * The tags to apply to the resources that are created during instance launch.
-     *
-     * To tag a resource after it has been created, see
-     * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
+     * The tags to apply to resources that are created during instance launch.
      *
      * To tag the launch template itself, use
      * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
@@ -6173,11 +6168,9 @@ public open class CfnLaunchTemplate(
      * The user data to make available to the instance.
      *
      * You must provide base64-encoded text. User data is limited to 16 KB. For more information,
-     * see [Run commands on your Linux instance at
-     * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) (Linux) or [Work
-     * with instance user
-     * data](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instancedata-add-user-data.html)
-     * (Windows) in the *Amazon Elastic Compute Cloud User Guide* .
+     * see [Run commands on your Amazon EC2 instance at
+     * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
+     * User Guide* .
      *
      * If you are creating the launch template for use with AWS Batch , the user data must be
      * provided in the [MIME multi-part archive
@@ -6240,25 +6233,25 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimizing CPU
-       * Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
-       * the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Optimize CPU
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * the *Amazon EC2 User Guide* .
        */
       public fun cpuOptions(cpuOptions: IResolvable)
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimizing CPU
-       * Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
-       * the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Optimize CPU
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * the *Amazon EC2 User Guide* .
        */
       public fun cpuOptions(cpuOptions: CpuOptionsProperty)
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimizing CPU
-       * Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
-       * the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Optimize CPU
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * the *Amazon EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("259e3b5c06cb5bf8c8108e0c786375e6a9cea676a84ba635b0c1c801565c8c24")
@@ -6287,17 +6280,17 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param disableApiStop Indicates whether to enable the instance for stop protection.
-       * For more information, see [Stop
-       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection)
-       * in the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Enable stop protection for your
+       * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
+       * *Amazon EC2 User Guide* .
        */
       public fun disableApiStop(disableApiStop: Boolean)
 
       /**
        * @param disableApiStop Indicates whether to enable the instance for stop protection.
-       * For more information, see [Stop
-       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection)
-       * in the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Enable stop protection for your
+       * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
+       * *Amazon EC2 User Guide* .
        */
       public fun disableApiStop(disableApiStop: IResolvable)
 
@@ -6453,9 +6446,9 @@ public open class CfnLaunchTemplate(
        * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
        * This parameter is valid only if the instance meets the [hibernation
        * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-       * . For more information, see [Hibernate your
+       * . For more information, see [Hibernate your Amazon EC2
        * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * EC2 User Guide* .
        */
       public fun hibernationOptions(hibernationOptions: IResolvable)
 
@@ -6463,9 +6456,9 @@ public open class CfnLaunchTemplate(
        * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
        * This parameter is valid only if the instance meets the [hibernation
        * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-       * . For more information, see [Hibernate your
+       * . For more information, see [Hibernate your Amazon EC2
        * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * EC2 User Guide* .
        */
       public fun hibernationOptions(hibernationOptions: HibernationOptionsProperty)
 
@@ -6473,9 +6466,9 @@ public open class CfnLaunchTemplate(
        * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
        * This parameter is valid only if the instance meets the [hibernation
        * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-       * . For more information, see [Hibernate your
+       * . For more information, see [Hibernate your Amazon EC2
        * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28e8f416c301f684b2caa0ff660d3316808d2aaa191bdf45a914e96dabfbc4a0")
@@ -6510,7 +6503,7 @@ public open class CfnLaunchTemplate(
        *
        * Valid formats:
        *
-       * * `ami-17characters00000`
+       * * `ami-0ac394d6a3example`
        * * `resolve:ssm:parameter-name`
        * * `resolve:ssm:parameter-name:version-number`
        * * `resolve:ssm:parameter-name:label`
@@ -6683,9 +6676,9 @@ public open class CfnLaunchTemplate(
           fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty.Builder.() -> Unit)
 
       /**
-       * @param instanceType The instance type. For more information, see [Instance
+       * @param instanceType The instance type. For more information, see [Amazon EC2 instance
        * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * EC2 User Guide* .
        * If you specify `InstanceType` , you can't specify `InstanceRequirements` .
        */
       public fun instanceType(instanceType: String)
@@ -6748,7 +6741,7 @@ public open class CfnLaunchTemplate(
        * @param metadataOptions The metadata options for the instance.
        * For more information, see [Instance metadata and user
        * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       public fun metadataOptions(metadataOptions: IResolvable)
 
@@ -6756,7 +6749,7 @@ public open class CfnLaunchTemplate(
        * @param metadataOptions The metadata options for the instance.
        * For more information, see [Instance metadata and user
        * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       public fun metadataOptions(metadataOptions: MetadataOptionsProperty)
 
@@ -6764,7 +6757,7 @@ public open class CfnLaunchTemplate(
        * @param metadataOptions The metadata options for the instance.
        * For more information, see [Instance metadata and user
        * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac7fc838a77a9a6a23cb745f94ea114a1de9fd91a5d1d8d5c34039bb5f711bb2")
@@ -6855,7 +6848,7 @@ public open class CfnLaunchTemplate(
        * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information,
        * see [User provided
        * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       public fun ramDiskId(ramDiskId: String)
 
@@ -6896,11 +6889,8 @@ public open class CfnLaunchTemplate(
       public fun securityGroups(vararg securityGroups: String)
 
       /**
-       * @param tagSpecifications The tags to apply to the resources that are created during
-       * instance launch.
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       *
+       * @param tagSpecifications The tags to apply to resources that are created during instance
+       * launch.
        * To tag the launch template itself, use
        * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
        * .
@@ -6908,11 +6898,8 @@ public open class CfnLaunchTemplate(
       public fun tagSpecifications(tagSpecifications: IResolvable)
 
       /**
-       * @param tagSpecifications The tags to apply to the resources that are created during
-       * instance launch.
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       *
+       * @param tagSpecifications The tags to apply to resources that are created during instance
+       * launch.
        * To tag the launch template itself, use
        * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
        * .
@@ -6920,11 +6907,8 @@ public open class CfnLaunchTemplate(
       public fun tagSpecifications(tagSpecifications: List<Any>)
 
       /**
-       * @param tagSpecifications The tags to apply to the resources that are created during
-       * instance launch.
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       *
+       * @param tagSpecifications The tags to apply to resources that are created during instance
+       * launch.
        * To tag the launch template itself, use
        * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
        * .
@@ -6934,11 +6918,9 @@ public open class CfnLaunchTemplate(
       /**
        * @param userData The user data to make available to the instance.
        * You must provide base64-encoded text. User data is limited to 16 KB. For more information,
-       * see [Run commands on your Linux instance at
-       * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) (Linux) or [Work
-       * with instance user
-       * data](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instancedata-add-user-data.html)
-       * (Windows) in the *Amazon Elastic Compute Cloud User Guide* .
+       * see [Run commands on your Amazon EC2 instance at
+       * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
+       * User Guide* .
        *
        * If you are creating the launch template for use with AWS Batch , the user data must be
        * provided in the [MIME multi-part archive
@@ -7011,9 +6993,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimizing CPU
-       * Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
-       * the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Optimize CPU
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * the *Amazon EC2 User Guide* .
        */
       override fun cpuOptions(cpuOptions: IResolvable) {
         cdkBuilder.cpuOptions(cpuOptions.let(IResolvable.Companion::unwrap))
@@ -7021,9 +7003,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimizing CPU
-       * Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
-       * the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Optimize CPU
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * the *Amazon EC2 User Guide* .
        */
       override fun cpuOptions(cpuOptions: CpuOptionsProperty) {
         cdkBuilder.cpuOptions(cpuOptions.let(CpuOptionsProperty.Companion::unwrap))
@@ -7031,9 +7013,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param cpuOptions The CPU options for the instance.
-       * For more information, see [Optimizing CPU
-       * Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
-       * the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Optimize CPU
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * the *Amazon EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("259e3b5c06cb5bf8c8108e0c786375e6a9cea676a84ba635b0c1c801565c8c24")
@@ -7068,9 +7050,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param disableApiStop Indicates whether to enable the instance for stop protection.
-       * For more information, see [Stop
-       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection)
-       * in the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Enable stop protection for your
+       * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
+       * *Amazon EC2 User Guide* .
        */
       override fun disableApiStop(disableApiStop: Boolean) {
         cdkBuilder.disableApiStop(disableApiStop)
@@ -7078,9 +7060,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param disableApiStop Indicates whether to enable the instance for stop protection.
-       * For more information, see [Stop
-       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection)
-       * in the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Enable stop protection for your
+       * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
+       * *Amazon EC2 User Guide* .
        */
       override fun disableApiStop(disableApiStop: IResolvable) {
         cdkBuilder.disableApiStop(disableApiStop.let(IResolvable.Companion::unwrap))
@@ -7261,9 +7243,9 @@ public open class CfnLaunchTemplate(
        * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
        * This parameter is valid only if the instance meets the [hibernation
        * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-       * . For more information, see [Hibernate your
+       * . For more information, see [Hibernate your Amazon EC2
        * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * EC2 User Guide* .
        */
       override fun hibernationOptions(hibernationOptions: IResolvable) {
         cdkBuilder.hibernationOptions(hibernationOptions.let(IResolvable.Companion::unwrap))
@@ -7273,9 +7255,9 @@ public open class CfnLaunchTemplate(
        * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
        * This parameter is valid only if the instance meets the [hibernation
        * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-       * . For more information, see [Hibernate your
+       * . For more information, see [Hibernate your Amazon EC2
        * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * EC2 User Guide* .
        */
       override fun hibernationOptions(hibernationOptions: HibernationOptionsProperty) {
         cdkBuilder.hibernationOptions(hibernationOptions.let(HibernationOptionsProperty.Companion::unwrap))
@@ -7285,9 +7267,9 @@ public open class CfnLaunchTemplate(
        * @param hibernationOptions Indicates whether an instance is enabled for hibernation.
        * This parameter is valid only if the instance meets the [hibernation
        * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-       * . For more information, see [Hibernate your
+       * . For more information, see [Hibernate your Amazon EC2
        * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28e8f416c301f684b2caa0ff660d3316808d2aaa191bdf45a914e96dabfbc4a0")
@@ -7328,7 +7310,7 @@ public open class CfnLaunchTemplate(
        *
        * Valid formats:
        *
-       * * `ami-17characters00000`
+       * * `ami-0ac394d6a3example`
        * * `resolve:ssm:parameter-name`
        * * `resolve:ssm:parameter-name:version-number`
        * * `resolve:ssm:parameter-name:label`
@@ -7515,9 +7497,9 @@ public open class CfnLaunchTemplate(
           Unit = instanceRequirements(InstanceRequirementsProperty(instanceRequirements))
 
       /**
-       * @param instanceType The instance type. For more information, see [Instance
+       * @param instanceType The instance type. For more information, see [Amazon EC2 instance
        * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * EC2 User Guide* .
        * If you specify `InstanceType` , you can't specify `InstanceRequirements` .
        */
       override fun instanceType(instanceType: String) {
@@ -7596,7 +7578,7 @@ public open class CfnLaunchTemplate(
        * @param metadataOptions The metadata options for the instance.
        * For more information, see [Instance metadata and user
        * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       override fun metadataOptions(metadataOptions: IResolvable) {
         cdkBuilder.metadataOptions(metadataOptions.let(IResolvable.Companion::unwrap))
@@ -7606,7 +7588,7 @@ public open class CfnLaunchTemplate(
        * @param metadataOptions The metadata options for the instance.
        * For more information, see [Instance metadata and user
        * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       override fun metadataOptions(metadataOptions: MetadataOptionsProperty) {
         cdkBuilder.metadataOptions(metadataOptions.let(MetadataOptionsProperty.Companion::unwrap))
@@ -7616,7 +7598,7 @@ public open class CfnLaunchTemplate(
        * @param metadataOptions The metadata options for the instance.
        * For more information, see [Instance metadata and user
        * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac7fc838a77a9a6a23cb745f94ea114a1de9fd91a5d1d8d5c34039bb5f711bb2")
@@ -7728,7 +7710,7 @@ public open class CfnLaunchTemplate(
        * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information,
        * see [User provided
        * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        */
       override fun ramDiskId(ramDiskId: String) {
         cdkBuilder.ramDiskId(ramDiskId)
@@ -7777,11 +7759,8 @@ public open class CfnLaunchTemplate(
           securityGroups(securityGroups.toList())
 
       /**
-       * @param tagSpecifications The tags to apply to the resources that are created during
-       * instance launch.
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       *
+       * @param tagSpecifications The tags to apply to resources that are created during instance
+       * launch.
        * To tag the launch template itself, use
        * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
        * .
@@ -7791,11 +7770,8 @@ public open class CfnLaunchTemplate(
       }
 
       /**
-       * @param tagSpecifications The tags to apply to the resources that are created during
-       * instance launch.
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       *
+       * @param tagSpecifications The tags to apply to resources that are created during instance
+       * launch.
        * To tag the launch template itself, use
        * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
        * .
@@ -7805,11 +7781,8 @@ public open class CfnLaunchTemplate(
       }
 
       /**
-       * @param tagSpecifications The tags to apply to the resources that are created during
-       * instance launch.
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
-       *
+       * @param tagSpecifications The tags to apply to resources that are created during instance
+       * launch.
        * To tag the launch template itself, use
        * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
        * .
@@ -7820,11 +7793,9 @@ public open class CfnLaunchTemplate(
       /**
        * @param userData The user data to make available to the instance.
        * You must provide base64-encoded text. User data is limited to 16 KB. For more information,
-       * see [Run commands on your Linux instance at
-       * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) (Linux) or [Work
-       * with instance user
-       * data](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instancedata-add-user-data.html)
-       * (Windows) in the *Amazon Elastic Compute Cloud User Guide* .
+       * see [Run commands on your Amazon EC2 instance at
+       * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
+       * User Guide* .
        *
        * If you are creating the launch template for use with AWS Batch , the user data must be
        * provided in the [MIME multi-part archive
@@ -7844,7 +7815,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateDataProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateDataProperty {
+    ) : CdkObject(cdkObject),
+        LaunchTemplateDataProperty {
       /**
        * The block device mapping.
        *
@@ -7867,9 +7839,9 @@ public open class CfnLaunchTemplate(
       /**
        * The CPU options for the instance.
        *
-       * For more information, see [Optimizing CPU
-       * Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
-       * the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Optimize CPU
+       * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in
+       * the *Amazon EC2 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions)
        */
@@ -7887,9 +7859,9 @@ public open class CfnLaunchTemplate(
       /**
        * Indicates whether to enable the instance for stop protection.
        *
-       * For more information, see [Stop
-       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection)
-       * in the *Amazon Elastic Compute Cloud User Guide* .
+       * For more information, see [Enable stop protection for your
+       * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html) in the
+       * *Amazon EC2 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-disableapistop)
        */
@@ -7972,9 +7944,9 @@ public open class CfnLaunchTemplate(
        *
        * This parameter is valid only if the instance meets the [hibernation
        * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html)
-       * . For more information, see [Hibernate your
+       * . For more information, see [Hibernate your Amazon EC2
        * instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * EC2 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions)
        */
@@ -7995,7 +7967,7 @@ public open class CfnLaunchTemplate(
        *
        * Valid formats:
        *
-       * * `ami-17characters00000`
+       * * `ami-0ac394d6a3example`
        * * `resolve:ssm:parameter-name`
        * * `resolve:ssm:parameter-name:version-number`
        * * `resolve:ssm:parameter-name:label`
@@ -8074,9 +8046,9 @@ public open class CfnLaunchTemplate(
       override fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
 
       /**
-       * The instance type. For more information, see [Instance
+       * The instance type. For more information, see [Amazon EC2 instance
        * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * EC2 User Guide* .
        *
        * If you specify `InstanceType` , you can't specify `InstanceRequirements` .
        *
@@ -8131,7 +8103,7 @@ public open class CfnLaunchTemplate(
        *
        * For more information, see [Instance metadata and user
        * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions)
        */
@@ -8177,7 +8149,7 @@ public open class CfnLaunchTemplate(
        * We recommend that you use PV-GRUB instead of kernels and RAM disks. For more information,
        * see [User provided
        * kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-ramdiskid)
@@ -8210,10 +8182,7 @@ public open class CfnLaunchTemplate(
       override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
       /**
-       * The tags to apply to the resources that are created during instance launch.
-       *
-       * To tag a resource after it has been created, see
-       * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
+       * The tags to apply to resources that are created during instance launch.
        *
        * To tag the launch template itself, use
        * [TagSpecifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-tagspecifications)
@@ -8227,11 +8196,9 @@ public open class CfnLaunchTemplate(
        * The user data to make available to the instance.
        *
        * You must provide base64-encoded text. User data is limited to 16 KB. For more information,
-       * see [Run commands on your Linux instance at
-       * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) (Linux) or [Work
-       * with instance user
-       * data](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/instancedata-add-user-data.html)
-       * (Windows) in the *Amazon Elastic Compute Cloud User Guide* .
+       * see [Run commands on your Amazon EC2 instance at
+       * launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) in the *Amazon EC2
+       * User Guide* .
        *
        * If you are creating the launch template for use with AWS Batch , the user data must be
        * provided in the [MIME multi-part archive
@@ -8352,7 +8319,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateElasticInferenceAcceleratorProperty {
+    ) : CdkObject(cdkObject),
+        LaunchTemplateElasticInferenceAcceleratorProperty {
       /**
        * The number of elastic inference accelerators to attach to the instance.
        *
@@ -8394,6 +8362,11 @@ public open class CfnLaunchTemplate(
   /**
    * Specifies the tags to apply to the launch template during creation.
    *
+   * To specify the tags for the resources that are created during instance launch, use
+   * [AWS::EC2::LaunchTemplate
+   * TagSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-tagspecification.html)
+   * .
+   *
    * `LaunchTemplateTagSpecification` is a property of
    * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
    * .
@@ -8420,7 +8393,7 @@ public open class CfnLaunchTemplate(
     /**
      * The type of resource.
      *
-     * To tag the launch template, `ResourceType` must be `launch-template` .
+     * To tag a launch template, `ResourceType` must be `launch-template` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html#cfn-ec2-launchtemplate-launchtemplatetagspecification-resourcetype)
      */
@@ -8440,7 +8413,7 @@ public open class CfnLaunchTemplate(
     public interface Builder {
       /**
        * @param resourceType The type of resource.
-       * To tag the launch template, `ResourceType` must be `launch-template` .
+       * To tag a launch template, `ResourceType` must be `launch-template` .
        */
       public fun resourceType(resourceType: String)
 
@@ -8463,7 +8436,7 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param resourceType The type of resource.
-       * To tag the launch template, `ResourceType` must be `launch-template` .
+       * To tag a launch template, `ResourceType` must be `launch-template` .
        */
       override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
@@ -8488,11 +8461,12 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty,
-    ) : CdkObject(cdkObject), LaunchTemplateTagSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        LaunchTemplateTagSpecificationProperty {
       /**
        * The type of resource.
        *
-       * To tag the launch template, `ResourceType` must be `launch-template` .
+       * To tag a launch template, `ResourceType` must be `launch-template` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html#cfn-ec2-launchtemplate-launchtemplatetagspecification-resourcetype)
        */
@@ -8585,7 +8559,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty,
-    ) : CdkObject(cdkObject), LicenseSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        LicenseSpecificationProperty {
       /**
        * The Amazon Resource Name (ARN) of the license configuration.
        *
@@ -8668,7 +8643,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty,
-    ) : CdkObject(cdkObject), MaintenanceOptionsProperty {
+    ) : CdkObject(cdkObject),
+        MaintenanceOptionsProperty {
       /**
        * Disables the automatic recovery behavior of your instance or sets it to default.
        *
@@ -8777,7 +8753,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty,
-    ) : CdkObject(cdkObject), MemoryGiBPerVCpuProperty {
+    ) : CdkObject(cdkObject),
+        MemoryGiBPerVCpuProperty {
       /**
        * The maximum amount of memory per vCPU, in GiB.
        *
@@ -8896,7 +8873,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty,
-    ) : CdkObject(cdkObject), MemoryMiBProperty {
+    ) : CdkObject(cdkObject),
+        MemoryMiBProperty {
       /**
        * The maximum amount of memory, in MiB.
        *
@@ -9168,7 +9146,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty,
-    ) : CdkObject(cdkObject), MetadataOptionsProperty {
+    ) : CdkObject(cdkObject),
+        MetadataOptionsProperty {
       /**
        * Enables or disables the HTTP metadata endpoint on your instances.
        *
@@ -9335,7 +9314,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty,
-    ) : CdkObject(cdkObject), MonitoringProperty {
+    ) : CdkObject(cdkObject),
+        MonitoringProperty {
       /**
        * Specify `true` to enable detailed monitoring.
        *
@@ -9457,7 +9437,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty,
-    ) : CdkObject(cdkObject), NetworkBandwidthGbpsProperty {
+    ) : CdkObject(cdkObject),
+        NetworkBandwidthGbpsProperty {
       /**
        * The maximum amount of network bandwidth, in Gbps.
        *
@@ -9579,7 +9560,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceCountProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInterfaceCountProperty {
       /**
        * The maximum number of network interfaces.
        *
@@ -9752,8 +9734,8 @@ public open class CfnLaunchTemplate(
      * The type of network interface.
      *
      * To create an Elastic Fabric Adapter (EFA), specify `efa` . For more information, see [Elastic
-     * Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon
-     * Elastic Compute Cloud User Guide* .
+     * Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon EC2
+     * User Guide* .
      *
      * If you are not creating an EFA, specify `interface` or omit this parameter.
      *
@@ -10000,7 +9982,7 @@ public open class CfnLaunchTemplate(
        * @param interfaceType The type of network interface.
        * To create an Elastic Fabric Adapter (EFA), specify `efa` . For more information, see
        * [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        *
        * If you are not creating an EFA, specify `interface` or omit this parameter.
        *
@@ -10301,7 +10283,7 @@ public open class CfnLaunchTemplate(
        * @param interfaceType The type of network interface.
        * To create an Elastic Fabric Adapter (EFA), specify `efa` . For more information, see
        * [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        *
        * If you are not creating an EFA, specify `interface` or omit this parameter.
        *
@@ -10497,7 +10479,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceProperty,
-    ) : CdkObject(cdkObject), NetworkInterfaceProperty {
+    ) : CdkObject(cdkObject),
+        NetworkInterfaceProperty {
       /**
        * Associates a Carrier IP address with eth0 for a new network interface.
        *
@@ -10574,7 +10557,7 @@ public open class CfnLaunchTemplate(
        *
        * To create an Elastic Fabric Adapter (EFA), specify `efa` . For more information, see
        * [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the
-       * *Amazon Elastic Compute Cloud User Guide* .
+       * *Amazon EC2 User Guide* .
        *
        * If you are not creating an EFA, specify `interface` or omit this parameter.
        *
@@ -10956,7 +10939,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PlacementProperty,
-    ) : CdkObject(cdkObject), PlacementProperty {
+    ) : CdkObject(cdkObject),
+        PlacementProperty {
       /**
        * The affinity setting for an instance on a Dedicated Host.
        *
@@ -11202,7 +11186,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty,
-    ) : CdkObject(cdkObject), PrivateDnsNameOptionsProperty {
+    ) : CdkObject(cdkObject),
+        PrivateDnsNameOptionsProperty {
       /**
        * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
        *
@@ -11351,7 +11336,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty,
-    ) : CdkObject(cdkObject), PrivateIpAddProperty {
+    ) : CdkObject(cdkObject),
+        PrivateIpAddProperty {
       /**
        * Indicates whether the private IPv4 address is the primary private IPv4 address.
        *
@@ -11581,7 +11567,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty,
-    ) : CdkObject(cdkObject), SpotOptionsProperty {
+    ) : CdkObject(cdkObject),
+        SpotOptionsProperty {
       /**
        * Deprecated.
        *
@@ -11660,7 +11647,7 @@ public open class CfnLaunchTemplate(
   }
 
   /**
-   * Specifies the tags to apply to a resource when the resource is created for the launch template.
+   * Specifies the tags to apply to resources that are created during instance launch.
    *
    * `TagSpecification` is a property type of
    * [`TagSpecifications`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications)
@@ -11691,11 +11678,10 @@ public open class CfnLaunchTemplate(
     /**
      * The type of resource to tag.
      *
-     * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
-     * launch template, you can specify tags for the following resource types only: `instance` |
-     * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include the
-     * resource type that you specify, the instance launch fails. For example, not all instance types
-     * include a volume.
+     * You can specify tags for the following resource types only: `instance` | `volume` |
+     * `network-interface` | `spot-instances-request` . If the instance does not include the resource
+     * type that you specify, the instance launch fails. For example, not all instance types include a
+     * volume.
      *
      * To tag a resource after it has been created, see
      * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
@@ -11718,11 +11704,10 @@ public open class CfnLaunchTemplate(
     public interface Builder {
       /**
        * @param resourceType The type of resource to tag.
-       * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
-       * launch template, you can specify tags for the following resource types only: `instance` |
-       * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include
-       * the resource type that you specify, the instance launch fails. For example, not all instance
-       * types include a volume.
+       * You can specify tags for the following resource types only: `instance` | `volume` |
+       * `network-interface` | `spot-instances-request` . If the instance does not include the resource
+       * type that you specify, the instance launch fails. For example, not all instance types include
+       * a volume.
        *
        * To tag a resource after it has been created, see
        * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
@@ -11747,11 +11732,10 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param resourceType The type of resource to tag.
-       * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
-       * launch template, you can specify tags for the following resource types only: `instance` |
-       * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include
-       * the resource type that you specify, the instance launch fails. For example, not all instance
-       * types include a volume.
+       * You can specify tags for the following resource types only: `instance` | `volume` |
+       * `network-interface` | `spot-instances-request` . If the instance does not include the resource
+       * type that you specify, the instance launch fails. For example, not all instance types include
+       * a volume.
        *
        * To tag a resource after it has been created, see
        * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
@@ -11779,15 +11763,15 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty,
-    ) : CdkObject(cdkObject), TagSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        TagSpecificationProperty {
       /**
        * The type of resource to tag.
        *
-       * Valid Values lists all resource types for Amazon EC2 that can be tagged. When you create a
-       * launch template, you can specify tags for the following resource types only: `instance` |
-       * `volume` | `network-interface` | `spot-instances-request` . If the instance does not include
-       * the resource type that you specify, the instance launch fails. For example, not all instance
-       * types include a volume.
+       * You can specify tags for the following resource types only: `instance` | `volume` |
+       * `network-interface` | `spot-instances-request` . If the instance does not include the resource
+       * type that you specify, the instance launch fails. For example, not all instance types include
+       * a volume.
        *
        * To tag a resource after it has been created, see
        * [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html) .
@@ -11905,7 +11889,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty,
-    ) : CdkObject(cdkObject), TotalLocalStorageGBProperty {
+    ) : CdkObject(cdkObject),
+        TotalLocalStorageGBProperty {
       /**
        * The maximum amount of total local storage, in GB.
        *
@@ -12024,7 +12009,8 @@ public open class CfnLaunchTemplate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty,
-    ) : CdkObject(cdkObject), VCpuCountProperty {
+    ) : CdkObject(cdkObject),
+        VCpuCountProperty {
       /**
        * The maximum number of vCPUs.
        *

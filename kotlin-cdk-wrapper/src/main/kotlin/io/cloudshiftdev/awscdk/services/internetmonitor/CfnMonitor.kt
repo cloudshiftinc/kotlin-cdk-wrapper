@@ -88,7 +88,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnMonitor(
   cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -1428,7 +1430,8 @@ public open class CfnMonitor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.HealthEventsConfigProperty,
-    ) : CdkObject(cdkObject), HealthEventsConfigProperty {
+    ) : CdkObject(cdkObject),
+        HealthEventsConfigProperty {
       /**
        * The configuration that determines the threshold and other conditions for when Internet
        * Monitor creates a health event for a local availability issue.
@@ -1582,7 +1585,8 @@ public open class CfnMonitor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty,
-    ) : CdkObject(cdkObject), InternetMeasurementsLogDeliveryProperty {
+    ) : CdkObject(cdkObject),
+        InternetMeasurementsLogDeliveryProperty {
       /**
        * The configuration for publishing Amazon CloudWatch Internet Monitor internet measurements
        * to Amazon S3.
@@ -1740,7 +1744,8 @@ public open class CfnMonitor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.LocalHealthEventsConfigProperty,
-    ) : CdkObject(cdkObject), LocalHealthEventsConfigProperty {
+    ) : CdkObject(cdkObject),
+        LocalHealthEventsConfigProperty {
       /**
        * The health event threshold percentage set for a local health score.
        *
@@ -1900,7 +1905,8 @@ public open class CfnMonitor(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.S3ConfigProperty,
-    ) : CdkObject(cdkObject), S3ConfigProperty {
+    ) : CdkObject(cdkObject),
+        S3ConfigProperty {
       /**
        * The Amazon S3 bucket name for internet measurements publishing.
        *

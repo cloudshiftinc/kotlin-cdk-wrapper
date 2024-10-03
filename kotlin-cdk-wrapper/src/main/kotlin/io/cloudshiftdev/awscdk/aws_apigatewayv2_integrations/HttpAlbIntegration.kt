@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.apigatewayv2.HttpMethod
 import io.cloudshiftdev.awscdk.services.apigatewayv2.HttpRouteIntegration
@@ -115,6 +116,18 @@ public open class HttpAlbIntegration(
     public fun secureServerName(secureServerName: String)
 
     /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     *
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response. 
+     */
+    public fun timeout(timeout: Duration)
+
+    /**
      * The vpc link to be used for the private integration.
      *
      * Default: - a new VpcLink is created
@@ -168,6 +181,20 @@ public open class HttpAlbIntegration(
      */
     override fun secureServerName(secureServerName: String) {
       cdkBuilder.secureServerName(secureServerName)
+    }
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     *
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response. 
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

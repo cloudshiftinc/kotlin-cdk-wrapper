@@ -166,7 +166,8 @@ public interface ConnectionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.ConnectionProps,
-  ) : CdkObject(cdkObject), ConnectionProps {
+  ) : CdkObject(cdkObject),
+      ConnectionProps {
     /**
      * The authorization type for the connection.
      */

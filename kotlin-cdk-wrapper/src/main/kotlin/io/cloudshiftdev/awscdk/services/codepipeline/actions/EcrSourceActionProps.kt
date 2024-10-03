@@ -174,7 +174,8 @@ public interface EcrSourceActionProps : CommonAwsActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcrSourceActionProps,
-  ) : CdkObject(cdkObject), EcrSourceActionProps {
+  ) : CdkObject(cdkObject),
+      EcrSourceActionProps {
     /**
      * The physical, human-readable name of the Action.
      *

@@ -18,6 +18,7 @@ import io.cloudshiftdev.awscdk.services.ecs.ICluster
 import io.cloudshiftdev.awscdk.services.ecs.PropagatedTagSource
 import io.cloudshiftdev.awscdk.services.ecs.RuntimePlatform
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IpAddressType
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.Boolean
 import kotlin.Number
@@ -321,6 +322,19 @@ public open class NetworkLoadBalancedFargateService(
      * started. 
      */
     public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration)
+
+    /**
+     * The type of IP addresses to use.
+     *
+     * If you want to add a UDP or TCP_UDP listener to the load balancer,
+     * you must choose IPv4.
+     *
+     * Default: IpAddressType.IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-ip-address-type.html)
+     * @param ipAddressType The type of IP addresses to use. 
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
     /**
      * Listener port of the network load balancer that will serve traffic to the service.
@@ -850,6 +864,21 @@ public open class NetworkLoadBalancedFargateService(
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
       cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * The type of IP addresses to use.
+     *
+     * If you want to add a UDP or TCP_UDP listener to the load balancer,
+     * you must choose IPv4.
+     *
+     * Default: IpAddressType.IPV4
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-ip-address-type.html)
+     * @param ipAddressType The type of IP addresses to use. 
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
     }
 
     /**

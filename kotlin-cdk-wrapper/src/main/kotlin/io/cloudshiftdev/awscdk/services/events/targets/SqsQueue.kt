@@ -28,7 +28,8 @@ import software.amazon.awscdk.services.sqs.IQueue as AmazonAwscdkServicesSqsIQue
  */
 public open class SqsQueue(
   cdkObject: software.amazon.awscdk.services.events.targets.SqsQueue,
-) : CdkObject(cdkObject), IRuleTarget {
+) : CdkObject(cdkObject),
+    IRuleTarget {
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
       this(software.amazon.awscdk.services.events.targets.SqsQueue(queue.let(CloudshiftdevAwscdkServicesSqsIQueue.Companion::unwrap))
   )

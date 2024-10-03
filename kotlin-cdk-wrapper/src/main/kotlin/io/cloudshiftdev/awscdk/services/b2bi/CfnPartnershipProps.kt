@@ -191,7 +191,8 @@ public interface CfnPartnershipProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnershipProps,
-  ) : CdkObject(cdkObject), CfnPartnershipProps {
+  ) : CdkObject(cdkObject),
+      CfnPartnershipProps {
     /**
      * Returns one or more capabilities associated with this partnership.
      *

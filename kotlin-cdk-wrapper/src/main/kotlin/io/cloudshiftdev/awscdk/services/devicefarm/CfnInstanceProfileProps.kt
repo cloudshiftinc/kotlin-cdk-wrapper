@@ -255,7 +255,8 @@ public interface CfnInstanceProfileProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.devicefarm.CfnInstanceProfileProps,
-  ) : CdkObject(cdkObject), CfnInstanceProfileProps {
+  ) : CdkObject(cdkObject),
+      CfnInstanceProfileProps {
     /**
      * The description of the instance profile.
      *

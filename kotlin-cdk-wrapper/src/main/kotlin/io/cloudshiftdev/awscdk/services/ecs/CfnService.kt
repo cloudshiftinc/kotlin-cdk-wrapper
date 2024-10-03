@@ -29,13 +29,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  *
  * The stack update fails if you change any properties that require replacement and at least one
- * Amazon ECS Service Connect `ServiceConnectService` is configured. This is because AWS CloudFormation
- * creates the replacement service first, but each `ServiceConnectService` must have a name that is
- * unique in the namespace. &gt; Starting April 15, 2023, AWS ; will not onboard new customers to
- * Amazon Elastic Inference (EI), and will help current customers migrate their workloads to options
- * that offer better price and performance. After April 15, 2023, new customers will not be able to
- * launch instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS , or Amazon EC2 .
- * However, customers who have used Amazon EI at least once during the past 30-day period are
+ * Amazon ECS Service Connect `ServiceConnectConfiguration` property the is configured. This is because
+ * AWS CloudFormation creates the replacement service first, but each `ServiceConnectService` must have
+ * a name that is unique in the namespace. &gt; Starting April 15, 2023, AWS ; will not onboard new
+ * customers to Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+ * to options that offer better price and performance. After April 15, 2023, new customers will not be
+ * able to launch instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS , or Amazon EC2
+ * . However, customers who have used Amazon EI at least once during the past 30-day period are
  * considered current customers and will be able to continue using the service.
  *
  *
@@ -181,7 +181,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnService(
   cdkObject: software.amazon.awscdk.services.ecs.CfnService,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ecs.CfnService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -2233,7 +2235,8 @@ public open class CfnService(
   /**
    * An object representing the networking details for a task or service.
    *
-   * For example `awsvpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
+   * For example `awsVpcConfiguration={subnets=["subnet-12344321"],securityGroups=["sg-12344321"]}`
+   * .
    *
    * Example:
    *
@@ -2264,7 +2267,7 @@ public open class CfnService(
      * The IDs of the security groups associated with the task or service.
      *
      * If you don't specify a security group, the default security group for the VPC is used.
-     * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+     * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
      *
      *
      * All specified security groups must be from the same VPC.
@@ -2277,7 +2280,7 @@ public open class CfnService(
     /**
      * The IDs of the subnets associated with the task or service.
      *
-     * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+     * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
      *
      *
      * All specified subnets must be from the same VPC.
@@ -2302,7 +2305,7 @@ public open class CfnService(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified security groups must be from the same VPC.
@@ -2312,7 +2315,7 @@ public open class CfnService(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified security groups must be from the same VPC.
@@ -2321,7 +2324,7 @@ public open class CfnService(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified subnets must be from the same VPC.
@@ -2330,7 +2333,7 @@ public open class CfnService(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified subnets must be from the same VPC.
@@ -2355,7 +2358,7 @@ public open class CfnService(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified security groups must be from the same VPC.
@@ -2367,7 +2370,7 @@ public open class CfnService(
       /**
        * @param securityGroups The IDs of the security groups associated with the task or service.
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified security groups must be from the same VPC.
@@ -2377,7 +2380,7 @@ public open class CfnService(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified subnets must be from the same VPC.
@@ -2388,7 +2391,7 @@ public open class CfnService(
 
       /**
        * @param subnets The IDs of the subnets associated with the task or service.
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified subnets must be from the same VPC.
@@ -2401,7 +2404,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty,
-    ) : CdkObject(cdkObject), AwsVpcConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        AwsVpcConfigurationProperty {
       /**
        * Whether the task's elastic network interface receives a public IP address.
        *
@@ -2415,7 +2419,7 @@ public open class CfnService(
        * The IDs of the security groups associated with the task or service.
        *
        * If you don't specify a security group, the default security group for the VPC is used.
-       * There's a limit of 5 security groups that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 5 security groups that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified security groups must be from the same VPC.
@@ -2428,7 +2432,7 @@ public open class CfnService(
       /**
        * The IDs of the subnets associated with the task or service.
        *
-       * There's a limit of 16 subnets that can be specified per `AwsVpcConfiguration` .
+       * There's a limit of 16 subnets that can be specified per `awsvpcConfiguration` .
        *
        *
        * All specified subnets must be from the same VPC.
@@ -2627,7 +2631,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty,
-    ) : CdkObject(cdkObject), CapacityProviderStrategyItemProperty {
+    ) : CdkObject(cdkObject),
+        CapacityProviderStrategyItemProperty {
       /**
        * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
        * provider.
@@ -2855,7 +2860,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty,
-    ) : CdkObject(cdkObject), DeploymentAlarmsProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentAlarmsProperty {
       /**
        * One or more CloudWatch alarm names.
        *
@@ -3033,7 +3039,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty,
-    ) : CdkObject(cdkObject), DeploymentCircuitBreakerProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentCircuitBreakerProperty {
       /**
        * Determines whether to use the deployment circuit breaker logic for the service.
        *
@@ -3135,12 +3142,20 @@ public open class CfnService(
      * older tasks (provided that the cluster resources required to do this are available). The default
      * `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
      *
-     * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types
-     * and tasks that use the EC2 launch type, the *maximum percent* value is set to the default value
-     * and is used to define the upper limit on the number of the tasks in the service that remain in
-     * the `RUNNING` state while the container instances are in the `DRAINING` state. If the tasks in
-     * the service use the Fargate launch type, the maximum percent value is not used, although it is
-     * returned when describing your service.
+     * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types,
+     * and tasks in the service use the EC2 launch type, the *maximum percent* value is set to the
+     * default value. The *maximum percent* value is used to define the upper limit on the number of
+     * the tasks in the service that remain in the `RUNNING` state while the container instances are in
+     * the `DRAINING` state.
+     *
+     *
+     * You can't specify a custom `maximumPercent` value for a service that uses either the
+     * blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types and has tasks that use the EC2
+     * launch type.
+     *
+     *
+     * If the tasks in the service use the Fargate launch type, the maximum percent value is not
+     * used, although it is returned when describing your service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent)
      */
@@ -3189,11 +3204,19 @@ public open class CfnService(
      *
      * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types
      * and is running tasks that use the EC2 launch type, the *minimum healthy percent* value is set to
-     * the default value and is used to define the lower limit on the number of the tasks in the
-     * service that remain in the `RUNNING` state while the container instances are in the `DRAINING`
-     * state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
-     * types and is running tasks that use the Fargate launch type, the minimum healthy percent value
-     * is not used, although it is returned when describing your service.
+     * the default value. The *minimum healthy percent* value is used to define the lower limit on the
+     * number of the tasks in the service that remain in the `RUNNING` state while the container
+     * instances are in the `DRAINING` state.
+     *
+     *
+     * You can't specify a custom `minimumHealthyPercent` value for a service that uses either the
+     * blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types and has tasks that use the EC2
+     * launch type.
+     *
+     *
+     * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types
+     * and is running tasks that use the Fargate launch type, the minimum healthy percent value is not
+     * used, although it is returned when describing your service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)
      */
@@ -3276,9 +3299,17 @@ public open class CfnService(
        * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
        *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
-       * types and tasks that use the EC2 launch type, the *maximum percent* value is set to the
-       * default value and is used to define the upper limit on the number of the tasks in the service
-       * that remain in the `RUNNING` state while the container instances are in the `DRAINING` state.
+       * types, and tasks in the service use the EC2 launch type, the *maximum percent* value is set to
+       * the default value. The *maximum percent* value is used to define the upper limit on the number
+       * of the tasks in the service that remain in the `RUNNING` state while the container instances
+       * are in the `DRAINING` state.
+       *
+       *
+       * You can't specify a custom `maximumPercent` value for a service that uses either the
+       * blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types and has tasks that use the EC2
+       * launch type.
+       *
+       *
        * If the tasks in the service use the Fargate launch type, the maximum percent value is not
        * used, although it is returned when describing your service.
        */
@@ -3326,11 +3357,19 @@ public open class CfnService(
        *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
        * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value
-       * is set to the default value and is used to define the lower limit on the number of the tasks
-       * in the service that remain in the `RUNNING` state while the container instances are in the
-       * `DRAINING` state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL`
-       * deployment types and is running tasks that use the Fargate launch type, the minimum healthy
-       * percent value is not used, although it is returned when describing your service.
+       * is set to the default value. The *minimum healthy percent* value is used to define the lower
+       * limit on the number of the tasks in the service that remain in the `RUNNING` state while the
+       * container instances are in the `DRAINING` state.
+       *
+       *
+       * You can't specify a custom `minimumHealthyPercent` value for a service that uses either the
+       * blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types and has tasks that use the EC2
+       * launch type.
+       *
+       *
+       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
+       * types and is running tasks that use the Fargate launch type, the minimum healthy percent value
+       * is not used, although it is returned when describing your service.
        */
       public fun minimumHealthyPercent(minimumHealthyPercent: Number)
     }
@@ -3423,9 +3462,17 @@ public open class CfnService(
        * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
        *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
-       * types and tasks that use the EC2 launch type, the *maximum percent* value is set to the
-       * default value and is used to define the upper limit on the number of the tasks in the service
-       * that remain in the `RUNNING` state while the container instances are in the `DRAINING` state.
+       * types, and tasks in the service use the EC2 launch type, the *maximum percent* value is set to
+       * the default value. The *maximum percent* value is used to define the upper limit on the number
+       * of the tasks in the service that remain in the `RUNNING` state while the container instances
+       * are in the `DRAINING` state.
+       *
+       *
+       * You can't specify a custom `maximumPercent` value for a service that uses either the
+       * blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types and has tasks that use the EC2
+       * launch type.
+       *
+       *
        * If the tasks in the service use the Fargate launch type, the maximum percent value is not
        * used, although it is returned when describing your service.
        */
@@ -3475,11 +3522,19 @@ public open class CfnService(
        *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
        * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value
-       * is set to the default value and is used to define the lower limit on the number of the tasks
-       * in the service that remain in the `RUNNING` state while the container instances are in the
-       * `DRAINING` state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL`
-       * deployment types and is running tasks that use the Fargate launch type, the minimum healthy
-       * percent value is not used, although it is returned when describing your service.
+       * is set to the default value. The *minimum healthy percent* value is used to define the lower
+       * limit on the number of the tasks in the service that remain in the `RUNNING` state while the
+       * container instances are in the `DRAINING` state.
+       *
+       *
+       * You can't specify a custom `minimumHealthyPercent` value for a service that uses either the
+       * blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types and has tasks that use the EC2
+       * launch type.
+       *
+       *
+       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
+       * types and is running tasks that use the Fargate launch type, the minimum healthy percent value
+       * is not used, although it is returned when describing your service.
        */
       override fun minimumHealthyPercent(minimumHealthyPercent: Number) {
         cdkBuilder.minimumHealthyPercent(minimumHealthyPercent)
@@ -3492,7 +3547,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty,
-    ) : CdkObject(cdkObject), DeploymentConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentConfigurationProperty {
       /**
        * Information about the CloudWatch alarms.
        *
@@ -3529,9 +3585,17 @@ public open class CfnService(
        * default `maximumPercent` value for a service using the `REPLICA` service scheduler is 200%.
        *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
-       * types and tasks that use the EC2 launch type, the *maximum percent* value is set to the
-       * default value and is used to define the upper limit on the number of the tasks in the service
-       * that remain in the `RUNNING` state while the container instances are in the `DRAINING` state.
+       * types, and tasks in the service use the EC2 launch type, the *maximum percent* value is set to
+       * the default value. The *maximum percent* value is used to define the upper limit on the number
+       * of the tasks in the service that remain in the `RUNNING` state while the container instances
+       * are in the `DRAINING` state.
+       *
+       *
+       * You can't specify a custom `maximumPercent` value for a service that uses either the
+       * blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types and has tasks that use the EC2
+       * launch type.
+       *
+       *
        * If the tasks in the service use the Fargate launch type, the maximum percent value is not
        * used, although it is returned when describing your service.
        *
@@ -3582,11 +3646,19 @@ public open class CfnService(
        *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
        * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value
-       * is set to the default value and is used to define the lower limit on the number of the tasks
-       * in the service that remain in the `RUNNING` state while the container instances are in the
-       * `DRAINING` state. If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL`
-       * deployment types and is running tasks that use the Fargate launch type, the minimum healthy
-       * percent value is not used, although it is returned when describing your service.
+       * is set to the default value. The *minimum healthy percent* value is used to define the lower
+       * limit on the number of the tasks in the service that remain in the `RUNNING` state while the
+       * container instances are in the `DRAINING` state.
+       *
+       *
+       * You can't specify a custom `minimumHealthyPercent` value for a service that uses either the
+       * blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types and has tasks that use the EC2
+       * launch type.
+       *
+       *
+       * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
+       * types and is running tasks that use the Fargate launch type, the minimum healthy percent value
+       * is not used, although it is returned when describing your service.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)
        */
@@ -3712,7 +3784,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty,
-    ) : CdkObject(cdkObject), DeploymentControllerProperty {
+    ) : CdkObject(cdkObject),
+        DeploymentControllerProperty {
       /**
        * The deployment controller type to use. There are three deployment controller types
        * available:.
@@ -3876,7 +3949,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty,
-    ) : CdkObject(cdkObject), EBSTagSpecificationProperty {
+    ) : CdkObject(cdkObject),
+        EBSTagSpecificationProperty {
       /**
        * Determines whether to propagate the tags from the task definition to the Amazon EBS volume.
        *
@@ -4136,7 +4210,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.LoadBalancerProperty,
-    ) : CdkObject(cdkObject), LoadBalancerProperty {
+    ) : CdkObject(cdkObject),
+        LoadBalancerProperty {
       /**
        * The name of the container (as it appears in a container definition) to associate with the
        * load balancer.
@@ -4219,19 +4294,12 @@ public open class CfnService(
   /**
    * The log configuration for the container.
    *
-   * This parameter maps to `LogConfig` in the [Create a
-   * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-   * section of the [Docker Remote
-   * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--log-driver`
-   * option to [`docker
-   * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+   * This parameter maps to `LogConfig` in the docker container create command and the
+   * `--log-driver` option to docker run.
    *
    * By default, containers use the same logging driver that the Docker daemon uses. However, the
    * container might use a different logging driver than the Docker daemon by specifying a log driver
-   * configuration in the container definition. For more information about the options for different
-   * supported log drivers, see [Configure logging
-   * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/) in
-   * the Docker documentation.
+   * configuration in the container definition.
    *
    * Understand the following when specifying a log configuration for your containers.
    *
@@ -4242,7 +4310,7 @@ public open class CfnService(
    * `awsfirelens` .
    *
    * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd` ,
-   * `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens` .
+   * `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
    *
    * * This parameter requires version 1.18 of the Docker Remote API or greater on your container
    * instance.
@@ -4284,15 +4352,15 @@ public open class CfnService(
      * `awsfirelens` .
      *
      * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd`
-     * , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens` .
+     * , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
      *
-     * For more information about using the `awslogs` log driver, see [Using the awslogs log
-     * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-     * *Amazon Elastic Container Service Developer Guide* .
+     * For more information about using the `awslogs` log driver, see [Send Amazon ECS logs to
+     * CloudWatch](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in
+     * the *Amazon Elastic Container Service Developer Guide* .
      *
-     * For more information about using the `awsfirelens` log driver, see [Custom log
-     * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in the
-     * *Amazon Elastic Container Service Developer Guide* .
+     * For more information about using the `awsfirelens` log driver, see [Send Amazon ECS logs to
+     * an AWS service or AWS
+     * Partner](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) .
      *
      *
      * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
@@ -4341,16 +4409,15 @@ public open class CfnService(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
-       * For more information about using the `awslogs` log driver, see [Using the awslogs log
-       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-       * *Amazon Elastic Container Service Developer Guide* .
-       *
-       * For more information about using the `awsfirelens` log driver, see [Custom log
-       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
+       * For more information about using the `awslogs` log driver, see [Send Amazon ECS logs to
+       * CloudWatch](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * For more information about using the `awsfirelens` log driver, see [Send Amazon ECS logs to
+       * an AWS service or AWS
+       * Partner](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) .
        *
        *
        * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
@@ -4416,16 +4483,15 @@ public open class CfnService(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
-       * For more information about using the `awslogs` log driver, see [Using the awslogs log
-       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-       * *Amazon Elastic Container Service Developer Guide* .
-       *
-       * For more information about using the `awsfirelens` log driver, see [Custom log
-       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
+       * For more information about using the `awslogs` log driver, see [Send Amazon ECS logs to
+       * CloudWatch](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * For more information about using the `awsfirelens` log driver, see [Send Amazon ECS logs to
+       * an AWS service or AWS
+       * Partner](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) .
        *
        *
        * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
@@ -4496,7 +4562,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty,
-    ) : CdkObject(cdkObject), LogConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LogConfigurationProperty {
       /**
        * The log driver to use for the container.
        *
@@ -4504,16 +4571,15 @@ public open class CfnService(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
-       * For more information about using the `awslogs` log driver, see [Using the awslogs log
-       * driver](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in the
-       * *Amazon Elastic Container Service Developer Guide* .
-       *
-       * For more information about using the `awsfirelens` log driver, see [Custom log
-       * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in
+       * For more information about using the `awslogs` log driver, see [Send Amazon ECS logs to
+       * CloudWatch](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html) in
        * the *Amazon Elastic Container Service Developer Guide* .
+       *
+       * For more information about using the `awsfirelens` log driver, see [Send Amazon ECS logs to
+       * an AWS service or AWS
+       * Partner](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) .
        *
        *
        * If you have a custom driver that isn't listed, you can fork the Amazon ECS container agent
@@ -4680,7 +4746,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NetworkConfigurationProperty {
       /**
        * The VPC subnets and security groups that are associated with a task.
        *
@@ -4818,7 +4885,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty,
-    ) : CdkObject(cdkObject), PlacementConstraintProperty {
+    ) : CdkObject(cdkObject),
+        PlacementConstraintProperty {
       /**
        * A cluster query language expression to apply to the constraint.
        *
@@ -4972,7 +5040,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty,
-    ) : CdkObject(cdkObject), PlacementStrategyProperty {
+    ) : CdkObject(cdkObject),
+        PlacementStrategyProperty {
       /**
        * The field to apply the placement strategy against.
        *
@@ -5148,7 +5217,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.SecretProperty,
-    ) : CdkObject(cdkObject), SecretProperty {
+    ) : CdkObject(cdkObject),
+        SecretProperty {
       /**
        * The name of the secret.
        *
@@ -5349,7 +5419,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectClientAliasProperty,
-    ) : CdkObject(cdkObject), ServiceConnectClientAliasProperty {
+    ) : CdkObject(cdkObject),
+        ServiceConnectClientAliasProperty {
       /**
        * The `dnsName` is the name that you use in the applications of client tasks to connect to
        * this service.
@@ -5480,19 +5551,12 @@ public open class CfnService(
     /**
      * The log configuration for the container.
      *
-     * This parameter maps to `LogConfig` in the [Create a
-     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-     * section of the [Docker Remote
-     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-     * `--log-driver` option to [`docker
-     * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+     * This parameter maps to `LogConfig` in the docker container create command and the
+     * `--log-driver` option to docker run.
      *
      * By default, containers use the same logging driver that the Docker daemon uses. However, the
      * container might use a different logging driver than the Docker daemon by specifying a log driver
-     * configuration in the container definition. For more information about the options for different
-     * supported log drivers, see [Configure logging
-     * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/) in
-     * the Docker documentation.
+     * configuration in the container definition.
      *
      * Understand the following when specifying a log configuration for your containers.
      *
@@ -5504,7 +5568,7 @@ public open class CfnService(
      * `awsfirelens` .
      *
      * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` , `fluentd`
-     * , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and `awsfirelens` .
+     * , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
      *
      * * This parameter requires version 1.18 of the Docker Remote API or greater on your container
      * instance.
@@ -5573,19 +5637,12 @@ public open class CfnService(
 
       /**
        * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       * This parameter maps to `LogConfig` in the docker container create command and the
+       * `--log-driver` option to docker run.
        *
        * By default, containers use the same logging driver that the Docker daemon uses. However,
        * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
+       * driver configuration in the container definition.
        *
        * Understand the following when specifying a log configuration for your containers.
        *
@@ -5597,8 +5654,7 @@ public open class CfnService(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
        * * This parameter requires version 1.18 of the Docker Remote API or greater on your
        * container instance.
@@ -5617,19 +5673,12 @@ public open class CfnService(
 
       /**
        * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       * This parameter maps to `LogConfig` in the docker container create command and the
+       * `--log-driver` option to docker run.
        *
        * By default, containers use the same logging driver that the Docker daemon uses. However,
        * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
+       * driver configuration in the container definition.
        *
        * Understand the following when specifying a log configuration for your containers.
        *
@@ -5641,8 +5690,7 @@ public open class CfnService(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
        * * This parameter requires version 1.18 of the Docker Remote API or greater on your
        * container instance.
@@ -5661,19 +5709,12 @@ public open class CfnService(
 
       /**
        * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       * This parameter maps to `LogConfig` in the docker container create command and the
+       * `--log-driver` option to docker run.
        *
        * By default, containers use the same logging driver that the Docker daemon uses. However,
        * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
+       * driver configuration in the container definition.
        *
        * Understand the following when specifying a log configuration for your containers.
        *
@@ -5685,8 +5726,7 @@ public open class CfnService(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
        * * This parameter requires version 1.18 of the Docker Remote API or greater on your
        * container instance.
@@ -5787,19 +5827,12 @@ public open class CfnService(
 
       /**
        * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       * This parameter maps to `LogConfig` in the docker container create command and the
+       * `--log-driver` option to docker run.
        *
        * By default, containers use the same logging driver that the Docker daemon uses. However,
        * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
+       * driver configuration in the container definition.
        *
        * Understand the following when specifying a log configuration for your containers.
        *
@@ -5811,8 +5844,7 @@ public open class CfnService(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
        * * This parameter requires version 1.18 of the Docker Remote API or greater on your
        * container instance.
@@ -5833,19 +5865,12 @@ public open class CfnService(
 
       /**
        * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       * This parameter maps to `LogConfig` in the docker container create command and the
+       * `--log-driver` option to docker run.
        *
        * By default, containers use the same logging driver that the Docker daemon uses. However,
        * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
+       * driver configuration in the container definition.
        *
        * Understand the following when specifying a log configuration for your containers.
        *
@@ -5857,8 +5882,7 @@ public open class CfnService(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
        * * This parameter requires version 1.18 of the Docker Remote API or greater on your
        * container instance.
@@ -5879,19 +5903,12 @@ public open class CfnService(
 
       /**
        * @param logConfiguration The log configuration for the container.
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       * This parameter maps to `LogConfig` in the docker container create command and the
+       * `--log-driver` option to docker run.
        *
        * By default, containers use the same logging driver that the Docker daemon uses. However,
        * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
+       * driver configuration in the container definition.
        *
        * Understand the following when specifying a log configuration for your containers.
        *
@@ -5903,8 +5920,7 @@ public open class CfnService(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
        * * This parameter requires version 1.18 of the Docker Remote API or greater on your
        * container instance.
@@ -5996,7 +6012,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty,
-    ) : CdkObject(cdkObject), ServiceConnectConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServiceConnectConfigurationProperty {
       /**
        * Specifies whether to use Service Connect with this service.
        *
@@ -6007,19 +6024,12 @@ public open class CfnService(
       /**
        * The log configuration for the container.
        *
-       * This parameter maps to `LogConfig` in the [Create a
-       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
-       * section of the [Docker Remote
-       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
-       * `--log-driver` option to [`docker
-       * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+       * This parameter maps to `LogConfig` in the docker container create command and the
+       * `--log-driver` option to docker run.
        *
        * By default, containers use the same logging driver that the Docker daemon uses. However,
        * the container might use a different logging driver than the Docker daemon by specifying a log
-       * driver configuration in the container definition. For more information about the options for
-       * different supported log drivers, see [Configure logging
-       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
-       * in the Docker documentation.
+       * driver configuration in the container definition.
        *
        * Understand the following when specifying a log configuration for your containers.
        *
@@ -6031,8 +6041,7 @@ public open class CfnService(
        * `awsfirelens` .
        *
        * For tasks hosted on Amazon EC2 instances, the supported log drivers are `awslogs` ,
-       * `fluentd` , `gelf` , `json-file` , `journald` , `logentries` , `syslog` , `splunk` , and
-       * `awsfirelens` .
+       * `fluentd` , `gelf` , `json-file` , `journald` , `syslog` , `splunk` , and `awsfirelens` .
        *
        * * This parameter requires version 1.18 of the Docker Remote API or greater on your
        * container instance.
@@ -6485,7 +6494,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectServiceProperty,
-    ) : CdkObject(cdkObject), ServiceConnectServiceProperty {
+    ) : CdkObject(cdkObject),
+        ServiceConnectServiceProperty {
       /**
        * The list of client aliases for this Service Connect service.
        *
@@ -6576,7 +6586,7 @@ public open class CfnService(
   }
 
   /**
-   * An object that represents the AWS Private Certificate Authority certificate.
+   * The certificate root authority that secures your service.
    *
    * Example:
    *
@@ -6631,7 +6641,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty,
-    ) : CdkObject(cdkObject), ServiceConnectTlsCertificateAuthorityProperty {
+    ) : CdkObject(cdkObject),
+        ServiceConnectTlsCertificateAuthorityProperty {
       /**
        * The ARN of the AWS Private Certificate Authority certificate.
        *
@@ -6660,7 +6671,7 @@ public open class CfnService(
   }
 
   /**
-   * An object that represents the configuration for Service Connect TLS.
+   * The key that encrypts and decrypts your resources for Service Connect TLS.
    *
    * Example:
    *
@@ -6793,7 +6804,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty,
-    ) : CdkObject(cdkObject), ServiceConnectTlsConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServiceConnectTlsConfigurationProperty {
       /**
        * The signer certificate authority.
        *
@@ -7420,7 +7432,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceManagedEBSVolumeConfigurationProperty,
-    ) : CdkObject(cdkObject), ServiceManagedEBSVolumeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServiceManagedEBSVolumeConfigurationProperty {
       /**
        * Indicates whether the volume should be encrypted.
        *
@@ -7782,7 +7795,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceRegistryProperty,
-    ) : CdkObject(cdkObject), ServiceRegistryProperty {
+    ) : CdkObject(cdkObject),
+        ServiceRegistryProperty {
       /**
        * The container name value to be used for your service discovery service.
        *
@@ -8012,7 +8026,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceVolumeConfigurationProperty,
-    ) : CdkObject(cdkObject), ServiceVolumeConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ServiceVolumeConfigurationProperty {
       /**
        * The configuration for the Amazon EBS volume that Amazon ECS creates and manages on your
        * behalf.
@@ -8164,7 +8179,8 @@ public open class CfnService(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty,
-    ) : CdkObject(cdkObject), TimeoutConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        TimeoutConfigurationProperty {
       /**
        * The amount of time in seconds a connection will stay active while idle.
        *

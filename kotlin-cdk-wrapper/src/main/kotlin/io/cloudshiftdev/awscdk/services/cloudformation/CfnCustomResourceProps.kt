@@ -26,13 +26,9 @@ import kotlin.Unit
  */
 public interface CfnCustomResourceProps {
   /**
-   * Only one property is defined by AWS for a custom resource: `ServiceToken` .
+   * The service token, such as an Amazon SNS topic ARN or Lambda function ARN.
    *
-   * All other properties are defined by the service provider.
-   *
-   * The service token that was given to the template developer by the service provider to access
-   * the service, such as an Amazon SNS topic ARN or Lambda function ARN. The service token must be
-   * from the same Region in which you are creating the stack.
+   * The service token must be from the same Region as the stack.
    *
    * Updates aren't supported.
    *
@@ -46,13 +42,9 @@ public interface CfnCustomResourceProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param serviceToken Only one property is defined by AWS for a custom resource: `ServiceToken`
-     * . 
-     * All other properties are defined by the service provider.
-     *
-     * The service token that was given to the template developer by the service provider to access
-     * the service, such as an Amazon SNS topic ARN or Lambda function ARN. The service token must be
-     * from the same Region in which you are creating the stack.
+     * @param serviceToken The service token, such as an Amazon SNS topic ARN or Lambda function
+     * ARN. 
+     * The service token must be from the same Region as the stack.
      *
      * Updates aren't supported.
      */
@@ -65,13 +57,9 @@ public interface CfnCustomResourceProps {
         software.amazon.awscdk.services.cloudformation.CfnCustomResourceProps.builder()
 
     /**
-     * @param serviceToken Only one property is defined by AWS for a custom resource: `ServiceToken`
-     * . 
-     * All other properties are defined by the service provider.
-     *
-     * The service token that was given to the template developer by the service provider to access
-     * the service, such as an Amazon SNS topic ARN or Lambda function ARN. The service token must be
-     * from the same Region in which you are creating the stack.
+     * @param serviceToken The service token, such as an Amazon SNS topic ARN or Lambda function
+     * ARN. 
+     * The service token must be from the same Region as the stack.
      *
      * Updates aren't supported.
      */
@@ -85,15 +73,12 @@ public interface CfnCustomResourceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudformation.CfnCustomResourceProps,
-  ) : CdkObject(cdkObject), CfnCustomResourceProps {
+  ) : CdkObject(cdkObject),
+      CfnCustomResourceProps {
     /**
-     * Only one property is defined by AWS for a custom resource: `ServiceToken` .
+     * The service token, such as an Amazon SNS topic ARN or Lambda function ARN.
      *
-     * All other properties are defined by the service provider.
-     *
-     * The service token that was given to the template developer by the service provider to access
-     * the service, such as an Amazon SNS topic ARN or Lambda function ARN. The service token must be
-     * from the same Region in which you are creating the stack.
+     * The service token must be from the same Region as the stack.
      *
      * Updates aren't supported.
      *

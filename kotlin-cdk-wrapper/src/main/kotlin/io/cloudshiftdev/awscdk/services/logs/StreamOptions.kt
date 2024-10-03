@@ -61,7 +61,8 @@ public interface StreamOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.StreamOptions,
-  ) : CdkObject(cdkObject), StreamOptions {
+  ) : CdkObject(cdkObject),
+      StreamOptions {
     /**
      * The name of the log stream to create.
      *

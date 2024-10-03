@@ -45,7 +45,8 @@ import kotlin.Unit
  */
 public open class AddHeader(
   cdkObject: software.amazon.awscdk.services.ses.actions.AddHeader,
-) : CdkObject(cdkObject), IReceiptRuleAction {
+) : CdkObject(cdkObject),
+    IReceiptRuleAction {
   public constructor(props: AddHeaderProps) :
       this(software.amazon.awscdk.services.ses.actions.AddHeader(props.let(AddHeaderProps.Companion::unwrap))
   )

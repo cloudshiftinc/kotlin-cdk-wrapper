@@ -176,7 +176,8 @@ public interface ActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.ActionProps,
-  ) : CdkObject(cdkObject), ActionProps {
+  ) : CdkObject(cdkObject),
+      ActionProps {
     /**
      * The action points that will trigger the extension action.
      */

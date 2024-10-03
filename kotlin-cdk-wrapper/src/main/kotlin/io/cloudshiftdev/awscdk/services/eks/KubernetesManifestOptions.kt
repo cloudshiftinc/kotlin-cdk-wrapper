@@ -172,7 +172,8 @@ public interface KubernetesManifestOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.KubernetesManifestOptions,
-  ) : CdkObject(cdkObject), KubernetesManifestOptions {
+  ) : CdkObject(cdkObject),
+      KubernetesManifestOptions {
     /**
      * Automatically detect `Ingress` resources in the manifest and annotate them so they are picked
      * up by an ALB Ingress Controller.

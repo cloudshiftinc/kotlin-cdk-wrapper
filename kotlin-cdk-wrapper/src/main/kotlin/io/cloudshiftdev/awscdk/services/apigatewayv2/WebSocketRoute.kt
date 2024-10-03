@@ -35,7 +35,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class WebSocketRoute(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRoute,
-) : Resource(cdkObject), IWebSocketRoute {
+) : Resource(cdkObject),
+    IWebSocketRoute {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

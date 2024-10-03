@@ -70,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnInfrastructureConfiguration(
   cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -890,7 +892,8 @@ public open class CfnInfrastructureConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty,
-    ) : CdkObject(cdkObject), InstanceMetadataOptionsProperty {
+    ) : CdkObject(cdkObject),
+        InstanceMetadataOptionsProperty {
       /**
        * Limit the number of hops that an instance metadata request can traverse to reach its
        * destination.
@@ -1024,7 +1027,8 @@ public open class CfnInfrastructureConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty,
-    ) : CdkObject(cdkObject), LoggingProperty {
+    ) : CdkObject(cdkObject),
+        LoggingProperty {
       /**
        * The Amazon S3 logging configuration.
        *
@@ -1126,7 +1130,8 @@ public open class CfnInfrastructureConfiguration(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty,
-    ) : CdkObject(cdkObject), S3LogsProperty {
+    ) : CdkObject(cdkObject),
+        S3LogsProperty {
       /**
        * The S3 bucket in which to store the logs.
        *

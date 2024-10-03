@@ -83,7 +83,8 @@ public interface CfnApplicationFleetAssociationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appstream.CfnApplicationFleetAssociationProps,
-  ) : CdkObject(cdkObject), CfnApplicationFleetAssociationProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationFleetAssociationProps {
     /**
      * The ARN of the application.
      *

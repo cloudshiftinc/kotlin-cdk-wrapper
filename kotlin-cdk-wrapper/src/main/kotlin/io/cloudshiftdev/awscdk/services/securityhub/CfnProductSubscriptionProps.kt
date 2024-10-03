@@ -61,7 +61,8 @@ public interface CfnProductSubscriptionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.securityhub.CfnProductSubscriptionProps,
-  ) : CdkObject(cdkObject), CfnProductSubscriptionProps {
+  ) : CdkObject(cdkObject),
+      CfnProductSubscriptionProps {
     /**
      * The ARN of the product to enable the integration for.
      *

@@ -43,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CrossAccountDestination(
   cdkObject: software.amazon.awscdk.services.logs.CrossAccountDestination,
-) : Resource(cdkObject), ILogSubscriptionDestination {
+) : Resource(cdkObject),
+    ILogSubscriptionDestination {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

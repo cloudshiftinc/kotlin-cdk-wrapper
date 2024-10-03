@@ -298,7 +298,8 @@ public interface CfnParameterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.CfnParameterProps,
-  ) : CdkObject(cdkObject), CfnParameterProps {
+  ) : CdkObject(cdkObject),
+      CfnParameterProps {
     /**
      * A regular expression that represents the patterns to allow for String types.
      *

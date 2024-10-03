@@ -80,7 +80,8 @@ public interface HttpNamespaceProps : BaseNamespaceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.HttpNamespaceProps,
-  ) : CdkObject(cdkObject), HttpNamespaceProps {
+  ) : CdkObject(cdkObject),
+      HttpNamespaceProps {
     /**
      * A description of the Namespace.
      *

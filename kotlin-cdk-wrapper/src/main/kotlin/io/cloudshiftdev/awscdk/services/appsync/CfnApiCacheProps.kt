@@ -320,7 +320,8 @@ public interface CfnApiCacheProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.CfnApiCacheProps,
-  ) : CdkObject(cdkObject), CfnApiCacheProps {
+  ) : CdkObject(cdkObject),
+      CfnApiCacheProps {
     /**
      * Caching behavior.
      *

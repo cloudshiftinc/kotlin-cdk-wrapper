@@ -29,7 +29,8 @@ import kotlin.String
  */
 public open class GenericSSMParameterImage(
   cdkObject: software.amazon.awscdk.services.ec2.GenericSSMParameterImage,
-) : CdkObject(cdkObject), IMachineImage {
+) : CdkObject(cdkObject),
+    IMachineImage {
   public constructor(parameterName: String, os: OperatingSystemType) :
       this(software.amazon.awscdk.services.ec2.GenericSSMParameterImage(parameterName,
       os.let(OperatingSystemType.Companion::unwrap))

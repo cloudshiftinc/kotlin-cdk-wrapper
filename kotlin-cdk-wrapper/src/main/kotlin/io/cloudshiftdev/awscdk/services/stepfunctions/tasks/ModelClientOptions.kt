@@ -99,7 +99,8 @@ public interface ModelClientOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions,
-  ) : CdkObject(cdkObject), ModelClientOptions {
+  ) : CdkObject(cdkObject),
+      ModelClientOptions {
     /**
      * The maximum number of retries when invocation requests are failing.
      *

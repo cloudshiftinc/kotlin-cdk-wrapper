@@ -40,7 +40,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class EcsFargateContainerDefinition(
   cdkObject: software.amazon.awscdk.services.batch.EcsFargateContainerDefinition,
-) : CloudshiftdevConstructsConstruct(cdkObject), IEcsFargateContainerDefinition,
+) : CloudshiftdevConstructsConstruct(cdkObject),
+    IEcsFargateContainerDefinition,
     IEcsContainerDefinition {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,

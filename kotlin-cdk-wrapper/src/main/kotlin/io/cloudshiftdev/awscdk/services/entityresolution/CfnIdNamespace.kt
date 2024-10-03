@@ -48,6 +48,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .providerConfiguration(Map.of(
  * "providerConfigurationKey", "providerConfiguration"))
  * .build())
+ * .ruleBasedProperties(NamespaceRuleBasedPropertiesProperty.builder()
+ * .attributeMatchingModel("attributeMatchingModel")
+ * .recordMatchingModels(List.of("recordMatchingModels"))
+ * .ruleDefinitionTypes(List.of("ruleDefinitionTypes"))
+ * .rules(List.of(RuleProperty.builder()
+ * .matchingKeys(List.of("matchingKeys"))
+ * .ruleName("ruleName")
+ * .build()))
+ * .build())
  * .build()))
  * .inputSourceConfig(List.of(IdNamespaceInputSourceProperty.builder()
  * .inputSourceArn("inputSourceArn")
@@ -66,7 +75,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIdNamespace(
   cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdNamespace,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -347,7 +358,7 @@ public open class CfnIdNamespace(
      * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
      * mapping workflow.
      *
-     * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve to.
+     * The `TARGET` contains a configuration of `targetId` which all `sourceIds` will resolve to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idnamespace.html#cfn-entityresolution-idnamespace-type)
      * @param type The type of ID namespace. There are two types: `SOURCE` and `TARGET` . 
@@ -486,7 +497,7 @@ public open class CfnIdNamespace(
      * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
      * mapping workflow.
      *
-     * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve to.
+     * The `TARGET` contains a configuration of `targetId` which all `sourceIds` will resolve to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idnamespace.html#cfn-entityresolution-idnamespace-type)
      * @param type The type of ID namespace. There are two types: `SOURCE` and `TARGET` . 
@@ -521,7 +532,7 @@ public open class CfnIdNamespace(
   }
 
   /**
-   * An object containing `IdMappingType` and `ProviderProperties` .
+   * An object containing `IdMappingType` , `ProviderProperties` , and `RuleBasedProperties` .
    *
    * Example:
    *
@@ -538,6 +549,15 @@ public open class CfnIdNamespace(
    * // the properties below are optional
    * .providerConfiguration(Map.of(
    * "providerConfigurationKey", "providerConfiguration"))
+   * .build())
+   * .ruleBasedProperties(NamespaceRuleBasedPropertiesProperty.builder()
+   * .attributeMatchingModel("attributeMatchingModel")
+   * .recordMatchingModels(List.of("recordMatchingModels"))
+   * .ruleDefinitionTypes(List.of("ruleDefinitionTypes"))
+   * .rules(List.of(RuleProperty.builder()
+   * .matchingKeys(List.of("matchingKeys"))
+   * .ruleName("ruleName")
+   * .build()))
    * .build())
    * .build();
    * ```
@@ -558,6 +578,13 @@ public open class CfnIdNamespace(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-idnamespaceidmappingworkflowproperties.html#cfn-entityresolution-idnamespace-idnamespaceidmappingworkflowproperties-providerproperties)
      */
     public fun providerProperties(): Any? = unwrap(this).getProviderProperties()
+
+    /**
+     * An object which defines any additional configurations required by rule-based matching.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-idnamespaceidmappingworkflowproperties.html#cfn-entityresolution-idnamespace-idnamespaceidmappingworkflowproperties-rulebasedproperties)
+     */
+    public fun ruleBasedProperties(): Any? = unwrap(this).getRuleBasedProperties()
 
     /**
      * A builder for [IdNamespaceIdMappingWorkflowPropertiesProperty]
@@ -589,6 +616,27 @@ public open class CfnIdNamespace(
       @JvmName("78ad4e8085bdee3d62dad29fd5bb09ed9a22f0461305c03a444452386fd185e0")
       public
           fun providerProperties(providerProperties: NamespaceProviderPropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      public fun ruleBasedProperties(ruleBasedProperties: IResolvable)
+
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      public fun ruleBasedProperties(ruleBasedProperties: NamespaceRuleBasedPropertiesProperty)
+
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a700a811b7510231362a5c6d97b3a9e9ee067505f69870f37003feeb7864965c")
+      public
+          fun ruleBasedProperties(ruleBasedProperties: NamespaceRuleBasedPropertiesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -630,6 +678,32 @@ public open class CfnIdNamespace(
           fun providerProperties(providerProperties: NamespaceProviderPropertiesProperty.Builder.() -> Unit):
           Unit = providerProperties(NamespaceProviderPropertiesProperty(providerProperties))
 
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      override fun ruleBasedProperties(ruleBasedProperties: IResolvable) {
+        cdkBuilder.ruleBasedProperties(ruleBasedProperties.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      override fun ruleBasedProperties(ruleBasedProperties: NamespaceRuleBasedPropertiesProperty) {
+        cdkBuilder.ruleBasedProperties(ruleBasedProperties.let(NamespaceRuleBasedPropertiesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param ruleBasedProperties An object which defines any additional configurations required
+       * by rule-based matching.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a700a811b7510231362a5c6d97b3a9e9ee067505f69870f37003feeb7864965c")
+      override
+          fun ruleBasedProperties(ruleBasedProperties: NamespaceRuleBasedPropertiesProperty.Builder.() -> Unit):
+          Unit = ruleBasedProperties(NamespaceRuleBasedPropertiesProperty(ruleBasedProperties))
+
       public fun build():
           software.amazon.awscdk.services.entityresolution.CfnIdNamespace.IdNamespaceIdMappingWorkflowPropertiesProperty
           = cdkBuilder.build()
@@ -637,7 +711,8 @@ public open class CfnIdNamespace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdNamespace.IdNamespaceIdMappingWorkflowPropertiesProperty,
-    ) : CdkObject(cdkObject), IdNamespaceIdMappingWorkflowPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        IdNamespaceIdMappingWorkflowPropertiesProperty {
       /**
        * The type of ID mapping.
        *
@@ -651,6 +726,13 @@ public open class CfnIdNamespace(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-idnamespaceidmappingworkflowproperties.html#cfn-entityresolution-idnamespace-idnamespaceidmappingworkflowproperties-providerproperties)
        */
       override fun providerProperties(): Any? = unwrap(this).getProviderProperties()
+
+      /**
+       * An object which defines any additional configurations required by rule-based matching.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-idnamespaceidmappingworkflowproperties.html#cfn-entityresolution-idnamespace-idnamespaceidmappingworkflowproperties-rulebasedproperties)
+       */
+      override fun ruleBasedProperties(): Any? = unwrap(this).getRuleBasedProperties()
     }
 
     public companion object {
@@ -693,7 +775,8 @@ public open class CfnIdNamespace(
    */
   public interface IdNamespaceInputSourceProperty {
     /**
-     * An AWS Glue table ARN for the input source table.
+     * An AWS Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input source
+     * table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-idnamespaceinputsource.html#cfn-entityresolution-idnamespace-idnamespaceinputsource-inputsourcearn)
      */
@@ -712,7 +795,8 @@ public open class CfnIdNamespace(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param inputSourceArn An AWS Glue table ARN for the input source table. 
+       * @param inputSourceArn An AWS Glue table Amazon Resource Name (ARN) or a matching workflow
+       * ARN for the input source table. 
        */
       public fun inputSourceArn(inputSourceArn: String)
 
@@ -729,7 +813,8 @@ public open class CfnIdNamespace(
           software.amazon.awscdk.services.entityresolution.CfnIdNamespace.IdNamespaceInputSourceProperty.builder()
 
       /**
-       * @param inputSourceArn An AWS Glue table ARN for the input source table. 
+       * @param inputSourceArn An AWS Glue table Amazon Resource Name (ARN) or a matching workflow
+       * ARN for the input source table. 
        */
       override fun inputSourceArn(inputSourceArn: String) {
         cdkBuilder.inputSourceArn(inputSourceArn)
@@ -749,9 +834,11 @@ public open class CfnIdNamespace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdNamespace.IdNamespaceInputSourceProperty,
-    ) : CdkObject(cdkObject), IdNamespaceInputSourceProperty {
+    ) : CdkObject(cdkObject),
+        IdNamespaceInputSourceProperty {
       /**
-       * An AWS Glue table ARN for the input source table.
+       * An AWS Glue table Amazon Resource Name (ARN) or a matching workflow ARN for the input
+       * source table.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-idnamespaceinputsource.html#cfn-entityresolution-idnamespace-idnamespaceinputsource-inputsourcearn)
        */
@@ -877,7 +964,8 @@ public open class CfnIdNamespace(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdNamespace.NamespaceProviderPropertiesProperty,
-    ) : CdkObject(cdkObject), NamespaceProviderPropertiesProperty {
+    ) : CdkObject(cdkObject),
+        NamespaceProviderPropertiesProperty {
       /**
        * An object which defines any additional configurations required by the provider service.
        *
@@ -909,6 +997,443 @@ public open class CfnIdNamespace(
           software.amazon.awscdk.services.entityresolution.CfnIdNamespace.NamespaceProviderPropertiesProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.entityresolution.CfnIdNamespace.NamespaceProviderPropertiesProperty
+    }
+  }
+
+  /**
+   * The rule-based properties of an ID namespace.
+   *
+   * These properties define how the ID namespace can be used in an ID mapping workflow.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
+   * NamespaceRuleBasedPropertiesProperty namespaceRuleBasedPropertiesProperty =
+   * NamespaceRuleBasedPropertiesProperty.builder()
+   * .attributeMatchingModel("attributeMatchingModel")
+   * .recordMatchingModels(List.of("recordMatchingModels"))
+   * .ruleDefinitionTypes(List.of("ruleDefinitionTypes"))
+   * .rules(List.of(RuleProperty.builder()
+   * .matchingKeys(List.of("matchingKeys"))
+   * .ruleName("ruleName")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-namespacerulebasedproperties.html)
+   */
+  public interface NamespaceRuleBasedPropertiesProperty {
+    /**
+     * The comparison type. You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the
+     * `attributeMatchingModel` .
+     *
+     * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+     * attribute type. For example, if the value of the `Email` field of Profile A matches the value of
+     * `BusinessEmail` field of Profile B, the two profiles are matched on the `Email` attribute type.
+     *
+     * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+     * exact match. For example, for the `Email` attribute type, the system will only consider it a
+     * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+     * Profile B.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-namespacerulebasedproperties.html#cfn-entityresolution-idnamespace-namespacerulebasedproperties-attributematchingmodel)
+     */
+    public fun attributeMatchingModel(): String? = unwrap(this).getAttributeMatchingModel()
+
+    /**
+     * The type of matching record that is allowed to be used in an ID mapping workflow.
+     *
+     * If the value is set to `ONE_SOURCE_TO_ONE_TARGET` , only one record in the source is matched
+     * to one record in the target.
+     *
+     * If the value is set to `MANY_SOURCE_TO_ONE_TARGET` , all matching records in the source are
+     * matched to one record in the target.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-namespacerulebasedproperties.html#cfn-entityresolution-idnamespace-namespacerulebasedproperties-recordmatchingmodels)
+     */
+    public fun recordMatchingModels(): List<String> = unwrap(this).getRecordMatchingModels() ?:
+        emptyList()
+
+    /**
+     * The sets of rules you can use in an ID mapping workflow.
+     *
+     * The limitations specified for the source and target must be compatible.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-namespacerulebasedproperties.html#cfn-entityresolution-idnamespace-namespacerulebasedproperties-ruledefinitiontypes)
+     */
+    public fun ruleDefinitionTypes(): List<String> = unwrap(this).getRuleDefinitionTypes() ?:
+        emptyList()
+
+    /**
+     * The rules for the ID namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-namespacerulebasedproperties.html#cfn-entityresolution-idnamespace-namespacerulebasedproperties-rules)
+     */
+    public fun rules(): Any? = unwrap(this).getRules()
+
+    /**
+     * A builder for [NamespaceRuleBasedPropertiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param attributeMatchingModel The comparison type. You can either choose `ONE_TO_ONE` or
+       * `MANY_TO_MANY` as the `attributeMatchingModel` .
+       * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+       * attribute type. For example, if the value of the `Email` field of Profile A matches the value
+       * of `BusinessEmail` field of Profile B, the two profiles are matched on the `Email` attribute
+       * type.
+       *
+       * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+       * exact match. For example, for the `Email` attribute type, the system will only consider it a
+       * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+       * Profile B.
+       */
+      public fun attributeMatchingModel(attributeMatchingModel: String)
+
+      /**
+       * @param recordMatchingModels The type of matching record that is allowed to be used in an ID
+       * mapping workflow.
+       * If the value is set to `ONE_SOURCE_TO_ONE_TARGET` , only one record in the source is
+       * matched to one record in the target.
+       *
+       * If the value is set to `MANY_SOURCE_TO_ONE_TARGET` , all matching records in the source are
+       * matched to one record in the target.
+       */
+      public fun recordMatchingModels(recordMatchingModels: List<String>)
+
+      /**
+       * @param recordMatchingModels The type of matching record that is allowed to be used in an ID
+       * mapping workflow.
+       * If the value is set to `ONE_SOURCE_TO_ONE_TARGET` , only one record in the source is
+       * matched to one record in the target.
+       *
+       * If the value is set to `MANY_SOURCE_TO_ONE_TARGET` , all matching records in the source are
+       * matched to one record in the target.
+       */
+      public fun recordMatchingModels(vararg recordMatchingModels: String)
+
+      /**
+       * @param ruleDefinitionTypes The sets of rules you can use in an ID mapping workflow.
+       * The limitations specified for the source and target must be compatible.
+       */
+      public fun ruleDefinitionTypes(ruleDefinitionTypes: List<String>)
+
+      /**
+       * @param ruleDefinitionTypes The sets of rules you can use in an ID mapping workflow.
+       * The limitations specified for the source and target must be compatible.
+       */
+      public fun ruleDefinitionTypes(vararg ruleDefinitionTypes: String)
+
+      /**
+       * @param rules The rules for the ID namespace.
+       */
+      public fun rules(rules: IResolvable)
+
+      /**
+       * @param rules The rules for the ID namespace.
+       */
+      public fun rules(rules: List<Any>)
+
+      /**
+       * @param rules The rules for the ID namespace.
+       */
+      public fun rules(vararg rules: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.entityresolution.CfnIdNamespace.NamespaceRuleBasedPropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.entityresolution.CfnIdNamespace.NamespaceRuleBasedPropertiesProperty.builder()
+
+      /**
+       * @param attributeMatchingModel The comparison type. You can either choose `ONE_TO_ONE` or
+       * `MANY_TO_MANY` as the `attributeMatchingModel` .
+       * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+       * attribute type. For example, if the value of the `Email` field of Profile A matches the value
+       * of `BusinessEmail` field of Profile B, the two profiles are matched on the `Email` attribute
+       * type.
+       *
+       * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+       * exact match. For example, for the `Email` attribute type, the system will only consider it a
+       * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+       * Profile B.
+       */
+      override fun attributeMatchingModel(attributeMatchingModel: String) {
+        cdkBuilder.attributeMatchingModel(attributeMatchingModel)
+      }
+
+      /**
+       * @param recordMatchingModels The type of matching record that is allowed to be used in an ID
+       * mapping workflow.
+       * If the value is set to `ONE_SOURCE_TO_ONE_TARGET` , only one record in the source is
+       * matched to one record in the target.
+       *
+       * If the value is set to `MANY_SOURCE_TO_ONE_TARGET` , all matching records in the source are
+       * matched to one record in the target.
+       */
+      override fun recordMatchingModels(recordMatchingModels: List<String>) {
+        cdkBuilder.recordMatchingModels(recordMatchingModels)
+      }
+
+      /**
+       * @param recordMatchingModels The type of matching record that is allowed to be used in an ID
+       * mapping workflow.
+       * If the value is set to `ONE_SOURCE_TO_ONE_TARGET` , only one record in the source is
+       * matched to one record in the target.
+       *
+       * If the value is set to `MANY_SOURCE_TO_ONE_TARGET` , all matching records in the source are
+       * matched to one record in the target.
+       */
+      override fun recordMatchingModels(vararg recordMatchingModels: String): Unit =
+          recordMatchingModels(recordMatchingModels.toList())
+
+      /**
+       * @param ruleDefinitionTypes The sets of rules you can use in an ID mapping workflow.
+       * The limitations specified for the source and target must be compatible.
+       */
+      override fun ruleDefinitionTypes(ruleDefinitionTypes: List<String>) {
+        cdkBuilder.ruleDefinitionTypes(ruleDefinitionTypes)
+      }
+
+      /**
+       * @param ruleDefinitionTypes The sets of rules you can use in an ID mapping workflow.
+       * The limitations specified for the source and target must be compatible.
+       */
+      override fun ruleDefinitionTypes(vararg ruleDefinitionTypes: String): Unit =
+          ruleDefinitionTypes(ruleDefinitionTypes.toList())
+
+      /**
+       * @param rules The rules for the ID namespace.
+       */
+      override fun rules(rules: IResolvable) {
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param rules The rules for the ID namespace.
+       */
+      override fun rules(rules: List<Any>) {
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param rules The rules for the ID namespace.
+       */
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.entityresolution.CfnIdNamespace.NamespaceRuleBasedPropertiesProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdNamespace.NamespaceRuleBasedPropertiesProperty,
+    ) : CdkObject(cdkObject),
+        NamespaceRuleBasedPropertiesProperty {
+      /**
+       * The comparison type. You can either choose `ONE_TO_ONE` or `MANY_TO_MANY` as the
+       * `attributeMatchingModel` .
+       *
+       * If you choose `MANY_TO_MANY` , the system can match attributes across the sub-types of an
+       * attribute type. For example, if the value of the `Email` field of Profile A matches the value
+       * of `BusinessEmail` field of Profile B, the two profiles are matched on the `Email` attribute
+       * type.
+       *
+       * If you choose `ONE_TO_ONE` , the system can only match attributes if the sub-types are an
+       * exact match. For example, for the `Email` attribute type, the system will only consider it a
+       * match if the value of the `Email` field of Profile A matches the value of the `Email` field of
+       * Profile B.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-namespacerulebasedproperties.html#cfn-entityresolution-idnamespace-namespacerulebasedproperties-attributematchingmodel)
+       */
+      override fun attributeMatchingModel(): String? = unwrap(this).getAttributeMatchingModel()
+
+      /**
+       * The type of matching record that is allowed to be used in an ID mapping workflow.
+       *
+       * If the value is set to `ONE_SOURCE_TO_ONE_TARGET` , only one record in the source is
+       * matched to one record in the target.
+       *
+       * If the value is set to `MANY_SOURCE_TO_ONE_TARGET` , all matching records in the source are
+       * matched to one record in the target.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-namespacerulebasedproperties.html#cfn-entityresolution-idnamespace-namespacerulebasedproperties-recordmatchingmodels)
+       */
+      override fun recordMatchingModels(): List<String> = unwrap(this).getRecordMatchingModels() ?:
+          emptyList()
+
+      /**
+       * The sets of rules you can use in an ID mapping workflow.
+       *
+       * The limitations specified for the source and target must be compatible.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-namespacerulebasedproperties.html#cfn-entityresolution-idnamespace-namespacerulebasedproperties-ruledefinitiontypes)
+       */
+      override fun ruleDefinitionTypes(): List<String> = unwrap(this).getRuleDefinitionTypes() ?:
+          emptyList()
+
+      /**
+       * The rules for the ID namespace.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-namespacerulebasedproperties.html#cfn-entityresolution-idnamespace-namespacerulebasedproperties-rules)
+       */
+      override fun rules(): Any? = unwrap(this).getRules()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          NamespaceRuleBasedPropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdNamespace.NamespaceRuleBasedPropertiesProperty):
+          NamespaceRuleBasedPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NamespaceRuleBasedPropertiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NamespaceRuleBasedPropertiesProperty):
+          software.amazon.awscdk.services.entityresolution.CfnIdNamespace.NamespaceRuleBasedPropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.entityresolution.CfnIdNamespace.NamespaceRuleBasedPropertiesProperty
+    }
+  }
+
+  /**
+   * An object containing `RuleName` , and `MatchingKeys` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.entityresolution.*;
+   * RuleProperty ruleProperty = RuleProperty.builder()
+   * .matchingKeys(List.of("matchingKeys"))
+   * .ruleName("ruleName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-rule.html)
+   */
+  public interface RuleProperty {
+    /**
+     * A list of `MatchingKeys` .
+     *
+     * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are considered
+     * to match according to this rule if all of the `MatchingKeys` match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-rule.html#cfn-entityresolution-idnamespace-rule-matchingkeys)
+     */
+    public fun matchingKeys(): List<String>
+
+    /**
+     * A name for the matching rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-rule.html#cfn-entityresolution-idnamespace-rule-rulename)
+     */
+    public fun ruleName(): String
+
+    /**
+     * A builder for [RuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param matchingKeys A list of `MatchingKeys` . 
+       * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are
+       * considered to match according to this rule if all of the `MatchingKeys` match.
+       */
+      public fun matchingKeys(matchingKeys: List<String>)
+
+      /**
+       * @param matchingKeys A list of `MatchingKeys` . 
+       * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are
+       * considered to match according to this rule if all of the `MatchingKeys` match.
+       */
+      public fun matchingKeys(vararg matchingKeys: String)
+
+      /**
+       * @param ruleName A name for the matching rule. 
+       */
+      public fun ruleName(ruleName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.entityresolution.CfnIdNamespace.RuleProperty.Builder =
+          software.amazon.awscdk.services.entityresolution.CfnIdNamespace.RuleProperty.builder()
+
+      /**
+       * @param matchingKeys A list of `MatchingKeys` . 
+       * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are
+       * considered to match according to this rule if all of the `MatchingKeys` match.
+       */
+      override fun matchingKeys(matchingKeys: List<String>) {
+        cdkBuilder.matchingKeys(matchingKeys)
+      }
+
+      /**
+       * @param matchingKeys A list of `MatchingKeys` . 
+       * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are
+       * considered to match according to this rule if all of the `MatchingKeys` match.
+       */
+      override fun matchingKeys(vararg matchingKeys: String): Unit =
+          matchingKeys(matchingKeys.toList())
+
+      /**
+       * @param ruleName A name for the matching rule. 
+       */
+      override fun ruleName(ruleName: String) {
+        cdkBuilder.ruleName(ruleName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.entityresolution.CfnIdNamespace.RuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdNamespace.RuleProperty,
+    ) : CdkObject(cdkObject),
+        RuleProperty {
+      /**
+       * A list of `MatchingKeys` .
+       *
+       * The `MatchingKeys` must have been defined in the `SchemaMapping` . Two records are
+       * considered to match according to this rule if all of the `MatchingKeys` match.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-rule.html#cfn-entityresolution-idnamespace-rule-matchingkeys)
+       */
+      override fun matchingKeys(): List<String> = unwrap(this).getMatchingKeys()
+
+      /**
+       * A name for the matching rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idnamespace-rule.html#cfn-entityresolution-idnamespace-rule-rulename)
+       */
+      override fun ruleName(): String = unwrap(this).getRuleName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdNamespace.RuleProperty):
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RuleProperty):
+          software.amazon.awscdk.services.entityresolution.CfnIdNamespace.RuleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.entityresolution.CfnIdNamespace.RuleProperty
     }
   }
 }

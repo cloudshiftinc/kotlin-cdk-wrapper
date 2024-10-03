@@ -36,10 +36,10 @@ public interface LambdaFunctionAssociation {
    * Allows a Lambda function to have read access to the body content.
    *
    * Only valid for "request" event types (`ORIGIN_REQUEST` or `VIEWER_REQUEST`).
-   * See
-   * https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-include-body-access.html
    *
    * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-include-body-access.html)
    */
   public fun includeBody(): Boolean? = unwrap(this).getIncludeBody()
 
@@ -62,8 +62,6 @@ public interface LambdaFunctionAssociation {
     /**
      * @param includeBody Allows a Lambda function to have read access to the body content.
      * Only valid for "request" event types (`ORIGIN_REQUEST` or `VIEWER_REQUEST`).
-     * See
-     * https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-include-body-access.html
      */
     public fun includeBody(includeBody: Boolean)
 
@@ -89,8 +87,6 @@ public interface LambdaFunctionAssociation {
     /**
      * @param includeBody Allows a Lambda function to have read access to the body content.
      * Only valid for "request" event types (`ORIGIN_REQUEST` or `VIEWER_REQUEST`).
-     * See
-     * https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-include-body-access.html
      */
     override fun includeBody(includeBody: Boolean) {
       cdkBuilder.includeBody(includeBody)
@@ -109,7 +105,8 @@ public interface LambdaFunctionAssociation {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation,
-  ) : CdkObject(cdkObject), LambdaFunctionAssociation {
+  ) : CdkObject(cdkObject),
+      LambdaFunctionAssociation {
     /**
      * The lambda event type defines at which event the lambda is called during the request
      * lifecycle.
@@ -121,10 +118,10 @@ public interface LambdaFunctionAssociation {
      * Allows a Lambda function to have read access to the body content.
      *
      * Only valid for "request" event types (`ORIGIN_REQUEST` or `VIEWER_REQUEST`).
-     * See
-     * https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-include-body-access.html
      *
      * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-include-body-access.html)
      */
     override fun includeBody(): Boolean? = unwrap(this).getIncludeBody()
 

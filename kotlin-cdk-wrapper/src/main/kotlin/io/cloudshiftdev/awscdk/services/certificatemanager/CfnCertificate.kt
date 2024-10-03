@@ -73,7 +73,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCertificate(
   cdkObject: software.amazon.awscdk.services.certificatemanager.CfnCertificate,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -876,7 +878,8 @@ public open class CfnCertificate(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.certificatemanager.CfnCertificate.DomainValidationOptionProperty,
-    ) : CdkObject(cdkObject), DomainValidationOptionProperty {
+    ) : CdkObject(cdkObject),
+        DomainValidationOptionProperty {
       /**
        * A fully qualified domain name (FQDN) in the certificate request.
        *

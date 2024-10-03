@@ -32,7 +32,8 @@ public interface IRoute : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.IRoute,
-  ) : CdkObject(cdkObject), IRoute {
+  ) : CdkObject(cdkObject),
+      IRoute {
     /**
      * Apply the given removal policy to this resource.
      *

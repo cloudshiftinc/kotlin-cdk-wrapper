@@ -43,7 +43,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEventStream(
   cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStream,
-) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -369,7 +371,8 @@ public open class CfnEventStream(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStream.DestinationDetailsProperty,
-    ) : CdkObject(cdkObject), DestinationDetailsProperty {
+    ) : CdkObject(cdkObject),
+        DestinationDetailsProperty {
       /**
        * The status of enabling the Kinesis stream as a destination for export.
        *

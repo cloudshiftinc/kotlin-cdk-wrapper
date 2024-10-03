@@ -207,7 +207,8 @@ public interface AlarmStatusWidgetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetProps,
-  ) : CdkObject(cdkObject), AlarmStatusWidgetProps {
+  ) : CdkObject(cdkObject),
+      AlarmStatusWidgetProps {
     /**
      * CloudWatch Alarms to show in widget.
      */

@@ -279,7 +279,8 @@ public interface CnameRecordProps : RecordSetOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.CnameRecordProps,
-  ) : CdkObject(cdkObject), CnameRecordProps {
+  ) : CdkObject(cdkObject),
+      CnameRecordProps {
     /**
      * A comment to add on the record.
      *

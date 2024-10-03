@@ -46,7 +46,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIPAMResourceDiscovery(
   cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
       this(software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
@@ -423,7 +425,8 @@ public open class CfnIPAMResourceDiscovery(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery.IpamOperatingRegionProperty,
-    ) : CdkObject(cdkObject), IpamOperatingRegionProperty {
+    ) : CdkObject(cdkObject),
+        IpamOperatingRegionProperty {
       /**
        * The name of the operating Region.
        *

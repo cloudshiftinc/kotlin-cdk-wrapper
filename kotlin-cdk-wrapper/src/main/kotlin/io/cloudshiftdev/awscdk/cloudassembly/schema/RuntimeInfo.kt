@@ -9,36 +9,11 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
 
-/**
- * Information about the application's runtime components.
- *
- * Example:
- *
- * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.cloudassembly.schema.*;
- * RuntimeInfo runtimeInfo = RuntimeInfo.builder()
- * .libraries(Map.of(
- * "librariesKey", "libraries"))
- * .build();
- * ```
- */
 public interface RuntimeInfo {
-  /**
-   * The list of libraries loaded in the application, associated with their versions.
-   */
   public fun libraries(): Map<String, String>
 
-  /**
-   * A builder for [RuntimeInfo]
-   */
   @CdkDslMarker
   public interface Builder {
-    /**
-     * @param libraries The list of libraries loaded in the application, associated with their
-     * versions. 
-     */
     public fun libraries(libraries: Map<String, String>)
   }
 
@@ -46,10 +21,6 @@ public interface RuntimeInfo {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo.Builder =
         software.amazon.awscdk.cloudassembly.schema.RuntimeInfo.builder()
 
-    /**
-     * @param libraries The list of libraries loaded in the application, associated with their
-     * versions. 
-     */
     override fun libraries(libraries: Map<String, String>) {
       cdkBuilder.libraries(libraries)
     }
@@ -59,10 +30,8 @@ public interface RuntimeInfo {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo,
-  ) : CdkObject(cdkObject), RuntimeInfo {
-    /**
-     * The list of libraries loaded in the application, associated with their versions.
-     */
+  ) : CdkObject(cdkObject),
+      RuntimeInfo {
     override fun libraries(): Map<String, String> = unwrap(this).getLibraries() ?: emptyMap()
   }
 

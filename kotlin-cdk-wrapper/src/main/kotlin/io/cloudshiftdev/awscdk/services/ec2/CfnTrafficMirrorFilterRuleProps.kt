@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.ec2
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -10,6 +11,7 @@ import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 
 /**
@@ -40,6 +42,10 @@ import kotlin.jvm.JvmName
  * .fromPort(123)
  * .toPort(123)
  * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -108,6 +114,13 @@ public interface CfnTrafficMirrorFilterRuleProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html#cfn-ec2-trafficmirrorfilterrule-sourceportrange)
    */
   public fun sourcePortRange(): Any? = unwrap(this).getSourcePortRange()
+
+  /**
+   * Tags on Traffic Mirroring filter rules.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html#cfn-ec2-trafficmirrorfilterrule-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * The type of traffic.
@@ -200,6 +213,16 @@ public interface CfnTrafficMirrorFilterRuleProps {
     @JvmName("9f81f9ebdd25baa631b8fd5e7b3657bd9de0f4b9f78c4fcb04e6a73a114a6cb0")
     public
         fun sourcePortRange(sourcePortRange: CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty.Builder.() -> Unit)
+
+    /**
+     * @param tags Tags on Traffic Mirroring filter rules.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags Tags on Traffic Mirroring filter rules.
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * @param trafficDirection The type of traffic. 
@@ -315,6 +338,18 @@ public interface CfnTrafficMirrorFilterRuleProps {
         sourcePortRange(CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty(sourcePortRange))
 
     /**
+     * @param tags Tags on Traffic Mirroring filter rules.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags Tags on Traffic Mirroring filter rules.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
      * @param trafficDirection The type of traffic. 
      */
     override fun trafficDirection(trafficDirection: String) {
@@ -334,7 +369,8 @@ public interface CfnTrafficMirrorFilterRuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRuleProps,
-  ) : CdkObject(cdkObject), CfnTrafficMirrorFilterRuleProps {
+  ) : CdkObject(cdkObject),
+      CfnTrafficMirrorFilterRuleProps {
     /**
      * The description of the Traffic Mirror rule.
      *
@@ -397,6 +433,13 @@ public interface CfnTrafficMirrorFilterRuleProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html#cfn-ec2-trafficmirrorfilterrule-sourceportrange)
      */
     override fun sourcePortRange(): Any? = unwrap(this).getSourcePortRange()
+
+    /**
+     * Tags on Traffic Mirroring filter rules.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html#cfn-ec2-trafficmirrorfilterrule-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
      * The type of traffic.

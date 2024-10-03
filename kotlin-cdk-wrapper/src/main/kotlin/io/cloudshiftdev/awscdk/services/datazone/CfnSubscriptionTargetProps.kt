@@ -279,7 +279,8 @@ public interface CfnSubscriptionTargetProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datazone.CfnSubscriptionTargetProps,
-  ) : CdkObject(cdkObject), CfnSubscriptionTargetProps {
+  ) : CdkObject(cdkObject),
+      CfnSubscriptionTargetProps {
     /**
      * The asset types included in the subscription target.
      *

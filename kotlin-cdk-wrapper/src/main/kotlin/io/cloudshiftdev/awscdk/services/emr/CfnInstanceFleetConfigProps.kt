@@ -404,7 +404,8 @@ public interface CfnInstanceFleetConfigProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfigProps,
-  ) : CdkObject(cdkObject), CfnInstanceFleetConfigProps {
+  ) : CdkObject(cdkObject),
+      CfnInstanceFleetConfigProps {
     /**
      * The unique identifier of the EMR cluster.
      *

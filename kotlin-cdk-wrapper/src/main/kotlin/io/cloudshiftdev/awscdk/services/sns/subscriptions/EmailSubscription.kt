@@ -30,7 +30,8 @@ import kotlin.collections.Map
  */
 public open class EmailSubscription(
   cdkObject: software.amazon.awscdk.services.sns.subscriptions.EmailSubscription,
-) : CdkObject(cdkObject), ITopicSubscription {
+) : CdkObject(cdkObject),
+    ITopicSubscription {
   public constructor(emailAddress: String) :
       this(software.amazon.awscdk.services.sns.subscriptions.EmailSubscription(emailAddress)
   )

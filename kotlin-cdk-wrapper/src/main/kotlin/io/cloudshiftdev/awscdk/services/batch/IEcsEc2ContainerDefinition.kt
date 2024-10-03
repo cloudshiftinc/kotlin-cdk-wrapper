@@ -62,7 +62,8 @@ public interface IEcsEc2ContainerDefinition : IEcsContainerDefinition {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IEcsEc2ContainerDefinition,
-  ) : CdkObject(cdkObject), IEcsEc2ContainerDefinition {
+  ) : CdkObject(cdkObject),
+      IEcsEc2ContainerDefinition {
     /**
      * Add a ulimit to this container.
      *

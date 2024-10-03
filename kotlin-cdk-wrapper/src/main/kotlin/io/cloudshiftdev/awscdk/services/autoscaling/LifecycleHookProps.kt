@@ -163,7 +163,8 @@ public interface LifecycleHookProps : BasicLifecycleHookProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.LifecycleHookProps,
-  ) : CdkObject(cdkObject), LifecycleHookProps {
+  ) : CdkObject(cdkObject),
+      LifecycleHookProps {
     /**
      * The AutoScalingGroup to add the lifecycle hook to.
      */

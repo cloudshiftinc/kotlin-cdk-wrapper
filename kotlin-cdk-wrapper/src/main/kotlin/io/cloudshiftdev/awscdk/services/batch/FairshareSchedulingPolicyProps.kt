@@ -200,7 +200,8 @@ public interface FairshareSchedulingPolicyProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.FairshareSchedulingPolicyProps,
-  ) : CdkObject(cdkObject), FairshareSchedulingPolicyProps {
+  ) : CdkObject(cdkObject),
+      FairshareSchedulingPolicyProps {
     /**
      * Used to calculate the percentage of the maximum available vCPU to reserve for share
      * identifiers not present in the Queue.

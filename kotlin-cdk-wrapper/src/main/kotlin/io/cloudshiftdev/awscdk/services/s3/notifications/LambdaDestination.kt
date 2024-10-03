@@ -28,7 +28,8 @@ import io.cloudshiftdev.constructs.Construct
  */
 public open class LambdaDestination(
   cdkObject: software.amazon.awscdk.services.s3.notifications.LambdaDestination,
-) : CdkObject(cdkObject), IBucketNotificationDestination {
+) : CdkObject(cdkObject),
+    IBucketNotificationDestination {
   public constructor(fn: IFunction) :
       this(software.amazon.awscdk.services.s3.notifications.LambdaDestination(fn.let(IFunction.Companion::unwrap))
   )

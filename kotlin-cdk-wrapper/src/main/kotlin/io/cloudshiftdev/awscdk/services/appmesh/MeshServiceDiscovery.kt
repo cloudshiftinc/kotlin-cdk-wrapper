@@ -63,7 +63,8 @@ public interface MeshServiceDiscovery {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.MeshServiceDiscovery,
-  ) : CdkObject(cdkObject), MeshServiceDiscovery {
+  ) : CdkObject(cdkObject),
+      MeshServiceDiscovery {
     /**
      * IP preference applied to all Virtual Nodes in the Mesh.
      *

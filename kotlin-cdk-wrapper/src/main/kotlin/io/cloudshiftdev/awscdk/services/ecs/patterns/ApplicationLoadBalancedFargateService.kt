@@ -22,6 +22,7 @@ import io.cloudshiftdev.awscdk.services.ecs.RuntimePlatform
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationProtocol
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationProtocolVersion
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IpAddressType
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.SslPolicy
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.Boolean
@@ -49,11 +50,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
  * .build())
- * .taskSubnets(SubnetSelection.builder()
- * .subnets(List.of(Subnet.fromSubnetId(this, "subnet", "VpcISOLATEDSubnet1Subnet80F07FA0")))
- * .build())
- * .loadBalancerName("application-lb-name")
  * .build();
+ * ScalableTaskCount scalableTarget =
+ * loadBalancedFargateService.service.autoScaleTaskCount(EnableScalingProps.builder()
+ * .minCapacity(1)
+ * .maxCapacity(20)
+ * .build());
+ * scalableTarget.scaleOnCpuUtilization("CpuScaling", CpuUtilizationScalingProps.builder()
+ * .targetUtilizationPercent(50)
+ * .build());
+ * scalableTarget.scaleOnMemoryUtilization("MemoryScaling", MemoryUtilizationScalingProps.builder()
+ * .targetUtilizationPercent(50)
+ * .build());
  * ```
  */
 public open class ApplicationLoadBalancedFargateService(
@@ -377,6 +385,15 @@ public open class ApplicationLoadBalancedFargateService(
      * @param idleTimeout The load balancer idle timeout, in seconds. 
      */
     public fun idleTimeout(idleTimeout: Duration)
+
+    /**
+     * The type of IP address to use.
+     *
+     * Default: - IpAddressType.IPV4
+     *
+     * @param ipAddressType The type of IP address to use. 
+     */
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
     /**
      * Listener port of the application load balancer that will serve traffic to the service.
@@ -1039,6 +1056,17 @@ public open class ApplicationLoadBalancedFargateService(
      */
     override fun idleTimeout(idleTimeout: Duration) {
       cdkBuilder.idleTimeout(idleTimeout.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * The type of IP address to use.
+     *
+     * Default: - IpAddressType.IPV4
+     *
+     * @param ipAddressType The type of IP address to use. 
+     */
+    override fun ipAddressType(ipAddressType: IpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
     }
 
     /**

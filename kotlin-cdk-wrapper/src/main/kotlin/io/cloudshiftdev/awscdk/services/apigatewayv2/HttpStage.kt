@@ -23,12 +23,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * HttpStage.Builder.create(this, "Stage")
  * .httpApi(api)
  * .stageName("beta")
+ * .description("My Stage")
  * .build();
  * ```
  */
 public open class HttpStage(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpStage,
-) : Resource(cdkObject), IHttpStage, IStage {
+) : Resource(cdkObject),
+    IHttpStage,
+    IStage {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -277,6 +280,15 @@ public open class HttpStage(
     public fun autoDeploy(autoDeploy: Boolean)
 
     /**
+     * The description for the API stage.
+     *
+     * Default: - no description
+     *
+     * @param description The description for the API stage. 
+     */
+    public fun description(description: String)
+
+    /**
      * The options for custom domain and api mapping.
      *
      * Default: - no custom domain and api mapping configuration
@@ -352,6 +364,17 @@ public open class HttpStage(
      */
     override fun autoDeploy(autoDeploy: Boolean) {
       cdkBuilder.autoDeploy(autoDeploy)
+    }
+
+    /**
+     * The description for the API stage.
+     *
+     * Default: - no description
+     *
+     * @param description The description for the API stage. 
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
     }
 
     /**

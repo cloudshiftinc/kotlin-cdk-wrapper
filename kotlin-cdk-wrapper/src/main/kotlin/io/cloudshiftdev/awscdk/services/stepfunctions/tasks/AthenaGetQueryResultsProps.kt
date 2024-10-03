@@ -321,7 +321,8 @@ public interface AthenaGetQueryResultsProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryResultsProps,
-  ) : CdkObject(cdkObject), AthenaGetQueryResultsProps {
+  ) : CdkObject(cdkObject),
+      AthenaGetQueryResultsProps {
     /**
      * An optional description for this state.
      *

@@ -85,7 +85,8 @@ public interface CfnPolicyPrincipalAttachmentProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachmentProps,
-  ) : CdkObject(cdkObject), CfnPolicyPrincipalAttachmentProps {
+  ) : CdkObject(cdkObject),
+      CfnPolicyPrincipalAttachmentProps {
     /**
      * The name of the AWS IoT policy.
      *

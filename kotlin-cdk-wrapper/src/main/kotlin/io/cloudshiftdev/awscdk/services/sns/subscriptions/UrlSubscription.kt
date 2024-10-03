@@ -32,7 +32,8 @@ import kotlin.collections.Map
  */
 public open class UrlSubscription(
   cdkObject: software.amazon.awscdk.services.sns.subscriptions.UrlSubscription,
-) : CdkObject(cdkObject), ITopicSubscription {
+) : CdkObject(cdkObject),
+    ITopicSubscription {
   public constructor(url: String) :
       this(software.amazon.awscdk.services.sns.subscriptions.UrlSubscription(url)
   )

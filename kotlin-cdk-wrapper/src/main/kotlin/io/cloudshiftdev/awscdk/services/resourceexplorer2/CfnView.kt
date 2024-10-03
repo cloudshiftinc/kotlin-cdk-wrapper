@@ -51,7 +51,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnView(
   cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -569,7 +571,8 @@ public open class CfnView(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty,
-    ) : CdkObject(cdkObject), FiltersProperty {
+    ) : CdkObject(cdkObject),
+        FiltersProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-filters.html#cfn-resourceexplorer2-view-filters-filterstring)
        */
@@ -650,7 +653,8 @@ public open class CfnView(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty,
-    ) : CdkObject(cdkObject), IncludedPropertyProperty {
+    ) : CdkObject(cdkObject),
+        IncludedPropertyProperty {
       /**
        * The name of the property that is included in this view.
        *
@@ -772,7 +776,8 @@ public open class CfnView(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty,
-    ) : CdkObject(cdkObject), SearchFilterProperty {
+    ) : CdkObject(cdkObject),
+        SearchFilterProperty {
       /**
        * The string that contains the search keywords, prefixes, and operators to control the
        * results that can be returned by a Search operation.

@@ -86,7 +86,8 @@ public interface EBSTagSpecification {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.EBSTagSpecification,
-  ) : CdkObject(cdkObject), EBSTagSpecification {
+  ) : CdkObject(cdkObject),
+      EBSTagSpecification {
     /**
      * Specifies whether to propagate the tags from the task definition or the service to the task.
      *

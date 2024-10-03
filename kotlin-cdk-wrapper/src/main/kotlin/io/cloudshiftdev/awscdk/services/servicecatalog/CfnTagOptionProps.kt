@@ -116,7 +116,8 @@ public interface CfnTagOptionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CfnTagOptionProps,
-  ) : CdkObject(cdkObject), CfnTagOptionProps {
+  ) : CdkObject(cdkObject),
+      CfnTagOptionProps {
     /**
      * The TagOption active state.
      *

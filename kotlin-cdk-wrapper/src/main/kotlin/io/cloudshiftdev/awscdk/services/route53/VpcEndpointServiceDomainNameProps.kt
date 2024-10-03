@@ -107,7 +107,8 @@ public interface VpcEndpointServiceDomainNameProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.VpcEndpointServiceDomainNameProps,
-  ) : CdkObject(cdkObject), VpcEndpointServiceDomainNameProps {
+  ) : CdkObject(cdkObject),
+      VpcEndpointServiceDomainNameProps {
     /**
      * The domain name to use.
      *

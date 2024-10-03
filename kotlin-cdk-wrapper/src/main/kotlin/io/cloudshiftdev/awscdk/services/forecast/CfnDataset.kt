@@ -19,6 +19,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Creates an Amazon Forecast dataset.
  *
+ *
+ * Amazon Forecast is no longer available to new customers. Existing customers of Amazon Forecast
+ * can continue to use the service as normal. [Learn
+ * more"](https://docs.aws.amazon.com/machine-learning/transition-your-amazon-forecast-usage-to-amazon-sagemaker-canvas/)
+ *
+ *
  * The information about the dataset that you provide helps Forecast understand how to consume the
  * data for model training. This includes the following:
  *
@@ -73,7 +79,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDataset(
   cdkObject: software.amazon.awscdk.services.forecast.CfnDataset,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -518,7 +525,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty,
-    ) : CdkObject(cdkObject), AttributesItemsProperty {
+    ) : CdkObject(cdkObject),
+        AttributesItemsProperty {
       /**
        * Name of the dataset field.
        *
@@ -638,7 +646,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.EncryptionConfigProperty,
-    ) : CdkObject(cdkObject), EncryptionConfigProperty {
+    ) : CdkObject(cdkObject),
+        EncryptionConfigProperty {
       /**
        * The Amazon Resource Name (ARN) of the KMS key.
        *
@@ -759,7 +768,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.SchemaProperty,
-    ) : CdkObject(cdkObject), SchemaProperty {
+    ) : CdkObject(cdkObject),
+        SchemaProperty {
       /**
        * An array of attributes specifying the name and type of each field in a dataset.
        *
@@ -878,7 +888,8 @@ public open class CfnDataset(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.TagsItemsProperty,
-    ) : CdkObject(cdkObject), TagsItemsProperty {
+    ) : CdkObject(cdkObject),
+        TagsItemsProperty {
       /**
        * The key name of the tag.
        *

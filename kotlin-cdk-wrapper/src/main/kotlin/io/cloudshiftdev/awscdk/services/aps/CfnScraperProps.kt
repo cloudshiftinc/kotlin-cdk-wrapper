@@ -260,7 +260,8 @@ public interface CfnScraperProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.aps.CfnScraperProps,
-  ) : CdkObject(cdkObject), CfnScraperProps {
+  ) : CdkObject(cdkObject),
+      CfnScraperProps {
     /**
      * An optional user-assigned scraper alias.
      *

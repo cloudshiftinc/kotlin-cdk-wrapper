@@ -64,7 +64,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnGlobalReplicationGroup(
   cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -143,12 +144,12 @@ public open class CfnGlobalReplicationGroup(
   }
 
   /**
-   * The Elasticache Redis engine version.
+   * The Elasticache Redis OSS engine version.
    */
   public open fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
   /**
-   * The Elasticache Redis engine version.
+   * The Elasticache Redis OSS engine version.
    */
   public open fun engineVersion(`value`: String) {
     unwrap(this).setEngineVersion(`value`)
@@ -259,7 +260,7 @@ public open class CfnGlobalReplicationGroup(
      * Specifies whether a read-only replica is automatically promoted to read/write primary if the
      * existing primary fails.
      *
-     * `AutomaticFailoverEnabled` must be enabled for Redis (cluster mode enabled) replication
+     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
      * groups.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-automaticfailoverenabled)
@@ -272,7 +273,7 @@ public open class CfnGlobalReplicationGroup(
      * Specifies whether a read-only replica is automatically promoted to read/write primary if the
      * existing primary fails.
      *
-     * `AutomaticFailoverEnabled` must be enabled for Redis (cluster mode enabled) replication
+     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
      * groups.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-automaticfailoverenabled)
@@ -301,10 +302,10 @@ public open class CfnGlobalReplicationGroup(
     public fun cacheParameterGroupName(cacheParameterGroupName: String)
 
     /**
-     * The Elasticache Redis engine version.
+     * The Elasticache Redis OSS engine version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-engineversion)
-     * @param engineVersion The Elasticache Redis engine version. 
+     * @param engineVersion The Elasticache Redis OSS engine version. 
      */
     public fun engineVersion(engineVersion: String)
 
@@ -396,7 +397,7 @@ public open class CfnGlobalReplicationGroup(
      * Specifies whether a read-only replica is automatically promoted to read/write primary if the
      * existing primary fails.
      *
-     * `AutomaticFailoverEnabled` must be enabled for Redis (cluster mode enabled) replication
+     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
      * groups.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-automaticfailoverenabled)
@@ -411,7 +412,7 @@ public open class CfnGlobalReplicationGroup(
      * Specifies whether a read-only replica is automatically promoted to read/write primary if the
      * existing primary fails.
      *
-     * `AutomaticFailoverEnabled` must be enabled for Redis (cluster mode enabled) replication
+     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
      * groups.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-automaticfailoverenabled)
@@ -446,10 +447,10 @@ public open class CfnGlobalReplicationGroup(
     }
 
     /**
-     * The Elasticache Redis engine version.
+     * The Elasticache Redis OSS engine version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-engineversion)
-     * @param engineVersion The Elasticache Redis engine version. 
+     * @param engineVersion The Elasticache Redis OSS engine version. 
      */
     override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
@@ -668,7 +669,8 @@ public open class CfnGlobalReplicationGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty,
-    ) : CdkObject(cdkObject), GlobalReplicationGroupMemberProperty {
+    ) : CdkObject(cdkObject),
+        GlobalReplicationGroupMemberProperty {
       /**
        * The replication group id of the Global datastore member.
        *
@@ -839,7 +841,8 @@ public open class CfnGlobalReplicationGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty,
-    ) : CdkObject(cdkObject), RegionalConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        RegionalConfigurationProperty {
       /**
        * The name of the secondary cluster.
        *
@@ -902,8 +905,8 @@ public open class CfnGlobalReplicationGroup(
    */
   public interface ReshardingConfigurationProperty {
     /**
-     * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node group
-     * these configuration values apply to.
+     * Either the ElastiCache (Redis OSS) supplied 4-digit id or a user supplied id for the node
+     * group these configuration values apply to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html#cfn-elasticache-globalreplicationgroup-reshardingconfiguration-nodegroupid)
      */
@@ -923,8 +926,8 @@ public open class CfnGlobalReplicationGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param nodeGroupId Either the ElastiCache for Redis supplied 4-digit id or a user supplied
-       * id for the node group these configuration values apply to.
+       * @param nodeGroupId Either the ElastiCache (Redis OSS) supplied 4-digit id or a user
+       * supplied id for the node group these configuration values apply to.
        */
       public fun nodeGroupId(nodeGroupId: String)
 
@@ -948,8 +951,8 @@ public open class CfnGlobalReplicationGroup(
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty.builder()
 
       /**
-       * @param nodeGroupId Either the ElastiCache for Redis supplied 4-digit id or a user supplied
-       * id for the node group these configuration values apply to.
+       * @param nodeGroupId Either the ElastiCache (Redis OSS) supplied 4-digit id or a user
+       * supplied id for the node group these configuration values apply to.
        */
       override fun nodeGroupId(nodeGroupId: String) {
         cdkBuilder.nodeGroupId(nodeGroupId)
@@ -977,9 +980,10 @@ public open class CfnGlobalReplicationGroup(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty,
-    ) : CdkObject(cdkObject), ReshardingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ReshardingConfigurationProperty {
       /**
-       * Either the ElastiCache for Redis supplied 4-digit id or a user supplied id for the node
+       * Either the ElastiCache (Redis OSS) supplied 4-digit id or a user supplied id for the node
        * group these configuration values apply to.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html#cfn-elasticache-globalreplicationgroup-reshardingconfiguration-nodegroupid)

@@ -30,7 +30,8 @@ public interface IAccessKey : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IAccessKey,
-  ) : CdkObject(cdkObject), IAccessKey {
+  ) : CdkObject(cdkObject),
+      IAccessKey {
     /**
      * The Access Key ID.
      */

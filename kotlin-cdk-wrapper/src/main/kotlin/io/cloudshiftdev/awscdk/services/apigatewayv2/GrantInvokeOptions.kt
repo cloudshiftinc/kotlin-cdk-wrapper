@@ -70,7 +70,8 @@ public interface GrantInvokeOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions,
-  ) : CdkObject(cdkObject), GrantInvokeOptions {
+  ) : CdkObject(cdkObject),
+      GrantInvokeOptions {
     /**
      * The HTTP methods to allow.
      *

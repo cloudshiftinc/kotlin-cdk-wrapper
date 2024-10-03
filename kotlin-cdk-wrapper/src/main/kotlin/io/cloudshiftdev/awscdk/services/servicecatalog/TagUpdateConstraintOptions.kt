@@ -88,7 +88,8 @@ public interface TagUpdateConstraintOptions : CommonConstraintOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.TagUpdateConstraintOptions,
-  ) : CdkObject(cdkObject), TagUpdateConstraintOptions {
+  ) : CdkObject(cdkObject),
+      TagUpdateConstraintOptions {
     /**
      * Toggle for if users should be allowed to change/update tags on provisioned products.
      *

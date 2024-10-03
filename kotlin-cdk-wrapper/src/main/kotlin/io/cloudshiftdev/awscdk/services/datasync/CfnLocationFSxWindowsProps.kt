@@ -281,7 +281,8 @@ public interface CfnLocationFSxWindowsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxWindowsProps,
-  ) : CdkObject(cdkObject), CfnLocationFSxWindowsProps {
+  ) : CdkObject(cdkObject),
+      CfnLocationFSxWindowsProps {
     /**
      * Specifies the name of the Microsoft Active Directory domain that the FSx for Windows File
      * Server file system belongs to.

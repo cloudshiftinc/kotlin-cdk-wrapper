@@ -171,7 +171,8 @@ public interface NetworkLoadBalancerAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerAttributes,
-  ) : CdkObject(cdkObject), NetworkLoadBalancerAttributes {
+  ) : CdkObject(cdkObject),
+      NetworkLoadBalancerAttributes {
     /**
      * ARN of the load balancer.
      */

@@ -33,7 +33,8 @@ import kotlin.Any
  */
 public open class LambdaAction(
   cdkObject: software.amazon.awscdk.services.cloudwatch.actions.LambdaAction,
-) : CdkObject(cdkObject), IAlarmAction {
+) : CdkObject(cdkObject),
+    IAlarmAction {
   public constructor(lambdaFunction: Any) :
       this(software.amazon.awscdk.services.cloudwatch.actions.LambdaAction(lambdaFunction)
   )

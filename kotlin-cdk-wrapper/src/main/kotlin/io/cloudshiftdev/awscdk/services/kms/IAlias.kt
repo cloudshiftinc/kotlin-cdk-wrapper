@@ -35,7 +35,8 @@ public interface IAlias : IKey {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kms.IAlias,
-  ) : CdkObject(cdkObject), IAlias {
+  ) : CdkObject(cdkObject),
+      IAlias {
     /**
      * Defines a new alias for the key.
      *

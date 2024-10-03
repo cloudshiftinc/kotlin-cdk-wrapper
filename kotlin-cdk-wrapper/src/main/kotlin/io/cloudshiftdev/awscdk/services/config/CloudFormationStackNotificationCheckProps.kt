@@ -54,6 +54,12 @@ public interface CloudFormationStackNotificationCheckProps : RuleProps {
     public fun description(description: String)
 
     /**
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in.
+     * The valid values are distinct objects.
+     */
+    public fun evaluationModes(evaluationModes: EvaluationMode)
+
+    /**
      * @param inputParameters Input parameter values that are passed to the AWS Config rule.
      */
     public fun inputParameters(inputParameters: Map<String, Any>)
@@ -102,6 +108,14 @@ public interface CloudFormationStackNotificationCheckProps : RuleProps {
     }
 
     /**
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in.
+     * The valid values are distinct objects.
+     */
+    override fun evaluationModes(evaluationModes: EvaluationMode) {
+      cdkBuilder.evaluationModes(evaluationModes.let(EvaluationMode.Companion::unwrap))
+    }
+
+    /**
      * @param inputParameters Input parameter values that are passed to the AWS Config rule.
      */
     override fun inputParameters(inputParameters: Map<String, Any>) {
@@ -144,7 +158,8 @@ public interface CloudFormationStackNotificationCheckProps : RuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.config.CloudFormationStackNotificationCheckProps,
-  ) : CdkObject(cdkObject), CloudFormationStackNotificationCheckProps {
+  ) : CdkObject(cdkObject),
+      CloudFormationStackNotificationCheckProps {
     /**
      * A name for the AWS Config rule.
      *
@@ -158,6 +173,16 @@ public interface CloudFormationStackNotificationCheckProps : RuleProps {
      * Default: - No description
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects.
+     *
+     * Default: - Detective evaluation mode only
+     */
+    override fun evaluationModes(): EvaluationMode? =
+        unwrap(this).getEvaluationModes()?.let(EvaluationMode::wrap)
 
     /**
      * Input parameter values that are passed to the AWS Config rule.

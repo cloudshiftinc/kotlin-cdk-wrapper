@@ -159,7 +159,8 @@ public interface ApiDestinationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.ApiDestinationProps,
-  ) : CdkObject(cdkObject), ApiDestinationProps {
+  ) : CdkObject(cdkObject),
+      ApiDestinationProps {
     /**
      * The name for the API destination.
      *

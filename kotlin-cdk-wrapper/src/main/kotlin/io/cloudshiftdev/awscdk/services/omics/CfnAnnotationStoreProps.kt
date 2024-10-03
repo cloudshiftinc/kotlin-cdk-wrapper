@@ -283,7 +283,8 @@ public interface CfnAnnotationStoreProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStoreProps,
-  ) : CdkObject(cdkObject), CfnAnnotationStoreProps {
+  ) : CdkObject(cdkObject),
+      CfnAnnotationStoreProps {
     /**
      * A description for the store.
      *

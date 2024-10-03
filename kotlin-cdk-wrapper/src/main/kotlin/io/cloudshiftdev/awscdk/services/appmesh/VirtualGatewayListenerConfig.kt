@@ -136,7 +136,8 @@ public interface VirtualGatewayListenerConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListenerConfig,
-  ) : CdkObject(cdkObject), VirtualGatewayListenerConfig {
+  ) : CdkObject(cdkObject),
+      VirtualGatewayListenerConfig {
     /**
      * Single listener config for a VirtualGateway.
      */

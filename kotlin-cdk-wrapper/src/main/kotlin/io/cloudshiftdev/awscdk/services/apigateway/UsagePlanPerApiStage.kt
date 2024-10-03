@@ -110,7 +110,8 @@ public interface UsagePlanPerApiStage {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage,
-  ) : CdkObject(cdkObject), UsagePlanPerApiStage {
+  ) : CdkObject(cdkObject),
+      UsagePlanPerApiStage {
     /**
      * Default: none
      */

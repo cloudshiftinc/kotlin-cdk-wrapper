@@ -39,7 +39,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class VpcLink(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLink,
-) : Resource(cdkObject), IVpcLink {
+) : Resource(cdkObject),
+    IVpcLink {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

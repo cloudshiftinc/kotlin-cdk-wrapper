@@ -17,22 +17,16 @@ import kotlin.jvm.JvmName
  *
  * ```
  * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration;
- * Function connectHandler;
- * Function disconnectHandler;
- * Function defaultHandler;
- * WebSocketApi webSocketApi = WebSocketApi.Builder.create(this, "mywsapi")
- * .connectRouteOptions(WebSocketRouteOptions.builder().integration(new
- * WebSocketLambdaIntegration("ConnectIntegration", connectHandler)).build())
- * .disconnectRouteOptions(WebSocketRouteOptions.builder().integration(new
- * WebSocketLambdaIntegration("DisconnectIntegration", disconnectHandler)).build())
- * .defaultRouteOptions(WebSocketRouteOptions.builder().integration(new
- * WebSocketLambdaIntegration("DefaultIntegration", defaultHandler)).build())
- * .build();
+ * Function messageHandler;
+ * WebSocketApi webSocketApi = new WebSocketApi(this, "mywsapi");
  * WebSocketStage.Builder.create(this, "mystage")
  * .webSocketApi(webSocketApi)
  * .stageName("dev")
  * .autoDeploy(true)
  * .build();
+ * webSocketApi.addRoute("sendMessage", WebSocketRouteOptions.builder()
+ * .integration(new WebSocketLambdaIntegration("SendMessageIntegration", messageHandler))
+ * .build());
  * ```
  */
 public interface WebSocketStageProps : StageOptions {
@@ -55,6 +49,11 @@ public interface WebSocketStageProps : StageOptions {
      * @param autoDeploy Whether updates to an API automatically trigger a new deployment.
      */
     public fun autoDeploy(autoDeploy: Boolean)
+
+    /**
+     * @param description The description for the API stage.
+     */
+    public fun description(description: String)
 
     /**
      * @param domainMapping The options for custom domain and api mapping.
@@ -100,6 +99,13 @@ public interface WebSocketStageProps : StageOptions {
      */
     override fun autoDeploy(autoDeploy: Boolean) {
       cdkBuilder.autoDeploy(autoDeploy)
+    }
+
+    /**
+     * @param description The description for the API stage.
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
     }
 
     /**
@@ -152,13 +158,21 @@ public interface WebSocketStageProps : StageOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStageProps,
-  ) : CdkObject(cdkObject), WebSocketStageProps {
+  ) : CdkObject(cdkObject),
+      WebSocketStageProps {
     /**
      * Whether updates to an API automatically trigger a new deployment.
      *
      * Default: false
      */
     override fun autoDeploy(): Boolean? = unwrap(this).getAutoDeploy()
+
+    /**
+     * The description for the API stage.
+     *
+     * Default: - no description
+     */
+    override fun description(): String? = unwrap(this).getDescription()
 
     /**
      * The options for custom domain and api mapping.

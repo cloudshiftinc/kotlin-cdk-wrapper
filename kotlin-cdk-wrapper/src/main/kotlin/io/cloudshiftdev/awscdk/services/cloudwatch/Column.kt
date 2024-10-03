@@ -22,7 +22,8 @@ import kotlin.collections.List
  */
 public open class Column(
   cdkObject: software.amazon.awscdk.services.cloudwatch.Column,
-) : CdkObject(cdkObject), IWidget {
+) : CdkObject(cdkObject),
+    IWidget {
   public constructor(widgets: IWidget) :
       this(software.amazon.awscdk.services.cloudwatch.Column(widgets.let(IWidget.Companion::unwrap))
   )

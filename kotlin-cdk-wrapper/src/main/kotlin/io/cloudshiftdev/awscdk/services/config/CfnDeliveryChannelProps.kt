@@ -265,7 +265,8 @@ public interface CfnDeliveryChannelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.config.CfnDeliveryChannelProps,
-  ) : CdkObject(cdkObject), CfnDeliveryChannelProps {
+  ) : CdkObject(cdkObject),
+      CfnDeliveryChannelProps {
     /**
      * The options for how often AWS Config delivers configuration snapshots to the Amazon S3
      * bucket.

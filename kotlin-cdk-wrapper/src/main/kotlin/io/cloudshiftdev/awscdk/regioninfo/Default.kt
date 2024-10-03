@@ -3,10 +3,18 @@
 package io.cloudshiftdev.awscdk.regioninfo
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.Deprecated
 import kotlin.String
 
 /**
- * Provides default values for certain regional information points.
+ * (deprecated) Provides default values for certain regional information points.
+ *
+ * This class is no longer needed because service principals are no longer needed except in very
+ * specific cases
+ * that are handled in the IAM ServicePrincipal class.
+ *
+ * * Service principals are now globally `&lt;SERVICE&gt;.amazonaws.com`, use iam.ServicePrincipal
+ * instead.
  */
 public open class Default(
   cdkObject: software.amazon.awscdk.regioninfo.Default,
@@ -15,6 +23,7 @@ public open class Default(
     public val VPC_ENDPOINT_SERVICE_NAME_PREFIX: String =
         software.amazon.awscdk.regioninfo.Default.VPC_ENDPOINT_SERVICE_NAME_PREFIX
 
+    @Deprecated(message = "deprecated in CDK")
     public fun servicePrincipal(
       serviceFqn: String,
       region: String,

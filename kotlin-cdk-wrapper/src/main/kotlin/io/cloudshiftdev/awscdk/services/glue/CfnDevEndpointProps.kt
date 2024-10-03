@@ -569,7 +569,8 @@ public interface CfnDevEndpointProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.glue.CfnDevEndpointProps,
-  ) : CdkObject(cdkObject), CfnDevEndpointProps {
+  ) : CdkObject(cdkObject),
+      CfnDevEndpointProps {
     /**
      * A map of arguments used to configure the `DevEndpoint` .
      *

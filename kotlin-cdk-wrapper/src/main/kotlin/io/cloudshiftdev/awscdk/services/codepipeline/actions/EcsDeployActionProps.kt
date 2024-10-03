@@ -251,7 +251,8 @@ public interface EcsDeployActionProps : CommonAwsActionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcsDeployActionProps,
-  ) : CdkObject(cdkObject), EcsDeployActionProps {
+  ) : CdkObject(cdkObject),
+      EcsDeployActionProps {
     /**
      * The physical, human-readable name of the Action.
      *

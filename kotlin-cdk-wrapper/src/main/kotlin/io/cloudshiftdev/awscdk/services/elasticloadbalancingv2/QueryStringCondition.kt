@@ -78,7 +78,8 @@ public interface QueryStringCondition {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.QueryStringCondition,
-  ) : CdkObject(cdkObject), QueryStringCondition {
+  ) : CdkObject(cdkObject),
+      QueryStringCondition {
     /**
      * The query string key for the condition.
      *

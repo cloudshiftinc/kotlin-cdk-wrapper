@@ -70,7 +70,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .logLevel("logLevel")
  * .build())
  * .build())
+ * .maxWebservers(123)
  * .maxWorkers(123)
+ * .minWebservers(123)
  * .minWorkers(123)
  * .networkConfiguration(NetworkConfigurationProperty.builder()
  * .securityGroupIds(List.of("securityGroupIds"))
@@ -94,7 +96,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnEnvironment(
   cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -303,6 +307,18 @@ public open class CfnEnvironment(
       Unit = loggingConfiguration(LoggingConfigurationProperty(`value`))
 
   /**
+   * The maximum number of web servers that you want to run in your environment.
+   */
+  public open fun maxWebservers(): Number? = unwrap(this).getMaxWebservers()
+
+  /**
+   * The maximum number of web servers that you want to run in your environment.
+   */
+  public open fun maxWebservers(`value`: Number) {
+    unwrap(this).setMaxWebservers(`value`)
+  }
+
+  /**
    * The maximum number of workers that you want to run in your environment.
    */
   public open fun maxWorkers(): Number? = unwrap(this).getMaxWorkers()
@@ -312,6 +328,18 @@ public open class CfnEnvironment(
    */
   public open fun maxWorkers(`value`: Number) {
     unwrap(this).setMaxWorkers(`value`)
+  }
+
+  /**
+   * The minimum number of web servers that you want to run in your environment.
+   */
+  public open fun minWebservers(): Number? = unwrap(this).getMinWebservers()
+
+  /**
+   * The minimum number of web servers that you want to run in your environment.
+   */
+  public open fun minWebservers(`value`: Number) {
+    unwrap(this).setMinWebservers(`value`)
   }
 
   /**
@@ -568,8 +596,8 @@ public open class CfnEnvironment(
      * If you specify a newer version number for an existing environment, the version update
      * requires some service interruption before taking effect.
      *
-     * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2`
-     * (latest)
+     * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2` |
+     * `2.8.1` | `2.9.2` (latest)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)
      * @param airflowVersion The version of Apache Airflow to use for the environment. 
@@ -669,6 +697,25 @@ public open class CfnEnvironment(
         fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * The maximum number of web servers that you want to run in your environment.
+     *
+     * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+     * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+     * API, or the Apache Airflow CLI. For example, in scenarios where your workload requires network
+     * calls to the Apache Airflow REST API with a high transaction-per-second (TPS) rate, Amazon MWAA
+     * will increase the number of web servers up to the number set in `MaxWebserers` . As TPS rates
+     * decrease Amazon MWAA disposes of the additional web servers, and scales down to the number set
+     * in `MinxWebserers` .
+     *
+     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-maxwebservers)
+     * @param maxWebservers The maximum number of web servers that you want to run in your
+     * environment. 
+     */
+    public fun maxWebservers(maxWebservers: Number)
+
+    /**
      * The maximum number of workers that you want to run in your environment.
      *
      * MWAA scales the number of Apache Airflow workers up to the number you specify in the
@@ -680,6 +727,23 @@ public open class CfnEnvironment(
      * @param maxWorkers The maximum number of workers that you want to run in your environment. 
      */
     public fun maxWorkers(maxWorkers: Number)
+
+    /**
+     * The minimum number of web servers that you want to run in your environment.
+     *
+     * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+     * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+     * API, or the Apache Airflow CLI. As the transaction-per-second rate, and the network load,
+     * decrease, Amazon MWAA disposes of the additional web servers, and scales down to the number set
+     * in `MinxWebserers` .
+     *
+     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-minwebservers)
+     * @param minWebservers The minimum number of web servers that you want to run in your
+     * environment. 
+     */
+    public fun minWebservers(minWebservers: Number)
 
     /**
      * The minimum number of workers that you want to run in your environment.
@@ -934,8 +998,8 @@ public open class CfnEnvironment(
      * If you specify a newer version number for an existing environment, the version update
      * requires some service interruption before taking effect.
      *
-     * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2`
-     * (latest)
+     * *Allowed Values* : `1.10.12` | `2.0.2` | `2.2.2` | `2.4.3` | `2.5.1` | `2.6.3` | `2.7.2` |
+     * `2.8.1` | `2.9.2` (latest)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)
      * @param airflowVersion The version of Apache Airflow to use for the environment. 
@@ -1052,6 +1116,27 @@ public open class CfnEnvironment(
         Unit = loggingConfiguration(LoggingConfigurationProperty(loggingConfiguration))
 
     /**
+     * The maximum number of web servers that you want to run in your environment.
+     *
+     * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+     * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+     * API, or the Apache Airflow CLI. For example, in scenarios where your workload requires network
+     * calls to the Apache Airflow REST API with a high transaction-per-second (TPS) rate, Amazon MWAA
+     * will increase the number of web servers up to the number set in `MaxWebserers` . As TPS rates
+     * decrease Amazon MWAA disposes of the additional web servers, and scales down to the number set
+     * in `MinxWebserers` .
+     *
+     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-maxwebservers)
+     * @param maxWebservers The maximum number of web servers that you want to run in your
+     * environment. 
+     */
+    override fun maxWebservers(maxWebservers: Number) {
+      cdkBuilder.maxWebservers(maxWebservers)
+    }
+
+    /**
      * The maximum number of workers that you want to run in your environment.
      *
      * MWAA scales the number of Apache Airflow workers up to the number you specify in the
@@ -1064,6 +1149,25 @@ public open class CfnEnvironment(
      */
     override fun maxWorkers(maxWorkers: Number) {
       cdkBuilder.maxWorkers(maxWorkers)
+    }
+
+    /**
+     * The minimum number of web servers that you want to run in your environment.
+     *
+     * Amazon MWAA scales the number of Apache Airflow web servers up to the number you specify for
+     * `MaxWebservers` when you interact with your Apache Airflow environment using Apache Airflow REST
+     * API, or the Apache Airflow CLI. As the transaction-per-second rate, and the network load,
+     * decrease, Amazon MWAA disposes of the additional web servers, and scales down to the number set
+     * in `MinxWebserers` .
+     *
+     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-minwebservers)
+     * @param minWebservers The minimum number of web servers that you want to run in your
+     * environment. 
+     */
+    override fun minWebservers(minWebservers: Number) {
+      cdkBuilder.minWebservers(minWebservers)
     }
 
     /**
@@ -1668,7 +1772,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment.LoggingConfigurationProperty,
-    ) : CdkObject(cdkObject), LoggingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        LoggingConfigurationProperty {
       /**
        * Defines the processing logs sent to CloudWatch Logs and the logging level to send.
        *
@@ -1864,7 +1969,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment.ModuleLoggingConfigurationProperty,
-    ) : CdkObject(cdkObject), ModuleLoggingConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ModuleLoggingConfigurationProperty {
       /**
        * The ARN of the CloudWatch Logs log group for each type of Apache Airflow log type that you
        * have enabled.
@@ -2054,7 +2160,8 @@ public open class CfnEnvironment(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty,
-    ) : CdkObject(cdkObject), NetworkConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        NetworkConfigurationProperty {
       /**
        * A list of one or more security group IDs.
        *

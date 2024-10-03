@@ -84,7 +84,8 @@ public interface SubjectAlternativeNamesMatcherConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.SubjectAlternativeNamesMatcherConfig,
-  ) : CdkObject(cdkObject), SubjectAlternativeNamesMatcherConfig {
+  ) : CdkObject(cdkObject),
+      SubjectAlternativeNamesMatcherConfig {
     /**
      * VirtualNode CFN configuration for subject alternative names secured by the certificate.
      */

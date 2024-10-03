@@ -377,7 +377,8 @@ public interface IApplication : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.IApplication,
-  ) : CdkObject(cdkObject), IApplication {
+  ) : CdkObject(cdkObject),
+      IApplication {
     /**
      * Adds an environment.
      *

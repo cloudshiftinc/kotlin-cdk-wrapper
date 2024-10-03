@@ -704,7 +704,8 @@ public interface IDomain : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticsearch.IDomain,
-  ) : CdkObject(cdkObject), IDomain {
+  ) : CdkObject(cdkObject),
+      IDomain {
     /**
      * Apply the given removal policy to this resource.
      *

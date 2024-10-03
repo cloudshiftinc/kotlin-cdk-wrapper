@@ -199,7 +199,8 @@ public interface ParallelProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.ParallelProps,
-  ) : CdkObject(cdkObject), ParallelProps {
+  ) : CdkObject(cdkObject),
+      ParallelProps {
     /**
      * An optional description for this state.
      *

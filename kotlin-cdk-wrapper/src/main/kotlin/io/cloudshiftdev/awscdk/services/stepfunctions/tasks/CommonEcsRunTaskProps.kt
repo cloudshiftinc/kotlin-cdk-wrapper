@@ -178,7 +178,8 @@ public interface CommonEcsRunTaskProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CommonEcsRunTaskProps,
-  ) : CdkObject(cdkObject), CommonEcsRunTaskProps {
+  ) : CdkObject(cdkObject),
+      CommonEcsRunTaskProps {
     /**
      * The topic to run the task on.
      */

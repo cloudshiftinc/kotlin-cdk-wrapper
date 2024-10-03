@@ -352,7 +352,8 @@ public interface ITable : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.ITable,
-  ) : CdkObject(cdkObject), ITable {
+  ) : CdkObject(cdkObject),
+      ITable {
     /**
      * Apply the given removal policy to this resource.
      *

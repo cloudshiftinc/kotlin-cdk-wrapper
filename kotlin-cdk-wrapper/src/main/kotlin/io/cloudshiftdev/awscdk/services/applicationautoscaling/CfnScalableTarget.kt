@@ -74,7 +74,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnScalableTarget(
   cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -311,6 +312,8 @@ public open class CfnScalableTarget(
      * the resource ID. Example: `endpoint/my-end-point/variant/KMeansClustering` .
      * * SageMaker inference component - The resource type is `inference-component` and the unique
      * identifier is the resource ID. Example: `inference-component/my-inference-component` .
+     * * Pool of WorkSpaces - The resource type is `workspacespool` and the unique identifier is the
+     * pool ID. Example: `workspacespool/wspool-123456` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-resourceid)
      * @param resourceId The identifier of the resource associated with the scalable target. 
@@ -345,11 +348,11 @@ public open class CfnScalableTarget(
      *
      * This string consists of the service namespace, resource type, and scaling property.
      *
-     * * `ecs:service:DesiredCount` - The desired task count of an ECS service.
+     * * `ecs:service:DesiredCount` - The task count of an ECS service.
      * * `elasticmapreduce:instancegroup:InstanceCount` - The instance count of an EMR Instance
      * Group.
      * * `ec2:spot-fleet-request:TargetCapacity` - The target capacity of a Spot Fleet.
-     * * `appstream:fleet:DesiredCapacity` - The desired capacity of an AppStream 2.0 fleet.
+     * * `appstream:fleet:DesiredCapacity` - The capacity of an AppStream 2.0 fleet.
      * * `dynamodb:table:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB table.
      * * `dynamodb:table:WriteCapacityUnits` - The provisioned write capacity for a DynamoDB table.
      * * `dynamodb:index:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB global
@@ -384,6 +387,8 @@ public open class CfnScalableTarget(
      * SageMaker serverless endpoint.
      * * `sagemaker:inference-component:DesiredCopyCount` - The number of copies across an endpoint
      * for a SageMaker inference component.
+     * * `workspaces:workspacespool:DesiredUserSessions` - The number of user sessions for the
+     * WorkSpaces in the pool.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-scalabledimension)
      * @param scalableDimension The scalable dimension associated with the scalable target. 
@@ -582,6 +587,8 @@ public open class CfnScalableTarget(
      * the resource ID. Example: `endpoint/my-end-point/variant/KMeansClustering` .
      * * SageMaker inference component - The resource type is `inference-component` and the unique
      * identifier is the resource ID. Example: `inference-component/my-inference-component` .
+     * * Pool of WorkSpaces - The resource type is `workspacespool` and the unique identifier is the
+     * pool ID. Example: `workspacespool/wspool-123456` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-resourceid)
      * @param resourceId The identifier of the resource associated with the scalable target. 
@@ -620,11 +627,11 @@ public open class CfnScalableTarget(
      *
      * This string consists of the service namespace, resource type, and scaling property.
      *
-     * * `ecs:service:DesiredCount` - The desired task count of an ECS service.
+     * * `ecs:service:DesiredCount` - The task count of an ECS service.
      * * `elasticmapreduce:instancegroup:InstanceCount` - The instance count of an EMR Instance
      * Group.
      * * `ec2:spot-fleet-request:TargetCapacity` - The target capacity of a Spot Fleet.
-     * * `appstream:fleet:DesiredCapacity` - The desired capacity of an AppStream 2.0 fleet.
+     * * `appstream:fleet:DesiredCapacity` - The capacity of an AppStream 2.0 fleet.
      * * `dynamodb:table:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB table.
      * * `dynamodb:table:WriteCapacityUnits` - The provisioned write capacity for a DynamoDB table.
      * * `dynamodb:index:ReadCapacityUnits` - The provisioned read capacity for a DynamoDB global
@@ -659,6 +666,8 @@ public open class CfnScalableTarget(
      * SageMaker serverless endpoint.
      * * `sagemaker:inference-component:DesiredCopyCount` - The number of copies across an endpoint
      * for a SageMaker inference component.
+     * * `workspaces:workspacespool:DesiredUserSessions` - The number of user sessions for the
+     * WorkSpaces in the pool.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-scalabledimension)
      * @param scalableDimension The scalable dimension associated with the scalable target. 
@@ -891,7 +900,8 @@ public open class CfnScalableTarget(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty,
-    ) : CdkObject(cdkObject), ScalableTargetActionProperty {
+    ) : CdkObject(cdkObject),
+        ScalableTargetActionProperty {
       /**
        * The maximum capacity.
        *
@@ -1227,7 +1237,8 @@ public open class CfnScalableTarget(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScheduledActionProperty,
-    ) : CdkObject(cdkObject), ScheduledActionProperty {
+    ) : CdkObject(cdkObject),
+        ScheduledActionProperty {
       /**
        * The date and time that the action is scheduled to end, in UTC.
        *
@@ -1493,7 +1504,8 @@ public open class CfnScalableTarget(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.SuspendedStateProperty,
-    ) : CdkObject(cdkObject), SuspendedStateProperty {
+    ) : CdkObject(cdkObject),
+        SuspendedStateProperty {
       /**
        * Whether scale in by a target tracking scaling policy or a step scaling policy is suspended.
        *

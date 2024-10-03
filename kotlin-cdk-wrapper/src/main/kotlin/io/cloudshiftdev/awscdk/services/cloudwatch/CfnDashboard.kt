@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDashboard(
   cdkObject: software.amazon.awscdk.services.cloudwatch.CfnDashboard,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -52,11 +53,6 @@ public open class CfnDashboard(
     props: CfnDashboardProps.Builder.() -> Unit,
   ) : this(scope, id, CfnDashboardProps(props)
   )
-
-  /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
    * The detailed information about the dashboard in JSON format, including the widgets to include

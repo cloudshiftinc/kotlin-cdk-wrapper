@@ -139,7 +139,8 @@ public interface TransformOutput {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformOutput,
-  ) : CdkObject(cdkObject), TransformOutput {
+  ) : CdkObject(cdkObject),
+      TransformOutput {
     /**
      * MIME type used to specify the output data.
      *

@@ -78,7 +78,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTaskDefinition(
   cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -626,7 +628,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty,
-    ) : CdkObject(cdkObject), LoRaWANGatewayVersionProperty {
+    ) : CdkObject(cdkObject),
+        LoRaWANGatewayVersionProperty {
       /**
        * The model number of the wireless gateway.
        *
@@ -845,7 +848,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskCreateProperty,
-    ) : CdkObject(cdkObject), LoRaWANUpdateGatewayTaskCreateProperty {
+    ) : CdkObject(cdkObject),
+        LoRaWANUpdateGatewayTaskCreateProperty {
       /**
        * The version of the gateways that should receive the update.
        *
@@ -1032,7 +1036,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty,
-    ) : CdkObject(cdkObject), LoRaWANUpdateGatewayTaskEntryProperty {
+    ) : CdkObject(cdkObject),
+        LoRaWANUpdateGatewayTaskEntryProperty {
       /**
        * The version of the gateways that should receive the update.
        *
@@ -1203,7 +1208,8 @@ public open class CfnTaskDefinition(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty,
-    ) : CdkObject(cdkObject), UpdateWirelessGatewayTaskCreateProperty {
+    ) : CdkObject(cdkObject),
+        UpdateWirelessGatewayTaskCreateProperty {
       /**
        * The properties that relate to the LoRaWAN wireless gateway.
        *

@@ -49,7 +49,8 @@ import kotlin.Unit
  */
 public open class S3(
   cdkObject: software.amazon.awscdk.services.ses.actions.S3,
-) : CdkObject(cdkObject), IReceiptRuleAction {
+) : CdkObject(cdkObject),
+    IReceiptRuleAction {
   public constructor(props: S3Props) :
       this(software.amazon.awscdk.services.ses.actions.S3(props.let(S3Props.Companion::unwrap))
   )

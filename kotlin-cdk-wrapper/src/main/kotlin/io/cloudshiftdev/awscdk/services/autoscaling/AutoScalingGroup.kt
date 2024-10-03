@@ -65,8 +65,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class AutoScalingGroup(
   cdkObject: software.amazon.awscdk.services.autoscaling.AutoScalingGroup,
-) : Resource(cdkObject), ILoadBalancerTarget, IConnectable, IApplicationLoadBalancerTarget,
-    INetworkLoadBalancerTarget, IAutoScalingGroup {
+) : Resource(cdkObject),
+    ILoadBalancerTarget,
+    IConnectable,
+    IApplicationLoadBalancerTarget,
+    INetworkLoadBalancerTarget,
+    IAutoScalingGroup {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

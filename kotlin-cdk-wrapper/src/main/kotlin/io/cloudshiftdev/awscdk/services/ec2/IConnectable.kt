@@ -16,7 +16,8 @@ public interface IConnectable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.IConnectable,
-  ) : CdkObject(cdkObject), IConnectable {
+  ) : CdkObject(cdkObject),
+      IConnectable {
     /**
      * The network connections associated with this resource.
      */

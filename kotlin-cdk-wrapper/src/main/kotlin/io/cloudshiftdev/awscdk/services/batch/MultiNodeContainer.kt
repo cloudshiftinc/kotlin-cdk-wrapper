@@ -116,7 +116,8 @@ public interface MultiNodeContainer {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.MultiNodeContainer,
-  ) : CdkObject(cdkObject), MultiNodeContainer {
+  ) : CdkObject(cdkObject),
+      MultiNodeContainer {
     /**
      * The container that this node range will run.
      */

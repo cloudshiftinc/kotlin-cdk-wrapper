@@ -132,7 +132,8 @@ public interface CfnOutcomeProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.frauddetector.CfnOutcomeProps,
-  ) : CdkObject(cdkObject), CfnOutcomeProps {
+  ) : CdkObject(cdkObject),
+      CfnOutcomeProps {
     /**
      * The outcome description.
      *

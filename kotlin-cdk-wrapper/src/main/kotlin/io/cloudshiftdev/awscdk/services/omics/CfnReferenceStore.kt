@@ -47,7 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnReferenceStore(
   cdkObject: software.amazon.awscdk.services.omics.CfnReferenceStore,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -378,7 +380,8 @@ public open class CfnReferenceStore(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.omics.CfnReferenceStore.SseConfigProperty,
-    ) : CdkObject(cdkObject), SseConfigProperty {
+    ) : CdkObject(cdkObject),
+        SseConfigProperty {
       /**
        * An encryption key ARN.
        *

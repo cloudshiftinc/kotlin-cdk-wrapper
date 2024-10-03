@@ -317,7 +317,8 @@ public interface BucketAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.s3.BucketAttributes,
-  ) : CdkObject(cdkObject), BucketAttributes {
+  ) : CdkObject(cdkObject),
+      BucketAttributes {
     /**
      * The account this existing bucket belongs to.
      *

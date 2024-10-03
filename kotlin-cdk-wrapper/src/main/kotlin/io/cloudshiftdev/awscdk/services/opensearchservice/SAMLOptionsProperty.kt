@@ -198,7 +198,8 @@ public interface SAMLOptionsProperty {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.opensearchservice.SAMLOptionsProperty,
-  ) : CdkObject(cdkObject), SAMLOptionsProperty {
+  ) : CdkObject(cdkObject),
+      SAMLOptionsProperty {
     /**
      * The unique entity ID of the application in the SAML identity provider.
      */

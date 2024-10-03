@@ -6,7 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
 /**
- * Translate stack outputs to Codepipline variable references.
+ * Translate stack outputs to CodePipeline variable references.
  *
  * Example:
  *

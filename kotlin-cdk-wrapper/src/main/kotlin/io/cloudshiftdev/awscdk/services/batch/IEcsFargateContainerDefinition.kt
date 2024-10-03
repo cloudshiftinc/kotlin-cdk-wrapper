@@ -69,7 +69,8 @@ public interface IEcsFargateContainerDefinition : IEcsContainerDefinition {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IEcsFargateContainerDefinition,
-  ) : CdkObject(cdkObject), IEcsFargateContainerDefinition {
+  ) : CdkObject(cdkObject),
+      IEcsFargateContainerDefinition {
     /**
      * Add a Volume to this container.
      *

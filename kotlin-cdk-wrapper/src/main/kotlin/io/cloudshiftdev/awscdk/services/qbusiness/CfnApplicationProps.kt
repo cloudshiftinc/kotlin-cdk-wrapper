@@ -28,11 +28,25 @@ import kotlin.jvm.JvmName
  * .attachmentsConfiguration(AttachmentsConfigurationProperty.builder()
  * .attachmentsControlMode("attachmentsControlMode")
  * .build())
+ * .autoSubscriptionConfiguration(AutoSubscriptionConfigurationProperty.builder()
+ * .autoSubscribe("autoSubscribe")
+ * // the properties below are optional
+ * .defaultSubscriptionType("defaultSubscriptionType")
+ * .build())
+ * .clientIdsForOidc(List.of("clientIdsForOidc"))
  * .description("description")
  * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
  * .kmsKeyId("kmsKeyId")
  * .build())
+ * .iamIdentityProviderArn("iamIdentityProviderArn")
  * .identityCenterInstanceArn("identityCenterInstanceArn")
+ * .identityType("identityType")
+ * .personalizationConfiguration(PersonalizationConfigurationProperty.builder()
+ * .personalizationControlMode("personalizationControlMode")
+ * .build())
+ * .qAppsConfiguration(QAppsConfigurationProperty.builder()
+ * .qAppsControlMode("qAppsControlMode")
+ * .build())
  * .roleArn("roleArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -50,6 +64,19 @@ public interface CfnApplicationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-attachmentsconfiguration)
    */
   public fun attachmentsConfiguration(): Any? = unwrap(this).getAttachmentsConfiguration()
+
+  /**
+   * Subscription configuration information for an Amazon Q Business application using IAM identity
+   * federation for user management.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-autosubscriptionconfiguration)
+   */
+  public fun autoSubscriptionConfiguration(): Any? = unwrap(this).getAutoSubscriptionConfiguration()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-clientidsforoidc)
+   */
+  public fun clientIdsForOidc(): List<String> = unwrap(this).getClientIdsForOidc() ?: emptyList()
 
   /**
    * A description for the Amazon Q Business application.
@@ -75,6 +102,14 @@ public interface CfnApplicationProps {
   public fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
 
   /**
+   * The Amazon Resource Name (ARN) of an identity provider being used by an Amazon Q Business
+   * application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-iamidentityproviderarn)
+   */
+  public fun iamIdentityProviderArn(): String? = unwrap(this).getIamIdentityProviderArn()
+
+  /**
    * The Amazon Resource Name (ARN) of the IAM Identity Center instance you are either creating
    * for—or connecting to—your Amazon Q Business application.
    *
@@ -85,8 +120,37 @@ public interface CfnApplicationProps {
   public fun identityCenterInstanceArn(): String? = unwrap(this).getIdentityCenterInstanceArn()
 
   /**
+   * The authentication type being used by a Amazon Q Business application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-identitytype)
+   */
+  public fun identityType(): String? = unwrap(this).getIdentityType()
+
+  /**
+   * Configuration information about chat response personalization.
+   *
+   * For more information, see [Personalizing chat
+   * responses](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-personalizationconfiguration)
+   */
+  public fun personalizationConfiguration(): Any? = unwrap(this).getPersonalizationConfiguration()
+
+  /**
+   * Configuration information about Amazon Q Apps.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-qappsconfiguration)
+   */
+  public fun qAppsConfiguration(): Any? = unwrap(this).getQAppsConfiguration()
+
+  /**
    * The Amazon Resource Name (ARN) of an IAM role with permissions to access your Amazon CloudWatch
    * logs and metrics.
+   *
+   * If this property is not specified, Amazon Q Business will create a [service linked role
+   * (SLR)](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/using-service-linked-roles.html#slr-permissions)
+   * and use it as the application's role.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-rolearn)
    */
@@ -130,6 +194,38 @@ public interface CfnApplicationProps {
         fun attachmentsConfiguration(attachmentsConfiguration: CfnApplication.AttachmentsConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * @param autoSubscriptionConfiguration Subscription configuration information for an Amazon Q
+     * Business application using IAM identity federation for user management.
+     */
+    public fun autoSubscriptionConfiguration(autoSubscriptionConfiguration: IResolvable)
+
+    /**
+     * @param autoSubscriptionConfiguration Subscription configuration information for an Amazon Q
+     * Business application using IAM identity federation for user management.
+     */
+    public
+        fun autoSubscriptionConfiguration(autoSubscriptionConfiguration: CfnApplication.AutoSubscriptionConfigurationProperty)
+
+    /**
+     * @param autoSubscriptionConfiguration Subscription configuration information for an Amazon Q
+     * Business application using IAM identity federation for user management.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8b4b03e43a5c9a22aab39b9c8d3b9522ab56673c8ab94536da1dff6a8e022107")
+    public
+        fun autoSubscriptionConfiguration(autoSubscriptionConfiguration: CfnApplication.AutoSubscriptionConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param clientIdsForOidc the value to be set.
+     */
+    public fun clientIdsForOidc(clientIdsForOidc: List<String>)
+
+    /**
+     * @param clientIdsForOidc the value to be set.
+     */
+    public fun clientIdsForOidc(vararg clientIdsForOidc: String)
+
+    /**
      * @param description A description for the Amazon Q Business application.
      */
     public fun description(description: String)
@@ -165,6 +261,12 @@ public interface CfnApplicationProps {
         fun encryptionConfiguration(encryptionConfiguration: CfnApplication.EncryptionConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * @param iamIdentityProviderArn The Amazon Resource Name (ARN) of an identity provider being
+     * used by an Amazon Q Business application.
+     */
+    public fun iamIdentityProviderArn(iamIdentityProviderArn: String)
+
+    /**
      * @param identityCenterInstanceArn The Amazon Resource Name (ARN) of the IAM Identity Center
      * instance you are either creating for—or connecting to—your Amazon Q Business application.
      * *Required* : `Yes`
@@ -172,8 +274,65 @@ public interface CfnApplicationProps {
     public fun identityCenterInstanceArn(identityCenterInstanceArn: String)
 
     /**
+     * @param identityType The authentication type being used by a Amazon Q Business application.
+     */
+    public fun identityType(identityType: String)
+
+    /**
+     * @param personalizationConfiguration Configuration information about chat response
+     * personalization.
+     * For more information, see [Personalizing chat
+     * responses](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html)
+     * .
+     */
+    public fun personalizationConfiguration(personalizationConfiguration: IResolvable)
+
+    /**
+     * @param personalizationConfiguration Configuration information about chat response
+     * personalization.
+     * For more information, see [Personalizing chat
+     * responses](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html)
+     * .
+     */
+    public
+        fun personalizationConfiguration(personalizationConfiguration: CfnApplication.PersonalizationConfigurationProperty)
+
+    /**
+     * @param personalizationConfiguration Configuration information about chat response
+     * personalization.
+     * For more information, see [Personalizing chat
+     * responses](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html)
+     * .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7fe9f491f8046c630f861de4ae4f59762c0e99118e612ddbc3fba395f7b668f9")
+    public
+        fun personalizationConfiguration(personalizationConfiguration: CfnApplication.PersonalizationConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param qAppsConfiguration Configuration information about Amazon Q Apps.
+     */
+    public fun qAppsConfiguration(qAppsConfiguration: IResolvable)
+
+    /**
+     * @param qAppsConfiguration Configuration information about Amazon Q Apps.
+     */
+    public fun qAppsConfiguration(qAppsConfiguration: CfnApplication.QAppsConfigurationProperty)
+
+    /**
+     * @param qAppsConfiguration Configuration information about Amazon Q Apps.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0f26f3a798119a59262229a82de5e820aafba5cc143caa174e523a1fe90eebd6")
+    public
+        fun qAppsConfiguration(qAppsConfiguration: CfnApplication.QAppsConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param roleArn The Amazon Resource Name (ARN) of an IAM role with permissions to access your
      * Amazon CloudWatch logs and metrics.
+     * If this property is not specified, Amazon Q Business will create a [service linked role
+     * (SLR)](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/using-service-linked-roles.html#slr-permissions)
+     * and use it as the application's role.
      */
     public fun roleArn(roleArn: String)
 
@@ -227,6 +386,47 @@ public interface CfnApplicationProps {
         attachmentsConfiguration(CfnApplication.AttachmentsConfigurationProperty(attachmentsConfiguration))
 
     /**
+     * @param autoSubscriptionConfiguration Subscription configuration information for an Amazon Q
+     * Business application using IAM identity federation for user management.
+     */
+    override fun autoSubscriptionConfiguration(autoSubscriptionConfiguration: IResolvable) {
+      cdkBuilder.autoSubscriptionConfiguration(autoSubscriptionConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param autoSubscriptionConfiguration Subscription configuration information for an Amazon Q
+     * Business application using IAM identity federation for user management.
+     */
+    override
+        fun autoSubscriptionConfiguration(autoSubscriptionConfiguration: CfnApplication.AutoSubscriptionConfigurationProperty) {
+      cdkBuilder.autoSubscriptionConfiguration(autoSubscriptionConfiguration.let(CfnApplication.AutoSubscriptionConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param autoSubscriptionConfiguration Subscription configuration information for an Amazon Q
+     * Business application using IAM identity federation for user management.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8b4b03e43a5c9a22aab39b9c8d3b9522ab56673c8ab94536da1dff6a8e022107")
+    override
+        fun autoSubscriptionConfiguration(autoSubscriptionConfiguration: CfnApplication.AutoSubscriptionConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        autoSubscriptionConfiguration(CfnApplication.AutoSubscriptionConfigurationProperty(autoSubscriptionConfiguration))
+
+    /**
+     * @param clientIdsForOidc the value to be set.
+     */
+    override fun clientIdsForOidc(clientIdsForOidc: List<String>) {
+      cdkBuilder.clientIdsForOidc(clientIdsForOidc)
+    }
+
+    /**
+     * @param clientIdsForOidc the value to be set.
+     */
+    override fun clientIdsForOidc(vararg clientIdsForOidc: String): Unit =
+        clientIdsForOidc(clientIdsForOidc.toList())
+
+    /**
      * @param description A description for the Amazon Q Business application.
      */
     override fun description(description: String) {
@@ -272,6 +472,14 @@ public interface CfnApplicationProps {
         encryptionConfiguration(CfnApplication.EncryptionConfigurationProperty(encryptionConfiguration))
 
     /**
+     * @param iamIdentityProviderArn The Amazon Resource Name (ARN) of an identity provider being
+     * used by an Amazon Q Business application.
+     */
+    override fun iamIdentityProviderArn(iamIdentityProviderArn: String) {
+      cdkBuilder.iamIdentityProviderArn(iamIdentityProviderArn)
+    }
+
+    /**
      * @param identityCenterInstanceArn The Amazon Resource Name (ARN) of the IAM Identity Center
      * instance you are either creating for—or connecting to—your Amazon Q Business application.
      * *Required* : `Yes`
@@ -281,8 +489,78 @@ public interface CfnApplicationProps {
     }
 
     /**
+     * @param identityType The authentication type being used by a Amazon Q Business application.
+     */
+    override fun identityType(identityType: String) {
+      cdkBuilder.identityType(identityType)
+    }
+
+    /**
+     * @param personalizationConfiguration Configuration information about chat response
+     * personalization.
+     * For more information, see [Personalizing chat
+     * responses](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html)
+     * .
+     */
+    override fun personalizationConfiguration(personalizationConfiguration: IResolvable) {
+      cdkBuilder.personalizationConfiguration(personalizationConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param personalizationConfiguration Configuration information about chat response
+     * personalization.
+     * For more information, see [Personalizing chat
+     * responses](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html)
+     * .
+     */
+    override
+        fun personalizationConfiguration(personalizationConfiguration: CfnApplication.PersonalizationConfigurationProperty) {
+      cdkBuilder.personalizationConfiguration(personalizationConfiguration.let(CfnApplication.PersonalizationConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param personalizationConfiguration Configuration information about chat response
+     * personalization.
+     * For more information, see [Personalizing chat
+     * responses](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html)
+     * .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7fe9f491f8046c630f861de4ae4f59762c0e99118e612ddbc3fba395f7b668f9")
+    override
+        fun personalizationConfiguration(personalizationConfiguration: CfnApplication.PersonalizationConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        personalizationConfiguration(CfnApplication.PersonalizationConfigurationProperty(personalizationConfiguration))
+
+    /**
+     * @param qAppsConfiguration Configuration information about Amazon Q Apps.
+     */
+    override fun qAppsConfiguration(qAppsConfiguration: IResolvable) {
+      cdkBuilder.qAppsConfiguration(qAppsConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param qAppsConfiguration Configuration information about Amazon Q Apps.
+     */
+    override fun qAppsConfiguration(qAppsConfiguration: CfnApplication.QAppsConfigurationProperty) {
+      cdkBuilder.qAppsConfiguration(qAppsConfiguration.let(CfnApplication.QAppsConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param qAppsConfiguration Configuration information about Amazon Q Apps.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0f26f3a798119a59262229a82de5e820aafba5cc143caa174e523a1fe90eebd6")
+    override
+        fun qAppsConfiguration(qAppsConfiguration: CfnApplication.QAppsConfigurationProperty.Builder.() -> Unit):
+        Unit = qAppsConfiguration(CfnApplication.QAppsConfigurationProperty(qAppsConfiguration))
+
+    /**
      * @param roleArn The Amazon Resource Name (ARN) of an IAM role with permissions to access your
      * Amazon CloudWatch logs and metrics.
+     * If this property is not specified, Amazon Q Business will create a [service linked role
+     * (SLR)](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/using-service-linked-roles.html#slr-permissions)
+     * and use it as the application's role.
      */
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
@@ -312,13 +590,29 @@ public interface CfnApplicationProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.qbusiness.CfnApplicationProps,
-  ) : CdkObject(cdkObject), CfnApplicationProps {
+  ) : CdkObject(cdkObject),
+      CfnApplicationProps {
     /**
      * Configuration information for the file upload during chat feature.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-attachmentsconfiguration)
      */
     override fun attachmentsConfiguration(): Any? = unwrap(this).getAttachmentsConfiguration()
+
+    /**
+     * Subscription configuration information for an Amazon Q Business application using IAM
+     * identity federation for user management.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-autosubscriptionconfiguration)
+     */
+    override fun autoSubscriptionConfiguration(): Any? =
+        unwrap(this).getAutoSubscriptionConfiguration()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-clientidsforoidc)
+     */
+    override fun clientIdsForOidc(): List<String> = unwrap(this).getClientIdsForOidc() ?:
+        emptyList()
 
     /**
      * A description for the Amazon Q Business application.
@@ -344,6 +638,14 @@ public interface CfnApplicationProps {
     override fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
 
     /**
+     * The Amazon Resource Name (ARN) of an identity provider being used by an Amazon Q Business
+     * application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-iamidentityproviderarn)
+     */
+    override fun iamIdentityProviderArn(): String? = unwrap(this).getIamIdentityProviderArn()
+
+    /**
      * The Amazon Resource Name (ARN) of the IAM Identity Center instance you are either creating
      * for—or connecting to—your Amazon Q Business application.
      *
@@ -354,8 +656,38 @@ public interface CfnApplicationProps {
     override fun identityCenterInstanceArn(): String? = unwrap(this).getIdentityCenterInstanceArn()
 
     /**
+     * The authentication type being used by a Amazon Q Business application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-identitytype)
+     */
+    override fun identityType(): String? = unwrap(this).getIdentityType()
+
+    /**
+     * Configuration information about chat response personalization.
+     *
+     * For more information, see [Personalizing chat
+     * responses](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/personalizing-chat-responses.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-personalizationconfiguration)
+     */
+    override fun personalizationConfiguration(): Any? =
+        unwrap(this).getPersonalizationConfiguration()
+
+    /**
+     * Configuration information about Amazon Q Apps.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-qappsconfiguration)
+     */
+    override fun qAppsConfiguration(): Any? = unwrap(this).getQAppsConfiguration()
+
+    /**
      * The Amazon Resource Name (ARN) of an IAM role with permissions to access your Amazon
      * CloudWatch logs and metrics.
+     *
+     * If this property is not specified, Amazon Q Business will create a [service linked role
+     * (SLR)](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/using-service-linked-roles.html#slr-permissions)
+     * and use it as the application's role.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-rolearn)
      */

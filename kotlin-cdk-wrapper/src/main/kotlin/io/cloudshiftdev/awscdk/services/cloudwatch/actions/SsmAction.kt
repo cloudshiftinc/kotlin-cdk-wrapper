@@ -22,7 +22,8 @@ import io.cloudshiftdev.constructs.Construct
  */
 public open class SsmAction(
   cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SsmAction,
-) : CdkObject(cdkObject), IAlarmAction {
+) : CdkObject(cdkObject),
+    IAlarmAction {
   public constructor(severity: OpsItemSeverity) :
       this(software.amazon.awscdk.services.cloudwatch.actions.SsmAction(severity.let(OpsItemSeverity.Companion::unwrap))
   )

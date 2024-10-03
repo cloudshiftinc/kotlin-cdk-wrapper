@@ -157,7 +157,8 @@ public interface CfnReferenceStoreProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.omics.CfnReferenceStoreProps,
-  ) : CdkObject(cdkObject), CfnReferenceStoreProps {
+  ) : CdkObject(cdkObject),
+      CfnReferenceStoreProps {
     /**
      * A description for the store.
      *

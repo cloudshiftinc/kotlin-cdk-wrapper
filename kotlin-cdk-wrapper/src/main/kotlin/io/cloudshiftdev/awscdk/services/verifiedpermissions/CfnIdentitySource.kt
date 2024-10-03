@@ -68,6 +68,25 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .groupEntityType("groupEntityType")
  * .build())
  * .build())
+ * .openIdConnectConfiguration(OpenIdConnectConfigurationProperty.builder()
+ * .issuer("issuer")
+ * .tokenSelection(OpenIdConnectTokenSelectionProperty.builder()
+ * .accessTokenOnly(OpenIdConnectAccessTokenConfigurationProperty.builder()
+ * .audiences(List.of("audiences"))
+ * .principalIdClaim("principalIdClaim")
+ * .build())
+ * .identityTokenOnly(OpenIdConnectIdentityTokenConfigurationProperty.builder()
+ * .clientIds(List.of("clientIds"))
+ * .principalIdClaim("principalIdClaim")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .entityIdPrefix("entityIdPrefix")
+ * .groupConfiguration(OpenIdConnectGroupConfigurationProperty.builder()
+ * .groupClaim("groupClaim")
+ * .groupEntityType("groupEntityType")
+ * .build())
+ * .build())
  * .build())
  * .policyStoreId("policyStoreId")
  * // the properties below are optional
@@ -79,7 +98,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnIdentitySource(
   cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -127,26 +147,26 @@ public open class CfnIdentitySource(
   public open fun attrIdentitySourceId(): String = unwrap(this).getAttrIdentitySourceId()
 
   /**
-   * Contains configuration information about an identity source.
+   * Contains configuration information used when creating a new identity source.
    */
   public open fun configuration(): Any = unwrap(this).getConfiguration()
 
   /**
-   * Contains configuration information about an identity source.
+   * Contains configuration information used when creating a new identity source.
    */
   public open fun configuration(`value`: IResolvable) {
     unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Contains configuration information about an identity source.
+   * Contains configuration information used when creating a new identity source.
    */
   public open fun configuration(`value`: IdentitySourceConfigurationProperty) {
     unwrap(this).setConfiguration(`value`.let(IdentitySourceConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   * Contains configuration information about an identity source.
+   * Contains configuration information used when creating a new identity source.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("3f097b6a0169411a9541f2f293b2ec50920e1c9135042b5e23a00482ca4233e1")
@@ -194,26 +214,29 @@ public open class CfnIdentitySource(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Contains configuration information about an identity source.
+     * Contains configuration information used when creating a new identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     public fun configuration(configuration: IResolvable)
 
     /**
-     * Contains configuration information about an identity source.
+     * Contains configuration information used when creating a new identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     public fun configuration(configuration: IdentitySourceConfigurationProperty)
 
     /**
-     * Contains configuration information about an identity source.
+     * Contains configuration information used when creating a new identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8bbfe0ed3878f6d1c30b37f35051aaaf5948f60ea00fa239fb3ec49a4c3cee4d")
@@ -252,30 +275,33 @@ public open class CfnIdentitySource(
         id)
 
     /**
-     * Contains configuration information about an identity source.
+     * Contains configuration information used when creating a new identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Contains configuration information about an identity source.
+     * Contains configuration information used when creating a new identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     override fun configuration(configuration: IdentitySourceConfigurationProperty) {
       cdkBuilder.configuration(configuration.let(IdentitySourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
-     * Contains configuration information about an identity source.
+     * Contains configuration information used when creating a new identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information about an identity source. 
+     * @param configuration Contains configuration information used when creating a new identity
+     * source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8bbfe0ed3878f6d1c30b37f35051aaaf5948f60ea00fa239fb3ec49a4c3cee4d")
@@ -339,12 +365,6 @@ public open class CfnIdentitySource(
    * The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity
    * source.
    *
-   * This data type is part of a
-   * [CognitoUserPoolConfiguration](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CognitoUserPoolConfiguration.html)
-   * structure and is a request parameter in
-   * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-   * .
-   *
    * Example:
    *
    * ```
@@ -404,7 +424,8 @@ public open class CfnIdentitySource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoGroupConfigurationProperty,
-    ) : CdkObject(cdkObject), CognitoGroupConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CognitoGroupConfigurationProperty {
       /**
        * The name of the schema entity type that's mapped to the user pool group.
        *
@@ -598,7 +619,8 @@ public open class CfnIdentitySource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty,
-    ) : CdkObject(cdkObject), CognitoUserPoolConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        CognitoUserPoolConfigurationProperty {
       /**
        * The unique application client IDs that are associated with the specified Amazon Cognito
        * user pool.
@@ -673,6 +695,25 @@ public open class CfnIdentitySource(
    * .groupEntityType("groupEntityType")
    * .build())
    * .build())
+   * .openIdConnectConfiguration(OpenIdConnectConfigurationProperty.builder()
+   * .issuer("issuer")
+   * .tokenSelection(OpenIdConnectTokenSelectionProperty.builder()
+   * .accessTokenOnly(OpenIdConnectAccessTokenConfigurationProperty.builder()
+   * .audiences(List.of("audiences"))
+   * .principalIdClaim("principalIdClaim")
+   * .build())
+   * .identityTokenOnly(OpenIdConnectIdentityTokenConfigurationProperty.builder()
+   * .clientIds(List.of("clientIds"))
+   * .principalIdClaim("principalIdClaim")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .entityIdPrefix("entityIdPrefix")
+   * .groupConfiguration(OpenIdConnectGroupConfigurationProperty.builder()
+   * .groupClaim("groupClaim")
+   * .groupEntityType("groupEntityType")
+   * .build())
+   * .build())
    * .build();
    * ```
    *
@@ -686,7 +727,12 @@ public open class CfnIdentitySource(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourceconfiguration.html#cfn-verifiedpermissions-identitysource-identitysourceconfiguration-cognitouserpoolconfiguration)
      */
-    public fun cognitoUserPoolConfiguration(): Any
+    public fun cognitoUserPoolConfiguration(): Any? = unwrap(this).getCognitoUserPoolConfiguration()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourceconfiguration.html#cfn-verifiedpermissions-identitysource-identitysourceconfiguration-openidconnectconfiguration)
+     */
+    public fun openIdConnectConfiguration(): Any? = unwrap(this).getOpenIdConnectConfiguration()
 
     /**
      * A builder for [IdentitySourceConfigurationProperty]
@@ -696,14 +742,14 @@ public open class CfnIdentitySource(
       /**
        * @param cognitoUserPoolConfiguration A structure that contains configuration information
        * used when creating or updating an identity source that represents a connection to an Amazon
-       * Cognito user pool used as an identity provider for Verified Permissions . 
+       * Cognito user pool used as an identity provider for Verified Permissions .
        */
       public fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: IResolvable)
 
       /**
        * @param cognitoUserPoolConfiguration A structure that contains configuration information
        * used when creating or updating an identity source that represents a connection to an Amazon
-       * Cognito user pool used as an identity provider for Verified Permissions . 
+       * Cognito user pool used as an identity provider for Verified Permissions .
        */
       public
           fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: CognitoUserPoolConfigurationProperty)
@@ -711,12 +757,31 @@ public open class CfnIdentitySource(
       /**
        * @param cognitoUserPoolConfiguration A structure that contains configuration information
        * used when creating or updating an identity source that represents a connection to an Amazon
-       * Cognito user pool used as an identity provider for Verified Permissions . 
+       * Cognito user pool used as an identity provider for Verified Permissions .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51bdf9dd6707933905c3a015af20f3e511473a2a30ce40b46ee0e5fe6764b226")
       public
           fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: CognitoUserPoolConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      public fun openIdConnectConfiguration(openIdConnectConfiguration: IResolvable)
+
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      public
+          fun openIdConnectConfiguration(openIdConnectConfiguration: OpenIdConnectConfigurationProperty)
+
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e302c19608fde93e2042f9662d74e15f730e62214508da1182cee1db965d3bc1")
+      public
+          fun openIdConnectConfiguration(openIdConnectConfiguration: OpenIdConnectConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -728,7 +793,7 @@ public open class CfnIdentitySource(
       /**
        * @param cognitoUserPoolConfiguration A structure that contains configuration information
        * used when creating or updating an identity source that represents a connection to an Amazon
-       * Cognito user pool used as an identity provider for Verified Permissions . 
+       * Cognito user pool used as an identity provider for Verified Permissions .
        */
       override fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: IResolvable) {
         cdkBuilder.cognitoUserPoolConfiguration(cognitoUserPoolConfiguration.let(IResolvable.Companion::unwrap))
@@ -737,7 +802,7 @@ public open class CfnIdentitySource(
       /**
        * @param cognitoUserPoolConfiguration A structure that contains configuration information
        * used when creating or updating an identity source that represents a connection to an Amazon
-       * Cognito user pool used as an identity provider for Verified Permissions . 
+       * Cognito user pool used as an identity provider for Verified Permissions .
        */
       override
           fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: CognitoUserPoolConfigurationProperty) {
@@ -747,7 +812,7 @@ public open class CfnIdentitySource(
       /**
        * @param cognitoUserPoolConfiguration A structure that contains configuration information
        * used when creating or updating an identity source that represents a connection to an Amazon
-       * Cognito user pool used as an identity provider for Verified Permissions . 
+       * Cognito user pool used as an identity provider for Verified Permissions .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51bdf9dd6707933905c3a015af20f3e511473a2a30ce40b46ee0e5fe6764b226")
@@ -756,6 +821,31 @@ public open class CfnIdentitySource(
           Unit =
           cognitoUserPoolConfiguration(CognitoUserPoolConfigurationProperty(cognitoUserPoolConfiguration))
 
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      override fun openIdConnectConfiguration(openIdConnectConfiguration: IResolvable) {
+        cdkBuilder.openIdConnectConfiguration(openIdConnectConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      override
+          fun openIdConnectConfiguration(openIdConnectConfiguration: OpenIdConnectConfigurationProperty) {
+        cdkBuilder.openIdConnectConfiguration(openIdConnectConfiguration.let(OpenIdConnectConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param openIdConnectConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e302c19608fde93e2042f9662d74e15f730e62214508da1182cee1db965d3bc1")
+      override
+          fun openIdConnectConfiguration(openIdConnectConfiguration: OpenIdConnectConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          openIdConnectConfiguration(OpenIdConnectConfigurationProperty(openIdConnectConfiguration))
+
       public fun build():
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceConfigurationProperty
           = cdkBuilder.build()
@@ -763,7 +853,8 @@ public open class CfnIdentitySource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceConfigurationProperty,
-    ) : CdkObject(cdkObject), IdentitySourceConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        IdentitySourceConfigurationProperty {
       /**
        * A structure that contains configuration information used when creating or updating an
        * identity source that represents a connection to an Amazon Cognito user pool used as an
@@ -771,8 +862,13 @@ public open class CfnIdentitySource(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourceconfiguration.html#cfn-verifiedpermissions-identitysource-identitysourceconfiguration-cognitouserpoolconfiguration)
        */
-      override fun cognitoUserPoolConfiguration(): Any =
+      override fun cognitoUserPoolConfiguration(): Any? =
           unwrap(this).getCognitoUserPoolConfiguration()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourceconfiguration.html#cfn-verifiedpermissions-identitysource-identitysourceconfiguration-openidconnectconfiguration)
+       */
+      override fun openIdConnectConfiguration(): Any? = unwrap(this).getOpenIdConnectConfiguration()
     }
 
     public companion object {
@@ -910,7 +1006,8 @@ public open class CfnIdentitySource(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty,
-    ) : CdkObject(cdkObject), IdentitySourceDetailsProperty {
+    ) : CdkObject(cdkObject),
+        IdentitySourceDetailsProperty {
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourcedetails.html#cfn-verifiedpermissions-identitysource-identitysourcedetails-clientids)
        */
@@ -947,6 +1044,992 @@ public open class CfnIdentitySource(
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty
+    }
+  }
+
+  /**
+   * The configuration of an OpenID Connect (OIDC) identity source for handling access token claims.
+   *
+   * Contains the claim that you want to identify as the principal in an authorization request, and
+   * the values of the `aud` claim, or audiences, that you want to accept.
+   *
+   * This data type is part of a
+   * [OpenIdConnectTokenSelection](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_OpenIdConnectTokenSelection.html)
+   * structure, which is a parameter of
+   * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
+   * OpenIdConnectAccessTokenConfigurationProperty openIdConnectAccessTokenConfigurationProperty =
+   * OpenIdConnectAccessTokenConfigurationProperty.builder()
+   * .audiences(List.of("audiences"))
+   * .principalIdClaim("principalIdClaim")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectaccesstokenconfiguration.html)
+   */
+  public interface OpenIdConnectAccessTokenConfigurationProperty {
+    /**
+     * The access token `aud` claim values that you want to accept in your policy store.
+     *
+     * For example, `https://myapp.example.com, https://myapp2.example.com` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectaccesstokenconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectaccesstokenconfiguration-audiences)
+     */
+    public fun audiences(): List<String> = unwrap(this).getAudiences() ?: emptyList()
+
+    /**
+     * The claim that determines the principal in OIDC access tokens.
+     *
+     * For example, `sub` .
+     *
+     * Default: - "sub"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectaccesstokenconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectaccesstokenconfiguration-principalidclaim)
+     */
+    public fun principalIdClaim(): String? = unwrap(this).getPrincipalIdClaim()
+
+    /**
+     * A builder for [OpenIdConnectAccessTokenConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param audiences The access token `aud` claim values that you want to accept in your policy
+       * store.
+       * For example, `https://myapp.example.com, https://myapp2.example.com` .
+       */
+      public fun audiences(audiences: List<String>)
+
+      /**
+       * @param audiences The access token `aud` claim values that you want to accept in your policy
+       * store.
+       * For example, `https://myapp.example.com, https://myapp2.example.com` .
+       */
+      public fun audiences(vararg audiences: String)
+
+      /**
+       * @param principalIdClaim The claim that determines the principal in OIDC access tokens.
+       * For example, `sub` .
+       */
+      public fun principalIdClaim(principalIdClaim: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectAccessTokenConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectAccessTokenConfigurationProperty.builder()
+
+      /**
+       * @param audiences The access token `aud` claim values that you want to accept in your policy
+       * store.
+       * For example, `https://myapp.example.com, https://myapp2.example.com` .
+       */
+      override fun audiences(audiences: List<String>) {
+        cdkBuilder.audiences(audiences)
+      }
+
+      /**
+       * @param audiences The access token `aud` claim values that you want to accept in your policy
+       * store.
+       * For example, `https://myapp.example.com, https://myapp2.example.com` .
+       */
+      override fun audiences(vararg audiences: String): Unit = audiences(audiences.toList())
+
+      /**
+       * @param principalIdClaim The claim that determines the principal in OIDC access tokens.
+       * For example, `sub` .
+       */
+      override fun principalIdClaim(principalIdClaim: String) {
+        cdkBuilder.principalIdClaim(principalIdClaim)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectAccessTokenConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectAccessTokenConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        OpenIdConnectAccessTokenConfigurationProperty {
+      /**
+       * The access token `aud` claim values that you want to accept in your policy store.
+       *
+       * For example, `https://myapp.example.com, https://myapp2.example.com` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectaccesstokenconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectaccesstokenconfiguration-audiences)
+       */
+      override fun audiences(): List<String> = unwrap(this).getAudiences() ?: emptyList()
+
+      /**
+       * The claim that determines the principal in OIDC access tokens.
+       *
+       * For example, `sub` .
+       *
+       * Default: - "sub"
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectaccesstokenconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectaccesstokenconfiguration-principalidclaim)
+       */
+      override fun principalIdClaim(): String? = unwrap(this).getPrincipalIdClaim()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OpenIdConnectAccessTokenConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectAccessTokenConfigurationProperty):
+          OpenIdConnectAccessTokenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenIdConnectAccessTokenConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenIdConnectAccessTokenConfigurationProperty):
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectAccessTokenConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectAccessTokenConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains configuration details of an OpenID Connect (OIDC) identity provider, or identity
+   * source, that Verified Permissions can use to generate entities from authenticated identities.
+   *
+   * It specifies the issuer URL, token type that you want to use, and policy store entity details.
+   *
+   * This data type is part of a
+   * [Configuration](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_Configuration.html)
+   * structure, which is a parameter to
+   * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
+   * OpenIdConnectConfigurationProperty openIdConnectConfigurationProperty =
+   * OpenIdConnectConfigurationProperty.builder()
+   * .issuer("issuer")
+   * .tokenSelection(OpenIdConnectTokenSelectionProperty.builder()
+   * .accessTokenOnly(OpenIdConnectAccessTokenConfigurationProperty.builder()
+   * .audiences(List.of("audiences"))
+   * .principalIdClaim("principalIdClaim")
+   * .build())
+   * .identityTokenOnly(OpenIdConnectIdentityTokenConfigurationProperty.builder()
+   * .clientIds(List.of("clientIds"))
+   * .principalIdClaim("principalIdClaim")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .entityIdPrefix("entityIdPrefix")
+   * .groupConfiguration(OpenIdConnectGroupConfigurationProperty.builder()
+   * .groupClaim("groupClaim")
+   * .groupEntityType("groupEntityType")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectconfiguration.html)
+   */
+  public interface OpenIdConnectConfigurationProperty {
+    /**
+     * A descriptive string that you want to prefix to user entities from your OIDC identity
+     * provider.
+     *
+     * For example, if you set an `entityIdPrefix` of `MyOIDCProvider` , you can reference
+     * principals in your policies in the format `MyCorp::User::MyOIDCProvider|Carlos` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectconfiguration-entityidprefix)
+     */
+    public fun entityIdPrefix(): String? = unwrap(this).getEntityIdPrefix()
+
+    /**
+     * The claim in OIDC identity provider tokens that indicates a user's group membership, and the
+     * entity type that you want to map it to.
+     *
+     * For example, this object can map the contents of a `groups` claim to `MyCorp::UserGroup` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectconfiguration-groupconfiguration)
+     */
+    public fun groupConfiguration(): Any? = unwrap(this).getGroupConfiguration()
+
+    /**
+     * The issuer URL of an OIDC identity provider.
+     *
+     * This URL must have an OIDC discovery endpoint at the path `.well-known/openid-configuration`
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectconfiguration-issuer)
+     */
+    public fun issuer(): String
+
+    /**
+     * The token type that you want to process from your OIDC identity provider.
+     *
+     * Your policy store can process either identity (ID) or access tokens from a given OIDC
+     * identity source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectconfiguration-tokenselection)
+     */
+    public fun tokenSelection(): Any
+
+    /**
+     * A builder for [OpenIdConnectConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param entityIdPrefix A descriptive string that you want to prefix to user entities from
+       * your OIDC identity provider.
+       * For example, if you set an `entityIdPrefix` of `MyOIDCProvider` , you can reference
+       * principals in your policies in the format `MyCorp::User::MyOIDCProvider|Carlos` .
+       */
+      public fun entityIdPrefix(entityIdPrefix: String)
+
+      /**
+       * @param groupConfiguration The claim in OIDC identity provider tokens that indicates a
+       * user's group membership, and the entity type that you want to map it to.
+       * For example, this object can map the contents of a `groups` claim to `MyCorp::UserGroup` .
+       */
+      public fun groupConfiguration(groupConfiguration: IResolvable)
+
+      /**
+       * @param groupConfiguration The claim in OIDC identity provider tokens that indicates a
+       * user's group membership, and the entity type that you want to map it to.
+       * For example, this object can map the contents of a `groups` claim to `MyCorp::UserGroup` .
+       */
+      public fun groupConfiguration(groupConfiguration: OpenIdConnectGroupConfigurationProperty)
+
+      /**
+       * @param groupConfiguration The claim in OIDC identity provider tokens that indicates a
+       * user's group membership, and the entity type that you want to map it to.
+       * For example, this object can map the contents of a `groups` claim to `MyCorp::UserGroup` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("59665db2f60079d16c60706069d7c72386fa7a8064d53c291a9fa1c924dcae37")
+      public
+          fun groupConfiguration(groupConfiguration: OpenIdConnectGroupConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param issuer The issuer URL of an OIDC identity provider. 
+       * This URL must have an OIDC discovery endpoint at the path
+       * `.well-known/openid-configuration` .
+       */
+      public fun issuer(issuer: String)
+
+      /**
+       * @param tokenSelection The token type that you want to process from your OIDC identity
+       * provider. 
+       * Your policy store can process either identity (ID) or access tokens from a given OIDC
+       * identity source.
+       */
+      public fun tokenSelection(tokenSelection: IResolvable)
+
+      /**
+       * @param tokenSelection The token type that you want to process from your OIDC identity
+       * provider. 
+       * Your policy store can process either identity (ID) or access tokens from a given OIDC
+       * identity source.
+       */
+      public fun tokenSelection(tokenSelection: OpenIdConnectTokenSelectionProperty)
+
+      /**
+       * @param tokenSelection The token type that you want to process from your OIDC identity
+       * provider. 
+       * Your policy store can process either identity (ID) or access tokens from a given OIDC
+       * identity source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b179f443f7a241512ebec7e5b8c7fe5a3ad107bc04b0b36823f173ac1edb1c27")
+      public
+          fun tokenSelection(tokenSelection: OpenIdConnectTokenSelectionProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectConfigurationProperty.builder()
+
+      /**
+       * @param entityIdPrefix A descriptive string that you want to prefix to user entities from
+       * your OIDC identity provider.
+       * For example, if you set an `entityIdPrefix` of `MyOIDCProvider` , you can reference
+       * principals in your policies in the format `MyCorp::User::MyOIDCProvider|Carlos` .
+       */
+      override fun entityIdPrefix(entityIdPrefix: String) {
+        cdkBuilder.entityIdPrefix(entityIdPrefix)
+      }
+
+      /**
+       * @param groupConfiguration The claim in OIDC identity provider tokens that indicates a
+       * user's group membership, and the entity type that you want to map it to.
+       * For example, this object can map the contents of a `groups` claim to `MyCorp::UserGroup` .
+       */
+      override fun groupConfiguration(groupConfiguration: IResolvable) {
+        cdkBuilder.groupConfiguration(groupConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param groupConfiguration The claim in OIDC identity provider tokens that indicates a
+       * user's group membership, and the entity type that you want to map it to.
+       * For example, this object can map the contents of a `groups` claim to `MyCorp::UserGroup` .
+       */
+      override fun groupConfiguration(groupConfiguration: OpenIdConnectGroupConfigurationProperty) {
+        cdkBuilder.groupConfiguration(groupConfiguration.let(OpenIdConnectGroupConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param groupConfiguration The claim in OIDC identity provider tokens that indicates a
+       * user's group membership, and the entity type that you want to map it to.
+       * For example, this object can map the contents of a `groups` claim to `MyCorp::UserGroup` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("59665db2f60079d16c60706069d7c72386fa7a8064d53c291a9fa1c924dcae37")
+      override
+          fun groupConfiguration(groupConfiguration: OpenIdConnectGroupConfigurationProperty.Builder.() -> Unit):
+          Unit = groupConfiguration(OpenIdConnectGroupConfigurationProperty(groupConfiguration))
+
+      /**
+       * @param issuer The issuer URL of an OIDC identity provider. 
+       * This URL must have an OIDC discovery endpoint at the path
+       * `.well-known/openid-configuration` .
+       */
+      override fun issuer(issuer: String) {
+        cdkBuilder.issuer(issuer)
+      }
+
+      /**
+       * @param tokenSelection The token type that you want to process from your OIDC identity
+       * provider. 
+       * Your policy store can process either identity (ID) or access tokens from a given OIDC
+       * identity source.
+       */
+      override fun tokenSelection(tokenSelection: IResolvable) {
+        cdkBuilder.tokenSelection(tokenSelection.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param tokenSelection The token type that you want to process from your OIDC identity
+       * provider. 
+       * Your policy store can process either identity (ID) or access tokens from a given OIDC
+       * identity source.
+       */
+      override fun tokenSelection(tokenSelection: OpenIdConnectTokenSelectionProperty) {
+        cdkBuilder.tokenSelection(tokenSelection.let(OpenIdConnectTokenSelectionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param tokenSelection The token type that you want to process from your OIDC identity
+       * provider. 
+       * Your policy store can process either identity (ID) or access tokens from a given OIDC
+       * identity source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b179f443f7a241512ebec7e5b8c7fe5a3ad107bc04b0b36823f173ac1edb1c27")
+      override
+          fun tokenSelection(tokenSelection: OpenIdConnectTokenSelectionProperty.Builder.() -> Unit):
+          Unit = tokenSelection(OpenIdConnectTokenSelectionProperty(tokenSelection))
+
+      public fun build():
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        OpenIdConnectConfigurationProperty {
+      /**
+       * A descriptive string that you want to prefix to user entities from your OIDC identity
+       * provider.
+       *
+       * For example, if you set an `entityIdPrefix` of `MyOIDCProvider` , you can reference
+       * principals in your policies in the format `MyCorp::User::MyOIDCProvider|Carlos` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectconfiguration-entityidprefix)
+       */
+      override fun entityIdPrefix(): String? = unwrap(this).getEntityIdPrefix()
+
+      /**
+       * The claim in OIDC identity provider tokens that indicates a user's group membership, and
+       * the entity type that you want to map it to.
+       *
+       * For example, this object can map the contents of a `groups` claim to `MyCorp::UserGroup` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectconfiguration-groupconfiguration)
+       */
+      override fun groupConfiguration(): Any? = unwrap(this).getGroupConfiguration()
+
+      /**
+       * The issuer URL of an OIDC identity provider.
+       *
+       * This URL must have an OIDC discovery endpoint at the path
+       * `.well-known/openid-configuration` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectconfiguration-issuer)
+       */
+      override fun issuer(): String = unwrap(this).getIssuer()
+
+      /**
+       * The token type that you want to process from your OIDC identity provider.
+       *
+       * Your policy store can process either identity (ID) or access tokens from a given OIDC
+       * identity source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectconfiguration-tokenselection)
+       */
+      override fun tokenSelection(): Any = unwrap(this).getTokenSelection()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OpenIdConnectConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectConfigurationProperty):
+          OpenIdConnectConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenIdConnectConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenIdConnectConfigurationProperty):
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectConfigurationProperty
+    }
+  }
+
+  /**
+   * The claim in OIDC identity provider tokens that indicates a user's group membership, and the
+   * entity type that you want to map it to.
+   *
+   * For example, this object can map the contents of a `groups` claim to `MyCorp::UserGroup` .
+   *
+   * This data type is part of a
+   * [OpenIdConnectConfiguration](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_OpenIdConnectConfiguration.html)
+   * structure, which is a parameter of
+   * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
+   * OpenIdConnectGroupConfigurationProperty openIdConnectGroupConfigurationProperty =
+   * OpenIdConnectGroupConfigurationProperty.builder()
+   * .groupClaim("groupClaim")
+   * .groupEntityType("groupEntityType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectgroupconfiguration.html)
+   */
+  public interface OpenIdConnectGroupConfigurationProperty {
+    /**
+     * The token claim that you want Verified Permissions to interpret as group membership.
+     *
+     * For example, `groups` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectgroupconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectgroupconfiguration-groupclaim)
+     */
+    public fun groupClaim(): String
+
+    /**
+     * The policy store entity type that you want to map your users' group claim to.
+     *
+     * For example, `MyCorp::UserGroup` . A group entity type is an entity that can have a user
+     * entity type as a member.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectgroupconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectgroupconfiguration-groupentitytype)
+     */
+    public fun groupEntityType(): String
+
+    /**
+     * A builder for [OpenIdConnectGroupConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param groupClaim The token claim that you want Verified Permissions to interpret as group
+       * membership. 
+       * For example, `groups` .
+       */
+      public fun groupClaim(groupClaim: String)
+
+      /**
+       * @param groupEntityType The policy store entity type that you want to map your users' group
+       * claim to. 
+       * For example, `MyCorp::UserGroup` . A group entity type is an entity that can have a user
+       * entity type as a member.
+       */
+      public fun groupEntityType(groupEntityType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectGroupConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectGroupConfigurationProperty.builder()
+
+      /**
+       * @param groupClaim The token claim that you want Verified Permissions to interpret as group
+       * membership. 
+       * For example, `groups` .
+       */
+      override fun groupClaim(groupClaim: String) {
+        cdkBuilder.groupClaim(groupClaim)
+      }
+
+      /**
+       * @param groupEntityType The policy store entity type that you want to map your users' group
+       * claim to. 
+       * For example, `MyCorp::UserGroup` . A group entity type is an entity that can have a user
+       * entity type as a member.
+       */
+      override fun groupEntityType(groupEntityType: String) {
+        cdkBuilder.groupEntityType(groupEntityType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectGroupConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectGroupConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        OpenIdConnectGroupConfigurationProperty {
+      /**
+       * The token claim that you want Verified Permissions to interpret as group membership.
+       *
+       * For example, `groups` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectgroupconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectgroupconfiguration-groupclaim)
+       */
+      override fun groupClaim(): String = unwrap(this).getGroupClaim()
+
+      /**
+       * The policy store entity type that you want to map your users' group claim to.
+       *
+       * For example, `MyCorp::UserGroup` . A group entity type is an entity that can have a user
+       * entity type as a member.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectgroupconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectgroupconfiguration-groupentitytype)
+       */
+      override fun groupEntityType(): String = unwrap(this).getGroupEntityType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OpenIdConnectGroupConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectGroupConfigurationProperty):
+          OpenIdConnectGroupConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenIdConnectGroupConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenIdConnectGroupConfigurationProperty):
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectGroupConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectGroupConfigurationProperty
+    }
+  }
+
+  /**
+   * The configuration of an OpenID Connect (OIDC) identity source for handling identity (ID) token
+   * claims.
+   *
+   * Contains the claim that you want to identify as the principal in an authorization request, and
+   * the values of the `aud` claim, or audiences, that you want to accept.
+   *
+   * This data type is part of a
+   * [OpenIdConnectTokenSelection](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_OpenIdConnectTokenSelection.html)
+   * structure, which is a parameter of
+   * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
+   * OpenIdConnectIdentityTokenConfigurationProperty openIdConnectIdentityTokenConfigurationProperty
+   * = OpenIdConnectIdentityTokenConfigurationProperty.builder()
+   * .clientIds(List.of("clientIds"))
+   * .principalIdClaim("principalIdClaim")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectidentitytokenconfiguration.html)
+   */
+  public interface OpenIdConnectIdentityTokenConfigurationProperty {
+    /**
+     * The ID token audience, or client ID, claim values that you want to accept in your policy
+     * store from an OIDC identity provider.
+     *
+     * For example, `1example23456789, 2example10111213` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectidentitytokenconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectidentitytokenconfiguration-clientids)
+     */
+    public fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
+
+    /**
+     * The claim that determines the principal in OIDC access tokens.
+     *
+     * For example, `sub` .
+     *
+     * Default: - "sub"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectidentitytokenconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectidentitytokenconfiguration-principalidclaim)
+     */
+    public fun principalIdClaim(): String? = unwrap(this).getPrincipalIdClaim()
+
+    /**
+     * A builder for [OpenIdConnectIdentityTokenConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clientIds The ID token audience, or client ID, claim values that you want to accept
+       * in your policy store from an OIDC identity provider.
+       * For example, `1example23456789, 2example10111213` .
+       */
+      public fun clientIds(clientIds: List<String>)
+
+      /**
+       * @param clientIds The ID token audience, or client ID, claim values that you want to accept
+       * in your policy store from an OIDC identity provider.
+       * For example, `1example23456789, 2example10111213` .
+       */
+      public fun clientIds(vararg clientIds: String)
+
+      /**
+       * @param principalIdClaim The claim that determines the principal in OIDC access tokens.
+       * For example, `sub` .
+       */
+      public fun principalIdClaim(principalIdClaim: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectIdentityTokenConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectIdentityTokenConfigurationProperty.builder()
+
+      /**
+       * @param clientIds The ID token audience, or client ID, claim values that you want to accept
+       * in your policy store from an OIDC identity provider.
+       * For example, `1example23456789, 2example10111213` .
+       */
+      override fun clientIds(clientIds: List<String>) {
+        cdkBuilder.clientIds(clientIds)
+      }
+
+      /**
+       * @param clientIds The ID token audience, or client ID, claim values that you want to accept
+       * in your policy store from an OIDC identity provider.
+       * For example, `1example23456789, 2example10111213` .
+       */
+      override fun clientIds(vararg clientIds: String): Unit = clientIds(clientIds.toList())
+
+      /**
+       * @param principalIdClaim The claim that determines the principal in OIDC access tokens.
+       * For example, `sub` .
+       */
+      override fun principalIdClaim(principalIdClaim: String) {
+        cdkBuilder.principalIdClaim(principalIdClaim)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectIdentityTokenConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectIdentityTokenConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        OpenIdConnectIdentityTokenConfigurationProperty {
+      /**
+       * The ID token audience, or client ID, claim values that you want to accept in your policy
+       * store from an OIDC identity provider.
+       *
+       * For example, `1example23456789, 2example10111213` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectidentitytokenconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectidentitytokenconfiguration-clientids)
+       */
+      override fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
+
+      /**
+       * The claim that determines the principal in OIDC access tokens.
+       *
+       * For example, `sub` .
+       *
+       * Default: - "sub"
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnectidentitytokenconfiguration.html#cfn-verifiedpermissions-identitysource-openidconnectidentitytokenconfiguration-principalidclaim)
+       */
+      override fun principalIdClaim(): String? = unwrap(this).getPrincipalIdClaim()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OpenIdConnectIdentityTokenConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectIdentityTokenConfigurationProperty):
+          OpenIdConnectIdentityTokenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenIdConnectIdentityTokenConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenIdConnectIdentityTokenConfigurationProperty):
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectIdentityTokenConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectIdentityTokenConfigurationProperty
+    }
+  }
+
+  /**
+   * The token type that you want to process from your OIDC identity provider.
+   *
+   * Your policy store can process either identity (ID) or access tokens from a given OIDC identity
+   * source.
+   *
+   * This data type is part of a
+   * [OpenIdConnectConfiguration](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_OpenIdConnectConfiguration.html)
+   * structure, which is a parameter of
+   * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
+   * OpenIdConnectTokenSelectionProperty openIdConnectTokenSelectionProperty =
+   * OpenIdConnectTokenSelectionProperty.builder()
+   * .accessTokenOnly(OpenIdConnectAccessTokenConfigurationProperty.builder()
+   * .audiences(List.of("audiences"))
+   * .principalIdClaim("principalIdClaim")
+   * .build())
+   * .identityTokenOnly(OpenIdConnectIdentityTokenConfigurationProperty.builder()
+   * .clientIds(List.of("clientIds"))
+   * .principalIdClaim("principalIdClaim")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnecttokenselection.html)
+   */
+  public interface OpenIdConnectTokenSelectionProperty {
+    /**
+     * The OIDC configuration for processing access tokens.
+     *
+     * Contains allowed audience claims, for example `https://auth.example.com` , and the claim that
+     * you want to map to the principal, for example `sub` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnecttokenselection.html#cfn-verifiedpermissions-identitysource-openidconnecttokenselection-accesstokenonly)
+     */
+    public fun accessTokenOnly(): Any? = unwrap(this).getAccessTokenOnly()
+
+    /**
+     * The OIDC configuration for processing identity (ID) tokens.
+     *
+     * Contains allowed client ID claims, for example `1example23456789` , and the claim that you
+     * want to map to the principal, for example `sub` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnecttokenselection.html#cfn-verifiedpermissions-identitysource-openidconnecttokenselection-identitytokenonly)
+     */
+    public fun identityTokenOnly(): Any? = unwrap(this).getIdentityTokenOnly()
+
+    /**
+     * A builder for [OpenIdConnectTokenSelectionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accessTokenOnly The OIDC configuration for processing access tokens.
+       * Contains allowed audience claims, for example `https://auth.example.com` , and the claim
+       * that you want to map to the principal, for example `sub` .
+       */
+      public fun accessTokenOnly(accessTokenOnly: IResolvable)
+
+      /**
+       * @param accessTokenOnly The OIDC configuration for processing access tokens.
+       * Contains allowed audience claims, for example `https://auth.example.com` , and the claim
+       * that you want to map to the principal, for example `sub` .
+       */
+      public fun accessTokenOnly(accessTokenOnly: OpenIdConnectAccessTokenConfigurationProperty)
+
+      /**
+       * @param accessTokenOnly The OIDC configuration for processing access tokens.
+       * Contains allowed audience claims, for example `https://auth.example.com` , and the claim
+       * that you want to map to the principal, for example `sub` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa3c9fa6856bb3ac117266e9947e89bc29d87d3b5bacbcc69c5542cc490b9b8d")
+      public
+          fun accessTokenOnly(accessTokenOnly: OpenIdConnectAccessTokenConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param identityTokenOnly The OIDC configuration for processing identity (ID) tokens.
+       * Contains allowed client ID claims, for example `1example23456789` , and the claim that you
+       * want to map to the principal, for example `sub` .
+       */
+      public fun identityTokenOnly(identityTokenOnly: IResolvable)
+
+      /**
+       * @param identityTokenOnly The OIDC configuration for processing identity (ID) tokens.
+       * Contains allowed client ID claims, for example `1example23456789` , and the claim that you
+       * want to map to the principal, for example `sub` .
+       */
+      public
+          fun identityTokenOnly(identityTokenOnly: OpenIdConnectIdentityTokenConfigurationProperty)
+
+      /**
+       * @param identityTokenOnly The OIDC configuration for processing identity (ID) tokens.
+       * Contains allowed client ID claims, for example `1example23456789` , and the claim that you
+       * want to map to the principal, for example `sub` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("23e46a2c2cf78b04ec9460b66c4488ca2a170829b8ef6f0d157d5a7d140f1e22")
+      public
+          fun identityTokenOnly(identityTokenOnly: OpenIdConnectIdentityTokenConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectTokenSelectionProperty.Builder
+          =
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectTokenSelectionProperty.builder()
+
+      /**
+       * @param accessTokenOnly The OIDC configuration for processing access tokens.
+       * Contains allowed audience claims, for example `https://auth.example.com` , and the claim
+       * that you want to map to the principal, for example `sub` .
+       */
+      override fun accessTokenOnly(accessTokenOnly: IResolvable) {
+        cdkBuilder.accessTokenOnly(accessTokenOnly.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param accessTokenOnly The OIDC configuration for processing access tokens.
+       * Contains allowed audience claims, for example `https://auth.example.com` , and the claim
+       * that you want to map to the principal, for example `sub` .
+       */
+      override fun accessTokenOnly(accessTokenOnly: OpenIdConnectAccessTokenConfigurationProperty) {
+        cdkBuilder.accessTokenOnly(accessTokenOnly.let(OpenIdConnectAccessTokenConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param accessTokenOnly The OIDC configuration for processing access tokens.
+       * Contains allowed audience claims, for example `https://auth.example.com` , and the claim
+       * that you want to map to the principal, for example `sub` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa3c9fa6856bb3ac117266e9947e89bc29d87d3b5bacbcc69c5542cc490b9b8d")
+      override
+          fun accessTokenOnly(accessTokenOnly: OpenIdConnectAccessTokenConfigurationProperty.Builder.() -> Unit):
+          Unit = accessTokenOnly(OpenIdConnectAccessTokenConfigurationProperty(accessTokenOnly))
+
+      /**
+       * @param identityTokenOnly The OIDC configuration for processing identity (ID) tokens.
+       * Contains allowed client ID claims, for example `1example23456789` , and the claim that you
+       * want to map to the principal, for example `sub` .
+       */
+      override fun identityTokenOnly(identityTokenOnly: IResolvable) {
+        cdkBuilder.identityTokenOnly(identityTokenOnly.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param identityTokenOnly The OIDC configuration for processing identity (ID) tokens.
+       * Contains allowed client ID claims, for example `1example23456789` , and the claim that you
+       * want to map to the principal, for example `sub` .
+       */
+      override
+          fun identityTokenOnly(identityTokenOnly: OpenIdConnectIdentityTokenConfigurationProperty) {
+        cdkBuilder.identityTokenOnly(identityTokenOnly.let(OpenIdConnectIdentityTokenConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param identityTokenOnly The OIDC configuration for processing identity (ID) tokens.
+       * Contains allowed client ID claims, for example `1example23456789` , and the claim that you
+       * want to map to the principal, for example `sub` .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("23e46a2c2cf78b04ec9460b66c4488ca2a170829b8ef6f0d157d5a7d140f1e22")
+      override
+          fun identityTokenOnly(identityTokenOnly: OpenIdConnectIdentityTokenConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          identityTokenOnly(OpenIdConnectIdentityTokenConfigurationProperty(identityTokenOnly))
+
+      public fun build():
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectTokenSelectionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectTokenSelectionProperty,
+    ) : CdkObject(cdkObject),
+        OpenIdConnectTokenSelectionProperty {
+      /**
+       * The OIDC configuration for processing access tokens.
+       *
+       * Contains allowed audience claims, for example `https://auth.example.com` , and the claim
+       * that you want to map to the principal, for example `sub` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnecttokenselection.html#cfn-verifiedpermissions-identitysource-openidconnecttokenselection-accesstokenonly)
+       */
+      override fun accessTokenOnly(): Any? = unwrap(this).getAccessTokenOnly()
+
+      /**
+       * The OIDC configuration for processing identity (ID) tokens.
+       *
+       * Contains allowed client ID claims, for example `1example23456789` , and the claim that you
+       * want to map to the principal, for example `sub` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-openidconnecttokenselection.html#cfn-verifiedpermissions-identitysource-openidconnecttokenselection-identitytokenonly)
+       */
+      override fun identityTokenOnly(): Any? = unwrap(this).getIdentityTokenOnly()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OpenIdConnectTokenSelectionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectTokenSelectionProperty):
+          OpenIdConnectTokenSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenIdConnectTokenSelectionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenIdConnectTokenSelectionProperty):
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectTokenSelectionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.OpenIdConnectTokenSelectionProperty
     }
   }
 }

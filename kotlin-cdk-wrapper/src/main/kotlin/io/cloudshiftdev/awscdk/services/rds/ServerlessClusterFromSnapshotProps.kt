@@ -149,7 +149,7 @@ public interface ServerlessClusterFromSnapshotProps {
   public fun subnetGroup(): ISubnetGroup? = unwrap(this).getSubnetGroup()?.let(ISubnetGroup::wrap)
 
   /**
-   * The VPC that this Aurora Serverless cluster has been created in.
+   * The VPC that this Aurora Serverless v1 Cluster has been created in.
    *
    * Default: - the default VPC in the account and region will be used
    */
@@ -264,7 +264,7 @@ public interface ServerlessClusterFromSnapshotProps {
     public fun subnetGroup(subnetGroup: ISubnetGroup)
 
     /**
-     * @param vpc The VPC that this Aurora Serverless cluster has been created in.
+     * @param vpc The VPC that this Aurora Serverless v1 Cluster has been created in.
      */
     public fun vpc(vpc: IVpc)
 
@@ -412,7 +412,7 @@ public interface ServerlessClusterFromSnapshotProps {
     }
 
     /**
-     * @param vpc The VPC that this Aurora Serverless cluster has been created in.
+     * @param vpc The VPC that this Aurora Serverless v1 Cluster has been created in.
      */
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
@@ -441,7 +441,8 @@ public interface ServerlessClusterFromSnapshotProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshotProps,
-  ) : CdkObject(cdkObject), ServerlessClusterFromSnapshotProps {
+  ) : CdkObject(cdkObject),
+      ServerlessClusterFromSnapshotProps {
     /**
      * The number of days during which automatic DB snapshots are retained.
      *
@@ -564,7 +565,7 @@ public interface ServerlessClusterFromSnapshotProps {
         unwrap(this).getSubnetGroup()?.let(ISubnetGroup::wrap)
 
     /**
-     * The VPC that this Aurora Serverless cluster has been created in.
+     * The VPC that this Aurora Serverless v1 Cluster has been created in.
      *
      * Default: - the default VPC in the account and region will be used
      */

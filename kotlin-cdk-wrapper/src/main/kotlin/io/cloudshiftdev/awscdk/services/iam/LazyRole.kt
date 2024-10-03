@@ -51,7 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class LazyRole(
   cdkObject: software.amazon.awscdk.services.iam.LazyRole,
-) : Resource(cdkObject), IRole {
+) : Resource(cdkObject),
+    IRole {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

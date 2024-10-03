@@ -78,7 +78,8 @@ public interface LifecycleHookTargetConfig {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig,
-  ) : CdkObject(cdkObject), LifecycleHookTargetConfig {
+  ) : CdkObject(cdkObject),
+      LifecycleHookTargetConfig {
     /**
      * The IRole that was used to bind the lifecycle hook to the target.
      */

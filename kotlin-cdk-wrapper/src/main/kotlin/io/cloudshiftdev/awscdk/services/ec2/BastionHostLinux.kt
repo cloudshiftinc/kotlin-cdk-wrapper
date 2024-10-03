@@ -43,7 +43,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class BastionHostLinux(
   cdkObject: software.amazon.awscdk.services.ec2.BastionHostLinux,
-) : Resource(cdkObject), IInstance {
+) : Resource(cdkObject),
+    IInstance {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

@@ -203,7 +203,8 @@ public interface RollingUpdateOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.RollingUpdateOptions,
-  ) : CdkObject(cdkObject), RollingUpdateOptions {
+  ) : CdkObject(cdkObject),
+      RollingUpdateOptions {
     /**
      * The maximum number of instances that AWS CloudFormation updates at once.
      *

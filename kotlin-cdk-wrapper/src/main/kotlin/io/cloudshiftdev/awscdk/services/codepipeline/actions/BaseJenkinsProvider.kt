@@ -12,7 +12,8 @@ import kotlin.String
  */
 public abstract class BaseJenkinsProvider(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider,
-) : Construct(cdkObject), IJenkinsProvider {
+) : Construct(cdkObject),
+    IJenkinsProvider {
   /**
    *
    */

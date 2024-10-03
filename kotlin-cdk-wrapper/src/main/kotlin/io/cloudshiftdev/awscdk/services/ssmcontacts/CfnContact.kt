@@ -57,7 +57,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnContact(
   cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -394,7 +395,8 @@ public open class CfnContact(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty,
-    ) : CdkObject(cdkObject), ChannelTargetInfoProperty {
+    ) : CdkObject(cdkObject),
+        ChannelTargetInfoProperty {
       /**
        * The Amazon Resource Name (ARN) of the contact channel.
        *
@@ -520,7 +522,8 @@ public open class CfnContact(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty,
-    ) : CdkObject(cdkObject), ContactTargetInfoProperty {
+    ) : CdkObject(cdkObject),
+        ContactTargetInfoProperty {
       /**
        * The Amazon Resource Name (ARN) of the contact.
        *
@@ -704,7 +707,8 @@ public open class CfnContact(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.StageProperty,
-    ) : CdkObject(cdkObject), StageProperty {
+    ) : CdkObject(cdkObject),
+        StageProperty {
       /**
        * The time to wait until beginning the next stage.
        *
@@ -887,7 +891,8 @@ public open class CfnContact(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.TargetsProperty,
-    ) : CdkObject(cdkObject), TargetsProperty {
+    ) : CdkObject(cdkObject),
+        TargetsProperty {
       /**
        * Information about the contact channel that Incident Manager engages.
        *

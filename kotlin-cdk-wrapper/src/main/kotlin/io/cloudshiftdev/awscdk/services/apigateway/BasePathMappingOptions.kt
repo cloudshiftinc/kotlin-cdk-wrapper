@@ -111,7 +111,8 @@ public interface BasePathMappingOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.apigateway.BasePathMappingOptions,
-  ) : CdkObject(cdkObject), BasePathMappingOptions {
+  ) : CdkObject(cdkObject),
+      BasePathMappingOptions {
     /**
      * Whether to attach the base path mapping to a stage.
      *

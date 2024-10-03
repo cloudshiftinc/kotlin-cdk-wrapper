@@ -27,7 +27,8 @@ public interface IApiDestination : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.IApiDestination,
-  ) : CdkObject(cdkObject), IApiDestination {
+  ) : CdkObject(cdkObject),
+      IApiDestination {
     /**
      * The ARN of the Api Destination created.
      */

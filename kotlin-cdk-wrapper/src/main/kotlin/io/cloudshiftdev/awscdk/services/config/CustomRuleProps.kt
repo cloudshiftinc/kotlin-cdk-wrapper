@@ -18,17 +18,19 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * // Lambda function containing logic that evaluates compliance with the rule.
- * Function evalComplianceFn = Function.Builder.create(this, "CustomFunction")
- * .code(AssetCode.fromInline("exports.handler = (event) =&gt; console.log(event);"))
- * .handler("index.handler")
- * .runtime(Runtime.NODEJS_18_X)
+ * Function fn;
+ * String samplePolicyText;
+ * ManagedRule.Builder.create(this, "ManagedRule")
+ * .identifier(ManagedRuleIdentifiers.API_GW_XRAY_ENABLED)
+ * .evaluationModes(EvaluationMode.DETECTIVE_AND_PROACTIVE)
  * .build();
- * // A custom rule that runs on configuration changes of EC2 instances
- * CustomRule customRule = CustomRule.Builder.create(this, "Custom")
- * .configurationChanges(true)
- * .lambdaFunction(evalComplianceFn)
- * .ruleScope(RuleScope.fromResource(ResourceType.EC2_INSTANCE))
+ * CustomRule.Builder.create(this, "CustomRule")
+ * .lambdaFunction(fn)
+ * .evaluationModes(EvaluationMode.PROACTIVE)
+ * .build();
+ * CustomPolicy.Builder.create(this, "CustomPolicy")
+ * .policyText(samplePolicyText)
+ * .evaluationModes(EvaluationMode.DETECTIVE)
  * .build();
  * ```
  */
@@ -71,6 +73,12 @@ public interface CustomRuleProps : RuleProps {
      * @param description A description about this AWS Config rule.
      */
     public fun description(description: String)
+
+    /**
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in.
+     * The valid values are distinct objects.
+     */
+    public fun evaluationModes(evaluationModes: EvaluationMode)
 
     /**
      * @param inputParameters Input parameter values that are passed to the AWS Config rule.
@@ -125,6 +133,14 @@ public interface CustomRuleProps : RuleProps {
     }
 
     /**
+     * @param evaluationModes The modes the AWS Config rule can be evaluated in.
+     * The valid values are distinct objects.
+     */
+    override fun evaluationModes(evaluationModes: EvaluationMode) {
+      cdkBuilder.evaluationModes(evaluationModes.let(EvaluationMode.Companion::unwrap))
+    }
+
+    /**
      * @param inputParameters Input parameter values that are passed to the AWS Config rule.
      */
     override fun inputParameters(inputParameters: Map<String, Any>) {
@@ -165,7 +181,8 @@ public interface CustomRuleProps : RuleProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.config.CustomRuleProps,
-  ) : CdkObject(cdkObject), CustomRuleProps {
+  ) : CdkObject(cdkObject),
+      CustomRuleProps {
     /**
      * A name for the AWS Config rule.
      *
@@ -186,6 +203,16 @@ public interface CustomRuleProps : RuleProps {
      * Default: - No description
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The modes the AWS Config rule can be evaluated in.
+     *
+     * The valid values are distinct objects.
+     *
+     * Default: - Detective evaluation mode only
+     */
+    override fun evaluationModes(): EvaluationMode? =
+        unwrap(this).getEvaluationModes()?.let(EvaluationMode::wrap)
 
     /**
      * Input parameter values that are passed to the AWS Config rule.

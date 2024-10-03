@@ -92,7 +92,8 @@ public interface EncryptionConfiguration {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration,
-  ) : CdkObject(cdkObject), EncryptionConfiguration {
+  ) : CdkObject(cdkObject),
+      EncryptionConfiguration {
     /**
      * KMS key ARN or ID.
      *

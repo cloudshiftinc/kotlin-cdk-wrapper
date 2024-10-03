@@ -36,7 +36,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class UserPoolClient(
   cdkObject: software.amazon.awscdk.services.cognito.UserPoolClient,
-) : Resource(cdkObject), IUserPoolClient {
+) : Resource(cdkObject),
+    IUserPoolClient {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -141,6 +142,21 @@ public open class UserPoolClient(
      * @param disableOAuth Turns off all OAuth interactions for this client. 
      */
     public fun disableOAuth(disableOAuth: Boolean)
+
+    /**
+     * Enable the propagation of additional user context data.
+     *
+     * You can only activate enablePropagateAdditionalUserContextData in an app client that has a
+     * client secret.
+     *
+     * Default: false for new user pool clients
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint)
+     * @param enablePropagateAdditionalUserContextData Enable the propagation of additional user
+     * context data. 
+     */
+    public
+        fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: Boolean)
 
     /**
      * Enable token revocation for this client.
@@ -365,6 +381,23 @@ public open class UserPoolClient(
      */
     override fun disableOAuth(disableOAuth: Boolean) {
       cdkBuilder.disableOAuth(disableOAuth)
+    }
+
+    /**
+     * Enable the propagation of additional user context data.
+     *
+     * You can only activate enablePropagateAdditionalUserContextData in an app client that has a
+     * client secret.
+     *
+     * Default: false for new user pool clients
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-adaptive-authentication.html#user-pool-settings-adaptive-authentication-device-fingerprint)
+     * @param enablePropagateAdditionalUserContextData Enable the propagation of additional user
+     * context data. 
+     */
+    override
+        fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: Boolean) {
+      cdkBuilder.enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData)
     }
 
     /**

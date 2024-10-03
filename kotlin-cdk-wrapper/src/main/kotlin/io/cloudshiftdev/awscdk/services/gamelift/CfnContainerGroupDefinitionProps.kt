@@ -97,6 +97,15 @@ public interface CfnContainerGroupDefinitionProps {
   /**
    * The platform required for all containers in the container group definition.
    *
+   *
+   * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+   * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For game
+   * servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the game
+   * server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+   * GameLift server SDK version
+   * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-operatingsystem)
    */
   public fun operatingSystem(): String
@@ -185,6 +194,13 @@ public interface CfnContainerGroupDefinitionProps {
     /**
      * @param operatingSystem The platform required for all containers in the container group
      * definition. 
+     *
+     * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+     * GameLift server SDK version
+     * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
      */
     public fun operatingSystem(operatingSystem: String)
 
@@ -277,6 +293,13 @@ public interface CfnContainerGroupDefinitionProps {
     /**
      * @param operatingSystem The platform required for all containers in the container group
      * definition. 
+     *
+     * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+     * GameLift server SDK version
+     * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
      */
     override fun operatingSystem(operatingSystem: String) {
       cdkBuilder.operatingSystem(operatingSystem)
@@ -345,7 +368,8 @@ public interface CfnContainerGroupDefinitionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinitionProps,
-  ) : CdkObject(cdkObject), CfnContainerGroupDefinitionProps {
+  ) : CdkObject(cdkObject),
+      CfnContainerGroupDefinitionProps {
     /**
      * The set of container definitions that are included in the container group.
      *
@@ -364,6 +388,15 @@ public interface CfnContainerGroupDefinitionProps {
 
     /**
      * The platform required for all containers in the container group definition.
+     *
+     *
+     * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
+     * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
+     * GameLift server SDK version
+     * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-operatingsystem)
      */

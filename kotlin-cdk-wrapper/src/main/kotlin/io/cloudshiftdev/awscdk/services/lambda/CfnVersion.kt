@@ -29,11 +29,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.lambda.*;
+ * Object policy;
  * CfnVersion cfnVersion = CfnVersion.Builder.create(this, "MyCfnVersion")
  * .functionName("functionName")
  * // the properties below are optional
  * .codeSha256("codeSha256")
  * .description("description")
+ * .policy(policy)
  * .provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty.builder()
  * .provisionedConcurrentExecutions(123)
  * .build())
@@ -49,7 +51,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnVersion(
   cdkObject: software.amazon.awscdk.services.lambda.CfnVersion,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -67,7 +70,7 @@ public open class CfnVersion(
   )
 
   /**
-   * The ARN of the version.
+   * The ARN of the function.
    */
   public open fun attrFunctionArn(): String = unwrap(this).getAttrFunctionArn()
 
@@ -119,6 +122,18 @@ public open class CfnVersion(
    */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
+  }
+
+  /**
+   * The resource policy of your function.
+   */
+  public open fun policy(): Any? = unwrap(this).getPolicy()
+
+  /**
+   * The resource policy of your function.
+   */
+  public open fun policy(`value`: Any) {
+    unwrap(this).setPolicy(`value`)
   }
 
   /**
@@ -221,6 +236,14 @@ public open class CfnVersion(
      * @param functionName The name or ARN of the Lambda function. 
      */
     public fun functionName(functionName: String)
+
+    /**
+     * The resource policy of your function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-policy)
+     * @param policy The resource policy of your function. 
+     */
+    public fun policy(policy: Any)
 
     /**
      * Specifies a provisioned concurrency configuration for a function's version.
@@ -336,6 +359,16 @@ public open class CfnVersion(
      */
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
+    }
+
+    /**
+     * The resource policy of your function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-policy)
+     * @param policy The resource policy of your function. 
+     */
+    override fun policy(policy: Any) {
+      cdkBuilder.policy(policy)
     }
 
     /**
@@ -495,7 +528,8 @@ public open class CfnVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnVersion.ProvisionedConcurrencyConfigurationProperty,
-    ) : CdkObject(cdkObject), ProvisionedConcurrencyConfigurationProperty {
+    ) : CdkObject(cdkObject),
+        ProvisionedConcurrencyConfigurationProperty {
       /**
        * The amount of provisioned concurrency to allocate for the version.
        *
@@ -602,7 +636,8 @@ public open class CfnVersion(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.lambda.CfnVersion.RuntimePolicyProperty,
-    ) : CdkObject(cdkObject), RuntimePolicyProperty {
+    ) : CdkObject(cdkObject),
+        RuntimePolicyProperty {
       /**
        * The ARN of the runtime the function is configured to use.
        *

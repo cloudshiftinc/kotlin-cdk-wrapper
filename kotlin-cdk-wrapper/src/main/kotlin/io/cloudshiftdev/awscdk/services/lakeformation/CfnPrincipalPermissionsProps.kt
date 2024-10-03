@@ -288,7 +288,8 @@ public interface CfnPrincipalPermissionsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissionsProps,
-  ) : CdkObject(cdkObject), CfnPrincipalPermissionsProps {
+  ) : CdkObject(cdkObject),
+      CfnPrincipalPermissionsProps {
     /**
      * The identifier for the Data Catalog .
      *

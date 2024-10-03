@@ -68,7 +68,8 @@ public interface TemplateParsingOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.assertions.TemplateParsingOptions,
-  ) : CdkObject(cdkObject), TemplateParsingOptions {
+  ) : CdkObject(cdkObject),
+      TemplateParsingOptions {
     /**
      * If set to true, will skip checking for cyclical / circular dependencies.
      *

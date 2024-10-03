@@ -27,7 +27,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class AccessKey(
   cdkObject: software.amazon.awscdk.services.iam.AccessKey,
-) : Resource(cdkObject), IAccessKey {
+) : Resource(cdkObject),
+    IAccessKey {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,

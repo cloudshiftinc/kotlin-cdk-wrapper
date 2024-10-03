@@ -116,7 +116,8 @@ public interface MutualTlsValidation {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsValidation,
-  ) : CdkObject(cdkObject), MutualTlsValidation {
+  ) : CdkObject(cdkObject),
+      MutualTlsValidation {
     /**
      * Represents the subject alternative names (SANs) secured by the certificate.
      *

@@ -27,6 +27,8 @@ import kotlin.jvm.JvmName
  * .type(AttributeType.BINARY)
  * .build())
  * // the properties below are optional
+ * .maxReadRequestUnits(123)
+ * .maxWriteRequestUnits(123)
  * .nonKeyAttributes(List.of("nonKeyAttributes"))
  * .projectionType(ProjectionType.KEYS_ONLY)
  * .readCapacity(123)
@@ -39,6 +41,24 @@ import kotlin.jvm.JvmName
  * ```
  */
 public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions {
+  /**
+   * The maximum read request units for the global secondary index.
+   *
+   * Can only be provided if table billingMode is PAY_PER_REQUEST.
+   *
+   * Default: - on-demand throughput is disabled
+   */
+  public fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
+
+  /**
+   * The maximum write request units for the global secondary index.
+   *
+   * Can only be provided if table billingMode is PAY_PER_REQUEST.
+   *
+   * Default: - on-demand throughput is disabled
+   */
+  public fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
+
   /**
    * The read capacity for the global secondary index.
    *
@@ -66,6 +86,18 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
      * @param indexName The name of the secondary index. 
      */
     public fun indexName(indexName: String)
+
+    /**
+     * @param maxReadRequestUnits The maximum read request units for the global secondary index.
+     * Can only be provided if table billingMode is PAY_PER_REQUEST.
+     */
+    public fun maxReadRequestUnits(maxReadRequestUnits: Number)
+
+    /**
+     * @param maxWriteRequestUnits The maximum write request units for the global secondary index.
+     * Can only be provided if table billingMode is PAY_PER_REQUEST.
+     */
+    public fun maxWriteRequestUnits(maxWriteRequestUnits: Number)
 
     /**
      * @param nonKeyAttributes The non-key attributes that are projected into the secondary index.
@@ -129,6 +161,22 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
      */
     override fun indexName(indexName: String) {
       cdkBuilder.indexName(indexName)
+    }
+
+    /**
+     * @param maxReadRequestUnits The maximum read request units for the global secondary index.
+     * Can only be provided if table billingMode is PAY_PER_REQUEST.
+     */
+    override fun maxReadRequestUnits(maxReadRequestUnits: Number) {
+      cdkBuilder.maxReadRequestUnits(maxReadRequestUnits)
+    }
+
+    /**
+     * @param maxWriteRequestUnits The maximum write request units for the global secondary index.
+     * Can only be provided if table billingMode is PAY_PER_REQUEST.
+     */
+    override fun maxWriteRequestUnits(maxWriteRequestUnits: Number) {
+      cdkBuilder.maxWriteRequestUnits(maxWriteRequestUnits)
     }
 
     /**
@@ -202,11 +250,30 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexProps,
-  ) : CdkObject(cdkObject), GlobalSecondaryIndexProps {
+  ) : CdkObject(cdkObject),
+      GlobalSecondaryIndexProps {
     /**
      * The name of the secondary index.
      */
     override fun indexName(): String = unwrap(this).getIndexName()
+
+    /**
+     * The maximum read request units for the global secondary index.
+     *
+     * Can only be provided if table billingMode is PAY_PER_REQUEST.
+     *
+     * Default: - on-demand throughput is disabled
+     */
+    override fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
+
+    /**
+     * The maximum write request units for the global secondary index.
+     *
+     * Can only be provided if table billingMode is PAY_PER_REQUEST.
+     *
+     * Default: - on-demand throughput is disabled
+     */
+    override fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
 
     /**
      * The non-key attributes that are projected into the secondary index.

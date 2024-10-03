@@ -47,7 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnDocumentationPart(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationPart,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -494,7 +495,8 @@ public open class CfnDocumentationPart(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationPart.LocationProperty,
-    ) : CdkObject(cdkObject), LocationProperty {
+    ) : CdkObject(cdkObject),
+        LocationProperty {
       /**
        * The HTTP verb of a method.
        *

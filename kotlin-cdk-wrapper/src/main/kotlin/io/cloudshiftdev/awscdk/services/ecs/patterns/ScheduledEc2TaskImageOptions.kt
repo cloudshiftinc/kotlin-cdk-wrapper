@@ -87,6 +87,11 @@ public interface ScheduledEc2TaskImageOptions : ScheduledTaskImageProps {
     public fun command(vararg command: String)
 
     /**
+     * @param containerName Optional name for the container added.
+     */
+    public fun containerName(containerName: String)
+
+    /**
      * @param cpu The minimum number of CPU units to reserve for the container.
      */
     public fun cpu(cpu: Number)
@@ -151,6 +156,13 @@ public interface ScheduledEc2TaskImageOptions : ScheduledTaskImageProps {
      * If you provide a shell command as a single string, you have to quote command-line arguments.
      */
     override fun command(vararg command: String): Unit = command(command.toList())
+
+    /**
+     * @param containerName Optional name for the container added.
+     */
+    override fun containerName(containerName: String) {
+      cdkBuilder.containerName(containerName)
+    }
 
     /**
      * @param cpu The minimum number of CPU units to reserve for the container.
@@ -218,7 +230,8 @@ public interface ScheduledEc2TaskImageOptions : ScheduledTaskImageProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskImageOptions,
-  ) : CdkObject(cdkObject), ScheduledEc2TaskImageOptions {
+  ) : CdkObject(cdkObject),
+      ScheduledEc2TaskImageOptions {
     /**
      * The command that is passed to the container.
      *
@@ -227,6 +240,13 @@ public interface ScheduledEc2TaskImageOptions : ScheduledTaskImageProps {
      * Default: - CMD value built into container image.
      */
     override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+
+    /**
+     * Optional name for the container added.
+     *
+     * Default: - ScheduledContainer
+     */
+    override fun containerName(): String? = unwrap(this).getContainerName()
 
     /**
      * The minimum number of CPU units to reserve for the container.

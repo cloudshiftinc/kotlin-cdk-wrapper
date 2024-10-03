@@ -99,7 +99,8 @@ public interface LogOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.LogOptions,
-  ) : CdkObject(cdkObject), LogOptions {
+  ) : CdkObject(cdkObject),
+      LogOptions {
     /**
      * The log group where the execution history events will be logged.
      */

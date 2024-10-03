@@ -37,7 +37,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnTransitGatewayRoute(
   cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayRoute,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject),
+    IInspectable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -53,11 +54,6 @@ public open class CfnTransitGatewayRoute(
     props: CfnTransitGatewayRouteProps.Builder.() -> Unit,
   ) : this(scope, id, CfnTransitGatewayRouteProps(props)
   )
-
-  /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
    * Indicates whether to drop traffic that matches this route.

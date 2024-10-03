@@ -59,7 +59,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnHoursOfOperation(
   cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -545,7 +547,8 @@ public open class CfnHoursOfOperation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationConfigProperty,
-    ) : CdkObject(cdkObject), HoursOfOperationConfigProperty {
+    ) : CdkObject(cdkObject),
+        HoursOfOperationConfigProperty {
       /**
        * The day that the hours of operation applies to.
        *
@@ -662,7 +665,8 @@ public open class CfnHoursOfOperation(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationTimeSliceProperty,
-    ) : CdkObject(cdkObject), HoursOfOperationTimeSliceProperty {
+    ) : CdkObject(cdkObject),
+        HoursOfOperationTimeSliceProperty {
       /**
        * The hours.
        *

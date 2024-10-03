@@ -16,7 +16,8 @@ public interface IGrantable {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iam.IGrantable,
-  ) : CdkObject(cdkObject), IGrantable {
+  ) : CdkObject(cdkObject),
+      IGrantable {
     /**
      * The principal to grant permissions to.
      */

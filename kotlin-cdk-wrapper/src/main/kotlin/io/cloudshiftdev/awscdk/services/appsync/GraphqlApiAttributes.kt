@@ -157,7 +157,8 @@ public interface GraphqlApiAttributes {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiAttributes,
-  ) : CdkObject(cdkObject), GraphqlApiAttributes {
+  ) : CdkObject(cdkObject),
+      GraphqlApiAttributes {
     /**
      * The GraphQl endpoint arn for the GraphQL API.
      *

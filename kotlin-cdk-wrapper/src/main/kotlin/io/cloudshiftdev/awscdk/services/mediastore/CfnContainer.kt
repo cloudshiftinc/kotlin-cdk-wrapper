@@ -69,7 +69,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnContainer(
   cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer,
-) : CfnResource(cdkObject), IInspectable, ITaggable {
+) : CfnResource(cdkObject),
+    IInspectable,
+    ITaggable {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -954,7 +956,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.CorsRuleProperty,
-    ) : CdkObject(cdkObject), CorsRuleProperty {
+    ) : CdkObject(cdkObject),
+        CorsRuleProperty {
       /**
        * Specifies which headers are allowed in a preflight `OPTIONS` request through the
        * `Access-Control-Request-Headers` header.
@@ -1175,7 +1178,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty,
-    ) : CdkObject(cdkObject), MetricPolicyProperty {
+    ) : CdkObject(cdkObject),
+        MetricPolicyProperty {
       /**
        * A setting to enable or disable metrics at the container level.
        *
@@ -1298,7 +1302,8 @@ public open class CfnContainer(
 
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty,
-    ) : CdkObject(cdkObject), MetricPolicyRuleProperty {
+    ) : CdkObject(cdkObject),
+        MetricPolicyRuleProperty {
       /**
        * A path or file name that defines which objects to include in the group.
        *

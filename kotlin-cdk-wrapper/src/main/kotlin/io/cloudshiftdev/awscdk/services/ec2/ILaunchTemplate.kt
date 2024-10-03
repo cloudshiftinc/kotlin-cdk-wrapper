@@ -36,7 +36,8 @@ public interface ILaunchTemplate : IResource {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.ILaunchTemplate,
-  ) : CdkObject(cdkObject), ILaunchTemplate {
+  ) : CdkObject(cdkObject),
+      ILaunchTemplate {
     /**
      * Apply the given removal policy to this resource.
      *

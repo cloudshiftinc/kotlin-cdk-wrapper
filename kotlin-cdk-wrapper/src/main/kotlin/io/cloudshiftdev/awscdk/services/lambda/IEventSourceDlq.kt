@@ -19,7 +19,8 @@ public interface IEventSourceDlq {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.lambda.IEventSourceDlq,
-  ) : CdkObject(cdkObject), IEventSourceDlq {
+  ) : CdkObject(cdkObject),
+      IEventSourceDlq {
     /**
      * Returns the DLQ destination config of the DLQ.
      *

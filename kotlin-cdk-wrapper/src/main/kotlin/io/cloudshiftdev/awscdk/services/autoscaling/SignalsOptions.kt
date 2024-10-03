@@ -100,7 +100,8 @@ public interface SignalsOptions {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.autoscaling.SignalsOptions,
-  ) : CdkObject(cdkObject), SignalsOptions {
+  ) : CdkObject(cdkObject),
+      SignalsOptions {
     /**
      * The percentage of signals that need to be successful.
      *

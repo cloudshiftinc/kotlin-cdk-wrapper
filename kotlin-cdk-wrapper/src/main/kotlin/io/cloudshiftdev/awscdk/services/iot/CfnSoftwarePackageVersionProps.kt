@@ -166,7 +166,8 @@ public interface CfnSoftwarePackageVersionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.iot.CfnSoftwarePackageVersionProps,
-  ) : CdkObject(cdkObject), CfnSoftwarePackageVersionProps {
+  ) : CdkObject(cdkObject),
+      CfnSoftwarePackageVersionProps {
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-attributes)
      */

@@ -129,7 +129,8 @@ public interface HttpJwtAuthorizerProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizerProps,
-  ) : CdkObject(cdkObject), HttpJwtAuthorizerProps {
+  ) : CdkObject(cdkObject),
+      HttpJwtAuthorizerProps {
     /**
      * The name of the authorizer.
      *

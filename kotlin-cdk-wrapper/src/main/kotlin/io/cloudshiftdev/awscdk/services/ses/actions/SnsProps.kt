@@ -93,7 +93,8 @@ public interface SnsProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.actions.SnsProps,
-  ) : CdkObject(cdkObject), SnsProps {
+  ) : CdkObject(cdkObject),
+      SnsProps {
     /**
      * The encoding to use for the email within the Amazon SNS notification.
      *

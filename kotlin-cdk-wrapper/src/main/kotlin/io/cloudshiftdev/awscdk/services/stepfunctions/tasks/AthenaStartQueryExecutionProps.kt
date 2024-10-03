@@ -84,6 +84,15 @@ public interface AthenaStartQueryExecutionProps : TaskStateBaseProps {
       unwrap(this).getResultConfiguration()?.let(ResultConfiguration::wrap)
 
   /**
+   * Specifies, in minutes, the maximum age of a previous query result that Athena should consider
+   * for reuse.
+   *
+   * Default: - Query results are not reused
+   */
+  public fun resultReuseConfigurationMaxAge(): Duration? =
+      unwrap(this).getResultReuseConfigurationMaxAge()?.let(Duration::wrap)
+
+  /**
    * Configuration on how and where to save query.
    *
    * Default: - No work group
@@ -210,6 +219,12 @@ public interface AthenaStartQueryExecutionProps : TaskStateBaseProps {
      * input to become its output.
      */
     public fun resultPath(resultPath: String)
+
+    /**
+     * @param resultReuseConfigurationMaxAge Specifies, in minutes, the maximum age of a previous
+     * query result that Athena should consider for reuse.
+     */
+    public fun resultReuseConfigurationMaxAge(resultReuseConfigurationMaxAge: Duration)
 
     /**
      * @param resultSelector The JSON that will replace the state's raw result and become the
@@ -396,6 +411,14 @@ public interface AthenaStartQueryExecutionProps : TaskStateBaseProps {
     }
 
     /**
+     * @param resultReuseConfigurationMaxAge Specifies, in minutes, the maximum age of a previous
+     * query result that Athena should consider for reuse.
+     */
+    override fun resultReuseConfigurationMaxAge(resultReuseConfigurationMaxAge: Duration) {
+      cdkBuilder.resultReuseConfigurationMaxAge(resultReuseConfigurationMaxAge.let(Duration.Companion::unwrap))
+    }
+
+    /**
      * @param resultSelector The JSON that will replace the state's raw result and become the
      * effective result before ResultPath is applied.
      * You can use ResultSelector to create a payload with values that are static
@@ -444,7 +467,8 @@ public interface AthenaStartQueryExecutionProps : TaskStateBaseProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AthenaStartQueryExecutionProps,
-  ) : CdkObject(cdkObject), AthenaStartQueryExecutionProps {
+  ) : CdkObject(cdkObject),
+      AthenaStartQueryExecutionProps {
     /**
      * Unique string string to ensure idempotence.
      *
@@ -570,6 +594,15 @@ public interface AthenaStartQueryExecutionProps : TaskStateBaseProps {
      * Default: - Replaces the entire input with the result (JSON path '$')
      */
     override fun resultPath(): String? = unwrap(this).getResultPath()
+
+    /**
+     * Specifies, in minutes, the maximum age of a previous query result that Athena should consider
+     * for reuse.
+     *
+     * Default: - Query results are not reused
+     */
+    override fun resultReuseConfigurationMaxAge(): Duration? =
+        unwrap(this).getResultReuseConfigurationMaxAge()?.let(Duration::wrap)
 
     /**
      * The JSON that will replace the state's raw result and become the effective result before

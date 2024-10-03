@@ -174,7 +174,8 @@ public interface CfnAliasProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.kms.CfnAliasProps,
-  ) : CdkObject(cdkObject), CfnAliasProps {
+  ) : CdkObject(cdkObject),
+      CfnAliasProps {
     /**
      * Specifies the alias name. This value must begin with `alias/` followed by a name, such as
      * `alias/ExampleAlias` .

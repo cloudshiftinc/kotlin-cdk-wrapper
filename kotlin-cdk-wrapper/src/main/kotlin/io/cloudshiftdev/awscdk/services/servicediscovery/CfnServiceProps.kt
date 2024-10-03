@@ -446,7 +446,8 @@ public interface CfnServiceProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicediscovery.CfnServiceProps,
-  ) : CdkObject(cdkObject), CfnServiceProps {
+  ) : CdkObject(cdkObject),
+      CfnServiceProps {
     /**
      * The description of the service.
      *

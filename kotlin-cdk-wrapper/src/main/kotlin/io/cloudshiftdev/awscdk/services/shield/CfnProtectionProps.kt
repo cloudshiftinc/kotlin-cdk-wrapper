@@ -344,7 +344,8 @@ public interface CfnProtectionProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.shield.CfnProtectionProps,
-  ) : CdkObject(cdkObject), CfnProtectionProps {
+  ) : CdkObject(cdkObject),
+      CfnProtectionProps {
     /**
      * The automatic application layer DDoS mitigation settings for the protection.
      *

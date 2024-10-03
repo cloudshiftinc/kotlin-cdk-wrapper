@@ -36,7 +36,7 @@ import kotlin.jvm.JvmName
  * .subnetType(SubnetType.PUBLIC)
  * .build())
  * .vpc(vpc)
- * .caCertificate(CaCertificate.RDS_CA_RSA4096_G1)
+ * .removalPolicy(RemovalPolicy.SNAPSHOT)
  * .build();
  * ```
  */
@@ -122,7 +122,7 @@ public interface DatabaseClusterProps {
   /**
    * What version of the database to start.
    *
-   * Default: - The default engine version.
+   * Default: -  the latest major version
    */
   public fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
@@ -271,6 +271,17 @@ public interface DatabaseClusterProps {
    * Default: true
    */
   public fun storageEncrypted(): Boolean? = unwrap(this).getStorageEncrypted()
+
+  /**
+   * The storage type of the DocDB cluster.
+   *
+   * I/O-optimized storage is supported starting with engine version 5.0.0.
+   *
+   * Default: StorageType.STANDARD
+   *
+   * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/release-notes.html#release-notes.11-21-2023)
+   */
+  public fun storageType(): StorageType? = unwrap(this).getStorageType()?.let(StorageType::wrap)
 
   /**
    * What subnets to run the DocumentDB instances in.
@@ -456,6 +467,12 @@ public interface DatabaseClusterProps {
      * @param storageEncrypted Whether to enable storage encryption.
      */
     public fun storageEncrypted(storageEncrypted: Boolean)
+
+    /**
+     * @param storageType The storage type of the DocDB cluster.
+     * I/O-optimized storage is supported starting with engine version 5.0.0.
+     */
+    public fun storageType(storageType: StorageType)
 
     /**
      * @param vpc What subnets to run the DocumentDB instances in. 
@@ -695,6 +712,14 @@ public interface DatabaseClusterProps {
     }
 
     /**
+     * @param storageType The storage type of the DocDB cluster.
+     * I/O-optimized storage is supported starting with engine version 5.0.0.
+     */
+    override fun storageType(storageType: StorageType) {
+      cdkBuilder.storageType(storageType.let(StorageType.Companion::unwrap))
+    }
+
+    /**
      * @param vpc What subnets to run the DocumentDB instances in. 
      * Must be at least 2 subnets in two different AZs.
      */
@@ -723,7 +748,8 @@ public interface DatabaseClusterProps {
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.docdb.DatabaseClusterProps,
-  ) : CdkObject(cdkObject), DatabaseClusterProps {
+  ) : CdkObject(cdkObject),
+      DatabaseClusterProps {
     /**
      * Backup settings.
      *
@@ -805,7 +831,7 @@ public interface DatabaseClusterProps {
     /**
      * What version of the database to start.
      *
-     * Default: - The default engine version.
+     * Default: -  the latest major version
      */
     override fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
@@ -958,6 +984,17 @@ public interface DatabaseClusterProps {
      * Default: true
      */
     override fun storageEncrypted(): Boolean? = unwrap(this).getStorageEncrypted()
+
+    /**
+     * The storage type of the DocDB cluster.
+     *
+     * I/O-optimized storage is supported starting with engine version 5.0.0.
+     *
+     * Default: StorageType.STANDARD
+     *
+     * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/release-notes.html#release-notes.11-21-2023)
+     */
+    override fun storageType(): StorageType? = unwrap(this).getStorageType()?.let(StorageType::wrap)
 
     /**
      * What subnets to run the DocumentDB instances in.
