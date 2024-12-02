@@ -44,13 +44,13 @@ caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version = "3.1.8
 aspectj-tools = { module = "org.aspectj:aspectjtools", version = "1.9.22.1" }
 
 guava = { module = "com.google.guava:guava", version = "32.1.3-jre" }
-awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.170.0" }
+awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.171.1" }
 awscdk-constructs = { module = "software.constructs:constructs", version = "10.4.2" }
 squareup-kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.18.1" }
 javaparser-core = { module = "com.github.javaparser:javaparser-core", version = "3.26.2" }
 
-jackson-bom = { module = "com.fasterxml.jackson:jackson-bom", version = "2.18.1" }
+jackson-bom = { module = "com.fasterxml.jackson:jackson-bom", version = "2.18.2" }
 jackson-core = { module = "com.fasterxml.jackson.core:jackson-core" }
 jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind" }
-jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version = "2.18.1" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version = "2.18.2" }
 
