@@ -24,7 +24,7 @@ jobs:
     - uses: 'hmarr/debug-action@cd1afbd7852b7ad7b1b7a9a1b03efebd3b0a1820' # v3.0.0
 
     # https://github.com/zgosalvez/github-actions-ensure-sha-pinned-actions
-    - uses: 'zgosalvez/github-actions-ensure-sha-pinned-actions@5d6ac37a4cef8b8df67f482a8e384987766f0213' # v3.0.17
+    - uses: 'zgosalvez/github-actions-ensure-sha-pinned-actions@64418826697dcd77c93a8e4a1f7601a1942e57b5' # v3.0.18
 
     # https://github.com/actions/checkout
     - name: 'checkout'
